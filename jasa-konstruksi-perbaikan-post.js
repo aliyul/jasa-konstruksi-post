@@ -76,10 +76,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (urlMappingChippingBeton[cleanUrl]) {
        removeCondition('materialKons');
-       restoreCondition('JasaKons');
+     
         removeCondition('JasaBobokTembok');
          removeCondition('JasaBongkarKeramik');
        removeCondition('JasaBobokBeton');
+         restoreCondition('JasaKons');
         restoreCondition('JasaChippingBeton');
         JasaKonstruksiLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
