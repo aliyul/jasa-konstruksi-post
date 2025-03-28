@@ -60,6 +60,13 @@ document.addEventListener("DOMContentLoaded", function() {
      var pageNameSpan = document.getElementById("pageNameKonstruksi");
 
      // Default untuk menyembunyikan elemen
+      materialKons.style.visibility = 'hidden';
+      JasaKons.style.visibility = 'hidden';
+      JasaBobokTembok.style.visibility = 'hidden';
+      JasaBongkarKeramik.style.visibility = 'hidden';
+      JasaBobokBeton.style.visibility = 'hidden';
+      JasaChippingBeton.style.visibility = 'hidden';
+ 
      JasaKonstruksiLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanLink.style.visibility = 'hidden';
      JasaChippingBetonLink.style.visibility = 'hidden';
