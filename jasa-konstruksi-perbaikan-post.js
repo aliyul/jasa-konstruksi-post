@@ -20,14 +20,14 @@ const urlMappingBongkarKeramik = {
 };
 
 // Menyimpan elemen yang dihapus dalam variabel
-let removedElements = {};
+let removedElementsJasaPerbaikanKons = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
 function removeCondition(conditionId) {
     const conditionElement = document.getElementById(conditionId);
 
     if (conditionElement) {
         // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
-        removedElements[conditionId] = conditionElement;
+        removedElementsJasaPerbaikanKons[conditionId] = conditionElement;
         conditionElement.remove(); // Menghapus elemen tersebut
     }
 }
@@ -35,11 +35,11 @@ function removeCondition(conditionId) {
 // Fungsi untuk mengembalikan elemen yang telah dihapus
 function restoreCondition(conditionId) {
     const breadcrumb = document.querySelector('.breadcrumb');
-    const elementToRestore = removedElements[conditionId]; // Mendapatkan elemen yang disimpan
+    const elementToRestore = removedElementsJasaPerbaikanKons[conditionId]; // Mendapatkan elemen yang disimpan
 
     if (elementToRestore) {
         breadcrumb.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
-        delete removedElements[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
+        delete removedElementsJasaPerbaikanKons[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
     } else {
         console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElements.`);
     }
