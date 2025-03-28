@@ -45,8 +45,6 @@ function restoreCondition(conditionId) {
     }
 }
 
-removeCondition('materialKons');
-restoreCondition('JasaKons');
 document.addEventListener("DOMContentLoaded", function() {
     // var currentUrl = window.location.href;
      //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
@@ -68,6 +66,8 @@ document.addEventListener("DOMContentLoaded", function() {
      pageNameSpan.textContent = "";
 
     if (urlMappingChippingBeton[cleanUrl]) {
+       removeCondition('materialKons');
+       restoreCondition('JasaKons');
         removeCondition('JasaBobokTembok');
          removeCondition('JasaBongkarKeramik');
        removeCondition('JasaBobokBeton');
@@ -78,6 +78,9 @@ document.addEventListener("DOMContentLoaded", function() {
         pageNameSpan.textContent = urlMapping[cleanUrl];
     }
     if (urlMappingBobokTembok[cleanUrl]) {
+        removeCondition('materialKons');
+        restoreCondition('JasaKons');
+     
         removeCondition('JasaChippingBeton');
         removeCondition('JasaBongkarKeramik');
        removeCondition('JasaBobokBeton');
@@ -88,6 +91,9 @@ document.addEventListener("DOMContentLoaded", function() {
         pageNameSpan.textContent = urlMapping[cleanUrl];
     }
    if (urlMappingBobokBeton[cleanUrl]) {
+       removeCondition('materialKons');
+       restoreCondition('JasaKons');
+    
         removeCondition('JasaChippingBeton');
         removeCondition('JasaBongkarKeramik');
        removeCondition('JasaBobokTembok');
@@ -98,6 +104,9 @@ document.addEventListener("DOMContentLoaded", function() {
         pageNameSpan.textContent = urlMapping[cleanUrl];
     }
    if (urlMappingBongkarKeramik[cleanUrl]) {
+        removeCondition('materialKons');
+        restoreCondition('JasaKons');
+    
         removeCondition('JasaChippingBeton');
         removeCondition('JasaBobokTembok');
          removeCondition('JasaBobokBeton');
