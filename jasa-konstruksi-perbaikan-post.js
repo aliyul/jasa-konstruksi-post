@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaBobokBeton');
         JasaKonstruksiLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
-        JasaBobokTembokLink.style.visibility = 'visible';
+        JasaBobokBetonLink.style.visibility = 'visible';
         pageNameSpan.textContent = urlMapping[cleanUrl];
     }
    if (urlMappingBongkarKeramik[cleanUrl]) {
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaBongkarKeramik');
         JasaKonstruksiLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
-        JasaBobokTembokLink.style.visibility = 'visible';
+        JasaBongkarKeramikLink.style.visibility = 'visible';
         pageNameSpan.textContent = urlMapping[cleanUrl];
     }
 
