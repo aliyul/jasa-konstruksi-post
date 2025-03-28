@@ -51,6 +51,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const cleanUrl = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
 
      // Menemukan elemen menggunakan Id
+     var materialKons = document.getElementById("materialKons");
+     var JasaKons = document.getElementById("JasaKons");
+     var JasaBobokTembok = document.getElementById("JasaBobokTembok");
+     var JasaBongkarKeramik = document.getElementById("JasaBongkarKeramik");
+     var JasaBobokBeton = document.getElementById("JasaBobokBeton");
+      var JasaChippingBeton = document.getElementById("JasaChippingBeton");
+ 
      var JasaKonstruksiLink = document.getElementById("JasaKonstruksi");
      var JasaRenovasiPerbaikanLink = document.getElementById("JasaRenovasiPerbaikan");
      var JasaChippingBetonLink = document.getElementById("JasaChippingBeton");
