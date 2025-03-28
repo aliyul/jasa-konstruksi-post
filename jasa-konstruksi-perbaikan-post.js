@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaBobokTembokLink = document.getElementById("JasaBobokTembok");
      var JasaBobokBetonLink = document.getElementById("JasaBobokBeton");
      var JasaBongkarKeramikLink = document.getElementById("JasaBongkarKeramik");
-     var pageNameSpan = document.getElementById("pageNameSpan");
+     var pageNameSpan = document.getElementById("pageNameKonstruksi");
 
      // Default untuk menyembunyikan elemen
      JasaKonstruksiLink.style.visibility = 'hidden';
