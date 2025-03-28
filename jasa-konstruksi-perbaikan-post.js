@@ -63,6 +63,9 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaKonstruksiLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanLink.style.visibility = 'hidden';
      JasaChippingBetonLink.style.visibility = 'hidden';
+     JasaBobokTembokLink.style.visibility = 'hidden';
+     JasaBobokBetonLink.style.visibility = 'hidden';
+     JasaBongkarKeramikLink.style.visibility = 'hidden';
      pageNameSpan.textContent = "";
 
     if (urlMappingChippingBeton[cleanUrl]) {
@@ -75,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
         JasaChippingBetonLink.style.visibility = 'visible';
-        pageNameSpan.textContent = urlMapping[cleanUrl];
+        pageNameSpan.textContent = urlMappingChippingBeton[cleanUrl];
     }
     if (urlMappingBobokTembok[cleanUrl]) {
         removeCondition('materialKons');
@@ -88,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
         JasaBobokTembokLink.style.visibility = 'visible';
-        pageNameSpan.textContent = urlMapping[cleanUrl];
+        pageNameSpan.textContent = urlMappingBobokTembok[cleanUrl];
     }
    if (urlMappingBobokBeton[cleanUrl]) {
        removeCondition('materialKons');
@@ -101,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
         JasaBobokBetonLink.style.visibility = 'visible';
-        pageNameSpan.textContent = urlMapping[cleanUrl];
+        pageNameSpan.textContent = urlMappingBobokBeton[cleanUrl];
     }
    if (urlMappingBongkarKeramik[cleanUrl]) {
         removeCondition('materialKons');
@@ -114,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
         JasaBongkarKeramikLink.style.visibility = 'visible';
-        pageNameSpan.textContent = urlMapping[cleanUrl];
+        pageNameSpan.textContent = urlMappingBongkarKeramik[cleanUrl];
     }
 
    });
