@@ -53,10 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
      // Menemukan elemen menggunakan Id
      var materialKons = document.getElementById("materialKons");
      var JasaKons = document.getElementById("JasaKons");
-     var JasaBobokTembok = document.getElementById("JasaBobokTembok");
-     var JasaBongkarKeramik = document.getElementById("JasaBongkarKeramik");
-     var JasaBobokBeton = document.getElementById("JasaBobokBeton");
-      var JasaChippingBeton = document.getElementById("JasaChippingBeton");
  
      var JasaKonstruksiLink = document.getElementById("JasaKonstruksi");
      var JasaRenovasiPerbaikanLink = document.getElementById("JasaRenovasiPerbaikan");
@@ -69,10 +65,6 @@ document.addEventListener("DOMContentLoaded", function() {
      // Default untuk menyembunyikan elemen
       materialKons.style.visibility = 'hidden';
       JasaKons.style.visibility = 'hidden';
-      JasaBobokTembok.style.visibility = 'hidden';
-      JasaBongkarKeramik.style.visibility = 'hidden';
-      JasaBobokBeton.style.visibility = 'hidden';
-      JasaChippingBeton.style.visibility = 'hidden';
  
      JasaKonstruksiLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanLink.style.visibility = 'hidden';
