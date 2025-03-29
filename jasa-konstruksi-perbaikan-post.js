@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiPerbaikanLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
         JasaChippingBetonLink.style.visibility = 'visible';
-        pageNameKonstruksi.textContent = urlMappingChippingBeton[cleanUrlJasaPerbaikanKons];
+        pageNameKonstruksiPerbaikan.textContent = urlMappingChippingBeton[cleanUrlJasaPerbaikanKons];
     }
     if (urlMappingBobokTembok[cleanUrlJasaPerbaikanKons]) {
         removeCondition('materialKonsReadymix');
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiPerbaikanLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
         JasaBobokTembokLink.style.visibility = 'visible';
-        pageNameKonstruksi.textContent = urlMappingBobokTembok[cleanUrlJasaPerbaikanKons];
+        pageNameKonstruksiPerbaikan.textContent = urlMappingBobokTembok[cleanUrlJasaPerbaikanKons];
     }
    if (urlMappingBobokBeton[cleanUrlJasaPerbaikanKons]) {
        removeCondition('materialKonsReadymix');
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiPerbaikanLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
         JasaBobokBetonLink.style.visibility = 'visible';
-        pageNameKonstruksi.textContent = urlMappingBobokBeton[cleanUrlJasaPerbaikanKons];
+        pageNameKonstruksiPerbaikan.textContent = urlMappingBobokBeton[cleanUrlJasaPerbaikanKons];
     }
    if (urlMappingBongkarKeramik[cleanUrlJasaPerbaikanKons]) {
         removeCondition('materialKonsReadymix');
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiPerbaikanLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
         JasaBongkarKeramikLink.style.visibility = 'visible';
-        pageNameKonstruksi.textContent = urlMappingBongkarKeramik[cleanUrlJasaPerbaikanKons];
+        pageNameKonstruksiPerbaikan.textContent = urlMappingBongkarKeramik[cleanUrlJasaPerbaikanKons];
     }
 
    });
