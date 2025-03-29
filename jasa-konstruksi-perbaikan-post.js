@@ -43,6 +43,22 @@ function restoreCondition(conditionId) {
     } else {
         console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElements.`);
     }
+
+     var JasaKonstruksiLink = document.getElementById("JasaKonstruksi");
+     var JasaRenovasiPerbaikanLink = document.getElementById("JasaRenovasiPerbaikan");
+     var JasaChippingBetonLink = document.getElementById("JasaChippingBeton");
+     var JasaBobokTembokLink = document.getElementById("JasaBobokTembok");
+     var JasaBobokBetonLink = document.getElementById("JasaBobokBeton");
+     var JasaBongkarKeramikLink = document.getElementById("JasaBongkarKeramik");
+     var pageNameKonstruksi = document.getElementById("pageNameKonstruksi");
+
+     JasaKonstruksiLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanLink.style.visibility = 'hidden';
+     JasaChippingBetonLink.style.visibility = 'hidden';
+     JasaBobokTembokLink.style.visibility = 'hidden';
+     JasaBobokBetonLink.style.visibility = 'hidden';
+     JasaBongkarKeramikLink.style.visibility = 'hidden';
+     pageNameKonstruksi.textContent = "";
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -54,25 +70,13 @@ document.addEventListener("DOMContentLoaded", function() {
     // var materialKons = document.getElementById("materialKons");
     // var JasaKons = document.getElementById("JasaKons");
  
-     var JasaKonstruksiLink = document.getElementById("JasaKonstruksi");
-     var JasaRenovasiPerbaikanLink = document.getElementById("JasaRenovasiPerbaikan");
-     var JasaChippingBetonLink = document.getElementById("JasaChippingBeton");
-     var JasaBobokTembokLink = document.getElementById("JasaBobokTembok");
-     var JasaBobokBetonLink = document.getElementById("JasaBobokBeton");
-     var JasaBongkarKeramikLink = document.getElementById("JasaBongkarKeramik");
-     var pageNameKonstruksi = document.getElementById("pageNameKonstruksi");
+    
 
      // Default untuk menyembunyikan elemen
      // materialKons.style.visibility = 'hidden';
       //JasaKons.style.visibility = 'hidden';
  
-     JasaKonstruksiLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanLink.style.visibility = 'hidden';
-     JasaChippingBetonLink.style.visibility = 'hidden';
-     JasaBobokTembokLink.style.visibility = 'hidden';
-     JasaBobokBetonLink.style.visibility = 'hidden';
-     JasaBongkarKeramikLink.style.visibility = 'hidden';
-     pageNameKonstruksi.textContent = "";
+    
 
     if (urlMappingChippingBeton[cleanUrlJasaPerbaikanKons]) {
         restoreCondition('JasaKons');
