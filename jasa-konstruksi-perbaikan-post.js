@@ -79,6 +79,8 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaChippingBeton');
      
         removeCondition('materialKonsReadymix');
+        removeCondition('ProdukKonsSaluran');
+     
         removeCondition('JasaBobokTembok');
         removeCondition('JasaBongkarKeramik');
         removeCondition('JasaBobokBeton');
@@ -90,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     if (urlMappingBobokTembok[cleanUrlJasaPerbaikanKons]) {
         removeCondition('materialKonsReadymix');
+        removeCondition('ProdukKonsSaluran');
         restoreCondition('JasaKonsPerbaikan');
      
         removeCondition('JasaChippingBeton');
@@ -103,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
    if (urlMappingBobokBeton[cleanUrlJasaPerbaikanKons]) {
        removeCondition('materialKonsReadymix');
+       removeCondition('ProdukKonsSaluran');
        restoreCondition('JasaKonsPerbaikan');
     
         removeCondition('JasaChippingBeton');
@@ -116,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
    if (urlMappingBongkarKeramik[cleanUrlJasaPerbaikanKons]) {
         removeCondition('materialKonsReadymix');
+        removeCondition('ProdukKonsSaluran');
         restoreCondition('JasaKonsPerbaikan');
     
         removeCondition('JasaChippingBeton');
