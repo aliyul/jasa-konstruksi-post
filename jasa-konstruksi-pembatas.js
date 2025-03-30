@@ -120,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
      
         //hapus elemen jasa pembatas lain
@@ -138,6 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
        //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
 
         //hapus elemen jasa pembatas lain
@@ -156,6 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
        //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
 
         //hapus elemen jasa pembatas lain
