@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
    if (urlMappingPasangPagarRumah[cleanUrlJasaPembatasKons]) {
         restoreCondition('JasaKonsPembatas');
-        restoreCondition('JasaPasangPagarBeton');
+        restoreCondition('JasaPasangPagarRumah');
 
        //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
