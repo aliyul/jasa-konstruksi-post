@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiPembatasLink.style.visibility = 'visible';
         JasaPembatasLink.style.visibility = 'visible';
         JasaPasangPagarPanelBetonLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingChippingBeton[cleanUrlJasaPembatasKons];
+        pageNameJasaPembatas.textContent = urlMappingPasangPagarPanelBeton[cleanUrlJasaPembatasKons];
     }
     if (urlMappingPasangPagarBeton[cleanUrlJasaPembatasKons]) {
         restoreCondition('JasaKonsPembatas');
@@ -130,10 +130,10 @@ document.addEventListener("DOMContentLoaded", function() {
         //hapus elemen jasa pembatas lain
         removeCondition('JasaPasangPagarPanelBeton');
         
-        JasaKonstruksiPerbaikanLink.style.visibility = 'visible';
-        JasaRenovasiPerbaikanLink.style.visibility = 'visible';
-        JasaChippingBetonLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan.textContent = urlMappingChippingBeton[cleanUrlJasaPembatasKons];
+        JasaKonstruksiPembatasLink.style.visibility = 'visible';
+        JasaPembatasLink.style.visibility = 'visible';
+        JasaPasangPagarPanelBetonLink.style.visibility = 'visible';
+        pageNameJasaPembatas.textContent = urlMappingPasangPagarBeton[cleanUrlJasaPembatasKons];
     }
  
    });
