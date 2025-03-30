@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
            // hapus elemen id DIV Lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
        
         removeCondition('JasaBobokTembok');
@@ -98,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
        // hapus elemen id DIV Lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         
         // hapus elemen JasaPerbaikanKons Lain
@@ -117,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
          // hapus elemen id DIV Lain
        removeCondition('materialKonsReadymix');
        removeCondition('ProdukKonsSaluran');
+       removeCondition('ProdukKonsPembatas');
        removeCondition('JasaKonsPembatas');
     
         // hapus elemen JasaPerbaikanKons Lain
@@ -135,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function() {
           // hapus elemen id DIV Lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         
        // hapus elemen JasaPerbaikanKons Lain
