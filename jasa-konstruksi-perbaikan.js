@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
         return;
     }
-      var JasaKonstruksiPerbaikanLink = document.getElementById("JasaKonstruksiPerbaikan");
+     var JasaKonstruksiPerbaikanLink = document.getElementById("JasaKonstruksiPerbaikan");
      var JasaRenovasiPerbaikanLink = document.getElementById("JasaRenovasiPerbaikan");
      var JasaChippingBetonLink = document.getElementById("JasaChippingBeton");
      var JasaBobokTembokLink = document.getElementById("JasaBobokTembok");
@@ -66,9 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
     
 
      // Default untuk menyembunyikan elemen
-     // materialKons.style.visibility = 'hidden';
-      //JasaKons.style.visibility = 'hidden';
- 
      JasaKonstruksiPerbaikanLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanLink.style.visibility = 'hidden';
      JasaChippingBetonLink.style.visibility = 'hidden';
@@ -80,10 +77,11 @@ document.addEventListener("DOMContentLoaded", function() {
     if (urlMappingChippingBeton[cleanUrlJasaPerbaikanKons]) {
         restoreCondition('JasaKonsPerbaikan');
         restoreCondition('JasaChippingBeton');
-     
+           // hapus elemen id DIV Lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
-     
+        removeCondition('JasaKonsPembatas');
+       
         removeCondition('JasaBobokTembok');
         removeCondition('JasaBongkarKeramik');
         removeCondition('JasaBobokBeton');
@@ -94,42 +92,56 @@ document.addEventListener("DOMContentLoaded", function() {
         pageNameKonstruksiPerbaikan.textContent = urlMappingChippingBeton[cleanUrlJasaPerbaikanKons];
     }
     if (urlMappingBobokTembok[cleanUrlJasaPerbaikanKons]) {
+        restoreCondition('JasaKonsPerbaikan');
+        restoreCondition('JasaBobokTembok');
+     
+       // hapus elemen id DIV Lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
-        restoreCondition('JasaKonsPerbaikan');
-     
+        removeCondition('JasaKonsPembatas');
+        
+        // hapus elemen JasaPerbaikanKons Lain
         removeCondition('JasaChippingBeton');
         removeCondition('JasaBongkarKeramik');
-       removeCondition('JasaBobokBeton');
-        restoreCondition('JasaBobokTembok');
+        removeCondition('JasaBobokBeton');
+     
         JasaKonstruksiPerbaikanLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
         JasaBobokTembokLink.style.visibility = 'visible';
         pageNameKonstruksiPerbaikan.textContent = urlMappingBobokTembok[cleanUrlJasaPerbaikanKons];
     }
    if (urlMappingBobokBeton[cleanUrlJasaPerbaikanKons]) {
+       restoreCondition('JasaKonsPerbaikan');
+       restoreCondition('JasaBobokBeton');
+
+         // hapus elemen id DIV Lain
        removeCondition('materialKonsReadymix');
        removeCondition('ProdukKonsSaluran');
-       restoreCondition('JasaKonsPerbaikan');
+       removeCondition('JasaKonsPembatas');
     
+        // hapus elemen JasaPerbaikanKons Lain
         removeCondition('JasaChippingBeton');
         removeCondition('JasaBongkarKeramik');
-       removeCondition('JasaBobokTembok');
-        restoreCondition('JasaBobokBeton');
+        removeCondition('JasaBobokTembok');
+       
         JasaKonstruksiPerbaikanLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
         JasaBobokBetonLink.style.visibility = 'visible';
         pageNameKonstruksiPerbaikan.textContent = urlMappingBobokBeton[cleanUrlJasaPerbaikanKons];
     }
    if (urlMappingBongkarKeramik[cleanUrlJasaPerbaikanKons]) {
+        restoreCondition('JasaKonsPerbaikan');
+        restoreCondition('JasaBongkarKeramik');
+          // hapus elemen id DIV Lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
-        restoreCondition('JasaKonsPerbaikan');
-    
+        removeCondition('JasaKonsPembatas');
+        
+       // hapus elemen JasaPerbaikanKons Lain
         removeCondition('JasaChippingBeton');
         removeCondition('JasaBobokTembok');
          removeCondition('JasaBobokBeton');
-        restoreCondition('JasaBongkarKeramik');
+       
         JasaKonstruksiPerbaikanLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
         JasaBongkarKeramikLink.style.visibility = 'visible';
