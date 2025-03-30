@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const cleanUrlJasaPembatasKons = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
 
      // Menemukan elemen menggunakan Id
-    var JasaKonsPembatas = document.getElementById("materialKons");
+    var JasaKonsPembatas = document.getElementById("JasaKonsPembatas");
     if (!JasaKonsPembatas) {
         console.error("elemen Id JasaKonsPembatas kondisi terhapus");
         return;
