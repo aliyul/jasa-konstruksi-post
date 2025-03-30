@@ -45,7 +45,17 @@ const urlMappingPasangPagarBeton = {
 
 };
 const urlMappingPasangPagarRumah = {
-
+"https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-terdekat.html": "Jasa Pasang Pagar Rumah Terdekat",
+    "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah.html": "Harga Jasa Pasang Pagar Rumah",
+    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-besi-beton-kayu.html": "Jasa Pasang Pagar Rumah Besi Beton Kayu",
+    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-minimalis-mewah.html": "Jasa Pasang Pagar Rumah Minimalis Mewah",
+    "https://www.betonjayareadymix.com/2018/11/biaya-jasa-pasang-pagar-rumah.html": "Biaya Jasa Pasang Pagar Rumah",
+    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-profesional.html": "Jasa Pasang Pagar Rumah Profesional",
+    "https://www.betonjayareadymix.com/2018/11/keunggulan-jasa-pasang-pagar-rumah.html": "Keunggulan Jasa Pasang Pagar Rumah",
+    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-pondasi-kuat.html": "Jasa Pasang Pagar Rumah Pondasi Kuat",
+    "https://www.betonjayareadymix.com/2018/11/tukang-pasang-pagar-rumah.html": "Tukang Pasang Pagar Rumah",
+    "https://www.betonjayareadymix.com/2018/11/model-pagar-rumah-minimalis-modern.html": "Model Pagar Rumah Minimalis"
+ 
 };
 
 
