@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaKonstruksiPembatasLink = document.getElementById("JasaKonstruksiPembatas");
      var JasaPembatasLink = document.getElementById("JasaPembatas");
      var JasaPasangPagarPanelBetonLink = document.getElementById("JasaPasangPagarPanelBeton");
-     //var JasaBobokTembokLink = document.getElementById("JasaBobokTembok");
+     var JasaPasangPagarBetonLink = document.getElementById("JasaPasangPagarBeton");
      //var JasaBobokBetonLink = document.getElementById("JasaBobokBeton");
      //var JasaBongkarKeramikLink = document.getElementById("JasaBongkarKeramik");
      var pageNameJasaPembatas = document.getElementById("pageNameJasaPembatas");
@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaKonstruksiPembatasLink.style.visibility = 'hidden';
      JasaPembatasLink.style.visibility = 'hidden';
      JasaPasangPagarPanelBetonLink.style.visibility = 'hidden';
+     JasaPasangPagarBetonLink.style.visibility = 'hidden';
      //JasaBobokTembokLink.style.visibility = 'hidden';
      //JasaBobokBetonLink.style.visibility = 'hidden';
      //JasaBongkarKeramikLink.style.visibility = 'hidden';
@@ -132,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         JasaKonstruksiPembatasLink.style.visibility = 'visible';
         JasaPembatasLink.style.visibility = 'visible';
-        JasaPasangPagarPanelBetonLink.style.visibility = 'visible';
+        JasaPasangPagarBetonLink.style.visibility = 'visible';
         pageNameJasaPembatas.textContent = urlMappingPasangPagarBeton[cleanUrlJasaPembatasKons];
     }
  
