@@ -51,8 +51,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const cleanUrlJasaPerbaikanKons = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
 
      // Menemukan elemen menggunakan Id
-    // var materialKons = document.getElementById("materialKons");
-    // var JasaKons = document.getElementById("JasaKons");
+    var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
+    if (!JasaKonsPerbaikan) {
+        console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
+        return;
+    }
       var JasaKonstruksiPerbaikanLink = document.getElementById("JasaKonstruksiPerbaikan");
      var JasaRenovasiPerbaikanLink = document.getElementById("JasaRenovasiPerbaikan");
      var JasaChippingBetonLink = document.getElementById("JasaChippingBeton");
