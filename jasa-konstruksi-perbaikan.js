@@ -65,6 +65,7 @@ const urlMappingPerbaikanDinding = {
  
  
 };
+/*
 const urlMappingBobokTembok = {
    
 
@@ -80,6 +81,8 @@ const urlMappingBongkarKeramik = {
     "https://www.betonjayareadymix.com/2019/06/harga-bongkar-lantai-keramik.html": "Harga Bongkar Lantai Keramik"
 
 };
+
+*/
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPerbaikanKons = {};
