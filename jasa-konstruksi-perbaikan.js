@@ -234,7 +234,8 @@ if (JasaKonsPerbaikan) {
 }
 if (!JasaKonsPerbaikan1) {
 
-else {
+	
+} else {
      var JasaKonstruksiPerbaikanLink1 = document.getElementById("JasaKonstruksiPerbaikan1");
      var JasaRenovasiPerbaikanLink1 = document.getElementById("JasaRenovasiPerbaikan1");
      var JasaRenovasiPerbaikanStrukturLink = document.getElementById("JasaRenovasiPerbaikanStruktur");
