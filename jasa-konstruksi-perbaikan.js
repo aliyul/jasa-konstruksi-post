@@ -90,9 +90,11 @@ const urlMappingPerbaikanDinding = {
  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-jakarta.html": "Jasa Renovasi Perbaikan Dinding  Jakarta",
  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-bogor.html": "Jasa Renovasi Perbaikan Dinding Bogor",
  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-depok.html": "Jasa Renovasi Perbaikan Dinding Depok",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-tangerang.html": "Jasa Renovasi Perbaikan Dinding Tangerang",
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-tangerang.html": "Jasa Perbaikan Dinding Tangerang",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-tangerang.html": "Jasa Renovasi Dinding Tangerang",
  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-bekasi.html": "Jasa Renovasi Perbaikan Dinding Bekasi",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-karawang.html": "Jasa Renovasi Perbaikan Dinding Karawang"
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-karawang.html": "Jasa Perbaikan Dinding Karawang",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-karawang.html": "Jasa Renovasi Dinding Karawang"
 
 
 
