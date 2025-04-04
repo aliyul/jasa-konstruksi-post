@@ -224,7 +224,7 @@ if (JasaKonsPerbaikan) {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
-        removeCondition1('JasaKonsPerbaikanSub');
+        removeCondition('JasaKonsPerbaikanSub');
        
         JasaKonstruksiPerbaikanLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
