@@ -1,7 +1,7 @@
  // Cek URL saat ini dan sesuaikan dengan kondisi yang diinginkan
 const urlMappingFinishing = {
  "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-plester-acian.html": "Jasa Renovasi Dinding Plester Acian",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-plester-acian.html": "Jasa Perbaikan Dinding Plester Acian",
+ "https://www.betonjayareadymix.com/p/jasa-plester-acian.html": "Jasa Plester Acian",
 };
 
 const urlMappingPerbaikanStruktur = {
