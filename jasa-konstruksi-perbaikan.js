@@ -230,8 +230,11 @@ if (JasaKonsPerbaikan) {
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
         pageNameKonstruksiPerbaikan.textContent = urlMappingPerbaikan[cleanUrlJasaPerbaikanKons];
     }
+	 return;
 }
-if (JasaKonsPerbaikan1) {
+if (!JasaKonsPerbaikan1) {
+
+else {
      var JasaKonstruksiPerbaikanLink1 = document.getElementById("JasaKonstruksiPerbaikan1");
      var JasaRenovasiPerbaikanLink1 = document.getElementById("JasaRenovasiPerbaikan1");
      var JasaRenovasiPerbaikanStrukturLink = document.getElementById("JasaRenovasiPerbaikanStruktur");
@@ -330,6 +333,7 @@ if (JasaKonsPerbaikan1) {
         JasaRenovasiPerbaikanInteriorLink.style.visibility = 'visible';
         pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanInterior[cleanUrlJasaPerbaikanKons];
     }
+}
 }
 	
    });
