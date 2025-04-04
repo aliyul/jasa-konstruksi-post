@@ -230,7 +230,6 @@ if (JasaKonsPerbaikan) {
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
         pageNameKonstruksiPerbaikan.textContent = urlMappingPerbaikan[cleanUrlJasaPerbaikanKons];
     }
-	 return;
 }
 if (!JasaKonsPerbaikan1) {
 
