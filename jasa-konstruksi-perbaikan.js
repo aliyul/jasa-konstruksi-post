@@ -27,9 +27,14 @@ const urlMappingPerbaikanStruktur = {
      "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-struktur.html": "Jasa Perbaikan Lantai Struktur",
      "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-jembatan.html": "Jasa Perbaikan Struktur Jembatan",
      "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-gedung.html": "Jasa Perbaikan Struktur Gedung Bertingkat",
+      "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-gedung.html": "Jasa Perbaikan Struktur Gedung Bertingkat",
+ 
 //Jasa Renovasi Struktur
    "https://www.betonjayareadymix.com/p/jasa-penguatan-struktur-bangunan.html": "Jasa Penguatan Struktur Bangunan",
     " https://www.betonjayareadymix.com/p/jasa-penguatan-pondasi-bangunan.html": "Jasa Penguatan Pondasi Bangunan",
+    "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-bangunan-miring.html": "Jasa Renovasi Perbaikan Bangunan Miring",    
+    "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-tiangan-beton.html": "Jasa Renovasi Perbaikan Tiang Beton",
+ 
     "https://www.betonjayareadymix.com/p/jasa-renovasi-pondasi.html": "Jasa Renovasi Pondasi",
      "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-beton-bertulang.html": "Jasa Renovasi Lantai Beton Bertulang",
      "https://www.betonjayareadymix.com/p/jasa-renovasi-kolom-balok.html": "Jasa Renovasi Kolom & Balok",
