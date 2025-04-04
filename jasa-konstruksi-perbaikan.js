@@ -76,6 +76,19 @@ const urlMappingPerbaikanDinding = {
  "https://www.betonjayareadymix.com/p/harga-jasa-bobok-tembok.html": "Harga Jasa Bobok Tembok",
  "https://www.betonjayareadymix.com/p/jasa-tukang-bobok-tembok.html": "Jasa Tukang Bobok Tembok",
 
+ 
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-retak.html": "Jasa Renovasi Perbaikan Dinding Retak",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-lembab.html": "Jasa Renovasi Perbaikan Dinding Lembab",
+ "https://www.betonjayareadymix.com/p/jasa-bobok-dinding-instalasi.html": "Jasa Renovasi Perbaikan Bobok Dinding ",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-penggantian-dinding-bata.html": "Jasa Renovasi Perbaikan Dinding Bata",
+ 
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-jakarta.html": "Jasa Renovasi Perbaikan Dinding  Jakarta",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-bogor.html": "Jasa Renovasi Perbaikan Dinding Bogor",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-depok.html": "Jasa Renovasi Perbaikan Dinding Depok",
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-tangerang.html": "Jasa Renovasi Perbaikan Dinding Tangerang",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-bekasi.html": "Jasa Renovasi Perbaikan Dinding Bekasi",
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-karawang.html": "Jasa Renovasi Perbaikan Dinding Karawang"
+
 
 
  
