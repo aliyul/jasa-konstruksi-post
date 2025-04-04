@@ -86,12 +86,12 @@ const urlMappingPerbaikanStruktur = {
  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-ambles.html": "Jasa Perbaikan Lantai Ambles",
 
  //Perbaikan Struktur Dinding dan Kolom
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-retak-struktur.html": "Jasa Perbaikan Dinding Retak Struktur"
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-struktur.html": "Jasa Perbaikan Kolom Struktur"
- "https://www.betonjayareadymix.com/p/jasa-injeksi-dinding-retak.html": "Jasa Injeksi Dinding Retak"
- "https://www.betonjayareadymix.com/p/jasa-penggantian-dinding-bata.html": "Jasa Penggantian Dinding Bata"
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-lembab.html": "Jasa Perbaikan Dinding Lembab"
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-tua.html": "Jasa Perbaikan Struktur Bangunan Tua"
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-retak-struktur.html": "Jasa Perbaikan Dinding Retak Struktur",
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-struktur.html": "Jasa Perbaikan Kolom Struktur",
+ "https://www.betonjayareadymix.com/p/jasa-injeksi-dinding-retak.html": "Jasa Injeksi Dinding Retak",
+ "https://www.betonjayareadymix.com/p/jasa-penggantian-dinding-bata.html": "Jasa Penggantian Dinding Bata",
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-lembab.html": "Jasa Perbaikan Dinding Lembab",
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-tua.html": "Jasa Perbaikan Struktur Bangunan Tua",
  "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-bangunan.html": "Jasa Renovasi Dinding Bangunan",
 
 "https://www.betonjayareadymix.com/p/jasa-bobok-tembok.html": "Jasa Bobok Tembok",
