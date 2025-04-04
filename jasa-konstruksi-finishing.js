@@ -1,88 +1,15 @@
  // Cek URL saat ini dan sesuaikan dengan kondisi yang diinginkan
 const urlMappingFinishing = {
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-renovasi-pagar.html": "Jasa Perbaikan dan Renovasi Pagar",
-
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-plester-acian.html": "Jasa Renovasi Dinding Plester Acian",
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-plester-acian.html": "Jasa Perbaikan Dinding Plester Acian",
 };
 
 const urlMappingPerbaikanStruktur = {
-//Jasa Perbaikan Struktur
-   "https://www.betonjayareadymix.com/p/jasa-perbaikan-retak-struktur.html": "Jasa Perbaikan Retak Struktur",
-     "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-bangunan.html": "Jasa Perbaikan Pondasi Bangunan",
-     "https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-balok-beton.html": "Jasa Perbaikan Kolom & Balok Beton",
-     "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-struktur.html": "Jasa Perbaikan Lantai Struktur",
-     "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-jembatan.html": "Jasa Perbaikan Struktur Jembatan",
-     "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-gedung.html": "Jasa Perbaikan Struktur Gedung Bertingkat",
-//Jasa Renovasi Struktur
-   "https://www.betonjayareadymix.com/p/jasa-penguatan-struktur-bangunan.html": "Jasa Renovasi Penguatan Struktur Bangunan",
-     "https://www.betonjayareadymix.com/p/jasa-renovasi-pondasi.html": "Jasa Renovasi Pondasi",
-     "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-beton-bertulang.html": "Jasa Renovasi Lantai Beton Bertulang",
-     "https://www.betonjayareadymix.com/p/jasa-renovasi-kolom-balok.html": "Jasa Renovasi Kolom & Balok",
-     "https://www.betonjayareadymix.com/p/jasa-renovasi-atap-beton.html": "Jasa Renovasi Atap Beton",
-     "https://www.betonjayareadymix.com/p/jasa-jacketing-kolom-balok.html": "Jasa Jacketing Kolom & Balok",
-     "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-cfrp.html": "Jasa Perkuatan Struktur dengan CFRP",
- 
-     //Jasa Perbaikan Struktur Beton
-     "https://www.betonjayareadymix.com/p/jasa-chipping-beton.html": "Jasa Chipping Beton",
-    "https://www.betonjayareadymix.com/p/harga-chipping-beton-per-m2.html": "Harga Chipping Beton Per M2",
-      "https://www.betonjayareadymix.com/p/jasa-bobok-beton.html": "Jasa Bobok Beton",
 
-    "https://www.betonjayareadymix.com/p/jasa-injeksi-beton-retak.html": "Jasa Injeksi Beton Retak",
-    "https://www.betonjayareadymix.com/p/jasa-borongan-injeksi-beton-retak.html": "Jasa Borongan Injeksi Beton Retak",
-   "https://www.betonjayareadymix.com/p/jasa-shotcrete-beton.html": "Jasa Shotcrete Beton",
-   "https://www.betonjayareadymix.com/p/harga-jasa-shotcrete-beton.html": "Harga Jasa Shotcrete Beton",
-   "https://www.betonjayareadymix.com/p/jasa-borongan-shotcrete-beton.html": "Jasa Borongan Shotcrete Beton",
-   "https://www.betonjayareadymix.com/p/jasa-grouting-struktur-beton.html": "Jasa Grouting Struktur Beton",
-
-    "https://www.betonjayareadymix.com/p/jasa-perbaikan-retak-beton.html": "Jasa Perbaikan Retak Beton",
-    "https://www.betonjayareadymix.com/p/jasa-repair-struktur-beton.html": "Jasa Repair Struktur Beton",
-    "https://www.betonjayareadymix.com/p/jasa-renovasi-balok-beton.html": "Jasa Renovasi Balok Beton",
-    "https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-gantung.html": "Jasa Perbaikan Balok Gantung",
-    "https://www.betonjayareadymix.com/p/jasa-beton-karbonasi.html": "Jasa Beton Karbonasi",
- 
- //Renovasi & Perbaikan Lantai
-  "https://www.betonjayareadymix.com/p/harga-bobok-lantai-beton-per-m2.html": "Harga Bobok Lantai Beton Per M2",  
- "https://www.betonjayareadymix.com/p/harga-borongan-bobok-lantai-beton.html": "Harga Borongan Bobok Lantai Beton",
-
- "https://www.betonjayareadymix.com/p/jasa-bobok-lantai-beton.html": "Jasa Bobok Lantai Beton",  
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai.html": "Jasa Perbaikan Lantai",  
- "https://www.betonjayareadymix.com/p/jasa-lantai-ambles.html": "Jasa Lantai Ambles",  
- "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai.html": "Jasa Renovasi Lantai",  
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-rusak.html": "Jasa Perbaikan Lantai Rusak",  
- "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-rusak.html": "Jasa Renovasi Lantai Rusak",  
- "https://www.betonjayareadymix.com/p/jasa-bobok-lantai-lama.html": "Jasa Bobok Lantai Lama",  
- "https://www.betonjayareadymix.com/p/jasa-ganti-lantai-ambles.html": "Jasa Ganti Lantai Ambles",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-ambles.html": "Jasa Perbaikan Lantai Ambles"
  
 };
 
 const urlMappingPerbaikanDinding = {
-  "https://www.betonjayareadymix.com/p/jasa-bobok-tembok.html": "Jasa Bobok Tembok",
- "https://www.betonjayareadymix.com/p/harga-jasa-bobok-tembok.html": "Harga Jasa Bobok Tembok",
- "https://www.betonjayareadymix.com/p/jasa-tukang-bobok-tembok.html": "Jasa Tukang Bobok Tembok",
-
- 
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-retak.html": "Jasa Renovasi Perbaikan Dinding Retak",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-lembab.html": "Jasa Renovasi Perbaikan Dinding Lembab",
- "https://www.betonjayareadymix.com/p/jasa-bobok-dinding-instalasi.html": "Jasa Bobok Dinding Instalasi",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-penggantian-dinding-bata.html": "Jasa Renovasi Penggantian Dinding Bata",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-penggantian-dinding-bata.html": "Jasa Perbaikan Penggantian Dinding Bata",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-plester-acian.html": "Jasa Renovasi Dinding Plester Acian",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-plester-acian.html": "Jasa Perbaikan Dinding Plester Acian",
-
- 
- 
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-jakarta.html": "Jasa Renovasi Perbaikan Dinding  Jakarta",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-bogor.html": "Jasa Renovasi Perbaikan Dinding Bogor",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-depok.html": "Jasa Renovasi Perbaikan Dinding Depok",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-tangerang.html": "Jasa Perbaikan Dinding Tangerang",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-tangerang.html": "Jasa Renovasi Dinding Tangerang",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-bekasi.html": "Jasa Renovasi Perbaikan Dinding Bekasi",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-karawang.html": "Jasa Perbaikan Dinding Karawang",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-karawang.html": "Jasa Renovasi Dinding Karawang"
-
-
-
- 
  
 };
 /*
