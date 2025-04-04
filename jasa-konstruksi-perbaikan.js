@@ -41,7 +41,7 @@ const urlMappingPerbaikanStruktur = {
      "https://www.betonjayareadymix.com/p/jasa-renovasi-atap-beton.html": "Jasa Renovasi Atap Beton",
      "https://www.betonjayareadymix.com/p/jasa-jacketing-kolom-balok.html": "Jasa Jacketing Kolom & Balok",
      "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-cfrp.html": "Jasa Perkuatan Struktur dengan CFRP",
-   " https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-retak-struktur.html": "Jasa Renovasi Retak Struktur",
+   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-retak-struktur.html": "Jasa Renovasi Retak Struktur",
     
  
      //Perbaikan Struktur Retak & Kerusakan Beton
@@ -225,7 +225,7 @@ if (JasaKonsPerbaikan) {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikan1');
+        removeCondition1('JasaKonsPerbaikan1');
        
         JasaKonstruksiPerbaikanLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
@@ -250,7 +250,7 @@ if (JasaKonsPerbaikan1) {
      JasaRenovasiPerbaikanInteriorLink.style.visibility = 'hidden';
      pageNameKonstruksiPerbaikan1.textContent = "";
 
-    if (urlMappingPerbaikanStruktur[cleanUrlJasaPerbaikanKons1]) {
+    if (urlMappingPerbaikanStruktur[cleanUrlJasaPerbaikanKons]) {
         restoreCondition('JasaKonsPerbaikan1');
         restoreCondition('JasaRenovasiPerbaikanStruktur');
            // hapus elemen id DIV Lain
@@ -267,9 +267,9 @@ if (JasaKonsPerbaikan1) {
         JasaKonstruksiPerbaikanLink1.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink1.style.visibility = 'visible';
         JasaRenovasiPerbaikanStrukturLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanStruktur[cleanUrlJasaPerbaikanKons1];
+        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanStruktur[cleanUrlJasaPerbaikanKons];
     }
-    if (urlMappingPerbaikanInfrastruktur[cleanUrlJasaPerbaikanKons1]) {
+    if (urlMappingPerbaikanInfrastruktur[cleanUrlJasaPerbaikanKons]) {
         restoreCondition('JasaKonsPerbaikan1');
         restoreCondition('JasaRenovasiPerbaikanInfrastruktur');
      
@@ -288,9 +288,9 @@ if (JasaKonsPerbaikan1) {
         JasaKonstruksiPerbaikanLink1.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink1.style.visibility = 'visible';
         JasaRenovasiPerbaikanInfrastrukturLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanInfrastruktur[cleanUrlJasaPerbaikanKons1];
+        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanInfrastruktur[cleanUrlJasaPerbaikanKons];
     }
-   if (urlMappingPerbaikanAtap[cleanUrlJasaPerbaikanKons1]) {
+   if (urlMappingPerbaikanAtap[cleanUrlJasaPerbaikanKons]) {
        restoreCondition('JasaKonsPerbaikan1');
        restoreCondition('JasaRenovasiPerbaikanAtap');
 
@@ -309,9 +309,9 @@ if (JasaKonsPerbaikan1) {
         JasaKonstruksiPerbaikanLink1.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink1.style.visibility = 'visible';
         JasaRenovasiPerbaikanAtapLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanAtap[cleanUrlJasaPerbaikanKons1];
+        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanAtap[cleanUrlJasaPerbaikanKons];
     }
-   if (urlMappingPerbaikanInterior [cleanUrlJasaPerbaikanKons1]) {
+   if (urlMappingPerbaikanInterior [cleanUrlJasaPerbaikanKons]) {
         restoreCondition('JasaKonsPerbaikan1');
         restoreCondition('JasaRenovasiPerbaikanInterior');
           // hapus elemen id DIV Lain
@@ -329,7 +329,7 @@ if (JasaKonsPerbaikan1) {
         JasaKonstruksiPerbaikanLink1.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink1.style.visibility = 'visible';
         JasaRenovasiPerbaikanInteriorLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanInterior[cleanUrlJasaPerbaikanKons1];
+        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanInterior[cleanUrlJasaPerbaikanKons];
     }
 }
 	
