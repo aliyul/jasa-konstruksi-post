@@ -192,19 +192,18 @@ document.addEventListener("DOMContentLoaded", function() {
      // Menemukan elemen menggunakan Id
     var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
     var JasaKonsPerbaikan1 = document.getElementById("JasaKonsPerbaikan1");
-    if (JasaKonsPerbaikan) {
-	if (JasaKonsPerbaikan1) {
-		
+    if (!JasaKonsPerbaikan) {
+	if (!JasaKonsPerbaikan1) {
+	console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
+	console.error("elemen Id JasaKonsPerbaikan1 kondisi terhapus");
+        return;
     	} else {
        	console.error("elemen Id JasaKonsPerbaikan1 kondisi terhapus");
-        return;
 	}
-    } else if (JasaKonsPerbaikan1) {
-	console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
+    } else if (!JasaKonsPerbaikan1) {
+	console.error("elemen Id JasaKonsPerbaikan1 kondisi terhapus");
     } else {
-     	console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
-       	console.error("elemen Id JasaKonsPerbaikan1 kondisi terhapus");
-        return;
+    
     }
 
 if (JasaKonsPerbaikan) {
