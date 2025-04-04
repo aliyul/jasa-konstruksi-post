@@ -191,16 +191,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
      // Menemukan elemen menggunakan Id
     var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
-    var JasaKonsPerbaikan1 = document.getElementById("JasaKonsPerbaikan1");
+    var JasaKonsPerbaikanSub = document.getElementById("JasaKonsPerbaikanSub");
     if (!JasaKonsPerbaikan) {
-	if (!JasaKonsPerbaikan1) {
+	if (!JasaKonsPerbaikanSub) {
 	console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
 	console.error("elemen Id JasaKonsPerbaikan1 kondisi terhapus");
         return;
     	} else {
        	console.error("elemen Id JasaKonsPerbaikan1 kondisi terhapus");
 	}
-    } else if (!JasaKonsPerbaikan1) {
+    } else if (!JasaKonsPerbaikanSub) {
 	console.error("elemen Id JasaKonsPerbaikan1 kondisi terhapus");
     } else {
     
@@ -231,9 +231,8 @@ if (JasaKonsPerbaikan) {
         pageNameKonstruksiPerbaikan.textContent = urlMappingPerbaikan[cleanUrlJasaPerbaikanKons];
     }
 }
-if (!JasaKonsPerbaikan1) {
-
-	
+if (!JasaKonsPerbaikanSub) {
+     console.error("elemen Id JasaKonsPerbaikan1 kondisi terhapus");	
 } else {
      var JasaKonstruksiPerbaikanLink1 = document.getElementById("JasaKonstruksiPerbaikan1");
      var JasaRenovasiPerbaikanLink1 = document.getElementById("JasaRenovasiPerbaikan1");
