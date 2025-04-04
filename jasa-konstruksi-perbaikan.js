@@ -334,6 +334,5 @@ if (!JasaKonsPerbaikan1) {
         pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanInterior[cleanUrlJasaPerbaikanKons];
     }
 }
-}
 	
    });
