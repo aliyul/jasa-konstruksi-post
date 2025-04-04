@@ -4,7 +4,7 @@ const urlMappingPerbaikan = {
     "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-renovasi-interior.html": "Jasa Perbaikan dan Renovasi Interior",
     "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-renovasi-fasad.html": "Jasa Perbaikan dan Renovasi Fasad",
     "https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat Ibadah",
-    "https://www.betonjayareadymix.com/p/jasa-renovasi-atap.html": "Jasa Renovasi Atap",
+    "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap.html": "Jasa Renovasi Perbaikan Atap",
  "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung-kantor.html": "Jasa Renovasi Gedung Kantor",
     "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-dan-drainase.html": "Jasa Perbaikan Saluran dan Drainase",
     "https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-umum.html": "Jasa Renovasi Fasilitas Umum",
@@ -13,7 +13,7 @@ const urlMappingPerbaikan = {
     "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-renovasi-sekolah.html": "Jasa Perbaikan dan Renovasi Sekolah",
     "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-apartemen.html": "Jasa Renovasi Hotel Apartemen",
  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah.html": "Jasa Renovasi Rumah",
-    "https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html": "Jasa Perbaikan Infrastruktur",
+    "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-infrastruktur.html": "Jasa Renovasi Perbaikan Infrastruktur",
  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-struktur.html": "Jasa Renovasi Perbaikan Struktur",
     "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding.html": "Jasa Renovasi Perbaikan Dinding"
 
@@ -113,10 +113,47 @@ const urlMappingPerbaikanStruktur = {
  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-bekasi.html": "Jasa Renovasi Perbaikan Dinding Bekasi",
  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-karawang.html": "Jasa Perbaikan Dinding Karawang",
  "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-karawang.html": "Jasa Renovasi Dinding Karawang"
-
-
  
 };
+const urlMappingPerbaikanInfrastruktur = {
+
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-perawatan-jalan.html": "Jasa Perbaikan dan Perawatan Jalan"
+};
+
+const urlMappingPerbaikanAtap = {
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon.html": "Jasa Perbaikan Plafon",
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-bocor.html": "Jasa Perbaikan Atap Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-gudang.html": "Jasa Renovasi Perbaikan Atap Gudang",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-kanopi.html": "Jasa Renovasi Perbaikan Atap Kanopi",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-baja-ringan.html": "Jasa Renovasi Perbaikan Atap Baja Ringan",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-rangka-atap.html": "Jasa Renovasi Perbaikan Rangka Atap",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-talang-air.html": "Jasa Renovasi Perbaikan Talang Air"
+};
+
+const urlMappingPerbaikanInterior = {
+
+ "https://www.betonjayareadymix.com/p/jasa-bongkar-keramik.html": "Jasa Bongkar Keramik"
+};
+<b:if cond='data:blog.url == &quot;https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-retak.html&quot;'>
+            <a href='https://www.betonjayareadymix.com/p/jasa-konstruksi.html' itemprop='item' title='JASA KONSTRUKSI'>
+
+              <span itemprop='name'><data:/>Jasa Konstruksi</span> &amp;nbsp;&#8250;&amp;nbsp;
+
+            </a>
+            <a href='https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan.html' itemprop='item' title='JASA RENOVASI &amp; PERBAIKAN'>
+
+              <span itemprop='name'><data:/>Jasa Renovasi &amp; Perbaikan</span> &amp;nbsp;&#8250;&amp;nbsp;
+
+            </a>
+			<a href='https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding.html' itemprop='item' title='JASA RENOVASI PERBAIKAN DINDING'>
+
+              <span itemprop='name'><data:/>Jasa Renovasi Perbaikan Dinding</span> &amp;nbsp;&#8250;&amp;nbsp;
+
+            </a>
+
+              <span itemprop='name'><data:blog.pageName/></span>
+            </b:if>
+          
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPerbaikanKons = {};
