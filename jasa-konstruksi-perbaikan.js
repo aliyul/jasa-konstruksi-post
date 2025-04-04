@@ -162,22 +162,22 @@ function restoreCondition(conditionId) {
 }
 
 function removeCondition1(conditionId) {
-    const conditionElement = document.getElementById(conditionId);
+    const conditionElement1 = document.getElementById(conditionId);
 
-    if (conditionElement) {
+    if (conditionElement1) {
         // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
-        removedElementsJasaPerbaikanKons1[conditionId] = conditionElement;
-        conditionElement.remove(); // Menghapus elemen tersebut
+        removedElementsJasaPerbaikanKons1[conditionId] = conditionElement1;
+        conditionElement1.remove(); // Menghapus elemen tersebut
     }
 }
 
 // Fungsi untuk mengembalikan elemen yang telah dihapus
 function restoreCondition1(conditionId) {
-    const breadcrumb = document.querySelector('.breadcrumb');
-    const elementToRestore = removedElementsJasaPerbaikanKons1[conditionId]; // Mendapatkan elemen yang disimpan
+    const breadcrumb1 = document.querySelector('.breadcrumb');
+    const elementToRestore1 = removedElementsJasaPerbaikanKons1[conditionId]; // Mendapatkan elemen yang disimpan
 
-    if (elementToRestore) {
-        breadcrumb.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
+    if (elementToRestore1) {
+        breadcrumb1.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
         delete removedElementsJasaPerbaikanKons1[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
     } else {
         console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaPerbaikanKons1.`);
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
     } else if (JasaKonsPerbaikan1) {
 	console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
-    } else{
+    } else {
      	console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
        	console.error("elemen Id JasaKonsPerbaikan1 kondisi terhapus");
         return;
