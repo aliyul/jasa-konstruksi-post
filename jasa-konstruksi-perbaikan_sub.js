@@ -289,7 +289,7 @@ if (!JasaKonsPerbaikanSub) {
         JasaRenovasiPerbaikanInfrastrukturLink.style.visibility = 'visible';
         pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanInfrastruktur[cleanUrlJasaPerbaikanKonsSub];
     }
-   if (urlMappingPerbaikanFasadAtap[cleanUrlJasaPerbaikanKonsSub]) {
+   if (urlMappingPerbaikanAtap[cleanUrlJasaPerbaikanKonsSub]) {
        restoreCondition1('JasaKonsPerbaikanSub');
        restoreCondition1('JasaRenovasiPerbaikanAtap');
 
@@ -309,7 +309,7 @@ if (!JasaKonsPerbaikanSub) {
         JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanAtapLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanFasadAtap[cleanUrlJasaPerbaikanKonsSub];
+        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanAtap[cleanUrlJasaPerbaikanKonsSub];
     }
    if (urlMappingPerbaikanInterior[cleanUrlJasaPerbaikanKonsSub]) {
         restoreCondition1('JasaKonsPerbaikanSub');
