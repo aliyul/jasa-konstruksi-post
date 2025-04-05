@@ -259,7 +259,7 @@ if (!JasaKonsPerbaikanSub) {
         JasaRenovasiPerbaikanInfrastrukturLink.style.visibility = 'visible';
         pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanInfrastruktur[cleanUrlJasaPerbaikanKonsSub];
     }
-   if (urlMappingPerbaikanAtap[cleanUrlJasaPerbaikanKonsSub]) {
+   if (urlMappingPerbaikanFasadAtap[cleanUrlJasaPerbaikanKonsSub]) {
        restoreCondition1('JasaKonsPerbaikanSub');
        restoreCondition1('JasaRenovasiPerbaikanAtap');
 
