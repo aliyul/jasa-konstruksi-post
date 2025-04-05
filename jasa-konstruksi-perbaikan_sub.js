@@ -3,24 +3,39 @@ const urlMappingPerbaikanStruktur = {
 //Jasa Penguatan & Perbaikan Pondasi
    "https://www.betonjayareadymix.com/p/jasa-perbaikan-retak-struktur.html": "Jasa Perbaikan Retak Struktur",
      "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-bangunan.html": "Jasa Perbaikan Pondasi Bangunan",
-      "https://www.betonjayareadymix.com/p/jasa-perbaikan-fondasi-bangunan.html": "Jasa Perbaikan Fondasi Bangunan",
+      "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-fondasi-bangunan.html": "Jasa Perbaikan Struktur Fondasi Bangunan",
       "https://www.betonjayareadymix.com/p/jasa-perbaikan-fondasi-rumah.html": "Jasa Perbaikan Fondasi Rumah",
+      "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-fondasi-rumah.html": "Jasa Perbaikan Struktur Fondasi Rumah",
+     "https://www.betonjayareadymix.com/p/jasa-perbaikan-fondasi.html": "Jasa Perbaikan Pondasi",
+      "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-fondasi.html": "Jasa Perbaikan Struktur Pondasi",
+	
 	
      "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-struktur.html": "Jasa Perbaikan Lantai Struktur",
      "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-jembatan.html": "Jasa Perbaikan Struktur Jembatan",
      "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-gedung.html": "Jasa Perbaikan Struktur Gedung Bertingkat",
-//Jasa Renovasi Struktur
+
    "https://www.betonjayareadymix.com/p/jasa-penguatan-struktur-bangunan.html": "Jasa Penguatan Struktur Bangunan",
     "https://www.betonjayareadymix.com/p/jasa-penguatan-pondasi-bangunan.html": "Jasa Penguatan Pondasi Bangunan",   
     "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-tiang-beton.html": "Jasa Perbaikan Struktur Tiang Beton",
 	 
-    "https://www.betonjayareadymix.com/p/jasa-renovasi-pondasi.html": "Jasa Renovasi Pondasi",
-     "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-beton-bertulang.html": "Jasa Renovasi Lantai Beton Bertulang",
-     "https://www.betonjayareadymix.com/p/jasa-renovasi-kolom-balok.html": "Jasa Renovasi Kolom & Balok",
-     "https://www.betonjayareadymix.com/p/jasa-renovasi-atap-beton.html": "Jasa Renovasi Atap Beton",
+    
+     "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-lantai-beton.html": "Jasa Perbaikan Struktur Lantai Beton",
+     "https://www.betonjayareadymix.com/p/jasa-perbaikan-retakan-lantai-beton.html": "Jasa Perbaikan Retakan Lantai Beton",
+     "https://www.betonjayareadymix.com/p/jasa-perkuatan-lantai-beton.html": "Jasa Perkuatan Lantai Beton",
+
+      "https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-beton.html": "Jasa Perbaikan Kolom Beton",
+      "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-kolom-beton.html": "Jasa Perbaikan Struktur Kolom Beton",
+      "https://www.betonjayareadymix.com/p/jasa-perkuatan-kolom-beton-retak.html": "Jasa Perkuatan Kolom Beton Retak",
+
+   "https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-beton.html": "Jasa Perbaikan Balok Beton",
+    "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-balok-beton.html": "Jasa Perbaikan Struktur Balok Beton",
+    "https://www.betonjayareadymix.com/p/jasa-perkuatan-balok-beton.html": "Jasa Perkuatan Balok Beton",
+	
+    "https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-balok-beton.html": "Jasa Perbaikan Kolom & Balok Beton",
+
      "https://www.betonjayareadymix.com/p/jasa-jacketing-kolom-balok.html": "Jasa Jacketing Kolom & Balok",
      "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-cfrp.html": "Jasa Perkuatan Struktur dengan CFRP",
-   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-retak-struktur.html": "Jasa Renovasi Retak Struktur",
+   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-retak-struktur.html": "Jasa Renovasi Perbaikan Retak Struktur",
     
  
      //Perbaikan Struktur Retak & Kerusakan Beton
@@ -39,14 +54,12 @@ const urlMappingPerbaikanStruktur = {
    "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-keropos.html": "Jasa Perbaikan Beton Keropos",
    "https://www.betonjayareadymix.com/p/jasa-pengecoran-ulang-struktur.html": "Jasa Pengecoran Ulang Struktur",
 
-   "https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-beton.html": "Jasa Perbaikan Kolom Beton",
-   "https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-beton.html": "Jasa Perbaikan Balok Beton",
-    "https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-balok-beton.html": "Jasa Perbaikan Kolom & Balok Beton",
     "https://www.betonjayareadymix.com/p/jasa-perbaikan-retak-beton.html": "Jasa Perbaikan Retak Beton",
     "https://www.betonjayareadymix.com/p/jasa-repair-struktur-beton.html": "Jasa Repair Struktur Beton",
     "https://www.betonjayareadymix.com/p/jasa-renovasi-struktur-beton.html": "Jasa Renovasi Struktur Beton",
-    "https://www.betonjayareadymix.com/p/jasa-renovasi-balok-beton.html": "Jasa Renovasi Balok Beton",
-    "https://www.betonjayareadymix.com/p/jasa-renovasi-kolom-beton.html": "Jasa Renovasi Kolom Beton",
+    "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-beton.html": "Jasa Perbaikan Struktur Beton",
+    "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-beton.html": "Jasa Perkuatan Struktur Beton",
+	
     "https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-gantung.html": "Jasa Perbaikan Balok Gantung",
     "https://www.betonjayareadymix.com/p/jasa-beton-karbonasi.html": "Jasa Beton Karbonasi",
  
@@ -102,10 +115,12 @@ const urlMappingPerbaikanInfrastruktur = {
 const urlMappingPerbaikanFasadAtap = {
 //PERBAIKAN ATAP
 "https://www.betonjayareadymix.com/p/jasa-renovasi-atap.html": "Jasa Renovasi Atap",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-atap-gudang.html": "Jasa Renovasi Atap Gudang",
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-bocor.html": "Jasa Perbaikan Atap Bocor",
 "https://www.betonjayareadymix.com/p/jasa-renovasi-atap-baja-ringan.html": "Jasa Renovasi Atap Baja Ringan",
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-air.html": "Jasa Perbaikan Talang Air",
 "https://www.betonjayareadymix.com/p/jasa-renovasi-talang-air.html": "Jasa Renovasi Talang Air"
+	
 	
 };
 
@@ -120,7 +135,11 @@ const urlMappingPerbaikanGedung = {
 const urlMappingPerbaikanInterior = {
 //Atap dalam bangunan
  "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon.html": "Jasa Perbaikan Plafon",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-atap-gudang.html": "Jasa Renovasi Atap Gudang",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-plafon.html": "Jasa Renovasi Plafon",
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon-gypsum.html": "Jasa Perbaikan Plafon Gypsum",
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon-pvc.html": "Jasa Perbaikan Plafon Pvc",
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon-rusak-karena-bocor.html": "Jasa Perbaikan Plafon Rusak Karna Bocor",
+	
 //dinding dalam bangunan
 //dinding masuk interior dan fasad
  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding.html": "Jasa Renovasi Dinding",
@@ -278,9 +297,9 @@ if (!JasaKonsPerbaikanSub) {
         JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanAtapLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanAtap[cleanUrlJasaPerbaikanKonsSub];
+        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanFasadAtap[cleanUrlJasaPerbaikanKonsSub];
     }
-   if (urlMappingPerbaikanInterior [cleanUrlJasaPerbaikanKonsSub]) {
+   if (urlMappingPerbaikanInterior[cleanUrlJasaPerbaikanKonsSub]) {
         restoreCondition1('JasaKonsPerbaikanSub');
         restoreCondition1('JasaRenovasiPerbaikanInterior');
           // hapus elemen id DIV Lain
@@ -300,6 +319,48 @@ if (!JasaKonsPerbaikanSub) {
         JasaRenovasiPerbaikanInteriorLink.style.visibility = 'visible';
         pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanInterior[cleanUrlJasaPerbaikanKonsSub];
     }
+    /*
+     if (urlMappingPerbaikanRumah[cleanUrlJasaPerbaikanKonsSub]) {
+        restoreCondition1('JasaKonsPerbaikanSub');
+        restoreCondition1('JasaRenovasiPerbaikanInterior');
+          // hapus elemen id DIV Lain
+        removeCondition1('materialKonsReadymix');
+        removeCondition1('ProdukKonsSaluran');
+        removeCondition1('ProdukKonsPembatas');
+        removeCondition1('JasaKonsPembatas');
+	removeCondition1('JasaKons');
+        
+       // hapus elemen JasaPerbaikanKons Lain
+        removeCondition1('JasaRenovasiPerbaikanStruktur');
+        removeCondition1('JasaRenovasiPerbaikanInfrastruktur');
+         removeCondition1('JasaRenovasiPerbaikanAtap');
+
+        JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
+        JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
+        JasaRenovasiPerbaikanInteriorLink.style.visibility = 'visible';
+        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanRumah[cleanUrlJasaPerbaikanKonsSub];
+    }
+   if (urlMappingPerbaikanGedung[cleanUrlJasaPerbaikanKonsSub]) {
+        restoreCondition1('JasaKonsPerbaikanSub');
+        restoreCondition1('JasaRenovasiPerbaikanInterior');
+          // hapus elemen id DIV Lain
+        removeCondition1('materialKonsReadymix');
+        removeCondition1('ProdukKonsSaluran');
+        removeCondition1('ProdukKonsPembatas');
+        removeCondition1('JasaKonsPembatas');
+	removeCondition1('JasaKons');
+        
+       // hapus elemen JasaPerbaikanKons Lain
+        removeCondition1('JasaRenovasiPerbaikanStruktur');
+        removeCondition1('JasaRenovasiPerbaikanInfrastruktur');
+         removeCondition1('JasaRenovasiPerbaikanAtap');
+
+        JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
+        JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
+        JasaRenovasiPerbaikanInteriorLink.style.visibility = 'visible';
+        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanGedung[cleanUrlJasaPerbaikanKonsSub];
+    }
+  */
 }
 	
    });
