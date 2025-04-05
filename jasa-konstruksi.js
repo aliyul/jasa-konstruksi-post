@@ -168,7 +168,7 @@ console.error("elemen Id JasaKons kondisi terhapus");
 	    
         pageNameKonstruksi.textContent = urlMappingPerbaikan[cleanUrlJasaKons];
     }
-    if (urlMappingStruktur[cleanUrlJasaPerbaikanKons]) {
+    if (urlMappingStruktur[cleanUrlJasaKons]) {
         restoreCondition('JasaKons');
 	restoreCondition('JasaStrukturKonstruksi');
            // hapus elemen id DIV Lain
@@ -236,7 +236,7 @@ console.error("elemen Id JasaKons kondisi terhapus");
         JasaPondasiPerkuatanLink.style.visibility = 'visible';
         pageNameKonstruksi.textContent = urlMappingPondasi[cleanUrlJasaKons];
     }
-    if (urlMappingSaluran[cleanUrlJasaPerbaikanKons]) {
+    if (urlMappingSaluran[cleanUrlJasaKons]) {
         restoreCondition('JasaKons');
 	 restoreCondition('JasaSaluranDrainase');
            // hapus elemen id DIV Lain
