@@ -47,6 +47,12 @@ const urlMappingSaluran = {
 };
 
 const urlMappingJalan = {
+"https://www.betonjayareadymix.com/p/jasa-pengecoran-jalan-beton.html": "Jasa Pengecoran Jalan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-pengaspalan-jalan.html": "Jasa Pengaspalan Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-pemadatan-tanah.html": "Jasa Pemadatan Tanah",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-jalan-setapak-dan-trotoar.html": "Jasa Pembuatan Jalan Setapak dan Trotoar",
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-paving-block.html": "Jasa Pemasangan Paving Block",
+  "https://www.betonjayareadymix.com/p/jasa-pembangunan-infrastruktur-jalan.html": "Jasa Pembangunan Infrastruktur Jalan"
 
 };
 
