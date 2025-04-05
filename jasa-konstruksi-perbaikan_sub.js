@@ -73,6 +73,8 @@ const urlMappingPerbaikanStruktur = {
  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-lembab.html": "Jasa Perbaikan Dinding Lembab",
  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-tua.html": "Jasa Perbaikan Struktur Bangunan Tua",
  "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-bangunan.html": "Jasa Renovasi Dinding Bangunan",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding.html": "Jasa Renovasi Perbaikan Dinding",
+
 
 "https://www.betonjayareadymix.com/p/jasa-bobok-tembok.html": "Jasa Bobok Tembok",
  "https://www.betonjayareadymix.com/p/harga-jasa-bobok-tembok.html": "Harga Jasa Bobok Tembok",
