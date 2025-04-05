@@ -303,7 +303,7 @@ console.error("elemen Id JasaKons kondisi terhapus");
         pageNameKonstruksi.textContent = urlMappingPembatas[cleanUrlJasaKons];
     }
 
-    if (urlMappingCustome[cleanUrlJasaKons]) {
+    if (urlMappingCustom[cleanUrlJasaKons]) {
         restoreCondition('JasaKons');
 	restoreCondition('JasaKonstruksiCustom');
            // hapus elemen id DIV Lain
@@ -323,6 +323,6 @@ console.error("elemen Id JasaKons kondisi terhapus");
 
         JasaKonstruksiLink.style.visibility = 'visible';
         JasaKonstruksiCustomLink.style.visibility = 'visible';
-        pageNameKonstruksi.textContent = urlMappingCustome[cleanUrlJasaKons];
+        pageNameKonstruksi.textContent = urlMappingCustom[cleanUrlJasaKons];
     }
    });
