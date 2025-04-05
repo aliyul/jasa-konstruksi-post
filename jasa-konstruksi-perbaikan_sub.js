@@ -196,7 +196,7 @@ if (!JasaKonsPerbaikanSub) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
-	removeCondition1('JasaKonsPerbaikan');
+	removeCondition1('JasaKons');
 	
         removeCondition1('JasaRenovasiPerbaikanInfrastruktur');
         removeCondition1('JasaRenovasiPerbaikanAtap');
@@ -216,7 +216,7 @@ if (!JasaKonsPerbaikanSub) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
-	     removeCondition1('JasaKonsPerbaikan');
+	removeCondition1('JasaKons');
 
         // hapus elemen JasaPerbaikanKons Lain
         removeCondition1('JasaRenovasiPerbaikanStruktur');
@@ -237,7 +237,7 @@ if (!JasaKonsPerbaikanSub) {
        removeCondition1('ProdukKonsSaluran');
        removeCondition1('ProdukKonsPembatas');
        removeCondition1('JasaKonsPembatas');
-       removeCondition1('JasaKonsPerbaikan');
+       removeCondition1('JasaKons');
     
         // hapus elemen JasaPerbaikanKons Lain
         removeCondition1('JasaRenovasiPerbaikanStruktur');
@@ -257,7 +257,7 @@ if (!JasaKonsPerbaikanSub) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
-	removeCondition1('JasaKonsPerbaikan');
+	removeCondition1('JasaKons');
         
        // hapus elemen JasaPerbaikanKons Lain
         removeCondition1('JasaRenovasiPerbaikanStruktur');
