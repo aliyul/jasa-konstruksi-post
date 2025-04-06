@@ -186,7 +186,7 @@ console.error("elemen Id JasaKonsSub kondisi terhapus");
        // hapus elemen id DIV Lain
 
         JasaKonstruksiLink.style.visibility = 'visible';
-        pageNameKonstruksi.textContent = urlMappingCustom[cleanUrlJasaKons];
+        pageNameKonstruksi.textContent = urlMappingJasaKons[cleanUrlJasaKons];
     }
 
     if (urlMappingPerbaikan[cleanUrlJasaKons]) {
