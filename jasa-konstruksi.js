@@ -11,6 +11,7 @@ const urlMappingJasaKons = {
 
 //jasa secara umum
  "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html": "Jasa Alat Konstruksi",
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-indonesia.html": "Jasa Konstruksi Indonesia"
 
 //panduan
 
