@@ -132,13 +132,17 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     */
 	
-if (!JasaKons) {
-console.error("elemen Id JasaKons kondisi terhapus");
+if (!JasaKons && !JasaKons) {
+console.error("elemen Id JasaKons dan Id JasaKonsSub kondisi terhapus");
         return;
 }
-if (!JasaKonsSub) {
-console.error("elemen Id JasaKonsSub kondisi terhapus");
-        return;
+if (!JasaKons || !JasaKonsSub) {
+	if (!JasaKons) {
+	console.error("elemen Id JasaKons kondisi terhapus");
+	}
+	if (!JasaKonsSub) {
+	console.error("elemen Id JasaKonsSub kondisi terhapus");
+}
 }
 	//bagian2 dari jasa konstruksi umum dan panduan
 	var JasaKonstruksiLink = document.getElementById("JasaKonstruksi");
