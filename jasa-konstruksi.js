@@ -170,6 +170,7 @@ console.error("elemen Id JasaKonsSub kondisi terhapus");
 	JasaPembatasPengamanLink.style.visibility = 'hidden';
 	JasaKonstruksiCustomLink.style.visibility = 'hidden';
      pageNameKonstruksi.textContent = "";
+      pageNameKonstruksiSub.textContent = "";
 	
     if (urlMappingJasaKons[cleanUrlJasaKons]) {
         restoreCondition('JasaKons');
