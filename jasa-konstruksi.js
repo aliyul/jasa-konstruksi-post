@@ -11,9 +11,19 @@ const urlMappingJasaKons = {
 
 //jasa secara umum
  "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html": "Jasa Alat Konstruksi",
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-indonesia.html": "Jasa Konstruksi Indonesia"
+ "https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html": "Jasa Konstruksi Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-infrastruktur.html": "Jasa Konstruksi Infrastruktur",
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-indonesia.html": "Jasa Konstruksi Indonesia",
+//panduan jasa konstruksi
+  "https://www.betonjayareadymix.com/p/panduan-membangun-bangunan.html": "Panduan Membangun Bangunan",
+  "https://www.betonjayareadymix.com/p/panduan-renovasi-bangunan.html": "Panduan Renovasi Bangunan",
+  "https://www.betonjayareadymix.com/p/panduan-perbaikan-bangunan.html": "Panduan Perbaikan Bangunan",
+  "https://www.betonjayareadymix.com/p/panduan-finishing-bangunan.html": "Panduan Finishing Bangunan",
 
-//panduan
+  "https://www.betonjayareadymix.com/p/panduan-pembuatan-infrastruktur.html": "Panduan Pembuatan Infrastruktur",
+  "https://www.betonjayareadymix.com/p/panduan-renovasi-infrastruktur.html": "Panduan Renovasi Infrastruktur",
+  "https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur",
+  "https://www.betonjayareadymix.com/p/panduan-finishing-infrastruktur.html": "Panduan Finishing Infrastruktur"
 
 };
 
