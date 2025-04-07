@@ -177,7 +177,7 @@ if (!JasaKons || !JasaKonsSub) {
 	var JasaSaluranDrainaseLink = document.getElementById("JasaSaluranDrainase");
 	var JasaJalanPerkerasanLink = document.getElementById("JasaJalanPerkerasan");
 	var JasaPembatasPengamanLink = document.getElementById("JasaPembatasPengaman");
-	var JasaKonstruksiCustomLink = document.getElementById("JasaKonstruksiCustom");
+	//var JasaKonstruksiCustomLink = document.getElementById("JasaKonstruksiCustom");
 	
      var pageNameKonstruksi = document.getElementById("pageNameKonstruksi");
      var pageNameKonstruksiSub = document.getElementById("pageNameKonstruksiSub");
@@ -193,7 +193,7 @@ if (!JasaKons || !JasaKonsSub) {
 	JasaSaluranDrainaseLink.style.visibility = 'hidden';
 	JasaJalanPerkerasanLink.style.visibility = 'hidden';
 	JasaPembatasPengamanLink.style.visibility = 'hidden';
-	JasaKonstruksiCustomLink.style.visibility = 'hidden';
+	//JasaKonstruksiCustomLink.style.visibility = 'hidden';
      pageNameKonstruksi.textContent = "";
       pageNameKonstruksiSub.textContent = "";
 	
@@ -233,7 +233,6 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaSaluranDrainase');
         removeCondition('JasaJalanPerkerasan');
         removeCondition('JasaPembatasPengaman');
-        removeCondition('JasaKonstruksiCustom');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
@@ -258,7 +257,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaSaluranDrainase');
         removeCondition('JasaJalanPerkerasan');
         removeCondition('JasaPembatasPengaman');
-        removeCondition('JasaKonstruksiCustom');
+       // removeCondition('JasaKonstruksiCustom');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaStrukturKonstruksiLink.style.visibility = 'visible';
@@ -282,7 +281,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaSaluranDrainase');
         removeCondition('JasaJalanPerkerasan');
         removeCondition('JasaPembatasPengaman');
-        removeCondition('JasaKonstruksiCustom');
+       // removeCondition('JasaKonstruksiCustom');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaFinishingLink.style.visibility = 'visible';
@@ -306,7 +305,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaSaluranDrainase');
         removeCondition('JasaJalanPerkerasan');
         removeCondition('JasaPembatasPengaman');
-        removeCondition('JasaKonstruksiCustom');
+       // removeCondition('JasaKonstruksiCustom');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaPondasiPerkuatanLink.style.visibility = 'visible';
@@ -329,7 +328,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaPondasiPerkuatan');
         removeCondition('JasaJalanPerkerasan');
         removeCondition('JasaPembatasPengaman');
-        removeCondition('JasaKonstruksiCustom');
+       // removeCondition('JasaKonstruksiCustom');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaSaluranDrainaseLink.style.visibility = 'visible';
@@ -352,7 +351,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaPondasiPerkuatan');
         removeCondition('JasaSaluranDrainase');
         removeCondition('JasaPembatasPengaman');
-        removeCondition('JasaKonstruksiCustom');
+        //removeCondition('JasaKonstruksiCustom');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaJalanPerkerasanLink.style.visibility = 'visible';
@@ -375,13 +374,13 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaPondasiPerkuatan');
         removeCondition('JasaSaluranDrainase');
         removeCondition('JasaJalanPerkerasan');
-        removeCondition('JasaKonstruksiCustom');
+       // removeCondition('JasaKonstruksiCustom');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaPembatasPengamanLink.style.visibility = 'visible';
         pageNameKonstruksiSub.textContent = urlMappingPembatas[cleanUrlJasaKons];
     }
-
+/*
     if (urlMappingCustom[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaKonstruksiCustom');
@@ -405,4 +404,5 @@ if (!JasaKons || !JasaKonsSub) {
         JasaKonstruksiCustomLink.style.visibility = 'visible';
         pageNameKonstruksiSub.textContent = urlMappingCustom[cleanUrlJasaKons];
     }
+    */
    });
