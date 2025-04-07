@@ -112,7 +112,12 @@ const urlMappingPerbaikanStruktur = {
 //Jasa Renovasi Perbaikan Infrastruktur
 const urlMappingPerbaikanInfrastruktur = {
 
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-perawatan-jalan.html": "Jasa Perbaikan dan Perawatan Jalan"
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-perawatan-jalan.html": "Jasa Perbaikan dan Perawatan Jalan",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-trotoar.html": "Jasa Renovasi Perbaikan Trotoar",
+// "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jalan-berlubang.html": "Jasa Renovasi Perbaikan Jalan Berlubang",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jembatan.html": "Jasa Renovasi Perbaikan Jembatan",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jalan.html": "Jasa Renovasi Perbaikan Jalan"
+
 };
 
 
@@ -147,8 +152,9 @@ const urlMappingPerbaikanBangunan = {
 //Jasa Renovasi Perbaikan Elemen Pendukung
 const urlMappingPerbaikanFasilitasUmum = {
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-taman-kota.html": "Jasa Renovasi Perbaikan Taman Kota",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-trotoar.html": "Jasa Renovasi Perbaikan Trotoar"
-
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-sekolah.html": "Jasa Renovasi Perbaikan Sekolah",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-stadion-olahraga.html": "Renovasi Perbaikan Stadion Olah Raga"
+	
 };
 
 //Jasa Renovasi dan Perbaikan Interior
