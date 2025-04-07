@@ -115,13 +115,6 @@ const urlMappingPerbaikanInfrastruktur = {
  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-perawatan-jalan.html": "Jasa Perbaikan dan Perawatan Jalan"
 };
 
-//Jasa Renovasi Elemen Pendukung
-const urlMappingPerbaikanAtap = {
-
-	
-	
-};
-
 
 //Jasa Renovasi Perbaikan Fasad Eksterior
 const urlMappingPerbaikanFasadEksterior = {
