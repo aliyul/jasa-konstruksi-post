@@ -29,8 +29,6 @@ const urlMappingJasaKons = {
 
 const urlMappingPerbaikan = {
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-renovasi-pagar.html": "Jasa Perbaikan dan Renovasi Pagar",
-    "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-renovasi-interior.html": "Jasa Perbaikan dan Renovasi Interior",
-    "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-fasad-eksterior.html": "Jasa Renovasi Perbaikan Fasad Eksterior",
     "https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat Ibadah",
     "https://www.betonjayareadymix.com/p/jasa-renovasi-atap.html": "Jasa Renovasi Atap",
  "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung-kantor.html": "Jasa Renovasi Gedung Kantor",
@@ -41,8 +39,13 @@ const urlMappingPerbaikan = {
     "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-renovasi-sekolah.html": "Jasa Perbaikan dan Renovasi Sekolah",
     "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-apartemen.html": "Jasa Renovasi Hotel Apartemen",
  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah.html": "Jasa Renovasi Rumah",
-    "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-infrastruktur.html": "Jasa Renovasi Perbaikan Infrastruktur",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-struktur.html": "Jasa Renovasi Perbaikan Struktur"
+
+	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-elemen-pendukung.html": "Jasa Renovasi Elemen Pendukung",
+	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-bangunan.html": "Jasa Renovasi Perbaikan Bangunan",
+	 "https://www.betonjayareadymix.com/p/jasa-renovasi-dan-perbaikan-interior.html": "Jasa Renovasi dan Perbaikan Interior",
+	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-fasad-eksterior.html": "Jasa Renovasi Perbaikan Fasad Eksterior",
+	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-infrastruktur.html": "Jasa Renovasi Perbaikan Infrastruktur",
+	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-struktur.html": "Jasa Renovasi Perbaikan Struktur"
   //  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding.html": "Jasa Renovasi Perbaikan Dinding"
 
 };
@@ -105,10 +108,12 @@ const urlMappingPembatas = {
   "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html": "Jasa Pembuatan Pagar Dinding Pembatas"
 
 };
-
+/*
 const urlMappingCustom = {
 
 };
+*/
+
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPerbaikanKons = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
