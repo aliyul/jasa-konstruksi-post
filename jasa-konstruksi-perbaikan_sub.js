@@ -1,4 +1,5 @@
 
+//Jasa Renovasi Perbaikan Struktur
 const urlMappingPerbaikanStruktur = {
 //Jasa Penguatan & Perbaikan Pondasi
    "https://www.betonjayareadymix.com/p/jasa-perbaikan-retak-struktur.html": "Jasa Perbaikan Retak Struktur",
@@ -107,37 +108,42 @@ const urlMappingPerbaikanStruktur = {
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-rangka-atap-baja-ringan.html": "Jasa Perbaikan Rangka Atap Baja Ringan"
  
 };
+
+//Jasa Renovasi Perbaikan Infrastruktur
 const urlMappingPerbaikanInfrastruktur = {
 
  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-perawatan-jalan.html": "Jasa Perbaikan dan Perawatan Jalan"
 };
 
+//Jasa Renovasi Elemen Pendukung
 const urlMappingPerbaikanAtap = {
-//PERBAIKAN ATAP
-//"https://www.betonjayareadymix.com/p/jasa-renovasi-atap.html": "Jasa Renovasi Atap",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-atap-gudang.html": "Jasa Renovasi Atap Gudang",
+
+	
+	
+};
+
+
+//Jasa Renovasi Perbaikan Fasad Eksterior
+const urlMappingPerbaikanFasadEksterior = {
+//PERBAIKAN EKSTERIOR
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap.html": "Jasa Renovasi Perbaikan Atap",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-gudang.html": "Jasa Renovasi Perbaikan Atap Gudang",
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-bocor.html": "Jasa Perbaikan Atap Bocor",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-atap-baja-ringan.html": "Jasa Renovasi Atap Baja Ringan",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-baja-ringan.html": "Jasa Renovasi Perbaikan Atap Baja Ringan",
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-air.html": "Jasa Perbaikan Talang Air",
 "https://www.betonjayareadymix.com/p/jasa-renovasi-talang-air.html": "Jasa Renovasi Talang Air"
-	
-	
-};
 
-const urlMappingPerbaikanFasadEksterior = {
 //PERBAIKAN Fasad
 	
-	
 };
 
-/*
-const urlMappingPerbaikanRumah = {
+
+//Jasa Renovasi Perbaikan Bangunan
+const urlMappingPerbaikanBangunan = {
 
 };
-const urlMappingPerbaikanGedung = {
-  
-}; */
 
+//Jasa Renovasi dan Perbaikan Interior
 const urlMappingPerbaikanInterior = {
 //Atap dalam bangunan
  "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon.html": "Jasa Perbaikan Plafon",
