@@ -27,20 +27,8 @@ const urlMappingJasaKons = {
 
 };
 
-const urlMappingPerbaikan = {
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-renovasi-pagar.html": "Jasa Perbaikan dan Renovasi Pagar",
-    "https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat Ibadah",
-    "https://www.betonjayareadymix.com/p/jasa-renovasi-atap.html": "Jasa Renovasi Atap",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung-kantor.html": "Jasa Renovasi Gedung Kantor",
-    "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-dan-drainase.html": "Jasa Perbaikan Saluran dan Drainase",
-    "https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-umum.html": "Jasa Renovasi Fasilitas Umum",
-    "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-renovasi-pabrik.html": "Jasa Perbaikan dan Renovasi Pabrik",
-    "https://www.betonjayareadymix.com/p/jasa-renovasi-dan-perbaikan-kolam-renang.html": "Jasa Renovasi dan Perbaikan Kolam Renang",
-    "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-renovasi-sekolah.html": "Jasa Perbaikan dan Renovasi Sekolah",
-    "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-apartemen.html": "Jasa Renovasi Hotel Apartemen",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah.html": "Jasa Renovasi Rumah",
-
-	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-elemen-pendukung.html": "Jasa Renovasi Elemen Pendukung",
+const urlMappingPerbaikan = {	
+	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-fasilitas-umum.html": "Jasa Renovasi Perbaikan Fasilitas Umum",
 	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-bangunan.html": "Jasa Renovasi Perbaikan Bangunan",
 	 "https://www.betonjayareadymix.com/p/jasa-renovasi-dan-perbaikan-interior.html": "Jasa Renovasi dan Perbaikan Interior",
 	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-fasad-eksterior.html": "Jasa Renovasi Perbaikan Fasad Eksterior",
