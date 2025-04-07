@@ -126,21 +126,34 @@ const urlMappingPerbaikanAtap = {
 //Jasa Renovasi Perbaikan Fasad Eksterior
 const urlMappingPerbaikanFasadEksterior = {
 //PERBAIKAN EKSTERIOR
+	//atap
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap.html": "Jasa Renovasi Perbaikan Atap",
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-gudang.html": "Jasa Renovasi Perbaikan Atap Gudang",
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-bocor.html": "Jasa Perbaikan Atap Bocor",
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-baja-ringan.html": "Jasa Renovasi Perbaikan Atap Baja Ringan",
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-air.html": "Jasa Perbaikan Talang Air",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-talang-air.html": "Jasa Renovasi Talang Air"
+"https://www.betonjayareadymix.com/p/jasa-renovasi-talang-air.html": "Jasa Renovasi Talang Air",
+	//pagar
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-renovasi-pagar.html": "Jasa Perbaikan dan Renovasi Pagar",
 
-//PERBAIKAN Fasad
+	//saluran
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-dan-drainase.html": "Jasa Perbaikan Saluran dan Drainase",
 	
 };
 
-
 //Jasa Renovasi Perbaikan Bangunan
 const urlMappingPerbaikanBangunan = {
+"https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat Ibadah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-pabrik.html": "Jasa Renovasi Perbaikan Pabrik",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-rumah.html": "Jasa Renovasi Perbaikan Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-kantor.html": "Jasa Renovasi Perbaikan Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-gedung.html": "Jasa Renovasi Perbaikan Gedung"
 
+};
+
+//Jasa Renovasi Perbaikan Elemen Pendukung
+const urlMappingPerbaikanFasilitas Umum = {
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-fasilitas-umum.html": "Jasa Renovasi Perbaikan Fasilitas Umum"
 };
 
 //Jasa Renovasi dan Perbaikan Interior
