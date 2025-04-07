@@ -5,6 +5,7 @@ const urlMappingPerbaikanStruktur = {
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-struktur-umum.html": "Jasa Renovasi Perbaikan Struktur Umum",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-balok-beton.html": "Jasa Perbaikan Struktur Kolom Balok Beton",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-struktur.html": "Jasa Perbaikan Pondasi Struktur",
+	//baru sampai lantai beton besok lanjut lantai beton url anak nya
  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-lantai-beton.html": "Jasa Perbaikan Pondasi Struktur",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-besar.html": "Jasa Perbaikan Struktur Bangunan Besar",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-dinding.html": "Jasa Perbaikan Struktur Dinding",
