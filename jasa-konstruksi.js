@@ -74,6 +74,13 @@ const urlMappingStruktur = {
 };
 
 const urlMappingPondasi = {
+"https://www.betonjayareadymix.com/p/jasa-pondasi-bangunan.html": "Jasa Pondasi Bangunan",
+//Jasa Perkuatan dan Stabilisasi Tanah tidak di masukkan karna sudah ada di artikel lain yaitu
+//Jasa Perkuatan Tanah dan Jasa Pemadatan dan Persiapan Lahan yang kedua nya bisa mencakup
+ //"https://www.betonjayareadymix.com/p/jasa-perkuatan-dan-stabilisasi-tanah.html": "Jasa Perkuatan dan Stabilisasi Tanah",
+  "https://www.betonjayareadymix.com/p/jasa-pemadatan-dan-persiapan-lahan.html": "Jasa Pemadatan dan Persiapan Lahan",
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah.html": "Jasa Perkuatan Tanah",
+  "https://www.betonjayareadymix.com/p/jasa-retrofitting-pondasi.html": "Jasa Retrofitting Pondasi"
 
 };
 
