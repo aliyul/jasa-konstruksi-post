@@ -153,7 +153,9 @@ const urlMappingPerbaikanBangunan = {
 
 //Jasa Renovasi Perbaikan Elemen Pendukung
 const urlMappingPerbaikanFasilitas Umum = {
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-fasilitas-umum.html": "Jasa Renovasi Perbaikan Fasilitas Umum"
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-taman-kota.html": "Jasa Renovasi Perbaikan Taman Kota",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-trotoar.html": "Jasa Renovasi Perbaikan Trotoar"
+
 };
 
 //Jasa Renovasi dan Perbaikan Interior
