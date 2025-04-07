@@ -391,6 +391,8 @@ if (!JasaKonsPerbaikanSub) {
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
 	removeCondition1('JasaKons');
+	removeCondition1('JasaKonsSub');
+	
         
        // hapus elemen JasaPerbaikanKons Lain
         removeCondition1('JasaRenovasiPerbaikanStruktur');
