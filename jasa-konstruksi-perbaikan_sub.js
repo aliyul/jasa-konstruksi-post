@@ -59,6 +59,11 @@ const urlMappingPerbaikanInfrastruktur = {
 
 //Jasa Renovasi Perbaikan Fasad Eksterior
 const urlMappingPerbaikanFasadEksterior = {
+//utama
+"https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-bangunan.html": "Jasa Renovasi Fasad Bangunan",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-eksterior-bangunan.html": "Jasa Renovasi Eksterior Bangunan",
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-arsitektur-eksterior.html": "Jasa Perbaikan Arsitektur Eksterior"
+/*
 //PERBAIKAN EKSTERIOR
 	//atap
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap.html": "Jasa Renovasi Perbaikan Atap",
@@ -72,7 +77,7 @@ const urlMappingPerbaikanFasadEksterior = {
 
 	//saluran
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-dan-drainase.html": "Jasa Perbaikan Saluran dan Drainase",
-	
+*/
 };
 
 //Jasa Renovasi Perbaikan Bangunan
@@ -81,7 +86,9 @@ const urlMappingPerbaikanBangunan = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-pabrik.html": "Jasa Renovasi Perbaikan Pabrik",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-rumah.html": "Jasa Renovasi Perbaikan Rumah",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-kantor.html": "Jasa Renovasi Perbaikan Kantor",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-gedung.html": "Jasa Renovasi Perbaikan Gedung"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-gedung.html": "Jasa Renovasi Perbaikan Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-gudang.html": "Jasa Renovasi Perbaikan Gudang",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-hotel-apartemen.html": "Jasa Renovasi Perbaikan Hotel Apartemen"
 
 };
 
@@ -89,7 +96,10 @@ const urlMappingPerbaikanBangunan = {
 const urlMappingPerbaikanFasilitasUmum = {
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-taman-kota.html": "Jasa Renovasi Perbaikan Taman Kota",
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-sekolah.html": "Jasa Renovasi Perbaikan Sekolah",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-stadion-olahraga.html": "Renovasi Perbaikan Stadion Olah Raga"
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-stadion-olahraga.html": "Jasa Renovasi Perbaikan Stadion Olah Raga",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-tempat-ibadah.html": "Jasa Renovasi Perbaikan Tempat Ibadah",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-terminal.html": "Jasa Renovasi Perbaikan Terminal",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-halte.html": "Jasa Renovasi Perbaikan Halte"
 	
 };
 
