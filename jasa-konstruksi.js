@@ -1,19 +1,24 @@
  // Cek URL saat ini dan sesuaikan dengan kondisi yang diinginkan
 const urlMappingJasaKons = {
 //aplikasi nya
+"https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html": "Jasa Alat Konstruksi",
 "https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html": "Jasa Struktur Konstruksi",
 "https://www.betonjayareadymix.com/p/jasa-pondasi-perkuatan-tanah.html": "Jasa Pondasi Perkuatan Tanah",
   "https://www.betonjayareadymix.com/p/jasa-saluran-drainase.html": "Jasa Saluran Drainase",
   "https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html": "Jasa Jalan Perkerasan",
   "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html": "Jasa Pembatas Pengaman",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan.html": "Jasa Renovasi Perbaikan",
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-custom.html": "Jasa Konstruksi Custom",
+  "https://www.betonjayareadymix.com/p/jasa-finishing.html": "Jasa Finishing",
+	
+  //"https://www.betonjayareadymix.com/p/jasa-konstruksi-custom.html": "Jasa Konstruksi Custom",
 
 //jasa secara umum
+/*
  "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html": "Jasa Alat Konstruksi",
  "https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html": "Jasa Konstruksi Bangunan",
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-infrastruktur.html": "Jasa Konstruksi Infrastruktur",
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-indonesia.html": "Jasa Konstruksi Indonesia",
+  */
 //panduan jasa konstruksi
   "https://www.betonjayareadymix.com/p/panduan-membangun-bangunan.html": "Panduan Membangun Bangunan",
   "https://www.betonjayareadymix.com/p/panduan-renovasi-bangunan.html": "Panduan Renovasi Bangunan",
@@ -39,6 +44,10 @@ const urlMappingPerbaikan = {
 };
 
 const urlMappingFinishing = {
+"https://www.betonjayareadymix.com/p/jasa-finishing-interior.html": "Jasa Finishing Interior",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html": "Jasa Finishing Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur"
+/*
  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html": "Jasa Finishing Dinding",
  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html": "Jasa Finishing Lantai",
  "https://www.betonjayareadymix.com/p/jasa-finishing-atap.html": "Jasa Finishing Atap",
@@ -50,7 +59,7 @@ const urlMappingFinishing = {
  "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html": "Jasa Finishing Infrastruktur",
  "https://www.betonjayareadymix.com/p/jasa-finishing-pintu-keamanan.html": "Jasa Finishing Pintu Keamanan Otomatisasi",
  "https://www.betonjayareadymix.com/p/jasa-finishing-akustik-peredam.html": "Jasa Finishing Akustik Peredam"
-	
+*/
 };
 
 const urlMappingStruktur = {
