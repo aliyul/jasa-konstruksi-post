@@ -105,6 +105,15 @@ const urlMappingPerbaikanFasilitasUmum = {
 
 //Jasa Renovasi dan Perbaikan Interior
 const urlMappingPerbaikanInterior = {
+"https://www.betonjayareadymix.com/p/jasa-renovasi-interior-rumah.html": "Jasa Renovasi Interior Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-kantor.html": "Jasa Renovasi Interior Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-apartemen.html": "Jasa Renovasi Interior Apartemen",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-hotel.html": "Jasa Renovasi Interior Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-toko.html": "Jasa Renovasi Interior Toko",
+  "https://www.betonjayareadymix.com/p/jasa-desain-interior-custom.html": "Jasa Desain Interior Custom",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruangan.html": "Jasa Renovasi Interior Ruangan"
+
+/*
 //Atap dalam bangunan
  "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon.html": "Jasa Perbaikan Plafon",
  "https://www.betonjayareadymix.com/p/jasa-renovasi-plafon.html": "Jasa Renovasi Plafon",
@@ -137,6 +146,7 @@ const urlMappingPerbaikanInterior = {
 
 //KERAMIK
  "https://www.betonjayareadymix.com/p/jasa-bongkar-keramik.html": "Jasa Bongkar Keramik"
+ */
 };
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPerbaikanKons1 = {};
