@@ -216,6 +216,8 @@ if (!JasaKons || !JasaKonsSub) {
 	var JasaPondasiPerkuatanLink = document.getElementById("JasaPondasiPerkuatan");
 	var JasaSaluranDrainaseLink = document.getElementById("JasaSaluranDrainase");
 	var JasaJalanPerkerasanLink = document.getElementById("JasaJalanPerkerasan");
+	var JasaPematanganLahanLink = document.getElementById("JasaPematanganLahan");
+	var JasaUjiTanahLink = document.getElementById("JasaUjiTanah");
 	var JasaPembatasPengamanLink = document.getElementById("JasaPembatasPengaman");
 	//var JasaKonstruksiCustomLink = document.getElementById("JasaKonstruksiCustom");
 	
@@ -232,6 +234,8 @@ if (!JasaKons || !JasaKonsSub) {
 	JasaPondasiPerkuatanLink.style.visibility = 'hidden';
 	JasaSaluranDrainaseLink.style.visibility = 'hidden';
 	JasaJalanPerkerasanLink.style.visibility = 'hidden';
+	JasaPematanganLahanLink.style.visibility = 'hidden';
+	JasaUjiTanahLink.style.visibility = 'hidden';
 	JasaPembatasPengamanLink.style.visibility = 'hidden';
 	//JasaKonstruksiCustomLink.style.visibility = 'hidden';
      pageNameKonstruksi.textContent = "";
@@ -272,6 +276,8 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaPondasiPerkuatan');
         removeCondition('JasaSaluranDrainase');
         removeCondition('JasaJalanPerkerasan');
+	removeCondition('JasaPematanganLahan');
+	removeCondition('JasaUjiTanah');
         removeCondition('JasaPembatasPengaman');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
@@ -296,6 +302,8 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaPondasiPerkuatan');
         removeCondition('JasaSaluranDrainase');
         removeCondition('JasaJalanPerkerasan');
+	removeCondition('JasaPematanganLahan');
+	removeCondition('JasaUjiTanah');
         removeCondition('JasaPembatasPengaman');
        // removeCondition('JasaKonstruksiCustom');
 
@@ -320,6 +328,8 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaPondasiPerkuatan');
         removeCondition('JasaSaluranDrainase');
         removeCondition('JasaJalanPerkerasan');
+	removeCondition('JasaPematanganLahan');
+	removeCondition('JasaUjiTanah');
         removeCondition('JasaPembatasPengaman');
        // removeCondition('JasaKonstruksiCustom');
 
@@ -344,6 +354,8 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaFinishing');
         removeCondition('JasaSaluranDrainase');
         removeCondition('JasaJalanPerkerasan');
+	removeCondition('JasaPematanganLahan');
+	removeCondition('JasaUjiTanah');
         removeCondition('JasaPembatasPengaman');
        // removeCondition('JasaKonstruksiCustom');
 
@@ -367,6 +379,8 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaFinishing');
         removeCondition('JasaPondasiPerkuatan');
         removeCondition('JasaJalanPerkerasan');
+	removeCondition('JasaPematanganLahan');
+	removeCondition('JasaUjiTanah');
         removeCondition('JasaPembatasPengaman');
        // removeCondition('JasaKonstruksiCustom');
 
@@ -391,6 +405,8 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaPondasiPerkuatan');
         removeCondition('JasaSaluranDrainase');
         removeCondition('JasaPembatasPengaman');
+	removeCondition('JasaPematanganLahan');
+	removeCondition('JasaUjiTanah');
         //removeCondition('JasaKonstruksiCustom');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
@@ -414,11 +430,69 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaPondasiPerkuatan');
         removeCondition('JasaSaluranDrainase');
         removeCondition('JasaJalanPerkerasan');
+	removeCondition('JasaPematanganLahan');
+	removeCondition('JasaUjiTanah');
+
        // removeCondition('JasaKonstruksiCustom');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaPembatasPengamanLink.style.visibility = 'visible';
         pageNameKonstruksiSub.textContent = urlMappingPembatas[cleanUrlJasaKons];
+    }
+
+    
+    if (urlMappingPematanganLahan[cleanUrlJasaKons]) {
+        restoreCondition('JasaKonsSub');
+	restoreCondition('JasaPematanganLahan');
+           // hapus elemen id DIV Lain
+        removeCondition('materialKonsReadymix');
+        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsPerbaikanSub');
+	removeCondition('JasaKons');
+       // hapus elemen id DIV Lain
+	removeCondition('JasaRenovasiPerbaikan');
+        removeCondition('JasaStrukturKonstruksi');
+        removeCondition('JasaFinishing');
+        removeCondition('JasaPondasiPerkuatan');
+        removeCondition('JasaSaluranDrainase');
+        removeCondition('JasaJalanPerkerasan');
+	removeCondition('JasaPembatasPengaman');
+	removeCondition('JasaUjiTanah');
+
+       // removeCondition('JasaKonstruksiCustom');
+
+        JasaKonstruksiSubLink.style.visibility = 'visible';
+        JasaPematanganLahanLink.style.visibility = 'visible';
+        pageNameKonstruksiSub.textContent = urlMappingPematanganLahan[cleanUrlJasaKons];
+    }
+
+   if (urlMappingUjiTanah[cleanUrlJasaKons]) {
+        restoreCondition('JasaKonsSub');
+	restoreCondition('JasaUjiTanah');
+           // hapus elemen id DIV Lain
+        removeCondition('materialKonsReadymix');
+        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsPerbaikanSub');
+	removeCondition('JasaKons');
+       // hapus elemen id DIV Lain
+	removeCondition('JasaRenovasiPerbaikan');
+        removeCondition('JasaStrukturKonstruksi');
+        removeCondition('JasaFinishing');
+        removeCondition('JasaPondasiPerkuatan');
+        removeCondition('JasaSaluranDrainase');
+        removeCondition('JasaJalanPerkerasan');
+	removeCondition('JasaPembatasPengaman');
+	removeCondition('JasaPematanganLahan');
+
+       // removeCondition('JasaKonstruksiCustom');
+
+        JasaKonstruksiSubLink.style.visibility = 'visible';
+        JasaUjiTanahLink.style.visibility = 'visible';
+        pageNameKonstruksiSub.textContent = urlMappingUjiTanah[cleanUrlJasaKons];
     }
 /*
     if (urlMappingCustom[cleanUrlJasaKons]) {
