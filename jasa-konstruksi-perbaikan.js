@@ -180,28 +180,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
      // Menemukan elemen menggunakan Id
     //var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
-    var JasaKonsPerbaikanSub = document.getElementById("JasaKonsPerbaikanSub");
-/*
-    if (!JasaKonsPerbaikan) {
-	if (!JasaKonsPerbaikanSub) {
-	console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
-	console.error("elemen Id JasaKonsPerbaikanSub kondisi terhapus");
-        return;
-    	} else {
-       	console.error("elemen Id JasaKonsPerbaikanSub kondisi terhapus");
-	}
-    } else if (!JasaKonsPerbaikanSub) {
-	console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
-    } else {
-    
-    } */
+    var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
 
-if (!JasaKonsPerbaikanSub) {
-console.error("elemen Id JasaKonsPerbaikanSub kondisi terhapus");
+if (!JasaKonsPerbaikan) {
+console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
         return;
 }
-if (!JasaKonsPerbaikanSub) {
-     console.error("elemen Id JasaKonsPerbaikanSub kondisi terhapus");	
+if (!JasaKonsPerbaikan) {
+     console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");	
 } else {
      var JasaKonstruksiPerbaikanLinkSub = document.getElementById("JasaKonstruksiPerbaikanSub");
      var JasaRenovasiPerbaikanLinkSub = document.getElementById("JasaRenovasiPerbaikanSub");
@@ -226,7 +212,7 @@ if (!JasaKonsPerbaikanSub) {
      pageNameKonstruksiPerbaikan1.textContent = "";
 
     if (urlMappingPerbaikanStruktur[cleanUrlJasaPerbaikanKonsSub]) {
-        restoreCondition1('JasaKonsPerbaikanSub');
+        restoreCondition1('JasaKonsPerbaikan');
         restoreCondition1('JasaRenovasiPerbaikanStruktur');
            // hapus elemen id DIV Lain
         removeCondition1('materialKonsReadymix');
@@ -249,7 +235,7 @@ if (!JasaKonsPerbaikanSub) {
         pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanStruktur[cleanUrlJasaPerbaikanKonsSub];
     }
     if (urlMappingPerbaikanInfrastruktur[cleanUrlJasaPerbaikanKonsSub]) {
-        restoreCondition1('JasaKonsPerbaikanSub');
+        restoreCondition1('JasaKonsPerbaikan');
         restoreCondition1('JasaRenovasiPerbaikanInfrastruktur');
      
        // hapus elemen id DIV Lain
@@ -273,7 +259,7 @@ if (!JasaKonsPerbaikanSub) {
         pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanInfrastruktur[cleanUrlJasaPerbaikanKonsSub];
     }
    if (urlMappingPerbaikanBangunan[cleanUrlJasaPerbaikanKonsSub]) {
-       restoreCondition1('JasaKonsPerbaikanSub');
+       restoreCondition1('JasaKonsPerbaikan');
        restoreCondition1('JasaRenovasiPerbaikanBangunan');
 
          // hapus elemen id DIV Lain
@@ -297,7 +283,7 @@ if (!JasaKonsPerbaikanSub) {
         pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanBangunan[cleanUrlJasaPerbaikanKonsSub];
     }
    if (urlMappingPerbaikanInterior[cleanUrlJasaPerbaikanKonsSub]) {
-        restoreCondition1('JasaKonsPerbaikanSub');
+        restoreCondition1('JasaKonsPerbaikan');
         restoreCondition1('JasaRenovasiPerbaikanInterior');
           // hapus elemen id DIV Lain
         removeCondition1('materialKonsReadymix');
@@ -321,7 +307,7 @@ if (!JasaKonsPerbaikanSub) {
     }
   
      if (urlMappingPerbaikanFasadEksterior[cleanUrlJasaPerbaikanKonsSub]) {
-        restoreCondition1('JasaKonsPerbaikanSub');
+        restoreCondition1('JasaKonsPerbaikan');
         restoreCondition1('JasaRenovasiPerbaikanFasad');
           // hapus elemen id DIV Lain
         removeCondition1('materialKonsReadymix');
@@ -345,7 +331,7 @@ if (!JasaKonsPerbaikanSub) {
     }
   
    if (urlMappingPerbaikanFasilitasUmum[cleanUrlJasaPerbaikanKonsSub]) {
-        restoreCondition1('JasaKonsPerbaikanSub');
+        restoreCondition1('JasaKonsPerbaikan');
         restoreCondition1('JasaRenovasiPerbaikanFasilitas');
           // hapus elemen id DIV Lain
         removeCondition1('materialKonsReadymix');
