@@ -251,7 +251,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikanSub');
 	removeCondition('JasaKonsSub');
-	    
+	removeCondition('MenuKons');
        // hapus elemen id DIV Lain
 
         JasaKonstruksiLink.style.visibility = 'visible';
@@ -269,6 +269,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikanSub');
 	removeCondition('JasaKons');
+	removeCondition('MenuKons');
 
 	// hapus elemen id DIV Lain
 	removeCondition('JasaStrukturKonstruksi');
@@ -295,6 +296,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikanSub');
 	removeCondition('JasaKons');
+	removeCondition('MenuKons');
 
 	// hapus elemen id DIV Lain
 	removeCondition('JasaRenovasiPerbaikan');
@@ -321,6 +323,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikanSub');
 	removeCondition('JasaKons');
+	removeCondition('MenuKons');
 
 	// hapus elemen id DIV Lain
 	removeCondition('JasaRenovasiPerbaikan');
@@ -347,6 +350,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikanSub');
 	removeCondition('JasaKons');
+	removeCondition('MenuKons');
 	    
        // hapus elemen id DIV Lain
 	removeCondition('JasaRenovasiPerbaikan');
@@ -373,6 +377,8 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikanSub');
 	removeCondition('JasaKons');
+	removeCondition('MenuKons');
+	    
        // hapus elemen id DIV Lain
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaStrukturKonstruksi');
@@ -398,6 +404,8 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikanSub');
 	removeCondition('JasaKons');
+	removeCondition('MenuKons');
+	    
        // hapus elemen id DIV Lain
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaStrukturKonstruksi');
@@ -423,6 +431,8 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikanSub');
 	removeCondition('JasaKons');
+	removeCondition('MenuKons');
+	    
        // hapus elemen id DIV Lain
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaStrukturKonstruksi');
@@ -451,6 +461,8 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikanSub');
 	removeCondition('JasaKons');
+	removeCondition('MenuKons');
+	    
        // hapus elemen id DIV Lain
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaStrukturKonstruksi');
@@ -478,6 +490,8 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikanSub');
 	removeCondition('JasaKons');
+	removeCondition('MenuKons');
+	   
        // hapus elemen id DIV Lain
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaStrukturKonstruksi');
