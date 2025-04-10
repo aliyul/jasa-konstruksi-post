@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
      
        
          // hapus elemen id 
-        removeCondition('JasaFinishingInfrastruktur');
+        removeCondition('JasaFinishingBangunan');
        
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
         JasaFinishingSubLink.style.visibility = 'visible';
