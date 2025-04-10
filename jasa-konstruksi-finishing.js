@@ -138,16 +138,16 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaFinishingBangunanLink = document.getElementById("JasaFinishingBangunanSub");
      var JasaFinishingInfrastrukturLink = document.getElementById("JasaFinishingInfrastrukturSub");
     //sub finishing bangunan
-    var JasaFinishingInteriorLink = document.getElementById("JasaFinishingInterior");
-    var JasaFinishingEksteriorLink = document.getElementById("JasaFinishingEksterior");
-    var JasaFinishingStrukturLink = document.getElementById("JasaFinishingStruktur");
+    var JasaFinishingInteriorLink = document.getElementById("JasaFinishingBanguanInterior");
+    var JasaFinishingEksteriorLink = document.getElementById("JasaFinishingBanguanEksterior");
+    var JasaFinishingStrukturLink = document.getElementById("JasaFinishingBanguanStruktur");
 
     //sub finishing infrastruktur
-    var JasaFinishingJalanLink = document.getElementById("JasaFinishingJalan");
-    var JasaFinishingTrotoarLink = document.getElementById("JasaFinishingTrotoar");
-    var JasaFinishingSaluranLink = document.getElementById("JasaFinishingSaluran");
-    var JasaFinishingStrukturLink = document.getElementById("JasaFinishingStruktur");
-    var JasaFinishingProteksiLink = document.getElementById("JasaFinishingProteksi");
+    var JasaFinishingJalanLink = document.getElementById("JasaFinishingInfrastrukturJalan");
+    var JasaFinishingTrotoarLink = document.getElementById("JasaFinishingInfrastrukturTrotoar");
+    var JasaFinishingSaluranLink = document.getElementById("JasaFinishingInfrastrukturSaluran");
+    var JasaFinishingStrukturLink = document.getElementById("JasaFinishingInfrastrukturStruktur");
+    var JasaFinishingProteksiLink = document.getElementById("JasaFinishingInfrastrukturProteksi");
 
      var pageNameJasaKonsFinishing = document.getElementById("pageNameJasaKonsFinishing");
     
@@ -425,7 +425,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   if (urlMappingFinishingInfrastrukturStruktur[cleanUrlJasaKonsFinishing]) {
         restoreCondition('JasaFinishingInfrastruktur');
-        restoreCondition('JasaFinishingInfrastruktur');
+        restoreCondition('JasaFinishingInfrastrukturStruktur');
           // hapus elemen id DIV Lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
