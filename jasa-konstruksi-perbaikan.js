@@ -11,48 +11,59 @@ const urlMappingPerbaikanStruktur = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-teknik-beton.html": "Jasa Perbaikan Teknik Beton",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-atap.html": "Jasa Perbaikan Struktur Atap"
 //akhir artikel utama 
-	
-//Jasa Penguatan & Perbaikan Pondasi
-     
-	
-     
-    
-   
-    
-  
-  
-    
- 
+//Jasa Penguatan & Perbaikan Pondasi 
  //Perbaikan & Penguatan Lantai
- 
-   
- 
-   
-  
-   
-
-
-
-
  //Perbaikan Struktur Dinding dan Kolom Tiang
- 
- 
 //struktur bangunan
- 
 // "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-bangunan.html": "Jasa Renovasi Dinding Bangunan",
-
 //PERBAIKAN STRUKTUR ATAP
  
+};
+//Sub Perbaikan Struktur
+const urlMappingPerbaikanStrukturUmum = {
+
+	
+};
+const urlMappingPerbaikanStrukturKolomBalok = {
+
+};
+const urlMappingPerbaikanStrukturPondasi = {
+
+};
+const urlMappingPerbaikanStrukturLantai = {
+
+};
+const urlMappingPerbaikanStrukturDinding = {
+
+};
+const urlMappingPerbaikanStrukturBangunanBesar = {
+
+};
+const urlMappingPerbaikanStrukturTeknikBeton = {
+
+};
+const urlMappingPerbaikanStrukturAtap = {
+
 };
 
 //Jasa Renovasi Perbaikan Infrastruktur
 const urlMappingPerbaikanInfrastruktur = {
-
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-perawatan-jalan.html": "Jasa Perbaikan dan Perawatan Jalan",
+ //"https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-perawatan-jalan.html": "Jasa Perbaikan dan Perawatan Jalan",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jalan.html": "Jasa Renovasi Perbaikan Jalan"
  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-trotoar.html": "Jasa Renovasi Perbaikan Trotoar",
 // "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jalan-berlubang.html": "Jasa Renovasi Perbaikan Jalan Berlubang",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jembatan.html": "Jasa Renovasi Perbaikan Jembatan",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jalan.html": "Jasa Renovasi Perbaikan Jalan"
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jembatan.html": "Jasa Renovasi Perbaikan Jembatan"
+};
+
+//SUB Jasa Renovasi Perbaikan Infrastruktur
+const urlMappingPerbaikanInfrastrukturJalan = {
+ 
+};
+const urlMappingPerbaikanInfrastrukturTrotoar = {
+
+
+};
+const urlMappingPerbaikanInfrastrukturJembatan = {
 
 };
 
@@ -79,28 +90,77 @@ const urlMappingPerbaikanFasadEksterior = {
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-dan-drainase.html": "Jasa Perbaikan Saluran dan Drainase",
 */
 };
+//SUB Jasa Renovasi Perbaikan Fasad Eksterior
+const urlMappingPerbaikanFasadEksteriorFasad = {
+
+};
+const urlMappingPerbaikanFasadEksteriorEksterior = {
+
+};
+const urlMappingPerbaikanFasadEksteriorArsitektur = {
+
+};
 
 //Jasa Renovasi Perbaikan Bangunan
 const urlMappingPerbaikanBangunan = {
-"https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat Ibadah",
+//"https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat Ibadah",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-pabrik.html": "Jasa Renovasi Perbaikan Pabrik",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-rumah.html": "Jasa Renovasi Perbaikan Rumah",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-kantor.html": "Jasa Renovasi Perbaikan Kantor",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-gedung.html": "Jasa Renovasi Perbaikan Gedung",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-gudang.html": "Jasa Renovasi Perbaikan Gudang",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-hotel-apartemen.html": "Jasa Renovasi Perbaikan Hotel Apartemen"
+};
+//SUB Jasa Renovasi Perbaikan Bangunan
+const urlMappingPerbaikanBangunanIbadah = {
+
+};
+const urlMappingPerbaikanBangunanPabrik = {
+
+};
+const urlMappingPerbaikanBangunanRumah = {
+
+};
+const urlMappingPerbaikanBangunanKantor = {
+
+};
+const urlMappingPerbaikanBangunanGedung = {
+
+};
+const urlMappingPerbaikanBangunanGudang = {
+
+};
+const urlMappingPerbaikanBangunanHotel = {
 
 };
 
-//Jasa Renovasi Perbaikan Elemen Pendukung
+//Jasa Renovasi Perbaikan Fasilitas Umum
 const urlMappingPerbaikanFasilitasUmum = {
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-taman-kota.html": "Jasa Renovasi Perbaikan Taman Kota",
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-sekolah.html": "Jasa Renovasi Perbaikan Sekolah",
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-stadion-olahraga.html": "Jasa Renovasi Perbaikan Stadion Olah Raga",
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-tempat-ibadah.html": "Jasa Renovasi Perbaikan Tempat Ibadah",
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-terminal.html": "Jasa Renovasi Perbaikan Terminal",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-halte.html": "Jasa Renovasi Perbaikan Halte"
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-halte.html": "Jasa Renovasi Perbaikan Halte"	
+};
+//SUB Jasa Renovasi Perbaikan Fasilitas Umum
+const urlMappingPerbaikanFasilitasUmumTaman = {
+
+};
+const urlMappingPerbaikanFasilitasUmumSekolah = {
+
+};
+const urlMappingPerbaikanFasilitasUmumStadion = {
+
+};
+const urlMappingPerbaikanFasilitasIbadah = {
+
+};
+const urlMappingPerbaikanFasilitasUmumTerminal = {
 	
+};
+const urlMappingPerbaikanFasilitasUmumHalte = {
+
 };
 
 //Jasa Renovasi dan Perbaikan Interior
@@ -148,6 +208,30 @@ const urlMappingPerbaikanInterior = {
  "https://www.betonjayareadymix.com/p/jasa-bongkar-keramik.html": "Jasa Bongkar Keramik"
  */
 };
+
+//SUB Jasa Renovasi dan Perbaikan Interior
+const urlMappingPerbaikanInteriorRumah = {
+
+};
+const urlMappingPerbaikanInteriorKantor = {
+
+};
+const urlMappingPerbaikanInteriorApartemen = {
+
+};
+const urlMappingPerbaikanInteriorHotel = {
+
+};
+const urlMappingPerbaikanInteriorToko = {
+
+};
+const urlMappingPerbaikanInteriorCustom = {
+
+};
+const urlMappingPerbaikanInteriorRuangan = {
+
+};
+
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPerbaikanKons1 = {};
 function removeCondition1(conditionId) {
