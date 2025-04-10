@@ -14,11 +14,11 @@ const urlMappingFinishingBangunanInterior = {
 
 };
 
-const urlMappingFinishingEksterior = {
+const urlMappingFinishingBangunanEksterior = {
 
 };
 
-const urlMappingFinishingStruktur = {
+const urlMappingFinishingBangunanStruktur = {
  
 };
 
