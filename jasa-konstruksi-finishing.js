@@ -243,11 +243,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
           // hapus elemen id Infrastruktur Semua
         removeCondition('JasaFinishingInfrastruktur');
-        removeCondition('JasaFinishingJalan');
-        removeCondition('JasaFinishingTrotoar');
-        removeCondition('JasaFinishingSaluran');
-        removeCondition('JasaFinishingStruktur');
-        removeCondition('JasaFinishingProteksi');
+        removeCondition('JasaFinishingInfrastrukturJalan');
+        removeCondition('JasaFinishingInfrastrukturTrotoar');
+        removeCondition('JasaFinishingInfrastrukturSaluran');
+        removeCondition('JasaFinishingInfrastrukturStruktur');
+        removeCondition('JasaFinishingInfrastrukturProteksi');
        
 
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
@@ -277,11 +277,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
           // hapus elemen id Infrastruktur Semua
         removeCondition('JasaFinishingInfrastruktur');
-        removeCondition('JasaFinishingJalan');
-        removeCondition('JasaFinishingTrotoar');
-        removeCondition('JasaFinishingSaluran');
-        removeCondition('JasaFinishingStruktur');
-        removeCondition('JasaFinishingProteksi');
+        removeCondition('JasaFinishingInfrastrukturJalan');
+        removeCondition('JasaFinishingInfrastrukturTrotoar');
+        removeCondition('JasaFinishingInfrastrukturSaluran');
+        removeCondition('JasaFinishingInfrastrukturStruktur');
+        removeCondition('JasaFinishingInfrastrukturProteksi');
        
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
         JasaFinishingSubLink.style.visibility = 'visible';
@@ -311,11 +311,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
           // hapus elemen id Infrastruktur Semua
         removeCondition('JasaFinishingInfrastruktur');
-        removeCondition('JasaFinishingJalan');
-        removeCondition('JasaFinishingTrotoar');
-        removeCondition('JasaFinishingSaluran');
-        removeCondition('JasaFinishingStruktur');
-        removeCondition('JasaFinishingProteksi');
+        removeCondition('JasaFinishingInfrastrukturJalan');
+        removeCondition('JasaFinishingInfrastrukturTrotoar');
+        removeCondition('JasaFinishingInfrastrukturSaluran');
+        removeCondition('JasaFinishingInfrastrukturStruktur');
+        removeCondition('JasaFinishingInfrastrukturProteksi');
        
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
         JasaFinishingSubLink.style.visibility = 'visible';
