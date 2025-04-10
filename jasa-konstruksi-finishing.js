@@ -1,7 +1,8 @@
  // Cek URL saat ini dan sesuaikan dengan kondisi yang diinginkan
 const urlMappingFinishingBangunan = {
  "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html": "Jasa Finishing Interior",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html": "Jasa Finishing Eksterior"
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html": "Jasa Finishing Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur"
 
  /*
  "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-plester-acian.html": "Jasa Renovasi Dinding Plester Acian",
@@ -9,13 +10,45 @@ const urlMappingFinishingBangunan = {
 */
 };
 
+const urlMappingFinishingBangunanInterior = {
+
+};
+
+const urlMappingFinishingEksterior = {
+
+};
+
+const urlMappingFinishingStruktur = {
+ 
+};
+
+
 const urlMappingFinishingInfrastruktur = {
-  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur",
   "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-jembatan.html": "Jasa Finishing Jalan Jembatan",
   "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar-area-publik.html": "Jasa Finishing Trotoar Area Publik",
   "https://www.betonjayareadymix.com/p/jasa-finishing-saluran-drainase.html": "Jasa Finishing Saluran Drainase",
   "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-utilitas.html": "Jasa Finishing Struktur Utilitas",
   "https://www.betonjayareadymix.com/p/jasa-finishing-proteksi-beton.html": "Jasa Finishing Proteksi Beton"
+};
+
+const urlMappingFinishingInfrastrukturJalan = {
+ 
+};
+
+const urlMappingFinishingInfrastrukturTrotoar = {
+ 
+};
+
+const urlMappingFinishingInfrastrukturSaluran = {
+  
+};
+
+const urlMappingFinishingInfrastrukturStruktur = {
+ 
+};
+
+const urlMappingFinishingInfrastrukturProteksi = {
+ 
 };
 
 // Menyimpan elemen yang dihapus dalam variabel
