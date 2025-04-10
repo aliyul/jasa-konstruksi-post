@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //Sub FinishingBangunan
    if (urlMappingFinishingBangunanInterior[cleanUrlJasaKonsFinishing]) {
         restoreCondition('JasaFinishingBangunan');
-        restoreCondition('JasaFinishingEksterior');
+        restoreCondition('JasaFinishingInterior');
         //restoreCondition('JasaChippingBeton');
            // hapus elemen id DIV Lain
         removeCondition('materialKonsReadymix');
@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function() {
        
           // hapus elemen id lain
         removeCondition('JasaFinishingStruktur');
-        removeCondition('JasaFinishingInterior');
+        removeCondition('JasaFinishingEksterior');
 
           // hapus elemen id Infrastruktur Semua
         removeCondition('JasaFinishingInfrastruktur');
