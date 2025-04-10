@@ -135,8 +135,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }
      var JasaKonstruksiFinishingSubLink = document.getElementById("JasaKonstruksiFinishingSub");
      var JasaFinishingSubLink = document.getElementById("JasaFinishingSub");
-     var JasaFinishingBangunanLink = document.getElementById("JasaFinishingBangunan");
-     var JasaFinishingInfrastrukturLink = document.getElementById("JasaFinishingInfrastruktur");
+     var JasaFinishingBangunanLink = document.getElementById("JasaFinishingBangunanSub");
+     var JasaFinishingInfrastrukturLink = document.getElementById("JasaFinishingInfrastrukturSub");
+    //sub finishing bangunan
+    var JasaFinishingInteriorLink = document.getElementById("JasaFinishingInterior");
+    var JasaFinishingEksteriorLink = document.getElementById("JasaFinishingEksterior");
+    var JasaFinishingStrukturLink = document.getElementById("JasaFinishingStruktur");
+
+    //sub finishing infrastruktur
+    var JasaFinishingJembatanLink = document.getElementById("JasaFinishingJembatan");
+    var JasaFinishingTrotoarLink = document.getElementById("JasaFinishingTrotoar");
+    var JasaFinishingSaluranLink = document.getElementById("JasaFinishingSaluran");
+    var JasaFinishingStrukturLink = document.getElementById("JasaFinishingStruktur");
+    var JasaFinishingProteksiLink = document.getElementById("JasaFinishingProteksi");
+
      var pageNameJasaKonsFinishing = document.getElementById("pageNameJasaKonsFinishing");
     
 
