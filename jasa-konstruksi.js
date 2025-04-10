@@ -254,8 +254,10 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
+        removeCondition('JasaKonsFinishing');
 	removeCondition('JasaKonsSub');
 	removeCondition('MenuKons');
+	    
        // hapus elemen id DIV Lain
 
         JasaKonstruksiLink.style.visibility = 'visible';
@@ -272,6 +274,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
+	removeCondition('JasaKonsFinishing');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 
@@ -299,6 +302,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
+	removeCondition('JasaKonsFinishing');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 
@@ -326,6 +330,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
+	removeCondition('JasaKonsFinishing');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 
@@ -353,6 +358,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
+	removeCondition('JasaKonsFinishing');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 	    
@@ -380,6 +386,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
+	removeCondition('JasaKonsFinishing');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 	    
@@ -407,6 +414,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
+	removeCondition('JasaKonsFinishing');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 	    
@@ -434,6 +442,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
+	removeCondition('JasaKonsFinishing');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 	    
@@ -464,6 +473,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
+	removeCondition('JasaKonsFinishing');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 	    
@@ -493,6 +503,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
+	removeCondition('JasaKonsFinishing');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 	   
