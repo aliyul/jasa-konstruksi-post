@@ -382,7 +382,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaFinishingSubLink.style.visibility = 'visible';
         JasaFinishingInfrastrukturLink.style.visibility = 'visible';
        //sub finish infrastruktur
-        JasaFinishingTrotoarLink.style.visibility = 'visible;
+        JasaFinishingTrotoarLink.style.visibility = 'visible';
     
         pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastrukturTrotoar[cleanUrlJasaKonsFinishing];
 
