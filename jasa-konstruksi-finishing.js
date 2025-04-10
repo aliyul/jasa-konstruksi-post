@@ -138,9 +138,9 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaFinishingBangunanLink = document.getElementById("JasaFinishingBangunanSub");
      var JasaFinishingInfrastrukturLink = document.getElementById("JasaFinishingInfrastrukturSub");
     //sub finishing bangunan
-    var JasaFinishingInteriorLink = document.getElementById("JasaFinishingBanguanInterior");
-    var JasaFinishingEksteriorLink = document.getElementById("JasaFinishingBanguanEksterior");
-    var JasaFinishingStrukturLink = document.getElementById("JasaFinishingBanguanStruktur");
+    var JasaFinishingInteriorLink = document.getElementById("JasaFinishingBangunanInterior");
+    var JasaFinishingEksteriorLink = document.getElementById("JasaFinishingBangunanEksterior");
+    var JasaFinishingStrukturLink = document.getElementById("JasaFinishingBangunanStruktur");
 
     //sub finishing infrastruktur
     var JasaFinishingJalanLink = document.getElementById("JasaFinishingInfrastrukturJalan");
