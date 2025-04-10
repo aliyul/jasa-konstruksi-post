@@ -253,7 +253,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikanSub');
+        removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKonsSub');
 	removeCondition('MenuKons');
        // hapus elemen id DIV Lain
@@ -271,7 +271,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikanSub');
+        removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 
@@ -298,7 +298,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikanSub');
+        removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 
@@ -325,7 +325,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikanSub');
+        removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 
@@ -352,7 +352,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikanSub');
+        removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 	    
@@ -379,7 +379,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikanSub');
+        removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 	    
@@ -406,7 +406,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikanSub');
+        removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 	    
@@ -433,7 +433,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikanSub');
+        removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 	    
@@ -463,7 +463,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikanSub');
+        removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 	    
@@ -492,7 +492,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikanSub');
+        removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKons');
 	removeCondition('MenuKons');
 	   
