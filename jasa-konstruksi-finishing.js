@@ -174,11 +174,16 @@ document.addEventListener("DOMContentLoaded", function() {
      
           // hapus elemen id Infrastruktur Semua
         removeCondition('JasaFinishingInfrastruktur');
-        removeCondition('JasaFinishingJalan');
-        removeCondition('JasaFinishingTrotoar');
-        removeCondition('JasaFinishingSaluran');
-        removeCondition('JasaFinishingStruktur');
-        removeCondition('JasaFinishingProteksi');
+        removeCondition('JasaFinishingInfrastrukturJalan');
+        removeCondition('JasaFinishingInfrastrukturTrotoar');
+        removeCondition('JasaFinishingInfrastrukturSaluran');
+        removeCondition('JasaFinishingInfrastrukturStruktur');
+        removeCondition('JasaFinishingInfrastrukturProteksi');
+
+        // hapus elemen id bangunan sub semua
+        removeCondition('JasaFinishingBangunanEksterior');
+        removeCondition('JasaFinishingBangunanInterior');
+        removeCondition('JasaFinishingBangunanStruktur');
        
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
         JasaFinishingSubLink.style.visibility = 'visible';
@@ -203,8 +208,12 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaFinishingBangunanInterior');
         removeCondition('JasaFinishingBangunanStruktur');
          
-         // hapus elemen id 
-        removeCondition('JasaFinishingBangunan');
+       // hapus elemen id infrastruktur sub semua
+        removeCondition('JasaFinishingInfrastrukturJalan');
+        removeCondition('JasaFinishingInfrastrukturTrotoar');
+        removeCondition('JasaFinishingInfrastrukturSaluran');
+        removeCondition('JasaFinishingInfrastrukturStruktur');
+        removeCondition('JasaFinishingInfrastrukturProteksi');
        
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
         JasaFinishingSubLink.style.visibility = 'visible';
