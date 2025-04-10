@@ -221,6 +221,8 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaKonsPembatas');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
+	removeCondition1('MenuKons');
+	removeCondition1('JasaKonsFinishing');
 	
 	
         removeCondition1('JasaRenovasiPerbaikanInfrastruktur');
@@ -245,6 +247,8 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaKonsPembatas');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
+	removeCondition1('MenuKons');
+	removeCondition1('JasaKonsFinishing');
 
         // hapus elemen JasaPerbaikanKons Lain
         removeCondition1('JasaRenovasiPerbaikanStruktur');
@@ -269,6 +273,8 @@ if (!JasaKonsPerbaikan) {
        removeCondition1('JasaKonsPembatas');
        removeCondition1('JasaKons');
        removeCondition1('JasaKonsSub');
+       removeCondition1('MenuKons');
+       removeCondition1('JasaKonsFinishing');
     
         // hapus elemen JasaPerbaikanKons Lain
         removeCondition1('JasaRenovasiPerbaikanStruktur');
@@ -292,6 +298,8 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaKonsPembatas');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
+	removeCondition1('MenuKons');
+	removeCondition1('JasaKonsFinishing');
         
        // hapus elemen JasaPerbaikanKons Lain
         removeCondition1('JasaRenovasiPerbaikanStruktur');
@@ -316,6 +324,8 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaKonsPembatas');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
+	removeCondition1('MenuKons');
+	removeCondition1('JasaKonsFinishing');
         
        // hapus elemen JasaPerbaikanKons Lain
         removeCondition1('JasaRenovasiPerbaikanStruktur');
@@ -338,8 +348,12 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
+	removeCondition1('JasaKonsFinishing');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
+	removeCondition1('MenuKons');
+	removeCondition1('JasaKonsFinishing');
+	
 	
         
        // hapus elemen JasaPerbaikanKons Lain
