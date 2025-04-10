@@ -1,45 +1,33 @@
  // Cek URL saat ini dan sesuaikan dengan kondisi yang diinginkan
-const urlMappingFinishing = {
+const urlMappingFinishingBangunan = {
+ "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html": "Jasa Finishing Interior",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html": "Jasa Finishing Eksterior"
+
+ /*
  "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-plester-acian.html": "Jasa Renovasi Dinding Plester Acian",
  "https://www.betonjayareadymix.com/p/jasa-plester-acian.html": "Jasa Plester Acian",
-};
-
-const urlMappingPerbaikanStruktur = {
-
- 
-};
-
-const urlMappingPerbaikanDinding = {
- 
-};
-/*
-const urlMappingBobokTembok = {
-   
-
-};
-const urlMappingBobokBeton = {
-    "https://www.betonjayareadymix.com/2019/06/harga-bongkar-beton.html": "Harga Bongkar Beton",
-    "https://www.betonjayareadymix.com/2019/06/harga-bobok-beton-per-m2.html":  "Harga Bobok Beton Per M2"
-
-
-};
-const urlMappingBongkarKeramik = {
-    "https://www.betonjayareadymix.com/2019/06/biaya-bongkar-lantai-keramik.html": "Biaya Bongkar Lantai Keramik",
-    "https://www.betonjayareadymix.com/2019/06/harga-bongkar-lantai-keramik.html": "Harga Bongkar Lantai Keramik"
-
-};
-
 */
+};
+
+const urlMappingFinishingInfrastruktur = {
+ 
+  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-jembatan.html": "Jasa Finishing Jalan Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar-area-publik.html": "Jasa Finishing Trotoar Area Publik",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-saluran-drainase.html": "Jasa Finishing Saluran Drainase",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-utilitas.html": "Jasa Finishing Struktur Utilitas",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-proteksi-beton.html": "Jasa Finishing Proteksi Beton"
+};
 
 // Menyimpan elemen yang dihapus dalam variabel
-let removedElementsJasaPerbaikanKons = {};
+let removedElementsJasaKonsFinishing = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
 function removeCondition(conditionId) {
     const conditionElement = document.getElementById(conditionId);
 
     if (conditionElement) {
         // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
-        removedElementsJasaPerbaikanKons[conditionId] = conditionElement;
+        removedElementsJasaKonsFinishing[conditionId] = conditionElement;
         conditionElement.remove(); // Menghapus elemen tersebut
     }
 }
@@ -47,122 +35,84 @@ function removeCondition(conditionId) {
 // Fungsi untuk mengembalikan elemen yang telah dihapus
 function restoreCondition(conditionId) {
     const breadcrumb = document.querySelector('.breadcrumb');
-    const elementToRestore = removedElementsJasaPerbaikanKons[conditionId]; // Mendapatkan elemen yang disimpan
+    const elementToRestore = removedElementsJasaKonsFinishing[conditionId]; // Mendapatkan elemen yang disimpan
 
     if (elementToRestore) {
         breadcrumb.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
-        delete removedElementsJasaPerbaikanKons[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
+        delete removedElementsJasaKonsFinishing[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
     } else {
-        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaPerbaikanKons.`);
+        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaKonsFinishing.`);
     }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     // var currentUrl = window.location.href;
      //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
-    const cleanUrlJasaPerbaikanKons = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
+    const cleanUrlJasaKonsFinishing = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
 
      // Menemukan elemen menggunakan Id
-    var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
-    if (!JasaKonsPerbaikan) {
-        console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
+    var JasaKonsFinishing = document.getElementById("JasaKonsFinishing");
+    if (!JasaKonsFinishing) {
+        console.error("elemen Id JasaKonsFinishing kondisi terhapus");
         return;
     }
-     var JasaKonstruksiPerbaikanLink = document.getElementById("JasaKonstruksiPerbaikan");
-     var JasaRenovasiPerbaikanLink = document.getElementById("JasaRenovasiPerbaikan");
-     var JasaChippingBetonLink = document.getElementById("JasaChippingBeton");
-     var JasaChippingBetonLink = document.getElementById("JasaChippingBeton");
-     var JasaBobokTembokLink = document.getElementById("JasaBobokTembok");
-     var JasaBobokBetonLink = document.getElementById("JasaBobokBeton");
-     var JasaBongkarKeramikLink = document.getElementById("JasaBongkarKeramik");
-     var pageNameKonstruksiPerbaikan = document.getElementById("pageNameKonstruksiPerbaikan");
+     var JasaKonstruksiFinishingSubLink = document.getElementById("JasaKonstruksiFinishingSub");
+     var JasaFinishingSubLink = document.getElementById("JasaFinishingSub");
+     var JasaFinishingBangunanLink = document.getElementById("JasaFinishingBangunan");
+     var JasaFinishingInfrastrukturLink = document.getElementById("JasaFinishingInfrastruktur");
+     var pageNameJasaKonsFinishing = document.getElementById("pageNameJasaKonsFinishing");
     
 
      // Default untuk menyembunyikan elemen
-     JasaKonstruksiPerbaikanLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanLink.style.visibility = 'hidden';
-     JasaChippingBetonLink.style.visibility = 'hidden';
-     JasaBobokTembokLink.style.visibility = 'hidden';
-     JasaBobokBetonLink.style.visibility = 'hidden';
-     JasaBongkarKeramikLink.style.visibility = 'hidden';
-     pageNameKonstruksiPerbaikan.textContent = "";
+     JasaKonstruksiFinishingSubLink.style.visibility = 'hidden';
+     JasaFinishingSubLink.style.visibility = 'hidden';
+     JasaFinishingBangunanLink.style.visibility = 'hidden';
+     JasaFinishingInfrastrukturLink.style.visibility = 'hidden';
+     pageNameJasaKonsFinishing.textContent = "";
 
-    if (urlMappingChippingBeton[cleanUrlJasaPerbaikanKons]) {
-        restoreCondition('JasaKonsPerbaikan');
-        restoreCondition('JasaChippingBeton');
+    if (urlMappingFinishingBangunan[cleanUrlJasaKonsFinishing]) {
+        restoreCondition('JasaFinishingBangunan');
+        //restoreCondition('JasaChippingBeton');
            // hapus elemen id DIV Lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
-       
-        removeCondition('JasaBobokTembok');
-        removeCondition('JasaBongkarKeramik');
-        removeCondition('JasaBobokBeton');
-       
-        JasaKonstruksiPerbaikanLink.style.visibility = 'visible';
-        JasaRenovasiPerbaikanLink.style.visibility = 'visible';
-        JasaChippingBetonLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan.textContent = urlMappingChippingBeton[cleanUrlJasaPerbaikanKons];
-    }
-    if (urlMappingBobokTembok[cleanUrlJasaPerbaikanKons]) {
-        restoreCondition('JasaKonsPerbaikan');
-        restoreCondition('JasaBobokTembok');
+        removeCondition('JasaKonsPerbaikan');
+       	removeCondition('JasaKons');
+        removeCondition('JasaKonsSub');
+        removeCondition('MenuKons');
      
-       // hapus elemen id DIV Lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPembatas');
-        
-        // hapus elemen JasaPerbaikanKons Lain
-        removeCondition('JasaChippingBeton');
-        removeCondition('JasaBongkarKeramik');
-        removeCondition('JasaBobokBeton');
-     
-        JasaKonstruksiPerbaikanLink.style.visibility = 'visible';
-        JasaRenovasiPerbaikanLink.style.visibility = 'visible';
-        JasaBobokTembokLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan.textContent = urlMappingBobokTembok[cleanUrlJasaPerbaikanKons];
-    }
-   if (urlMappingBobokBeton[cleanUrlJasaPerbaikanKons]) {
-       restoreCondition('JasaKonsPerbaikan');
-       restoreCondition('JasaBobokBeton');
-
-         // hapus elemen id DIV Lain
-       removeCondition('materialKonsReadymix');
-       removeCondition('ProdukKonsSaluran');
-       removeCondition('ProdukKonsPembatas');
-       removeCondition('JasaKonsPembatas');
-    
-        // hapus elemen JasaPerbaikanKons Lain
-        removeCondition('JasaChippingBeton');
-        removeCondition('JasaBongkarKeramik');
-        removeCondition('JasaBobokTembok');
        
-        JasaKonstruksiPerbaikanLink.style.visibility = 'visible';
-        JasaRenovasiPerbaikanLink.style.visibility = 'visible';
-        JasaBobokBetonLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan.textContent = urlMappingBobokBeton[cleanUrlJasaPerbaikanKons];
+         // hapus elemen id 
+        removeCondition('JasaFinishingInfrastruktur');
+       
+        JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
+        JasaFinishingSubLink.style.visibility = 'visible';
+        JasaFinishingBangunanLink.style.visibility = 'visible';
+        pageNameJasaKonsFinishing.textContent = urlMappingFinishingBangunan[cleanUrlJasaKonsFinishing];
     }
-   if (urlMappingBongkarKeramik[cleanUrlJasaPerbaikanKons]) {
-        restoreCondition('JasaKonsPerbaikan');
-        restoreCondition('JasaBongkarKeramik');
+    if (urlMappingFinishingInfrastruktur[cleanUrlJasaKonsFinishing]) {
+        restoreCondition('JasaFinishingInfrastruktur');
           // hapus elemen id DIV Lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
-        
-       // hapus elemen JasaPerbaikanKons Lain
-        removeCondition('JasaChippingBeton');
-        removeCondition('JasaBobokTembok');
-         removeCondition('JasaBobokBeton');
+        removeCondition('JasaKonsPerbaikan');
+       	removeCondition('JasaKons');
+        removeCondition('JasaKonsSub');
+        removeCondition('MenuKons');
+     
        
-        JasaKonstruksiPerbaikanLink.style.visibility = 'visible';
-        JasaRenovasiPerbaikanLink.style.visibility = 'visible';
-        JasaBongkarKeramikLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan.textContent = urlMappingBongkarKeramik[cleanUrlJasaPerbaikanKons];
-    }
+         // hapus elemen id 
+        removeCondition('JasaFinishingInfrastruktur');
+       
+        JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
+        JasaFinishingSubLink.style.visibility = 'visible';
+        JasaFinishingInfrastrukturLink.style.visibility = 'visible';
+        pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastruktur[cleanUrlJasaKonsFinishing];
 
+    }
+   
    });
