@@ -75,7 +75,7 @@ const urlMappingStruktur = {
   "https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html": "Jasa Struktur Khusus",
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-lapangan-olahraga.html": "Jasa Konstruksi Lapangan Olahraga",
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html": "Jasa Konstruksi Modular dan Precast",
-  "https://www.betonjayareadymix.com/p/jasa-struktur-pengecoran-beton.html": "Jasa Struktur Pengecoran Beton"
+  "https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html": "Jasa Struktur Beton dan Pengecoran"
 
 };
 
