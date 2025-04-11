@@ -159,6 +159,7 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaPengamananAreaProyekLink = document.getElementById("JasaPengamananAreaProyek");
 
     //SUB JasaPembuatanPagarDindingPembatas
+  /*
      var JasaPagarBetonPrecastLink = document.getElementById("JasaPagarBetonPrecast");
      var JasaPagarPanelBetonLink = document.getElementById("JasaPagarPanelBeton");
      var JasaPagarBesiHollowWiremeshLink = document.getElementById("JasaPagarBesiHollowWiremesh");
@@ -167,6 +168,7 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaPagarBrcLink = document.getElementById("JasaPagarBrc");
      var JasaPagarRumahLink = document.getElementById("JasaPagarRumah");
      var JasaPagarBangunanLink = document.getElementById("JasaPagarBangunan");
+*/
 	
      var pageNameJasaPembatas = document.getElementById("pageNameJasaPembatas");
     
@@ -182,6 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaPengamananAreaProyekLink.style.visibility = 'hidden';
 
     //SUB JasaPembuatanPagarDindingPembatas
+    /*
      JasaPagarBetonPrecastLink.style.visibility = 'hidden';
      JasaPagarPanelBetonLink.style.visibility = 'hidden';
      JasaPagarBesiHollowWiremeshLink.style.visibility = 'hidden';
@@ -190,6 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaPagarBrcLink.style.visibility = 'hidden';
      JasaPagarRumahLink.style.visibility = 'hidden';
      JasaPagarBangunanLink.style.visibility = 'hidden';
+  */
 	
      pageNameJasaPembatas.textContent = "";
 
@@ -215,6 +219,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaPengamananAreaProyek');
 
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SEMUA NYA
+	/*
         removeCondition('JasaPagarBetonPrecast');
         removeCondition('JasaPagarPanelBeton');
         removeCondition('JasaPagarBesiHollowWiremesh'); 
@@ -223,7 +228,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	removeCondition('JasaPagarBrc');
 	removeCondition('JasaPagarRumah');
 	removeCondition('JasaPagarBangunan');
-       
+       */
+	
         JasaKonstruksiPembatasLink.style.visibility = 'visible';
         JasaPembatasLink.style.visibility = 'visible';
         JasaPembuatanPagarDindingPembatasLink.style.visibility = 'visible';
@@ -251,6 +257,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaPengamananAreaProyek');
 
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SEMUA NYA
+        /*
         removeCondition('JasaPagarBetonPrecast');
         removeCondition('JasaPagarPanelBeton');
         removeCondition('JasaPagarBesiHollowWiremesh'); 
@@ -259,7 +266,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	removeCondition('JasaPagarBrc');
 	removeCondition('JasaPagarRumah');
 	removeCondition('JasaPagarBangunan');
-       
+       */
+	
         JasaKonstruksiPembatasLink.style.visibility = 'visible';
         JasaPembatasLink.style.visibility = 'visible';
         JasaPengamanSisiJalanInfrastrukturLink.style.visibility = 'visible';
@@ -287,6 +295,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaPengamananAreaProyek');
 
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SEMUA NYA
+	/*
         removeCondition('JasaPagarBetonPrecast');
         removeCondition('JasaPagarPanelBeton');
         removeCondition('JasaPagarBesiHollowWiremesh'); 
@@ -295,6 +304,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	removeCondition('JasaPagarBrc');
 	removeCondition('JasaPagarRumah');
 	removeCondition('JasaPagarBangunan');
+       */
+	
        
         JasaKonstruksiPembatasLink.style.visibility = 'visible';
         JasaPembatasLink.style.visibility = 'visible';
@@ -323,6 +334,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaPembuatanPagarDindingPembatas');
 
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SEMUA NYA
+	/*
         removeCondition('JasaPagarBetonPrecast');
         removeCondition('JasaPagarPanelBeton');
         removeCondition('JasaPagarBesiHollowWiremesh'); 
@@ -331,7 +343,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	removeCondition('JasaPagarBrc');
 	removeCondition('JasaPagarRumah');
 	removeCondition('JasaPagarBangunan');
-       
+      */
+	
         JasaKonstruksiPembatasLink.style.visibility = 'visible';
         JasaPembatasLink.style.visibility = 'visible';
         JasaPengamananAreaProyekLink.style.visibility = 'visible';
