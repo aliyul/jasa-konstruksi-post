@@ -118,10 +118,16 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaPasangPagarPanelBeton');
      
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
+        removeCondition1('materialKonsReadymix');
+        removeCondition1('ProdukKonsSaluran');
+        removeCondition1('ProdukKonsPembatas');
+        removeCondition1('JasaKonsPerbaikan');
+       	removeCondition1('JasaKons');
+       	removeCondition1('JasaKonsSub');
+       	removeCondition1('MenuKons');
+       	removeCondition1('JasaKonsFinishing');
+        removeCondition1('JasaKonsStruktur');
+	
      
         //hapus elemen jasa pembatas lain
         removeCondition('JasaPasangPagarBeton');
@@ -137,11 +143,16 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaPasangPagarBeton');
 
        //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-
+        removeCondition1('materialKonsReadymix');
+        removeCondition1('ProdukKonsSaluran');
+        removeCondition1('ProdukKonsPembatas');
+        removeCondition1('JasaKonsPerbaikan');
+       	removeCondition1('JasaKons');
+       	removeCondition1('JasaKonsSub');
+       	removeCondition1('MenuKons');
+       	removeCondition1('JasaKonsFinishing');
+        removeCondition1('JasaKonsStruktur');
+	
         //hapus elemen jasa pembatas lain
         removeCondition('JasaPasangPagarPanelBeton');
         removeCondition('JasaPasangPagarRumah');
@@ -156,11 +167,16 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaPasangPagarRumah');
 
        //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-
+        removeCondition1('materialKonsReadymix');
+        removeCondition1('ProdukKonsSaluran');
+        removeCondition1('ProdukKonsPembatas');
+        removeCondition1('JasaKonsPerbaikan');
+       	removeCondition1('JasaKons');
+       	removeCondition1('JasaKonsSub');
+       	removeCondition1('MenuKons');
+       	removeCondition1('JasaKonsFinishing');
+        removeCondition1('JasaKonsStruktur');
+	
         //hapus elemen jasa pembatas lain
         removeCondition('JasaPasangPagarPanelBeton');
         removeCondition('JasaPasangPagarBeton');
