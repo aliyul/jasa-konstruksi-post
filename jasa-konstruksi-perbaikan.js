@@ -409,6 +409,7 @@ if (!JasaKonsPerbaikan) {
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
 	removeCondition1('JasaKonsFinishing');
+        removeCondition1('JasaKonsStruktur');
 	
 	// hapus elemen id Sub JasaRenovasiPerbaikan yang lain
         removeCondition1('JasaRenovasiPerbaikanInfrastruktur');
@@ -482,6 +483,7 @@ if (!JasaKonsPerbaikan) {
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
 	removeCondition1('JasaKonsFinishing');
+        removeCondition1('JasaKonsStruktur');
 	
 	// hapus elemen id Sub JasaRenovasiPerbaikan Selain 'JasaRenovasiPerbaikanStruktur'
         removeCondition1('JasaRenovasiPerbaikanInfrastruktur');
@@ -557,6 +559,7 @@ if (!JasaKonsPerbaikan) {
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
 	removeCondition1('JasaKonsFinishing');
+        removeCondition1('JasaKonsStruktur');
 	
 	// hapus elemen id Sub JasaRenovasiPerbaikan Selain 'JasaRenovasiPerbaikanStruktur'
         removeCondition1('JasaRenovasiPerbaikanInfrastruktur');
@@ -632,6 +635,7 @@ if (!JasaKonsPerbaikan) {
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
 	removeCondition1('JasaKonsFinishing');
+        removeCondition1('JasaKonsStruktur');
 
         // hapus elemen JasaPerbaikanKons Lain
         removeCondition1('JasaRenovasiPerbaikanStruktur');
@@ -704,6 +708,7 @@ if (!JasaKonsPerbaikan) {
        removeCondition1('JasaKonsSub');
        removeCondition1('MenuKons');
        removeCondition1('JasaKonsFinishing');
+        removeCondition1('JasaKonsStruktur');
     
         // hapus elemen JasaPerbaikanKons Lain
         removeCondition1('JasaRenovasiPerbaikanStruktur');
@@ -774,6 +779,7 @@ if (!JasaKonsPerbaikan) {
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
 	removeCondition1('JasaKonsFinishing');
+        removeCondition1('JasaKonsStruktur');
         
        // hapus elemen JasaPerbaikanKons Lain
         removeCondition1('JasaRenovasiPerbaikanStruktur');
@@ -845,6 +851,7 @@ if (!JasaKonsPerbaikan) {
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
 	removeCondition1('JasaKonsFinishing');
+        removeCondition1('JasaKonsStruktur');
         
        // hapus elemen JasaPerbaikanKons Lain
         removeCondition1('JasaRenovasiPerbaikanStruktur');
@@ -918,6 +925,7 @@ if (!JasaKonsPerbaikan) {
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
 	removeCondition1('JasaKonsFinishing');
+        removeCondition1('JasaKonsStruktur');
 	
        // hapus elemen JasaPerbaikanKons Lain
         removeCondition1('JasaRenovasiPerbaikanStruktur');
