@@ -304,6 +304,20 @@ if (!JasaKonsPerbaikan) {
      var JasaRenovasiPerbaikanBangunanGedungLink = document.getElementById("JasaRenovasiPerbaikanBangunanGedung");
      var JasaRenovasiPerbaikanBangunanGudangLink = document.getElementById("JasaRenovasiPerbaikanBangunanGudang");
      var JasaRenovasiPerbaikanBangunanHotelLink = document.getElementById("JasaRenovasiPerbaikanBangunanHotel");
+	
+ //SUB JasaRenovasiPerbaikanInterior
+     var JasaRenovasiInteriorRumahLink = document.getElementById("JasaRenovasiInteriorRumah");
+     var JasaRenovasiInteriorKantorLink = document.getElementById("JasaRenovasiInteriorKantor");
+     var JasaRenovasiInteriorApartemenLink = document.getElementById("JasaRenovasiInteriorApartemen");
+     var JasaRenovasiInteriorHotelLink = document.getElementById("JasaRenovasiInteriorHotel");
+     var JasaRenovasiInteriorTokoLink = document.getElementById("JasaRenovasiInteriorToko");
+     var JasaDesignInteriorCustomLink = document.getElementById("JasaDesignInteriorCustom");
+     var JasaRenovasiInteriorRuanganLink = document.getElementById("JasaRenovasiInteriorRuangan");
+
+ //SUB JasaRenovasiPerbaikanBangunan
+     var JasaRenovasiFasadBangunanLink = document.getElementById("JasaRenovasiFasadBangunan");
+     var JasaRenovasiEksteriorBangunanLink = document.getElementById("JasaRenovasiEksteriorBangunan");
+     var JasaPerbaikanArsitekturEksteriorLink = document.getElementById("JasaPerbaikanArsitekturEksterior");
 
 
      //NAMA DEFAULT HALAMAN BUAT SEMUA
@@ -341,6 +355,21 @@ if (!JasaKonsPerbaikan) {
      JasaRenovasiPerbaikanBangunanGedungLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanBangunanGudangLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanBangunanHotelLink.style.visibility = 'hidden';
+
+	//Hide SUB JasaRenovasiPerbaikanInterior
+     JasaRenovasiInteriorRumahLink.style.visibility = 'hidden';
+     JasaRenovasiInteriorKantorLink.style.visibility = 'hidden';
+     JasaRenovasiInteriorApartemenLink.style.visibility = 'hidden';
+     JasaRenovasiInteriorHotelLink.style.visibility = 'hidden';
+     JasaRenovasiInteriorTokoLink.style.visibility = 'hidden';
+     JasaDesignInteriorCustomLink.style.visibility = 'hidden';
+     JasaRenovasiInteriorRuanganLink.style.visibility = 'hidden';
+
+ //Hide SUB JasaRenovasiPerbaikanBangunan
+     JasaRenovasiFasadBangunanLink.style.visibility = 'hidden';
+     JasaRenovasiEksteriorBangunanLink.style.visibility = 'hidden';
+     JasaPerbaikanArsitekturEksteriorLink.style.visibility = 'hidden';
+
 
      //NAMA DEFAULT BUAT SEMUA DI KOSONGKAN DULU
      pageNameKonstruksiPerbaikan1.textContent = "";
@@ -389,7 +418,20 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanBangunanGedung');
         removeCondition1('JasaRenovasiPerbaikanBangunanGudang');
         removeCondition1('JasaRenovasiPerbaikanBangunanHotel');
-       
+
+	 // hapus elemen id Semua Sub JasaRenovasiPerbaikanInterior
+        removeCondition1('JasaRenovasiInteriorRumah');
+        removeCondition1('JasaRenovasiInteriorKantor');
+        removeCondition1('JasaRenovasiInteriorApartemen');
+        removeCondition1('JasaRenovasiInteriorHotel');
+        removeCondition1('JasaRenovasiInteriorToko');
+        removeCondition1('JasaDesignInteriorCustom');
+        removeCondition1('JasaRenovasiInteriorRuangan');
+       // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
+        removeCondition1('JasaRenovasiFasadBangunan');
+        removeCondition1('JasaRenovasiEksteriorBangunan');
+        removeCondition1('JasaPerbaikanArsitekturEksterior');
+	   
         JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanStrukturLink.style.visibility = 'visible';
@@ -439,7 +481,20 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanBangunanGedung');
         removeCondition1('JasaRenovasiPerbaikanBangunanGudang');
         removeCondition1('JasaRenovasiPerbaikanBangunanHotel');
-       
+
+	 // hapus elemen id Semua Sub JasaRenovasiPerbaikanInterior
+        removeCondition1('JasaRenovasiInteriorRumah');
+        removeCondition1('JasaRenovasiInteriorKantor');
+        removeCondition1('JasaRenovasiInteriorApartemen');
+        removeCondition1('JasaRenovasiInteriorHotel');
+        removeCondition1('JasaRenovasiInteriorToko');
+        removeCondition1('JasaDesignInteriorCustom');
+        removeCondition1('JasaRenovasiInteriorRuangan');
+       // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
+        removeCondition1('JasaRenovasiFasadBangunan');
+        removeCondition1('JasaRenovasiEksteriorBangunan');
+        removeCondition1('JasaPerbaikanArsitekturEksterior');
+	
        
 	JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
@@ -490,7 +545,20 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanBangunanGedung');
         removeCondition1('JasaRenovasiPerbaikanBangunanGudang');
         removeCondition1('JasaRenovasiPerbaikanBangunanHotel');
-       
+
+	 // hapus elemen id Semua Sub JasaRenovasiPerbaikanInterior
+        removeCondition1('JasaRenovasiInteriorRumah');
+        removeCondition1('JasaRenovasiInteriorKantor');
+        removeCondition1('JasaRenovasiInteriorApartemen');
+        removeCondition1('JasaRenovasiInteriorHotel');
+        removeCondition1('JasaRenovasiInteriorToko');
+        removeCondition1('JasaDesignInteriorCustom');
+        removeCondition1('JasaRenovasiInteriorRuangan');
+	    
+       // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
+        removeCondition1('JasaRenovasiFasadBangunan');
+        removeCondition1('JasaRenovasiEksteriorBangunan');
+        removeCondition1('JasaPerbaikanArsitekturEksterior');
        
 	JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
@@ -544,6 +612,21 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanBangunanGedung');
         removeCondition1('JasaRenovasiPerbaikanBangunanGudang');
         removeCondition1('JasaRenovasiPerbaikanBangunanHotel');
+
+	 // hapus elemen id Semua Sub JasaRenovasiPerbaikanInterior
+        removeCondition1('JasaRenovasiInteriorRumah');
+        removeCondition1('JasaRenovasiInteriorKantor');
+        removeCondition1('JasaRenovasiInteriorApartemen');
+        removeCondition1('JasaRenovasiInteriorHotel');
+        removeCondition1('JasaRenovasiInteriorToko');
+        removeCondition1('JasaDesignInteriorCustom');
+        removeCondition1('JasaRenovasiInteriorRuangan');
+	    
+       // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
+        removeCondition1('JasaRenovasiFasadBangunan');
+        removeCondition1('JasaRenovasiEksteriorBangunan');
+        removeCondition1('JasaPerbaikanArsitekturEksterior');
+	
        
         JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
@@ -592,7 +675,21 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanBangunanGedung');
         removeCondition1('JasaRenovasiPerbaikanBangunanGudang');
         removeCondition1('JasaRenovasiPerbaikanBangunanHotel');
-       
+
+	 // hapus elemen id Semua Sub JasaRenovasiPerbaikanInterior
+        removeCondition1('JasaRenovasiInteriorRumah');
+        removeCondition1('JasaRenovasiInteriorKantor');
+        removeCondition1('JasaRenovasiInteriorApartemen');
+        removeCondition1('JasaRenovasiInteriorHotel');
+        removeCondition1('JasaRenovasiInteriorToko');
+        removeCondition1('JasaDesignInteriorCustom');
+        removeCondition1('JasaRenovasiInteriorRuangan');
+	   
+       // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
+        removeCondition1('JasaRenovasiFasadBangunan');
+        removeCondition1('JasaRenovasiEksteriorBangunan');
+        removeCondition1('JasaPerbaikanArsitekturEksterior');
+	
         JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanBangunanLink.style.visibility = 'visible';
@@ -639,7 +736,21 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanBangunanGedung');
         removeCondition1('JasaRenovasiPerbaikanBangunanGudang');
         removeCondition1('JasaRenovasiPerbaikanBangunanHotel');
-       
+
+	 // hapus elemen id Semua Sub JasaRenovasiPerbaikanInterior
+        removeCondition1('JasaRenovasiInteriorRumah');
+        removeCondition1('JasaRenovasiInteriorKantor');
+        removeCondition1('JasaRenovasiInteriorApartemen');
+        removeCondition1('JasaRenovasiInteriorHotel');
+        removeCondition1('JasaRenovasiInteriorToko');
+        removeCondition1('JasaDesignInteriorCustom');
+        removeCondition1('JasaRenovasiInteriorRuangan');
+	   
+       // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
+        removeCondition1('JasaRenovasiFasadBangunan');
+        removeCondition1('JasaRenovasiEksteriorBangunan');
+        removeCondition1('JasaPerbaikanArsitekturEksterior');
+	
         JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanInteriorLink.style.visibility = 'visible';
@@ -687,7 +798,21 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanBangunanGedung');
         removeCondition1('JasaRenovasiPerbaikanBangunanGudang');
         removeCondition1('JasaRenovasiPerbaikanBangunanHotel');
-       
+
+	 // hapus elemen id Semua Sub JasaRenovasiPerbaikanInterior
+        removeCondition1('JasaRenovasiInteriorRumah');
+        removeCondition1('JasaRenovasiInteriorKantor');
+        removeCondition1('JasaRenovasiInteriorApartemen');
+        removeCondition1('JasaRenovasiInteriorHotel');
+        removeCondition1('JasaRenovasiInteriorToko');
+        removeCondition1('JasaDesignInteriorCustom');
+        removeCondition1('JasaRenovasiInteriorRuangan');
+	     
+       // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
+        removeCondition1('JasaRenovasiFasadBangunan');
+        removeCondition1('JasaRenovasiEksteriorBangunan');
+        removeCondition1('JasaPerbaikanArsitekturEksterior');
+	
 
         JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
@@ -737,7 +862,21 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanBangunanGedung');
         removeCondition1('JasaRenovasiPerbaikanBangunanGudang');
         removeCondition1('JasaRenovasiPerbaikanBangunanHotel');
-       
+
+	 // hapus elemen id Semua Sub JasaRenovasiPerbaikanInterior
+        removeCondition1('JasaRenovasiInteriorRumah');
+        removeCondition1('JasaRenovasiInteriorKantor');
+        removeCondition1('JasaRenovasiInteriorApartemen');
+        removeCondition1('JasaRenovasiInteriorHotel');
+        removeCondition1('JasaRenovasiInteriorToko');
+        removeCondition1('JasaDesignInteriorCustom');
+        removeCondition1('JasaRenovasiInteriorRuangan');
+	   
+       // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
+        removeCondition1('JasaRenovasiFasadBangunan');
+        removeCondition1('JasaRenovasiEksteriorBangunan');
+        removeCondition1('JasaPerbaikanArsitekturEksterior');
+	
 
         JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
