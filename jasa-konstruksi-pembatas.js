@@ -142,10 +142,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
      // Menemukan elemen menggunakan Id
     var JasaKonsPembatas = document.getElementById("JasaKonsPembatas");
+	/*
     if (!JasaKonsPembatas) {
         console.error("elemen Id JasaKonsPembatas kondisi terhapus");
         return;
     }
+    */
+	
      var JasaKonstruksiPembatasLink = document.getElementById("JasaKonstruksiPembatas");
      var JasaPembatasLink = document.getElementById("JasaPembatas");
 
