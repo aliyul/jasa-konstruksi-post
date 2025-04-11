@@ -56,8 +56,44 @@ const urlMappingPasangPagarRumah = {
     "https://www.betonjayareadymix.com/2018/11/tukang-pasang-pagar-rumah.html": "Tukang Pasang Pagar Rumah"
  
 };
+"https://www.betonjayareadymix.com/p/jasa-pengamanan-area-proyek.html": "Jasa Pengamanan Area Proyek",
+  "https://www.betonjayareadymix.com/p/jasa-rambu-dan-sistem-keamanan-visual.html": "Jasa Rambu dan Sistem Keamanan Visual",
+  "https://www.betonjayareadymix.com/p/jasa-pengaman-sisi-jalan-infrastruktur.html": "Jasa Pengaman Sisi Jalan Infrastruktur",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html": "Jasa Pembuatan Pagar Dinding Pembatas"
 
+const urlMappingPengamananAreaProyek = {
+"https://www.betonjayareadymix.com/p/jasa-pemasangan-safety-net-proyek.html": "Jasa Pemasangan Safety Net Proyek",
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-scaffolding-guard.html": "Jasa Pemasangan Scaffolding Guard",
+  "https://www.betonjayareadymix.com/p/jasa-pagar-sementara-proyek.html": "Jasa Pagar Sementara Proyek",
+  "https://www.betonjayareadymix.com/p/jasa-sistem-keamanan-perimeter-proyek.html": "Jasa Sistem Keamanan Perimeter Proyek"
 
+};
+
+const urlMappingRambuSistemKeamananVisual = {
+"https://www.betonjayareadymix.com/p/jasa-pemasangan-rambu-lalu-lintas.html": "Jasa Pemasangan Rambu Lalu Lintas",
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-cermin-tikungan.html": "Jasa Pemasangan Cermin Tikungan",
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-cat-marka-jalan.html": "Jasa Pemasangan Cat Marka Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-warning-light.html": "Jasa Pemasangan Warning Light"
+
+};
+
+const urlMappingPengamananSisiJalan = {
+"https://www.betonjayareadymix.com/p/jasa-pemasangan-guardrail-besi.html": "Jasa Pemasangan Guardrail Besi",
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-railing-jalan.html": "Jasa Pemasangan Railing Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-bollard-tiang-pengaman-jalan.html": "Jasa Bollard & Tiang Pengaman Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-pagar-pembatas-flyover-jembatan.html": "Jasa Pagar Pembatas Flyover & Jembatan"
+
+};
+
+const urlMappingPembuatanPagarDinding = {
+"https://www.betonjayareadymix.com/p/jasa-pagar-beton-precast.html": "Jasa Pagar Beton Precast",
+  "https://www.betonjayareadymix.com/p/jasa-pagar-panel-beton.html": "Jasa Pagar Panel Beton",
+  "https://www.betonjayareadymix.com/p/jasa-pagar-besi-hollow-wiremesh.html": "Jasa Pagar Besi Hollow & Wiremesh",
+  "https://www.betonjayareadymix.com/p/jasa-dinding-pembatas-bata-batako.html": "Jasa Dinding Pembatas Bata & Batako",
+  "https://www.betonjayareadymix.com/p/jasa-pagar-kawat-harmonika.html": "Jasa Pagar Kawat Harmonika",
+  "https://www.betonjayareadymix.com/p/jasa-pagar-brc.html": "Jasa Pagar BRC"
+
+};
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPembatasKons = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
