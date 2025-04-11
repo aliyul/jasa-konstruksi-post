@@ -1,4 +1,4 @@
-
+/*
 const urlMappingPengamananAreaProyek = {
 "https://www.betonjayareadymix.com/p/jasa-pemasangan-safety-net-proyek.html": "Jasa Pemasangan Safety Net Proyek",
   "https://www.betonjayareadymix.com/p/jasa-pemasangan-scaffolding-guard.html": "Jasa Pemasangan Scaffolding Guard",
@@ -35,7 +35,7 @@ const urlMappingPembuatanPagarDinding = {
 
 
 };
-
+*/
 //SUB urlMappingPembuatanPagarDinding
 const urlMappingJasaPagarBetonPrecast = {
 
