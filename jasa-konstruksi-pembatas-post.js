@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", function() {
         pageNameJasaPembatasPost.textContent = urlMappingJasaPagarBetonPrecast[cleanUrlJasaPembatasKonsPost];
     }
 
-   if (urlMappingJasaPagarRumah[cleanUrlJasaPembatasKons]) {
+   if (urlMappingJasaPagarRumah[cleanUrlJasaPembatasKonsPost]) {
         restoreCondition('JasaKonsPembatasPost');
         restoreCondition('JasaPembuatanPagarDindingPembatasPost');
         restoreCondition('JasaPagarRumahPost');
