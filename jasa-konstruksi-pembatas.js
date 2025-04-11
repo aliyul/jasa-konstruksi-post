@@ -37,6 +37,7 @@ const urlMappingPembuatanPagarDinding = {
 };
 
 //SUB urlMappingPembuatanPagarDinding
+/*
 const urlMappingPagarBetonPrecast = {
 
 };
@@ -109,6 +110,8 @@ const urlMappingPagarRumah = {
 const urlMappingPagarBangunan = {
 
 };
+*/
+
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPembatasKons = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
