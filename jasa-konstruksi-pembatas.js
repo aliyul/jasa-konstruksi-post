@@ -91,7 +91,10 @@ const urlMappingPembuatanPagarDinding = {
   "https://www.betonjayareadymix.com/p/jasa-pagar-besi-hollow-wiremesh.html": "Jasa Pagar Besi Hollow & Wiremesh",
   "https://www.betonjayareadymix.com/p/jasa-dinding-pembatas-bata-batako.html": "Jasa Dinding Pembatas Bata & Batako",
   "https://www.betonjayareadymix.com/p/jasa-pagar-kawat-harmonika.html": "Jasa Pagar Kawat Harmonika",
-  "https://www.betonjayareadymix.com/p/jasa-pagar-brc.html": "Jasa Pagar BRC"
+  "https://www.betonjayareadymix.com/p/jasa-pagar-brc.html": "Jasa Pagar BRC",
+  "https://www.betonjayareadymix.com/p/jasa-pagar-rumah.html": "Jasa Pagar Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-pagar-bangunan.html": "Jasa Pagar Bangunan"
+
 
 };
 // Menyimpan elemen yang dihapus dalam variabel
