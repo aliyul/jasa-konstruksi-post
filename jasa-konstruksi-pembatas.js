@@ -41,21 +41,6 @@ const urlMappingPasangPagarPanelBeton = {
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-rendah.html": "Jasa Pasang Pagar Panel Beton Rendah"
   
 };
-const urlMappingPasangPagarBeton = {
-
-};
-const urlMappingPasangPagarRumah = {
-"https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-terdekat.html": "Jasa Pasang Pagar Rumah Terdekat",
-    "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah.html": "Harga Jasa Pasang Pagar Rumah",
-    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-besi-beton-kayu.html": "Jasa Pasang Pagar Rumah Besi Beton Kayu",
-    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-minimalis-mewah.html": "Jasa Pasang Pagar Rumah Minimalis Mewah",
-    "https://www.betonjayareadymix.com/2018/11/biaya-jasa-pasang-pagar-rumah.html": "Biaya Jasa Pasang Pagar Rumah",
-    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-profesional.html": "Jasa Pasang Pagar Rumah Profesional",
-    "https://www.betonjayareadymix.com/2018/11/keunggulan-jasa-pasang-pagar-rumah.html": "Keunggulan Jasa Pasang Pagar Rumah",
-    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-pondasi-kuat.html": "Jasa Pasang Pagar Rumah Pondasi Kuat",
-    "https://www.betonjayareadymix.com/2018/11/tukang-pasang-pagar-rumah.html": "Tukang Pasang Pagar Rumah"
- 
-};
 
 const urlMappingPengamananAreaProyek = {
 "https://www.betonjayareadymix.com/p/jasa-pemasangan-safety-net-proyek.html": "Jasa Pemasangan Safety Net Proyek",
@@ -91,6 +76,41 @@ const urlMappingPembuatanPagarDinding = {
   "https://www.betonjayareadymix.com/p/jasa-pagar-rumah.html": "Jasa Pagar Rumah",
   "https://www.betonjayareadymix.com/p/jasa-pagar-bangunan.html": "Jasa Pagar Bangunan"
 
+
+};
+
+//SUB urlMappingPembuatanPagarDinding
+const urlMappingPagarBetonPrecast = {
+
+};
+const urlMappingPagarPanelBeton = {
+
+};
+const urlMappingPagarBesi = {
+
+};
+const urlMappingDindingBata = {
+
+};
+const urlMappingPagarKawat = {
+
+};
+const urlMappingPagarBRC = {
+
+};
+const urlMappingPagarRumah = {
+"https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-terdekat.html": "Jasa Pasang Pagar Rumah Terdekat",
+    "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah.html": "Harga Jasa Pasang Pagar Rumah",
+    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-besi-beton-kayu.html": "Jasa Pasang Pagar Rumah Besi Beton Kayu",
+    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-minimalis-mewah.html": "Jasa Pasang Pagar Rumah Minimalis Mewah",
+    "https://www.betonjayareadymix.com/2018/11/biaya-jasa-pasang-pagar-rumah.html": "Biaya Jasa Pasang Pagar Rumah",
+    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-profesional.html": "Jasa Pasang Pagar Rumah Profesional",
+    "https://www.betonjayareadymix.com/2018/11/keunggulan-jasa-pasang-pagar-rumah.html": "Keunggulan Jasa Pasang Pagar Rumah",
+    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-pondasi-kuat.html": "Jasa Pasang Pagar Rumah Pondasi Kuat",
+    "https://www.betonjayareadymix.com/2018/11/tukang-pasang-pagar-rumah.html": "Tukang Pasang Pagar Rumah"
+ 
+};
+const urlMappingPagarBangunan = {
 
 };
 // Menyimpan elemen yang dihapus dalam variabel
