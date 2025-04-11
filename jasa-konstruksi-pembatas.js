@@ -133,23 +133,49 @@ document.addEventListener("DOMContentLoaded", function() {
     }
      var JasaKonstruksiPembatasLink = document.getElementById("JasaKonstruksiPembatas");
      var JasaPembatasLink = document.getElementById("JasaPembatas");
-     var JasaPasangPagarPanelBetonLink = document.getElementById("JasaPasangPagarPanelBeton");
-     var JasaPasangPagarBetonLink = document.getElementById("JasaPasangPagarBeton");
-     var JasaPasangPagarRumahLink = document.getElementById("JasaPasangPagarRumah");
-     //var JasaBongkarKeramikLink = document.getElementById("JasaBongkarKeramik");
+
+     //SUB JASA PEMBATAS
+     var JasaPembuatanPagarDindingPembatasLink = document.getElementById("JasaPembuatanPagarDindingPembatas");
+     var JasaPengamanSisiJalanInfrastrukturLink = document.getElementById("JasaPengamanSisiJalanInfrastruktur");
+     var JasaRambudanSistemKeamananVisualLink = document.getElementById("JasaRambudanSistemKeamananVisual");
+     var JasaPengamananAreaProyekLink = document.getElementById("JasaPengamananAreaProyek");
+
+    //SUB JasaPembuatanPagarDindingPembatas
+     var JasaPagarBetonPrecastLink = document.getElementById("JasaPagarBetonPrecast");
+     var JasaPagarPanelBetonLink = document.getElementById("JasaPagarPanelBeton");
+     var JasaPagarBesiHollowWiremeshLink = document.getElementById("JasaPagarBesiHollowWiremesh");
+     var JasaDindingPembatasBataBatakoLink = document.getElementById("JasaDindingPembatasBataBatako");
+     var JasaPagarKawatHarmonikaLink = document.getElementById("JasaPagarKawatHarmonika");
+     var JasaPagarBrcLink = document.getElementById("JasaPagarBrc");
+     var JasaPagarRumahLink = document.getElementById("JasaPagarRumah");
+     var JasaPagarBangunanLink = document.getElementById("JasaPagarBangunan");
+	
      var pageNameJasaPembatas = document.getElementById("pageNameJasaPembatas");
     
 
      // Default untuk menyembunyikan elemen
      JasaKonstruksiPembatasLink.style.visibility = 'hidden';
      JasaPembatasLink.style.visibility = 'hidden';
-     JasaPasangPagarPanelBetonLink.style.visibility = 'hidden';
-     JasaPasangPagarBetonLink.style.visibility = 'hidden';
-     JasaPasangPagarRumahLink.style.visibility = 'hidden';
-     //JasaBongkarKeramikLink.style.visibility = 'hidden';
+	
+     //SUB JASA PEMBATAS
+     JasaPembuatanPagarDindingPembatasLink.style.visibility = 'hidden';
+     JasaPengamanSisiJalanInfrastrukturLink.style.visibility = 'hidden';
+     JasaRambudanSistemKeamananVisualLink.style.visibility = 'hidden';
+     JasaPengamananAreaProyekLink.style.visibility = 'hidden';
+
+    //SUB JasaPembuatanPagarDindingPembatas
+     JasaPagarBetonPrecastLink.style.visibility = 'hidden';
+     JasaPagarPanelBetonLink.style.visibility = 'hidden';
+     JasaPagarBesiHollowWiremeshLink.style.visibility = 'hidden';
+     JasaDindingPembatasBataBatakoLink.style.visibility = 'hidden';
+     JasaPagarKawatHarmonikaLink.style.visibility = 'hidden';
+     JasaPagarBrcLink.style.visibility = 'hidden';
+     JasaPagarRumahLink.style.visibility = 'hidden';
+     JasaPagarBangunanLink.style.visibility = 'hidden';
+	
      pageNameJasaPembatas.textContent = "";
 
-    if (urlMappingPasangPagarPanelBeton[cleanUrlJasaPembatasKons]) {
+    if (urlMappingPembuatanPagarDinding[cleanUrlJasaPembatasKons]) {
         restoreCondition('JasaKonsPembatas');
         restoreCondition('JasaPasangPagarPanelBeton');
      
