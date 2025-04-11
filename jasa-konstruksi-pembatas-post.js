@@ -149,24 +149,24 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   
 	
-     var JasaKonstruksiPembatasLink = document.getElementById("JasaKonstruksiPembatasPost");
+     var JasaKonstruksiPembatasPostLink = document.getElementById("JasaKonstruksiPembatasPost");
      var JasaPembatasPostLink = document.getElementById("JasaPembatasPost");
 
      //SUB JASA PEMBATAS
-     var JasaPembuatanPagarDindingPembatasLink = document.getElementById("JasaPembuatanPagarDindingPembatasPost");
-     var JasaPengamanSisiJalanInfrastrukturLink = document.getElementById("JasaPengamanSisiJalanInfrastrukturPost");
-     var JasaRambudanSistemKeamananVisualLink = document.getElementById("JasaRambudanSistemKeamananVisualPost");
-     var JasaPengamananAreaProyekLink = document.getElementById("JasaPengamananAreaProyekPost");
+     var JasaPembuatanPagarDindingPembatasPostLink = document.getElementById("JasaPembuatanPagarDindingPembatasPost");
+     var JasaPengamanSisiJalanInfrastrukturPostLink = document.getElementById("JasaPengamanSisiJalanInfrastrukturPost");
+     var JasaRambudanSistemKeamananVisualPostLink = document.getElementById("JasaRambudanSistemKeamananVisualPost");
+     var JasaPengamananAreaProyekPostLink = document.getElementById("JasaPengamananAreaProyekPost");
 
     //SUB JasaPembuatanPagarDindingPembatas
-     var JasaPagarBetonPrecastLink = document.getElementById("JasaPagarBetonPrecastPost");
-     var JasaPagarPanelBetonLink = document.getElementById("JasaPagarPanelBetonPost");
-     var JasaPagarBesiHollowWiremeshLink = document.getElementById("JasaPagarBesiHollowWiremeshPost");
-     var JasaDindingPembatasBataBatakoLink = document.getElementById("JasaDindingPembatasBataBatakoPost");
-     var JasaPagarKawatHarmonikaLink = document.getElementById("JasaPagarKawatHarmonikaPost");
-     var JasaPagarBrcLink = document.getElementById("JasaPagarBrcPost");
-     var JasaPagarRumahLink = document.getElementById("JasaPagarRumahPost");
-     var JasaPagarBangunanLink = document.getElementById("JasaPagarBangunanPost");
+     var JasaPagarBetonPrecastPostLink = document.getElementById("JasaPagarBetonPrecastPost");
+     var JasaPagarPanelBetonPostLink = document.getElementById("JasaPagarPanelBetonPost");
+     var JasaPagarBesiHollowWiremeshPostLink = document.getElementById("JasaPagarBesiHollowWiremeshPost");
+     var JasaDindingPembatasBataBatakoPostLink = document.getElementById("JasaDindingPembatasBataBatakoPost");
+     var JasaPagarKawatHarmonikaPostLink = document.getElementById("JasaPagarKawatHarmonikaPost");
+     var JasaPagarBrcPostLink = document.getElementById("JasaPagarBrcPost");
+     var JasaPagarRumahPostLink = document.getElementById("JasaPagarRumahPost");
+     var JasaPagarBangunanPostLink = document.getElementById("JasaPagarBangunanPost");
 	
      var pageNameJasaPembatasPost = document.getElementById("pageNameJasaPembatasPost");
     
