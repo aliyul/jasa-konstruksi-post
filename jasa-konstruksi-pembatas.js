@@ -336,6 +336,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 	
     //SUB urlMappingPembuatanPagarDinding
+   /*
        if (urlMappingPagarPanelBeton[cleanUrlJasaPembatasKons]) {
         restoreCondition('JasaKonsPembatas');
         restoreCondition('JasaPembuatanPagarDindingPembatas');
@@ -376,6 +377,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaPagarPanelBetonLink.style.visibility = 'visible';
         pageNameJasaPembatas.textContent = urlMappingPagarPanelBeton[cleanUrlJasaPembatasKons];
     }
+    
 	
     if (urlMappingPagarBetonPrecast[cleanUrlJasaPembatasKons]) {
         restoreCondition('JasaKonsPembatas');
@@ -401,6 +403,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaPasangPagarBetonLink.style.visibility = 'visible';
         pageNameJasaPembatas.textContent = urlMappingPagarBetonPrecast[cleanUrlJasaPembatasKons];
     }
+
    if (urlMappingPagarRumah[cleanUrlJasaPembatasKons]) {
         restoreCondition('JasaKonsPembatas');
         restoreCondition('JasaPasangPagarRumah');
@@ -425,6 +428,6 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaPasangPagarRumahLink.style.visibility = 'visible';
         pageNameJasaPembatas.textContent = urlMappingPagarRumah[cleanUrlJasaPembatasKons];
     }
- 
+ */
    });
 
