@@ -211,6 +211,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsStruktur');
+        removeCondition('JasaKonsPembatas');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -253,6 +254,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsStruktur');
+	removeCondition('JasaKonsPembatas');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -294,6 +296,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsStruktur');
+	removeCondition('JasaKonsPembatas');
 
 
         //hapus elemen SUB jasa pembatas lain
