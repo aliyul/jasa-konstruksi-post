@@ -240,7 +240,7 @@ if (urlMappingStrukturKhusus[cleanUrlJasaJasaKonsStruktur]) {
         JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
         JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
 	//TAMPILKAN JasaStrukturKhususLink
-        JasaStrukturKhususSubLink.style.visibility = 'visible';
+        JasaStrukturKhususLink.style.visibility = 'visible';
         pageNameJasaKonsStruktur.textContent = urlMappingStrukturKhusus[cleanUrlJasaJasaKonsStruktur];
     }
 if (urlMappingStrukturLapangan[cleanUrlJasaJasaKonsStruktur]) {
