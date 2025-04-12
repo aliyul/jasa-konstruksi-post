@@ -141,7 +141,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
     }
     
 	
-    if (urlMappingJasaPondasiTapak[cleanUrlJasaPembatasKonsPost]) {
+    if (urlMappingJasaPondasiTapak[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
         restoreCondition('JasaPondasiTapakPost');
@@ -187,7 +187,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiTapak[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
     }
 
-   if (urlMappingJasaPondasiBoredPile[cleanUrlJasaPembatasKonsPost]) {
+   if (urlMappingJasaPondasiBoredPile[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
         restoreCondition('JasaPondasiBoredPilePost');
@@ -233,7 +233,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiBoredPile[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
    }
 	
-if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPembatasKonsPost]) {
+if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
         restoreCondition('JasaPondasiTiangPancangPost');
@@ -278,7 +278,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPembatasKonsPost]) {
         JasaPondasiTiangPancangPostLink.style.visibility = 'visible';
         pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
    }
-   if (urlMappingJasaPondasiSumuran[cleanUrlJasaPembatasKonsPost]) {
+   if (urlMappingJasaPondasiSumuran[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
         restoreCondition('JasaPondasiSumuranPost');
