@@ -82,10 +82,9 @@ const urlMappingStruktur = {
 
 const urlMappingPondasi = {
 "https://www.betonjayareadymix.com/p/jasa-pondasi-bangunan.html": "Jasa Pondasi Bangunan",
-//Jasa Perkuatan dan Stabilisasi Tanah tidak di masukkan karna sudah ada di artikel lain yaitu
-//Jasa Perkuatan Tanah dan Jasa Pemadatan dan Persiapan Lahan yang kedua nya bisa mencakup
- //"https://www.betonjayareadymix.com/p/jasa-perkuatan-dan-stabilisasi-tanah.html": "Jasa Perkuatan dan Stabilisasi Tanah",
-  "https://www.betonjayareadymix.com/p/jasa-pemadatan-dan-persiapan-lahan.html": "Jasa Pemadatan dan Persiapan Lahan",
+//Jasa Pemadatan dan Persiapan Lahan ini terlalu UMUM ga FKS ke pondasi
+  //"https://www.betonjayareadymix.com/p/jasa-pemadatan-dan-persiapan-lahan.html": "Jasa Pemadatan dan Persiapan Lahan",
+"https://www.betonjayareadymix.com/p/jasa-pemadatan-persiapan-pondasi.html": "Jasa Pemadatan & Persiapan Pondasi",
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah.html": "Jasa Perkuatan Tanah",
   "https://www.betonjayareadymix.com/p/jasa-retrofitting-pondasi.html": "Jasa Retrofitting Pondasi"
 
@@ -116,7 +115,8 @@ const urlMappingPematanganLahan = {
   "https://www.betonjayareadymix.com/p/jasa-pemotongan-bukit-lahan.html": "Jasa Pemotongan Bukit Lahan",
   "https://www.betonjayareadymix.com/p/jasa-urugan-tanah-lahan.html": "Jasa Urugan Tanah Lahan",
   "https://www.betonjayareadymix.com/p/jasa-pemadatan-tanah-lahan.html": "Jasa Pemadatan Tanah Lahan",
-  "https://www.betonjayareadymix.com/p/jasa-pemadatan-tanah-bangunan.html": "Jasa Pemadatan Tanah Bangunan",
+ //ga usah karna ini untuk umum dan ga fokus ke lahan pematangan
+  //"https://www.betonjayareadymix.com/p/jasa-pemadatan-tanah-bangunan.html": "Jasa Pemadatan Tanah Bangunan",
   "https://www.betonjayareadymix.com/p/jasa-base-course-lahan.html": "Jasa Base Course Lahan",
   "https://www.betonjayareadymix.com/p/jasa-stabilisasi-tanah-lahan.html": "Jasa Stabilisasi Tanah Lahan",
   "https://www.betonjayareadymix.com/p/jasa-drainase-lahan.html": "Jasa Drainase Lahan",
