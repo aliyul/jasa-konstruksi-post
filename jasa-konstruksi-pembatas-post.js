@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
     //SUB urlMappingPembuatanPagarDinding
 
-       if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
+if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         restoreCondition('JasaKonsPembatasPost');
         restoreCondition('JasaPembuatanPagarDindingPembatasPost');
         restoreCondition('JasaPagarPanelBetonPost');
@@ -213,6 +213,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsStruktur');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsor');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -257,6 +258,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsStruktur');
 	removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsor');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -300,6 +302,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsStruktur');
 	removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsor');
 
 
         //hapus elemen SUB jasa pembatas lain
