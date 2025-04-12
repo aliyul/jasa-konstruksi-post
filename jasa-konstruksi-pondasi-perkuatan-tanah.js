@@ -1,5 +1,5 @@
 
-const urlMappingJasaPondasiBangunan= {
+const urlMappingJasaPondasiBangunan = {
 "https://www.betonjayareadymix.com/p/jasa-pondasi-cakar-ayam.html": "Jasa Pondasi Cakar Ayam",
   "https://www.betonjayareadymix.com/p/jasa-pondasi-tapak.html": "Jasa Pondasi Tapak",
   "https://www.betonjayareadymix.com/p/jasa-pondasi-bored-pile.html": "Jasa Pondasi Bored Pile",
@@ -37,14 +37,14 @@ const urlMappingJasaRetrofittingPondasi = {
 };
 
 // Menyimpan elemen yang dihapus dalam variabel
-let removedElementsJasaPembatasKons = {};
+let removedElementsJasapondasiPerkuatanTanahKons = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
 function removeCondition(conditionId) {
     const conditionElement = document.getElementById(conditionId);
 
     if (conditionElement) {
         // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
-        removedElementsJasaPembatasKons[conditionId] = conditionElement;
+        removedElementsJasapondasiPerkuatanTanahKons[conditionId] = conditionElement;
         conditionElement.remove(); // Menghapus elemen tersebut
     }
 }
@@ -52,57 +52,56 @@ function removeCondition(conditionId) {
 // Fungsi untuk mengembalikan elemen yang telah dihapus
 function restoreCondition(conditionId) {
     const breadcrumb = document.querySelector('.breadcrumb');
-    const elementToRestore = removedElementsJasaPembatasKons[conditionId]; // Mendapatkan elemen yang disimpan
+    const elementToRestore = removedElementsJasapondasiPerkuatanTanahKons[conditionId]; // Mendapatkan elemen yang disimpan
 
     if (elementToRestore) {
         breadcrumb.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
-        delete removedElementsJasaPembatasKons[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
+        delete removedElementsJasapondasiPerkuatanTanahKons[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
     } else {
-        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaPembatasKons.`);
+        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasapondasiPerkuatanTanahKons.`);
     }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     // var currentUrl = window.location.href;
      //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
-    const cleanUrlJasaPembatasKons = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
+    const cleanUrlJasaPondasiPerkuatanTanahKons = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
 
      // Menemukan elemen menggunakan Id
-    var JasaKonsPembatas = document.getElementById("JasaKonsPembatas");
+    var JasaKonsPondasiTanah = document.getElementById("JasaKonsPondasiTanah");
 
-    if (!JasaKonsPembatas) {
-        console.error("elemen Id JasaKonsPembatas kondisi terhapus");
+    if (!JasaKonsPondasiTanah) {
+        console.error("elemen Id JasaKonsPondasiTanah kondisi terhapus");
         return;
     }
     
-	
-     var JasaKonstruksiPembatasLink = document.getElementById("JasaKonstruksiPembatas");
-     var JasaPembatasLink = document.getElementById("JasaPembatas");
+     var JasaKonstruksiPondasiTanahSubLink = document.getElementById("JasaKonstruksiPondasiTanahSub");
+     var JasaPondasiTanahSub = document.getElementById("JasaPondasiTanahSub");
 
-     //SUB JASA PEMBATAS
-     var JasaPembuatanPagarDindingPembatasLink = document.getElementById("JasaPembuatanPagarDindingPembatas");
-     var JasaPengamanSisiJalanInfrastrukturLink = document.getElementById("JasaPengamanSisiJalanInfrastruktur");
-     var JasaRambudanSistemKeamananVisualLink = document.getElementById("JasaRambudanSistemKeamananVisual");
-     var JasaPengamananAreaProyekLink = document.getElementById("JasaPengamananAreaProyek");
+     //SUB Jasa Pondasi Tanah
+     var JasaPondasiBangunanSubLink = document.getElementById("JasaPondasiBangunanSub");
+     var JasaPemadatanPersiapanPondasiSubLink = document.getElementById("JasaPemadatanPersiapanPondasiSub");
+     var JasaPerkuatanTanahSubLink = document.getElementById("JasaPerkuatanTanahSub");
+     var JasaRetrofittingPondasiSubLink = document.getElementById("JasaRetrofittingPondasiSub");
 
 	
-     var pageNameJasaPembatas = document.getElementById("pageNameJasaPembatas");
+     var pageNameJasaKonsPondasiTanah = document.getElementById("pageNameJasaKonsPondasiTanah");
     
 
      // Default untuk menyembunyikan elemen
-     JasaKonstruksiPembatasLink.style.visibility = 'hidden';
-     JasaPembatasLink.style.visibility = 'hidden';
+     JasaKonstruksiPondasiTanahSubLink.style.visibility = 'hidden';
+     JasaPondasiTanahSub.style.visibility = 'hidden';
 	
      //SUB JASA PEMBATAS
-     JasaPembuatanPagarDindingPembatasLink.style.visibility = 'hidden';
-     JasaPengamanSisiJalanInfrastrukturLink.style.visibility = 'hidden';
-     JasaRambudanSistemKeamananVisualLink.style.visibility = 'hidden';
-     JasaPengamananAreaProyekLink.style.visibility = 'hidden';
+     JasaPondasiBangunanSubLink.style.visibility = 'hidden';
+     JasaPemadatanPersiapanPondasiSubLink.style.visibility = 'hidden';
+     JasaPerkuatanTanahSubLink.style.visibility = 'hidden';
+     JasaRetrofittingPondasiSubLink.style.visibility = 'hidden';
 
      pageNameJasaPembatas.textContent = "";
 
-    if (urlMappingPembuatanPagarDinding[cleanUrlJasaPembatasKons]) {
-        restoreCondition('JasaKonsPembatas');
+    if (urlMappingJasaPondasiBangunan[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        restoreCondition('JasaKonsPondasiTanah');
         restoreCondition('JasaPembuatanPagarDindingPembatas');
      
         //hapus elemen div id lain
@@ -115,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsStruktur');
+        removeCondition('JasaKonsPembatas');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -126,10 +126,10 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiPembatasLink.style.visibility = 'visible';
         JasaPembatasLink.style.visibility = 'visible';
         JasaPembuatanPagarDindingPembatasLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingPembuatanPagarDinding[cleanUrlJasaPembatasKons];
+        pageNameJasaPembatas.textContent = urlMappingJasaPondasiBangunan[cleanUrlJasaPondasiPerkuatanTanahKons];
     }
-       if (urlMappingPengamananSisiJalan[cleanUrlJasaPembatasKons]) {
-        restoreCondition('JasaKonsPembatas');
+       if (urlMappingJasaPemadatanPersiapanPondasi[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        restoreCondition('JasaKonsPondasiTanah');
         restoreCondition('JasaPengamanSisiJalanInfrastruktur');
      
         //hapus elemen div id lain
@@ -142,6 +142,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsStruktur');
+        removeCondition('JasaKonsPembatas');
 
 
         //hapus elemen SUB jasa pembatas lain SELAIN JasaPengamanSisiJalanInfrastruktur
@@ -152,10 +153,10 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiPembatasLink.style.visibility = 'visible';
         JasaPembatasLink.style.visibility = 'visible';
         JasaPengamanSisiJalanInfrastrukturLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingPengamananSisiJalan[cleanUrlJasaPembatasKons];
+        pageNameJasaPembatas.textContent = urlMappingJasaPemadatanPersiapanPondasi[cleanUrlJasaPondasiPerkuatanTanahKons];
     }
-       if (urlMappingRambuSistemKeamananVisual[cleanUrlJasaPembatasKons]) {
-        restoreCondition('JasaKonsPembatas');
+       if (urlMappingJasaPerkuatanTanah[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        restoreCondition('JasaKonsPondasiTanah');
         restoreCondition('JasaRambudanSistemKeamananVisual');
      
         //hapus elemen div id lain
@@ -168,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsStruktur');
+        removeCondition('JasaKonsPembatas');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -178,10 +180,10 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiPembatasLink.style.visibility = 'visible';
         JasaPembatasLink.style.visibility = 'visible';
         JasaRambudanSistemKeamananVisualLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingRambuSistemKeamananVisual[cleanUrlJasaPembatasKons];
+        pageNameJasaPembatas.textContent = urlMappingJasaPerkuatanTanah[cleanUrlJasaPondasiPerkuatanTanahKons];
     }
-       if (urlMappingPengamananAreaProyek[cleanUrlJasaPembatasKons]) {
-        restoreCondition('JasaKonsPembatas');
+       if (urlMappingJasaRetrofittingPondasi[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        restoreCondition('JasaKonsPondasiTanah');
         restoreCondition('JasaPengamananAreaProyek');
      
         //hapus elemen div id lain
@@ -194,6 +196,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsStruktur');
+        removeCondition('JasaKonsPembatas');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -206,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiPembatasLink.style.visibility = 'visible';
         JasaPembatasLink.style.visibility = 'visible';
         JasaPengamananAreaProyekLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingPengamananAreaProyek[cleanUrlJasaPembatasKons];
+        pageNameJasaPembatas.textContent = urlMappingJasaRetrofittingPondasi[cleanUrlJasaPondasiPerkuatanTanahKons];
     }
 	
     //SUB urlMappingPembuatanPagarDinding
