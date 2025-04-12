@@ -24,14 +24,14 @@ const urlMappingPagarBangunan = {
 
 };
 // Menyimpan elemen yang dihapus dalam variabel
-let removedElementsJasaPembatasKonsPost = {};
+let removedElementsJasapondasiPerkuatanTanahKons = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
 function removeCondition(conditionId) {
     const conditionElement = document.getElementById(conditionId);
 
     if (conditionElement) {
         // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
-        removedElementsJasaPembatasKonsPost[conditionId] = conditionElement;
+        removedElementsJasapondasiPerkuatanTanahKons[conditionId] = conditionElement;
         conditionElement.remove(); // Menghapus elemen tersebut
     }
 }
@@ -39,50 +39,46 @@ function removeCondition(conditionId) {
 // Fungsi untuk mengembalikan elemen yang telah dihapus
 function restoreCondition(conditionId) {
     const breadcrumb = document.querySelector('.breadcrumb');
-    const elementToRestore = removedElementsJasaPembatasKonsPost[conditionId]; // Mendapatkan elemen yang disimpan
+    const elementToRestore = removedElementsJasapondasiPerkuatanTanahKons[conditionId]; // Mendapatkan elemen yang disimpan
 
     if (elementToRestore) {
         breadcrumb.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
-        delete removedElementsJasaPembatasKonsPost[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
+        delete removedElementsJasapondasiPerkuatanTanahKons[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
     } else {
-        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaPembatasKonsPost.`);
+        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasapondasiPerkuatanTanahKons.`);
     }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     // var currentUrl = window.location.href;
      //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
-    const cleanUrlJasaPembatasKonsPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
+    const cleanUrlJasaPondasiPerkuatanTanahKons = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
 
      // Menemukan elemen menggunakan Id
-    var JasaKonsPembatasPost = document.getElementById("JasaKonsPembatasPost");
+    var JasaKonsPondasiTanahPost = document.getElementById("JasaKonsPondasiTanahPost");
 
-    if (!JasaKonsPembatasPost) {
-        console.error("elemen Id JasaKonsPembatasPost kondisi terhapus");
+    if (!JasaKonsPondasiTanahPost) {
+        console.error("elemen Id JasaKonsPondasiTanahPost kondisi terhapus");
         return;
     }
-  
-	
-     var JasaKonstruksiPembatasPostLink = document.getElementById("JasaKonstruksiPembatasPost");
-     var JasaPembatasPostLink = document.getElementById("JasaPembatasPost");
+    
+     var JasaKonstruksiPondasiTanahSubLink = document.getElementById("JasaKonstruksiPondasiTanahSubPost");
+     var JasaPondasiTanahSub = document.getElementById("JasaPondasiTanahSubPost");
 
-     //SUB JASA PEMBATAS
-     var JasaPembuatanPagarDindingPembatasPostLink = document.getElementById("JasaPembuatanPagarDindingPembatasPost");
-     var JasaPengamanSisiJalanInfrastrukturPostLink = document.getElementById("JasaPengamanSisiJalanInfrastrukturPost");
-     var JasaRambudanSistemKeamananVisualPostLink = document.getElementById("JasaRambudanSistemKeamananVisualPost");
-     var JasaPengamananAreaProyekPostLink = document.getElementById("JasaPengamananAreaProyekPost");
-
-    //SUB JasaPembuatanPagarDindingPembatas
-     var JasaPagarBetonPrecastPostLink = document.getElementById("JasaPagarBetonPrecastPost");
-     var JasaPagarPanelBetonPostLink = document.getElementById("JasaPagarPanelBetonPost");
-     var JasaPagarBesiHollowWiremeshPostLink = document.getElementById("JasaPagarBesiHollowWiremeshPost");
-     var JasaDindingPembatasBataBatakoPostLink = document.getElementById("JasaDindingPembatasBataBatakoPost");
-     var JasaPagarKawatHarmonikaPostLink = document.getElementById("JasaPagarKawatHarmonikaPost");
-     var JasaPagarBrcPostLink = document.getElementById("JasaPagarBrcPost");
-     var JasaPagarRumahPostLink = document.getElementById("JasaPagarRumahPost");
-     var JasaPagarBangunanPostLink = document.getElementById("JasaPagarBangunanPost");
+     //SUB Jasa Pondasi Tanah
+     var JasaPondasiBangunanSubPostLink = document.getElementById("JasaPondasiBangunanSubPost");
+     var JasaPemadatanPersiapanPondasiSubPostLink = document.getElementById("JasaPemadatanPersiapanPondasiSubPost");
+     var JasaPerkuatanTanahSubPostLink = document.getElementById("JasaPerkuatanTanahSubPost");
+     var JasaRetrofittingPondasiSubPostLink = document.getElementById("JasaRetrofittingPondasiSubPost");
 	
-     var pageNameJasaPembatasPost = document.getElementById("pageNameJasaPembatasPost");
+    //SUB JasaPondasiBangunanSubPost
+     var JasaPondasiCakarAyamPostLink = document.getElementById("JasaPondasiCakarAyamPost");
+     var JasaPondasiTapakPostLink = document.getElementById("JasaPondasiTapakPost");
+     var JasaPondasiBoredPilePostLink = document.getElementById("JasaPondasiBoredPilePost");
+     var JasaPondasiTiangPancangPostLink = document.getElementById("JasaPondasiTiangPancangPost");
+     var JasaPondasiSumuranPostLink = document.getElementById("JasaPondasiSumuranPost");
+	
+     var pageNameJasaKonsPondasiTanahPost = document.getElementById("pageNameJasaKonsPondasiTanahPost");
     
 
      // Default untuk menyembunyikan elemen
