@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
    if (urlMappingJasaPemadatanPersiapanPondasi[cleanUrlJasaPondasiPerkuatanTanahKons]) {
         restoreCondition('JasaKonsPondasiTanah');
-        restoreCondition('JasaPondasiBangunanSub');
+        restoreCondition('JasaPemadatanPersiapanPondasiSub');
      
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaPemadatanPersiapanPondasiSub');
+        removeCondition('JasaPondasiBangunanSub');
         removeCondition('JasaPerkuatanTanahSub');
         removeCondition('JasaRetrofittingPondasiSub');
 /*
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     if (urlMappingJasaPerkuatanTanah[cleanUrlJasaPondasiPerkuatanTanahKons]) {
         restoreCondition('JasaKonsPondasiTanah');
-        restoreCondition('JasaPondasiBangunanSub');
+        restoreCondition('JasaPerkuatanTanahSub');
      
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaPemadatanPersiapanPondasiSub');
-        removeCondition('JasaPerkuatanTanahSub');
+        removeCondition('JasaPondasiBangunanSub');
         removeCondition('JasaRetrofittingPondasiSub');
 /*
 	JasaPondasiBangunanSubLink.style.visibility = 'hidden';
@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function() {
        
    if (urlMappingJasaRetrofittingPondasi[cleanUrlJasaPondasiPerkuatanTanahKons]) {
         restoreCondition('JasaKonsPondasiTanah');
-        restoreCondition('JasaPondasiBangunanSub');
+        restoreCondition('JasaRetrofittingPondasiSub');
      
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function() {
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaPemadatanPersiapanPondasiSub');
         removeCondition('JasaPerkuatanTanahSub');
-        removeCondition('JasaRetrofittingPondasiSub');
+        removeCondition('JasaPondasiBangunanSub');
 /*
 	JasaPondasiBangunanSubLink.style.visibility = 'hidden';
      JasaPemadatanPersiapanPondasiSubLink.style.visibility = 'hidden';
