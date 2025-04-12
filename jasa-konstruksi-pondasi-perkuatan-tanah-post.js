@@ -143,7 +143,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
     if (urlMappingJasaPondasiTapak[cleanUrlJasaPembatasKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
-        restoreCondition('JasaPondasiCakarAyamPost');
+        restoreCondition('JasaPondasiTapakPost');
      
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
@@ -165,7 +165,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         removeCondition('JasaRetrofittingPondasiSubPost');
 
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
-        removeCondition('JasaPondasiTapakPost');
+        removeCondition('JasaPondasiCakarAyamPost');
         removeCondition('JasaPondasiBoredPilePost'); 
 	removeCondition('JasaPondasiTiangPancangPost');
 	removeCondition('JasaPondasiSumuranPost');
@@ -181,14 +181,14 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
 	//TAMPILKAN PONDASI BANGUNAN
         JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPondasiCakarAyam
-        JasaPondasiCakarAyamPostLink.style.visibility = 'visible';
+        JasaPondasiTapakPostLink.style.visibility = 'visible';
         pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiTapak[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
     }
 
    if (urlMappingJasaPondasiBoredPile[cleanUrlJasaPembatasKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
-        restoreCondition('JasaPondasiCakarAyamPost');
+        restoreCondition('JasaPondasiBoredPilePost');
      
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
@@ -211,7 +211,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
 
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
         removeCondition('JasaPondasiTapakPost');
-        removeCondition('JasaPondasiBoredPilePost'); 
+        removeCondition('JasaPondasiCakarAyamPost'); 
 	removeCondition('JasaPondasiTiangPancangPost');
 	removeCondition('JasaPondasiSumuranPost');
 	/*
@@ -226,14 +226,14 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
 	//TAMPILKAN PONDASI BANGUNAN
         JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPondasiCakarAyam
-        JasaPondasiCakarAyamPostLink.style.visibility = 'visible';
+        JasaPondasiBoredPilePostLink.style.visibility = 'visible';
         pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiBoredPile[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
    }
 	
 if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPembatasKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
-        restoreCondition('JasaPondasiCakarAyamPost');
+        restoreCondition('JasaPondasiTiangPancangPost');
      
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
@@ -257,7 +257,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPembatasKonsPost]) {
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
         removeCondition('JasaPondasiTapakPost');
         removeCondition('JasaPondasiBoredPilePost'); 
-	removeCondition('JasaPondasiTiangPancangPost');
+	removeCondition('JasaPondasiCakarAyamPost');
 	removeCondition('JasaPondasiSumuranPost');
 	/*
  JasaPondasiBangunanSubPostLink.style.visibility = 'hidden';
@@ -271,13 +271,13 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPembatasKonsPost]) {
 	//TAMPILKAN PONDASI BANGUNAN
         JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPondasiCakarAyam
-        JasaPondasiCakarAyamPostLink.style.visibility = 'visible';
+        JasaPondasiTiangPancangPostLink.style.visibility = 'visible';
         pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
    }
    if (urlMappingJasaPondasiSumuran[cleanUrlJasaPembatasKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
-        restoreCondition('JasaPondasiCakarAyamPost');
+        restoreCondition('JasaPondasiSumuranPost');
      
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
@@ -302,7 +302,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPembatasKonsPost]) {
         removeCondition('JasaPondasiTapakPost');
         removeCondition('JasaPondasiBoredPilePost'); 
 	removeCondition('JasaPondasiTiangPancangPost');
-	removeCondition('JasaPondasiSumuranPost');
+	removeCondition('JasaPondasiCakarAyamPost');
 	/*
  JasaPondasiBangunanSubPostLink.style.visibility = 'hidden';
      JasaPemadatanPersiapanPondasiSubPostLink.style.visibility = 'hidden';
@@ -315,7 +315,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPembatasKonsPost]) {
 	//TAMPILKAN PONDASI BANGUNAN
         JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPondasiCakarAyam
-        JasaPondasiCakarAyamPostLink.style.visibility = 'visible';
+        JasaPondasiSumuranPostLink.style.visibility = 'visible';
         pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiSumuran[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
    }
 
