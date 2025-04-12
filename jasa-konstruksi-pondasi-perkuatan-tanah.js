@@ -98,11 +98,11 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaPerkuatanTanahSubLink.style.visibility = 'hidden';
      JasaRetrofittingPondasiSubLink.style.visibility = 'hidden';
 
-     pageNameJasaPembatas.textContent = "";
+     pageNameJasaKonsPondasiTanah.textContent = "";
 
     if (urlMappingJasaPondasiBangunan[cleanUrlJasaPondasiPerkuatanTanahKons]) {
         restoreCondition('JasaKonsPondasiTanah');
-        restoreCondition('JasaPembuatanPagarDindingPembatas');
+        restoreCondition('JasaPondasiBangunanSub');
      
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
@@ -118,46 +118,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaPengamanSisiJalanInfrastruktur');
-        removeCondition('JasaRambudanSistemKeamananVisual');
-        removeCondition('JasaPengamananAreaProyek');
-
-	
-        JasaKonstruksiPembatasLink.style.visibility = 'visible';
-        JasaPembatasLink.style.visibility = 'visible';
-        JasaPembuatanPagarDindingPembatasLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingJasaPondasiBangunan[cleanUrlJasaPondasiPerkuatanTanahKons];
+        removeCondition('JasaPemadatanPersiapanPondasiSub');
+        removeCondition('JasaPerkuatanTanahSub');
+        removeCondition('JasaRetrofittingPondasiSub');
+/*
+	JasaPondasiBangunanSubLink.style.visibility = 'hidden';
+     JasaPemadatanPersiapanPondasiSubLink.style.visibility = 'hidden';
+     JasaPerkuatanTanahSubLink.style.visibility = 'hidden';
+     JasaRetrofittingPondasiSubLink.style.visibility = 'hidden';
+	*/
+        JasaKonstruksiPondasiTanahSubLink.style.visibility = 'visible';
+        JasaPondasiTanahSub.style.visibility = 'visible';
+        JasaPondasiBangunanSubLink.style.visibility = 'visible';
+        pageNameJasaKonsPondasiTanah.textContent = urlMappingJasaPondasiBangunan[cleanUrlJasaPondasiPerkuatanTanahKons];
     }
-       if (urlMappingJasaPemadatanPersiapanPondasi[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+   if (urlMappingJasaPemadatanPersiapanPondasi[cleanUrlJasaPondasiPerkuatanTanahKons]) {
         restoreCondition('JasaKonsPondasiTanah');
-        restoreCondition('JasaPengamanSisiJalanInfrastruktur');
-     
-        //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsPembatas');
-
-
-        //hapus elemen SUB jasa pembatas lain SELAIN JasaPengamanSisiJalanInfrastruktur
-        removeCondition('JasaPembuatanPagarDindingPembatas');
-        removeCondition('JasaRambudanSistemKeamananVisual');
-        removeCondition('JasaPengamananAreaProyek');
-	
-        JasaKonstruksiPembatasLink.style.visibility = 'visible';
-        JasaPembatasLink.style.visibility = 'visible';
-        JasaPengamanSisiJalanInfrastrukturLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingJasaPemadatanPersiapanPondasi[cleanUrlJasaPondasiPerkuatanTanahKons];
-    }
-       if (urlMappingJasaPerkuatanTanah[cleanUrlJasaPondasiPerkuatanTanahKons]) {
-        restoreCondition('JasaKonsPondasiTanah');
-        restoreCondition('JasaRambudanSistemKeamananVisual');
+        restoreCondition('JasaPondasiBangunanSub');
      
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
@@ -173,18 +150,56 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaPengamanSisiJalanInfrastruktur');
-        removeCondition('JasaPembuatanPagarDindingPembatas');
-        removeCondition('JasaPengamananAreaProyek');
+        removeCondition('JasaPemadatanPersiapanPondasiSub');
+        removeCondition('JasaPerkuatanTanahSub');
+        removeCondition('JasaRetrofittingPondasiSub');
+/*
+	JasaPondasiBangunanSubLink.style.visibility = 'hidden';
+     JasaPemadatanPersiapanPondasiSubLink.style.visibility = 'hidden';
+     JasaPerkuatanTanahSubLink.style.visibility = 'hidden';
+     JasaRetrofittingPondasiSubLink.style.visibility = 'hidden';
+	*/
+        JasaKonstruksiPondasiTanahSubLink.style.visibility = 'visible';
+        JasaPondasiTanahSub.style.visibility = 'visible';
+        JasaPondasiBangunanSubLink.style.visibility = 'visible';
+        pageNameJasaKonsPondasiTanah.textContent = urlMappingJasaPemadatanPersiapanPondasi[cleanUrlJasaPondasiPerkuatanTanahKons];
+    }
+    if (urlMappingJasaPerkuatanTanah[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        restoreCondition('JasaKonsPondasiTanah');
+        restoreCondition('JasaPondasiBangunanSub');
+     
+        //hapus elemen div id lain
+        removeCondition('materialKonsReadymix');
+        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPerbaikan');
+       	removeCondition('JasaKons');
+       	removeCondition('JasaKonsSub');
+       	removeCondition('MenuKons');
+       	removeCondition('JasaKonsFinishing');
+        removeCondition('JasaKonsStruktur');
+        removeCondition('JasaKonsPembatas');
+
+
+        //hapus elemen SUB jasa pembatas lain
+        removeCondition('JasaPemadatanPersiapanPondasiSub');
+        removeCondition('JasaPerkuatanTanahSub');
+        removeCondition('JasaRetrofittingPondasiSub');
+/*
+	JasaPondasiBangunanSubLink.style.visibility = 'hidden';
+     JasaPemadatanPersiapanPondasiSubLink.style.visibility = 'hidden';
+     JasaPerkuatanTanahSubLink.style.visibility = 'hidden';
+     JasaRetrofittingPondasiSubLink.style.visibility = 'hidden';
+	*/
+        JasaKonstruksiPondasiTanahSubLink.style.visibility = 'visible';
+        JasaPondasiTanahSub.style.visibility = 'visible';
+        JasaPondasiBangunanSubLink.style.visibility = 'visible';
+	pageNameJasaKonsPondasiTanah.textContent = urlMappingJasaPerkuatanTanah[cleanUrlJasaPondasiPerkuatanTanahKons];
+    }
        
-        JasaKonstruksiPembatasLink.style.visibility = 'visible';
-        JasaPembatasLink.style.visibility = 'visible';
-        JasaRambudanSistemKeamananVisualLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingJasaPerkuatanTanah[cleanUrlJasaPondasiPerkuatanTanahKons];
-    }
-       if (urlMappingJasaRetrofittingPondasi[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+   if (urlMappingJasaRetrofittingPondasi[cleanUrlJasaPondasiPerkuatanTanahKons]) {
         restoreCondition('JasaKonsPondasiTanah');
-        restoreCondition('JasaPengamananAreaProyek');
+        restoreCondition('JasaPondasiBangunanSub');
      
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
@@ -200,16 +215,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaPengamanSisiJalanInfrastruktur');
-        removeCondition('JasaRambudanSistemKeamananVisual');
-        removeCondition('JasaPembuatanPagarDindingPembatas');
-
-	
-	
-        JasaKonstruksiPembatasLink.style.visibility = 'visible';
-        JasaPembatasLink.style.visibility = 'visible';
-        JasaPengamananAreaProyekLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingJasaRetrofittingPondasi[cleanUrlJasaPondasiPerkuatanTanahKons];
+        removeCondition('JasaPemadatanPersiapanPondasiSub');
+        removeCondition('JasaPerkuatanTanahSub');
+        removeCondition('JasaRetrofittingPondasiSub');
+/*
+	JasaPondasiBangunanSubLink.style.visibility = 'hidden';
+     JasaPemadatanPersiapanPondasiSubLink.style.visibility = 'hidden';
+     JasaPerkuatanTanahSubLink.style.visibility = 'hidden';
+     JasaRetrofittingPondasiSubLink.style.visibility = 'hidden';
+	*/
+        JasaKonstruksiPondasiTanahSubLink.style.visibility = 'visible';
+        JasaPondasiTanahSub.style.visibility = 'visible';
+        JasaPondasiBangunanSubLink.style.visibility = 'visible';
+        pageNameJasaKonsPondasiTanah.textContent = urlMappingJasaRetrofittingPondasi[cleanUrlJasaPondasiPerkuatanTanahKons];
     }
 	
     //SUB urlMappingPembuatanPagarDinding
