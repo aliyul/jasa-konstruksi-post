@@ -212,6 +212,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsStruktur');
         removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsPondasiTanahPost');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -255,6 +256,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsStruktur');
 	removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsPondasiTanahPost');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -297,6 +299,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsStruktur');
 	removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsPondasiTanahPost');
 
 
         //hapus elemen SUB jasa pembatas lain
