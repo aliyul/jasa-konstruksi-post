@@ -209,6 +209,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPondasiTanah');
+        removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
@@ -248,6 +249,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPondasiTanah');
+        removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
@@ -287,6 +289,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPondasiTanah');
+        removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
@@ -327,6 +330,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPondasiTanah');
+        removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
