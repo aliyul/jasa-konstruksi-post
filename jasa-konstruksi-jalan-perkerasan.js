@@ -1,21 +1,15 @@
 
-const urlMappingJasaPondasiBangunan= {
+const urlMappingJasaPembangunanInfrastrukturJalan = {
 
 
 };
 
-const urlMappingJasaPemadatanPersiapanPondasi = {
+const urlMappingJasaPemadatanPersiapanTanahJalan = {
 
 
 };
 
-const urlMappingJasaPerkuatanTanah = {
-
-};
-
-const urlMappingJasaRetrofittingPondasi = {
-
-
+const urlMappingJasaPerkerasanJalan = {
 
 };
 
