@@ -1,23 +1,60 @@
-
-const urlMappingJasaPondasiBangunan= {
-
-
-};
-
-const urlMappingJasaPemadatanPersiapanPondasi = {
+const urlMappingJasaBronjong = {
 
 
 };
 
-const urlMappingJasaPerkuatanTanah = {
-
-};
-
-const urlMappingJasaRetrofittingPondasi = {
-
+const urlMappingJasaSoilNailingLongsor = {
 
 
 };
+
+const urlMappingJasaDindingPenahanLongsor = {
+
+};
+
+const urlMappingJasaGeotextileLongsor = {
+
+
+
+};
+
+const urlMappingJasaSheetPileLongsor = {
+
+
+
+};
+
+const urlMappingJasaStabilisasiLongsor = {
+
+
+
+};
+
+const urlMappingJasaPerkuatanRumahLongsor = {
+
+
+
+};
+
+const urlMappingJasaPerkuatanTebingLongsor = {
+
+
+
+};
+
+const urlMappingJasaPerkuatanPerkebunanLongsor  = {
+
+
+
+};
+
+
+const urlMappingJasaDrainaseAntiLongsor  = {
+
+
+
+};
+
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPembatasKons = {};
