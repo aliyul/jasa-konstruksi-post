@@ -266,12 +266,14 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
         removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsStruktur');
 	removeCondition('JasaKonsSub');
 	removeCondition('MenuKons');
+	
 	    
        // hapus elemen id DIV Lain
 
@@ -287,6 +289,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKonsFinishing');
@@ -317,6 +320,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKonsFinishing');
@@ -347,6 +351,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKonsFinishing');
@@ -377,6 +382,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKonsFinishing');
@@ -407,6 +413,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKonsFinishing');
@@ -437,6 +444,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKonsFinishing');
@@ -467,6 +475,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKonsFinishing');
@@ -500,6 +509,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKonsFinishing');
@@ -532,6 +542,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKonsFinishing');
@@ -565,6 +576,7 @@ if (!JasaKons || !JasaKonsSub) {
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
 	removeCondition('JasaKonsFinishing');
