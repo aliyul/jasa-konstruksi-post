@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	*/
         JasaKonstruksiPondasiTanahSubLink.style.visibility = 'visible';
         JasaPondasiTanahSub.style.visibility = 'visible';
-        JasaPondasiBangunanSubLink.style.visibility = 'visible';
+        JasaPemadatanPersiapanPondasiSubLink.style.visibility = 'visible';
         pageNameJasaKonsPondasiTanah.textContent = urlMappingJasaPemadatanPersiapanPondasi[cleanUrlJasaPondasiPerkuatanTanahKons];
     }
     if (urlMappingJasaPerkuatanTanah[cleanUrlJasaPondasiPerkuatanTanahKons]) {
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	*/
         JasaKonstruksiPondasiTanahSubLink.style.visibility = 'visible';
         JasaPondasiTanahSub.style.visibility = 'visible';
-        JasaPondasiBangunanSubLink.style.visibility = 'visible';
+        JasaPerkuatanTanahSubLink.style.visibility = 'visible';
 	pageNameJasaKonsPondasiTanah.textContent = urlMappingJasaPerkuatanTanah[cleanUrlJasaPondasiPerkuatanTanahKons];
     }
        
@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	*/
         JasaKonstruksiPondasiTanahSubLink.style.visibility = 'visible';
         JasaPondasiTanahSub.style.visibility = 'visible';
-        JasaPondasiBangunanSubLink.style.visibility = 'visible';
+        JasaRetrofittingPondasiSubLink.style.visibility = 'visible';
         pageNameJasaKonsPondasiTanah.textContent = urlMappingJasaRetrofittingPondasi[cleanUrlJasaPondasiPerkuatanTanahKons];
     }
 	
