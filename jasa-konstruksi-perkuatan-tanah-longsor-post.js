@@ -1,3 +1,4 @@
+// sub jasa-perkuatan-tanah-longsor-post
 const urlMappingJasaBronjong = {
 
 
@@ -57,14 +58,14 @@ const urlMappingJasaDrainaseAntiLongsor  = {
 
 
 // Menyimpan elemen yang dihapus dalam variabel
-let removedElementsJasaPembatasKons = {};
+let removedElementsPerkuatanTanahLongsorKonsPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
 function removeCondition(conditionId) {
     const conditionElement = document.getElementById(conditionId);
 
     if (conditionElement) {
         // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
-        removedElementsJasaPembatasKons[conditionId] = conditionElement;
+        removedElementsPerkuatanTanahLongsorKonsPost[conditionId] = conditionElement;
         conditionElement.remove(); // Menghapus elemen tersebut
     }
 }
@@ -72,20 +73,20 @@ function removeCondition(conditionId) {
 // Fungsi untuk mengembalikan elemen yang telah dihapus
 function restoreCondition(conditionId) {
     const breadcrumb = document.querySelector('.breadcrumb');
-    const elementToRestore = removedElementsJasaPembatasKons[conditionId]; // Mendapatkan elemen yang disimpan
+    const elementToRestore = removedElementsPerkuatanTanahLongsorKonsPost[conditionId]; // Mendapatkan elemen yang disimpan
 
     if (elementToRestore) {
         breadcrumb.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
-        delete removedElementsJasaPembatasKons[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
+        delete removedElementsPerkuatanTanahLongsorKonsPost[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
     } else {
-        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaPembatasKons.`);
+        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsPerkuatanTanahLongsorKonsPost.`);
     }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     // var currentUrl = window.location.href;
      //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
-    const cleanUrlJasaPembatasKons = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
+    const cleanUrlJasaPerkuatanTanahLongsorKonsPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
 
      // Menemukan elemen menggunakan Id
     var JasaKonsPembatas = document.getElementById("JasaKonsPembatas");
@@ -119,9 +120,9 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaRambudanSistemKeamananVisualLink.style.visibility = 'hidden';
      JasaPengamananAreaProyekLink.style.visibility = 'hidden';
 
-     pageNameJasaPembatas.textContent = "";
+     pageNameJasaKonsPerkuatanTanahLongsor.textContent = "";
 
-    if (urlMappingPembuatanPagarDinding[cleanUrlJasaPembatasKons]) {
+    if (urlMappingJasaBronjong[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
         restoreCondition('JasaKonsPembatas');
         restoreCondition('JasaPembuatanPagarDindingPembatas');
      
@@ -146,9 +147,9 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiPembatasLink.style.visibility = 'visible';
         JasaPembatasLink.style.visibility = 'visible';
         JasaPembuatanPagarDindingPembatasLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingPembuatanPagarDinding[cleanUrlJasaPembatasKons];
+        pageNameJasaKonsPerkuatanTanahLongsor.textContent = urlMappingJasaBronjong[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
     }
-       if (urlMappingPengamananSisiJalan[cleanUrlJasaPembatasKons]) {
+       if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
         restoreCondition('JasaKonsPembatas');
         restoreCondition('JasaPengamanSisiJalanInfrastruktur');
      
@@ -172,9 +173,9 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiPembatasLink.style.visibility = 'visible';
         JasaPembatasLink.style.visibility = 'visible';
         JasaPengamanSisiJalanInfrastrukturLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingPengamananSisiJalan[cleanUrlJasaPembatasKons];
+        pageNameJasaKonsPerkuatanTanahLongsor.textContent = urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
     }
-       if (urlMappingRambuSistemKeamananVisual[cleanUrlJasaPembatasKons]) {
+       if (urlMappingJasaDindingPenahanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
         restoreCondition('JasaKonsPembatas');
         restoreCondition('JasaRambudanSistemKeamananVisual');
      
@@ -198,9 +199,9 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiPembatasLink.style.visibility = 'visible';
         JasaPembatasLink.style.visibility = 'visible';
         JasaRambudanSistemKeamananVisualLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingRambuSistemKeamananVisual[cleanUrlJasaPembatasKons];
+        pageNameJasaKonsPerkuatanTanahLongsor.textContent = urlMappingJasaDindingPenahanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
     }
-       if (urlMappingPengamananAreaProyek[cleanUrlJasaPembatasKons]) {
+    if (urlMappingJasaGeotextileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
         restoreCondition('JasaKonsPembatas');
         restoreCondition('JasaPengamananAreaProyek');
      
@@ -226,7 +227,175 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiPembatasLink.style.visibility = 'visible';
         JasaPembatasLink.style.visibility = 'visible';
         JasaPengamananAreaProyekLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingPengamananAreaProyek[cleanUrlJasaPembatasKons];
+        pageNameJasaKonsPerkuatanTanahLongsor.textContent = urlMappingJasaGeotextileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
+    }
+if (urlMappingJasaSheetPileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+        restoreCondition('JasaKonsPembatas');
+        restoreCondition('JasaPengamananAreaProyek');
+     
+        //hapus elemen div id lain
+        removeCondition('materialKonsReadymix');
+        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPerbaikan');
+       	removeCondition('JasaKons');
+       	removeCondition('JasaKonsSub');
+       	removeCondition('MenuKons');
+       	removeCondition('JasaKonsFinishing');
+        removeCondition('JasaKonsStruktur');
+
+
+        //hapus elemen SUB jasa pembatas lain
+        removeCondition('JasaPengamanSisiJalanInfrastruktur');
+        removeCondition('JasaRambudanSistemKeamananVisual');
+        removeCondition('JasaPembuatanPagarDindingPembatas');
+
+	
+	
+        JasaKonstruksiPembatasLink.style.visibility = 'visible';
+        JasaPembatasLink.style.visibility = 'visible';
+        JasaPengamananAreaProyekLink.style.visibility = 'visible';
+        pageNameJasaKonsPerkuatanTanahLongsor.textContent = urlMappingJasaSheetPileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
+    }
+if (urlMappingJasaStabilisasiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+        restoreCondition('JasaKonsPembatas');
+        restoreCondition('JasaPengamananAreaProyek');
+     
+        //hapus elemen div id lain
+        removeCondition('materialKonsReadymix');
+        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPerbaikan');
+       	removeCondition('JasaKons');
+       	removeCondition('JasaKonsSub');
+       	removeCondition('MenuKons');
+       	removeCondition('JasaKonsFinishing');
+        removeCondition('JasaKonsStruktur');
+
+
+        //hapus elemen SUB jasa pembatas lain
+        removeCondition('JasaPengamanSisiJalanInfrastruktur');
+        removeCondition('JasaRambudanSistemKeamananVisual');
+        removeCondition('JasaPembuatanPagarDindingPembatas');
+
+	
+	
+        JasaKonstruksiPembatasLink.style.visibility = 'visible';
+        JasaPembatasLink.style.visibility = 'visible';
+        JasaPengamananAreaProyekLink.style.visibility = 'visible';
+        pageNameJasaKonsPerkuatanTanahLongsor.textContent = urlMappingJasaStabilisasiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
+    }
+if (urlMappingJasaPerkuatanRumahLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+        restoreCondition('JasaKonsPembatas');
+        restoreCondition('JasaPengamananAreaProyek');
+     
+        //hapus elemen div id lain
+        removeCondition('materialKonsReadymix');
+        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPerbaikan');
+       	removeCondition('JasaKons');
+       	removeCondition('JasaKonsSub');
+       	removeCondition('MenuKons');
+       	removeCondition('JasaKonsFinishing');
+        removeCondition('JasaKonsStruktur');
+
+
+        //hapus elemen SUB jasa pembatas lain
+        removeCondition('JasaPengamanSisiJalanInfrastruktur');
+        removeCondition('JasaRambudanSistemKeamananVisual');
+        removeCondition('JasaPembuatanPagarDindingPembatas');
+
+	
+	
+        JasaKonstruksiPembatasLink.style.visibility = 'visible';
+        JasaPembatasLink.style.visibility = 'visible';
+        JasaPengamananAreaProyekLink.style.visibility = 'visible';
+        pageNameJasaKonsPerkuatanTanahLongsor.textContent = urlMappingJasaPerkuatanRumahLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
+    }
+if (urlMappingJasaPerkuatanTebingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+        restoreCondition('JasaKonsPembatas');
+        restoreCondition('JasaPengamananAreaProyek');
+     
+        //hapus elemen div id lain
+        removeCondition('materialKonsReadymix');
+        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPerbaikan');
+       	removeCondition('JasaKons');
+       	removeCondition('JasaKonsSub');
+       	removeCondition('MenuKons');
+       	removeCondition('JasaKonsFinishing');
+        removeCondition('JasaKonsStruktur');
+
+
+        //hapus elemen SUB jasa pembatas lain
+        removeCondition('JasaPengamanSisiJalanInfrastruktur');
+        removeCondition('JasaRambudanSistemKeamananVisual');
+        removeCondition('JasaPembuatanPagarDindingPembatas');
+
+	
+	
+        JasaKonstruksiPembatasLink.style.visibility = 'visible';
+        JasaPembatasLink.style.visibility = 'visible';
+        JasaPengamananAreaProyekLink.style.visibility = 'visible';
+        pageNameJasaKonsPerkuatanTanahLongsor.textContent = urlMappingJasaPerkuatanTebingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
+    }
+if (urlMappingJasaPerkuatanPerkebunanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+        restoreCondition('JasaKonsPembatas');
+        restoreCondition('JasaPengamananAreaProyek');
+     
+        //hapus elemen div id lain
+        removeCondition('materialKonsReadymix');
+        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPerbaikan');
+       	removeCondition('JasaKons');
+       	removeCondition('JasaKonsSub');
+       	removeCondition('MenuKons');
+       	removeCondition('JasaKonsFinishing');
+        removeCondition('JasaKonsStruktur');
+
+
+        //hapus elemen SUB jasa pembatas lain
+        removeCondition('JasaPengamanSisiJalanInfrastruktur');
+        removeCondition('JasaRambudanSistemKeamananVisual');
+        removeCondition('JasaPembuatanPagarDindingPembatas');
+
+	
+	
+        JasaKonstruksiPembatasLink.style.visibility = 'visible';
+        JasaPembatasLink.style.visibility = 'visible';
+        JasaPengamananAreaProyekLink.style.visibility = 'visible';
+        pageNameJasaKonsPerkuatanTanahLongsor.textContent = urlMappingJasaPerkuatanPerkebunanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
+    }
+if (urlMappingJasaDrainaseAntiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+        restoreCondition('JasaKonsPembatas');
+        restoreCondition('JasaPengamananAreaProyek');
+     
+        //hapus elemen div id lain
+        removeCondition('materialKonsReadymix');
+        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPerbaikan');
+       	removeCondition('JasaKons');
+       	removeCondition('JasaKonsSub');
+       	removeCondition('MenuKons');
+       	removeCondition('JasaKonsFinishing');
+        removeCondition('JasaKonsStruktur');
+
+
+        //hapus elemen SUB jasa pembatas lain
+        removeCondition('JasaPengamanSisiJalanInfrastruktur');
+        removeCondition('JasaRambudanSistemKeamananVisual');
+        removeCondition('JasaPembuatanPagarDindingPembatas');
+
+	
+	
+        JasaKonstruksiPembatasLink.style.visibility = 'visible';
+        JasaPembatasLink.style.visibility = 'visible';
+        JasaPengamananAreaProyekLink.style.visibility = 'visible';
+        pageNameJasaKonsPerkuatanTanahLongsor.textContent = urlMappingJasaDrainaseAntiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
     }
 	
     //SUB urlMappingPembuatanPagarDinding
