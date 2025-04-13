@@ -234,9 +234,29 @@ JasaPemadatanPersiapanTanahJalanSub
 JasaPerkerasanJalanSub
 */
 
-        //hapus elemen SUB jasa pembatas lain
+        //hapus elemen SUB jasa jalan & perkerasan lain
         removeCondition('JasaPemadatanPersiapanTanahJalanSub');
         removeCondition('JasaPerkerasanJalanSub');
+
+
+	//hapus elemen SUB JASA PERKERASAN LAIN SEMUA NYA
+	removeCondition('JasaPengerasanJalanSub');
+	removeCondition('JasaPavingBlockJalanSub');
+        removeCondition('JasaPengaspalanJalanSub');
+        removeCondition('JasaPengecoranJalanBetonSub');
+
+	
+        removeCondition('JasaPerkerasanAgregatJalanSub');
+
+	
+        removeCondition('JasaTimbunanSubbaseJalanSub');
+        removeCondition('JasaPerkerasanBaseCourseJalanSub');
+        removeCondition('JasaPerkerasanJalanKerikilSub');
+        removeCondition('JasaPerkuatanDasarTanahJalanSub');
+        removeCondition('JasaPerkerasanJalanBetonSub');
+        removeCondition('JasaPerkerasanJalanAspalSub');
+        removeCondition('JasaPerkerasanJalanKompositSub');
+    	
 	
         JasaKonstruksiJalanPerkerasanSubLink.style.visibility = 'visible';
         JasaJalanPerkerasanSubLink.style.visibility = 'visible';
@@ -262,9 +282,29 @@ JasaPerkerasanJalanSub
         removeCondition('JasaKonsPondasiTanah');
         removeCondition('JasaKonsPembatas');
 
-        //hapus elemen SUB jasa pembatas lain
+        //hapus elemen SUB jasa jalan & perkerasan lain
         removeCondition('JasaPembangunanInfrastrukturJalanSub');
         removeCondition('JasaPerkerasanJalanSub');
+
+
+	//hapus elemen SUB JASA PERKERASAN LAIN SEMUA NYA
+	removeCondition('JasaPengerasanJalanSub');
+	removeCondition('JasaPavingBlockJalanSub');
+        removeCondition('JasaPengaspalanJalanSub');
+        removeCondition('JasaPengecoranJalanBetonSub');
+
+	
+        removeCondition('JasaPerkerasanAgregatJalanSub');
+
+	
+        removeCondition('JasaTimbunanSubbaseJalanSub');
+        removeCondition('JasaPerkerasanBaseCourseJalanSub');
+        removeCondition('JasaPerkerasanJalanKerikilSub');
+        removeCondition('JasaPerkuatanDasarTanahJalanSub');
+        removeCondition('JasaPerkerasanJalanBetonSub');
+        removeCondition('JasaPerkerasanJalanAspalSub');
+        removeCondition('JasaPerkerasanJalanKompositSub');
+    	
 	
         JasaKonstruksiJalanPerkerasanSubLink.style.visibility = 'visible';
         JasaJalanPerkerasanSubLink.style.visibility = 'visible';
@@ -290,9 +330,28 @@ JasaPerkerasanJalanSub
         removeCondition('JasaKonsPondasiTanah');
         removeCondition('JasaKonsPembatas');
 
-        //hapus elemen SUB jasa pembatas lain
+        //hapus elemen SUB jasa jalan & perkerasan lain
         removeCondition('JasaPemadatanPersiapanTanahJalanSub');
         removeCondition('JasaPembangunanInfrastrukturJalanSub');
+
+	//hapus elemen SUB JASA PERKERASAN LAIN SEMUA NYA
+	removeCondition('JasaPengerasanJalanSub');
+	removeCondition('JasaPavingBlockJalanSub');
+        removeCondition('JasaPengaspalanJalanSub');
+        removeCondition('JasaPengecoranJalanBetonSub');
+
+	
+        removeCondition('JasaPerkerasanAgregatJalanSub');
+
+	
+        removeCondition('JasaTimbunanSubbaseJalanSub');
+        removeCondition('JasaPerkerasanBaseCourseJalanSub');
+        removeCondition('JasaPerkerasanJalanKerikilSub');
+        removeCondition('JasaPerkuatanDasarTanahJalanSub');
+        removeCondition('JasaPerkerasanJalanBetonSub');
+        removeCondition('JasaPerkerasanJalanAspalSub');
+        removeCondition('JasaPerkerasanJalanKompositSub');
+    	
 	
         JasaKonstruksiJalanPerkerasanSubLink.style.visibility = 'visible';
         JasaJalanPerkerasanSubLink.style.visibility = 'visible';
