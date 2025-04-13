@@ -123,6 +123,23 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaPerkerasanJalanSubLink = document.getElementById("JasaPerkerasanJalanSub");
 
 	
+	 //SUB JASA PERKERASAN JALAN
+     var JasaPengerasanJalanSubLink = document.getElementById("JasaPengerasanJalanSub");
+     var JasaPavingBlockJalanSubLink = document.getElementById("JasaPavingBlockJalanSub");
+     var JasaPengaspalanJalanSubLink = document.getElementById("JasaPengaspalanJalanSub");
+     var JasaPengecoranJalanBetonSubLink = document.getElementById("JasaPengecoranJalanBetonSub");
+
+     
+     var JasaPerkerasanAgregatJalanSubLink = document.getElementById("JasaPerkerasanAgregatJalanSub");
+
+     var JasaTimbunanSubbaseJalanSubLink = document.getElementById("JasaTimbunanSubbaseJalanSub");
+     var JasaPerkerasanBaseCourseJalanSubLink = document.getElementById("JasaPerkerasanBaseCourseJalanSub");
+     var JasaPerkerasanJalanKerikilSubLink = document.getElementById("JasaPerkerasanJalanKerikilSub");
+     var JasaPerkuatanDasarTanahJalanSubLink = document.getElementById("JasaPerkuatanDasarTanahJalanSub");
+     var JasaPerkerasanJalanBetonSubLink = document.getElementById("JasaPerkerasanJalanBetonSub");
+     var JasaPerkerasanJalanAspalSubLink = document.getElementById("JasaPerkerasanJalanAspalSub");
+     var JasaPerkerasanJalanKompositSubLink = document.getElementById("JasaPerkerasanJalanKompositSub");
+	
      var pageNameJasaKonsJalanPerkerasan = document.getElementById("pageNameJasaKonsJalanPerkerasan");
     
 
