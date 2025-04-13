@@ -31,7 +31,10 @@ const urlMappingJasaPerkerasanJalan = {
   "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-beton.html": "Jasa Perkerasan Jalan Beton",
   "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-aspal.html": "Jasa Perkerasan Jalan Aspal",
   "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-semi-rigid.html": "Jasa Perkerasan Jalan Semi Rigid",
+/* jadi sub page Perkerasan jalan Beton
   "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-komposit.html": "Jasa Perkerasan Jalan Komposit",
+  */
+	
 /* jadi sub page Jasa Perkerasan Jalan Beton
   "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-rabat-beton.html": "Jasa Perkerasan Jalan Rabat Beton"
   */
