@@ -213,7 +213,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         removeCondition('JasaKonsStruktur');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsor');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -258,7 +258,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         removeCondition('JasaKonsStruktur');
 	removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsor');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -302,7 +302,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         removeCondition('JasaKonsStruktur');
 	removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsor');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
 
 
         //hapus elemen SUB jasa pembatas lain
