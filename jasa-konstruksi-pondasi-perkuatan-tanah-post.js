@@ -102,7 +102,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        removeCondition('ProdukKonsPembatasPost');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
@@ -149,7 +149,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        removeCondition('ProdukKonsPembatasPost');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
@@ -195,7 +195,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        removeCondition('ProdukKonsPembatasPost');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
@@ -241,7 +241,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        removeCondition('ProdukKonsPembatasPost');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
@@ -286,7 +286,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        removeCondition('ProdukKonsPembatasPost');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
