@@ -405,6 +405,8 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPondasiTanah');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
@@ -479,6 +481,8 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPondasiTanah');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
@@ -555,6 +559,8 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPondasiTanah');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
@@ -631,6 +637,8 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPondasiTanah');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
@@ -704,6 +712,8 @@ if (!JasaKonsPerbaikan) {
        removeCondition1('ProdukKonsSaluran');
        removeCondition1('ProdukKonsPembatas');
        removeCondition1('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPondasiTanah');
        removeCondition1('JasaKons');
        removeCondition1('JasaKonsSub');
        removeCondition1('MenuKons');
@@ -775,6 +785,8 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPondasiTanah');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
@@ -847,6 +859,8 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPondasiTanah');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
@@ -920,7 +934,8 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
-	removeCondition1('JasaKonsFinishing');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPondasiTanah');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
