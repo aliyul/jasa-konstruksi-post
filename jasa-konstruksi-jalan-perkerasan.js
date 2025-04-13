@@ -48,6 +48,29 @@ const urlMappingJasaPerkerasanJalan = {
 
 };
 
+// SUB PAGE urlMappingJasaPerkerasanJalan
+const urlMappingJasaPengerasanJalan = {
+"https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-proyek.html": "Jasa Pengerasan Jalan Proyek",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-akses.html": "Jasa Pengerasan Jalan Akses",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-perumahan.html": "Jasa Pengerasan Jalan Perumahan",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-lingkungan.html": "Jasa Pengerasan Jalan Lingkungan",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-perdesaan.html": "Jasa Pengerasan Jalan Perdesaan",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-industri.html": "Jasa Pengerasan Jalan Industri",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-area-parkir.html": "Jasa Pengerasan Jalan Area Parkir",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-tanah.html": "Jasa Pengerasan Jalan Tanah",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-batu.html": "Jasa Pengerasan Jalan Batu",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-kerikil.html": "Jasa Pengerasan Jalan Kerikil",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-base-course.html": "Jasa Pengerasan Jalan Base Course",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-subbase.html": "Jasa Pengerasan Jalan Sub Base",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-agregat.html": "Jasa Pengerasan Jalan Agregat",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-makadam.html": "Jasa Pengerasan Jalan Makadam",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-urugan-material.html": "Jasa Pengerasan Jalan Urugan Material",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-urugan-tanah.html": "Jasa Pengerasan Jalan Urugan Tanah",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-sirtu.html": "Jasa Pengerasan Jalan Sirtu",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-lapis-penetrasi.html": "Jasa Pengerasan Jalan Lapisan Penetrasi",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-tahan-beban-berat.html": "Jasa Pengerasan Jalan Tahan Beban Berat",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-ekonomis.html": "Jasa Pengerasan Jalan Ekonomis"
+};
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaJalanPerkerasanKons = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
@@ -111,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
      pageNameJasaKonsJalanPerkerasan.textContent = "";
 
+   //SUB MAPPING JASA JALAN & PERKERASAN
     if (urlMappingJasaPembangunanInfrastrukturJalan[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
         restoreCondition('JasaPembangunanInfrastrukturJalanSub');
@@ -204,5 +228,50 @@ JasaPerkerasanJalanSub
         JasaPerkerasanJalanSubLink.style.visibility = 'visible';
         pageNameJasaKonsJalanPerkerasan.textContent = urlMappingJasaPerkerasanJalan[cleanUrlJasaJalanPerkerasanKons];
     }
+
+/*SUB MAPPING Jasa Perkerasan Jalan : 
+   "https://www.betonjayareadymix.com/p/jasa-perkerasan-agregat-jalan.html": "Jasa Perkerasan Agregat Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan.html": "Jasa Pengerasan Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-pengecoran-jalan-beton.html": "Jasa Pengecoran Jalan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-pengaspalan-jalan.html": "Jasa Pengaspalan Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-paving-block-jalan.html": "Jasa Paving Block Jalan" */
+    if (urlMappingJasaPengerasanJalan[cleanUrlJasaJalanPerkerasanKons]) {
+        restoreCondition('JasaKonsJalanPerkerasan');
+        restoreCondition('JasaPembangunanInfrastrukturJalanSub');
+     
+        //hapus elemen div id lain
+        removeCondition('materialKonsReadymix');
+        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikan');
+       	removeCondition('JasaKons');
+       	removeCondition('JasaKonsSub');
+       	removeCondition('MenuKons');
+       	removeCondition('JasaKonsFinishing');
+        removeCondition('JasaKonsStruktur');
+        removeCondition('JasaKonsPondasiTanah');
+        removeCondition('JasaKonsPembatas');
+/*
+JasaKonsJalanPerkerasan
+JasaKonstruksiJalanPerkerasanSub
+JasaJalanPerkerasanSub
+
+
+JasaPembangunanInfrastrukturJalanSub
+JasaPemadatanPersiapanTanahJalanSub
+JasaPerkerasanJalanSub
+*/
+
+        //hapus elemen SUB jasa pembatas lain
+        removeCondition('JasaPemadatanPersiapanTanahJalanSub');
+        removeCondition('JasaPerkerasanJalanSub');
+	
+        JasaKonstruksiJalanPerkerasanSubLink.style.visibility = 'visible';
+        JasaJalanPerkerasanSubLink.style.visibility = 'visible';
+	    
+        JasaPembangunanInfrastrukturJalanSubLink.style.visibility = 'visible';
+        pageNameJasaKonsJalanPerkerasan.textContent = urlMappingJasaPengerasanJalan[cleanUrlJasaJalanPerkerasanKons];
+    }
+   
        
    });
