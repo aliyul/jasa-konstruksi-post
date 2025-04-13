@@ -111,7 +111,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         removeCondition('JasaKonsStruktur');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsor');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -158,7 +158,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         removeCondition('JasaKonsStruktur');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsor');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -204,7 +204,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         removeCondition('JasaKonsStruktur');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsor');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -250,7 +250,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
         removeCondition('JasaKonsStruktur');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsor');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -295,7 +295,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
         removeCondition('JasaKonsStruktur');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsor');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
 
 
         //hapus elemen SUB jasa pembatas lain
