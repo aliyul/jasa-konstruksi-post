@@ -135,6 +135,8 @@ if (!JasaKonsStruktur) {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPondasiTanah');
 /*
 JasaKonstruksiGedungdanHunianSub
 JasaKonstruksiIndustridanGudangSub
@@ -172,6 +174,8 @@ if (urlMappingStrukturIndustriGudang[cleanUrlJasaJasaKonsStruktur]) {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPondasiTanah');
 
        //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
         removeCondition1('JasaKonstruksiGedungdanHunianSub');
@@ -200,6 +204,8 @@ if (urlMappingStrukturBajaRangka[cleanUrlJasaJasaKonsStruktur]) {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPondasiTanah');
 
        //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
         removeCondition1('JasaKonstruksiIndustridanGudangSub');
@@ -228,6 +234,8 @@ if (urlMappingStrukturKhusus[cleanUrlJasaJasaKonsStruktur]) {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPondasiTanah');
 
        //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
         removeCondition1('JasaKonstruksiIndustridanGudangSub');
@@ -256,6 +264,8 @@ if (urlMappingStrukturLapangan[cleanUrlJasaJasaKonsStruktur]) {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPondasiTanah');
 
        //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
         removeCondition1('JasaKonstruksiIndustridanGudangSub');
@@ -284,6 +294,8 @@ if (urlMappingStrukturModularPrecast[cleanUrlJasaJasaKonsStruktur]) {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPondasiTanah');
 
        //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
         removeCondition1('JasaKonstruksiIndustridanGudangSub');
@@ -312,6 +324,8 @@ if (urlMappingStrukturBetonPengecoran[cleanUrlJasaJasaKonsStruktur]) {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPondasiTanah');
 
        //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
         removeCondition1('JasaKonstruksiIndustridanGudangSub');
