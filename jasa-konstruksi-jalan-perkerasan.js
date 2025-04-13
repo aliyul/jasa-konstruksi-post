@@ -152,6 +152,22 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaPemadatanPersiapanTanahJalanSubLink.style.visibility = 'hidden';
      JasaPerkerasanJalanSubLink.style.visibility = 'hidden';
 
+    //SUB JASA PERKERASAN JALAN
+     JasaPengerasanJalanSubLink.style.visibility = 'hidden';
+     JasaPavingBlockJalanSubLink.style.visibility = 'hidden';
+     JasaPengaspalanJalanSubLink.style.visibility = 'hidden';
+     JasaPengecoranJalanBetonSubLink.style.visibility = 'hidden';
+	
+     JasaPerkerasanAgregatJalanSubLink.style.visibility = 'hidden';
+	
+     JasaTimbunanSubbaseJalanSubLink.style.visibility = 'hidden';
+     JasaPerkerasanBaseCourseJalanSubLink.style.visibility = 'hidden';
+     JasaPerkerasanJalanKerikilSubLink.style.visibility = 'hidden';
+     JasaPerkuatanDasarTanahJalanSubLink.style.visibility = 'hidden';
+     JasaPerkerasanJalanBetonSubLink.style.visibility = 'hidden';
+     JasaPerkerasanJalanAspalSubLink.style.visibility = 'hidden';
+     JasaPerkerasanJalanKompositSubLink.style.visibility = 'hidden';
+	
      pageNameJasaKonsJalanPerkerasan.textContent = "";
 
    //SUB MAPPING JASA JALAN & PERKERASAN
