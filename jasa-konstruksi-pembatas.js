@@ -216,6 +216,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsStruktur');
+        removeCondition('JasaKonsJalanPerkerasan');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -256,6 +257,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsStruktur');
+        removeCondition('JasaKonsJalanPerkerasan');
 
 
         //hapus elemen SUB jasa pembatas lain SELAIN JasaPengamanSisiJalanInfrastruktur
@@ -296,6 +298,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsStruktur');
+        removeCondition('JasaKonsJalanPerkerasan');
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -337,6 +340,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('MenuKons');
        	removeCondition('JasaKonsFinishing');
         removeCondition('JasaKonsStruktur');
+        removeCondition('JasaKonsJalanPerkerasan');
 
 
         //hapus elemen SUB jasa pembatas lain
