@@ -145,7 +145,7 @@ JasaPerkuatanTanahLongsorPost
 */
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
@@ -191,7 +191,7 @@ if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
 
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
@@ -226,7 +226,7 @@ if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
 
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
@@ -261,7 +261,7 @@ if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
 
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
@@ -296,7 +296,7 @@ if (urlMappingJasaSheetPileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
 
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
@@ -331,7 +331,7 @@ if (urlMappingJasaStabilisasiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
 
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
@@ -366,7 +366,7 @@ if (urlMappingJasaPerkuatanRumahLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPos
 
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
@@ -401,7 +401,7 @@ if (urlMappingJasaPerkuatanTebingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPo
 
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
@@ -436,7 +436,7 @@ if (urlMappingJasaPerkuatanPerkebunanLongsor[cleanUrlJasaPerkuatanTanahLongsorKo
 
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
@@ -471,7 +471,7 @@ if (urlMappingJasaDrainaseAntiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]
 
         //hapus elemen div id lain
         removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
