@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
      pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = "";
 
 if (urlMappingJasaBronjong[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsor');
+        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
         restoreCondition('JasaBronjongPenahanLongsorPost');
 /*
 	    JasaKonsPerkuatanTanahLongsor
@@ -186,7 +186,7 @@ JasaDrainaseAntiLongsorPost
         pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaBronjong[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
     }
 if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsor');
+        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
         restoreCondition('JasaSoilNailingTebingPost');
 
         //hapus elemen div id lain
@@ -221,7 +221,7 @@ if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
         pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
     }
    if (urlMappingJasaDindingPenahanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsor');
+        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
         restoreCondition('JasaDindingPenahanTanahLongsorPost');
 
         //hapus elemen div id lain
@@ -256,7 +256,7 @@ if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
 	pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaDindingPenahanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
     }
     if (urlMappingJasaGeotextileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsor');
+        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
         restoreCondition('JasaGeotextilePerkuatanLerengPost');
 
         //hapus elemen div id lain
@@ -291,7 +291,7 @@ if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
         pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaGeotextileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
     }
 if (urlMappingJasaSheetPileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsor');
+        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
         restoreCondition('JasaSheetPilePenahanLongsorPost');
 
         //hapus elemen div id lain
@@ -326,7 +326,7 @@ if (urlMappingJasaSheetPileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
         pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaSheetPileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
     }
 if (urlMappingJasaStabilisasiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsor');
+        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
         restoreCondition('JasaStabilisasiTanahLabilPost');
 
         //hapus elemen div id lain
@@ -361,7 +361,7 @@ if (urlMappingJasaStabilisasiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
         pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaStabilisasiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
     }
 if (urlMappingJasaPerkuatanRumahLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsor');
+        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
         restoreCondition('JasaPerkuatanTanahLongsorRumahPost');
 
         //hapus elemen div id lain
@@ -396,7 +396,7 @@ if (urlMappingJasaPerkuatanRumahLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPos
         pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaPerkuatanRumahLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
     }
 if (urlMappingJasaPerkuatanTebingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsor');
+        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
         restoreCondition('JasaPerkuatanTebingJalanPost');
 
         //hapus elemen div id lain
@@ -431,7 +431,7 @@ if (urlMappingJasaPerkuatanTebingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPo
         pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaPerkuatanTebingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
     }
 if (urlMappingJasaPerkuatanPerkebunanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsor');
+        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
         restoreCondition('JasaPerkuatanLongsorPerkebunanPost');
 
         //hapus elemen div id lain
@@ -466,7 +466,7 @@ if (urlMappingJasaPerkuatanPerkebunanLongsor[cleanUrlJasaPerkuatanTanahLongsorKo
         pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaPerkuatanPerkebunanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
     }
 if (urlMappingJasaDrainaseAntiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsor');
+        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
         restoreCondition('JasaDrainaseAntiLongsorPost');
 
         //hapus elemen div id lain
