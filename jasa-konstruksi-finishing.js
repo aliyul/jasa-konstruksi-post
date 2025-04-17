@@ -174,6 +174,8 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
+        removeCondition('MaterialKons');
+     
      
           // hapus elemen id Infrastruktur Semua
         removeCondition('JasaFinishingInfrastrukturSub');
@@ -207,6 +209,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
+        removeCondition('MaterialKons');
      
         // hapus elemen id bangunan semua
         removeCondition('JasaFinishingBangunanSub');
@@ -244,6 +247,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
+        removeCondition('MaterialKons');
      
        
           // hapus elemen id lain
@@ -281,6 +285,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
+        removeCondition('MaterialKons');
      
        
          // hapus elemen id lain
@@ -319,6 +324,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
+        removeCondition('MaterialKons');
      
          // hapus elemen id lain
         removeCondition('JasaFinishingBangunanEksterior');
@@ -357,6 +363,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
+        removeCondition('MaterialKons');
      
      
             // hapus elemen id lain nya
@@ -395,6 +402,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
+        removeCondition('MaterialKons');
        
   
             // hapus elemen id lain nya
@@ -433,6 +441,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
+        removeCondition('MaterialKons');
 
   
        
@@ -471,6 +480,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
+        removeCondition('MaterialKons');
 
              // hapus elemen id lain nya
         removeCondition('JasaFinishingInfrastrukturJalan');
@@ -508,6 +518,7 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
+        removeCondition('MaterialKons');
      
        
         // hapus elemen id lain nya
