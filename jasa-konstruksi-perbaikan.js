@@ -401,7 +401,7 @@ if (!JasaKonsPerbaikan) {
         restoreCondition1('JasaKonsPerbaikan');
         restoreCondition1('JasaRenovasiPerbaikanStruktur');
            // hapus elemen id DIV Lain
-        removeCondition1('materialKonsReadymix');
+        removeCondition1('MaterialKons');
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
@@ -477,7 +477,7 @@ if (!JasaKonsPerbaikan) {
         restoreCondition1('JasaRenovasiPerbaikanStrukturUmum');
 	    
            // hapus elemen id DIV Lain
-        removeCondition1('materialKonsReadymix');
+        removeCondition1('MaterialKons');
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
@@ -555,7 +555,7 @@ if (!JasaKonsPerbaikan) {
         restoreCondition1('JasaRenovasiPerbaikanStrukturKolomBalok');
 	    
            // hapus elemen id DIV Lain
-        removeCondition1('materialKonsReadymix');
+        removeCondition1('MaterialKons');
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
@@ -633,7 +633,7 @@ if (!JasaKonsPerbaikan) {
         restoreCondition1('JasaRenovasiPerbaikanInfrastruktur');
      
        // hapus elemen id DIV Lain
-        removeCondition1('materialKonsReadymix');
+        removeCondition1('MaterialKons');
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
@@ -708,7 +708,7 @@ if (!JasaKonsPerbaikan) {
        restoreCondition1('JasaRenovasiPerbaikanBangunan');
 
          // hapus elemen id DIV Lain
-       removeCondition1('materialKonsReadymix');
+       removeCondition1('MaterialKons');
        removeCondition1('ProdukKonsSaluran');
        removeCondition1('ProdukKonsPembatas');
        removeCondition1('JasaKonsPembatas');
@@ -781,7 +781,7 @@ if (!JasaKonsPerbaikan) {
         restoreCondition1('JasaKonsPerbaikan');
         restoreCondition1('JasaRenovasiPerbaikanInterior');
           // hapus elemen id DIV Lain
-        removeCondition1('materialKonsReadymix');
+        removeCondition1('MaterialKons');
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
@@ -855,7 +855,7 @@ if (!JasaKonsPerbaikan) {
         restoreCondition1('JasaKonsPerbaikan');
         restoreCondition1('JasaRenovasiPerbaikanFasad');
           // hapus elemen id DIV Lain
-        removeCondition1('materialKonsReadymix');
+        removeCondition1('MaterialKons');
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
@@ -930,7 +930,7 @@ if (!JasaKonsPerbaikan) {
         restoreCondition1('JasaKonsPerbaikan');
         restoreCondition1('JasaRenovasiPerbaikanFasilitas');
           // hapus elemen id DIV Lain
-        removeCondition1('materialKonsReadymix');
+        removeCondition1('MaterialKons');
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
