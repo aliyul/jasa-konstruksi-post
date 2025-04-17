@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaPondasiBangunanSub');
      
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
+        removeCondition('MaterialKons');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaPemadatanPersiapanPondasiSub');
      
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
+        removeCondition('MaterialKons');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaPerkuatanTanahSub');
      
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
+        removeCondition('MaterialKons');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaRetrofittingPondasiSub');
      
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
+        removeCondition('MaterialKons');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
