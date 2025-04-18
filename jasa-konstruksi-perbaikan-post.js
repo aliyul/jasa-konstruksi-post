@@ -1,24 +1,4 @@
-
-//Jasa Renovasi Perbaikan Struktur
-const urlMappingPerbaikanStruktur = {
-//artikel utama jangan di hapus
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-struktur-umum.html": "Jasa Renovasi Perbaikan Struktur Umum",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-balok-beton.html": "Jasa Perbaikan Kolom Balok Beton",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-struktur.html": "Jasa Perbaikan Pondasi Struktur",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-lantai-beton.html": "Jasa Perbaikan Struktur Lantai Beton",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-dinding.html": "Jasa Perbaikan Struktur Dinding",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-besar.html": "Jasa Perbaikan Struktur Bangunan Besar",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-teknik-beton.html": "Jasa Perbaikan Teknik Beton",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-atap.html": "Jasa Perbaikan Struktur Atap"
-//akhir artikel utama 
-//Jasa Penguatan & Perbaikan Pondasi 
- //Perbaikan & Penguatan Lantai
- //Perbaikan Struktur Dinding dan Kolom Tiang
-//struktur bangunan
-// "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-bangunan.html": "Jasa Renovasi Dinding Bangunan",
-//PERBAIKAN STRUKTUR ATAP
- 
-};
+//SUB Jasa Renovasi Perbaikan Struktur
 //Sub Perbaikan Struktur
 const urlMappingPerbaikanStrukturUmum = {
 
@@ -48,11 +28,11 @@ const urlMappingPerbaikanStrukturAtap = {
 
 //Jasa Renovasi Perbaikan Infrastruktur
 const urlMappingPerbaikanInfrastruktur = {
- //"https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-perawatan-jalan.html": "Jasa Perbaikan dan Perawatan Jalan",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jalan.html": "Jasa Renovasi Perbaikan Jalan",
+ //"https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-perawatan-jalan.html": "Jasa Perbaikan dan Perawatan JalanPost",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jalan.html": "Jasa Renovasi Perbaikan JalanPost",
  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-trotoar.html": "Jasa Renovasi Perbaikan Trotoar",
 // "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jalan-berlubang.html": "Jasa Renovasi Perbaikan Jalan Berlubang",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jembatan.html": "Jasa Renovasi Perbaikan Jembatan"
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jembatan.html": "Jasa Renovasi Perbaikan JembatanPost"
 };
 
 //SUB Jasa Renovasi Perbaikan Infrastruktur
@@ -71,14 +51,14 @@ const urlMappingPerbaikanInfrastrukturJembatan = {
 //Jasa Renovasi Perbaikan Fasad Eksterior
 const urlMappingPerbaikanFasadEksterior = {
 //utama
-"https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-bangunan.html": "Jasa Renovasi Fasad Bangunan",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-eksterior-bangunan.html": "Jasa Renovasi Eksterior Bangunan",
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-arsitektur-eksterior.html": "Jasa Perbaikan Arsitektur Eksterior"
+"https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-bangunan.html": "Jasa Renovasi Fasad BangunanPost",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-eksterior-bangunan.html": "Jasa Renovasi Eksterior BangunanPost",
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-arsitektur-eksterior.html": "Jasa Perbaikan Arsitektur EksteriorPost"
 /*
 //PERBAIKAN EKSTERIOR
 	//atap
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap.html": "Jasa Renovasi Perbaikan Atap",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-gudang.html": "Jasa Renovasi Perbaikan Atap Gudang",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap.html": "Jasa Renovasi Perbaikan AtapPost",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-gudang.html": "Jasa Renovasi Perbaikan Atap GudangPost",
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-bocor.html": "Jasa Perbaikan Atap Bocor",
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-baja-ringan.html": "Jasa Renovasi Perbaikan Atap Baja Ringan",
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-air.html": "Jasa Perbaikan Talang Air",
@@ -103,12 +83,12 @@ const urlMappingPerbaikanFasadEksteriorArsitektur = {
 
 //Jasa Renovasi Perbaikan Bangunan
 const urlMappingPerbaikanBangunan = {
-//"https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat Ibadah",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-pabrik.html": "Jasa Renovasi Perbaikan Pabrik",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-rumah.html": "Jasa Renovasi Perbaikan Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-kantor.html": "Jasa Renovasi Perbaikan Kantor",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-gedung.html": "Jasa Renovasi Perbaikan Gedung",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-gudang.html": "Jasa Renovasi Perbaikan Gudang",
+//"https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat IbadahPost",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-pabrik.html": "Jasa Renovasi Perbaikan PabrikPost",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-rumah.html": "Jasa Renovasi Perbaikan RumahPost",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-kantor.html": "Jasa Renovasi Perbaikan KantorPost",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-gedung.html": "Jasa Renovasi Perbaikan GedungPost",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-gudang.html": "Jasa Renovasi Perbaikan GudangPost",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-hotel-apartemen.html": "Jasa Renovasi Perbaikan Hotel Apartemen"
 };
 //SUB Jasa Renovasi Perbaikan Bangunan
@@ -136,14 +116,14 @@ const urlMappingPerbaikanBangunanHotel = {
 
 //Jasa Renovasi Perbaikan Fasilitas Umum
 const urlMappingPerbaikanFasilitasUmum = {
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-taman-kota.html": "Jasa Renovasi Perbaikan Taman Kota",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-sekolah.html": "Jasa Renovasi Perbaikan Sekolah",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-taman-kota.html": "Jasa Renovasi Perbaikan Taman KotaPost",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-sekolah.html": "Jasa Renovasi Perbaikan SekolahPost",
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-stadion-olahraga.html": "Jasa Renovasi Perbaikan Stadion Olah Raga",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-tempat-ibadah.html": "Jasa Renovasi Perbaikan Tempat Ibadah",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-rumah-sakit.html": "Jasa Renovasi Perbaikan Rumah Sakit",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-tempat-ibadah.html": "Jasa Renovasi Perbaikan Tempat IbadahPost",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-rumah-sakit.html": "Jasa Renovasi Perbaikan Rumah SakitPost",
 	
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-terminal.html": "Jasa Renovasi Perbaikan Terminal",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-halte.html": "Jasa Renovasi Perbaikan Halte"	
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-terminal.html": "Jasa Renovasi Perbaikan TerminalPost",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-halte.html": "Jasa Renovasi Perbaikan HaltePost"	
 };
 //SUB Jasa Renovasi Perbaikan Fasilitas Umum
 const urlMappingPerbaikanFasilitasUmumTaman = {
@@ -167,13 +147,13 @@ const urlMappingPerbaikanFasilitasUmumHalte = {
 
 //Jasa Renovasi dan Perbaikan Interior
 const urlMappingPerbaikanInterior = {
-"https://www.betonjayareadymix.com/p/jasa-renovasi-interior-rumah.html": "Jasa Renovasi Interior Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-kantor.html": "Jasa Renovasi Interior Kantor",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-interior-rumah.html": "Jasa Renovasi Interior RumahPost",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-kantor.html": "Jasa Renovasi Interior KantorPost",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-apartemen.html": "Jasa Renovasi Interior Apartemen",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-hotel.html": "Jasa Renovasi Interior Hotel",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-toko.html": "Jasa Renovasi Interior Toko",
-  "https://www.betonjayareadymix.com/p/jasa-desain-interior-custom.html": "Jasa Desain Interior Custom",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruangan.html": "Jasa Renovasi Interior Ruangan"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-hotel.html": "Jasa Renovasi Interior HotelPost",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-toko.html": "Jasa Renovasi Interior TokoPost",
+  "https://www.betonjayareadymix.com/p/jasa-desain-interior-custom.html": "Jasa Desain Interior CustomPost",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruangan.html": "Jasa Renovasi Interior RuanganPost"
 
 /*
 //Atap dalam bangunan
@@ -185,10 +165,10 @@ const urlMappingPerbaikanInterior = {
 	
 //dinding dalam bangunan
 //dinding masuk interior dan fasad
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding.html": "Jasa Renovasi Dinding",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-interior.html": "Jasa Renovasi Dinding Interior",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-gedung.html": "Jasa Renovasi Perbaikan Dinding Gedung",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding.html": "Jasa Renovasi Dinding",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding.html": "Jasa Renovasi DindingPost",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-interior.html": "Jasa Renovasi Dinding InteriorPost",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-gedung.html": "Jasa Renovasi Perbaikan Dinding GedungPost",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding.html": "Jasa Renovasi DindingPost",
 	
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-lembab.html": "Jasa Perbaikan Dinding Lembab",
 "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-lembab.html": "Jasa Renovasi Dinding Lembab",
@@ -262,143 +242,143 @@ function restoreCondition1(conditionId) {
 document.addEventListener("DOMContentLoaded", function() {
     // var currentUrl = window.location.href;
      //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
-    const cleanUrlJasaPerbaikanKonsSub = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
+    const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
 
      // Menemukan elemen menggunakan Id
-    //var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
-    var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
+    //var JasaKonsPerbaikanPost = document.getElementById("JasaKonsPerbaikanPost");
+    var JasaKonsPerbaikanPost = document.getElementById("JasaKonsPerbaikanPost");
 
-if (!JasaKonsPerbaikan) {
-console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
+if (!JasaKonsPerbaikanPost) {
+console.error("elemen Id JasaKonsPerbaikanPost kondisi terhapus");
         return;
 }
-if (!JasaKonsPerbaikan) {
-     console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");	
+if (!JasaKonsPerbaikanPost) {
+     console.error("elemen Id JasaKonsPerbaikanPost kondisi terhapus");	
 } else {
-     var JasaKonstruksiPerbaikanLinkSub = document.getElementById("JasaKonstruksiPerbaikanSub");
-     var JasaRenovasiPerbaikanLinkSub = document.getElementById("JasaRenovasiPerbaikanSub");
+     var JasaKonstruksiPerbaikanSubPostLink = document.getElementById("JasaKonstruksiPerbaikanSubPost");
+     var JasaRenovasiPerbaikanSubPostLink = document.getElementById("JasaRenovasiPerbaikanSubPost");
      //SUB JasaRenovasiPerbaikan
-     var JasaRenovasiPerbaikanStrukturLink = document.getElementById("JasaRenovasiPerbaikanStruktur");
-     var JasaRenovasiPerbaikanInfrastrukturLink = document.getElementById("JasaRenovasiPerbaikanInfrastruktur");
-     var JasaRenovasiPerbaikanBangunanLink = document.getElementById("JasaRenovasiPerbaikanBangunan");
-      var JasaRenovasiPerbaikanFasilitasLink = document.getElementById("JasaRenovasiPerbaikanFasilitas");
-     var JasaRenovasiPerbaikanInteriorLink = document.getElementById("JasaRenovasiPerbaikanInterior");
-     var JasaRenovasiPerbaikanFasadLink = document.getElementById("JasaRenovasiPerbaikanFasad");
+     var JasaRenovasiPerbaikanStrukturPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturPost");
+     var JasaRenovasiPerbaikanInfrastrukturPostLink = document.getElementById("JasaRenovasiPerbaikanInfrastrukturPost");
+     var JasaRenovasiPerbaikanBangunanPostLink = document.getElementById("JasaRenovasiPerbaikanBangunanPost");
+      var JasaRenovasiPerbaikanFasilitasPostLink = document.getElementById("JasaRenovasiPerbaikanFasilitasPost");
+     var JasaRenovasiPerbaikanInteriorPostLink = document.getElementById("JasaRenovasiPerbaikanInteriorPost");
+     var JasaRenovasiPerbaikanFasadPostLink = document.getElementById("JasaRenovasiPerbaikanFasadPost");
 
      //SUB JasaRenovasiPerbaikanStruktur
-     var JasaRenovasiPerbaikanStrukturUmumLink = document.getElementById("JasaRenovasiPerbaikanStrukturUmum");
-     var JasaRenovasiPerbaikanStrukturKolomBalokLink = document.getElementById("JasaRenovasiPerbaikanStrukturKolomBalok");
-     var JasaRenovasiPerbaikanStrukturPondasiLink = document.getElementById("JasaRenovasiPerbaikanStrukturPondasi");
-      var JasaRenovasiPerbaikanStrukturLantaiLink = document.getElementById("JasaRenovasiPerbaikanStrukturLantai");
-     var JasaRenovasiPerbaikanStrukturDindingLink = document.getElementById("JasaRenovasiPerbaikanStrukturDinding");
-     var JasaRenovasiPerbaikanStrukturBangunanBesarLink = document.getElementById("JasaRenovasiPerbaikanStrukturBangunanBesar");
-     var JasaRenovasiPerbaikanStrukturAtapLink = document.getElementById("JasaRenovasiPerbaikanStrukturAtap");
+     var JasaRenovasiPerbaikanStrukturUmumPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturUmumPost");
+     var JasaRenovasiPerbaikanStrukturKolomBalokPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturKolomBalokPost");
+     var JasaRenovasiPerbaikanStrukturPondasiPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturPondasiPost");
+      var JasaRenovasiPerbaikanStrukturLantaiPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturLantaiPost");
+     var JasaRenovasiPerbaikanStrukturDindingPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturDindingPost");
+     var JasaRenovasiPerbaikanStrukturBangunanBesarPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturBangunanBesarPost");
+     var JasaRenovasiPerbaikanStrukturAtapPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturAtapPost");
 
      //SUB JasaRenovasiPerbaikanInfrastruktur
-     var JasaRenovasiPerbaikanInfrastrukturJalanLink = document.getElementById("JasaRenovasiPerbaikanInfrastrukturJalan");
-     var JasaRenovasiPerbaikanInfrastrukturJembatanLink = document.getElementById("JasaRenovasiPerbaikanInfrastrukturJembatan");
-     var JasaRenovasiPerbaikanInfrastrukturSaluranLink = document.getElementById("JasaRenovasiPerbaikanInfrastrukturSaluran");
+     var JasaRenovasiPerbaikanInfrastrukturJalanPostLink = document.getElementById("JasaRenovasiPerbaikanInfrastrukturJalanPost");
+     var JasaRenovasiPerbaikanInfrastrukturJembatanPostLink = document.getElementById("JasaRenovasiPerbaikanInfrastrukturJembatanPost");
+     var JasaRenovasiPerbaikanInfrastrukturSaluranPostLink = document.getElementById("JasaRenovasiPerbaikanInfrastrukturSaluranPost");
 
       //SUB JasaRenovasiPerbaikanBangunan
-     var JasaRenovasiPerbaikanBangunanRumahLink = document.getElementById("JasaRenovasiPerbaikanBangunanRumah");
-     var JasaRenovasiPerbaikanBangunanKantorLink = document.getElementById("JasaRenovasiPerbaikanBangunanKantor");
-     var JasaRenovasiPerbaikanBangunanPabrikLink = document.getElementById("JasaRenovasiPerbaikanBangunanPabrik");
-     var JasaRenovasiPerbaikanBangunanGedungLink = document.getElementById("JasaRenovasiPerbaikanBangunanGedung");
-     var JasaRenovasiPerbaikanBangunanGudangLink = document.getElementById("JasaRenovasiPerbaikanBangunanGudang");
-     var JasaRenovasiPerbaikanBangunanHotelLink = document.getElementById("JasaRenovasiPerbaikanBangunanHotel");
+     var JasaRenovasiPerbaikanBangunanRumahPostLink = document.getElementById("JasaRenovasiPerbaikanBangunanRumahPost");
+     var JasaRenovasiPerbaikanBangunanKantorPostLink = document.getElementById("JasaRenovasiPerbaikanBangunanKantorPost");
+     var JasaRenovasiPerbaikanBangunanPabrikPostLink = document.getElementById("JasaRenovasiPerbaikanBangunanPabrikPost");
+     var JasaRenovasiPerbaikanBangunanGedungPostLink = document.getElementById("JasaRenovasiPerbaikanBangunanGedungPost");
+     var JasaRenovasiPerbaikanBangunanGudangPostLink = document.getElementById("JasaRenovasiPerbaikanBangunanGudangPost");
+     var JasaRenovasiPerbaikanBangunanHotelPostLink = document.getElementById("JasaRenovasiPerbaikanBangunanHotelPost");
 	
  //SUB JasaRenovasiPerbaikanInterior
-     var JasaRenovasiInteriorRumahLink = document.getElementById("JasaRenovasiInteriorRumah");
-     var JasaRenovasiInteriorKantorLink = document.getElementById("JasaRenovasiInteriorKantor");
-     var JasaRenovasiInteriorApartemenLink = document.getElementById("JasaRenovasiInteriorApartemen");
-     var JasaRenovasiInteriorHotelLink = document.getElementById("JasaRenovasiInteriorHotel");
-     var JasaRenovasiInteriorTokoLink = document.getElementById("JasaRenovasiInteriorToko");
-     var JasaDesignInteriorCustomLink = document.getElementById("JasaDesignInteriorCustom");
-     var JasaRenovasiInteriorRuanganLink = document.getElementById("JasaRenovasiInteriorRuangan");
+     var JasaRenovasiInteriorRumahPostLink = document.getElementById("JasaRenovasiInteriorRumahPost");
+     var JasaRenovasiInteriorKantorPostLink = document.getElementById("JasaRenovasiInteriorKantorPost");
+     var JasaRenovasiInteriorApartemenPostLink = document.getElementById("JasaRenovasiInteriorApartemen");
+     var JasaRenovasiInteriorHotelPostLink = document.getElementById("JasaRenovasiInteriorHotelPost");
+     var JasaRenovasiInteriorTokoPostLink = document.getElementById("JasaRenovasiInteriorTokoPost");
+     var JasaDesignInteriorCustomPostLink = document.getElementById("JasaDesignInteriorCustomPost");
+     var JasaRenovasiInteriorRuanganPostLink = document.getElementById("JasaRenovasiInteriorRuanganPost");
 
  //SUB JasaRenovasiPerbaikanBangunan
-     var JasaRenovasiFasadBangunanLink = document.getElementById("JasaRenovasiFasadBangunan");
-     var JasaRenovasiEksteriorBangunanLink = document.getElementById("JasaRenovasiEksteriorBangunan");
-     var JasaPerbaikanArsitekturEksteriorLink = document.getElementById("JasaPerbaikanArsitekturEksterior");
+     var JasaRenovasiFasadBangunanPostLink = document.getElementById("JasaRenovasiFasadBangunanPost");
+     var JasaRenovasiEksteriorBangunanPostLink = document.getElementById("JasaRenovasiEksteriorBangunanPost");
+     var JasaPerbaikanArsitekturEksteriorLink = document.getElementById("JasaPerbaikanArsitekturEksteriorPost");
 
  //SUB JasaRenovasiPerbaikanFasilitas
-     var JasaRenovasiPerbaikanStadionOlahragaLink = document.getElementById("JasaRenovasiPerbaikanStadionOlahraga");
-     var JasaRenovasiPerbaikanSekolahLink = document.getElementById("JasaRenovasiPerbaikanSekolah");
-     var JasaRenovasiPerbaikanRumahSakitLink = document.getElementById("JasaRenovasiPerbaikanRumahSakit");
-     var JasaRenovasiPerbaikanTempatIbadahLink = document.getElementById("JasaRenovasiPerbaikanTempatIbadah");
-     var JasaRenovasiPerbaikanTerminalLink = document.getElementById("JasaRenovasiPerbaikanTerminal");
-     var JasaRenovasiPerbaikanHalteLink = document.getElementById("JasaRenovasiPerbaikanHalte");
-     var JasaRenovasiPerbaikanTamanKotaLink = document.getElementById("JasaRenovasiPerbaikanTamanKota");
+     var JasaRenovasiPerbaikanStadionOlahragaLink = document.getElementById("JasaRenovasiPerbaikanStadionOlahragaPost");
+     var JasaRenovasiPerbaikanSekolahPostLink = document.getElementById("JasaRenovasiPerbaikanSekolahPost");
+     var JasaRenovasiPerbaikanRumahSakitPostLink = document.getElementById("JasaRenovasiPerbaikanRumahSakitPost");
+     var JasaRenovasiPerbaikanTempatIbadahPostLink = document.getElementById("JasaRenovasiPerbaikanTempatIbadahPost");
+     var JasaRenovasiPerbaikanTerminalPostLink = document.getElementById("JasaRenovasiPerbaikanTerminalPost");
+     var JasaRenovasiPerbaikanHaltePostLink = document.getElementById("JasaRenovasiPerbaikanHaltePost");
+     var JasaRenovasiPerbaikanTamanKotaPostLink = document.getElementById("JasaRenovasiPerbaikanTamanKotaPost");
 
      //NAMA DEFAULT HALAMAN BUAT SEMUA
-     var pageNameKonstruksiPerbaikan1 = document.getElementById("pageNameKonstruksiPerbaikan1");
+     var pageNameJasaKonsPerbaikanPost = document.getElementById("pageNameJasaKonsPerbaikanPost");
     
      // Default untuk menyembunyikan elemen
-     JasaKonstruksiPerbaikanLinkSub.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanLinkSub.style.visibility = 'hidden';
+     JasaKonstruksiPerbaikanSubPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanSubPostLink.style.visibility = 'hidden';
      //Hide Sub JasaRenovasiPerbaikan
-     JasaRenovasiPerbaikanStrukturLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanInfrastrukturLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanBangunanLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanInteriorLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanFasadLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanFasilitasLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanStrukturPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanInfrastrukturPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanBangunanPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanInteriorPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanFasadPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanFasilitasPostLink.style.visibility = 'hidden';
 
     //Hide SUB JasaRenovasiPerbaikanStruktur
-     JasaRenovasiPerbaikanStrukturUmumLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanStrukturKolomBalokLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanStrukturPondasiLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanStrukturLantaiLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanStrukturDindingLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanStrukturBangunanBesarLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanStrukturAtapLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanStrukturUmumPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanStrukturKolomBalokPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanStrukturPondasiPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanStrukturLantaiPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanStrukturDindingPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanStrukturBangunanBesarPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanStrukturAtapPostLink.style.visibility = 'hidden';
 
      //Hide SUB JasaRenovasiPerbaikanInfrastruktur
-     JasaRenovasiPerbaikanInfrastrukturJalanLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanInfrastrukturJembatanLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanInfrastrukturSaluranLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanInfrastrukturJalanPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanInfrastrukturJembatanPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanInfrastrukturSaluranPostLink.style.visibility = 'hidden';
 
  	// Hide SUB JasaRenovasiPerbaikanBangunan
-     JasaRenovasiPerbaikanBangunanRumahLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanBangunanKantorLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanBangunanPabrikLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanBangunanGedungLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanBangunanGudangLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanBangunanHotelLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanBangunanRumahPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanBangunanKantorPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanBangunanPabrikPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanBangunanGedungPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanBangunanGudangPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanBangunanHotelPostLink.style.visibility = 'hidden';
 
 	//Hide SUB JasaRenovasiPerbaikanInterior
-     JasaRenovasiInteriorRumahLink.style.visibility = 'hidden';
-     JasaRenovasiInteriorKantorLink.style.visibility = 'hidden';
-     JasaRenovasiInteriorApartemenLink.style.visibility = 'hidden';
-     JasaRenovasiInteriorHotelLink.style.visibility = 'hidden';
-     JasaRenovasiInteriorTokoLink.style.visibility = 'hidden';
-     JasaDesignInteriorCustomLink.style.visibility = 'hidden';
-     JasaRenovasiInteriorRuanganLink.style.visibility = 'hidden';
+     JasaRenovasiInteriorRumahPostLink.style.visibility = 'hidden';
+     JasaRenovasiInteriorKantorPostLink.style.visibility = 'hidden';
+     JasaRenovasiInteriorApartemenPostLink.style.visibility = 'hidden';
+     JasaRenovasiInteriorHotelPostLink.style.visibility = 'hidden';
+     JasaRenovasiInteriorTokoPostLink.style.visibility = 'hidden';
+     JasaDesignInteriorCustomPostLink.style.visibility = 'hidden';
+     JasaRenovasiInteriorRuanganPostLink.style.visibility = 'hidden';
 
  //Hide SUB JasaRenovasiPerbaikanBangunan
-     JasaRenovasiFasadBangunanLink.style.visibility = 'hidden';
-     JasaRenovasiEksteriorBangunanLink.style.visibility = 'hidden';
+     JasaRenovasiFasadBangunanPostLink.style.visibility = 'hidden';
+     JasaRenovasiEksteriorBangunanPostLink.style.visibility = 'hidden';
      JasaPerbaikanArsitekturEksteriorLink.style.visibility = 'hidden';
 
 
 	//Hide SUB JasaRenovasiPerbaikanFasilitas
      JasaRenovasiPerbaikanStadionOlahragaLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanSekolahLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanRumahSakitLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanTempatIbadahLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanTerminalLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanHalteLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanTamanKotaLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanSekolahPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanRumahSakitPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanTempatIbadahPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanTerminalPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanHaltePostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanTamanKotaPostLink.style.visibility = 'hidden';
 
 	
      //NAMA DEFAULT BUAT SEMUA DI KOSONGKAN DULU
-     pageNameKonstruksiPerbaikan1.textContent = "";
+     pageNameJasaKonsPerbaikanPost.textContent = "";
 
 	
     //Sub JasaRenovasiPerbaikan 
     
-   if (urlMappingPerbaikanStruktur[cleanUrlJasaPerbaikanKonsSub]) {
-        restoreCondition1('JasaKonsPerbaikan');
+   if (urlMappingPerbaikanStruktur[cleanUrlJasaKonsPerbaikanPost]) {
+        restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanStruktur');
            // hapus elemen id DIV Lain
         removeCondition1('MaterialKons');
@@ -465,14 +445,14 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanHalte');
         removeCondition1('JasaRenovasiPerbaikanTamanKota');
 	   
-        JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanStrukturLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanStruktur[cleanUrlJasaPerbaikanKonsSub];
+        JasaKonstruksiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanStrukturPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPerbaikanPost.textContent = urlMappingPerbaikanStruktur[cleanUrlJasaKonsPerbaikanPost];
     }
     //SUB JasaRenovasiPerbaikanStruktur
-       if (urlMappingPerbaikanStrukturUmum[cleanUrlJasaPerbaikanKonsSub]) {
-        restoreCondition1('JasaKonsPerbaikan');
+       if (urlMappingPerbaikanStrukturUmum[cleanUrlJasaKonsPerbaikanPost]) {
+        restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanStruktur');
         restoreCondition1('JasaRenovasiPerbaikanStrukturUmum');
 	    
@@ -542,15 +522,15 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanTamanKota');
 	
        
-	JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanStrukturLink.style.visibility = 'visible';
+	JasaKonstruksiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanStrukturPostLink.style.visibility = 'visible';
 	//tampilkan menu JasaRenovasiPerbaikanStrukturUmum
-	JasaRenovasiPerbaikanStrukturUmumLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanStrukturUmum[cleanUrlJasaPerbaikanKonsSub];
+	JasaRenovasiPerbaikanStrukturUmumPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPerbaikanPost.textContent = urlMappingPerbaikanStrukturUmum[cleanUrlJasaKonsPerbaikanPost];
     }
-    if (urlMappingPerbaikanStrukturKolomBalok[cleanUrlJasaPerbaikanKonsSub]) {
-        restoreCondition1('JasaKonsPerbaikan');
+    if (urlMappingPerbaikanStrukturKolomBalok[cleanUrlJasaKonsPerbaikanPost]) {
+        restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanStruktur');
         restoreCondition1('JasaRenovasiPerbaikanStrukturKolomBalok');
 	    
@@ -618,18 +598,18 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanHalte');
         removeCondition1('JasaRenovasiPerbaikanTamanKota');
        
-	JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanStrukturLink.style.visibility = 'visible';
+	JasaKonstruksiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanStrukturPostLink.style.visibility = 'visible';
 	//tampilkan menu JasaRenovasiPerbaikanStrukturKolomBalok
-	JasaRenovasiPerbaikanStrukturKolomBalokLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanStrukturKolomBalok[cleanUrlJasaPerbaikanKonsSub];    
+	JasaRenovasiPerbaikanStrukturKolomBalokPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPerbaikanPost.textContent = urlMappingPerbaikanStrukturKolomBalok[cleanUrlJasaKonsPerbaikanPost];    
     }
 
 	
     // JasaRenovasiPerbaikanInfrastruktur
-    if (urlMappingPerbaikanInfrastruktur[cleanUrlJasaPerbaikanKonsSub]) {
-        restoreCondition1('JasaKonsPerbaikan');
+    if (urlMappingPerbaikanInfrastruktur[cleanUrlJasaKonsPerbaikanPost]) {
+        restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanInfrastruktur');
      
        // hapus elemen id DIV Lain
@@ -698,13 +678,13 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanTamanKota');
 	
        
-        JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanInfrastrukturLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanInfrastruktur[cleanUrlJasaPerbaikanKonsSub];
+        JasaKonstruksiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanInfrastrukturPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPerbaikanPost.textContent = urlMappingPerbaikanInfrastruktur[cleanUrlJasaKonsPerbaikanPost];
     }
-   if (urlMappingPerbaikanBangunan[cleanUrlJasaPerbaikanKonsSub]) {
-       restoreCondition1('JasaKonsPerbaikan');
+   if (urlMappingPerbaikanBangunan[cleanUrlJasaKonsPerbaikanPost]) {
+       restoreCondition1('JasaKonsPerbaikanPost');
        restoreCondition1('JasaRenovasiPerbaikanBangunan');
 
          // hapus elemen id DIV Lain
@@ -772,13 +752,13 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanHalte');
         removeCondition1('JasaRenovasiPerbaikanTamanKota');
 	
-        JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanBangunanLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanBangunan[cleanUrlJasaPerbaikanKonsSub];
+        JasaKonstruksiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanBangunanPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPerbaikanPost.textContent = urlMappingPerbaikanBangunan[cleanUrlJasaKonsPerbaikanPost];
     }
-   if (urlMappingPerbaikanInterior[cleanUrlJasaPerbaikanKonsSub]) {
-        restoreCondition1('JasaKonsPerbaikan');
+   if (urlMappingPerbaikanInterior[cleanUrlJasaKonsPerbaikanPost]) {
+        restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanInterior');
           // hapus elemen id DIV Lain
         removeCondition1('MaterialKons');
@@ -845,14 +825,14 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanHalte');
         removeCondition1('JasaRenovasiPerbaikanTamanKota');
 	
-        JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanInteriorLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanInterior[cleanUrlJasaPerbaikanKonsSub];
+        JasaKonstruksiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanInteriorPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPerbaikanPost.textContent = urlMappingPerbaikanInterior[cleanUrlJasaKonsPerbaikanPost];
     }
   
-     if (urlMappingPerbaikanFasadEksterior[cleanUrlJasaPerbaikanKonsSub]) {
-        restoreCondition1('JasaKonsPerbaikan');
+     if (urlMappingPerbaikanFasadEksterior[cleanUrlJasaKonsPerbaikanPost]) {
+        restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanFasad');
           // hapus elemen id DIV Lain
         removeCondition1('MaterialKons');
@@ -920,14 +900,14 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanTamanKota');
 	
 
-        JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanFasadLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanFasadEksterior[cleanUrlJasaPerbaikanKonsSub];
+        JasaKonstruksiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanFasadPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPerbaikanPost.textContent = urlMappingPerbaikanFasadEksterior[cleanUrlJasaKonsPerbaikanPost];
     }
   
-   if (urlMappingPerbaikanFasilitasUmum[cleanUrlJasaPerbaikanKonsSub]) {
-        restoreCondition1('JasaKonsPerbaikan');
+   if (urlMappingPerbaikanFasilitasUmum[cleanUrlJasaKonsPerbaikanPost]) {
+        restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanFasilitas');
           // hapus elemen id DIV Lain
         removeCondition1('MaterialKons');
@@ -995,10 +975,10 @@ if (!JasaKonsPerbaikan) {
         removeCondition1('JasaRenovasiPerbaikanTamanKota');
 	
 
-        JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanFasilitasLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanFasilitasUmum[cleanUrlJasaPerbaikanKonsSub];
+        JasaKonstruksiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanSubPostLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanFasilitasPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPerbaikanPost.textContent = urlMappingPerbaikanFasilitasUmum[cleanUrlJasaKonsPerbaikanPost];
     }
   
 }
