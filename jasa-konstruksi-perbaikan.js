@@ -21,7 +21,14 @@ const urlMappingPerbaikanStruktur = {
 };
 //Sub Perbaikan Struktur
 const urlMappingPerbaikanStrukturUmum = {
-
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-retak-struktur.html": "Jasa Perbaikan Retak Struktur",
+  "https://www.betonjayareadymix.com/p/jasa-penguatan-struktur-bangunan.html": "Jasa Penguatan Struktur Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-struktur-beton.html": "Jasa Renovasi Struktur Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-beton.html": "Jasa Perkuatan Struktur Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-retak-beton.html": "Jasa Perbaikan Retak Beton",
+  "https://www.betonjayareadymix.com/p/jasa-repair-struktur-beton.html": "Jasa Repair Struktur Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-beton.html": "Jasa Perbaikan Struktur Beton",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-retak-struktur.html": "Jasa Renovasi Perbaikan Retak Struktur"
 	
 };
 const urlMappingPerbaikanStrukturKolomBalok = {
