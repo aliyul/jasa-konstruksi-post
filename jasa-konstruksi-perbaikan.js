@@ -77,7 +77,6 @@ const urlMappingPerbaikanStrukturDinding = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-penggantian-dinding-bata.html": "Jasa Perbaikan Penggantian Dinding Bata"
 };
 const urlMappingPerbaikanStrukturBangunan = {
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-jembatan.html": "Jasa Perbaikan Struktur Jembatan",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-gedung-bertingkat.html": "Jasa Perbaikan Gedung Bertingkat",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-tua.html": "Jasa Perbaikan Struktur Bangunan Tua",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-miring.html": "Jasa Perbaikan Struktur Bangunan Miring"
@@ -142,7 +141,7 @@ const urlMappingPerbaikanInfrastrukturTrotoar = {
 
 };
 const urlMappingPerbaikanInfrastrukturJembatan = {
-
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-jembatan.html": "Jasa Perbaikan Struktur Jembatan"
 };
 const urlMappingPerbaikanInfrastrukturSaluran = {
 
