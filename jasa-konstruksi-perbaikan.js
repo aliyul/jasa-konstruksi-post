@@ -107,21 +107,44 @@ const urlMappingPerbaikanStrukturAtap = {
 //Jasa Renovasi Perbaikan Infrastruktur
 const urlMappingPerbaikanInfrastruktur = {
  //"https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-perawatan-jalan.html": "Jasa Perbaikan dan Perawatan Jalan",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jalan.html": "Jasa Renovasi Perbaikan Jalan",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-trotoar.html": "Jasa Renovasi Perbaikan Trotoar",
 // "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jalan-berlubang.html": "Jasa Renovasi Perbaikan Jalan Berlubang",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jembatan.html": "Jasa Renovasi Perbaikan Jembatan"
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jalan.html": "Jasa Renovasi Perbaikan Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jembatan.html": "Jasa Renovasi Perbaikan Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-saluran-drainase.html": "Jasa Renovasi Perbaikan Saluran Drainase",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-trotoar.html": "Jasa Renovasi Perbaikan Trotoar dan Pejalan Kaki"
 };
 
 //SUB Jasa Renovasi Perbaikan Infrastruktur
 const urlMappingPerbaikanInfrastrukturJalan = {
- 
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-berlubang.html": "Jasa Perbaikan Jalan Berlubang",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-ambles.html": "Jasa Perbaikan Jalan Ambles",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-retak.html": "Jasa Perbaikan Jalan Retak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-permukaan-jalan.html": "Jasa Perbaikan Permukaan Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-rusak-berat.html": "Jasa Perbaikan Jalan Rusak Berat",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-aspal.html": "Jasa Perbaikan Jalan Aspal",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-beton.html": "Jasa Perbaikan Jalan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-paving.html": "Jasa Perbaikan Jalan Paving",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-coring-beton.html": "Jasa Perbaikan Jalan Coring Beton",
+  "https://www.betonjayareadymix.com/p/jasa-overlay-jalan-aspal.html": "Jasa Overlay Jalan Aspal",
+  "https://www.betonjayareadymix.com/p/jasa-rekonstruksi-jalan-beton.html": "Jasa Rekonstruksi Jalan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-penambalan-jalan-berlubang.html": "Jasa Penambalan Jalan Berlubang",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-pasang-jalan-paving.html": "Jasa Bongkar Pasang Jalan Paving",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-komplek.html": "Jasa Perbaikan Jalan Komplek",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-raya.html": "Jasa Perbaikan Jalan Raya",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-perusahaan.html": "Jasa Perbaikan Jalan Perusahaan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-perumahan.html": "Jasa Perbaikan Jalan Perumahan",
+  "https://www.betonjayareadymix.com/p/jasa-repair-jalan-dengan-cold-mix.html": "Jasa Repair Jalan dengan Cold Mix",
+  "https://www.betonjayareadymix.com/p/jasa-marking-jalan-dan-repair.html": "Jasa Marking Jalan dan Repair"
+
 };
 const urlMappingPerbaikanInfrastrukturTrotoar = {
 
 
 };
 const urlMappingPerbaikanInfrastrukturJembatan = {
+
+};
+const urlMappingPerbaikanInfrastrukturSaluran = {
 
 };
 
