@@ -2423,7 +2423,7 @@ if (urlMappingPerbaikanFasilitasUmumHalte[cleanUrlJasaPerbaikanKonsSub]) {
         JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanFasilitasLink.style.visibility = 'visible';
 	   
-        urlMappingPerbaikanFasilitasUmumHalteLink.style.visibility = 'visible';
+        JasaRenovasiPerbaikanHalteLink.style.visibility = 'visible';
         pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanFasilitasUmumHalte[cleanUrlJasaPerbaikanKonsSub];
     }
   }
