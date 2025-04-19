@@ -139,8 +139,8 @@ const urlMappingPerbaikanInfrastrukturJalan = {
 
 };
 const urlMappingPerbaikanInfrastrukturTrotoar = {
-
-
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan-rusak.html": "Jasa Perbaikan Trotoar Jalan Rusak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-beton.html": "Jasa Perbaikan Trotoar Beton"
 };
 const urlMappingPerbaikanInfrastrukturJembatan = {
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-jembatan.html": "Jasa Perbaikan Struktur Jembatan",
