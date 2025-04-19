@@ -460,6 +460,7 @@ if (!JasaKonsPerbaikan) {
      JasaRenovasiPerbaikanInfrastrukturJalanLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanInfrastrukturJembatanLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanInfrastrukturSaluranLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanInfrastrukturTrotoarLink.style.visibility = 'hidden';
 
  	// Hide SUB JasaRenovasiPerbaikanBangunan
      JasaRenovasiPerbaikanBangunanRumahLink.style.visibility = 'hidden';
