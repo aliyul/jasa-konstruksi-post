@@ -289,7 +289,14 @@ const urlMappingPerbaikanFasilitasIbadah = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-pura.html": "Jasa Renovasi Pura"
 };
 const urlMappingPerbaikanFasilitasUmumTerminal = {
-	
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-terminal.html": "Jasa Perbaikan Lantai Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-terminal.html": "Jasa Perbaikan Atap Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kanopi-terminal.html": "Jasa Renovasi Kanopi Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-terminal.html": "Jasa Perbaikan Dinding Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pagar-terminal.html": "Jasa Perbaikan Pagar Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-penerangan-terminal.html": "Jasa Perbaikan Penerangan Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-area-tunggu-terminal.html": "Jasa Renovasi Area Tunggu Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi-terminal.html": "Jasa Renovasi Kamar Mandi Terminal"	
 };
 const urlMappingPerbaikanFasilitasUmumHalte = {
 
