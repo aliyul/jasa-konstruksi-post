@@ -269,7 +269,15 @@ const urlMappingPerbaikanFasilitasUmumSekolah = {
 
 };
 const urlMappingPerbaikanFasilitasUmumStadion = {
-
+"https://www.betonjayareadymix.com/p/jasa-renovasi-tribun-stadion.html": "Jasa Renovasi Tribun Stadion",
+    "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-stadion.html": "Jasa Perbaikan Atap Stadion",
+    "https://www.betonjayareadymix.com/p/jasa-perbaikan-lintasan-atletik.html": "Jasa Perbaikan Lintasan Atletik",
+    "https://www.betonjayareadymix.com/p/jasa-renovasi-lapangan-stadion.html": "Jasa Renovasi Lapangan Stadion",
+    "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-ganti-stadion.html": "Jasa Renovasi Kamar Ganti Stadion",
+    "https://www.betonjayareadymix.com/p/jasa-perbaikan-pencahayaan-stadion.html": "Jasa Perbaikan Pencahayaan Stadion",
+    "https://www.betonjayareadymix.com/p/jasa-renovasi-pagar-stadion.html": "Jasa Renovasi Pagar Stadion",
+    "https://www.betonjayareadymix.com/p/perbaikan-fasilitas-penonton-stadion.html": "Jasa Perbaikan Fasilitas Penonton Stadion",
+    "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-stadion.html": "Jasa Perbaikan Struktur Stadion"
 };
 const urlMappingPerbaikanFasilitasIbadah = {
 
