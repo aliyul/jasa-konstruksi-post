@@ -249,9 +249,23 @@ const urlMappingPerbaikanFasilitasUmum = {
 };
 //SUB Jasa Renovasi Perbaikan Fasilitas Umum
 const urlMappingPerbaikanFasilitasUmumTaman = {
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan-rusak.html": "Jasa Perbaikan Drainase Taman",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalur-pedestrian-taman.html": "Jasa Perbaikan Jalur Pedestrian Taman",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-lampu-taman-kota.html": "Jasa Renovasi Lampu Taman Kota",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-lansekap-taman-kota.html": "Jasa Renovasi Lansekap Taman Kota",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-area-bermain-anak-taman.html": "Jasa Perbaikan Area Bermain Anak Taman",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-fasilitas-taman.html": "Jasa Perbaikan Fasilitas Taman"
 
 };
 const urlMappingPerbaikanFasilitasUmumSekolah = {
+"https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-kelas.html": "Jasa Renovasi Ruang Kelas",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-sekolah.html": "Jasa Perbaikan Atap Sekolah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi-sekolah.html": "Jasa Renovasi Kamar Mandi Sekolah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-laboratorium.html": "Jasa Renovasi Fasilitas Laboratorium",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-lapangan-sekolah.html": "Jasa Renovasi Lapangan Sekolah",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase-sekolah.html": "Jasa Perbaikan Drainase Sekolah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-lantai-sekolah.html": "Jasa Renovasi Dinding & Lantai Sekolah",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-listrik-sekolah.html": "Jasa Perbaikan Listrik Sekolah"
 
 };
 const urlMappingPerbaikanFasilitasUmumStadion = {
