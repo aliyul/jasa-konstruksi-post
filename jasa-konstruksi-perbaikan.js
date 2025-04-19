@@ -398,6 +398,7 @@ if (!JasaKonsPerbaikan) {
 
      //SUB JasaRenovasiPerbaikanInfrastruktur
      var JasaRenovasiPerbaikanInfrastrukturJalanLink = document.getElementById("JasaRenovasiPerbaikanInfrastrukturJalan");
+     var JasaRenovasiPerbaikanInfrastrukturTrotoarLink = document.getElementById("JasaRenovasiPerbaikanInfrastrukturTrotoar");
      var JasaRenovasiPerbaikanInfrastrukturJembatanLink = document.getElementById("JasaRenovasiPerbaikanInfrastrukturJembatan");
      var JasaRenovasiPerbaikanInfrastrukturSaluranLink = document.getElementById("JasaRenovasiPerbaikanInfrastrukturSaluran");
 
