@@ -150,7 +150,18 @@ const urlMappingPerbaikanInfrastrukturJembatan = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-jembatan-gantung.html": "Jasa Renovasi Jembatan Gantung",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-fondasi-jembatan.html": "Jasa Perbaikan Fondasi Jembatan",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-jembatan-bertingkat.html": "Jasa Renovasi Jembatan Bertingkat",
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-jembatan.html": "Jasa Perkuatan Struktur Jembatan"
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-jembatan.html": "Jasa Perkuatan Struktur Jembatan",
+
+	
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-jembatan-rusak.html": "Jasa Renovasi Jembatan Rusak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-retak-jembatan-beton.html": "Jasa Perbaikan Retak Jembatan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-jembatan.html": "Jasa Perbaikan Lantai Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-rekonstruksi-jembatan.html": "Jasa Rekonstruksi Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-jembatan.html": "Jasa Perbaikan Balok Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-tiang-penyangga-jembatan.html": "Jasa Perbaikan Tiang Penyangga Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-chipping-jembatan-beton.html": "Jasa Chipping Jembatan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-shotcrete-jembatan.html": "Jasa Shotcrete Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-injeksi-retak-jembatan.html": "Jasa Injeksi Retak Jembatan"
 };
 const urlMappingPerbaikanInfrastrukturSaluran = {
 
