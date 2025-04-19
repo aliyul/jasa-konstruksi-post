@@ -303,7 +303,7 @@ const urlMappingPerbaikanFasilitasUmumHalte = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-tempat-duduk-halte.html": "Jasa Perbaikan Tempat Duduk Halte",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-penerangan-halte.html": "Jasa Perbaikan Penerangan Halte",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-halte.html": "Jasa Perbaikan Lantai Halte",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-desain-halte-modern.html": "Jasa Renovasi Desain Halte Modern
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-desain-halte-modern.html": "Jasa Renovasi Desain Halte Modern"
 };
 
 //Jasa Renovasi dan Perbaikan Interior
