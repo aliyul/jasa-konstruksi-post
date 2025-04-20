@@ -194,7 +194,18 @@ const urlMappingPerbaikanFasadEksterior = {
 };
 //SUB Jasa Renovasi Perbaikan Fasad Eksterior
 const urlMappingPerbaikanFasadEksteriorFasad = {
-
+"https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-kaca-gedung.html": "Jasa Renovasi Fasad Kaca Gedung",
+  "https://www.betonjayareadymix.com/p/renovasi-fasad-aluminium-composite-panel.html": "Jasa Renovasi Fasad Aluminium Composite Panel",
+  "https://www.betonjayareadymix.com/p/jasa-pembersihan-fasad-gedung.html": "Jasa Pembersihan Fasad Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-gedung-tinggi.html": "Jasa Renovasi Fasad Gedung Tinggi",
+  "https://www.betonjayareadymix.com/p/jasa-recoating-fasad-gedung.html": "Jasa Recoating Fasad Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-fasad-gedung-retak.html": "Jasa Perbaikan Fasad Gedung Retak",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-bangunan-komersial.html": "Jasa Renovasi Fasad Bangunan Komersial",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kanopi-fasad-gedung.html": "Jasa Renovasi Kanopi Fasad Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-desain-renovasi-fasad-bangunan.html": "Jasa Desain Renovasi Fasad Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-penggantian-fasad-bangunan-lama.html": "Jasa Penggantian Fasad Bangunan Lama",
+  "https://www.betonjayareadymix.com/p/jasa-fasad-dekoratif-bangunan.html": "Jasa Fasad Dekoratif Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-fasad-bangunan.html": "Jasa Perkuatan Struktur Fasad Bangunan"
 };
 const urlMappingPerbaikanFasadEksteriorEksterior = {
 
