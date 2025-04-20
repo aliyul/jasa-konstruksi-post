@@ -62,6 +62,7 @@ const urlMappingPerbaikanStrukturLantai = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-rusak.html": "Jasa Renovasi Lantai Rusak",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-ambles.html": "Jasa Perbaikan Lantai Ambles",
   "https://www.betonjayareadymix.com/p/jasa-ganti-lantai-ambles.html": "Jasa Ganti Lantai Ambles",
+  "https://www.betonjayareadymix.com/p/jasa-bobok-lantai-beton.html": "Jasa Bobok Lantai Beton",
   "https://www.betonjayareadymix.com/p/jasa-bobok-lantai-lama.html": "Jasa Bobok Lantai Lama"
 
 };
@@ -92,7 +93,6 @@ const urlMappingPerbaikanStrukturTeknikBeton = {
   "https://www.betonjayareadymix.com/p/jasa-chipping-beton.html": "Jasa Chipping Beton",
   "https://www.betonjayareadymix.com/p/jasa-bobok-beton.html": "Jasa Bobok Beton",
   "https://www.betonjayareadymix.com/p/jasa-beton-karbonasi.html": "Jasa Beton Karbonasi",
-  "https://www.betonjayareadymix.com/p/jasa-bobok-lantai-beton.html": "Jasa Bobok Lantai Beton",
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-cfrp.html": "Jasa Perkuatan Struktur dengan CFRP"
 
 };
