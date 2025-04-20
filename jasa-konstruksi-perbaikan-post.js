@@ -1,12 +1,62 @@
 //SUB Jasa Renovasi Perbaikan Struktur
 //Sub Perbaikan Struktur
-const urlMappingPerbaikanStrukturUmum = {
-
+//Sub PerbaikanStrukturUmum
+const urlMappingJasaPerbaikanRetakStruktur= {
 	
 };
-const urlMappingPerbaikanStrukturKolomBalok = {
+const urlMappingJasaPengutanaStrukturBangunan= {
+	
+};
+const urlMappingJasaRenovasiStrukturBeton= {
+	
+};
+const urlMappingJasaPerkuatanStrukturBeton= {
+	
+};
+const urlMappingJasaPerbaikanRetakBeton= {
+	
+};
+const urlMappingJasaRepairStrukturBeton= {
+	
+};
+const urlMappingJasaPerbaikanStrukturBeton= {
+	
+};
+const urlMappingJasaRenovasiPerbaikanRetakStruktur= {
+	
+};
+//Akhir Sub PerbaikanStrukturUmum
+
+//Sub PerbaikanStrukturKolomBalokBeton
+const urlMappingJasaPerbaikanKolomBeton = {
 
 };
+const urlMappingJasaPerbaikanBalokBeton = {
+
+};
+const urlMappingJasaPerbaikanStrukturKolomBeton = {
+
+};
+const urlMappingJasaPerbaikanStrukturBalokBeton = {
+
+};
+const urlMappingJasaPerkuatanKolomBetomRetak = {
+
+};
+const urlMappingJasaPerkuatanBalokBeton = {
+
+};
+const urlMappingJasaJacketingKolomBalok = {
+
+};
+const urlMappingPerbaikanBalokGantung = {
+
+};
+const urlMappingPerbaikanStrukturTiangBeton = {
+
+};
+//Akhir Sub PerbaikanStrukturKolomBalokBeton
+
 const urlMappingPerbaikanStrukturPondasi = {
 
 };
@@ -29,7 +79,7 @@ const urlMappingJasaPerbaikanDindingRetakStruktur = {
 const urlMappingJasaPerbaikanStrukturDindingRetak = {
 
 };
-const urlMappingJasaBobokDindingInstalasi = {
+const urlMappingJasaBobokDindingInstalasi= {
 
 };
 const urlMappingJasaPerbaikanStrukturDindingLembab = {
@@ -41,6 +91,7 @@ const urlMappingJasaRenovasiPenggantianDindingBata = {
 const urlMappingJasaPerbaikanPenggantianDindingBata= {
 
 };
+//Akhir SUB PerbaikanStrukturDinding
 
 //SUB PerbaikanStrukturBangunan
 const urlMappingPerbaikanStrukturBangunan = {
