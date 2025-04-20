@@ -1,4 +1,4 @@
-//SUB Jasa Renovasi Perbaikan Struktur
+//SUB JasaRenovasiPerbaikan Struktur
 //Sub Perbaikan Struktur
 //Sub PerbaikanStrukturUmum
 const urlMappingJasaPerbaikanRetakStruktur= {
@@ -634,7 +634,7 @@ if (!JasaKonsPerbaikanPost) {
         pageNameJasaKonsPerbaikanPost.textContent = urlMappingJasaBongkarDinding[cleanUrlJasaKonsPerbaikanPost];
     }
     //SUB JasaRenovasiPerbaikanStruktur
-       if (urlMappingPerbaikanStrukturUmum[cleanUrlJasaKonsPerbaikanPost]) {
+ if (urlMappingPerbaikanStrukturUmum[cleanUrlJasaKonsPerbaikanPost]) {
         restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanStruktur');
         restoreCondition1('JasaRenovasiPerbaikanStrukturUmum');
