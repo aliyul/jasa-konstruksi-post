@@ -202,13 +202,13 @@ const urlMappingJasaPerkuatanStrukturdenganCFRP = {
 //AKHIR SUB PerbaikanStrukturTeknikBeton
 
 // Menyimpan elemen yang dihapus dalam variabel
-let removedElementsJasaPerbaikanKons1 = {};
+let removedElementsJasaPerbaikanKonsPost = {};
 function removeCondition1(conditionId) {
     const conditionElement1 = document.getElementById(conditionId);
 
     if (conditionElement1) {
         // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
-        removedElementsJasaPerbaikanKons1[conditionId] = conditionElement1;
+        removedElementsJasaPerbaikanKonsPost[conditionId] = conditionElement1;
         conditionElement1.remove(); // Menghapus elemen tersebut
     }
 }
@@ -216,11 +216,11 @@ function removeCondition1(conditionId) {
 // Fungsi untuk mengembalikan elemen yang telah dihapus
 function restoreCondition1(conditionId) {
     const breadcrumb1 = document.querySelector('.breadcrumb');
-    const elementToRestore1 = removedElementsJasaPerbaikanKons1[conditionId]; // Mendapatkan elemen yang disimpan
+    const elementToRestore1 = removedElementsJasaPerbaikanKonsPost[conditionId]; // Mendapatkan elemen yang disimpan
 
     if (elementToRestore1) {
         breadcrumb1.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
-        delete removedElementsJasaPerbaikanKons1[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
+        delete removedElementsJasaPerbaikanKonsPost[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
     } else {
         console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaPerbaikanKons1.`);
     }
