@@ -162,10 +162,12 @@ document.addEventListener("DOMContentLoaded", function() {
     if (urlMappingFinishingBangunan[cleanUrlJasaKonsFinishing]) {
         restoreCondition('JasaFinishingBangunanSub');
         //restoreCondition('JasaChippingBeton');
+     
            // hapus elemen id DIV Lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        removeCondition('MaterialKons');
+	       removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsJalanPerkerasan');
         removeCondition('JasaKonsPondasiTanah');
@@ -174,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
-        removeCondition('MaterialKons');
      
      
           // hapus elemen id Infrastruktur Semua
@@ -198,9 +199,10 @@ document.addEventListener("DOMContentLoaded", function() {
     if (urlMappingFinishingInfrastruktur[cleanUrlJasaKonsFinishing]) {
         restoreCondition('JasaFinishingInfrastrukturSub');
           // hapus elemen id DIV Lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        removeCondition('MaterialKons');
+	       removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsJalanPerkerasan');
         removeCondition('JasaKonsPondasiTanah');
@@ -209,7 +211,6 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
-        removeCondition('MaterialKons');
      
         // hapus elemen id bangunan semua
         removeCondition('JasaFinishingBangunanSub');
@@ -236,9 +237,10 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingBangunanInterior');
         //restoreCondition('JasaChippingBeton');
            // hapus elemen id DIV Lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        removeCondition('MaterialKons');
+	       removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsJalanPerkerasan');
         removeCondition('JasaKonsPondasiTanah');
@@ -247,7 +249,6 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
-        removeCondition('MaterialKons');
      
        
           // hapus elemen id lain
@@ -274,9 +275,10 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingBangunanEksterior');
         //restoreCondition('JasaChippingBeton');
            // hapus elemen id DIV Lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        removeCondition('MaterialKons');
+	       removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsJalanPerkerasan');
         removeCondition('JasaKonsPondasiTanah');
@@ -285,7 +287,6 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
-        removeCondition('MaterialKons');
      
        
          // hapus elemen id lain
@@ -313,9 +314,10 @@ document.addEventListener("DOMContentLoaded", function() {
     
         //restoreCondition('JasaChippingBeton');
            // hapus elemen id DIV Lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        removeCondition('MaterialKons');
+	       removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsJalanPerkerasan');
         removeCondition('JasaKonsPondasiTanah');
@@ -324,7 +326,6 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
-        removeCondition('MaterialKons');
      
          // hapus elemen id lain
         removeCondition('JasaFinishingBangunanEksterior');
@@ -352,9 +353,10 @@ document.addEventListener("DOMContentLoaded", function() {
        restoreCondition('JasaFinishingInfrastrukturJalan');
      
           // hapus elemen id DIV Lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        removeCondition('MaterialKons');
+	       removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsJalanPerkerasan');
         removeCondition('JasaKonsPondasiTanah');
@@ -363,7 +365,6 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
-        removeCondition('MaterialKons');
      
      
             // hapus elemen id lain nya
@@ -391,9 +392,10 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingTrotoar');
     
           // hapus elemen id DIV Lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        removeCondition('MaterialKons');
+	       removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsJalanPerkerasan');
         removeCondition('JasaKonsPondasiTanah');
@@ -402,7 +404,6 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
-        removeCondition('MaterialKons');
        
   
             // hapus elemen id lain nya
@@ -430,9 +431,10 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingSaluran');
     
           // hapus elemen id DIV Lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        removeCondition('MaterialKons');
+	       removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsJalanPerkerasan');
         removeCondition('JasaKonsPondasiTanah');
         removeCondition('JasaKonsPembatas');
@@ -441,7 +443,6 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
-        removeCondition('MaterialKons');
 
   
        
@@ -469,9 +470,10 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingInfrastrukturSub');
         restoreCondition('JasaFinishingInfrastrukturStruktur');
           // hapus elemen id DIV Lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        removeCondition('MaterialKons');
+	       removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsJalanPerkerasan');
         removeCondition('JasaKonsPondasiTanah');
@@ -480,7 +482,6 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
-        removeCondition('MaterialKons');
 
              // hapus elemen id lain nya
         removeCondition('JasaFinishingInfrastrukturJalan');
@@ -507,9 +508,10 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingInfrastrukturProteksi');
        
           // hapus elemen id DIV Lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        removeCondition('MaterialKons');
+	       removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsJalanPerkerasan');
         removeCondition('JasaKonsPondasiTanah');
@@ -518,7 +520,6 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
-        removeCondition('MaterialKons');
      
        
         // hapus elemen id lain nya
