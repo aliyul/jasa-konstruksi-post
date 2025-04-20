@@ -1,4 +1,4 @@
-//SUB JasaRenovasiPerbaikan Struktur
+//SUB JasaRenovasiPerbaikanStruktur
 //Sub Perbaikan Struktur
 //Sub PerbaikanStrukturUmum
 const urlMappingJasaPerbaikanRetakStruktur= {
