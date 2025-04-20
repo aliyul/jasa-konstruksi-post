@@ -370,17 +370,13 @@ if (!JasaKonsPerbaikanPost) {
         restoreCondition1('JasaRenovasiPerbaikanStrukturDinding');
 
            // hapus elemen id DIV Lain
-        removeCondition1('MaterialKons');
-        removeCondition1('ProdukKonsSaluran');
-        removeCondition1('ProdukKonsPembatas');
-        removeCondition1('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
-	removeCondition1('JasaKons');
-	removeCondition1('JasaKonsSub');
-	removeCondition1('MenuKons');
-	removeCondition1('JasaKonsFinishing');
-        removeCondition1('JasaKonsStruktur');
+	removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('MaterialKonsStukturPost');
+	   
 	
 	// hapus elemen id Sub JasaRenovasiPerbaikan yang lain
         removeCondition1('JasaRenovasiPerbaikanInfrastruktur');
