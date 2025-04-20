@@ -87,6 +87,8 @@ const urlMappingJasaInjeksiDindingRetak = {
 
 };
 const urlMappingJasaBongkarDinding = {
+ "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-dinding.html": "Harga Jasa Bongkar Dinding",
+ "https://www.betonjayareadymix.com/2019/06/harga-bongkar-dinding-bata-per-m2.html": "Harga Jasa Bongkar Dinding Bata Per M2"
 
 };
 const urlMappingJasaPerbaikanDindingRetakStruktur = {
@@ -554,9 +556,11 @@ if (!JasaKonsPerbaikanPost) {
 	
     //Sub JasaRenovasiPerbaikan 
     
-   if (urlMappingPerbaikanStruktur[cleanUrlJasaKonsPerbaikanPost]) {
+   if (urlMappingJasaBongkarDinding[cleanUrlJasaKonsPerbaikanPost]) {
         restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanStruktur');
+        restoreCondition1('JasaRenovasiPerbaikanStrukturDinding');
+
            // hapus elemen id DIV Lain
         removeCondition1('MaterialKons');
         removeCondition1('ProdukKonsSaluran');
@@ -577,12 +581,12 @@ if (!JasaKonsPerbaikanPost) {
 	removeCondition1('JasaRenovasiPerbaikanFasad');
 	removeCondition1('JasaRenovasiPerbaikanFasilitas');
 
-	// hapus elemen id Semua Sub JasaRenovasiPerbaikanStruktur
+	// hapus elemen id Semua Sub JasaRenovasiPerbaikanStruktur selain JasaRenovasiPerbaikanStrukturDinding
 	removeCondition1('JasaRenovasiPerbaikanStrukturUmum');
 	removeCondition1('JasaRenovasiPerbaikanStrukturKolomBalok');
         removeCondition1('JasaRenovasiPerbaikanStrukturPondasi');
         removeCondition1('JasaRenovasiPerbaikanStrukturLantai');
-	removeCondition1('JasaRenovasiPerbaikanStrukturDinding');
+	//removeCondition1('');
 	removeCondition1('JasaRenovasiPerbaikanStrukturBangunan');
 	removeCondition1('JasaRenovasiPerbaikanStrukturAtap');
        
@@ -625,7 +629,9 @@ if (!JasaKonsPerbaikanPost) {
         JasaKonstruksiPerbaikanSubPostLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanSubPostLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanStrukturPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPerbaikanPost.textContent = urlMappingPerbaikanStruktur[cleanUrlJasaKonsPerbaikanPost];
+
+	JasaRenovasiPerbaikanStrukturDindingLink.style.visibility = 'visible';
+        pageNameJasaKonsPerbaikanPost.textContent = urlMappingJasaBongkarDinding[cleanUrlJasaKonsPerbaikanPost];
     }
     //SUB JasaRenovasiPerbaikanStruktur
        if (urlMappingPerbaikanStrukturUmum[cleanUrlJasaKonsPerbaikanPost]) {
