@@ -13,9 +13,36 @@ const urlMappingPerbaikanStrukturPondasi = {
 const urlMappingPerbaikanStrukturLantai = {
 
 };
-const urlMappingPerbaikanStrukturDinding = {
+//SUB PerbaikanStrukturDinding
+const urlMappingJasaBobokTembok = {
 
 };
+const urlMappingJasaInjeksiDindingRetak = {
+
+};
+const urlMappingJasaBongkarDinding = {
+
+};
+const urlMappingJasaPerbaikanDindingRetakStruktur = {
+
+};
+const urlMappingJasaPerbaikanStrukturDindingRetak = {
+
+};
+const urlMappingJasaBobokDindingInstalasi = {
+
+};
+const urlMappingJasaPerbaikanStrukturDindingLembab = {
+
+};
+const urlMappingJasaRenovasiPenggantianDindingBata = {
+
+};
+const urlMappingJasaPerbaikanPenggantianDindingBata= {
+
+};
+
+//SUB PerbaikanStrukturBangunan
 const urlMappingPerbaikanStrukturBangunan = {
 
 };
