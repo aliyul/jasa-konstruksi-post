@@ -148,12 +148,12 @@ JasaKonstruksiModulardanPrecastSub
 JasaStrukturBetondanPengecoranSub
 */
        //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
-        removeCondition1('JasaKonstruksiIndustridanGudangSub');
-        removeCondition1('JasaStrukturBajadanRangkaRinganSub');
-        removeCondition1('JasaStrukturKhususSub');
-	removeCondition1('JasaKonstruksiLapanganOlahragaSub');
-	removeCondition1('JasaKonstruksiModulardanPrecastSub');
-	removeCondition1('JasaStrukturBetondanPengecoranSub');
+        removeCondition('JasaKonstruksiIndustridanGudangSub');
+        removeCondition('JasaStrukturBajadanRangkaRinganSub');
+        removeCondition('JasaStrukturKhususSub');
+	removeCondition('JasaKonstruksiLapanganOlahragaSub');
+	removeCondition('JasaKonstruksiModulardanPrecastSub');
+	removeCondition('JasaStrukturBetondanPengecoranSub');
        
         JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
         JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
@@ -180,12 +180,12 @@ if (urlMappingStrukturIndustriGudang[cleanUrlJasaJasaKonsStruktur]) {
         removeCondition('JasaKonsPondasiTanah');
 
        //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
-        removeCondition1('JasaKonstruksiGedungdanHunianSub');
-        removeCondition1('JasaStrukturBajadanRangkaRinganSub');
-        removeCondition1('JasaStrukturKhususSub');
-	removeCondition1('JasaKonstruksiLapanganOlahragaSub');
-	removeCondition1('JasaKonstruksiModulardanPrecastSub');
-	removeCondition1('JasaStrukturBetondanPengecoranSub');
+        removeCondition('JasaKonstruksiGedungdanHunianSub');
+        removeCondition('JasaStrukturBajadanRangkaRinganSub');
+        removeCondition('JasaStrukturKhususSub');
+	removeCondition('JasaKonstruksiLapanganOlahragaSub');
+	removeCondition('JasaKonstruksiModulardanPrecastSub');
+	removeCondition('JasaStrukturBetondanPengecoranSub');
        
         JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
         JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
@@ -211,12 +211,12 @@ if (urlMappingStrukturBajaRangka[cleanUrlJasaJasaKonsStruktur]) {
         removeCondition('JasaKonsPondasiTanah');
 
        //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
-        removeCondition1('JasaKonstruksiIndustridanGudangSub');
-        removeCondition1('JasaKonstruksiGedungdanHunianSub');
-        removeCondition1('JasaStrukturKhususSub');
-	removeCondition1('JasaKonstruksiLapanganOlahragaSub');
-	removeCondition1('JasaKonstruksiModulardanPrecastSub');
-	removeCondition1('JasaStrukturBetondanPengecoranSub');
+        removeCondition('JasaKonstruksiIndustridanGudangSub');
+        removeCondition('JasaKonstruksiGedungdanHunianSub');
+        removeCondition('JasaStrukturKhususSub');
+	removeCondition('JasaKonstruksiLapanganOlahragaSub');
+	removeCondition('JasaKonstruksiModulardanPrecastSub');
+	removeCondition('JasaStrukturBetondanPengecoranSub');
        
         JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
         JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
@@ -242,12 +242,12 @@ if (urlMappingStrukturKhusus[cleanUrlJasaJasaKonsStruktur]) {
         removeCondition('JasaKonsPondasiTanah');
 
        //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
-        removeCondition1('JasaKonstruksiIndustridanGudangSub');
-        removeCondition1('JasaStrukturBajadanRangkaRinganSub');
-        removeCondition1('JasaKonstruksiGedungdanHunianSub');
-	removeCondition1('JasaKonstruksiLapanganOlahragaSub');
-	removeCondition1('JasaKonstruksiModulardanPrecastSub');
-	removeCondition1('JasaStrukturBetondanPengecoranSub');
+        removeCondition('JasaKonstruksiIndustridanGudangSub');
+        removeCondition('JasaStrukturBajadanRangkaRinganSub');
+        removeCondition('JasaKonstruksiGedungdanHunianSub');
+	removeCondition('JasaKonstruksiLapanganOlahragaSub');
+	removeCondition('JasaKonstruksiModulardanPrecastSub');
+	removeCondition('JasaStrukturBetondanPengecoranSub');
        
         JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
         JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
@@ -273,12 +273,12 @@ if (urlMappingStrukturLapangan[cleanUrlJasaJasaKonsStruktur]) {
         removeCondition('JasaKonsPondasiTanah');
 
        //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
-        removeCondition1('JasaKonstruksiIndustridanGudangSub');
-        removeCondition1('JasaStrukturBajadanRangkaRinganSub');
-        removeCondition1('JasaStrukturKhususSub');
-	removeCondition1('JasaKonstruksiGedungdanHunianSub');
-	removeCondition1('JasaKonstruksiModulardanPrecastSub');
-	removeCondition1('JasaStrukturBetondanPengecoranSub');
+        removeCondition('JasaKonstruksiIndustridanGudangSub');
+        removeCondition('JasaStrukturBajadanRangkaRinganSub');
+        removeCondition('JasaStrukturKhususSub');
+	removeCondition('JasaKonstruksiGedungdanHunianSub');
+	removeCondition('JasaKonstruksiModulardanPrecastSub');
+	removeCondition('JasaStrukturBetondanPengecoranSub');
        
         JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
         JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
@@ -304,12 +304,12 @@ if (urlMappingStrukturModularPrecast[cleanUrlJasaJasaKonsStruktur]) {
         removeCondition('JasaKonsPondasiTanah');
 
        //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
-        removeCondition1('JasaKonstruksiIndustridanGudangSub');
-        removeCondition1('JasaStrukturBajadanRangkaRinganSub');
-        removeCondition1('JasaStrukturKhususSub');
-	removeCondition1('JasaKonstruksiLapanganOlahragaSub');
-	removeCondition1('JasaKonstruksiGedungdanHunianSub');
-	removeCondition1('JasaStrukturBetondanPengecoranSub');
+        removeCondition('JasaKonstruksiIndustridanGudangSub');
+        removeCondition('JasaStrukturBajadanRangkaRinganSub');
+        removeCondition('JasaStrukturKhususSub');
+	removeCondition('JasaKonstruksiLapanganOlahragaSub');
+	removeCondition('JasaKonstruksiGedungdanHunianSub');
+	removeCondition('JasaStrukturBetondanPengecoranSub');
        
         JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
         JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
@@ -335,12 +335,12 @@ if (urlMappingStrukturBetonPengecoran[cleanUrlJasaJasaKonsStruktur]) {
         removeCondition('JasaKonsPondasiTanah');
 
        //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
-        removeCondition1('JasaKonstruksiIndustridanGudangSub');
-        removeCondition1('JasaStrukturBajadanRangkaRinganSub');
-        removeCondition1('JasaStrukturKhususSub');
-	removeCondition1('JasaKonstruksiLapanganOlahragaSub');
-	removeCondition1('JasaKonstruksiModulardanPrecastSub');
-	removeCondition1('JasaKonstruksiGedungdanHunianSub');
+        removeCondition('JasaKonstruksiIndustridanGudangSub');
+        removeCondition('JasaStrukturBajadanRangkaRinganSub');
+        removeCondition('JasaStrukturKhususSub');
+	removeCondition('JasaKonstruksiLapanganOlahragaSub');
+	removeCondition('JasaKonstruksiModulardanPrecastSub');
+	removeCondition('JasaKonstruksiGedungdanHunianSub');
        
         JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
         JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
