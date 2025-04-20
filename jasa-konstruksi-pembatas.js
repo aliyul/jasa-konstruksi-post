@@ -206,10 +206,11 @@ document.addEventListener("DOMContentLoaded", function() {
      
         //hapus elemen div id lain
         removeCondition('MaterialKons');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+	removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsPondasiTanahPost');
+        //removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
@@ -247,10 +248,11 @@ document.addEventListener("DOMContentLoaded", function() {
      
         //hapus elemen div id lain
         removeCondition('MaterialKons');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+	removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsPondasiTanahPost');
+        //removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
@@ -288,10 +290,11 @@ document.addEventListener("DOMContentLoaded", function() {
      
         //hapus elemen div id lain
         removeCondition('MaterialKons');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+	removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsPondasiTanahPost');
+        //removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
@@ -330,10 +333,11 @@ document.addEventListener("DOMContentLoaded", function() {
      
         //hapus elemen div id lain
         removeCondition('MaterialKons');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+	removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsPondasiTanahPost');
+        //removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
@@ -376,8 +380,8 @@ document.addEventListener("DOMContentLoaded", function() {
      
         //hapus elemen div id lain
         removeCondition('MaterialKons');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
@@ -416,8 +420,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
        //hapus elemen div id lain
         removeCondition('MaterialKons');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
@@ -441,8 +445,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
        //hapus elemen div id lain
         removeCondition('MaterialKons');
-        removeCondition('ProdukKonsSaluran');
-        removeCondition('ProdukKonsPembatas');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
         removeCondition('JasaKonsPerbaikan');
        	removeCondition('JasaKons');
        	removeCondition('JasaKonsSub');
