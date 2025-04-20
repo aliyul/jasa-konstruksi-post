@@ -202,6 +202,13 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
 	       
      
         //hapus elemen div id lain
+	removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+/*
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
         removeCondition('ProdukKonsPembatasPost');
@@ -214,7 +221,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         removeCondition('JasaKonsPembatas');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-
+*/
 
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaPengamanSisiJalanInfrastrukturPost');
