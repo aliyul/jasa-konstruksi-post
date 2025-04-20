@@ -250,6 +250,7 @@ const urlMappingPerbaikanFasadEksterior = {
 */
 };
 //SUB Jasa Renovasi Perbaikan Fasad Eksterior
+/*
 const urlMappingPerbaikanFasadEksteriorFasad = {
 
 };
@@ -259,8 +260,9 @@ const urlMappingPerbaikanFasadEksteriorEksterior = {
 const urlMappingPerbaikanFasadEksteriorArsitektur = {
 
 };
-
+*/
 //Jasa Renovasi Perbaikan Bangunan
+/*
 const urlMappingPerbaikanBangunan = {
 //"https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat IbadahPost",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-pabrik.html": "Jasa Renovasi Perbaikan PabrikPost",
@@ -270,7 +272,9 @@ const urlMappingPerbaikanBangunan = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-gudang.html": "Jasa Renovasi Perbaikan GudangPost",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-hotel-apartemen.html": "Jasa Renovasi Perbaikan Hotel Apartemen"
 };
+*/
 //SUB Jasa Renovasi Perbaikan Bangunan
+/*
 const urlMappingPerbaikanBangunanIbadah = {
 
 };
@@ -292,8 +296,9 @@ const urlMappingPerbaikanBangunanGudang = {
 const urlMappingPerbaikanBangunanHotel = {
 
 };
-
+*/
 //Jasa Renovasi Perbaikan Fasilitas Umum
+/*
 const urlMappingPerbaikanFasilitasUmum = {
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-taman-kota.html": "Jasa Renovasi Perbaikan Taman KotaPost",
 "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-sekolah.html": "Jasa Renovasi Perbaikan SekolahPost",
@@ -323,8 +328,9 @@ const urlMappingPerbaikanFasilitasUmumTerminal = {
 const urlMappingPerbaikanFasilitasUmumHalte = {
 
 };
-
+*/
 //Jasa Renovasi dan Perbaikan Interior
+/*
 const urlMappingPerbaikanInterior = {
 "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-rumah.html": "Jasa Renovasi Interior RumahPost",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-kantor.html": "Jasa Renovasi Interior KantorPost",
@@ -333,44 +339,10 @@ const urlMappingPerbaikanInterior = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-toko.html": "Jasa Renovasi Interior TokoPost",
   "https://www.betonjayareadymix.com/p/jasa-desain-interior-custom.html": "Jasa Desain Interior CustomPost",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruangan.html": "Jasa Renovasi Interior RuanganPost"
-
-/*
-//Atap dalam bangunan
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon.html": "Jasa Perbaikan Plafon",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-plafon.html": "Jasa Renovasi Plafon",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon-gypsum.html": "Jasa Perbaikan Plafon Gypsum",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon-pvc.html": "Jasa Perbaikan Plafon Pvc",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon-rusak-karena-bocor.html": "Jasa Perbaikan Plafon Rusak Karna Bocor",
-	
-//dinding dalam bangunan
-//dinding masuk interior dan fasad
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding.html": "Jasa Renovasi DindingPost",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-interior.html": "Jasa Renovasi Dinding InteriorPost",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-gedung.html": "Jasa Renovasi Perbaikan Dinding GedungPost",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding.html": "Jasa Renovasi DindingPost",
-	
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-lembab.html": "Jasa Perbaikan Dinding Lembab",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-lembab.html": "Jasa Renovasi Dinding Lembab",
-	
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-jakarta.html": "Jasa Renovasi Perbaikan Dinding  Jakarta",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-bogor.html": "Jasa Renovasi Perbaikan Dinding Bogor",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-depok.html": "Jasa Renovasi Perbaikan Dinding Depok",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-tangerang.html": "Jasa Perbaikan Dinding Tangerang",
-
-"https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-tangerang.html": "Jasa Renovasi Dinding Tangerang",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding-bekasi.html": "Jasa Renovasi Perbaikan Dinding Bekasi",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-karawang.html": "Jasa Perbaikan Dinding Karawang",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-karawang.html": "Jasa Renovasi Dinding Karawang",
-
-//Tiang
-"https://www.betonjayareadymix.com/p/jasa-renovasi-tiang-beton.html": "Jasa Renovasi Tiang Beton",
-
-//KERAMIK
- "https://www.betonjayareadymix.com/p/jasa-bongkar-keramik.html": "Jasa Bongkar Keramik"
- */
 };
-
+*/
 //SUB Jasa Renovasi dan Perbaikan Interior
+/*
 const urlMappingPerbaikanInteriorRumah = {
 
 };
@@ -392,7 +364,7 @@ const urlMappingPerbaikanInteriorCustom = {
 const urlMappingPerbaikanInteriorRuangan = {
 
 };
-
+*/
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPerbaikanKons1 = {};
 function removeCondition1(conditionId) {
@@ -634,6 +606,7 @@ if (!JasaKonsPerbaikanPost) {
         pageNameJasaKonsPerbaikanPost.textContent = urlMappingJasaBongkarDinding[cleanUrlJasaKonsPerbaikanPost];
     }
     //SUB JasaRenovasiPerbaikanStruktur
+/*
  if (urlMappingPerbaikanStrukturUmum[cleanUrlJasaKonsPerbaikanPost]) {
         restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanStruktur');
@@ -789,8 +762,10 @@ if (!JasaKonsPerbaikanPost) {
         pageNameJasaKonsPerbaikanPost.textContent = urlMappingPerbaikanStrukturKolomBalok[cleanUrlJasaKonsPerbaikanPost];    
     }
 
+    */
 	
     // JasaRenovasiPerbaikanInfrastruktur
+/*
     if (urlMappingPerbaikanInfrastruktur[cleanUrlJasaKonsPerbaikanPost]) {
         restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanInfrastruktur');
@@ -1013,7 +988,8 @@ if (!JasaKonsPerbaikanPost) {
         JasaRenovasiPerbaikanInteriorPostLink.style.visibility = 'visible';
         pageNameJasaKonsPerbaikanPost.textContent = urlMappingPerbaikanInterior[cleanUrlJasaKonsPerbaikanPost];
     }
-  
+  */
+/*
      if (urlMappingPerbaikanFasadEksterior[cleanUrlJasaKonsPerbaikanPost]) {
         restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanFasad');
@@ -1163,7 +1139,7 @@ if (!JasaKonsPerbaikanPost) {
         JasaRenovasiPerbaikanFasilitasPostLink.style.visibility = 'visible';
         pageNameJasaKonsPerbaikanPost.textContent = urlMappingPerbaikanFasilitasUmum[cleanUrlJasaKonsPerbaikanPost];
     }
-  
+  */
 }
 	
    });
