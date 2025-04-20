@@ -378,12 +378,29 @@ const urlMappingPerbaikanInterior = {
 
 //SUB Jasa Renovasi dan Perbaikan Interior
 const urlMappingPerbaikanInteriorRumah = {
-
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-tidur.html": "Jasa Renovasi Kamar Tidur",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-dapur.html": "Jasa Renovasi Dapur",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi.html": "Jasa Renovasi Kamar Mandi",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-tamu.html": "Jasa Renovasi Ruang Tamu",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-keluarga.html": "Jasa Renovasi Ruang Keluarga",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-belajar.html": "Jasa Renovasi Ruang Belajar",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-makan.html": "Jasa Renovasi Ruang Makan",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-multifungsi.html": "Jasa Renovasi Ruang Multifungsi"
 };
 const urlMappingPerbaikanInteriorKantor = {
-
+"https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-kerja-karyawan.html": "Jasa Renovasi Ruang Kerja Karyawan",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-rapat-kantor.html": "Jasa Renovasi Ruang Rapat Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-lobby-dan-resepsionis.html": "Jasa Renovasi Lobby dan Resepsionis",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-direksi.html": "Jasa Renovasi Ruang Direksi",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-coworking-space.html": "Jasa Renovasi Coworking Space",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-partisi-ruang-kantor.html": "Jasa Renovasi Partisi Ruang Kantor"
 };
 const urlMappingPerbaikanInteriorApartemen = {
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-studio-apartemen.html": "Jasa Renovasi Interior Studio Apartemen",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-apartemen.html": "Jasa Renovasi Kamar Apartemen",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-dapur-apartemen.html": "Jasa Renovasi Dapur Apartemen",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi-apartemen.html": "Jasa Renovasi Kamar Mandi Apartemen",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-tamu-apartemen.html": "Jasa Renovasi Ruang Tamu Apartemen"
 
 };
 const urlMappingPerbaikanInteriorHotel = {
