@@ -208,9 +208,22 @@ const urlMappingPerbaikanFasadEksteriorFasad = {
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-fasad-bangunan.html": "Jasa Perkuatan Struktur Fasad Bangunan"
 };
 const urlMappingPerbaikanFasadEksteriorEksterior = {
+"https://www.betonjayareadymix.com/p/jasa-renovasi-atap.html": "Jasa Renovasi Atap",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kanopi.html": "Jasa Renovasi Kanopi",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-pagar-dan-gerbang.html": "Jasa Renovasi Pagar dan Gerbang",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-taman-dan-landscape.html": "Jasa Renovasi Taman dan Landscape",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-balkon-dan-teras.html": "Jasa Renovasi Balkon dan Teras",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-penerangan-eksterior.html": "Jasa Renovasi Penerangan Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-jalur-pejalan-akses.html": "Jasa Renovasi Jalur Pejalan Kaki dan Aksesibilitas",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-elemen-dekoratif-eksterior.html": "Jasa Renovasi Elemen Dekoratif Eksterior"
 
 };
 const urlMappingPerbaikanFasadEksteriorArsitektur = {
+"https://www.betonjayareadymix.com/p/jasa-desain-eksterior-rumah.html": "Jasa Desain Eksterior Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-komersial.html": "Jasa Desain Eksterior Komersial",
+  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-villa-dan-resort.html": "Jasa Desain Eksterior Villa dan Resort",
+  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-hunian-vertikal.html": "Jasa Desain Eksterior Hunian Vertikal",
+  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-fasilitas-publik.html": "Jasa Desain Eksterior Fasilitas Publik"
 
 };
 
