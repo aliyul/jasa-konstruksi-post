@@ -57,12 +57,28 @@ const urlMappingPerbaikanStrukturTiangBeton = {
 };
 //Akhir Sub PerbaikanStrukturKolomBalokBeton
 
-const urlMappingPerbaikanStrukturPondasi = {
+
+//SUB PerbaikanStrukturPondasi
+const urlMappingJasaPerbaikanPondasi = {
 
 };
-const urlMappingPerbaikanStrukturLantai = {
+const urlMappingJasaPerbaikanPondasiBangunan = {
 
 };
+const urlMappingJasaPerbaikanStrukturPondasi = {
+
+};
+const urlMappingJasaPerbaikanPondasiRumah = {
+
+};
+const urlMappingJasaPenguatanPondasiBangunan = {
+
+};
+const urlMappingJasaPerbaikanStrukturPondasiRumah = {
+
+};
+//Akhir SUB PerbaikanStrukturPondasi
+
 //SUB PerbaikanStrukturDinding
 const urlMappingJasaBobokTembok = {
 
@@ -93,13 +109,96 @@ const urlMappingJasaPerbaikanPenggantianDindingBata= {
 };
 //Akhir SUB PerbaikanStrukturDinding
 
+//SUB JasaRenovasiPerbaikanStrukturLantai
+const urlMappingJasaPerbaikanLantaiStruktur = {
+
+};
+const urlMappingJasaPerbaikanStrukturLantaiBeton = {
+
+};
+const urlMappingJasaPerbaikanRetakanLantaiBeton = {
+
+};
+const urlMappingJasaPerkuatanLantaiBeton = {
+
+};
+const urlMappingJasaPerbaikanLantai = {
+
+};
+const urlMappingJasaLantaiAmbles = {
+
+};
+const urlMappingJasaPerbaikanLantaiRusak = {
+
+};
+const urlMappingJasaRenovasiLantai = {
+
+};
+const urlMappingJasaRenovasiLantaiRusak = {
+
+};
+const urlMappingJasaPerbaikanLantaiAmbles = {
+
+};
+const urlMappingJasaGantiLantaiAmbles = {
+
+};
+const urlMappingJasaBobokLantaiBeton = {
+
+};
+const urlMappingJasaBobokLantaiLama = {
+
+};
+//SUB JasaRenovasiPerbaikanStrukturLantai
+
 //SUB PerbaikanStrukturBangunan
-const urlMappingPerbaikanStrukturBangunan = {
+const urlMappingJasaPerbaikanGedungBertingkat= {
 
 };
-const urlMappingPerbaikanStrukturTeknikBeton = {
+const urlMappingJasaPerbaikanStrukturBangunanTua = {
 
 };
+const urlMappingJasaPerbaikanStrukturBangunanMiring = {
+
+};
+//Akhir SUB PerbaikanStrukturBangunan
+
+//SUB PerbaikanStrukturTeknikBeton
+const urlMappingJasaInjeksiBetonRetak = {
+
+};
+const urlMappingJasaInjeksiRetakBeton = {
+
+};
+const urlMappingJasaShortcreteBeton = {
+
+};
+const urlMappingJasaGoutingStrukturBeton = {
+
+};
+const urlMappingJasaPerbaikanBetonMengelupas = {
+
+};
+const urlMappingJasaPerbaikanBetonKeropos = {
+
+};
+const urlMappingJasaPerbaikanBetonRetak = {
+
+};
+const urlMappingJasaChippingBeton = {
+
+};
+const urlMappingJasaBobokBeton = {
+
+};
+const urlMappingJasaBetonKarbonasi = {
+
+};
+const urlMappingJasaPerkuatanStrukturdenganCFRP = {
+
+};
+//AKHIR SUB PerbaikanStrukturTeknikBeton
+
 const urlMappingPerbaikanStrukturAtap = {
 
 };
