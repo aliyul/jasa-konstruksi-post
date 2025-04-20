@@ -404,16 +404,36 @@ const urlMappingPerbaikanInteriorApartemen = {
 
 };
 const urlMappingPerbaikanInteriorHotel = {
-
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-hotel.html": "Jasa Renovasi Kamar Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-lobi-hotel.html": "Jasa Renovasi Lobi Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-makan-hotel.html": "Jasa Renovasi Ruang Makan Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi-hotel.html": "Jasa Renovasi Kamar Mandi Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-koridor-hotel.html": "Jasa Renovasi Koridor Hotel"
 };
 const urlMappingPerbaikanInteriorToko = {
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-mini-market.html": "Jasa Renovasi Interior Mini Market",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-butik.html": "Jasa Renovasi Interior Butik",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-gerai-kuliner.html": "Jasa Renovasi Interior Gerai Kuliner",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-etalase-toko.html": "Jasa Renovasi Interior Etalase Toko",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-gerai-waralaba.html": "Jasa Renovasi Interior Gerai Waralaba"
 
 };
 const urlMappingPerbaikanInteriorCustom = {
+  "https://www.betonjayareadymix.com/p/jasa-desain-interior-custom-rumah.html": "Jasa Desain Interior Custom Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-desain-interior-custom-kantor.html": "Jasa Desain Interior Custom Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-desain-interior-custom-apartemen.html": "Jasa Desain Interior Custom Apartemen",
+  "https://www.betonjayareadymix.com/p/jasa-desain-interior-custom-toko.html": "Jasa Desain Interior Custom Toko",
+  "https://www.betonjayareadymix.com/p/jasa-desain-interior-custom-hotel.html": "Jasa Desain Interior Custom Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-desain-interior-custom-cafe.html": "Jasa Desain Interior Custom Cafe"
 
 };
 const urlMappingPerbaikanInteriorRuangan = {
-
+"https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruang-tamu.html": "Jasa Renovasi Interior Ruang Tamu",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-dapur.html": "Jasa Renovasi Interior Dapur",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-kamar-tidur.html": "Jasa Renovasi Interior Kamar Tidur",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-kamar-mandi.html": "Jasa Renovasi Interior Kamar Mandi",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruang-kerja.html": "Jasa Renovasi Interior Ruang Kerja",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruang-keluarga.html": "Jasa Renovasi Interior Ruang Keluarga"
 };
 
 // Menyimpan elemen yang dihapus dalam variabel
