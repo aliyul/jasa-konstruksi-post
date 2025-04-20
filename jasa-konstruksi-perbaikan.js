@@ -2571,7 +2571,7 @@ if (urlMappingPerbaikanFasadEksteriorFasad[cleanUrlJasaPerbaikanKonsSub]) {
 if (urlMappingPerbaikanFasadEksteriorEksterior[cleanUrlJasaPerbaikanKonsSub]) {
         restoreCondition1('JasaKonsPerbaikan');
         restoreCondition1('JasaRenovasiPerbaikanFasad');
-        restoreCondition1('JasaPerbaikanArsitekturEksterior');
+        restoreCondition1('JasaRenovasiEksteriorBangunan');
 	
           // hapus elemen id DIV Lain
         removeCondition1('MaterialKons');
@@ -2646,7 +2646,7 @@ if (urlMappingPerbaikanFasadEksteriorEksterior[cleanUrlJasaPerbaikanKonsSub]) {
         JasaRenovasiPerbaikanFasadLink.style.visibility = 'visible';
 
 	
-        JasaPerbaikanArsitekturEksteriorLink.style.visibility = 'visible';
+        JasaRenovasiEksteriorBangunanLink.style.visibility = 'visible';
         pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanFasadEksteriorEksterior[cleanUrlJasaPerbaikanKonsSub];
     }
 if (urlMappingPerbaikanFasadEksteriorArsitektur[cleanUrlJasaPerbaikanKonsSub]) {
