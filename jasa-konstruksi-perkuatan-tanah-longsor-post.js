@@ -144,6 +144,14 @@ JasaPerkuatanTanahLongsorPost
 
 */
         //hapus elemen div id lain
+	
+	removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	/*
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -155,7 +163,7 @@ JasaPerkuatanTanahLongsorPost
         removeCondition('JasaKonsStruktur');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPondasiTanahPost');
-
+*/
 
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaSoilNailingTebingPost');
@@ -190,17 +198,13 @@ if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
         restoreCondition('JasaSoilNailingTebingPost');
 
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
         removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -225,18 +229,13 @@ if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
         restoreCondition('JasaDindingPenahanTanahLongsorPost');
 
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
         removeCondition('JasaKonsPondasiTanahPost');
-
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	
 
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaSoilNailingTebingPost');
@@ -260,17 +259,13 @@ if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
         restoreCondition('JasaGeotextilePerkuatanLerengPost');
 
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
         removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	
 
 
         //hapus elemen SUB jasa pembatas lain
@@ -295,18 +290,13 @@ if (urlMappingJasaSheetPileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
         restoreCondition('JasaSheetPilePenahanLongsorPost');
 
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
         removeCondition('JasaKonsPondasiTanahPost');
-
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	
 
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaSoilNailingTebingPost');
@@ -330,18 +320,13 @@ if (urlMappingJasaStabilisasiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
         restoreCondition('JasaStabilisasiTanahLabilPost');
 
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
         removeCondition('JasaKonsPondasiTanahPost');
-
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	
 
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaSoilNailingTebingPost');
@@ -365,18 +350,13 @@ if (urlMappingJasaPerkuatanRumahLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPos
         restoreCondition('JasaPerkuatanTanahLongsorRumahPost');
 
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
         removeCondition('JasaKonsPondasiTanahPost');
-
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	
 
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaSoilNailingTebingPost');
@@ -400,18 +380,13 @@ if (urlMappingJasaPerkuatanTebingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPo
         restoreCondition('JasaPerkuatanTebingJalanPost');
 
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
         removeCondition('JasaKonsPondasiTanahPost');
-
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	
 
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaSoilNailingTebingPost');
@@ -435,18 +410,13 @@ if (urlMappingJasaPerkuatanPerkebunanLongsor[cleanUrlJasaPerkuatanTanahLongsorKo
         restoreCondition('JasaPerkuatanLongsorPerkebunanPost');
 
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
         removeCondition('JasaKonsPondasiTanahPost');
-
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	
 
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaSoilNailingTebingPost');
@@ -470,18 +440,13 @@ if (urlMappingJasaDrainaseAntiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]
         restoreCondition('JasaDrainaseAntiLongsorPost');
 
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
         removeCondition('JasaKonsPondasiTanahPost');
-
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	
 
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaSoilNailingTebingPost');
