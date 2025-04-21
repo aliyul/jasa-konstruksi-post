@@ -379,62 +379,62 @@ if (!JasaKonsPerbaikanPost) {
 	   
 	
 	// hapus elemen id Sub JasaRenovasiPerbaikan yang lain
-        removeCondition1('JasaRenovasiPerbaikanInfrastruktur');
-        removeCondition1('JasaRenovasiPerbaikanBangunan');
-        removeCondition1('JasaRenovasiPerbaikanInterior');
-	removeCondition1('JasaRenovasiPerbaikanFasad');
-	removeCondition1('JasaRenovasiPerbaikanFasilitas');
+        removeCondition1('JasaRenovasiPerbaikanInfrastrukturPost');
+        removeCondition1('JasaRenovasiPerbaikanBangunanPost');
+        removeCondition1('JasaRenovasiPerbaikanInteriorPost');
+	removeCondition1('JasaRenovasiPerbaikanFasadPost');
+	removeCondition1('JasaRenovasiPerbaikanFasilitasPost');
 
 	// hapus elemen id Semua Sub JasaRenovasiPerbaikanStruktur selain JasaRenovasiPerbaikanStrukturDinding
-	removeCondition1('JasaRenovasiPerbaikanStrukturUmum');
-	removeCondition1('JasaRenovasiPerbaikanStrukturKolomBalok');
-        removeCondition1('JasaRenovasiPerbaikanStrukturPondasi');
-        removeCondition1('JasaRenovasiPerbaikanStrukturLantai');
+	removeCondition1('JasaRenovasiPerbaikanStrukturUmumPost');
+	removeCondition1('JasaRenovasiPerbaikanStrukturKolomBalokPost');
+        removeCondition1('JasaRenovasiPerbaikanStrukturPondasiPost');
+        removeCondition1('JasaRenovasiPerbaikanStrukturLantaiPost');
 	//removeCondition1('');
-	removeCondition1('JasaRenovasiPerbaikanStrukturBangunan');
-	removeCondition1('JasaRenovasiPerbaikanStrukturAtap');
+	removeCondition1('JasaRenovasiPerbaikanStrukturBangunanPost');
+	removeCondition1('JasaRenovasiPerbaikanStrukturAtapPost');
        
         // hapus elemen id Semua Sub JasaRenovasiPerbaikanInfrastruktur
-        removeCondition1('JasaRenovasiPerbaikanInfrastrukturJalan');
-        removeCondition1('JasaRenovasiPerbaikanInfrastrukturJembatan');
-        removeCondition1('JasaRenovasiPerbaikanInfrastrukturSaluran');
+        removeCondition1('JasaRenovasiPerbaikanInfrastrukturJalanPost');
+        removeCondition1('JasaRenovasiPerbaikanInfrastrukturJembatanPost');
+        removeCondition1('JasaRenovasiPerbaikanInfrastrukturSaluranPost');
 
        // hapus elemen id Semua Sub JasaRenovasiPerbaikanBangunan
-        removeCondition1('JasaRenovasiPerbaikanBangunanRumah');
-        removeCondition1('JasaRenovasiPerbaikanBangunanKantor');
-        removeCondition1('JasaRenovasiPerbaikanBangunanPabrik');
-        removeCondition1('JasaRenovasiPerbaikanBangunanGedung');
-        removeCondition1('JasaRenovasiPerbaikanBangunanGudang');
-        removeCondition1('JasaRenovasiPerbaikanBangunanHotel');
+        removeCondition1('JasaRenovasiPerbaikanBangunanRumahPost');
+        removeCondition1('JasaRenovasiPerbaikanBangunanKantorPost');
+        removeCondition1('JasaRenovasiPerbaikanBangunanPabrikPost');
+        removeCondition1('JasaRenovasiPerbaikanBangunanGedungPost');
+        removeCondition1('JasaRenovasiPerbaikanBangunanGudangPost');
+        removeCondition1('JasaRenovasiPerbaikanBangunanHotelPost');
 
 	 // hapus elemen id Semua Sub JasaRenovasiPerbaikanInterior
-        removeCondition1('JasaRenovasiInteriorRumah');
-        removeCondition1('JasaRenovasiInteriorKantor');
-        removeCondition1('JasaRenovasiInteriorApartemen');
-        removeCondition1('JasaRenovasiInteriorHotel');
-        removeCondition1('JasaRenovasiInteriorToko');
-        removeCondition1('JasaDesignInteriorCustom');
-        removeCondition1('JasaRenovasiInteriorRuangan');
+        removeCondition1('JasaRenovasiInteriorRumahPost');
+        removeCondition1('JasaRenovasiInteriorKantorPost');
+        removeCondition1('JasaRenovasiInteriorApartemenPost');
+        removeCondition1('JasaRenovasiInteriorHotelPost');
+        removeCondition1('JasaRenovasiInteriorTokoPost');
+        removeCondition1('JasaDesignInteriorCustomPost');
+        removeCondition1('JasaRenovasiInteriorRuanganPost');
 	   
        // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
-        removeCondition1('JasaRenovasiFasadBangunan');
-        removeCondition1('JasaRenovasiEksteriorBangunan');
-        removeCondition1('JasaPerbaikanArsitekturEksterior');
+        removeCondition1('JasaRenovasiFasadBangunanPost');
+        removeCondition1('JasaRenovasiEksteriorBangunanPost');
+        removeCondition1('JasaPerbaikanArsitekturEksteriorPost');
 
 	// hapus elemen id Semua Sub JasaRenovasiPerbaikanFasilitas
-        removeCondition1('JasaRenovasiPerbaikanStadionOlahraga');
-        removeCondition1('JasaRenovasiPerbaikanSekolah');
-        removeCondition1('JasaRenovasiPerbaikanRumahSakit');
-        removeCondition1('JasaRenovasiPerbaikanTempatIbadah');
-        removeCondition1('JasaRenovasiPerbaikanTerminal');
-        removeCondition1('JasaRenovasiPerbaikanHalte');
-        removeCondition1('JasaRenovasiPerbaikanTamanKota');
+        removeCondition1('JasaRenovasiPerbaikanStadionOlahragaPost');
+        removeCondition1('JasaRenovasiPerbaikanSekolahPost');
+        removeCondition1('JasaRenovasiPerbaikanRumahSakitPost');
+        removeCondition1('JasaRenovasiPerbaikanTempatIbadahPost');
+        removeCondition1('JasaRenovasiPerbaikanTerminalPost');
+        removeCondition1('JasaRenovasiPerbaikanHaltePost');
+        removeCondition1('JasaRenovasiPerbaikanTamanKotaPost');
 	   
         JasaKonstruksiPerbaikanSubPostLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanSubPostLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanStrukturPostLink.style.visibility = 'visible';
 
-	JasaRenovasiPerbaikanStrukturDindingLink.style.visibility = 'visible';
+	JasaRenovasiPerbaikanStrukturDindingPostLinkLink.style.visibility = 'visible';
         pageNameJasaKonsPerbaikanPost.textContent = urlMappingJasaBongkarDinding[cleanUrlJasaKonsPerbaikanPost];
     }
     //SUB JasaRenovasiPerbaikanStruktur
