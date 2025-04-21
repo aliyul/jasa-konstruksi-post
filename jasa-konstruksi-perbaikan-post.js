@@ -345,7 +345,7 @@ if (!JasaKonsPerbaikanPost) {
      JasaRenovasiPerbaikanStrukturDindingPostLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanStrukturBangunanPostLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanStrukturAtapPostLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanStrukturTeknikBetonPost.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanStrukturTeknikBetonPostLink.style.visibility = 'hidden';
 
      //Hide SUB JasaRenovasiPerbaikanInfrastruktur
      JasaRenovasiPerbaikanInfrastrukturJalanPostLink.style.visibility = 'hidden';
