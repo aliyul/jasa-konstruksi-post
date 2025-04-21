@@ -256,11 +256,33 @@ if (!JasaKonsPerbaikanPost) {
      var JasaRenovasiPerbaikanStrukturUmumPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturUmumPost");
      var JasaRenovasiPerbaikanStrukturKolomBalokPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturKolomBalokPost");
      var JasaRenovasiPerbaikanStrukturPondasiPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturPondasiPost");
-      var JasaRenovasiPerbaikanStrukturLantaiPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturLantaiPost");
+      var JasaRenovasiPerbaikanStrukturLantaiBetonPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturLantaiBetonPost");
      var JasaRenovasiPerbaikanStrukturDindingPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturDindingPost");
      var JasaRenovasiPerbaikanStrukturBangunanPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturBangunanPost");
      var JasaRenovasiPerbaikanStrukturAtapPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturAtapPost");
+      //SUB JasaRenovasiPerbaikanStrukturDindingPost
+     var JasaBobokTembokPostLink = document.getElementById("JasaBobokTembokPost");
+     var JasaInjeksiDindingRetakPostLink = document.getElementById("JasaInjeksiDindingRetakPost");
+     var JasaBongkarDindingPostLink = document.getElementById("JasaBongkarDindingPost");
+     var JasaPerbaikanDindingRetakStrukturPostLink = document.getElementById("JasaPerbaikanDindingRetakStrukturPost");
+     var JasaPerbaikanStrukturDindingRetakPostLink = document.getElementById("JasaPerbaikanStrukturDindingRetakPost");
+     var JasaBobokDindingInstalasiPostLink = document.getElementById("JasaBobokDindingInstalasiPost");
+     var JasaPerbaikanStrukturDindingLembabPostLink = document.getElementById("JasaPerbaikanStrukturDindingLembabPost");
+     var JasaRenovasiPenggantianDindingBataPostLink = document.getElementById("JasaRenovasiPenggantianDindingBataPost");
+     var JasaPerbaikanPenggantianDindingBataPostLink = document.getElementById("JasaPerbaikanPenggantianDindingBataPost");
 
+     //SUB JasaRenovasiPerbaikanStrukturDindingPost
+     JasaBobokTembokPostLink.style.visibility = 'hidden';
+     JasaInjeksiDindingRetakPostLink.style.visibility = 'hidden';
+     JasaBongkarDindingPostLink.style.visibility = 'hidden';
+     JasaPerbaikanDindingRetakStrukturPostLink.style.visibility = 'hidden';
+     JasaPerbaikanStrukturDindingRetakPostLink.style.visibility = 'hidden';
+     JasaBobokDindingInstalasiPostLink.style.visibility = 'hidden';
+     JasaPerbaikanStrukturDindingLembabPostLink.style.visibility = 'hidden';
+     JasaRenovasiPenggantianDindingBataPostLink.style.visibility = 'hidden';
+     JasaPerbaikanPenggantianDindingBataPostLink.style.visibility = 'hidden';
+
+	
      //SUB JasaRenovasiPerbaikanInfrastruktur
      var JasaRenovasiPerbaikanInfrastrukturJalanPostLink = document.getElementById("JasaRenovasiPerbaikanInfrastrukturJalanPost");
      var JasaRenovasiPerbaikanInfrastrukturJembatanPostLink = document.getElementById("JasaRenovasiPerbaikanInfrastrukturJembatanPost");
@@ -316,7 +338,7 @@ if (!JasaKonsPerbaikanPost) {
      JasaRenovasiPerbaikanStrukturUmumPostLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanStrukturKolomBalokPostLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanStrukturPondasiPostLink.style.visibility = 'hidden';
-     JasaRenovasiPerbaikanStrukturLantaiPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanStrukturLantaiBetonPostLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanStrukturDindingPostLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanStrukturBangunanPostLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanStrukturAtapPostLink.style.visibility = 'hidden';
@@ -369,6 +391,8 @@ if (!JasaKonsPerbaikanPost) {
         restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanStruktur');
         restoreCondition1('JasaRenovasiPerbaikanStrukturDinding');
+	
+        restoreCondition1('JasaBongkarDindingPost');
 
            // hapus elemen id DIV Lain
 	removeCondition1('ProdukKonsSaluranPost');
@@ -377,7 +401,18 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaKonsPondasiTanahPost');
         removeCondition1('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition1('MaterialKonsStukturPost');
-	   
+
+	// hapus elemen id Sub JasaRenovasiPerbaikanStrukturDinding SELAIN JasaBongkarDindingPost
+        //removeCondition1('JasaBongkarDindingPost');
+        removeCondition1('JasaBobokTembokPost');
+        removeCondition1('JasaInjeksiDindingRetakPost');
+        removeCondition1('JasaPerbaikanDindingRetakStrukturPost');
+        removeCondition1('JasaPerbaikanStrukturDindingRetakPost');
+        removeCondition1('JasaBobokDindingInstalasiPost');
+        removeCondition1('JasaPerbaikanStrukturDindingLembabPost');
+        removeCondition1('JasaRenovasiPenggantianDindingBataPost');
+        removeCondition1('JasaPerbaikanPenggantianDindingBataPost');
+     
 	
 	// hapus elemen id Sub JasaRenovasiPerbaikan yang lain
         removeCondition1('JasaRenovasiPerbaikanInfrastrukturPost');
@@ -390,7 +425,7 @@ if (!JasaKonsPerbaikanPost) {
 	removeCondition1('JasaRenovasiPerbaikanStrukturUmumPost');
 	removeCondition1('JasaRenovasiPerbaikanStrukturKolomBalokPost');
         removeCondition1('JasaRenovasiPerbaikanStrukturPondasiPost');
-        removeCondition1('JasaRenovasiPerbaikanStrukturLantaiPost');
+        removeCondition1('JasaRenovasiPerbaikanStrukturLantaiBetonPost');
 	//removeCondition1('');
 	removeCondition1('JasaRenovasiPerbaikanStrukturBangunanPost');
 	removeCondition1('JasaRenovasiPerbaikanStrukturAtapPost');
@@ -435,8 +470,9 @@ if (!JasaKonsPerbaikanPost) {
         JasaKonstruksiPerbaikanSubPostLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanSubPostLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanStrukturPostLink.style.visibility = 'visible';
-
 	JasaRenovasiPerbaikanStrukturDindingPostLink.style.visibility = 'visible';
+	
+	JasaBongkarDindingPostLink.style.visibility = 'visible';
         pageNameJasaKonsPerbaikanPost.textContent = urlMappingJasaBongkarDinding[cleanUrlJasaKonsPerbaikanPost];
     }
     //SUB JasaRenovasiPerbaikanStruktur
