@@ -434,7 +434,7 @@ if (!JasaKonsPerbaikanPost) {
         JasaRenovasiPerbaikanSubPostLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanStrukturPostLink.style.visibility = 'visible';
 
-	JasaRenovasiPerbaikanStrukturDindingPostLinkLink.style.visibility = 'visible';
+	JasaRenovasiPerbaikanStrukturDindingPostLink.style.visibility = 'visible';
         pageNameJasaKonsPerbaikanPost.textContent = urlMappingJasaBongkarDinding[cleanUrlJasaKonsPerbaikanPost];
     }
     //SUB JasaRenovasiPerbaikanStruktur
