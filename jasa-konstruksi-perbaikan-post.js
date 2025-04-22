@@ -237,6 +237,88 @@ const urlMappingJasaPerkuatanStrukturdenganCFRP = {
 };
 //AKHIR SUB PerbaikanStrukturTeknikBeton
 
+
+//SUB JasaRenovasiPerbaikanBangunan
+//Sub JasaRenovasiPerbaikanRumah
+//Sub JasaRenovasiRumahMinimalisPost
+const urlMappingJasaRenovasiRumahMinimalis = {
+
+};
+//Sub JasaRenovasiRumahType36Post
+const urlMappingJasaRenovasiRumahType36 = {
+
+};
+//Sub JasaRenovasiRumahType45Post
+const urlMappingJasaRenovasiRumahType45 = {
+
+};
+//Sub JasaRenovasRumah2LantaiPost
+const urlMappingJasaRenovasRumah2Lantai = {
+
+};
+//Sub JasaRenovasiPerbaikanAtapRumahPost
+const urlMappingJasaRenovasiPerbaikanAtapRumahPost = {
+
+};
+//Sub JasaRenovasiDindingRumahPost
+const urlMappingJasaRenovasiDindingRumah = {
+
+};
+//Sub JasaPerbaikanStrukturRumahPost
+const urlMappingJasaPerbaikanStrukturRumah = {
+
+};
+//Sub JasaRenovasiKosmetikRumahPost
+const urlMappingJasaRenovasiKosmetikRumah = {
+
+};
+//Sub JasaRenovasiRumahTumbuhPost
+const urlMappingJasaRenovasiRumahTumbuh = {
+
+};
+//Sub JasaRenovasiRumahJakartaPost
+const urlMappingJasaRenovasiRumahJakarta = {
+ "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-jakarta.html": "Harga Jasa Renovasi Rumah Jakarta"
+
+};
+//Sub JasaRenovasiRumahBogorPost
+const urlMappingJasaRenovasiRumahBogor = {
+ "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-bogor.html": "Harga Jasa Renovasi Rumah Bogor"
+
+};
+//Sub JasaRenovasiRumahDepokPost
+const urlMappingJasaRenovasiRumahDepok = {
+ "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-depok.html": "Harga Jasa Renovasi Rumah Depok"
+
+};
+//Sub JasaRenovasiRumahTangerangPost
+const urlMappingJasaRenovasiRumahTangerang = {
+ "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-tangerang.html": "Harga Jasa Renovasi Rumah Tangerang"
+
+};
+//Sub JasaRenovasiRumahBekasiPost
+const urlMappingJasaRenovasiRumahBekasi = {
+ "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-bekasi.html": "Harga Jasa Renovasi Rumah Bekasi"
+
+};
+//Sub JasaRenovasiRumahKarawangPost
+const urlMappingJasaRenovasiRumahKarawang = {
+// "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-semarang.html": "Harga Jasa Renovasi Rumah Semarang"
+
+};
+//Sub JasaRenovasiRumahSemarangPost
+const urlMappingJasaRenovasiRumahSemarang = {
+ "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-semarang.html": "Harga Jasa Renovasi Rumah Semarang"
+};
+//Sub JasaRenovasiRumahJogjaPost
+const urlMappingJasaRenovasiRumahJogja = {
+ "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-jogja.html": "Harga Jasa Renovasi Rumah Jogja"
+};
+//Sub JasaRenovasiRumahSurabayaPost
+const urlMappingJasaRenovasiRumahSurabaya = {
+  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-surabaya.html": "Harga Jasa Renovasi Rumah Surabaya"
+};
+
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPerbaikanKonsPost = {};
 function removeCondition1(conditionId) {
