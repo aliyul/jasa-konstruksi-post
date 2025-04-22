@@ -398,6 +398,26 @@ if (!JasaKonsPerbaikanPost) {
      var JasaRepairStrukturBetonPostLink = document.getElementById("JasaRepairStrukturBetonPost");
      var JasaPerbaikanStrukturBetonPostLink = document.getElementById("JasaPerbaikanStrukturBetonPost");
      var JasaRenovasiPerbaikanRetakStrukturPostLink = document.getElementById("JasaRenovasiPerbaikanRetakStrukturPost");
+     //SUB JASA JasaRenovasiPerbaikanBangunanRumah
+     var JasaRenovasiRumahMinimalisPostLink = document.getElementById("JasaRenovasiRumahMinimalisPost");
+     var JasaRenovasiRumahType36PostLink = document.getElementById("JasaRenovasiRumahType36Post");
+     var JasaRenovasiRumahType45PostLink = document.getElementById("JasaRenovasiRumahType45Post");
+     var JasaRenovasRumah2LantaiPostLink = document.getElementById("JasaRenovasRumah2LantaiPost");
+     var JasaRenovasiPerbaikanAtapRumahPostLink = document.getElementById("JasaRenovasiPerbaikanAtapRumahPost");
+     var JasaRenovasiDindingRumahPostLink = document.getElementById("JasaRenovasiDindingRumahPost");
+     var JasaPerbaikanStrukturRumahPostLink = document.getElementById("JasaPerbaikanStrukturRumahPost");
+     var JasaRenovasiKosmetikRumahPostLink = document.getElementById("JasaRenovasiKosmetikRumahPost");
+     var JasaRenovasiRumahTumbuhPostLink = document.getElementById("JasaRenovasiRumahTumbuhPost");
+     var JasaRenovasiRumahJakartaPostLink = document.getElementById("JasaRenovasiRumahJakartaPost");
+     var JasaRenovasiRumahBogorPostLink = document.getElementById("JasaRenovasiRumahBogorPost");
+     var JasaRenovasiRumahDepokPostLink = document.getElementById("JasaRenovasiRumahDepokPost");
+     var JasaRenovasiRumahTangerangPostLink = document.getElementById("JasaRenovasiRumahTangerangPost");
+     var JasaRenovasiRumahBekasiPostLink = document.getElementById("JasaRenovasiRumahBekasiPost");
+     //var JasaRenovasiRumahKarawangPostLink = document.getElementById("JasaRenovasiRumahKarawangPost");
+     var JasaRenovasiRumahSemarangPostLink = document.getElementById("JasaRenovasiRumahSemarangPost");
+     var JasaRenovasiRumahJogjaPostLink = document.getElementById("JasaRenovasiRumahJogjaPost");
+     var JasaRenovasiRumahSurabayaPostLink = document.getElementById("JasaRenovasiRumahSurabayaPost");
+
 	
      //hide SUB JasaRenovasiPerbaikanStrukturDindingPost
      JasaBobokTembokPostLink.style.visibility = 'hidden';
@@ -418,6 +438,25 @@ if (!JasaKonsPerbaikanPost) {
      JasaRepairStrukturBetonPostLink.style.visibility = 'hidden';
      JasaPerbaikanStrukturBetonPostLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanRetakStrukturPostLink.style.visibility = 'hidden';
+   //hide SUB JasaRenovasiPerbaikanBangunanRumah
+     JasaRenovasiRumahMinimalisPostLink.style.visibility = 'hidden';
+     JasaRenovasiRumahType36PostLink.style.visibility = 'hidden';
+     JasaRenovasiRumahType45PostLink.style.visibility = 'hidden';
+     JasaRenovasRumah2LantaiPostLink.style.visibility = 'hidden';
+     JasaRenovasiPerbaikanAtapRumahPostLink.style.visibility = 'hidden';
+     JasaRenovasiDindingRumahPostLink.style.visibility = 'hidden';
+     JasaPerbaikanStrukturRumahPostLink.style.visibility = 'hidden';
+     JasaRenovasiKosmetikRumahPostLink.style.visibility = 'hidden';
+     JasaRenovasiRumahTumbuhPostLink.style.visibility = 'hidden';
+     JasaRenovasiRumahJakartaPostLink.style.visibility = 'hidden';
+     JasaRenovasiRumahBogorPostLink.style.visibility = 'hidden';
+     JasaRenovasiRumahDepokPostLink.style.visibility = 'hidden';
+     JasaRenovasiRumahTangerangPostLink.style.visibility = 'hidden';
+     JasaRenovasiRumahBekasiPostLink.style.visibility = 'hidden';
+    // JasaRenovasiRumahKarawangPostLink.style.visibility = 'hidden';
+     JasaRenovasiRumahSemarangPostLink.style.visibility = 'hidden';
+     JasaRenovasiRumahJogjaPostLink.style.visibility = 'hidden';
+     JasaRenovasiRumahSurabayaPostLink.style.visibility = 'hidden';
      
 	
      //SUB JasaRenovasiPerbaikanInfrastruktur
