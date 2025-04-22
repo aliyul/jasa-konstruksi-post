@@ -1217,7 +1217,7 @@ if (!JasaKonsPerbaikanPost) {
     }
 
 //SUB JasaRenovasiPerbaikanStrukturUmum
-if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {urlMappingJasaRenovasiRumahJakarta
+if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {
         restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanStrukturPost');
         restoreCondition1('JasaRenovasiPerbaikanStrukturUmumPost');
@@ -1348,7 +1348,8 @@ if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {urlMap
 	JasaPerbaikanStrukturBetonPostLink.style.visibility = 'visible';
         pageNameJasaKonsPerbaikanPost.textContent = urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost];
     }
-//SUB JasaRenovasiPerbaikanStrukturUmum
+//SUB JasaRenovasiPerbaikanBangunanPost
+//SUB JasaRenovasiPerbaikanBangunanRumahPost
 if (urlMappingJasaRenovasiRumahJakarta[cleanUrlJasaKonsPerbaikanPost]) {
         restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanBangunanPost');
@@ -1473,6 +1474,7 @@ if (urlMappingJasaRenovasiRumahJakarta[cleanUrlJasaKonsPerbaikanPost]) {
 	   
         JasaKonstruksiPerbaikanSubPostLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanSubPostLink.style.visibility = 'visible';
+        removeCondition1('JasaRenovasiPerbaikanStrukturPost');
         JasaRenovasiPerbaikanBangunanPostLink.style.visibility = 'visible';
 	JasaRenovasiPerbaikanBangunanRumahPostLink.style.visibility = 'visible';
 	
