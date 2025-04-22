@@ -252,7 +252,7 @@ const urlMappingJasaRenovasiRumahType36 = {
 const urlMappingJasaRenovasiRumahType45 = {
 
 };
-//Sub JasaRenovasRumah2LantaiPost
+//Sub JasaRenovasiRumah2LantaiPost
 const urlMappingJasaRenovasRumah2Lantai = {
 
 };
@@ -402,7 +402,7 @@ if (!JasaKonsPerbaikanPost) {
      var JasaRenovasiRumahMinimalisPostLink = document.getElementById("JasaRenovasiRumahMinimalisPost");
      var JasaRenovasiRumahType36PostLink = document.getElementById("JasaRenovasiRumahType36Post");
      var JasaRenovasiRumahType45PostLink = document.getElementById("JasaRenovasiRumahType45Post");
-     var JasaRenovasRumah2LantaiPostLink = document.getElementById("JasaRenovasRumah2LantaiPost");
+     var JasaRenovasiRumah2LantaiPostLink = document.getElementById("JasaRenovasiRumah2LantaiPost");
      var JasaRenovasiPerbaikanAtapRumahPostLink = document.getElementById("JasaRenovasiPerbaikanAtapRumahPost");
      var JasaRenovasiDindingRumahPostLink = document.getElementById("JasaRenovasiDindingRumahPost");
      var JasaPerbaikanStrukturRumahPostLink = document.getElementById("JasaPerbaikanStrukturRumahPost");
@@ -442,7 +442,7 @@ if (!JasaKonsPerbaikanPost) {
      JasaRenovasiRumahMinimalisPostLink.style.visibility = 'hidden';
      JasaRenovasiRumahType36PostLink.style.visibility = 'hidden';
      JasaRenovasiRumahType45PostLink.style.visibility = 'hidden';
-     JasaRenovasRumah2LantaiPostLink.style.visibility = 'hidden';
+     JasaRenovasiRumah2LantaiPostLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanAtapRumahPostLink.style.visibility = 'hidden';
      JasaRenovasiDindingRumahPostLink.style.visibility = 'hidden';
      JasaPerbaikanStrukturRumahPostLink.style.visibility = 'hidden';
