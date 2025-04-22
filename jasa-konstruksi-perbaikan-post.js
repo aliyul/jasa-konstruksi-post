@@ -1423,6 +1423,7 @@ if (urlMappingJasaRenovasiRumahJakarta[cleanUrlJasaKonsPerbaikanPost]) {
 	removeCondition1('JasaRenovasiPerbaikanFasilitasPost');
 
 	// hapus elemen id Semua Sub JasaRenovasiPerbaikanStruktur SEMUA 
+	removeCondition1('JasaRenovasiPerbaikanStrukturUmumPost');
 	removeCondition1('JasaRenovasiPerbaikanStrukturTeknikBetonPost');
 	removeCondition1('JasaRenovasiPerbaikanStrukturKolomBalokPost');
         removeCondition1('JasaRenovasiPerbaikanStrukturPondasiPost');
