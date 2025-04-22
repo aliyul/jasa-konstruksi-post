@@ -253,7 +253,7 @@ const urlMappingJasaRenovasiRumahType45 = {
 
 };
 //Sub JasaRenovasiRumah2LantaiPost
-const urlMappingJasaRenovasRumah2Lantai = {
+const urlMappingJasaRenovasiRumah2Lantai = {
 
 };
 //Sub JasaRenovasiPerbaikanAtapRumahPost
