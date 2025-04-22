@@ -253,7 +253,8 @@ const urlMappingPerbaikanBangunanRumah = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-rumah.html": "Jasa Renovasi Dinding Rumah",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-rumah.html": "Jasa Perbaikan Struktur Rumah",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-kosmetik-rumah.html": "Jasa Renovasi Kosmetik Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-tumbuh.html": "Jasa Renovasi Rumah Tumbuh",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-tumbuh.html": "Jasa Renovasi Rumah Tumbuh"
+/* Untuk Lokasi Jadi Post saja langsung induk ke JasaRenovasiPerbaikanRumah :
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-jakarta.html": "Jasa Renovasi Rumah Jakarta",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-bogor.html": "Jasa Renovasi Rumah Bogor",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-depok.html": "Jasa Renovasi Rumah Depok",
@@ -263,7 +264,7 @@ const urlMappingPerbaikanBangunanRumah = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-semarang.html": "Jasa Renovasi Rumah Semarang",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-jogja.html": "Jasa Renovasi Rumah Jogja",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-surabaya.html": "Jasa Renovasi Rumah Surabaya"
-
+*/
 };
 const urlMappingPerbaikanBangunanKantor = {
 
