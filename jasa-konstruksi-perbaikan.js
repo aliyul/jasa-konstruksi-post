@@ -251,7 +251,7 @@ const urlMappingPerbaikanBangunanRumah = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-2-lantai.html": "Jasa Renovasi Rumah 2 Lantai",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-rumah.html": "Jasa Renovasi Perbaikan Atap Rumah",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-rumah.html": "Jasa Renovasi Dinding Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-rumah.html": "Jasa Renovasi Perbaikan Struktur Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-rumah.html": "Jasa Perbaikan Struktur Rumah",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-kosmetik-rumah.html": "Jasa Renovasi Kosmetik Rumah",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-tumbuh.html": "Jasa Renovasi Rumah Tumbuh",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-jakarta.html": "Jasa Renovasi Rumah Jakarta",
