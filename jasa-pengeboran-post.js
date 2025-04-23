@@ -107,7 +107,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
-	      removeCondition('JasaKonsBongkarBangunanPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
 	
 	/*
         removeCondition('materialKonsReadymix');
