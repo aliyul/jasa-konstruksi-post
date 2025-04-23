@@ -379,6 +379,19 @@ if (!JasaKonsPerbaikanPost) {
      var JasaPerbaikanStrukturRumahPostLink = document.getElementById("JasaPerbaikanStrukturRumahPost");
      var JasaRenovasiKosmetikRumahPostLink = document.getElementById("JasaRenovasiKosmetikRumahPost");
      var JasaRenovasiRumahTumbuhPostLink = document.getElementById("JasaRenovasiRumahTumbuhPost");
+    //SUB JasaRenovasiPerbaikanStrukturTeknikBetonPost
+     var JasaInjeksiBetonRetakPostLink = document.getElementById("JasaInjeksiBetonRetakPost");
+     var JasaInjeksiRetakBetonPostLink = document.getElementById("JasaInjeksiRetakBetonPost");
+     var JasaShotcreteBetonPostLink = document.getElementById("JasaShotcreteBetonPost");
+     var JasaGroutingStrukturBetonPostLink = document.getElementById("JasaGroutingStrukturBetonPost");
+     var JasaPerbaikanBetonMengelupasPostLink = document.getElementById("JasaPerbaikanBetonMengelupasPost");
+     var JasaPerbaikanBetonKeroposPostLink = document.getElementById("JasaPerbaikanBetonKeroposPost");
+     var JasaPerbaikanBetonRetakPostLink = document.getElementById("JasaPerbaikanBetonRetakPost");
+     var JasaChippingBetonPostLink = document.getElementById("JasaChippingBetonPost");
+     var JasaBobokBetonPostLink = document.getElementById("JasaBobokBetonPost");
+     var JasaBetonKarbonasiPostLink = document.getElementById("JasaBetonKarbonasiPost");
+     var JasaPerkuatanStrukturCfrpPostLink = document.getElementById("JasaPerkuatanStrukturCfrpPost");
+	
 	
      //hide SUB JasaRenovasiPerbaikanStrukturDindingPost
      JasaBobokTembokPostLink.style.visibility = 'hidden';
@@ -409,6 +422,18 @@ if (!JasaKonsPerbaikanPost) {
      JasaPerbaikanStrukturRumahPostLink.style.visibility = 'hidden';
      JasaRenovasiKosmetikRumahPostLink.style.visibility = 'hidden';
      JasaRenovasiRumahTumbuhPostLink.style.visibility = 'hidden'
+   //hide SUB JasaRenovasiPerbaikanStrukturTeknikBetonPost
+     JasaInjeksiBetonRetakPostLink.style.visibility = 'hidden';
+     JasaInjeksiRetakBetonPostLink.style.visibility = 'hidden';
+     JasaShotcreteBetonPostLink.style.visibility = 'hidden';
+     JasaGroutingStrukturBetonPostLink.style.visibility = 'hidden';
+     JasaPerbaikanBetonMengelupasPostLink.style.visibility = 'hidden';
+     JasaPerbaikanBetonKeroposPostLink.style.visibility = 'hidden';
+     JasaPerbaikanBetonRetakPostLink.style.visibility = 'hidden';
+     JasaChippingBetonPostLink.style.visibility = 'hidden';
+     JasaBobokBetonPostLink.style.visibility = 'hidden';
+     JasaBetonKarbonasiPostLink.style.visibility = 'hidden';
+     JasaPerkuatanStrukturCfrpPostLink.style.visibility = 'hidden';
 	
      //SUB JasaRenovasiPerbaikanInfrastruktur
      var JasaRenovasiPerbaikanInfrastrukturJalanPostLink = document.getElementById("JasaRenovasiPerbaikanInfrastrukturJalanPost");
