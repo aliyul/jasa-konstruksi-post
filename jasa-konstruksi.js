@@ -700,7 +700,7 @@ if (!JasaKons || !JasaKonsSub) {
 	removeCondition('JasaPembatasPengaman');
 	removeCondition('JasaPematanganLahan');
 	removeCondition('JasaUjiTanah');
-	removeCondition('PerkuatanTanahLongsor');
+	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaPengeboran');
 
        // removeCondition('JasaKonstruksiCustom');
@@ -735,7 +735,7 @@ if (!JasaKons || !JasaKonsSub) {
 	removeCondition('JasaPembatasPengaman');
 	removeCondition('JasaPematanganLahan');
 	removeCondition('JasaUjiTanah');
-	removeCondition('PerkuatanTanahLongsor');
+	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
 
        // removeCondition('JasaKonstruksiCustom');
