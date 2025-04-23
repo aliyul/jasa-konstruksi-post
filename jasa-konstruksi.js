@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     */
 	
-if (!JasaKons && !JasaKons) {
+if (!JasaKons && !JasaKonsSub) {
 console.error("elemen Id JasaKons dan Id JasaKonsSub kondisi terhapus");
         return;
 }
@@ -262,6 +262,8 @@ if (!JasaKons || !JasaKonsSub) {
 	var JasaPematanganLahanLink = document.getElementById("JasaPematanganLahan");
 	var JasaUjiTanahLink = document.getElementById("JasaUjiTanah");
 	var JasaPembatasPengamanLink = document.getElementById("JasaPembatasPengaman");
+	var JasaBongkarBangunanLink = document.getElementById("JasaBongkarBangunan");
+	var JasaPengeboranLink = document.getElementById("JasaPengeboran");
 	//var JasaKonstruksiCustomLink = document.getElementById("JasaKonstruksiCustom");
 	
      var pageNameKonstruksi = document.getElementById("pageNameKonstruksi");
@@ -280,6 +282,9 @@ if (!JasaKons || !JasaKonsSub) {
 	JasaPematanganLahanLink.style.visibility = 'hidden';
 	JasaUjiTanahLink.style.visibility = 'hidden';
 	JasaPembatasPengamanLink.style.visibility = 'hidden';
+	JasaBongkarBangunanLink.style.visibility = 'hidden';
+	JasaPengeboranLink.style.visibility = 'hidden';
+	
 	//JasaKonstruksiCustomLink.style.visibility = 'hidden';
      pageNameKonstruksi.textContent = "";
       pageNameKonstruksiSub.textContent = "";
@@ -336,6 +341,8 @@ if (!JasaKons || !JasaKonsSub) {
 	removeCondition('JasaUjiTanah');
         removeCondition('JasaPembatasPengaman');
 	removeCondition('JasaPerkuatanTanahLongsor');
+	removeCondition('JasaBongkarBangunan');
+	removeCondition('JasaPengeboran');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
@@ -369,6 +376,8 @@ if (!JasaKons || !JasaKonsSub) {
 	removeCondition('JasaUjiTanah');
         removeCondition('JasaPembatasPengaman');
 	removeCondition('JasaPerkuatanTanahLongsor');
+	removeCondition('JasaBongkarBangunan');
+	removeCondition('JasaPengeboran');
        // removeCondition('JasaKonstruksiCustom');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
@@ -402,6 +411,8 @@ if (!JasaKons || !JasaKonsSub) {
 	removeCondition('JasaUjiTanah');
         removeCondition('JasaPembatasPengaman');
 	removeCondition('JasaPerkuatanTanahLongsor');
+	removeCondition('JasaBongkarBangunan');
+	removeCondition('JasaPengeboran');
        // removeCondition('JasaKonstruksiCustom');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
@@ -435,6 +446,8 @@ if (!JasaKons || !JasaKonsSub) {
 	removeCondition('JasaUjiTanah');
         removeCondition('JasaPembatasPengaman');
 	removeCondition('JasaPerkuatanTanahLongsor');
+	removeCondition('JasaBongkarBangunan');
+	removeCondition('JasaPengeboran');
        // removeCondition('JasaKonstruksiCustom');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
@@ -468,6 +481,8 @@ if (!JasaKons || !JasaKonsSub) {
 	removeCondition('JasaUjiTanah');
         removeCondition('JasaPembatasPengaman');
 	removeCondition('JasaPerkuatanTanahLongsor');
+	removeCondition('JasaBongkarBangunan');
+	removeCondition('JasaPengeboran');
        // removeCondition('JasaKonstruksiCustom');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
@@ -501,6 +516,8 @@ if (!JasaKons || !JasaKonsSub) {
 	removeCondition('JasaPematanganLahan');
 	removeCondition('JasaUjiTanah');
 	removeCondition('JasaPerkuatanTanahLongsor');
+	removeCondition('JasaBongkarBangunan');
+	removeCondition('JasaPengeboran');
         //removeCondition('JasaKonstruksiCustom');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
@@ -534,6 +551,8 @@ if (!JasaKons || !JasaKonsSub) {
 	removeCondition('JasaPematanganLahan');
 	removeCondition('JasaUjiTanah');
 	removeCondition('JasaPerkuatanTanahLongsor');
+	removeCondition('JasaBongkarBangunan');
+	removeCondition('JasaPengeboran');
 
        // removeCondition('JasaKonstruksiCustom');
 
@@ -570,6 +589,8 @@ if (!JasaKons || !JasaKonsSub) {
 	removeCondition('JasaPembatasPengaman');
 	removeCondition('JasaUjiTanah');
 	removeCondition('JasaPerkuatanTanahLongsor');
+	removeCondition('JasaBongkarBangunan');
+	removeCondition('JasaPengeboran');
 
        // removeCondition('JasaKonstruksiCustom');
 
@@ -605,6 +626,8 @@ if (!JasaKons || !JasaKonsSub) {
 	removeCondition('JasaPembatasPengaman');
 	removeCondition('JasaPematanganLahan');
 	removeCondition('JasaPerkuatanTanahLongsor');
+	removeCondition('JasaBongkarBangunan');
+	removeCondition('JasaPengeboran');
 	   
 
        // removeCondition('JasaKonstruksiCustom');
@@ -641,6 +664,8 @@ if (!JasaKons || !JasaKonsSub) {
 	removeCondition('JasaPembatasPengaman');
 	removeCondition('JasaPematanganLahan');
 	removeCondition('JasaUjiTanah');
+	removeCondition('JasaBongkarBangunan');
+	removeCondition('JasaPengeboran');
 
        // removeCondition('JasaKonstruksiCustom');
 
@@ -648,7 +673,78 @@ if (!JasaKons || !JasaKonsSub) {
         JasaUjiTanahLink.style.visibility = 'visible';
         pageNameKonstruksiSub.textContent = urlMappingPerkuatanTanahLongsor[cleanUrlJasaKons];
     }
+   if (urlMappingBongkarBangunan[cleanUrlJasaKons]) {
+        restoreCondition('JasaKonsSub');
+	restoreCondition('JasaBongkarBangunan');
+           // hapus elemen id DIV Lain
+        removeCondition('MaterialKons');
+	removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsPerbaikan');
+	removeCondition('JasaKonsFinishing');
+        removeCondition('JasaKonsStruktur');
+	removeCondition('JasaKons');
+	removeCondition('MenuKons');
+	   
+       // hapus elemen id DIV Lain
+	removeCondition('JasaRenovasiPerbaikan');
+        removeCondition('JasaStrukturKonstruksi');
+        removeCondition('JasaFinishing');
+        removeCondition('JasaPondasiPerkuatan');
+        removeCondition('JasaSaluranDrainase');
+        removeCondition('JasaJalanPerkerasan');
+	removeCondition('JasaPembatasPengaman');
+	removeCondition('JasaPematanganLahan');
+	removeCondition('JasaUjiTanah');
+	removeCondition('PerkuatanTanahLongsor');
+	removeCondition('JasaPengeboran');
+
+       // removeCondition('JasaKonstruksiCustom');
+        JasaKonstruksiSubLink.style.visibility = 'visible';
+        JasaBongkarBangunanLink.style.visibility = 'visible';
+        pageNameKonstruksiSub.textContent = urlMappingBongkarBangunan[cleanUrlJasaKons];
+    }
+   if (urlMappingPengeboran[cleanUrlJasaKons]) {
+        restoreCondition('JasaKonsSub');
+	restoreCondition('JasaPengeboran');
+           // hapus elemen id DIV Lain
+        removeCondition('MaterialKons');
+	removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsPerbaikan');
+	removeCondition('JasaKonsFinishing');
+        removeCondition('JasaKonsStruktur');
+	removeCondition('JasaKons');
+	removeCondition('MenuKons');
+	   
+       // hapus elemen id DIV Lain
+	removeCondition('JasaRenovasiPerbaikan');
+        removeCondition('JasaStrukturKonstruksi');
+        removeCondition('JasaFinishing');
+        removeCondition('JasaPondasiPerkuatan');
+        removeCondition('JasaSaluranDrainase');
+        removeCondition('JasaJalanPerkerasan');
+	removeCondition('JasaPembatasPengaman');
+	removeCondition('JasaPematanganLahan');
+	removeCondition('JasaUjiTanah');
+	removeCondition('PerkuatanTanahLongsor');
+	removeCondition('JasaBongkarBangunan');
+
+       // removeCondition('JasaKonstruksiCustom');
+	JasaPengeboranLink.style.visibility = 'hidden';
 	
+        JasaKonstruksiSubLink.style.visibility = 'visible';
+        JasaPengeboranLink.style.visibility = 'visible';
+        pageNameKonstruksiSub.textContent = urlMappingPengeboran[cleanUrlJasaKons];
+    }
 /*
     if (urlMappingCustom[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
