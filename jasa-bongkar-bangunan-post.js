@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaBongkarBangunanPostLink.style.visibility = 'hidden';
 	
      //SUB JasaBongkarBangunanPost
-     JasaBongkarRumahPostPostLink.style.visibility = 'hidden';
+     JasaBongkarRumahPostLink.style.visibility = 'hidden';
      JasaBongkarBetonPostLink.style.visibility = 'hidden';
      JasaBongkarAtapPostLink.style.visibility = 'hidden';
      JasaBongkarKeramikPostLink.style.visibility = 'hidden';
