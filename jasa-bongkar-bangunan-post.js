@@ -4,19 +4,22 @@ const urlMappingJasaBongkarRumah = {
 
 };
 const urlMappingJasaBongkarBeton = {
+"https://www.betonjayareadymix.com/2019/06/harga-bongkar-beton.html": "Harga Bongkar Beton"
 
 };
 const urlMappingJasaBongkarAtap = {
 
 };
 const urlMappingJasaBongkarKeramik = {
-
+  "https://www.betonjayareadymix.com/2019/06/biaya-bongkar-lantai-keramik.html": "Biaya Bongkar Lantai Keramik",
+  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-lantai-keramik.html": "Harga Bongkar Lantai Keramik"
 };
 const urlMappingJasaBongkarTembok = {
 
 };
 const urlMappingJasaBongkarDinding = {
-
+"https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-dinding.html": "Harga Jasa Bongkar Dinding",
+ "https://www.betonjayareadymix.com/2019/06/harga-bongkar-dinding-bata-per-m2.html": "Harga Jasa Bongkar Dinding Bata Per M2"
 };
 const urlMappingJasaBongkarPlafon = {
 
