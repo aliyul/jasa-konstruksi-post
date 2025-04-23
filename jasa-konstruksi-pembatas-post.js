@@ -208,6 +208,9 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+	
 /*
         removeCondition('materialKonsReadymix');
         removeCondition('ProdukKonsSaluran');
@@ -254,20 +257,15 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
 	       
      
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
+       removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-	removeCondition('JasaKonsPembatas');
+        removeCondition('MaterialKonsStukturPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-
-
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+	
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaPengamanSisiJalanInfrastrukturPost');
         removeCondition('JasaRambudanSistemKeamananVisualPost');
@@ -298,19 +296,15 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
 	       
      
         //hapus elemen div id lain
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluran');
+        removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-	removeCondition('JasaKonsPembatas');
+        removeCondition('MaterialKonsStukturPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+	
 
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaPengamanSisiJalanInfrastrukturPost');
