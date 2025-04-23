@@ -8,7 +8,7 @@ const urlMappingJasaKons = {
   "https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html": "Jasa Jalan & Perkerasan",
  "https://www.betonjayareadymix.com/p/jasa-pematangan-lahan.html": "Jasa Pematangan Lahan",
  "https://www.betonjayareadymix.com/p/jasa-uji-tanah.html": "Jasa Uji Tanah",
- "https://www.betonjayareadymix.com/p/jasa-pembongkaran.html": "Jasa Pembongkaran",
+ "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html": "Jasa Bongkar Bangunan",
   "https://www.betonjayareadymix.com/p/jasa-pengeboran.html": "Jasa Pengeboran",
  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html": "Jasa Perkuatan Tanah Longsor",
   "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html": "Jasa Pembatas Pengaman",
@@ -151,6 +151,23 @@ const urlMappingPerkuatanTanahLongsor = {
   "https://www.betonjayareadymix.com/p/jasa-drainase-anti-longsor.html": "Jasa Drainase Anti Longsor"
 
 };
+const urlMappingBongkarBangunan = {
+"https://www.betonjayareadymix.com/p/jasa-sondir.html": "Jasa Sondir",
+  "https://www.betonjayareadymix.com/p/jasa-cpt.html": "Jasa CPT",
+  "https://www.betonjayareadymix.com/p/jasa-lab-tanah.html": "Jasa Lab Tanah",
+  "https://www.betonjayareadymix.com/p/jasa-boring-tanah.html": "Jasa Boring Tanah",
+  "https://www.betonjayareadymix.com/p/jasa-uji-penetrasi.html": "Jasa Uji Penetrasi"
+
+};
+const urlMappingPengeboran = {
+"https://www.betonjayareadymix.com/p/jasa-sondir.html": "Jasa Sondir",
+  "https://www.betonjayareadymix.com/p/jasa-cpt.html": "Jasa CPT",
+  "https://www.betonjayareadymix.com/p/jasa-lab-tanah.html": "Jasa Lab Tanah",
+  "https://www.betonjayareadymix.com/p/jasa-boring-tanah.html": "Jasa Boring Tanah",
+  "https://www.betonjayareadymix.com/p/jasa-uji-penetrasi.html": "Jasa Uji Penetrasi"
+
+};
+
 const urlMappingPembatas = {
 "https://www.betonjayareadymix.com/p/jasa-pengamanan-area-proyek.html": "Jasa Pengamanan Area Proyek",
   "https://www.betonjayareadymix.com/p/jasa-rambu-dan-sistem-keamanan-visual.html": "Jasa Rambu dan Sistem Keamanan Visual",
