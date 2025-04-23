@@ -528,6 +528,9 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaKonsPondasiTanahPost');
         removeCondition1('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition1('MaterialKonsStukturPost');
+        removeCondition1('JasaKonsBongkarBangunanPost');
+        removeCondition1('JasaKonsPengeboranPost');
+
 
 	// hapus elemen JasaPerbaikanKons Lain kecuali JasaRenovasiPerbaikanStrukturPost
         removeCondition1('JasaRenovasiPerbaikanBangunanPost');
@@ -657,6 +660,9 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaKonsPondasiTanahPost');
         removeCondition1('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition1('MaterialKonsStukturPost');
+        removeCondition1('JasaKonsBongkarBangunanPost');
+        removeCondition1('JasaKonsPengeboranPost');
+
 
        // hapus elemen JasaPerbaikanKons Lain kecuali JasaRenovasiPerbaikanStrukturPost
         removeCondition1('JasaRenovasiPerbaikanBangunanPost');
@@ -785,6 +791,9 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaKonsPondasiTanahPost');
         removeCondition1('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition1('MaterialKonsStukturPost');
+        removeCondition1('JasaKonsBongkarBangunanPost');
+        removeCondition1('JasaKonsPengeboranPost');
+
 
 	// hapus elemen JasaPerbaikanKons Lain kecuali JasaRenovasiPerbaikanStrukturPost
         removeCondition1('JasaRenovasiPerbaikanBangunanPost');
@@ -913,6 +922,9 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaKonsPondasiTanahPost');
         removeCondition1('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition1('MaterialKonsStukturPost');
+        removeCondition1('JasaKonsBongkarBangunanPost');
+        removeCondition1('JasaKonsPengeboranPost');
+
 
 	// hapus elemen JasaPerbaikanKons Lain kecuali JasaRenovasiPerbaikanStrukturPost
         removeCondition1('JasaRenovasiPerbaikanBangunanPost');
@@ -1043,6 +1055,9 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaKonsPondasiTanahPost');
         removeCondition1('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition1('MaterialKonsStukturPost');
+        removeCondition1('JasaKonsBongkarBangunanPost');
+        removeCondition1('JasaKonsPengeboranPost');
+
 
 	// hapus elemen JasaPerbaikanKons Lain kecuali JasaRenovasiPerbaikanStrukturPost
         removeCondition1('JasaRenovasiPerbaikanBangunanPost');
@@ -1174,6 +1189,9 @@ if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaKonsPondasiTanahPost');
         removeCondition1('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition1('MaterialKonsStukturPost');
+        removeCondition1('JasaKonsBongkarBangunanPost');
+        removeCondition1('JasaKonsPengeboranPost');
+
 
 	// hapus elemen JasaPerbaikanKons Lain kecuali JasaRenovasiPerbaikanStrukturPost
         removeCondition1('JasaRenovasiPerbaikanBangunanPost');
@@ -1305,6 +1323,9 @@ if (urlMappingJasaRenovasiPerbaikanRumah[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaKonsPondasiTanahPost');
         removeCondition1('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition1('MaterialKonsStukturPost');
+        removeCondition1('JasaKonsBongkarBangunanPost');
+        removeCondition1('JasaKonsPengeboranPost');
+
 
 	// hapus elemen JasaPerbaikanKons Lain kecuali JasaRenovasiPerbaikanBangunanPost
         removeCondition1('JasaRenovasiPerbaikanStrukturPost');
@@ -1435,6 +1456,9 @@ if (urlMappingJasaRenovasiRumahMinimalis[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaKonsPondasiTanahPost');
         removeCondition1('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition1('MaterialKonsStukturPost');
+        removeCondition1('JasaKonsBongkarBangunanPost');
+        removeCondition1('JasaKonsPengeboranPost');
+
 
 	// hapus elemen JasaPerbaikanKons Lain kecuali JasaRenovasiPerbaikanBangunanPost
         removeCondition1('JasaRenovasiPerbaikanStrukturPost');
@@ -1566,6 +1590,9 @@ if (urlMappingJasaRenovasiRumahType36[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaKonsPondasiTanahPost');
         removeCondition1('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition1('MaterialKonsStukturPost');
+        removeCondition1('JasaKonsBongkarBangunanPost');
+        removeCondition1('JasaKonsPengeboranPost');
+
 
 	// hapus elemen JasaPerbaikanKons Lain kecuali JasaRenovasiPerbaikanBangunanPost
         removeCondition1('JasaRenovasiPerbaikanStrukturPost');
@@ -1697,6 +1724,9 @@ if (urlMappingJasaRenovasiRumahType45[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaKonsPondasiTanahPost');
         removeCondition1('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition1('MaterialKonsStukturPost');
+        removeCondition1('JasaKonsBongkarBangunanPost');
+        removeCondition1('JasaKonsPengeboranPost');
+
 
 	// hapus elemen JasaPerbaikanKons Lain kecuali JasaRenovasiPerbaikanBangunanPost
         removeCondition1('JasaRenovasiPerbaikanStrukturPost');
@@ -1827,8 +1857,8 @@ if (urlMappingJasaRenovasiRumahType45[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
+        removeCondition1('JasaKonsJalanPerkerasan');
+        removeCondition1('JasaKonsPondasiTanah');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
@@ -1905,8 +1935,8 @@ if (urlMappingJasaRenovasiRumahType45[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
+        removeCondition1('JasaKonsJalanPerkerasan');
+        removeCondition1('JasaKonsPondasiTanah');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
@@ -1985,8 +2015,8 @@ if (urlMappingJasaRenovasiRumahType45[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
+        removeCondition1('JasaKonsJalanPerkerasan');
+        removeCondition1('JasaKonsPondasiTanah');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
@@ -2060,8 +2090,8 @@ if (urlMappingJasaRenovasiRumahType45[cleanUrlJasaKonsPerbaikanPost]) {
        removeCondition1('ProdukKonsSaluran');
        removeCondition1('ProdukKonsPembatas');
        removeCondition1('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
+        removeCondition1('JasaKonsJalanPerkerasan');
+        removeCondition1('JasaKonsPondasiTanah');
        removeCondition1('JasaKons');
        removeCondition1('JasaKonsSub');
        removeCondition1('MenuKons');
@@ -2133,8 +2163,8 @@ if (urlMappingJasaRenovasiRumahType45[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
+        removeCondition1('JasaKonsJalanPerkerasan');
+        removeCondition1('JasaKonsPondasiTanah');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
@@ -2208,8 +2238,8 @@ if (urlMappingJasaRenovasiRumahType45[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
+        removeCondition1('JasaKonsJalanPerkerasan');
+        removeCondition1('JasaKonsPondasiTanah');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
@@ -2283,8 +2313,8 @@ if (urlMappingJasaRenovasiRumahType45[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('ProdukKonsSaluran');
         removeCondition1('ProdukKonsPembatas');
         removeCondition1('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
+        removeCondition1('JasaKonsJalanPerkerasan');
+        removeCondition1('JasaKonsPondasiTanah');
 	removeCondition1('JasaKons');
 	removeCondition1('JasaKonsSub');
 	removeCondition1('MenuKons');
