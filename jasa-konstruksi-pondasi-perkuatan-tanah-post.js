@@ -108,6 +108,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         removeCondition('JasaKonsPerbaikanPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
 	
 	/*
         removeCondition('materialKonsReadymix');
@@ -165,6 +166,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         removeCondition('JasaKonsPerbaikanPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
 
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaPemadatanPersiapanPondasiSubPost');
@@ -206,6 +208,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         removeCondition('JasaKonsPerbaikanPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
 	
 
         //hapus elemen SUB jasa pembatas lain
@@ -248,6 +251,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
         removeCondition('JasaKonsPerbaikanPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
 	
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaPemadatanPersiapanPondasiSubPost');
@@ -288,6 +292,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
         removeCondition('JasaKonsPerbaikanPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
 	
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaPemadatanPersiapanPondasiSubPost');
