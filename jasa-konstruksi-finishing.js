@@ -2,7 +2,9 @@
 const urlMappingFinishingBangunan = {
  "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html": "Jasa Finishing Interior",
   "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html": "Jasa Finishing Eksterior",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur"
+  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html": "Jasa Finishing Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html": "Jasa Finishing Lantai"
 
  /*
  "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-plester-acian.html": "Jasa Renovasi Dinding Plester Acian",
@@ -11,6 +13,7 @@ const urlMappingFinishingBangunan = {
 };
 
 const urlMappingFinishingBangunanInterior = {
+/* Jadikan Post aja
 "https://www.betonjayareadymix.com/p/jasa-ganti-keramik-lantai.html": "Jasa Ganti Keramik Lantai",
   "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
   "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",
@@ -21,10 +24,12 @@ const urlMappingFinishingBangunanInterior = {
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis",
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html": "Jasa Finishing Interior Klasik",
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern"
+  */
 
 };
 
 const urlMappingFinishingBangunanEksterior = {
+/* jadikan post aja
 "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-rumah.html": "Jasa Cat Eksterior Rumah",
   "https://www.betonjayareadymix.com/p/jasa-finishing-fasad-eksterior.html": "Jasa Finishing Fasad Eksterior",
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-cuaca.html": "Jasa Pelapisan Anti Cuaca",
@@ -33,10 +38,11 @@ const urlMappingFinishingBangunanEksterior = {
   "https://www.betonjayareadymix.com/p/jasa-finishing-kanopi-teras.html": "Jasa Finishing Kanopi Teras",
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html": "Jasa Pelapisan Batu Alam Eksterior",
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak.html": "Jasa Pelapisan Genteng Dak"
-
+*/
 };
 
 const urlMappingFinishingBangunanStruktur = {
+/* Jadikan Post aja
  "https://www.betonjayareadymix.com/p/jasa-finishing-beton-expose.html": "Jasa Finishing Beton Expose",
   "https://www.betonjayareadymix.com/p/jasa-aci-dinding-beton.html": "Jasa Aci Dinding Beton",
   "https://www.betonjayareadymix.com/p/jasa-finishing-grouting-struktur-beton.html": "Jasa Finishing Grouting Struktur Beton",
@@ -45,16 +51,19 @@ const urlMappingFinishingBangunanStruktur = {
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html": "Jasa Pelapisan Waterproofing Struktur",
   "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html": "Jasa Finishing Lantai Beton",
   "https://www.betonjayareadymix.com/p/jasa-pelindung-retak-struktur.html": "Jasa Pelindung Retak Struktur"
-
+*/
+	
 };
 
 
 const urlMappingFinishingInfrastruktur = {
+/*jadikan Post aja
   "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-jembatan.html": "Jasa Finishing Jalan Jembatan",
   "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar-area-publik.html": "Jasa Finishing Trotoar Area Publik",
   "https://www.betonjayareadymix.com/p/jasa-finishing-saluran-drainase.html": "Jasa Finishing Saluran Drainase",
   "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-utilitas.html": "Jasa Finishing Struktur Utilitas",
   "https://www.betonjayareadymix.com/p/jasa-finishing-proteksi-beton.html": "Jasa Finishing Proteksi Beton"
+  */
 };
 
 const urlMappingFinishingInfrastrukturJalan = {
