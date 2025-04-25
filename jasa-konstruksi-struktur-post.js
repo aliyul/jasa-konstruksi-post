@@ -67,6 +67,42 @@ const urlMappingJasaBekistingdanPembesian = {
 
 };
 
+/*const urlMappingStrukturGedungHunian = {
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah-tinggal.html": "Jasa Konstruksi Rumah Tinggal",
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-ruko-dan-kios.html": "Jasa Konstruksi Ruko dan Kios",
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-villa.html": "Jasa Konstruksi Villa",
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-apartemen.html": "Jasa Konstruksi Apartemen",
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-hotel.html": "Jasa Konstruksi Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-perkantoran.html": "Jasa Konstruksi Perkantoran",
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-sekolah.html": "Jasa Konstruksi Gedung Sekolah",
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-rs.html": "Jasa Konstruksi Gedung Rumah Sakit"
+};
+*/
+//SUB JasaKonstruksiGedungdanHunianPost
+const urlMappingJasaKonstruksiRumahTinggal = {
+
+};
+const urlMappingJasaKonstruksiRukodanKios = {
+
+};
+const urlMappingJasaKonstruksiVilla = {
+
+};
+const urlMappingJasaKonstruksiApartemen = {
+
+};
+const urlMappingJasaKonstruksiHotel = {
+
+};
+const urlMappingJasaKonstruksiPerkantoran = {
+
+};
+const urlMappingJasaKonstruksiGedungSekolah = {
+
+};
+const urlMappingJasaKonstruksiGedungRumahSakit = {
+
+};
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasakonstruksistrukturPost = {};
