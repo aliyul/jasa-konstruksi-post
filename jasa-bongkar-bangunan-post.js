@@ -126,6 +126,7 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPerbaikanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
 	
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarRumahPost
@@ -163,6 +164,7 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPerbaikanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarBetonPost
         removeCondition('JasaBongkarRumahPost');
@@ -199,6 +201,7 @@ if (urlMappingJasaBongkarAtap[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPerbaikanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarAtapPost
         removeCondition('JasaBongkarBetonPost');
@@ -235,6 +238,7 @@ if (urlMappingJasaBongkarKeramik[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPerbaikanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarKeramikPost
         removeCondition('JasaBongkarBetonPost');
@@ -271,6 +275,7 @@ if (urlMappingJasaBongkarTembok[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPerbaikanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarTembokPost
         removeCondition('JasaBongkarBetonPost');
@@ -307,6 +312,7 @@ if (urlMappingJasaBongkarDinding[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPerbaikanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarDindingPost
         removeCondition('JasaBongkarBetonPost');
@@ -343,6 +349,7 @@ if (urlMappingJasaBongkarPlafon[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPerbaikanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarPlafonPost
         removeCondition('JasaBongkarBetonPost');
@@ -379,6 +386,7 @@ if (urlMappingJasaBongkarPartisi[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPerbaikanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarPartisiPost
         removeCondition('JasaBongkarBetonPost');
@@ -415,6 +423,7 @@ if (urlMappingJasaBongkarPagar[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPerbaikanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarPagarPost
         removeCondition('JasaBongkarBetonPost');
@@ -451,6 +460,7 @@ if (urlMappingJasaBongkarLantai[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPerbaikanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarLantaiPost
         removeCondition('JasaBongkarBetonPost');
