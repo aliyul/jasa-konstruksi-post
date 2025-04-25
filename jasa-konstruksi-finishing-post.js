@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanStrukturPost');
     
-        //restoreCondition('JasaChippingBeton');
+        restoreCondition('JasaPlesteranAcianDindingPost');
            
 	// hapus elemen id DIV Lain
         removeCondition('ProdukKonsSaluranPost');
@@ -232,32 +232,43 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsFinishingPost');
 
-	   
-         // hapus elemen id lain
-        removeCondition('JasaFinishingBangunanEksterior');
-        removeCondition('JasaFinishingBangunanInterior');
+	 // hapus elemen id FINISHING STRUKTUR lain NYA SELAIN JasaPlesteranAcianDindingPost
+        removeCondition('JasaFinishingBetonExposePost');
+        //removeCondition('JasaPlesteranAcianDindingPost');
+        removeCondition('JasaFinishingGroutingStrukturBetonPost');
+        removeCondition('JasaPelapisanCoatingStrukturPost');
+        removeCondition('JasaFinishingKolomdanBalokPost');
+        removeCondition('JasaPelapisanWaterproofingStrukturPost');
+        removeCondition('JasaFinishingLantaiBetonPost');
+        removeCondition('JasaPelindungRetakStrukturPost');
+
+         // hapus elemen id FINISHING UTAMA lain NYA
+        removeCondition('JasaFinishingBangunanEksteriorPost');
+        removeCondition('JasaFinishingBangunanInteriorPost');
 
           // hapus elemen id Infrastruktur Semua
-        removeCondition('JasaFinishingInfrastrukturSub');
-        removeCondition('JasaFinishingInfrastrukturJalan');
-        removeCondition('JasaFinishingInfrastrukturTrotoar');
-        removeCondition('JasaFinishingInfrastrukturSaluran');
-        removeCondition('JasaFinishingInfrastrukturStruktur');
-        removeCondition('JasaFinishingInfrastrukturProteksi');
+        removeCondition('JasaFinishingInfrastrukturPost');
+        removeCondition('JasaFinishingInfrastrukturJalanPost');
+        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
+        removeCondition('JasaFinishingInfrastrukturSaluranPost');
+        removeCondition('JasaFinishingInfrastrukturStrukturPost');
+        removeCondition('JasaFinishingInfrastrukturProteksiPost');
        
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
-        JasaFinishingBangunanLink.style.visibility = 'visible';
+        JasaFinishingBangunanPostLink.style.visibility = 'visible';
         //sub finishing bangunan
-        JasaFinishingStrukturLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishing.textContent = urlMappingJasaPlesteranAcianDinding[cleanUrlJasaKonsFinishingPost];
+        JasaFinishingStrukturPostLink.style.visibility = 'visible';
+        //sub finishing STRUKKTUR
+        JasaPlesteranAcianDindingPostLink.style.visibility = 'visible';
+        pageNameJasaKonsFinishingPost.textContent = urlMappingJasaPlesteranAcianDinding[cleanUrlJasaKonsFinishingPost];
     }
 
  //Sub Finishing Infrastruktur
 	/*
     if (urlMappingFinishingInfrastrukturJalan[cleanUrlJasaKonsFinishingPost]) {
-        restoreCondition('JasaFinishingInfrastrukturSub');
-       restoreCondition('JasaFinishingInfrastrukturJalan');
+        restoreCondition('JasaFinishingInfrastrukturPost');
+       restoreCondition('JasaFinishingInfrastrukturJalanPost');
      
           // hapus elemen id DIV Lain
         removeCondition('MaterialKons');
@@ -270,17 +281,17 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsPerbaikan');
         removeCondition('JasaKonsStruktur');
        	removeCondition('JasaKons');
-        removeCondition('JasaKonsSub');
+        removeCondition('JasaKonsPost');
         removeCondition('MenuKons');
      
      
             // hapus elemen id lain nya
-        removeCondition('JasaFinishingInfrastrukturProteksi');
-        removeCondition('JasaFinishingInfrastrukturTrotoar');
-        removeCondition('JasaFinishingInfrastrukturSaluran');
-        removeCondition('JasaFinishingInfrastrukturStruktur');
+        removeCondition('JasaFinishingInfrastrukturProteksiPost');
+        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
+        removeCondition('JasaFinishingInfrastrukturSaluranPost');
+        removeCondition('JasaFinishingInfrastrukturStrukturPost');
        //hapus elemen id bangunan
-        removeCondition('JasaFinishingBangunanSub');
+        removeCondition('JasaFinishingBangunanPost');
         removeCondition('JasaFinishingBangunanInterior');
         removeCondition('JasaFinishingBangunanEksterior');
         removeCondition('JasaFinishingBangunanStruktur');
@@ -295,7 +306,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }
    if (urlMappingFinishingInfrastrukturTrotoar[cleanUrlJasaKonsFinishingPost]) {
-        restoreCondition('JasaFinishingInfrastrukturSub');
+        restoreCondition('JasaFinishingInfrastrukturPost');
         restoreCondition('JasaFinishingTrotoar');
     
           // hapus elemen id DIV Lain
@@ -309,17 +320,17 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsPerbaikan');
         removeCondition('JasaKonsStruktur');
        	removeCondition('JasaKons');
-        removeCondition('JasaKonsSub');
+        removeCondition('JasaKonsPost');
         removeCondition('MenuKons');
        
   
             // hapus elemen id lain nya
-        removeCondition('JasaFinishingInfrastrukturJalan');
-        removeCondition('JasaFinishingInfrastrukturProteksi');
-        removeCondition('JasaFinishingInfrastrukturSaluran');
-        removeCondition('JasaFinishingInfrastrukturStruktur');
+        removeCondition('JasaFinishingInfrastrukturJalanPost');
+        removeCondition('JasaFinishingInfrastrukturProteksiPost');
+        removeCondition('JasaFinishingInfrastrukturSaluranPost');
+        removeCondition('JasaFinishingInfrastrukturStrukturPost');
        //hapus elemen id bangunan
-        removeCondition('JasaFinishingBangunanSub');
+        removeCondition('JasaFinishingBangunanPost');
         removeCondition('JasaFinishingBangunanInterior');
         removeCondition('JasaFinishingBangunanEksterior');
         removeCondition('JasaFinishingBangunanStruktur');
@@ -334,7 +345,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }
    if (urlMappingFinishingInfrastrukturSaluran[cleanUrlJasaKonsFinishingPost]) {
-        restoreCondition('JasaFinishingInfrastrukturSub');
+        restoreCondition('JasaFinishingInfrastrukturPost');
         restoreCondition('JasaFinishingSaluran');
     
           // hapus elemen id DIV Lain
@@ -348,18 +359,18 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsPerbaikan');
         removeCondition('JasaKonsStruktur');
        	removeCondition('JasaKons');
-        removeCondition('JasaKonsSub');
+        removeCondition('JasaKonsPost');
         removeCondition('MenuKons');
 
   
        
             // hapus elemen id lain nya
-        removeCondition('JasaFinishingInfrastrukturJalan');
-        removeCondition('JasaFinishingInfrastrukturTrotoar');
-        removeCondition('JasaFinishingInfrastrukturProteksi');
-        removeCondition('JasaFinishingInfrastrukturStruktur');
+        removeCondition('JasaFinishingInfrastrukturJalanPost');
+        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
+        removeCondition('JasaFinishingInfrastrukturProteksiPost');
+        removeCondition('JasaFinishingInfrastrukturStrukturPost');
        //hapus elemen id bangunan
-        removeCondition('JasaFinishingBangunanSub');
+        removeCondition('JasaFinishingBangunanPost');
         removeCondition('JasaFinishingBangunanInterior');
         removeCondition('JasaFinishingBangunanEksterior');
         removeCondition('JasaFinishingBangunanStruktur');
@@ -374,8 +385,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }
   if (urlMappingFinishingInfrastrukturStruktur[cleanUrlJasaKonsFinishingPost]) {
-        restoreCondition('JasaFinishingInfrastrukturSub');
-        restoreCondition('JasaFinishingInfrastrukturStruktur');
+        restoreCondition('JasaFinishingInfrastrukturPost');
+        restoreCondition('JasaFinishingInfrastrukturStrukturPost');
           // hapus elemen id DIV Lain
         removeCondition('MaterialKons');
 	       removeCondition('ProdukKons');
@@ -387,16 +398,16 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsPerbaikan');
         removeCondition('JasaKonsStruktur');
        	removeCondition('JasaKons');
-        removeCondition('JasaKonsSub');
+        removeCondition('JasaKonsPost');
         removeCondition('MenuKons');
 
              // hapus elemen id lain nya
-        removeCondition('JasaFinishingInfrastrukturJalan');
-        removeCondition('JasaFinishingInfrastrukturTrotoar');
-        removeCondition('JasaFinishingInfrastrukturSaluran');
-        removeCondition('JasaFinishingInfrastrukturProteksi');
+        removeCondition('JasaFinishingInfrastrukturJalanPost');
+        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
+        removeCondition('JasaFinishingInfrastrukturSaluranPost');
+        removeCondition('JasaFinishingInfrastrukturProteksiPost');
        //hapus elemen id bangunan
-        removeCondition('JasaFinishingBangunanSub');
+        removeCondition('JasaFinishingBangunanPost');
         removeCondition('JasaFinishingBangunanInterior');
         removeCondition('JasaFinishingBangunanEksterior');
         removeCondition('JasaFinishingBangunanStruktur');
@@ -411,8 +422,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }
   if (urlMappingFinishingInfrastrukturProteksi[cleanUrlJasaKonsFinishingPost]) {
-        restoreCondition('JasaFinishingInfrastrukturSub');
-        restoreCondition('JasaFinishingInfrastrukturProteksi');
+        restoreCondition('JasaFinishingInfrastrukturPost');
+        restoreCondition('JasaFinishingInfrastrukturProteksiPost');
        
           // hapus elemen id DIV Lain
         removeCondition('MaterialKons');
@@ -425,17 +436,17 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsPerbaikan');
         removeCondition('JasaKonsStruktur');
        	removeCondition('JasaKons');
-        removeCondition('JasaKonsSub');
+        removeCondition('JasaKonsPost');
         removeCondition('MenuKons');
      
        
         // hapus elemen id lain nya
-        removeCondition('JasaFinishingInfrastrukturJalan');
-        removeCondition('JasaFinishingInfrastrukturTrotoar');
-        removeCondition('JasaFinishingInfrastrukturSaluran');
-        removeCondition('JasaFinishingInfrastrukturStruktur');
+        removeCondition('JasaFinishingInfrastrukturJalanPost');
+        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
+        removeCondition('JasaFinishingInfrastrukturSaluranPost');
+        removeCondition('JasaFinishingInfrastrukturStrukturPost');
        //hapus elemen id bangunan
-        removeCondition('JasaFinishingBangunanSub');
+        removeCondition('JasaFinishingBangunanPost');
         removeCondition('JasaFinishingBangunanInterior');
         removeCondition('JasaFinishingBangunanEksterior');
         removeCondition('JasaFinishingBangunanStruktur');
