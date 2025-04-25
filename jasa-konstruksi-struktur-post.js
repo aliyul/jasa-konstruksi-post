@@ -242,13 +242,13 @@ JasaKonstruksiLapanganOlahragaPost
 JasaKonstruksiModulardanPrecastPost
 JasaStrukturBetondanPengecoranPost
 */
-       //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaStrukturBajadanRangkaRinganPost
+       //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaStrukturBetondanPengecoranPost
         removeCondition('JasaKonstruksiIndustridanGudangPost');
         removeCondition('JasaKonstruksiGedungdanHunianPost');
         removeCondition('JasaStrukturKhususPost');
 	removeCondition('JasaKonstruksiLapanganOlahragaPost');
 	removeCondition('JasaKonstruksiModulardanPrecastPost');
-	removeCondition('JasaStrukturBetondanPengecoranPost');
+	removeCondition('JasaStrukturBajadanRangkaRinganPost');
        
         JasaKonstruksiStrukturPostLink.style.visibility = 'visible';
         JasaStrukturKonstruksiPostLink.style.visibility = 'visible';
