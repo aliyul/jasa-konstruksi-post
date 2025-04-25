@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
     var JasaKonsStrukturPost = document.getElementById("JasaKonsStrukturPost");
 
-if (!JasaKonsStruktur) {
+if (!JasaKonsStrukturPost) {
      console.error("elemen Id JasaKonsPerbaikanPost kondisi terhapus");	
 } else {
 	
