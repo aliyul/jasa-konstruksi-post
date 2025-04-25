@@ -47,6 +47,28 @@ const urlMappingJasaPelindungRetakStruktur = {
 	
 };
 //AKHIR SUB FinishingBangunanStruktur
+
+/*
+const urlMappingFinishingBangunanInterior = {
+"https://www.betonjayareadymix.com/p/jasa-desain-interior.html": "Jasa Desain Interior",
+"https://www.betonjayareadymix.com/p/jasa-ganti-keramik-lantai.html": "Jasa Ganti Keramik Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-vinyl.html": "Jasa Pasang Lantai Vinyl",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-gypsum.html": "Jasa Pasang Plafon Gypsum",
+  "https://www.betonjayareadymix.com/p/jasa-ganti-lampu-interior.html": "Jasa Ganti Lampu Interior",
+  "https://www.betonjayareadymix.com/p/jasa-ganti-kitchen-set.html": "Jasa Ganti Kitchen Set",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html": "Jasa Finishing Interior Klasik",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern"
+};
+*/
+//SUB JasaFinishingBangunanInteriorPost
+const urlMappingJasaDesainInterior = {
+	
+};
+//AKHIR SUB JasaFinishingBangunanInteriorPost
+
 /*
 const urlMappingFinishingInfrastruktur = {
 
@@ -144,7 +166,19 @@ document.addEventListener("DOMContentLoaded", function() {
     var JasaFinishingInteriorPostLink = document.getElementById("JasaFinishingBangunanInteriorPost");
     var JasaFinishingEksteriorPostLink = document.getElementById("JasaFinishingBangunanEksteriorPost");
     var JasaFinishingStrukturPostLink = document.getElementById("JasaFinishingBangunanStrukturPost");
-
+	
+   //SUB JasaFinishingBangunanInteriorPost
+   var JasaDesainInteriorPostLink = document.getElementById("JasaDesainInteriorPost");
+   var JasaGantiKeramikLantaiPostLink = document.getElementById("JasaGantiKeramikLantaiPost");
+   var JasaCatInteriorRumahPostLink = document.getElementById("JasaCatInteriorRumahPost");
+   var JasaPasangWallpaperDindingPostLink = document.getElementById("JasaPasangWallpaperDindingPost");
+   var JasaPasangLantaiVinylPostLink = document.getElementById("JasaPasangLantaiVinylPost");
+   var JasaPasangPlafonGypsumPostLink = document.getElementById("JasaPasangPlafonGypsumPost");
+   var JasaGantiLampuInteriorPostLink = document.getElementById("JasaGantiLampuInteriorPost");
+   var JasaGantiKitchenSetPostLink = document.getElementById("JasaGantiKitchenSetPost");
+   var JasaFinishingInteriorMinimalisPostLink = document.getElementById("JasaFinishingInteriorMinimalisPost");
+   var JasaFinishingInteriorKlasikPostLink = document.getElementById("JasaFinishingInteriorKlasikPost");
+   var JasaFinishingInteriorModernPostLink = document.getElementById("JasaFinishingInteriorModernPost");
    //SUB JasaFinishingBangunanStrukturPost
    var JasaFinishingBetonExposePostLink = document.getElementById("JasaFinishingBetonExposePost");
    var JasaPlesteranAcianDindingPostLink = document.getElementById("JasaPlesteranAcianDindingPost");
@@ -161,7 +195,20 @@ document.addEventListener("DOMContentLoaded", function() {
     var JasaFinishingSaluranPostLink = document.getElementById("JasaFinishingInfrastrukturSaluranPost");
     var JasaFinishingStrukturPostLink = document.getElementById("JasaFinishingInfrastrukturStrukturPost");
     var JasaFinishingProteksiPostLink = document.getElementById("JasaFinishingInfrastrukturProteksiPost");
-    
+
+   //HIDE sub JasaFinishingBangunanInteriorPost
+    JasaDesainInteriorPostLink.style.visibility = 'hidden';
+    JasaGantiKeramikLantaiPostLink.style.visibility = 'hidden';
+    JasaCatInteriorRumahPostLink.style.visibility = 'hidden';
+    JasaPasangWallpaperDindingPostLink.style.visibility = 'hidden';
+    JasaPasangLantaiVinylPostLink.style.visibility = 'hidden';
+    JasaPasangPlafonGypsumPostLink.style.visibility = 'hidden';
+    JasaGantiLampuInteriorPostLink.style.visibility = 'hidden';
+    JasaGantiKitchenSetPostLink.style.visibility = 'hidden';
+    JasaFinishingInteriorMinimalisPostLink.style.visibility = 'hidden';
+    JasaFinishingInteriorKlasikPostLink.style.visibility = 'hidden';
+    JasaFinishingInteriorModernPostLink.style.visibility = 'hidden';
+   
      //HIDE sub JasaFinishingBangunanStrukturPost
     JasaPlesteranAcianDindingPostLink.style.visibility = 'hidden';
     JasaFinishingBetonExposePostLink.style.visibility = 'hidden';
@@ -211,7 +258,19 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaPelapisanWaterproofingStrukturPost');
         removeCondition('JasaFinishingLantaiBetonPost');
         removeCondition('JasaPelindungRetakStrukturPost');
-
+         // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua
+        removeCondition('JasaDesainInteriorPost');
+        removeCondition('JasaGantiKeramikLantaiPost');
+        removeCondition('JasaCatInteriorRumahPost');
+        removeCondition('JasaPasangWallpaperDindingPost');
+        removeCondition('JasaPasangLantaiVinylPost');
+        removeCondition('JasaPasangPlafonGypsumPost');
+        removeCondition('JasaGantiLampuInteriorPost');
+        removeCondition('JasaGantiKitchenSetPost');
+        removeCondition('JasaFinishingInteriorMinimalisPost');
+        removeCondition('JasaFinishingInteriorKlasikPost');
+        removeCondition('JasaFinishingInteriorModernPost');
+       
          // hapus elemen id FINISHING UTAMA lain NYA
         removeCondition('JasaFinishingBangunanEksteriorPost');
         removeCondition('JasaFinishingBangunanInteriorPost');
