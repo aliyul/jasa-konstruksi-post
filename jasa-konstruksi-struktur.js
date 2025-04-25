@@ -63,7 +63,7 @@ function removeCondition(conditionId) {
 
     if (conditionElement) {
         // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
-        removedElementsJasakonstruksistruktur[conditionId] = conditionElement1;
+        removedElementsJasakonstruksistruktur[conditionId] = conditionElement;
         conditionElement.remove(); // Menghapus elemen tersebut
     }
 }
