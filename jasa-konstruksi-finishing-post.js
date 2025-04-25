@@ -65,7 +65,7 @@ const urlMappingFinishingBangunanInterior = {
 */
 //SUB JasaFinishingBangunanInteriorPost
 const urlMappingJasaDesainInterior = {
-	
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-interior-rumah.html": "Harga Jasa Desain Interior Rumah"
 };
 //AKHIR SUB JasaFinishingBangunanInteriorPost
 
@@ -292,7 +292,72 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaPlesteranAcianDindingPostLink.style.visibility = 'visible';
         pageNameJasaKonsFinishingPost.textContent = urlMappingJasaPlesteranAcianDinding[cleanUrlJasaKonsFinishingPost];
     }
+//AKHIR FINISHING STRUKTUR
 
+//FINISHING INTERIOR
+   if (urlMappingJasaDesainInterior[cleanUrlJasaKonsFinishingPost]) {
+        restoreCondition('JasaFinishingBangunanPost');
+        restoreCondition('JasaFinishingBangunanInteriorPost');
+    
+        restoreCondition('JasaDesainInteriorPost');
+           
+	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsStrukturPost');
+     //   removeCondition('JasaKonsFinishingPost');
+
+	 // hapus elemen id FINISHING STRUKTUR SEMUA NYA
+        removeCondition('JasaFinishingBetonExposePost');
+        removeCondition('JasaPlesteranAcianDindingPost');
+        removeCondition('JasaFinishingGroutingStrukturBetonPost');
+        removeCondition('JasaPelapisanCoatingStrukturPost');
+        removeCondition('JasaFinishingKolomdanBalokPost');
+        removeCondition('JasaPelapisanWaterproofingStrukturPost');
+        removeCondition('JasaFinishingLantaiBetonPost');
+        removeCondition('JasaPelindungRetakStrukturPost');
+         // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaDesainInteriorPost
+        //removeCondition('');
+        removeCondition('JasaGantiKeramikLantaiPost');
+        removeCondition('JasaCatInteriorRumahPost');
+        removeCondition('JasaPasangWallpaperDindingPost');
+        removeCondition('JasaPasangLantaiVinylPost');
+        removeCondition('JasaPasangPlafonGypsumPost');
+        removeCondition('JasaGantiLampuInteriorPost');
+        removeCondition('JasaGantiKitchenSetPost');
+        removeCondition('JasaFinishingInteriorMinimalisPost');
+        removeCondition('JasaFinishingInteriorKlasikPost');
+        removeCondition('JasaFinishingInteriorModernPost');
+       
+         // hapus elemen id FINISHING UTAMA lain NYA
+        removeCondition('JasaFinishingBangunanEksteriorPost');
+        removeCondition('JasaFinishingBangunanStrukturPost');
+
+          // hapus elemen id Infrastruktur Semua
+        removeCondition('JasaFinishingInfrastrukturPost');
+        removeCondition('JasaFinishingInfrastrukturJalanPost');
+        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
+        removeCondition('JasaFinishingInfrastrukturSaluranPost');
+        removeCondition('JasaFinishingInfrastrukturStrukturPost');
+        removeCondition('JasaFinishingInfrastrukturProteksiPost');
+       
+        JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingBangunanPostLink.style.visibility = 'visible';
+        //sub finishing bangunan
+        JasaFinishingBangunanInteriorPostLink.style.visibility = 'visible';
+        //sub finishing STRUKKTUR
+        JasaDesainInteriorPostLink.style.visibility = 'visible';
+        pageNameJasaKonsFinishingPost.textContent = urlMappingJasaDesainInterior[cleanUrlJasaKonsFinishingPost];
+    }
+//AKHIR FINISHING INTERIOR
  //Sub Finishing Infrastruktur
 	/*
     if (urlMappingFinishingInfrastrukturJalan[cleanUrlJasaKonsFinishingPost]) {
