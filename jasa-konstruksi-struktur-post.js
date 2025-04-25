@@ -209,7 +209,7 @@ JasaStrukturBetondanPengecoranPost
     }
 if (urlMappingJasaPengecoranLantaiDak[cleanUrlJasaJasaKonsStrukturPost]) {
         restoreCondition('JasaKonsStrukturPost');
-        restoreCondition('JasaStrukturBetondanPengecoranPostLink');
+        restoreCondition('JasaStrukturBetondanPengecoranPost');
         restoreCondition('JasaPengecoranLantaiDakPost');
 
        //hapus elemen div id lain
