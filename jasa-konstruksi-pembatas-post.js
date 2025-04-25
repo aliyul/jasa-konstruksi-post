@@ -211,6 +211,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
 	
 /*
         removeCondition('materialKonsReadymix');
@@ -267,6 +268,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
 	
         //hapus elemen SUB jasa pembatas lain
         removeCondition('JasaPengamanSisiJalanInfrastrukturPost');
@@ -307,6 +309,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
 	
 
         //hapus elemen SUB jasa pembatas lain
