@@ -199,6 +199,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsPerbaikanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsStrukturPost');
      //   removeCondition('JasaKonsFinishingPost');
 
 	 // hapus elemen id FINISHING STRUKTUR lain NYA SELAIN JasaPlesteranAcianDindingPost
