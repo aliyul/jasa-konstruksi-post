@@ -145,16 +145,35 @@ document.addEventListener("DOMContentLoaded", function() {
     var JasaFinishingEksteriorPostLink = document.getElementById("JasaFinishingBangunanEksteriorPost");
     var JasaFinishingStrukturPostLink = document.getElementById("JasaFinishingBangunanStrukturPost");
 
+   //SUB JasaFinishingBangunanStrukturPost
+   var JasaFinishingBetonExposePostLink = document.getElementById("JasaFinishingBetonExposePost");
+   var JasaPlesteranAcianDindingPostLink = document.getElementById("JasaPlesteranAcianDindingPost");
+   var JasaFinishingGroutingStrukturBetonPostLink = document.getElementById("JasaFinishingGroutingStrukturBetonPost");
+   var JasaPelapisanCoatingStrukturPostLink = document.getElementById("JasaPelapisanCoatingStrukturPost");
+   var JasaFinishingKolomdanBalokPostLink = document.getElementById("JasaFinishingKolomdanBalokPost");
+   var JasaPelapisanWaterproofingStrukturPostLink = document.getElementById("JasaPelapisanWaterproofingStrukturPost");
+   var JasaFinishingLantaiBetonPostLink = document.getElementById("JasaFinishingLantaiBetonPost");
+   var JasaPelindungRetakStrukturPostLink = document.getElementById("JasaPelindungRetakStrukturPost");
+	
     //sub finishing infrastruktur
     var JasaFinishingJalanPostLink = document.getElementById("JasaFinishingInfrastrukturJalanPost");
     var JasaFinishingTrotoarPostLink = document.getElementById("JasaFinishingInfrastrukturTrotoarPost");
     var JasaFinishingSaluranPostLink = document.getElementById("JasaFinishingInfrastrukturSaluranPost");
     var JasaFinishingStrukturPostLink = document.getElementById("JasaFinishingInfrastrukturStrukturPost");
     var JasaFinishingProteksiPostLink = document.getElementById("JasaFinishingInfrastrukturProteksiPost");
-
-     var pageNameJasaKonsFinishingPost = document.getElementById("pageNameJasaKonsFinishingPost");
     
-
+     //HIDE sub JasaFinishingBangunanStrukturPost
+    JasaPlesteranAcianDindingPostLink.style.visibility = 'hidden';
+    JasaFinishingBetonExposePostLink.style.visibility = 'hidden';
+    JasaFinishingGroutingStrukturBetonPostLink.style.visibility = 'hidden';
+    JasaPelapisanCoatingStrukturPostLink.style.visibility = 'hidden';
+    JasaFinishingKolomdanBalokPostLink.style.visibility = 'hidden';
+    JasaPelapisanWaterproofingStrukturPostLink.style.visibility = 'hidden';
+    JasaFinishingLantaiBetonPostLink.style.visibility = 'hidden';
+    JasaPelindungRetakStrukturPostLink.style.visibility = 'hidden';
+   
+    var pageNameJasaKonsFinishingPost = document.getElementById("pageNameJasaKonsFinishingPost");
+	
      // Default untuk menyembunyikan elemen
      JasaKonstruksiFinishingPostLink.style.visibility = 'hidden';
      JasaFinishingPostLink.style.visibility = 'hidden';
