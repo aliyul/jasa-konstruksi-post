@@ -30,6 +30,44 @@ const urlMappingJasaStrukturBajaGudang = {
 
 };
 
+
+/*const urlMappingStrukturBetonPengecoran = {
+"https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-dak.html": "Jasa Pengecoran Lantai Dak",
+  "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-gudang.html": "Jasa Pengecoran Lantai Gudang",
+  "https://www.betonjayareadymix.com/p/jasa-bekisting-dan-pembesian.html": "Jasa Bekisting dan Pembesian"
+
+};
+
+*/
+//SUB JasaStrukturBetondanPengecoranPost
+const urlMappingJasaPengecoranLantaiDak = {
+"https://www.betonjayareadymix.com/2021/03/harga-borongan-cor-beton.html": "Harga Borongan Cor Beton",
+    "https://www.betonjayareadymix.com/2021/03/harga-borongan-cor-beton-per-m3.html": "Harga Borongan Cor Beton per m3",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-townhouse.html": "Borongan Cor Beton Townhouse",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-villa.html": "Borongan Cor Beton Villa",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-pabrik.html": "Borongan Cor Beton Pabrik",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-gedung.html": "Borongan Cor Beton Gedung",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-gudang.html": "Borongan Cor Beton Gudang",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-masjid.html": "Borongan Cor Beton Masjid",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-yayasan.html": "Borongan Cor Beton Yayasan",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-mall.html": "Borongan Cor Beton Mall",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-stadion.html": "Borongan Cor Beton Stadion",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-stasiun.html": "Borongan Cor Beton Stasiun",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-sekolah.html": "Borongan Cor Beton Sekolah",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-pelabuhan.html": "Borongan Cor Beton Pelabuhan",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-bandara.html": "Borongan Cor Beton Bandara",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-desa.html": "Borongan Cor Beton Jalan Desa",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-raya.html": "Borongan Cor Beton Jalan Raya",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-tol.html": "Borongan Cor Beton Jalan Tol"
+};
+const urlMappingJasaPengecoranLantaiGudang = {
+
+};
+const urlMappingJasaBekistingdanPembesian = {
+
+};
+
+
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasakonstruksistrukturPost = {};
 function removeCondition(conditionId) {
@@ -84,6 +122,10 @@ if (!JasaKonsStrukturPost) {
      var JasaKonstruksiBajaKonvensionalPostLink = document.getElementById("JasaKonstruksiBajaKonvensionalPost");
      var JasaKanopiBajadanBesiPostLink = document.getElementById("JasaKanopiBajadanBesiPost");
      var JasaStrukturBajaGudangPostLink = document.getElementById("JasaStrukturBajaGudangPost");
+     //SUB JasaStrukturBetondanPengecoranPost
+     var JasaPengecoranLantaiDakPostLink = document.getElementById("JasaPengecoranLantaiDakPost");
+     var JasaPengecoranLantaiGudangPostLink = document.getElementById("JasaPengecoranLantaiGudangPost");
+     var JasaBekistingdanPembesianPostLink = document.getElementById("JasaBekistingdanPembesianPost");
     	
      var pageNameJasaKonsStrukturPost = document.getElementById("pageNameJasaKonsStrukturPost");
 
@@ -93,7 +135,11 @@ if (!JasaKonsStrukturPost) {
       JasaKonstruksiBajaKonvensionalPostLink.style.visibility = 'hidden';
       JasaKanopiBajadanBesiPostLink.style.visibility = 'hidden';
       JasaStrukturBajaGudangPostLink.style.visibility = 'hidden';
-
+      //hide SUB JasaStrukturBetondanPengecoranPost     
+      JasaPengecoranLantaiDakPostLink.style.visibility = 'hidden';
+      JasaPengecoranLantaiGudangPostLink.style.visibility = 'hidden';
+      JasaBekistingdanPembesianPostLink.style.visibility = 'hidden';
+     
 	
      // Default untuk menyembunyikan elemen
      JasaKonstruksiStrukturPostLink.style.visibility = 'hidden';
@@ -131,6 +177,10 @@ if (urlMappingJasaRangkaAtapBajaRingan[cleanUrlJasaJasaKonsStrukturPost]) {
         removeCondition('JasaKonstruksiBajaKonvensionalPost');
         removeCondition('JasaKanopiBajadanBesiPost');
         removeCondition('JasaStrukturBajaGudangPost');
+      //hapus elemen id JasaStrukturBetondanPengecoranPost SEMUA
+        removeCondition('JasaPengecoranLantaiDakPost');
+        removeCondition('JasaPengecoranLantaiGudangPost');
+        removeCondition('JasaBekistingdanPembesianPost');
       
 	/*
 JasaKonstruksiGedungdanHunianPost
@@ -156,6 +206,57 @@ JasaStrukturBetondanPengecoranPost
 	//TAMPILKAN JasaRangkaAtapBajaRinganPostLink
         JasaRangkaAtapBajaRinganPostLink.style.visibility = 'visible';
         pageNameJasaKonsStrukturPost.textContent = urlMappingJasaRangkaAtapBajaRingan[cleanUrlJasaJasaKonsStrukturPost];
+    }
+if (urlMappingJasaPengecoranLantaiDak[cleanUrlJasaJasaKonsStrukturPost]) {
+        restoreCondition('JasaKonsStrukturPost');
+        restoreCondition('JasaStrukturBetondanPengecoranPostLink');
+        restoreCondition('JasaPengecoranLantaiDakPost');
+
+       //hapus elemen div id lain
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost'); 
+	removeCondition('JasaKonsFinishingPost');
+        removeCondition('ProdukKonsSaluranPost');
+
+	 //hapus elemen id JasaStrukturBajadanRangkaRinganPost SEMUA
+        removeCondition('JasaKonstruksiBajaKonvensionalPost');
+        removeCondition('JasaKanopiBajadanBesiPost');
+        removeCondition('JasaStrukturBajaGudangPost');
+        removeCondition('JasaRangkaAtapBajaRinganPost');
+      //hapus elemen id JasaStrukturBetondanPengecoranPost SEMUA selain JasaPengecoranLantaiDakPost
+        removeCondition('JasaPengecoranLantaiGudangPost');
+        removeCondition('JasaBekistingdanPembesianPost');
+      
+	/*
+JasaKonstruksiGedungdanHunianPost
+JasaKonstruksiIndustridanGudangPost
+JasaStrukturBajadanRangkaRinganPost
+JasaStrukturKhusus
+JasaKonstruksiLapanganOlahragaPost
+JasaKonstruksiModulardanPrecastPost
+JasaStrukturBetondanPengecoranPost
+*/
+       //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaStrukturBajadanRangkaRinganPost
+        removeCondition('JasaKonstruksiIndustridanGudangPost');
+        removeCondition('JasaKonstruksiGedungdanHunianPost');
+        removeCondition('JasaStrukturKhususPost');
+	removeCondition('JasaKonstruksiLapanganOlahragaPost');
+	removeCondition('JasaKonstruksiModulardanPrecastPost');
+	removeCondition('JasaStrukturBetondanPengecoranPost');
+       
+        JasaKonstruksiStrukturPostLink.style.visibility = 'visible';
+        JasaStrukturKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaStrukturBetondanPengecoranPostLink
+        JasaStrukturBetondanPengecoranPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaPengecoranLantaiDakPostLink
+        JasaPengecoranLantaiDakPostLink.style.visibility = 'visible';
+        pageNameJasaKonsStrukturPost.textContent = urlMappingJasaPengecoranLantaiDak[cleanUrlJasaJasaKonsStrukturPost];
     }
 
 }
