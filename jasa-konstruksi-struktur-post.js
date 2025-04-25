@@ -122,23 +122,22 @@ if (!JasaKonsStruktur) {
 	
      pageNameJasaKonsStruktur.textContent = "";
 	
-    if (urlMappingStrukturGedungHunian[cleanUrlJasaJasaKonsStruktur]) {
+if (urlMappingStrukturGedungHunian[cleanUrlJasaJasaKonsStruktur]) {
         restoreCondition('JasaKonsStruktur');
         restoreCondition('JasaKonstruksiGedungdanHunianSub');
-           // hapus elemen id DIV Lain
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-       // removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
-/*
+
+       //hapus elemen div id lain
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost'); 
+	removeCondition('JasaKonsFinishingPost');
+        removeCondition('ProdukKonsSaluranPost');
+	/*
 JasaKonstruksiGedungdanHunianSub
 JasaKonstruksiIndustridanGudangSub
 JasaStrukturBajadanRangkaRinganSub
@@ -162,192 +161,6 @@ JasaStrukturBetondanPengecoranSub
         pageNameJasaKonsStruktur.textContent = urlMappingStrukturGedungHunian[cleanUrlJasaJasaKonsStruktur];
     }
 
-if (urlMappingStrukturIndustriGudang[cleanUrlJasaJasaKonsStruktur]) {
-        restoreCondition('JasaKonsStruktur');
-        restoreCondition('JasaKonstruksiIndustridanGudangSub');
-           // hapus elemen id DIV Lain
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-       // removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
-
-       //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
-        removeCondition('JasaKonstruksiGedungdanHunianSub');
-        removeCondition('JasaStrukturBajadanRangkaRinganSub');
-        removeCondition('JasaStrukturKhususSub');
-	removeCondition('JasaKonstruksiLapanganOlahragaSub');
-	removeCondition('JasaKonstruksiModulardanPrecastSub');
-	removeCondition('JasaStrukturBetondanPengecoranSub');
-       
-        JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
-        JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
-	//TAMPILKAN urlMappingStrukturIndustriGudang
-        urlMappingStrukturIndustriGudangSubLink.style.visibility = 'visible';
-        pageNameJasaKonsStruktur.textContent = urlMappingStrukturIndustriGudang[cleanUrlJasaJasaKonsStruktur];
-    }
-if (urlMappingStrukturBajaRangka[cleanUrlJasaJasaKonsStruktur]) {
-        restoreCondition('JasaKonsStruktur');
-        restoreCondition('JasaStrukturBajadanRangkaRinganSub');
-           // hapus elemen id DIV Lain
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-       // removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
-
-       //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
-        removeCondition('JasaKonstruksiIndustridanGudangSub');
-        removeCondition('JasaKonstruksiGedungdanHunianSub');
-        removeCondition('JasaStrukturKhususSub');
-	removeCondition('JasaKonstruksiLapanganOlahragaSub');
-	removeCondition('JasaKonstruksiModulardanPrecastSub');
-	removeCondition('JasaStrukturBetondanPengecoranSub');
-       
-        JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
-        JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
-	//TAMPILKAN JasaKonstruksiGedungdanHunianSubLink
-        JasaStrukturBajadanRangkaRinganSubLink.style.visibility = 'visible';
-        pageNameJasaKonsStruktur.textContent = urlMappingStrukturBajaRangka[cleanUrlJasaJasaKonsStruktur];
-    }
-if (urlMappingStrukturKhusus[cleanUrlJasaJasaKonsStruktur]) {
-        restoreCondition('JasaKonsStruktur');
-        restoreCondition('JasaStrukturKhususSub');
-           // hapus elemen id DIV Lain
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-       // removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
-
-       //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
-        removeCondition('JasaKonstruksiIndustridanGudangSub');
-        removeCondition('JasaStrukturBajadanRangkaRinganSub');
-        removeCondition('JasaKonstruksiGedungdanHunianSub');
-	removeCondition('JasaKonstruksiLapanganOlahragaSub');
-	removeCondition('JasaKonstruksiModulardanPrecastSub');
-	removeCondition('JasaStrukturBetondanPengecoranSub');
-       
-        JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
-        JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
-	//TAMPILKAN JasaStrukturKhususLink
-        JasaStrukturKhususLink.style.visibility = 'visible';
-        pageNameJasaKonsStruktur.textContent = urlMappingStrukturKhusus[cleanUrlJasaJasaKonsStruktur];
-    }
-if (urlMappingStrukturLapangan[cleanUrlJasaJasaKonsStruktur]) {
-        restoreCondition('JasaKonsStruktur');
-        restoreCondition('JasaKonstruksiLapanganOlahragaSub');
-           // hapus elemen id DIV Lain
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-       // removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
-
-       //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
-        removeCondition('JasaKonstruksiIndustridanGudangSub');
-        removeCondition('JasaStrukturBajadanRangkaRinganSub');
-        removeCondition('JasaStrukturKhususSub');
-	removeCondition('JasaKonstruksiGedungdanHunianSub');
-	removeCondition('JasaKonstruksiModulardanPrecastSub');
-	removeCondition('JasaStrukturBetondanPengecoranSub');
-       
-        JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
-        JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
-	//TAMPILKAN JasaKonstruksiLapanganOlahragaSubLink
-        JasaKonstruksiLapanganOlahragaSubLink.style.visibility = 'visible';
-        pageNameJasaKonsStruktur.textContent = urlMappingStrukturLapangan[cleanUrlJasaJasaKonsStruktur];
-    }
-if (urlMappingStrukturModularPrecast[cleanUrlJasaJasaKonsStruktur]) {
-        restoreCondition('JasaKonsStruktur');
-        restoreCondition('JasaKonstruksiModulardanPrecastSub');
-           // hapus elemen id DIV Lain
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-       // removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
-
-       //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
-        removeCondition('JasaKonstruksiIndustridanGudangSub');
-        removeCondition('JasaStrukturBajadanRangkaRinganSub');
-        removeCondition('JasaStrukturKhususSub');
-	removeCondition('JasaKonstruksiLapanganOlahragaSub');
-	removeCondition('JasaKonstruksiGedungdanHunianSub');
-	removeCondition('JasaStrukturBetondanPengecoranSub');
-       
-        JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
-        JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
-	//TAMPILKAN JasaKonstruksiModulardanPrecastSubLink
-        JasaKonstruksiModulardanPrecastSubLink.style.visibility = 'visible';
-        pageNameJasaKonsStruktur.textContent = urlMappingStrukturModularPrecast[cleanUrlJasaJasaKonsStruktur];
-    }
-if (urlMappingStrukturBetonPengecoran[cleanUrlJasaJasaKonsStruktur]) {
-        restoreCondition('JasaKonsStruktur');
-        restoreCondition('JasaStrukturBetondanPengecoranSub');
-           // hapus elemen id DIV Lain
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-       // removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
-
-       //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
-        removeCondition('JasaKonstruksiIndustridanGudangSub');
-        removeCondition('JasaStrukturBajadanRangkaRinganSub');
-        removeCondition('JasaStrukturKhususSub');
-	removeCondition('JasaKonstruksiLapanganOlahragaSub');
-	removeCondition('JasaKonstruksiModulardanPrecastSub');
-	removeCondition('JasaKonstruksiGedungdanHunianSub');
-       
-        JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
-        JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
-	//TAMPILKAN JasaStrukturBetondanPengecoranSubLink
-        JasaStrukturBetondanPengecoranSubLink.style.visibility = 'visible';
-        pageNameJasaKonsStruktur.textContent = urlMappingStrukturBetonPengecoran[cleanUrlJasaJasaKonsStruktur];
-    }
 }
 	
    });
