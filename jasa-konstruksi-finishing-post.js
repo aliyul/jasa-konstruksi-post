@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
         restoreCondition('JasaPlesteranAcianDindingPost');
            
-	// hapus elemen id DIV Lain
+	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsPerbaikanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsFinishingPost');
+     //   removeCondition('JasaKonsFinishingPost');
 
 	 // hapus elemen id FINISHING STRUKTUR lain NYA SELAIN JasaPlesteranAcianDindingPost
         removeCondition('JasaFinishingBetonExposePost');
