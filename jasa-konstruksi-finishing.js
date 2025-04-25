@@ -13,7 +13,7 @@ const urlMappingFinishingBangunan = {
 };
 
 const urlMappingFinishingBangunanInterior = {
-
+"https://www.betonjayareadymix.com/p/jasa-desain-interior.html": "Jasa Desin Interior",
 "https://www.betonjayareadymix.com/p/jasa-ganti-keramik-lantai.html": "Jasa Ganti Keramik Lantai",
   "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
   "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",
