@@ -47,7 +47,7 @@ const urlMappingJasaPelindungRetakStruktur = {
 	
 };
 //AKHIR SUB FinishingBangunanStruktur
-
+/*
 const urlMappingFinishingInfrastruktur = {
 
   "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-jembatan.html": "Jasa Finishing Jalan Jembatan",
@@ -97,6 +97,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
   "https://www.betonjayareadymix.com/p/jasa-finishing-khusus-cuaca-ekstrem.html": "Jasa Finishing Khusus Cuaca Ekstrem"
 
 };
+*/
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaKonsFinishingPost = {};
