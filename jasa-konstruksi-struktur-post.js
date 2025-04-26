@@ -173,6 +173,22 @@ const urlMappingJasaKonstruksiGedungRumahSakit = {
 
 };
 
+//SUB JasaKonstruksiLapanganOlahragaPost
+const urlMappingJasaPembuatanLapanganFutsalPost = {
+
+};
+const urlMappingJasaPembuatanLapanganBasketPost = {
+
+};
+const urlMappingJasaPembuatanLapanganSepakbolaPost = {
+
+};
+const urlMappingJasaPembuatanLapanganVoliPost = {
+
+};
+const urlMappingJasaPembuatanLapanganSerbagunaPost = {
+
+};
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasakonstruksistrukturPost = {};
 function removeCondition(conditionId) {
