@@ -80,6 +80,14 @@ const urlMappingJasaBekistingdanPembesian = {
 */
 //SUB JasaKonstruksiGedungdanHunianPost
 const urlMappingJasaKonstruksiRumahTinggal = {
+  "https://www.betonjayareadymix.com/2018/09/borongan-bangunan.html": "Borongan Bangunan",
+  "https://www.betonjayareadymix.com/2018/09/harga-bangunan.html": "Harga Bangunan",
+  "https://www.betonjayareadymix.com/2018/09/borongan-konstruksi.html": "Borongan Konstruksi",
+  "https://www.betonjayareadymix.com/2018/09/konsultan-bangunan.html": "Konsultan Bangunan",
+  "https://www.betonjayareadymix.com/2018/09/konsultan-kontruksi.html": "Konsultan Kontruksi",
+  "https://www.betonjayareadymix.com/2018/09/perencanaan-pembangunan.html": "Perencanaan Pembangunan",
+  "https://www.betonjayareadymix.com/2018/09/perencanaan-konstruksi.html": "Perencanaan Konstruksi",
+	
 "https://www.betonjayareadymix.com/2018/11/harga-borongan-rumah-per-meter-terima-kunci-cirebon.html": "Harga Borongan Rumah Per Meter Terima Kunci Cirebon",
   "https://www.betonjayareadymix.com/2018/11/harga-borongan-rumah-per-meter-terima-kunci-dramaga.html": "Harga Borongan Rumah Per Meter Terima Kunci Dramaga",
   "https://www.betonjayareadymix.com/2018/11/harga-borongan-rumah-per-meter-terima-kunci-cianjur.html": "Harga Borongan Rumah Per Meter Terima Kunci Cianjur",
