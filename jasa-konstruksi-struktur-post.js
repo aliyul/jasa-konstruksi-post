@@ -276,6 +276,7 @@ if (urlMappingJasaRangkaAtapBajaRingan[cleanUrlJasaJasaKonsStrukturPost]) {
        //hapus elemen div id lain
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
@@ -339,6 +340,7 @@ if (urlMappingJasaPengecoranLantaiDak[cleanUrlJasaJasaKonsStrukturPost]) {
        //hapus elemen div id lain
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
@@ -402,6 +404,7 @@ if (urlMappingJasaKonstruksiRumahTinggal[cleanUrlJasaJasaKonsStrukturPost]) {
        //hapus elemen div id lain
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
