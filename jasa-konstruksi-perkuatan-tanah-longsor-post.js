@@ -148,6 +148,7 @@ JasaPerkuatanTanahLongsorPost
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
@@ -206,6 +207,7 @@ if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
@@ -239,6 +241,7 @@ if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
@@ -273,6 +276,7 @@ if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
@@ -306,6 +310,7 @@ if (urlMappingJasaSheetPileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
@@ -340,6 +345,7 @@ if (urlMappingJasaStabilisasiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
@@ -374,6 +380,7 @@ if (urlMappingJasaPerkuatanRumahLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPos
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
@@ -408,6 +415,7 @@ if (urlMappingJasaPerkuatanTebingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPo
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
@@ -442,6 +450,7 @@ if (urlMappingJasaPerkuatanPerkebunanLongsor[cleanUrlJasaPerkuatanTanahLongsorKo
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
@@ -476,6 +485,7 @@ if (urlMappingJasaDrainaseAntiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
