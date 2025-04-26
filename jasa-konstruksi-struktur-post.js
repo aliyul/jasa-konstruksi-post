@@ -41,6 +41,9 @@ const urlMappingJasaStrukturBajaGudang = {
 */
 //SUB JasaStrukturBetondanPengecoranPost
 const urlMappingJasaPengecoranLantaiDak = {
+"https://www.betonjayareadymix.com/2018/09/borongan-sloof.html": "Borongan Sloof",
+  "https://www.betonjayareadymix.com/2018/09/harga-borongan-sloof-per-meter-kubik.html": "Harga Borongan Sloof Per Meter Kubik",
+
 "https://www.betonjayareadymix.com/2021/03/harga-borongan-cor-beton.html": "Harga Borongan Cor Beton",
     "https://www.betonjayareadymix.com/2021/03/harga-borongan-cor-beton-per-m3.html": "Harga Borongan Cor Beton per m3",
   "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-townhouse.html": "Borongan Cor Beton Townhouse",
