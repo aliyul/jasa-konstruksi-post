@@ -174,7 +174,7 @@ const urlMappingJasaKonstruksiGedungRumahSakit = {
 };
 
 //SUB JasaKonstruksiLapanganOlahragaPost
-const urlMappingJasaPembuatanLapanganFutsalPost = {
+const urlMappingJasaPembuatanLapanganFutsal = {
   "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-bekasi.html": "Jasa Pembuatan Lapangan Futsal Bekasi",
   "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-depok.html": "Jasa Pembuatan Lapangan Futsal Depok",
   "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-jakarta.html": "Jasa Pembuatan Lapangan Futsal Jakarta",
@@ -183,16 +183,16 @@ const urlMappingJasaPembuatanLapanganFutsalPost = {
   "https://www.betonjayareadymix.com/2018/09/harga-buat-lapangan-futsal.html": "Harga Buat Lapangan Futsal"
 
 };
-const urlMappingJasaPembuatanLapanganBasketPost = {
+const urlMappingJasaPembuatanLapanganBasket = {
 
 };
-const urlMappingJasaPembuatanLapanganSepakbolaPost = {
+const urlMappingJasaPembuatanLapanganSepakbola = {
 
 };
-const urlMappingJasaPembuatanLapanganVoliPost = {
+const urlMappingJasaPembuatanLapanganVoli = {
 
 };
-const urlMappingJasaPembuatanLapanganSerbagunaPost = {
+const urlMappingJasaPembuatanLapanganSerbaguna = {
 
 };
 // Menyimpan elemen yang dihapus dalam variabel
@@ -262,7 +262,12 @@ if (!JasaKonsStrukturPost) {
      var JasaKonstruksiPerkantoranPostLink = document.getElementById("JasaKonstruksiPerkantoranPost");
      var JasaKonstruksiGedungSekolahPostLink = document.getElementById("JasaKonstruksiGedungSekolahPost");
      var JasaKonstruksiGedungRumahSakitPostLink = document.getElementById("JasaKonstruksiGedungRumahSakitPost");
-
+    //SUB JasaKonstruksiLapanganOlahragaPost
+     var JasaPembuatanLapanganFutsalPostLink = document.getElementById("JasaPembuatanLapanganFutsalPost");
+     var JasaPembuatanLapanganBasketPostLink = document.getElementById("JasaPembuatanLapanganBasketPost");
+     var JasaPembuatanLapanganSepakbolaPostLink = document.getElementById("JasaPembuatanLapanganSepakbolaPost");
+     var JasaPembuatanLapanganVoliPostLink = document.getElementById("JasaPembuatanLapanganVoliPost");
+     var JasaPembuatanLapanganSerbagunaPostLink = document.getElementById("JasaPembuatanLapanganSerbagunaPost");
     	
      var pageNameJasaKonsStrukturPost = document.getElementById("pageNameJasaKonsStrukturPost");
     
@@ -284,7 +289,13 @@ if (!JasaKonsStrukturPost) {
       JasaKonstruksiPerkantoranPostLink.style.visibility = 'hidden';
       JasaKonstruksiGedungSekolahPostLink.style.visibility = 'hidden';
       JasaKonstruksiGedungRumahSakitPostLink.style.visibility = 'hidden';
-   
+      //SUB JasaKonstruksiLapanganOlahragaPost
+    JasaPembuatanLapanganFutsalPostLink.style.visibility = 'hidden';
+    JasaPembuatanLapanganBasketPostLink.style.visibility = 'hidden';
+    JasaPembuatanLapanganSepakbolaPostLink.style.visibility = 'hidden';
+    JasaPembuatanLapanganVoliPostLink.style.visibility = 'hidden';
+    JasaPembuatanLapanganSerbagunaPostLink.style.visibility = 'hidden';
+      
 	
      // Default untuk menyembunyikan elemen
      JasaKonstruksiStrukturPostLink.style.visibility = 'hidden';
@@ -338,6 +349,13 @@ if (urlMappingJasaRangkaAtapBajaRingan[cleanUrlJasaJasaKonsStrukturPost]) {
         removeCondition('JasaKonstruksiPerkantoranPost');
         removeCondition('JasaKonstruksiGedungSekolahPost');
         removeCondition('JasaKonstruksiGedungRumahSakitPost');
+	// hapus elemen id JasaKonstruksiLapanganOlahragaPost SEMUA
+        removeCondition('JasaPembuatanLapanganFutsalPost');
+        removeCondition('JasaPembuatanLapanganBasketPost');
+        removeCondition('JasaPembuatanLapanganSepakbolaPost');
+        removeCondition('JasaPembuatanLapanganVoliPost');
+        removeCondition('JasaPembuatanLapanganSerbagunaPost');
+	
       
 	/*
 JasaKonstruksiGedungdanHunianPost
@@ -399,6 +417,13 @@ if (urlMappingJasaPengecoranLantaiDak[cleanUrlJasaJasaKonsStrukturPost]) {
         removeCondition('JasaKonstruksiPerkantoranPost');
         removeCondition('JasaKonstruksiGedungSekolahPost');
         removeCondition('JasaKonstruksiGedungRumahSakitPost');
+	// hapus elemen id JasaKonstruksiLapanganOlahragaPost SEMUA
+        removeCondition('JasaPembuatanLapanganFutsalPost');
+        removeCondition('JasaPembuatanLapanganBasketPost');
+        removeCondition('JasaPembuatanLapanganSepakbolaPost');
+        removeCondition('JasaPembuatanLapanganVoliPost');
+        removeCondition('JasaPembuatanLapanganSerbagunaPost');
+	
       //hapus elemen id JasaStrukturBetondanPengecoranPost SEMUA selain JasaPengecoranLantaiDakPost
         removeCondition('JasaPengecoranLantaiGudangPost');
         removeCondition('JasaBekistingdanPembesianPost');
@@ -454,6 +479,13 @@ if (urlMappingJasaKonstruksiRumahTinggal[cleanUrlJasaJasaKonsStrukturPost]) {
         removeCondition('JasaKanopiBajadanBesiPost');
         removeCondition('JasaStrukturBajaGudangPost');
         removeCondition('JasaRangkaAtapBajaRinganPost');
+	// hapus elemen id JasaKonstruksiLapanganOlahragaPost SEMUA
+        removeCondition('JasaPembuatanLapanganFutsalPost');
+        removeCondition('JasaPembuatanLapanganBasketPost');
+        removeCondition('JasaPembuatanLapanganSepakbolaPost');
+        removeCondition('JasaPembuatanLapanganVoliPost');
+        removeCondition('JasaPembuatanLapanganSerbagunaPost');
+	
 	 //hapus elemen id JasaKonstruksiGedungdanHunianPost SEMUA selain JasaKonstruksiRumahTinggalPost
        // removeCondition('');
         removeCondition('JasaKonstruksiRukodanKiosPost');
@@ -496,6 +528,78 @@ JasaStrukturBetondanPengecoranPost
     }
 //AKHIR SUB JasaKonstruksiGedungdanHunianPost
 
+//SUB JasaKonstruksiLapanganOlahragaPost
+if (urlMappingJasaPembuatanLapanganFutsal[cleanUrlJasaJasaKonsStrukturPost]) {
+        restoreCondition('JasaKonsStrukturPost');
+        restoreCondition('JasaKonstruksiLapanganOlahragaPost');
+        restoreCondition('JasaPembuatanLapanganFutsalPost');
+
+       //hapus elemen div id lain
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost'); 
+	removeCondition('JasaKonsFinishingPost');
+        removeCondition('ProdukKonsSaluranPost');
+
+	 //hapus elemen id JasaStrukturBajadanRangkaRinganPost SEMUA
+        removeCondition('JasaKonstruksiBajaKonvensionalPost');
+        removeCondition('JasaKanopiBajadanBesiPost');
+        removeCondition('JasaStrukturBajaGudangPost');
+        removeCondition('JasaRangkaAtapBajaRinganPost');
+	// hapus elemen id JasaKonstruksiLapanganOlahragaPost SEMUA selain JasaPembuatanLapanganFutsalPost
+        //removeCondition('');
+        removeCondition('JasaPembuatanLapanganBasketPost');
+        removeCondition('JasaPembuatanLapanganSepakbolaPost');
+        removeCondition('JasaPembuatanLapanganVoliPost');
+        removeCondition('JasaPembuatanLapanganSerbagunaPost');
+	
+	 //hapus elemen id JasaKonstruksiGedungdanHunianPost SEMUA
+       removeCondition('JasaKonstruksiRumahTinggalPost');
+        removeCondition('JasaKonstruksiRukodanKiosPost');
+        removeCondition('JasaKonstruksiVillaPost');
+        removeCondition('JasaKonstruksiApartemenPost');
+        removeCondition('JasaKonstruksiHotelPost');
+        removeCondition('JasaKonstruksiPerkantoranPost');
+        removeCondition('JasaKonstruksiGedungSekolahPost');
+        removeCondition('JasaKonstruksiGedungRumahSakitPost');
+      //hapus elemen id JasaStrukturBetondanPengecoranPost SEMUA 
+        removeCondition('JasaPengecoranLantaiGudangPost');
+        removeCondition('JasaBekistingdanPembesianPost');
+        removeCondition('JasaPengecoranLantaiDakPost');
+	
+      
+	/*
+JasaKonstruksiGedungdanHunianPost
+JasaKonstruksiIndustridanGudangPost
+JasaStrukturBajadanRangkaRinganPost
+JasaStrukturKhusus
+JasaKonstruksiLapanganOlahragaPost
+JasaKonstruksiModulardanPrecastPost
+JasaStrukturBetondanPengecoranPost
+*/
+       //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiLapanganOlahragaPost
+        removeCondition('JasaKonstruksiIndustridanGudangPost');
+        removeCondition('JasaStrukturBetondanPengecoranPost');
+        removeCondition('JasaStrukturKhususPost');
+	removeCondition('JasaKonstruksiGedungdanHunianPost');
+	removeCondition('JasaKonstruksiModulardanPrecastPost');
+	removeCondition('JasaStrukturBajadanRangkaRinganPost');
+       
+        JasaKonstruksiStrukturPostLink.style.visibility = 'visible';
+        JasaStrukturKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaKonstruksiLapanganOlahragaPost
+        JasaKonstruksiLapanganOlahragaPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaPembuatanLapanganFutsalPost
+        JasaPembuatanLapanganFutsalPostLink.style.visibility = 'visible';
+        pageNameJasaKonsStrukturPost.textContent = urlMappingJasaPembuatanLapanganFutsal[cleanUrlJasaJasaKonsStrukturPost];
+    }
+//AKHIR SUB JasaKonstruksiLapanganOlahragaPost
 }
 	
    });
