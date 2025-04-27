@@ -1,5 +1,8 @@
 //SUB MAPPING JasaPengeboranPost 
 const urlMappingJasaBorAir = {
+"https://www.betonjayareadymix.com/2018/09/tukang-bor-terdekat.html": "Tukang Bor Terdekat",
+  "https://www.betonjayareadymix.com/2018/09/tukang-bor.html": "Tukang Bor",
+	
    "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-depok.html": "Jasa Bor Air Tanah Depok",
   "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-tangerang.html": "Jasa Bor Air Tanah Tangerang",
   "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-jakarta.html": "Jasa Bor Air Tanah Jakarta",
