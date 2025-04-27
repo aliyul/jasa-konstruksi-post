@@ -252,10 +252,6 @@ const urlMappingJasaPembuatanBakPenampungan = {
 const urlMappingJasaKonstruksiMenaraAir = {
 
 };
-const urlMappingJasaPembuatanKolamRenang = {
-
-};
-
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasakonstruksistrukturPost = {};
