@@ -1,30 +1,32 @@
-//SUB MAPPING JASA PONDASI TANAH 
-// BANGUNAN
-const urlMappingJasaPondasiCakarAyam = {
+//SUB MAPPING JasaPengeboranPost 
+const urlMappingJasaBorAir = {
 
 };
-const urlMappingJasaPondasiTapak = {
+const urlMappingJasaBorePile = {
 
 };
-const urlMappingJasaPondasiBoredPile = {
+const urlMappingJasaCoringBeton = {
 
 };
-const urlMappingJasaPondasiTiangPancang = {
+const urlMappingJasaBorBeton = {
 
 };
-const urlMappingJasaPondasiSumuran = {
+const urlMappingJasaBorTanah = {
+
+};
+const urlMappingJasaBorHorizontal = {
 
 };
 
 // Menyimpan elemen yang dihapus dalam variabel
-let removedElementsJasaPondasiPerkuatanTanahKonsPost = {};
+let removedElementsJasaPengeboranPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
 function removeCondition(conditionId) {
     const conditionElement = document.getElementById(conditionId);
 
     if (conditionElement) {
         // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
-        removedElementsJasaPondasiPerkuatanTanahKonsPost[conditionId] = conditionElement;
+        removedElementsJasaPengeboranPost[conditionId] = conditionElement;
         conditionElement.remove(); // Menghapus elemen tersebut
     }
 }
@@ -32,46 +34,43 @@ function removeCondition(conditionId) {
 // Fungsi untuk mengembalikan elemen yang telah dihapus
 function restoreCondition(conditionId) {
     const breadcrumb = document.querySelector('.breadcrumb');
-    const elementToRestore = removedElementsJasaPondasiPerkuatanTanahKonsPost[conditionId]; // Mendapatkan elemen yang disimpan
+    const elementToRestore = removedElementsJasaPengeboranPost[conditionId]; // Mendapatkan elemen yang disimpan
 
     if (elementToRestore) {
         breadcrumb.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
-        delete removedElementsJasaPondasiPerkuatanTanahKonsPost[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
+        delete removedElementsJasaPengeboranPost[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
     } else {
-        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaPondasiPerkuatanTanahKonsPost.`);
+        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaPengeboranPost.`);
     }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     // var currentUrl = window.location.href;
      //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
-    const cleanUrlJasaPondasiPerkuatanTanahKonsPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
+    const cleanUrlJasaPengeboranPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
+
 
      // Menemukan elemen menggunakan Id
-    var JasaKonsPondasiTanahPost = document.getElementById("JasaKonsPondasiTanahPost");
+    var JasaKonsPengeboranPost = document.getElementById("JasaKonsPengeboranPost");
 
-    if (!JasaKonsPondasiTanahPost) {
+    if (!JasaKonsPengeboranPost) {
         console.error("elemen Id JasaKonsPondasiTanahPost kondisi terhapus");
         return;
     }
     
-     var JasaKonstruksiPondasiTanahSubPostLink = document.getElementById("JasaKonstruksiPondasiTanahSubPost");
-     var JasaPondasiTanahSubPost = document.getElementById("JasaPondasiTanahSubPost");
+     var JasaKonstruksiPengeboranPostLink = document.getElementById("JasaKonstruksiPengeboranPost");
+     var JasaPengeboranPost = document.getElementById("JasaPengeboranPost");
 
      //SUB Jasa Pondasi Tanah
-     var JasaPondasiBangunanSubPostLink = document.getElementById("JasaPondasiBangunanSubPost");
-     var JasaPemadatanPersiapanPondasiSubPostLink = document.getElementById("JasaPemadatanPersiapanPondasiSubPost");
-     var JasaPerkuatanTanahSubPostLink = document.getElementById("JasaPerkuatanTanahSubPost");
-     var JasaRetrofittingPondasiSubPostLink = document.getElementById("JasaRetrofittingPondasiSubPost");
+     var JasaBorAirPostLink = document.getElementById("JasaBorAirPost");
+     var JasaBorePilePostLink = document.getElementById("JasaBorePilePost");
+     var JasaCoringBetonPostLink = document.getElementById("JasaCoringBetonPost");
+     var JasaBorBetonPostLink = document.getElementById("JasaBorBetonPost");
+     var JasaBorTanahPostLink = document.getElementById("JasaBorTanahPost");
+     var JasaBorHorizontalPostLink = document.getElementById("JasaBorHorizontalPost");
 	
-    //SUB JasaPondasiBangunanSubPost
-     var JasaPondasiCakarAyamPostLink = document.getElementById("JasaPondasiCakarAyamPost");
-     var JasaPondasiTapakPostLink = document.getElementById("JasaPondasiTapakPost");
-     var JasaPondasiBoredPilePostLink = document.getElementById("JasaPondasiBoredPilePost");
-     var JasaPondasiTiangPancangPostLink = document.getElementById("JasaPondasiTiangPancangPost");
-     var JasaPondasiSumuranPostLink = document.getElementById("JasaPondasiSumuranPost");
-	
-     var pageNameJasaKonsPondasiTanahPost = document.getElementById("pageNameJasaKonsPondasiTanahPost");
+    	
+     var pageNameJasaKonsPengeboranPost = document.getElementById("pageNameJasaKonsPengeboranPost");
     
 
      // Default untuk menyembunyikan elemen
@@ -94,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
      pageNameJasaKonsPondasiTanahPost.textContent = "";
 	
     //SUB urlMappingBangunan
-if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
         restoreCondition('JasaPondasiCakarAyamPost');
@@ -150,7 +149,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPondasiCakarAyam
         JasaPondasiCakarAyamPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
+        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiCakarAyam[cleanUrlJasaPengeboranPost];
     }
     
    });
