@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaBorTanahPostLink.style.visibility = 'hidden';
      JasaBorHorizontalPostLink.style.visibility = 'hidden';
 	
-     pageNameJasaPengeboranPost.textContent = "";
+     pageNameJasaKonsPengeboranPost .textContent = "";
 	
     //SUB urlMappingBangunan
 if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
