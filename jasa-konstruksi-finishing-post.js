@@ -230,6 +230,14 @@ document.addEventListener("DOMContentLoaded", function() {
    var JasaPelapisanWaterproofingStrukturPostLink = document.getElementById("JasaPelapisanWaterproofingStrukturPost");
    var JasaFinishingLantaiBetonPostLink = document.getElementById("JasaFinishingLantaiBetonPost");
    var JasaPelindungRetakStrukturPostLink = document.getElementById("JasaPelindungRetakStrukturPost");
+   //SUB JasaFinishingBangunanEksteriorPost
+   var JasaCatEksteriorRumahPostLink = document.getElementById("JasaCatEksteriorRumahPost");
+   var JasaFinishingFasadEksteriorPostLink = document.getElementById("JasaFinishingFasadEksteriorPost");
+   var JasaPelapisanAntiCuacaPostLink = document.getElementById("JasaPelapisanAntiCuacaPost");
+   var JasaPelapisanDindingLuarPostLink = document.getElementById("JasaPelapisanDindingLuarPost");
+   var JasaFinishingTamanRumahPostLink = document.getElementById("JasaFinishingTamanRumahPost");
+   var JasaPelapisanBatuAlamEksteriorPostLink = document.getElementById("JasaPelapisanBatuAlamEksteriorPost");
+   var JasaPelapisanGentengDakPostLink = document.getElementById("JasaPelapisanGentengDakPost");
 	
     //sub finishing infrastruktur
     var JasaFinishingJalanPostLink = document.getElementById("JasaFinishingInfrastrukturJalanPost");
