@@ -118,14 +118,14 @@ if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaPengeboranPost');
         restoreCondition('JasaBorAirPost');
      
-        //hapus elemen div id lain
+        //hapus elemen div id lain KECUALI JasaPengeboranPost
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaPengeboranPost');
+       // removeCondition('JasaPengeboranPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
