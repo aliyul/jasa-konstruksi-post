@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var JasaKonsPengeboranPost = document.getElementById("JasaKonsPengeboranPost");
 
     if (!JasaKonsPengeboranPost) {
-        console.error("elemen Id JasaKonsPondasiTanahPost kondisi terhapus");
+        console.error("elemen Id JasaPengeboranPost kondisi terhapus");
         return;
     }
     
@@ -115,52 +115,38 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaPondasiTiangPancangPostLink.style.visibility = 'hidden';
      JasaPondasiSumuranPostLink.style.visibility = 'hidden';
 	
-     pageNameJasaKonsPondasiTanahPost.textContent = "";
+     pageNameJasaPengeboranPost.textContent = "";
 	
     //SUB urlMappingBangunan
-if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPengeboranPost]) {
-        restoreCondition('JasaKonsPondasiTanahPost');
-        restoreCondition('JasaPondasiBangunanSubPost');
-        restoreCondition('JasaPondasiCakarAyamPost');
+if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
+        restoreCondition('JasaKonsPengeboranPost');
+        restoreCondition('JasaPengeboranPost');
+        restoreCondition('JasaBorAirPost');
      
+
+
         //hapus elemen div id lain
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaPengeboranPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
 	
-	/*
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-*/
+	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
+        //removeCondition('');
+        removeCondition('JasaBorePilePost');
+        removeCondition('JasaCoringBetonPost');
+        removeCondition('JasaBorBetonPost');
+        removeCondition('JasaBorTanahPost');
+        removeCondition('JasaBorHorizontalPost');
 
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaPemadatanPersiapanPondasiSubPost');
-        removeCondition('JasaPerkuatanTanahSubPost');
-        removeCondition('JasaRetrofittingPondasiSubPost');
-
-	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
-        removeCondition('JasaPondasiTapakPost');
-        removeCondition('JasaPondasiBoredPilePost'); 
-	removeCondition('JasaPondasiTiangPancangPost');
-	removeCondition('JasaPondasiSumuranPost');
+	
 	/*
  JasaPondasiBangunanSubPostLink.style.visibility = 'hidden';
      JasaPemadatanPersiapanPondasiSubPostLink.style.visibility = 'hidden';
@@ -168,13 +154,12 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPengeboranPost]) {
      JasaRetrofittingPondasiSubPostLink.style.visibility = 'hidden';
 */
        
-        JasaKonstruksiPondasiTanahSubPostLink.style.visibility = 'visible';
-        JasaPondasiTanahSubPostLink.style.visibility = 'visible';
-	//TAMPILKAN PONDASI BANGUNAN
-        JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
+        JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
+       //TAMPILKAN PONDASI BANGUNAN
+        JasaPengeboranPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPondasiCakarAyam
-        JasaPondasiCakarAyamPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiCakarAyam[cleanUrlJasaPengeboranPost];
+        JasaBorAirPostLink.style.visibility = 'visible';
+        pageNameJasaPengeboranPost.textContent = urlMappingJasaBorAir[cleanUrlJasaPengeboranPost];
     }
     
    });
