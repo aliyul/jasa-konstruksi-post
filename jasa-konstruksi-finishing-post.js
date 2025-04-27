@@ -68,6 +68,48 @@ const urlMappingJasaDesainInterior = {
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-interior-rumah.html": "Harga Jasa Desain Interior Rumah"
 };
 //AKHIR SUB JasaFinishingBangunanInteriorPost
+/*
+const urlMappingFinishingBangunanEksterior = {
+
+"https://www.betonjayareadymix.com/p/jasa-cat-eksterior-rumah.html": "Jasa Cat Eksterior Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-fasad-eksterior.html": "Jasa Finishing Fasad Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-cuaca.html": "Jasa Pelapisan Anti Cuaca",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-dinding-luar.html": "Jasa Pelapisan Dinding Luar",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-taman-rumah.html": "Jasa Finishing Taman Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-kanopi-teras.html": "Jasa Finishing Kanopi Teras",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html": "Jasa Pelapisan Batu Alam Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak.html": "Jasa Pelapisan Genteng Dak"
+
+};
+*/
+//SUB JasaFinishingBangunanEksteriorPost
+const urlMappingJasaCatEksteriorRumah = {
+  
+};
+const urlMappingJasaFinishingFasadEksterior = {
+  
+};
+const urlMappingJasaPelapisanAntiCuaca = {
+  
+};
+const urlMappingJasaPelapisanDindingLuar = {
+  
+};
+const urlMappingJasaFinishingTamanRumah = {
+  
+};
+const urlMappingJasaFinishingKanopiTeras = {
+  
+};
+const urlMappingJasaPelapisanBatuAlamEksterior = {
+  
+};
+const urlMappingJasaPelapisanGentengDak = {
+  
+};
+
+
+//AKHIR SUB JasaFinishingBangunanEksteriorPost
 
 /*
 const urlMappingFinishingInfrastruktur = {
