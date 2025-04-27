@@ -167,5 +167,39 @@ if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
         JasaBorAirPostLink.style.visibility = 'visible';
         pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorAir[cleanUrlJasaPengeboranPost];
     }
+if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
+        restoreCondition('JasaKonsPengeboranPost');
+        restoreCondition('JasaPengeboranPost');
+        restoreCondition('JasaCoringBetonPost');
+     
+        //hapus elemen div id lain KECUALI JasaPengeboranPost
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+       // removeCondition('JasaPengeboranPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+	
+	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
+        //removeCondition('');
+        removeCondition('JasaBorePilePost');
+        removeCondition('JasaBorAirPost');
+        removeCondition('JasaBorBetonPost');
+        removeCondition('JasaBorTanahPost');
+        removeCondition('JasaBorHorizontalPost');
+       
+        JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
+       //TAMPILKAN JasaPengeboranPost
+        JasaPengeboranPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaCoringBetonPost
+        JasaCoringBetonPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost];
+    }
     
    });
