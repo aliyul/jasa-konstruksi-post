@@ -144,7 +144,7 @@ if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
         JasaPengeboranPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBorAirPost
         JasaBorAirPostLink.style.visibility = 'visible';
-        pageNameJasaPengeboranPost.textContent = urlMappingJasaBorAir[cleanUrlJasaPengeboranPost];
+        pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorAir[cleanUrlJasaPengeboranPost];
     }
     
    });
