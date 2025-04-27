@@ -96,7 +96,15 @@ const urlMappingJasaPelapisanDindingLuar = {
   
 };
 const urlMappingJasaFinishingTamanRumah = {
-  
+  "https://www.betonjayareadymix.com/2018/09/jasa-relief-taman.html": "Jasa Relief Taman",
+  "https://www.betonjayareadymix.com/2018/09/jasa-tukang-taman.html": "Jasa Tukang Taman",
+  "https://www.betonjayareadymix.com/2018/09/jasa-taman-terdekat.html": "Jasa Taman Terdekat",
+  "https://www.betonjayareadymix.com/2018/09/jasa-taman-murah.html": "Jasa Taman Murah",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",
+  "https://www.betonjayareadymix.com/2018/09/jasa-taman.html": "Jasa Taman",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-taman-terdekat.html": "Jasa Pembuatan Taman Terdekat",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-taman-rumah.html": "Jasa Pembuatan Taman Rumah"
+
 };
 const urlMappingJasaFinishingKanopiTeras = {
   
