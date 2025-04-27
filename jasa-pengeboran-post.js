@@ -99,21 +99,16 @@ document.addEventListener("DOMContentLoaded", function() {
     
 
      // Default untuk menyembunyikan elemen
-     JasaKonstruksiPondasiTanahSubPostLink.style.visibility = 'hidden';
-     JasaPondasiTanahSubPost.style.visibility = 'hidden';
+     JasaKonstruksiPengeboranPostLink.style.visibility = 'hidden';
+     JasaPengeboranPost.style.visibility = 'hidden';
 	
-     //SUB PONDASI TANAH
-     JasaPondasiBangunanSubPostLink.style.visibility = 'hidden';
-     JasaPemadatanPersiapanPondasiSubPostLink.style.visibility = 'hidden';
-     JasaPerkuatanTanahSubPostLink.style.visibility = 'hidden';
-     JasaRetrofittingPondasiSubPostLink.style.visibility = 'hidden';
-
-    //SUB JasaPondasiBangunanSubPost
-     JasaPondasiCakarAyamPostLink.style.visibility = 'hidden';
-     JasaPondasiTapakPostLink.style.visibility = 'hidden';
-     JasaPondasiBoredPilePostLink.style.visibility = 'hidden';
-     JasaPondasiTiangPancangPostLink.style.visibility = 'hidden';
-     JasaPondasiSumuranPostLink.style.visibility = 'hidden';
+     //SUB JasaPengeboranPost
+     JasaBorAirPostLink.style.visibility = 'hidden';
+     JasaBorePilePostLink.style.visibility = 'hidden';
+     JasaCoringBetonPostLink.style.visibility = 'hidden';
+     JasaBorBetonPostLink.style.visibility = 'hidden';
+     JasaBorTanahPostLink.style.visibility = 'hidden';
+     JasaBorHorizontalPostLink.style.visibility = 'hidden';
 	
      pageNameJasaPengeboranPost.textContent = "";
 	
@@ -123,8 +118,6 @@ if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaPengeboranPost');
         restoreCondition('JasaBorAirPost');
      
-
-
         //hapus elemen div id lain
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -145,19 +138,11 @@ if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaBorBetonPost');
         removeCondition('JasaBorTanahPost');
         removeCondition('JasaBorHorizontalPost');
-
-	
-	/*
- JasaPondasiBangunanSubPostLink.style.visibility = 'hidden';
-     JasaPemadatanPersiapanPondasiSubPostLink.style.visibility = 'hidden';
-     JasaPerkuatanTanahSubPostLink.style.visibility = 'hidden';
-     JasaRetrofittingPondasiSubPostLink.style.visibility = 'hidden';
-*/
        
         JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
        //TAMPILKAN PONDASI BANGUNAN
         JasaPengeboranPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaPondasiCakarAyam
+	//TAMPILKAN JasaBorAirPost
         JasaBorAirPostLink.style.visibility = 'visible';
         pageNameJasaPengeboranPost.textContent = urlMappingJasaBorAir[cleanUrlJasaPengeboranPost];
     }
