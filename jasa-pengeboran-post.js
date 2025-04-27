@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
      var JasaKonstruksiPengeboranPostLink = document.getElementById("JasaKonstruksiPengeboranPost");
-     var JasaPengeboranPost = document.getElementById("JasaPengeboranPost");
+     var JasaPengeboranPostLink = document.getElementById("JasaPengeboranPost");
 
      //SUB Jasa Pondasi Tanah
      var JasaBorAirPostLink = document.getElementById("JasaBorAirPost");
