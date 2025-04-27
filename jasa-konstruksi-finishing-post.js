@@ -330,7 +330,15 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaFinishingInteriorMinimalisPost');
         removeCondition('JasaFinishingInteriorKlasikPost');
         removeCondition('JasaFinishingInteriorModernPost');
-       
+         // hapus elemen id sub JasaFinishingBangunanEksteriorPost Semua
+        removeCondition('JasaCatEksteriorRumahPost');
+        removeCondition('JasaFinishingFasadEksteriorPost');
+        removeCondition('JasaPelapisanAntiCuacaPost');
+        removeCondition('JasaPelapisanDindingLuarPost');
+        removeCondition('JasaFinishingTamanRumahPost');
+        removeCondition('JasaPelapisanBatuAlamEksteriorPost');
+        removeCondition('JasaPelapisanGentengDakPost');
+      
          // hapus elemen id FINISHING UTAMA lain NYA
         removeCondition('JasaFinishingBangunanEksteriorPost');
         removeCondition('JasaFinishingBangunanInteriorPost');
@@ -383,7 +391,16 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaFinishingKolomdanBalokPost');
         removeCondition('JasaPelapisanWaterproofingStrukturPost');
         removeCondition('JasaFinishingLantaiBetonPost');
-        removeCondition('JasaPelindungRetakStrukturPost');
+        removeCondition('JasaPelindungRetakStrukturPost'); 
+	// hapus elemen id sub JasaFinishingBangunanEksteriorPost Semua
+        removeCondition('JasaCatEksteriorRumahPost');
+        removeCondition('JasaFinishingFasadEksteriorPost');
+        removeCondition('JasaPelapisanAntiCuacaPost');
+        removeCondition('JasaPelapisanDindingLuarPost');
+        removeCondition('JasaFinishingTamanRumahPost');
+        removeCondition('JasaPelapisanBatuAlamEksteriorPost');
+        removeCondition('JasaPelapisanGentengDakPost');
+      
          // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaDesainInteriorPost
         //removeCondition('');
         removeCondition('JasaGantiKeramikLantaiPost');
