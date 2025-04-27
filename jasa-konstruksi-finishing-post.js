@@ -87,7 +87,9 @@ const urlMappingJasaCatEksteriorRumah = {
   
 };
 const urlMappingJasaFinishingFasadEksterior = {
-  
+"https://www.betonjayareadymix.com/2018/09/jasa-relief-dinding.html": "Jasa Relief Dinding",
+"https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-relief-dinding.html": "Jasa Pembuatan Relief Dinding"
+
 };
 const urlMappingJasaPelapisanAntiCuaca = {
   
