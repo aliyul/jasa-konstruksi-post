@@ -1,5 +1,8 @@
 //SUB MAPPING JASA PONDASI TANAH 
 // BANGUNAN
+const urlMappingJasaBoronganPondasi = {
+
+};
 const urlMappingJasaPondasiCakarAyam = {
 
 };
