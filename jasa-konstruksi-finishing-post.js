@@ -268,6 +268,15 @@ document.addEventListener("DOMContentLoaded", function() {
     JasaPelapisanWaterproofingStrukturPostLink.style.visibility = 'hidden';
     JasaFinishingLantaiBetonPostLink.style.visibility = 'hidden';
     JasaPelindungRetakStrukturPostLink.style.visibility = 'hidden';
+
+    //HIDE sub JasaFinishingBangunanEksteriorPost
+    JasaCatEksteriorRumahPostLink.style.visibility = 'hidden';
+    JasaFinishingFasadEksteriorPostLink.style.visibility = 'hidden';
+    JasaPelapisanAntiCuacaPostLink.style.visibility = 'hidden';
+    JasaPelapisanDindingLuarPostLink.style.visibility = 'hidden';
+    JasaFinishingTamanRumahPostLink.style.visibility = 'hidden';
+    JasaPelapisanBatuAlamEksteriorPostLink.style.visibility = 'hidden';
+    JasaPelapisanGentengDakPostLink.style.visibility = 'hidden';
    
     var pageNameJasaKonsFinishingPost = document.getElementById("pageNameJasaKonsFinishingPost");
 	
