@@ -123,6 +123,7 @@ if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaPengeboranPost');
         removeCondition('JasaKonsPembatasPost');
