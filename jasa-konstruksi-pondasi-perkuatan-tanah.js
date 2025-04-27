@@ -1,5 +1,6 @@
 
 const urlMappingJasaPondasiBangunan = {
+"https://www.betonjayareadymix.com/p/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi",
 "https://www.betonjayareadymix.com/p/jasa-pondasi-cakar-ayam.html": "Jasa Pondasi Cakar Ayam",
   "https://www.betonjayareadymix.com/p/jasa-pondasi-tapak.html": "Jasa Pondasi Tapak",
   "https://www.betonjayareadymix.com/p/jasa-pondasi-bored-pile.html": "Jasa Pondasi Bored Pile",
