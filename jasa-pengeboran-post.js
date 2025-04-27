@@ -1,5 +1,15 @@
 //SUB MAPPING JasaPengeboranPost 
 const urlMappingJasaBorAir = {
+   "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-depok.html": "Jasa Bor Air Tanah Depok",
+  "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-tangerang.html": "Jasa Bor Air Tanah Tangerang",
+  "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-jakarta.html": "Jasa Bor Air Tanah Jakarta",
+  "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-bekasi.html": "Jasa Bor Air Tanah Bekasi",
+  "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-bogor.html": "Jasa Bor Air Tanah Bogor",
+  "https://www.betonjayareadymix.com/2018/09/tukang-bor-air-terdekat.html": "Tukang Bor Air Terdekat",
+  "https://www.betonjayareadymix.com/2018/09/jasa-bor-air-terdekat.html": "Jasa Bor Air Terdekat",
+  "https://www.betonjayareadymix.com/2018/09/jasa-bor-air-tanah.html": "Jasa Bor Air Tanah",
+  "https://www.betonjayareadymix.com/2018/09/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",
+
   "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-150-meter.html": "Biaya Sumur Bor 150 Meter",
   "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-100-meter.html": "Biaya Sumur Bor 100 Meter",
   "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-60-meter.html": "Biaya Sumur Bor 60 Meter",
