@@ -520,7 +520,7 @@ if (urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost]) {
         JasaFinishingFasadEksteriorPostLink.style.visibility = 'visible';
         pageNameJasaKonsFinishingPost.textContent = urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost];
     }
-if (urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost]) {
+if (urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanEksteriorPost');
     
@@ -590,7 +590,7 @@ if (urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost]) {
         JasaFinishingBangunanEksteriorPostLink.style.visibility = 'visible';
         //JasaFinishingTamanRumahPost
         JasaFinishingTamanRumahPostLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPost.textContent = urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost];
+        pageNameJasaKonsFinishingPost.textContent = urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost];
     }
 
 //AKHIR SUB JasaFinishingBangunanEksteriorPost
