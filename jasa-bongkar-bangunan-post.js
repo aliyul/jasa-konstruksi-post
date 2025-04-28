@@ -119,6 +119,7 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
         //hapus elemen div id lain
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
 	removeCondition('MaterialKonsAtapPenutupPost');
@@ -159,6 +160,7 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
         //hapus elemen div id lain
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
 	removeCondition('MaterialKonsAtapPenutupPost');
@@ -198,6 +200,7 @@ if (urlMappingJasaBongkarAtap[cleanUrlJasaKonsBongkarBangunanPost]) {
         //hapus elemen div id lain
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
 	removeCondition('MaterialKonsAtapPenutupPost');
@@ -237,6 +240,7 @@ if (urlMappingJasaBongkarKeramik[cleanUrlJasaKonsBongkarBangunanPost]) {
         //hapus elemen div id lain
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
 	removeCondition('MaterialKonsAtapPenutupPost');
@@ -276,6 +280,7 @@ if (urlMappingJasaBongkarTembok[cleanUrlJasaKonsBongkarBangunanPost]) {
         //hapus elemen div id lain
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
 	removeCondition('MaterialKonsAtapPenutupPost');
@@ -315,6 +320,7 @@ if (urlMappingJasaBongkarDinding[cleanUrlJasaKonsBongkarBangunanPost]) {
         //hapus elemen div id lain
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
 	removeCondition('MaterialKonsAtapPenutupPost');
@@ -354,6 +360,7 @@ if (urlMappingJasaBongkarPlafon[cleanUrlJasaKonsBongkarBangunanPost]) {
         //hapus elemen div id lain
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
 	removeCondition('MaterialKonsAtapPenutupPost');
@@ -393,6 +400,7 @@ if (urlMappingJasaBongkarPartisi[cleanUrlJasaKonsBongkarBangunanPost]) {
         //hapus elemen div id lain
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
 	removeCondition('MaterialKonsAtapPenutupPost');
@@ -432,6 +440,7 @@ if (urlMappingJasaBongkarPagar[cleanUrlJasaKonsBongkarBangunanPost]) {
         //hapus elemen div id lain
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
 	removeCondition('MaterialKonsAtapPenutupPost');
@@ -471,6 +480,7 @@ if (urlMappingJasaBongkarLantai[cleanUrlJasaKonsBongkarBangunanPost]) {
         //hapus elemen div id lain
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
 	removeCondition('MaterialKonsAtapPenutupPost');
