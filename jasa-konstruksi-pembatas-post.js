@@ -204,6 +204,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         //hapus elemen div id lain
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
 	removeCondition('MaterialKonsAtapPenutupPost');
@@ -263,6 +264,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         //hapus elemen div id lain
        removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
 	removeCondition('MaterialKonsAtapPenutupPost');
@@ -306,6 +308,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         //hapus elemen div id lain
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
 	removeCondition('MaterialKonsAtapPenutupPost');
