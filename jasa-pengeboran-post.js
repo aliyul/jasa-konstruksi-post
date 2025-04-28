@@ -141,6 +141,7 @@ if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
         //hapus elemen div id lain KECUALI JasaPengeboranPost
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('MaterialKonsAtapPenutupPost');
@@ -176,6 +177,7 @@ if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
         //hapus elemen div id lain KECUALI JasaPengeboranPost
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('MaterialKonsAtapPenutupPost');
