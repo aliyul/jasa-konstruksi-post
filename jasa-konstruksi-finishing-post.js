@@ -440,7 +440,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
         //sub finishing bangunan
-        JasaFinishingBangunanInteriorPostLink.style.visibility = 'visible';
+        JasaFinishingInteriorPostLink.style.visibility = 'visible';
         //sub finishing STRUKKTUR
         JasaDesainInteriorPostLink.style.visibility = 'visible';
         pageNameJasaKonsFinishingPost.textContent = urlMappingJasaDesainInterior[cleanUrlJasaKonsFinishingPost];
