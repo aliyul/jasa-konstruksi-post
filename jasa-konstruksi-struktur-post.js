@@ -395,6 +395,7 @@ if (urlMappingJasaRangkaAtapBajaRingan[cleanUrlJasaJasaKonsStrukturPost]) {
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
@@ -474,6 +475,7 @@ if (urlMappingJasaPengecoranLantaiDak[cleanUrlJasaJasaKonsStrukturPost]) {
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
@@ -553,6 +555,7 @@ if (urlMappingJasaKonstruksiRumahTinggal[cleanUrlJasaJasaKonsStrukturPost]) {
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
@@ -634,6 +637,7 @@ if (urlMappingJasaPembuatanLapanganFutsal[cleanUrlJasaJasaKonsStrukturPost]) {
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
@@ -712,6 +716,7 @@ if (urlMappingJasaPembuatanLapanganBasket[cleanUrlJasaJasaKonsStrukturPost]) {
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
@@ -790,6 +795,7 @@ if (urlMappingJasaPembuatanLapanganSepakbola[cleanUrlJasaJasaKonsStrukturPost]) 
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
@@ -868,6 +874,7 @@ if (urlMappingJasaPembuatanLapanganVoli[cleanUrlJasaJasaKonsStrukturPost]) {
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
@@ -946,6 +953,7 @@ if (urlMappingJasaPembuatanLapanganSerbaguna[cleanUrlJasaJasaKonsStrukturPost]) 
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
@@ -1027,6 +1035,7 @@ if (urlMappingJasaPembuatanKolamRenang[cleanUrlJasaJasaKonsStrukturPost]) {
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
