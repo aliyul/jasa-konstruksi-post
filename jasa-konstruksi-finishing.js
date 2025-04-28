@@ -42,6 +42,7 @@ const urlMappingFinishingBangunanEksterior = {
 };
 
 const urlMappingFinishingBangunanStruktur = {
+ "https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html": "Jasa Finishing Dak Beton",
  "https://www.betonjayareadymix.com/p/jasa-finishing-beton-expose.html": "Jasa Finishing Beton Expose",
   //"https://www.betonjayareadymix.com/p/jasa-aci-dinding-beton.html": "Jasa Aci Dinding Beton",
   "https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html": "Jasa Plesteran & Acian Dinding",
