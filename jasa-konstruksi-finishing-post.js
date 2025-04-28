@@ -372,6 +372,78 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //SUB FINISHING BANGUNAN
 	//FINISHING STRUKTUR
+  if (urlMappingJasaFinishingLantaiBeton[cleanUrlJasaKonsFinishingPost]) {
+        restoreCondition('JasaFinishingBangunanPost');
+        restoreCondition('JasaFinishingBangunanStrukturPost');
+    
+        restoreCondition('JasaFinishingLantaiBetonPost');
+           
+	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsStrukturPost');
+     //   removeCondition('JasaKonsFinishingPost');
+
+	 // hapus elemen id FINISHING STRUKTUR lain NYA SELAIN JasaPlesteranAcianDindingPost
+        removeCondition('JasaFinishingBetonExposePost');
+        //removeCondition('JasaPlesteranAcianDindingPost');
+        removeCondition('JasaFinishingGroutingStrukturBetonPost');
+        removeCondition('JasaPelapisanCoatingStrukturPost');
+        removeCondition('JasaFinishingKolomdanBalokPost');
+        removeCondition('JasaPelapisanWaterproofingStrukturPost');
+        removeCondition('JasaPlesteranAcianDindingPost');
+        removeCondition('JasaPelindungRetakStrukturPost');
+         // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua
+        removeCondition('JasaDesainInteriorPost');
+        removeCondition('JasaGantiKeramikLantaiPost');
+        removeCondition('JasaCatInteriorRumahPost');
+        removeCondition('JasaPasangWallpaperDindingPost');
+        removeCondition('JasaPasangLantaiVinylPost');
+        removeCondition('JasaPasangPlafonGypsumPost');
+        removeCondition('JasaGantiLampuInteriorPost');
+        removeCondition('JasaGantiKitchenSetPost');
+        removeCondition('JasaFinishingInteriorMinimalisPost');
+        removeCondition('JasaFinishingInteriorKlasikPost');
+        removeCondition('JasaFinishingInteriorModernPost');
+         // hapus elemen id sub JasaFinishingBangunanEksteriorPost Semua
+        removeCondition('JasaCatEksteriorRumahPost');
+        removeCondition('JasaFinishingFasadEksteriorPost');
+        removeCondition('JasaPelapisanAntiCuacaPost');
+        removeCondition('JasaPelapisanDindingLuarPost');
+        removeCondition('JasaFinishingTamanRumahPost');
+        removeCondition('JasaPelapisanBatuAlamEksteriorPost');
+        removeCondition('JasaPelapisanGentengDakPost');
+      
+         // hapus elemen id FINISHING UTAMA lain NYA
+        removeCondition('JasaFinishingBangunanEksteriorPost');
+        removeCondition('JasaFinishingBangunanInteriorPost');
+
+          // hapus elemen id Infrastruktur Semua
+        removeCondition('JasaFinishingInfrastrukturPost');
+        removeCondition('JasaFinishingInfrastrukturJalanPost');
+        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
+        removeCondition('JasaFinishingInfrastrukturSaluranPost');
+        removeCondition('JasaFinishingInfrastrukturStrukturPost');
+        removeCondition('JasaFinishingInfrastrukturProteksiPost');
+       
+        JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingBangunanPostLink.style.visibility = 'visible';
+        //sub finishing bangunan
+        JasaFinishingStrukturPostLink.style.visibility = 'visible';
+        //sub finishing STRUKKTUR
+        JasaFinishingLantaiBetonPostLink.style.visibility = 'visible';
+        pageNameJasaKonsFinishingPost.textContent = urlMappingJasaFinishingLantaiBeton[cleanUrlJasaKonsFinishingPost];
+    }
    if (urlMappingJasaPlesteranAcianDinding[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanStrukturPost');
