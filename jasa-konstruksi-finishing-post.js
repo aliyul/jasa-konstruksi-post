@@ -384,7 +384,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanStrukturPost');
     
-        restoreCondition('JasaFinishingBetonExposePost');
+        restoreCondition('JasaFinishingDakBetonPost');
            
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
         removeCondition('ProdukKonsSaluranPost');
@@ -403,7 +403,7 @@ document.addEventListener("DOMContentLoaded", function() {
      //   removeCondition('JasaKonsFinishingPost');
 
 	 // hapus elemen id FINISHING STRUKTUR lain NYA SELAIN JasaFinishingBetonExposePost
-	removeCondition('JasaFinishingDakBetonPost');
+	removeCondition('JasaFinishingBetonExposePost');
         removeCondition('JasaFinishingLantaiBetonPost');
         //removeCondition('JasaPlesteranAcianDindingPost');
         removeCondition('JasaFinishingGroutingStrukturBetonPost');
@@ -451,7 +451,7 @@ document.addEventListener("DOMContentLoaded", function() {
         //sub finishing bangunan
         JasaFinishingStrukturPostLink.style.visibility = 'visible';
         //sub finishing STRUKKTUR
-        JasaFinishingBetonExposePostLink.style.visibility = 'visible';
+        JasaFinishingDakBetonPostLink.style.visibility = 'visible';
         pageNameJasaKonsFinishingPost.textContent = urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost];
     }
     if (urlMappingJasaFinishingBetonExpose[cleanUrlJasaKonsFinishingPost]) {
