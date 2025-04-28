@@ -41,6 +41,8 @@ const urlMappingJasaStrukturBajaGudang = {
 */
 //SUB JasaStrukturBetondanPengecoranPost
 const urlMappingJasaPengecoranLantaiDak = {
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-dak-beton.html": "Harga Jasa Dak Beton",
+
   "https://www.betonjayareadymix.com/2018/09/borongan-ring-balok.html": "Borongan ring balok",
 
 "https://www.betonjayareadymix.com/2018/09/borongan-sloof.html": "Borongan Sloof",
