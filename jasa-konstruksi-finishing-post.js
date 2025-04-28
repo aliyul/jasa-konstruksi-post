@@ -65,7 +65,26 @@ const urlMappingFinishingBangunanInterior = {
 */
 //SUB JasaFinishingBangunanInteriorPost
 const urlMappingJasaDesainInterior = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-interior-rumah.html": "Harga Jasa Desain Interior Rumah"
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-interior-rumah.html": "Harga Jasa Desain Interior Rumah",
+  "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-apartemen.html": "Jasa Desain Interior Apartemen",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-interior-hotel.html": "Harga Jasa Desain Interior Hotel",
+  "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-kamar.html": "Jasa Desain Interior Kamar",
+  "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-ruangan.html": "Jasa Desain Interior Ruangan",
+  "https://www.betonjayareadymix.com/2018/09/harga-desain-interior-kamar-mandi.html": "Harga Desain Interior Kamar Mandi",
+  "https://www.betonjayareadymix.com/2018/09/harga-desain-interior-kamar.html": "Harga Desain Interior Kamar",
+  "https://www.betonjayareadymix.com/2018/09/harga-interior-kamar-tidur.html": "Harga Interior Kamar Tidur",
+  "https://www.betonjayareadymix.com/2018/09/harga-interior-kamar.html": "Harga Interior Kamar",
+  "https://www.betonjayareadymix.com/2018/09/harga-interior-ruang-tamu.html": "Harga Interior Ruang Tamu",
+  "https://www.betonjayareadymix.com/2018/09/harga-interior-per-meter.html": "Harga Interior Per Meter",
+  "https://www.betonjayareadymix.com/2018/09/harga-borongan-interior.html": "Harga Borongan Interior",
+  "https://www.betonjayareadymix.com/2018/09/harga-interior-kamar-tidur-minimalis.html": "Harga Interior Kamar Tidur Minimalis",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-interior-kamar-tidur.html": "Harga Jasa Desain Interior Kamar Tidur",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-interior-per-meter.html": "Harga Jasa Desain Interior Per Meter",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-interior-ruang-tamu.html": "Harga Jasa Desain Interior Ruang Tamu",
+  "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-per-m2.html": "Jasa Desain Interior Per M2",
+  "https://www.betonjayareadymix.com/2018/09/jasa-interior-desain-terdekat.html": "Jasa Interior Desain Terdekat",
+  "https://www.betonjayareadymix.com/2018/09/jasa-interior-desain.html": "Jasa Interior Desain"
+
 };
 //AKHIR SUB JasaFinishingBangunanInteriorPost
 /*
