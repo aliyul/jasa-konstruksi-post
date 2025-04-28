@@ -105,6 +105,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         //hapus elemen div id lain
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
@@ -166,6 +167,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         //hapus elemen div id lain
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
 	removeCondition('MaterialKonsAtapPenutupPost');
@@ -211,6 +213,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         //hapus elemen div id lain
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('MaterialKonsAtapPenutupPost');
@@ -257,6 +260,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
         //hapus elemen div id lain
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('MaterialKonsAtapPenutupPost');
@@ -301,6 +305,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
         //hapus elemen div id lain
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('MaterialKonsAtapPenutupPost');
