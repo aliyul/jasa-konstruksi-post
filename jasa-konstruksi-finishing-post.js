@@ -1,8 +1,9 @@
  // Cek URL saat ini dan sesuaikan dengan kondisi yang diinginkan
 //SUB FinishingBangunanStruktur
 const urlMappingJasaFinishingDakBeton = {
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-beton-ekspos.html": "Harga Jasa Beton Ekspos",
-  "https://www.betonjayareadymix.com/2018/10/finishing-beton-ekspos.html": "Finishing Beton Ekspos"
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-dak-super-flat.html": "Harga Jasa Dak Super Flat",
+  "https://www.betonjayareadymix.com/2018/10/dak-super-flat.html": "Dak Super Flat"
+
 
 };
 
