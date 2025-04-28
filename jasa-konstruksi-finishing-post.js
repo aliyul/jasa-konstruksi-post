@@ -1,7 +1,9 @@
  // Cek URL saat ini dan sesuaikan dengan kondisi yang diinginkan
 //SUB FinishingBangunanStruktur
 const urlMappingJasaFinishingBetonExpose = {
-	
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-beton-ekspos.html": "Harga Jasa Beton Ekspos",
+  "https://www.betonjayareadymix.com/2018/10/finishing-beton-ekspos.html": "Finishing Beton Ekspos"
+
 };
 const urlMappingJasaPlesteranAcianDinding = {
 "https://www.betonjayareadymix.com/2018/11/harga-borongan-tenaga-plesteran-dan-acian-per-meter-jakarta.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Jakarta",
