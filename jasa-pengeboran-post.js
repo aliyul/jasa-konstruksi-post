@@ -143,6 +143,7 @@ if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
        // removeCondition('JasaPengeboranPost');
@@ -177,6 +178,7 @@ if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
        // removeCondition('JasaPengeboranPost');
