@@ -25,9 +25,6 @@ const urlMappingSewaCrane = {
 const urlMappingSewaSelfLoader = {
 
 };
-const urlMappingSewaWheelLoader = {
-
-};
 const urlMappingSewaVibroRoller = {
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-roller-alat-berat.html": "Harga Sewa Roller Alat Berat"
 };
