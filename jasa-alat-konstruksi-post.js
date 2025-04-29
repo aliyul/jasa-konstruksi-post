@@ -185,6 +185,16 @@ if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
 	
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
         removeCondition('SewaAlatBeratPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+		
         removeCondition('SewaAlatKonstruksiRinganPost');
     
         JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
@@ -217,6 +227,15 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsPembatasPost');
 	
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
     
@@ -227,6 +246,541 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost];
     }
+    if (urlMappingSewaForklift[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+        restoreCondition('SewaAlatBeratPost');
+        restoreCondition('SewaForkliftPost');
+	       
+     
+        //hapus elemen div id lain
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+	
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaForkliftPost
+		 //removeCondition('');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+        removeCondition('SewaAlatProyekPost');
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatBeratPost
+        SewaAlatBeratPostLink.style.visibility = 'visible';
+	
+        SewaForkliftPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaForklift[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+
+    if (urlMappingSewaForklift[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+        restoreCondition('SewaAlatBeratPost');
+        restoreCondition('SewaForkliftPost');
+	       
+     
+        //hapus elemen div id lain
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+	
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaForkliftPost
+		 //removeCondition('');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+        removeCondition('SewaAlatProyekPost');
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatBeratPost
+        SewaAlatBeratPostLink.style.visibility = 'visible';
+	
+        SewaForkliftPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaForklift[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+	
+    if (urlMappingSewaForklift[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+        restoreCondition('SewaAlatBeratPost');
+        restoreCondition('SewaForkliftPost');
+	       
+     
+        //hapus elemen div id lain
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+	
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaForkliftPost
+		 //removeCondition('');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+        removeCondition('SewaAlatProyekPost');
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatBeratPost
+        SewaAlatBeratPostLink.style.visibility = 'visible';
+	
+        SewaForkliftPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaForklift[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+   //AWAL SUB PAGE SEWA ALAT BERAT
+    if (urlMappingSewaForklift[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+        restoreCondition('SewaAlatBeratPost');
+        restoreCondition('SewaForkliftPost');
+	       
+     
+        //hapus elemen div id lain
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+	
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaForkliftPost
+		 //removeCondition('');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+        removeCondition('SewaAlatProyekPost');
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatBeratPost
+        SewaAlatBeratPostLink.style.visibility = 'visible';
+	
+        SewaForkliftPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaForklift[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+    if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+        restoreCondition('SewaAlatBeratPost');
+        restoreCondition('SewaCranePost');
+	       
+     
+        //hapus elemen div id lain
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+	
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaCranePost
+		 //removeCondition('');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+        removeCondition('SewaAlatProyekPost');
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatBeratPost
+        SewaAlatBeratPostLink.style.visibility = 'visible';
+	
+        SewaCranePostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+	
+    if (urlMappingSewaSelfLoader[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+        restoreCondition('SewaAlatBeratPost');
+        restoreCondition('SewaSelfLoaderPost');
+	       
+     
+        //hapus elemen div id lain
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+	
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaSelfLoaderPost
+		 //removeCondition('');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+        removeCondition('SewaAlatProyekPost');
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatBeratPost
+        SewaAlatBeratPostLink.style.visibility = 'visible';
+	
+        SewaSelfLoaderPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaSelfLoader[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+	
+    if (urlMappingSewaWheelLoader[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+        restoreCondition('SewaAlatBeratPost');
+        restoreCondition('SewaWheelLoaderPost');
+	       
+     
+        //hapus elemen div id lain
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+	
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaWheelLoaderPost
+		 //removeCondition('');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+        removeCondition('SewaAlatProyekPost');
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatBeratPost
+        SewaAlatBeratPostLink.style.visibility = 'visible';
+	
+        SewaWheelLoaderPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaWheelLoader[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+	
+    if (urlMappingSewaVibroRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+        restoreCondition('SewaAlatBeratPost');
+        restoreCondition('SewaVibroRollerPost');
+	       
+     
+        //hapus elemen div id lain
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+	
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
+		 //removeCondition('');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+        removeCondition('SewaAlatProyekPost');
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatBeratPost
+        SewaAlatBeratPostLink.style.visibility = 'visible';
+	
+        SewaVibroRollerPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaVibroRoller[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+    if (urlMappingSewaWalesStoom[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+        restoreCondition('SewaAlatBeratPost');
+        restoreCondition('SewaWalesStoomPost');
+	       
+     
+        //hapus elemen div id lain
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+	
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
+		 //removeCondition('');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+        removeCondition('SewaAlatProyekPost');
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatBeratPost
+        SewaAlatBeratPostLink.style.visibility = 'visible';
+	
+        SewaWalesStoomPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaWalesStoom[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+    if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+        restoreCondition('SewaAlatBeratPost');
+        restoreCondition('SewaTandemRollerPost');
+	       
+     
+        //hapus elemen div id lain
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+	
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
+		 //removeCondition('');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+        removeCondition('SewaAlatProyekPost');
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatBeratPost
+        SewaAlatBeratPostLink.style.visibility = 'visible';
+	
+        SewaTandemRollerPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+   if (urlMappingSewaBulldozer[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+        restoreCondition('SewaAlatBeratPost');
+        restoreCondition('SewaBulldozerPost');
+	       
+     
+        //hapus elemen div id lain
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+	
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
+		 //removeCondition('');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaExcavatorPost');
+        removeCondition('SewaAlatProyekPost');
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatBeratPost
+        SewaAlatBeratPostLink.style.visibility = 'visible';
+	
+        SewaBulldozerPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBulldozer[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+if (urlMappingSewaExcavator[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+        restoreCondition('SewaAlatBeratPost');
+        restoreCondition('SewaExcavatorPost');
+	       
+     
+        //hapus elemen div id lain
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+	
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
+		 //removeCondition('');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaBulldozerPost');
+        removeCondition('SewaAlatProyekPost');
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatBeratPost
+        SewaAlatBeratPostLink.style.visibility = 'visible';
+	
+        SewaExcavatorPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaExcavator[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+//AKHIR SUB PAGE SEWA ALAT BERAT
 if (urlMappingSewaAlatKonstruksiRingan[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
@@ -250,9 +804,17 @@ if (urlMappingSewaAlatKonstruksiRingan[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsPembatasPost');
 	
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatKonstruksiRinganPost
-        //removeCondition('SewaAlatBeratPost');
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatBeratPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
     
         JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
         JasaAlatKonstruksiPostLink.style.visibility = 'visible';
