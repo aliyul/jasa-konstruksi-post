@@ -13,7 +13,7 @@ const urlMappingSewaAlatBerat = {
 
 };
 const urlMappingSewaBabyRoller = {
-
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-baby-roller.html": "Harga Sewa Baby Roller"
 };
 const urlMappingSewaTrencher = {
 "https://www.betonjayareadymix.com/2019/02/harga-sewa-trencher-mesin.html": "Harga Sewa Trencher Mesin"
