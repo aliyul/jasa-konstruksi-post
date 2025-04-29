@@ -48,7 +48,15 @@ const urlMappingJasaSewaAlatKonstruksi = {
 "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi-ringan.html": "Sewa Alat Konstruksi Ringan"
 }
 const urlMappingJasaSewaAlatBerat = {	
-
+"https://www.betonjayareadymix.com/p/sewa-forklift.html": "Sewa Forklift",
+  "https://www.betonjayareadymix.com/p/sewa-crane.html": "Sewa Crane",
+  "https://www.betonjayareadymix.com/p/sewa-self-loader.html": "Sewa Self Loader",
+  "https://www.betonjayareadymix.com/p/sewa-wheel-loader.html": "Sewa Wheel Loader",
+  "https://www.betonjayareadymix.com/p/sewa-vibro-roller.html": "Sewa Vibro Roller",
+  "https://www.betonjayareadymix.com/p/sewa-wales-stoom.html": "Sewa Wales Stoom",
+  "https://www.betonjayareadymix.com/p/sewa-tandem-roller.html": "Sewa Tandem Roller",
+  "https://www.betonjayareadymix.com/p/sewa-bulldozer.html": "Sewa Bulldozer",
+  "https://www.betonjayareadymix.com/p/sewa-excavator.html": "Sewa Excavator"
 }
 const urlMappingJasaSewaAlatKonstruksiRingan = {	
 
