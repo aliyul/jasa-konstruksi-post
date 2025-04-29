@@ -43,6 +43,7 @@ const urlMappingJasaAlatKonstruksi = {
 "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html": "Sewa Alat Konstruksi"
 }
 const urlMappingJasaSewaAlatKonstruksi = {	
+"https://www.betonjayareadymix.com/p/sewa-alat-proyek.html": "Sewa Alat Proyek",
 "https://www.betonjayareadymix.com/p/sewa-alat-berat.html": "Sewa Alat Berat",
 "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi-ringan.html": "Sewa Alat Konstruksi Ringan"
 }
