@@ -322,7 +322,7 @@ if (!JasaKons || !JasaKonsSub) {
    if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	//restoreCondition('JasaKonstruksi');
-	restoreCondition('JasaRenovasiPerbaikan');
+	restoreCondition('JasaAlatKonstruksi');
            // hapus elemen id DIV Lain
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
@@ -338,7 +338,7 @@ if (!JasaKons || !JasaKonsSub) {
 	removeCondition('MenuKons');
 
 	// hapus elemen id DIV Lain
-	removeCondition('JasaAlatKonstruksi');
+	removeCondition('JasaRenovasiPerbaikan');
 	removeCondition('JasaStrukturKonstruksi');
         removeCondition('JasaFinishing');
         removeCondition('JasaPondasiPerkuatan');
@@ -352,7 +352,7 @@ if (!JasaKons || !JasaKonsSub) {
 	removeCondition('JasaPengeboran');
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
-        JasaRenovasiPerbaikanLink.style.visibility = 'visible';
+        JasaAlatKonstruksiLink.style.visibility = 'visible';
 	    
         pageNameKonstruksiSub.textContent = urlMappingJasaAlatKonstruksi[cleanUrlJasaKons];
     }
