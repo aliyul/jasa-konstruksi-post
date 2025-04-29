@@ -14,7 +14,7 @@ const urlMappingSewaAlatBerat = {
 };
 
 const urlMappingSewaTrencher = {
-
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-trencher-mesin.html": "Harga Sewa Trencher Mesin"
 };
 const urlMappingSewaConcretePaver = {
 
