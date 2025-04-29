@@ -22,7 +22,10 @@ const urlMappingSewaConcretePaver = {
 
 };
 const urlMappingSewaExcavator = {
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator.html": "Harga Sewa Excavator"
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator.html": "Harga Sewa Excavator",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-beko.html": "Harga Sewa Beko",
+  "https://www.betonjayareadymix.com/2019/02/sewa-beko.html": "Sewa Beko"
+   
 };
 const urlMappingSewaBulldozer = {
 "https://www.betonjayareadymix.com/2019/02/harga-sewa-bulldozer.html": "Harga Sewa Bulldozer"
