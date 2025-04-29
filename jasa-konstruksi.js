@@ -536,8 +536,10 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 
 	// hapus elemen id DIV Lain
 	removeCondition('JasaAlatKonstruksi');
-	
 	removeCondition('SewaAlatKonstruksi');
+	removeCondition('SewaAlatBerat');
+	removeCondition('SewaAlatKonstruksiRingan');
+	
 	    
 	removeCondition('JasaStrukturKonstruksi');
         removeCondition('JasaFinishing');
@@ -575,8 +577,10 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 
 	// hapus elemen id DIV Lain
 	removeCondition('JasaAlatKonstruksi');
-	
 	removeCondition('SewaAlatKonstruksi');
+	removeCondition('SewaAlatBerat');
+	removeCondition('SewaAlatKonstruksiRingan');
+	
 	    
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaFinishing');
@@ -614,8 +618,10 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 
 	// hapus elemen id DIV Lain
 	removeCondition('JasaAlatKonstruksi');
-	
 	removeCondition('SewaAlatKonstruksi');
+	removeCondition('SewaAlatBerat');
+	removeCondition('SewaAlatKonstruksiRingan');
+	
 	    
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaStrukturKonstruksi');
@@ -653,8 +659,10 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	    
        // hapus elemen id DIV Lain
 	removeCondition('JasaAlatKonstruksi');
-	
 	removeCondition('SewaAlatKonstruksi');
+	removeCondition('SewaAlatBerat');
+	removeCondition('SewaAlatKonstruksiRingan');
+	
 	    
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaStrukturKonstruksi');
@@ -692,8 +700,10 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	    
        // hapus elemen id DIV Lain
 	removeCondition('JasaAlatKonstruksi');
-	
 	removeCondition('SewaAlatKonstruksi');
+	removeCondition('SewaAlatBerat');
+	removeCondition('SewaAlatKonstruksiRingan');
+	
 	    
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaStrukturKonstruksi');
@@ -731,8 +741,10 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	    
        // hapus elemen id DIV Lain
 	removeCondition('JasaAlatKonstruksi');
-	
 	removeCondition('SewaAlatKonstruksi');
+	removeCondition('SewaAlatBerat');
+	removeCondition('SewaAlatKonstruksiRingan');
+	
 	    
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaStrukturKonstruksi');
@@ -770,8 +782,10 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	    
        // hapus elemen id DIV Lain
 	removeCondition('JasaAlatKonstruksi');
-	
 	removeCondition('SewaAlatKonstruksi');
+	removeCondition('SewaAlatBerat');
+	removeCondition('SewaAlatKonstruksiRingan');
+	
 	    
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaStrukturKonstruksi');
@@ -812,8 +826,9 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	    
        // hapus elemen id DIV Lain
 	removeCondition('JasaAlatKonstruksi');
-	
 	removeCondition('SewaAlatKonstruksi');
+	removeCondition('SewaAlatBerat');
+	removeCondition('SewaAlatKonstruksiRingan');
 	    
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaStrukturKonstruksi');
@@ -853,8 +868,9 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	   
        // hapus elemen id DIV Lain
 	removeCondition('JasaAlatKonstruksi');
-	
 	removeCondition('SewaAlatKonstruksi');
+	removeCondition('SewaAlatBerat');
+	removeCondition('SewaAlatKonstruksiRingan');
 	   
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaStrukturKonstruksi');
@@ -895,8 +911,9 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	   
        // hapus elemen id DIV Lain
 	removeCondition('JasaAlatKonstruksi');
-	
 	removeCondition('SewaAlatKonstruksi');
+	removeCondition('SewaAlatBerat');
+	removeCondition('SewaAlatKonstruksiRingan');
 	   
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaStrukturKonstruksi');
@@ -935,8 +952,9 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	   
        // hapus elemen id DIV Lain
 	removeCondition('JasaAlatKonstruksi');
-	
 	removeCondition('SewaAlatKonstruksi');
+	removeCondition('SewaAlatBerat');
+	removeCondition('SewaAlatKonstruksiRingan');
 
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaStrukturKonstruksi');
@@ -974,8 +992,9 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	   
        // hapus elemen id DIV Lain
 	removeCondition('JasaAlatKonstruksi');
-	
 	removeCondition('SewaAlatKonstruksi');
+	removeCondition('SewaAlatBerat');
+	removeCondition('SewaAlatKonstruksiRingan');
 	   
 	removeCondition('JasaRenovasiPerbaikan');
         removeCondition('JasaStrukturKonstruksi');
