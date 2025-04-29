@@ -1,5 +1,15 @@
 
 // SUB JasaAlatKonstruksi
+const urlMappingSewaAlatProyek = {
+"https://www.betonjayareadymix.com/2019/03/sewa-alat-proyek-tangerang.html": "Sewa Alat Proyek Tangerang",
+  "https://www.betonjayareadymix.com/2019/03/sewa-alat-proyek-depok.html": "Sewa Alat Proyek Depok",
+  "https://www.betonjayareadymix.com/2019/03/sewa-alat-proyek-jakarta.html": "Sewa Alat Proyek Jakarta",
+  "https://www.betonjayareadymix.com/2019/03/sewa-alat-proyek-bekasi.html": "Sewa Alat Proyek Bekasi",
+  "https://www.betonjayareadymix.com/2019/03/sewa-alat-proyek-bogor.html": "Sewa Alat Proyek Bogor",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-terdekat.html": "Sewa Alat Proyek Terdekat"
+	
+};
+
 const urlMappingSewaAlatBerat = {
 
 };
@@ -80,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
      var JasaKonstruksiAlatKonstruksiPostLink = document.getElementById("JasaKonstruksiAlatKonstruksiPost");
      var JasaAlatKonstruksiPostLink = document.getElementById("JasaAlatKonstruksiPost");
+     var SewaAlatProyekPostLink = document.getElementById("SewaAlatProyekPost");
      var SewaAlatKonstruksiPostLink = document.getElementById("SewaAlatKonstruksiPost");
      var SewaAlatBeratPostLink = document.getElementById("SewaAlatBeratPost");
      var SewaAlatKonstruksiRinganPostLink = document.getElementById("SewaAlatKonstruksiRinganPost");
@@ -90,14 +101,47 @@ document.addEventListener("DOMContentLoaded", function() {
      // Default untuk menyembunyikan elemen
      JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'hidden';
      JasaAlatKonstruksiPostLink.style.visibility = 'hidden';
+     SewaAlatProyekPostLink.style.visibility = 'hidden';
      SewaAlatKonstruksiPostLink.style.visibility = 'hidden';
      SewaAlatBeratPostLink.style.visibility = 'hidden';
      SewaAlatKonstruksiRinganPostLink.style.visibility = 'hidden';
 	
      pageNameJasaKonsAlatKonstruksiPost.textContent = "";
 	
-    //SUB urlMappingPembuatanPagarDinding
-
+    //SUB JasaAlatKonstruksiPost
+if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+       // restoreCondition('JasaAlatKonstruksiPost');
+        restoreCondition('SewaAlatProyekPost');
+	       
+     
+        //hapus elemen div id lain
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+	
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
+        removeCondition('SewaAlatBeratPost');
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatProyekPost
+        SewaAlatProyekPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
 if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
@@ -121,7 +165,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsPembatasPost');
 	
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost
-        //removeCondition('SewaAlatBeratPost');
+        removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
     
         JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
@@ -153,8 +197,9 @@ if (urlMappingSewaAlatKonstruksiRingan[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
 	
-        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatKonstruksiRinganPost
         //removeCondition('SewaAlatBeratPost');
+        removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatBeratPost');
     
         JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
