@@ -9,7 +9,9 @@ const urlMappingSewaAlatProyek = {
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-terdekat.html": "Sewa Alat Proyek Terdekat"
 	
 };
+const urlMappingSewaAlatBerat = {
 
+};
 const urlMappingSewaExcavator = {
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator.html": "Harga Sewa Excavator"
 };
@@ -23,7 +25,7 @@ const urlMappingSewaCrane = {
 
 };
 const urlMappingSewaBackhoeLoader = {
-
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-backhoe-loader.html": "Harga Sewa Backhoe Loader"
 };
 const urlMappingSewaSelfLoader = {
 
