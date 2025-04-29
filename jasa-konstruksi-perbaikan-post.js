@@ -225,7 +225,8 @@ const urlMappingJasaChippingBeton = {
 
 };
 const urlMappingJasaBobokBeton = {
-  "https://www.betonjayareadymix.com/2019/06/harga-bobok-beton-per-m2.html": "Harga Bobok Beton per m2"
+  "https://www.betonjayareadymix.com/2019/06/harga-bobok-beton-per-m2.html": "Harga Bobok Beton per m2",
+  "https://www.betonjayareadymix.com/2018/06/harga-jasa-bobok-beton.html": "Harga Jasa Bobok Beton"
 
 };
 const urlMappingJasaBetonKarbonasi = {
