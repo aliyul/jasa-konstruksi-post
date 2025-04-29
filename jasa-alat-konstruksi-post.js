@@ -93,6 +93,16 @@ document.addEventListener("DOMContentLoaded", function() {
      var SewaAlatProyekPostLink = document.getElementById("SewaAlatProyekPost");
      var SewaAlatKonstruksiPostLink = document.getElementById("SewaAlatKonstruksiPost");
      var SewaAlatBeratPostLink = document.getElementById("SewaAlatBeratPost");
+        var SewaForkliftPostLink = document.getElementById("SewaForkliftPost");
+        var SewaCranePostLink = document.getElementById("SewaCranePost");
+        var SewaSelfLoaderPostLink = document.getElementById("SewaSelfLoaderPost");
+        var SewaWheelLoaderPostLink = document.getElementById("SewaWheelLoaderPost");
+        var SewaVibroRollerPostLink = document.getElementById("SewaVibroRollerPost");
+        var SewaWalesStoomPostLink = document.getElementById("SewaWalesStoomPost");
+        var SewaTandemRollerPostLink = document.getElementById("SewaTandemRollerPost");
+        var SewaBulldozerPostLink = document.getElementById("SewaBulldozerPost");
+        var SewaExcavatorPostLink = document.getElementById("SewaExcavatorPost");
+        
      var SewaAlatKonstruksiRinganPostLink = document.getElementById("SewaAlatKonstruksiRinganPost");
 
      var pageNameJasaKonsAlatKonstruksiPost = document.getElementById("pageNameJasaKonsAlatKonstruksiPost");
@@ -104,6 +114,16 @@ document.addEventListener("DOMContentLoaded", function() {
      SewaAlatProyekPostLink.style.visibility = 'hidden';
      SewaAlatKonstruksiPostLink.style.visibility = 'hidden';
      SewaAlatBeratPostLink.style.visibility = 'hidden';
+	SewaForkliftPostLink.style.visibility = 'hidden';
+        SewaCranePostLink.style.visibility = 'hidden';
+        SewaSelfLoaderPostLink.style.visibility = 'hidden';
+        SewaWheelLoaderPostLink.style.visibility = 'hidden';
+        SewaVibroRollerPostLink.style.visibility = 'hidden';
+        SewaWalesStoomPostLink.style.visibility = 'hidden';
+        SewaTandemRollerPostLink.style.visibility = 'hidden';
+        SewaBulldozerPostLink.style.visibility = 'hidden';
+        SewaExcavatorPostLink.style.visibility = 'hidden';
+        
      SewaAlatKonstruksiRinganPostLink.style.visibility = 'hidden';
 	
      pageNameJasaKonsAlatKonstruksiPost.textContent = "";
