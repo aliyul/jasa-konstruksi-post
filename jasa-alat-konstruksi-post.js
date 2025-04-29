@@ -12,7 +12,9 @@ const urlMappingSewaAlatProyek = {
 const urlMappingSewaAlatBerat = {
 
 };
+const urlMappingSewaBabyRoller = {
 
+};
 const urlMappingSewaTrencher = {
 "https://www.betonjayareadymix.com/2019/02/harga-sewa-trencher-mesin.html": "Harga Sewa Trencher Mesin"
 };
@@ -146,8 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var SewaBackhoeLoaderPostLink = document.getElementById("SewaBackhoeLoaderPost");
         var SewaConcretePaverPostLink = document.getElementById("SewaConcretePaverPost");
         var SewaTrencherPostLink = document.getElementById("SewaTrencherPost");
-	
-	
+	var SewaBabyRollerPostLink = document.getElementById("SewaBabyRollerPost");
         
      var SewaAlatKonstruksiRinganPostLink = document.getElementById("SewaAlatKonstruksiRinganPost");
 
@@ -172,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	SewaBackhoeLoaderPostLink.style.visibility = 'hidden';
         SewaConcretePaverPostLink.style.visibility = 'hidden';
         SewaTrencherPostLink.style.visibility = 'hidden';
-
+        SewaBabyRollerPostLink.style.visibility = 'hidden';
 	
      SewaAlatKonstruksiRinganPostLink.style.visibility = 'hidden';
 	
@@ -215,6 +216,8 @@ if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
+	
 	
         removeCondition('SewaAlatKonstruksiRinganPost');
     
@@ -260,6 +263,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
     
@@ -305,6 +309,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
     
@@ -353,6 +358,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
     
@@ -401,6 +407,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
     
@@ -449,6 +456,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
     
@@ -496,6 +504,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
     
@@ -544,6 +553,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
     
@@ -592,6 +602,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
     
@@ -640,6 +651,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
     
@@ -687,6 +699,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
     
@@ -734,6 +747,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
     
@@ -781,6 +795,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
     
@@ -828,6 +843,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
     
@@ -875,6 +891,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaExcavatorPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
 	    
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
@@ -923,6 +940,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaExcavatorPost');
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
 	    
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
@@ -971,6 +989,7 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaExcavatorPost');
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
+		 removeCondition('SewaBabyRollerPost');
 	    
         removeCondition('SewaAlatProyekPost');
         removeCondition('SewaAlatKonstruksiRinganPost');
@@ -983,6 +1002,55 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
 	
         SewaTrencherPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaTrencher[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+   if (urlMappingSewaBabyRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+        restoreCondition('SewaAlatBeratPost');
+        restoreCondition('SewaBabyRollerPost');
+	       
+     
+        //hapus elemen div id lain
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+	
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
+		 //removeCondition('');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+		 removeCondition('SewaBackhoeLoaderPost');
+		 removeCondition('SewaConcretePaverPost');
+		 removeCondition('SewaTrencherPost');
+	    
+        removeCondition('SewaAlatProyekPost');
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatBeratPost
+        SewaAlatBeratPostLink.style.visibility = 'visible';
+	
+        SewaBabyRollerPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBabyRoller[cleanUrlJasaKonsAlatKonstruksiPost];
     }
 //AKHIR SUB PAGE SEWA ALAT BERAT
 if (urlMappingSewaAlatKonstruksiRingan[cleanUrlJasaKonsAlatKonstruksiPost]) {
@@ -1022,6 +1090,7 @@ if (urlMappingSewaAlatKonstruksiRingan[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		 removeCondition('SewaBackhoeLoaderPost');
 		 removeCondition('SewaConcretePaverPost');
 		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
     
         JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
         JasaAlatKonstruksiPostLink.style.visibility = 'visible';
