@@ -153,6 +153,7 @@ if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
 	
 	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
         //removeCondition('');
@@ -189,6 +190,7 @@ if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
 	
 	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
         //removeCondition('');
