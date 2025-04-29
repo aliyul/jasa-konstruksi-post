@@ -10,9 +10,41 @@ const urlMappingSewaAlatProyek = {
 	
 };
 
-const urlMappingSewaAlatBerat = {
+const urlMappingSewaExcavator = {
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator.html": "Harga Sewa Excavator"
+};
+const urlMappingSewaBulldozer = {
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-bulldozer.html": "Harga Sewa Bulldozer"
+};
+const urlMappingSewaForklift = {
 
 };
+const urlMappingSewaCrane = {
+
+};
+const urlMappingSewaSelfLoader = {
+
+};
+const urlMappingSewaWheelLoader = {
+
+};
+const urlMappingSewaVibroRoller = {
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-roller-alat-berat.html": "Harga Sewa Roller Alat Berat"
+};
+const urlMappingSewaWalesStoom = {
+
+};
+const urlMappingSewaTandemRoller = {
+
+};
+const urlMappingSewaBabyRoller = {
+ "https://www.betonjayareadymix.com/2019/02/harga-sewa-baby-roller.html": "Harga Sewa Baby Roller"
+};
+const urlMappingSewaWheelLoader = {
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-wheel-loader.html": "Harga Sewa Wheel Loader"
+};
+
+
 const urlMappingSewaAlatKonstruksiRingan = {
   "https://www.betonjayareadymix.com/2019/02/jasa-sewa-alat-cleaning.html": "Jasa Sewa Alat Cleaning",
   "https://www.betonjayareadymix.com/2019/02/sewa-mesin-polisher.html": "Sewa Mesin Polisher",
