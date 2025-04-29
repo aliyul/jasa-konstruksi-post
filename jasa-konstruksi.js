@@ -60,7 +60,8 @@ const urlMappingJasaSewaAlatBerat = {
   "https://www.betonjayareadymix.com/p/sewa-backhoe-loader.html": "Sewa Backhoe Loader",
   "https://www.betonjayareadymix.com/p/sewa-trencher.html": "Sewa Trencher",
   "https://www.betonjayareadymix.com/p/sewa-concrete-paver.html": "Sewa Concrete Paver",
-  "https://www.betonjayareadymix.com/p/sewa-baby-roller.html": "Sewa Baby Roller"
+  "https://www.betonjayareadymix.com/p/sewa-baby-roller.html": "Sewa Baby Roller",
+  "https://www.betonjayareadymix.com/p/sewa-alat-pancang.html": "Sewa Alat Pancang"
 }
 const urlMappingJasaSewaAlatKonstruksiRingan = {	
 
