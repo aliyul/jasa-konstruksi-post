@@ -83,13 +83,7 @@ const urlMappingJasaPerbaikanStrukturPondasiRumah = {
 //Akhir SUB PerbaikanStrukturPondasi
 
 //SUB PerbaikanStrukturDinding
-const urlMappingJasaBobokTembok = {
-  "https://www.betonjayareadymix.com/2019/06/jasa-bobok-tembok-per-meter.html": "Jasa Bobok Tembok Per Meter",
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bobok-tembok.html": "Harga Jasa Bobok Tembok",
-  "https://www.betonjayareadymix.com/2019/06/jasa-tukang-bobok-tembok.html": "Jasa Tukang Bobok Tembok"
 
-
-};
 const urlMappingJasaInjeksiDindingRetak = {
 
 };
@@ -224,11 +218,7 @@ const urlMappingJasaChippingBeton = {
   "https://www.betonjayareadymix.com/2019/06/harga-pekerjaan-chipping-beton.html": "Harga Pekerjaan Chipping Beton"
 
 };
-const urlMappingJasaBobokBeton = {
-  "https://www.betonjayareadymix.com/2019/06/harga-bobok-beton-per-m2.html": "Harga Bobok Beton per m2",
-  "https://www.betonjayareadymix.com/2018/06/harga-jasa-bobok-beton.html": "Harga Jasa Bobok Beton"
 
-};
 const urlMappingJasaBetonKarbonasi = {
 
 };
