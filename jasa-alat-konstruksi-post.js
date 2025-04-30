@@ -43,7 +43,7 @@ const urlMappingSewaBulldozer = {
 "https://www.betonjayareadymix.com/2019/02/harga-sewa-bulldozer.html": "Harga Sewa Bulldozer"
 };
 const urlMappingSewaForklift = {
-
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-forklift.html": "Harga Sewa Forklift"
 };
 const urlMappingSewaCrane = {
 
