@@ -10,7 +10,37 @@ const urlMappingSewaAlatProyek = {
 	
 };
 const urlMappingSewaAlatBerat = {
-
+"https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-subang.html": "Sewa Alat Berat Subang",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-bandung.html": "Sewa Alat Berat Bandung",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-purwakarta.html": "Sewa Alat Berat Purwakarta",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-jawa-barat.html": "Sewa Alat Berat Jawa Barat",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-jabodetabek.html": "Sewa Alat Berat Jabodetabek",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-cikampek.html": "Sewa Alat Berat Cikampek",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-cikarang.html": "Sewa Alat Berat Cikarang",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-cileungsi.html": "Sewa Alat Berat Cileungsi",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-karawang.html": "Sewa Alat Berat Karawang",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-bekasi.html": "Sewa Alat Berat Bekasi",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-tangerang.html": "Sewa Alat Berat Tangerang",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-depok.html": "Sewa Alat Berat Depok",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-bogor.html": "Sewa Alat Berat Bogor",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-jakarta.html": "Sewa Alat Berat Jakarta",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-murah.html": "Sewa Alat Berat Murah",
+  "https://www.betonjayareadymix.com/2019/02/berapa-sewa-alat-berat.html": "Berapa Sewa Alat Berat",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-trakindo.html": "Sewa Alat Berat Trakindo",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-per-hari.html": "Sewa Alat Berat per Hari",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-per-jam.html": "Sewa Alat Berat per Jam",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-dump-truck.html": "Sewa Alat Berat Dump Truck",
+  "https://www.betonjayareadymix.com/2022/12/sewa-alat-berat-cold-milling-machine.html": "Sewa Alat Berat Cold Milling Machine",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-pc-300.html": "Sewa Alat Berat PC 300",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-pc-200.html": "Sewa Alat Berat PC 200",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-pc-75.html": "Sewa Alat Berat PC 75",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-breaker.html": "Sewa Alat Berat Breaker",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-crane.html": "Sewa Alat Berat Crane",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-dozer.html": "Sewa Alat Berat Dozer",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-beko.html": "Sewa Alat Berat Beko",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-wales.html": "Sewa Alat Berat Wales",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-excavator.html": "Sewa Alat Berat Excavator",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-all-in.html": "Sewa Alat Berat All In"
 };
 
 const urlMappingSewaMotorGrader = {
