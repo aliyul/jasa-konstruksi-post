@@ -14,7 +14,7 @@ const urlMappingSewaAlatBerat = {
 };
 
 const urlMappingSewaMotorGrader = {
-
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-motor-grader.html": "Harga Sewa Motor Grader"
 };
 const urlMappingSewaAlatPancang = {
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-pancang-hidrolik.html": "Sewa Alat Pancang Hidrolik",
