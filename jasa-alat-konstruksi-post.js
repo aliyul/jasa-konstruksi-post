@@ -41,9 +41,10 @@ const urlMappingSewaAlatBerat = {
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-wales.html": "Sewa Alat Berat Wales",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-excavator.html": "Sewa Alat Berat Excavator",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-all-in.html": "Sewa Alat Berat All In",
-    "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-loader.html": "Sewa Alat Berat Loader",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-loader.html": "Sewa Alat Berat Loader",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-terdekat.html": "Sewa Alat Berat Terdekat",
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-bore-pile.html": "Sewa Alat Berat Bore Pile"
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-bore-pile.html": "Sewa Alat Berat Bore Pile",
+ "https://www.betonjayareadymix.com/2019/02/harga-sewa-roller-alat-berat.html": "Harga Sewa Roller Alat Berat"
 
 };
 
