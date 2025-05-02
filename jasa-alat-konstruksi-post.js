@@ -93,7 +93,7 @@ const urlMappingSewaSelfLoader = {
 
 };
 const urlMappingSewaVibroRoller = {
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-roller-alat-berat.html": "Harga Sewa Roller Alat Berat"
+ // "https://www.betonjayareadymix.com/2019/02/harga-sewa-roller-alat-berat.html": "Harga Sewa Roller Alat Berat"
 };
 const urlMappingSewaWalesStoom = {
 
