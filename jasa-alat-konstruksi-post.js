@@ -1,11 +1,11 @@
 
 // SUB JasaAlatKonstruksi
 const urlMappingSewaAlatProyek = {
-"https://www.betonjayareadymix.com/2019/03/sewa-alat-proyek-tangerang.html": "Sewa Alat Proyek Tangerang",
-  "https://www.betonjayareadymix.com/2019/03/sewa-alat-proyek-depok.html": "Sewa Alat Proyek Depok",
-  "https://www.betonjayareadymix.com/2019/03/sewa-alat-proyek-jakarta.html": "Sewa Alat Proyek Jakarta",
-  "https://www.betonjayareadymix.com/2019/03/sewa-alat-proyek-bekasi.html": "Sewa Alat Proyek Bekasi",
-  "https://www.betonjayareadymix.com/2019/03/sewa-alat-proyek-bogor.html": "Sewa Alat Proyek Bogor",
+"https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-tangerang.html": "Sewa Alat Proyek Tangerang",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-depok.html": "Sewa Alat Proyek Depok",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-jakarta.html": "Sewa Alat Proyek Jakarta",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-bekasi.html": "Sewa Alat Proyek Bekasi",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-bogor.html": "Sewa Alat Proyek Bogor",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-terdekat.html": "Sewa Alat Proyek Terdekat"
 	
 };
