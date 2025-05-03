@@ -30,7 +30,7 @@ const urlMappingSewaAlatBerat = {
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-per-hari.html": "Sewa Alat Berat per Hari",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-per-jam.html": "Sewa Alat Berat per Jam",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-dump-truck.html": "Sewa Alat Berat Dump Truck",
-  "https://www.betonjayareadymix.com/2022/12/sewa-alat-berat-cold-milling-machine.html": "Sewa Alat Berat Cold Milling Machine",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-cold-milling-machine.html": "Sewa Alat Berat Cold Milling Machine",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-pc-300.html": "Sewa Alat Berat PC 300",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-pc-200.html": "Sewa Alat Berat PC 200",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-pc-75.html": "Sewa Alat Berat PC 75",
