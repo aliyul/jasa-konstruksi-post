@@ -83,7 +83,7 @@ const urlMappingJasaPagarPanelBeton = {
   
 };
 const urlMappingPagarBesi = {
-"https://www.betonjayareadymix.com/2021/04/harga-pagar-besi-ulir.html": "Harga Pagar Besi Ulir"
+
 };
 const urlMappingDindingBata = {
 
@@ -347,5 +347,52 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         pageNameJasaPembatasPost.textContent = urlMappingJasaPagarRumah[cleanUrlJasaPembatasKonsPost];
    }
 
+/*
+   if (urlMappingPagarBesi[cleanUrlJasaPembatasKonsPost]) {
+        restoreCondition('JasaKonsPembatasPost');
+        restoreCondition('JasaPembuatanPagarDindingPembatasPost');
+        restoreCondition('JasaPagarRumahPost');
+	       
+     
+        //hapus elemen div id lain
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+	
+
+        //hapus elemen SUB jasa pembatas lain
+        removeCondition('JasaPengamanSisiJalanInfrastrukturPost');
+        removeCondition('JasaRambudanSistemKeamananVisualPost');
+        removeCondition('JasaPengamananAreaProyekPost');
+
+	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
+        removeCondition('JasaPagarBetonPrecastPost');
+        removeCondition('JasaPagarPanelBetonPost');
+        removeCondition('JasaPagarBesiHollowWiremeshPost'); 
+	removeCondition('JasaDindingPembatasBataBatakoPost');
+	removeCondition('JasaPagarKawatHarmonikaPost');
+	removeCondition('JasaPagarBrcPost');
+	//removeCondition('JasaPagarRumahPost');
+	removeCondition('JasaPagarBangunanPost');
+       
+        JasaKonstruksiPembatasPostLink.style.visibility = 'visible';
+        JasaPembatasPostLink.style.visibility = 'visible';
+        JasaPembuatanPagarDindingPembatasPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaPagarPanelBeton
+        JasaPagarRumahPostLink.style.visibility = 'visible';
+        pageNameJasaPembatasPost.textContent = urlMappingPagarBesi[cleanUrlJasaPembatasKonsPost];
+   }
+*/
    });
 
