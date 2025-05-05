@@ -26,7 +26,7 @@ const urlMappingPengamananSisiJalan = {
 const urlMappingPembuatanPagarDinding = {
 "https://www.betonjayareadymix.com/p/jasa-pagar-beton-precast.html": "Jasa Pagar Beton Precast",
   "https://www.betonjayareadymix.com/p/jasa-pagar-panel-beton.html": "Jasa Pagar Panel Beton",
-  "https://www.betonjayareadymix.com/p/jasa-pagar-besi-hollow-wiremesh.html": "Jasa Pagar Besi Hollow & Wiremesh",
+  "https://www.betonjayareadymix.com/p/jasa-pagar-besi.html": "Jasa Pagar Besi",
   "https://www.betonjayareadymix.com/p/jasa-dinding-pembatas-bata-batako.html": "Jasa Dinding Pembatas Bata & Batako",
   "https://www.betonjayareadymix.com/p/jasa-pagar-kawat-harmonika.html": "Jasa Pagar Kawat Harmonika",
   "https://www.betonjayareadymix.com/p/jasa-pagar-brc.html": "Jasa Pagar BRC",
