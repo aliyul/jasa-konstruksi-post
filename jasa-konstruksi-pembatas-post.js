@@ -82,7 +82,7 @@ const urlMappingJasaPagarPanelBeton = {
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-rendah.html": "Jasa Pasang Pagar Panel Beton Rendah"
   
 };
-const urlMappingPagarBesi = {
+const urlMappingJasaPagarBesi = {
 
 };
 const urlMappingDindingBata = {
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //SUB JasaPembuatanPagarDindingPembatas
      var JasaPagarBetonPrecastPostLink = document.getElementById("JasaPagarBetonPrecastPost");
      var JasaPagarPanelBetonPostLink = document.getElementById("JasaPagarPanelBetonPost");
-     var JasaPagarBesiHollowWiremeshPostLink = document.getElementById("JasaPagarBesiHollowWiremeshPost");
+     var JasaPagarBesiPostLink = document.getElementById("JasaPagarBesiPost");
      var JasaDindingPembatasBataBatakoPostLink = document.getElementById("JasaDindingPembatasBataBatakoPost");
      var JasaPagarKawatHarmonikaPostLink = document.getElementById("JasaPagarKawatHarmonikaPost");
      var JasaPagarBrcPostLink = document.getElementById("JasaPagarBrcPost");
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //SUB JasaPembuatanPagarDindingPembatas
      JasaPagarBetonPrecastPostLink.style.visibility = 'hidden';
      JasaPagarPanelBetonPostLink.style.visibility = 'hidden';
-     JasaPagarBesiHollowWiremeshPostLink.style.visibility = 'hidden';
+     JasaPagarBesiPostLink.style.visibility = 'hidden';
      JasaDindingPembatasBataBatakoPostLink.style.visibility = 'hidden';
      JasaPagarKawatHarmonikaPostLink.style.visibility = 'hidden';
      JasaPagarBrcPostLink.style.visibility = 'hidden';
@@ -240,7 +240,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
         removeCondition('JasaPagarBetonPrecastPost');
        // removeCondition('JasaPagarPanelBetonPost');
-        removeCondition('JasaPagarBesiHollowWiremeshPost'); 
+        removeCondition('JasaPagarBesiPost'); 
 	removeCondition('JasaDindingPembatasBataBatakoPost');
 	removeCondition('JasaPagarKawatHarmonikaPost');
 	removeCondition('JasaPagarBrcPost');
@@ -286,7 +286,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
         //removeCondition('JasaPagarBetonPrecastPost');
         removeCondition('JasaPagarPanelBetonPost');
-        removeCondition('JasaPagarBesiHollowWiremeshPost'); 
+        removeCondition('JasaPagarBesiPost'); 
 	removeCondition('JasaDindingPembatasBataBatakoPost');
 	removeCondition('JasaPagarKawatHarmonikaPost');
 	removeCondition('JasaPagarBrcPost');
@@ -332,7 +332,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
         removeCondition('JasaPagarBetonPrecastPost');
         removeCondition('JasaPagarPanelBetonPost');
-        removeCondition('JasaPagarBesiHollowWiremeshPost'); 
+        removeCondition('JasaPagarBesiPost'); 
 	removeCondition('JasaDindingPembatasBataBatakoPost');
 	removeCondition('JasaPagarKawatHarmonikaPost');
 	removeCondition('JasaPagarBrcPost');
@@ -347,13 +347,11 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         pageNameJasaPembatasPost.textContent = urlMappingJasaPagarRumah[cleanUrlJasaPembatasKonsPost];
    }
 
-/*
-   if (urlMappingPagarBesi[cleanUrlJasaPembatasKonsPost]) {
+   if (urlMappingJasaPagarBesi[cleanUrlJasaPembatasKonsPost]) {
         restoreCondition('JasaKonsPembatasPost');
         restoreCondition('JasaPembuatanPagarDindingPembatasPost');
-        restoreCondition('JasaPagarRumahPost');
+        restoreCondition('JasaPagarBesiPost');
 	       
-     
         //hapus elemen div id lain
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -379,7 +377,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
         removeCondition('JasaPagarBetonPrecastPost');
         removeCondition('JasaPagarPanelBetonPost');
-        removeCondition('JasaPagarBesiHollowWiremeshPost'); 
+        removeCondition('JasaPagarRumahPost'); 
 	removeCondition('JasaDindingPembatasBataBatakoPost');
 	removeCondition('JasaPagarKawatHarmonikaPost');
 	removeCondition('JasaPagarBrcPost');
@@ -389,10 +387,10 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         JasaKonstruksiPembatasPostLink.style.visibility = 'visible';
         JasaPembatasPostLink.style.visibility = 'visible';
         JasaPembuatanPagarDindingPembatasPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaPagarPanelBeton
-        JasaPagarRumahPostLink.style.visibility = 'visible';
-        pageNameJasaPembatasPost.textContent = urlMappingPagarBesi[cleanUrlJasaPembatasKonsPost];
+	//TAMPILKAN JasaPagarBesiPost
+        JasaPagarBesiPostLink.style.visibility = 'visible';
+        pageNameJasaPembatasPost.textContent = urlMappingJasaPagarBesi[cleanUrlJasaPembatasKonsPost];
    }
-*/
+
    });
 
