@@ -83,15 +83,16 @@ const urlMappingJasaPagarPanelBeton = {
   
 };
 const urlMappingJasaPagarBesi = {
+ "https://www.betonjayareadymix.com/2021/04/harga-pagar-besi-ulir.html": "Harga Pagar Besi Ulir"
 
 };
-const urlMappingDindingBata = {
+const urlMappingJasaDindingBata = {
 
 };
-const urlMappingPagarKawat = {
+const urlMappingJasaPagarKawat = {
 
 };
-const urlMappingPagarBRC = {
+const urlMappingJasaPagarBRC = {
 
 };
 const urlMappingJasaPagarRumah = {
