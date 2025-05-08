@@ -44,8 +44,7 @@ const urlMappingJasaPengecoranLantaiDak = {
   "https://www.betonjayareadymix.com/2018/10/harga-jasa-dak-beton.html": "Harga Jasa Dak Beton",
   "https://www.betonjayareadymix.com/2018/09/borongan-dak-beton.html": "Borongan Dak Beton,
   "https://www.betonjayareadymix.com/2018/09/borongan-ring-balok.html": "Borongan ring balok",
-  "https://www.betonjayareadymix.com/2018/09/borongan-lantai.html": "Borongan Lantai",
-
+ 
 "https://www.betonjayareadymix.com/2018/09/borongan-sloof.html": "Borongan Sloof",
   "https://www.betonjayareadymix.com/2018/09/harga-borongan-sloof-per-meter-kubik.html": "Harga Borongan Sloof Per Meter Kubik",
 
@@ -95,6 +94,7 @@ const urlMappingJasaKonstruksiRumahTinggal = {
   "https://www.betonjayareadymix.com/2018/09/konsultan-kontruksi.html": "Konsultan Kontruksi",
   "https://www.betonjayareadymix.com/2018/09/perencanaan-pembangunan.html": "Perencanaan Pembangunan",
   "https://www.betonjayareadymix.com/2018/09/perencanaan-konstruksi.html": "Perencanaan Konstruksi",
+  "https://www.betonjayareadymix.com/2018/09/borongan-dinding.html": "Borongan Dinding",
 	
 "https://www.betonjayareadymix.com/2018/11/harga-borongan-rumah-per-meter-terima-kunci-cirebon.html": "Harga Borongan Rumah Per Meter Terima Kunci Cirebon",
   "https://www.betonjayareadymix.com/2018/11/harga-borongan-rumah-per-meter-terima-kunci-dramaga.html": "Harga Borongan Rumah Per Meter Terima Kunci Dramaga",
