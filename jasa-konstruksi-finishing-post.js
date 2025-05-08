@@ -75,6 +75,7 @@ const urlMappingJasaFinishingLantaiBeton = {
     "https://www.betonjayareadymix.com/2018/10/finishing-lantai-beton-ekspos.html": "Finishing Lantai Beton Ekspos",
     "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-lantai-beton.html": "Harga Jasa Finishing Lantai Beton",
     "https://www.betonjayareadymix.com/2018/10/finishing-lantai.html": "Finishing Lantai",
+ "https://www.betonjayareadymix.com/2018/09/borongan-lantai.html": "Borongan Lantai",
 
 "https://www.betonjayareadymix.com/2018/10/jasa-trowel-lantai-beton.html": "Jasa Trowel Lantai Beton",
 "https://www.betonjayareadymix.com/2018/12/harga-jasa-trowel-lantai-beton-depok.html": "Harga Jasa Trowel Lantai Beton Depok",
