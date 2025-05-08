@@ -634,7 +634,7 @@ JasaStrukturBetondanPengecoranPost
 	//TAMPILKAN JasaStrukturBetondanPengecoranPostLink
         JasaStrukturBetondanPengecoranPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPengecoranKolomBetonPostLink
-        JasaPengecoranKolomBetonPostLinkLink.style.visibility = 'visible';
+        JasaPengecoranKolomBetonPostLink.style.visibility = 'visible';
         pageNameJasaKonsStrukturPost.textContent = urlMappingJasaPengecoranKolomBeton[cleanUrlJasaJasaKonsStrukturPost];
     } 
 
