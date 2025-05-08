@@ -74,7 +74,7 @@ const urlMappingJasaBekistingdanPembesian = {
 
 };
 const urlMappingJasaPengecoranKolomBeton = {
-
+"https://www.betonjayareadymix.com/2018/09/borongan-kolom.html": "Borongan Kolom"
 };
 /*const urlMappingStrukturGedungHunian = {
 "https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah-tinggal.html": "Jasa Konstruksi Rumah Tinggal",
