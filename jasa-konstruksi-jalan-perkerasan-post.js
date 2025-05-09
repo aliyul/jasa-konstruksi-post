@@ -69,41 +69,41 @@ const urlMappingJasaPengerasanJalan = {
   
 };
 */
-const urlMappingJasaPavingBlockJalan = {
+const urlMappingJasaPavingBlockJalanPost = {
 	
 };
-const urlMappingJasaPengecoranJalanBeton = {
+const urlMappingJasaPengecoranJalanBetonPost = {
 "https://www.betonjayareadymix.com/2018/05/harga-cor-beton-jalan-per-meter.html": "Harga Cor Beton Jalan Per Meter",
   "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-desa.html": "Borongan Cor Beton Jalan Desa",
   "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-raya.html": "Borongan Cor Beton Jalan Raya",
   "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-tol.html": "Borongan Cor Beton Jalan Tol"
 };
-const urlMappingJasaPengaspalanJalan = {
+const urlMappingJasaPengaspalanJalanPost = {
 	
 };
 
-const urlMappingJasaPerkerasanAgregatJalan = {
+const urlMappingJasaPerkerasanAgregatJalanPost = {
 	
 };
-const urlMappingJasaTimbunanSubPostbaseJalan = {
+const urlMappingJasaTimbunanSubPostbaseJalanPost = {
 	
 };
-const urlMappingJasaPerkerasanBaseCourseJalan = {
+const urlMappingJasaPerkerasanBaseCourseJalanPost = {
 	
 };
-const urlMappingJasaPerkerasanJalanKerikil = {
+const urlMappingJasaPerkerasanJalanKerikilPost = {
 	
 };
-const urlMappingJasaPerkuatanDasarTanahJalan = {
+const urlMappingJasaPerkuatanDasarTanahJalanPost = {
 	
 };
-const urlMappingJasaPerkerasanJalanBeton = {
+const urlMappingJasaPerkerasanJalanBetonPost = {
 	
 };
-const urlMappingJasaPerkerasanJalanAspal = {
+const urlMappingJasaPerkerasanJalanAspalPost = {
 	
 };
-const urlMappingJasaPerkerasanJalanKomposit = {
+const urlMappingJasaPerkerasanJalanKompositPost = {
 	
 };
 
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
    //SUB MAPPING JASA JALAN & PERKERASAN
        
-   if (urlMappingJasaPerkerasanJalan[cleanUrlJasaJalanPerkerasanKons]) {
+   if (urlMappingJasaPerkerasanJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
         restoreCondition('JasaPerkerasanJalanSubPost');
      
@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaJalanPerkerasanSubPostLink.style.visibility = 'visible';
 	    
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
-        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanJalan[cleanUrlJasaJalanPerkerasanKons];
+        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanJalanPost[cleanUrlJasaJalanPerkerasanKons];
     }
 
 /*SUB MAPPING Jasa Perkerasan Jalan : 
@@ -258,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function() {
   "https://www.betonjayareadymix.com/p/jasa-pengecoran-jalan-beton.html": "Jasa Pengecoran Jalan Beton",
   "https://www.betonjayareadymix.com/p/jasa-pengaspalan-jalan.html": "Jasa Pengaspalan Jalan",
   "https://www.betonjayareadymix.com/p/jasa-paving-block-jalan.html": "Jasa Paving Block Jalan" */
-if (urlMappingJasaPengerasanJalan[cleanUrlJasaJalanPerkerasanKons]) {
+if (urlMappingJasaPengerasanJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
@@ -316,9 +316,9 @@ JasaPerkerasanJalanSubPost
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
 
 	JasaPengerasanJalanSubPostLink.style.visibility = 'visible';
-        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPengerasanJalan[cleanUrlJasaJalanPerkerasanKons];
+        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPengerasanJalanPost[cleanUrlJasaJalanPerkerasanKons];
     }
-if (urlMappingJasaPavingBlockJalan[cleanUrlJasaJalanPerkerasanKons]) {
+if (urlMappingJasaPavingBlockJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
@@ -366,10 +366,10 @@ if (urlMappingJasaPavingBlockJalan[cleanUrlJasaJalanPerkerasanKons]) {
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
 
 	JasaPavingBlockJalanSubPostLink.style.visibility = 'visible';
-        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPavingBlockJalan[cleanUrlJasaJalanPerkerasanKons];
+        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPavingBlockJalanPost[cleanUrlJasaJalanPerkerasanKons];
     }
 	
-   if (urlMappingJasaPengaspalanJalan[cleanUrlJasaJalanPerkerasanKons]) {
+   if (urlMappingJasaPengaspalanJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
@@ -417,10 +417,10 @@ if (urlMappingJasaPavingBlockJalan[cleanUrlJasaJalanPerkerasanKons]) {
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
 
 	JasaPengaspalanJalanSubPostLink.style.visibility = 'visible';
-        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPengaspalanJalan[cleanUrlJasaJalanPerkerasanKons];
+        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPengaspalanJalanPost[cleanUrlJasaJalanPerkerasanKons];
     }
 
-if (urlMappingJasaPengecoranJalanBeton[cleanUrlJasaJalanPerkerasanKons]) {
+if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
@@ -472,9 +472,9 @@ if (urlMappingJasaPengecoranJalanBeton[cleanUrlJasaJalanPerkerasanKons]) {
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
 
 	JasaPengecoranJalanBetonSubPostLink.style.visibility = 'visible';
-        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPengecoranJalanBeton[cleanUrlJasaJalanPerkerasanKons];
+        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKons];
     }
-if (urlMappingJasaPerkerasanAgregatJalan[cleanUrlJasaJalanPerkerasanKons]) {
+if (urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
@@ -522,9 +522,9 @@ if (urlMappingJasaPerkerasanAgregatJalan[cleanUrlJasaJalanPerkerasanKons]) {
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
 
 	JasaPerkerasanAgregatJalanSubPostLink.style.visibility = 'visible';
-        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanAgregatJalan[cleanUrlJasaJalanPerkerasanKons];
+        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKons];
     }
-if (urlMappingJasaTimbunanSubPostbaseJalan[cleanUrlJasaJalanPerkerasanKons]) {
+if (urlMappingJasaTimbunanSubPostbaseJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
@@ -572,9 +572,9 @@ if (urlMappingJasaTimbunanSubPostbaseJalan[cleanUrlJasaJalanPerkerasanKons]) {
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
 
 	JasaTimbunanSubPostbaseJalanSubPostLink.style.visibility = 'visible';
-        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaTimbunanSubPostbaseJalan[cleanUrlJasaJalanPerkerasanKons];
+        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaTimbunanSubPostbaseJalanPost[cleanUrlJasaJalanPerkerasanKons];
     }
-if (urlMappingJasaPerkerasanBaseCourseJalan[cleanUrlJasaJalanPerkerasanKons]) {
+if (urlMappingJasaPerkerasanBaseCourseJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
@@ -622,9 +622,9 @@ if (urlMappingJasaPerkerasanBaseCourseJalan[cleanUrlJasaJalanPerkerasanKons]) {
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
 
 	JasaPerkerasanBaseCourseJalanSubPostLink.style.visibility = 'visible';
-        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanBaseCourseJalan[cleanUrlJasaJalanPerkerasanKons];
+        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanBaseCourseJalanPost[cleanUrlJasaJalanPerkerasanKons];
     }
-if (urlMappingJasaPerkerasanJalanKerikil[cleanUrlJasaJalanPerkerasanKons]) {
+if (urlMappingJasaPerkerasanJalanKerikilPost[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
@@ -672,9 +672,9 @@ if (urlMappingJasaPerkerasanJalanKerikil[cleanUrlJasaJalanPerkerasanKons]) {
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
 
 	JasaPerkerasanJalanKerikilSubPostLink.style.visibility = 'visible';
-        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanJalanKerikil[cleanUrlJasaJalanPerkerasanKons];
+        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanJalanKerikilPost[cleanUrlJasaJalanPerkerasanKons];
     }
-if (urlMappingJasaPerkuatanDasarTanahJalan[cleanUrlJasaJalanPerkerasanKons]) {
+if (urlMappingJasaPerkuatanDasarTanahJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
@@ -722,9 +722,9 @@ if (urlMappingJasaPerkuatanDasarTanahJalan[cleanUrlJasaJalanPerkerasanKons]) {
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
 
 	JasaPerkuatanDasarTanahJalanSubPostLink.style.visibility = 'visible';
-        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkuatanDasarTanahJalan[cleanUrlJasaJalanPerkerasanKons];
+        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkuatanDasarTanahJalanPost[cleanUrlJasaJalanPerkerasanKons];
     }
-if (urlMappingJasaPerkerasanJalanBeton[cleanUrlJasaJalanPerkerasanKons]) {
+if (urlMappingJasaPerkerasanJalanBetonPost[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
@@ -772,9 +772,9 @@ if (urlMappingJasaPerkerasanJalanBeton[cleanUrlJasaJalanPerkerasanKons]) {
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
 
 	JasaPerkerasanJalanBetonSubPostLink.style.visibility = 'visible';
-        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanJalanBeton[cleanUrlJasaJalanPerkerasanKons];
+        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanJalanBetonPost[cleanUrlJasaJalanPerkerasanKons];
     }
-if (urlMappingJasaPerkerasanJalanAspal[cleanUrlJasaJalanPerkerasanKons]) {
+if (urlMappingJasaPerkerasanJalanAspalPost[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
@@ -822,9 +822,9 @@ if (urlMappingJasaPerkerasanJalanAspal[cleanUrlJasaJalanPerkerasanKons]) {
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
 
 	JasaPerkerasanJalanAspalSubPostLink.style.visibility = 'visible';
-        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanJalanAspal[cleanUrlJasaJalanPerkerasanKons];
+        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanJalanAspalPost[cleanUrlJasaJalanPerkerasanKons];
     }
-if (urlMappingJasaPerkerasanJalanKomposit[cleanUrlJasaJalanPerkerasanKons]) {
+if (urlMappingJasaPerkerasanJalanKompositPost[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
@@ -882,7 +882,7 @@ JasaPerkerasanJalanSubPost
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
 
 	JasaPerkerasanJalanKompositSubPostLink.style.visibility = 'visible';
-        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanJalanKomposit[cleanUrlJasaJalanPerkerasanKons];
+        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanJalanKompositPost[cleanUrlJasaJalanPerkerasanKons];
     }
    
        
