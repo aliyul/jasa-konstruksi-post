@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const cleanUrlJasaJalanPerkerasanKons = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
 
      // Menemukan elemen menggunakan Id
-    var JasaKonsJalanPerkerasan = document.getElementById("JasaKonsJalanPerkerasan");
+    var JasaKonsJalanPerkerasanPost = document.getElementById("JasaKonsJalanPerkerasanPost");
 
     if (!JasaKonsJalanPerkerasan) {
         console.error("elemen Id JasaKonsJalanPerkerasan kondisi terhapus");
@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function() {
    //SUB MAPPING JASA JALAN & PERKERASAN
        
    if (urlMappingJasaPerkerasanJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
-        restoreCondition('JasaKonsJalanPerkerasan');
+        restoreCondition('JasaKonsJalanPerkerasanPost');
         restoreCondition('JasaPerkerasanJalanSubPost');
      
         //hapus elemen div id lain
@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function() {
   "https://www.betonjayareadymix.com/p/jasa-pengaspalan-jalan.html": "Jasa Pengaspalan Jalan",
   "https://www.betonjayareadymix.com/p/jasa-paving-block-jalan.html": "Jasa Paving Block Jalan" */
 if (urlMappingJasaPengerasanJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
-        restoreCondition('JasaKonsJalanPerkerasan');
+        restoreCondition('JasaKonsJalanPerkerasanPost');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
 	restoreCondition('JasaPengerasanJalanSubPost');
@@ -319,7 +319,7 @@ JasaPerkerasanJalanSubPost
         pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPengerasanJalanPost[cleanUrlJasaJalanPerkerasanKons];
     }
 if (urlMappingJasaPavingBlockJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
-        restoreCondition('JasaKonsJalanPerkerasan');
+        restoreCondition('JasaKonsJalanPerkerasanPost');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
 	restoreCondition('JasaPavingBlockJalanSubPost');
@@ -370,7 +370,7 @@ if (urlMappingJasaPavingBlockJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
     }
 	
    if (urlMappingJasaPengaspalanJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
-        restoreCondition('JasaKonsJalanPerkerasan');
+        restoreCondition('JasaKonsJalanPerkerasanPost');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
 	restoreCondition('JasaPengaspalanJalanSubPost');
@@ -421,7 +421,7 @@ if (urlMappingJasaPavingBlockJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
     }
 
 if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKons]) {
-        restoreCondition('JasaKonsJalanPerkerasan');
+        restoreCondition('JasaKonsJalanPerkerasanPost');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
 	restoreCondition('JasaPengecoranJalanBetonSubPost');
@@ -475,7 +475,7 @@ if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKons]) {
         pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKons];
     }
 if (urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
-        restoreCondition('JasaKonsJalanPerkerasan');
+        restoreCondition('JasaKonsJalanPerkerasanPost');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
 	restoreCondition('JasaPerkerasanAgregatJalanSubPost');
@@ -525,7 +525,7 @@ if (urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
         pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKons];
     }
 if (urlMappingJasaTimbunanSubPostbaseJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
-        restoreCondition('JasaKonsJalanPerkerasan');
+        restoreCondition('JasaKonsJalanPerkerasanPost');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
 	restoreCondition('JasaTimbunanSubPostbaseJalanSubPost');
@@ -575,7 +575,7 @@ if (urlMappingJasaTimbunanSubPostbaseJalanPost[cleanUrlJasaJalanPerkerasanKons])
         pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaTimbunanSubPostbaseJalanPost[cleanUrlJasaJalanPerkerasanKons];
     }
 if (urlMappingJasaPerkerasanBaseCourseJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
-        restoreCondition('JasaKonsJalanPerkerasan');
+        restoreCondition('JasaKonsJalanPerkerasanPost');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
 	restoreCondition('JasaPerkerasanBaseCourseJalanSubPost');
@@ -625,7 +625,7 @@ if (urlMappingJasaPerkerasanBaseCourseJalanPost[cleanUrlJasaJalanPerkerasanKons]
         pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanBaseCourseJalanPost[cleanUrlJasaJalanPerkerasanKons];
     }
 if (urlMappingJasaPerkerasanJalanKerikilPost[cleanUrlJasaJalanPerkerasanKons]) {
-        restoreCondition('JasaKonsJalanPerkerasan');
+        restoreCondition('JasaKonsJalanPerkerasanPost');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
 	restoreCondition('JasaPerkerasanJalanKerikilSubPost');
@@ -675,7 +675,7 @@ if (urlMappingJasaPerkerasanJalanKerikilPost[cleanUrlJasaJalanPerkerasanKons]) {
         pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanJalanKerikilPost[cleanUrlJasaJalanPerkerasanKons];
     }
 if (urlMappingJasaPerkuatanDasarTanahJalanPost[cleanUrlJasaJalanPerkerasanKons]) {
-        restoreCondition('JasaKonsJalanPerkerasan');
+        restoreCondition('JasaKonsJalanPerkerasanPost');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
 	restoreCondition('JasaPerkuatanDasarTanahJalanSubPost');
@@ -725,7 +725,7 @@ if (urlMappingJasaPerkuatanDasarTanahJalanPost[cleanUrlJasaJalanPerkerasanKons])
         pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkuatanDasarTanahJalanPost[cleanUrlJasaJalanPerkerasanKons];
     }
 if (urlMappingJasaPerkerasanJalanBetonPost[cleanUrlJasaJalanPerkerasanKons]) {
-        restoreCondition('JasaKonsJalanPerkerasan');
+        restoreCondition('JasaKonsJalanPerkerasanPost');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
 	restoreCondition('JasaPerkerasanJalanBetonSubPost');
@@ -775,7 +775,7 @@ if (urlMappingJasaPerkerasanJalanBetonPost[cleanUrlJasaJalanPerkerasanKons]) {
         pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanJalanBetonPost[cleanUrlJasaJalanPerkerasanKons];
     }
 if (urlMappingJasaPerkerasanJalanAspalPost[cleanUrlJasaJalanPerkerasanKons]) {
-        restoreCondition('JasaKonsJalanPerkerasan');
+        restoreCondition('JasaKonsJalanPerkerasanPost');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
 	restoreCondition('JasaPerkerasanJalanAspalSubPost');
@@ -825,7 +825,7 @@ if (urlMappingJasaPerkerasanJalanAspalPost[cleanUrlJasaJalanPerkerasanKons]) {
         pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanJalanAspalPost[cleanUrlJasaJalanPerkerasanKons];
     }
 if (urlMappingJasaPerkerasanJalanKompositPost[cleanUrlJasaJalanPerkerasanKons]) {
-        restoreCondition('JasaKonsJalanPerkerasan');
+        restoreCondition('JasaKonsJalanPerkerasanPost');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
 	restoreCondition('JasaPerkerasanJalanKompositSubPost');
