@@ -404,6 +404,8 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	    
      //   removeCondition('JasaKonsFinishingPost');
 
 	 // hapus elemen id FINISHING STRUKTUR lain NYA SELAIN JasaFinishingBetonExposePost
@@ -479,6 +481,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
      //   removeCondition('JasaKonsFinishingPost');
 
 	 // hapus elemen id FINISHING STRUKTUR lain NYA SELAIN JasaFinishingBetonExposePost
@@ -554,6 +557,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
      //   removeCondition('JasaKonsFinishingPost');
 
 	 // hapus elemen id FINISHING STRUKTUR lain NYA SELAIN JasaPlesteranAcianDindingPost
@@ -629,6 +633,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
      //   removeCondition('JasaKonsFinishingPost');
 
 	 // hapus elemen id FINISHING STRUKTUR lain NYA SELAIN JasaPlesteranAcianDindingPost
@@ -707,6 +712,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
      //   removeCondition('JasaKonsFinishingPost');
 
 	 // hapus elemen id FINISHING STRUKTUR SEMUA NYA
@@ -786,6 +792,7 @@ if (urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
      //   removeCondition('JasaKonsFinishingPost');
 
 	 // hapus elemen id FINISHING STRUKTUR SEMUA NYA
@@ -862,6 +869,7 @@ if (urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
      //   removeCondition('JasaKonsFinishingPost');
 
 	 // hapus elemen id FINISHING STRUKTUR SEMUA NYA
