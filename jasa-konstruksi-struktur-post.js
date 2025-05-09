@@ -73,7 +73,8 @@ const urlMappingJasaPengecoranLantaiDak = {
   "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-ruko-toko.html": "Borongan Cor Beton Ruko Toko",
   "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-rukan-kantor.html": "Borongan Cor Beton Rukan Kantor",
   "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-rumah.html": "Borongan Cor Beton Rumah",
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton.html": "Borongan Cor Beton"
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton.html": "Borongan Cor Beton",
+  "https://www.betonjayareadymix.com/2018/05/harga-cor-beton-jalan-per-meter.html": "Harga Cor Beton Jalan Per Meter"
 
 };
 const urlMappingJasaPengecoranLantaiGudang = {
