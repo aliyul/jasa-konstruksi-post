@@ -210,66 +210,6 @@ document.addEventListener("DOMContentLoaded", function() {
   "https://www.betonjayareadymix.com/p/jasa-pengecoran-jalan-beton.html": "Jasa Pengecoran Jalan Beton",
   "https://www.betonjayareadymix.com/p/jasa-pengaspalan-jalan.html": "Jasa Pengaspalan Jalan",
   "https://www.betonjayareadymix.com/p/jasa-paving-block-jalan.html": "Jasa Paving Block Jalan" */
-if (urlMappingJasaPengerasanJalanPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
-        restoreCondition('JasaKonsJalanPerkerasanPost');
-        restoreCondition('JasaPerkerasanJalanSubPost');
-
-	restoreCondition('JasaPengerasanJalanSubPost');
-     
-        //hapus elemen div id lain
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-        //removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsSaluran');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSubPost');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsPembatas');
-/*
-JasaKonsJalanPerkerasan
-JasaKonstruksiJalanPerkerasanSubPost
-JasaJalanPerkerasanSubPost
-
-
-JasaPembangunanInfrastrukturJalanSubPost
-JasaPemadatanPersiapanTanahJalanSubPost
-JasaPerkerasanJalanSubPost
-*/
-
-        //hapus elemen SUB jasa JALAN & PERKERASAN lain SELAIN JasaPerkerasanJalanSubPost
-        removeCondition('JasaPemadatanPersiapanTanahJalanSubPost');
-        removeCondition('JasaPembangunanInfrastrukturJalanSubPost');
-
-	//hapus elemen SUB JASA PERKERASAN LAIN SEMUA NYA SELAIN JasaPengerasanJalanSubPost
-        removeCondition('JasaPavingBlockJalanSubPost');
-        removeCondition('JasaPengaspalanJalanSubPost');
-        removeCondition('JasaPengecoranJalanBetonSubPost');
-
-	
-        removeCondition('JasaPerkerasanAgregatJalanSubPost');
-
-	
-        removeCondition('JasaTimbunanSubbaseJalanSubPost');
-        removeCondition('JasaPerkerasanBaseCourseJalanSubPost');
-        removeCondition('JasaPerkerasanJalanKerikilSubPost');
-        removeCondition('JasaPerkuatanDasarTanahJalanSubPost');
-        removeCondition('JasaPerkerasanJalanBetonSubPost');
-        removeCondition('JasaPerkerasanJalanAspalSubPost');
-        removeCondition('JasaPerkerasanJalanKompositSubPost');
-    	
-	
-        JasaKonstruksiJalanPerkerasanSubPostLink.style.visibility = 'visible';
-        JasaJalanPerkerasanSubPostLink.style.visibility = 'visible';
-	    
-        JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
-
-	JasaPengerasanJalanSubPostLink.style.visibility = 'visible';
-        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPengerasanJalanPost[cleanUrlJasaJalanPerkerasanKonsPost];
-    }
 if (urlMappingJasaPavingBlockJalanPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
         restoreCondition('JasaKonsJalanPerkerasanPost');
         restoreCondition('JasaPerkerasanJalanSubPost');
