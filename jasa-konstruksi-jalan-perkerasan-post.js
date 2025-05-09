@@ -108,14 +108,14 @@ const urlMappingJasaPerkerasanJalanKompositPost = {
 };
 
 // Menyimpan elemen yang dihapus dalam variabel
-let removedElementsJasaJalanPerkerasanKons = {};
+let removedElementsJasaJalanPerkerasanKonsPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
 function removeCondition(conditionId) {
     const conditionElement = document.getElementById(conditionId);
 
     if (conditionElement) {
         // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
-        removedElementsJasaJalanPerkerasanKons[conditionId] = conditionElement;
+        removedElementsJasaJalanPerkerasanKonsPost[conditionId] = conditionElement;
         conditionElement.remove(); // Menghapus elemen tersebut
     }
 }
@@ -123,13 +123,13 @@ function removeCondition(conditionId) {
 // Fungsi untuk mengembalikan elemen yang telah dihapus
 function restoreCondition(conditionId) {
     const breadcrumb = document.querySelector('.breadcrumb');
-    const elementToRestore = removedElementsJasaJalanPerkerasanKons[conditionId]; // Mendapatkan elemen yang disimpan
+    const elementToRestore = removedElementsJasaJalanPerkerasanKonsPost[conditionId]; // Mendapatkan elemen yang disimpan
 
     if (elementToRestore) {
         breadcrumb.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
-        delete removedElementsJasaJalanPerkerasanKons[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
+        delete removedElementsJasaJalanPerkerasanKonsPost[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
     } else {
-        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaJalanPerkerasanKons.`);
+        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaJalanPerkerasanKonsPost.`);
     }
 }
 
