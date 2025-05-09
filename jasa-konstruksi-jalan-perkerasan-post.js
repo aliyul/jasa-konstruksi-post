@@ -204,54 +204,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
    //SUB MAPPING JASA JALAN & PERKERASAN
        
-   if (urlMappingJasaPerkerasanJalanPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
-        restoreCondition('JasaKonsJalanPerkerasanPost');
-        restoreCondition('JasaPerkerasanJalanSubPost');
-     
-        //hapus elemen div id lain
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-        //removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsSaluran');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSubPost');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsPembatas');
-
-        //hapus elemen SUB jasa jalan & perkerasan lain
-        removeCondition('JasaPemadatanPersiapanTanahJalanSubPost');
-        removeCondition('JasaPembangunanInfrastrukturJalanSubPost');
-
-	//hapus elemen SUB JASA PERKERASAN LAIN SEMUA NYA
-	removeCondition('JasaPengerasanJalanSubPost');
-	removeCondition('JasaPavingBlockJalanSubPost');
-        removeCondition('JasaPengaspalanJalanSubPost');
-        removeCondition('JasaPengecoranJalanBetonSubPost');
-
-	
-        removeCondition('JasaPerkerasanAgregatJalanSubPost');
-
-	
-        removeCondition('JasaTimbunanSubbaseJalanSubPost');
-        removeCondition('JasaPerkerasanBaseCourseJalanSubPost');
-        removeCondition('JasaPerkerasanJalanKerikilSubPost');
-        removeCondition('JasaPerkuatanDasarTanahJalanSubPost');
-        removeCondition('JasaPerkerasanJalanBetonSubPost');
-        removeCondition('JasaPerkerasanJalanAspalSubPost');
-        removeCondition('JasaPerkerasanJalanKompositSubPost');
-    	
-	
-        JasaKonstruksiJalanPerkerasanSubPostLink.style.visibility = 'visible';
-        JasaJalanPerkerasanSubPostLink.style.visibility = 'visible';
-	    
-        JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
-        pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanJalanPost[cleanUrlJasaJalanPerkerasanKonsPost];
-    }
-
 /*SUB MAPPING Jasa Perkerasan Jalan : 
    "https://www.betonjayareadymix.com/p/jasa-perkerasan-agregat-jalan.html": "Jasa Perkerasan Agregat Jalan",
   "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan.html": "Jasa Pengerasan Jalan",
