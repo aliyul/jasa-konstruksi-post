@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function() {
      
      var JasaPerkerasanAgregatJalanSubPostLink = document.getElementById("JasaPerkerasanAgregatJalanSubPost");
 
-     var JasaTimbunanSubPostbaseJalanSubPostLink = document.getElementById("JasaTimbunanSubPostbaseJalanSubPost");
+     var JasaTimbunanSubbaseJalanSubPostLink = document.getElementById("JasaTimbunanSubbaseJalanSubPost");
      var JasaPerkerasanBaseCourseJalanSubPostLink = document.getElementById("JasaPerkerasanBaseCourseJalanSubPost");
      var JasaPerkerasanJalanKerikilSubPostLink = document.getElementById("JasaPerkerasanJalanKerikilSubPost");
      var JasaPerkuatanDasarTanahJalanSubPostLink = document.getElementById("JasaPerkuatanDasarTanahJalanSubPost");
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
      JasaPerkerasanAgregatJalanSubPostLink.style.visibility = 'hidden';
 	
-     JasaTimbunanSubPostbaseJalanSubPostLink.style.visibility = 'hidden';
+     JasaTimbunanSubbaseJalanSubPostLink.style.visibility = 'hidden';
      JasaPerkerasanBaseCourseJalanSubPostLink.style.visibility = 'hidden';
      JasaPerkerasanJalanKerikilSubPostLink.style.visibility = 'hidden';
      JasaPerkuatanDasarTanahJalanSubPostLink.style.visibility = 'hidden';
@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaPerkerasanAgregatJalanSubPost');
 
 	
-        removeCondition('JasaTimbunanSubPostbaseJalanSubPost');
+        removeCondition('JasaTimbunanSubbaseJalanSubPost');
         removeCondition('JasaPerkerasanBaseCourseJalanSubPost');
         removeCondition('JasaPerkerasanJalanKerikilSubPost');
         removeCondition('JasaPerkuatanDasarTanahJalanSubPost');
@@ -301,7 +301,7 @@ JasaPerkerasanJalanSubPost
         removeCondition('JasaPerkerasanAgregatJalanSubPost');
 
 	
-        removeCondition('JasaTimbunanSubPostbaseJalanSubPost');
+        removeCondition('JasaTimbunanSubbaseJalanSubPost');
         removeCondition('JasaPerkerasanBaseCourseJalanSubPost');
         removeCondition('JasaPerkerasanJalanKerikilSubPost');
         removeCondition('JasaPerkuatanDasarTanahJalanSubPost');
@@ -351,7 +351,7 @@ if (urlMappingJasaPavingBlockJalanPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
         removeCondition('JasaPerkerasanAgregatJalanSubPost');
 
 	
-        removeCondition('JasaTimbunanSubPostbaseJalanSubPost');
+        removeCondition('JasaTimbunanSubbaseJalanSubPost');
         removeCondition('JasaPerkerasanBaseCourseJalanSubPost');
         removeCondition('JasaPerkerasanJalanKerikilSubPost');
         removeCondition('JasaPerkuatanDasarTanahJalanSubPost');
@@ -402,7 +402,7 @@ if (urlMappingJasaPavingBlockJalanPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
         removeCondition('JasaPerkerasanAgregatJalanSubPost');
 
 	
-        removeCondition('JasaTimbunanSubPostbaseJalanSubPost');
+        removeCondition('JasaTimbunanSubbaseJalanSubPost');
         removeCondition('JasaPerkerasanBaseCourseJalanSubPost');
         removeCondition('JasaPerkerasanJalanKerikilSubPost');
         removeCondition('JasaPerkuatanDasarTanahJalanSubPost');
@@ -457,7 +457,7 @@ if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost])
         removeCondition('JasaPerkerasanAgregatJalanSubPost');
 
 	
-        removeCondition('JasaTimbunanSubPostbaseJalanSubPost');
+        removeCondition('JasaTimbunanSubbaseJalanSubPost');
         removeCondition('JasaPerkerasanBaseCourseJalanSubPost');
         removeCondition('JasaPerkerasanJalanKerikilSubPost');
         removeCondition('JasaPerkuatanDasarTanahJalanSubPost');
@@ -507,7 +507,7 @@ if (urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKonsPost
         removeCondition('JasaPengerasanJalanSubPost');
 
 	
-        removeCondition('JasaTimbunanSubPostbaseJalanSubPost');
+        removeCondition('JasaTimbunanSubbaseJalanSubPost');
         removeCondition('JasaPerkerasanBaseCourseJalanSubPost');
         removeCondition('JasaPerkerasanJalanKerikilSubPost');
         removeCondition('JasaPerkuatanDasarTanahJalanSubPost');
@@ -528,7 +528,7 @@ if (urlMappingJasaTimbunanSubPostbaseJalanPost[cleanUrlJasaJalanPerkerasanKonsPo
         restoreCondition('JasaKonsJalanPerkerasanPost');
         restoreCondition('JasaPerkerasanJalanSubPost');
 
-	restoreCondition('JasaTimbunanSubPostbaseJalanSubPost');
+	restoreCondition('JasaTimbunanSubbaseJalanSubPost');
      
         //hapus elemen div id lain
         removeCondition('MaterialKons');
@@ -571,7 +571,7 @@ if (urlMappingJasaTimbunanSubPostbaseJalanPost[cleanUrlJasaJalanPerkerasanKonsPo
 	    
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
 
-	JasaTimbunanSubPostbaseJalanSubPostLink.style.visibility = 'visible';
+	JasaTimbunanSubbaseJalanSubPostLink.style.visibility = 'visible';
         pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaTimbunanSubPostbaseJalanPost[cleanUrlJasaJalanPerkerasanKonsPost];
     }
 if (urlMappingJasaPerkerasanBaseCourseJalanPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
@@ -607,7 +607,7 @@ if (urlMappingJasaPerkerasanBaseCourseJalanPost[cleanUrlJasaJalanPerkerasanKonsP
         removeCondition('JasaPerkerasanAgregatJalanSubPost');
 
 	
-        removeCondition('JasaTimbunanSubPostbaseJalanSubPost');
+        removeCondition('JasaTimbunanSubbaseJalanSubPost');
         removeCondition('JasaPengerasanJalanSubPost');
         removeCondition('JasaPerkerasanJalanKerikilSubPost');
         removeCondition('JasaPerkuatanDasarTanahJalanSubPost');
@@ -657,7 +657,7 @@ if (urlMappingJasaPerkerasanJalanKerikilPost[cleanUrlJasaJalanPerkerasanKonsPost
         removeCondition('JasaPerkerasanAgregatJalanSubPost');
 
 	
-        removeCondition('JasaTimbunanSubPostbaseJalanSubPost');
+        removeCondition('JasaTimbunanSubbaseJalanSubPost');
         removeCondition('JasaPerkerasanBaseCourseJalanSubPost');
         removeCondition('JasaPengerasanJalanSubPost');
         removeCondition('JasaPerkuatanDasarTanahJalanSubPost');
@@ -707,7 +707,7 @@ if (urlMappingJasaPerkuatanDasarTanahJalanPost[cleanUrlJasaJalanPerkerasanKonsPo
         removeCondition('JasaPerkerasanAgregatJalanSubPost');
 
 	
-        removeCondition('JasaTimbunanSubPostbaseJalanSubPost');
+        removeCondition('JasaTimbunanSubbaseJalanSubPost');
         removeCondition('JasaPerkerasanBaseCourseJalanSubPost');
         removeCondition('JasaPerkerasanJalanKerikilSubPost');
         removeCondition('JasaPengerasanJalanSubPost');
@@ -757,7 +757,7 @@ if (urlMappingJasaPerkerasanJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost])
         removeCondition('JasaPerkerasanAgregatJalanSubPost');
 
 	
-        removeCondition('JasaTimbunanSubPostbaseJalanSubPost');
+        removeCondition('JasaTimbunanSubbaseJalanSubPost');
         removeCondition('JasaPerkerasanBaseCourseJalanSubPost');
         removeCondition('JasaPerkerasanJalanKerikilSubPost');
         removeCondition('JasaPerkuatanDasarTanahJalanSubPost');
@@ -807,7 +807,7 @@ if (urlMappingJasaPerkerasanJalanAspalPost[cleanUrlJasaJalanPerkerasanKonsPost])
         removeCondition('JasaPerkerasanAgregatJalanSubPost');
 
 	
-        removeCondition('JasaTimbunanSubPostbaseJalanSubPost');
+        removeCondition('JasaTimbunanSubbaseJalanSubPost');
         removeCondition('JasaPerkerasanBaseCourseJalanSubPost');
         removeCondition('JasaPerkerasanJalanKerikilSubPost');
         removeCondition('JasaPerkuatanDasarTanahJalanSubPost');
@@ -867,7 +867,7 @@ JasaPerkerasanJalanSubPost
         removeCondition('JasaPerkerasanAgregatJalanSubPost');
 
 	
-        removeCondition('JasaTimbunanSubPostbaseJalanSubPost');
+        removeCondition('JasaTimbunanSubbaseJalanSubPost');
         removeCondition('JasaPerkerasanBaseCourseJalanSubPost');
         removeCondition('JasaPerkerasanJalanKerikilSubPost');
         removeCondition('JasaPerkuatanDasarTanahJalanSubPost');
