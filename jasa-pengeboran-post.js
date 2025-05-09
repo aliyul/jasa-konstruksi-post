@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaBorTanahPostLink.style.visibility = 'hidden';
      JasaBorHorizontalPostLink.style.visibility = 'hidden';
 	
-     pageNameJasaKonsPengeboranPost .textContent = "";
+     pageNameJasaKonsPengeboranPost.textContent = "";
 	
     //SUB urlMappingBangunan
 if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
@@ -154,6 +154,7 @@ if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
 	
 	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
         //removeCondition('');
@@ -191,6 +192,7 @@ if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
 	
 	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
         //removeCondition('');
