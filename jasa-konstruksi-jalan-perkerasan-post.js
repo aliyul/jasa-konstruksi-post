@@ -141,8 +141,8 @@ document.addEventListener("DOMContentLoaded", function() {
      // Menemukan elemen menggunakan Id
     var JasaKonsJalanPerkerasanPost = document.getElementById("JasaKonsJalanPerkerasanPost");
 
-    if (!JasaKonsJalanPerkerasan) {
-        console.error("elemen Id JasaKonsJalanPerkerasan kondisi terhapus");
+    if (!JasaKonsJalanPerkerasanPost) {
+        console.error("elemen Id JasaKonsJalanPerkerasanPost kondisi terhapus");
         return;
     }
 	
