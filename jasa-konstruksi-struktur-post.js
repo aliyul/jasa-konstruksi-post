@@ -65,7 +65,10 @@ const urlMappingJasaPengecoranLantaiDak = {
   "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-bandara.html": "Borongan Cor Beton Bandara",
   "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-desa.html": "Borongan Cor Beton Jalan Desa",
   "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-raya.html": "Borongan Cor Beton Jalan Raya",
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-tol.html": "Borongan Cor Beton Jalan Tol"
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-tol.html": "Borongan Cor Beton Jalan Tol",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-apartemen.html": "Borongan Cor Beton Apartemen",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-tangerang.html": "Borongan Cor Beton Tangerang"
+
 };
 const urlMappingJasaPengecoranLantaiGudang = {
 
