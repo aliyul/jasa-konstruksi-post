@@ -50,6 +50,7 @@ const urlMappingStrukturModularPrecast = {
 
 };
 const urlMappingStrukturBetonPengecoran = {
+"https://www.betonjayareadymix.com/p/jasa-cor-beton.html": "Jasa Cor Beton",
 "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-dak.html": "Jasa Pengecoran Lantai Dak",
   "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-gudang.html": "Jasa Pengecoran Lantai Gudang",
   "https://www.betonjayareadymix.com/p/jasa-bekisting-dan-pembesian.html": "Jasa Bekisting dan Pembesian",
