@@ -84,7 +84,8 @@ const urlMappingJasaPengecoranLantaiGudang = {
 
 };
 const urlMappingJasaBekistingdanPembesian = {
-
+https://www.betonjayareadymix.com/2021/12/jasa-bekisting-sloof-per-m2.html": "Jasa Bekisting Sloof per m2",
+  "https://www.betonjayareadymix.com/2021/08/jasa-bekisting-rumah.html": "Jasa Bekisting Rumah"
 };
 const urlMappingJasaPengecoranKolomBeton = {
 "https://www.betonjayareadymix.com/2018/09/borongan-kolom.html": "Borongan Kolom"
