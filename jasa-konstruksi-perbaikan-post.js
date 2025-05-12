@@ -1386,6 +1386,7 @@ if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {
 	JasaPerbaikanStrukturBetonPostLink.style.visibility = 'visible';
         pageNameJasaKonsPerbaikanPost.textContent = urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost];
     }
+	
 //SUB JasaRenovasiPerbaikanBangunanPost
 //SUB JasaRenovasiPerbaikanBangunanRumahPost
 if (urlMappingJasaRenovasiPerbaikanRumah[cleanUrlJasaKonsPerbaikanPost]) {
