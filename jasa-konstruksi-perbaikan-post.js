@@ -864,6 +864,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaPerbaikanBetonMengelupasPost');
         removeCondition1('JasaPerbaikanBetonKeroposPost');
         removeCondition1('JasaPerbaikanBetonRetakPost');
+        removeCondition1('JasaPatchingBetonPost');
        // removeCondition1('JasaGroutingStrukturBetonPost');
         
         removeCondition1('JasaBetonKarbonasiPost');
@@ -1286,6 +1287,7 @@ if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaPerbaikanBetonMengelupasPost');
         removeCondition1('JasaPerbaikanBetonKeroposPost');
         removeCondition1('JasaPerbaikanBetonRetakPost');
+        removeCondition1('JasaPatchingBetonPost');
         
         removeCondition1('JasaBetonKarbonasiPost');
         removeCondition1('JasaPerkuatanStrukturCfrpPost');
