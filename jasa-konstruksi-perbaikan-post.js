@@ -20,6 +20,7 @@ const urlMappingJasaRepairStrukturBeton= {
 	
 };
 const urlMappingJasaPerbaikanStrukturBeton= {
+  "https://www.betonjayareadymix.com/2018/09/perbaikan-beton.html": "Perbaikan Beton",
   "https://www.betonjayareadymix.com/2018/09/borongan-perbaikan-beton.html": "Borongan Perbaikan Beton",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-perbaikan-beton.html": "Harga Jasa Perbaikan Beton",
     "https://www.betonjayareadymix.com/2018/09/perbaikan-beton-bandung.html": "Perbaikan Beton Bandung",
