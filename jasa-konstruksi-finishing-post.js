@@ -9,7 +9,8 @@ const urlMappingJasaFinishingDakBeton = {
 
 const urlMappingJasaFinishingBetonExpose = {
   "https://www.betonjayareadymix.com/2018/10/harga-jasa-beton-ekspos.html": "Harga Jasa Beton Ekspos",
-  "https://www.betonjayareadymix.com/2018/10/finishing-beton-ekspos.html": "Finishing Beton Ekspos"
+  "https://www.betonjayareadymix.com/2018/10/finishing-beton-ekspos.html": "Finishing Beton Ekspos",
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-beton-ekspos.html": "Harga Jasa Finishing Beton Ekspos"
 
 };
 const urlMappingJasaPlesteranAcianDinding = {
