@@ -196,7 +196,8 @@ const urlMappingPengeboran = {
   "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",
   "https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton",
   "https://www.betonjayareadymix.com/p/jasa-bor-tanah.html": "Jasa Bor Tanah",
-  "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal"
+  "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal",
+ "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html": "Jasa Bor Tembok"
 };
 
 const urlMappingPembatas = {
