@@ -1170,6 +1170,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRepairStrukturBetonPost');
         removeCondition1('JasaPerbaikanStrukturBetonPost');
         removeCondition1('JasaRenovasiPerbaikanRetakStrukturPost');
+	  
 	// hapus elemen id Sub JasaRenovasiPerbaikanBangunanRumahPost SEMUA
         removeCondition1('JasaRenovasiRumahMinimalisPost');
         removeCondition1('JasaRenovasiRumahType36Post');
@@ -1439,6 +1440,7 @@ if (urlMappingJasaRenovasiPerbaikanRumah[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaPerbaikanBetonMengelupasPost');
         removeCondition1('JasaPerbaikanBetonKeroposPost');
         removeCondition1('JasaPerbaikanBetonRetakPost');
+        removeCondition1('JasaPatchingBetonPost');
         
         removeCondition1('JasaBetonKarbonasiPost');
         removeCondition1('JasaPerkuatanStrukturCfrpPost');
@@ -1580,6 +1582,7 @@ if (urlMappingJasaRenovasiRumahMinimalis[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaPerbaikanBetonMengelupasPost');
         removeCondition1('JasaPerbaikanBetonKeroposPost');
         removeCondition1('JasaPerbaikanBetonRetakPost');
+        removeCondition1('JasaPatchingBetonPost');
         
         removeCondition1('JasaBetonKarbonasiPost');
         removeCondition1('JasaPerkuatanStrukturCfrpPost');
@@ -1721,6 +1724,7 @@ if (urlMappingJasaRenovasiRumahType36[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaPerbaikanBetonMengelupasPost');
         removeCondition1('JasaPerbaikanBetonKeroposPost');
         removeCondition1('JasaPerbaikanBetonRetakPost');
+        removeCondition1('JasaPatchingBetonPost');
         
         removeCondition1('JasaBetonKarbonasiPost');
         removeCondition1('JasaPerkuatanStrukturCfrpPost');
@@ -1862,6 +1866,7 @@ if (urlMappingJasaRenovasiRumahType45[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaPerbaikanBetonMengelupasPost');
         removeCondition1('JasaPerbaikanBetonKeroposPost');
         removeCondition1('JasaPerbaikanBetonRetakPost');
+        removeCondition1('JasaPatchingBetonPost');
         
         removeCondition1('JasaBetonKarbonasiPost');
         removeCondition1('JasaPerkuatanStrukturCfrpPost');
