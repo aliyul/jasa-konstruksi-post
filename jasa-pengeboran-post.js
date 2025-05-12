@@ -43,6 +43,9 @@ const urlMappingJasaBorAir = {
 const urlMappingJasaBorePile = {
 
 };
+const urlMappingJasaBorTembok = {
+	
+};
 const urlMappingJasaCoringBeton = {
 "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-depok.html": "Jasa Coring Beton Depok",
     "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-bogor.html": "Jasa Coring Beton Bogor",
@@ -110,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaBorAirPostLink = document.getElementById("JasaBorAirPost");
      var JasaBorePilePostLink = document.getElementById("JasaBorePilePost");
      var JasaCoringBetonPostLink = document.getElementById("JasaCoringBetonPost");
+     var JasaBorTembokPostLink = document.getElementById("JasaBorTembokPost");
      var JasaBorBetonPostLink = document.getElementById("JasaBorBetonPost");
      var JasaBorTanahPostLink = document.getElementById("JasaBorTanahPost");
      var JasaBorHorizontalPostLink = document.getElementById("JasaBorHorizontalPost");
@@ -126,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaBorAirPostLink.style.visibility = 'hidden';
      JasaBorePilePostLink.style.visibility = 'hidden';
      JasaCoringBetonPostLink.style.visibility = 'hidden';
+     JasaBorTembokPostLink.style.visibility = 'hidden';
      JasaBorBetonPostLink.style.visibility = 'hidden';
      JasaBorTanahPostLink.style.visibility = 'hidden';
      JasaBorHorizontalPostLink.style.visibility = 'hidden';
@@ -157,7 +162,7 @@ if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
 	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
-        //removeCondition('');
+        removeCondition('JasaBorTembokPost');
         removeCondition('JasaBorePilePost');
         removeCondition('JasaCoringBetonPost');
         removeCondition('JasaBorBetonPost');
@@ -196,6 +201,7 @@ if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
 	
 	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
         //removeCondition('');
+        removeCondition('JasaBorTembokPost');
         removeCondition('JasaBorePilePost');
         removeCondition('JasaBorAirPost');
         removeCondition('JasaBorBetonPost');
@@ -210,4 +216,43 @@ if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
         pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost];
     }
     
+if (urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost]) {
+        restoreCondition('JasaKonsPengeboranPost');
+        restoreCondition('JasaPengeboranPost');
+        restoreCondition('JasaBorTembokPost');
+     
+        //hapus elemen div id lain KECUALI JasaPengeboranPost
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+       // removeCondition('JasaPengeboranPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	
+	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
+        removeCondition('JasaCoringBetonPost');
+        //removeCondition('JasaBorTembokPost');
+        removeCondition('JasaBorePilePost');
+        removeCondition('JasaBorAirPost');
+        removeCondition('JasaBorBetonPost');
+        removeCondition('JasaBorTanahPost');
+        removeCondition('JasaBorHorizontalPost');
+       
+        JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
+       //TAMPILKAN JasaPengeboranPost
+        JasaPengeboranPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaCoringBetonPost
+        JasaBorTembokPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost];
+    }
    });
