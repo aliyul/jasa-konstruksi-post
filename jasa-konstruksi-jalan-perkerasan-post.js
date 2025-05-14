@@ -78,7 +78,7 @@ const urlMappingJasaPengecoranJalanBetonPost = {
   "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-raya.html": "Borongan Cor Beton Jalan Raya",
   "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-tol.html": "Borongan Cor Beton Jalan Tol",
 
-
+  "https://www.betonjayareadymix.com/2021/12/harga-cor-beton-untuk-jalan.html": "Harga Cor Beton Untuk Jalan",
    "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-tasikmalaya.html": "Harga Cor Beton Jalan Tasikmalaya",
     "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-sukabumi.html": "Harga Cor Beton Jalan Sukabumi",
   "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-kuningan.html": "Harga Cor Beton Jalan Kuningan",
