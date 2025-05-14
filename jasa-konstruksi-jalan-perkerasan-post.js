@@ -76,7 +76,13 @@ const urlMappingJasaPengecoranJalanBetonPost = {
 "https://www.betonjayareadymix.com/2018/05/harga-cor-beton-jalan-per-meter.html": "Harga Cor Beton Jalan Per Meter",
   "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-desa.html": "Borongan Cor Beton Jalan Desa",
   "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-raya.html": "Borongan Cor Beton Jalan Raya",
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-tol.html": "Borongan Cor Beton Jalan Tol"
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-tol.html": "Borongan Cor Beton Jalan Tol",
+
+
+  "https://www.betonjayareadymix.com/2021/12/harga-cor-beton-rumah-tinggal-per-m3.html": "Harga Cor Beton Rumah Tinggal per m3",
+   "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-tasikmalaya.html": "Harga Cor Beton Jalan Tasikmalaya",
+    "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-sukabumi.html": "Harga Cor Beton Jalan Sukabumi"
+
 };
 const urlMappingJasaPengaspalanJalanPost = {
 	
