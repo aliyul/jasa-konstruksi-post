@@ -79,7 +79,6 @@ const urlMappingJasaPengecoranJalanBetonPost = {
   "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-tol.html": "Borongan Cor Beton Jalan Tol",
 
 
-  "https://www.betonjayareadymix.com/2021/12/harga-cor-beton-rumah-tinggal-per-m3.html": "Harga Cor Beton Rumah Tinggal per m3",
    "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-tasikmalaya.html": "Harga Cor Beton Jalan Tasikmalaya",
     "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-sukabumi.html": "Harga Cor Beton Jalan Sukabumi",
   "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-kuningan.html": "Harga Cor Beton Jalan Kuningan",
