@@ -41,6 +41,9 @@ const urlMappingJasaStrukturBajaGudang = {
 */
 //SUB JasaStrukturBetondanPengecoranPost
 const urlMappingJasaCorBeton = {
+  "https://www.betonjayareadymix.com/2018/09/jasa-sloof-beton.html": "Jasa Sloof Beton",
+  "https://www.betonjayareadymix.com/2018/09/jasa-ring-balok.html": "Jasa Ring Balok",
+  "https://www.betonjayareadymix.com/2018/09/jasa-kolom.html": "Jasa Kolom",
   "https://www.betonjayareadymix.com/2018/09/jasa-cor-tiang.html": "Jasa Cor Tiang",
   "https://www.betonjayareadymix.com/2018/09/jasa-gelar-beton.html": "Jasa Gelar Beton",
   "https://www.betonjayareadymix.com/2018/09/jasa-rabat-beton-per-meter.html": "Jasa Rabat Beton per Meter"
