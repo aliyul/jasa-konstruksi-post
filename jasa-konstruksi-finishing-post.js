@@ -871,7 +871,7 @@ if (urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost]) {
         JasaFinishingBangunanEksteriorPostLink.style.visibility = 'visible';
         //JasaFinishingFasadEksteriorPost
         JasaFinishingFasadEksteriorPostLink.style.visibility = 'visible';
-	pageNameJasaKonsFinishingPostLink.style.visibility = 'visible';
+	//pageNameJasaKonsFinishingPostLink.style.visibility = 'visible';
         pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost];
     }
 if (urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost]) {
