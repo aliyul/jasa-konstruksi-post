@@ -323,8 +323,9 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaFinishingBangunanPostLink = document.getElementById("JasaFinishingBangunanPost");
      var JasaFinishingInfrastrukturPostLink = document.getElementById("JasaFinishingInfrastrukturPost");
     //sub finishing bangunan
+	
     var JasaFinishingInteriorPostLink = document.getElementById("JasaFinishingBangunanInteriorPost");
-    var JasaFinishingEksteriorPostLink = document.getElementById("JasaFinishingBangunanEksteriorPost");
+    var JasaFinishingBangunanEksteriorPostLink = document.getElementById("JasaFinishingBangunanEksteriorPost");
     var JasaFinishingStrukturPostLink = document.getElementById("JasaFinishingBangunanStrukturPost");
 	
    //SUB JasaFinishingBangunanInteriorPost
@@ -389,7 +390,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //HIDE sub JasaFinishingBangunanEksteriorPost
     JasaCatEksteriorRumahPostLink.style.visibility = 'hidden';
-    //JasaFinishingFasadEksteriorPostLink.style.visibility = 'hidden';
+    JasaFinishingFasadEksteriorPostLink.style.visibility = 'hidden';
     JasaPelapisanAntiCuacaPostLink.style.visibility = 'hidden';
     JasaPelapisanDindingLuarPostLink.style.visibility = 'hidden';
     JasaFinishingTamanRumahPostLink.style.visibility = 'hidden';
