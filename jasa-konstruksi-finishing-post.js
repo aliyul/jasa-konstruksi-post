@@ -374,7 +374,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //HIDE sub JasaFinishingBangunanEksteriorPost
     JasaCatEksteriorRumahPostLink.style.visibility = 'hidden';
-    JasaFinishingFasadEksteriorPostLink.style.visibility = 'hidden';
+    //JasaFinishingFasadEksteriorPostLink.style.visibility = 'hidden';
     JasaPelapisanAntiCuacaPostLink.style.visibility = 'hidden';
     JasaPelapisanDindingLuarPostLink.style.visibility = 'hidden';
     JasaFinishingTamanRumahPostLink.style.visibility = 'hidden';
