@@ -396,14 +396,14 @@ document.addEventListener("DOMContentLoaded", function() {
     JasaPelapisanBatuAlamEksteriorPostLink.style.visibility = 'hidden';
     JasaPelapisanGentengDakPostLink.style.visibility = 'hidden';
    
-    var pageNameJasaKonsFinishingPost = document.getElementById("pageNameJasaKonsFinishingPost");
+    var pageNameJasaKonsFinishingPostLink = document.getElementById("pageNameJasaKonsFinishingPost");
 	
      // Default untuk menyembunyikan elemen
      JasaKonstruksiFinishingPostLink.style.visibility = 'hidden';
      JasaFinishingPostLink.style.visibility = 'hidden';
      JasaFinishingBangunanPostLink.style.visibility = 'hidden';
      JasaFinishingInfrastrukturPostLink.style.visibility = 'hidden';
-     pageNameJasaKonsFinishingPost.textContent = "";
+     pageNameJasaKonsFinishingPostLink.textContent = "";
 
     //SUB FINISHING BANGUNAN
 	//FINISHING STRUKTUR
@@ -482,7 +482,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaFinishingStrukturPostLink.style.visibility = 'visible';
         //sub finishing STRUKKTUR
         JasaFinishingDakBetonPostLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPost.textContent = urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost];
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost];
     }
     if (urlMappingJasaFinishingBetonExpose[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
@@ -558,7 +558,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaFinishingStrukturPostLink.style.visibility = 'visible';
         //sub finishing STRUKKTUR
         JasaFinishingBetonExposePostLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPost.textContent = urlMappingJasaFinishingBetonExpose[cleanUrlJasaKonsFinishingPost];
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingBetonExpose[cleanUrlJasaKonsFinishingPost];
     }
   if (urlMappingJasaFinishingLantaiBeton[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
@@ -634,7 +634,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaFinishingStrukturPostLink.style.visibility = 'visible';
         //sub finishing STRUKKTUR
         JasaFinishingLantaiBetonPostLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPost.textContent = urlMappingJasaFinishingLantaiBeton[cleanUrlJasaKonsFinishingPost];
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingLantaiBeton[cleanUrlJasaKonsFinishingPost];
     }
    if (urlMappingJasaPlesteranAcianDinding[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
@@ -710,7 +710,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaFinishingStrukturPostLink.style.visibility = 'visible';
         //sub finishing STRUKKTUR
         JasaPlesteranAcianDindingPostLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPost.textContent = urlMappingJasaPlesteranAcianDinding[cleanUrlJasaKonsFinishingPost];
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaPlesteranAcianDinding[cleanUrlJasaKonsFinishingPost];
     }
 //AKHIR FINISHING STRUKTUR
 
@@ -790,7 +790,7 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaFinishingInteriorPostLink.style.visibility = 'visible';
         //sub finishing STRUKKTUR
         JasaDesainInteriorPostLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPost.textContent = urlMappingJasaDesainInterior[cleanUrlJasaKonsFinishingPost];
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaDesainInterior[cleanUrlJasaKonsFinishingPost];
     }
 //AKHIR FINISHING INTERIOR
 
@@ -870,8 +870,8 @@ if (urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost]) {
         JasaFinishingBangunanEksteriorPostLink.style.visibility = 'visible';
         //JasaFinishingFasadEksteriorPost
         JasaFinishingFasadEksteriorPostLink.style.visibility = 'visible';
-	pageNameJasaKonsFinishingPost.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPost.textContent = urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost];
+	pageNameJasaKonsFinishingPostLink.style.visibility = 'visible';
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost];
     }
 if (urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
@@ -948,7 +948,7 @@ if (urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost]) {
         JasaFinishingBangunanEksteriorPostLink.style.visibility = 'visible';
         //JasaFinishingTamanRumahPost
         JasaFinishingTamanRumahPostLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPost.textContent = urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost];
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost];
     }
 
 //AKHIR SUB JasaFinishingBangunanEksteriorPost
