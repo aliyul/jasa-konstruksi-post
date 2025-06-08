@@ -41,6 +41,7 @@ const urlMappingJasaPagarBetonPrecast = {
 
 };
 const urlMappingJasaPagarPanelBeton = {
+ "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton.html": "Jasa Pasang Pagar Panel Beton",
  "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton",
   "https://www.betonjayareadymix.com/2018/11/pagar-panel-beton-terpasang.html": "Pagar Panel Beton Terpasang",
   "https://www.betonjayareadymix.com/2018/11/harga-pasang-pagar-panel-beton.html": "Harga Pasang Pagar Panel Beton",
@@ -96,6 +97,7 @@ const urlMappingJasaPagarBRC = {
 
 };
 const urlMappingJasaPagarRumah = {
+"https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah.html": "Jasa Pasang Pagar Rumah",
 "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-terdekat.html": "Jasa Pasang Pagar Rumah Terdekat",
     "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah.html": "Harga Jasa Pasang Pagar Rumah",
     "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-besi-beton-kayu.html": "Jasa Pasang Pagar Rumah Besi Beton Kayu",
