@@ -205,6 +205,7 @@ const urlMappingJasaShortcreteBeton = {
   "https://www.betonjayareadymix.com/2018/09/borongan-semprot-beton.html": "Borongan Semprot Beton"
 };
 const urlMappingJasaGoutingStrukturBeton = {
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-grouting-beton.html": "Harga Jasa Grouting Beton",
   "https://www.betonjayareadymix.com/2018/09/grouting-beton-bekasi.html": "Grouting Beton Bekasi",
   "https://www.betonjayareadymix.com/2018/09/grouting-beton-depok.html": "Grouting Beton Depok",
   "https://www.betonjayareadymix.com/2018/09/grouting-beton-tangerang.html": "Grouting Beton Tangerang",
