@@ -203,6 +203,7 @@ const urlMappingJasaPatchingBeton = {
 
 const urlMappingJasaShortcreteBeton = {
   "https://www.betonjayareadymix.com/2018/09/borongan-semprot-beton.html": "Borongan Semprot Beton"
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-shotcrete.html": "Harga Jasa Shotcrete"
 };
 const urlMappingJasaGoutingStrukturBeton = {
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-grouting-beton.html": "Harga Jasa Grouting Beton",
