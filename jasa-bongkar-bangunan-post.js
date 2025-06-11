@@ -1,7 +1,7 @@
 //SUB MAPPING JASA BONGKAR BANGUNAN
 // JasaBongkarRumah
 const urlMappingJasaBongkarRumah = {
-"https://www.betonjayareadymix.com/2018/09/jasa-bongkar-bangunan.html": "Jasa Bongkar Bangunan"
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-bongkar-bangunan.html": "Harga Jasa Bongkar Bangunan"
 };
 const urlMappingJasaBongkarBeton = {
 "https://www.betonjayareadymix.com/2019/06/harga-bongkar-beton.html": "Harga Bongkar Beton",
