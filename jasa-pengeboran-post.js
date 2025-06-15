@@ -57,7 +57,8 @@ const urlMappingJasaCoringBeton = {
 
 };
 const urlMappingJasaBorBeton = {
-
+"https://www.betonjayareadymix.com/2018/09/jasa-core-drill-beton.html": "Jasa Core Drill Beton"
+	
 };
 const urlMappingJasaBorTanah = {
 
