@@ -256,4 +256,45 @@ if (urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost]) {
         JasaBorTembokPostLink.style.visibility = 'visible';
         pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost];
     }
+	
+if (urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost]) {
+        restoreCondition('JasaKonsPengeboranPost');
+        restoreCondition('JasaPengeboranPost');
+        restoreCondition('JasaBorBetonPost');
+     
+        //hapus elemen div id lain KECUALI JasaPengeboranPost
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+       // removeCondition('JasaPengeboranPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	
+	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
+        //removeCondition('');
+        removeCondition('JasaBorTembokPost');
+        removeCondition('JasaBorePilePost');
+        removeCondition('JasaBorAirPost');
+        removeCondition('JasaCoringBetonPost');
+        removeCondition('JasaBorTanahPost');
+        removeCondition('JasaBorHorizontalPost');
+       
+        JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
+       //TAMPILKAN JasaPengeboranPost
+        JasaPengeboranPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaCoringBetonPost
+        JasaBorBetonPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost];
+    }
+
    });
