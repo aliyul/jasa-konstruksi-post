@@ -66,6 +66,11 @@ const urlMappingJasaSewaAlatBerat = {
 const urlMappingJasaSewaAlatKonstruksiRingan = {	
 
 }
+
+const urlMappingJasaJualAlatKonstruksi = {	
+"https://www.betonjayareadymix.com/p/jual-alat-konstruksi.html": "Jual Alat Konstruksi"
+}
+
 const urlMappingPerbaikan = {	
 	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-fasilitas-umum.html": "Jasa Renovasi Perbaikan Fasilitas Umum",
 	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-bangunan.html": "Jasa Renovasi Perbaikan Bangunan",
@@ -527,6 +532,53 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	
         SewaAlatKonstruksiRinganLink.style.visibility = 'visible';
         pageNameKonstruksiSub.textContent = urlMappingJasaSewaAlatKonstruksiRingan[cleanUrlJasaKons];
+    }
+
+    
+   if (urlMappingJasaJualAlatKonstruksi[cleanUrlJasaKons]) {
+        restoreCondition('JasaKonsSub');
+	//restoreCondition('JasaKonstruksi');
+	restoreCondition('JasaAlatKonstruksi');
+	restoreCondition('');
+	   
+           // hapus elemen id DIV Lain
+        removeCondition('MaterialKons');
+	removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
+        removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPerbaikan');
+	removeCondition('JasaKonsFinishing');
+        removeCondition('JasaKonsStruktur');
+	removeCondition('JasaKons');
+	removeCondition('MenuKons');
+
+	// hapus elemen id DIV Lain selain SewaAlatKonstruksi dan JasaAlatKonstruksi
+	removeCondition('SewaAlatBerat');
+	removeCondition('SewaAlatKonstruksiRingan');
+	removeCondition('SewaAlatKonstruksi');
+	
+	   
+	removeCondition('JasaRenovasiPerbaikan');
+	removeCondition('JasaStrukturKonstruksi');
+        removeCondition('JasaFinishing');
+        removeCondition('JasaPondasiPerkuatan');
+        removeCondition('JasaSaluranDrainase');
+        removeCondition('JasaJalanPerkerasan');
+	removeCondition('JasaPematanganLahan');
+	removeCondition('JasaUjiTanah');
+        removeCondition('JasaPembatasPengaman');
+	removeCondition('JasaPerkuatanTanahLongsor');
+	removeCondition('JasaBongkarBangunan');
+	removeCondition('JasaPengeboran');
+
+        JasaKonstruksiSubLink.style.visibility = 'visible';
+        JasaAlatKonstruksiLink.style.visibility = 'visible';
+        //JualAlatKonstruksiLink.style.visibility = 'visible';
+	    
+        pageNameKonstruksiSub.textContent = urlMappingJasaJualAlatKonstruksi[cleanUrlJasaKons];
     }
   //AKHIR JASA KONTRUKSI ALAT
 	
