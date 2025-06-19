@@ -42,9 +42,13 @@ const urlMappingJasaStrukturBajaGudang = {
 //SUB JasaStrukturBetondanPengecoranPost
 const urlMappingJasaCorBeton = {
   "https://www.betonjayareadymix.com/2018/09/jasa-sloof-beton.html": "Jasa Sloof Beton",
-  
+  "https://www.betonjayareadymix.com/2021/12/harga-cor-beton-sloof.html": "Harga Cor Beton Sloof",  
   "https://www.betonjayareadymix.com/2018/09/harga-sloof-per-meter.html": "Harga Sloof Per Meter",
   
+"https://www.betonjayareadymix.com/2018/09/borongan-sloof.html": "Borongan Sloof",
+  "https://www.betonjayareadymix.com/2018/09/harga-borongan-sloof-per-meter-kubik.html": "Harga Borongan Sloof Per Meter Kubik",
+ "https://www.betonjayareadymix.com/2021/12/harga-cor-beton-sloof.html": "Harga Cor Beton Sloof",
+	
   "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-kuningan.html": "Harga Sloof Per m3 Kuningan",
   "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-ciamis.html": "Harga Sloof Per m3 Ciamis",
   "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-cianjur.html": "Harga Sloof Per m3 Cianjur",
@@ -74,12 +78,11 @@ const urlMappingJasaCorBeton = {
 
 const urlMappingJasaPengecoranLantaiDak = {
    "https://www.betonjayareadymix.com/2018/09/jasa-cor-dak.html": "Jasa Cor Dak",
+  "https://www.betonjayareadymix.com/2021/12/harga-cor-beton-lantai.html": "Harga Cor Beton Lantai",
+  "https://www.betonjayareadymix.com/2021/12/harga-beton-cor-dak.html": "Harga Beton Cor Dak",
   "https://www.betonjayareadymix.com/2018/10/harga-jasa-dak-beton.html": "Harga Jasa Dak Beton",
   "https://www.betonjayareadymix.com/2018/09/borongan-dak-beton.html": "Borongan Dak Beton",
   "https://www.betonjayareadymix.com/2018/09/borongan-ring-balok.html": "Borongan ring balok",
- 
-"https://www.betonjayareadymix.com/2018/09/borongan-sloof.html": "Borongan Sloof",
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-sloof-per-meter-kubik.html": "Harga Borongan Sloof Per Meter Kubik",
 
 "https://www.betonjayareadymix.com/2021/03/harga-borongan-cor-beton.html": "Harga Borongan Cor Beton",
     "https://www.betonjayareadymix.com/2021/03/harga-borongan-cor-beton-per-m3.html": "Harga Borongan Cor Beton per m3",
