@@ -83,9 +83,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	
     //SUB urlMappingBangunan
 if (urlMappingJasaCuttingBeton[cleanUrlJasaCuttingBetonPost]) {
-        restoreCondition('JasaKonsPengeboranPost');
-        restoreCondition('JasaPengeboranPost');
-        restoreCondition('JasaBorAirPost');
+        restoreCondition('JasaKonsCuttingBetonPost');
+        restoreCondition('JasaCuttingBetonPost');
+       // restoreCondition('JasaBorAirPost');
      
         //hapus elemen div id lain KECUALI JasaPengeboranPost
         removeCondition('ProdukKonsSaluranPost');
@@ -99,7 +99,7 @@ if (urlMappingJasaCuttingBeton[cleanUrlJasaCuttingBetonPost]) {
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
+	//removeCondition('JasaKonsCuttingBetonPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
