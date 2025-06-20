@@ -346,6 +346,7 @@ if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost])
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost'); 
 	removeCondition('JasaKonsFinishingPost');
