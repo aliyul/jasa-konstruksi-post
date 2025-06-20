@@ -97,31 +97,31 @@ function restoreCondition(conditionId) {
 document.addEventListener("DOMContentLoaded", function() {
     // var currentUrl = window.location.href;
      //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
-    const cleanUrlJasaPengeboranPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
+    const cleanUrlJasaCuttingBetonPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
 
 
      // Menemukan elemen menggunakan Id
-    var JasaKonsPengeboranPost = document.getElementById("JasaKonsPengeboranPost");
+    var JasaKonsCuttingBetonPost = document.getElementById("JasaKonsCuttingBetonPost");
 
-    if (!JasaKonsPengeboranPost) {
-        console.error("elemen Id JasaPengeboranPost kondisi terhapus");
+    if (!JasaKonsCuttingBetonPost) {
+        console.error("elemen Id JasaKonsCuttingBetonPost kondisi terhapus");
         return;
     }
     
-     var JasaKonstruksiPengeboranPostLink = document.getElementById("JasaKonstruksiPengeboranPost");
-     var JasaPengeboranPostLink = document.getElementById("JasaPengeboranPost");
+     var JasaKonstruksiCuttingBetonPostLink = document.getElementById("JasaKonstruksiCuttingBetonPost");
+     var JasaCuttingBetonPostLink = document.getElementById("JasaCuttingBetonPost");
 
      //SUB Jasa Pondasi Tanah
-     var JasaBorAirPostLink = document.getElementById("JasaBorAirPost");
+     /*var JasaBorAirPostLink = document.getElementById("JasaBorAirPost");
      var JasaBorePilePostLink = document.getElementById("JasaBorePilePost");
      var JasaCoringBetonPostLink = document.getElementById("JasaCoringBetonPost");
      var JasaBorTembokPostLink = document.getElementById("JasaBorTembokPost");
      var JasaBorBetonPostLink = document.getElementById("JasaBorBetonPost");
      var JasaBorTanahPostLink = document.getElementById("JasaBorTanahPost");
      var JasaBorHorizontalPostLink = document.getElementById("JasaBorHorizontalPost");
-	
+    */
     	
-     var pageNameJasaKonsPengeboranPost = document.getElementById("pageNameJasaKonsPengeboranPost");
+     var pageNameJasaKonsCuttingBetonPost = document.getElementById("pageNameJasaKonsCuttingBetonPost");
     
 
      // Default untuk menyembunyikan elemen
@@ -129,18 +129,18 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaPengeboranPost.style.visibility = 'hidden';
 	
      //SUB JasaPengeboranPost
-     JasaBorAirPostLink.style.visibility = 'hidden';
+     /*JasaBorAirPostLink.style.visibility = 'hidden';
      JasaBorePilePostLink.style.visibility = 'hidden';
      JasaCoringBetonPostLink.style.visibility = 'hidden';
      JasaBorTembokPostLink.style.visibility = 'hidden';
      JasaBorBetonPostLink.style.visibility = 'hidden';
      JasaBorTanahPostLink.style.visibility = 'hidden';
      JasaBorHorizontalPostLink.style.visibility = 'hidden';
-	
+    */
      pageNameJasaKonsPengeboranPost.textContent = "";
 	
     //SUB urlMappingBangunan
-if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
+if (urlMappingJasaCuttingBeton[cleanUrlJasaCuttingBetonPost]) {
         restoreCondition('JasaKonsPengeboranPost');
         restoreCondition('JasaPengeboranPost');
         restoreCondition('JasaBorAirPost');
