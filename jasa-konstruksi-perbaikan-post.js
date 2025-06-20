@@ -230,8 +230,8 @@ const urlMappingJasaPerbaikanBetonRetak = {
 };
 const urlMappingJasaChippingBeton = {
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-chipping-beton.html": "Harga Jasa Chipping Beton",
-  "https://www.betonjayareadymix.com/2019/06/harga-chipping-per-m3.html": "Harga Chipping Per M3",
-  "https://www.betonjayareadymix.com/2019/06/harga-chipping-per-m2.html": "Harga Chipping Per M2",
+  "https://www.betonjayareadymix.com/2019/06/harga-chipping-beton-per-m3.html": "Harga Chipping Beton Per M3",
+  "https://www.betonjayareadymix.com/2019/06/harga-chipping-beton-murah.html": "Harga Chipping Beton Murah",
     "https://www.betonjayareadymix.com/2019/06/harga-chipping-beton-per-m2.html": "Harga Chipping Beton Per M2",
   "https://www.betonjayareadymix.com/2019/06/harga-pekerjaan-chipping-beton.html": "Harga Pekerjaan Chipping Beton"
 
