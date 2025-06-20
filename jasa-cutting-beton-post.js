@@ -1,73 +1,7 @@
 //SUB MAPPING JasaPengeboranPost 
-const urlMappingJasaBorAir = {
+const urlMappingJasaCuttingBeton = {
 "https://www.betonjayareadymix.com/2018/09/tukang-bor-terdekat.html": "Tukang Bor Terdekat",
-  "https://www.betonjayareadymix.com/2018/09/tukang-bor.html": "Tukang Bor",
-	
-   "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-depok.html": "Jasa Bor Air Tanah Depok",
-  "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-tangerang.html": "Jasa Bor Air Tanah Tangerang",
-  "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-jakarta.html": "Jasa Bor Air Tanah Jakarta",
-  "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-bekasi.html": "Jasa Bor Air Tanah Bekasi",
-  "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-bogor.html": "Jasa Bor Air Tanah Bogor",
-  "https://www.betonjayareadymix.com/2018/09/tukang-bor-air-terdekat.html": "Tukang Bor Air Terdekat",
-  "https://www.betonjayareadymix.com/2018/09/jasa-bor-air-terdekat.html": "Jasa Bor Air Terdekat",
-  "https://www.betonjayareadymix.com/2018/09/jasa-bor-air-tanah.html": "Jasa Bor Air Tanah",
-  "https://www.betonjayareadymix.com/2018/09/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",
-
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-150-meter.html": "Biaya Sumur Bor 150 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-100-meter.html": "Biaya Sumur Bor 100 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-60-meter.html": "Biaya Sumur Bor 60 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-50-meter.html": "Biaya Sumur Bor 50 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-40-meter.html": "Biaya Sumur Bor 40 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-15-meter.html": "Biaya Sumur Bor 15 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-10-meter.html": "Biaya Sumur Bor 10 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-20-meter.html": "Biaya Sumur Bor 20 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-30-meter.html": "Biaya Sumur Bor 30 Meter",
-  "https://www.betonjayareadymix.com/2018/11/jasa-sumur-bor-tangerang.html": "Jasa Sumur Bor Tangerang",
-  "https://www.betonjayareadymix.com/2018/11/jasa-sumur-bor-jakarta.html": "Jasa Sumur Bor Jakarta",
-  "https://www.betonjayareadymix.com/2018/11/jasa-sumur-bor-bekasi.html": "Jasa Sumur Bor Bekasi",
-  "https://www.betonjayareadymix.com/2018/11/jasa-sumur-bor-bogor.html": "Jasa Sumur Bor Bogor",
-  "https://www.betonjayareadymix.com/2018/11/tukang-sumur-bor-tangerang.html": "Tukang Sumur Bor Tangerang",
-  "https://www.betonjayareadymix.com/2018/11/tukang-sumur-bor-depok.html": "Tukang Sumur Bor Depok",
-  "https://www.betonjayareadymix.com/2018/11/tukang-sumur-bor-jakarta.html": "Tukang Sumur Bor Jakarta",
-  "https://www.betonjayareadymix.com/2018/11/tukang-sumur-bor-bekasi.html": "Tukang Sumur Bor Bekasi",
-  "https://www.betonjayareadymix.com/2018/11/tukang-sumur-bor-bogor.html": "Tukang Sumur Bor Bogor",
-  "https://www.betonjayareadymix.com/2018/09/biaya-sumur-bor-per-meter.html": "Biaya Sumur Bor Per Meter",
-  "https://www.betonjayareadymix.com/2018/09/bor-sumur-terdekat.html": "Bor Sumur Terdekat",
-  "https://www.betonjayareadymix.com/2018/09/bor-sumur-murah.html": "Bor Sumur Murah",
-  "https://www.betonjayareadymix.com/2018/09/tukang-sumur-bor-terdekat.html": "Tukang Sumur Bor Terdekat",
-  "https://www.betonjayareadymix.com/2018/09/tukang-sumur-bor.html": "Tukang Sumur Bor",
-  "https://www.betonjayareadymix.com/2018/09/jasa-bor-sumur.html": "Jasa Bor Sumur",
-  "https://www.betonjayareadymix.com/2018/09/jasa-bor-sumur-terdekat.html": "Jasa Bor Sumur Terdekat"
-
-};
-const urlMappingJasaBorePile = {
-
-};
-const urlMappingJasaBorTembok = {
-	
-};
-const urlMappingJasaCoringBeton = {
-"https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-karawang.html": "Jasa Coring Beton Karawang",
-"https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-depok.html": "Jasa Coring Beton Depok",
-    "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-bogor.html": "Jasa Coring Beton Bogor",
-    "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-bekasi.html": "Jasa Coring Beton Bekasi",
-    "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-jakarta.html": "Jasa Coring Beton Jakarta",
-    "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-tangerang.html": "Jasa Coring Beton Tangerang",
-    "https://www.betonjayareadymix.com/2018/09/jasa-coring-beton.html": "Jasa Coring Beton",
-    "https://www.betonjayareadymix.com/2018/09/jasa-coring-beton-terdekat.html": "Jasa Coring Beton Terdekat"
-
-};
-const urlMappingJasaBorBeton = {
-"https://www.betonjayareadymix.com/2018/09/jasa-core-drill-beton.html": "Jasa Core Drill Beton"
-	
-};
-const urlMappingJasaBorTanah = {
-
-};
-const urlMappingJasaBorHorizontal = {
-
-};
-
+  };
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPengeboranPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
