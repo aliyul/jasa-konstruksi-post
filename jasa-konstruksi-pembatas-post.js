@@ -214,6 +214,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
         removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
@@ -276,6 +277,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
         removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
@@ -322,6 +324,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
         removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
@@ -368,6 +371,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
         removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
