@@ -154,6 +154,7 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
@@ -198,6 +199,7 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
@@ -240,6 +242,7 @@ if (urlMappingJasaBongkarAtap[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
@@ -282,6 +285,7 @@ if (urlMappingJasaBongkarKeramik[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
@@ -324,6 +328,7 @@ if (urlMappingJasaBongkarTembok[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
@@ -366,6 +371,7 @@ if (urlMappingJasaBongkarDinding[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
@@ -408,6 +414,7 @@ if (urlMappingJasaBongkarPlafon[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
@@ -450,6 +457,7 @@ if (urlMappingJasaBongkarPartisi[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
@@ -492,6 +500,7 @@ if (urlMappingJasaBongkarPagar[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
@@ -534,6 +543,7 @@ if (urlMappingJasaBongkarLantai[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
         removeCondition('JasaKonsStrukturPost');
