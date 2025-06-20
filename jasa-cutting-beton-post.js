@@ -3,14 +3,14 @@ const urlMappingJasaCuttingBeton = {
 "https://www.betonjayareadymix.com/2018/09/tukang-bor-terdekat.html": "Tukang Bor Terdekat",
   };
 // Menyimpan elemen yang dihapus dalam variabel
-let removedElementsJasaPengeboranPost = {};
+let removedElementsJasaCuttingBetonPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
 function removeCondition(conditionId) {
     const conditionElement = document.getElementById(conditionId);
 
     if (conditionElement) {
         // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
-        removedElementsJasaPengeboranPost[conditionId] = conditionElement;
+        removedElementsJasaCuttingBetonPost[conditionId] = conditionElement;
         conditionElement.remove(); // Menghapus elemen tersebut
     }
 }
@@ -18,13 +18,13 @@ function removeCondition(conditionId) {
 // Fungsi untuk mengembalikan elemen yang telah dihapus
 function restoreCondition(conditionId) {
     const breadcrumb = document.querySelector('.breadcrumb');
-    const elementToRestore = removedElementsJasaPengeboranPost[conditionId]; // Mendapatkan elemen yang disimpan
+    const elementToRestore = removedElementsJasaCuttingBetonPost[conditionId]; // Mendapatkan elemen yang disimpan
 
     if (elementToRestore) {
         breadcrumb.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
-        delete removedElementsJasaPengeboranPost[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
+        delete removedElementsJasaCuttingBetonPost[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
     } else {
-        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaPengeboranPost.`);
+        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaCuttingBetonPost.`);
     }
 }
 
