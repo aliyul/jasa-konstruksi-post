@@ -154,6 +154,7 @@ JasaPerkuatanTanahLongsorPost
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
@@ -217,6 +218,7 @@ if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
@@ -255,6 +257,7 @@ if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
@@ -294,6 +297,7 @@ if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
@@ -332,6 +336,7 @@ if (urlMappingJasaSheetPileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
@@ -370,6 +375,7 @@ if (urlMappingJasaStabilisasiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost])
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
@@ -408,6 +414,7 @@ if (urlMappingJasaPerkuatanRumahLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPos
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
@@ -446,6 +453,7 @@ if (urlMappingJasaPerkuatanTebingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPo
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
@@ -484,6 +492,7 @@ if (urlMappingJasaPerkuatanPerkebunanLongsor[cleanUrlJasaPerkuatanTanahLongsorKo
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
@@ -523,6 +532,7 @@ if (urlMappingJasaDrainaseAntiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]
         removeCondition('JasaKonsPondasiTanahPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
 	removeCondition('JasaKonsBongkarBangunanPost');
         removeCondition('JasaKonsPengeboranPost');
         removeCondition('JasaKonsFinishingPost');
