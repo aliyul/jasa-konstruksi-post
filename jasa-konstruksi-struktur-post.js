@@ -141,6 +141,10 @@ const urlMappingJasaPengecoranKolomBeton = {
 */
 //SUB JasaKonstruksiGedungdanHunianPost
 const urlMappingJasaKonstruksiRumahTinggal = {
+  "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-per-meter.html": "Harga Borongan Konstruksi Per Meter",
+  "https://www.betonjayareadymix.com/2018/09/harga-borongan-tukang-bangunan-per-meter.html": "Harga Borongan Tukang Bangunan Per Meter",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-bangunan.html": "Jasa Pembuatan Bangunan",
+
 "https://www.betonjayareadymix.com/2018/09/harga-upah-tenaga-borongan-bangunan-per-m2.html": "Harga Upah Tenaga Borongan Bangunan Per M2",
 "https://www.betonjayareadymix.com/2018/09/harga-borong-bangunan-plus-material.html": "Harga Borong Bangunan Plus Material",
   "https://www.betonjayareadymix.com/2018/09/borongan-bangunan.html": "Borongan Bangunan",
