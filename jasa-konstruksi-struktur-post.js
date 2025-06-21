@@ -1149,10 +1149,10 @@ JasaStrukturBetondanPengecoranPost
         JasaKonstruksiStrukturPostLink.style.visibility = 'visible';
         JasaStrukturKonstruksiPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaKonstruksiGedungdanHunianPost
-        JasaKonstruksiGedungdanHunianPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaKonstruksiRumahTinggalPost
-        JasaKonstruksiRumahTinggalPostLink.style.visibility = 'visible';
-        pageNameJasaKonsStrukturPost.textContent = urlMappingJasaKonstruksiRumahTinggal[cleanUrlJasaJasaKonsStrukturPost];
+        JasaKonstruksiIndustridanGudangPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaKonstruksiGudangLogistikPost
+        JasaKonstruksiGudangLogistikPostLink.style.visibility = 'visible';
+        pageNameJasaKonsStrukturPost.textContent = urlMappingJasaKonstruksiGudangLogistik[cleanUrlJasaJasaKonsStrukturPost];
     }
 //AKHIR SUB JasaKonstruksiGudangLogistikPost
 
