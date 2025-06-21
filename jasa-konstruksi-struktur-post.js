@@ -141,6 +141,7 @@ const urlMappingJasaPengecoranKolomBeton = {
 */
 //SUB JasaKonstruksiGedungdanHunianPost
 const urlMappingJasaKonstruksiRumahTinggal = {
+"https://www.betonjayareadymix.com/2018/09/harga-borong-bangunan-plus-material.html": "Harga Borong Bangunan Plus Material",
   "https://www.betonjayareadymix.com/2018/09/borongan-bangunan.html": "Borongan Bangunan",
   "https://www.betonjayareadymix.com/2018/09/harga-bangunan.html": "Harga Bangunan",
   "https://www.betonjayareadymix.com/2018/09/borongan-konstruksi.html": "Borongan Konstruksi",
