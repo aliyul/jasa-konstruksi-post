@@ -192,7 +192,7 @@ if (urlMappingStrukturIndustriGudang[cleanUrlJasaJasaKonsStruktur]) {
         JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
         JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
 	//TAMPILKAN urlMappingStrukturIndustriGudang
-        urlMappingStrukturIndustriGudangSubLink.style.visibility = 'visible';
+        JasaKonstruksiIndustridanGudangSubLink.style.visibility = 'visible';
         pageNameJasaKonsStruktur.textContent = urlMappingStrukturIndustriGudang[cleanUrlJasaJasaKonsStruktur];
     }
 if (urlMappingStrukturBajaRangka[cleanUrlJasaJasaKonsStruktur]) {
