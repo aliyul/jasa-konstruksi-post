@@ -79,6 +79,7 @@ const urlMappingJasaCorBeton = {
 };
 
 const urlMappingJasaPengecoranLantaiDak = {
+  "https://www.betonjayareadymix.com/2018/10/dak-beton.html": "Dak Beton",
    "https://www.betonjayareadymix.com/2018/09/harga-borongan-dak-beton.html": "Harga Borongan Dak Beton",
 	
    "https://www.betonjayareadymix.com/2018/09/jasa-cor-dak.html": "Jasa Cor Dak",
