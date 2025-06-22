@@ -1,6 +1,6 @@
 //SUB MAPPING JASA PONDASI TANAH 
 // BANGUNAN
-const urlMappingJasaPondasiBangunan = {
+const urlMappingJasaPondasi = {
 "https://www.betonjayareadymix.com/2018/09/borongan-pondasi.html": "Borongan Pondasi"
 };
 const urlMappingJasaPondasiCakarAyam = {
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
      pageNameJasaKonsPondasiTanahPost.textContent = "";
 	
     //SUB urlMappingBangunan
-if (urlMappingJasaPondasiBangunan[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+if (urlMappingJasaPondasi[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
         //restoreCondition('JasaPondasiCakarAyamPost');
@@ -159,7 +159,7 @@ if (urlMappingJasaPondasiBangunan[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPondasiCakarAyam
        // JasaPondasiCakarAyamPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiBangunan[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
+        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasi[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
     }
 
 if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
