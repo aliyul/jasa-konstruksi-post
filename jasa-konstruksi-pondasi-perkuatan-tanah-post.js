@@ -1,7 +1,7 @@
 //SUB MAPPING JASA PONDASI TANAH 
 // BANGUNAN
 const urlMappingJasaPondasiBangunan = {
-
+"https://www.betonjayareadymix.com/2018/09/borongan-pondasi.html": "Borongan Pondasi"
 };
 const urlMappingJasaPondasiCakarAyam = {
 
