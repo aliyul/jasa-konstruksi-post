@@ -1,6 +1,9 @@
  // Cek URL saat ini dan sesuaikan dengan kondisi yang diinginkan
 //SUB FinishingBangunanStruktur
 const urlMappingJasaFinishingDakBeton = {
+   "https://www.betonjayareadymix.com/2018/10/finishing-dak.html": "Finishing Dak",
+  "https://betonjayareadymix.com/2018/10/harga-jasa-finishing-dak-beton.html": "Harga Jasa Finishing Dak Beton",
+  "https://www.betonjayareadymix.com/2018/10/finishing-dak-beton.html": "Finishing Dak Beton",
   "https://www.betonjayareadymix.com/2018/10/harga-jasa-dak-super-flat.html": "Harga Jasa Dak Super Flat",
   "https://www.betonjayareadymix.com/2018/10/dak-super-flat.html": "Dak Super Flat"
 
@@ -52,6 +55,10 @@ const urlMappingJasaPelapisanWaterproofingStruktur = {
 	
 };
 const urlMappingJasaFinishingLantaiBeton = {
+  "https://www.betonjayareadymix.com/2018/12/harga-jasa-trowel-floor-hardener-depok.html": "Harga Jasa Trowel Floor Hardener Depok",
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-floor-hardener.html": "Harga Jasa Floor Hardener",
+  "https://www.betonjayareadymix.com/2018/10/harga-borongan-floor-hardener.html": "Harga Borongan Floor Hardener",
+	
 "https://www.betonjayareadymix.com/2018/10/harga-jasa-lapangan-super-flat.html": "Harga Jasa Lapangan Super Flat",
     "https://www.betonjayareadymix.com/2018/10/lapangan-super-flat.html": "Lapangan Super Flat",
     "https://www.betonjayareadymix.com/2018/10/harga-jasa-lantai-epoxy.html": "Harga Jasa Lantai Epoxy",
