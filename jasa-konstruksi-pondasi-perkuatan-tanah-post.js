@@ -1,6 +1,6 @@
 //SUB MAPPING JASA PONDASI TANAH 
 // BANGUNAN
-const urlMappingJasaBoronganPondasi = {
+const urlMappingJasaPondasiBangunan = {
 
 };
 const urlMappingJasaPondasiCakarAyam = {
@@ -97,6 +97,71 @@ document.addEventListener("DOMContentLoaded", function() {
      pageNameJasaKonsPondasiTanahPost.textContent = "";
 	
     //SUB urlMappingBangunan
+if (urlMappingJasaPondasiBangunan[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+        restoreCondition('JasaKonsPondasiTanahPost');
+        restoreCondition('JasaPondasiBangunanSubPost');
+        //restoreCondition('JasaPondasiCakarAyamPost');
+     
+        //hapus elemen div id lain
+	removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+	removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	
+	/*
+        removeCondition('materialKonsReadymix');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikan');
+       	removeCondition('JasaKons');
+       	removeCondition('JasaKonsSub');
+       	removeCondition('MenuKons');
+       	removeCondition('JasaKonsFinishing');
+        removeCondition('JasaKonsStruktur');
+        removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+*/
+
+        //hapus elemen SUB jasa pembatas lain
+        removeCondition('JasaPemadatanPersiapanPondasiSubPost');
+        removeCondition('JasaPerkuatanTanahSubPost');
+        removeCondition('JasaRetrofittingPondasiSubPost');
+
+	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SEMUA
+	removeCondition('JasaPondasiCakarAyamPost');
+        removeCondition('JasaPondasiTapakPost');
+        removeCondition('JasaPondasiBoredPilePost'); 
+	removeCondition('JasaPondasiTiangPancangPost');
+	removeCondition('JasaPondasiSumuranPost');
+	/*
+ JasaPondasiBangunanSubPostLink.style.visibility = 'hidden';
+     JasaPemadatanPersiapanPondasiSubPostLink.style.visibility = 'hidden';
+     JasaPerkuatanTanahSubPostLink.style.visibility = 'hidden';
+     JasaRetrofittingPondasiSubPostLink.style.visibility = 'hidden';
+*/
+       
+        JasaKonstruksiPondasiTanahSubPostLink.style.visibility = 'visible';
+        JasaPondasiTanahSubPostLink.style.visibility = 'visible';
+	//TAMPILKAN PONDASI BANGUNAN
+        JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaPondasiCakarAyam
+       // JasaPondasiCakarAyamPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiBangunan[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
+    }
+
 if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
@@ -140,7 +205,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         removeCondition('JasaPerkuatanTanahSubPost');
         removeCondition('JasaRetrofittingPondasiSubPost');
 
-	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
+	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPondasiCakarAyamPost
         removeCondition('JasaPondasiTapakPost');
         removeCondition('JasaPondasiBoredPilePost'); 
 	removeCondition('JasaPondasiTiangPancangPost');
