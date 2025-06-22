@@ -135,9 +135,9 @@ if (urlMappingJasaPondasi[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
 */
 
-        //hapus elemen SUB jasa pembatas lain
+        //hapus elemen SUB jasa pembatas lain selain JasaPerkuatanTanahSubPost
         removeCondition('JasaPemadatanPersiapanPondasiSubPost');
-        removeCondition('JasaPerkuatanTanahSubPost');
+        //removeCondition('JasaPerkuatanTanahSubPost');
         removeCondition('JasaRetrofittingPondasiSubPost');
 
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SEMUA
@@ -200,9 +200,9 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
 */
 
-        //hapus elemen SUB jasa pembatas lain
+        //hapus elemen SUB jasa pembatas lain selain JasaPerkuatanTanahSubPost
         removeCondition('JasaPemadatanPersiapanPondasiSubPost');
-        removeCondition('JasaPerkuatanTanahSubPost');
+        //removeCondition('JasaPerkuatanTanahSubPost');
         removeCondition('JasaRetrofittingPondasiSubPost');
 
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPondasiCakarAyamPost
