@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
      var JasaKonstruksiPondasiTanahSubPostLink = document.getElementById("JasaKonstruksiPondasiTanahSubPost");
-     var JasaPondasiTanahSubPost = document.getElementById("JasaPondasiTanahSubPost");
+     var JasaPondasiTanahSubPostLink = document.getElementById("JasaPondasiTanahSubPost");
 
      //SUB Jasa Pondasi Tanah
      var JasaPondasiBangunanSubPostLink = document.getElementById("JasaPondasiBangunanSubPost");
@@ -135,9 +135,9 @@ if (urlMappingJasaPondasi[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
 */
 
-        //hapus elemen SUB jasa pembatas lain selain JasaPerkuatanTanahSubPost
+        //hapus elemen SUB jasa pembatas lain selain JasaPondasiBangunanSubPost
         removeCondition('JasaPemadatanPersiapanPondasiSubPost');
-        //removeCondition('JasaPerkuatanTanahSubPost');
+        removeCondition('JasaPerkuatanTanahSubPost');
         removeCondition('JasaRetrofittingPondasiSubPost');
 
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SEMUA
@@ -200,9 +200,9 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         removeCondition('JasaKonsPerkuatanTanahLongsorPost');
 */
 
-        //hapus elemen SUB jasa pembatas lain selain JasaPerkuatanTanahSubPost
+        //hapus elemen SUB jasa pembatas lain selain JasaPondasiBangunanSubPost
         removeCondition('JasaPemadatanPersiapanPondasiSubPost');
-        //removeCondition('JasaPerkuatanTanahSubPost');
+        removeCondition('JasaPerkuatanTanahSubPost');
         removeCondition('JasaRetrofittingPondasiSubPost');
 
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPondasiCakarAyamPost
