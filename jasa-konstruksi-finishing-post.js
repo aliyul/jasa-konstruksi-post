@@ -423,7 +423,7 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaFinishingPostLink.style.visibility = 'hidden';
      JasaFinishingBangunanPostLink.style.visibility = 'hidden';
      JasaFinishingInfrastrukturPostLink.style.visibility = 'hidden';
-     pageNameJasaKonsFinishingPostLink.textContent = "";
+     //pageNameJasaKonsFinishingPostLink.textContent = "";
 
     //SUB FINISHING BANGUNAN
 	//FINISHING STRUKTUR
