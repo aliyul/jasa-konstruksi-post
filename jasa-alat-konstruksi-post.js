@@ -57,6 +57,7 @@ const urlMappingSewaAlatBerat = {
   "https://www.betonjayareadymix.com/2019/02/berapa-harga-sewa-alat-berat.html": "Berapa Harga Sewa Alat Berat",
   "https://www.betonjayareadymix.com/2019/02/list-harga-sewa-alat-berat.html": "List Harga Sewa Alat Berat",
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-murah.html": "Harga Sewa Alat Berat Murah",
+  "https://www.betonjayareadymix.com/2019/02/daftar-harga-sewa-alat-berat-murah.html": "Daftar Harga Sewa Alat Berat Murah",
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-tandem-roller.html": "Harga Sewa Alat Berat Tandem Roller",
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-vibro.html": "Harga Sewa Alat Berat Vibro",
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-wheel-loader.html": "Harga Sewa Alat Berat Wheel Loader",
