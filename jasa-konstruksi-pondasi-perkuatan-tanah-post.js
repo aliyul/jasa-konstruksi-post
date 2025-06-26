@@ -37,6 +37,15 @@ const urlMappingJasaPondasiBoredPile = {
 
 };
 const urlMappingJasaPondasiTiangPancang = {
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang.html": "Harga jasa pondasi tiang pancang",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-terdekat.html": "Harga jasa pondasi tiang pancang terdekat",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-murah.html": "Harga jasa pondasi tiang pancang murah",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-karawang.html": "Harga jasa pondasi tiang pancang Karawang",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-bekasi.html": "Harga jasa pondasi tiang pancang Bekasi",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-tangerang.html": "Harga jasa pondasi tiang pancang Tangerang",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-depok.html": "Harga jasa pondasi tiang pancang Depok",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-bogor.html": "Harga jasa pondasi tiang pancang Bogor",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-jakarta.html": "Harga jasa pondasi tiang pancang Jakarta"
 
 };
 const urlMappingJasaPondasiSumuran = {
