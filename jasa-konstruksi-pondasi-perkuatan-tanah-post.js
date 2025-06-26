@@ -37,6 +37,8 @@ const urlMappingJasaPondasiBoredPile = {
 
 };
 const urlMappingJasaPondasiTiangPancang = {
+    "https://www.betonjayareadymix.com/2019/08/harga-jasa-pancang-hidrolik.html": "Harga Jasa Pancang Hidrolik",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pemasangan-tiang-pancang.html": "Harga Jasa Pemasangan Tiang Pancang",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang.html": "Harga jasa pondasi tiang pancang",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-terdekat.html": "Harga jasa pondasi tiang pancang terdekat",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-murah.html": "Harga jasa pondasi tiang pancang murah",
