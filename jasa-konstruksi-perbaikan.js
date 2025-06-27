@@ -2681,7 +2681,8 @@ if (urlMappingPerbaikanFasadEksteriorEksterior[cleanUrlJasaPerbaikanKonsSub]) {
 	     
        // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
        // removeCondition1('');
-        removeCondition1('JasaRenovasiEksteriorBangunan');
+        removeCondition1('JasaPerbaikanArsitekturEksterior');
+        //removeCondition1('JasaRenovasiEksteriorBangunan');
         removeCondition1('JasaRenovasiFasadBangunan');
 
 	// hapus elemen id Semua Sub JasaRenovasiPerbaikanFasilitas
