@@ -162,6 +162,7 @@ const urlMappingSewaForklift = {
 "https://www.betonjayareadymix.com/2019/02/harga-sewa-forklift.html": "Harga Sewa Forklift"
 };
 const urlMappingSewaCrane = {
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-crane.html": "Harga Sewa Crane"
 
 };
 const urlMappingSewaBackhoeLoader = {
