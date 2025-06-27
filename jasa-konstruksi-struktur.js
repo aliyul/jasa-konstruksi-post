@@ -25,7 +25,7 @@ const urlMappingStrukturBajaRangka = {
 };
 const urlMappingStrukturKhusus= {
 "https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html": "Jasa Pembuatan Kolam Renang",
-  "https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-ikan.html": "Jasa Pembuatan Kolam Ikan",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-ikan-koi.html": "Jasa Pembuatan Kolam Ikan Koi",
   "https://www.betonjayareadymix.com/p/jasa-septic-tank-beton.html": "Jasa Septic Tank Beton",
   "https://www.betonjayareadymix.com/p/jasa-pembuatan-tangki-air.html": "Jasa Pembuatan Tangki Air",
   "https://www.betonjayareadymix.com/p/jasa-pembuatan-bak-penampungan.html": "Jasa Pembuatan Bak Penampungan",
