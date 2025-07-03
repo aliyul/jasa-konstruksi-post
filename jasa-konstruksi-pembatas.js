@@ -19,7 +19,8 @@ const urlMappingPengamananSisiJalan = {
 "https://www.betonjayareadymix.com/p/jasa-pemasangan-guardrail-besi.html": "Jasa Pemasangan Guardrail Besi",
   "https://www.betonjayareadymix.com/p/jasa-pemasangan-railing-jalan.html": "Jasa Pemasangan Railing Jalan",
   "https://www.betonjayareadymix.com/p/jasa-bollard-tiang-pengaman-jalan.html": "Jasa Bollard & Tiang Pengaman Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-pagar-pembatas-flyover-jembatan.html": "Jasa Pagar Pembatas Flyover & Jembatan"
+  "https://www.betonjayareadymix.com/p/jasa-pagar-pembatas-flyover-jembatan.html": "Jasa Pagar Pembatas Flyover & Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-kanstin-jalan.html": "Jasa Pemasangan Kanstin Jalan"
 
 };
 
