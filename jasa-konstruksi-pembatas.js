@@ -31,7 +31,7 @@ const urlMappingPembuatanPagarDinding = {
   "https://www.betonjayareadymix.com/p/jasa-dinding-pembatas-bata-batako.html": "Jasa Dinding Pembatas Bata & Batako",
   "https://www.betonjayareadymix.com/p/jasa-pagar-kawat-harmonika.html": "Jasa Pagar Kawat Harmonika",
   "https://www.betonjayareadymix.com/p/jasa-pagar-brc.html": "Jasa Pagar BRC", 
-	"https://www.betonjayareadymix.com/p/jasa-pagar-plat-cutting-laser.html": "Jasa Pagar Plat Cutting Laser",
+  "https://www.betonjayareadymix.com/p/jasa-pagar-plat-cutting-laser.html": "Jasa Pagar Plat Cutting Laser",
   "https://www.betonjayareadymix.com/p/jasa-pagar-rumah.html": "Jasa Pagar Rumah",
   "https://www.betonjayareadymix.com/p/jasa-pagar-bangunan.html": "Jasa Pagar Bangunan"
 
