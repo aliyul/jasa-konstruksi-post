@@ -9,6 +9,7 @@ const urlMappingStrukturBajaRangka = {
 */
 //SUB JasaStrukturBajadanRangkaRinganPost
 const urlMappingJasaRangkaAtapBajaRingan = {
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-atap.html": "Harga Jasa Pasang Atap",
 "https://www.betonjayareadymix.com/2018/09/harga-borongan-jasa-konstruksi-baja-ringan.html": "Harga Borongan Jasa Konstruksi Baja Ringan",
 "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-ringan-ruko.html": "Jasa Konstruksi Baja Ringan Ruko",
  "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-bandung.html": "Harga Borongan Baja Ringan Plus Material Bandung",
