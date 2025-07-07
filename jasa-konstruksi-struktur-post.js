@@ -39,10 +39,12 @@ const urlMappingJasaKonstruksiBajaKonvensional = {
 "https://www.betonjayareadymix.com/2018/09/harga-konstruksi-baja-wf-per-m2.html": "Harga Konstruksi Baja Wf Per M2",
 "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-baja-wf.html": "Harga Borongan Konstruksi Baja Wf",
 "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-baja-per-meter.html": "Harga Borongan Konstrusi Baja Per Meter",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-baja.html": "Harga Jasa Konstruksi Baja",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-baja.html": "Harga Jasa Konstruksi Baja",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-baja.html": "Harga Jasa Konstruksi Baja",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-baja.html": "Harga Jasa Konstruksi Baja",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-baja.html": "Harga Jasa Konstruksi Baja",  
+"https://www.betonjayareadymix.com/2018/09/jasa-pembangunan-tower.html": "Jasa Pembangunan Tower",
+  "https://www.betonjayareadymix.com/2018/09/harga-borongan-pasang-tower.html": "Harga Borongan Pasang Tower",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pemasangan-tower-bts.html": "Jasa Pemasangan Tower BTS",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pemasangan-tower-triangle.html": "Jasa Pemasangan Tower Triangle"
+
 };
 const urlMappingJasaKanopiBajadanBesi = {
 
