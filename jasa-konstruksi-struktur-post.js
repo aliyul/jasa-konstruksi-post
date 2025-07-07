@@ -33,6 +33,8 @@ const urlMappingJasaRangkaAtapBajaRingan = {
 };
 const urlMappingJasaKonstruksiBajaKonvensional = {
 "https://www.betonjayareadymix.com/2018/09/harga-borongan-jasa-konstruksi-besi.html": "Harga Borongan Jasa Konstruksi Besi",
+"https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-besi.html": "Harga Borongan Konstruksi Besi",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-besi-wf.html": "Harga Jasa Konstruksi Besi Wf",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-baja-wf.html": "Harga Jasa Konstruksi Baja Wf",
 "https://www.betonjayareadymix.com/2018/09/harga-konstruksi-baja-wf-per-m2.html": "Harga Konstruksi Baja Wf Per M2",
 "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-baja-wf.html": "Harga Borongan Konstruksi Baja Wf",
@@ -272,6 +274,18 @@ const urlMappingJasaKonstruksiGudangLogistik = {
   "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-konstruksi-gudang.html": "Jasa Pembuatan Konstruksi Gudang",
   "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-gudang.html": "Jasa Pembuatan Gudang",
   "https://www.betonjayareadymix.com/2018/09/harga-pembuatan-gudang-per-m2.html": "Harga Pembuatan Gudang per M2"
+
+};
+const urlMappingJasaKonstruksiPabrik = {
+
+};
+const urlMappingJasaKonstruksiColdStorage = {
+
+};
+const urlMappingJasaKonstruksiBengkel = {
+
+};
+const urlMappingJasaKonstruksiWorkshop = {
 
 };
 
