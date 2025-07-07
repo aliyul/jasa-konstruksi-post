@@ -299,7 +299,7 @@ const urlMappingJasaPembuatanLapanganTenis = {
 
 };
 const urlMappingJasaPembuatanLapanganBadminton = {
-"https://www.betonjayareadymix.com/2018/09/harga-buat-lapangan-tenis.html": "Harga Buat Lapangan Tenis"
+//"https://www.betonjayareadymix.com/2018/09/harga-buat-lapangan-tenis.html": "Harga Buat Lapangan Tenis"
 
 };
 
