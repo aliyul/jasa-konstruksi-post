@@ -1,4 +1,10 @@
 //SUB MAPPING JASA BONGKAR BANGUNAN
+// JasaBongkarTower
+const urlMappingJasaBongkarTower = {
+  "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower.html": "Jasa Bongkar Tower",
+  "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower-triangle.html": "Jasa Bongkar Tower Triangle"
+};
+
 // JasaBongkarRumah
 const urlMappingJasaBongkarRumah = {
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-bongkar-bangunan.html": "Harga Jasa Bongkar Bangunan"
