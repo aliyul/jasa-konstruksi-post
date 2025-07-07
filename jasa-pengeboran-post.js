@@ -44,7 +44,7 @@ const urlMappingJasaBorePile = {
 
 };
 const urlMappingJasaBorTembok = {
-	
+"https://www.betonjayareadymix.com/2018/09/jasa-bor-tembok-terdekat.html": "Jasa Bor Tembok Terdekat"
 };
 const urlMappingJasaCoringBeton = {
 "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-karawang.html": "Jasa Coring Beton Karawang",
