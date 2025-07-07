@@ -277,6 +277,7 @@ const urlMappingJasaKonstruksiGudangLogistik = {
 
 };
 const urlMappingJasaKonstruksiPabrik = {
+"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-pabrik.html": "Jasa Konstruksi Baja Pabrik"
 
 };
 const urlMappingJasaKonstruksiColdStorage = {
