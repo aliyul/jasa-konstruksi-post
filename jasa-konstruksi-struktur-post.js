@@ -237,7 +237,7 @@ const urlMappingJasaKonstruksiRumahTinggal = {
 
 };
 const urlMappingJasaKonstruksiRukodanKios = {
-
+"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-ruko.html": "Jasa Konstruksi Baja Ruko"
 };
 const urlMappingJasaKonstruksiVilla = {
 
