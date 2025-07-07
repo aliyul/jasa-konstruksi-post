@@ -291,7 +291,8 @@ const urlMappingJasaPembuatanLapanganBasket = {
 
 };
 const urlMappingJasaPembuatanLapanganSepakbola = {
-"https://www.betonjayareadymix.com/2018/09/harga-buat-lapangan-mini-soccer.html": "Harga Buat Lapangan Mini Soccer"
+"https://www.betonjayareadymix.com/2018/09/harga-buat-lapangan-mini-soccer.html": "Harga Buat Lapangan Mini Soccer",
+"https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-mini-soccer.html": "Jasa Pembuatan Lapangan Mini Soccer"
 };
 const urlMappingJasaPembuatanLapanganTenis = {
 "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-tenis.html": "Jasa Pembuatan Lapangan Tenis"
