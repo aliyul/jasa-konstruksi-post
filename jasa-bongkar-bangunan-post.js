@@ -101,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaBongkarBangunanPostLink = document.getElementById("JasaBongkarBangunanPost");
 
      //SUB JasaKonsBongkarBangunanPost
+    var JasaBongkarTowerPostLink = document.getElementById("JasaBongkarTowerPost");
      var JasaBongkarRumahPostLink = document.getElementById("JasaBongkarRumahPost");
      var JasaBongkarBetonPostLink = document.getElementById("JasaBongkarBetonPost");
      var JasaBongkarAtapPostLink = document.getElementById("JasaBongkarAtapPost");
@@ -120,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaBongkarBangunanPostLink.style.visibility = 'hidden';
 	
      //SUB JasaBongkarBangunanPost
+     JasaBongkarTowerPostLink.style.visibility = 'hidden';
      JasaBongkarRumahPostLink.style.visibility = 'hidden';
      JasaBongkarBetonPostLink.style.visibility = 'hidden';
      JasaBongkarAtapPostLink.style.visibility = 'hidden';
@@ -134,6 +136,53 @@ document.addEventListener("DOMContentLoaded", function() {
      pageNameJasaKonsBongkarBangunanPost.textContent = "";
 	
 //SUB urlMappingJasaKonsBongkarBangunanPost
+if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
+        restoreCondition('JasaKonsBongkarBangunanPost');
+	
+        restoreCondition('JasaBongkarBangunanPost');
+        restoreCondition('JasaBongkarRumahPost');
+     
+        //hapus elemen div id lain
+	removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	
+	
+	
+        //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarTowerPost
+        removeCondition('JasaBongkarRumahPost');
+        removeCondition('JasaBongkarBetonPost');
+        removeCondition('JasaBongkarAtapPost');
+        removeCondition('JasaBongkarKeramikPost');
+        removeCondition('JasaBongkarTembokPost');
+        removeCondition('JasaBongkarDindingPost');
+        removeCondition('JasaBongkarPlafonPost');
+        removeCondition('JasaBongkarPartisiPost');
+        removeCondition('JasaBongkarPagarPost');
+        removeCondition('JasaBongkarLantaiPost');
+       
+        JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaBongkarBangunanPost
+        JasaBongkarBangunanPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaBongkarTowerPost
+	JasaBongkarTowerPostLink.style.visibility = 'visible';
+	
+	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost];
+    }
+	
 if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
@@ -161,6 +210,7 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
 	
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarRumahPost
+        removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarBetonPost');
         removeCondition('JasaBongkarAtapPost');
         removeCondition('JasaBongkarKeramikPost');
@@ -204,6 +254,7 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarBetonPost
+	removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarRumahPost');
         removeCondition('JasaBongkarAtapPost');
         removeCondition('JasaBongkarKeramikPost');
@@ -247,6 +298,7 @@ if (urlMappingJasaBongkarAtap[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarAtapPost
+	removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarBetonPost');
         removeCondition('JasaBongkarRumahPost');
         removeCondition('JasaBongkarKeramikPost');
@@ -290,6 +342,7 @@ if (urlMappingJasaBongkarKeramik[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarKeramikPost
+	removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarBetonPost');
         removeCondition('JasaBongkarAtapPost');
         removeCondition('JasaBongkarRumahPost');
@@ -333,6 +386,7 @@ if (urlMappingJasaBongkarTembok[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarTembokPost
+	removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarBetonPost');
         removeCondition('JasaBongkarAtapPost');
         removeCondition('JasaBongkarKeramikPost');
@@ -376,6 +430,7 @@ if (urlMappingJasaBongkarDinding[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarDindingPost
+	removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarBetonPost');
         removeCondition('JasaBongkarAtapPost');
         removeCondition('JasaBongkarKeramikPost');
@@ -419,6 +474,7 @@ if (urlMappingJasaBongkarPlafon[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarPlafonPost
+	removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarBetonPost');
         removeCondition('JasaBongkarAtapPost');
         removeCondition('JasaBongkarKeramikPost');
@@ -462,6 +518,7 @@ if (urlMappingJasaBongkarPartisi[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarPartisiPost
+	removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarBetonPost');
         removeCondition('JasaBongkarAtapPost');
         removeCondition('JasaBongkarKeramikPost');
@@ -505,6 +562,7 @@ if (urlMappingJasaBongkarPagar[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarPagarPost
+	removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarBetonPost');
         removeCondition('JasaBongkarAtapPost');
         removeCondition('JasaBongkarKeramikPost');
@@ -548,6 +606,7 @@ if (urlMappingJasaBongkarLantai[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarLantaiPost
+	removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarBetonPost');
         removeCondition('JasaBongkarAtapPost');
         removeCondition('JasaBongkarKeramikPost');
