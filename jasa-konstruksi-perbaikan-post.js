@@ -912,6 +912,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaPerbaikanBetonKeroposPost');
         removeCondition1('JasaPerbaikanBetonRetakPost');
         removeCondition1('JasaPatchingBetonPost');
+        removeCondition1('JasaGroutingStrukturBetonPost');
        // removeCondition1('JasaGroutingStrukturBetonPost');
         
         removeCondition1('JasaBetonKarbonasiPost');
