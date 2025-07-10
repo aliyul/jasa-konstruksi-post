@@ -17,7 +17,10 @@ const urlMappingJasaRangkaAtapBajaRingan = {
   "https://www.betonjayareadymix.com/2018/09/jasa-atap-baja-ringan.html": "Jasa Atap Baja Ringan",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-atap-kanopi.html": "Harga Jasa Pasang Atap Kanopi",
 	
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-atap.html": "Harga Jasa Pasang Atap",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-atap-baja-ringan.html": "Harga jasa pasang atap baja ringan",
+  "https://www.betonjayareadymix.com/2018/09/tukang-baja-ringan.html": "Tukang baja ringan",
+  "https://www.betonjayareadymix.com/2018/09/tukang-baja-ringan-murah.html": "Tukang baja ringan murah",
+  "https://www.betonjayareadymix.com/2018/09/tukang-baja-ringan-terdekat.html": "Tukang baja ringan terdekat",
 "https://www.betonjayareadymix.com/2018/09/harga-borongan-jasa-konstruksi-baja-ringan.html": "Harga Borongan Jasa Konstruksi Baja Ringan",
 "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-ringan-ruko.html": "Jasa Konstruksi Baja Ringan Ruko",
  "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-bandung.html": "Harga Borongan Baja Ringan Plus Material Bandung",
