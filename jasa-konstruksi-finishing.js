@@ -14,13 +14,13 @@ const urlMappingFinishingBangunan = {
 
 const urlMappingFinishingBangunanInterior = {
 "https://www.betonjayareadymix.com/p/jasa-desain-interior.html": "Jasa Desin Interior",
-"https://www.betonjayareadymix.com/p/jasa-ganti-keramik-lantai.html": "Jasa Ganti Keramik Lantai",
+"https://www.betonjayareadymix.com/p/jasa-keramik-lantai.html": "Jasa Keramik Lantai",
   "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
   "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",
   "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-vinyl.html": "Jasa Pasang Lantai Vinyl",
   "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-gypsum.html": "Jasa Pasang Plafon Gypsum",
-  "https://www.betonjayareadymix.com/p/jasa-ganti-lampu-interior.html": "Jasa Ganti Lampu Interior",
-  "https://www.betonjayareadymix.com/p/jasa-ganti-kitchen-set.html": "Jasa Ganti Kitchen Set",
+  "https://www.betonjayareadymix.com/p/jasa-lampu-interior.html": "Jasa Lampu Interior",
+  "https://www.betonjayareadymix.com/p/jasa-kitchen-set.html": "Jasa Kitchen Set",
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis",
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html": "Jasa Finishing Interior Klasik",
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern"
