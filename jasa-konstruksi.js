@@ -74,12 +74,12 @@ const urlMappingJasaJualAlatKonstruksi = {
 }
 
 const urlMappingPerbaikan = {	
-	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-fasilitas-umum.html": "Jasa Renovasi Perbaikan Fasilitas Umum",
-	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-bangunan.html": "Jasa Renovasi Perbaikan Bangunan",
-	 "https://www.betonjayareadymix.com/p/jasa-renovasi-dan-perbaikan-interior.html": "Jasa Renovasi dan Perbaikan Interior",
-	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-fasad-eksterior.html": "Jasa Renovasi Perbaikan Fasad Eksterior",
-	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-infrastruktur.html": "Jasa Renovasi Perbaikan Infrastruktur",
-	"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-struktur.html": "Jasa Renovasi Perbaikan Struktur"
+	"https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-umum.html": "Jasa Renovasi Fasilitas Umum",
+	"https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan.html": "Jasa Renovasi Bangunan",
+	 "https://www.betonjayareadymix.com/p/jasa-renovasi-interior.html": "Jasa Renovasi Interior",
+	"https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-eksterior.html": "Jasa Renovasi Fasad Eksterior",
+	"https://www.betonjayareadymix.com/p/jasa-renovasi-infrastruktur.html": "Jasa Renovasi Infrastruktur",
+	"https://www.betonjayareadymix.com/p/jasa-renovasi-struktur.html": "Jasa Renovasi Struktur"
   //  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding.html": "Jasa Renovasi Perbaikan Dinding"
 
 };
