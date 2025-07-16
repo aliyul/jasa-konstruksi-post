@@ -173,7 +173,7 @@ const urlMappingPerbaikanFasadEksterior = {
 //utama
 "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-bangunan.html": "Jasa Renovasi Fasad Bangunan",
 "https://www.betonjayareadymix.com/p/jasa-renovasi-eksterior-bangunan.html": "Jasa Renovasi Eksterior Bangunan",
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-arsitektur-eksterior.html": "Jasa Perbaikan Arsitektur Eksterior"
+"https://www.betonjayareadymix.com/p/jasa-renovasi-arsitektur-eksterior.html": "Jasa Renovasi Arsitektur Eksterior"
 /*
 //PERBAIKAN EKSTERIOR
 	//atap
@@ -228,12 +228,12 @@ const urlMappingPerbaikanFasadEksteriorArsitektur = {
 //Jasa Renovasi Perbaikan Bangunan
 const urlMappingPerbaikanBangunan = {
 //"https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat Ibadah",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-pabrik.html": "Jasa Renovasi Perbaikan Pabrik",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-rumah.html": "Jasa Renovasi Perbaikan Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-kantor.html": "Jasa Renovasi Perbaikan Kantor",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-gedung.html": "Jasa Renovasi Perbaikan Gedung",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-gudang.html": "Jasa Renovasi Perbaikan Gudang",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-hotel-apartemen.html": "Jasa Renovasi Perbaikan Hotel Apartemen"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik.html": "Jasa Renovasi Pabrik",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah.html": "Jasa Renovasi Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kantor.html": "Jasa Renovasi Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung.html": "Jasa Renovasi Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-gudang.html": "Jasa Renovasi Gudang",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-apartemen.html": "Jasa Renovasi Hotel Apartemen"
 };
 //SUB Jasa Renovasi Perbaikan Bangunan
 const urlMappingPerbaikanBangunanIbadah = {
@@ -290,7 +290,7 @@ const urlMappingPerbaikanFasilitasUmum = {
 };
 //SUB Jasa Renovasi Perbaikan Fasilitas Umum
 const urlMappingPerbaikanFasilitasUmumTaman = {
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan-rusak.html": "Jasa Perbaikan Drainase Taman",
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan-rusak.html": "Jasa Perbaikan Trotoar Jalan Rusak",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalur-pedestrian-taman.html": "Jasa Perbaikan Jalur Pedestrian Taman",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-lampu-taman-kota.html": "Jasa Renovasi Lampu Taman Kota",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-lansekap-taman-kota.html": "Jasa Renovasi Lansekap Taman Kota",
@@ -310,6 +310,7 @@ const urlMappingPerbaikanFasilitasUmumSekolah = {
 
 };
 const urlMappingPerbaikanFasilitasUmumStadion = {
+/* Buat Post aja
 "https://www.betonjayareadymix.com/p/jasa-renovasi-tribun-stadion.html": "Jasa Renovasi Tribun Stadion",
     "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-stadion.html": "Jasa Perbaikan Atap Stadion",
     "https://www.betonjayareadymix.com/p/jasa-perbaikan-lintasan-atletik.html": "Jasa Perbaikan Lintasan Atletik",
@@ -319,6 +320,7 @@ const urlMappingPerbaikanFasilitasUmumStadion = {
     "https://www.betonjayareadymix.com/p/jasa-renovasi-pagar-stadion.html": "Jasa Renovasi Pagar Stadion",
     "https://www.betonjayareadymix.com/p/perbaikan-fasilitas-penonton-stadion.html": "Jasa Perbaikan Fasilitas Penonton Stadion",
     "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-stadion.html": "Jasa Perbaikan Struktur Stadion"
+    */
 };
 const urlMappingPerbaikanFasilitasIbadah = {
 "https://www.betonjayareadymix.com/p/jasa-renovasi-masjid.html": "Jasa Renovasi Masjid",
