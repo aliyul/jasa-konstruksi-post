@@ -105,10 +105,10 @@ const urlMappingPerbaikanStrukturAtap = {
 const urlMappingPerbaikanInfrastruktur = {
  //"https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-perawatan-jalan.html": "Jasa Perbaikan dan Perawatan Jalan",
 // "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jalan-berlubang.html": "Jasa Renovasi Perbaikan Jalan Berlubang",
- "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jalan.html": "Jasa Renovasi Perbaikan Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jembatan.html": "Jasa Renovasi Perbaikan Jembatan",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-saluran-drainase.html": "Jasa Renovasi Perbaikan Saluran Drainase",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-trotoar.html": "Jasa Renovasi Perbaikan Trotoar dan Pejalan Kaki"
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan.html": "Jasa Renovasi Perbaikan Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan.html": "Jasa Perbaikan Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase.html": "Jasa Perbaikan Drainase",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar.html": "Jasa Perbaikan Trotoar"
 };
 
 //SUB Jasa Renovasi Perbaikan Infrastruktur
