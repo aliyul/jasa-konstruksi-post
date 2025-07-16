@@ -279,14 +279,14 @@ const urlMappingPerbaikanBangunanHotel = {
 
 //Jasa Renovasi Perbaikan Fasilitas Umum
 const urlMappingPerbaikanFasilitasUmum = {
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-taman-kota.html": "Jasa Renovasi Perbaikan Taman Kota",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-sekolah.html": "Jasa Renovasi Perbaikan Sekolah",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-stadion-olahraga.html": "Jasa Renovasi Perbaikan Stadion Olah Raga",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-tempat-ibadah.html": "Jasa Renovasi Perbaikan Tempat Ibadah",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-rumah-sakit.html": "Jasa Renovasi Perbaikan Rumah Sakit",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-taman-kota.html": "Jasa Renovasi Taman Kota",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-sekolah.html": "Jasa Renovasi Sekolah",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-stadion.html": "Jasa Renovasi Stadion",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat Ibadah",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-sakit.html": "Jasa Renovasi Rumah Sakit",
 	
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-terminal.html": "Jasa Renovasi Perbaikan Terminal",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-halte.html": "Jasa Renovasi Perbaikan Halte"	
+"https://www.betonjayareadymix.com/p/jasa-renovasi-terminal.html": "Jasa Renovasi Terminal",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-halte.html": "Jasa Renovasi Halte"	
 };
 //SUB Jasa Renovasi Perbaikan Fasilitas Umum
 const urlMappingPerbaikanFasilitasUmumTaman = {
