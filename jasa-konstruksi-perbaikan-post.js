@@ -1286,7 +1286,7 @@ if (!JasaKonsPerbaikanPost) {
 	removeCondition1('JasaRenovasiPerbaikanStrukturKolomBalokPost');
         removeCondition1('JasaRenovasiPerbaikanStrukturPondasiPost');
         removeCondition1('JasaRenovasiPerbaikanStrukturLantaiBetonPost');
-	//removeCondition1('');
+	removeCondition1('JasaPerbaikanStrukturBetonPost');
 	removeCondition1('JasaRenovasiPerbaikanStrukturBangunanPost');
 	removeCondition1('JasaRenovasiPerbaikanStrukturAtapPost');
 	removeCondition1('JasaRenovasiPerbaikanStrukturDindingPost');
