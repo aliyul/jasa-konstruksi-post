@@ -367,6 +367,7 @@ if (!JasaKonsPerbaikanPost) {
 
      //SUB JasaRenovasiPerbaikanStruktur
      //var JasaRenovasiPerbaikanStrukturUmumPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturUmumPost");
+     var JasaPerbaikanStrukturBetonPostLink = document.getElementById("JasaPerbaikanStrukturBetonPost");
      var JasaRenovasiPerbaikanStrukturKolomBalokPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturKolomBalokPost");
      var JasaRenovasiPerbaikanStrukturPondasiPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturPondasiPost");
       var JasaRenovasiPerbaikanStrukturLantaiBetonPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturLantaiBetonPost");
@@ -527,6 +528,7 @@ if (!JasaKonsPerbaikanPost) {
 
     //Hide SUB JasaRenovasiPerbaikanStruktur
      //JasaRenovasiPerbaikanStrukturUmumPostLink.style.visibility = 'hidden';
+     JasaPerbaikanStrukturBetonPostLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanStrukturKolomBalokPostLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanStrukturPondasiPostLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanStrukturLantaiBetonPostLink.style.visibility = 'hidden';
