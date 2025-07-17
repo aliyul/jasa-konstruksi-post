@@ -227,7 +227,7 @@ const urlMappingPerbaikanFasadEksteriorArsitektur = {
 
 //Jasa Renovasi Perbaikan Bangunan
 const urlMappingPerbaikanBangunan = {
-//"https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat Ibadah",
+"https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat Ibadah",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik.html": "Jasa Renovasi Pabrik",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah.html": "Jasa Renovasi Rumah",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-kantor.html": "Jasa Renovasi Kantor",
