@@ -2,7 +2,7 @@
 //Jasa Renovasi Perbaikan Struktur
 const urlMappingPerbaikanStruktur = {
 //artikel utama jangan di hapus
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-umum.html": "Jasa Perbaikan Struktur Umum",
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-beton.html": "Jasa Perbaikan Struktur Beton",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-kolom-balok.html": "Jasa Perbaikan Struktur Kolom Balok Beton",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-struktur.html": "Jasa Perbaikan Pondasi Struktur",
  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-lantai-beton.html": "Jasa Perbaikan Struktur Lantai Beton",
@@ -20,6 +20,7 @@ const urlMappingPerbaikanStruktur = {
  
 };
 //Sub Perbaikan Struktur
+/* hilang kan saja meenjadi satu kesatuan di JasaPerbaikanStrukturBeton
 const urlMappingPerbaikanStrukturUmum = {
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-retak-struktur.html": "Jasa Perbaikan Retak Struktur",
   "https://www.betonjayareadymix.com/p/jasa-penguatan-struktur-bangunan.html": "Jasa Penguatan Struktur Bangunan",
@@ -31,6 +32,7 @@ const urlMappingPerbaikanStrukturUmum = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-retak-struktur.html": "Jasa Perbaikan Retak Struktur"
 	
 };
+*/
 const urlMappingPerbaikanStrukturKolomBalok = {
  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-beton.html": "Jasa Perbaikan Kolom Beton",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-beton.html": "Jasa Perbaikan Balok Beton",
