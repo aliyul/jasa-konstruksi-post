@@ -649,6 +649,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRenovasiPenggantianDindingBataPost');
         removeCondition1('JasaPerbaikanPenggantianDindingBataPost');
 	// hapus elemen id Sub JasaRenovasiPerbaikanStrukturUmum SEMUA
+	/* tidak perlu
         removeCondition1('JasaPerbaikanRetakStrukturPost');
         removeCondition1('JasaPenguatanStrukturBangunanPost');
         removeCondition1('JasaRenovasiStrukturBetonPost');
@@ -657,6 +658,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRepairStrukturBetonPost');
         removeCondition1('JasaPerbaikanStrukturBetonPost');
         removeCondition1('JasaRenovasiPerbaikanRetakStrukturPost');
+	*/
 	// hapus elemen id Sub JasaRenovasiPerbaikanBangunanRumahPost SEMUA
         removeCondition1('JasaRenovasiRumahMinimalisPost');
         removeCondition1('JasaRenovasiRumahType36Post');
@@ -799,6 +801,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRenovasiPenggantianDindingBataPost');
         removeCondition1('JasaPerbaikanPenggantianDindingBataPost');
 	// hapus elemen id Sub JasaRenovasiPerbaikanStrukturUmum SEMUA
+	/*
         removeCondition1('JasaPerbaikanRetakStrukturPost');
         removeCondition1('JasaPenguatanStrukturBangunanPost');
         removeCondition1('JasaRenovasiStrukturBetonPost');
@@ -807,6 +810,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRepairStrukturBetonPost');
         removeCondition1('JasaPerbaikanStrukturBetonPost');
         removeCondition1('JasaRenovasiPerbaikanRetakStrukturPost');
+	*/
 	// hapus elemen id Sub JasaRenovasiPerbaikanBangunanRumahPost SEMUA
         removeCondition1('JasaRenovasiRumahMinimalisPost');
         removeCondition1('JasaRenovasiRumahType36Post');
@@ -946,6 +950,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRenovasiPenggantianDindingBataPost');
         removeCondition1('JasaPerbaikanPenggantianDindingBataPost');
 	// hapus elemen id Sub JasaRenovasiPerbaikanStrukturUmum SEMUA
+	/*
         removeCondition1('JasaPerbaikanRetakStrukturPost');
         removeCondition1('JasaPenguatanStrukturBangunanPost');
         removeCondition1('JasaRenovasiStrukturBetonPost');
@@ -954,6 +959,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRepairStrukturBetonPost');
         removeCondition1('JasaPerbaikanStrukturBetonPost');
         removeCondition1('JasaRenovasiPerbaikanRetakStrukturPost');
+	*/
 	// hapus elemen id Sub JasaRenovasiPerbaikanBangunanRumahPost SEMUA
         removeCondition1('JasaRenovasiRumahMinimalisPost');
         removeCondition1('JasaRenovasiRumahType36Post');
@@ -1095,6 +1101,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRenovasiPenggantianDindingBataPost');
         removeCondition1('JasaPerbaikanPenggantianDindingBataPost');
 	// hapus elemen id Sub JasaRenovasiPerbaikanStrukturUmum SEMUA
+	/*
         removeCondition1('JasaPerbaikanRetakStrukturPost');
         removeCondition1('JasaPenguatanStrukturBangunanPost');
         removeCondition1('JasaRenovasiStrukturBetonPost');
@@ -1103,6 +1110,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRepairStrukturBetonPost');
         removeCondition1('JasaPerbaikanStrukturBetonPost');
         removeCondition1('JasaRenovasiPerbaikanRetakStrukturPost');
+	*/
 	// hapus elemen id Sub JasaRenovasiPerbaikanBangunanRumahPost SEMUA
         removeCondition1('JasaRenovasiRumahMinimalisPost');
         removeCondition1('JasaRenovasiRumahType36Post');
@@ -1245,6 +1253,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRenovasiPenggantianDindingBataPost');
         removeCondition1('JasaPerbaikanPenggantianDindingBataPost');
 	// hapus elemen id Sub JasaRenovasiPerbaikanStrukturUmum SEMUA
+	/*
         removeCondition1('JasaPerbaikanRetakStrukturPost');
         removeCondition1('JasaPenguatanStrukturBangunanPost');
         removeCondition1('JasaRenovasiStrukturBetonPost');
@@ -1253,7 +1262,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRepairStrukturBetonPost');
         removeCondition1('JasaPerbaikanStrukturBetonPost');
         removeCondition1('JasaRenovasiPerbaikanRetakStrukturPost');
-	  
+	*/
 	// hapus elemen id Sub JasaRenovasiPerbaikanBangunanRumahPost SEMUA
         removeCondition1('JasaRenovasiRumahMinimalisPost');
         removeCondition1('JasaRenovasiRumahType36Post');
@@ -1338,9 +1347,9 @@ if (!JasaKonsPerbaikanPost) {
     }
 //SUB JasaRenovasiPerbaikanStrukturUmum
 if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {
-        restoreCondition1('JasaKonsPerbaikanPost');
+        restoreCondition1('JasaKonstruksiPerbaikanSubPost');
+        restoreCondition1('JasaRenovasiPerbaikanSubPost');
         restoreCondition1('JasaRenovasiPerbaikanStrukturPost');
-        restoreCondition1('JasaRenovasiPerbaikanStrukturUmumPost');
 	
         restoreCondition1('JasaPerbaikanStrukturBetonPost');
 
@@ -1404,7 +1413,7 @@ if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaPerbaikanStrukturRumahPost');
         removeCondition1('JasaRenovasiKosmetikRumahPost');
         removeCondition1('JasaRenovasiRumahTumbuhPost');
-	
+	/*ga perlu
 	// hapus elemen id Sub JasaRenovasiPerbaikanStrukturUmum SEMUA KECUALI JasaPerbaikanStrukturBetonPost
         removeCondition1('JasaPerbaikanRetakStrukturPost');
         removeCondition1('JasaPenguatanStrukturBangunanPost');
@@ -1414,7 +1423,7 @@ if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaRepairStrukturBetonPost');
         //removeCondition1('');
         removeCondition1('JasaRenovasiPerbaikanRetakStrukturPost');
-	
+	*/
 	// hapus elemen id Sub JasaRenovasiPerbaikan yang lain
         removeCondition1('JasaRenovasiPerbaikanInfrastrukturPost');
         removeCondition1('JasaRenovasiPerbaikanBangunanPost');
@@ -1422,7 +1431,7 @@ if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {
 	removeCondition1('JasaRenovasiPerbaikanFasadPost');
 	removeCondition1('JasaRenovasiPerbaikanFasilitasPost');
 
-	// hapus elemen id Semua Sub JasaRenovasiPerbaikanStruktur selain JasaRenovasiPerbaikanStrukturTeknikBetonPost
+	// hapus elemen id Semua Sub JasaRenovasiPerbaikanStruktur selain JasaRenovasiPerbaikanStrukturPost
 	removeCondition1('JasaRenovasiPerbaikanStrukturTeknikBetonPost');
 	removeCondition1('JasaRenovasiPerbaikanStrukturKolomBalokPost');
         removeCondition1('JasaRenovasiPerbaikanStrukturPondasiPost');
@@ -1481,7 +1490,7 @@ if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {
         JasaKonstruksiPerbaikanSubPostLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanSubPostLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanStrukturPostLink.style.visibility = 'visible';
-	JasaRenovasiPerbaikanStrukturUmumPostLink.style.visibility = 'visible';
+	//JasaRenovasiPerbaikanStrukturUmumPostLink.style.visibility = 'visible';
 	
 	JasaPerbaikanStrukturBetonPostLink.style.visibility = 'visible';
         pageNameJasaKonsPerbaikanPost.textContent = urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost];
