@@ -703,6 +703,7 @@ if (!JasaKonsPerbaikan) {
         pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanStruktur[cleanUrlJasaPerbaikanKonsSub];
     }
     //SUB JasaRenovasiPerbaikanStruktur
+/* ga perlu
     if (urlMappingPerbaikanStrukturUmum[cleanUrlJasaPerbaikanKonsSub]) {
         restoreCondition1('JasaKonsPerbaikan');
         restoreCondition1('JasaRenovasiPerbaikanStruktur');
@@ -784,6 +785,7 @@ if (!JasaKonsPerbaikan) {
 	JasaPerbaikanStrukturBetonLink.style.visibility = 'visible';
         pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanStrukturUmum[cleanUrlJasaPerbaikanKonsSub];
     }
+    */
     if (urlMappingPerbaikanStrukturKolomBalok[cleanUrlJasaPerbaikanKonsSub]) {
         restoreCondition1('JasaKonsPerbaikan');
         restoreCondition1('JasaRenovasiPerbaikanStruktur');
