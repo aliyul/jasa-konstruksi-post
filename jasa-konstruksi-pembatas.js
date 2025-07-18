@@ -207,6 +207,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaPembuatanPagarDindingPembatas');
      
         //hapus elemen div id lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -249,6 +250,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaPengamanSisiJalanInfrastruktur');
      
         //hapus elemen div id lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -291,6 +293,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaRambudanSistemKeamananVisual');
      
         //hapus elemen div id lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -334,6 +337,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaPengamananAreaProyek');
      
         //hapus elemen div id lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
