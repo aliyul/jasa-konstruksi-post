@@ -341,6 +341,7 @@ if (!JasaKons || !JasaKonsSub) {
         restoreCondition('JasaKons');
 	restoreCondition('JasaKonstruksi');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -366,6 +367,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaAlatKonstruksi');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -409,6 +411,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	restoreCondition('SewaAlatKonstruksi');
 	   
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -454,6 +457,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	  
 	   
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -499,6 +503,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	restoreCondition('SewaAlatKonstruksiRingan');
 	   
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -545,6 +550,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	restoreCondition('');
 	   
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -590,6 +596,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	//restoreCondition('JasaKonstruksi');
 	restoreCondition('JasaRenovasiPerbaikan');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -631,6 +638,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaStrukturKonstruksi');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -672,6 +680,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaFinishing');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -713,6 +722,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPondasiPerkuatan');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -754,6 +764,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	 restoreCondition('JasaSaluranDrainase');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -795,6 +806,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaJalanPerkerasan');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -836,6 +848,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPembatasPengaman');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -880,6 +893,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPematanganLahan');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -922,6 +936,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaUjiTanah');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -965,6 +980,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPerkuatanTanahLongsor');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -1006,6 +1022,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaBongkarBangunan');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -1046,6 +1063,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPengeboran');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
