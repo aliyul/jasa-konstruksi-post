@@ -174,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
         //restoreCondition('JasaChippingBeton');
      
            // hapus elemen id DIV Lain
+        removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	       removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -209,6 +210,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (urlMappingFinishingInfrastruktur[cleanUrlJasaKonsFinishing]) {
         restoreCondition('JasaFinishingInfrastrukturSub');
           // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	       removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -247,6 +249,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingBangunanInterior');
         //restoreCondition('JasaChippingBeton');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	       removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -285,6 +288,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingBangunanEksterior');
         //restoreCondition('JasaChippingBeton');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	       removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -324,6 +328,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
         //restoreCondition('JasaChippingBeton');
            // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	       removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -363,6 +368,7 @@ document.addEventListener("DOMContentLoaded", function() {
        restoreCondition('JasaFinishingInfrastrukturJalan');
      
           // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	       removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -402,6 +408,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingTrotoar');
     
           // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	       removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -441,6 +448,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingSaluran');
     
           // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	       removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -480,6 +488,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingInfrastrukturSub');
         restoreCondition('JasaFinishingInfrastrukturStruktur');
           // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	       removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
@@ -518,6 +527,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingInfrastrukturProteksi');
        
           // hapus elemen id DIV Lain
+	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
 	       removeCondition('ProdukKons');
         //removeCondition('ProdukKonsSaluran');
