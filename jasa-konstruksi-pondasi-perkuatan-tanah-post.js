@@ -158,6 +158,7 @@ if (urlMappingJasaPondasi[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         //restoreCondition('JasaPondasiCakarAyamPost');
      
         //hapus elemen div id lain
+	removeCondition('ProdukInFurPost');
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('ProdukKonsPost');
@@ -223,6 +224,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaPondasiCakarAyamPost');
      
         //hapus elemen div id lain
+	removeCondition('ProdukInFurPost');
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('ProdukKonsPost');
@@ -288,6 +290,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaPondasiTapakPost');
      
         //hapus elemen div id lain
+	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('ProdukKonsPost');
@@ -337,6 +340,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaPondasiBoredPilePost');
      
         //hapus elemen div id lain
+	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('ProdukKonsPost');
@@ -387,6 +391,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
         restoreCondition('JasaPondasiTiangPancangPost');
      
         //hapus elemen div id lain
+	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('ProdukKonsPost');
@@ -435,6 +440,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
         restoreCondition('JasaPondasiSumuranPost');
      
         //hapus elemen div id lain
+	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('ProdukKonsPost');
