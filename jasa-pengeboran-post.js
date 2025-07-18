@@ -146,6 +146,7 @@ if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaBorAirPost');
      
         //hapus elemen div id lain KECUALI JasaPengeboranPost
+	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('ProdukKonsPost');
@@ -185,6 +186,7 @@ if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaCoringBetonPost');
      
         //hapus elemen div id lain KECUALI JasaPengeboranPost
+	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('ProdukKonsPost');
@@ -226,6 +228,7 @@ if (urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaBorTembokPost');
      
         //hapus elemen div id lain KECUALI JasaPengeboranPost
+	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('ProdukKonsPost');
@@ -267,6 +270,7 @@ if (urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaBorBetonPost');
      
         //hapus elemen div id lain KECUALI JasaPengeboranPost
+	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('ProdukKonsPost');
