@@ -158,6 +158,7 @@ if (urlMappingJasaPondasi[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         //restoreCondition('JasaPondasiCakarAyamPost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
 	removeCondition('ProdukInFurPost');
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -224,6 +225,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaPondasiCakarAyamPost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
 	removeCondition('ProdukInFurPost');
 	removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -290,6 +292,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaPondasiTapakPost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
 	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -340,6 +343,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaPondasiBoredPilePost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
 	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -391,6 +395,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
         restoreCondition('JasaPondasiTiangPancangPost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
 	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -440,6 +445,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
         restoreCondition('JasaPondasiSumuranPost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
 	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
