@@ -234,6 +234,7 @@ if (urlMappingJasaPavingBlockJalanPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
 	restoreCondition('JasaPavingBlockJalanSubPost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
@@ -286,6 +287,7 @@ if (urlMappingJasaPavingBlockJalanPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
 	restoreCondition('JasaPengaspalanJalanSubPost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
@@ -339,6 +341,7 @@ if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost])
      
         //hapus elemen div id lain
        //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsPembatasPost');
         removeCondition('ProdukKonsPost');
@@ -394,6 +397,7 @@ if (urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKonsPost
 	restoreCondition('JasaPerkerasanAgregatJalanSubPost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
@@ -445,6 +449,7 @@ if (urlMappingJasaTimbunanSubPostbaseJalanPost[cleanUrlJasaJalanPerkerasanKonsPo
 	restoreCondition('JasaTimbunanSubbaseJalanSubPost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
@@ -496,6 +501,7 @@ if (urlMappingJasaPerkerasanBaseCourseJalanPost[cleanUrlJasaJalanPerkerasanKonsP
 	restoreCondition('JasaPerkerasanBaseCourseJalanSubPost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
@@ -547,6 +553,7 @@ if (urlMappingJasaPerkerasanJalanKerikilPost[cleanUrlJasaJalanPerkerasanKonsPost
 	restoreCondition('JasaPerkerasanJalanKerikilSubPost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
@@ -598,6 +605,7 @@ if (urlMappingJasaPerkuatanDasarTanahJalanPost[cleanUrlJasaJalanPerkerasanKonsPo
 	restoreCondition('JasaPerkuatanDasarTanahJalanSubPost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
@@ -649,6 +657,7 @@ if (urlMappingJasaPerkerasanJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost])
 	restoreCondition('JasaPerkerasanJalanBetonSubPost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
@@ -700,6 +709,7 @@ if (urlMappingJasaPerkerasanJalanAspalPost[cleanUrlJasaJalanPerkerasanKonsPost])
 	restoreCondition('JasaPerkerasanJalanAspalSubPost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
@@ -751,6 +761,7 @@ if (urlMappingJasaPerkerasanJalanKompositPost[cleanUrlJasaJalanPerkerasanKonsPos
 	restoreCondition('JasaPerkerasanJalanKompositSubPost');
      
         //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('MaterialKons');
 	removeCondition('ProdukKons');
