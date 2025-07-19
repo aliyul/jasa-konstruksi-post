@@ -88,6 +88,7 @@ if (urlMappingJasaCuttingBeton[cleanUrlJasaCuttingBetonPost]) {
        // restoreCondition('JasaBorAirPost');
      
         //hapus elemen div id lain KECUALI JasaPengeboranPost
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
