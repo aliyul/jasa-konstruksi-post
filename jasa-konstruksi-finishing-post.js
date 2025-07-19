@@ -166,32 +166,6 @@ const urlMappingJasafinishingInterior {
  
 };
 
-const urlMappingJasaDesainInterior = {
-    "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-dan-furniture.html": "Jasa Desain Interior dan Furniture",
-  "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-furniture.html": "Jasa Desain Interior Furniture",
-  "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-terdekat.html": "Jasa Desain Interior Terdekat",
-  "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-murah.html": "Jasa Desain Interior Murah",
-  "https://www.betonjayareadymix.com/2018/11/jasa-desain-interior-depok.html": "Jasa Desain Interior Depok",
-  "https://www.betonjayareadymix.com/2018/11/jasa-desain-interior-bogor.html": "Jasa Desain Interior Bogor",
-  "https://www.betonjayareadymix.com/2018/11/jasa-desain-interior-bekasi.html": "Jasa Desain Interior Bekasi",
-  "https://www.betonjayareadymix.com/2018/11/jasa-desain-interior-jakarta.html": "Jasa Desain Interior Jakarta",
-  "https://www.betonjayareadymix.com/2018/11/jasa-desain-interior-tangerang.html": "Jasa Desain Interior Tangerang",
-
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-interior-rumah.html": "Harga Jasa Desain Interior Rumah",
-  "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-apartemen.html": "Jasa Desain Interior Apartemen",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-interior-hotel.html": "Harga Jasa Desain Interior Hotel",
-  "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-kamar.html": "Jasa Desain Interior Kamar",
-  "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-ruangan.html": "Jasa Desain Interior Ruangan",
-  "https://www.betonjayareadymix.com/2018/09/harga-desain-interior-kamar-mandi.html": "Harga Desain Interior Kamar Mandi",
-  "https://www.betonjayareadymix.com/2018/09/harga-desain-interior-kamar.html": "Harga Desain Interior Kamar",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-interior-kamar-tidur.html": "Harga Jasa Desain Interior Kamar Tidur",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-interior-per-meter.html": "Harga Jasa Desain Interior Per Meter",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-interior-ruang-tamu.html": "Harga Jasa Desain Interior Ruang Tamu",
-  "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-per-m2.html": "Jasa Desain Interior Per M2",
-  "https://www.betonjayareadymix.com/2018/09/jasa-interior-desain-terdekat.html": "Jasa Interior Desain Terdekat",
-  "https://www.betonjayareadymix.com/2018/09/jasa-interior-desain.html": "Jasa Interior Desain"
-
-};
 const urlMappingJasaFinishingInteriorModern = {
  "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-wpc-lantai.html": "Harga Jasa Pasang WPC Lantai",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wpc-panel-dinding.html": "Jasa Pasang WPC Panel Dinding",
