@@ -459,6 +459,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingDakBetonPost');
            
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -538,6 +539,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingBetonExposePost');
            
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -616,6 +618,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaFinishingLantaiBetonPost');
            
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -694,6 +697,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaPlesteranAcianDindingPost');
            
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -775,6 +779,7 @@ document.addEventListener("DOMContentLoaded", function() {
         restoreCondition('JasaGantiKitchenSetPost');
            
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -855,6 +860,7 @@ if (urlMappingJasafinishingInterior[cleanUrlJasaKonsFinishingPost]) {
        // restoreCondition('JasaDesainInteriorPost');
            
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -935,6 +941,7 @@ if (urlMappingJasafinishingInterior[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingInteriorModernPost');
            
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -1017,6 +1024,7 @@ if (urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingFasadEksteriorPost');
            
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
@@ -1097,6 +1105,7 @@ if (urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingTamanRumahPost');
            
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
