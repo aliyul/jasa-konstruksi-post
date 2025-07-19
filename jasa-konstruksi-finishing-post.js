@@ -871,14 +871,14 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaFinishingInteriorPostLink.style.visibility = 'visible';
         //sub finishing JasaGantiKitchenSetPost
         JasaGantiKitchenSetPostLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaDesainInterior[cleanUrlJasaKonsFinishingPost];
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingFinishingInteriorKitchenSet[cleanUrlJasaKonsFinishingPost];
     }
 	
-if (urlMappingJasaDesainInterior[cleanUrlJasaKonsFinishingPost]) {
+if (urlMappingJasafinishingInterior[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanInteriorPost');
     
-        restoreCondition('JasaDesainInteriorPost');
+       // restoreCondition('JasaDesainInteriorPost');
            
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
         removeCondition('ProdukInFurPost');
@@ -950,8 +950,8 @@ if (urlMappingJasaDesainInterior[cleanUrlJasaKonsFinishingPost]) {
         //sub finishing bangunan
         JasaFinishingInteriorPostLink.style.visibility = 'visible';
         //sub finishing STRUKKTUR
-        JasaDesainInteriorPostLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaDesainInterior[cleanUrlJasaKonsFinishingPost];
+        //JasaDesainInteriorPostLink.style.visibility = 'visible';
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasafinishingInterior[cleanUrlJasaKonsFinishingPost];
     }
 
   if (urlMappingJasaFinishingInteriorModern[cleanUrlJasaKonsFinishingPost]) {
@@ -1031,7 +1031,7 @@ if (urlMappingJasaDesainInterior[cleanUrlJasaKonsFinishingPost]) {
         JasaFinishingInteriorPostLink.style.visibility = 'visible';
         //sub finishing STRUKKTUR
         JasaFinishingInteriorModernPostLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaDesainInterior[cleanUrlJasaKonsFinishingPost];
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingInteriorModern[cleanUrlJasaKonsFinishingPost];
     }
 //AKHIR FINISHING INTERIOR
 
