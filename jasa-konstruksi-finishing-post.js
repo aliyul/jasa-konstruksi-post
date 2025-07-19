@@ -139,7 +139,7 @@ const urlMappingFinishingBangunanInterior = {
 */
 
 //SUB JasaFinishingBangunanInteriorPost
-const urlMappingJasafinishingInterior {
+const urlMappingJasafinishingInterior = {
  "https://www.betonjayareadymix.com/2018/09/harga-interior-kamar-tidur.html": "Harga Interior Kamar Tidur",
   "https://www.betonjayareadymix.com/2018/09/harga-interior-kamar.html": "Harga Interior Kamar",
   "https://www.betonjayareadymix.com/2018/09/harga-interior-ruang-tamu.html": "Harga Interior Ruang Tamu",
