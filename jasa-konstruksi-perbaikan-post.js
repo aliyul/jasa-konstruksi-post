@@ -209,7 +209,8 @@ const urlMappingJasaInjeksiBetonRetak = {
   "https://www.betonjayareadymix.com/2018/09/injeksi-beton-bekasi.html": "Injeksi Beton Bekasi",
   "https://www.betonjayareadymix.com/2018/09/injeksi-beton-bogor.html": "Injeksi Beton Bogor",
   "https://www.betonjayareadymix.com/2018/09/injeksi-beton-depok.html": "Injeksi Beton Depok",
-  "https://www.betonjayareadymix.com/2018/09/borongan-injeksi-beton.html": "Borongan Injeksi Beton"
+  "https://www.betonjayareadymix.com/2018/09/borongan-injeksi-beton.html": "Borongan Injeksi Beton",
+  "https://www.betonjayareadymix.com/2018/09/injeksi-beton.html": "Injeksi Beton"
 
 };
 const urlMappingJasaInjeksiRetakBeton = {
