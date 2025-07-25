@@ -82,6 +82,7 @@ const urlMappingPerbaikanStrukturBangunan = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-miring.html": "Jasa Perbaikan Struktur Bangunan Miring"
 };
 const urlMappingPerbaikanStrukturTeknikBeton = {
+//"https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-beton.html":
 "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-korosi-beton.html": "Jasa Pelapisan Anti Korosi Beton",
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-sambungan-beton.html": "Jasa Perbaikan Sambungan Beton",
 "https://www.betonjayareadymix.com/p/jasa-waterproofing-beton.html": "Jasa Waterproofing Beton",
