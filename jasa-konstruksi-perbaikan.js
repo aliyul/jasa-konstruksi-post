@@ -88,7 +88,7 @@ const urlMappingPerbaikanStrukturTeknikBeton = {
 "https://www.betonjayareadymix.com/p/jasa-waterproofing-beton.html": "Jasa Waterproofing Beton",
 "https://www.betonjayareadymix.com/p/jasa-patching-beton.html": "Jasa Patching Beton",
 "https://www.betonjayareadymix.com/p/jasa-injeksi-beton-retak.html": "Jasa Injeksi Beton Retak",
-  "https://www.betonjayareadymix.com/p/jasa-injeksi-retak-beton.html": "Jasa Injeksi Retak Beton",
+ // "https://www.betonjayareadymix.com/p/jasa-injeksi-retak-beton.html": "Jasa Injeksi Retak Beton",
   "https://www.betonjayareadymix.com/p/jasa-shotcrete-beton.html": "Jasa Shotcrete Beton",
   "https://www.betonjayareadymix.com/p/jasa-grouting-struktur-beton.html": "Jasa Grouting Struktur Beton",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-mengelupas.html": "Jasa Perbaikan Beton Mengelupas",
