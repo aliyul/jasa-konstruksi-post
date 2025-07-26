@@ -189,31 +189,31 @@ const urlMappingJasaRenovasiStadion = {
 
 //SUB PerbaikanStrukturTeknikBeton
 const urlMappingJasaInjeksiBetonRetak = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-injeksi-beton.html": "Harga Jasa Injeksi Beton",
-  "https://www.betonjayareadymix.com/2018/09/jasa-injeksi-beton-depok.html": "Jasa Injeksi Beton Depok",
-  "https://www.betonjayareadymix.com/2018/09/jasa-injeksi-beton-tangerang.html": "Jasa Injeksi Beton Tangerang",
-  "https://www.betonjayareadymix.com/2018/09/jasa-injeksi-beton-bekasi.html": "Jasa Injeksi Beton Bekasi",
-  "https://www.betonjayareadymix.com/2018/09/jasa-injeksi-beton-jakarta.html": "Jasa Injeksi Beton Jakarta",
-  "https://www.betonjayareadymix.com/2018/09/jasa-injeksi-beton-bogor.html": "Jasa Injeksi Beton Bogor",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-kuningan.html": "Injeksi Beton Kuningan",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-ciamis.html": "Injeksi Beton Ciamis",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-cianjur.html": "Injeksi Beton Cianjur",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-sukabumi.html": "Injeksi Beton Sukabumi",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-karawang.html": "Injeksi Beton Karawang",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-sumedang.html": "Injeksi Beton Sumedang",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-indramayu.html": "Injeksi Beton Indramayu",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-cirebon.html": "Injeksi Beton Cirebon",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-majalengka.html": "Injeksi Beton Majalengka",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-garut.html": "Injeksi Beton Garut",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-tasikmalaya.html": "Injeksi Beton Tasikmalaya",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-bandung.html": "Injeksi Beton Bandung",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-jakarta.html": "Injeksi Beton Jakarta",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-tangerang.html": "Injeksi Beton Tangerang",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-bekasi.html": "Injeksi Beton Bekasi",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-bogor.html": "Injeksi Beton Bogor",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton-depok.html": "Injeksi Beton Depok",
   "https://www.betonjayareadymix.com/2018/09/borongan-injeksi-beton.html": "Borongan Injeksi Beton",
-  "https://www.betonjayareadymix.com/2018/09/injeksi-beton.html": "Injeksi Beton"
+  "https://www.betonjayareadymix.com/2018/09/injeksi-beton.html": "Injeksi Beton",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-injeksi-beton.html": "Harga Jasa Injeksi Beton",
+  "https://www.betonjayareadymix.com/2018/12/jasa-injeksi-beton-depok.html": "Jasa Injeksi Beton Depok",
+  "https://www.betonjayareadymix.com/2018/12/jasa-injeksi-beton-tangerang.html": "Jasa Injeksi Beton Tangerang",
+  "https://www.betonjayareadymix.com/2018/12/jasa-injeksi-beton-bekasi.html": "Jasa Injeksi Beton Bekasi",
+  "https://www.betonjayareadymix.com/2018/12/jasa-injeksi-beton-jakarta.html": "Jasa Injeksi Beton Jakarta",
+  "https://www.betonjayareadymix.com/2018/12/jasa-injeksi-beton-bogor.html": "Jasa Injeksi Beton Bogor",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-kuningan.html": "Injeksi Beton Kuningan",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-ciamis.html": "Injeksi Beton Ciamis",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-cianjur.html": "Injeksi Beton Cianjur",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-sukabumi.html": "Injeksi Beton Sukabumi",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-karawang.html": "Injeksi Beton Karawang",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-sumedang.html": "Injeksi Beton Sumedang",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-indramayu.html": "Injeksi Beton Indramayu",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-cirebon.html": "Injeksi Beton Cirebon",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-majalengka.html": "Injeksi Beton Majalengka",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-garut.html": "Injeksi Beton Garut",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-tasikmalaya.html": "Injeksi Beton Tasikmalaya",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-bandung.html": "Injeksi Beton Bandung",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-jakarta.html": "Injeksi Beton Jakarta",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-tangerang.html": "Injeksi Beton Tangerang",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-bekasi.html": "Injeksi Beton Bekasi",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-bogor.html": "Injeksi Beton Bogor",
+  "https://www.betonjayareadymix.com/2018/12/injeksi-beton-depok.html": "Injeksi Beton Depok"
 
 };
 const urlMappingJasaInjeksiRetakBeton = {
@@ -230,12 +230,13 @@ const urlMappingJasaShortcreteBeton = {
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-semprot-beton.html": "Harga Jasa Semprot Beton"
 };
 const urlMappingJasaGoutingStrukturBeton = {
+  "https://www.betonjayareadymix.com/2018/09/grouting-beton.html": "Grouting Beton",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-grouting-beton.html": "Harga Jasa Grouting Beton",
-  "https://www.betonjayareadymix.com/2018/09/grouting-beton-bekasi.html": "Grouting Beton Bekasi",
-  "https://www.betonjayareadymix.com/2018/09/grouting-beton-depok.html": "Grouting Beton Depok",
-  "https://www.betonjayareadymix.com/2018/09/grouting-beton-tangerang.html": "Grouting Beton Tangerang",
-  "https://www.betonjayareadymix.com/2018/09/grouting-beton-jakarta.html": "Grouting Beton Jakarta",
-  "https://www.betonjayareadymix.com/2018/09/grouting-beton-bogor.html": "Grouting Beton Bogor"
+  "https://www.betonjayareadymix.com/2018/12/grouting-beton-bekasi.html": "Grouting Beton Bekasi",
+  "https://www.betonjayareadymix.com/2018/12/grouting-beton-depok.html": "Grouting Beton Depok",
+  "https://www.betonjayareadymix.com/2018/12/grouting-beton-tangerang.html": "Grouting Beton Tangerang",
+  "https://www.betonjayareadymix.com/2018/12/grouting-beton-jakarta.html": "Grouting Beton Jakarta",
+  "https://www.betonjayareadymix.com/2018/12/grouting-beton-bogor.html": "Grouting Beton Bogor"
 };
 const urlMappingJasaPerbaikanBetonMengelupas = {
 
