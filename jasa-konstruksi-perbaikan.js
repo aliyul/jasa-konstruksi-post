@@ -953,7 +953,7 @@ if (!JasaKonsPerbaikan) {
 	    "@type": "ListItem",
 	     "position": 6,
 	      "name": urlMappingPerbaikanStrukturKolomBalok[cleanUrlJasaPerbaikanKonsSub],
-	      "item": urlMappingPerbaikanStrukturKolomBalok
+	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
 	};
@@ -1084,7 +1084,7 @@ if (!JasaKonsPerbaikan) {
 	    "@type": "ListItem",
 	     "position": 6,
 	      "name": urlMappingPerbaikanStrukturPondasi[cleanUrlJasaPerbaikanKonsSub],
-	      "item": urlMappingPerbaikanStrukturPondasi
+	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
 	};
@@ -1215,7 +1215,7 @@ if (!JasaKonsPerbaikan) {
 	    "@type": "ListItem",
 	     "position": 6,
 	      "name": urlMappingPerbaikanStrukturLantai[cleanUrlJasaPerbaikanKonsSub],
-	      "item": urlMappingPerbaikanStrukturLantai
+	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
 	};
@@ -1345,7 +1345,7 @@ if (!JasaKonsPerbaikan) {
 	    "@type": "ListItem",
 	     "position": 6,
 	      "name": urlMappingPerbaikanStrukturDinding[cleanUrlJasaPerbaikanKonsSub],
-	      "item": urlMappingPerbaikanStrukturDinding
+	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
 	};
@@ -1476,7 +1476,7 @@ if (!JasaKonsPerbaikan) {
 	    "@type": "ListItem",
 	     "position": 6,
 	      "name": urlMappingPerbaikanStrukturBangunan[cleanUrlJasaPerbaikanKonsSub],
-	      "item": urlMappingPerbaikanStrukturBangunan
+	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
 	};
@@ -1607,7 +1607,7 @@ if (!JasaKonsPerbaikan) {
 	    "@type": "ListItem",
 	     "position": 6,
 	      "name": urlMappingPerbaikanStrukturAtap[cleanUrlJasaPerbaikanKonsSub],
-	      "item": urlMappingPerbaikanStrukturAtap
+	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
 	};
@@ -1738,7 +1738,7 @@ if (!JasaKonsPerbaikan) {
 	    "@type": "ListItem",
 	     "position": 6,
 	      "name": urlMappingPerbaikanStrukturTeknikBeton[cleanUrlJasaPerbaikanKonsSub],
-	      "item": urlMappingPerbaikanStrukturTeknikBeton
+	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
 	};
@@ -1864,7 +1864,7 @@ if (!JasaKonsPerbaikan) {
 	    "@type": "ListItem",
 	     "position": 5,
 	      "name": urlMappingPerbaikanInfrastruktur[cleanUrlJasaPerbaikanKonsSub],
-	      "item": urlMappingPerbaikanInfrastruktur
+	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
 	};
@@ -1997,7 +1997,7 @@ if (!JasaKonsPerbaikan) {
 	    "@type": "ListItem",
 	     "position": 6,
 	      "name": urlMappingPerbaikanInfrastrukturJalan[cleanUrlJasaPerbaikanKonsSub],
-	      "item": urlMappingPerbaikanInfrastrukturJalan
+	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
 	};
@@ -2130,7 +2130,7 @@ if (!JasaKonsPerbaikan) {
 	    "@type": "ListItem",
 	     "position": 6,
 	      "name": urlMappingPerbaikanInfrastrukturTrotoar[cleanUrlJasaPerbaikanKonsSub],
-	      "item": urlMappingPerbaikanInfrastrukturTrotoar
+	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
 	};
@@ -2262,7 +2262,7 @@ if (!JasaKonsPerbaikan) {
 	    "@type": "ListItem",
 	     "position": 6,
 	      "name": urlMappingPerbaikanInfrastrukturJembatan[cleanUrlJasaPerbaikanKonsSub],
-	      "item": urlMappingPerbaikanInfrastrukturJembatan
+	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
 	};
@@ -2395,7 +2395,7 @@ if (!JasaKonsPerbaikan) {
 	    "@type": "ListItem",
 	     "position": 6,
 	      "name": urlMappingPerbaikanInfrastrukturSaluran[cleanUrlJasaPerbaikanKonsSub],
-	      "item": urlMappingPerbaikanInfrastrukturSaluran
+	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
 	};
@@ -2518,7 +2518,7 @@ if (!JasaKonsPerbaikan) {
 	    "@type": "ListItem",
 	     "position": 5,
 	      "name": urlMappingPerbaikanBangunan[cleanUrlJasaPerbaikanKonsSub],
-	      "item": urlMappingPerbaikanBangunan
+	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
 	};
