@@ -494,7 +494,7 @@ if (!JasaKonsPerbaikanPost) {
      var JasaRenovasiInteriorApartemenPostLink = document.getElementById("JasaRenovasiInteriorApartemenPost");
      var JasaRenovasiInteriorHotelPostLink = document.getElementById("JasaRenovasiInteriorHotelPost");
      var JasaRenovasiInteriorTokoPostLink = document.getElementById("JasaRenovasiInteriorTokoPost");
-     var JasaDesignInteriorCustomPostLink = document.getElementById("JasaDesignInteriorCustomPost");
+     var JasaRenovasiInteriorCustomPostLink = document.getElementById("JasaRenovasiInteriorCustomPost");
      var JasaRenovasiInteriorRuanganPostLink = document.getElementById("JasaRenovasiInteriorRuanganPost");
 
  //SUB JasaRenovasiPerbaikanBangunan
@@ -564,7 +564,7 @@ if (!JasaKonsPerbaikanPost) {
      JasaRenovasiInteriorApartemenPostLink.style.visibility = 'hidden';
      JasaRenovasiInteriorHotelPostLink.style.visibility = 'hidden';
      JasaRenovasiInteriorTokoPostLink.style.visibility = 'hidden';
-     JasaDesignInteriorCustomPostLink.style.visibility = 'hidden';
+     JasaRenovasiInteriorCustomPostLink.style.visibility = 'hidden';
      JasaRenovasiInteriorRuanganPostLink.style.visibility = 'hidden';
 
  //Hide SUB JasaRenovasiPerbaikanBangunan
@@ -721,7 +721,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRenovasiInteriorApartemenPost');
         removeCondition1('JasaRenovasiInteriorHotelPost');
         removeCondition1('JasaRenovasiInteriorTokoPost');
-        removeCondition1('JasaDesignInteriorCustomPost');
+        removeCondition1('JasaRenovasiInteriorCustomPost');
         removeCondition1('JasaRenovasiInteriorRuanganPost');
 	   
        // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
@@ -933,7 +933,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRenovasiInteriorApartemenPost');
         removeCondition1('JasaRenovasiInteriorHotelPost');
         removeCondition1('JasaRenovasiInteriorTokoPost');
-        removeCondition1('JasaDesignInteriorCustomPost');
+        removeCondition1('JasaRenovasiInteriorCustomPost');
         removeCondition1('JasaRenovasiInteriorRuanganPost');
 	   
        // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
@@ -1086,7 +1086,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRenovasiInteriorApartemenPost');
         removeCondition1('JasaRenovasiInteriorHotelPost');
         removeCondition1('JasaRenovasiInteriorTokoPost');
-        removeCondition1('JasaDesignInteriorCustomPost');
+        removeCondition1('JasaRenovasiInteriorCustomPost');
         removeCondition1('JasaRenovasiInteriorRuanganPost');
 	   
        // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
@@ -1241,7 +1241,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRenovasiInteriorApartemenPost');
         removeCondition1('JasaRenovasiInteriorHotelPost');
         removeCondition1('JasaRenovasiInteriorTokoPost');
-        removeCondition1('JasaDesignInteriorCustomPost');
+        removeCondition1('JasaRenovasiInteriorCustomPost');
         removeCondition1('JasaRenovasiInteriorRuanganPost');
 	   
        // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
@@ -1397,7 +1397,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRenovasiInteriorApartemenPost');
         removeCondition1('JasaRenovasiInteriorHotelPost');
         removeCondition1('JasaRenovasiInteriorTokoPost');
-        removeCondition1('JasaDesignInteriorCustomPost');
+        removeCondition1('JasaRenovasiInteriorCustomPost');
         removeCondition1('JasaRenovasiInteriorRuanganPost');
 	   
        // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
@@ -1608,7 +1608,7 @@ if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaRenovasiInteriorApartemenPost');
         removeCondition1('JasaRenovasiInteriorHotelPost');
         removeCondition1('JasaRenovasiInteriorTokoPost');
-        removeCondition1('JasaDesignInteriorCustomPost');
+        removeCondition1('JasaRenovasiInteriorCustomPost');
         removeCondition1('JasaRenovasiInteriorRuanganPost');
 	   
        // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
@@ -1810,7 +1810,7 @@ if (urlMappingJasaRenovasiPerbaikanRumah[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaRenovasiInteriorApartemenPost');
         removeCondition1('JasaRenovasiInteriorHotelPost');
         removeCondition1('JasaRenovasiInteriorTokoPost');
-        removeCondition1('JasaDesignInteriorCustomPost');
+        removeCondition1('JasaRenovasiInteriorCustomPost');
         removeCondition1('JasaRenovasiInteriorRuanganPost');
 	   
        // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
@@ -1964,7 +1964,7 @@ if (urlMappingJasaRenovasiRumahMinimalis[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaRenovasiInteriorApartemenPost');
         removeCondition1('JasaRenovasiInteriorHotelPost');
         removeCondition1('JasaRenovasiInteriorTokoPost');
-        removeCondition1('JasaDesignInteriorCustomPost');
+        removeCondition1('JasaRenovasiInteriorCustomPost');
         removeCondition1('JasaRenovasiInteriorRuanganPost');
 	   
        // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
@@ -2119,7 +2119,7 @@ if (urlMappingJasaRenovasiRumahType36[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaRenovasiInteriorApartemenPost');
         removeCondition1('JasaRenovasiInteriorHotelPost');
         removeCondition1('JasaRenovasiInteriorTokoPost');
-        removeCondition1('JasaDesignInteriorCustomPost');
+        removeCondition1('JasaRenovasiInteriorCustomPost');
         removeCondition1('JasaRenovasiInteriorRuanganPost');
 	   
        // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
@@ -2273,7 +2273,7 @@ if (urlMappingJasaRenovasiRumahType45[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaRenovasiInteriorApartemenPost');
         removeCondition1('JasaRenovasiInteriorHotelPost');
         removeCondition1('JasaRenovasiInteriorTokoPost');
-        removeCondition1('JasaDesignInteriorCustomPost');
+        removeCondition1('JasaRenovasiInteriorCustomPost');
         removeCondition1('JasaRenovasiInteriorRuanganPost');
 	   
        // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
@@ -2432,7 +2432,7 @@ if (urlMappingJasaRenovasiStadion[cleanUrlJasaKonsPerbaikanPost]) {
         removeCondition1('JasaRenovasiInteriorApartemenPost');
         removeCondition1('JasaRenovasiInteriorHotelPost');
         removeCondition1('JasaRenovasiInteriorTokoPost');
-        removeCondition1('JasaDesignInteriorCustomPost');
+        removeCondition1('JasaRenovasiInteriorCustomPost');
         removeCondition1('JasaRenovasiInteriorRuanganPost');
 	   
        // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
