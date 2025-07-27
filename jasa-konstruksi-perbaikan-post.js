@@ -1427,6 +1427,7 @@ if (!JasaKonsPerbaikanPost) {
        script.type = 'application/ld+json';
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
+   }
 //SUB JasaRenovasiPerbaikanStrukturUmum
 if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {
         restoreCondition1('JasaKonstruksiPerbaikanSubPost');
@@ -1625,6 +1626,7 @@ if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {
        script.type = 'application/ld+json';
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
+} 
 //SUB JasaRenovasiPerbaikanBangunanPost
 //SUB JasaRenovasiPerbaikanBangunanRumahPost
 if (urlMappingJasaRenovasiPerbaikanRumah[cleanUrlJasaKonsPerbaikanPost]) {
@@ -2451,7 +2453,6 @@ if (urlMappingJasaRenovasiStadion[cleanUrlJasaKonsPerbaikanPost]) {
        script.type = 'application/ld+json';
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
-   }
-}	
-   });
+}                                                               
+}}});
 
