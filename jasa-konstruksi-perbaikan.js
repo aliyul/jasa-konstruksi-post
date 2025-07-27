@@ -1037,6 +1037,51 @@ if (!JasaKonsPerbaikan) {
 	JasaRenovasiPerbaikanStrukturPondasiLink.style.visibility = 'visible';
         pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanStrukturPondasi[cleanUrlJasaPerbaikanKonsSub];    
     }
+	
+	  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingPerbaikanStrukturPondasi[cleanUrlJasaPerbaikanKonsSub]) {
+	const jsonLDBreadcrumb = {
+	  "@context": "https://schema.org",
+	  "@type": "BreadcrumbList",
+	  "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+	    {
+	      "@type": "ListItem",
+	      "position": 2,
+	      "name": "Jasa Konstruksi",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+	    },
+	    {
+	      "@type": "ListItem",
+	      "position": 3,
+	      "name": "Jasa Renovasi",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-renovasi.html"
+	    },
+	    {
+	      "@type": "ListItem",
+	      "position": 4,
+	      "name": "Jasa Perbaikan Struktur",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur.html"
+	    },
+	  {
+	    "@type": "ListItem",
+	     "position": 5,
+	      "name": urlMappingPerbaikanStrukturPondasi[cleanUrlJasaPerbaikanKonsSub],
+	      "item": urlMappingPerbaikanStrukturPondasi
+	   }
+	  ]
+	};
+	
+	       const script = document.createElement('script');
+	       script.type = 'application/ld+json';
+	       script.text = JSON.stringify(jsonLDBreadcrumb);
+	       document.head.appendChild(script);
+     }
     if (urlMappingPerbaikanStrukturLantai[cleanUrlJasaPerbaikanKonsSub]) {
         restoreCondition1('JasaKonsPerbaikan');
         restoreCondition1('JasaRenovasiPerbaikanStruktur');
