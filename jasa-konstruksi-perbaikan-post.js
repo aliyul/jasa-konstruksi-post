@@ -24,13 +24,15 @@ const urlMappingJasaPerbaikanStrukturBeton= {
   "https://www.betonjayareadymix.com/2018/09/perbaikan-beton.html": "Perbaikan Beton",
   "https://www.betonjayareadymix.com/2018/09/borongan-perbaikan-beton.html": "Borongan Perbaikan Beton",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-perbaikan-beton.html": "Harga Jasa Perbaikan Beton",
-    "https://www.betonjayareadymix.com/2018/09/perbaikan-beton-bandung.html": "Perbaikan Beton Bandung",
-  "https://www.betonjayareadymix.com/2018/09/perbaikan-beton-tangerang.html": "Perbaikan Beton Tangerang",
-  "https://www.betonjayareadymix.com/2018/09/perbaikan-beton-depok.html": "Perbaikan Beton Depok",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-perbaikan-struktur-beton.html": "Harga Jasa Perbaikan Struktur Beton",
+   "https://www.betonjayareadymix.com/2018/09/harga-jasa-perbaikan-struktur-beton.html": "Harga Jasa Perbaikan Struktur Beton",
   "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-kebocoran-beton.html": "Jasa Perbaikan Kebocoran Beton",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perkuatan-struktur-cfrp.html": "Jasa Perkuatan Struktur Crf"
-
+  "https://www.betonjayareadymix.com/2018/09/jasa-perkuatan-struktur-cfrp.html": "Jasa Perkuatan Struktur Crf",
+	
+    "https://www.betonjayareadymix.com/2018/12/perbaikan-beton-bandung.html": "Perbaikan Beton Bandung",
+ "https://www.betonjayareadymix.com/2018/12/perbaikan-beton-bekasi.html": "Perbaikan Beton Bekasi",
+  "https://www.betonjayareadymix.com/2018/12/perbaikan-beton-tangerang.html": "Perbaikan Beton Tangerang",
+  "https://www.betonjayareadymix.com/2018/12/perbaikan-beton-depok.html": "Perbaikan Beton Depok",
+ 
 };
 const urlMappingJasaRenovasiPerbaikanRetakStruktur= {
 	
