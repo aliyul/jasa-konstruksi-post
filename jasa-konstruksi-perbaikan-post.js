@@ -794,8 +794,8 @@ if (!JasaKonsPerbaikanPost) {
 	    {
 	      "@type": "ListItem",
 	      "position": 6,
-	      "name": "Jasa Injeksi Beton Retak",
-	      "item": "https://www.betonjayareadymix.com/p/jasa-injeksi-beton-retak.html"
+	      "name": "Jasa Chipping Beton",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-chipping-beton.html"
 	    },
 	   {
                 "@type": "ListItem",
