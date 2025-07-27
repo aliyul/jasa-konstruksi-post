@@ -181,6 +181,44 @@ if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
         JasaBorAirPostLink.style.visibility = 'visible';
         pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorAir[cleanUrlJasaPengeboranPost];
     }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+		{
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Pengeboran",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
+               },
+        	{
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bor Air",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bor-air.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": urlMappingJasaBorAir[cleanUrlJasaPengeboranPost],
+                   "item": cleanUrlJasaPengeboranPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaKonsPengeboranPost');
         restoreCondition('JasaPengeboranPost');
@@ -223,7 +261,44 @@ if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
         JasaCoringBetonPostLink.style.visibility = 'visible';
         pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost];
     }
-    
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+		{
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Pengeboran",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
+               },
+        	{
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Coring Beton",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-coring-beton.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost],
+                   "item": cleanUrlJasaPengeboranPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaKonsPengeboranPost');
         restoreCondition('JasaPengeboranPost');
@@ -266,7 +341,44 @@ if (urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost]) {
         JasaBorTembokPostLink.style.visibility = 'visible';
         pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost];
     }
-	
+     // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+		{
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Pengeboran",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
+               },
+        	{
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bor Tembok",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost],
+                   "item": cleanUrlJasaPengeboranPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaKonsPengeboranPost');
         restoreCondition('JasaPengeboranPost');
@@ -309,5 +421,43 @@ if (urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost]) {
         JasaBorBetonPostLink.style.visibility = 'visible';
         pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost];
     }
+     // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+		{
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Pengeboran",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
+               },
+        	{
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bor Beton",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bor-beton.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost],
+                   "item": cleanUrlJasaPengeboranPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 
    });
