@@ -1077,8 +1077,8 @@ if (!JasaKonsPerbaikan) {
           {
 	      "@type": "ListItem",
 	      "position": 5,
-	      "name": "Jasa Perbaikan Struktur Pondasi",
-	      "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-pondasi.html"
+	      "name": "Jasa Perbaikan Pondasi Struktur",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-struktur.html"
 	    },
 	  {
 	    "@type": "ListItem",
