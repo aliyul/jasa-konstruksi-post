@@ -714,7 +714,7 @@ const jsonLDBreadcrumb = {
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "BJR",
+      "name": "Beton Jaya Readymix",
       "item": "https://www.betonjayareadymix.com/"
     },
     {
