@@ -693,6 +693,7 @@ if (!JasaKonsPerbaikanPost) {
         removeCondition1('JasaRenovasiPerbaikanStrukturPondasiPost');
         removeCondition1('JasaRenovasiPerbaikanStrukturLantaiBetonPost');
 	//removeCondition1('');
+        removeCondition1('JasaPerbaikanStrukturBetonPost');
 	removeCondition1('JasaRenovasiPerbaikanStrukturBangunanPost');
 	removeCondition1('JasaRenovasiPerbaikanStrukturAtapPost');
 	removeCondition1('JasaRenovasiPerbaikanStrukturDindingPost');
@@ -753,7 +754,63 @@ if (!JasaKonsPerbaikanPost) {
 	JasaChippingBetonPostLink.style.visibility = 'visible';
         pageNameJasaKonsPerbaikanPost.textContent = urlMappingJasaChippingBeton[cleanUrlJasaKonsPerbaikanPost];
     }
-   
+    
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaChippingBeton[cleanUrlJasaKonsPerbaikanPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+	    {
+	      "@type": "ListItem",
+	      "position": 2,
+	      "name": "Jasa Konstruksi",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+	    },
+	    {
+	      "@type": "ListItem",
+	      "position": 3,
+	      "name": "Jasa Renovasi",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-renovasi.html"
+	    },
+	    {
+	      "@type": "ListItem",
+	      "position": 4,
+	      "name": "Jasa Perbaikan Struktur",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur.html"
+	    },
+	    {
+	      "@type": "ListItem",
+	      "position": 5,
+	      "name": "Jasa Perbaikan Teknik Beton",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-teknik-beton.html"
+	    },
+	    {
+	      "@type": "ListItem",
+	      "position": 6,
+	      "name": "Jasa Injeksi Beton Retak",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-injeksi-beton-retak.html"
+	    },
+	   {
+                "@type": "ListItem",
+                "position": 7,
+                "name": urlMappingJasaChippingBeton[cleanUrlJasaKonsPerbaikanPost],
+                "item": cleanUrlJasaKonsPerbaikanPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
     if (urlMappingJasaPatchingBeton[cleanUrlJasaKonsPerbaikanPost]) {
         restoreCondition1('JasaKonsPerbaikanPost');
         restoreCondition1('JasaRenovasiPerbaikanStrukturPost');
