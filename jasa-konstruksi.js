@@ -70,7 +70,7 @@ const urlMappingJasaSewaAlatKonstruksiRingan = {
 }
 
 const urlMappingPerbaikan = {	
-	"https://www.betonjayareadymix.com/p/jasa-perbaikan-fasilitas-umum.html": "Jasa Perbaikan Fasilitas Umum",
+	"https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-umum.html": "Jasa Renovasi Fasilitas Umum",
 	"https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan.html": "Jasa Renovasi Bangunan",
 	 "https://www.betonjayareadymix.com/p/jasa-renovasi-interior.html": "Jasa Renovasi Interior",
 	"https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-eksterior.html": "Jasa Renovasi Fasad Eksterior",
