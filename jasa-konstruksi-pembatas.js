@@ -245,6 +245,51 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaPembuatanPagarDindingPembatasLink.style.visibility = 'visible';
         pageNameJasaPembatas.textContent = urlMappingPembuatanPagarDinding[cleanUrlJasaPembatasKons];
     }
+
+ // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingPembuatanPagarDinding[cleanUrlJasaPembatasKons]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pembatas Pengaman",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Pembuatan Pagar Diding Pembatas",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingPembuatanPagarDinding[cleanUrlJasaPembatasKons],
+                   "item": cleanUrlJasaPembatasKons
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
        if (urlMappingPengamananSisiJalan[cleanUrlJasaPembatasKons]) {
         restoreCondition('JasaKonsPembatas');
         restoreCondition('JasaPengamanSisiJalanInfrastruktur');
@@ -288,6 +333,50 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaPengamanSisiJalanInfrastrukturLink.style.visibility = 'visible';
         pageNameJasaPembatas.textContent = urlMappingPengamananSisiJalan[cleanUrlJasaPembatasKons];
     }
+ // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingPengamananSisiJalan[cleanUrlJasaPembatasKons]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pembatas Pengaman",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Pengaman Sisi Jalan Infrastruktur",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pengaman-sisi-jalan-infrastruktur.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingPengamananSisiJalan[cleanUrlJasaPembatasKons],
+                   "item": cleanUrlJasaPembatasKons
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
        if (urlMappingRambuSistemKeamananVisual[cleanUrlJasaPembatasKons]) {
         restoreCondition('JasaKonsPembatas');
         restoreCondition('JasaRambudanSistemKeamananVisual');
@@ -332,6 +421,51 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaRambudanSistemKeamananVisualLink.style.visibility = 'visible';
         pageNameJasaPembatas.textContent = urlMappingRambuSistemKeamananVisual[cleanUrlJasaPembatasKons];
     }
+
+ // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingRambuSistemKeamananVisual[cleanUrlJasaPembatasKons]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pembatas Pengaman",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Rambu dan Sistem Keamanan Visual",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-rambu-dan-sistem-keamanan-visual.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingRambuSistemKeamananVisual[cleanUrlJasaPembatasKons],
+                   "item": cleanUrlJasaPembatasKons
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
        if (urlMappingPengamananAreaProyek[cleanUrlJasaPembatasKons]) {
         restoreCondition('JasaKonsPembatas');
         restoreCondition('JasaPengamananAreaProyek');
@@ -375,7 +509,50 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaPengamananAreaProyekLink.style.visibility = 'visible';
         pageNameJasaPembatas.textContent = urlMappingPengamananAreaProyek[cleanUrlJasaPembatasKons];
     }
-	
+ // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingPengamananAreaProyek[cleanUrlJasaPembatasKons]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pembatas Pengaman",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Pengamanan Area Proyek",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pengamanan-area-proyek.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingPengamananAreaProyek[cleanUrlJasaPembatasKons],
+                   "item": cleanUrlJasaPembatasKons
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
     //SUB urlMappingPembuatanPagarDinding
    /*
        if (urlMappingPagarPanelBeton[cleanUrlJasaPembatasKons]) {
