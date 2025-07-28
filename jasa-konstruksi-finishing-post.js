@@ -385,6 +385,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var JasaFinishingStrukturPostLink = document.getElementById("JasaFinishingBangunanStrukturPost");
 	
    //SUB JasaFinishingBangunanInteriorPosT
+   var JasaFinishingDakBetonPostLink = document.getElementById("JasaFinishingDakBetonPost");
    var JasaInteriorFurnitureCustomePostLink = document.getElementById("JasaInteriorFurnitureCustomePost");
    var JasaGantiKeramikLantaiPostLink = document.getElementById("JasaGantiKeramikLantaiPost");
    var JasaCatInteriorRumahPostLink = document.getElementById("JasaCatInteriorRumahPost");
@@ -460,7 +461,7 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaFinishingPostLink.style.visibility = 'hidden';
      JasaFinishingBangunanPostLink.style.visibility = 'hidden';
      JasaFinishingInfrastrukturPostLink.style.visibility = 'hidden';
-     //pageNameJasaKonsFinishingPostLink.textContent = "";
+     pageNameJasaKonsFinishingPostLink.textContent = "";
 
     //SUB FINISHING BANGUNAN
 	//FINISHING STRUKTUR
