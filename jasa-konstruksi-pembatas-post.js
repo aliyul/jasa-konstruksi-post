@@ -263,6 +263,50 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         JasaPagarPanelBetonPostLink.style.visibility = 'visible';
         pageNameJasaPembatasPost.textContent = urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost];
     }
+ // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaPagarPanelBeton[cleanUrlJasaJasaKonsStruktur]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pembuatan Pagar Dinding Pembatas",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Pagar Panel Beton",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pagar-panel-beton.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost],
+                   "item": cleanUrlJasaPembatasKonsPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
     
 	
     if (urlMappingJasaPagarBetonPrecast[cleanUrlJasaPembatasKonsPost]) {
@@ -314,6 +358,50 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         pageNameJasaPembatasPost.textContent = urlMappingJasaPagarBetonPrecast[cleanUrlJasaPembatasKonsPost];
     }
 
+ // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaPagarBetonPrecast[cleanUrlJasaJasaKonsStruktur]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pembuatan Pagar Dinding Pembatas",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Pagar Beton Precast",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pagar-beton-precast.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaPagarBetonPrecast[cleanUrlJasaPembatasKonsPost],
+                   "item": cleanUrlJasaPembatasKonsPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
    if (urlMappingJasaPagarRumah[cleanUrlJasaPembatasKonsPost]) {
         restoreCondition('JasaKonsPembatasPost');
         restoreCondition('JasaPembuatanPagarDindingPembatasPost');
@@ -363,7 +451,50 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         JasaPagarRumahPostLink.style.visibility = 'visible';
         pageNameJasaPembatasPost.textContent = urlMappingJasaPagarRumah[cleanUrlJasaPembatasKonsPost];
    }
+  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaPagarRumah[cleanUrlJasaJasaKonsStruktur]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pembuatan Pagar Dinding Pembatas",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Pagar Rumah",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pagar-rumah.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaPagarRumah[cleanUrlJasaPembatasKonsPost],
+                   "item": cleanUrlJasaPembatasKonsPost
+               }
+           ]
+       };
 
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
    if (urlMappingJasaPagarBesi[cleanUrlJasaPembatasKonsPost]) {
         restoreCondition('JasaKonsPembatasPost');
         restoreCondition('JasaPembuatanPagarDindingPembatasPost');
@@ -413,5 +544,49 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         pageNameJasaPembatasPost.textContent = urlMappingJasaPagarBesi[cleanUrlJasaPembatasKonsPost];
    }
 
+  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaPagarBesi[cleanUrlJasaJasaKonsStruktur]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pembuatan Pagar Dinding Pembatas",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Pagar Besi Hollow Wiremesh",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pagar-besi-hollow-wiremesh.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaPagarBesi[cleanUrlJasaPembatasKonsPost],
+                   "item": cleanUrlJasaPembatasKonsPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
    });
 
