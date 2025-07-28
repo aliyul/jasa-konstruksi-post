@@ -1,6 +1,6 @@
 
 const urlMappingJasaPondasiBangunan = {
-"https://www.betonjayareadymix.com/p/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi",
+//"https://www.betonjayareadymix.com/p/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi",
 "https://www.betonjayareadymix.com/p/jasa-pondasi-cakar-ayam.html": "Jasa Pondasi Cakar Ayam",
   "https://www.betonjayareadymix.com/p/jasa-pondasi-tapak.html": "Jasa Pondasi Tapak",
   "https://www.betonjayareadymix.com/p/jasa-pondasi-bored-pile.html": "Jasa Pondasi Bored Pile",
@@ -136,6 +136,50 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaPondasiBangunanSubLink.style.visibility = 'visible';
         pageNameJasaKonsPondasiTanah.textContent = urlMappingJasaPondasiBangunan[cleanUrlJasaPondasiPerkuatanTanahKons];
     }
+// ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaPondasiBangunan[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pondasi & Perkuatan Tanah",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pondasi-perkuatan-tanah.html"
+               },
+		{
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Pondasi Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pondasi-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaPondasiBangunan[cleanUrlJasaPondasiPerkuatanTanahKons],
+                   "item": cleanUrlJasaPondasiPerkuatanTanahKons
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }	
    if (urlMappingJasaPemadatanPersiapanPondasi[cleanUrlJasaPondasiPerkuatanTanahKons]) {
         restoreCondition('JasaKonsPondasiTanah');
         restoreCondition('JasaPemadatanPersiapanPondasiSub');
@@ -206,7 +250,51 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaPerkuatanTanahSubLink.style.visibility = 'visible';
 	pageNameJasaKonsPondasiTanah.textContent = urlMappingJasaPerkuatanTanah[cleanUrlJasaPondasiPerkuatanTanahKons];
     }
-       
+
+// ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaPerkuatanTanah[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pondasi & Perkuatan Tanah",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pondasi-perkuatan-tanah.html"
+               },
+		{
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Perkuatan Tanah",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaPerkuatanTanah[cleanUrlJasaPondasiPerkuatanTanahKons],
+                   "item": cleanUrlJasaPondasiPerkuatanTanahKons
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
    if (urlMappingJasaRetrofittingPondasi[cleanUrlJasaPondasiPerkuatanTanahKons]) {
         restoreCondition('JasaKonsPondasiTanah');
         restoreCondition('JasaRetrofittingPondasiSub');
@@ -242,7 +330,50 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaRetrofittingPondasiSubLink.style.visibility = 'visible';
         pageNameJasaKonsPondasiTanah.textContent = urlMappingJasaRetrofittingPondasi[cleanUrlJasaPondasiPerkuatanTanahKons];
     }
-	
+// ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaRetrofittingPondasi[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pondasi & Perkuatan Tanah",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pondasi-perkuatan-tanah.html"
+               },
+		{
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Retrofitting Pondasi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-retrofitting-pondasi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaRetrofittingPondasi[cleanUrlJasaPondasiPerkuatanTanahKons],
+                   "item": cleanUrlJasaPondasiPerkuatanTanahKons
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
     //SUB urlMappingPembuatanPagarDinding
    
    });
