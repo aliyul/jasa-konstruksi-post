@@ -264,7 +264,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         pageNameJasaPembatasPost.textContent = urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost];
     }
  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPagarPanelBeton[cleanUrlJasaJasaKonsStruktur]) {
+   if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -359,7 +359,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
     }
 
  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPagarBetonPrecast[cleanUrlJasaJasaKonsStruktur]) {
+   if (urlMappingJasaPagarBetonPrecast[cleanUrlJasaPembatasKonsPost]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -452,7 +452,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         pageNameJasaPembatasPost.textContent = urlMappingJasaPagarRumah[cleanUrlJasaPembatasKonsPost];
    }
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPagarRumah[cleanUrlJasaJasaKonsStruktur]) {
+   if (urlMappingJasaPagarRumah[cleanUrlJasaPembatasKonsPost]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -545,7 +545,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
    }
 
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPagarBesi[cleanUrlJasaJasaKonsStruktur]) {
+   if (urlMappingJasaPagarBesi[cleanUrlJasaPembatasKonsPost]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
