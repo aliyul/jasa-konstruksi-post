@@ -503,7 +503,9 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaPlesteranAcianDindingPost');
         removeCondition('JasaPelindungRetakStrukturPost');
          // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua
-        removeCondition('JasaInteriorFurniturePost');
+	    
+        removeCondition('JasaInteriorFurnitureCustomePost');
+	removeCondition('JasaInteriorFurniturePost');
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
         removeCondition('JasaPasangWallpaperDindingPost');
