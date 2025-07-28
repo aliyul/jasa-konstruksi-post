@@ -167,7 +167,50 @@ JasaStrukturBetondanPengecoranSub
         JasaKonstruksiGedungdanHunianSubLink.style.visibility = 'visible';
         pageNameJasaKonsStruktur.textContent = urlMappingStrukturGedungHunian[cleanUrlJasaJasaKonsStruktur];
     }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingStrukturGedungHunian[cleanUrlJasaJasaKonsStruktur]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Struktur Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Konstruksi Gedung dan Hunian",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingStrukturGedungHunian[cleanUrlJasaJasaKonsStruktur],
+                   "item": cleanUrlJasaJasaKonsStruktur
+               }
+           ]
+       };
 
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingStrukturIndustriGudang[cleanUrlJasaJasaKonsStruktur]) {
         restoreCondition('JasaKonsStruktur');
         restoreCondition('JasaKonstruksiIndustridanGudangSub');
@@ -200,6 +243,51 @@ if (urlMappingStrukturIndustriGudang[cleanUrlJasaJasaKonsStruktur]) {
         JasaKonstruksiIndustridanGudangSubLink.style.visibility = 'visible';
         pageNameJasaKonsStruktur.textContent = urlMappingStrukturIndustriGudang[cleanUrlJasaJasaKonsStruktur];
     }
+
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingStrukturIndustriGudang[cleanUrlJasaJasaKonsStruktur]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Struktur Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Konstruksi Industri dan Gedung",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi-industri-dan-gudang.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingStrukturIndustriGudang[cleanUrlJasaJasaKonsStruktur],
+                   "item": cleanUrlJasaJasaKonsStruktur
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingStrukturBajaRangka[cleanUrlJasaJasaKonsStruktur]) {
         restoreCondition('JasaKonsStruktur');
         restoreCondition('JasaStrukturBajadanRangkaRinganSub');
@@ -232,6 +320,50 @@ if (urlMappingStrukturBajaRangka[cleanUrlJasaJasaKonsStruktur]) {
         JasaStrukturBajadanRangkaRinganSubLink.style.visibility = 'visible';
         pageNameJasaKonsStruktur.textContent = urlMappingStrukturBajaRangka[cleanUrlJasaJasaKonsStruktur];
     }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingStrukturBajaRangka[cleanUrlJasaJasaKonsStruktur]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Struktur Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Struktur Baja dan Rangka Ringan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingStrukturBajaRangka[cleanUrlJasaJasaKonsStruktur],
+                   "item": cleanUrlJasaJasaKonsStruktur
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingStrukturKhusus[cleanUrlJasaJasaKonsStruktur]) {
         restoreCondition('JasaKonsStruktur');
         restoreCondition('JasaStrukturKhususSub');
@@ -264,6 +396,50 @@ if (urlMappingStrukturKhusus[cleanUrlJasaJasaKonsStruktur]) {
         JasaStrukturKhususLink.style.visibility = 'visible';
         pageNameJasaKonsStruktur.textContent = urlMappingStrukturKhusus[cleanUrlJasaJasaKonsStruktur];
     }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingStrukturKhusus[cleanUrlJasaJasaKonsStruktur]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Struktur Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Struktur Khusus",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingStrukturKhusus[cleanUrlJasaJasaKonsStruktur],
+                   "item": cleanUrlJasaJasaKonsStruktur
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingStrukturLapangan[cleanUrlJasaJasaKonsStruktur]) {
         restoreCondition('JasaKonsStruktur');
         restoreCondition('JasaKonstruksiLapanganOlahragaSub');
@@ -296,6 +472,50 @@ if (urlMappingStrukturLapangan[cleanUrlJasaJasaKonsStruktur]) {
         JasaKonstruksiLapanganOlahragaSubLink.style.visibility = 'visible';
         pageNameJasaKonsStruktur.textContent = urlMappingStrukturLapangan[cleanUrlJasaJasaKonsStruktur];
     }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingStrukturLapangan[cleanUrlJasaJasaKonsStruktur]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Struktur Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Konstruksi Lapangan Olahraga",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi-lapangan-olahraga.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingStrukturLapangan[cleanUrlJasaJasaKonsStruktur],
+                   "item": cleanUrlJasaJasaKonsStruktur
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingStrukturModularPrecast[cleanUrlJasaJasaKonsStruktur]) {
         restoreCondition('JasaKonsStruktur');
         restoreCondition('JasaKonstruksiModulardanPrecastSub');
@@ -328,6 +548,50 @@ if (urlMappingStrukturModularPrecast[cleanUrlJasaJasaKonsStruktur]) {
         JasaKonstruksiModulardanPrecastSubLink.style.visibility = 'visible';
         pageNameJasaKonsStruktur.textContent = urlMappingStrukturModularPrecast[cleanUrlJasaJasaKonsStruktur];
     }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingStrukturModularPrecast[cleanUrlJasaJasaKonsStruktur]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Struktur Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Konstruksi Modular dan Precast",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingStrukturModularPrecast[cleanUrlJasaJasaKonsStruktur],
+                   "item": cleanUrlJasaJasaKonsStruktur
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingStrukturBetonPengecoran[cleanUrlJasaJasaKonsStruktur]) {
         restoreCondition('JasaKonsStruktur');
         restoreCondition('JasaStrukturBetondanPengecoranSub');
@@ -360,6 +624,50 @@ if (urlMappingStrukturBetonPengecoran[cleanUrlJasaJasaKonsStruktur]) {
         JasaStrukturBetondanPengecoranSubLink.style.visibility = 'visible';
         pageNameJasaKonsStruktur.textContent = urlMappingStrukturBetonPengecoran[cleanUrlJasaJasaKonsStruktur];
     }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingStrukturBetonPengecoran[cleanUrlJasaJasaKonsStruktur]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Struktur Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Struktur Beton dan Pengecoran",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingStrukturBetonPengecoran[cleanUrlJasaJasaKonsStruktur],
+                   "item": cleanUrlJasaJasaKonsStruktur
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 }
 	
    });
