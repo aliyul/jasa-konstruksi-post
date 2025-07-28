@@ -122,6 +122,44 @@ if (urlMappingJasaCuttingBeton[cleanUrlJasaCuttingBetonPost]) {
         JasaCuttingBetonPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBorAirPost
        // JasaBorAirPostLink.style.visibility = 'visible';
-        pageNameJasaKonsCuttingBetonPost.textContent = urlMappingJasaCuttingBeton[cleanUrlJasaPengeboranPost];
+        pageNameJasaKonsCuttingBetonPost.textContent = urlMappingJasaCuttingBeton[cleanUrlJasaCuttingBetonPost];
     }
+      // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaCuttingBeton[cleanUrlJasaCuttingBetonPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Cutting Beton",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-cutting-beton.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": urlMappingJasaCuttingBeton[cleanUrlJasaCuttingBetonPost],
+                   "item": cleanUrlJasaCuttingBetonPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
    });
