@@ -184,7 +184,51 @@ if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost];
     }
-	
+      // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bongkar Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Bongkar Tower",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-tower.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost],
+                   "item": cleanUrlJasaKonsBongkarBangunanPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+
 if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
@@ -233,6 +277,50 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost];
     }
+  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bongkar Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Bongkar Rumah",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost],
+                   "item": cleanUrlJasaKonsBongkarBangunanPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
     if (urlMappingJasaBongkarBeton[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
@@ -279,6 +367,50 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarBeton[cleanUrlJasaKonsBongkarBangunanPost];
     }
+  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBongkarBeton[cleanUrlJasaKonsBongkarBangunanPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bongkar Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Bongkar Beton",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-beton.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaBongkarBeton[cleanUrlJasaKonsBongkarBangunanPost],
+                   "item": cleanUrlJasaKonsBongkarBangunanPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingJasaBongkarAtap[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
@@ -325,6 +457,51 @@ if (urlMappingJasaBongkarAtap[cleanUrlJasaKonsBongkarBangunanPost]) {
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarAtap[cleanUrlJasaKonsBongkarBangunanPost];
     }
+
+  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBongkarAtap[cleanUrlJasaKonsBongkarBangunanPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bongkar Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Bongkar Atap",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-atap.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaBongkarAtap[cleanUrlJasaKonsBongkarBangunanPost],
+                   "item": cleanUrlJasaKonsBongkarBangunanPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingJasaBongkarKeramik[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
@@ -371,6 +548,50 @@ if (urlMappingJasaBongkarKeramik[cleanUrlJasaKonsBongkarBangunanPost]) {
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarKeramik[cleanUrlJasaKonsBongkarBangunanPost];
     }
+ // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBongkarKeramik[cleanUrlJasaKonsBongkarBangunanPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bongkar Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Bongkar Keramik",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-keramik.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaBongkarKeramik[cleanUrlJasaKonsBongkarBangunanPost],
+                   "item": cleanUrlJasaKonsBongkarBangunanPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingJasaBongkarTembok[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
@@ -417,6 +638,50 @@ if (urlMappingJasaBongkarTembok[cleanUrlJasaKonsBongkarBangunanPost]) {
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarTembok[cleanUrlJasaKonsBongkarBangunanPost];
     }
+// ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBongkarTembok[cleanUrlJasaKonsBongkarBangunanPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bongkar Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Bongkar Tembok",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-tembok.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaBongkarTembok[cleanUrlJasaKonsBongkarBangunanPost],
+                   "item": cleanUrlJasaKonsBongkarBangunanPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingJasaBongkarDinding[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
@@ -463,6 +728,50 @@ if (urlMappingJasaBongkarDinding[cleanUrlJasaKonsBongkarBangunanPost]) {
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarDinding[cleanUrlJasaKonsBongkarBangunanPost];
     }
+// ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBongkarDinding[cleanUrlJasaKonsBongkarBangunanPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bongkar Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Bongkar Dinding",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-dinding.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaBongkarDinding[cleanUrlJasaKonsBongkarBangunanPost],
+                   "item": cleanUrlJasaKonsBongkarBangunanPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingJasaBongkarPlafon[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
@@ -509,6 +818,50 @@ if (urlMappingJasaBongkarPlafon[cleanUrlJasaKonsBongkarBangunanPost]) {
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarPlafon[cleanUrlJasaKonsBongkarBangunanPost];
     }
+// ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBongkarPlafon[cleanUrlJasaKonsBongkarBangunanPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bongkar Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Bongkar Plafon",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-plafon.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaBongkarPlafon[cleanUrlJasaKonsBongkarBangunanPost],
+                   "item": cleanUrlJasaKonsBongkarBangunanPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingJasaBongkarPartisi[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
@@ -555,6 +908,50 @@ if (urlMappingJasaBongkarPartisi[cleanUrlJasaKonsBongkarBangunanPost]) {
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarPartisi[cleanUrlJasaKonsBongkarBangunanPost];
     }
+// ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBongkarPartisi[cleanUrlJasaKonsBongkarBangunanPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bongkar Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Bongkar Partisi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-partisi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaBongkarPartisi[cleanUrlJasaKonsBongkarBangunanPost],
+                   "item": cleanUrlJasaKonsBongkarBangunanPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingJasaBongkarPagar[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
@@ -601,6 +998,50 @@ if (urlMappingJasaBongkarPagar[cleanUrlJasaKonsBongkarBangunanPost]) {
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarPagar[cleanUrlJasaKonsBongkarBangunanPost];
     }
+// ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBongkarPagar[cleanUrlJasaKonsBongkarBangunanPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bongkar Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Bongkar Pagar",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-pagar.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaBongkarPagar[cleanUrlJasaKonsBongkarBangunanPost],
+                   "item": cleanUrlJasaKonsBongkarBangunanPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingJasaBongkarLantai[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
@@ -647,5 +1088,48 @@ if (urlMappingJasaBongkarLantai[cleanUrlJasaKonsBongkarBangunanPost]) {
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarLantai[cleanUrlJasaKonsBongkarBangunanPost];
     }
+// ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBongkarLantai[cleanUrlJasaKonsBongkarBangunanPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bongkar Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Bongkar Lantai",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-lantai.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaBongkarLantai[cleanUrlJasaKonsBongkarBangunanPost],
+                   "item": cleanUrlJasaKonsBongkarBangunanPost
+               }
+           ]
+       };
 
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
    });
