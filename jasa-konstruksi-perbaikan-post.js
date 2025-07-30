@@ -37,7 +37,9 @@ const urlMappingJasaPerbaikanStrukturBeton= {
     "https://www.betonjayareadymix.com/2018/12/perbaikan-beton-bandung.html": "Perbaikan Beton Bandung",
  "https://www.betonjayareadymix.com/2018/12/perbaikan-beton-bekasi.html": "Perbaikan Beton Bekasi",
   "https://www.betonjayareadymix.com/2018/12/perbaikan-beton-tangerang.html": "Perbaikan Beton Tangerang",
-  "https://www.betonjayareadymix.com/2018/12/perbaikan-beton-depok.html": "Perbaikan Beton Depok"
+  "https://www.betonjayareadymix.com/2018/12/perbaikan-beton-depok.html": "Perbaikan Beton Depok",
+  "https://www.betonjayareadymix.com/2018/12/perbaikan-beton-jakarta.html": "Perbaikan Beton Jakarta,
+  "https://www.betonjayareadymix.com/2018/12/perbaikan-beton-bogor.html": "Perbaikan Beton Bogor"
  
 };
 const urlMappingJasaRenovasiPerbaikanRetakStruktur= {
