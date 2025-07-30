@@ -10,6 +10,7 @@ const urlMappingJasaKons = {
  "https://www.betonjayareadymix.com/p/jasa-uji-tanah.html": "Jasa Uji Tanah",
  "https://www.betonjayareadymix.com/p/jasa-cutting-beton.html": "Jasa Cutting Beton",
  "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html": "Jasa Bongkar Bangunan",
+ "https://www.betonjayareadymix.com/p/jasa-buang-puing.html": "Jasa Buang Puing",
   "https://www.betonjayareadymix.com/p/jasa-pengeboran.html": "Jasa Pengeboran",
  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html": "Jasa Perkuatan Tanah Longsor",
   "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html": "Jasa Pembatas Pengaman",
