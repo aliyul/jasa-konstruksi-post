@@ -98,6 +98,9 @@ const urlMappingJasaPengecoranJalanBetonPost = {
 const urlMappingJasaPengaspalanJalanPost = {
 	
 };
+const urlMappingJasaPerkerasanAgregatJalanPost = {
+	
+};
 
 
 // Menyimpan elemen yang dihapus dalam variabel
