@@ -33,9 +33,11 @@ const urlMappingJasaPondasiCakarAyam = {
 const urlMappingJasaPondasiTapak = {
 
 };
+/* ini sudah ada di pengeboran
 const urlMappingJasaPondasiBoredPile = {
 
 };
+*/
 const urlMappingJasaPondasiTiangPancang = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-pancang-drop-hammer.html": "Harga Jasa Pancang Drop Hammer",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-pancang-spun-pile.html": "Harga Jasa Pancang Spun Pile",
@@ -109,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //SUB JasaPondasiBangunanSubPost
      var JasaPondasiCakarAyamPostLink = document.getElementById("JasaPondasiCakarAyamPost");
      var JasaPondasiTapakPostLink = document.getElementById("JasaPondasiTapakPost");
-     var JasaPondasiBoredPilePostLink = document.getElementById("JasaPondasiBoredPilePost");
+    // var JasaPondasiBoredPilePostLink = document.getElementById("JasaPondasiBoredPilePost");
      var JasaPondasiTiangPancangPostLink = document.getElementById("JasaPondasiTiangPancangPost");
      var JasaPondasiSumuranPostLink = document.getElementById("JasaPondasiSumuranPost");
 	
@@ -129,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //SUB JasaPondasiBangunanSubPost
      JasaPondasiCakarAyamPostLink.style.visibility = 'hidden';
      JasaPondasiTapakPostLink.style.visibility = 'hidden';
-     JasaPondasiBoredPilePostLink.style.visibility = 'hidden';
+     //JasaPondasiBoredPilePostLink.style.visibility = 'hidden';
      JasaPondasiTiangPancangPostLink.style.visibility = 'hidden';
      JasaPondasiSumuranPostLink.style.visibility = 'hidden';
 	
@@ -185,7 +187,7 @@ if (urlMappingJasaPondasi[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SEMUA
 	removeCondition('JasaPondasiCakarAyamPost');
         removeCondition('JasaPondasiTapakPost');
-        removeCondition('JasaPondasiBoredPilePost'); 
+        
 	removeCondition('JasaPondasiTiangPancangPost');
 	removeCondition('JasaPondasiSumuranPost');
 	/*
@@ -295,7 +297,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
 
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPondasiCakarAyamPost
         removeCondition('JasaPondasiTapakPost');
-        removeCondition('JasaPondasiBoredPilePost'); 
+         
 	removeCondition('JasaPondasiTiangPancangPost');
 	removeCondition('JasaPondasiSumuranPost');
 	/*
@@ -398,7 +400,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
 
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
         removeCondition('JasaPondasiCakarAyamPost');
-        removeCondition('JasaPondasiBoredPilePost'); 
+         
 	removeCondition('JasaPondasiTiangPancangPost');
 	removeCondition('JasaPondasiSumuranPost');
 	/*
@@ -467,108 +469,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-   if (urlMappingJasaPondasiBoredPile[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
-        restoreCondition('JasaKonsPondasiTanahPost');
-        restoreCondition('JasaPondasiBangunanSubPost');
-        restoreCondition('JasaPondasiBoredPilePost');
-     
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-        removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	
-
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaPemadatanPersiapanPondasiSubPost');
-        removeCondition('JasaPerkuatanTanahSubPost');
-        removeCondition('JasaRetrofittingPondasiSubPost');
-
-	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
-        removeCondition('JasaPondasiTapakPost');
-        removeCondition('JasaPondasiCakarAyamPost'); 
-	removeCondition('JasaPondasiTiangPancangPost');
-	removeCondition('JasaPondasiSumuranPost');
-	/*
- JasaPondasiBangunanSubPostLink.style.visibility = 'hidden';
-     JasaPemadatanPersiapanPondasiSubPostLink.style.visibility = 'hidden';
-     JasaPerkuatanTanahSubPostLink.style.visibility = 'hidden';
-     JasaRetrofittingPondasiSubPostLink.style.visibility = 'hidden';
-*/
-       
-        JasaKonstruksiPondasiTanahSubPostLink.style.visibility = 'visible';
-        JasaPondasiTanahSubPostLink.style.visibility = 'visible';
-	//TAMPILKAN PONDASI BANGUNAN
-        JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaPondasiCakarAyam
-        JasaPondasiBoredPilePostLink.style.visibility = 'visible';
-        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiBoredPile[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
-   }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPondasiBoredPile[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Pondasi & Perkuatan Tanah",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pondasi-perkuatan-tanah.html"
-               },
-		{
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Pondasi Bangunan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pondasi-bangunan.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Pondasi Bore Pile",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pondasi-bore-pile.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": urlMappingJasaPondasiBoredPile[cleanUrlJasaPondasiPerkuatanTanahKonsPost],
-                   "item": cleanUrlJasaPondasiPerkuatanTanahKonsPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }	
+ 
 if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
@@ -602,7 +503,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
 
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
         removeCondition('JasaPondasiTapakPost');
-        removeCondition('JasaPondasiBoredPilePost'); 
+         
 	removeCondition('JasaPondasiCakarAyamPost');
 	removeCondition('JasaPondasiSumuranPost');
 	/*
@@ -703,7 +604,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
 
 	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
         removeCondition('JasaPondasiTapakPost');
-        removeCondition('JasaPondasiBoredPilePost'); 
+         
 	removeCondition('JasaPondasiTiangPancangPost');
 	removeCondition('JasaPondasiCakarAyamPost');
 	/*
