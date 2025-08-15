@@ -151,6 +151,7 @@ if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
 	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+	   removeCondition('ProdukKonsDindingModularPost');
         removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
@@ -230,6 +231,7 @@ if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
 	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+	   removeCondition('ProdukKonsDindingModularPost');
         removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
@@ -310,6 +312,7 @@ if (urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost]) {
 	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+	   removeCondition('ProdukKonsDindingModularPost');
         removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
@@ -390,6 +393,7 @@ if (urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost]) {
 	removeCondition('ProdukInFurPost');
         removeCondition('ProdukKonsSaluranPost');
         removeCondition('ProdukKonsPembatasPost');
+	   removeCondition('ProdukKonsDindingModularPost');
         removeCondition('ProdukKonsPost');
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
