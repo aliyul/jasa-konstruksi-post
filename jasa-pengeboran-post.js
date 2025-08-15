@@ -41,6 +41,22 @@ const urlMappingJasaBorAir = {
 
 };
 const urlMappingJasaBorePile = {
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile.html": "Harga Jasa Strauss Pile",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-murah.html": "Harga Jasa Bore Pile Murah",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-auger-bore-pile.html": "Harga Jasa Auger Bore Pile",
+  "https://www.betonjayareadymix.com/2019/08/harga-borongan-strauss-pile.html": "Harga Borongan Strauss Pile",
+  "https://www.betonjayareadymix.com/2019/08/harga-borongan-bore-pile.html": "Harga Borongan Bore Pile",
+  "https://www.betonjayareadymix.com/2019/08/harga-pengeboran-bore-pile.html": "Harga Pengeboran Bore Pile",
+  "https://www.betonjayareadymix.com/2019/08/harga-pengeboran-strauss-pile.html": "Harga Pengeboran Strauss Pile",
+
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-jakarta.html": "Harga Jasa Bore Pile Jakarta",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-bogor.html": "Harga Jasa Bore Pile Bogor",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-depok.html": "Harga Jasa Bore Pile Depok",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-tangerang.html": "Harga Jasa Bore Pile Tangerang",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-bekasi.html": "Harga Jasa Bore Pile Bekasi",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-karawang.html": "Harga Jasa Bore Pile Karawang"
+
 
 };
 const urlMappingJasaBorTembok = {
@@ -464,5 +480,87 @@ if (urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+
+  if (urlMappingJasaBorePile[cleanUrlJasaPengeboranPost]) {
+        restoreCondition('JasaKonsPengeboranPost');
+        restoreCondition('JasaPengeboranPost');
+        restoreCondition('JasaBorePilePost');
+     
+        //hapus elemen div id lain KECUALI JasaPengeboranPost
+	removeCondition('JasaDesInPost');
+	removeCondition('ProdukInFurPost');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+	   removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+       // removeCondition('JasaPengeboranPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	
+	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
+        removeCondition('JasaBorTembokPost');
+        removeCondition('JasaBorAirPost');
+        removeCondition('JasaCoringBetonPost');
+        removeCondition('JasaBorBetonPost');
+        removeCondition('JasaBorTanahPost');
+        removeCondition('JasaBorHorizontalPost');
+       
+        JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
+       //TAMPILKAN PONDASI BANGUNAN
+        JasaPengeboranPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaBorAirPost
+        JasaBorePilePostLink.style.visibility = 'visible';
+        pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorePile[cleanUrlJasaPengeboranPost];
+    }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBorePile[cleanUrlJasaPengeboranPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+		{
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Pengeboran",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
+               },
+        	{
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bore Pile",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bore-pile.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": urlMappingJasaBorePile[cleanUrlJasaPengeboranPost],
+                   "item": cleanUrlJasaPengeboranPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+
 
    });
