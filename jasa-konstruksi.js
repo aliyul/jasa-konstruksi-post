@@ -373,7 +373,7 @@ if (!JasaKons || !JasaKonsSub) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -447,7 +447,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -530,7 +530,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -622,7 +622,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -718,7 +718,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -813,7 +813,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -893,7 +893,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -973,7 +973,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -1053,7 +1053,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -1134,7 +1134,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -1214,7 +1214,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -1295,7 +1295,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -1377,7 +1377,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -1459,7 +1459,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -1540,7 +1540,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -1620,7 +1620,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
@@ -1701,7 +1701,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 2,
-                   "name": "Jasa Kpnstruksi",
+                   "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
                {
