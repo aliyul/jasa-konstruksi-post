@@ -203,6 +203,7 @@ if (urlMappingJasaBorAirLokasi[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaKonsPengeboranPost');
         restoreCondition('JasaPengeboranPost');
         restoreCondition('JasaBorAirPost');
+        restoreCondition('JasaBorAirLokasiPost');
      
         //hapus elemen div id lain KECUALI JasaPengeboranPost
 	removeCondition('JasaDesInPost');
@@ -235,16 +236,18 @@ if (urlMappingJasaBorAirLokasi[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaBorHorizontalPost');
 
 	//hapus elemen sub jasa bor air post kecuali jasa bor air lokasi
-		//removeCondition('JasaBorAirLokasi');
-		removeCondition('JasaBorAirBiaya');
-		removeCondition('JasaBorAirTerdekat');
-		removeCondition('JasaBorAirDiameter');
+		//removeCondition('JasaBorAirLokasiPost');
+		removeCondition('JasaBorAirBiayaPost');
+		removeCondition('JasaBorAirTerdekatPost');
+		removeCondition('JasaBorAirDiameterPost');
        
         JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
        //TAMPILKAN PONDASI BANGUNAN
         JasaPengeboranPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBorAirPost
         JasaBorAirPostLink.style.visibility = 'visible';
+	    
+        JasaBorAirLokasiPostLink.style.visibility = 'visible';
         pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorAirLokasi[cleanUrlJasaPengeboranPost];
     }
    // ✅ Tambahkan JSON-LD Breadcrumb otomatis
