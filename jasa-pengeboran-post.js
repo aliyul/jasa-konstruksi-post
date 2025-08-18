@@ -41,9 +41,16 @@ const urlMappingJasaBorAirSumur = {
   "https://www.betonjayareadymix.com/2018/11/tukang-sumur-bor-bogor.html": "Tukang Sumur Bor Bogor"
 };
 const urlMappingJasaBorAirTeknik = {
+"https://www.betonjayareadymix.com/2018/09/tukang-bor.html": "Tukang Bor",
+  "https://www.betonjayareadymix.com/2018/09/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",
+  "https://www.betonjayareadymix.com/2018/09/jasa-bor-air-tanah.html": "Jasa Bor Air Tanah"
+	
+};
+const urlMappingJasaBorAirKebutuhan = {
 
 };
-const urlMappingJasaBorAirUmum = {
+
+const urlMappingJasaBorAirPeralatan = {
 
 };
 
