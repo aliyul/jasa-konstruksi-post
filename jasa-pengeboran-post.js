@@ -335,6 +335,13 @@ if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaBorBetonPost');
         removeCondition('JasaBorTanahPost');
         removeCondition('JasaBorHorizontalPost');
+	
+	//hapus elemen sub jasa bor air post
+		removeCondition('JasaBorAirLokasiPost');
+		removeCondition('JasaBorAirBiayaPost');
+		removeCondition('JasaBorAirTerdekatPost');
+		removeCondition('JasaBorAirDiameterPost');
+    
        
         JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
        //TAMPILKAN JasaPengeboranPost
@@ -422,6 +429,12 @@ if (urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaBorBetonPost');
         removeCondition('JasaBorTanahPost');
         removeCondition('JasaBorHorizontalPost');
+
+	//hapus elemen sub jasa bor air post
+		removeCondition('JasaBorAirLokasiPost');
+		removeCondition('JasaBorAirBiayaPost');
+		removeCondition('JasaBorAirTerdekatPost');
+		removeCondition('JasaBorAirDiameterPost');
        
         JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
        //TAMPILKAN JasaPengeboranPost
@@ -509,6 +522,12 @@ if (urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaCoringBetonPost');
         removeCondition('JasaBorTanahPost');
         removeCondition('JasaBorHorizontalPost');
+
+	//hapus elemen sub jasa bor air post
+		removeCondition('JasaBorAirLokasiPost');
+		removeCondition('JasaBorAirBiayaPost');
+		removeCondition('JasaBorAirTerdekatPost');
+		removeCondition('JasaBorAirDiameterPost');
        
         JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
        //TAMPILKAN JasaPengeboranPost
@@ -597,6 +616,12 @@ if (urlMappingJasaBorTanah[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaCoringBetonPost');
         removeCondition('JasaBorBetonPost');
         removeCondition('JasaBorHorizontalPost');
+
+	//hapus elemen sub jasa bor air post
+		removeCondition('JasaBorAirLokasiPost');
+		removeCondition('JasaBorAirBiayaPost');
+		removeCondition('JasaBorAirTerdekatPost');
+		removeCondition('JasaBorAirDiameterPost');
        
         JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
        //TAMPILKAN JasaPengeboranPost
@@ -683,6 +708,12 @@ if (urlMappingJasaBorTanah[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaBorBetonPost');
         removeCondition('JasaBorTanahPost');
         removeCondition('JasaBorHorizontalPost');
+
+	  //hapus elemen sub jasa bor air post
+		removeCondition('JasaBorAirLokasiPost');
+		removeCondition('JasaBorAirBiayaPost');
+		removeCondition('JasaBorAirTerdekatPost');
+		removeCondition('JasaBorAirDiameterPost');
        
         JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
        //TAMPILKAN PONDASI BANGUNAN
