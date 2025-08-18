@@ -257,30 +257,36 @@ if (urlMappingJasaBorAirLokasi[cleanUrlJasaPengeboranPost]) {
 	      "item": "https://www.betonjayareadymix.com/"
 	    },
 		{
+           "@type": "ListItem",
+	        "position": 2,
+	        "name": "Jasa Konstruksi",
+	        "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+        },
+		{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Jasa Pengeboran",
+            "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+             "name": "Jasa Bor Air",
+            "item": "https://www.betonjayareadymix.com/p/jasa-bor-air.html"
+        },
+		{
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Jasa Bor Air Lokasi",
+            "item": "https://www.betonjayareadymix.com/p/jasa-bor-air-lokasi.html"
+        },
+        {
                    "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Pengeboran",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
-               },
-        	{
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Bor Air",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-bor-air.html"
-               },
-			   {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Bor Air Lokasi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-bor-air-lokasi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
+                   "position": 6,
                    "name": urlMappingJasaBorAirLokasi[cleanUrlJasaPengeboranPost],
                    "item": cleanUrlJasaPengeboranPost
-               }
-           ]
+        }
+        ]
        };
 
        const script = document.createElement('script');
