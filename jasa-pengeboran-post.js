@@ -350,20 +350,26 @@ if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
 	      "item": "https://www.betonjayareadymix.com/"
 	    },
 		{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Jasa Konstruksi",
+            "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+        },
+		{
                    "@type": "ListItem",
-                   "position": 2,
+                   "position": 3,
                    "name": "Jasa Pengeboran",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
                },
         	{
                    "@type": "ListItem",
-                   "position": 3,
+                   "position": 4,
                    "name": "Jasa Coring Beton",
                    "item": "https://www.betonjayareadymix.com/p/jasa-coring-beton.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 4,
+                   "position": 5,
                    "name": urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost],
                    "item": cleanUrlJasaPengeboranPost
                }
@@ -431,20 +437,26 @@ if (urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost]) {
 	      "item": "https://www.betonjayareadymix.com/"
 	    },
 		{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Jasa Konstruksi",
+            "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+        },
+		{
                    "@type": "ListItem",
-                   "position": 2,
+                   "position": 3,
                    "name": "Jasa Pengeboran",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
                },
         	{
                    "@type": "ListItem",
-                   "position": 3,
+                   "position": 4,
                    "name": "Jasa Bor Tembok",
                    "item": "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 4,
+                   "position": 5,
                    "name": urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost],
                    "item": cleanUrlJasaPengeboranPost
                }
@@ -512,20 +524,26 @@ if (urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost]) {
 	      "item": "https://www.betonjayareadymix.com/"
 	    },
 		{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Jasa Konstruksi",
+            "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+        },
+		{
                    "@type": "ListItem",
-                   "position": 2,
+                   "position": 3,
                    "name": "Jasa Pengeboran",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
                },
         	{
                    "@type": "ListItem",
-                   "position": 3,
+                   "position": 4,
                    "name": "Jasa Bor Beton",
                    "item": "https://www.betonjayareadymix.com/p/jasa-bor-beton.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 4,
+                   "position": 5,
                    "name": urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost],
                    "item": cleanUrlJasaPengeboranPost
                }
@@ -594,20 +612,26 @@ if (urlMappingJasaBorTanah[cleanUrlJasaPengeboranPost]) {
 	      "item": "https://www.betonjayareadymix.com/"
 	    },
 		{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Jasa Konstruksi",
+            "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+        },
+		{
                    "@type": "ListItem",
-                   "position": 2,
+                   "position": 3,
                    "name": "Jasa Pengeboran",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
                },
         	{
                    "@type": "ListItem",
-                   "position": 3,
+                   "position": 4,
                    "name": "Jasa Bor Tanah",
                    "item": "https://www.betonjayareadymix.com/p/jasa-bor-tanah.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 4,
+                   "position": 5,
                    "name": urlMappingJasaBorTanah[cleanUrlJasaPengeboranPost],
                    "item": cleanUrlJasaPengeboranPost
                }
@@ -674,24 +698,30 @@ if (urlMappingJasaBorTanah[cleanUrlJasaPengeboranPost]) {
 	      "item": "https://www.betonjayareadymix.com/"
 	    },
 		{
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Pengeboran",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
-               },
-        	{
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Bore Pile",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-bore-pile.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingJasaBorePile[cleanUrlJasaPengeboranPost],
-                   "item": cleanUrlJasaPengeboranPost
-               }
-           ]
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Jasa Konstruksi",
+            "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+        },
+		{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Jasa Pengeboran",
+          "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Jasa Bore Pile",
+            "item": "https://www.betonjayareadymix.com/p/jasa-bore-pile.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 5,
+            "name": urlMappingJasaBorePile[cleanUrlJasaPengeboranPost],
+            "item": cleanUrlJasaPengeboranPost
+        }
+        ]
        };
 
        const script = document.createElement('script');
