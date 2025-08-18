@@ -242,10 +242,10 @@ if (urlMappingJasaBorAirLokasi[cleanUrlJasaPengeboranPost]) {
         JasaPengeboranPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBorAirPost
         JasaBorAirPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorAir[cleanUrlJasaPengeboranPost];
+        pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorAirLokasi[cleanUrlJasaPengeboranPost];
     }
    // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
+   if (urlMappingJasaBorAirLokasi[cleanUrlJasaPengeboranPost]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -268,10 +268,16 @@ if (urlMappingJasaBorAirLokasi[cleanUrlJasaPengeboranPost]) {
                    "name": "Jasa Bor Air",
                    "item": "https://www.betonjayareadymix.com/p/jasa-bor-air.html"
                },
-               {
+			   {
                    "@type": "ListItem",
                    "position": 4,
-                   "name": urlMappingJasaBorAir[cleanUrlJasaPengeboranPost],
+                   "name": "Jasa Bor Air Lokasi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bor-air-lokasi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaBorAirLokasi[cleanUrlJasaPengeboranPost],
                    "item": cleanUrlJasaPengeboranPost
                }
            ]
