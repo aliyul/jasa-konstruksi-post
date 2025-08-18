@@ -22,7 +22,10 @@ const urlMappingJasaBorAirBiaya = {
 const urlMappingJasaBorAirTerdekat = {
 
 };
-const urlMappingJasaBorAirBiaya = {
+const urlMappingJasaBorAirDiameter = {
+
+};
+const urlMappingJasaBorAirUmum = {
 
 };
 
