@@ -205,10 +205,12 @@ const urlMappingPengeboran = {
  "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html": "Jasa Bor Tembok"
 };
 const urlMappingJasaBorAir = {
-"https://www.betonjayareadymix.com/p/jasa-bor-air-lokasi.html": "Jasa Bor Air Lokasi",
-  "https://www.betonjayareadymix.com/p/jasa-bor-air-biaya.html": "Jasa Bor Air Biaya",
-  "https://www.betonjayareadymix.com/p/jasa-bor-air-terdekat.html": "Jasa Bor Air Terdekat",
-  "https://www.betonjayareadymix.com/p/jasa-bor-air-diameter.html": "Jasa Bor Air Diameter"
+  "https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html": "Jasa Bor Air Sumur",
+  "https://www.betonjayareadymix.com/p/jasa-bor-air-teknik.html": "Jasa Bor Air Teknik",
+  "https://www.betonjayareadymix.com/p/jasa-bor-air-kebutuhan.html": "Jasa Bor Air Kebutuhan",
+  "https://www.betonjayareadymix.com/p/jasa-bor-air-lokasi.html": "Jasa Bor Air Lokasi",
+  "https://www.betonjayareadymix.com/p/biaya-jasa-bor-air.html": "Biaya Jasa Bor Air",
+  "https://www.betonjayareadymix.com/p/peralatan-jasa-bor-air.html": "Peralatan Jasa Bor Air"
 };
 
 const urlMappingPembatas = {
