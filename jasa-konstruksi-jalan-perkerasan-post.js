@@ -1274,16 +1274,7 @@ if (urlMappingJasaPerkerasanJalanKompositPost[cleanUrlJasaJalanPerkerasanKonsPos
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-   /*
-JasaKonsJalanPerkerasan
-JasaKonstruksiJalanPerkerasanSubPost
-JasaJalanPerkerasanSubPost
 
-
-JasaPembangunanInfrastrukturJalanSubPost
-JasaPemadatanPersiapanTanahJalanSubPost
-JasaPerkerasanJalanSubPost
-*/
        */
    });
 
