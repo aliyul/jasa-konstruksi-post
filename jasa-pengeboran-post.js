@@ -1,27 +1,10 @@
 //SUB MAPPING JasaPengeboranPost 
-const urlMappingJasaBorAir = {
-"https://www.betonjayareadymix.com/2018/09/tukang-bor-terdekat.html": "Tukang Bor Terdekat",
-  "https://www.betonjayareadymix.com/2018/09/tukang-bor.html": "Tukang Bor",
-	
-   "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-depok.html": "Jasa Bor Air Tanah Depok",
+const urlMappingJasaBorAirLokasi = {
+    "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-depok.html": "Jasa Bor Air Tanah Depok",
   "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-tangerang.html": "Jasa Bor Air Tanah Tangerang",
   "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-jakarta.html": "Jasa Bor Air Tanah Jakarta",
   "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-bekasi.html": "Jasa Bor Air Tanah Bekasi",
   "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-bogor.html": "Jasa Bor Air Tanah Bogor",
-  "https://www.betonjayareadymix.com/2018/09/tukang-bor-air-terdekat.html": "Tukang Bor Air Terdekat",
-  "https://www.betonjayareadymix.com/2018/09/jasa-bor-air-terdekat.html": "Jasa Bor Air Terdekat",
-  "https://www.betonjayareadymix.com/2018/09/jasa-bor-air-tanah.html": "Jasa Bor Air Tanah",
-  "https://www.betonjayareadymix.com/2018/09/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",
-
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-150-meter.html": "Biaya Sumur Bor 150 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-100-meter.html": "Biaya Sumur Bor 100 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-60-meter.html": "Biaya Sumur Bor 60 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-50-meter.html": "Biaya Sumur Bor 50 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-40-meter.html": "Biaya Sumur Bor 40 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-15-meter.html": "Biaya Sumur Bor 15 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-10-meter.html": "Biaya Sumur Bor 10 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-20-meter.html": "Biaya Sumur Bor 20 Meter",
-  "https://www.betonjayareadymix.com/2018/11/biaya-sumur-bor-30-meter.html": "Biaya Sumur Bor 30 Meter",
   "https://www.betonjayareadymix.com/2018/11/jasa-sumur-bor-tangerang.html": "Jasa Sumur Bor Tangerang",
   "https://www.betonjayareadymix.com/2018/11/jasa-sumur-bor-jakarta.html": "Jasa Sumur Bor Jakarta",
   "https://www.betonjayareadymix.com/2018/11/jasa-sumur-bor-bekasi.html": "Jasa Sumur Bor Bekasi",
@@ -31,15 +14,18 @@ const urlMappingJasaBorAir = {
   "https://www.betonjayareadymix.com/2018/11/tukang-sumur-bor-jakarta.html": "Tukang Sumur Bor Jakarta",
   "https://www.betonjayareadymix.com/2018/11/tukang-sumur-bor-bekasi.html": "Tukang Sumur Bor Bekasi",
   "https://www.betonjayareadymix.com/2018/11/tukang-sumur-bor-bogor.html": "Tukang Sumur Bor Bogor",
-  "https://www.betonjayareadymix.com/2018/09/biaya-sumur-bor-per-meter.html": "Biaya Sumur Bor Per Meter",
-  "https://www.betonjayareadymix.com/2018/09/bor-sumur-terdekat.html": "Bor Sumur Terdekat",
-  "https://www.betonjayareadymix.com/2018/09/bor-sumur-murah.html": "Bor Sumur Murah",
-  "https://www.betonjayareadymix.com/2018/09/tukang-sumur-bor-terdekat.html": "Tukang Sumur Bor Terdekat",
-  "https://www.betonjayareadymix.com/2018/09/tukang-sumur-bor.html": "Tukang Sumur Bor",
-  "https://www.betonjayareadymix.com/2018/09/jasa-bor-sumur.html": "Jasa Bor Sumur",
-  "https://www.betonjayareadymix.com/2018/09/jasa-bor-sumur-terdekat.html": "Jasa Bor Sumur Terdekat"
 
 };
+const urlMappingJasaBorAirBiaya = {
+
+};
+const urlMappingJasaBorAirTerdekat = {
+
+};
+const urlMappingJasaBorAirBiaya = {
+
+};
+
 const urlMappingJasaBorePile = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile.html": "Harga Jasa Strauss Pile",
@@ -171,9 +157,13 @@ document.addEventListener("DOMContentLoaded", function() {
     
      var JasaKonstruksiPengeboranPostLink = document.getElementById("JasaKonstruksiPengeboranPost");
      var JasaPengeboranPostLink = document.getElementById("JasaPengeboranPost");
-
-     //SUB Jasa Pondasi Tanah
-     var JasaBorAirPostLink = document.getElementById("JasaBorAirPost");
+     //SUB JasaPengeboranPosth
+	     	var JasaBorAirPostLink = document.getElementById("JasaBorAirPost");
+			var JasaBorAirLokasiLink = document.getElementById("JasaBorAirLokasi");
+			var JasaBorAirBiayaLink = document.getElementById("JasaBorAirBiaya");
+			var JasaBorAirTerdekatLink = document.getElementById("JasaBorAirTerdekat");
+			var JasaBorAirDiameterLink = document.getElementById("JasaBorAirDiameter");
+		
      var JasaBorePilePostLink = document.getElementById("JasaBorePilePost");
      var JasaCoringBetonPostLink = document.getElementById("JasaCoringBetonPost");
      var JasaBorTembokPostLink = document.getElementById("JasaBorTembokPost");
@@ -191,6 +181,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	
      //SUB JasaPengeboranPost
      JasaBorAirPostLink.style.visibility = 'hidden';
+		JasaBorAirLokasiPostLink.style.visibility = 'hidden';
+		JasaBorAirBiayaPostLink.style.visibility = 'hidden';
+		JasaBorAirTerdekatPostLink.style.visibility = 'hidden';
+		JasaBorAirDiameterPostLink.style.visibility = 'hidden';
+	
      JasaBorePilePostLink.style.visibility = 'hidden';
      JasaCoringBetonPostLink.style.visibility = 'hidden';
      JasaBorTembokPostLink.style.visibility = 'hidden';
@@ -201,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function() {
      pageNameJasaKonsPengeboranPost.textContent = "";
 	
     //SUB urlMappingBangunan
-if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
+if (urlMappingJasaBorAirLokasi[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaKonsPengeboranPost');
         restoreCondition('JasaPengeboranPost');
         restoreCondition('JasaBorAirPost');
@@ -235,6 +230,12 @@ if (urlMappingJasaBorAir[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaBorBetonPost');
         removeCondition('JasaBorTanahPost');
         removeCondition('JasaBorHorizontalPost');
+
+	//hapus elemen sub jasa bor air post kecuali jasa bor air lokasi
+		//removeCondition('JasaBorAirLokasi');
+		removeCondition('JasaBorAirBiaya');
+		removeCondition('JasaBorAirTerdekat');
+		removeCondition('JasaBorAirDiameter');
        
         JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
        //TAMPILKAN PONDASI BANGUNAN
