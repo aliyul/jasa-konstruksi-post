@@ -331,6 +331,317 @@ if (urlMappingJasaBorAirLokasi[cleanUrlJasaPengeboranPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+if (urlMappingJasaBorAirBiaya[cleanUrlJasaPengeboranPost]) {
+        restoreCondition('JasaKonsPengeboranPost');
+        restoreCondition('JasaPengeboranPost');
+        restoreCondition('JasaBorAirPost');
+        restoreCondition('JasaBorAirBiayaPost');
+     
+        //hapus elemen div id lain KECUALI JasaPengeboranPost
+	removeCondition('JasaDesInPost');
+	removeCondition('ProdukInFurPost');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+	   removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+       // removeCondition('JasaPengeboranPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	
+	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
+        removeCondition('JasaBorTembokPost');
+        removeCondition('JasaBorePilePost');
+        removeCondition('JasaCoringBetonPost');
+        removeCondition('JasaBorBetonPost');
+        removeCondition('JasaBorTanahPost');
+        removeCondition('JasaBorHorizontalPost');
+
+	//hapus elemen sub jasa bor air post kecuali jasa bor air lokasi
+		//removeCondition('JasaBorAirLokasiPost');
+		removeCondition('JasaBorAirLokasiPost');
+		removeCondition('JasaBorAirSumurPost');
+		removeCondition('JasaBorAirTeknikPost');
+		removeCondition('JasaBorAirKebutuhanPost');
+		removeCondition('JasaBorAirPeralatanPost');
+       
+        JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
+       //TAMPILKAN PONDASI BANGUNAN
+        JasaPengeboranPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaBorAirPost
+        JasaBorAirPostLink.style.visibility = 'visible';
+	    
+        JasaBorAirBiayaPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorAirBiaya[cleanUrlJasaPengeboranPost];
+    }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBorAirBiaya[cleanUrlJasaPengeboranPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+		{
+           "@type": "ListItem",
+	        "position": 2,
+	        "name": "Jasa Konstruksi",
+	        "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+        },
+		{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Jasa Pengeboran",
+            "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+             "name": "Jasa Bor Air",
+            "item": "https://www.betonjayareadymix.com/p/jasa-bor-air.html"
+        },
+		{
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Biaya Jasa Bor Air",
+            "item": "https://www.betonjayareadymix.com/p/biaya-jasa-bor-air.html"
+        },
+        {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": urlMappingJasaBorAirBiaya[cleanUrlJasaPengeboranPost],
+                   "item": cleanUrlJasaPengeboranPost
+        }
+        ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+if (urlMappingJasaBorAirSumur[cleanUrlJasaPengeboranPost]) {
+        restoreCondition('JasaKonsPengeboranPost');
+        restoreCondition('JasaPengeboranPost');
+        restoreCondition('JasaBorAirPost');
+        restoreCondition('JasaBorAirSumurPost');
+     
+        //hapus elemen div id lain KECUALI JasaPengeboranPost
+	removeCondition('JasaDesInPost');
+	removeCondition('ProdukInFurPost');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+	   removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+       // removeCondition('JasaPengeboranPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	
+	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
+        removeCondition('JasaBorTembokPost');
+        removeCondition('JasaBorePilePost');
+        removeCondition('JasaCoringBetonPost');
+        removeCondition('JasaBorBetonPost');
+        removeCondition('JasaBorTanahPost');
+        removeCondition('JasaBorHorizontalPost');
+
+	//hapus elemen sub jasa bor air post kecuali jasa bor air lokasi
+		//removeCondition('JasaBorAirLokasiPost');
+		removeCondition('JasaBorAirBiayaPost');
+		removeCondition('JasaBorAirLokasiPost');
+		removeCondition('JasaBorAirTeknikPost');
+		removeCondition('JasaBorAirKebutuhanPost');
+		removeCondition('JasaBorAirPeralatanPost');
+       
+        JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
+       //TAMPILKAN PONDASI BANGUNAN
+        JasaPengeboranPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaBorAirPost
+        JasaBorAirPostLink.style.visibility = 'visible';
+	    
+        JasaBorAirSumurPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorAirSumur[cleanUrlJasaPengeboranPost];
+    }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBorAirSumur[cleanUrlJasaPengeboranPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+		{
+           "@type": "ListItem",
+	        "position": 2,
+	        "name": "Jasa Konstruksi",
+	        "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+        },
+		{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Jasa Pengeboran",
+            "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+             "name": "Jasa Bor Air",
+            "item": "https://www.betonjayareadymix.com/p/jasa-bor-air.html"
+        },
+		{
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Jasa Bor Air Sumur",
+            "item": "https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html"
+        },
+        {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": urlMappingJasaBorAirSumur[cleanUrlJasaPengeboranPost],
+                   "item": cleanUrlJasaPengeboranPost
+        }
+        ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+if (urlMappingJasaBorAirTeknik[cleanUrlJasaPengeboranPost]) {
+        restoreCondition('JasaKonsPengeboranPost');
+        restoreCondition('JasaPengeboranPost');
+        restoreCondition('JasaBorAirPost');
+        restoreCondition('JasaBorAirTeknikPost');
+     
+        //hapus elemen div id lain KECUALI JasaPengeboranPost
+	removeCondition('JasaDesInPost');
+	removeCondition('ProdukInFurPost');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+	   removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+       // removeCondition('JasaPengeboranPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	
+	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
+        removeCondition('JasaBorTembokPost');
+        removeCondition('JasaBorePilePost');
+        removeCondition('JasaCoringBetonPost');
+        removeCondition('JasaBorBetonPost');
+        removeCondition('JasaBorTanahPost');
+        removeCondition('JasaBorHorizontalPost');
+
+	//hapus elemen sub jasa bor air post kecuali jasa bor air lokasi
+		//removeCondition('JasaBorAirLokasiPost');
+		removeCondition('JasaBorAirBiayaPost');
+		removeCondition('JasaBorAirSumurPost');
+		removeCondition('JasaBorAirLokasiPost');
+		removeCondition('JasaBorAirKebutuhanPost');
+		removeCondition('JasaBorAirPeralatanPost');
+       
+        JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
+       //TAMPILKAN PONDASI BANGUNAN
+        JasaPengeboranPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaBorAirPost
+        JasaBorAirPostLink.style.visibility = 'visible';
+	    
+        JasaBorAirTeknikPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorAirTeknik[cleanUrlJasaPengeboranPost];
+    }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBorAirTeknik[cleanUrlJasaPengeboranPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+		{
+           "@type": "ListItem",
+	        "position": 2,
+	        "name": "Jasa Konstruksi",
+	        "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+        },
+		{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Jasa Pengeboran",
+            "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+             "name": "Jasa Bor Air",
+            "item": "https://www.betonjayareadymix.com/p/jasa-bor-air.html"
+        },
+		{
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Jasa Bor Air Teknik",
+            "item": "https://www.betonjayareadymix.com/p/jasa-bor-air-teknik.html"
+        },
+        {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": urlMappingJasaBorAirTeknik[cleanUrlJasaPengeboranPost],
+                   "item": cleanUrlJasaPengeboranPost
+        }
+        ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+
+//AKHIR SUB JASA BOR AIR
 if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaKonsPengeboranPost');
         restoreCondition('JasaPengeboranPost');
