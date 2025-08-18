@@ -162,10 +162,10 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaPengeboranPostLink = document.getElementById("JasaPengeboranPost");
      //SUB JasaPengeboranPosth
 	     	var JasaBorAirPostLink = document.getElementById("JasaBorAirPost");
-			var JasaBorAirLokasiLink = document.getElementById("JasaBorAirLokasi");
-			var JasaBorAirBiayaLink = document.getElementById("JasaBorAirBiaya");
-			var JasaBorAirTerdekatLink = document.getElementById("JasaBorAirTerdekat");
-			var JasaBorAirDiameterLink = document.getElementById("JasaBorAirDiameter");
+			var JasaBorAirLokasiPostLink = document.getElementById("JasaBorAirLokasiPost");
+			var JasaBorAirBiayaPostLink = document.getElementById("JasaBorAirBiayaPost");
+			var JasaBorAirTerdekatPostLink = document.getElementById("JasaBorAirTerdekatPost");
+			var JasaBorAirDiameterPostLink = document.getElementById("JasaBorAirDiameterPost");
 		
      var JasaBorePilePostLink = document.getElementById("JasaBorePilePost");
      var JasaCoringBetonPostLink = document.getElementById("JasaCoringBetonPost");
