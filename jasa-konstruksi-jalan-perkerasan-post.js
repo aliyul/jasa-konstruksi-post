@@ -276,8 +276,11 @@ if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost])
        //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsPembatasPost');   
+        removeCondition('ProdukKonsSaluranPost');
+	    removeCondition('ProdukKonsDindingModularPost');
         removeCondition('ProdukKonsPost');
+	
         removeCondition('MaterialKonsStukturPost');
         removeCondition('MaterialKonsFasadPelapisEksteriorPost');
         removeCondition('MaterialKonsAtapPenutupPost');
