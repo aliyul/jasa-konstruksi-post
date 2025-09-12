@@ -191,6 +191,7 @@ const urlMappingSewaWheelLoader = {
 
 
 const urlMappingSewaAlatKonstruksiRingan = {
+  "https://www.betonjayareadymix.com/2021/03/sewa-bekisting-cor-jalan.html": "Sewa Bekisting Cor Jalan",
   "https://www.betonjayareadymix.com/2019/02/harga-jasa-sewa-scaffolding.html": "Harga Jasa Sewa Scaffolding",
   "https://www.betonjayareadymix.com/2019/02/jasa-sewa-alat-cleaning.html": "Jasa Sewa Alat Cleaning",
   "https://www.betonjayareadymix.com/2019/02/sewa-mesin-polisher.html": "Sewa Mesin Polisher",
