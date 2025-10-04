@@ -371,7 +371,7 @@ document.addEventListener("DOMContentLoaded", function() {
      // Menemukan elemen menggunakan Id
     var JasaKonsFinishingPost = document.getElementById("JasaKonsFinishingPost");
     if (!JasaKonsFinishingPost) {
-        console.error("elemen Id JasaKonsFinishing kondisi terhapus");
+        console.log("elemen Id JasaKonsFinishing kondisi terhapus");
         return;
     }
      var JasaKonstruksiFinishingPostLink = document.getElementById("JasaKonstruksiFinishingPost");
