@@ -313,7 +313,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
   // === Tanggal nextUpdate1 global ===
-	const globalNextUpdate1 = "2026-02-15T00:00:00.000Z";
+	const globalNextUpdate1 = "2026-02-16T00:00:00.000Z";
 	console.log(`🌐 [AutoMeta] Detected jasa-alat-konstruksi-post: ${cleanUrlJasaKonsAlatKonstruksiPost}`);
 
     // --- pastikan meta nextUpdate1 ada ---
