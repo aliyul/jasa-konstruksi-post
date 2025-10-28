@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
   // === Tanggal nextUpdate1 global ===
-		const globalNextUpdate1 = "2026-01-30T00:00:00.000Z";
+	const globalNextUpdate1 = "2026-01-30T00:00:00.000Z";
 	console.log(`🌐 [AutoMeta] Detected jasa-konstruksi-struktur: ${cleanUrlJasaJasaKonsStruktur}`);
 
     // --- pastikan meta nextUpdate1 ada ---
