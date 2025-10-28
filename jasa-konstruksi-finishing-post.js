@@ -368,6 +368,138 @@ document.addEventListener("DOMContentLoaded", function() {
      //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
     const cleanUrlJasaKonsFinishingPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
 
+		/* ==========================================================
+   🧩 HybridDateModified v2.5 — StableHash + Safe Load Order
+   Fitur:
+   - Menjamin detect-evergreen.js dimuat lebih dulu
+   - Update <meta dateModified> hanya jika URL terdaftar
+   - Stable hash → hasil dateModified konsisten
+   ========================================================== */
+(async function runHybridDateModified() {
+  try {
+    // --- helper untuk load eksternal JS secara promise ---
+    function loadExternalJSAsync(src) {
+      return new Promise((resolve, reject) => {
+        const s = document.createElement("script");
+        s.src = src;
+        s.async = true;
+        s.onload = () => resolve(src);
+        s.onerror = () => reject(new Error("Gagal load " + src));
+        document.head.appendChild(s);
+      });
+    }
+
+    // --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingJasaFinishingDakBeton,
+		urlMappingJasaFinishingBetonExpose,
+		urlMappingJasaPlesteranAcianDinding,
+		urlMappingJasaFinishingGroutingStrukturBeton,
+                urlMappingJasaPelapisanCoatingStruktur,
+		urlMappingJasaFinishingKolomBalok,
+		urlMappingJasaPelapisanWaterproofingStruktur,
+		urlMappingJasaFinishingLantaiBeton,
+		urlMappingJasaPelindungRetakStruktur,
+		urlMappingJasaInteriorFurnitureCustome,
+		urlMappingJasaFinishingInteriorModern,
+		urlMappingFinishingInteriorKitchenSet,
+		urlMappingJasaCatEksteriorRumah,
+		urlMappingJasaFinishingFasadEksterior,
+		urlMappingJasaPelapisanAntiCuaca,
+		urlMappingJasaPelapisanDindingLuar,
+		urlMappingJasaFinishingTamanRumah,
+		urlMappingJasaFinishingKanopiTeras,
+		urlMappingJasaPelapisanBatuAlamEksterior,
+		urlMappingJasaPelapisanGentengDak
+	
+    );
+
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaKonsFinishingPost}`);
+      return;
+    }
+
+  // === Tanggal nextUpdate1 global ===
+	const globalNextUpdate1 = "2026-02-13T00:00:00.000Z";
+	console.log(`🌐 [AutoMeta] Detected jasa-konstruksi-finishing-post: ${cleanUrlJasaKonsFinishingPost}`);
+
+    // --- pastikan meta nextUpdate1 ada ---
+    let metaNextUpdate1 = document.querySelector('meta[name="nextUpdate1"]');
+    if (!metaNextUpdate1) {
+      metaNextUpdate1 = document.createElement("meta");
+      metaNextUpdate1.setAttribute("name", "nextUpdate1");
+      metaNextUpdate1.setAttribute("content", globalNextUpdate1);
+      document.head.appendChild(metaNextUpdate1);
+      console.log(`🆕 [AutoMeta] Meta nextUpdate1 ditambahkan → ${globalNextUpdate1}`);
+    } else {
+      console.log("✅ [AutoMeta] Meta nextUpdate1 sudah ada, tidak dibuat ulang.");
+    }
+
+    // --- pastikan detect-evergreen.js selesai dimuat ---
+    await loadExternalJSAsync("https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js");
+    console.log("✅ detect-evergreen.js selesai dimuat.");
+
+    // --- pastikan AEDMetaDates sudah tersedia ---
+    if (!window.AEDMetaDates || !window.AEDMetaDates.dateModified) {
+      console.warn("[HybridDateModified] AEDMetaDates tidak ditemukan, skip update.");
+      return;
+    }
+
+    const { dateModified, nextUpdate, type } = window.AEDMetaDates;
+
+    // 🔒 Stable hash untuk variasi waktu stabil
+    function stableHash(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        hash = (hash << 5) - hash + str.charCodeAt(i);
+        hash |= 0;
+      }
+      return Math.abs(hash);
+    }
+
+    const hash = stableHash(cleanUrlJasaKonsFinishingPost);
+    const offsetSeconds = hash % 86400;
+    const finalDate = new Date(new Date(dateModified).getTime() + offsetSeconds * 1000);
+    const isoDate = finalDate.toISOString();
+
+    // 🧱 Update meta dateModified
+    [
+      ['meta[itemprop="dateModified"]', 'itemprop', 'dateModified'],
+      ['meta[name="dateModified"]', 'name', 'dateModified'],
+      ['meta[property="article:modified_time"]', 'property', 'article:modified_time']
+    ].forEach(([selector, attr, val]) => {
+      let meta = document.querySelector(selector);
+      if (!meta) {
+        meta = document.createElement("meta");
+        meta.setAttribute(attr, val);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute("content", isoDate);
+    });
+
+    console.log(`✅ [HybridDateModified v2.5] ${cleanUrlJasaKonsFinishingPost} → ${isoDate} | type=${type || "-"}`);
+
+    // 🧩 Perbarui schema jika ada
+    const schemaEl = document.querySelector('script[data-schema="evergreen-maintenance"]');
+    if (schemaEl) {
+      try {
+        const data = JSON.parse(schemaEl.textContent.trim());
+        data.dateModified = isoDate;
+        if (data.maintenanceSchedule) data.maintenanceSchedule.scheduledTime = nextUpdate;
+        schemaEl.textContent = JSON.stringify(data, null, 2);
+        console.log(`🔄 Schema maintenance diperbarui → dateModified: ${isoDate}`);
+      } catch (err) {
+        console.error("❌ Gagal update schema:", err);
+      }
+    }
+
+  } catch (err) {
+    console.error("[HybridDateModified] Fatal error:", err);
+  }
+})();
+	
      // Menemukan elemen menggunakan Id
     var JasaKonsFinishingPost = document.getElementById("JasaKonsFinishingPost");
     if (!JasaKonsFinishingPost) {
