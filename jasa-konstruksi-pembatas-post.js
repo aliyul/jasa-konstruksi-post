@@ -176,8 +176,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPagarKawat,
 		urlMappingJasaPagarBRC,
 		urlMappingJasaPagarRumah,
-		urlMappingPagarBangunan,
-                urlMappingJasaPagarBangunan		
+        urlMappingJasaPagarBangunan		
     );
 
     // --- validasi URL terdaftar ---
