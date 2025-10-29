@@ -191,7 +191,8 @@ document.addEventListener("DOMContentLoaded", function() {
       meta.setAttribute("content", isoDate);
     });
 
-	window.AEDMetaDates = {
+	window.AEDMetaDates = {	
+		...window.AEDMetaDates,// tidak ubah variable lain
     dateModified : isoDate,
     datePublished : datePublished.toISOString()
   };
