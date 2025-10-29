@@ -191,10 +191,17 @@ document.addEventListener("DOMContentLoaded", function() {
       meta.setAttribute("content", isoDate);
     });
 
-	window.AEDMetaDates = {	
-		...window.AEDMetaDates,// tidak ubah variable lain
-    dateModified : isoDate
-  };
+    // Pastikan AEDMetaDates sudah ada minimal sebagai objek kosong
+	window.AEDMetaDates = window.AEDMetaDates || {};
+	
+	// Update hanya properti dateModified tanpa menghapus lainnya
+	window.AEDMetaDates = {
+	  ...window.AEDMetaDates,
+	  dateModified: isoDate
+	};
+	
+	console.log("✅ AEDMetaDates updated jasa-bongkar-bangunan-post:", window.AEDMetaDates);
+
     console.log(`✅ [HybridDateModified v2.5] ${cleanUrlJasaKonsBongkarBangunanPost} → ${isoDate} | type=${type || "-"}`);
 
     // 🧩 Perbarui schema jika ada
