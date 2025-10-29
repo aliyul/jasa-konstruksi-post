@@ -191,6 +191,10 @@ document.addEventListener("DOMContentLoaded", function() {
       meta.setAttribute("content", isoDate);
     });
 
+	window.AEDMetaDates = {
+    dateModified : isoDate,
+    datePublished : datePublished.toISOString()
+  };
     console.log(`✅ [HybridDateModified v2.5] ${cleanUrlJasaKonsBongkarBangunanPost} → ${isoDate} | type=${type || "-"}`);
 
     // 🧩 Perbarui schema jika ada
