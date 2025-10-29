@@ -193,8 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	window.AEDMetaDates = {	
 		...window.AEDMetaDates,// tidak ubah variable lain
-    dateModified : isoDate,
-    datePublished : datePublished.toISOString()
+    dateModified : isoDate
   };
     console.log(`✅ [HybridDateModified v2.5] ${cleanUrlJasaKonsBongkarBangunanPost} → ${isoDate} | type=${type || "-"}`);
 
