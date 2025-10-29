@@ -239,6 +239,17 @@ document.addEventListener("DOMContentLoaded", function() {
       meta.setAttribute("content", isoDate);
     });
 
+		// Pastikan AEDMetaDates sudah ada minimal sebagai objek kosong
+	window.AEDMetaDates = window.AEDMetaDates || {};
+	
+	// Update hanya properti dateModified tanpa menghapus lainnya
+	window.AEDMetaDates = {
+	  ...window.AEDMetaDates,
+	  dateModified: isoDate
+	};
+	
+	console.log("✅ AEDMetaDates updated jasa-konstruksi-pembatas:", window.AEDMetaDates);  
+
     console.log(`✅ [HybridDateModified v2.5] ${cleanUrlJasaPembatasKons} → ${isoDate} | type=${type || "-"}`);
 
     // 🧩 Perbarui schema jika ada
