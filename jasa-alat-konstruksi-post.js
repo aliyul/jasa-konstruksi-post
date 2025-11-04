@@ -311,7 +311,16 @@ document.addEventListener("DOMContentLoaded", function() {
         sessionStorage.removeItem(KEY);
       }
     }
-	  
+
+	 // ✅ Jalankan ALWAYS: detection tiap page
+    if (typeof window.runEvergreenCheck === "function") {
+      console.log("🔁 Running evergreen check for this page...");
+      window.runEvergreenCheck(); 
+    } else {
+      console.warn("⚠️ runEvergreenCheck tidak ditemukan!");
+    }
+  }
+	
     // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
