@@ -144,6 +144,38 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
 
+	    // ✅ Anti Spam GitHack (session based)
+    async function loadEvergreenScript() {
+        const KEY = "evergreenScriptLoaded";
+
+		  const needReload =
+		    !sessionStorage.getItem(KEY) ||     // belum pernah load di tab
+		    !window.AEDMetaDates ||             // variable hilang
+		    !window.detectEvergreenReady;       // marker tidak ada
+		
+		  if (!needReload) {
+		    console.log("⚡ detect-evergreen.js sudah aktif & variable ready — SKIP load");
+		    return;
+		  }
+		
+		  console.log("⏳ load detect-evergreen.js dari GitHack…");
+		
+		  try {
+		    await loadExternalJSAsync(
+		      "https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js"
+		    );
+		
+		    // ✅ set marker bahwa script sudah running
+		    window.detectEvergreenReady = true;
+		    sessionStorage.setItem(KEY, "true");
+		
+		    console.log("✅ detect-evergreen.js LOADED & READY");
+		  } catch (err) {
+		    console.error("❌ Gagal load detect-evergreen.js", err);
+		    sessionStorage.removeItem(KEY);
+		  }
+		}
+	  
     // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
@@ -177,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // --- pastikan detect-evergreen.js selesai dimuat ---
-    await loadExternalJSAsync("https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js");
+    await loadEvergreenScript();
     console.log("✅ detect-evergreen.js selesai dimuat.");
 
     // --- pastikan AEDMetaDates sudah tersedia ---
