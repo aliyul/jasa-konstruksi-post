@@ -271,16 +271,30 @@ document.addEventListener("DOMContentLoaded", function() {
    ========================================================== */
 (async function runHybridDateModified() {
   try {
-    // --- helper untuk load eksternal JS secara promise ---
-    function loadExternalJSAsync(src) {
-      return new Promise((resolve, reject) => {
+       // === Load detect-evergreen dari Blogger Page ===
+    async function loadEvergreenFromBlogger() {
+      const page = "/p/detect-evergreen.html";
+      const res = await fetch(page);
+      const html = await res.text();
+      const scriptMatch = html.match(/<script[^>]*>([\s\S]*?)<\/script>/);
+
+      if (scriptMatch && scriptMatch[1]) {
         const s = document.createElement("script");
-        s.src = src;
-        s.async = true;
-        s.onload = () => resolve(src);
-        s.onerror = () => reject(new Error("Gagal load " + src));
+        s.textContent = scriptMatch[1];
         document.head.appendChild(s);
-      });
+        console.log("⚡ detect-evergreen loaded from Blogger");
+      } else {
+        throw new Error("Script not found in detect-evergreen.html");
+      }
+    }
+
+    // === Cache agar tidak load berulang (anti 429) ===
+    const evergreenKey = "detectEvergreenLoaded";
+    if (!sessionStorage.getItem(evergreenKey)) {
+      await loadEvergreenFromBlogger();
+      sessionStorage.setItem(evergreenKey, "1");
+    } else {
+      console.log("⚡ detect-evergreen loaded from cache");
     }
 
     // --- gabungkan semua mapping ---
@@ -330,7 +344,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // --- pastikan detect-evergreen.js selesai dimuat ---
-    await loadExternalJSAsync("https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js");
     console.log("✅ detect-evergreen.js selesai dimuat.");
 
     // --- pastikan AEDMetaDates sudah tersedia ---
