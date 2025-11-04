@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // --- pastikan detect-evergreen.js selesai dimuat ---
-    await loadExternalJSAsync("https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js");
+    await loadEvergreenScript();
     console.log("✅ detect-evergreen.js selesai dimuat.");
 
     // --- pastikan AEDMetaDates sudah tersedia ---
