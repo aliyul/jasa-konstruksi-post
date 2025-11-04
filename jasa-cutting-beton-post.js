@@ -63,7 +63,37 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
 
+       // ✅ Anti Spam GitHack (session based)
+    async function loadEvergreenScript() {
+        const KEY = "evergreenScriptLoaded";
 
+		  const needReload =
+		    !sessionStorage.getItem(KEY) ||     // belum pernah load di tab
+		    !window.AEDMetaDates ||             // variable hilang
+		    !window.detectEvergreenReady;       // marker tidak ada
+		
+		  if (!needReload) {
+		    console.log("⚡ detect-evergreen.js sudah aktif & variable ready — SKIP load");
+		    return;
+		  }
+		
+		  console.log("⏳ load detect-evergreen.js dari GitHack…");
+		
+		  try {
+		    await loadExternalJSAsync(
+		      "https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js"
+		    );
+		
+		    // ✅ set marker bahwa script sudah running
+		    window.detectEvergreenReady = true;
+		    sessionStorage.setItem(KEY, "true");
+		
+		    console.log("✅ detect-evergreen.js LOADED & READY");
+		  } catch (err) {
+		    console.error("❌ Gagal load detect-evergreen.js", err);
+		    sessionStorage.removeItem(KEY);
+		  }
+		}
     // --- validasi URL terdaftar ---
     if (!urlMappingJasaCuttingBeton[cleanUrlJasaCuttingBetonPost]) {
       console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaCuttingBetonPost}`);
@@ -86,8 +116,9 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log("✅ [AutoMeta] Meta nextUpdate1 sudah ada, tidak dibuat ulang.");
     }
 
-    // --- pastikan detect-evergreen.js selesai dimuat ---
-    await loadExternalJSAsync("https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js");
+// ✅ Load evergreen JS (anti 429)
+    await loadEvergreenScript();
+
     console.log("✅ detect-evergreen.js selesai dimuat.");
 
     // --- pastikan AEDMetaDates sudah tersedia ---
