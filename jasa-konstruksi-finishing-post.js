@@ -2,7 +2,7 @@
 //SUB FinishingBangunanStruktur
 const urlMappingJasaFinishingDakBeton = {
   "https://www.betonjayareadymix.com/2018/10/finishing-dak.html": "Finishing Dak",
-  "https://betonjayareadymix.com/2018/10/harga-jasa-finishing-dak-beton.html": "Harga Jasa Finishing Dak Beton",
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-dak-beton.html": "Harga Jasa Finishing Dak Beton",
   "https://www.betonjayareadymix.com/2018/10/finishing-dak-beton.html": "Finishing Dak Beton",
   "https://www.betonjayareadymix.com/2018/10/harga-jasa-dak-super-flat.html": "Harga Jasa Dak Super Flat",
   "https://www.betonjayareadymix.com/2018/10/dak-super-flat.html": "Dak Super Flat"
