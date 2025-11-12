@@ -115,6 +115,11 @@ const urlMappingJasaFinishingLantaiBeton = {
 
    
 };
+
+const urlMappingJasaEpoxyDinding = {
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-epoxy-dinding.html": "Harga Jasa Epoxy Dinding"
+};
+
 const urlMappingJasaPelindungRetakStruktur = {
 	
 };
@@ -610,6 +615,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var JasaFinishingStrukturPostLink = document.getElementById("JasaFinishingBangunanStrukturPost");
 	
    //SUB JasaFinishingBangunanInteriorPosT
+   var JasaEpoxyDindingPostLink = document.getElementById("JasaEpoxyDindingPost");
    var JasaFinishingDakBetonPostLink = document.getElementById("JasaFinishingDakBetonPost");
    var JasaInteriorFurnitureCustomePostLink = document.getElementById("JasaInteriorFurnitureCustomePost");
    var JasaGantiKeramikLantaiPostLink = document.getElementById("JasaGantiKeramikLantaiPost");
@@ -648,6 +654,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var JasaFinishingProteksiPostLink = document.getElementById("JasaFinishingInfrastrukturProteksiPost");
 
    //HIDE sub JasaFinishingBangunanInteriorPost
+	JasaEpoxyDindingPostLink.style.visibility = 'hidden';
     JasaInteriorFurnitureCustomePostLink.style.visibility = 'hidden';
     JasaGantiKeramikLantaiPostLink.style.visibility = 'hidden';
     JasaCatInteriorRumahPostLink.style.visibility = 'hidden';
@@ -730,7 +737,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaPlesteranAcianDindingPost');
         removeCondition('JasaPelindungRetakStrukturPost');
          // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua
-	    
+	    removeCondition('JasaEpoxyDindingPost');
         removeCondition('JasaInteriorFurnitureCustomePost');
 	removeCondition('JasaInteriorFurniturePost');
         removeCondition('JasaGantiKeramikLantaiPost');
@@ -867,6 +874,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaPlesteranAcianDindingPost');
         removeCondition('JasaPelindungRetakStrukturPost');
          // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua
+		removeCondition('JasaEpoxyDindingPost');
         removeCondition('JasaInteriorFurnitureCustomePost');
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
@@ -1003,6 +1011,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaPlesteranAcianDindingPost');
         removeCondition('JasaPelindungRetakStrukturPost');
          // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua
+	   removeCondition('JasaEpoxyDindingPost');
         removeCondition('JasaInteriorFurnitureCustomePost');
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
@@ -1138,6 +1147,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaFinishingLantaiBetonPost');
         removeCondition('JasaPelindungRetakStrukturPost');
          // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua
+	   removeCondition('JasaEpoxyDindingPost');
         removeCondition('JasaInteriorFurnitureCustomePost');
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
@@ -1237,7 +1247,145 @@ document.addEventListener("DOMContentLoaded", function() {
 //AKHIR FINISHING STRUKTUR
 
 //FINISHING INTERIOR
-    if (urlMappingFinishingInteriorKitchenSet[cleanUrlJasaKonsFinishingPost]) {
+    if (urlMappingJasaEpoxyDinding[cleanUrlJasaKonsFinishingPost]) {
+        restoreCondition('JasaFinishingBangunanPost');
+        restoreCondition('JasaFinishingBangunanInteriorPost');
+    
+        restoreCondition('JasaEpoxyDindingPost');
+           
+	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+	removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+     //   removeCondition('JasaKonsFinishingPost');
+
+	 // hapus elemen id FINISHING STRUKTUR SEMUA NYA
+	removeCondition('JasaFinishingDakBetonPost');
+        removeCondition('JasaFinishingBetonExposePost');
+        removeCondition('JasaPlesteranAcianDindingPost');
+        removeCondition('JasaFinishingGroutingStrukturBetonPost');
+        removeCondition('JasaPelapisanCoatingStrukturPost');
+        removeCondition('JasaFinishingKolomdanBalokPost');
+        removeCondition('JasaPelapisanWaterproofingStrukturPost');
+        removeCondition('JasaFinishingLantaiBetonPost');
+        removeCondition('JasaPelindungRetakStrukturPost'); 
+	// hapus elemen id sub JasaFinishingBangunanEksteriorPost Semua
+        removeCondition('JasaCatEksteriorRumahPost');
+        removeCondition('JasaFinishingFasadEksteriorPost');
+        removeCondition('JasaPelapisanAntiCuacaPost');
+        removeCondition('JasaPelapisanDindingLuarPost');
+        removeCondition('JasaFinishingTamanRumahPost');
+        removeCondition('JasaPelapisanBatuAlamEksteriorPost');
+        removeCondition('JasaPelapisanGentengDakPost');
+      
+         // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaEpoxyDinding
+		removeCondition('JasaGantiKitchenSetPost');
+        removeCondition('JasaInteriorFurnitureCustomePost');
+        removeCondition('JasaGantiKeramikLantaiPost');
+        removeCondition('JasaCatInteriorRumahPost');
+        removeCondition('JasaPasangWallpaperDindingPost');
+        removeCondition('JasaPasangLantaiVinylPost');
+        removeCondition('JasaPasangPlafonGypsumPost');
+        removeCondition('JasaGantiLampuInteriorPost');
+        
+        removeCondition('JasaFinishingInteriorMinimalisPost');
+        removeCondition('JasaFinishingInteriorKlasikPost');
+        removeCondition('JasaFinishingInteriorModernPost');
+       
+         // hapus elemen id FINISHING UTAMA lain NYA
+        removeCondition('JasaFinishingBangunanEksteriorPost');
+        removeCondition('JasaFinishingBangunanStrukturPost');
+
+          // hapus elemen id Infrastruktur Semua
+        removeCondition('JasaFinishingInfrastrukturPost');
+        removeCondition('JasaFinishingInfrastrukturJalanPost');
+        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
+        removeCondition('JasaFinishingInfrastrukturSaluranPost');
+        removeCondition('JasaFinishingInfrastrukturStrukturPost');
+        removeCondition('JasaFinishingInfrastrukturProteksiPost');
+       
+        JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingBangunanPostLink.style.visibility = 'visible';
+        //sub finishing bangunan
+        JasaFinishingInteriorPostLink.style.visibility = 'visible';
+        //sub finishing JasaGantiKitchenSetPost
+        JasaEpoxyDindingPostLink.style.visibility = 'visible';
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaEpoxyDinding[cleanUrlJasaKonsFinishingPost];
+    }
+  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaEpoxyDinding[cleanUrlJasaKonsFinishingPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Finishing",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Finishing Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": "Jasa Finishing Interior",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": "Jasa Epoxy Dinding",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-epoxy-dinding.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 7,
+                   "name": urlMappingJasaEpoxyDinding[cleanUrlJasaKonsFinishingPost],
+                   "item": cleanUrlJasaKonsFinishingPost
+               }
+           ]
+       };
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+
+	if (urlMappingFinishingInteriorKitchenSet[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanInteriorPost');
     
@@ -1284,7 +1432,8 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaPelapisanBatuAlamEksteriorPost');
         removeCondition('JasaPelapisanGentengDakPost');
       
-         // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaDesainInteriorPost\
+         // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaDesainInteriorPost
+		removeCondition('JasaEpoxyDindingPost');
         removeCondition('JasaInteriorFurnitureCustomePost');
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
@@ -1422,6 +1571,7 @@ if (urlMappingJasaInteriorFurnitureCustome[cleanUrlJasaKonsFinishingPost]) {
       
          // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaDesainInteriorPost
         //removeCondition('');
+	    removeCondition('JasaEpoxyDindingPost');
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
         removeCondition('JasaPasangWallpaperDindingPost');
@@ -1558,6 +1708,7 @@ if (urlMappingJasaInteriorFurnitureCustome[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaPelapisanGentengDakPost');
       
          // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaDesainInteriorPost
+	    removeCondition('JasaEpoxyDindingPost');
         removeCondition('JasaInteriorFurnitureCustomePost');
         removeCondition('JasaInteriorFurniturePost');
         removeCondition('JasaGantiKeramikLantaiPost');
@@ -1698,6 +1849,7 @@ if (urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaPelapisanGentengDakPost');
       
          // hapus elemen id sub JasaFinishingBangunanInteriorPost SEMUA
+	    removeCondition('JasaEpoxyDindingPost');
         removeCondition('JasaInteriorFurnitureCustomePost');
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
@@ -1836,7 +1988,7 @@ if (urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaPelapisanGentengDakPost');
       
          // hapus elemen id sub JasaFinishingBangunanInteriorPost SEMUA
-        
+        removeCondition('JasaEpoxyDindingPost');
         removeCondition('JasaInteriorFurnitureCustomePost');
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
