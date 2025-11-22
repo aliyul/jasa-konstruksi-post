@@ -109,7 +109,7 @@ const urlMappingJasaCoringBeton = {
     "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-jakarta.html": "Jasa Coring Beton Jakarta",
     "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-tangerang.html": "Jasa Coring Beton Tangerang",
     "https://www.betonjayareadymix.com/2018/09/jasa-coring-beton.html": "Jasa Coring Beton",
-    "https://www.betonjayareadymix.com/2018/09/jasa-coring-beton-terdekat.html": "Jasa Coring Beton Sumur"
+    "https://www.betonjayareadymix.com/2018/09/jasa-coring-beton-terdekat.html": "Jasa Coring Beton Terdekat"
 
 };
 const urlMappingJasaBorBeton = {
