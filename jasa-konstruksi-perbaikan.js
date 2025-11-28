@@ -361,6 +361,7 @@ const urlMappingPerbaikanInterior = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-apartemen.html": "Jasa Renovasi Interior Apartemen",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-hotel.html": "Jasa Renovasi Interior Hotel",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-toko.html": "Jasa Renovasi Interior Toko",
+  "https://www.betonjayareadymix.com/p/renovasi-furniture.html": "Renovasi Furniture",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom.html": "Jasa Renovasi Interior Custom",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruangan.html": "Jasa Renovasi Interior Ruangan"
 
