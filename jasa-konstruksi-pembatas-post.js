@@ -114,6 +114,21 @@ const urlMappingJasaPagarRumah = {
 const urlMappingJasaPagarBangunan = {
 
 };
+
+/*const urlMappingPengamananSisiJalan = {
+"https://www.betonjayareadymix.com/p/jasa-pemasangan-guardrail-besi.html": "Jasa Pemasangan Guardrail Besi",
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-railing-jalan.html": "Jasa Pemasangan Railing Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-bollard-tiang-pengaman-jalan.html": "Jasa Bollard & Tiang Pengaman Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-pagar-pembatas-flyover-jembatan.html": "Jasa Pagar Pembatas Flyover & Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-kanstin-jalan.html": "Jasa Pemasangan Kanstin Jalan"
+
+};*/
+
+//SUB urlMappingPengamananSisiJalan
+const urlMappingJasaKanstinJalan = {
+"https://www.betonjayareadymix.com/2021/04/harga-pemasangan-kanstin.html": "Harga Pemasangan Kanstin"
+};
+
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPembatasKonsPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
@@ -213,7 +228,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPagarKawat,
 		urlMappingJasaPagarBRC,
 		urlMappingJasaPagarRumah,
-        urlMappingJasaPagarBangunan		
+        urlMappingJasaPagarBangunan,
+
+		urlMappingJasaKanstinJalan
     );
 
     // --- validasi URL terdaftar ---
