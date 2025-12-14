@@ -348,52 +348,7 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaKonsAlatKonstruksiPost}`);
       return;
     }
-  
-	/* ==========================================================
- 🧩 Auto DatePublished Normalizer v1.0
- 🔧 Fungsi:
- - Deteksi <meta itemprop="datePublished">
- - Jika lebih tua dari batas minimum (2020-08-03T00:00:00.000Z),
-   otomatis diperbarui ke tanggal tersebut
- - Tetap mempertahankan format ISO 8601 untuk SEO & schema JSON-LD
- ========================================================== */
-	try {
-    const minDateStr = "2020-08-03T00:00:00.000Z"; // batas minimal yang valid
-    const minDate = new Date(minDateStr);
 
-    // cari meta datePublished
-    const metaPublished = document.querySelector('meta[itemprop="datePublished"]');
-    if (!metaPublished) return; // tidak ada, keluar
-
-    const currentStr = metaPublished.getAttribute("content");
-    if (!currentStr) return;
-
-    const currentDate = new Date(currentStr);
-
-    // cek apakah tanggal lebih tua dari batas
-    if (currentDate < minDate) {
-      // update meta content
-      metaPublished.setAttribute("content", minDateStr);
-      console.log("🧩 [Normalizer] datePublished diperbarui →", minDateStr);
-    } else {
-      console.log("✅ [Normalizer] datePublished valid →", currentStr);
-    }
-
-    // 🔄 opsional: jika ada JSON-LD schema di <script type="application/ld+json">
-    document.querySelectorAll('script[type="application/ld+json"]').forEach((el) => {
-      try {
-        const data = JSON.parse(el.textContent.trim());
-        if (data && data.datePublished && new Date(data.datePublished) < minDate) {
-          data.datePublished = minDateStr;
-          el.textContent = JSON.stringify(data, null, 2);
-          console.log("🧩 [Normalizer] Schema datePublished diperbarui →", minDateStr);
-        }
-      } catch (e) {}
-    });
-  } catch (err) {
-    console.warn("⚠️ Auto DatePublished Normalizer error:", err);
-  }
-	  
   // === Tanggal nextUpdate1 global ===
 	const globalNextUpdate1 = "2026-02-16T00:00:00.000Z";
 	console.log(`🌐 [AutoMeta] Detected jasa-alat-konstruksi-post: ${cleanUrlJasaKonsAlatKonstruksiPost}`);
