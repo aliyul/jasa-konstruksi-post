@@ -475,18 +475,24 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
                {
                    "@type": "ListItem",
                    "position": 3,
+                   "name": "Jasa Pembatas & Pengaman",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
                    "name": "Jasa Pembuatan Pagar Dinding Pembatas",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 4,
+                   "position": 5,
                    "name": "Jasa Pagar Panel Beton",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pagar-panel-beton.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 6,
                    "name": urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost],
                    "item": cleanUrlJasaPembatasKonsPost
                }
@@ -571,18 +577,24 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
                {
                    "@type": "ListItem",
                    "position": 3,
+                   "name": "Jasa Pembatas & Pengaman",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
                    "name": "Jasa Pembuatan Pagar Dinding Pembatas",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 4,
+                   "position": 5,
                    "name": "Jasa Pagar Beton Precast",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pagar-beton-precast.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 6,
                    "name": urlMappingJasaPagarBetonPrecast[cleanUrlJasaPembatasKonsPost],
                    "item": cleanUrlJasaPembatasKonsPost
                }
@@ -662,22 +674,27 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
                    "position": 2,
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },{
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pembatas & Pengaman",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 3,
+                   "position": 4,
                    "name": "Jasa Pembuatan Pagar Dinding Pembatas",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 4,
+                   "position": 5,
                    "name": "Jasa Pagar Besi Hollow Wiremesh",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pagar-besi-hollow-wiremesh.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 6,
                    "name": urlMappingJasaPagarBesi[cleanUrlJasaPembatasKonsPost],
                    "item": cleanUrlJasaPembatasKonsPost
                }
@@ -761,18 +778,24 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
                {
                    "@type": "ListItem",
                    "position": 3,
+                   "name": "Jasa Pembatas & Pengaman",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
                    "name": "Jasa Pembuatan Pagar Dinding Pembatas",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 4,
+                   "position": 5,
                    "name": "Jasa Pagar Rumah",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pagar-rumah.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 6,
                    "name": urlMappingJasaPagarRumah[cleanUrlJasaPembatasKonsPost],
                    "item": cleanUrlJasaPembatasKonsPost
                }
@@ -853,22 +876,28 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
-               {
+  			   {
                    "@type": "ListItem",
                    "position": 3,
+                   "name": "Jasa Pembatas & Pengaman",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
                    "name": "Jasa Pembuatan Pagar Dinding Pembatas",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 4,
+                   "position": 5,
                    "name": "Jasa Pagar Bangunan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pagar-bangunan.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 5,
-                   "name": urlMappingJasaPagarBangunan[cleanUrlJasaPembatasKonsPost],
+                   "position": 6,
+                   "name": urlMappingJasaKanstinJalan[cleanUrlJasaPembatasKonsPost],
                    "item": cleanUrlJasaPembatasKonsPost
                }
            ]
@@ -880,7 +909,107 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
        document.head.appendChild(script);
    }
 
-  
+  //SUB urlMappingPengamananSisiJalan
+	if (urlMappingJasaKanstinJalan[cleanUrlJasaPembatasKonsPost]) {
+        restoreCondition('JasaKonsPembatasPost');
+        restoreCondition('JasaPembuatanPagarDindingPembatasPost');
+        restoreCondition('JasaPagarBangunanPost');
+	       
+     
+        //hapus elemen div id lain
+	    removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+	    removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	
+
+        //hapus elemen SUB jasa pembatas lain
+        removeCondition('JasaPengamanSisiJalanInfrastrukturPost');
+        removeCondition('JasaRambudanSistemKeamananVisualPost');
+        removeCondition('JasaPengamananAreaProyekPost');
+
+	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
+        removeCondition('JasaPagarBetonPrecastPost');
+        removeCondition('JasaPagarPanelBetonPost');
+        removeCondition('JasaPagarBesiPost'); 
+	removeCondition('JasaDindingPembatasBataBatakoPost');
+	removeCondition('JasaPagarKawatHarmonikaPost');
+	removeCondition('JasaPagarBrcPost');
+	//removeCondition('JasaPagarRumahPost');
+	removeCondition('JasaPagarRumahPost');
+       
+        JasaKonstruksiPembatasPostLink.style.visibility = 'visible';
+        JasaPembatasPostLink.style.visibility = 'visible';
+        JasaPembuatanPagarDindingPembatasPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaPagarPanelBeton
+        JasaPagarBangunanPostLink.style.visibility = 'visible';
+        pageNameJasaPembatasPost.textContent = urlMappingJasaKanstinJalan[cleanUrlJasaPembatasKonsPost];
+   }
+  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaKanstinJalan[cleanUrlJasaPembatasKonsPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+			   {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pembatas & Pengaman",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Pembuatan Pagar Dinding Pembatas",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": "Jasa Pagar Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pagar-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": urlMappingJasaKanstinJalan[cleanUrlJasaPembatasKonsPost],
+                   "item": cleanUrlJasaPembatasKonsPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 	
    });
 
