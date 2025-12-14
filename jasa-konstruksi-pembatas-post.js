@@ -126,7 +126,13 @@ const urlMappingJasaPagarBangunan = {
 
 //SUB urlMappingPengamananSisiJalan
 const urlMappingJasaKanstinJalan = {
-"https://www.betonjayareadymix.com/2021/04/harga-pemasangan-kanstin.html": "Harga Pemasangan Kanstin"
+"https://www.betonjayareadymix.com/2021/04/harga-pemasangan-kanstin.html": "Harga Pemasangan Kanstin",
+ "https://www.betonjayareadymix.com/2021/08/pemasangan-kanstin-jalan.html": "Pemasangan Kanstin Jalan",
+"https://www.betonjayareadymix.com/2021/09/cara-pasang-kanstin-taman.html": "Cara Pasang Kanstin Taman",
+"https://www.betonjayareadymix.com/2021/08/cara-pasang-kanstin-trotoar.html": "Cara Pasang Kanstin Trotoar",
+  "https://www.betonjayareadymix.com/2021/04/metode-pemasangan-kanstin.html": "Metode Pemasangan Kanstin",
+  "https://www.betonjayareadymix.com/2021/04/analisa-pemasangan-kanstin.html": "Analisa Pemasangan Kanstin",
+  "https://www.betonjayareadymix.com/2021/04/analisa-pekerjaan-kanstin-beton.html": "Analisa Pekerjaan Kanstin Beton"
 };
 
 // Menyimpan elemen yang dihapus dalam variabel
