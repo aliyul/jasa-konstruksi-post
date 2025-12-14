@@ -912,8 +912,8 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
   //SUB urlMappingPengamananSisiJalan
 	if (urlMappingJasaKanstinJalan[cleanUrlJasaPembatasKonsPost]) {
         restoreCondition('JasaKonsPembatasPost');
-        restoreCondition('JasaPembuatanPagarDindingPembatasPost');
-        restoreCondition('JasaPagarBangunanPost');
+        restoreCondition('JasaPengamanSisiJalanInfrastrukturPost');
+        restoreCondition('JasaPemasanganKanstinJalanPost');
 	       
      
         //hapus elemen div id lain
@@ -939,7 +939,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
 	
 
         //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaPengamanSisiJalanInfrastrukturPost');
+        removeCondition('JasaPembuatanPagarDindingPembatasPost');
         removeCondition('JasaRambudanSistemKeamananVisualPost');
         removeCondition('JasaPengamananAreaProyekPost');
 
@@ -950,14 +950,14 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
 	removeCondition('JasaDindingPembatasBataBatakoPost');
 	removeCondition('JasaPagarKawatHarmonikaPost');
 	removeCondition('JasaPagarBrcPost');
-	//removeCondition('JasaPagarRumahPost');
+	removeCondition('JasaPagarBangunanPost');
 	removeCondition('JasaPagarRumahPost');
        
         JasaKonstruksiPembatasPostLink.style.visibility = 'visible';
         JasaPembatasPostLink.style.visibility = 'visible';
-        JasaPembuatanPagarDindingPembatasPostLink.style.visibility = 'visible';
+        JasaPengamanSisiJalanInfrastrukturPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPagarPanelBeton
-        JasaPagarBangunanPostLink.style.visibility = 'visible';
+        JasaPemasanganKanstinJalanPostLink.style.visibility = 'visible';
         pageNameJasaPembatasPost.textContent = urlMappingJasaKanstinJalan[cleanUrlJasaPembatasKonsPost];
    }
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
