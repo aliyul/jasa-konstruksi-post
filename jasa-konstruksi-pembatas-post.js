@@ -362,6 +362,13 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaPagarBrcPostLink = document.getElementById("JasaPagarBrcPost");
      var JasaPagarRumahPostLink = document.getElementById("JasaPagarRumahPost");
      var JasaPagarBangunanPostLink = document.getElementById("JasaPagarBangunanPost");
+
+       //SUB JasaPengamanSisiJalanInfrastruktur
+     var JasaPemasanganKanstinJalanPostLink = document.getElementById("JasaPemasanganKanstinJalanPost");
+     var JasaPemasanganGuardrailBesiPostLink = document.getElementById("JasaPemasanganGuardrailBesiPost");
+     var JasaPemasanganRailingJalanPostLink = document.getElementById("JasaPemasanganRailingJalanPost");
+     var JasaBollardTiangPengamanJalanPostLink = document.getElementById("JasaBollardTiangPengamanJalanPost");
+     var JasaPagarPembatasFlyoverJembatanPostLink = document.getElementById("JasaPagarPembatasFlyoverJembatanPost");
 	
      var pageNameJasaPembatasPost = document.getElementById("pageNameJasaPembatasPost");
     
@@ -385,7 +392,14 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaPagarBrcPostLink.style.visibility = 'hidden';
      JasaPagarRumahPostLink.style.visibility = 'hidden';
      JasaPagarBangunanPostLink.style.visibility = 'hidden';
-	
+
+	 //SUB JasaPengamanSisiJalanInfrastruktur
+	JasaPemasanganKanstinJalanPostLink.style.visibility = 'hidden';
+	JasaPemasanganGuardrailBesiPostLink.style.visibility = 'hidden';
+	JasaPemasanganRailingJalanPostLink.style.visibility = 'hidden';
+	JasaBollardTiangPengamanJalanPostLink.style.visibility = 'hidden';
+	JasaPagarPembatasFlyoverJembatanPostLink.style.visibility = 'hidden';
+		
      pageNameJasaPembatasPost.textContent = "";
 	
     //SUB urlMappingPembuatanPagarDinding
@@ -446,7 +460,14 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
 	removeCondition('JasaPagarBrcPost');
 	removeCondition('JasaPagarRumahPost');
 	removeCondition('JasaPagarBangunanPost');
-       
+
+	 //hapus elemen sub JasaPengamanSisiJalanInfrastruktur
+	  	removeCondition('JasaPemasanganKanstinJalanPost');
+	  	removeCondition('JasaPemasanganGuardrailBesiPost');
+	  	removeCondition('JasaPemasanganRailingJalanPost');
+	  	removeCondition('JasaBollardTiangPengamanJalanPost');
+	  	removeCondition('JasaPagarPembatasFlyoverJembatanPost');
+	
         JasaKonstruksiPembatasPostLink.style.visibility = 'visible';
         JasaPembatasPostLink.style.visibility = 'visible';
         JasaPembuatanPagarDindingPembatasPostLink.style.visibility = 'visible';
@@ -648,7 +669,14 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
 	removeCondition('JasaPagarBrcPost');
 	//removeCondition('JasaPagarRumahPost');
 	removeCondition('JasaPagarBangunanPost');
-       
+
+	   //hapus elemen sub JasaPengamanSisiJalanInfrastruktur
+	  	removeCondition('JasaPemasanganKanstinJalanPost');
+	  	removeCondition('JasaPemasanganGuardrailBesiPost');
+	  	removeCondition('JasaPemasanganRailingJalanPost');
+	  	removeCondition('JasaBollardTiangPengamanJalanPost');
+	  	removeCondition('JasaPagarPembatasFlyoverJembatanPost');
+	
         JasaKonstruksiPembatasPostLink.style.visibility = 'visible';
         JasaPembatasPostLink.style.visibility = 'visible';
         JasaPembuatanPagarDindingPembatasPostLink.style.visibility = 'visible';
@@ -749,7 +777,14 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
 	removeCondition('JasaPagarBrcPost');
 	//removeCondition('JasaPagarRumahPost');
 	removeCondition('JasaPagarBangunanPost');
-       
+
+		//hapus elemen sub JasaPengamanSisiJalanInfrastruktur
+	  	removeCondition('JasaPemasanganKanstinJalanPost');
+	  	removeCondition('JasaPemasanganGuardrailBesiPost');
+	  	removeCondition('JasaPemasanganRailingJalanPost');
+	  	removeCondition('JasaBollardTiangPengamanJalanPost');
+	  	removeCondition('JasaPagarPembatasFlyoverJembatanPost');
+	
         JasaKonstruksiPembatasPostLink.style.visibility = 'visible';
         JasaPembatasPostLink.style.visibility = 'visible';
         JasaPembuatanPagarDindingPembatasPostLink.style.visibility = 'visible';
@@ -850,7 +885,14 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
 	removeCondition('JasaPagarBrcPost');
 	//removeCondition('JasaPagarRumahPost');
 	removeCondition('JasaPagarRumahPost');
-       
+
+		//hapus elemen sub JasaPengamanSisiJalanInfrastruktur
+	  	removeCondition('JasaPemasanganKanstinJalanPost');
+	  	removeCondition('JasaPemasanganGuardrailBesiPost');
+	  	removeCondition('JasaPemasanganRailingJalanPost');
+	  	removeCondition('JasaBollardTiangPengamanJalanPost');
+	  	removeCondition('JasaPagarPembatasFlyoverJembatanPost');
+
         JasaKonstruksiPembatasPostLink.style.visibility = 'visible';
         JasaPembatasPostLink.style.visibility = 'visible';
         JasaPembuatanPagarDindingPembatasPostLink.style.visibility = 'visible';
@@ -943,7 +985,14 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
         removeCondition('JasaRambudanSistemKeamananVisualPost');
         removeCondition('JasaPengamananAreaProyekPost');
 
-	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
+		//hapus elemen sub JasaPengamanSisiJalanInfrastruktur SELAIN JasaPemasanganKanstinJalanPost
+	  	//removeCondition('');
+	  	removeCondition('JasaPemasanganGuardrailBesiPost');
+	  	removeCondition('JasaPemasanganRailingJalanPost');
+	  	removeCondition('JasaBollardTiangPengamanJalanPost');
+	  	removeCondition('JasaPagarPembatasFlyoverJembatanPost');
+	
+	 //hapus elemen sub JasaPembuatanPagarDindingPembatas
         removeCondition('JasaPagarBetonPrecastPost');
         removeCondition('JasaPagarPanelBetonPost');
         removeCondition('JasaPagarBesiPost'); 
