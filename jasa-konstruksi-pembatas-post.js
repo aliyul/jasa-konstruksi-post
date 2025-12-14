@@ -882,7 +882,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
                    "name": "Jasa Pembatas & Pengaman",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
                },
-               {
+                              {
                    "@type": "ListItem",
                    "position": 4,
                    "name": "Jasa Pembuatan Pagar Dinding Pembatas",
@@ -897,7 +897,7 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
                {
                    "@type": "ListItem",
                    "position": 6,
-                   "name": urlMappingJasaKanstinJalan[cleanUrlJasaPembatasKonsPost],
+                   "name": urlMappingJasaPagarBangunan[cleanUrlJasaPembatasKonsPost],
                    "item": cleanUrlJasaPembatasKonsPost
                }
            ]
@@ -984,17 +984,17 @@ if (urlMappingJasaPagarPanelBeton[cleanUrlJasaPembatasKonsPost]) {
                    "name": "Jasa Pembatas & Pengaman",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
                },
-               {
+			    {
                    "@type": "ListItem",
                    "position": 4,
-                   "name": "Jasa Pembuatan Pagar Dinding Pembatas",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html"
+                   "name": "Jasa Pengaman Sisi Jalan Infrastruktur",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pengaman-sisi-jalan-infrastruktur.html"
                },
                {
                    "@type": "ListItem",
                    "position": 5,
-                   "name": "Jasa Pagar Bangunan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pagar-bangunan.html"
+                   "name": "Jasa Pemasangan Kanstin Jalan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pemasangan-kanstin-jalan.html"
                },
                {
                    "@type": "ListItem",
