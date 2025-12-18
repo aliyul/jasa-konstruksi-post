@@ -208,7 +208,7 @@ const urlMappingSewaAlatKonstruksiRingan = {
   "https://www.betonjayareadymix.com/2019/02/sewa-mesin-molen.html": "Sewa Mesin Molen",
 
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-genset.html": "Harga Sewa Mesin Genset",
-  "https://www.betonjayareadymix.com/2019/02/sewa-mesin-genset.html": "Sewa Mesin Genset",
+  "https://www.betonjayareadymix.com/2019/02/sewa-genset.html": "Sewa Genset",
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-compressor.html": "Harga Sewa Mesin Compressor",
   "https://www.betonjayareadymix.com/2019/02/sewa-mesin-compressor.html": "Sewa Mesin Compressor",
 
