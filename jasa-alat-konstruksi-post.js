@@ -224,7 +224,7 @@ const urlMappingSewaAlatKonstruksiRingan = {
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-screed.html": "Harga Sewa Mesin Screed",
 
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-pompa-air.html": "Harga Sewa Pompa Air",
-
+  "https://www.betonjayareadymix.com/2019/02/sewa-pompa-air.html": "Sewa Pompa Air",
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-stamper.html": "Harga Sewa Stamper",
 
   "https://www.betonjayareadymix.com/2019/02/sewa-screed.html": "Sewa Screed",
