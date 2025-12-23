@@ -196,6 +196,7 @@ const urlMappingBongkarBangunan = {
   "https://www.betonjayareadymix.com/p/jasa-bongkar-lantai.html": "Jasa Bongkar Lantai"
 };
 const urlMappingPengeboran = {
+"https://www.betonjayareadymix.com/p/jasa-bor-teknik.html": "Jasa Bor Teknik",
 "https://www.betonjayareadymix.com/p/jasa-bor-air.html": "Jasa Bor Air",
   "https://www.betonjayareadymix.com/p/jasa-bore-pile.html": "Jasa Bore Pile",
   "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",
@@ -206,7 +207,7 @@ const urlMappingPengeboran = {
 };
 const urlMappingJasaBorAir = {
   "https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html": "Jasa Bor Air Sumur",
-  "https://www.betonjayareadymix.com/p/jasa-bor-air-teknik.html": "Jasa Bor Air Teknik",
+  //"https://www.betonjayareadymix.com/p/jasa-bor-air-teknik.html": "Jasa Bor Air Teknik",
   "https://www.betonjayareadymix.com/p/jasa-bor-air-kebutuhan.html": "Jasa Bor Air Kebutuhan",
   "https://www.betonjayareadymix.com/p/jasa-bor-air-lokasi.html": "Jasa Bor Air Lokasi",
   "https://www.betonjayareadymix.com/p/biaya-jasa-bor-air.html": "Biaya Jasa Bor Air",
@@ -491,6 +492,7 @@ if (!JasaKons || !JasaKonsSub) {
 	var JasaPembatasPengamanLink = document.getElementById("JasaPembatasPengaman");
 	var JasaBongkarBangunanLink = document.getElementById("JasaBongkarBangunan");
 	var JasaPengeboranLink = document.getElementById("JasaPengeboran");
+	    var JasaBorTeknikLink = document.getElementById("JasaBorTeknik");
 		var JasaBorAirLink = document.getElementById("JasaBorAir");
 		var JasaBorPileLink = document.getElementById("JasaBorPile");
 		var JasaCoringBetonLink = document.getElementById("JasaCoringBeton");
@@ -524,6 +526,7 @@ if (!JasaKons || !JasaKonsSub) {
 	JasaBongkarBangunanLink.style.visibility = 'hidden';
 	JasaPengeboranLink.style.visibility = 'hidden';
 		JasaBorAirLink.style.visibility = 'hidden';
+	    JasaBorTeknikLink.style.visibility = 'hidden';
 		JasaBorPileLink.style.visibility = 'hidden';
 		JasaCoringBetonLink.style.visibility = 'hidden';
 		JasaBorBetonLink.style.visibility = 'hidden';
@@ -627,6 +630,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
 	removeCondition('JasaPengeboran');
+	    removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -716,6 +720,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
 	removeCondition('JasaPengeboran');
+	    removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -813,6 +818,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
 	removeCondition('JasaPengeboran');
+	    removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -916,6 +922,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
 	removeCondition('JasaPengeboran');
+	    removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -1021,6 +1028,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
 	removeCondition('JasaPengeboran');
+		  removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -1108,6 +1116,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
 	removeCondition('JasaPengeboran');
+		 removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -1195,6 +1204,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
 	removeCondition('JasaPengeboran');
+		 removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -1282,6 +1292,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
 	removeCondition('JasaPengeboran');
+		 removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -1370,6 +1381,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
 	removeCondition('JasaPengeboran');
+		 removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -1459,6 +1471,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
 	removeCondition('JasaPengeboran');
+		 removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -1546,6 +1559,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
 	removeCondition('JasaPengeboran');
+		 removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -1634,6 +1648,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
 	removeCondition('JasaPengeboran');
+		 removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -1722,6 +1737,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
 	removeCondition('JasaPengeboran');
+	    removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -1810,6 +1826,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaUjiTanah');
 	removeCondition('JasaBongkarBangunan');
 	removeCondition('JasaPengeboran');
+	    removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -1898,6 +1915,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaUjiTanah');
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaPengeboran');
+	    removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -1986,6 +2004,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
     //SUB JASA PENGEBORAN
+	    removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
@@ -2081,6 +2100,7 @@ if (urlMappingJasaBorAir[cleanUrlJasaKons]) {
 
 	//SUB JASA PENGEBORAN selain JasaBorAir
 		//removeCondition('JasaBorAir');
+	     removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorPile');
 		removeCondition('JasaCoringBeton');
 		removeCondition('JasaBorBeton');
