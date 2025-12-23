@@ -53,8 +53,9 @@ const urlMappingJasaPondasiTiangPancang = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-tangerang.html": "Harga jasa pondasi tiang pancang Tangerang",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-depok.html": "Harga jasa pondasi tiang pancang Depok",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-bogor.html": "Harga jasa pondasi tiang pancang Bogor",
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-jakarta.html": "Harga jasa pondasi tiang pancang Jakarta"
-
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-jakarta.html": "Harga jasa pondasi tiang pancang Jakarta",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-surabaya.html": "Harga jasa pondasi tiang pancang Surabaya"
+	
 };
 const urlMappingJasaPondasiSumuran = {
 
