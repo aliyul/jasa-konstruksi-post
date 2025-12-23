@@ -1,3 +1,7 @@
+const urlMappingJasaPengeboranPost = {
+  "https://www.betonjayareadymix.com/2018/09/tukang-bor-terdekat.html": "Tukang Bor Terdekat"
+
+};
 //SUB MAPPING JasaPengeboranPost 
 const urlMappingJasaBorAirLokasi = {
 "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-surabaya.html": "Jasa Bor Air Tanah Surabaya",
@@ -7,7 +11,6 @@ const urlMappingJasaBorAirLokasi = {
   "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-jakarta.html": "Jasa Bor Air Tanah Jakarta",
   "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-bekasi.html": "Jasa Bor Air Tanah Bekasi",
   "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-bogor.html": "Jasa Bor Air Tanah Bogor",
-  "https://www.betonjayareadymix.com/2018/09/tukang-bor-terdekat.html": "Tukang Bor Terdekat",
   "https://www.betonjayareadymix.com/2018/09/tukang-bor-air-terdekat.html": "Tukang Bor Air Terdekat",
   "https://www.betonjayareadymix.com/2018/09/jasa-bor-air-terdekat.html": "Jasa Bor Air Terdekat",
   "https://www.betonjayareadymix.com/2018/09/bor-sumur-terdekat.html": "Bor Sumur Terdekat",
@@ -259,7 +262,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaCoringBeton,
 		urlMappingJasaBorBeton,
 		urlMappingJasaBorTanah,
-		urlMappingJasaBorHorizontal
+		urlMappingJasaBorHorizontal,
+		urlMappingJasaPengeboranPost
 		
     );
 
@@ -849,6 +853,7 @@ if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
 	
 	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
         //removeCondition('');
+	     removeCondition('JasaBorTeknikPost');
         removeCondition('JasaBorTembokPost');
         removeCondition('JasaBorePilePost');
         removeCondition('JasaBorAirPost');
@@ -860,7 +865,7 @@ if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
 		removeCondition('JasaBorAirLokasiPost');
 		removeCondition('JasaBorAirBiayaPost');
 		removeCondition('JasaBorAirSumurPost');
-		removeCondition('JasaBorAirTeknikPost');
+		//removeCondition('JasaBorAirTeknikPost');
 		removeCondition('JasaBorAirKebutuhanPost');
 		removeCondition('JasaBorAirPeralatanPost');
     
@@ -944,6 +949,7 @@ if (urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
 	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
+	     removeCondition('JasaBorTeknikPost');
         removeCondition('JasaCoringBetonPost');
         //removeCondition('JasaBorTembokPost');
         removeCondition('JasaBorePilePost');
@@ -956,7 +962,7 @@ if (urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost]) {
 		removeCondition('JasaBorAirLokasiPost');
 		removeCondition('JasaBorAirBiayaPost');
 		removeCondition('JasaBorAirSumurPost');
-		removeCondition('JasaBorAirTeknikPost');
+		//removeCondition('JasaBorAirTeknikPost');
 		removeCondition('JasaBorAirKebutuhanPost');
 		removeCondition('JasaBorAirPeralatanPost');
        
@@ -1040,6 +1046,7 @@ if (urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost]) {
 	
 	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
         //removeCondition('');
+	     removeCondition('JasaBorTeknikPost');
         removeCondition('JasaBorTembokPost');
         removeCondition('JasaBorePilePost');
         removeCondition('JasaBorAirPost');
@@ -1051,7 +1058,7 @@ if (urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost]) {
 		removeCondition('JasaBorAirLokasiPost');
 		removeCondition('JasaBorAirBiayaPost');
 		removeCondition('JasaBorAirSumurPost');
-		removeCondition('JasaBorAirTeknikPost');
+		//removeCondition('JasaBorAirTeknikPost');
 		removeCondition('JasaBorAirKebutuhanPost');
 		removeCondition('JasaBorAirPeralatanPost');
        
@@ -1136,6 +1143,7 @@ if (urlMappingJasaBorTanah[cleanUrlJasaPengeboranPost]) {
 	
 	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
         //removeCondition('');
+	     removeCondition('JasaBorTeknikPost');
         removeCondition('JasaBorTembokPost');
         removeCondition('JasaBorePilePost');
         removeCondition('JasaBorAirPost');
@@ -1147,7 +1155,7 @@ if (urlMappingJasaBorTanah[cleanUrlJasaPengeboranPost]) {
 		removeCondition('JasaBorAirLokasiPost');
 		removeCondition('JasaBorAirBiayaPost');
 		removeCondition('JasaBorAirSumurPost');
-		removeCondition('JasaBorAirTeknikPost');
+		//removeCondition('JasaBorAirTeknikPost');
 		removeCondition('JasaBorAirKebutuhanPost');
 		removeCondition('JasaBorAirPeralatanPost');
        
@@ -1230,6 +1238,7 @@ if (urlMappingJasaBorTanah[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
 	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
+	     removeCondition('JasaBorTeknikPost');
         removeCondition('JasaBorTembokPost');
         removeCondition('JasaBorAirPost');
         removeCondition('JasaCoringBetonPost');
@@ -1241,7 +1250,7 @@ if (urlMappingJasaBorTanah[cleanUrlJasaPengeboranPost]) {
 		removeCondition('JasaBorAirLokasiPost');
 		removeCondition('JasaBorAirBiayaPost');
 		removeCondition('JasaBorAirSumurPost');
-		removeCondition('JasaBorAirTeknikPost');
+		//removeCondition('JasaBorAirTeknikPost');
 		removeCondition('JasaBorAirKebutuhanPost');
 		removeCondition('JasaBorAirPeralatanPost');
        
@@ -1289,6 +1298,97 @@ if (urlMappingJasaBorTanah[cleanUrlJasaPengeboranPost]) {
             "item": cleanUrlJasaPengeboranPost
         }
         ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+
+   if (urlMappingJasaPengeboranPost[cleanUrlJasaPengeboranPost]) {
+        restoreCondition('JasaKonsPengeboranPost');
+        restoreCondition('JasaPengeboranPost');
+        //restoreCondition('JasaBorTanahPost');
+     
+        //hapus elemen div id lain KECUALI JasaPengeboranPost
+	removeCondition('JasaDesInPost');
+	removeCondition('ProdukInFurPost');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+	   removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+       // removeCondition('JasaPengeboranPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	
+	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
+	   removeCondition('JasaBorTeknikPost');
+        removeCondition('JasaBorTanahPost');
+        removeCondition('JasaBorTembokPost');
+        removeCondition('JasaBorePilePost');
+        removeCondition('JasaBorAirPost');
+        removeCondition('JasaCoringBetonPost');
+        removeCondition('JasaBorBetonPost');
+        removeCondition('JasaBorHorizontalPost');
+
+	//hapus elemen sub jasa bor air post
+		removeCondition('JasaBorAirLokasiPost');
+		removeCondition('JasaBorAirBiayaPost');
+		removeCondition('JasaBorAirSumurPost');
+		//removeCondition('JasaBorAirTeknikPost');
+		removeCondition('JasaBorAirKebutuhanPost');
+		removeCondition('JasaBorAirPeralatanPost');
+       
+        JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
+       //TAMPILKAN JasaPengeboranPost
+        JasaPengeboranPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaCoringBetonPost
+       // JasaBorTanahPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaPengeboranPost[cleanUrlJasaPengeboranPost];
+    }
+     // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaPengeboranPost[cleanUrlJasaPengeboranPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+		{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Jasa Konstruksi",
+            "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+        },
+		{
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pengeboran",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": urlMappingJasaPengeboranPost[cleanUrlJasaPengeboranPost],
+                   "item": cleanUrlJasaPengeboranPost
+               }
+           ]
        };
 
        const script = document.createElement('script');
