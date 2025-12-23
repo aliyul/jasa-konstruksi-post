@@ -1,5 +1,7 @@
 //SUB MAPPING JasaPengeboranPost 
 const urlMappingJasaBorAirLokasi = {
+"https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-surabaya.html": "Jasa Bor Air Tanah Surabaya",
+"https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-karawang.html": "Jasa Bor Air Tanah Karawang",
 "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-depok.html": "Jasa Bor Air Tanah Depok",
   "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-tangerang.html": "Jasa Bor Air Tanah Tangerang",
   "https://www.betonjayareadymix.com/2018/11/jasa-bor-air-tanah-jakarta.html": "Jasa Bor Air Tanah Jakarta",
@@ -28,6 +30,8 @@ const urlMappingJasaBorAirBiaya = {
 
 };
 const urlMappingJasaBorAirSumur = {
+ "https://www.betonjayareadymix.com/2018/11/jasa-sumur-bor-surabaya.html": "Jasa Sumur Bor Surabaya",
+"https://www.betonjayareadymix.com/2018/11/jasa-sumur-bor-karawang.html": "Jasa Sumur Bor Karawang",
 "https://www.betonjayareadymix.com/2018/09/jasa-bor-sumur.html": "Jasa Bor Sumur",
   "https://www.betonjayareadymix.com/2018/11/jasa-sumur-bor-tangerang.html": "Jasa Sumur Bor Tangerang",
   "https://www.betonjayareadymix.com/2018/11/jasa-sumur-bor-jakarta.html": "Jasa Sumur Bor Jakarta",
@@ -40,12 +44,13 @@ const urlMappingJasaBorAirSumur = {
   "https://www.betonjayareadymix.com/2018/11/tukang-sumur-bor-bekasi.html": "Tukang Sumur Bor Bekasi",
   "https://www.betonjayareadymix.com/2018/11/tukang-sumur-bor-bogor.html": "Tukang Sumur Bor Bogor"
 };
+/*
 const urlMappingJasaBorAirTeknik = {
 "https://www.betonjayareadymix.com/2018/09/tukang-bor.html": "Tukang Bor",
   "https://www.betonjayareadymix.com/2018/09/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",
   "https://www.betonjayareadymix.com/2018/09/jasa-bor-air-tanah.html": "Jasa Bor Air Tanah"
 	
-};
+};*/
 const urlMappingJasaBorAirKebutuhan = {
 
 };
@@ -54,6 +59,12 @@ const urlMappingJasaBorAirPeralatan = {
 
 };
 
+const urlMappingJasaBorTeknik = {
+"https://www.betonjayareadymix.com/2018/09/tukang-bor.html": "Tukang Bor",
+  "https://www.betonjayareadymix.com/2018/09/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",
+  "https://www.betonjayareadymix.com/2018/09/jasa-bor-air-tanah.html": "Jasa Bor Air Tanah"
+	
+};
 const urlMappingJasaBorePile = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile.html": "Harga Jasa Strauss Pile",
@@ -69,8 +80,8 @@ const urlMappingJasaBorePile = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-depok.html": "Harga Jasa Bore Pile Depok",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-tangerang.html": "Harga Jasa Bore Pile Tangerang",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-bekasi.html": "Harga Jasa Bore Pile Bekasi",
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-karawang.html": "Harga Jasa Bore Pile Karawang"
-
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-karawang.html": "Harga Jasa Bore Pile Karawang",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-surabaya.html": "Harga Jasa Bore Pile Surabaya"
 
 };
 const urlMappingJasaBorTembok = {
@@ -137,7 +148,8 @@ const urlMappingJasaBorTanah = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-bekasi.html": "Jasa Bor Tanah Bekasi",
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-tangerang.html": "Jasa Bor Tanah Tangerang",
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-depok.html": "Jasa Bor Tanah Depok",
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-karawang.html": "Jasa Bor Tanah Karawang"
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-karawang.html": "Jasa Bor Tanah Karawang",
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-surabaya.html": "Jasa Bor Tanah Surabaya"
 
 };
 const urlMappingJasaBorHorizontal = {
@@ -239,9 +251,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBorAirLokasi,
 		urlMappingJasaBorAirBiaya,
 		urlMappingJasaBorAirSumur,
-		urlMappingJasaBorAirTeknik,
 		urlMappingJasaBorAirKebutuhan,
 		urlMappingJasaBorAirPeralatan,
+		urlMappingJasaBorTeknik,
 		urlMappingJasaBorePile,
 		urlMappingJasaBorTembok,
 		urlMappingJasaCoringBeton,
@@ -362,10 +374,9 @@ document.addEventListener("DOMContentLoaded", function() {
 			var JasaBorAirLokasiPostLink = document.getElementById("JasaBorAirLokasiPost");
 			var JasaBorAirBiayaPostLink = document.getElementById("JasaBorAirBiayaPost");
 			var JasaBorAirSumurPostLink = document.getElementById("JasaBorAirSumurPost");
-			var JasaBorAirTeknikPostLink = document.getElementById("JasaBorAirTeknikPost");
 	        var JasaBorAirKebutuhanPostLink = document.getElementById("JasaBorAirKebutuhanPost");
 	        var JasaBorAirPeralatanPostLink = document.getElementById("JasaBorAirPeralatanPost");
-		
+	var JasaBorTeknikPostLink = document.getElementById("JasaBorTeknikPost");
      var JasaBorePilePostLink = document.getElementById("JasaBorePilePost");
      var JasaCoringBetonPostLink = document.getElementById("JasaCoringBetonPost");
      var JasaBorTembokPostLink = document.getElementById("JasaBorTembokPost");
@@ -386,10 +397,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		JasaBorAirLokasiPostLink.style.visibility = 'hidden';
 		JasaBorAirBiayaPostLink.style.visibility = 'hidden';
 		JasaBorAirSumurPostLink.style.visibility = 'hidden';
-		JasaBorAirTeknikPostLink.style.visibility = 'hidden';
 	    JasaBorAirKebutuhanPostLink.style.visibility = 'hidden';
 	    JasaBorAirPeralatanPostLink.style.visibility = 'hidden';
-	
+	 	
+	  JasaBorTeknikPostLink.style.visibility = 'hidden';
      JasaBorePilePostLink.style.visibility = 'hidden';
      JasaCoringBetonPostLink.style.visibility = 'hidden';
      JasaBorTembokPostLink.style.visibility = 'hidden';
@@ -429,6 +440,7 @@ if (urlMappingJasaBorAirLokasi[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
 	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
+	    removeCondition('JasaBorTeknikPost');
         removeCondition('JasaBorTembokPost');
         removeCondition('JasaBorePilePost');
         removeCondition('JasaCoringBetonPost');
@@ -440,7 +452,6 @@ if (urlMappingJasaBorAirLokasi[cleanUrlJasaPengeboranPost]) {
 		//removeCondition('JasaBorAirLokasiPost');
 		removeCondition('JasaBorAirBiayaPost');
 		removeCondition('JasaBorAirSumurPost');
-		removeCondition('JasaBorAirTeknikPost');
 		removeCondition('JasaBorAirKebutuhanPost');
 		removeCondition('JasaBorAirPeralatanPost');
        
@@ -532,6 +543,7 @@ if (urlMappingJasaBorAirBiaya[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
 	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
+	   removeCondition('JasaBorTeknikPost');
         removeCondition('JasaBorTembokPost');
         removeCondition('JasaBorePilePost');
         removeCondition('JasaCoringBetonPost');
@@ -543,7 +555,6 @@ if (urlMappingJasaBorAirBiaya[cleanUrlJasaPengeboranPost]) {
 		//removeCondition('JasaBorAirLokasiPost');
 		removeCondition('JasaBorAirLokasiPost');
 		removeCondition('JasaBorAirSumurPost');
-		removeCondition('JasaBorAirTeknikPost');
 		removeCondition('JasaBorAirKebutuhanPost');
 		removeCondition('JasaBorAirPeralatanPost');
        
@@ -635,6 +646,7 @@ if (urlMappingJasaBorAirSumur[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
 	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
+	    removeCondition('JasaBorTeknikPost');
         removeCondition('JasaBorTembokPost');
         removeCondition('JasaBorePilePost');
         removeCondition('JasaCoringBetonPost');
@@ -646,7 +658,6 @@ if (urlMappingJasaBorAirSumur[cleanUrlJasaPengeboranPost]) {
 		//removeCondition('JasaBorAirLokasiPost');
 		removeCondition('JasaBorAirBiayaPost');
 		removeCondition('JasaBorAirLokasiPost');
-		removeCondition('JasaBorAirTeknikPost');
 		removeCondition('JasaBorAirKebutuhanPost');
 		removeCondition('JasaBorAirPeralatanPost');
        
@@ -709,11 +720,11 @@ if (urlMappingJasaBorAirSumur[cleanUrlJasaPengeboranPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-if (urlMappingJasaBorAirTeknik[cleanUrlJasaPengeboranPost]) {
+if (urlMappingJasaBorTeknik[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaKonsPengeboranPost');
         restoreCondition('JasaPengeboranPost');
-        restoreCondition('JasaBorAirPost');
-        restoreCondition('JasaBorAirTeknikPost');
+        restoreCondition('JasaBorTeknikPost');
+       // restoreCondition('JasaBorAirTeknikPost');
      
         //hapus elemen div id lain KECUALI JasaPengeboranPost
 	removeCondition('JasaDesInPost');
@@ -738,6 +749,7 @@ if (urlMappingJasaBorAirTeknik[cleanUrlJasaPengeboranPost]) {
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
 	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
+        removeCondition('JasaBorAirPost');
         removeCondition('JasaBorTembokPost');
         removeCondition('JasaBorePilePost');
         removeCondition('JasaCoringBetonPost');
@@ -757,13 +769,13 @@ if (urlMappingJasaBorAirTeknik[cleanUrlJasaPengeboranPost]) {
        //TAMPILKAN PONDASI BANGUNAN
         JasaPengeboranPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBorAirPost
-        JasaBorAirPostLink.style.visibility = 'visible';
+       // JasaBorAirPostLink.style.visibility = 'visible';
 	    
-        JasaBorAirTeknikPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorAirTeknik[cleanUrlJasaPengeboranPost];
+        JasaBorTeknikPostLink.style.visibility = 'visible';
+        pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorTeknik[cleanUrlJasaPengeboranPost];
     }
    // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaBorAirTeknik[cleanUrlJasaPengeboranPost]) {
+   if (urlMappingJasaBorTeknik[cleanUrlJasaPengeboranPost]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -786,22 +798,16 @@ if (urlMappingJasaBorAirTeknik[cleanUrlJasaPengeboranPost]) {
             "name": "Jasa Pengeboran",
             "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
         },
-        {
-            "@type": "ListItem",
-            "position": 4,
-             "name": "Jasa Bor Air",
-            "item": "https://www.betonjayareadymix.com/p/jasa-bor-air.html"
-        },
 		{
             "@type": "ListItem",
-            "position": 5,
-            "name": "Jasa Bor Air Teknik",
-            "item": "https://www.betonjayareadymix.com/p/jasa-bor-air-teknik.html"
+            "position": 4,
+            "name": "Jasa Bor Teknik",
+            "item": "https://www.betonjayareadymix.com/p/jasa-bor-teknik.html"
         },
         {
                    "@type": "ListItem",
-                   "position": 6,
-                   "name": urlMappingJasaBorAirTeknik[cleanUrlJasaPengeboranPost],
+                   "position": 5,
+                   "name": urlMappingJasaBorTeknik[cleanUrlJasaPengeboranPost],
                    "item": cleanUrlJasaPengeboranPost
         }
         ]
