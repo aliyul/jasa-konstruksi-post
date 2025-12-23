@@ -210,7 +210,7 @@ const urlMappingJasaBorAir = {
   //"https://www.betonjayareadymix.com/p/jasa-bor-air-teknik.html": "Jasa Bor Air Teknik",
   "https://www.betonjayareadymix.com/p/jasa-bor-air-kebutuhan.html": "Jasa Bor Air Kebutuhan",
   "https://www.betonjayareadymix.com/p/jasa-bor-air-lokasi.html": "Jasa Bor Air Lokasi",
-  "https://www.betonjayareadymix.com/p/biaya-jasa-bor-air.html": "Biaya Jasa Bor Air",
+  //"https://www.betonjayareadymix.com/p/biaya-jasa-bor-air.html": "Biaya Jasa Bor Air",
   "https://www.betonjayareadymix.com/p/peralatan-jasa-bor-air.html": "Peralatan Jasa Bor Air"
 };
 
