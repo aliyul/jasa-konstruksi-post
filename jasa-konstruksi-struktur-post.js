@@ -164,6 +164,10 @@ const urlMappingJasaPengecoranKolomBeton = {
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-rs.html": "Jasa Konstruksi Gedung Rumah Sakit"
 };
 */
+const urlMappingJasaKonstruksiGedungHunian = {
+"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-gedung.html": "Jasa Konstruksi Baja Gedung"
+};
+
 //SUB JasaKonstruksiGedungdanHunianPost
 const urlMappingJasaKonstruksiRumahTinggal = {
   "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-per-meter.html": "Harga Borongan Konstruksi Per Meter",
@@ -493,6 +497,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPengecoranLantaiGudang,
 		urlMappingJasaBekistingdanPembesian,
 		urlMappingJasaPengecoranKolomBeton,
+		urlMappingJasaKonstruksiGedungHunian,
 		urlMappingJasaKonstruksiRumahTinggal,
 		urlMappingJasaKonstruksiRukodanKios,
 		urlMappingJasaKonstruksiVilla,
@@ -1634,6 +1639,149 @@ JasaStrukturBetondanPengecoranPost
    }
 //akhir SUB JasaStrukturBetondanPengecoranPost
 
+if (urlMappingJasaKonstruksiGedungHunian[cleanUrlJasaJasaKonsStrukturPost]) {
+        restoreCondition('JasaKonsStrukturPost');
+        restoreCondition('JasaKonstruksiGedungdanHunianPost');
+        //restoreCondition('JasaKonstruksiRumahTinggalPost');
+
+       //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
+	removeCondition('ProdukInFurPost');
+        removeCondition('ProdukKonsPembatasPost');
+	    removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	removeCondition('JasaKonsCuttingBetonPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost'); 
+	removeCondition('JasaKonsFinishingPost');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+
+	 //hapus elemen id JasaStrukturBajadanRangkaRinganPost SEMUA
+        removeCondition('JasaKonstruksiBajaKonvensionalPost');
+        removeCondition('JasaKanopiBajadanBesiPost');
+        removeCondition('JasaStrukturBajaGudangPost');
+        removeCondition('JasaRangkaAtapBajaRinganPost');
+	// hapus elemen id JasaKonstruksiLapanganOlahragaPost SEMUA
+	removeCondition('JasaPembuatanLapanganBadmintonPost');
+	removeCondition('JasaPembuatanLapanganTenisPost');
+        removeCondition('JasaPembuatanLapanganFutsalPost');
+        removeCondition('JasaPembuatanLapanganBasketPost');
+        removeCondition('JasaPembuatanLapanganSepakbolaPost');
+        removeCondition('JasaPembuatanLapanganVoliPost');
+        removeCondition('JasaPembuatanLapanganSerbagunaPost');
+	
+	 //hapus elemen id JasaKonstruksiGedungdanHunianPost SEMUA selain JasaKonstruksiRumahTinggalPost
+        removeCondition('JasaKonstruksiRumahTinggalPost');
+        removeCondition('JasaKonstruksiRukodanKiosPost');
+        removeCondition('JasaKonstruksiVillaPost');
+        removeCondition('JasaKonstruksiApartemenPost');
+        removeCondition('JasaKonstruksiHotelPost');
+        removeCondition('JasaKonstruksiPerkantoranPost');
+        removeCondition('JasaKonstruksiGedungSekolahPost');
+        removeCondition('JasaKonstruksiGedungRumahSakitPost');
+	//hapus elemen id JasaKonstruksiIndustridanGudangPost SEMUA
+        removeCondition('JasaKonstruksiGudangLogistikPost');
+        removeCondition('JasaKonstruksiPabrikPost');
+        removeCondition('JasaKonstruksiColdStoragePost');
+        removeCondition('JasaKonstruksiBengkelPost');
+        removeCondition('JasaKonstruksiWorkshopPost');
+        removeCondition('JasaKonstruksiPabrikPost');
+	
+      //hapus elemen id JasaStrukturBetondanPengecoranPost SEMUA 
+        removeCondition('JasaPengecoranLantaiGudangPost');
+        removeCondition('JasaBekistingdanPembesianPost');
+        removeCondition('JasaPengecoranLantaiDakPost');
+        removeCondition('JasaPengecoranKolomBetonPost');
+        removeCondition('JasaCorBetonPost');
+	
+	//hapus elemen id JasaStrukturKhususPost SEMUA 
+        removeCondition('JasaPembuatanKolamRenangPost');
+        removeCondition('JasaPembuatanKolamIkanPost');
+        removeCondition('JasaSepticTankBetonPost');
+        removeCondition('JasaPembuatanTangkiAirPost');
+        removeCondition('JasaPembuatanBakPenampunganPost');
+        removeCondition('JasaKonstruksiMenaraAirPost');
+
+	
+      
+	/*
+JasaKonstruksiGedungdanHunianPost
+JasaKonstruksiIndustridanGudangPost
+JasaStrukturBajadanRangkaRinganPost
+JasaStrukturKhusus
+JasaKonstruksiLapanganOlahragaPost
+JasaKonstruksiModulardanPrecastPost
+JasaStrukturBetondanPengecoranPost
+*/
+       //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunianPost
+        removeCondition('JasaKonstruksiIndustridanGudangPost');
+        removeCondition('JasaStrukturBetondanPengecoranPost');
+        removeCondition('JasaStrukturKhususPost');
+	removeCondition('JasaKonstruksiLapanganOlahragaPost');
+	removeCondition('JasaKonstruksiModulardanPrecastPost');
+	removeCondition('JasaStrukturBajadanRangkaRinganPost');
+       
+        JasaKonstruksiStrukturPostLink.style.visibility = 'visible';
+        JasaStrukturKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaKonstruksiGedungdanHunianPost
+        JasaKonstruksiGedungdanHunianPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaKonstruksiRumahTinggalPost
+        //JasaKonstruksiRumahTinggalPostLink.style.visibility = 'visible';
+        pageNameJasaKonsStrukturPost.textContent = urlMappingJasaKonstruksiGedungHunian[cleanUrlJasaJasaKonsStrukturPost];
+    }
+// ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaKonstruksiGedungHunian[cleanUrlJasaJasaKonsStrukturPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Struktur Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Konstruksi Gedung dan Hunian",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html"
+               },	
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaKonstruksiGedungHunian[cleanUrlJasaJasaKonsStrukturPost],
+                   "item": cleanUrlJasaJasaKonsStrukturPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 //SUB JasaKonstruksiGedungdanHunianPost
 if (urlMappingJasaKonstruksiRumahTinggal[cleanUrlJasaJasaKonsStrukturPost]) {
         restoreCondition('JasaKonsStrukturPost');
