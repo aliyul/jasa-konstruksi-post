@@ -14,11 +14,15 @@ const urlMappingFinishingBangunan = {
 
 const urlMappingFinishingBangunanInterior = {
 "https://www.betonjayareadymix.com/p/jasa-epoxy-dinding.html": "Jasa Epoxy Dinding",
+"https://www.betonjayareadymix.com/p/jasa-epoxy-lantai.html": "Jasa Epoxy Lantai",
 "https://www.betonjayareadymix.com/p/jasa-interior-dan-furniture-custom.html": "Jasa Interior dan Furniture Custome",
 "https://www.betonjayareadymix.com/p/jasa-keramik-lantai.html": "Jasa Keramik Lantai",
   "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
   "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-vinyl.html": "Jasa Pasang Lantai Vinyl",
+  //"https://www.betonjayareadymix.com/p/jasa-pasang-lantai-vinyl.html": "Jasa Pasang Lantai Vinyl",
+//"https://www.betonjayareadymix.com/p/jasa-pasang-dinding-vinyl.html": "Jasa Pasang Dinding Vinyl",
+  //"https://www.betonjayareadymix.com/p/jasa-pasang-dinding-wpc.html": "Jasa Pasang Dinding WPC",
+  //"https://www.betonjayareadymix.com/p/jasa-pasang-lantai-wpc.html": "Jasa Pasang Lantai WPC",
   "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-gypsum.html": "Jasa Pasang Plafon Gypsum",
   "https://www.betonjayareadymix.com/p/jasa-lampu-interior.html": "Jasa Lampu Interior",
   "https://www.betonjayareadymix.com/p/jasa-kitchen-set.html": "Jasa Kitchen Set",
