@@ -600,7 +600,7 @@ document.addEventListener("DOMContentLoaded", function() {
    var JasaGantiKeramikLantaiPostLink = document.getElementById("JasaGantiKeramikLantaiPost");
    var JasaCatInteriorRumahPostLink = document.getElementById("JasaCatInteriorRumahPost");
    var JasaPasangWallpaperDindingPostLink = document.getElementById("JasaPasangWallpaperDindingPost");
-   var JasaPasangLantaiVinylPostLink = document.getElementById("JasaPasangLantaiVinylPost");
+   //var JasaPasangLantaiVinylPostLink = document.getElementById("JasaPasangLantaiVinylPost");
    var JasaPasangPlafonGypsumPostLink = document.getElementById("JasaPasangPlafonGypsumPost");
    var JasaGantiLampuInteriorPostLink = document.getElementById("JasaGantiLampuInteriorPost");
    var JasaGantiKitchenSetPostLink = document.getElementById("JasaGantiKitchenSetPost");
@@ -638,7 +638,7 @@ document.addEventListener("DOMContentLoaded", function() {
     JasaGantiKeramikLantaiPostLink.style.visibility = 'hidden';
     JasaCatInteriorRumahPostLink.style.visibility = 'hidden';
     JasaPasangWallpaperDindingPostLink.style.visibility = 'hidden';
-    JasaPasangLantaiVinylPostLink.style.visibility = 'hidden';
+   // JasaPasangLantaiVinylPostLink.style.visibility = 'hidden';
     JasaPasangPlafonGypsumPostLink.style.visibility = 'hidden';
     JasaGantiLampuInteriorPostLink.style.visibility = 'hidden';
     JasaGantiKitchenSetPostLink.style.visibility = 'hidden';
@@ -722,7 +722,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
         removeCondition('JasaPasangWallpaperDindingPost');
-        removeCondition('JasaPasangLantaiVinylPost');
+        //removeCondition('JasaPasangLantaiVinylPost');
         removeCondition('JasaPasangPlafonGypsumPost');
         removeCondition('JasaGantiLampuInteriorPost');
         removeCondition('JasaGantiKitchenSetPost');
@@ -858,7 +858,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
         removeCondition('JasaPasangWallpaperDindingPost');
-        removeCondition('JasaPasangLantaiVinylPost');
+        //removeCondition('JasaPasangLantaiVinylPost');
         removeCondition('JasaPasangPlafonGypsumPost');
         removeCondition('JasaGantiLampuInteriorPost');
         removeCondition('JasaGantiKitchenSetPost');
@@ -995,7 +995,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
         removeCondition('JasaPasangWallpaperDindingPost');
-        removeCondition('JasaPasangLantaiVinylPost');
+        //removeCondition('JasaPasangLantaiVinylPost');
         removeCondition('JasaPasangPlafonGypsumPost');
         removeCondition('JasaGantiLampuInteriorPost');
         removeCondition('JasaGantiKitchenSetPost');
@@ -1131,7 +1131,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
         removeCondition('JasaPasangWallpaperDindingPost');
-        removeCondition('JasaPasangLantaiVinylPost');
+        //removeCondition('JasaPasangLantaiVinylPost');
         removeCondition('JasaPasangPlafonGypsumPost');
         removeCondition('JasaGantiLampuInteriorPost');
         removeCondition('JasaGantiKitchenSetPost');
@@ -1279,7 +1279,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
         removeCondition('JasaPasangWallpaperDindingPost');
-        removeCondition('JasaPasangLantaiVinylPost');
+        //removeCondition('JasaPasangLantaiVinylPost');
         removeCondition('JasaPasangPlafonGypsumPost');
         removeCondition('JasaGantiLampuInteriorPost');
         
@@ -1417,7 +1417,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
         removeCondition('JasaPasangWallpaperDindingPost');
-        removeCondition('JasaPasangLantaiVinylPost');
+        //removeCondition('JasaPasangLantaiVinylPost');
         removeCondition('JasaPasangPlafonGypsumPost');
         removeCondition('JasaGantiLampuInteriorPost');
         
@@ -1554,7 +1554,7 @@ if (urlMappingJasaInteriorFurnitureCustome[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
         removeCondition('JasaPasangWallpaperDindingPost');
-        removeCondition('JasaPasangLantaiVinylPost');
+        //removeCondition('JasaPasangLantaiVinylPost');
         removeCondition('JasaPasangPlafonGypsumPost');
         removeCondition('JasaGantiLampuInteriorPost');
         removeCondition('JasaGantiKitchenSetPost');
@@ -1693,7 +1693,7 @@ if (urlMappingJasaInteriorFurnitureCustome[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
         removeCondition('JasaPasangWallpaperDindingPost');
-        removeCondition('JasaPasangLantaiVinylPost');
+        //removeCondition('JasaPasangLantaiVinylPost');
         removeCondition('JasaPasangPlafonGypsumPost');
         removeCondition('JasaGantiLampuInteriorPost');
         removeCondition('JasaGantiKitchenSetPost');
@@ -1833,7 +1833,7 @@ if (urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
         removeCondition('JasaPasangWallpaperDindingPost');
-        removeCondition('JasaPasangLantaiVinylPost');
+        //removeCondition('JasaPasangLantaiVinylPost');
         removeCondition('JasaPasangPlafonGypsumPost');
         removeCondition('JasaGantiLampuInteriorPost');
         removeCondition('JasaGantiKitchenSetPost');
@@ -1972,7 +1972,7 @@ if (urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaGantiKeramikLantaiPost');
         removeCondition('JasaCatInteriorRumahPost');
         removeCondition('JasaPasangWallpaperDindingPost');
-        removeCondition('JasaPasangLantaiVinylPost');
+        //removeCondition('JasaPasangLantaiVinylPost');
         removeCondition('JasaPasangPlafonGypsumPost');
         removeCondition('JasaGantiLampuInteriorPost');
         removeCondition('JasaGantiKitchenSetPost');
