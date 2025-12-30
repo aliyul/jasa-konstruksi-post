@@ -23,7 +23,7 @@ const urlMappingFinishingBangunanInterior = {
 //"https://www.betonjayareadymix.com/p/jasa-pasang-dinding-vinyl.html": "Jasa Pasang Dinding Vinyl",
   //"https://www.betonjayareadymix.com/p/jasa-pasang-dinding-wpc.html": "Jasa Pasang Dinding WPC",
   //"https://www.betonjayareadymix.com/p/jasa-pasang-lantai-wpc.html": "Jasa Pasang Lantai WPC",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-gypsum.html": "Jasa Pasang Plafon Gypsum",
+  //"https://www.betonjayareadymix.com/p/jasa-pasang-plafon-gypsum.html": "Jasa Pasang Plafon Gypsum",
   "https://www.betonjayareadymix.com/p/jasa-lampu-interior.html": "Jasa Lampu Interior",
   "https://www.betonjayareadymix.com/p/jasa-kitchen-set.html": "Jasa Kitchen Set",
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis",
