@@ -180,6 +180,7 @@ const urlMappingJasaInteriorFurnitureCustome = {
 };
 
 const urlMappingJasaFinishingInteriorModern = {
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wpc.html": "Jasa Pasang WPC",
  "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-wpc-lantai.html": "Harga Jasa Pasang WPC Lantai",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wpc-panel-dinding.html": "Jasa Pasang WPC Panel Dinding",
      "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-wpc-dinding.html": "Harga Jasa Pasang WPC Dinding",
