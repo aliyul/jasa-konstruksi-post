@@ -111,6 +111,10 @@ const urlMappingJasaFinishingLantaiBeton = {
 
 };
 
+const urlMappingJasaBoronganLantai = {
+  //"https://www.betonjayareadymix.com/2018/10/harga-jasa-epoxy-dinding.html": "Harga Jasa Epoxy Dinding"
+};
+
 const urlMappingJasaEpoxyDinding = {
   "https://www.betonjayareadymix.com/2018/10/harga-jasa-epoxy-dinding.html": "Harga Jasa Epoxy Dinding"
 };
