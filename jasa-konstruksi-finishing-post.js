@@ -59,8 +59,7 @@ const urlMappingJasaFinishingLantaiBeton = {
 	
 "https://www.betonjayareadymix.com/2018/10/harga-jasa-lapangan-super-flat.html": "Harga Jasa Lapangan Super Flat",
     "https://www.betonjayareadymix.com/2018/10/lapangan-super-flat.html": "Lapangan Super Flat",
-    "https://www.betonjayareadymix.com/2018/10/harga-jasa-lantai-epoxy.html": "Harga Jasa Lantai Epoxy",
-    "https://www.betonjayareadymix.com/2018/10/harga-jasa-lantai-super-flat.html": "Harga Jasa Lantai Super Flat",
+	"https://www.betonjayareadymix.com/2018/10/harga-jasa-lantai-super-flat.html": "Harga Jasa Lantai Super Flat",
 	 "https://www.betonjayareadymix.com/2018/10/lantai-super-flat.html": "Lantai Super Flat",
     "https://www.betonjayareadymix.com/2018/10/harga-jasa-screeding.html": "Harga Jasa Screeding",
     "https://www.betonjayareadymix.com/2018/10/jasa-screeding.html": "Jasa Screeding",
@@ -73,11 +72,6 @@ const urlMappingJasaFinishingLantaiBeton = {
     "https://www.betonjayareadymix.com/2018/10/finishing-screeding.html": "Finishing Screeding",
     "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-trowel.html": "Harga Jasa Finishing Trowel",
     "https://www.betonjayareadymix.com/2018/10/finising-trowel.html": "Finishing Trowel",
-    "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-epoxy.html": "Harga Jasa Finishing Epoxy",
-    "https://www.betonjayareadymix.com/2018/10/finishing-epoxy.html": "Finishing Epoxy",
-    "https://www.betonjayareadymix.com/2018/10/harga-jasa-epoxy.html": "Harga Jasa Epoxy",
-    "https://www.betonjayareadymix.com/2018/10/harga-jasa-epoxy-lantai.html": "Harga Jasa Epoxy Lantai",
-    //"https://www.betonjayareadymix.com/2018/10/jasa-epoxy.html": "Jasa Epoxy",
     "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-lantai-gudang.html": "Harga Jasa Finishing Lantai Gudang",
     "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-lantai-beton-ekspos.html": "Harga Jasa Finishing Lantai Beton Ekspos",
     "https://www.betonjayareadymix.com/2018/10/finishing-lantai-beton-ekspos.html": "Finishing Lantai Beton Ekspos",
@@ -119,6 +113,15 @@ const urlMappingJasaFinishingLantaiBeton = {
 
 const urlMappingJasaEpoxyDinding = {
   "https://www.betonjayareadymix.com/2018/10/harga-jasa-epoxy-dinding.html": "Harga Jasa Epoxy Dinding"
+};
+
+const urlMappingJasaEpoxyLantai = {
+   "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-epoxy.html": "Harga Jasa Finishing Epoxy",
+    "https://www.betonjayareadymix.com/2018/10/finishing-epoxy.html": "Finishing Epoxy",
+    "https://www.betonjayareadymix.com/2018/10/harga-jasa-epoxy.html": "Harga Jasa Epoxy",
+    "https://www.betonjayareadymix.com/2018/10/harga-jasa-epoxy-lantai.html": "Harga Jasa Epoxy Lantai",
+    "https://www.betonjayareadymix.com/2018/10/jasa-epoxy.html": "Jasa Epoxy",
+    "https://www.betonjayareadymix.com/2018/10/harga-jasa-lantai-epoxy.html": "Harga Jasa Lantai Epoxy"
 };
 
 const urlMappingJasaPelindungRetakStruktur = {
@@ -1384,6 +1387,145 @@ document.addEventListener("DOMContentLoaded", function() {
                    "@type": "ListItem",
                    "position": 7,
                    "name": urlMappingJasaEpoxyDinding[cleanUrlJasaKonsFinishingPost],
+                   "item": cleanUrlJasaKonsFinishingPost
+               }
+           ]
+       };
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+
+	if (urlMappingJasaEpoxyLantai[cleanUrlJasaKonsFinishingPost]) {
+        restoreCondition('JasaFinishingBangunanPost');
+        restoreCondition('JasaFinishingBangunanInteriorPost');
+    
+        restoreCondition('JasaEpoxyLantaiPost');
+           
+	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+	removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+     //   removeCondition('JasaKonsFinishingPost');
+
+	 // hapus elemen id FINISHING STRUKTUR SEMUA NYA
+	removeCondition('JasaFinishingDakBetonPost');
+        removeCondition('JasaFinishingBetonExposePost');
+        removeCondition('JasaPlesteranAcianDindingPost');
+        removeCondition('JasaFinishingGroutingStrukturBetonPost');
+        removeCondition('JasaPelapisanCoatingStrukturPost');
+        removeCondition('JasaFinishingKolomdanBalokPost');
+        removeCondition('JasaPelapisanWaterproofingStrukturPost');
+        removeCondition('JasaFinishingLantaiBetonPost');
+        removeCondition('JasaPelindungRetakStrukturPost'); 
+	// hapus elemen id sub JasaFinishingBangunanEksteriorPost Semua
+        removeCondition('JasaCatEksteriorRumahPost');
+        removeCondition('JasaFinishingFasadEksteriorPost');
+        removeCondition('JasaPelapisanAntiCuacaPost');
+        removeCondition('JasaPelapisanDindingLuarPost');
+        removeCondition('JasaFinishingTamanRumahPost');
+        removeCondition('JasaPelapisanBatuAlamEksteriorPost');
+        removeCondition('JasaPelapisanGentengDakPost');
+      
+         // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaEpoxyDinding
+		removeCondition('JasaEpoxyDindingPost');
+		removeCondition('JasaGantiKitchenSetPost');
+        removeCondition('JasaInteriorFurnitureCustomePost');
+        removeCondition('JasaGantiKeramikLantaiPost');
+        removeCondition('JasaCatInteriorRumahPost');
+        removeCondition('JasaPasangWallpaperDindingPost');
+        //removeCondition('JasaPasangLantaiVinylPost');
+        //removeCondition('JasaPasangPlafonGypsumPost');
+        removeCondition('JasaGantiLampuInteriorPost');
+        
+        removeCondition('JasaFinishingInteriorMinimalisPost');
+        removeCondition('JasaFinishingInteriorKlasikPost');
+        removeCondition('JasaFinishingInteriorModernPost');
+       
+         // hapus elemen id FINISHING UTAMA lain NYA
+        removeCondition('JasaFinishingBangunanEksteriorPost');
+        removeCondition('JasaFinishingBangunanStrukturPost');
+
+          // hapus elemen id Infrastruktur Semua
+        removeCondition('JasaFinishingInfrastrukturPost');
+        removeCondition('JasaFinishingInfrastrukturJalanPost');
+        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
+        removeCondition('JasaFinishingInfrastrukturSaluranPost');
+        removeCondition('JasaFinishingInfrastrukturStrukturPost');
+        removeCondition('JasaFinishingInfrastrukturProteksiPost');
+       
+        JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingBangunanPostLink.style.visibility = 'visible';
+        //sub finishing bangunan
+        JasaFinishingInteriorPostLink.style.visibility = 'visible';
+        //sub finishing JasaGantiKitchenSetPost
+        JasaEpoxyLantaiPostLink.style.visibility = 'visible';
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaEpoxyLantai[cleanUrlJasaKonsFinishingPost];
+    }
+  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaEpoxyLantai[cleanUrlJasaKonsFinishingPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Finishing",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Finishing Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": "Jasa Finishing Interior",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": "Jasa Epoxy Lantai",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-epoxy-lantai.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 7,
+                   "name": urlMappingJasaEpoxyLantai[cleanUrlJasaKonsFinishingPost],
                    "item": cleanUrlJasaKonsFinishingPost
                }
            ]
