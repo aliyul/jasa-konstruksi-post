@@ -1755,6 +1755,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaPelapisanGentengDakPost');
       
          // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaDesainInteriorPost
+		removeCondition('JasaBoronganLantaiPost');
 		removeCondition('JasaEpoxyDindingPost');
 		removeCondition('JasaEpoxyLantaiPost');
         removeCondition('JasaInteriorFurnitureCustomePost');
@@ -1894,6 +1895,7 @@ if (urlMappingJasaInteriorFurnitureCustome[cleanUrlJasaKonsFinishingPost]) {
       
          // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaDesainInteriorPost
         //removeCondition('');
+	   removeCondition('JasaBoronganLantaiPost');
 	    removeCondition('JasaEpoxyDindingPost');
 	removeCondition('JasaEpoxyLantaiPost');
         removeCondition('JasaGantiKeramikLantaiPost');
@@ -2032,6 +2034,7 @@ if (urlMappingJasaInteriorFurnitureCustome[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaPelapisanGentengDakPost');
       
          // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaDesainInteriorPost
+	  removeCondition('JasaBoronganLantaiPost');
 	    removeCondition('JasaEpoxyDindingPost');
 	  removeCondition('JasaEpoxyLantaiPost');
         removeCondition('JasaInteriorFurnitureCustomePost');
@@ -2174,6 +2177,7 @@ if (urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaPelapisanGentengDakPost');
       
          // hapus elemen id sub JasaFinishingBangunanInteriorPost SEMUA
+	   removeCondition('JasaBoronganLantaiPost');
 	    removeCondition('JasaEpoxyDindingPost');
 	removeCondition('JasaEpoxyLantaiPost');
         removeCondition('JasaInteriorFurnitureCustomePost');
@@ -2314,6 +2318,7 @@ if (urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaPelapisanGentengDakPost');
       
          // hapus elemen id sub JasaFinishingBangunanInteriorPost SEMUA
+	  removeCondition('JasaBoronganLantaiPost');
         removeCondition('JasaEpoxyDindingPost');
 	removeCondition('JasaEpoxyLantaiPost');
         removeCondition('JasaInteriorFurnitureCustomePost');
