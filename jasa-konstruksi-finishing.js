@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
   // === Tanggal nextUpdate1 global ===
-		const globalNextUpdate1 = "2026-02-04T00:00:00.000Z";
+	//	const globalNextUpdate1 = "2026-02-04T00:00:00.000Z";
 	console.log(`🌐 [AutoMeta] Detected jasa-konstruksi-finishing: ${cleanUrlJasaKonsFinishing}`);
 
     // --- pastikan meta nextUpdate1 ada ---
