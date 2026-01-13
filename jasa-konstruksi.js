@@ -199,6 +199,16 @@ const urlMappingBongkarBangunan = {
   "https://www.betonjayareadymix.com/p/jasa-bongkar-pagar.html": "Jasa Bongkar Pagar",
   "https://www.betonjayareadymix.com/p/jasa-bongkar-lantai.html": "Jasa Bongkar Lantai"
 };
+
+const urlMappingPerawatanPerbaikanBangunan = {
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-bocor.html": "Jasa Perbaikan Atap Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-retak.html": "Jasa Perbaikan Dinding Retak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-rembesan-air.html": "Jasa Perbaikan Rembesan Air",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon-rusak.html": "Jasa Perbaikan Plafon Rusak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dak-beton-bocor.html": "Jasa Perbaikan Dak Beton Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-bocor.html": "Jasa Perbaikan Talang Bocor"
+
+};
 const urlMappingPengeboran = {
 "https://www.betonjayareadymix.com/p/jasa-bor-teknik.html": "Jasa Bor Teknik",
 "https://www.betonjayareadymix.com/p/jasa-bor-air.html": "Jasa Bor Air",
