@@ -206,8 +206,32 @@ document.addEventListener("DOMContentLoaded", function() {
     
      var JasaKonstruksiCuttingBetonPostLink = document.getElementById("JasaKonstruksiCuttingBetonPost");
      var JasaCuttingBetonPostLink = document.getElementById("JasaCuttingBetonPost");
+     var JasaPematanganLahanPostLink = document.getElementById("JasaPematanganLahanPost");
+     var JasaUjiTanahPostLink = document.getElementById("JasaUjiTanahPost");
+	
+ //SUB JasaPematanganLahanPostLink
+	var JasaPengupasanLahanTanahPostLink = document.getElementById("JasaPengupasanLahanTanahPost");
+	var JasaTebangPohonPostLink = document.getElementById("JasaTebangPohonPost");
+	var JasaPerataandanGradingLahanPostLink = document.getElementById("JasaPerataandanGradingLahanPost");
+	var JasaElevasiLahanPostLink = document.getElementById("JasaElevasiLahanPost");
+	var JasaBadanLahanPostLink = document.getElementById("JasaBadanLahanPost");
+	var JasaCutandFillLahanPostLink = document.getElementById("JasaCutandFillLahanPost");
+	var JasaUruganTanahLahanPostLink = document.getElementById("JasaUruganTanahLahanPost");
+	var JasaPemadatanTanahLahanPostLink = document.getElementById("JasaPemadatanTanahLahanPost");
+	var JasaBaseCourseLahanPostLink = document.getElementById("JasaBaseCourseLahanPost");
+	var JasaStabilisasiTanahLahanPostLink = document.getElementById("JasaStabilisasiTanahLahanPost");
+	var JasaDrainaseLahanPostLink = document.getElementById("JasaDrainaseLahanPost");
+	var JasaGeotekstilLahanPostLink = document.getElementById("JasaGeotekstilLahanPost");
+	var JasaPersiapanPondasiLahanPostLink = document.getElementById("JasaPersiapanPondasiLahanPost");
 
-     //SUB Jasa Pondasi Tanah
+//SUB JasaPematanganLahanPostLink
+	var JasaCptPostLink = document.getElementById("JasaCptPost");
+	var JasaBoringTanahPostLink = document.getElementById("JasaBoringTanahPost");
+	var JasaLabTanahPostLink = document.getElementById("JasaLabTanahPost");
+	var JasaUjiPenetrasiPostLink = document.getElementById("JasaUjiPenetrasiPost");
+	var JasaSondirPostLink = document.getElementById("JasaSondirPost");
+
+    
      /*var JasaBorAirPostLink = document.getElementById("JasaBorAirPost");
      var JasaBorePilePostLink = document.getElementById("JasaBorePilePost");
      var JasaCoringBetonPostLink = document.getElementById("JasaCoringBetonPost");
@@ -263,14 +287,32 @@ if (urlMappingJasaCuttingBeton[cleanUrlJasaCuttingBetonPost]) {
         removeCondition('JasaKonsAlatKonstruksiPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
-	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
-       /* removeCondition('JasaBorTembokPost');
-        removeCondition('JasaBorePilePost');
-        removeCondition('JasaCoringBetonPost');
-        removeCondition('JasaBorBetonPost');
-        removeCondition('JasaBorTanahPost');
-        removeCondition('JasaBorHorizontalPost');
-       */
+	 //hapus elemen JasaPematanganLahanPost SEMUA
+        removeCondition('JasaPematanganLahanPost');
+	
+        removeCondition('JasaPengupasanLahanTanahPost');
+        removeCondition('JasaTebangPohonPost');
+        removeCondition('JasaPerataandanGradingLahanPost');
+        removeCondition('JasaElevasiLahanPost');
+        removeCondition('JasaBadanLahanPost');
+        removeCondition('JasaCutandFillLahanPost');
+        removeCondition('JasaUruganTanahLahanPost');
+        removeCondition('JasaPemadatanTanahLahanPost');
+        removeCondition('JasaBaseCourseLahanPost');
+        removeCondition('JasaStabilisasiTanahLahanPost');
+        removeCondition('JasaDrainaseLahanPost');
+        removeCondition('JasaGeotekstilLahanPost');
+        removeCondition('JasaPersiapanPondasiLahanPost');
+
+	 //hapus elemen JasaPematanganLahanPost SEMUA
+        removeCondition('JasaUjiTanahPost');
+	
+        removeCondition('JasaCptPost');
+        removeCondition('JasaBoringTanahPost');
+        removeCondition('JasaLabTanahPost');
+        removeCondition('JasaUjiPenetrasiPost');
+        removeCondition('JasaSondirPost');
+     
 	
         JasaKonstruksiCuttingBetonPostLink.style.visibility = 'visible';
        //TAMPILKAN PONDASI BANGUNAN
