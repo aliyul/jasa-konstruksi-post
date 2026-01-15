@@ -10,6 +10,84 @@ const urlMappingJasaCuttingBeton = {
  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton-karawang.html": "Harga Jasa Cutting Beton Karawang"
 
   };
+
+//SUB JASA UJI TANAH
+//JasaSondirPost
+const urlMappingJasaSondir = {
+
+};
+//JasaCptPost
+const urlMappingJasaCpt = {
+
+};
+//JasaBoringTanahPost
+const urlMappingJasaBoringTanah = {
+
+};
+//JasaLabTanahPost
+const urlMappingJasaLabTanaH = {
+
+};
+//JasaUjiPenetrasiPosT
+const urlMappingJasaUjiPenetrasi = {
+
+};
+
+//SUB JASA PEMATANGAN LAHAN
+//JasaPengupasanLahanTanahPost
+const urlMappingJasaPengupasanLahanTanah = {
+
+};
+//JasaTebangPohonPost
+const urlMappingJasaTebangPohon = {
+
+};
+//JasaPerataandanGradingLahanPost
+const urlMappingJasaPerataandanGradingLahan = {
+
+};
+//JasaElevasiLahanPost
+const urlMappingJasaElevasiLahan = {
+
+};
+//JasaBadanLahanPost
+const urlMappingJasaBadanLahan = {
+
+};
+//JasaCutandFillLahanPost
+const urlMappingJasaCutandFillLahan = {
+
+};
+//JasaUruganTanahLahanPost
+const urlMappingJasaUruganTanahLahan = {
+
+};
+//JasaPemadatanTanahLahanPost
+const urlMappingJasaPemadatanTanahLahan = {
+
+};
+//JasaBaseCourseLahanPost
+const urlMappingJasaBaseCourseLahan = {
+
+};
+//JasaStabilisasiTanahLahanPost
+const urlMappingJasaStabilisasiTanahLahan = {
+
+};
+//JasaDrainaseLahanPost
+const urlMappingJasaDrainaseLahan = {
+
+};
+//JasaGeotekstilLahanPost
+const urlMappingJasaGeotekstilLahan = {
+
+};
+//JasaPersiapanPondasiLahanPost
+const urlMappingJasaPersiapanPondasiLahan = {
+
+};
+
+
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaCuttingBetonPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
