@@ -1,4 +1,4 @@
-//SUB MAPPING JasaPengeboranPost 
+JasaPemadatanTanahLahanPost//SUB MAPPING JasaPengeboranPost 
 const urlMappingJasaCuttingBeton = {
  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton.html": "Harga Jasa Cutting Beton",
  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-expansion-joint.html": "Harga Jasa Cutting Expansion Joint Beton",
