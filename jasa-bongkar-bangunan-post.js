@@ -322,7 +322,7 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaPerbaikanRembesanAirPostLink = document.getElementById("JasaPerbaikanRembesanAirPost");
      var JasaPerbaikanPlafonRusakPostLink = document.getElementById("JasaPerbaikanPlafonRusakPost");
      var JasaPerbaikanDakBetonBocorPostLink = document.getElementById("JasaPerbaikanDakBetonBocorPost");
-     var JasaPerbaikanTalangBocorPostLink = document.getElementById("JasaPerbaikanTalangBocorPostPost");
+     var JasaPerbaikanTalangBocorPostLink = document.getElementById("JasaPerbaikanTalangBocorPost");
     
      // Default untuk menyembunyikan elemen
      JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'hidden';
