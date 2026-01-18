@@ -1059,6 +1059,116 @@ document.addEventListener("DOMContentLoaded", function() {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+
+	 //JasaPemadatanTanahLahanPost
+   if (urlMappingJasaPembersihanLahan[cleanUrlJasaCuttingBetonPost]) {
+        restoreCondition('JasaKonsCuttingBetonPost');
+        restoreCondition('JasaPematanganLahanPost');
+        restoreCondition('JasaPembersihanLahanPost');
+     
+        //hapus elemen div id lain KECUALI JasaPengeboranPost
+	    removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	//removeCondition('JasaKonsCuttingBetonPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+
+	//hapus elemen JasaCuttingBetonPost SEMUA
+	   removeCondition('JasaCuttingBetonPost');
+	   
+	 //hapus elemen JasaPematanganLahanPost SEMUA
+        //removeCondition('');
+	
+        removeCondition('JasaTebangPohonPost');
+        removeCondition('JasaPengupasanLahanTanahPost');
+        removeCondition('JasaCutandFillLahanPost');
+        removeCondition('JasaUruganTanahLahanPost');
+        removeCondition('JasaPemadatanTanahLahanPost');
+        removeCondition('JasaPerataandanGradingLahanPost');
+        removeCondition('JasaElevasiLahanPost');
+        removeCondition('JasaBadanLahanPost');
+        removeCondition('JasaBaseCourseLahanPost');
+        removeCondition('JasaStabilisasiTanahLahanPost');
+        removeCondition('JasaDrainaseLahanPost');
+        removeCondition('JasaGeotekstilLahanPost');
+        removeCondition('JasaPersiapanPondasiLahanPost');
+
+	 //hapus elemen JasaPematanganLahanPost SEMUA
+        removeCondition('JasaUjiTanahPost');
+	
+        removeCondition('JasaCptPost');
+        removeCondition('JasaBoringTanahPost');
+        removeCondition('JasaLabTanahPost');
+        removeCondition('JasaUjiPenetrasiPost');
+        removeCondition('JasaSondirPost');
+     
+	
+        JasaKonstruksiCuttingBetonPostLink.style.visibility = 'visible';
+       //TAMPILKAN PONDASI BANGUNAN
+        JasaPematanganLahanPostLink.style.visibility = 'visible';
+	   //TAMPILKAN JasaPembersihanLahanPost
+        JasaPembersihanLahanPostLink.style.visibility = 'visible';
+        pageNameJasaKonsCuttingBetonPost.textContent = urlMappingJasaPembersihanLahan[cleanUrlJasaCuttingBetonPost];
+    }
+      // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaPembersihanLahan[cleanUrlJasaCuttingBetonPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pematangan Lahan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pematangan-lahan.html"
+               },        
+			   {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Pembersihan Lahan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pembersihan-lahan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaPembersihanLahan[cleanUrlJasaCuttingBetonPost],
+                   "item": cleanUrlJasaCuttingBetonPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
   
  //SUB JasaUjiTanahPost
  if (urlMappingJasaSondir[cleanUrlJasaCuttingBetonPost]) {
