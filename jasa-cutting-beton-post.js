@@ -441,7 +441,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 	 //hapus elemen JasaPematanganLahanPost SEMUA
         removeCondition('JasaPematanganLahanPost');
-	
+
+	    
+	    removeCondition('JasaPembersihanLahanPost');
         removeCondition('JasaPengupasanLahanTanahPost');
         removeCondition('JasaTebangPohonPost');
         removeCondition('JasaPerataandanGradingLahanPost');
@@ -543,6 +545,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	//hapus elemen JasaCuttingBetonPost SEMUA
 	   removeCondition('JasaCuttingBetonPost');
 	   
+	    removeCondition('JasaPembersihanLahanPost');
 	 //hapus elemen JasaPematanganLahanPost SEMUA
         //removeCondition('');
 	
@@ -652,6 +655,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	//hapus elemen JasaCuttingBetonPost SEMUA
 	   removeCondition('JasaCuttingBetonPost');
 	   
+	    removeCondition('JasaPembersihanLahanPost');
 	 //hapus elemen JasaPematanganLahanPost SEMUA
         //removeCondition('');
 	
@@ -762,6 +766,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	//hapus elemen JasaCuttingBetonPost SEMUA
 	   removeCondition('JasaCuttingBetonPost');
 	   
+	    removeCondition('JasaPembersihanLahanPost');
 	 //hapus elemen JasaPematanganLahanPost SEMUA
         //removeCondition('');
 	
@@ -873,7 +878,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	   
 	 //hapus elemen JasaPematanganLahanPost SEMUA
         //removeCondition('');
-	
+	   
+	    removeCondition('JasaPembersihanLahanPost');
         removeCondition('JasaTebangPohonPost');
         removeCondition('JasaPengupasanLahanTanahPost');
        // removeCondition('');
@@ -983,7 +989,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	   
 	 //hapus elemen JasaPematanganLahanPost SEMUA
         //removeCondition('');
-	
+	    removeCondition('JasaPembersihanLahanPost');
         removeCondition('JasaTebangPohonPost');
         removeCondition('JasaPengupasanLahanTanahPost');
         removeCondition('JasaCutandFillLahanPost');
@@ -1203,6 +1209,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	   
 	 //hapus elemen JasaPematanganLahanPost SEMUA
         removeCondition('JasaPematanganLahanPost');
+	    removeCondition('JasaPembersihanLahanPost');
 	
         removeCondition('JasaPengupasanLahanTanahPost');
         removeCondition('JasaTebangPohonPost');
