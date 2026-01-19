@@ -161,6 +161,53 @@ const urlMappingJasaBaseCourseLahan = {
 };
 //JasaStabilisasiTanahLahanPost
 const urlMappingJasaStabilisasiTanahLahan = {
+"https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-skala-kecil.html":
+    "Jasa Stabilisasi Tanah Skala Kecil",
+
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-manual-semi-mekanis.html":
+    "Jasa Stabilisasi Tanah Manual & Semi Mekanis",
+
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-dengan-alat-berat.html":
+    "Jasa Stabilisasi Tanah dengan Alat Berat",
+
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-kawasan-industri.html":
+    "Jasa Stabilisasi Tanah Kawasan Industri",
+
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-area-komersial.html":
+    "Jasa Stabilisasi Tanah Area Komersial",
+
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-lahan-kavling.html":
+    "Jasa Stabilisasi Tanah Lahan Kavling",
+
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-lahan-perumahan.html":
+    "Jasa Stabilisasi Tanah Lahan Perumahan",
+
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-basah.html":
+    "Jasa Stabilisasi Tanah Basah",
+
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-rawan-longsor.html":
+    "Jasa Stabilisasi Tanah Rawan Longsor",
+
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-berpasir.html":
+    "Jasa Stabilisasi Tanah Berpasir",
+
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-lunak-lembek.html":
+    "Jasa Stabilisasi Tanah Lunak & Lembek",
+
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-geotekstil.html":
+    "Jasa Stabilisasi Tanah dengan Geotekstil",
+
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-mekanis.html":
+    "Jasa Stabilisasi Tanah Mekanis",
+
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-kimia.html":
+    "Jasa Stabilisasi Tanah Kimia",
+
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-dengan-kapur.html":
+    "Jasa Stabilisasi Tanah dengan Kapur",
+
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-dengan-semen.html":
+    "Jasa Stabilisasi Tanah dengan Semen"
 
 };
 //JasaDrainaseLahanPost
