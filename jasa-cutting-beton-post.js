@@ -523,6 +523,7 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaUjiTanahPostLink = document.getElementById("JasaUjiTanahPost");
 	
  //SUB JasaPematanganLahanPostLink
+	var JasaPemotonganBukitLahanPostLink = document.getElementById("JasaPemotonganBukitLahanPost");
 	var JasaPengupasanLahanTanahPostLink = document.getElementById("JasaPengupasanLahanTanahPost");
 	var JasaTebangPohonPostLink = document.getElementById("JasaTebangPohonPost");
 	var JasaPerataandanGradingLahanPostLink = document.getElementById("JasaPerataandanGradingLahanPost");
@@ -604,6 +605,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaPematanganLahanPost');
 
 	    
+	    removeCondition('JasaPemotonganBukitLahanPost');
 	    removeCondition('JasaPembersihanLahanPost');
         removeCondition('JasaPengupasanLahanTanahPost');
         removeCondition('JasaTebangPohonPost');
@@ -706,12 +708,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	//hapus elemen JasaCuttingBetonPost SEMUA
 	   removeCondition('JasaCuttingBetonPost');
 	   
-	    removeCondition('JasaPembersihanLahanPost');
 	 //hapus elemen JasaPematanganLahanPost SEMUA
         //removeCondition('');
 	
         removeCondition('JasaPengupasanLahanTanahPost');
-       // removeCondition('');
+           removeCondition('JasaPemotonganBukitLahanPost');
+	    removeCondition('JasaPembersihanLahanPost');
         removeCondition('JasaPerataandanGradingLahanPost');
         removeCondition('JasaElevasiLahanPost');
         removeCondition('JasaBadanLahanPost');
@@ -785,6 +787,118 @@ document.addEventListener("DOMContentLoaded", function() {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+	
+  //JasaPemotonganBukitLahanPost
+   if (urlMappingJasaPemotonganBukitLahan[cleanUrlJasaCuttingBetonPost]) {
+        restoreCondition('JasaKonsCuttingBetonPost');
+        restoreCondition('JasaPematanganLahanPost');
+        restoreCondition('JasaPemotonganBukitLahanPost');
+     
+        //hapus elemen div id lain KECUALI JasaPengeboranPost
+	    removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+        removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+	//removeCondition('JasaKonsCuttingBetonPost');
+	removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+
+	//hapus elemen JasaCuttingBetonPost SEMUA
+	   removeCondition('JasaCuttingBetonPost');
+	   
+	 //hapus elemen JasaPemotonganBukitLahanPost SEMUA
+        removeCondition('JasaPengupasanLahanTanahPost');
+	
+        removeCondition('JasaTebangPohonPost');
+	    removeCondition('JasaPembersihanLahanPost');
+        removeCondition('JasaPerataandanGradingLahanPost');
+        removeCondition('JasaElevasiLahanPost');
+        removeCondition('JasaBadanLahanPost');
+        removeCondition('JasaCutandFillLahanPost');
+        removeCondition('JasaUruganTanahLahanPost');
+        removeCondition('JasaPemadatanTanahLahanPost');
+        removeCondition('JasaBaseCourseLahanPost');
+        removeCondition('JasaStabilisasiTanahLahanPost');
+        removeCondition('JasaDrainaseLahanPost');
+        removeCondition('JasaGeotekstilLahanPost');
+        removeCondition('JasaPersiapanPondasiLahanPost');
+
+	 //hapus elemen JasaPematanganLahanPost SEMUA
+        removeCondition('JasaUjiTanahPost');
+	
+        removeCondition('JasaCptPost');
+        removeCondition('JasaBoringTanahPost');
+        removeCondition('JasaLabTanahPost');
+        removeCondition('JasaUjiPenetrasiPost');
+        removeCondition('JasaSondirPost');
+     
+	
+        JasaKonstruksiCuttingBetonPostLink.style.visibility = 'visible';
+       //TAMPILKAN PONDASI BANGUNAN
+        JasaPematanganLahanPostLink.style.visibility = 'visible';
+	   //TAMPILKAN JasaTebangPohonPost
+        JasaPemotonganBukitLahanPostLink.style.visibility = 'visible';
+        pageNameJasaKonsCuttingBetonPost.textContent = urlMappingJasaPemotonganBukitLahan[cleanUrlJasaCuttingBetonPost];
+    }
+      // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaPemotonganBukitLahan[cleanUrlJasaCuttingBetonPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Pematangan Lahan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pematangan-lahan.html"
+               },        
+			   {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Pemotongan Bukit Lahan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-pemotongan-bukit-lahan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": urlMappingJasaPemotonganBukitLahan[cleanUrlJasaCuttingBetonPost],
+                   "item": cleanUrlJasaCuttingBetonPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+
+
   //JasaPengupasanLahanTanahPost
    if (urlMappingJasaPengupasanLahanTanah[cleanUrlJasaCuttingBetonPost]) {
         restoreCondition('JasaKonsCuttingBetonPost');
@@ -816,12 +930,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	//hapus elemen JasaCuttingBetonPost SEMUA
 	   removeCondition('JasaCuttingBetonPost');
 	   
-	    removeCondition('JasaPembersihanLahanPost');
 	 //hapus elemen JasaPematanganLahanPost SEMUA
         //removeCondition('');
-	
+	 removeCondition('JasaPembersihanLahanPost');
         removeCondition('JasaTebangPohonPost');
-       // removeCondition('');
+      removeCondition('JasaPemotonganBukitLahanPost');
+	
         removeCondition('JasaPerataandanGradingLahanPost');
         removeCondition('JasaElevasiLahanPost');
         removeCondition('JasaBadanLahanPost');
@@ -927,13 +1041,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	//hapus elemen JasaCuttingBetonPost SEMUA
 	   removeCondition('JasaCuttingBetonPost');
 	   
-	    removeCondition('JasaPembersihanLahanPost');
 	 //hapus elemen JasaPematanganLahanPost SEMUA
         //removeCondition('');
-	
+	removeCondition('JasaPembersihanLahanPost');
         removeCondition('JasaTebangPohonPost');
         removeCondition('JasaPengupasanLahanTanahPost');
-       // removeCondition('');
+      removeCondition('JasaPemotonganBukitLahanPost');
         removeCondition('JasaPerataandanGradingLahanPost');
         removeCondition('JasaElevasiLahanPost');
         removeCondition('JasaBadanLahanPost');
@@ -1038,13 +1151,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	//hapus elemen JasaCuttingBetonPost SEMUA
 	   removeCondition('JasaCuttingBetonPost');
 	   
-	    removeCondition('JasaPembersihanLahanPost');
+  
 	 //hapus elemen JasaPematanganLahanPost SEMUA
         //removeCondition('');
 	
         removeCondition('JasaTebangPohonPost');
         removeCondition('JasaPengupasanLahanTanahPost');
-       // removeCondition('');
+           removeCondition('JasaPemotonganBukitLahanPost');
+	    removeCondition('JasaPembersihanLahanPost');
         removeCondition('JasaPerataandanGradingLahanPost');
         removeCondition('JasaElevasiLahanPost');
         removeCondition('JasaUruganTanahLahanPost');
@@ -1151,7 +1265,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	   
 	 //hapus elemen JasaPematanganLahanPost SEMUA
         //removeCondition('');
-	   
+	       removeCondition('JasaPemotonganBukitLahanPost');
 	    removeCondition('JasaPembersihanLahanPost');
         removeCondition('JasaTebangPohonPost');
         removeCondition('JasaPengupasanLahanTanahPost');
@@ -1262,6 +1376,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	   
 	 //hapus elemen JasaPematanganLahanPost SEMUA
         //removeCondition('');
+	        removeCondition('JasaPemotonganBukitLahanPost');
 	    removeCondition('JasaPembersihanLahanPost');
         removeCondition('JasaTebangPohonPost');
         removeCondition('JasaPengupasanLahanTanahPost');
@@ -1372,7 +1487,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	   
 	 //hapus elemen JasaPematanganLahanPost SEMUA
         //removeCondition('');
-	
+	    removeCondition('JasaPemotonganBukitLahanPost');
         removeCondition('JasaTebangPohonPost');
         removeCondition('JasaPengupasanLahanTanahPost');
         removeCondition('JasaCutandFillLahanPost');
@@ -1482,6 +1597,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	   
 	 //hapus elemen JasaPematanganLahanPost SEMUA
         removeCondition('JasaPematanganLahanPost');
+	        removeCondition('JasaPemotonganBukitLahanPost');
 	    removeCondition('JasaPembersihanLahanPost');
 	
         removeCondition('JasaPengupasanLahanTanahPost');
