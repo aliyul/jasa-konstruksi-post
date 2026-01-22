@@ -150,7 +150,85 @@ const urlMappingFinishingBangunanInterior = {
 */
 
 //SUB JasaFinishingBangunanInteriorPost
+const urlMappingJasaEpoxyDinding = {
+	
+};
+const urlMappingJasaEpoxyLantai = {
+	
+};
+const urlMappingJasaInteriordanFurnitureCustome = {
+	
+};
+const urlMappingJasaKeramikLantai = {
+	
+};
+const urlMappingJasaCatInteriorRumah = {
+	
+};
 
+const urlMappingJasaPasangWallpaperDinding = {
+	
+};
+const urlMappingJasaLampuInterior = {
+	
+};
+const urlMappingJasaKitchenSet = {
+	
+};
+
+const urlMappingJasaFinishingInteriorKlasik = {
+	
+};
+const urlMappingJasaFinishingInteriorMinimalis = {
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-interior-minimalis-built-in.html":
+    "Jasa Finishing Interior Minimalis Built In",
+
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-interior-minimalis-gypsum.html":
+    "Jasa Finishing Interior Minimalis Gypsum",
+
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-interior-minimalis-kayu-hpl.html":
+    "Jasa Finishing Interior Minimalis Kayu HPL",
+
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-interior-minimalis-toko.html":
+    "Jasa Finishing Interior Minimalis Toko",
+
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-interior-minimalis-kantor.html":
+    "Jasa Finishing Interior Minimalis Kantor",
+
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-interior-minimalis-apartemen.html":
+    "Jasa Finishing Interior Minimalis Apartemen",
+
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-interior-minimalis-rumah.html":
+    "Jasa Finishing Interior Minimalis Rumah",
+
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-interior-minimalis-kamar-mandi.html":
+    "Jasa Finishing Interior Minimalis Kamar Mandi",
+
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-interior-minimalis-dapur.html":
+    "Jasa Finishing Interior Minimalis Dapur",
+
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-interior-minimalis-kamar-tidur.html":
+    "Jasa Finishing Interior Minimalis Kamar Tidur",
+
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-interior-minimalis-ruang-tamu.html":
+    "Jasa Finishing Interior Minimalis Ruang Tamu",
+
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-partisi-sekat-minimalis.html":
+    "Jasa Finishing Partisi Sekat Minimalis",
+
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-cat-interior-minimalis.html":
+    "Jasa Finishing Cat Interior Minimalis",
+
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-lantai-interior-minimalis.html":
+    "Jasa Finishing Lantai Interior Minimalis",
+
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-plafon-minimalis.html":
+    "Jasa Finishing Plafon Minimalis",
+
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-dinding-interior-minimalis.html":
+    "Jasa Finishing Dinding Interior Minimalis"
+	
+};
 const urlMappingJasaInteriorFurnitureCustome = {
    "https://www.betonjayareadymix.com/2018/11/jasa-interior-furniture-tangerang.html": "Jasa Interior Furniture Tangerang",
   "https://www.betonjayareadymix.com/2018/11/jasa-interior-furniture-jakarta.html": "Jasa Interior Furniture Jakarta",
