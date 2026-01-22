@@ -111,10 +111,10 @@ const urlMappingJasaFinishingLantaiBeton = {
 
 };
 
-const urlMappingJasaBoronganLantai = {
-  //"https://www.betonjayareadymix.com/2018/10/harga-jasa-epoxy-dinding.html": "Harga Jasa Epoxy Dinding"
+/*const urlMappingJasaBoronganLantai = {
+  //https://www.betonjayareadymix.com/2018/10/harga-jasa-epoxy-dinding.html": "Harga Jasa Epoxy Dinding"
 };
-
+*/
 const urlMappingJasaEpoxyDinding = {
   "https://www.betonjayareadymix.com/2018/10/harga-jasa-epoxy-dinding.html": "Harga Jasa Epoxy Dinding"
 };
@@ -721,7 +721,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var JasaFinishingStrukturPostLink = document.getElementById("JasaFinishingBangunanStrukturPost");
 	
    //SUB JasaFinishingBangunanInteriorPosT
-   var JasaBoronganLantaiPostLink = document.getElementById("JasaBoronganLantaiPost");
+   //var JasaBoronganLantaiPostLink = document.getElementById("JasaBoronganLantaiPost");
    var JasaEpoxyDindingPostLink = document.getElementById("JasaEpoxyDindingPost");
    var JasaEpoxyLantaiPostLink = document.getElementById("JasaEpoxyLantaiPost");
    var JasaFinishingDakBetonPostLink = document.getElementById("JasaFinishingDakBetonPost");
@@ -762,7 +762,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var JasaFinishingProteksiPostLink = document.getElementById("JasaFinishingInfrastrukturProteksiPost");
 
    //HIDE sub JasaFinishingBangunanInteriorPost
-	JasaBoronganLantaiPostLink.style.visibility = 'hidden';
+	//JasaBoronganLantaiPostLink.style.visibility = 'hidden';
 	JasaEpoxyDindingPostLink.style.visibility = 'hidden';
 	JasaEpoxyLantaiPostLink.style.visibility = 'hidden';
     JasaInteriorFurnitureCustomePostLink.style.visibility = 'hidden';
@@ -1645,7 +1645,7 @@ document.addEventListener("DOMContentLoaded", function() {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-
+/*
   if (urlMappingJasaBoronganLantai[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanInteriorPost');
@@ -1785,7 +1785,7 @@ document.addEventListener("DOMContentLoaded", function() {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-	
+	*/
 	if (urlMappingFinishingInteriorKitchenSet[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanInteriorPost');
