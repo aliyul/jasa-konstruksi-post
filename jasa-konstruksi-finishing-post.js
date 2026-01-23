@@ -600,7 +600,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	  
     // --- gabungkan semua mapping ---
-    const urlMappingGabungan = Object.assign(
+   /* const urlMappingGabungan = Object.assign(
       {},
 		urlMappingJasaFinishingDakBeton,
 		urlMappingJasaFinishingBetonExpose,
@@ -625,6 +625,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
     );
 
+	
     // --- validasi URL terdaftar ---
     if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
       console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaKonsFinishingPost}`);
@@ -722,7 +723,8 @@ document.addEventListener("DOMContentLoaded", function() {
     console.error("[HybridDateModified] Fatal error:", err);
   }
 })();
-	
+	*/
+	  
      // Menemukan elemen menggunakan Id
     var JasaKonsFinishingPost = document.getElementById("JasaKonsFinishingPost");
     if (!JasaKonsFinishingPost) {
