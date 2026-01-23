@@ -718,12 +718,13 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("❌ Gagal update schema:", err);
       }
     }
-
+*/
+	
   } catch (err) {
     console.error("[HybridDateModified] Fatal error:", err);
   }
 })();
-	*/
+	
 	  
      // Menemukan elemen menggunakan Id
     var JasaKonsFinishingPost = document.getElementById("JasaKonsFinishingPost");
