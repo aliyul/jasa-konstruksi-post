@@ -167,24 +167,6 @@ const urlMappingJasaPasangWallpaperDinding = {
 const urlMappingJasaLampuInterior = {
 	
 };
-const urlMappingJasaKitchenSet = {
-"https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-kafe-restoran.html": "Jasa Kitchen Set Kafe & Restoran",
-  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-rumah-tinggal.html": "Jasa Kitchen Set Rumah Tinggal",
-  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-apartemen.html": "Jasa Kitchen Set Apartemen",
-  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-dapur-kecil-sempit.html": "Jasa Kitchen Set Dapur Kecil & Sempit",
-  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-aluminium.html": "Jasa Kitchen Set Aluminium",
-  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-kayu-solid.html": "Jasa Kitchen Set Kayu Solid",
-  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-multiplek-plywood.html": "Jasa Kitchen Set Multiplek / Plywood",
-  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-hpl.html": "Jasa Kitchen Set HPL",
-  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-letter-l-u-island.html": "Jasa Kitchen Set Letter L, U & Island",
-  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-per-meter.html": "Jasa Kitchen Set Per Meter",
-  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-custom.html": "Jasa Kitchen Set Custom",
-  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-industrial.html": "Jasa Kitchen Set Industrial",
-  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-klasik-elegan.html": "Jasa Kitchen Set Klasik Elegan",
-  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-modern.html": "Jasa Kitchen Set Modern",
-  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-minimalis.html": "Jasa Kitchen Set Minimalis"
-	
-};
 
 const urlMappingJasaFinishingInteriorKlasik = {
 "https://www.betonjayareadymix.com/2020/02/jasa-finishing-interior-klasik-gypsum.html": "Jasa Finishing Interior Klasik Gypsum",
@@ -366,7 +348,7 @@ const urlMappingJasaFinishingInteriorModern = {
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wall-panel-pvc.html": "Jasa Pasang Wall Panel PVC"
 	
 };
-const urlMappingFinishingInteriorKitchenSet = {
+const urlMappingJasaKitchenSet = {
   "https://www.betonjayareadymix.com/2018/09/kabinet-dapur.html": "Kabinet Dapur",
   "https://www.betonjayareadymix.com/2018/09/harga-kitchen-set-interior.html": "Harga Kitchen Set Interior",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set.html": "Harga Jasa Pembuatan Kitchen Set",
@@ -376,7 +358,24 @@ const urlMappingFinishingInteriorKitchenSet = {
 "https://www.betonjayareadymix.com/2018/09/harga-kitchen-set-per-meter-kayu-jati.html": "Harga Kitchen Set Per Meter Kayu Jati",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set-per-meter.html": "Harga Jasa Pembuatan Kitchen Set Per Meter",
 "https://www.betonjayareadymix.com/2018/09/jasa-kitchen-set-murah.html": "Jasa Kitchen Set Murah",
-"https://www.betonjayareadymix.com/2018/09/jasa-kitchen-set-terdekat.html": "Jasa Kitchen Set Terdekat"
+"https://www.betonjayareadymix.com/2018/09/jasa-kitchen-set-terdekat.html": "Jasa Kitchen Set Terdekat",
+
+"https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-kafe-restoran.html": "Jasa Kitchen Set Kafe & Restoran",
+  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-rumah-tinggal.html": "Jasa Kitchen Set Rumah Tinggal",
+  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-apartemen.html": "Jasa Kitchen Set Apartemen",
+  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-dapur-kecil-sempit.html": "Jasa Kitchen Set Dapur Kecil & Sempit",
+  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-aluminium.html": "Jasa Kitchen Set Aluminium",
+  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-kayu-solid.html": "Jasa Kitchen Set Kayu Solid",
+  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-multiplek-plywood.html": "Jasa Kitchen Set Multiplek / Plywood",
+  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-hpl.html": "Jasa Kitchen Set HPL",
+  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-letter-l-u-island.html": "Jasa Kitchen Set Letter L, U & Island",
+  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-per-meter.html": "Jasa Kitchen Set Per Meter",
+  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-custom.html": "Jasa Kitchen Set Custom",
+  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-industrial.html": "Jasa Kitchen Set Industrial",
+  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-klasik-elegan.html": "Jasa Kitchen Set Klasik Elegan",
+  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-modern.html": "Jasa Kitchen Set Modern",
+  "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-minimalis.html": "Jasa Kitchen Set Minimalis"
+	
 };
 
 //AKHIR SUB JasaFinishingBangunanInteriorPost
@@ -614,7 +613,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPelindungRetakStruktur,
 		urlMappingJasaInteriorFurnitureCustome,
 		urlMappingJasaFinishingInteriorModern,
-		urlMappingFinishingInteriorKitchenSet,
+		urlMappingJasaKitchenSet,
 		urlMappingJasaCatEksteriorRumah,
 		urlMappingJasaFinishingFasadEksterior,
 		urlMappingJasaPelapisanAntiCuaca,
@@ -1806,7 +1805,7 @@ document.addEventListener("DOMContentLoaded", function() {
        document.head.appendChild(script);
    }
 	*/
-	if (urlMappingFinishingInteriorKitchenSet[cleanUrlJasaKonsFinishingPost]) {
+	if (urlMappingJasaKitchenSet[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanInteriorPost');
     
@@ -1888,10 +1887,10 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaFinishingInteriorPostLink.style.visibility = 'visible';
         //sub finishing JasaGantiKitchenSetPost
         JasaGantiKitchenSetPostLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPostLink.textContent = urlMappingFinishingInteriorKitchenSet[cleanUrlJasaKonsFinishingPost];
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaKitchenSet[cleanUrlJasaKonsFinishingPost];
     }
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingFinishingInteriorKitchenSet[cleanUrlJasaKonsFinishingPost]) {
+   if (urlMappingJasaKitchenSet[cleanUrlJasaKonsFinishingPost]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -1935,7 +1934,7 @@ document.addEventListener("DOMContentLoaded", function() {
                {
                    "@type": "ListItem",
                    "position": 7,
-                   "name": urlMappingFinishingInteriorKitchenSet[cleanUrlJasaKonsFinishingPost],
+                   "name": urlMappingJasaKitchenSet[cleanUrlJasaKonsFinishingPost],
                    "item": cleanUrlJasaKonsFinishingPost
                }
            ]
@@ -1945,7 +1944,8 @@ document.addEventListener("DOMContentLoaded", function() {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-if (urlMappingJasaInteriorFurnitureCustome[cleanUrlJasaKonsFinishingPost]) {
+	
+  if (urlMappingJasaInteriorFurnitureCustome[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanInteriorPost');
     
@@ -2366,146 +2366,7 @@ if (urlMappingJasaFinishingInteriorKlasik[cleanUrlJasaKonsFinishingPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-if (urlMappingJasaKitchenSet[cleanUrlJasaKonsFinishingPost]) {
-        restoreCondition('JasaFinishingBangunanPost');
-        restoreCondition('JasaFinishingBangunanInteriorPost');
-    
-        restoreCondition('JasaGantiKitchenSetPost');
-           
-	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
-	removeCondition('JasaDesInPost');
-        removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-        removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-        removeCondition('JasaKonsCuttingBetonPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-     //   removeCondition('JasaKonsFinishingPost');
 
-	 // hapus elemen id FINISHING STRUKTUR SEMUA NYA
-	removeCondition('JasaFinishingDakBetonPost');
-        removeCondition('JasaFinishingBetonExposePost');
-        removeCondition('JasaPlesteranAcianDindingPost');
-        removeCondition('JasaFinishingGroutingStrukturBetonPost');
-        removeCondition('JasaPelapisanCoatingStrukturPost');
-        removeCondition('JasaFinishingKolomdanBalokPost');
-        removeCondition('JasaPelapisanWaterproofingStrukturPost');
-        removeCondition('JasaFinishingLantaiBetonPost');
-        removeCondition('JasaPelindungRetakStrukturPost'); 
-	// hapus elemen id sub JasaFinishingBangunanEksteriorPost Semua
-        removeCondition('JasaCatEksteriorRumahPost');
-        removeCondition('JasaFinishingFasadEksteriorPost');
-        removeCondition('JasaPelapisanAntiCuacaPost');
-        removeCondition('JasaPelapisanDindingLuarPost');
-        removeCondition('JasaFinishingTamanRumahPost');
-        removeCondition('JasaPelapisanBatuAlamEksteriorPost');
-        removeCondition('JasaPelapisanGentengDakPost');
-      
-         // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaDesainInteriorPost
-	  
-	    removeCondition('JasaEpoxyDindingPost');
-	  removeCondition('JasaEpoxyLantaiPost');
-        removeCondition('JasaInteriorFurnitureCustomePost');
-        removeCondition('JasaInteriorFurniturePost');
-        removeCondition('JasaGantiKeramikLantaiPost');
-        removeCondition('JasaCatInteriorRumahPost');
-        removeCondition('JasaPasangWallpaperDindingPost');
-        //removeCondition('JasaPasangLantaiVinylPost');
-        //removeCondition('JasaPasangPlafonGypsumPost');
-        removeCondition('JasaGantiLampuInteriorPost');
-        removeCondition('JasaFinishingInteriorModernPost');
-        removeCondition('JasaFinishingInteriorMinimalisPost');
-        removeCondition('JasaFinishingInteriorKlasikPost');
-        
-       
-         // hapus elemen id FINISHING UTAMA lain NYA
-        removeCondition('JasaFinishingBangunanEksteriorPost');
-        removeCondition('JasaFinishingBangunanStrukturPost');
-
-          // hapus elemen id Infrastruktur Semua
-        removeCondition('JasaFinishingInfrastrukturPost');
-        removeCondition('JasaFinishingInfrastrukturJalanPost');
-        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
-        removeCondition('JasaFinishingInfrastrukturSaluranPost');
-        removeCondition('JasaFinishingInfrastrukturStrukturPost');
-        removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
-        JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
-        JasaFinishingPostLink.style.visibility = 'visible';
-        JasaFinishingBangunanPostLink.style.visibility = 'visible';
-        //sub finishing bangunan
-        JasaFinishingInteriorPostLink.style.visibility = 'visible';
-        //sub finishing STRUKKTUR
-        JasaKitchenSetPostLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaKitchenSet[cleanUrlJasaKonsFinishingPost];
-    }
-  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaKitchenSet[cleanUrlJasaKonsFinishingPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Finishing Bangunan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Finishing Interior",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Jasa Kitchen Set",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-kitchen-set.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingJasaKitchenSet[cleanUrlJasaKonsFinishingPost],
-                   "item": cleanUrlJasaKonsFinishingPost
-               }
-           ]
-       };
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
 if (urlMappingJasaLampuInterior[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanInteriorPost');
