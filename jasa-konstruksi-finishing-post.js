@@ -593,16 +593,23 @@ document.addEventListener("DOMContentLoaded", function() {
       if (typeof window.runEvergreenCheck === "function") {
         console.log("🔁 Running evergreen check for this page...");
         window.runEvergreenCheck();
+      } else if (typeof window.detectEvergreen === "function") {
+        // fallback jika runEvergreenCheck tidak ada
+        console.log("🔁 fallback: running detectEvergreen() directly...");
+        window.detectEvergreen();
       } else {
-        console.warn("⚠️ runEvergreenCheck tidak ditemukan!");
+        console.warn("⚠️ runEvergreenCheck / detectEvergreen tidak ditemukan!");
       }
     }
-	
+
+    // === PANGGIL LOADER ===
+    await loadEvergreenScript();
+
   } catch (err) {
     console.error("[HybridDateModified] Fatal error:", err);
   }
 })();
-	
+
 	  
      // Menemukan elemen menggunakan Id
     var JasaKonsFinishingPost = document.getElementById("JasaKonsFinishingPost");
