@@ -548,8 +548,15 @@ document.addEventListener("DOMContentLoaded", function() {
    - Menjamin detect-evergreen.js dimuat lebih dulu
    - Update <meta dateModified> hanya jika URL terdaftar
    - Stable hash → hasil dateModified konsisten
-   ========================================================== */
-(async function runHybridDateModified() {
+   ========================================================== */	  
+     // Menemukan elemen menggunakan Id
+    var JasaKonsFinishingPost = document.getElementById("JasaKonsFinishingPost");
+    if (!JasaKonsFinishingPost) {
+        console.log("elemen Id JasaKonsFinishing kondisi terhapus");
+        return;
+    }
+
+	(async function runHybridDateModified() {
   try {
     // --- helper untuk load eksternal JS secara promise ---
     function loadExternalJSAsync(src) {
@@ -610,13 +617,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 
-	  
-     // Menemukan elemen menggunakan Id
-    var JasaKonsFinishingPost = document.getElementById("JasaKonsFinishingPost");
-    if (!JasaKonsFinishingPost) {
-        console.log("elemen Id JasaKonsFinishing kondisi terhapus");
-        return;
-    }
+
      var JasaKonstruksiFinishingPostLink = document.getElementById("JasaKonstruksiFinishingPost");
      var JasaFinishingPostLink = document.getElementById("JasaFinishingPost");
      var JasaFinishingBangunanPostLink = document.getElementById("JasaFinishingBangunanPost");
