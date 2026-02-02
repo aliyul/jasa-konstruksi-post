@@ -533,82 +533,88 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
     }
    
-     (async function runHybridDateModified() {
-  try {
-
-    function loadExternalJSAsync(src) {
-      return new Promise((resolve, reject) => {
-        const s = document.createElement("script");
-        s.src = src;
-        s.async = true;
-        s.onload = resolve;
-        s.onerror = () => reject(new Error("Gagal load " + src));
-        document.head.appendChild(s);
-      });
-    }
-
-    async function waitForDetectEvergreen(timeout = 3000) {
-      const start = Date.now();
-      return new Promise((resolve, reject) => {
-        (function check() {
-          if (typeof window.detectEvergreen === "function") {
-            resolve(true);
-          } else if (Date.now() - start > timeout) {
-            reject(new Error("detectEvergreen timeout"));
-          } else {
-            setTimeout(check, 50);
-          }
-        })();
-      });
-    }
-
-    async function loadEvergreenScript(manualDate = null) {
-      const KEY = "evergreenScriptLoaded";
-
-      // ✅ 1. Kalau fungsi sudah ada → STOP (ANTI LIMIT)
-      if (typeof window.detectEvergreen === "function") {
-        console.log("⚡ detectEvergreen already ready");
-      } else {
-
-        // ✅ 2. Kalau BELUM ada & belum pernah load
-        if (!sessionStorage.getItem(KEY)) {
-          console.log("⏳ Loading detect-evergreen.js...");
-          await loadExternalJSAsync(
-            "https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js"
-          );
-          sessionStorage.setItem(KEY, "true");
-        } else {
-          console.log("♻️ Script pernah diload, menunggu siap...");
-        }
-
-        // ✅ 3. Pastikan fungsi benar-benar siap
-        await waitForDetectEvergreen();
-        console.log("✅ detectEvergreen READY");
-      }
-
-      // ✅ 4. CONFIG WAJIB OBJECT
-      const config = manualDate
-        ? { customDateModified: manualDate }
-        : {};
-
-      console.log("🧠 detectEvergreen config:", config);
-      window.detectEvergreen(config);
-    }
-
-    // =============================
-    // MODE PEMANGGILAN
-    // =============================
-
-    // ✔ MANUAL
-    // await loadEvergreenScript("2026-02-25");
-
-    // ✔ AUTO (EVERGREEN)
-    await loadEvergreenScript();
-
-  } catch (err) {
-    console.error("[HybridDateModified] Fatal:", err);
-  }
-})();
+                        	    (async function runHybridDateModified() {
+		  try {
+		
+		    function loadExternalJS(src) {
+		      return new Promise((resolve) => {
+		        if (document.querySelector(`script[src="${src}"]`)) {
+		          resolve();
+		          return;
+		        }
+		
+		        const s = document.createElement("script");
+		        s.src = src;
+		        s.defer = true; // 🔥 PENTING
+		        s.onload = resolve;
+		        s.onerror = () => {
+		          console.warn("[Evergreen] Gagal load:", src);
+		          resolve(); // ❗ jangan reject
+		        };
+		        document.head.appendChild(s);
+		      });
+		    }
+		
+		    function waitForDetectEvergreen() {
+		      return new Promise((resolve) => {
+		        if (
+		          window.__detectEvergreenReady &&
+		          typeof window.detectEvergreen === "function"
+		        ) {
+		          resolve(true);
+		        } else {
+		          window.addEventListener(
+		            "detectEvergreenReady",
+		            () => resolve(true),
+		            { once: true }
+		          );
+		        }
+		      });
+		    }
+		
+		    async function loadEvergreenScript(manualDate = null) {
+		
+		      if (typeof window.detectEvergreen !== "function") {
+		        console.log("⏳ Loading detectEvergreen...");
+		
+		        await loadExternalJS(
+		          "https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js"
+		        );
+		
+		        await waitForDetectEvergreen();
+		        console.log("✅ detectEvergreen READY");
+		      } else {
+		        console.log("⚡ detectEvergreen already available");
+		      }
+		
+		      const config = manualDate
+		        ? { customDateModified: manualDate }
+		        : {};
+		
+		      console.log("🧠 detectEvergreen config:", config);
+		
+		      try {
+		        window.detectEvergreen(config);
+		      } catch (e) {
+		        console.error("[Evergreen] Execution failed:", e);
+		      }
+		    }
+		
+		    // =============================
+		    // MODE PEMANGGILAN
+		    // =============================
+		
+		    // ✔ MANUAL (ONCE UPDATE EVERGREEN)
+		    await loadEvergreenScript("2026-01-15T10:30:00+07:00");
+		
+		    // ✔ AUTO MODE
+		    // await loadEvergreenScript();
+		
+		  } catch (err) {
+		    console.error("[HybridDateModified] Fatal:", err);
+		  }
+		})();
+	
 
      var JasaKonstruksiCuttingBetonPostLink = document.getElementById("JasaKonstruksiCuttingBetonPost");
      var JasaCuttingBetonPostLink = document.getElementById("JasaCuttingBetonPost");
