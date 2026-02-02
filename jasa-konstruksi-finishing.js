@@ -319,66 +319,88 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("elemen Id JasaKonsFinishing kondisi terhapus");
         return;
     } 
-	(async function runHybridDateModified() {
-  try {
-    // --- helper untuk load eksternal JS secara promise ---
-    function loadExternalJSAsync(src) {
-      return new Promise((resolve, reject) => {
-        const s = document.createElement("script");
-        s.src = src;
-        s.async = true;
-        s.onload = () => resolve(src);
-        s.onerror = () => reject(new Error("Gagal load " + src));
-        document.head.appendChild(s);
-      });
-    }
-
-    // --- loader evergreen JS dengan sessionStorage (anti 429) ---
-    async function loadEvergreenScript() {
-      const KEY = "evergreenScriptLoaded";
-
-      const needReload =
-        !sessionStorage.getItem(KEY) ||
-        !window.AEDMetaDates ||
-        !window.detectEvergreenReady;
-
-      if (!needReload) {
-        console.log("⚡ detect-evergreen.js sudah aktif & variable ready — SKIP load");
-      } else {
-        console.log("⏳ load detect-evergreen.js dari GitHack…");
-        try {
-          await loadExternalJSAsync(
-            "https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js"
-          );
-          window.detectEvergreenReady = true;
-          sessionStorage.setItem(KEY, "true");
-          console.log("✅ detect-evergreen.js LOADED & READY");
-        } catch (err) {
-          console.error("❌ Gagal load detect-evergreen.js", err);
-          sessionStorage.removeItem(KEY);
-        }
-      }
-
-      // --- ALWAYS run evergreen check tiap halaman ---
-      if (typeof window.runEvergreenCheck === "function") {
-        console.log("🔁 Running evergreen check for this page...");
-        window.runEvergreenCheck();
-      } else if (typeof window.detectEvergreen === "function") {
-        // fallback jika runEvergreenCheck tidak ada
-        console.log("🔁 fallback: running detectEvergreen() directly...");
-        window.detectEvergreen();
-      } else {
-        console.warn("⚠️ runEvergreenCheck / detectEvergreen tidak ditemukan!");
-      }
-    }
-
-    // === PANGGIL LOADER ===
-    await loadEvergreenScript();
-
-  } catch (err) {
-    console.error("[HybridDateModified] Fatal error:", err);
-  }
-})();
+	
+	               (async function runHybridDateModified() {
+		  try {
+		
+		    function loadExternalJS(src) {
+		      return new Promise((resolve) => {
+		        if (document.querySelector(`script[src="${src}"]`)) {
+		          resolve();
+		          return;
+		        }
+		
+		        const s = document.createElement("script");
+		        s.src = src;
+		        s.defer = true; // 🔥 PENTING
+		        s.onload = resolve;
+		        s.onerror = () => {
+		          console.warn("[Evergreen] Gagal load:", src);
+		          resolve(); // ❗ jangan reject
+		        };
+		        document.head.appendChild(s);
+		      });
+		    }
+		
+		    function waitForDetectEvergreen() {
+		      return new Promise((resolve) => {
+		        if (
+		          window.__detectEvergreenReady &&
+		          typeof window.detectEvergreen === "function"
+		        ) {
+		          resolve(true);
+		        } else {
+		          window.addEventListener(
+		            "detectEvergreenReady",
+		            () => resolve(true),
+		            { once: true }
+		          );
+		        }
+		      });
+		    }
+		
+		    async function loadEvergreenScript(manualDate = null) {
+		
+		      if (typeof window.detectEvergreen !== "function") {
+		        console.log("⏳ Loading detectEvergreen...");
+		
+		        await loadExternalJS(
+		          "https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js"
+		        );
+		
+		        await waitForDetectEvergreen();
+		        console.log("✅ detectEvergreen READY");
+		      } else {
+		        console.log("⚡ detectEvergreen already available");
+		      }
+		
+		      const config = manualDate
+		        ? { customDateModified: manualDate }
+		        : {};
+		
+		      console.log("🧠 detectEvergreen config:", config);
+		
+		      try {
+		        window.detectEvergreen(config);
+		      } catch (e) {
+		        console.error("[Evergreen] Execution failed:", e);
+		      }
+		    }
+		
+		    // =============================
+		    // MODE PEMANGGILAN
+		    // =============================
+		
+		    // ✔ MANUAL (ONCE UPDATE EVERGREEN)
+		    await loadEvergreenScript("2026-01-08T10:30:00+07:00");
+		
+		    // ✔ AUTO MODE
+		    // await loadEvergreenScript();
+		
+		  } catch (err) {
+		    console.error("[HybridDateModified] Fatal:", err);
+		  }
+		})();
 
 
      var JasaKonstruksiFinishingSubLink = document.getElementById("JasaKonstruksiFinishingSub");
