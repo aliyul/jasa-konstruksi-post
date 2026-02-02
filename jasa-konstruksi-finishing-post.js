@@ -558,64 +558,81 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	(async function runHybridDateModified() {
   try {
-    // --- helper untuk load eksternal JS secara promise ---
+
     function loadExternalJSAsync(src) {
       return new Promise((resolve, reject) => {
         const s = document.createElement("script");
         s.src = src;
         s.async = true;
-        s.onload = () => resolve(src);
+        s.onload = resolve;
         s.onerror = () => reject(new Error("Gagal load " + src));
         document.head.appendChild(s);
       });
     }
 
-    // --- loader evergreen JS dengan sessionStorage (anti 429) ---
-    async function loadEvergreenScript() {
+    async function waitForDetectEvergreen(timeout = 3000) {
+      const start = Date.now();
+      return new Promise((resolve, reject) => {
+        (function check() {
+          if (typeof window.detectEvergreen === "function") {
+            resolve(true);
+          } else if (Date.now() - start > timeout) {
+            reject(new Error("detectEvergreen timeout"));
+          } else {
+            setTimeout(check, 50);
+          }
+        })();
+      });
+    }
+
+    async function loadEvergreenScript(manualDate = null) {
       const KEY = "evergreenScriptLoaded";
 
-      const needReload =
-        !sessionStorage.getItem(KEY) ||
-        !window.AEDMetaDates ||
-        !window.detectEvergreenReady;
-
-      if (!needReload) {
-        console.log("⚡ detect-evergreen.js sudah aktif & variable ready — SKIP load");
+      // ✅ 1. Kalau fungsi sudah ada → STOP (ANTI LIMIT)
+      if (typeof window.detectEvergreen === "function") {
+        console.log("⚡ detectEvergreen already ready");
       } else {
-        console.log("⏳ load detect-evergreen.js dari GitHack…");
-        try {
+
+        // ✅ 2. Kalau BELUM ada & belum pernah load
+        if (!sessionStorage.getItem(KEY)) {
+          console.log("⏳ Loading detect-evergreen.js...");
           await loadExternalJSAsync(
             "https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js"
           );
-          window.detectEvergreenReady = true;
           sessionStorage.setItem(KEY, "true");
-          console.log("✅ detect-evergreen.js LOADED & READY");
-        } catch (err) {
-          console.error("❌ Gagal load detect-evergreen.js", err);
-          sessionStorage.removeItem(KEY);
+        } else {
+          console.log("♻️ Script pernah diload, menunggu siap...");
         }
+
+        // ✅ 3. Pastikan fungsi benar-benar siap
+        await waitForDetectEvergreen();
+        console.log("✅ detectEvergreen READY");
       }
 
-      // --- ALWAYS run evergreen check tiap halaman ---
-      if (typeof window.runEvergreenCheck === "function") {
-        console.log("🔁 Running evergreen check for this page...");
-        window.runEvergreenCheck();
-      } else if (typeof window.detectEvergreen === "function") {
-        // fallback jika runEvergreenCheck tidak ada
-        console.log("🔁 fallback: running detectEvergreen() directly...");
-        window.detectEvergreen();
-      } else {
-        console.warn("⚠️ runEvergreenCheck / detectEvergreen tidak ditemukan!");
-      }
+      // ✅ 4. CONFIG WAJIB OBJECT
+      const config = manualDate
+        ? { customDateModified: manualDate }
+        : {};
+
+      console.log("🧠 detectEvergreen config:", config);
+      window.detectEvergreen(config);
     }
 
-    // === PANGGIL LOADER ===
+    // =============================
+    // MODE PEMANGGILAN
+    // =============================
+
+    // ✔ MANUAL
+    // await loadEvergreenScript("2026-02-25");
+
+    // ✔ AUTO (EVERGREEN)
     await loadEvergreenScript();
 
   } catch (err) {
-    console.error("[HybridDateModified] Fatal error:", err);
+    console.error("[HybridDateModified] Fatal:", err);
   }
 })();
+
 
 
      var JasaKonstruksiFinishingPostLink = document.getElementById("JasaKonstruksiFinishingPost");
