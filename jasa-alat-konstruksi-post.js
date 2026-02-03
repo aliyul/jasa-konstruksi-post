@@ -441,16 +441,38 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 */	
-	
-     // Menemukan elemen menggunakan Id
-    var JasaKonsAlatKonstruksiPost = document.getElementById("JasaKonsAlatKonstruksiPost");
 
-    if (!JasaKonsAlatKonstruksiPost) {
-        console.error("elemen Id JasaKonsAlatKonstruksiPost kondisi terhapus");
-        return;
+	 // --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingSewaAlatProyek,
+		urlMappingSewaAlatBerat,
+		urlMappingSewaMotorGrader,
+		urlMappingSewaAlatPancang,
+		urlMappingSewaTrencher,
+		urlMappingSewaConcretePaver,
+		urlMappingSewaExcavator,
+		urlMappingSewaBulldozer,
+		urlMappingSewaForklift,
+		urlMappingSewaCrane,
+		urlMappingSewaBackhoeLoader,
+		urlMappingSewaSelfLoader,
+		urlMappingSewaVibroRoller,
+		urlMappingSewaWalesStoom,
+		urlMappingSewaTandemRoller,
+		urlMappingSewaBabyRoller,
+		urlMappingSewaWheelLoader,
+		urlMappingSewaAlatKonstruksiRingan
+	
+    );
+
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaKonsAlatKonstruksiPost]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaKonsAlatKonstruksiPost}`);
+      return;
     }
-    
-            	    (async function runHybridDateModified() {
+
+	 (async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -532,6 +554,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		  }
 		})();
 
+     // Menemukan elemen menggunakan Id
+    var JasaKonsAlatKonstruksiPost = document.getElementById("JasaKonsAlatKonstruksiPost");
+
+    if (!JasaKonsAlatKonstruksiPost) {
+        console.error("elemen Id JasaKonsAlatKonstruksiPost kondisi terhapus");
+        return;
+    }
      var JasaKonstruksiAlatKonstruksiPostLink = document.getElementById("JasaKonstruksiAlatKonstruksiPost");
      var JasaAlatKonstruksiPostLink = document.getElementById("JasaAlatKonstruksiPost");
      var SewaAlatProyekPostLink = document.getElementById("SewaAlatProyekPost");
