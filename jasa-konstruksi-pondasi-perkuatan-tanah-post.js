@@ -256,16 +256,24 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 */
-	
-     // Menemukan elemen menggunakan Id
-    var JasaKonsPondasiTanahPost = document.getElementById("JasaKonsPondasiTanahPost");
 
-    if (!JasaKonsPondasiTanahPost) {
-        console.error("elemen Id JasaKonsPondasiTanahPost kondisi terhapus");
-        return;
+	    // --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingJasaPondasi,
+		urlMappingJasaPondasiCakarAyam,
+		urlMappingJasaPondasiTapak,
+		urlMappingJasaPondasiTiangPancang,
+		urlMappingJasaPondasiSumuran		
+    );
+   
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaPondasiPerkuatanTanahKonsPost}`);
+      return;
     }
-	
-   	          (async function runHybridDateModified() {
+
+	 (async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -346,6 +354,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		    console.error("[HybridDateModified] Fatal:", err);
 		  }
 		})();
+     // Menemukan elemen menggunakan Id
+    var JasaKonsPondasiTanahPost = document.getElementById("JasaKonsPondasiTanahPost");
+
+    if (!JasaKonsPondasiTanahPost) {
+        console.error("elemen Id JasaKonsPondasiTanahPost kondisi terhapus");
+        return;
+    }
     
      var JasaKonstruksiPondasiTanahSubPostLink = document.getElementById("JasaKonstruksiPondasiTanahSubPost");
      var JasaPondasiTanahSubPostLink = document.getElementById("JasaPondasiTanahSubPost");
