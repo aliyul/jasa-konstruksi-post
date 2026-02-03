@@ -336,15 +336,30 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 */	
-     // Menemukan elemen menggunakan Id
-    var JasaKonsPembatasPost = document.getElementById("JasaKonsPembatasPost");
 
-    if (!JasaKonsPembatasPost) {
-        console.error("elemen Id JasaKonsPembatasPost kondisi terhapus");
-        return;
+	  
+    // --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingJasaPagarBetonPrecast,
+		urlMappingJasaPagarPanelBeton,
+		urlMappingJasaPagarBesi,
+		urlMappingJasaDindingBata,
+		urlMappingJasaPagarKawat,
+		urlMappingJasaPagarBRC,
+		urlMappingJasaPagarRumah,
+        urlMappingJasaPagarBangunan,
+
+		urlMappingJasaKanstinJalan
+    );
+
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaPembatasKonsPost]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaPembatasKonsPost}`);
+      return;
     }
-  
-	        	                          	    (async function runHybridDateModified() {
+
+	 (async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -425,6 +440,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		    console.error("[HybridDateModified] Fatal:", err);
 		  }
 		})();
+     // Menemukan elemen menggunakan Id
+    var JasaKonsPembatasPost = document.getElementById("JasaKonsPembatasPost");
+
+    if (!JasaKonsPembatasPost) {
+        console.error("elemen Id JasaKonsPembatasPost kondisi terhapus");
+        return;
+    }
 
      var JasaKonstruksiPembatasPostLink = document.getElementById("JasaKonstruksiPembatasPost");
      var JasaPembatasPostLink = document.getElementById("JasaPembatasPost");
