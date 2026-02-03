@@ -625,16 +625,58 @@ document.addEventListener("DOMContentLoaded", function() {
     console.error("[HybridDateModified] Fatal error:", err);
   }
 })();
-*/	
-     // Menemukan elemen menggunakan Id
-    //var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
-    var JasaKonsStrukturPost = document.getElementById("JasaKonsStrukturPost");
+*/
 
-if (!JasaKonsStrukturPost) {
-     console.error("elemen Id JasaKonsPerbaikanPost kondisi terhapus");	
-} else {
+	// --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingJasaRangkaAtapBajaRingan,
+		urlMappingJasaKonstruksiBajaKonvensional,
+		urlMappingJasaKanopiBajadanBesi,
+		urlMappingJasaStrukturBajaGudang,
+		urlMappingJasaCorBeton,
+		urlMappingJasaPengecoranLantaiDak,
+		urlMappingJasaPengecoranLantaiGudang,
+		urlMappingJasaBekistingdanPembesian,
+		urlMappingJasaPengecoranKolomBeton,
+		urlMappingJasaKonstruksiGedungHunian,
+		urlMappingJasaKonstruksiRumahTinggal,
+		urlMappingJasaKonstruksiRukodanKios,
+		urlMappingJasaKonstruksiVilla,
+		urlMappingJasaKonstruksiApartemen,
+		urlMappingJasaKonstruksiHotel,
+		urlMappingJasaKonstruksiPerkantoran,
+		urlMappingJasaKonstruksiGedungSekolah,
+		urlMappingJasaKonstruksiGedungRumahSakit,
+		urlMappingJasaKonstruksiGudangLogistik,
+		urlMappingJasaKonstruksiPabrik,
+		urlMappingJasaKonstruksiColdStorage,
+		urlMappingJasaKonstruksiBengkel,
+		urlMappingJasaKonstruksiWorkshop,
+		urlMappingJasaPembuatanLapanganOlahRaga,
+		urlMappingJasaPembuatanLapanganFutsal,
+		urlMappingJasaPembuatanLapanganBasket,
+		urlMappingJasaPembuatanLapanganSepakbola,
+		urlMappingJasaPembuatanLapanganTenis,
+		urlMappingJasaPembuatanLapanganBadminton,
+		urlMappingJasaPembuatanLapanganVoli,
+		urlMappingJasaPembuatanLapanganSerbaguna,
+		urlMappingJasaPembuatanKolamRenang,
+		urlMappingJasaPembuatanKolamIkan,
+		urlMappingJasaSepticTankBeton,
+		urlMappingJasaPembuatanTangkiAir,
+		urlMappingJasaPembuatanBakPenampungan,
+		urlMappingJasaKonstruksiMenaraAir
+		
+    );
 
-	      	          (async function runHybridDateModified() {
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaJasaKonsStrukturPost]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaJasaKonsStrukturPost}`);
+      return;
+    }
+
+	(async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -715,6 +757,14 @@ if (!JasaKonsStrukturPost) {
 		    console.error("[HybridDateModified] Fatal:", err);
 		  }
 		})();
+	
+     // Menemukan elemen menggunakan Id
+    //var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
+    var JasaKonsStrukturPost = document.getElementById("JasaKonsStrukturPost");
+
+if (!JasaKonsStrukturPost) {
+     console.error("elemen Id JasaKonsPerbaikanPost kondisi terhapus");	
+} else {
 
 
      var JasaKonstruksiStrukturPostLink = document.getElementById("JasaKonstruksiStrukturPost");
