@@ -690,20 +690,60 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 */
-     // Menemukan elemen menggunakan Id
-    //var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
-    var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
 
-if (!JasaKonsPerbaikan) {
-console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
-        return;
-}
-if (!JasaKonsPerbaikan) {
-     console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");	
-} else {
-	
+	 // --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingPerbaikanStruktur,
+		urlMappingPerbaikanStrukturKolomBalok,
+		urlMappingPerbaikanStrukturPondasi,
+		urlMappingPerbaikanStrukturLantai,
+		urlMappingPerbaikanStrukturDinding,
+		urlMappingPerbaikanStrukturBangunan,
+		urlMappingPerbaikanStrukturTeknikBeton,
+                urlMappingPerbaikanStrukturAtap,
+                urlMappingPerbaikanInfrastruktur,
+                urlMappingPerbaikanInfrastrukturJalan,
+                urlMappingPerbaikanInfrastrukturTrotoar,
+                urlMappingPerbaikanInfrastrukturJembatan,
+                urlMappingPerbaikanInfrastrukturSaluran,
+                urlMappingPerbaikanFasadEksterior,
+                urlMappingPerbaikanFasadEksteriorFasad,
+                urlMappingPerbaikanFasadEksteriorEksterior,
+                urlMappingPerbaikanFasadEksteriorArsitektur,
+                urlMappingPerbaikanBangunan,
+                urlMappingPerbaikanBangunanIbadah,
+                urlMappingPerbaikanBangunanPabrik,
+                urlMappingPerbaikanBangunanRumah,
+                urlMappingPerbaikanBangunanKantor,
+                urlMappingPerbaikanBangunanGedung,
+		urlMappingPerbaikanBangunanGudang,
+		urlMappingPerbaikanBangunanHotel,
+		urlMappingPerbaikanFasilitasUmum,
+		urlMappingPerbaikanFasilitasUmumTaman,
+		urlMappingPerbaikanFasilitasUmumSekolah,
+		urlMappingPerbaikanFasilitasIbadah,
+		urlMappingPerbaikanFasilitasUmumTerminal,
+		urlMappingPerbaikanFasilitasUmumHalte,
+		urlMappingPerbaikanInterior,
+		urlMappingPerbaikanInteriorRumah,
+		urlMappingPerbaikanInteriorKantor,
+		urlMappingPerbaikanInteriorApartemen,
+		urlMappingPerbaikanInteriorHotel,
+		urlMappingPerbaikanInteriorToko,
+		urlMappingPerbaikanInteriorCustom,
+		urlMappingPerbaikanInteriorRuangan
+		
+    );
+
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaPerbaikanKonsSub]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaPerbaikanKonsSub}`);
+      return;
+    }
+
 	  	
-             (async function runHybridDateModified() {
+   (async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -785,7 +825,18 @@ if (!JasaKonsPerbaikan) {
 		  }
 		})();
 
+     // Menemukan elemen menggunakan Id
+    //var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
+var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
 
+if (!JasaKonsPerbaikan) {
+console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
+        return;
+}
+if (!JasaKonsPerbaikan) {
+     console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");	
+} else {
+	
      var JasaKonstruksiPerbaikanLinkSub = document.getElementById("JasaKonstruksiPerbaikanSub");
      var JasaRenovasiPerbaikanLinkSub = document.getElementById("JasaRenovasiPerbaikanSub");
      //SUB JasaRenovasiPerbaikan
