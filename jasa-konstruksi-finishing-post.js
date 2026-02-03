@@ -542,6 +542,45 @@ document.addEventListener("DOMContentLoaded", function() {
      //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
     const cleanUrlJasaKonsFinishingPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
 
+	
+   const urlMappingGabungan = Object.assign(
+    {},
+    urlMappingJasaFinishingDakBeton,
+    urlMappingJasaFinishingBetonExpose,
+    urlMappingJasaPlesteranAcianDinding,
+    urlMappingJasaFinishingGroutingStrukturBeton,
+    urlMappingJasaPelapisanCoatingStruktur,
+    urlMappingJasaFinishingKolomBalok,
+    urlMappingJasaPelapisanWaterproofingStruktur,
+    urlMappingJasaFinishingLantaiBeton,
+    urlMappingJasaEpoxyDinding,
+    urlMappingJasaEpoxyLantai,
+    urlMappingJasaPelindungRetakStruktur,
+    urlMappingJasaInteriordanFurnitureCustome,
+    urlMappingJasaKeramikLantai,
+    urlMappingJasaCatInteriorRumah,
+    urlMappingJasaPasangWallpaperDinding,
+    urlMappingJasaLampuInterior,
+    urlMappingJasaFinishingInteriorKlasik,
+    urlMappingJasaFinishingInteriorMinimalis,
+    urlMappingJasaInteriorFurnitureCustome,
+    urlMappingJasaFinishingInteriorModern,
+    urlMappingJasaKitchenSet,
+    urlMappingJasaCatEksteriorRumah,
+    urlMappingJasaFinishingFasadEksterior,
+    urlMappingJasaPelapisanAntiCuaca,
+    urlMappingJasaPelapisanDindingLuar,
+    urlMappingJasaFinishingTamanRumah,
+    urlMappingJasaFinishingKanopiTeras,
+    urlMappingJasaPelapisanBatuAlamEksterior,
+    urlMappingJasaPelapisanGentengDak
+);
+
+// --- validasi URL terdaftar ---
+if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
+    console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaKonsFinishingPost}`);
+    return;
+}
 		/* ==========================================================
    🧩 HybridDateModified v2.5 — StableHash + Safe Load Order
    Fitur:
@@ -549,14 +588,7 @@ document.addEventListener("DOMContentLoaded", function() {
    - Update <meta dateModified> hanya jika URL terdaftar
    - Stable hash → hasil dateModified konsisten
    ========================================================== */	  
-     // Menemukan elemen menggunakan Id
-    var JasaKonsFinishingPost = document.getElementById("JasaKonsFinishingPost");
-    if (!JasaKonsFinishingPost) {
-        console.log("elemen Id JasaKonsFinishing kondisi terhapus");
-        return;
-    }
-
-	                          	    (async function runHybridDateModified() {
+	(async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -638,6 +670,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		  }
 		})();
 
+     // Menemukan elemen menggunakan Id
+    var JasaKonsFinishingPost = document.getElementById("JasaKonsFinishingPost");
+    if (!JasaKonsFinishingPost) {
+        console.log("elemen Id JasaKonsFinishing kondisi terhapus");
+        return;
+    }
 
 
      var JasaKonstruksiFinishingPostLink = document.getElementById("JasaKonstruksiFinishingPost");
