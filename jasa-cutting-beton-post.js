@@ -525,15 +525,14 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 */
-     // Menemukan elemen menggunakan Id
-    var JasaKonsCuttingBetonPost = document.getElementById("JasaKonsCuttingBetonPost");
 
-    if (!JasaKonsCuttingBetonPost) {
-        console.error("elemen Id JasaKonsCuttingBetonPost kondisi terhapus");
-        return;
+	 // --- validasi URL terdaftar ---
+    if (!urlMappingJasaCuttingBeton[cleanUrlJasaCuttingBetonPost]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaCuttingBetonPost}`);
+      return;
     }
-   
-                        	    (async function runHybridDateModified() {
+
+	(async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -615,7 +614,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		  }
 		})();
 	
+	
+     // Menemukan elemen menggunakan Id
+    var JasaKonsCuttingBetonPost = document.getElementById("JasaKonsCuttingBetonPost");
 
+    if (!JasaKonsCuttingBetonPost) {
+        console.error("elemen Id JasaKonsCuttingBetonPost kondisi terhapus");
+        return;
+    }
+   
      var JasaKonstruksiCuttingBetonPostLink = document.getElementById("JasaKonstruksiCuttingBetonPost");
      var JasaCuttingBetonPostLink = document.getElementById("JasaCuttingBetonPost");
      var JasaPematanganLahanPostLink = document.getElementById("JasaPematanganLahanPost");
