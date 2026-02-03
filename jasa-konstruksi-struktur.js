@@ -256,16 +256,26 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 */
-	
-     // Menemukan elemen menggunakan Id
-    //var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
-    var JasaKonsStruktur = document.getElementById("JasaKonsStruktur");
 
-if (!JasaKonsStruktur) {
-     console.error("elemen Id JasaKonsPerbaikanSub kondisi terhapus");	
-} else {
-	
-      (async function runHybridDateModified() {
+	 // --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingStrukturGedungHunian,
+		urlMappingStrukturIndustriGudang,
+		urlMappingStrukturBajaRangka,
+		urlMappingStrukturKhusus,
+		urlMappingStrukturLapangan,
+		urlMappingStrukturModularPrecast,
+		urlMappingStrukturBetonPengecoran
+    );
+
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaJasaKonsStruktur]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaJasaKonsStruktur}`);
+      return;
+    }
+
+	 (async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -347,6 +357,14 @@ if (!JasaKonsStruktur) {
 		  }
 		})();
 
+	
+     // Menemukan elemen menggunakan Id
+    //var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
+    var JasaKonsStruktur = document.getElementById("JasaKonsStruktur");
+
+if (!JasaKonsStruktur) {
+     console.error("elemen Id JasaKonsPerbaikanSub kondisi terhapus");	
+} else {
 
 	
      var JasaKonstruksiStrukturSubLink = document.getElementById("JasaKonstruksiStrukturSub");
