@@ -307,16 +307,22 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 */	
-     // Menemukan elemen menggunakan Id
-    var JasaKonsPembatas = document.getElementById("JasaKonsPembatas");
+	 // --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingPengamananAreaProyek,
+		urlMappingRambuSistemKeamananVisual,
+		urlMappingPengamananSisiJalan,
+		urlMappingPembuatanPagarDinding
+    );
 
-    if (!JasaKonsPembatas) {
-        console.error("elemen Id JasaKonsPembatas kondisi terhapus");
-        return;
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaPembatasKons]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaPembatasKons}`);
+      return;
     }
-    
-	  	  	
-             (async function runHybridDateModified() {
+
+	 (async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -397,6 +403,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		    console.error("[HybridDateModified] Fatal:", err);
 		  }
 		})();
+     // Menemukan elemen menggunakan Id
+    var JasaKonsPembatas = document.getElementById("JasaKonsPembatas");
+
+    if (!JasaKonsPembatas) {
+        console.error("elemen Id JasaKonsPembatas kondisi terhapus");
+        return;
+    }
 
 
      var JasaKonstruksiPembatasLink = document.getElementById("JasaKonstruksiPembatas");
