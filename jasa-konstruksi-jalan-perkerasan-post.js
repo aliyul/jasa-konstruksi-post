@@ -302,15 +302,24 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 */	
-     // Menemukan elemen menggunakan Id
-    var JasaKonsJalanPerkerasanPost = document.getElementById("JasaKonsJalanPerkerasanPost");
 
-    if (!JasaKonsJalanPerkerasanPost) {
-        console.error("elemen Id JasaKonsJalanPerkerasanPost kondisi terhapus");
-        return;
-    }
+	 // --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingJasaPavingBlockJalanPost,
+		urlMappingJasaPengecoranJalanBetonPost,
+		urlMappingJasaPengaspalanJalanPost,
+		urlMappingJasaPerkerasanAgregatJalanPost
 	
-      	                          	    (async function runHybridDateModified() {
+    );
+
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaJalanPerkerasanKonsPost]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaJalanPerkerasanKonsPost}`);
+      return;
+    }
+
+	(async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -391,6 +400,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		    console.error("[HybridDateModified] Fatal:", err);
 		  }
 		})();
+  
+     // Menemukan elemen menggunakan Id
+    var JasaKonsJalanPerkerasanPost = document.getElementById("JasaKonsJalanPerkerasanPost");
+
+    if (!JasaKonsJalanPerkerasanPost) {
+        console.error("elemen Id JasaKonsJalanPerkerasanPost kondisi terhapus");
+        return;
+    }
 
 	
      var JasaKonstruksiJalanPerkerasanSubPostLink = document.getElementById("JasaKonstruksiJalanPerkerasanSubPost");
