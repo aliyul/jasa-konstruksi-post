@@ -313,14 +313,30 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 */	
-     // Menemukan elemen menggunakan Id
-    var JasaKonsFinishing = document.getElementById("JasaKonsFinishing");
-    if (!JasaKonsFinishing) {
-        console.error("elemen Id JasaKonsFinishing kondisi terhapus");
-        return;
-    } 
-	
-	               (async function runHybridDateModified() {
+
+	// --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingFinishingBangunan,
+		urlMappingFinishingBangunanInterior,
+		urlMappingFinishingBangunanEksterior,
+		urlMappingFinishingBangunanStruktur,
+		urlMappingFinishingInfrastruktur,
+		urlMappingFinishingInfrastrukturJalan,
+		urlMappingFinishingInfrastrukturTrotoar,
+		urlMappingFinishingInfrastrukturSaluran,
+		urlMappingFinishingInfrastrukturStruktur,
+		urlMappingFinishingInfrastrukturProteksi
+		
+    );
+
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaKonsFinishing]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaKonsFinishing}`);
+      return;
+    }
+
+	(async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -402,6 +418,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		  }
 		})();
 
+     // Menemukan elemen menggunakan Id
+    var JasaKonsFinishing = document.getElementById("JasaKonsFinishing");
+    if (!JasaKonsFinishing) {
+        console.error("elemen Id JasaKonsFinishing kondisi terhapus");
+        return;
+    } 
 
      var JasaKonstruksiFinishingSubLink = document.getElementById("JasaKonstruksiFinishingSub");
      var JasaFinishingSubLink = document.getElementById("JasaFinishingSub");
