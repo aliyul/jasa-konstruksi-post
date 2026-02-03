@@ -369,15 +369,33 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 */
-	
-     // Menemukan elemen menggunakan Id
-    var JasaKonsPengeboranPost = document.getElementById("JasaKonsPengeboranPost");
 
-    if (!JasaKonsPengeboranPost) {
-        console.error("elemen Id JasaPengeboranPost kondisi terhapus");
-        return;
+	 // --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingJasaBorAirLokasi,
+		urlMappingJasaBorAirSumur,
+		urlMappingJasaBorAirKebutuhan,
+		urlMappingJasaBorAirPeralatan,
+		urlMappingJasaBorTeknik,
+		urlMappingJasaBorePile,
+		urlMappingJasaBorTembok,
+		urlMappingJasaCoringBeton,
+		urlMappingJasaBorBeton,
+		urlMappingJasaBorTanah,
+		urlMappingJasaBorHorizontal,
+		urlMappingJasaPengeboranPost
+		
+    );
+
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaPengeboranPost]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaPengeboranPost}`);
+      return;
     }
-      	      	          (async function runHybridDateModified() {
+
+	
+	(async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -458,6 +476,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		    console.error("[HybridDateModified] Fatal:", err);
 		  }
 		})();
+	
+     // Menemukan elemen menggunakan Id
+    var JasaKonsPengeboranPost = document.getElementById("JasaKonsPengeboranPost");
+
+    if (!JasaKonsPengeboranPost) {
+        console.error("elemen Id JasaPengeboranPost kondisi terhapus");
+        return;
+    }
 
 
      var JasaKonstruksiPengeboranPostLink = document.getElementById("JasaKonstruksiPengeboranPost");
