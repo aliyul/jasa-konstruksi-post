@@ -589,20 +589,89 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
   }
 })();
 */	
-     // Menemukan elemen menggunakan Id
-    //var JasaKonsPerbaikanPost = document.getElementById("JasaKonsPerbaikanPost");
-    var JasaKonsPerbaikanPost = document.getElementById("JasaKonsPerbaikanPost");
 
-	if (!JasaKonsPerbaikanPost) {
-	console.error("elemen Id JasaKonsPerbaikanPost kondisi terhapus");
-	        return;
-	}
-	if (!JasaKonsPerbaikanPost) {
-	     console.error("elemen Id JasaKonsPerbaikanPost kondisi terhapus");	
-	} else {
+	// --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingJasaPerbaikanRetakStruktur,
+		urlMappingJasaPenguatanStrukturBangunan,
+		urlMappingJasaRenovasiStrukturBeton,
+		urlMappingJasaPerkuatanStrukturBeton,
+		urlMappingJasaPerbaikanRetakBeton,
+		urlMappingJasaRepairStrukturBeton,
+		urlMappingJasaPerbaikanStrukturBeton,
+		urlMappingJasaRenovasiPerbaikanRetakStruktur,
+		urlMappingJasaPerbaikanKolomBeton,
+		urlMappingJasaPerbaikanBalokBeton,
+		urlMappingJasaPerbaikanStrukturKolomBeton,
+		urlMappingJasaPerbaikanStrukturBalokBeton,
+		urlMappingJasaPerkuatanKolomBetomRetak,
+		urlMappingJasaPerkuatanBalokBeton,
+		urlMappingJasaJacketingKolomBalok,
+		urlMappingPerbaikanBalokGantung,
+		urlMappingPerbaikanStrukturTiangBeton,
+		urlMappingJasaPerbaikanPondasi,
+		urlMappingJasaPerbaikanPondasiBangunan,
+		urlMappingJasaPerbaikanStrukturPondasi,
+		urlMappingJasaPerbaikanPondasiRumah,
+		urlMappingJasaPenguatanPondasiBangunan,
+		urlMappingJasaPerbaikanStrukturPondasiRumah,
+		urlMappingJasaInjeksiDindingRetak,
+		urlMappingJasaPerbaikanDindingRetakStruktur,
+		urlMappingJasaPerbaikanStrukturDindingRetak,
+		urlMappingJasaBobokDindingInstalasi,
+		urlMappingJasaPerbaikanStrukturDindingLembab,
+		urlMappingJasaRenovasiPenggantianDindingBata,
+		urlMappingJasaPerbaikanPenggantianDindingBata,
+		urlMappingJasaPerbaikanLantaiStruktur,
+		urlMappingJasaPerbaikanStrukturLantaiBeton,
+		urlMappingJasaPerbaikanRetakanLantaiBeton,
+		urlMappingJasaPerkuatanLantaiBeton,
+		urlMappingJasaPerbaikanLantai,
+		urlMappingJasaLantaiAmbles,
+		urlMappingJasaPerbaikanLantaiRusak,
+		urlMappingJasaRenovasiLantai,
+		urlMappingJasaRenovasiLantaiRusak,
+		urlMappingJasaPerbaikanLantaiAmbles,
+		urlMappingJasaGantiLantaiAmbles,
+		urlMappingJasaBobokLantaiBeton,
+		urlMappingJasaBobokLantaiLama,
+		urlMappingJasaPerbaikanGedungBertingkat,
+		urlMappingJasaPerbaikanStrukturBangunanTua,
+		urlMappingJasaPerbaikanStrukturBangunanMiring,
+		urlMappingJasaPerbaikanTempatIbadah,
+		urlMappingJasaRenovasiStadion,
+		urlMappingJasaInjeksiBetonRetak,
+		urlMappingJasaPatchingBeton,
+		urlMappingJasaShortcreteBeton,
+		urlMappingJasaGoutingStrukturBeton,
+		urlMappingJasaPerbaikanBetonMengelupas,
+		urlMappingJasaPerbaikanBetonKeropos,
+		urlMappingJasaPerbaikanBetonRetak,
+		urlMappingJasaChippingBeton,
+		urlMappingJasaBetonKarbonasi,
+		urlMappingJasaPerkuatanStrukturdenganCFRP,
+		urlMappingJasaRenovasiPerbaikanRumah,
+		urlMappingJasaRenovasiRumahMinimalis,
+		urlMappingJasaRenovasiRumahType36,
+		urlMappingJasaRenovasiRumahType45,
+		urlMappingJasaRenovasiRumah2Lantai,
+		urlMappingJasaRenovasiPerbaikanAtapRumahPost,
+		urlMappingJasaRenovasiDindingRumah,
+		urlMappingJasaPerbaikanStrukturRumah,
+		urlMappingJasaRenovasiKosmetikRumah,
+		urlMappingJasaRenovasiRumahTumbuh
+		
+		
+    );
 
-	  
-    (async function runHybridDateModified() {
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaKonsPerbaikanPost]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaKonsPerbaikanPost}`);
+      return;
+    }
+
+	 (async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -684,6 +753,19 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
 		  }
 		})();
 
+     // Menemukan elemen menggunakan Id
+    //var JasaKonsPerbaikanPost = document.getElementById("JasaKonsPerbaikanPost");
+    var JasaKonsPerbaikanPost = document.getElementById("JasaKonsPerbaikanPost");
+
+	if (!JasaKonsPerbaikanPost) {
+	console.error("elemen Id JasaKonsPerbaikanPost kondisi terhapus");
+	        return;
+	}
+	if (!JasaKonsPerbaikanPost) {
+	     console.error("elemen Id JasaKonsPerbaikanPost kondisi terhapus");	
+	} else {
+
+	  
      var JasaKonstruksiPerbaikanSubPostLink = document.getElementById("JasaKonstruksiPerbaikanSubPost");
      var JasaRenovasiPerbaikanSubPostLink = document.getElementById("JasaRenovasiPerbaikanSubPost");
      //SUB JasaRenovasiPerbaikan
