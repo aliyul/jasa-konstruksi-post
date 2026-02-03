@@ -289,15 +289,24 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 */	
-     // Menemukan elemen menggunakan Id
-    var JasaKonsJalanPerkerasan = document.getElementById("JasaKonsJalanPerkerasan");
 
-    if (!JasaKonsJalanPerkerasan) {
-        console.error("elemen Id JasaKonsJalanPerkerasan kondisi terhapus");
-        return;
+	 // --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingJasaPembangunanInfrastrukturJalan,
+		urlMappingJasaPemadatanPersiapanTanahJalan,
+		urlMappingJasaPerkerasanJalan,
+		urlMappingJasaPengerasanJalan
+		
+    );
+
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaJalanPerkerasanKons]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaJalanPerkerasanKons}`);
+      return;
     }
-    
-                   (async function runHybridDateModified() {
+
+	 (async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -378,6 +387,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		    console.error("[HybridDateModified] Fatal:", err);
 		  }
 		})();
+	
+     // Menemukan elemen menggunakan Id
+    var JasaKonsJalanPerkerasan = document.getElementById("JasaKonsJalanPerkerasan");
+
+    if (!JasaKonsJalanPerkerasan) {
+        console.error("elemen Id JasaKonsJalanPerkerasan kondisi terhapus");
+        return;
+    }
 
 
      var JasaKonstruksiJalanPerkerasanSubLink = document.getElementById("JasaKonstruksiJalanPerkerasanSub");
