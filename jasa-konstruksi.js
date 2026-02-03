@@ -465,40 +465,38 @@ document.addEventListener("DOMContentLoaded", function() {
 })();
 */
 
-     // Menemukan elemen menggunakan Id
-    var JasaKons = document.getElementById("JasaKons");
-    var JasaKonsSub = document.getElementById("JasaKonsSub");
-    //var JasaKonsPerbaikanSub = document.getElementById("JasaKonsPerbaikanSub");
-/*
-    if (!JasaKonsPerbaikan) {
-	if (!JasaKonsPerbaikanSub) {
-	console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
-	console.error("elemen Id JasaKonsPerbaikanSub kondisi terhapus");
-        return;
-    	} else {
-       	console.error("elemen Id JasaKonsPerbaikanSub kondisi terhapus");
-	}
-    } else if (!JasaKonsPerbaikanSub) {
-	console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
-    } else {
-    
-    }
-    */
-	
-if (!JasaKons && !JasaKonsSub) {
-console.error("elemen Id JasaKons dan Id JasaKonsSub kondisi terhapus");
-        return;
-}
-if (!JasaKons || !JasaKonsSub) {
-	if (!JasaKons) {
-	console.error("elemen Id JasaKons kondisi terhapus");
-	}
-	if (!JasaKonsSub) {
-	console.error("elemen Id JasaKonsSub kondisi terhapus");
-}
-}
+	// --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingJasaKons,
+		urlMappingJasaAlatKonstruksi,
+		urlMappingJasaSewaAlatKonstruksi,
+		urlMappingJasaSewaAlatBerat,
+		urlMappingJasaSewaAlatKonstruksiRingan,
+		urlMappingPerbaikan,
+		urlMappingFinishing,
+		urlMappingStruktur,
+		urlMappingPondasi,
+		urlMappingSaluran,
+		urlMappingJalan,
+		urlMappingPematanganLahan,
+		urlMappingUjiTanah,
+		urlMappingPerkuatanTanahLongsor,
+		urlMappingBongkarBangunan,
+		urlMappingPengeboran,
+		urlMappingJasaBorAir,
+		urlMappingPembatas,
+		urlMappingJasaInstalasiListrik
+    );
 
-	   (async function runHybridDateModified() {
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaKons]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaKons}`);
+      return;
+    }
+
+	
+      (async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -579,6 +577,39 @@ if (!JasaKons || !JasaKonsSub) {
 		    console.error("[HybridDateModified] Fatal:", err);
 		  }
 		})();
+	
+     // Menemukan elemen menggunakan Id
+    var JasaKons = document.getElementById("JasaKons");
+    var JasaKonsSub = document.getElementById("JasaKonsSub");
+    //var JasaKonsPerbaikanSub = document.getElementById("JasaKonsPerbaikanSub");
+/*
+    if (!JasaKonsPerbaikan) {
+	if (!JasaKonsPerbaikanSub) {
+	console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
+	console.error("elemen Id JasaKonsPerbaikanSub kondisi terhapus");
+        return;
+    	} else {
+       	console.error("elemen Id JasaKonsPerbaikanSub kondisi terhapus");
+	}
+    } else if (!JasaKonsPerbaikanSub) {
+	console.error("elemen Id JasaKonsPerbaikan kondisi terhapus");
+    } else {
+    
+    }
+    */
+	
+if (!JasaKons && !JasaKonsSub) {
+console.error("elemen Id JasaKons dan Id JasaKonsSub kondisi terhapus");
+        return;
+}
+if (!JasaKons || !JasaKonsSub) {
+	if (!JasaKons) {
+	console.error("elemen Id JasaKons kondisi terhapus");
+	}
+	if (!JasaKonsSub) {
+	console.error("elemen Id JasaKonsSub kondisi terhapus");
+}
+}
 
 	//bagian2 dari jasa konstruksi umum dan panduan
 	var JasaKonstruksiLink = document.getElementById("JasaKonstruksi");
