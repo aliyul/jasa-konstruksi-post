@@ -257,16 +257,30 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 */
-	
-     // Menemukan elemen menggunakan Id
-    var JasaKonsPerkuatanTanahLongsorPost = document.getElementById("JasaKonsPerkuatanTanahLongsorPost");
 
-    if (!JasaKonsPerkuatanTanahLongsorPost) {
-        console.error("elemen Id JasaKonsPerkuatanTanahLongsorPost kondisi terhapus");
-        return;
+		  
+    // --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingJasaBronjong,
+		urlMappingJasaSoilNailingLongsor,
+		urlMappingJasaDindingPenahanLongsor,
+		urlMappingJasaGeotextileLongsor,
+		urlMappingJasaSheetPileLongsor,
+		urlMappingJasaStabilisasiLongsor,
+		urlMappingJasaPerkuatanRumahLongsor,
+		urlMappingJasaPerkuatanTebingLongsor,
+		urlMappingJasaPerkuatanPerkebunanLongsor,
+		urlMappingJasaDrainaseAntiLongsor		
+    );
+
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaPerkuatanTanahLongsorKonsPost}`);
+      return;
     }
-    
-        (async function runHybridDateModified() {
+
+	 (async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -347,6 +361,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		    console.error("[HybridDateModified] Fatal:", err);
 		  }
 		})();
+	
+     // Menemukan elemen menggunakan Id
+    var JasaKonsPerkuatanTanahLongsorPost = document.getElementById("JasaKonsPerkuatanTanahLongsorPost");
+
+    if (!JasaKonsPerkuatanTanahLongsorPost) {
+        console.error("elemen Id JasaKonsPerkuatanTanahLongsorPost kondisi terhapus");
+        return;
+    }
 
 
      var JasaKonstruksiPerkuatanTanahLongsorSubPostLink = document.getElementById("JasaKonstruksiPerkuatanTanahLongsorSubPost");
