@@ -231,15 +231,23 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 */	
-     // Menemukan elemen menggunakan Id
-    var JasaKonsPondasiTanah = document.getElementById("JasaKonsPondasiTanah");
 
-    if (!JasaKonsPondasiTanah) {
-        console.error("elemen Id JasaKonsPondasiTanah kondisi terhapus");
-        return;
+	 // --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingJasaPondasiBangunan,
+		urlMappingJasaPemadatanPersiapanPondasi,
+		urlMappingJasaPerkuatanTanah,
+		urlMappingJasaRetrofittingPondasi
+    );
+
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaPondasiPerkuatanTanahKons}`);
+      return;
     }
-	
-             (async function runHybridDateModified() {
+
+	(async function runHybridDateModified() {
 		  try {
 		
 		    function loadExternalJS(src) {
@@ -321,6 +329,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		  }
 		})();
 
+	
+     // Menemukan elemen menggunakan Id
+    var JasaKonsPondasiTanah = document.getElementById("JasaKonsPondasiTanah");
+
+    if (!JasaKonsPondasiTanah) {
+        console.error("elemen Id JasaKonsPondasiTanah kondisi terhapus");
+        return;
+    }
 
      var JasaKonstruksiPondasiTanahSubLink = document.getElementById("JasaKonstruksiPondasiTanahSub");
      var JasaPondasiTanahSub = document.getElementById("JasaPondasiTanahSub");
