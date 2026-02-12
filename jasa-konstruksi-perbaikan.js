@@ -38,7 +38,7 @@ const urlMappingPerbaikanStrukturGedungBertingkat  = {
 
 };
 
-const urlMappingJasaPerbaikanStrukturBangunanTua  = {
+const urlMappingPerbaikanStrukturBangunanTua  = {
 
 };
 
