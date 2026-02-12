@@ -714,6 +714,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlMappingGabungan = Object.assign(
       {},
 		urlMappingPerbaikanStruktur,
+        urlMappingPerbaikanStrukturGedungBertingkat,
+		urlMappingPerbaikanStrukturBangunanTua,
+		urlMappingPerbaikanStrukturBangunanMiring,
 		urlMappingPerbaikanStrukturKolomBalok,
 		urlMappingPerbaikanStrukturPondasi,
 		urlMappingPerbaikanStrukturLantai,
