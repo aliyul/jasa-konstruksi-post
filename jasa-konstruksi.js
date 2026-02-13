@@ -19,7 +19,7 @@ const urlMappingJasaKons = {
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik.html": "Jasa Instalasi Listrik",
 
   "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html": "Jasa Perawatan Perbaikan Bangunan",
-  
+  	"https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html": "Jasa Perbaikan Infrastruktur"
  
   //"https://www.betonjayareadymix.com/p/jasa-konstruksi-custom.html": "Jasa Konstruksi Custom",
 
@@ -72,13 +72,24 @@ const urlMappingJasaSewaAlatKonstruksiRingan = {
 
 }
 
-const urlMappingPerbaikan = {	
+const urlMappingPerbaikanBangunan = {	
+	"https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur.html": "Jasa Perbaikan Struktur"
+
+};
+const urlMappingPerbaikanInfrastruktur = {	
+ //"https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-perawatan-jalan.html": "Jasa Perbaikan dan Perawatan Jalan",
+// "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jalan-berlubang.html": "Jasa Renovasi Perbaikan Jalan Berlubang",
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan.html": "Jasa Renovasi Perbaikan Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan.html": "Jasa Perbaikan Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase.html": "Jasa Perbaikan Drainase",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar.html": "Jasa Perbaikan Trotoar"
+
+};
+const urlMappingRenovasi = {	
 	"https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-umum.html": "Jasa Renovasi Fasilitas Umum",
 	"https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan.html": "Jasa Renovasi Bangunan",
 	 "https://www.betonjayareadymix.com/p/jasa-renovasi-interior.html": "Jasa Renovasi Interior",
-	"https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-eksterior.html": "Jasa Renovasi Fasad Eksterior",
-	"https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html": "Jasa Perbaikan Infrastruktur",
-	"https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur.html": "Jasa Perbaikan Struktur"
+"https://www.betonjayareadymix.com/p/jasa-renovasi-eksterior-bangunan.html": "Jasa Renovasi Eksterior Bangunan",
   //  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding.html": "Jasa Renovasi Perbaikan Dinding"
 
 };
@@ -352,7 +363,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaSewaAlatKonstruksi,
 		urlMappingJasaSewaAlatBerat,
 		urlMappingJasaSewaAlatKonstruksiRingan,
-		urlMappingPerbaikan,
+		urlMappingRenovasi,
 		urlMappingFinishing,
 		urlMappingStruktur,
 		urlMappingPondasi,
@@ -473,7 +484,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaSewaAlatKonstruksi,
 		urlMappingJasaSewaAlatBerat,
 		urlMappingJasaSewaAlatKonstruksiRingan,
-		urlMappingPerbaikan,
+		urlMappingRenovasi,
 		urlMappingFinishing,
 		urlMappingStruktur,
 		urlMappingPondasi,
@@ -1145,7 +1156,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
    }
   //AKHIR JASA KONTRUKSI ALAT
 	
-    if (urlMappingPerbaikan[cleanUrlJasaKons]) {
+    if (urlMappingRenovasi[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	//restoreCondition('JasaKonstruksi');
 	restoreCondition('JasaRenovasiPerbaikan');
@@ -1195,10 +1206,10 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaRenovasiPerbaikanLink.style.visibility = 'visible';
 	    
-        pageNameKonstruksiSub.textContent = urlMappingPerbaikan[cleanUrlJasaKons];
+        pageNameKonstruksiSub.textContent = urlMappingRenovasi[cleanUrlJasaKons];
     }
  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingPerbaikan[cleanUrlJasaKons]) {
+   if (urlMappingRenovasi[cleanUrlJasaKons]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -1224,7 +1235,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	       {
                    "@type": "ListItem",
                    "position": 4,
-                   "name": urlMappingPerbaikan[cleanUrlJasaKons],
+                   "name": urlMappingRenovasi[cleanUrlJasaKons],
                    "item": cleanUrlJasaKons
                }
            ]
