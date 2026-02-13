@@ -138,6 +138,7 @@ const urlMappingPerbaikanStrukturAtap = {
 };
 
 //Jasa Renovasi Perbaikan Infrastruktur
+/*
 const urlMappingPerbaikanInfrastruktur = {
  //"https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-perawatan-jalan.html": "Jasa Perbaikan dan Perawatan Jalan",
 // "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-jalan-berlubang.html": "Jasa Renovasi Perbaikan Jalan Berlubang",
@@ -146,6 +147,7 @@ const urlMappingPerbaikanInfrastruktur = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase.html": "Jasa Perbaikan Drainase",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar.html": "Jasa Perbaikan Trotoar"
 };
+*/
 
 //SUB Jasa Renovasi Perbaikan Infrastruktur
 const urlMappingPerbaikanInfrastrukturJalan = {
@@ -741,7 +743,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		//urlMappingPerbaikanStrukturBangunan,
 		urlMappingPerbaikanStrukturTeknikBeton,
                 urlMappingPerbaikanStrukturAtap,
-                urlMappingPerbaikanInfrastruktur,
+               // urlMappingPerbaikanInfrastruktur,
                 urlMappingPerbaikanInfrastrukturJalan,
                 urlMappingPerbaikanInfrastrukturTrotoar,
                 urlMappingPerbaikanInfrastrukturJembatan,
@@ -2563,6 +2565,7 @@ if (!JasaKonsPerbaikan) {
 
 	
     // JasaRenovasiPerbaikanInfrastruktur
+	/*
     if (urlMappingPerbaikanInfrastruktur[cleanUrlJasaPerbaikanKonsSub]) {
         restoreCondition1('JasaKonsPerbaikan');
         restoreCondition1('JasaRenovasiPerbaikanInfrastruktur');
@@ -2689,6 +2692,8 @@ if (!JasaKonsPerbaikan) {
 	       script.text = JSON.stringify(jsonLDBreadcrumb);
 	       document.head.appendChild(script);
      }
+	 */
+	
 // SUB JasaRenovasiPerbaikanInfrastruktur
     if (urlMappingPerbaikanInfrastrukturJalan[cleanUrlJasaPerbaikanKonsSub]) {
         restoreCondition1('JasaKonsPerbaikan');
