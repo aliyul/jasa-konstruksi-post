@@ -269,7 +269,7 @@ const urlMappingPerbaikanFasadEksteriorArsitektur = {
 };
 
 //Jasa Renovasi Perbaikan Bangunan
-const urlMappingPerbaikanBangunan = {
+const urlMappingRenovasiBangunan = {
 "https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat Ibadah",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik.html": "Jasa Renovasi Pabrik",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah.html": "Jasa Renovasi Rumah",
@@ -279,13 +279,13 @@ const urlMappingPerbaikanBangunan = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-apartemen.html": "Jasa Renovasi Hotel Apartemen"
 };
 //SUB Jasa Renovasi Perbaikan Bangunan
-const urlMappingPerbaikanBangunanIbadah = {
+const urlMappingRenovasiBangunanIbadah = {
 
 };
-const urlMappingPerbaikanBangunanPabrik = {
+const urlMappingRenovasiBangunanPabrik = {
 
 };
-const urlMappingPerbaikanBangunanRumah = {
+const urlMappingRenovasiBangunanRumah = {
 "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-minimalis.html": "Jasa Renovasi Rumah Minimalis",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-type-36.html": "Jasa Renovasi Rumah Type 36",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-type-45.html": "Jasa Renovasi Rumah Type 45",
@@ -306,16 +306,16 @@ const urlMappingPerbaikanBangunanRumah = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-surabaya.html": "Jasa Renovasi Rumah Surabaya"
 */
 };
-const urlMappingPerbaikanBangunanKantor = {
+const urlMappingRenovasiBangunanKantor = {
 
 };
-const urlMappingPerbaikanBangunanGedung = {
+const urlMappingRenovasiBangunanGedung = {
 
 };
-const urlMappingPerbaikanBangunanGudang = {
+const urlMappingRenovasiBangunanGudang = {
 
 };
-const urlMappingPerbaikanBangunanHotel = {
+const urlMappingRenovasiBangunanHotel = {
 
 };
 
@@ -607,14 +607,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 urlMappingPerbaikanFasadEksteriorFasad,
                 //urlMappingPerbaikanFasadEksteriorEksterior,
                 urlMappingPerbaikanFasadEksteriorArsitektur,
-                urlMappingPerbaikanBangunan,
-                urlMappingPerbaikanBangunanIbadah,
-                urlMappingPerbaikanBangunanPabrik,
-                urlMappingPerbaikanBangunanRumah,
-                urlMappingPerbaikanBangunanKantor,
-                urlMappingPerbaikanBangunanGedung,
-		urlMappingPerbaikanBangunanGudang,
-		urlMappingPerbaikanBangunanHotel,
+                urlMappingRenovasiBangunan,
+                urlMappingRenovasiBangunanIbadah,
+                urlMappingRenovasiBangunanPabrik,
+                urlMappingRenovasiBangunanRumah,
+                urlMappingRenovasiBangunanKantor,
+                urlMappingRenovasiBangunanGedung,
+		urlMappingRenovasiBangunanGudang,
+		urlMappingRenovasiBangunanHotel,
 		urlMappingPerbaikanFasilitasUmum,
 		urlMappingPerbaikanFasilitasUmumTaman,
 		urlMappingPerbaikanFasilitasUmumSekolah,
@@ -752,14 +752,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 urlMappingPerbaikanFasadEksteriorFasad,
                 //urlMappingPerbaikanFasadEksteriorEksterior,
                 urlMappingPerbaikanFasadEksteriorArsitektur,
-                urlMappingPerbaikanBangunan,
-                urlMappingPerbaikanBangunanIbadah,
-                urlMappingPerbaikanBangunanPabrik,
-                urlMappingPerbaikanBangunanRumah,
-                urlMappingPerbaikanBangunanKantor,
-                urlMappingPerbaikanBangunanGedung,
-		urlMappingPerbaikanBangunanGudang,
-		urlMappingPerbaikanBangunanHotel,
+                urlMappingRenovasiBangunan,
+                urlMappingRenovasiBangunanIbadah,
+                urlMappingRenovasiBangunanPabrik,
+                urlMappingRenovasiBangunanRumah,
+                urlMappingRenovasiBangunanKantor,
+                urlMappingRenovasiBangunanGedung,
+		urlMappingRenovasiBangunanGudang,
+		urlMappingRenovasiBangunanHotel,
 		urlMappingPerbaikanFasilitasUmum,
 		urlMappingPerbaikanFasilitasUmumTaman,
 		urlMappingPerbaikanFasilitasUmumSekolah,
@@ -3237,7 +3237,7 @@ if (!JasaKonsPerbaikan) {
 	       document.head.appendChild(script);
      }
 //Jasa Perbaikan Bangunan
-   if (urlMappingPerbaikanBangunan[cleanUrlJasaPerbaikanKonsSub]) {
+   if (urlMappingRenovasiBangunan[cleanUrlJasaPerbaikanKonsSub]) {
        restoreCondition1('JasaKonsPerbaikan');
        restoreCondition1('JasaRenovasiPerbaikanBangunan');
 
@@ -3316,11 +3316,11 @@ if (!JasaKonsPerbaikan) {
         JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
         JasaRenovasiPerbaikanBangunanLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanBangunan[cleanUrlJasaPerbaikanKonsSub];
+        pageNameKonstruksiPerbaikan1.textContent = urlMappingRenovasiBangunan[cleanUrlJasaPerbaikanKonsSub];
     }
  
    // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingPerbaikanBangunan[cleanUrlJasaPerbaikanKonsSub]) {
+   if (urlMappingRenovasiBangunan[cleanUrlJasaPerbaikanKonsSub]) {
 	const jsonLDBreadcrumb = {
 	  "@context": "https://schema.org",
 	  "@type": "BreadcrumbList",
@@ -3352,7 +3352,7 @@ if (!JasaKonsPerbaikan) {
 	  {
 	    "@type": "ListItem",
 	     "position": 5,
-	      "name": urlMappingPerbaikanBangunan[cleanUrlJasaPerbaikanKonsSub],
+	      "name": urlMappingRenovasiBangunan[cleanUrlJasaPerbaikanKonsSub],
 	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
@@ -5899,7 +5899,7 @@ if (urlMappingPerbaikanFasilitasUmumHalte[cleanUrlJasaPerbaikanKonsSub]) {
 	       document.head.appendChild(script);
      }
 // SUB JASA RENOVASI PERBAIKAN BANGUNAN
-if (urlMappingPerbaikanBangunanRumah[cleanUrlJasaPerbaikanKonsSub]) {
+if (urlMappingRenovasiBangunanRumah[cleanUrlJasaPerbaikanKonsSub]) {
         restoreCondition1('JasaKonsPerbaikan');
         restoreCondition1('JasaRenovasiPerbaikanFasilitas');
         restoreCondition1('JasaRenovasiPerbaikanHalte');
@@ -5983,10 +5983,10 @@ if (urlMappingPerbaikanBangunanRumah[cleanUrlJasaPerbaikanKonsSub]) {
         JasaRenovasiPerbaikanBangunanLink.style.visibility = 'visible';
 	   
         JasaRenovasiPerbaikanBangunanRumahLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanBangunanRumah[cleanUrlJasaPerbaikanKonsSub];
+        pageNameKonstruksiPerbaikan1.textContent = urlMappingRenovasiBangunanRumah[cleanUrlJasaPerbaikanKonsSub];
     }
     // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingPerbaikanBangunanRumah[cleanUrlJasaPerbaikanKonsSub]) {
+   if (urlMappingRenovasiBangunanRumah[cleanUrlJasaPerbaikanKonsSub]) {
 	const jsonLDBreadcrumb = {
 	  "@context": "https://schema.org",
 	  "@type": "BreadcrumbList",
@@ -6024,7 +6024,7 @@ if (urlMappingPerbaikanBangunanRumah[cleanUrlJasaPerbaikanKonsSub]) {
 	   {
 	    "@type": "ListItem",
 	     "position": 6,
-	      "name": urlMappingPerbaikanBangunanRumah[cleanUrlJasaPerbaikanKonsSub],
+	      "name": urlMappingRenovasiBangunanRumah[cleanUrlJasaPerbaikanKonsSub],
 	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
