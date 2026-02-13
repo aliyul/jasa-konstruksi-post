@@ -4426,9 +4426,9 @@ if (urlMappingPerbaikanInteriorKantor[cleanUrlJasaPerbaikanKonsSub]) {
 	       document.head.appendChild(script);
      }
 //FASAD EKSTERIOR
-     if (urlMappingPerbaikanFasadEksterior[cleanUrlJasaPerbaikanKonsSub]) {
+if (urlMappingPerbaikanFasadEksterior[cleanUrlJasaPerbaikanKonsSub]) {
         restoreCondition1('JasaKonsPerbaikan');
-        restoreCondition1('JasaRenovasiPerbaikanFasad');
+        restoreCondition1('JasaRenovasiEksteriorBangunan');
           // hapus elemen id DIV Lain
 	removeCondition1('ProdukInFur');
         removeCondition1('MaterialKons');
@@ -4489,7 +4489,7 @@ if (urlMappingPerbaikanInteriorKantor[cleanUrlJasaPerbaikanKonsSub]) {
 	     
        // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
         removeCondition1('JasaRenovasiFasadBangunan');
-        removeCondition1('JasaRenovasiEksteriorBangunan');
+        removeCondition1('JasaRenovasiPerbaikanFasad');
         removeCondition1('JasaPerbaikanArsitekturEksterior');
 
 	// hapus elemen id Semua Sub JasaRenovasiPerbaikanFasilitas
