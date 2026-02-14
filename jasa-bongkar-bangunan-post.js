@@ -407,7 +407,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
      var JasaKonstruksiBongkarBangunanPostLink = document.getElementById("JasaKonstruksiBongkarBangunanPost");
      var JasaBongkarBangunanPostLink = document.getElementById("JasaBongkarBangunanPost");
-	 var JasaBongkarBangunanPostLink = document.getElementById("JasaPerawatanPerbaikanBangunanPost");
+	 var JasaPerawatanPerbaikanBangunanPostLink = document.getElementById("JasaPerawatanPerbaikanBangunanPost");
      
      //SUB JasaKonsBongkarBangunanPost
     var JasaBongkarTowerPostLink = document.getElementById("JasaBongkarTowerPost");
@@ -423,6 +423,9 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaBongkarLantaiPostLink = document.getElementById("JasaBongkarLantaiPost");
 
 	//SUB JasaPerawatanPerbaikanBangunanPost
+	var JasaPerbaikanAtapDrainaseBangunanPostLink = document.getElementById("JasaPerbaikanAtapDrainaseBangunanPost");
+     var JasaPerbaikanElemenArsitekturalPostLink = document.getElementById("JasaPerbaikanElemenArsitekturalPost");
+     var JasaPerbaikanKebocoranWaterproofingPostLink = document.getElementById("JasaPerbaikanKebocoranWaterproofingPost");
     var JasaPerbaikanAtapBocorPostLink = document.getElementById("JasaPerbaikanAtapBocorPost");
      var JasaPerbaikanDindingRetakPostLink = document.getElementById("JasaPerbaikanDindingRetakPost");
      var JasaPerbaikanRembesanAirPostLink = document.getElementById("JasaPerbaikanRembesanAirPost");
@@ -433,7 +436,7 @@ document.addEventListener("DOMContentLoaded", function() {
      // Default untuk menyembunyikan elemen
      JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'hidden';
      JasaBongkarBangunanPostLink.style.visibility = 'hidden';
-	 JasaPerawatanPerbaikanBangunanPost.style.visibility = 'hidden';
+	 JasaPerawatanPerbaikanBangunanPostLink.style.visibility = 'hidden';
 	
      //SUB JasaBongkarBangunanPost
      JasaBongkarTowerPostLink.style.visibility = 'hidden';
@@ -449,6 +452,10 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaBongkarLantaiPostLink.style.visibility = 'hidden';
 
 	 //SUB JasaPerawatanPerbaikanBangunanPost
+	JasaPerbaikanAtapDrainaseBangunanPostLink.style.visibility = 'hidden';
+	JasaPerbaikanElemenArsitekturalPostLink.style.visibility = 'hidden';
+	JasaPerbaikanKebocoranWaterproofingPostLink.style.visibility = 'hidden';
+	
      JasaPerbaikanAtapBocorPostLink.style.visibility = 'hidden';
      JasaPerbaikanDindingRetakPostLink.style.visibility = 'hidden';
      JasaPerbaikanRembesanAirPostLink.style.visibility = 'hidden';
@@ -500,7 +507,9 @@ if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
-	
+	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
         removeCondition('JasaPerbaikanRembesanAirPost');
@@ -604,6 +613,9 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 //hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
+	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
 	
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
@@ -664,6 +676,7 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+	
     if (urlMappingJasaBongkarBeton[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
@@ -705,7 +718,10 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 		//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
-	
+	     	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
+		
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
         removeCondition('JasaPerbaikanRembesanAirPost');
@@ -806,6 +822,9 @@ if (urlMappingJasaBongkarAtap[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
+	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
 	
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
@@ -908,6 +927,9 @@ if (urlMappingJasaBongkarKeramik[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
+	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
 	
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
@@ -1009,6 +1031,9 @@ if (urlMappingJasaBongkarTembok[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
+	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
 	
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
@@ -1110,6 +1135,9 @@ if (urlMappingJasaBongkarDinding[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
+	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
 	
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
@@ -1211,6 +1239,9 @@ if (urlMappingJasaBongkarPlafon[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
+	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
 	
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
@@ -1312,6 +1343,9 @@ if (urlMappingJasaBongkarPartisi[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
+	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
 	
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
@@ -1413,6 +1447,9 @@ if (urlMappingJasaBongkarPagar[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
+	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
 	
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
@@ -1514,6 +1551,9 @@ if (urlMappingJasaBongkarLantai[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
+	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
 	
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
@@ -1581,6 +1621,8 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
         restoreCondition('JasaPerawatanPerbaikanBangunanPost');
+	    restoreCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	    
         restoreCondition('JasaPerbaikanAtapBocorPost');
      
         //hapus elemen div id lain
@@ -1606,7 +1648,9 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost SELAIN JasaPerbaikanAtapBocorPost
         //removeCondition('JasaPerawatanPerbaikanBangunanPost');
-	
+	   	    //removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
         //removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
         removeCondition('JasaPerbaikanRembesanAirPost');
@@ -1663,15 +1707,21 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
                    "name": "Jasa Perawatan & Perbaikan Bangunan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html"
                },
-               {
+			 {
                    "@type": "ListItem",
                    "position": 4,
+                   "name": "Jasa Perbaikan Atap & Drainase Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-drainase-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
                    "name": "Jasa Perbaikan Atap Bocor",
                    "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-bocor.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 6,
                    "name": urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost],
                    "item": cleanUrlJasaKonsBongkarBangunanPost
                }
@@ -1714,7 +1764,9 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost SELAIN JasaPerbaikanAtapBocorPost
         //removeCondition('JasaPerawatanPerbaikanBangunanPost');
-	
+	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	     //removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
         //removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanRembesanAirPost');
@@ -1771,15 +1823,21 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
                    "name": "Jasa Perawatan & Perbaikan Bangunan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html"
                },
-               {
+			   {
                    "@type": "ListItem",
                    "position": 4,
+                   "name": "Jasa Perbaikan Elemen Arsitektural Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-elemen-arsitektural.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
                    "name": "Jasa Perbaikan Dinding Retak",
                    "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-retak.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 6,
                    "name": urlMappingJasaPerbaikanDindingRetak[cleanUrlJasaKonsBongkarBangunanPost],
                    "item": cleanUrlJasaKonsBongkarBangunanPost
                }
@@ -1822,7 +1880,10 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost SELAIN JasaPerbaikanAtapBocorPost
         //removeCondition('JasaPerawatanPerbaikanBangunanPost');
-	
+	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	     removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    //removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
+	 
         //removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
@@ -1879,15 +1940,21 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
                    "name": "Jasa Perawatan & Perbaikan Bangunan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html"
                },
-               {
+			   {
                    "@type": "ListItem",
                    "position": 4,
+                   "name": "Jasa Perbaikan Kebocoran & Waterproofing",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
                    "name": "Jasa Perbaikan Rembesan Air",
                    "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-rembesan-air.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 6,
                    "name": urlMappingJasaPerbaikanRembesanAir[cleanUrlJasaKonsBongkarBangunanPost],
                    "item": cleanUrlJasaKonsBongkarBangunanPost
                }
@@ -1930,7 +1997,9 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost SELAIN JasaPerbaikanAtapBocorPost
         //removeCondition('JasaPerawatanPerbaikanBangunanPost');
-	
+	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	      //removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	   removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
         //removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
@@ -1987,15 +2056,21 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
                    "name": "Jasa Perawatan & Perbaikan Bangunan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html"
                },
-               {
+			  {
                    "@type": "ListItem",
                    "position": 4,
+                   "name": "Jasa Perbaikan Elemen Arsitektural",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-elemen-arsitektural.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
                    "name": "Jasa Perbaikan Plafon Rusak",
                    "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon-rusak.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 6,
                    "name": urlMappingJasaPerbaikanPlafonRusak[cleanUrlJasaKonsBongkarBangunanPost],
                    "item": cleanUrlJasaKonsBongkarBangunanPost
                }
@@ -2038,7 +2113,9 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost SELAIN JasaPerbaikanAtapBocorPost
         //removeCondition('JasaPerawatanPerbaikanBangunanPost');
-	
+	   	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	      removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	   //removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
         //removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
@@ -2095,15 +2172,21 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
                    "name": "Jasa Perawatan & Perbaikan Bangunan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html"
                },
-               {
+			                  {
                    "@type": "ListItem",
                    "position": 4,
+                   "name": "Jasa Perbaikan Kebocoran Waterproofing",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
                    "name": "Jasa Perbaikan Dak Beton Bocor",
                    "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-dak-beton-bocor.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 6,
                    "name": urlMappingJasaPerbaikanDakBetonBocor[cleanUrlJasaKonsBongkarBangunanPost],
                    "item": cleanUrlJasaKonsBongkarBangunanPost
                }
@@ -2146,7 +2229,10 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost SELAIN JasaPerbaikanAtapBocorPost
         //removeCondition('JasaPerawatanPerbaikanBangunanPost');
-	
+	  	   	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	      removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	   //removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
+	 
         //removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanAtapBocorPost');
         removeCondition('JasaPerbaikanDindingRetakPost');
@@ -2206,12 +2292,18 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
                {
                    "@type": "ListItem",
                    "position": 4,
+                   "name": "Jasa Perbaikan Kebocoran Waterproofing",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html"
+               },
+			{
+                   "@type": "ListItem",
+                   "position": 5,
                    "name": "Jasa Perbaikan Talang Bocor",
                    "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-bocor.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 6,
                    "name": urlMappingJasaPerbaikanTalangBocor[cleanUrlJasaKonsBongkarBangunanPost],
                    "item": cleanUrlJasaKonsBongkarBangunanPost
                }
