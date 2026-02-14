@@ -139,7 +139,25 @@ const urlMappingPerbaikanStrukturAtap = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-rangka-atap-baja-ringan.html": "Jasa Perbaikan Rangka Atap Baja Ringan"
 
 };
+//Jasa PerawatanPerbaikanBanguna
+/*
+const urlMappingPerawatanPerbaikanBangunan = {
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur.html": "Jasa Perbaikan Struktur",
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html": "Jasa Perbaikan Kebocoran Waterproofing",
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-elemen-arsitektural.html": "Jasa Perbaikan Elemen Arsitektural",
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-drainase-bangunan.html": "Jasa Perbaikan Atap Drainase Bangunan"
+	
+};
+*/
+const urlMappingPerbaikanKebocoranWaterproofing = {
 
+};
+const urlMappingPerbaikanElemenArsitektural = {
+
+};
+const urlMappingPerbaikanAtapDrainaseBangunan = {
+
+};
 //Jasa Renovasi Perbaikan Infrastruktur
 /*
 const urlMappingPerbaikanInfrastruktur = {
@@ -735,6 +753,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
+		urlMappingPerbaikanKebocoranWaterproofing,
+urlMappingPerbaikanElemenArsitektural,
+urlMappingPerbaikanAtapDrainaseBangunan,
 		urlMappingPerbaikanStruktur,
         urlMappingPerbaikanStrukturGedungBertingkat,
 		urlMappingPerbaikanStrukturBangunanTua,
