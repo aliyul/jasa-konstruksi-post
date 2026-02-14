@@ -1939,7 +1939,7 @@ if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {
         restoreCondition1('JasaKonstruksiPerbaikanSubPost');
 	   restoreCondition1('JasaRenovasiPerawatanPerbaikanBangunanPost');
        removeCondition1('JasaRenovasiPerbaikanSubPost');
-        restoreCondition1('JasaRenovasiPerbaikanSubPost');
+      
         restoreCondition1('JasaRenovasiPerbaikanStrukturPost');
 	
         restoreCondition1('JasaPerbaikanStrukturBetonPost');
@@ -2125,9 +2125,15 @@ if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {
 	      "name": "Jasa Perbaikan Struktur",
 	      "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur.html"
 	    },
+		{
+	      "@type": "ListItem",
+	      "position": 5,
+	      "name": "Jasa Perbaikan Struktur Beton",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-beton.html"
+	    },
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 6,
                    "name": urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost],
                    "item": cleanUrlJasaKonsPerbaikanPost
                }
