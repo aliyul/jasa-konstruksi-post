@@ -781,6 +781,13 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
      var JasaRenovasiPerbaikanInteriorPostLink = document.getElementById("JasaRenovasiPerbaikanInteriorPost");
      var JasaRenovasiPerbaikanFasadPostLink = document.getElementById("JasaRenovasiPerbaikanFasadPost");
 
+	 //SUB JasaRenovasiPerawatanPerbaikanBangunanPost
+	/*
+	 var JasaPerbaikanKebocoranWaterproofingPostLink = document.getElementById("JasaPerbaikanKebocoranWaterproofingPost");
+	 var JasaPerbaikanElemenArsitekturalBangunanPostLink = document.getElementById("JasaPerbaikanElemenArsitekturalBangunanPost");
+	 var JasaPerbaikanAtapDrainaseBangunanPostLink = document.getElementById("JasaPerbaikanAtapDrainaseBangunanPost");
+	 */
+		
      //SUB JasaRenovasiPerbaikanStruktur
      //var JasaRenovasiPerbaikanStrukturUmumPostLink = document.getElementById("JasaRenovasiPerbaikanStrukturUmumPost");
      var JasaPerbaikanStrukturBetonPostLink = document.getElementById("JasaPerbaikanStrukturBetonPost");
@@ -839,7 +846,12 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
      //var JasaBobokBetonPostLink = document.getElementById("JasaBobokBetonPost");
      var JasaBetonKarbonasiPostLink = document.getElementById("JasaBetonKarbonasiPost");
      var JasaPerkuatanStrukturCfrpPostLink = document.getElementById("JasaPerkuatanStrukturCfrpPost");
-	
+   
+	/*
+		JasaPerbaikanKebocoranWaterproofingPostLink.style.visibility = 'hidden';
+JasaPerbaikanElemenArsitekturalBangunanPostLink.style.visibility = 'hidden';
+JasaPerbaikanAtapDrainaseBangunanPostLink.style.visibility = 'hidden';
+  */
      //hide SUB JasaRenovasiPerbaikanStrukturDindingPost
      //JasaBobokTembokPostLink.style.visibility = 'hidden';
      JasaInjeksiDindingRetakPostLink.style.visibility = 'hidden';
@@ -1328,7 +1340,7 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
 
 	// hapus elemen id Semua Sub JasaRenovasiPerbaikanStruktur selain JasaRenovasiPerbaikanStrukturTeknikBetonPost
 	//removeCondition1('JasaRenovasiPerbaikanStrukturUmumPost');
-				removeCondition1('JasaPerbaikanGedungBertingkatPost');
+			removeCondition1('JasaPerbaikanGedungBertingkatPost');
 			removeCondition1('JasaPerbaikanStrukturBangunanTuaPost');
 			removeCondition1('JasaPerbaikanStrukturBangunanMiringPost');
 		
