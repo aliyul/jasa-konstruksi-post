@@ -40,6 +40,33 @@ const urlMappingPerbaikanStrukturUmum = {
 	
 };
 */
+const urlMappingPerbaikanStrukturBeton = {
+
+  // Berdasarkan Jenis Kerusakan / Metode
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-retak-struktural-beton.html": "Jasa Perbaikan Retak Struktural Beton",
+  "https://www.betonjayareadymix.com/2018/09/jasa-rehabilitasi-struktur-beton-lama.html": "Jasa Rehabilitasi Struktur Beton Lama",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-akibat-korosi.html": "Jasa Perbaikan Beton Akibat Korosi",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-mengelupas.html": "Jasa Perbaikan Beton Mengelupas",
+  "https://www.betonjayareadymix.com/2018/09/jasa-retrofit-struktur-beton-eksisting.html": "Jasa Retrofit Struktur Beton Eksisting",
+  "https://www.betonjayareadymix.com/2018/09/jasa-peningkatan-kapasitas-struktur-beton.html": "Jasa Peningkatan Kapasitas Struktur Beton",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-akibat-overload.html": "Jasa Perbaikan Beton Akibat Overload",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-area-pesisir.html": "Jasa Perbaikan Beton Area Pesisir",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-akibat-asr.html": "Jasa Perbaikan Beton Akibat ASR (Alkali Silica Reaction)",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-serangan-sulfat.html": "Jasa Perbaikan Beton Akibat Serangan Sulfat",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-area-industri.html": "Jasa Perbaikan Beton Area Industri",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perpanjangan-umur-struktur-beton.html": "Jasa Perpanjangan Umur Struktur Beton",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-delaminasi.html": "Jasa Perbaikan Beton Delaminasi",
+
+  // Berdasarkan Lokasi
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-struktur-beton-jakarta.html": "Jasa Perbaikan Struktur Beton Jakarta",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-struktur-beton-bogor.html": "Jasa Perbaikan Struktur Beton Bogor",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-struktur-beton-depok.html": "Jasa Perbaikan Struktur Beton Depok",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-struktur-beton-tangerang.html": "Jasa Perbaikan Struktur Beton Tangerang",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-struktur-beton-bekasi.html": "Jasa Perbaikan Struktur Beton Bekasi",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-struktur-beton-karawang.html": "Jasa Perbaikan Struktur Beton Karawang",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-struktur-beton-bandung.html": "Jasa Perbaikan Struktur Beton Bandung"
+
+};
 
 const urlMappingPerbaikanStrukturGedungBertingkat  = {
 
@@ -757,6 +784,7 @@ document.addEventListener("DOMContentLoaded", function() {
 urlMappingPerbaikanElemenArsitektural,
 urlMappingPerbaikanAtapDrainaseBangunan,
 		urlMappingPerbaikanStruktur,
+		urlMappingPerbaikanStrukturBeton,
         urlMappingPerbaikanStrukturGedungBertingkat,
 		urlMappingPerbaikanStrukturBangunanTua,
 		urlMappingPerbaikanStrukturBangunanMiring,
@@ -1658,6 +1686,145 @@ if (!JasaKonsPerbaikan) {
 	    "@type": "ListItem",
 	     "position": 6,
 	      "name": urlMappingPerbaikanStrukturBangunanTua[cleanUrlJasaPerbaikanKonsSub],
+	      "item": cleanUrlJasaPerbaikanKonsSub
+	   }
+	  ]
+	};
+	
+	       const script = document.createElement('script');
+	       script.type = 'application/ld+json';
+	       script.text = JSON.stringify(jsonLDBreadcrumb);
+	       document.head.appendChild(script);
+     }
+	
+	 if (urlMappingPerbaikanStrukturBeton[cleanUrlJasaPerbaikanKonsSub]) {
+        restoreCondition1('JasaKonsPerbaikan');
+		restoreCondition1('JasaRenovasiPerbaikanPerawatanPerbaikanBangunan');
+	   removeCondition1('JasaRenovasiPerbaikanLinkSub');
+		
+        restoreCondition1('JasaRenovasiPerbaikanStruktur');
+        restoreCondition1('JasaPerbaikanStrukturBeton');
+	    
+           // hapus elemen id DIV Lain
+	removeCondition1('ProdukInFur');
+        removeCondition1('MaterialKons');
+	removeCondition1('ProdukKons');
+        //removeCondition1('ProdukKonsSaluran');
+        //removeCondition1('ProdukKonsPembatas');
+        removeCondition1('JasaKonsPembatas');
+        removeCondition1('JasaKonsJalanPerkerasan');
+        removeCondition1('JasaKonsPondasiTanah');
+	removeCondition1('JasaKons');
+	removeCondition1('JasaKonsSub');
+	removeCondition1('MenuKons');
+	removeCondition1('JasaKonsFinishing');
+        removeCondition1('JasaKonsStruktur');
+	
+	// hapus elemen id Sub JasaRenovasiPerbaikan Selain 'JasaRenovasiPerbaikanStruktur'
+        removeCondition1('JasaRenovasiPerbaikanInfrastruktur');
+        removeCondition1('JasaRenovasiPerbaikanBangunan');
+        removeCondition1('JasaRenovasiPerbaikanInterior');
+	removeCondition1('JasaRenovasiPerbaikanFasad');
+	removeCondition1('JasaRenovasiPerbaikanFasilitas');
+	       
+	// hapus elemen id Semua Sub JasaRenovasiPerbaikanStruktur selain 'JasaPerbaikanStrukturBeton'
+        removeCondition1('JasaRenovasiPerbaikanStrukturKolomBalok');
+			removeCondition1('JasaPerbaikanGedungBertingkat');
+			removeCondition1('JasaPerbaikanStrukturBangunanTua');
+			removeCondition1('JasaPerbaikanStrukturBangunanMiring');
+		
+        removeCondition1('JasaRenovasiPerbaikanStrukturPondasi');
+        removeCondition1('JasaRenovasiPerbaikanStrukturLantai');
+	removeCondition1('JasaRenovasiPerbaikanStrukturDinding');
+	removeCondition1('JasaRenovasiPerbaikanStrukturAtap');
+	removeCondition1('JasaRenovasiPerbaikanRehabilitasiBeton');
+       
+        // hapus elemen id Semua Sub JasaRenovasiPerbaikanInfrastruktur
+        removeCondition1('JasaRenovasiPerbaikanInfrastrukturJalan');
+        removeCondition1('JasaRenovasiPerbaikanInfrastrukturJembatan');
+        removeCondition1('JasaRenovasiPerbaikanInfrastrukturSaluran');
+        removeCondition1('JasaRenovasiPerbaikanInfrastrukturTrotoar');
+
+	// hapus elemen id Semua Sub JasaRenovasiPerbaikanBangunan
+        removeCondition1('JasaRenovasiPerbaikanBangunanRumah');
+        removeCondition1('JasaRenovasiPerbaikanBangunanKantor');
+        removeCondition1('JasaRenovasiPerbaikanBangunanPabrik');
+        removeCondition1('JasaRenovasiPerbaikanBangunanGedung');
+        removeCondition1('JasaRenovasiPerbaikanBangunanGudang');
+        removeCondition1('JasaRenovasiPerbaikanBangunanHotel');
+
+	 // hapus elemen id Semua Sub JasaRenovasiPerbaikanInterior
+        removeCondition1('JasaRenovasiInteriorRumah');
+        removeCondition1('JasaRenovasiInteriorKantor');
+        removeCondition1('JasaRenovasiInteriorApartemen');
+        removeCondition1('JasaRenovasiInteriorHotel');
+        removeCondition1('JasaRenovasiInteriorToko');
+        removeCondition1('JasaRenovasiInteriorCustom');
+        removeCondition1('JasaRenovasiInteriorRuangan');
+	    
+       // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
+        removeCondition1('JasaRenovasiFasadBangunan');
+        removeCondition1('JasaRenovasiEksteriorBangunan');
+        removeCondition1('JasaPerbaikanArsitekturEksterior');
+
+	// hapus elemen id Semua Sub JasaRenovasiPerbaikanFasilitas
+        removeCondition1('JasaRenovasiPerbaikanStadionOlahraga');
+        removeCondition1('JasaRenovasiPerbaikanSekolah');
+        removeCondition1('JasaRenovasiPerbaikanRumahSakit');
+        removeCondition1('JasaRenovasiPerbaikanTempatIbadah');
+        removeCondition1('JasaRenovasiPerbaikanTerminal');
+        removeCondition1('JasaRenovasiPerbaikanHalte');
+        removeCondition1('JasaRenovasiPerbaikanTamanKota');
+       
+	JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
+        //JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
+		JasaRenovasiPerbaikanPerawatanPerbaikanBangunanLink.style.visibility = 'visible';
+		
+        JasaRenovasiPerbaikanStrukturLink.style.visibility = 'visible';
+	//tampilkan menu JasaRenovasiPerbaikanStrukturKolomBalok
+		JasaPerbaikanStrukturBetonLink.style.visibility = 'visible';
+        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanStrukturBeton[cleanUrlJasaPerbaikanKonsSub];    
+    }
+	  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingPerbaikanStrukturBeton[cleanUrlJasaPerbaikanKonsSub]) {
+	const jsonLDBreadcrumb = {
+	  "@context": "https://schema.org",
+	  "@type": "BreadcrumbList",
+	  "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+	    {
+	      "@type": "ListItem",
+	      "position": 2,
+	      "name": "Jasa Konstruksi",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+	    },
+ {
+	      "@type": "ListItem",
+	      "position": 3,
+	      "name": "Jasa Perawatan & Perbaikan Bangunan",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html"
+	    },
+	    {
+	      "@type": "ListItem",
+	      "position": 4,
+	      "name": "Jasa Perbaikan Struktur",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur.html"
+	    },
+	  {
+	      "@type": "ListItem",
+	      "position": 5,
+	      "name": "Jasa Perbaikan Struktur Beton",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-beton.html"
+	    },
+	  {
+	    "@type": "ListItem",
+	     "position": 6,
+	      "name": urlMappingPerbaikanStrukturBeton[cleanUrlJasaPerbaikanKonsSub],
 	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
