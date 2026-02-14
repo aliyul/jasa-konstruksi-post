@@ -1195,8 +1195,8 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
 	    {
 	      "@type": "ListItem",
 	      "position": 3,
-	      "name": "Jasa Renovasi",
-	      "item": "https://www.betonjayareadymix.com/p/jasa-renovasi.html"
+	      "name": "Jasa Perawatan Perbaikan Bangunan",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html"
 	    },
 	    {
 	      "@type": "ListItem",
@@ -1207,8 +1207,8 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
 	    {
 	      "@type": "ListItem",
 	      "position": 5,
-	      "name": "Jasa Perbaikan Teknik Beton",
-	      "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-teknik-beton.html"
+	      "name": "Jasa Rehabilitasi Beton",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton.html"
 	    },
 	    {
 	      "@type": "ListItem",
@@ -1885,8 +1885,8 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
 	    {
 	      "@type": "ListItem",
 	      "position": 3,
-	      "name": "Jasa Renovasi",
-	      "item": "https://www.betonjayareadymix.com/p/jasa-renovasi.html"
+	      "name": "Jasa Perawatan Perbaikan Bangunan",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html"
 	    },
 	    {
 	      "@type": "ListItem",
@@ -1897,8 +1897,8 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
 	    {
 	      "@type": "ListItem",
 	      "position": 5,
-	      "name": "Jasa Perbaikan Teknik Beton",
-	      "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-teknik-beton.html"
+"name": "Jasa Rehabilitasi Beton",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton.html"
 	    },
 	    {
 	      "@type": "ListItem",
@@ -2100,8 +2100,8 @@ if (urlMappingJasaPerbaikanStrukturBeton[cleanUrlJasaKonsPerbaikanPost]) {
 	    {
 	      "@type": "ListItem",
 	      "position": 3,
-	      "name": "Jasa Renovasi",
-	      "item": "https://www.betonjayareadymix.com/p/jasa-renovasi.html"
+	      "name": "Jasa Perawatan Perbaikan Bangunan",
+	      "item": "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html"
 	    },
 	    {
 	      "@type": "ListItem",
