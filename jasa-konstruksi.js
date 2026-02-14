@@ -478,6 +478,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaSewaAlatKonstruksi,
 		urlMappingJasaSewaAlatBerat,
 		urlMappingJasaSewaAlatKonstruksiRingan,
+        urlMappingPerbaikanInfrastruktur,
+		urlMappingPerawatanPerbaikanBangunan,
 		urlMappingRenovasi,
 		urlMappingFinishing,
 		urlMappingStruktur,
