@@ -162,7 +162,7 @@ const urlMappingPerbaikanElemenArsitektural = {
 	  "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon-rusak.html": "Jasa Perbaikan Plafon Rusak",
 };
 const urlMappingPerbaikanAtapDrainaseBangunan = {
-
+	 "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-bocor.html": "Jasa Perbaikan Atap Bocor"
 };
 //Jasa Renovasi Perbaikan Infrastruktur
 /*
