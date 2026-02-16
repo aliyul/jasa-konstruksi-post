@@ -911,6 +911,7 @@ if (!JasaKonsPerbaikan) {
 	
      var JasaKonstruksiPerbaikanLinkSub = document.getElementById("JasaKonstruksiPerbaikanSub");
      var JasaRenovasiPerbaikanLinkSub = document.getElementById("JasaRenovasiPerbaikanSub");
+	
      //SUB JasaRenovasiPerbaikan
      var JasaRenovasiPerbaikanStrukturLink = document.getElementById("JasaRenovasiPerbaikanStruktur");
 	 var JasaPerbaikanKebocoranWaterproofingLink = document.getElementById("JasaPerbaikanKebocoranWaterproofing");
@@ -982,6 +983,7 @@ if (!JasaKonsPerbaikan) {
      // Default untuk menyembunyikan elemen
      JasaKonstruksiPerbaikanLinkSub.style.visibility = 'hidden';
      JasaRenovasiPerbaikanLinkSub.style.visibility = 'hidden';
+	
      //Hide Sub JasaRenovasiPerbaikan
 	JasaRenovasiPerbaikanPerawatanPerbaikanBangunanLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanStrukturLink.style.visibility = 'hidden';
