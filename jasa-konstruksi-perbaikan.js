@@ -913,6 +913,10 @@ if (!JasaKonsPerbaikan) {
      var JasaRenovasiPerbaikanLinkSub = document.getElementById("JasaRenovasiPerbaikanSub");
      //SUB JasaRenovasiPerbaikan
      var JasaRenovasiPerbaikanStrukturLink = document.getElementById("JasaRenovasiPerbaikanStruktur");
+	 var JasaPerbaikanKebocoranWaterproofingLink = document.getElementById("JasaPerbaikanKebocoranWaterproofing");
+     var JasaPerbaikanElemenArsitekturalBangunanLink = document.getElementById("JasaPerbaikanElemenArsitekturalBangunan");
+      var JasaPerbaikanAtapDrainaseBangunanLink = document.getElementById("JasaPerbaikanAtapDrainaseBangunan");
+	
      var JasaRenovasiPerbaikanInfrastrukturLink = document.getElementById("JasaRenovasiPerbaikanInfrastruktur");
      var JasaRenovasiPerbaikanBangunanLink = document.getElementById("JasaRenovasiPerbaikanBangunan");
       var JasaRenovasiPerbaikanFasilitasLink = document.getElementById("JasaRenovasiPerbaikanFasilitas");
@@ -981,6 +985,10 @@ if (!JasaKonsPerbaikan) {
      //Hide Sub JasaRenovasiPerbaikan
 	JasaRenovasiPerbaikanPerawatanPerbaikanBangunanLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanStrukturLink.style.visibility = 'hidden';
+	JasaPerbaikanKebocoranWaterproofingLink.style.visibility = 'hidden';
+JasaPerbaikanElemenArsitekturalBangunanLink.style.visibility = 'hidden';
+JasaPerbaikanAtapDrainaseBangunanLink.style.visibility = 'hidden';
+	
      JasaRenovasiPerbaikanInfrastrukturLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanBangunanLink.style.visibility = 'hidden';
      JasaRenovasiPerbaikanInteriorLink.style.visibility = 'hidden';
