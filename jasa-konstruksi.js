@@ -2386,6 +2386,9 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
     removeCondition('JasaPerawatanPerbaikanBangunan');
+	
+    removeCondition('JasaPerbaikanInfrastruktur');   
+	   
     //SUB JASA PENGEBORAN
 	    removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
@@ -2482,6 +2485,7 @@ if (urlMappingJasaBorAir[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
     removeCondition('JasaPerawatanPerbaikanBangunan');
+    removeCondition('JasaPerbaikanInfrastruktur'); 
 	//SUB JASA PENGEBORAN selain JasaBorAir
 		//removeCondition('JasaBorAir');
 	     removeCondition('JasaBorTeknik');
@@ -2581,6 +2585,7 @@ if (urlMappingJasaInstalasiListrik[cleanUrlJasaKons]) {
 	removeCondition('JasaPerkuatanTanahLongsor');
 	removeCondition('JasaBongkarBangunan');
 	removeCondition('JasaPerawatanPerbaikanBangunan');
+    removeCondition('JasaPerbaikanInfrastruktur'); 
 	removeCondition('JasaPengeboran');
 		 removeCondition('JasaBorTeknik');
 		removeCondition('JasaBorAir');
