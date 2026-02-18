@@ -154,7 +154,13 @@ const urlMappingPerbaikanKebocoranWaterproofing = {
 
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-rembesan-air.html": "Jasa Perbaikan Rembesan Air",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-dak-beton-bocor.html": "Jasa Perbaikan Dak Beton Bocor",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-bocor.html": "Jasa Perbaikan Talang Bocor"
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-bocor.html": "Jasa Perbaikan Talang Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-genteng-bocor.html": "Jasa Perbaikan Genteng Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-dak-beton.html": "Jasa Waterproofing Dak Beton",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-basement.html": "Jasa Waterproofing Basement",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-dinding.html": "Jasa Waterproofing Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-injeksi-anti-bocor.html": "Jasa Injeksi Anti Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-coating-waterproofing.html": "Jasa Coating Waterproofing"
 
 };
 const urlMappingPerbaikanElemenArsitektural = {
