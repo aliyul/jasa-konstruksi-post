@@ -120,6 +120,13 @@ const urlMappingJasaBorTembok = {
 
 };
 const urlMappingJasaCoringBeton = {
+  "https://www.betonjayareadymix.com/2018/11/layanan-core-drill-terpercaya.html": "Layanan Core Drill Terpercaya",
+  "https://www.betonjayareadymix.com/2018/11/core-drill-beton-jakarta.html": "Core Drill Beton Jakarta",
+  "https://www.betonjayareadymix.com/2018/11/core-drill-proyek-konstruksi.html": "Core Drill Proyek Konstruksi",
+  "https://www.betonjayareadymix.com/2018/11/pengeboran-beton-instalasi-pipa.html": "Pengeboran Beton Instalasi Pipa",
+  "https://www.betonjayareadymix.com/2018/11/jasa-bor-beton-saluran-kabel.html": "Jasa Bor Beton Saluran Kabel",
+  "https://www.betonjayareadymix.com/2018/11/pengeboran-beton-sistem-hvac.html": "Pengeboran Beton Sistem HVAC",
+	
 "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-surabaya.html": "Jasa Coring Beton Surabaya",
 "https://www.betonjayareadymix.com/2018/11/jasa-core-drill-beton.html": "Jasa Core Drill Beton",
 "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-karawang.html": "Jasa Coring Beton Karawang",
@@ -134,17 +141,10 @@ const urlMappingJasaCoringBeton = {
 };
 const urlMappingJasaBorBeton = {
 //"https://www.betonjayareadymix.com/2018/09/jasa-core-drill-beton.html": "Jasa Core Drill Beton",
-
+ "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-renovasi-bangunan.html": "Jasa Bor Beton Renovasi Bangunan",
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-profesional.html": "Jasa Bor Beton Profesional",
   "https://www.betonjayareadymix.com/2019/08/pengeboran-beton-akurat.html": "Pengeboran Beton Akurat",
-  "https://www.betonjayareadymix.com/2019/08/layanan-core-drill-terpercaya.html": "Layanan Core Drill Terpercaya",
-  "https://www.betonjayareadymix.com/2019/08/core-drill-beton-jakarta.html": "Core Drill Beton Jakarta",
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-jakarta.html": "Jasa Bor Beton Jakarta",
-  "https://www.betonjayareadymix.com/2019/08/pengeboran-beton-instalasi-pipa.html": "Pengeboran Beton Instalasi Pipa",
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-saluran-kabel.html": "Jasa Bor Beton Saluran Kabel",
-  "https://www.betonjayareadymix.com/2019/08/core-drill-proyek-konstruksi.html": "Core Drill Proyek Konstruksi",
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-renovasi-bangunan.html": "Jasa Bor Beton Renovasi Bangunan",
-  "https://www.betonjayareadymix.com/2019/08/pengeboran-beton-sistem-hvac.html": "Pengeboran Beton Sistem HVAC",
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-jakarta.html": "Jasa Bor Beton Jakarta",
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-bogor.html": "Jasa Bor Beton Bogor",
  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-depok.html": "Jasa Bor Beton Depok",
