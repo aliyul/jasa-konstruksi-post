@@ -380,22 +380,6 @@ document.addEventListener("DOMContentLoaded", function() {
 })();
 */
 
-function toISOWithTimezoneLocal(date, offset = "+07:00") {
-  if (!date) return null;
-  const d = new Date(date);
-  if (isNaN(d.getTime())) return null;
-
-  const pad = (n) => n.toString().padStart(2, "0");
-  const yyyy = d.getFullYear();
-  const mm = pad(d.getMonth() + 1);
-  const dd = pad(d.getDate());
-  const hh = pad(d.getHours());
-  const min = pad(d.getMinutes());
-  const ss = pad(d.getSeconds());
-
-  return `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${offset}`;
-}
-
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
@@ -495,6 +479,21 @@ function toISOWithTimezoneLocal(date, offset = "+07:00") {
 		    // await loadEvergreenScript();
 		         console.log("✅ detect-evergreen.js selesai dimuat.");
 
+			 function toISOWithTimezoneLocal(date, offset = "+07:00") {
+				  if (!date) return null;
+				  const d = new Date(date);
+				  if (isNaN(d.getTime())) return null;
+				
+				  const pad = (n) => n.toString().padStart(2, "0");
+				  const yyyy = d.getFullYear();
+				  const mm = pad(d.getMonth() + 1);
+				  const dd = pad(d.getDate());
+				  const hh = pad(d.getHours());
+				  const min = pad(d.getMinutes());
+				  const ss = pad(d.getSeconds());
+				
+				  return `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${offset}`;
+				}
 			    // --- pastikan AEDMetaDates sudah tersedia ---
 			    if (!window.AEDMetaDates || !window.AEDMetaDates.dateModified) {
 			      console.warn("[HybridDateModified] AEDMetaDates tidak ditemukan, skip update.");
