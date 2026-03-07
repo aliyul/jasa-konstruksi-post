@@ -384,11 +384,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingJasaBorAirLokasi,
 		urlMappingJasaBorAirSumur,
-		urlMappingJasaBorAirKebutuhan,
-		urlMappingJasaBorAirPeralatan,
-		urlMappingJasaBorTeknik,
 		urlMappingJasaBorePile,
 		urlMappingJasaBorTembok,
 		urlMappingJasaCoringBeton,
