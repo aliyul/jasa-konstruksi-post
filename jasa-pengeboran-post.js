@@ -1,13 +1,11 @@
+
 const urlMappingJasaPengeboranPost = {
-    "https://www.betonjayareadymix.com/2019/08/tukang-bor.html": "Tukang Bor",
+ "https://www.betonjayareadymix.com/2019/08/tukang-bor.html": "Tukang Bor",
   "https://www.betonjayareadymix.com/2019/08/tukang-bor-terdekat.html": "Tukang Bor Terdekat"
 
 };
 //SUB MAPPING JasaPengeboranPost 
-const urlMappingJasaBorAirLokasi = {
 
-
-};
 //ga perlu JasaBorAirBiaya, hapus aja
 /*const urlMappingJasaBorAirBiaya = {
 
@@ -64,18 +62,7 @@ const urlMappingJasaBorAirTeknik = {
   "https://www.betonjayareadymix.com/2018/09/jasa-bor-air-tanah.html": "Jasa Bor Air Tanah"
 	
 };*/
-const urlMappingJasaBorAirKebutuhan = {
 
-};
-
-const urlMappingJasaBorAirPeralatan = {
-
-};
-
-const urlMappingJasaBorTeknik = {
-
-	
-};
 const urlMappingJasaBorePile = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile.html": "Harga Jasa Strauss Pile",
@@ -913,6 +900,7 @@ if (urlMappingJasaCoringBeton[cleanUrlJasaPengeboranPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+	
 if (urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaKonsPengeboranPost');
         restoreCondition('JasaPengeboranPost');
@@ -1003,6 +991,7 @@ if (urlMappingJasaBorTembok[cleanUrlJasaPengeboranPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+	
 if (urlMappingJasaBorBeton[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaKonsPengeboranPost');
         restoreCondition('JasaPengeboranPost');
