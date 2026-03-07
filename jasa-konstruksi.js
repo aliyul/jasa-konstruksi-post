@@ -215,8 +215,8 @@ const urlMappingPerawatanPerbaikanBangunan = {
 	
 };
 const urlMappingPengeboran = {
-"https://www.betonjayareadymix.com/p/jasa-bor-teknik.html": "Jasa Bor Teknik",
-"https://www.betonjayareadymix.com/p/jasa-bor-air.html": "Jasa Bor Air",
+//"https://www.betonjayareadymix.com/p/jasa-bor-teknik.html": "Jasa Bor Teknik",
+"https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html": "Jasa Bor Air Sumur",
   "https://www.betonjayareadymix.com/p/jasa-bore-pile.html": "Jasa Bore Pile",
   "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",
   "https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton",
