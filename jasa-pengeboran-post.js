@@ -477,7 +477,73 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		    // ✔ AUTO MODE
 		    // await loadEvergreenScript();
-		
+		         console.log("✅ detect-evergreen.js selesai dimuat.");
+
+			    // --- pastikan AEDMetaDates sudah tersedia ---
+			    if (!window.AEDMetaDates || !window.AEDMetaDates.dateModified) {
+			      console.warn("[HybridDateModified] AEDMetaDates tidak ditemukan, skip update.");
+			      return;
+			    }
+			
+			    const { dateModified, nextUpdate, type } = window.AEDMetaDates;
+			
+			    // 🔒 Stable hash untuk variasi waktu stabil
+			    function stableHash(str) {
+			      let hash = 0;
+			      for (let i = 0; i < str.length; i++) {
+			        hash = (hash << 5) - hash + str.charCodeAt(i);
+			        hash |= 0;
+			      }
+			      return Math.abs(hash);
+			    }
+			
+			    const hash = stableHash(cleanUrlJasaPengeboranPost);
+			    const offsetSeconds = hash % 86400;
+			    const finalDate = new Date(new Date(dateModified).getTime() + offsetSeconds * 1000);
+			    const isoDate = finalDate.toISOString();
+			
+			    // 🧱 Update meta dateModified
+			    [
+			      ['meta[itemprop="dateModified"]', 'itemprop', 'dateModified'],
+			      ['meta[name="dateModified"]', 'name', 'dateModified'],
+			      ['meta[property="article:modified_time"]', 'property', 'article:modified_time']
+			    ].forEach(([selector, attr, val]) => {
+			      let meta = document.querySelector(selector);
+			      if (!meta) {
+			        meta = document.createElement("meta");
+			        meta.setAttribute(attr, val);
+			        document.head.appendChild(meta);
+			      }
+			      meta.setAttribute("content", isoDate);
+			    });
+			
+				
+							// Pastikan AEDMetaDates sudah ada minimal sebagai objek kosong
+				window.AEDMetaDates = window.AEDMetaDates || {};
+				
+				// Update hanya properti dateModified tanpa menghapus lainnya
+				window.AEDMetaDates = {
+				  ...window.AEDMetaDates,
+				  dateModified: isoDate
+				};
+				
+				console.log("✅ AEDMetaDates updated jasa-pengeboran-post:", window.AEDMetaDates);
+			    console.log(`✅ [HybridDateModified v2.5] ${cleanUrlJasaPengeboranPost} → ${isoDate} | type=${type || "-"}`);
+			
+			    // 🧩 Perbarui schema jika ada
+			    const schemaEl = document.querySelector('script[data-schema="evergreen-maintenance"]');
+			    if (schemaEl) {
+			      try {
+			        const data = JSON.parse(schemaEl.textContent.trim());
+			        data.dateModified = isoDate;
+			        if (data.maintenanceSchedule) data.maintenanceSchedule.scheduledTime = nextUpdate;
+			        schemaEl.textContent = JSON.stringify(data, null, 2);
+			        console.log(`🔄 Schema maintenance diperbarui → dateModified: ${isoDate}`);
+			      } catch (err) {
+			        console.error("❌ Gagal update schema:", err);
+			      }
+			    }
+			  
 		  } catch (err) {
 		    console.error("[HybridDateModified] Fatal:", err);
 		  }
