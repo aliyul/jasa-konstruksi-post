@@ -500,7 +500,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			    const hash = stableHash(cleanUrlJasaPengeboranPost);
 			    const offsetSeconds = hash % 86400;
 			    const finalDate = new Date(new Date(dateModified).getTime() + offsetSeconds * 1000);
-			    const isoDate = finalDate.toISOString();
+			    const isoDate = finalDate;
 			
 			    // 🧱 Update meta dateModified
 			    [
