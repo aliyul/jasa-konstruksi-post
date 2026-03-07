@@ -224,6 +224,7 @@ const urlMappingPengeboran = {
   "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal",
  "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html": "Jasa Bor Tembok"
 };
+/*
 const urlMappingJasaBorAirSumur = {
   "https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html": "Jasa Bor Air Sumur",
   //"https://www.betonjayareadymix.com/p/jasa-bor-air-teknik.html": "Jasa Bor Air Teknik",
@@ -232,7 +233,7 @@ const urlMappingJasaBorAirSumur = {
   //"https://www.betonjayareadymix.com/p/biaya-jasa-bor-air.html": "Biaya Jasa Bor Air",
   "https://www.betonjayareadymix.com/p/peralatan-jasa-bor-air.html": "Peralatan Jasa Bor Air"
 };
-
+*/
 const urlMappingPembatas = {
 "https://www.betonjayareadymix.com/p/jasa-pengamanan-area-proyek.html": "Jasa Pengamanan Area Proyek",
   "https://www.betonjayareadymix.com/p/jasa-rambu-dan-sistem-keamanan-visual.html": "Jasa Rambu dan Sistem Keamanan Visual",
@@ -491,7 +492,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingPerkuatanTanahLongsor,
 		urlMappingBongkarBangunan,
 		urlMappingPengeboran,
-		urlMappingJasaBorAirSumur,
 		urlMappingPembatas,
 		urlMappingJasaInstalasiListrik
     );
@@ -2428,6 +2428,7 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
    }
 
 //SUB JASA PENGEBORAN
+/*
 if (urlMappingJasaBorAirSumur[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPengeboran');
@@ -2522,7 +2523,8 @@ if (urlMappingJasaBorAirSumur[cleanUrlJasaKons]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-
+   */
+	
 //JASA INSTALASI LISTRIK
 if (urlMappingJasaInstalasiListrik[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
