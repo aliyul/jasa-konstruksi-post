@@ -697,7 +697,7 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
 			      return Math.abs(hash);
 			    }
 			
-			    const hash = stableHash(cleanUrlJasaPengeboranPost);
+			    const hash = stableHash(cleanUrlJasaKonsFinishingPost);
 			    const offsetSeconds = hash % 86400;
 			    const finalDate = new Date(new Date(dateModified).getTime() + offsetSeconds * 1000);
 			    const isoDate = toISOWithTimezoneLocal(finalDate);
@@ -728,7 +728,7 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
 				};
 				
 				console.log("✅ AEDMetaDates updated jasa-pengeboran-post:", window.AEDMetaDates);
-			    console.log(`✅ [HybridDateModified v2.5] ${cleanUrlJasaPengeboranPost} → ${isoDate} | type=${type || "-"}`);
+			    console.log(`✅ [HybridDateModified v2.5] ${cleanUrlJasaKonsFinishingPost} → ${isoDate} | type=${type || "-"}`);
 			
 			    // 🧩 Perbarui schema jika ada
 			    const schemaEl = document.querySelector('script[data-schema="evergreen-maintenance"]');
