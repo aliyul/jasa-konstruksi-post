@@ -526,9 +526,35 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 */
+    // --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingJasaCuttingBeton ,
+		urlMappingJasaSondir,
+		urlMappingJasaCpt,
+		urlMappingJasaBoringTanah,
+		urlMappingJasaLabTanaH,
+		urlMappingJasaUjiPenetrasi,
+		urlMappingJasaPemotonganBukitLahan,
+		urlMappingJasaPengupasanLahanTanah,
+		urlMappingJasaTebangPohon,
+		urlMappingJasaPerataandanGradingLahan,
+		urlMappingJasaElevasiLahan,
+		urlMappingJasaBadanLahan,
+		urlMappingJasaCutandFillLahan,
+		urlMappingJasaUruganTanahLahan,
+		urlMappingJasaPemadatanTanahLahan,
+		urlMappingJasaPembersihanLahan,
+		urlMappingJasaBaseCourseLahan ,
+		urlMappingJasaStabilisasiTanahLahan ,
+		urlMappingJasaDrainaseLahan,
+		urlMappingJasaGeotekstilLahan,
+		urlMappingJasaPersiapanPondasiLahan
+    );
 
+    // --- validasi URL terdaftar ---
 	 // --- validasi URL terdaftar ---
-    if (!urlMappingJasaCuttingBeton[cleanUrlJasaCuttingBetonPost]) {
+    if (!urlMappingGabungan[cleanUrlJasaCuttingBetonPost]) {
       console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaCuttingBetonPost}`);
       return;
     }
