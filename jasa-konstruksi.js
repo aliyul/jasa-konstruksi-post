@@ -150,6 +150,7 @@ const urlMappingJalan = {
 };
 
 const urlMappingPematanganLahan = {
+"https://www.betonjayareadymix.com/p/jasa-galian-tanah.html": "Jasa Galian Tanah",
 "https://www.betonjayareadymix.com/p/jasa-pengupasan-lahan-tanah.html": "Jasa Pengupasan Lahan Tanah",
   "https://www.betonjayareadymix.com/p/jasa-pembersihan-lahan.html": "Jasa Pembersihan Lahan",
   "https://www.betonjayareadymix.com/p/jasa-perataan-dan-grading-lahan.html": "Jasa Perataan dan Grading Lahan",
