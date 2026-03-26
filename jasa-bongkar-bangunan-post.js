@@ -58,6 +58,19 @@ const urlMappingJasaBongkarLantai = {
 
 };
 
+//SUB MAPPING JASA BUANG PUING
+// 
+const urlMappingJasaBuangBuing = {
+ "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-surabaya.html": "Jasa Buang Puing Surabaya",
+  "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-karawang.html": "Jasa Buang Puing Karawang",
+  "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-bekasi.html": "Jasa Buang Puing Bekasi",
+  "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-tangerang.html": "Jasa Buang Puing Tangerang",
+  "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-depok.html": "Jasa Buang Puing Depok",
+  "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-bogor.html": "Jasa Buang Puing Bogor",
+  "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-jakarta.html": "Jasa Buang Puing Jakarta",
+  "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-terdekat.html": "Jasa Buang Puing Terdekat"
+};
+
 //SUB MAPPING JASA PERAWATAN & PERBAIKAN BANGUNAN
 // JasaPerbaikanAtapBocorPost
 const urlMappingJasaPerbaikanAtapBocor = {
@@ -1615,6 +1628,106 @@ if (urlMappingJasaBongkarLantai[cleanUrlJasaKonsBongkarBangunanPost]) {
        document.head.appendChild(script);
    }
 
+//SUB urlMappingJasaBuangPuing
+if (urlMappingJasaBuangPuing[cleanUrlJasaKonsBongkarBangunanPost]) {
+        restoreCondition('JasaKonsBongkarBangunanPost');
+        restoreCondition('JasaBuangPuingPost'); 
+     
+        //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+	removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+
+	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost 
+        removeCondition('JasaPerawatanPerbaikanBangunanPost');
+	   	removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
+        removeCondition('JasaPerbaikanAtapBocorPost');
+        removeCondition('JasaPerbaikanDindingRetakPost');
+        removeCondition('JasaPerbaikanRembesanAirPost');
+        removeCondition('JasaPerbaikanPlafonRusakPost');
+        removeCondition('JasaPerbaikanDakBetonBocorPost');
+        removeCondition('JasaPerbaikanTalangBocorPost');
+	
+        //hapus elemen SUB jasa JasaBongkarBangunanPost semua 
+        removeCondition('JasaBongkarBangunanPost');
+	
+        removeCondition('JasaBongkarRumahPost');
+        removeCondition('JasaBongkarTowerPost');
+        removeCondition('JasaBongkarBetonPost');
+        removeCondition('JasaBongkarAtapPost');
+        removeCondition('JasaBongkarKeramikPost');
+        removeCondition('JasaBongkarTembokPost');
+        removeCondition('JasaBongkarDindingPost');
+        removeCondition('JasaBongkarPlafonPost');
+        removeCondition('JasaBongkarPartisiPost');
+        removeCondition('JasaBongkarPagarPost');
+        removeCondition('JasaBongkarLantaiPost');
+
+	
+       
+        JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaBongkarBangunanPost
+      JasaBuangPuingPostLink.style.visibility = 'visible';
+
+	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBuangPuing[cleanUrlJasaKonsBongkarBangunanPost];
+    }
+      // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBuangPuing[cleanUrlJasaKonsBongkarBangunanPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Buang Puing",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-buang-puing.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": urlMappingJasaBuangPuing[cleanUrlJasaKonsBongkarBangunanPost],
+                   "item": cleanUrlJasaKonsBongkarBangunanPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+
 //SUB urlMappingJasaPerawatanPerbaikanBangunanPost
 //JasaPerbaikanAtapBocorPost
 if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
@@ -1677,7 +1790,7 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
        
         JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarBangunanPost
-        JasaBongkarBangunanPostLink.style.visibility = 'visible';
+     JasaPerawatanPerbaikanBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaJasaPerbaikanAtapBocorPost
 	JasaPerbaikanAtapBocorPostLink.style.visibility = 'visible';
 	
@@ -1793,7 +1906,7 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
        
         JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarBangunanPost
-        JasaBongkarBangunanPostLink.style.visibility = 'visible';
+      JasaPerawatanPerbaikanBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarTowerPost
 	JasaPerbaikanDindingRetakPostLink.style.visibility = 'visible';
 	
@@ -1910,7 +2023,7 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
        
         JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarBangunanPost
-        JasaBongkarBangunanPostLink.style.visibility = 'visible';
+       JasaPerawatanPerbaikanBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarTowerPost
 	JasaPerbaikanRembesanAirPostLink.style.visibility = 'visible';
 	
@@ -2026,7 +2139,7 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
        
         JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarBangunanPost
-        JasaBongkarBangunanPostLink.style.visibility = 'visible';
+     JasaPerawatanPerbaikanBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPerbaikanPlafonRusakPost
 	JasaPerbaikanPlafonRusakPostLink.style.visibility = 'visible';
 	
@@ -2142,7 +2255,7 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
        
         JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarBangunanPost
-        JasaBongkarBangunanPostLink.style.visibility = 'visible';
+    JasaPerawatanPerbaikanBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPerbaikanPlafonRusakPost
 	JasaPerbaikanDakBetonBocorPostLink.style.visibility = 'visible';
 	
@@ -2259,7 +2372,7 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
        
         JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarBangunanPost
-        JasaBongkarBangunanPostLink.style.visibility = 'visible';
+     JasaPerawatanPerbaikanBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPerbaikanTalangBocorPost
 	JasaPerbaikanTalangBocorPostLink.style.visibility = 'visible';
 	
