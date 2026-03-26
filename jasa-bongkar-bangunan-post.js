@@ -319,7 +319,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBongkarPlafon,
 		urlMappingJasaBongkarPartisi,
 		urlMappingJasaBongkarPagar,
-		urlMappingJasaBongkarLantai
+		urlMappingJasaBongkarLantai,
+		urlMappingJasaBuangBuing,
+		urlMappingJasaPerbaikanAtapBocor,
+		urlMappingJasaPerbaikanDindingRetak,
+		urlMappingJasaPerbaikanRembesanAir,
+		urlMappingJasaPerbaikanPlafonRusak,
+		urlMappingJasaPerbaikanDakBetonBocor,
+		urlMappingJasaPerbaikanTalangBocor
 	
     );
 
@@ -420,6 +427,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
      var JasaKonstruksiBongkarBangunanPostLink = document.getElementById("JasaKonstruksiBongkarBangunanPost");
      var JasaBongkarBangunanPostLink = document.getElementById("JasaBongkarBangunanPost");
+	 var JasaBuangPuingPostLink = document.getElementById("JasaBuangPuingPost");
 	 var JasaPerawatanPerbaikanBangunanPostLink = document.getElementById("JasaPerawatanPerbaikanBangunanPost");
      
      //SUB JasaKonsBongkarBangunanPost
@@ -449,6 +457,7 @@ document.addEventListener("DOMContentLoaded", function() {
      // Default untuk menyembunyikan elemen
      JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'hidden';
      JasaBongkarBangunanPostLink.style.visibility = 'hidden';
+	 JasaBuangPuingPostLink.style.visibility = 'hidden';
 	 JasaPerawatanPerbaikanBangunanPostLink.style.visibility = 'hidden';
 	
      //SUB JasaBongkarBangunanPost
@@ -518,6 +527,8 @@ if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaBongkarPagarPost');
         removeCondition('JasaBongkarLantaiPost');
 
+	//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
 	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
@@ -624,6 +635,9 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaBongkarPagarPost');
         removeCondition('JasaBongkarLantaiPost');
 
+		//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
+	
 //hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
 	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
@@ -716,7 +730,10 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	
+
+			//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
+		
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarBetonPost
 	removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarRumahPost');
@@ -820,6 +837,9 @@ if (urlMappingJasaBongkarAtap[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
+
+		//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarAtapPost
 	removeCondition('JasaBongkarTowerPost');
@@ -938,6 +958,9 @@ if (urlMappingJasaBongkarKeramik[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaBongkarPagarPost');
         removeCondition('JasaBongkarLantaiPost');
 
+		//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
+	
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
 	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
@@ -1042,6 +1065,9 @@ if (urlMappingJasaBongkarTembok[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaBongkarPagarPost');
         removeCondition('JasaBongkarLantaiPost');
 
+		//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
+	
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
 	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
@@ -1133,6 +1159,9 @@ if (urlMappingJasaBongkarDinding[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
+
+		//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarDindingPost
 	removeCondition('JasaBongkarTowerPost');
@@ -1250,6 +1279,9 @@ if (urlMappingJasaBongkarPlafon[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaBongkarPagarPost');
         removeCondition('JasaBongkarLantaiPost');
 
+		//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
+	
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
 	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
@@ -1341,6 +1373,9 @@ if (urlMappingJasaBongkarPartisi[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
+
+		//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarPartisiPost
 	removeCondition('JasaBongkarTowerPost');
@@ -1445,6 +1480,9 @@ if (urlMappingJasaBongkarPagar[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
+
+		//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarPagarPost
 	removeCondition('JasaBongkarTowerPost');
@@ -1562,6 +1600,9 @@ if (urlMappingJasaBongkarLantai[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaBongkarPagarPost');
         removeCondition('JasaBongkarRumahPost');
 
+		//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
+	
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
         removeCondition('JasaPerawatanPerbaikanBangunanPost');
 	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
@@ -1759,6 +1800,9 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsAlatKonstruksiPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
 
+		//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
+	
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost SELAIN JasaPerbaikanAtapBocorPost
         //removeCondition('JasaPerawatanPerbaikanBangunanPost');
 	   	    //removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
@@ -1875,6 +1919,9 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsAlatKonstruksiPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
 
+	 	//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
+	 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost SELAIN JasaPerbaikanAtapBocorPost
         //removeCondition('JasaPerawatanPerbaikanBangunanPost');
 	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
@@ -1991,6 +2038,9 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsAlatKonstruksiPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
 
+	 	//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
+	 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost SELAIN JasaPerbaikanAtapBocorPost
         //removeCondition('JasaPerawatanPerbaikanBangunanPost');
 	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
@@ -2108,6 +2158,9 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsAlatKonstruksiPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
 
+	 	//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
+	 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost SELAIN JasaPerbaikanAtapBocorPost
         //removeCondition('JasaPerawatanPerbaikanBangunanPost');
 	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
@@ -2224,6 +2277,9 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsAlatKonstruksiPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
 
+	 	//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
+	 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost SELAIN JasaPerbaikanAtapBocorPost
         //removeCondition('JasaPerawatanPerbaikanBangunanPost');
 	   	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
@@ -2250,9 +2306,7 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaBongkarPartisiPost');
         removeCondition('JasaBongkarPagarPost');
         removeCondition('JasaBongkarLantaiPost');
-
-	
-       
+  
         JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarBangunanPost
     JasaPerawatanPerbaikanBangunanPostLink.style.visibility = 'visible';
@@ -2340,6 +2394,9 @@ if (urlMappingJasaPerbaikanAtapBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsAlatKonstruksiPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
 
+	 	//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
+	 
 	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost SELAIN JasaPerbaikanAtapBocorPost
         //removeCondition('JasaPerawatanPerbaikanBangunanPost');
 	  	   	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
