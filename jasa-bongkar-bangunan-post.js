@@ -60,7 +60,7 @@ const urlMappingJasaBongkarLantai = {
 
 //SUB MAPPING JASA BUANG PUING
 // 
-const urlMappingJasaBuangBuing = {
+const urlMappingJasaBuangPuing = {
  "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-surabaya.html": "Jasa Buang Puing Surabaya",
   "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-karawang.html": "Jasa Buang Puing Karawang",
   "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-bekasi.html": "Jasa Buang Puing Bekasi",
@@ -320,7 +320,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBongkarPartisi,
 		urlMappingJasaBongkarPagar,
 		urlMappingJasaBongkarLantai,
-		urlMappingJasaBuangBuing,
+		urlMappingJasaBuangPuing,
 		urlMappingJasaPerbaikanAtapBocor,
 		urlMappingJasaPerbaikanDindingRetak,
 		urlMappingJasaPerbaikanRembesanAir,
