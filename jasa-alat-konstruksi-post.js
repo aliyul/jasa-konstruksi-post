@@ -1,6 +1,10 @@
 
 // SUB JasaAlatKonstruksi
 const urlMappingSewaAlatProyek = {
+  "https://www.betonjayareadymix.com/2021/03/sewa-bekisting-cor-jalan.html": "Sewa Bekisting Cor Jalan",
+  "https://www.betonjayareadymix.com/2019/02/harga-jasa-sewa-scaffolding.html": "Harga Jasa Sewa Scaffolding",
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-bor-sumur.html": "Sewa Alat Bor Sumur",
+	
 "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-tangerang.html": "Sewa Alat Proyek Tangerang",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-depok.html": "Sewa Alat Proyek Depok",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-jakarta.html": "Sewa Alat Proyek Jakarta",
@@ -192,8 +196,7 @@ const urlMappingSewaWheelLoader = {
 
 
 const urlMappingSewaAlatKonstruksiRingan = {
-  "https://www.betonjayareadymix.com/2021/03/sewa-bekisting-cor-jalan.html": "Sewa Bekisting Cor Jalan",
-  "https://www.betonjayareadymix.com/2019/02/harga-jasa-sewa-scaffolding.html": "Harga Jasa Sewa Scaffolding",
+
   "https://www.betonjayareadymix.com/2019/02/jasa-sewa-alat-cleaning.html": "Jasa Sewa Alat Cleaning",
   "https://www.betonjayareadymix.com/2019/02/sewa-mesin-polisher.html": "Sewa Mesin Polisher",
   
@@ -218,7 +221,6 @@ const urlMappingSewaAlatKonstruksiRingan = {
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-potong-rumput.html": "Harga Sewa Mesin Potong Rumput",
   "https://www.betonjayareadymix.com/2019/02/sewa-mesin-potong-rumput.html": "Sewa Mesin Potong Rumput",
 
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-bor-sumur.html": "Sewa Alat Bor Sumur",
 
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-trowel.html": "Harga Sewa Mesin Trowel",
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-screed.html": "Harga Sewa Mesin Screed",
