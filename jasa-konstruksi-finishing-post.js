@@ -286,7 +286,7 @@ const urlMappingJasaFinishingInteriorModernWpc = {
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wpc-wall-panel-depok.html": "Jasa Pasang WPC Wall Panel Depok",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wpc-wall-panel-karawang.html": "Jasa Pasang WPC Wall Panel Karawang"
 
-);
+};
 const urlMappingJasaFinishingInteriorModernVinyl = {
     "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-lantai-karawang.html": "Jasa Pasang Vinyl Lantai Karawang",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-lantai-tangerang.html": "Jasa Pasang Vinyl Lantai Tangerang",
@@ -309,7 +309,7 @@ const urlMappingJasaFinishingInteriorModernVinyl = {
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-lantai.html": "Jasa Pasang Vinyl Lantai",
   "https://www.betonjayareadymix.com/2020/02/jasa-vinyl-lantai-terdekat.html": "Jasa Vinyl Lantai Terdekat"
 
-);
+};
 const urlMappingJasaFinishingInteriorModernPvc = {
    "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-lantai.html": "Jasa Pasang Pvc Lantai",
 	 "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-surabaya.html": "Jasa Pasang Dinding PVC Surabaya",
@@ -330,7 +330,7 @@ const urlMappingJasaFinishingInteriorModernPvc = {
   "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-wall-panel-pvc.html": "Harga Jasa Pasang Wall Panel PVC",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wall-panel-pvc.html": "Jasa Pasang Wall Panel PVC"
 
-);
+};
 const urlMappingJasaFinishingInteriorModernPlafon = {
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-wpc-premium.html": "Jasa Pasang Plafon WPC Premium",
   "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-plafon-wpc.html": "Harga Jasa Pasang Plafon WPC",
@@ -355,7 +355,7 @@ const urlMappingJasaFinishingInteriorModernPlafon = {
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-karawang.html": "Jasa Pasang Plafon Karawang",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-surabaya.html": "Jasa Pasang Plafon Surabaya"
 
-);
+};
 
 const urlMappingJasaKitchenSet = {
   "https://www.betonjayareadymix.com/2018/09/kabinet-dapur.html": "Kabinet Dapur",
