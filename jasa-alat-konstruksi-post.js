@@ -44,11 +44,27 @@ const urlMappingSewaAlatProyekPompaDewatering = {
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-surabaya.html": "Sewa Pompa Lumpur Surabaya",
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-bandung.html": "Sewa Pompa Lumpur Bandung"
 
-	
+};
+const urlMappingSewaAlatProyekBekistingScaffolding = {
+  "https://www.betonjayareadymix.com/2021/03/sewa-bekisting-cor-jalan.html": "Sewa Bekisting Cor Jalan",
+  "https://www.betonjayareadymix.com/2019/02/harga-jasa-sewa-scaffolding.html": "Harga Jasa Sewa Scaffolding"
 	
 };
+const urlMappingSewaAlatProyekPencahayaanUtilitas = {
+	
+};
+const urlMappingSewaAlatProyekSurveyPengukuran = {
 
+};
+const urlMappingSewaAlatProyekAksesKeamanan = {
+	
+};
+const urlMappingSewaAlatProyekBorGroundWork = {
 
+};
+const urlMappingSewaAlatProyekSistemPendukung = {
+
+};
 const urlMappingSewaAlatBerat = {
 "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-subang.html": "Sewa Alat Berat Subang",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-bandung.html": "Sewa Alat Berat Bandung",
