@@ -141,8 +141,10 @@ const urlMappingSewaAlatProyekAksesKeamanan = {
 	
 };
 const urlMappingSewaAlatProyekBorGroundWork = {
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-bor-sumur.html": "Sewa Alat Bor Sumur"
-	
+  "https://www.betonjayareadymix.com/2019/03/sewa-alat-bor-sumur.html": "Sewa Alat Bor Sumur",
+  "https://www.betonjayareadymix.com/2019/03/sewa-alat-bor-sumur-terdekat.html": "Sewa Alat Bor Sumur Terdekat",
+  "https://www.betonjayareadymix.com/2019/03/sewa-bor-tanah.html": "Sewa Bor Tanah",
+  "https://www.betonjayareadymix.com/2019/03/sewa-bor-tanah-terdekat.html": "Sewa Bor Tanah Terdekat"
 };
 const urlMappingSewaAlatProyekSistemPendukung = {
 
