@@ -50,8 +50,8 @@ const urlMappingSewaAlatProyekPompaDewatering = {
 
 };
 const urlMappingSewaAlatProyekBekistingScaffolding = {
-  "https://www.betonjayareadymix.com/2021/03/sewa-bekisting-cor-jalan.html": "Sewa Bekisting Cor Jalan",
-  "https://www.betonjayareadymix.com/2019/02/harga-jasa-sewa-scaffolding.html": "Harga Jasa Sewa Scaffolding"
+  "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-cor-jalan.html": "Sewa Bekisting Cor Jalan",
+  "https://www.betonjayareadymix.com/2019/03/harga-jasa-sewa-scaffolding.html": "Harga Jasa Sewa Scaffolding"
 	
 };
 const urlMappingSewaAlatProyekPencahayaanUtilitas = {
@@ -506,6 +506,12 @@ document.addEventListener("DOMContentLoaded", function() {
       {},
 		urlMappingSewaAlatProyek,
 		urlMappingSewaAlatProyekPompaDewatering,
+		urlMappingSewaAlatProyekBekistingScaffolding,
+		urlMappingSewaAlatProyekPencahayaanUtilitas,
+		urlMappingSewaAlatProyekSurveyPengukuran,
+		urlMappingSewaAlatProyekAksesKeamanan,
+		urlMappingSewaAlatProyekBorGroundWork,
+		urlMappingSewaAlatProyekSistemPendukung,
 		urlMappingSewaAlatBerat,
 		urlMappingSewaMotorGrader,
 		urlMappingSewaAlatPancang,
@@ -930,6 +936,752 @@ if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+
+ if (urlMappingSewaAlatProyekBekistingScaffolding[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+       // restoreCondition('JasaAlatKonstruksiPost');
+        restoreCondition('SewaAlatProyekPost');
+	    restoreCondition('SewaAlatProyekBekistingScaffoldingPost');
+	      
+        //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	   //hapus elemen SUB SewaAlatProyekPost lain selain SewaAlatProyekBekistingScaffoldingPost
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  //removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+	  
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
+        removeCondition('SewaAlatBeratPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+		 removeCondition('SewaBackhoeLoaderPost');
+		 removeCondition('SewaConcretePaverPost');
+		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
+		 removeCondition('SewaAlatPancangPost');
+		 removeCondition('SewaMotorGraderPost');
+	
+	
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatProyekPost
+        SewaAlatProyekPostLink.style.visibility = 'visible';
+	   SewaAlatProyekBekistingScaffoldingPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekBekistingScaffolding[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingSewaAlatProyekBekistingScaffolding[cleanUrlJasaKonsAlatKonstruksiPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+	      {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Sewa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": "Sewa Alat Proyek",
+                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
+               },
+			  {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": "Sewa Bekisting Scaffolding",
+                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-bekisting-scaffolding.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 7,
+                   "name": urlMappingSewaAlatProyekBekistingScaffolding[cleanUrlJasaKonsAlatKonstruksiPost],
+                   "item": cleanUrlJasaKonsAlatKonstruksiPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+
+ if (urlMappingSewaAlatProyekPencahayaanUtilitas[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+       // restoreCondition('JasaAlatKonstruksiPost');
+        restoreCondition('SewaAlatProyekPost');
+	    restoreCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	      
+        //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	   //hapus elemen SUB SewaAlatProyekPost lain selain SewaAlatProyekPencahayaanUtilitasPost
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  //removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+	  
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
+        removeCondition('SewaAlatBeratPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+		 removeCondition('SewaBackhoeLoaderPost');
+		 removeCondition('SewaConcretePaverPost');
+		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
+		 removeCondition('SewaAlatPancangPost');
+		 removeCondition('SewaMotorGraderPost');
+	
+	
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatProyekPost
+        SewaAlatProyekPostLink.style.visibility = 'visible';
+	   SewaAlatProyekPencahayaanUtilitasPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekPencahayaanUtilitas[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingSewaAlatProyekPencahayaanUtilitas[cleanUrlJasaKonsAlatKonstruksiPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+	      {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Sewa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": "Sewa Alat Proyek",
+                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
+               },
+			  {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": "Sewa Pencahayaan Utilitas",
+                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-pencahayaan-utilitas.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 7,
+                   "name": urlMappingSewaAlatProyekPencahayaanUtilitas[cleanUrlJasaKonsAlatKonstruksiPost],
+                   "item": cleanUrlJasaKonsAlatKonstruksiPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+
+if (urlMappingSewaAlatProyekSurveyPengukuran[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+       // restoreCondition('JasaAlatKonstruksiPost');
+        restoreCondition('SewaAlatProyekPost');
+	    restoreCondition('SewaAlatProyekSurveyPengukuranPost');
+	      
+        //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	   //hapus elemen SUB SewaAlatProyekPost lain selain SewaAlatProyekSurveyPengukuranPost
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  //removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+	  
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
+        removeCondition('SewaAlatBeratPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+		 removeCondition('SewaBackhoeLoaderPost');
+		 removeCondition('SewaConcretePaverPost');
+		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
+		 removeCondition('SewaAlatPancangPost');
+		 removeCondition('SewaMotorGraderPost');
+	
+	
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatProyekPost
+        SewaAlatProyekPostLink.style.visibility = 'visible';
+	   SewaAlatProyekSurveyPengukuranPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekSurveyPengukuran[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingSewaAlatProyekSurveyPengukuran[cleanUrlJasaKonsAlatKonstruksiPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+	      {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Sewa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": "Sewa Alat Proyek",
+                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
+               },
+			  {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": "Sewa Alat Survey Pengukuran",
+                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 7,
+                   "name": urlMappingSewaAlatProyekSurveyPengukuran[cleanUrlJasaKonsAlatKonstruksiPost],
+                   "item": cleanUrlJasaKonsAlatKonstruksiPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+
+  if (urlMappingSewaAlatProyekAksesKeamanan[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+       // restoreCondition('JasaAlatKonstruksiPost');
+        restoreCondition('SewaAlatProyekPost');
+	    restoreCondition('SewaAlatProyekAksesKeamananPost');
+	      
+        //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	   //hapus elemen SUB SewaAlatProyekPost lain selain SewaAlatProyekAksesKeamananPost
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  //removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+	  
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
+        removeCondition('SewaAlatBeratPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+		 removeCondition('SewaBackhoeLoaderPost');
+		 removeCondition('SewaConcretePaverPost');
+		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
+		 removeCondition('SewaAlatPancangPost');
+		 removeCondition('SewaMotorGraderPost');
+	
+	
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatProyekPost
+        SewaAlatProyekPostLink.style.visibility = 'visible';
+	   SewaAlatProyekAksesKeamananPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekAksesKeamanan[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingSewaAlatProyekAksesKeamanan[cleanUrlJasaKonsAlatKonstruksiPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+	      {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Sewa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": "Sewa Alat Proyek",
+                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
+               },
+			  {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": "Sewa Akses Keamanan Proyek",
+                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-akses-keamanan-proyek.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 7,
+                   "name": urlMappingSewaAlatProyekAksesKeamanan[cleanUrlJasaKonsAlatKonstruksiPost],
+                   "item": cleanUrlJasaKonsAlatKonstruksiPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   } 
+	
+  if (urlMappingSewaAlatProyekBorGroundWork[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+       // restoreCondition('JasaAlatKonstruksiPost');
+        restoreCondition('SewaAlatProyekPost');
+	    restoreCondition('SewaAlatProyekBorGroundWorkPost');
+	      
+        //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	   //hapus elemen SUB SewaAlatProyekPost lain selain SewaAlatProyekBorGroundWorkPost
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  //removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+	  
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
+        removeCondition('SewaAlatBeratPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+		 removeCondition('SewaBackhoeLoaderPost');
+		 removeCondition('SewaConcretePaverPost');
+		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
+		 removeCondition('SewaAlatPancangPost');
+		 removeCondition('SewaMotorGraderPost');
+	
+	
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatProyekPost
+        SewaAlatProyekPostLink.style.visibility = 'visible';
+	   SewaAlatProyekBorGroundWorkPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekBorGroundWork[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingSewaAlatProyekBorGroundWork[cleanUrlJasaKonsAlatKonstruksiPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+	      {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Sewa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": "Sewa Alat Proyek",
+                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
+               },
+			  {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": "Sewa Alat Bor Ground Work",
+                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-alat-bor-ground-work.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 7,
+                   "name": urlMappingSewaAlatProyekBorGroundWork[cleanUrlJasaKonsAlatKonstruksiPost],
+                   "item": cleanUrlJasaKonsAlatKonstruksiPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+	
+	 if (urlMappingSewaAlatProyekSistemPendukung[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+       // restoreCondition('JasaAlatKonstruksiPost');
+        restoreCondition('SewaAlatProyekPost');
+	    restoreCondition('SewaAlatProyekSistemPendukungPost');
+	      
+        //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	   //hapus elemen SUB SewaAlatProyekPost lain selain SewaAlatProyekSistemPendukungPost
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  //removeCondition('SewaAlatProyekSistemPendukungPost');
+	  
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
+        removeCondition('SewaAlatBeratPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+		 removeCondition('SewaBackhoeLoaderPost');
+		 removeCondition('SewaConcretePaverPost');
+		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
+		 removeCondition('SewaAlatPancangPost');
+		 removeCondition('SewaMotorGraderPost');
+	
+	
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatProyekPost
+        SewaAlatProyekPostLink.style.visibility = 'visible';
+	   SewaAlatProyekSistemPendukungPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekSistemPendukung[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingSewaAlatProyekSistemPendukung[cleanUrlJasaKonsAlatKonstruksiPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+	      {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Sewa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": "Sewa Alat Proyek",
+                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
+               },
+			  {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": "Sewa Sistem Pendukung Proyek",
+                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-sistem-pendukung-proyek.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 7,
+                   "name": urlMappingSewaAlatProyekSistemPendukung[cleanUrlJasaKonsAlatKonstruksiPost],
+                   "item": cleanUrlJasaKonsAlatKonstruksiPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+	
+	//AKHIR SUB SEWA ALAT PROYEK
 if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
