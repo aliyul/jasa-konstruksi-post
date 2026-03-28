@@ -874,7 +874,7 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
 
     //SUB FINISHING BANGUNAN
 	//FINISHING STRUKTUR
-    if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
+if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanStrukturPost');
     
@@ -950,7 +950,13 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+	   // hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -1015,6 +1021,7 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+	
     if (urlMappingJasaFinishingBetonExpose[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanStrukturPost');
@@ -1088,7 +1095,13 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+		// hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+		
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -1227,7 +1240,13 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+	  // hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	  
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -1365,7 +1384,13 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+	   // hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	   
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -1507,7 +1532,13 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+		// hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+		
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -1647,7 +1678,13 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+		// hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+		
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -1927,7 +1964,13 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+		// hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+		
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -2067,7 +2110,13 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+	  // hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	  
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -2134,7 +2183,7 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
        document.head.appendChild(script);
    }
   
-if (urlMappingJasaFinishingInteriorMinimalis[cleanUrlJasaKonsFinishingPost]) {
+   if (urlMappingJasaFinishingInteriorMinimalis[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanInteriorPost');
     
@@ -2209,7 +2258,13 @@ if (urlMappingJasaFinishingInteriorMinimalis[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+	   // hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	   
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -2349,7 +2404,13 @@ if (urlMappingJasaFinishingInteriorKlasik[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+	 // hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -2490,7 +2551,13 @@ if (urlMappingJasaLampuInterior[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+	 // hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -2630,7 +2697,13 @@ if (urlMappingJasaPasangWallpaperDinding[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+	 // hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -2770,7 +2843,13 @@ if (urlMappingJasaCatInteriorRumah[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+	// hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -2911,7 +2990,13 @@ if (urlMappingJasaKeramikLantai[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+	 // hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -3052,7 +3137,13 @@ if (urlMappingJasaKeramikLantai[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+		// hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+		
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -3193,7 +3284,13 @@ if (urlMappingJasaKeramikLantai[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+	   // hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	  
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -3957,7 +4054,13 @@ if (urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+	 // hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -4098,7 +4201,13 @@ if (urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingInfrastrukturSaluranPost');
         removeCondition('JasaFinishingInfrastrukturStrukturPost');
         removeCondition('JasaFinishingInfrastrukturProteksiPost');
-       
+
+	  // hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
