@@ -268,7 +268,12 @@ const urlMappingJasaInteriorFurnitureCustome = {
 
 const urlMappingJasaFinishingInteriorModern = {
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wpc.html": "Jasa Pasang WPC",
- "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-wpc-lantai.html": "Harga Jasa Pasang WPC Lantai",
+  "https://www.betonjayareadymix.com/2020/02/jasa-vinyl-lantai.html": "Jasa Vinyl Lantai",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc.html": "Jasa Pasang PVC", 
+    "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon.html": "Jasa Pasang Plafon"
+};
+const urlMappingJasaFinishingInteriorModernWpc = {
+   "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-wpc-lantai.html": "Harga Jasa Pasang WPC Lantai",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-panel-dinding-wpc.html": "Jasa Pasang Panel Dinding WPC",
   "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-dinding-wpc.html": "Harga Jasa Pasang Dinding WPC",
   "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-wall-panel-wpc.html": "Harga Jasa Pasang Wall Panel WPC",
@@ -279,9 +284,11 @@ const urlMappingJasaFinishingInteriorModern = {
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wpc-wall-panel-jakarta.html": "Jasa Pasang WPC Wall Panel Jakarta",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wpc-wall-panel-tangerang.html": "Jasa Pasang WPC Wall Panel Tangerang",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wpc-wall-panel-depok.html": "Jasa Pasang WPC Wall Panel Depok",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wpc-wall-panel-karawang.html": "Jasa Pasang WPC Wall Panel Karawang",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wpc-wall-panel-karawang.html": "Jasa Pasang WPC Wall Panel Karawang"
 
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-lantai-karawang.html": "Jasa Pasang Vinyl Lantai Karawang",
+);
+const urlMappingJasaFinishingInteriorModernVinyl = {
+    "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-lantai-karawang.html": "Jasa Pasang Vinyl Lantai Karawang",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-lantai-tangerang.html": "Jasa Pasang Vinyl Lantai Tangerang",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-lantai-depok.html": "Jasa Pasang Vinyl Lantai Depok",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-lantai-bogor.html": "Jasa Pasang Vinyl Lantai Bogor",
@@ -300,14 +307,34 @@ const urlMappingJasaFinishingInteriorModern = {
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-terdekat.html": "Jasa Pasang Vinyl Terdekat",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl.html": "Jasa Pasang Vinyl",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-lantai.html": "Jasa Pasang Vinyl Lantai",
-  "https://www.betonjayareadymix.com/2020/02/jasa-vinyl-lantai-terdekat.html": "Jasa Vinyl Lantai Terdekat",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-lantai.html": "Jasa Pasang Pvc Lantai",
-  "https://www.betonjayareadymix.com/2020/02/jasa-vinyl-lantai.html": "Jasa Vinyl Lantai",
+  "https://www.betonjayareadymix.com/2020/02/jasa-vinyl-lantai-terdekat.html": "Jasa Vinyl Lantai Terdekat"
 
+);
+const urlMappingJasaFinishingInteriorModernPvc = {
+   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-lantai.html": "Jasa Pasang Pvc Lantai",
+	 "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-surabaya.html": "Jasa Pasang Dinding PVC Surabaya",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-karawang.html": "Jasa Pasang Dinding PVC Karawang",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-depok.html": "Jasa Pasang Dinding PVC Depok",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-tangerang.html": "Jasa Pasang Dinding PVC Tangerang",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-jakarta.html": "Jasa Pasang Dinding PVC Jakarta",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-bekasi.html": "Jasa Pasang Dinding PVC Bekasi",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-bogor.html": "Jasa Pasang Dinding PVC Bogor",
+  "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-pvc-dinding.html": "Harga Jasa Pasang PVC Dinding",
+  "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-pvc-per-meter.html": "Harga Jasa Pasang PVC Per Meter",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-dinding-per-meter.html": "Jasa Pasang PVC Dinding Per Meter",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-dinding-terdekat.html": "Jasa Pasang PVC Dinding Terdekat",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-dinding.html": "Jasa Pasang PVC Dinding",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-per-meter.html": "Jasa Pasang PVC Per Meter",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-board.html": "Jasa Pasang PVC Board",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-terdekat.html": "Jasa Pasang PVC Terdekat",
+  "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-wall-panel-pvc.html": "Harga Jasa Pasang Wall Panel PVC",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wall-panel-pvc.html": "Jasa Pasang Wall Panel PVC"
+
+);
+const urlMappingJasaFinishingInteriorModernPlafon = {
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-wpc-premium.html": "Jasa Pasang Plafon WPC Premium",
   "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-plafon-wpc.html": "Harga Jasa Pasang Plafon WPC",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-wpc.html": "Jasa Pasang Plafon WPC",
-    "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon.html": "Jasa Pasang Plafon",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-gypsum.html": "Jasa Pasang Plafon Gypsum",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-per-meter.html": "Jasa Pasang Plafon Per Meter",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-terdekat.html": "Jasa Pasang Plafon Terdekat",
@@ -326,28 +353,10 @@ const urlMappingJasaFinishingInteriorModern = {
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-depok.html": "Jasa Pasang Plafon Depok",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-tangerang.html": "Jasa Pasang Plafon Tangerang",
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-karawang.html": "Jasa Pasang Plafon Karawang",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-surabaya.html": "Jasa Pasang Plafon Surabaya",
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-surabaya.html": "Jasa Pasang Plafon Surabaya"
 
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-surabaya.html": "Jasa Pasang Dinding PVC Surabaya",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-karawang.html": "Jasa Pasang Dinding PVC Karawang",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-depok.html": "Jasa Pasang Dinding PVC Depok",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-tangerang.html": "Jasa Pasang Dinding PVC Tangerang",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-jakarta.html": "Jasa Pasang Dinding PVC Jakarta",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-bekasi.html": "Jasa Pasang Dinding PVC Bekasi",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-bogor.html": "Jasa Pasang Dinding PVC Bogor",
-  "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-pvc-dinding.html": "Harga Jasa Pasang PVC Dinding",
-  "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-pvc-per-meter.html": "Harga Jasa Pasang PVC Per Meter",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-dinding-per-meter.html": "Jasa Pasang PVC Dinding Per Meter",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-dinding-terdekat.html": "Jasa Pasang PVC Dinding Terdekat",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-dinding.html": "Jasa Pasang PVC Dinding",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-per-meter.html": "Jasa Pasang PVC Per Meter",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-board.html": "Jasa Pasang PVC Board",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-terdekat.html": "Jasa Pasang PVC Terdekat",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc.html": "Jasa Pasang PVC",
-  "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-wall-panel-pvc.html": "Harga Jasa Pasang Wall Panel PVC",
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wall-panel-pvc.html": "Jasa Pasang Wall Panel PVC"
-	
-};
+);
+
 const urlMappingJasaKitchenSet = {
   "https://www.betonjayareadymix.com/2018/09/kabinet-dapur.html": "Kabinet Dapur",
   "https://www.betonjayareadymix.com/2018/09/harga-kitchen-set-interior.html": "Harga Kitchen Set Interior",
@@ -565,6 +574,10 @@ document.addEventListener("DOMContentLoaded", function() {
     urlMappingJasaFinishingInteriorMinimalis,
     urlMappingJasaInteriorFurnitureCustome,
     urlMappingJasaFinishingInteriorModern,
+    urlMappingJasaFinishingInteriorModernWpc,
+    urlMappingJasaFinishingInteriorModernVinyl,
+    urlMappingJasaFinishingInteriorModernPvc,
+    urlMappingJasaFinishingInteriorModernPlafon,
     urlMappingJasaKitchenSet,
     urlMappingJasaCatEksteriorRumah,
     urlMappingJasaFinishingFasadEksterior,
@@ -782,6 +795,10 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
    var JasaFinishingInteriorMinimalisPostLink = document.getElementById("JasaFinishingInteriorMinimalisPost");
    var JasaFinishingInteriorKlasikPostLink = document.getElementById("JasaFinishingInteriorKlasikPost");
    var JasaFinishingInteriorModernPostLink = document.getElementById("JasaFinishingInteriorModernPost");
+	   	var JasaFinishingInteriorModernWpcPostLink = document.getElementById("JasaFinishingInteriorModernWpcPost");
+		varJasaFinishingInteriorModernVinylPostLink = document.getElementById("JasaFinishingInteriorModernVinylPost");
+		varJasaFinishingInteriorModernPlafonPostLink = document.getElementById("JasaFinishingInteriorModernPlafonPost");
+		varJasaFinishingInteriorModernPvcPostLink = document.getElementById("JasaFinishingInteriorModernPvcPost");
    //SUB JasaFinishingBangunanStrukturPost
    var JasaFinishingBetonExposePostLink = document.getElementById("JasaFinishingBetonExposePost");
    var JasaPlesteranAcianDindingPostLink = document.getElementById("JasaPlesteranAcianDindingPost");
@@ -822,7 +839,11 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
     JasaFinishingInteriorMinimalisPostLink.style.visibility = 'hidden';
     JasaFinishingInteriorKlasikPostLink.style.visibility = 'hidden';
     JasaFinishingInteriorModernPostLink.style.visibility = 'hidden';
-   
+   		JasaFinishingInteriorModernWpcPostLink.style.visibility = 'hidden';
+		JasaFinishingInteriorModernVinylPostLink.style.visibility = 'hidden';
+		JasaFinishingInteriorModernPlafonPostLink.style.visibility = 'hidden';
+		JasaFinishingInteriorModernPvcPostLink.style.visibility = 'hidden';
+	
      //HIDE sub JasaFinishingBangunanStrukturPost
     JasaPlesteranAcianDindingPostLink.style.visibility = 'hidden';
     JasaFinishingBetonExposePostLink.style.visibility = 'hidden';
@@ -3237,7 +3258,628 @@ if (urlMappingJasaKeramikLantai[cleanUrlJasaKonsFinishingPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+  //Sub JASA FINISHING INTERIOR MODERN
+   if (urlMappingJasaFinishingInteriorModernWpc[cleanUrlJasaKonsFinishingPost]) {
+        restoreCondition('JasaFinishingBangunanPost');
+        restoreCondition('JasaFinishingBangunanInteriorPost');
+    
+        restoreCondition('JasaFinishingInteriorModernPost');
+        restoreCondition('JasaFinishingInteriorModernWpcPost');
+          
+	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+	removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+     //   removeCondition('JasaKonsFinishingPost');
 
+	// hapus SEMUA SUB JASA FINSING INTERIOR MODERN KECUALI JasaFinishingInteriorModernWpcPost
+	   //removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	   
+	 // hapus elemen id FINISHING STRUKTUR SEMUA NYA
+	removeCondition('JasaFinishingDakBetonPost');
+        removeCondition('JasaFinishingBetonExposePost');
+        removeCondition('JasaPlesteranAcianDindingPost');
+        removeCondition('JasaFinishingGroutingStrukturBetonPost');
+        removeCondition('JasaPelapisanCoatingStrukturPost');
+        removeCondition('JasaFinishingKolomdanBalokPost');
+        removeCondition('JasaPelapisanWaterproofingStrukturPost');
+        removeCondition('JasaFinishingLantaiBetonPost');
+        removeCondition('JasaPelindungRetakStrukturPost'); 
+	// hapus elemen id sub JasaFinishingBangunanEksteriorPost Semua
+        removeCondition('JasaCatEksteriorRumahPost');
+        removeCondition('JasaFinishingFasadEksteriorPost');
+        removeCondition('JasaPelapisanAntiCuacaPost');
+        removeCondition('JasaPelapisanDindingLuarPost');
+        removeCondition('JasaFinishingTamanRumahPost');
+        removeCondition('JasaPelapisanBatuAlamEksteriorPost');
+        removeCondition('JasaPelapisanGentengDakPost');
+      
+         // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaDesainInteriorPost
+	  
+	    removeCondition('JasaEpoxyDindingPost');
+	  removeCondition('JasaEpoxyLantaiPost');
+        removeCondition('JasaInteriorFurnitureCustomePost');
+        removeCondition('JasaInteriorFurniturePost');
+        removeCondition('JasaGantiKeramikLantaiPost');
+        removeCondition('JasaCatInteriorRumahPost');
+        removeCondition('JasaPasangWallpaperDindingPost');
+        //removeCondition('JasaPasangLantaiVinylPost');
+        //removeCondition('JasaPasangPlafonGypsumPost');
+        removeCondition('JasaGantiLampuInteriorPost');
+        removeCondition('JasaGantiKitchenSetPost');
+        removeCondition('JasaFinishingInteriorMinimalisPost');
+        removeCondition('JasaFinishingInteriorKlasikPost');
+        
+       
+         // hapus elemen id FINISHING UTAMA lain NYA
+        removeCondition('JasaFinishingBangunanEksteriorPost');
+        removeCondition('JasaFinishingBangunanStrukturPost');
+
+          // hapus elemen id Infrastruktur Semua
+        removeCondition('JasaFinishingInfrastrukturPost');
+        removeCondition('JasaFinishingInfrastrukturJalanPost');
+        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
+        removeCondition('JasaFinishingInfrastrukturSaluranPost');
+        removeCondition('JasaFinishingInfrastrukturStrukturPost');
+        removeCondition('JasaFinishingInfrastrukturProteksiPost');
+       
+        JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingBangunanPostLink.style.visibility = 'visible';
+        //sub finishing bangunan
+        JasaFinishingInteriorPostLink.style.visibility = 'visible';
+        //sub finishing STRUKKTUR
+        JasaFinishingInteriorModernPostLink.style.visibility = 'visible';
+	    JasaFinishingInteriorModernWpcPostLink.style.visibility = 'visible';
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingInteriorModernWpc[cleanUrlJasaKonsFinishingPost];
+    }
+  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaFinishingInteriorModernWpc[cleanUrlJasaKonsFinishingPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Finishing",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Finishing Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": "Jasa Finishing Interior",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": "Jasa Finishing Interior Modern",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html"
+               },
+			   {
+                   "@type": "ListItem",
+                   "position": 7,
+                   "name": "Jasa Pasang WPC",
+                   "item": "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wpc.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 8,
+                   "name": urlMappingJasaFinishingInteriorModernWpc[cleanUrlJasaKonsFinishingPost],
+                   "item": cleanUrlJasaKonsFinishingPost
+               }
+           ]
+       };
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+	
+    if (urlMappingJasaFinishingInteriorModernVinyl[cleanUrlJasaKonsFinishingPost]) {
+        restoreCondition('JasaFinishingBangunanPost');
+        restoreCondition('JasaFinishingBangunanInteriorPost');
+    
+        restoreCondition('JasaFinishingInteriorModernPost');
+        restoreCondition('JasaFinishingInteriorModernVinylPost');
+          
+	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+	removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+     //   removeCondition('JasaKonsFinishingPost');
+
+	// hapus SEMUA SUB JASA FINSING INTERIOR MODERN KECUALI JasaFinishingInteriorModernWpcPost
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   //removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	   
+	 // hapus elemen id FINISHING STRUKTUR SEMUA NYA
+	removeCondition('JasaFinishingDakBetonPost');
+        removeCondition('JasaFinishingBetonExposePost');
+        removeCondition('JasaPlesteranAcianDindingPost');
+        removeCondition('JasaFinishingGroutingStrukturBetonPost');
+        removeCondition('JasaPelapisanCoatingStrukturPost');
+        removeCondition('JasaFinishingKolomdanBalokPost');
+        removeCondition('JasaPelapisanWaterproofingStrukturPost');
+        removeCondition('JasaFinishingLantaiBetonPost');
+        removeCondition('JasaPelindungRetakStrukturPost'); 
+	// hapus elemen id sub JasaFinishingBangunanEksteriorPost Semua
+        removeCondition('JasaCatEksteriorRumahPost');
+        removeCondition('JasaFinishingFasadEksteriorPost');
+        removeCondition('JasaPelapisanAntiCuacaPost');
+        removeCondition('JasaPelapisanDindingLuarPost');
+        removeCondition('JasaFinishingTamanRumahPost');
+        removeCondition('JasaPelapisanBatuAlamEksteriorPost');
+        removeCondition('JasaPelapisanGentengDakPost');
+      
+         // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaDesainInteriorPost
+	  
+	    removeCondition('JasaEpoxyDindingPost');
+	  removeCondition('JasaEpoxyLantaiPost');
+        removeCondition('JasaInteriorFurnitureCustomePost');
+        removeCondition('JasaInteriorFurniturePost');
+        removeCondition('JasaGantiKeramikLantaiPost');
+        removeCondition('JasaCatInteriorRumahPost');
+        removeCondition('JasaPasangWallpaperDindingPost');
+        //removeCondition('JasaPasangLantaiVinylPost');
+        //removeCondition('JasaPasangPlafonGypsumPost');
+        removeCondition('JasaGantiLampuInteriorPost');
+        removeCondition('JasaGantiKitchenSetPost');
+        removeCondition('JasaFinishingInteriorMinimalisPost');
+        removeCondition('JasaFinishingInteriorKlasikPost');
+        
+       
+         // hapus elemen id FINISHING UTAMA lain NYA
+        removeCondition('JasaFinishingBangunanEksteriorPost');
+        removeCondition('JasaFinishingBangunanStrukturPost');
+
+          // hapus elemen id Infrastruktur Semua
+        removeCondition('JasaFinishingInfrastrukturPost');
+        removeCondition('JasaFinishingInfrastrukturJalanPost');
+        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
+        removeCondition('JasaFinishingInfrastrukturSaluranPost');
+        removeCondition('JasaFinishingInfrastrukturStrukturPost');
+        removeCondition('JasaFinishingInfrastrukturProteksiPost');
+       
+        JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingBangunanPostLink.style.visibility = 'visible';
+        //sub finishing bangunan
+        JasaFinishingInteriorPostLink.style.visibility = 'visible';
+        //sub finishing STRUKKTUR
+        JasaFinishingInteriorModernPostLink.style.visibility = 'visible';
+	    JasaFinishingInteriorModernVinylPostLink.style.visibility = 'visible';
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingInteriorModernVinyl[cleanUrlJasaKonsFinishingPost];
+    }
+  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaFinishingInteriorModernVinyl[cleanUrlJasaKonsFinishingPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Finishing",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Finishing Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": "Jasa Finishing Interior",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": "Jasa Finishing Interior Modern",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html"
+               },
+			   {
+                   "@type": "ListItem",
+                   "position": 7,
+                   "name": "Jasa Pasang Vinyl",
+                   "item": "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 8,
+                   "name": urlMappingJasaFinishingInteriorModernVinyl[cleanUrlJasaKonsFinishingPost],
+                   "item": cleanUrlJasaKonsFinishingPost
+               }
+           ]
+       };
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+	
+   if (urlMappingJasaFinishingInteriorModernPlafon[cleanUrlJasaKonsFinishingPost]) {
+        restoreCondition('JasaFinishingBangunanPost');
+        restoreCondition('JasaFinishingBangunanInteriorPost');
+    
+        restoreCondition('JasaFinishingInteriorModernPost');
+        restoreCondition('JasaFinishingInteriorModernPlafonPost');
+          
+	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+	removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+     //   removeCondition('JasaKonsFinishingPost');
+
+	// hapus SEMUA SUB JASA FINSING INTERIOR MODERN KECUALI JasaFinishingInteriorModernPlafonPost
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   //removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   removeCondition('JasaFinishingInteriorModernPvcPost');
+	   
+	 // hapus elemen id FINISHING STRUKTUR SEMUA NYA
+	removeCondition('JasaFinishingDakBetonPost');
+        removeCondition('JasaFinishingBetonExposePost');
+        removeCondition('JasaPlesteranAcianDindingPost');
+        removeCondition('JasaFinishingGroutingStrukturBetonPost');
+        removeCondition('JasaPelapisanCoatingStrukturPost');
+        removeCondition('JasaFinishingKolomdanBalokPost');
+        removeCondition('JasaPelapisanWaterproofingStrukturPost');
+        removeCondition('JasaFinishingLantaiBetonPost');
+        removeCondition('JasaPelindungRetakStrukturPost'); 
+	// hapus elemen id sub JasaFinishingBangunanEksteriorPost Semua
+        removeCondition('JasaCatEksteriorRumahPost');
+        removeCondition('JasaFinishingFasadEksteriorPost');
+        removeCondition('JasaPelapisanAntiCuacaPost');
+        removeCondition('JasaPelapisanDindingLuarPost');
+        removeCondition('JasaFinishingTamanRumahPost');
+        removeCondition('JasaPelapisanBatuAlamEksteriorPost');
+        removeCondition('JasaPelapisanGentengDakPost');
+      
+         // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaDesainInteriorPost
+	  
+	    removeCondition('JasaEpoxyDindingPost');
+	  removeCondition('JasaEpoxyLantaiPost');
+        removeCondition('JasaInteriorFurnitureCustomePost');
+        removeCondition('JasaInteriorFurniturePost');
+        removeCondition('JasaGantiKeramikLantaiPost');
+        removeCondition('JasaCatInteriorRumahPost');
+        removeCondition('JasaPasangWallpaperDindingPost');
+        //removeCondition('JasaPasangLantaiVinylPost');
+        //removeCondition('JasaPasangPlafonGypsumPost');
+        removeCondition('JasaGantiLampuInteriorPost');
+        removeCondition('JasaGantiKitchenSetPost');
+        removeCondition('JasaFinishingInteriorMinimalisPost');
+        removeCondition('JasaFinishingInteriorKlasikPost');
+        
+       
+         // hapus elemen id FINISHING UTAMA lain NYA
+        removeCondition('JasaFinishingBangunanEksteriorPost');
+        removeCondition('JasaFinishingBangunanStrukturPost');
+
+          // hapus elemen id Infrastruktur Semua
+        removeCondition('JasaFinishingInfrastrukturPost');
+        removeCondition('JasaFinishingInfrastrukturJalanPost');
+        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
+        removeCondition('JasaFinishingInfrastrukturSaluranPost');
+        removeCondition('JasaFinishingInfrastrukturStrukturPost');
+        removeCondition('JasaFinishingInfrastrukturProteksiPost');
+       
+        JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingBangunanPostLink.style.visibility = 'visible';
+        //sub finishing bangunan
+        JasaFinishingInteriorPostLink.style.visibility = 'visible';
+        //sub finishing STRUKKTUR
+        JasaFinishingInteriorModernPostLink.style.visibility = 'visible';
+	    JasaFinishingInteriorModernPlafonPostLink.style.visibility = 'visible';
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingInteriorModernPlafon[cleanUrlJasaKonsFinishingPost];
+    }
+  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaFinishingInteriorModernPlafon[cleanUrlJasaKonsFinishingPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Finishing",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Finishing Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": "Jasa Finishing Interior",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": "Jasa Finishing Interior Modern",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html"
+               },
+			   {
+                   "@type": "ListItem",
+                   "position": 7,
+                   "name": "Jasa Pasang Plafon",
+                   "item": "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 8,
+                   "name": urlMappingJasaFinishingInteriorModernPlafon[cleanUrlJasaKonsFinishingPost],
+                   "item": cleanUrlJasaKonsFinishingPost
+               }
+           ]
+       };
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+	
+   if (urlMappingJasaFinishingInteriorModernPvc[cleanUrlJasaKonsFinishingPost]) {
+        restoreCondition('JasaFinishingBangunanPost');
+        restoreCondition('JasaFinishingBangunanInteriorPost');
+    
+        restoreCondition('JasaFinishingInteriorModernPost');
+        restoreCondition('JasaFinishingInteriorModernPvcPost');
+          
+	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
+	removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+        removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+     //   removeCondition('JasaKonsFinishingPost');
+
+	// hapus SEMUA SUB JASA FINSING INTERIOR MODERN KECUALI JasaFinishingInteriorModernPvcPost
+	   removeCondition('JasaFinishingInteriorModernWpcPost');
+	   removeCondition('JasaFinishingInteriorModernVinylPost');
+	   removeCondition('JasaFinishingInteriorModernPlafonPost');
+	   //removeCondition('JasaFinishingInteriorModernPvcPost');
+	   
+	 // hapus elemen id FINISHING STRUKTUR SEMUA NYA
+	removeCondition('JasaFinishingDakBetonPost');
+        removeCondition('JasaFinishingBetonExposePost');
+        removeCondition('JasaPlesteranAcianDindingPost');
+        removeCondition('JasaFinishingGroutingStrukturBetonPost');
+        removeCondition('JasaPelapisanCoatingStrukturPost');
+        removeCondition('JasaFinishingKolomdanBalokPost');
+        removeCondition('JasaPelapisanWaterproofingStrukturPost');
+        removeCondition('JasaFinishingLantaiBetonPost');
+        removeCondition('JasaPelindungRetakStrukturPost'); 
+	// hapus elemen id sub JasaFinishingBangunanEksteriorPost Semua
+        removeCondition('JasaCatEksteriorRumahPost');
+        removeCondition('JasaFinishingFasadEksteriorPost');
+        removeCondition('JasaPelapisanAntiCuacaPost');
+        removeCondition('JasaPelapisanDindingLuarPost');
+        removeCondition('JasaFinishingTamanRumahPost');
+        removeCondition('JasaPelapisanBatuAlamEksteriorPost');
+        removeCondition('JasaPelapisanGentengDakPost');
+      
+         // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaDesainInteriorPost
+	  
+	    removeCondition('JasaEpoxyDindingPost');
+	  removeCondition('JasaEpoxyLantaiPost');
+        removeCondition('JasaInteriorFurnitureCustomePost');
+        removeCondition('JasaInteriorFurniturePost');
+        removeCondition('JasaGantiKeramikLantaiPost');
+        removeCondition('JasaCatInteriorRumahPost');
+        removeCondition('JasaPasangWallpaperDindingPost');
+        //removeCondition('JasaPasangLantaiVinylPost');
+        //removeCondition('JasaPasangPlafonGypsumPost');
+        removeCondition('JasaGantiLampuInteriorPost');
+        removeCondition('JasaGantiKitchenSetPost');
+        removeCondition('JasaFinishingInteriorMinimalisPost');
+        removeCondition('JasaFinishingInteriorKlasikPost');
+        
+       
+         // hapus elemen id FINISHING UTAMA lain NYA
+        removeCondition('JasaFinishingBangunanEksteriorPost');
+        removeCondition('JasaFinishingBangunanStrukturPost');
+
+          // hapus elemen id Infrastruktur Semua
+        removeCondition('JasaFinishingInfrastrukturPost');
+        removeCondition('JasaFinishingInfrastrukturJalanPost');
+        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
+        removeCondition('JasaFinishingInfrastrukturSaluranPost');
+        removeCondition('JasaFinishingInfrastrukturStrukturPost');
+        removeCondition('JasaFinishingInfrastrukturProteksiPost');
+       
+        JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingPostLink.style.visibility = 'visible';
+        JasaFinishingBangunanPostLink.style.visibility = 'visible';
+        //sub finishing bangunan
+        JasaFinishingInteriorPostLink.style.visibility = 'visible';
+        //sub finishing STRUKKTUR
+        JasaFinishingInteriorModernPostLink.style.visibility = 'visible';
+	    JasaFinishingInteriorModernPvcPostLink.style.visibility = 'visible';
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingInteriorModernPvc[cleanUrlJasaKonsFinishingPost];
+    }
+  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaFinishingInteriorModernPvc[cleanUrlJasaKonsFinishingPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Finishing",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Finishing Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": "Jasa Finishing Interior",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": "Jasa Finishing Interior Modern",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html"
+               },
+			   {
+                   "@type": "ListItem",
+                   "position": 7,
+                   "name": "Jasa Pasang Pvc",
+                   "item": "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 8,
+                   "name": urlMappingJasaFinishingInteriorModernPvc[cleanUrlJasaKonsFinishingPost],
+                   "item": cleanUrlJasaKonsFinishingPost
+               }
+           ]
+       };
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+	
+	// AKHIR SUB FINISHING INTERIOR MODERN
 //AKHIR FINISHING INTERIOR
 
 //SUB JasaFinishingBangunanEksteriorPost
