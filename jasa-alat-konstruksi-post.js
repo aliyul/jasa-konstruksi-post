@@ -133,6 +133,11 @@ const urlMappingSewaAlatProyekSurveyPengukuran = {
 	
 };
 const urlMappingSewaAlatProyekAksesKeamanan = {
+"https://www.betonjayareadymix.com/2019/03/sewa-tangga-proyek.html": "Sewa Tangga Proyek",
+  "https://www.betonjayareadymix.com/2019/03/sewa-mobile-scaffold.html": "Sewa Mobile Scaffold",
+  "https://www.betonjayareadymix.com/2019/03/sewa-safety-barrier.html": "Sewa Safety Barrier",
+  "https://www.betonjayareadymix.com/2019/03/sewa-traffic-cone.html": "Sewa Traffic Cone",
+  "https://www.betonjayareadymix.com/2019/03/sewa-jaring-pengaman.html": "Sewa Jaring Pengaman"
 	
 };
 const urlMappingSewaAlatProyekBorGroundWork = {
