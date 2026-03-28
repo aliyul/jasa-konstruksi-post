@@ -768,7 +768,6 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
         return;
     }
 
-
      var JasaKonstruksiFinishingPostLink = document.getElementById("JasaKonstruksiFinishingPost");
      var JasaFinishingPostLink = document.getElementById("JasaFinishingPost");
      var JasaFinishingBangunanPostLink = document.getElementById("JasaFinishingBangunanPost");
@@ -796,9 +795,9 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
    var JasaFinishingInteriorKlasikPostLink = document.getElementById("JasaFinishingInteriorKlasikPost");
    var JasaFinishingInteriorModernPostLink = document.getElementById("JasaFinishingInteriorModernPost");
 	   	var JasaFinishingInteriorModernWpcPostLink = document.getElementById("JasaFinishingInteriorModernWpcPost");
-		varJasaFinishingInteriorModernVinylPostLink = document.getElementById("JasaFinishingInteriorModernVinylPost");
-		varJasaFinishingInteriorModernPlafonPostLink = document.getElementById("JasaFinishingInteriorModernPlafonPost");
-		varJasaFinishingInteriorModernPvcPostLink = document.getElementById("JasaFinishingInteriorModernPvcPost");
+		var JasaFinishingInteriorModernVinylPostLink = document.getElementById("JasaFinishingInteriorModernVinylPost");
+		var JasaFinishingInteriorModernPlafonPostLink = document.getElementById("JasaFinishingInteriorModernPlafonPost");
+		var JasaFinishingInteriorModernPvcPostLink = document.getElementById("JasaFinishingInteriorModernPvcPost");
    //SUB JasaFinishingBangunanStrukturPost
    var JasaFinishingBetonExposePostLink = document.getElementById("JasaFinishingBetonExposePost");
    var JasaPlesteranAcianDindingPostLink = document.getElementById("JasaPlesteranAcianDindingPost");
