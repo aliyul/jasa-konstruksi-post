@@ -11,8 +11,10 @@ const urlMappingSewaAlatProyek = {
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-bekasi.html": "Sewa Alat Proyek Bekasi",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-bogor.html": "Sewa Alat Proyek Bogor",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-terdekat.html": "Sewa Alat Proyek Terdekat",
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-karawang.html": "Sewa Alat Proyek Karawang",
-
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-karawang.html": "Sewa Alat Proyek Karawang"
+	
+};
+const urlMappingSewaAlatProyekPompaDewatering = {
   "https://www.betonjayareadymix.com/2019/03/sewa-mesin-pompa-air.html": "Sewa Mesin Pompa Air",
   "https://www.betonjayareadymix.com/2019/03/sewa-mesin-pompa-air-terdekat.html": "Sewa Mesin Pompa Air Terdekat",
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-terdekat.html": "Sewa Pompa Air Terdekat",
@@ -45,6 +47,8 @@ const urlMappingSewaAlatProyek = {
 	
 	
 };
+
+
 const urlMappingSewaAlatBerat = {
 "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-subang.html": "Sewa Alat Berat Subang",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-bandung.html": "Sewa Alat Berat Bandung",
@@ -480,6 +484,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlMappingGabungan = Object.assign(
       {},
 		urlMappingSewaAlatProyek,
+		urlMappingSewaAlatProyekPompaDewatering,
 		urlMappingSewaAlatBerat,
 		urlMappingSewaMotorGrader,
 		urlMappingSewaAlatPancang,
@@ -598,6 +603,14 @@ document.addEventListener("DOMContentLoaded", function() {
      var JasaKonstruksiAlatKonstruksiPostLink = document.getElementById("JasaKonstruksiAlatKonstruksiPost");
      var JasaAlatKonstruksiPostLink = document.getElementById("JasaAlatKonstruksiPost");
      var SewaAlatProyekPostLink = document.getElementById("SewaAlatProyekPost");
+		 var SewaAlatProyekPompaDewateringPostLink = document.getElementById("SewaAlatProyekPompaDewateringPost");
+		 var SewaAlatProyekBekistingScaffoldingPostLink = document.getElementById("SewaAlatProyekBekistingScaffoldingPost");
+		 var SewaAlatProyekPencahayaanUtilitasPostLink = document.getElementById("SewaAlatProyekPencahayaanUtilitasPost");
+		 var SewaAlatProyekSurveyPengukuranPostLink = document.getElementById("SewaAlatProyekSurveyPengukuranPost");
+		 var SewaAlatProyekAksesKeamananPostLink = document.getElementById("SewaAlatProyekAksesKeamananPost");
+		 var SewaAlatProyekBorGroundWorkPostLink = document.getElementById("SewaAlatProyekBorGroundWorkPost");
+		 var SewaAlatProyekSistemPendukungPostLink = document.getElementById("SewaAlatProyekSistemPendukungPost");
+
      var SewaAlatKonstruksiPostLink = document.getElementById("SewaAlatKonstruksiPost");
      var SewaAlatBeratPostLink = document.getElementById("SewaAlatBeratPost");
         var SewaForkliftPostLink = document.getElementById("SewaForkliftPost");
@@ -626,6 +639,13 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'hidden';
      JasaAlatKonstruksiPostLink.style.visibility = 'hidden';
      SewaAlatProyekPostLink.style.visibility = 'hidden';
+		SewaAlatProyekPompaDewateringPostLink.style.visibility = 'hidden';
+		SewaAlatProyekBekistingScaffoldingPostLink.style.visibility = 'hidden';
+		SewaAlatProyekPencahayaanUtilitasPostLink.style.visibility = 'hidden';
+		SewaAlatProyekSurveyPengukuranPostLink.style.visibility = 'hidden';
+		SewaAlatProyekAksesKeamananPostLink.style.visibility = 'hidden';
+		SewaAlatProyekBorGroundWorkPostLink.style.visibility = 'hidden';
+		SewaAlatProyekSistemPendukungPostLink.style.visibility = 'hidden';
      SewaAlatKonstruksiPostLink.style.visibility = 'hidden';
      SewaAlatBeratPostLink.style.visibility = 'hidden';
 	SewaForkliftPostLink.style.visibility = 'hidden';
@@ -676,7 +696,14 @@ if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
 	
-	
+	 //hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
         removeCondition('SewaAlatBeratPost');
 		 removeCondition('SewaForkliftPost');
@@ -758,6 +785,130 @@ if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+//SUB SEWA ALAT PROYEK POST
+  if (urlMappingSewaAlatProyekPompaDewatering[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        restoreCondition('JasaKonsAlatKonstruksiPost');
+       // restoreCondition('JasaAlatKonstruksiPost');
+        restoreCondition('SewaAlatProyekPost');
+	    restoreCondition('SewaAlatProyekPompaDewateringPost');
+	      
+        //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+	      removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	      removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsBongkarBangunanPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
+	   //hapus elemen SUB SewaAlatProyekPost lain selain SewaAlatProyekPompaDewateringPost
+	  // removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+	  
+        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
+        removeCondition('SewaAlatBeratPost');
+		 removeCondition('SewaForkliftPost');
+		 removeCondition('SewaCranePost');
+		 removeCondition('SewaSelfLoaderPost');
+		 removeCondition('SewaWheelLoaderPost');
+		 removeCondition('SewaVibroRollerPost');
+		 removeCondition('SewaWalesStoomPost');
+		 removeCondition('SewaTandemRollerPost');
+		 removeCondition('SewaBulldozerPost');
+		 removeCondition('SewaExcavatorPost');
+		 removeCondition('SewaBackhoeLoaderPost');
+		 removeCondition('SewaConcretePaverPost');
+		 removeCondition('SewaTrencherPost');
+		 removeCondition('SewaBabyRollerPost');
+		 removeCondition('SewaAlatPancangPost');
+		 removeCondition('SewaMotorGraderPost');
+	
+	
+        removeCondition('SewaAlatKonstruksiRinganPost');
+    
+        JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
+        JasaAlatKonstruksiPostLink.style.visibility = 'visible';
+        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
+	//TAMPILKAN SewaAlatProyekPost
+        SewaAlatProyekPostLink.style.visibility = 'visible';
+	   SewaAlatProyekPompaDewateringPostLink.style.visibility = 'visible';
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekPompaDewatering[cleanUrlJasaKonsAlatKonstruksiPost];
+    }
+   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingSewaAlatProyekPompaDewatering[cleanUrlJasaKonsAlatKonstruksiPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+	      {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Sewa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
+               },
+	       
+               {
+                   "@type": "ListItem",
+                   "position": 5,
+                   "name": "Sewa Alat Proyek",
+                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
+               },
+			  {
+                   "@type": "ListItem",
+                   "position": 6,
+                   "name": "Sewa Pompa Dewatering Proyek",
+                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-pompa-dewatering-proyek.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 7,
+                   "name": urlMappingSewaAlatProyekPompaDewatering[cleanUrlJasaKonsAlatKonstruksiPost],
+                   "item": cleanUrlJasaKonsAlatKonstruksiPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
 if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
@@ -784,6 +935,15 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
+
+	  //hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
 	
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost
 		 removeCondition('SewaForkliftPost');
@@ -892,7 +1052,16 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	
+
+	   //hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+	   
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaForkliftPost
 		 //removeCondition('');
 		 removeCondition('SewaCranePost');
@@ -1007,6 +1176,15 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
+
+	  //hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
 	
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaCranePost
 		 //removeCondition('');
@@ -1121,7 +1299,16 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	
+
+		//hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+		
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaSelfLoaderPost
 		 //removeCondition('');
 		 removeCondition('SewaCranePost');
@@ -1210,7 +1397,7 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
        document.head.appendChild(script);
    }	
 	
-    if (urlMappingSewaWheelLoader[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaWheelLoader[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaWheelLoaderPost');
@@ -1236,7 +1423,16 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	
+
+		//hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+		
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaWheelLoaderPost
 		 //removeCondition('');
 		 removeCondition('SewaCranePost');
@@ -1351,7 +1547,16 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	
+
+		//hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+		
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
 		 //removeCondition('');
 		 removeCondition('SewaCranePost');
@@ -1465,7 +1670,16 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	
+
+		//hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+		
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
 		 //removeCondition('');
 		 removeCondition('SewaCranePost');
@@ -1553,7 +1767,8 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }	
-    if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
+	
+if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaTandemRollerPost');
@@ -1579,6 +1794,15 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
+
+	//hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
 	
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
 		 //removeCondition('');
@@ -1694,7 +1918,16 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	
+
+	   //hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+	   
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
 		 //removeCondition('');
 		 removeCondition('SewaCranePost');
@@ -1808,7 +2041,16 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	
+
+		//hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+		
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
 		 //removeCondition('');
 		 removeCondition('SewaCranePost');
@@ -1922,7 +2164,16 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	
+
+		//hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+		
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
 		 //removeCondition('');
 		 removeCondition('SewaCranePost');
@@ -2038,7 +2289,16 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	
+
+	  //hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+	  
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
 		 //removeCondition('');
 		 removeCondition('SewaCranePost');
@@ -2154,7 +2414,16 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	
+
+	  //hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+	  
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
 		 //removeCondition('');
 		 removeCondition('SewaCranePost');
@@ -2269,7 +2538,16 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	
+
+	   //hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+	   
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
 		 //removeCondition('');
 		 removeCondition('SewaCranePost');
@@ -2384,7 +2662,16 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	
+
+	   //hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+	   
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaVibroRollerPost
 		 //removeCondition('');
 		 removeCondition('SewaCranePost');
@@ -2473,6 +2760,7 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+	
    if (urlMappingSewaMotorGrader[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
@@ -2499,7 +2787,16 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	
+
+	   //hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
+	   
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatBeratPost DAN SewaMotorGraderPost
 		 //removeCondition('');
 		 removeCondition('SewaCranePost');
@@ -2615,6 +2912,15 @@ if (urlMappingSewaAlatKonstruksiRingan[cleanUrlJasaKonsAlatKonstruksiPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsPembatasPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
+
+	//hapus elemen SUB SewaAlatProyekPost 
+	  removeCondition('SewaAlatProyekPompaDewateringPost');
+	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
+	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
+	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
+	  removeCondition('SewaAlatProyekAksesKeamananPost');
+	  removeCondition('SewaAlatProyekBorGroundWorkPost');
+	  removeCondition('SewaAlatProyekSistemPendukungPost');
 	
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatKonstruksiRinganPost
         removeCondition('SewaAlatProyekPost');
