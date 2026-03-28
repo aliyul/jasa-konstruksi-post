@@ -1,10 +1,6 @@
 
 // SUB JasaAlatKonstruksi
 const urlMappingSewaAlatProyek = {
-  "https://www.betonjayareadymix.com/2021/03/sewa-bekisting-cor-jalan.html": "Sewa Bekisting Cor Jalan",
-  "https://www.betonjayareadymix.com/2019/02/harga-jasa-sewa-scaffolding.html": "Harga Jasa Sewa Scaffolding",
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-bor-sumur.html": "Sewa Alat Bor Sumur",
-	
 "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-tangerang.html": "Sewa Alat Proyek Tangerang",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-depok.html": "Sewa Alat Proyek Depok",
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-jakarta.html": "Sewa Alat Proyek Jakarta",
@@ -60,7 +56,8 @@ const urlMappingSewaAlatProyekAksesKeamanan = {
 	
 };
 const urlMappingSewaAlatProyekBorGroundWork = {
-
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-bor-sumur.html": "Sewa Alat Bor Sumur"
+	
 };
 const urlMappingSewaAlatProyekSistemPendukung = {
 
