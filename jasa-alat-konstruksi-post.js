@@ -1543,9 +1543,15 @@ if (urlMappingSewaAlatProyekSurveyPengukuranTotalStation[cleanUrlJasaKonsAlatKon
                    "name": "Sewa Alat Survey Pengukuran",
                    "item": "https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html"
                },
-               {
+			   {
                    "@type": "ListItem",
                    "position": 7,
+                   "name": "Sewa Total Station",
+                   "item": "https://www.betonjayareadymix.com/2019/03/sewa-total-station.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 8,
                    "name": urlMappingSewaAlatProyekSurveyPengukuranTotalStation[cleanUrlJasaKonsAlatKonstruksiPost],
                    "item": cleanUrlJasaKonsAlatKonstruksiPost
                }
@@ -1560,8 +1566,10 @@ if (urlMappingSewaAlatProyekSurveyPengukuranTotalStation[cleanUrlJasaKonsAlatKon
 if (urlMappingSewaAlatProyekSurveyPengukuranWaterpass[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
+	
         restoreCondition('SewaAlatProyekPost');
 	    restoreCondition('SewaAlatProyekSurveyPengukuranPost');
+	    restoreCondition('SewaAlatProyekSurveyPengukuranWaterpassPost');
 	      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
@@ -1624,6 +1632,7 @@ if (urlMappingSewaAlatProyekSurveyPengukuranWaterpass[cleanUrlJasaKonsAlatKonstr
 	//TAMPILKAN SewaAlatProyekPost
         SewaAlatProyekPostLink.style.visibility = 'visible';
 	   SewaAlatProyekSurveyPengukuranPostLink.style.visibility = 'visible';
+	   SewaAlatProyekSurveyPengukuranWaterpassPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekSurveyPengukuranWaterpass[cleanUrlJasaKonsAlatKonstruksiPost];
     }
    // ✅ Tambahkan JSON-LD Breadcrumb otomatis
@@ -1671,9 +1680,15 @@ if (urlMappingSewaAlatProyekSurveyPengukuranWaterpass[cleanUrlJasaKonsAlatKonstr
                    "name": "Sewa Alat Survey Pengukuran",
                    "item": "https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html"
                },
-               {
+			   {
                    "@type": "ListItem",
                    "position": 7,
+                   "name": "Sewa Waterpass",
+                   "item": "https://www.betonjayareadymix.com/2019/03/sewa-waterpass.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 8,
                    "name": urlMappingSewaAlatProyekSurveyPengukuranWaterpass[cleanUrlJasaKonsAlatKonstruksiPost],
                    "item": cleanUrlJasaKonsAlatKonstruksiPost
                }
@@ -1690,6 +1705,7 @@ if (urlMappingSewaAlatProyekSurveyPengukuranTheodolite[cleanUrlJasaKonsAlatKonst
        // restoreCondition('JasaAlatKonstruksiPost');
         restoreCondition('SewaAlatProyekPost');
 	    restoreCondition('SewaAlatProyekSurveyPengukuranPost');
+	    restoreCondition('SewaAlatProyekSurveyPengukuranTheodolitePost');
 	      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
@@ -1752,6 +1768,7 @@ if (urlMappingSewaAlatProyekSurveyPengukuranTheodolite[cleanUrlJasaKonsAlatKonst
 	//TAMPILKAN SewaAlatProyekPost
         SewaAlatProyekPostLink.style.visibility = 'visible';
 	   SewaAlatProyekSurveyPengukuranPostLink.style.visibility = 'visible';
+	   SewaAlatProyekSurveyPengukuranTheodolitePostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekSurveyPengukuranTheodolite[cleanUrlJasaKonsAlatKonstruksiPost];
     }
    // ✅ Tambahkan JSON-LD Breadcrumb otomatis
@@ -1799,9 +1816,15 @@ if (urlMappingSewaAlatProyekSurveyPengukuranTheodolite[cleanUrlJasaKonsAlatKonst
                    "name": "Sewa Alat Survey Pengukuran",
                    "item": "https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html"
                },
-               {
+			   {
                    "@type": "ListItem",
                    "position": 7,
+                   "name": "Sewa Theodolite",
+                   "item": "https://www.betonjayareadymix.com/2019/03/sewa-theodolite.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 8,
                    "name": urlMappingSewaAlatProyekSurveyPengukuranTheodolite[cleanUrlJasaKonsAlatKonstruksiPost],
                    "item": cleanUrlJasaKonsAlatKonstruksiPost
                }
