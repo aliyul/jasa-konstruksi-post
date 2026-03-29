@@ -134,7 +134,7 @@ const urlMappingSewaAlatProyekSurveyPengukuranTheodolite = {
   "https://www.betonjayareadymix.com/2019/03/sewa-theodolite-depok.html": "Sewa Theodolite Depok",
   "https://www.betonjayareadymix.com/2019/03/sewa-theodolite-tangerang.html": "Sewa Theodolite Tangerang",
   "https://www.betonjayareadymix.com/2019/03/sewa-theodolite-bekasi.html": "Sewa Theodolite Bekasi",
-  "https://www.betonjayareadymix.com/2019/03/sewa-theodolite-karawang.html": "Sewa Theodolite Karawang",
+  "https://www.betonjayareadymix.com/2019/03/sewa-theodolite-karawang.html": "Sewa Theodolite Karawang"
 	
 };
 
@@ -822,6 +822,12 @@ if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
 	  removeCondition('SewaAlatProyekAksesKeamananPost');
 	  removeCondition('SewaAlatProyekBorGroundWorkPost');
 	  removeCondition('SewaAlatProyekSistemPendukungPost');
+
+	  		 //HAPUS SEMUA SUB SewaAlatProyekSurveyPengukuranPost
+     removeCondition('SewaAlatProyekSurveyPengukuranTotalStationPost');
+	 removeCondition('SewaAlatProyekSurveyPengukuranWaterpassPost');
+     removeCondition('SewaAlatProyekSurveyPengukuranTheodolitePost');
+	
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
         removeCondition('SewaAlatBeratPost');
 		 removeCondition('SewaForkliftPost');
@@ -938,7 +944,12 @@ if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
 	  removeCondition('SewaAlatProyekAksesKeamananPost');
 	  removeCondition('SewaAlatProyekBorGroundWorkPost');
 	  removeCondition('SewaAlatProyekSistemPendukungPost');
-	  
+
+	  		 //HAPUS SEMUA SUB SewaAlatProyekSurveyPengukuranPost
+     removeCondition('SewaAlatProyekSurveyPengukuranTotalStationPost');
+	 removeCondition('SewaAlatProyekSurveyPengukuranWaterpassPost');
+     removeCondition('SewaAlatProyekSurveyPengukuranTheodolitePost');
+
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
         removeCondition('SewaAlatBeratPost');
 		 removeCondition('SewaForkliftPost');
@@ -1062,7 +1073,12 @@ if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
 	  removeCondition('SewaAlatProyekAksesKeamananPost');
 	  removeCondition('SewaAlatProyekBorGroundWorkPost');
 	  removeCondition('SewaAlatProyekSistemPendukungPost');
-	  
+
+	 		 //HAPUS SEMUA SUB SewaAlatProyekSurveyPengukuranPost
+     removeCondition('SewaAlatProyekSurveyPengukuranTotalStationPost');
+	 removeCondition('SewaAlatProyekSurveyPengukuranWaterpassPost');
+     removeCondition('SewaAlatProyekSurveyPengukuranTheodolitePost');
+	 
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
         removeCondition('SewaAlatBeratPost');
 		 removeCondition('SewaForkliftPost');
@@ -1186,7 +1202,12 @@ if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
 	  removeCondition('SewaAlatProyekAksesKeamananPost');
 	  removeCondition('SewaAlatProyekBorGroundWorkPost');
 	  removeCondition('SewaAlatProyekSistemPendukungPost');
-	  
+
+	 		 //HAPUS SEMUA SUB SewaAlatProyekSurveyPengukuranPost
+     removeCondition('SewaAlatProyekSurveyPengukuranTotalStationPost');
+	 removeCondition('SewaAlatProyekSurveyPengukuranWaterpassPost');
+     removeCondition('SewaAlatProyekSurveyPengukuranTheodolitePost');
+	 
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
         removeCondition('SewaAlatBeratPost');
 		 removeCondition('SewaForkliftPost');
@@ -1310,7 +1331,12 @@ if (urlMappingSewaAlatProyekSurveyPengukuran[cleanUrlJasaKonsAlatKonstruksiPost]
 	  removeCondition('SewaAlatProyekAksesKeamananPost');
 	  removeCondition('SewaAlatProyekBorGroundWorkPost');
 	  removeCondition('SewaAlatProyekSistemPendukungPost');
-	  
+
+		 //HAPUS SEMUA SUB SewaAlatProyekSurveyPengukuranPost
+     removeCondition('SewaAlatProyekSurveyPengukuranTotalStationPost');
+	 removeCondition('SewaAlatProyekSurveyPengukuranWaterpassPost');
+     removeCondition('SewaAlatProyekSurveyPengukuranTheodolitePost');
+	
         //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
         removeCondition('SewaAlatBeratPost');
 		 removeCondition('SewaForkliftPost');
