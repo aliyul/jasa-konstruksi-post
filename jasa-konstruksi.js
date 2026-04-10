@@ -1,58 +1,102 @@
  // Cek URL saat ini dan sesuaikan dengan kondisi yang diinginkan
+// ============================================================
+// JASA KONSTRUKSI - PILLAR
+// ============================================================
+// 🧠 SEO NOTE: PILLAR ini adalah halaman utama untuk semua layanan jasa konstruksi.
+// Intent: Commercial Investigation + Navigational.
+// Breadcrumb: Home > Jasa Konstruksi (2 level)
+// ============================================================
+
 const urlMappingJasaKons = {
-//aplikasi nya
-"https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html": "Jasa Alat Konstruksi",
-"https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html": "Jasa Struktur Konstruksi",
-"https://www.betonjayareadymix.com/p/jasa-pondasi-perkuatan-tanah.html": "Jasa Pondasi & Perkuatan Tanah",
+  // ============================================================
+  // [PILLAR] - TOPICAL AUTHORITY
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi.html": "Jasa Konstruksi",
+
+  // ============================================================
+  // [SUB2] - SUB-PILLAR TIPE 2 (KATEGORI LAYANAN UTAMA)
+  // 🧠 SEO NOTE: SUB2 ini adalah halaman kategori untuk setiap jenis layanan jasa.
+  // Intent: Commercial Investigation (user masih riset, membandingkan layanan).
+  // Breadcrumb: Home > Jasa Konstruksi > [Nama Layanan] (3 level)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html": "Jasa Alat Konstruksi",
+  "https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html": "Jasa Struktur Konstruksi",
+  "https://www.betonjayareadymix.com/p/jasa-pondasi-perkuatan-tanah.html": "Jasa Pondasi & Perkuatan Tanah",
   "https://www.betonjayareadymix.com/p/jasa-saluran-drainase.html": "Jasa Saluran & Drainase",
   "https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html": "Jasa Jalan & Perkerasan",
- "https://www.betonjayareadymix.com/p/jasa-pematangan-lahan.html": "Jasa Pematangan Lahan",
- "https://www.betonjayareadymix.com/p/jasa-uji-tanah.html": "Jasa Uji Tanah",
- "https://www.betonjayareadymix.com/p/jasa-cutting-beton.html": "Jasa Cutting Beton",
- "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html": "Jasa Bongkar Bangunan",
- "https://www.betonjayareadymix.com/p/jasa-buang-puing.html": "Jasa Buang Puing",
+  "https://www.betonjayareadymix.com/p/jasa-pematangan-lahan.html": "Jasa Pematangan Lahan",
+  "https://www.betonjayareadymix.com/p/jasa-uji-tanah.html": "Jasa Uji Tanah",
+  "https://www.betonjayareadymix.com/p/jasa-cutting-beton.html": "Jasa Cutting Beton",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html": "Jasa Bongkar Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-buang-puing.html": "Jasa Buang Puing",
   "https://www.betonjayareadymix.com/p/jasa-pengeboran.html": "Jasa Pengeboran",
- "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html": "Jasa Perkuatan Tanah Longsor",
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html": "Jasa Perkuatan Tanah Longsor",
   "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html": "Jasa Pembatas Pengaman",
   "https://www.betonjayareadymix.com/p/jasa-renovasi.html": "Jasa Renovasi",
-  "https://www.betonjayareadymix.com/p/jasa-finishing.html": "Jasa Finishing",  
+  "https://www.betonjayareadymix.com/p/jasa-finishing.html": "Jasa Finishing",
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik.html": "Jasa Instalasi Listrik",
-
   "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html": "Jasa Perawatan Perbaikan Bangunan",
-  	"https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html": "Jasa Perbaikan Infrastruktur",
- 
-  //"https://www.betonjayareadymix.com/p/jasa-konstruksi-custom.html": "Jasa Konstruksi Custom",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html": "Jasa Perbaikan Infrastruktur",
 
-//jasa secara umum
-/*
- "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html": "Jasa Alat Konstruksi",
- "https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html": "Jasa Konstruksi Bangunan",
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-infrastruktur.html": "Jasa Konstruksi Infrastruktur",
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-indonesia.html": "Jasa Konstruksi Indonesia",
-  */
-//panduan jasa konstruksi
+  // ============================================================
+  // [SUB1] - SUB-PILLAR TIPE 1 (PANDUAN / BRIDGE)
+  // 🧠 SEO NOTE: SUB1 berfungsi sebagai jembatan (bridge) ke MONEY page.
+  // Intent: Informational (edukasi) + Pre-commercial.
+  // Breadcrumb: Home > Jasa Konstruksi > Panduan [Nama] (3 level)
+  // ============================================================
   "https://www.betonjayareadymix.com/p/panduan-membangun-bangunan.html": "Panduan Membangun Bangunan",
   "https://www.betonjayareadymix.com/p/panduan-renovasi-bangunan.html": "Panduan Renovasi Bangunan",
   "https://www.betonjayareadymix.com/p/panduan-perbaikan-bangunan.html": "Panduan Perbaikan Bangunan",
   "https://www.betonjayareadymix.com/p/panduan-finishing-bangunan.html": "Panduan Finishing Bangunan",
-
   "https://www.betonjayareadymix.com/p/panduan-pembuatan-infrastruktur.html": "Panduan Pembuatan Infrastruktur",
   "https://www.betonjayareadymix.com/p/panduan-renovasi-infrastruktur.html": "Panduan Renovasi Infrastruktur",
   "https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur",
   "https://www.betonjayareadymix.com/p/panduan-finishing-infrastruktur.html": "Panduan Finishing Infrastruktur"
-
 };
 
-const urlMappingJasaAlatKonstruksi = {	
-"https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html": "Sewa Alat Konstruksi"
-}
-const urlMappingJasaSewaAlatKonstruksi = {	
-"https://www.betonjayareadymix.com/p/sewa-alat-proyek.html": "Sewa Alat Proyek",
-"https://www.betonjayareadymix.com/p/sewa-alat-berat.html": "Sewa Alat Berat",
-"https://www.betonjayareadymix.com/p/sewa-alat-konstruksi-ringan.html": "Sewa Alat Konstruksi Ringan"
-}
-const urlMappingJasaSewaAlatBerat = {	
-"https://www.betonjayareadymix.com/p/sewa-forklift.html": "Sewa Forklift",
+// ============================================================
+// 🔴 REDIRECT NOTES - JASA KONSTRUKSI (PILLAR)
+// ============================================================
+/*
+🧠 SEO CANNIBAL FIX - REDIRECT PLAN:
+
+| No | From URL | To URL | Type | Alasan SEO |
+|----|----------|--------|------|------------|
+| 1 | /p/jasa-konstruksi-bangunan.html | /p/jasa-konstruksi.html | 301 | Duplikasi intent dengan PILLAR utama |
+| 2 | /p/jasa-konstruksi-infrastruktur.html | /p/jasa-konstruksi.html | 301 | Intent sama, gabung ke PILLAR |
+| 3 | /p/jasa-konstruksi-indonesia.html | /p/jasa-konstruksi.html | 301 | Terlalu umum, cukup PILLAR utama |
+
+CATATAN: Hanya URL yang benar-benar duplikat yang di-redirect.
+Semua SUB2 di atas sudah memiliki intent yang berbeda dan spesifik.
+*/
+// ============================================================
+// JASA ALAT KONSTRUKSI - SUB2 & TURUNAN
+// ============================================================
+// 🧠 SEO NOTE: Cluster ini fokus ke layanan sewa alat konstruksi.
+// Intent: Transactional (user siap sewa alat).
+// ============================================================
+
+const urlMappingJasaAlatKonstruksi = {
+  // [SUB1] - BRIDGE PAGE (PANDUAN SEWA ALAT)
+  // 🧠 SEO NOTE: SUB1 berfungsi sebagai jembatan (bridge) dari PILLAR ke layanan sewa spesifik.
+  // Konten: Panduan memilih rental, konsep sewa, perbandingan sewa vs beli, SOP keselamatan.
+  // Intent: Informational + Pre-commercial.
+  // Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Konstruksi (3 level)
+  "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html": "Sewa Alat Konstruksi"
+};
+
+const urlMappingJasaSewaAlatKonstruksi = {
+  // [SUB2] - SUB-PILLAR TIPE 2 (KATEGORI SEWA)
+  "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html": "Sewa Alat Proyek",
+  "https://www.betonjayareadymix.com/p/sewa-alat-berat.html": "Sewa Alat Berat",
+  "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi-ringan.html": "Sewa Alat Konstruksi Ringan"
+};
+
+const urlMappingJasaSewaAlatBerat = {
+  // [MONEY PAGE] - SEWA PER JENIS ALAT
+  // 🧠 SEO NOTE: Setiap URL adalah MONEY page dengan intent transaksional.
+  // Breadcrumb: Home > Jasa Konstruksi > Sewa [Nama Alat] (3 level)
+  "https://www.betonjayareadymix.com/p/sewa-forklift.html": "Sewa Forklift",
   "https://www.betonjayareadymix.com/p/sewa-crane.html": "Sewa Crane",
   "https://www.betonjayareadymix.com/p/sewa-self-loader.html": "Sewa Self Loader",
   "https://www.betonjayareadymix.com/p/sewa-wheel-loader.html": "Sewa Wheel Loader",
@@ -67,10 +111,24 @@ const urlMappingJasaSewaAlatBerat = {
   "https://www.betonjayareadymix.com/p/sewa-baby-roller.html": "Sewa Baby Roller",
   "https://www.betonjayareadymix.com/p/sewa-motor-grader.html": "Sewa Motor Grader",
   "https://www.betonjayareadymix.com/p/sewa-alat-pancang.html": "Sewa Alat Pancang"
-}
-const urlMappingJasaSewaAlatKonstruksiRingan = {	
+};
 
-}
+const urlMappingJasaSewaAlatKonstruksiRingan = {
+  // [MONEY PAGE] - SEWA ALAT RINGAN
+  // (URL akan ditambahkan kemudian)
+};
+
+// ============================================================
+// 🟡 SEO NOTE - JASA SEWA ALAT BERAT
+// ============================================================
+/*
+🧠 SEMUA URL di atas sudah optimal karena:
+1. Masing-masing menarget keyword alat spesifik (tidak tumpang tindih)
+2. Intent transaksional (user sudah tahu alat yang dibutuhkan)
+3. Tidak ada cannibal antar sesama sewa alat berat
+
+✅ AMAN - TIDAK PERLU REDIRECT
+*/
 
 const urlMappingPerbaikanInfrastruktur = {	
  //"https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-perawatan-jalan.html": "Jasa Perbaikan dan Perawatan Jalan",
@@ -81,77 +139,281 @@ const urlMappingPerbaikanInfrastruktur = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar.html": "Jasa Perbaikan Trotoar"
 
 };
-const urlMappingRenovasi = {	
-	"https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-umum.html": "Jasa Renovasi Fasilitas Umum",
-	"https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan.html": "Jasa Renovasi Bangunan",
-	 "https://www.betonjayareadymix.com/p/jasa-renovasi-interior.html": "Jasa Renovasi Interior",
-"https://www.betonjayareadymix.com/p/jasa-renovasi-eksterior-bangunan.html": "Jasa Renovasi Eksterior Bangunan"
-  //  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-dinding.html": "Jasa Renovasi Perbaikan Dinding"
 
-};
+
+// ============================================================
+// JASA FINISHING - SUB2 & TURUNAN
+// ============================================================
+// 🧠 SEO NOTE: Finishing adalah tahap akhir konstruksi (cat, epoxy, keramik, dll).
+// ============================================================
 
 const urlMappingFinishing = {
-"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html": "Jasa Finishing Bangunan",
-"https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html": "Jasa Finishing Infrastruktur"
-/*
-"https://www.betonjayareadymix.com/p/jasa-finishing-interior.html": "Jasa Finishing Interior",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html": "Jasa Finishing Eksterior",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur"
-  */
-/*
- "https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html": "Jasa Finishing Dinding",
- "https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html": "Jasa Finishing Lantai",
- "https://www.betonjayareadymix.com/p/jasa-finishing-atap.html": "Jasa Finishing Atap",
- "https://www.betonjayareadymix.com/p/jasa-finishing-plafon.html": "Jasa Finishing Plafon",
- "https://www.betonjayareadymix.com/p/jasa-finishing-kusen-pintu-jendela.html": "Jasa Finishing Kusen Pintu Jendela",
- "https://www.betonjayareadymix.com/p/jasa-finishing-kamar-mandi.html": "Jasa Finishing Kamar Mandi",
- "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html": "Jasa Finishing Interior",
- "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html": "Jasa Finishing Eksterior",
- "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html": "Jasa Finishing Infrastruktur",
- "https://www.betonjayareadymix.com/p/jasa-finishing-pintu-keamanan.html": "Jasa Finishing Pintu Keamanan Otomatisasi",
- "https://www.betonjayareadymix.com/p/jasa-finishing-akustik-peredam.html": "Jasa Finishing Akustik Peredam"
-*/
+  // [SUB2] - MASTER FINISHING
+  "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html": "Jasa Finishing Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html": "Jasa Finishing Infrastruktur"
 };
+// ============================================================
+// JASA STRUKTUR KONSTRUKSI - SUB2 & TURUNAN
+// ============================================================
+// 🧠 SEO NOTE: Cluster ini fokus ke layanan pembangunan struktur.
+// Intent: Commercial Investigation (user riset jasa bangun).
+// ============================================================
 
 const urlMappingStruktur = {
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html": "Jasa Konstruksi Gedung dan Hunian",
+  // [SUB2] - SUB-PILLAR TIPE 2
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html": "Jasa Konstruksi Gedung dan Hunian",
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-industri-dan-gudang.html": "Jasa Konstruksi Industri dan Gudang",
   "https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html": "Jasa Struktur Baja dan Rangka Ringan",
   "https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html": "Jasa Struktur Khusus",
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-lapangan-olahraga.html": "Jasa Konstruksi Lapangan Olahraga",
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html": "Jasa Konstruksi Modular dan Precast",
   "https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html": "Jasa Struktur Beton dan Pengecoran"
-
 };
+
+
+// ============================================================
+// JASA PONDASI & PERKUATAN TANAH - SUB2 & TURUNAN
+// ============================================================
+// 🧠 SEO NOTE: Cluster ini fokus ke layanan pondasi dan perkuatan tanah.
+// Intent: Commercial Investigation + Transactional.
+// ============================================================
 
 const urlMappingPondasi = {
-"https://www.betonjayareadymix.com/p/jasa-pondasi-bangunan.html": "Jasa Pondasi Bangunan",
-//Jasa Pemadatan dan Persiapan Lahan ini terlalu UMUM ga FKS ke pondasi
-  //"https://www.betonjayareadymix.com/p/jasa-pemadatan-dan-persiapan-lahan.html": "Jasa Pemadatan dan Persiapan Lahan",
-"https://www.betonjayareadymix.com/p/jasa-pemadatan-persiapan-pondasi.html": "Jasa Pemadatan & Persiapan Pondasi",
+  // [SUB2] - SUB-PILLAR TIPE 2
+  "https://www.betonjayareadymix.com/p/jasa-pondasi-bangunan.html": "Jasa Pondasi Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-pemadatan-persiapan-pondasi.html": "Jasa Pemadatan & Persiapan Pondasi",
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah.html": "Jasa Perkuatan Tanah",
   "https://www.betonjayareadymix.com/p/jasa-retrofitting-pondasi.html": "Jasa Retrofitting Pondasi"
-
 };
+
+// ============================================================
+// 🟡 SEO NOTE - JASA PONDASI
+// ============================================================
+/*
+🧠 CATATAN PENTING:
+
+1. 'jasa-pondasi-bangunan.html' adalah MASTER untuk semua layanan pondasi.
+2. Pastikan kontennya mencakup: pondasi cakar ayam, tapak, tiang pancang, sumuran.
+3. Jangan buat halaman terpisah untuk 'jasa-pondasi-cakar-ayam.html' jika kontennya tipis.
+4. Jika sudah ada, redirect ke master page.
+
+✅ AMAN - TIDAK PERLU REDIRECT (asalkan konten master komprehensif)
+*/
+// ============================================================
+// JASA BONGKAR BANGUNAN - SUB2 & TURUNAN
+// ============================================================
+// 🧠 SEO NOTE: Master page untuk semua layanan bongkar bangunan.
+// Intent: Transactional.
+// ============================================================
+
+const urlMappingBongkarBangunan = {
+  // [MONEY PAGE] - MASTER BONGKAR BANGUNAN
+  // 🧠 SEO NOTE: Halaman ini adalah master untuk semua layanan bongkar.
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Bongkar Bangunan
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html": "Jasa Bongkar Bangunan",
+  
+  // [SUB2] - TETAP DIPERTAHANKAN (MASIH RELEVAN)
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-tower.html": "Jasa Bongkar Tower",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html": "Jasa Bongkar Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-beton.html": "Jasa Bongkar Beton",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-atap.html": "Jasa Bongkar Atap"
+};
+
+// ============================================================
+// 🔴 REDIRECT NOTES - JASA BONGKAR (TERLALU DETAIL)
+// ============================================================
+/*
+🧠 SEO CANNIBAL FIX - REDIRECT PLAN:
+
+| No | From URL | To URL | Type | Alasan SEO |
+|----|----------|--------|------|------------|
+| 1 | /p/jasa-bongkar-keramik.html | /p/jasa-bongkar-bangunan.html | 301 | Terlalu detail, cukup sebagai section di master page |
+| 2 | /p/jasa-bongkar-tembok.html | /p/jasa-bongkar-bangunan.html | 301 | Intent sama dengan master, duplikasi konten |
+| 3 | /p/jasa-bongkar-dinding.html | /p/jasa-bongkar-bangunan.html | 301 | Intent sama dengan master |
+| 4 | /p/jasa-bongkar-plafon.html | /p/jasa-bongkar-bangunan.html | 301 | Intent sama dengan master |
+| 5 | /p/jasa-bongkar-partisi.html | /p/jasa-bongkar-bangunan.html | 301 | Intent sama dengan master |
+| 6 | /p/jasa-bongkar-pagar.html | /p/jasa-bongkar-bangunan.html | 301 | Intent sama dengan master |
+| 7 | /p/jasa-bongkar-lantai.html | /p/jasa-bongkar-bangunan.html | 301 | Intent sama dengan master |
+
+📌 ALASAN SEO UTAMA:
+1. Breadcrumb tidak boleh lebih dari 4 level (halaman terlalu dalam)
+2. Link equity akan terbagi terlalu banyak jika membuat banyak halaman tipis
+3. Google lebih menyukai 1 halaman komprehensif daripada 10 halaman tipis
+4. User lebih mudah navigasi dengan 1 master page yang lengkap
+*/
+// ============================================================
+// JASA RENOVASI - SUB2 & TURUNAN
+// ============================================================
+// 🧠 SEO NOTE: Pisahkan dengan jelas antara RENOVASI (ubah fungsi) dan PERBAIKAN (kembalikan fungsi).
+// ============================================================
+
+const urlMappingRenovasi = {
+  // [SUB2] - RENOVASI (ubah bentuk/fungsi bangunan)
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-umum.html": "Jasa Renovasi Fasilitas Umum",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan.html": "Jasa Renovasi Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior.html": "Jasa Renovasi Interior",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-eksterior-bangunan.html": "Jasa Renovasi Eksterior Bangunan"
+};
+
+
+// [SUB2] - Jasa Perawatan & Perbaikan Bangunan (kembalikan ke fungsi semula)
+const urlMappingPerawatanPerbaikanBangunan = {
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur.html": "Jasa Perbaikan Struktur",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html": "Jasa Perbaikan Kebocoran Waterproofing",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-elemen-arsitektural.html": "Jasa Perbaikan Elemen Arsitektural",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-drainase-bangunan.html": "Jasa Perbaikan Atap Drainase Bangunan"
+};
+
+// ============================================================
+// 🟡 SEO NOTE - RENOVASI vs PERBAIKAN
+// ============================================================
+/*
+🧠 PERBEDAAN INTENT (PENTING UNTUK SEO):
+
+| Intent | Renovasi | Perbaikan |
+|--------|----------|-----------|
+| Keyword | renovasi rumah, renovasi bangunan | perbaikan struktur, perbaikan bocor |
+| User mindset | Mengubah fungsi/desain | Mengembalikan ke fungsi semula |
+| Contoh | Ubah ruang tamu jadi kamar | Perbaiki dinding retak |
+
+📌 REKOMENDASI:
+1. Pastikan konten 'jasa-renovasi-bangunan.html' TIDAK membahas perbaikan
+2. Pastikan konten 'jasa-perbaikan-struktur.html' TIDAK membahas renovasi
+3. Pisahkan dengan jelas di internal link dan breadcrumb
+*/
+
+
+// ============================================================
+// JASA PENGEBORAN - SUB2 & TURUNAN
+// ============================================================
+// 🧠 SEO NOTE: Pengeboran mencakup bore pile, bor air, coring beton, dll.
+// ============================================================
+
+const urlMappingPengeboran = {
+  // [SUB2] - MASTER PENGEBORAN
+  "https://www.betonjayareadymix.com/p/jasa-pengeboran.html": "Jasa Pengeboran",
+  
+  // [MONEY PAGE] - JENIS PENGEBORAN SPESIFIK
+  "https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html": "Jasa Bor Air Sumur",
+  "https://www.betonjayareadymix.com/p/jasa-bore-pile.html": "Jasa Bore Pile",
+  "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",
+  "https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton",
+  "https://www.betonjayareadymix.com/p/jasa-bor-tanah.html": "Jasa Bor Tanah",
+  "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal",
+  "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html": "Jasa Bor Tembok"
+};
+
+// ============================================================
+// 🟡 SEO NOTE - JASA PENGEBORAN
+// ============================================================
+/*
+🧠 CATATAN PENTING:
+
+1. 'jasa-pengeboran.html' adalah MASTER untuk semua layanan pengeboran.
+2. Pastikan kontennya mencakup semua jenis pengeboran dengan internal link ke masing-masing.
+3. Masing-masing URL di atas sudah spesifik (bor air, bore pile, coring, dll)
+4. Tidak ada tumpang tindih intent karena keyword berbeda.
+
+✅ AMAN - TIDAK PERLU REDIRECT
+*/
+
+// ============================================================
+// JASA SALURAN & DRAINASE - SUB2 (PAGE)
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah SUB2 untuk layanan jasa saluran dan drainase.
+// ⚠️ PERINGATAN: Konten saat ini KOSONG. Perlu segera diisi.
+// Intent: Commercial Investigation.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Saluran & Drainase (3 level)
+// ============================================================
 
 const urlMappingSaluran = {
-"https://www.betonjayareadymix.com/p/jasa-saluran-air-hujan.html": "Jasa Saluran Air Hujan",
-"https://www.betonjayareadymix.com/p/jasa-pemasangan-u-ditch.html": "Jasa Pemasangan U ditch",
-"https://www.betonjayareadymix.com/p/jasa-pemasangan-box-culvert.html": "Jasa Pemasangan Box Culvert",
-"https://www.betonjayareadymix.com/p/jasa-saluran-irigasi-air-limbah.html": "Jasa Saluran irigasi & air limbah",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-sumur-resapan.html": "Jasa Pembuatan Sumur Resapan"
+  // ============================================================
+  // [SUB2] - SUB-PILLAR TIPE 2 (LAYANAN SALURAN)
+  // ⚠️ STATUS: KONTEN KOSONG - PERLU DIBUAT
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-saluran-air-hujan.html": "Jasa Saluran Air Hujan",
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-u-ditch.html": "Jasa Pemasangan U Ditch",
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-box-culvert.html": "Jasa Pemasangan Box Culvert",
+  "https://www.betonjayareadymix.com/p/jasa-saluran-irigasi-air-limbah.html": "Jasa Saluran Irigasi & Air Limbah",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-sumur-resapan.html": "Jasa Pembuatan Sumur Resapan"
 };
+
+// ============================================================
+// 🔴 REKOMENDASI PRIORITAS - JASA SALURAN
+// ============================================================
+/*
+🧠 SEO ACTION PLAN - PRIORITAS TERTINGGI:
+
+| No | URL | Status | Tindakan | Prioritas |
+|----|-----|--------|----------|-----------|
+| 1 | /p/jasa-pemasangan-u-ditch.html | KOSONG | Buat konten: fungsi, metode pemasangan, estimasi biaya, CTA | 🔴 HIGH |
+| 2 | /p/jasa-pemasangan-box-culvert.html | KOSONG | Buat konten: spesifikasi, aplikasi, estimasi biaya, CTA | 🔴 HIGH |
+| 3 | /p/jasa-saluran-air-hujan.html | KOSONG | Buat konten: sistem drainase, perhitungan kapasitas, CTA | 🟡 MEDIUM |
+| 4 | /p/jasa-saluran-irigasi-air-limbah.html | KOSONG | Buat konten: perbedaan irigasi vs limbah, CTA | 🟡 MEDIUM |
+| 5 | /p/jasa-pembuatan-sumur-resapan.html | KOSONG | Buat konten: fungsi, cara kerja, estimasi biaya, CTA | 🟡 MEDIUM |
+
+📌 BREADCRUMB SKIP LEVEL:
+Breadcrumb asli: Home > Jasa Konstruksi > Jasa Saluran & Drainase > Jasa Pemasangan U Ditch (4 level)
+Tetap 4 level (masih aman)
+
+📌 REKOMENDASI KONTEN MINIMAL UNTUK SETIAP HALAMAN:
+1. Header (H1) yang jelas
+2. Paragraf pembuka (100-150 kata)
+3. Sub-section (H2) tentang layanan
+4. Estimasi biaya atau faktor yang mempengaruhi
+5. CTA (form konsultasi / hubungi kami)
+*/
+
+// ============================================================
+// JASA JALAN & PERKERASAN - SUB2 (PAGE)
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah SUB2 untuk layanan jasa jalan dan perkerasan.
+// Intent: Commercial Investigation.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Jalan & Perkerasan (3 level)
+// ============================================================
 
 const urlMappingJalan = {
-"https://www.betonjayareadymix.com/p/jasa-pembangunan-infrastruktur-jalan.html": "Jasa Pembangunan Infrastruktur Jalan",
-"https://www.betonjayareadymix.com/p/jasa-pemadatan-dan-persiapan-tanah-jalan.html": "Jasa Pemadatan dan Persiapan Tanah Jalan",
-"https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html": "Jasa Perkerasan Jalan"
-//finishing dan perbaikkan sengaja tidak dimasukkan 
+  // [SUB2] - SUB-PILLAR TIPE 2 (LAYANAN JALAN)
+  "https://www.betonjayareadymix.com/p/jasa-pembangunan-infrastruktur-jalan.html": "Jasa Pembangunan Infrastruktur Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-pemadatan-dan-persiapan-tanah-jalan.html": "Jasa Pemadatan dan Persiapan Tanah Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html": "Jasa Perkerasan Jalan"
 };
 
+// ============================================================
+// 🟡 SEO NOTE - JASA JALAN
+// ============================================================
+/*
+🧠 ANALISIS:
+
+| Aspek | Status | Catatan |
+|-------|--------|---------|
+| Konten | ⚠️ PERLU DICEK | Belum ada data konten dari URL |
+| Jumlah halaman | 3 URL | Sudah cukup untuk SUB2 |
+| Finishing & perbaikan | Sengaja tidak dimasukkan | Sudah benar (berada di cluster terpisah) |
+
+📌 BREADCRUMB:
+Home > Jasa Konstruksi > Jasa Pembangunan Infrastruktur Jalan (3 level)
+
+📌 REKOMENDASI:
+1. Periksa konten setiap halaman, pastikan tidak kosong
+2. Tambahkan internal link ke Jasa Perbaikan Infrastruktur Jalan (jika ada)
+3. Pastikan ada CTA untuk konsultasi proyek jalan
+
+✅ AMAN - TIDAK PERLU REDIRECT (asalkan konten tidak kosong)
+*/
+
+// ============================================================
+// JASA PEMATANGAN LAHAN - SUB2 (PAGE)
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah SUB2 untuk layanan pematangan lahan.
+// Intent: Commercial Investigation.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Pematangan Lahan > [Layanan] (4 level)
+// ============================================================
+
 const urlMappingPematanganLahan = {
-"https://www.betonjayareadymix.com/p/jasa-galian-tanah.html": "Jasa Galian Tanah",
-"https://www.betonjayareadymix.com/p/jasa-pengupasan-lahan-tanah.html": "Jasa Pengupasan Lahan Tanah",
+  // [SUB2] - SUB-PILLAR TIPE 2 (LAYANAN PEMATANGAN LAHAN)
+  "https://www.betonjayareadymix.com/p/jasa-galian-tanah.html": "Jasa Galian Tanah",
+  "https://www.betonjayareadymix.com/p/jasa-pengupasan-lahan-tanah.html": "Jasa Pengupasan Lahan Tanah",
   "https://www.betonjayareadymix.com/p/jasa-pembersihan-lahan.html": "Jasa Pembersihan Lahan",
   "https://www.betonjayareadymix.com/p/jasa-perataan-dan-grading-lahan.html": "Jasa Perataan dan Grading Lahan",
   "https://www.betonjayareadymix.com/p/jasa-elevasi-lahan.html": "Jasa Elevasi Lahan",
@@ -160,28 +422,86 @@ const urlMappingPematanganLahan = {
   "https://www.betonjayareadymix.com/p/jasa-pemotongan-bukit-lahan.html": "Jasa Pemotongan Bukit Lahan",
   "https://www.betonjayareadymix.com/p/jasa-urugan-tanah-lahan.html": "Jasa Urugan Tanah Lahan",
   "https://www.betonjayareadymix.com/p/jasa-pemadatan-tanah-lahan.html": "Jasa Pemadatan Tanah Lahan",
- //ga usah karna ini untuk umum dan ga fokus ke lahan pematangan
-  //"https://www.betonjayareadymix.com/p/jasa-pemadatan-tanah-bangunan.html": "Jasa Pemadatan Tanah Bangunan",
   "https://www.betonjayareadymix.com/p/jasa-base-course-lahan.html": "Jasa Base Course Lahan",
   "https://www.betonjayareadymix.com/p/jasa-stabilisasi-tanah-lahan.html": "Jasa Stabilisasi Tanah Lahan",
   "https://www.betonjayareadymix.com/p/jasa-drainase-lahan.html": "Jasa Drainase Lahan",
   "https://www.betonjayareadymix.com/p/jasa-geotekstil-lahan.html": "Jasa Geotekstil Lahan",
   "https://www.betonjayareadymix.com/p/jasa-persiapan-pondasi-lahan.html": "Jasa Persiapan Pondasi Lahan",
-
-   "https://www.betonjayareadymix.com/p/jasa-tebang-pohon.html": "Jasa Tebang Pohon"
-
+  "https://www.betonjayareadymix.com/p/jasa-tebang-pohon.html": "Jasa Tebang Pohon"
 };
 
+// ============================================================
+// 🟡 SEO NOTE - JASA PEMATANGAN LAHAN
+// ============================================================
+/*
+🧠 ANALISIS:
+
+| Aspek | Status | Catatan |
+|-------|--------|---------|
+| Jumlah halaman | 16 URL | Cukup lengkap |
+| Scope | Terfokus pada pematangan lahan | ✅ BAIK |
+| Halaman yang di-comment | jasa-pemadatan-tanah-bangunan.html | ✅ TEPAT (terlalu umum) |
+
+📌 BREADCRUMB:
+Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Galian Tanah (4 level)
+
+📌 REKOMENDASI:
+1. Periksa konten setiap halaman (jangan sampai kosong)
+2. Urutkan berdasarkan alur pekerjaan (pembersihan → pengupasan → galian → cut and fill → pemadatan)
+3. Pastikan ada internal link antar halaman yang berurutan
+
+✅ AMAN - TIDAK PERLU REDIRECT
+*/
+
+// ============================================================
+// JASA UJI TANAH - SUB2 (PAGE)
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah SUB2 untuk layanan uji tanah.
+// Intent: Commercial Investigation.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Uji Tanah > [Jenis Uji] (4 level)
+// ============================================================
+
 const urlMappingUjiTanah = {
-"https://www.betonjayareadymix.com/p/jasa-sondir.html": "Jasa Sondir",
+  // [SUB2] - SUB-PILLAR TIPE 2 (LAYANAN UJI TANAH)
+  "https://www.betonjayareadymix.com/p/jasa-sondir.html": "Jasa Sondir",
   "https://www.betonjayareadymix.com/p/jasa-cpt.html": "Jasa CPT",
   "https://www.betonjayareadymix.com/p/jasa-lab-tanah.html": "Jasa Lab Tanah",
   "https://www.betonjayareadymix.com/p/jasa-boring-tanah.html": "Jasa Boring Tanah",
   "https://www.betonjayareadymix.com/p/jasa-uji-penetrasi.html": "Jasa Uji Penetrasi"
-
 };
 
+// ============================================================
+// 🟡 SEO NOTE - JASA UJI TANAH
+// ============================================================
+/*
+🧠 ANALISIS:
+
+| Aspek | Status | Catatan |
+|-------|--------|---------|
+| Jumlah halaman | 5 URL | Cukup lengkap |
+| Scope | Metode uji tanah standar | ✅ BAIK |
+
+📌 BREADCRUMB:
+Home > Jasa Konstruksi > Jasa Uji Tanah > Jasa Sondir (4 level)
+
+📌 REKOMENDASI:
+1. Periksa konten setiap halaman
+2. Tambahkan penjelasan perbedaan setiap metode uji
+3. Kapan menggunakan Sondir vs CPT vs Boring
+
+✅ AMAN - TIDAK PERLU REDIRECT
+*/
+
+// ============================================================
+// JASA PERKUATAN TANAH LONGSOR - SUB2 (PAGE)
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah SUB2 untuk layanan perkuatan tanah longsor.
+// Intent: Commercial Investigation.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Perkuatan Tanah Longsor > [Metode] (4 level)
+// ============================================================
+
 const urlMappingPerkuatanTanahLongsor = {
+  // [SUB2] - SUB-PILLAR TIPE 2 (LAYANAN PERKUATAN TANAH LONGSOR)
   "https://www.betonjayareadymix.com/p/jasa-bronjong-penahan-longsor.html": "Jasa Bronjong Penahan Longsor",
   "https://www.betonjayareadymix.com/p/jasa-soil-nailing-tebing.html": "Jasa Soil Nailing Tebing",
   "https://www.betonjayareadymix.com/p/jasa-dinding-penahan-tanah-longsor.html": "Jasa Dinding Penahan Tanah Longsor",
@@ -192,68 +512,108 @@ const urlMappingPerkuatanTanahLongsor = {
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-tebing-jalan.html": "Jasa Perkuatan Tebing Jalan",
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-longsor-perkebunan.html": "Jasa Perkuatan Longsor Perkebunan",
   "https://www.betonjayareadymix.com/p/jasa-drainase-anti-longsor.html": "Jasa Drainase Anti Longsor"
-
-};
-const urlMappingBongkarBangunan = {
-"https://www.betonjayareadymix.com/p/jasa-bongkar-tower.html": "Jasa Bongkar Tower",
-"https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html": "Jasa Bongkar Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-beton.html": "Jasa Bongkar Beton",
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-atap.html": "Jasa Bongkar Atap",
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-keramik.html": "Jasa Bongkar Keramik",
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-tembok.html": "Jasa Bongkar Tembok",
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-dinding.html": "Jasa Bongkar Dinding",
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-plafon.html": "Jasa Bongkar Plafon",
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-partisi.html": "Jasa Bongkar Partisi",
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-pagar.html": "Jasa Bongkar Pagar",
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-lantai.html": "Jasa Bongkar Lantai"
 };
 
-const urlMappingPerawatanPerbaikanBangunan = {
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur.html": "Jasa Perbaikan Struktur",
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html": "Jasa Perbaikan Kebocoran Waterproofing",
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-elemen-arsitektural.html": "Jasa Perbaikan Elemen Arsitektural",
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-drainase-bangunan.html": "Jasa Perbaikan Atap Drainase Bangunan"
-	
-};
-const urlMappingPengeboran = {
-//"https://www.betonjayareadymix.com/p/jasa-bor-teknik.html": "Jasa Bor Teknik",
-"https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html": "Jasa Bor Air Sumur",
-  "https://www.betonjayareadymix.com/p/jasa-bore-pile.html": "Jasa Bore Pile",
-  "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",
-  "https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton",
-  "https://www.betonjayareadymix.com/p/jasa-bor-tanah.html": "Jasa Bor Tanah",
-  "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal",
- "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html": "Jasa Bor Tembok"
-};
+// ============================================================
+// 🟡 SEO NOTE - JASA PERKUATAN TANAH LONGSOR
+// ============================================================
 /*
-const urlMappingJasaBorAirSumur = {
-  "https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html": "Jasa Bor Air Sumur",
-  //"https://www.betonjayareadymix.com/p/jasa-bor-air-teknik.html": "Jasa Bor Air Teknik",
-  "https://www.betonjayareadymix.com/p/jasa-bor-air-kebutuhan.html": "Jasa Bor Air Kebutuhan",
-  "https://www.betonjayareadymix.com/p/jasa-bor-air-lokasi.html": "Jasa Bor Air Lokasi",
-  //"https://www.betonjayareadymix.com/p/biaya-jasa-bor-air.html": "Biaya Jasa Bor Air",
-  "https://www.betonjayareadymix.com/p/peralatan-jasa-bor-air.html": "Peralatan Jasa Bor Air"
-};
+🧠 ANALISIS:
+
+| Aspek | Status | Catatan |
+|-------|--------|---------|
+| Jumlah halaman | 10 URL | Cukup lengkap |
+| Scope | Metode perkuatan longsor | ✅ BAIK |
+
+📌 BREADCRUMB:
+Home > Jasa Konstruksi > Jasa Perkuatan Tanah Longsor > Jasa Bronjong Penahan Longsor (4 level)
+
+📌 REKOMENDASI:
+1. Periksa konten setiap halaman
+2. Tambahkan penjelasan kapan metode tertentu lebih tepat
+3. Faktor yang mempengaruhi pemilihan metode (kemiringan, jenis tanah, anggaran)
+
+✅ AMAN - TIDAK PERLU REDIRECT
 */
+
+// ============================================================
+// JASA PEMBATAS & PENGAMAN - SUB2 (PAGE)
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah SUB2 untuk layanan pembatas dan pengaman proyek.
+// Intent: Commercial Investigation.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas Pengaman > [Layanan] (4 level)
+// ============================================================
+
 const urlMappingPembatas = {
-"https://www.betonjayareadymix.com/p/jasa-pengamanan-area-proyek.html": "Jasa Pengamanan Area Proyek",
+  // [SUB2] - SUB-PILLAR TIPE 2 (LAYANAN PEMBATAS & PENGAMAN)
+  "https://www.betonjayareadymix.com/p/jasa-pengamanan-area-proyek.html": "Jasa Pengamanan Area Proyek",
   "https://www.betonjayareadymix.com/p/jasa-rambu-dan-sistem-keamanan-visual.html": "Jasa Rambu dan Sistem Keamanan Visual",
   "https://www.betonjayareadymix.com/p/jasa-pengaman-sisi-jalan-infrastruktur.html": "Jasa Pengaman Sisi Jalan Infrastruktur",
   "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html": "Jasa Pembuatan Pagar Dinding Pembatas"
-
 };
 
-const urlMappingJasaInstalasiListrik = {	
-	
-    "https://www.betonjayareadymix.com/p/jasa-instalasi-solar-panel.html": "Jasa Instalasi Solar Panel",
-    "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik-rumah.html": "Jasa Instalasi Listrik Rumah",
+// ============================================================
+// 🟡 SEO NOTE - JASA PEMBATAS & PENGAMAN
+// ============================================================
+/*
+🧠 ANALISIS:
+
+| Aspek | Status | Catatan |
+|-------|--------|---------|
+| Jumlah halaman | 4 URL | Cukup lengkap |
+| Scope | Pengamanan proyek dan jalan | ✅ BAIK |
+
+📌 BREADCRUMB:
+Home > Jasa Konstruksi > Jasa Pembatas Pengaman > Jasa Pengamanan Area Proyek (4 level)
+
+📌 REKOMENDASI:
+1. Periksa konten setiap halaman
+2. Pastikan ada CTA untuk konsultasi kebutuhan pengamanan proyek
+
+✅ AMAN - TIDAK PERLU REDIRECT
+*/
+
+// ============================================================
+// JASA INSTALASI LISTRIK - SUB2 (PAGE)
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah SUB2 untuk layanan instalasi listrik.
+// Intent: Commercial Investigation.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Instalasi Listrik > [Layanan] (4 level)
+// ============================================================
+
+const urlMappingJasaInstalasiListrik = {
+  // [SUB2] - SUB-PILLAR TIPE 2 (LAYANAN INSTALASI LISTRIK)
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-solar-panel.html": "Jasa Instalasi Solar Panel",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik-rumah.html": "Jasa Instalasi Listrik Rumah",
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik-komersial.html": "Jasa Instalasi Listrik Komersial",
   "https://www.betonjayareadymix.com/p/jasa-pemasangan-panel-listrik.html": "Jasa Pemasangan Panel Listrik",
   "https://www.betonjayareadymix.com/p/jasa-keamanan-proteksi-listrik.html": "Jasa Keamanan & Proteksi Listrik",
   "https://www.betonjayareadymix.com/p/jasa-maintenance-perbaikan-listrik.html": "Jasa Maintenance & Perbaikan Listrik",
   "https://www.betonjayareadymix.com/p/jasa-konsultasi-listrik.html": "Jasa Konsultasi Listrik"
+};
 
-}
+// ============================================================
+// 🔴 REKOMENDASI PRIORITAS - JASA INSTALASI LISTRIK
+// ============================================================
+/*
+🧠 SEO ACTION PLAN:
+
+| No | URL | Status | Tindakan | Prioritas |
+|----|-----|--------|----------|-----------|
+| 1 | /p/jasa-keamanan-proteksi-listrik.html | KOSONG | Buat konten: jenis proteksi, standar keamanan, CTA | 🔴 HIGH |
+| 2 | Halaman lain | ⚠️ PERLU DICEK | Periksa konten, pastikan tidak kosong | 🟡 MEDIUM |
+
+📌 BREADCRUMB:
+Home > Jasa Konstruksi > Jasa Instalasi Listrik > Jasa Keamanan & Proteksi Listrik (4 level)
+
+📌 REKOMENDASI KONTEN UNTUK jasa-keamanan-proteksi-listrik.html:
+1. Penjelasan tentang grounding system
+2. Penjelasan tentang surge protection device (SPD)
+3. Penjelasan tentang circuit breaker (MCB, MCCB)
+4. Standar keamanan listrik (PUIL)
+5. CTA untuk konsultasi instalasi keamanan listrik
+*/
+
 /*
 const urlMappingCustom = {
 
