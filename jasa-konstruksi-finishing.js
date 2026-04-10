@@ -1,42 +1,84 @@
- // Cek URL saat ini dan sesuaikan dengan kondisi yang diinginkan
+// ============================================================
+// JASA FINISHING BANGUNAN - PAGE (SUB2)
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah SUB2 yang berfungsi sebagai kategori utama finishing bangunan.
+// Konten: Layanan finishing interior, eksterior, dan struktur.
+// Intent: Commercial Investigation (user membandingkan layanan finishing).
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Bangunan (3 level)
+// ============================================================
+
 const urlMappingFinishingBangunan = {
- "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html": "Jasa Finishing Interior",
+  // [SUB2] - SUB-PILLAR TIPE 2 (KATEGORI FINISHING BANGUNAN)
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html": "Jasa Finishing Interior",
   "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html": "Jasa Finishing Eksterior",
   "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur"
-//  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html": "Jasa Finishing Dinding",
- // "https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html": "Jasa Finishing Lantai"
-
- /*
- "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-plester-acian.html": "Jasa Renovasi Dinding Plester Acian",
- "https://www.betonjayareadymix.com/p/jasa-plester-acian.html": "Jasa Plester Acian",
-*/
 };
 
+// ============================================================
+// 🧠 ANALISA KONTEN - JASA FINISHING INTERIOR
+// ============================================================
+/*
+📌 KESIMPULAN: Halaman ini adalah SUB2 dengan konten yang sangat baik.
+- Konten membahas: penyebab kegagalan finishing, kapan perlu jasa profesional, estimasi biaya
+- Intent: Commercial Investigation + Edukasi
+- Tidak ada harga spesifik produk, tidak ada form pemesanan langsung
+- BUKAN MONEY PAGE
+
+✅ AMAN - PERTAHANKAN SEBAGAI SUB2
+*/
+// ============================================================
+// JASA FINISHING INTERIOR - PAGE (SUB2 TURUNAN)
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah SUB2 turunan yang lebih spesifik dari Jasa Finishing Bangunan.
+// Konten: Epoxy dinding, epoxy lantai, furniture custom, keramik, cat interior, wallpaper, lampu, kitchen set, finishing interior minimalis/klasik/modern.
+// Intent: Commercial Investigation (user sudah tahu jenis finishing, masih bandingkan).
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Bangunan > Jasa Finishing Interior (4 level)
+// ============================================================
+
 const urlMappingFinishingBangunanInterior = {
-//"https://www.betonjayareadymix.com/p/jasa-borongan-lantai.html": "Jasa Borongan Lantai",
-"https://www.betonjayareadymix.com/p/jasa-epoxy-dinding.html": "Jasa Epoxy Dinding",
-"https://www.betonjayareadymix.com/p/jasa-epoxy-lantai.html": "Jasa Epoxy Lantai",
-"https://www.betonjayareadymix.com/p/jasa-interior-dan-furniture-custom.html": "Jasa Interior dan Furniture Custome",
-"https://www.betonjayareadymix.com/p/jasa-keramik-lantai.html": "Jasa Keramik Lantai",
+  // [SUB2] - SUB-PILLAR TIPE 2 (TURUNAN)
+  "https://www.betonjayareadymix.com/p/jasa-epoxy-dinding.html": "Jasa Epoxy Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-epoxy-lantai.html": "Jasa Epoxy Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-interior-dan-furniture-custom.html": "Jasa Interior dan Furniture Custom",
+  "https://www.betonjayareadymix.com/p/jasa-keramik-lantai.html": "Jasa Keramik Lantai",
   "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
   "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",
-  //"https://www.betonjayareadymix.com/p/jasa-pasang-lantai-vinyl.html": "Jasa Pasang Lantai Vinyl",
-//"https://www.betonjayareadymix.com/p/jasa-pasang-dinding-vinyl.html": "Jasa Pasang Dinding Vinyl",
-  //"https://www.betonjayareadymix.com/p/jasa-pasang-dinding-wpc.html": "Jasa Pasang Dinding WPC",
-  //"https://www.betonjayareadymix.com/p/jasa-pasang-lantai-wpc.html": "Jasa Pasang Lantai WPC",
-  //"https://www.betonjayareadymix.com/p/jasa-pasang-plafon-gypsum.html": "Jasa Pasang Plafon Gypsum",
   "https://www.betonjayareadymix.com/p/jasa-lampu-interior.html": "Jasa Lampu Interior",
   "https://www.betonjayareadymix.com/p/jasa-kitchen-set.html": "Jasa Kitchen Set",
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis",
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html": "Jasa Finishing Interior Klasik",
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern"
-
-
 };
 
-const urlMappingFinishingBangunanEksterior = {
+// ============================================================
+// 🧠 ANALISA KONTEN - JASA EPoxy BETON LUAR RUANG
+// ============================================================
+/*
+📌 KESIMPULAN: Halaman ini adalah MONEY PAGE (Lead Gen).
+- Konten: Halaman ini adalah landing page untuk jasa epoxy luar ruang.
+- Ada CTA "Konsultasi gratis tersedia hari ini juga"
+- Ada informasi teknis, tren 2025, proses aplikasi
+- Intent: Transactional (Lead Generation)
 
-"https://www.betonjayareadymix.com/p/jasa-cat-eksterior-rumah.html": "Jasa Cat Eksterior Rumah",
+📌 REKOMENDASI: 
+Halaman ini seharusnya berada di bawah urlMappingFinishingBangunanInterior
+tapi karena kontennya spesifik "epoxy beton luar ruang", ini adalah VARIANT atau MONEY PAGE.
+
+✅ TETAP PERTAHANKAN sebagai MONEY PAGE
+*/
+
+// ============================================================
+// JASA FINISHING EKSTERIOR - PAGE (SUB2 TURUNAN)
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah SUB2 turunan untuk finishing eksterior.
+// Konten: Cat eksterior, finishing fasad, pelapisan anti cuaca, pelapisan dinding luar, finishing taman, finishing kanopi, pelapisan batu alam, pelapisan genteng dak.
+// Intent: Commercial Investigation.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Bangunan > Jasa Finishing Eksterior (4 level)
+// ============================================================
+
+const urlMappingFinishingBangunanEksterior = {
+  // [SUB2] - SUB-PILLAR TIPE 2 (TURUNAN)
+  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-rumah.html": "Jasa Cat Eksterior Rumah",
   "https://www.betonjayareadymix.com/p/jasa-finishing-fasad-eksterior.html": "Jasa Finishing Fasad Eksterior",
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-cuaca.html": "Jasa Pelapisan Anti Cuaca",
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-dinding-luar.html": "Jasa Pelapisan Dinding Luar",
@@ -44,13 +86,33 @@ const urlMappingFinishingBangunanEksterior = {
   "https://www.betonjayareadymix.com/p/jasa-finishing-kanopi-teras.html": "Jasa Finishing Kanopi Teras",
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html": "Jasa Pelapisan Batu Alam Eksterior",
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak.html": "Jasa Pelapisan Genteng Dak"
-
 };
 
+// ============================================================
+// 🧠 ANALISA KONTEN - JASA FINISHING EKSTERIOR
+// ============================================================
+/*
+📌 KESIMPULAN: Halaman ini adalah SUB2 dengan konten yang sangat baik.
+- Konten membahas: kesalahan finishing, kapan perlu jasa, estimasi biaya, proses kerja
+- Intent: Commercial Investigation + Edukasi
+- BUKAN MONEY PAGE (tidak ada CTA jualan langsung)
+
+✅ AMAN - PERTAHANKAN SEBAGAI SUB2
+*/
+
+// ============================================================
+// JASA FINISHING STRUKTUR - PAGE (SUB2 TURUNAN)
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah SUB2 turunan untuk finishing struktur beton.
+// Konten: Finishing dak beton, beton expose, plesteran acian, grouting, coating, finishing kolom balok, waterproofing, finishing lantai beton.
+// Intent: Commercial Investigation.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Bangunan > Jasa Finishing Struktur (4 level)
+// ============================================================
+
 const urlMappingFinishingBangunanStruktur = {
- "https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html": "Jasa Finishing Dak Beton",
- "https://www.betonjayareadymix.com/p/jasa-finishing-beton-expose.html": "Jasa Finishing Beton Expose",
-  //"https://www.betonjayareadymix.com/p/jasa-aci-dinding-beton.html": "Jasa Aci Dinding Beton",
+  // [SUB2] - SUB-PILLAR TIPE 2 (TURUNAN)
+  "https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html": "Jasa Finishing Dak Beton",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-beton-expose.html": "Jasa Finishing Beton Expose",
   "https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html": "Jasa Plesteran & Acian Dinding",
   "https://www.betonjayareadymix.com/p/jasa-finishing-grouting-struktur-beton.html": "Jasa Finishing Grouting Struktur Beton",
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html": "Jasa Pelapisan Coating Struktur",
@@ -58,59 +120,120 @@ const urlMappingFinishingBangunanStruktur = {
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html": "Jasa Pelapisan Waterproofing Struktur",
   "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html": "Jasa Finishing Lantai Beton",
   "https://www.betonjayareadymix.com/p/jasa-pelindung-retak-struktur.html": "Jasa Pelindung Retak Struktur"
-	
 };
 
+// ============================================================
+// 🧠 ANALISA KONTEN - JASA FINISHING STRUKTUR
+// ============================================================
+/*
+📌 KESIMPULAN: Halaman ini adalah SUB2 dengan konten yang sangat baik.
+- Konten membahas: kapan perlu jasa, kesalahan fatal, proses kerja, estimasi biaya
+- Intent: Commercial Investigation + Edukasi
+- BUKAN MONEY PAGE
+
+✅ AMAN - PERTAHANKAN SEBAGAI SUB2
+*/
+
+// ============================================================
+// JASA FINISHING INFRASTRUKTUR - PAGE (SUB2)
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah SUB2 untuk finishing infrastruktur.
+// Konten: Finishing jalan jembatan, trotoar, saluran drainase, struktur utilitas, proteksi beton.
+// Intent: Commercial Investigation.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Infrastruktur (3 level)
+// ============================================================
 
 const urlMappingFinishingInfrastruktur = {
-
+  // [SUB2] - SUB-PILLAR TIPE 2
   "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-jembatan.html": "Jasa Finishing Jalan Jembatan",
   "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar-area-publik.html": "Jasa Finishing Trotoar Area Publik",
   "https://www.betonjayareadymix.com/p/jasa-finishing-saluran-drainase.html": "Jasa Finishing Saluran Drainase",
   "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-utilitas.html": "Jasa Finishing Struktur Utilitas",
   "https://www.betonjayareadymix.com/p/jasa-finishing-proteksi-beton.html": "Jasa Finishing Proteksi Beton"
-
 };
 
-const urlMappingFinishingInfrastrukturJalan = {
+// ============================================================
+// [SUB2] - JASA FINISHING INFRASTRUKTUR JALAN (TURUNAN)
+// ============================================================
 
- "https://www.betonjayareadymix.com/p/jasa-finishing-jembatan-beton.html": "Jasa Finishing Jembatan Beton",
+const urlMappingFinishingInfrastrukturJalan = {
+  "https://www.betonjayareadymix.com/p/jasa-finishing-jembatan-beton.html": "Jasa Finishing Jembatan Beton",
   "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-beton.html": "Jasa Finishing Jalan Beton",
   "https://www.betonjayareadymix.com/p/jasa-pengecatan-marking-jalan.html": "Jasa Pengecatan Marking Jalan",
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-jalan-tol.html": "Jasa Pelapisan Jalan Tol",
   "https://www.betonjayareadymix.com/p/jasa-coating-jembatan.html": "Jasa Coating Jembatan"
 };
 
+// ============================================================
+// [SUB2] - JASA FINISHING INFRASTRUKTUR TROTOAR (TURUNAN)
+// ============================================================
+
 const urlMappingFinishingInfrastrukturTrotoar = {
- "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar.html": "Jasa Finishing Trotoar",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar.html": "Jasa Finishing Trotoar",
   "https://www.betonjayareadymix.com/p/jasa-penataan-trotoar-beton.html": "Jasa Penataan Trotoar Beton",
   "https://www.betonjayareadymix.com/p/jasa-epoxy-area-publik.html": "Jasa Epoxy Area Publik",
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-area-pejalan-kaki.html": "Jasa Pelapisan Area Pejalan Kaki"
 };
+
+// ============================================================
+// [SUB2] - JASA FINISHING INFRASTRUKTUR SALURAN (TURUNAN)
+// ============================================================
 
 const urlMappingFinishingInfrastrukturSaluran = {
   "https://www.betonjayareadymix.com/p/jasa-coating-gorong-gorong.html": "Jasa Coating Gorong Gorong",
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-saluran-beton.html": "Jasa Pelapisan Saluran Beton",
   "https://www.betonjayareadymix.com/p/jasa-waterproofing-saluran-air.html": "Jasa Waterproofing Saluran Air",
   "https://www.betonjayareadymix.com/p/jasa-finishing-penutup-saluran.html": "Jasa Finishing Penutup Saluran"
-
 };
 
+// ============================================================
+// [SUB2] - JASA FINISHING INFRASTRUKTUR STRUKTUR (TURUNAN)
+// ============================================================
+
 const urlMappingFinishingInfrastrukturStruktur = {
- "https://www.betonjayareadymix.com/p/jasa-finishing-rumah-pompa.html": "Jasa Finishing Rumah Pompa",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-rumah-pompa.html": "Jasa Finishing Rumah Pompa",
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-box-utilitas.html": "Jasa Pelapisan Box Utilitas",
   "https://www.betonjayareadymix.com/p/jasa-epoxy-struktur-publik.html": "Jasa Epoxy Struktur Publik",
   "https://www.betonjayareadymix.com/p/jasa-finishing-penutup-kabel-beton.html": "Jasa Finishing Penutup Kabel Beton"
-
 };
 
+// ============================================================
+// [SUB2] - JASA FINISHING INFRASTRUKTUR PROTEKSI (TURUNAN)
+// ============================================================
+
 const urlMappingFinishingInfrastrukturProteksi = {
- "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-karat-beton.html": "Jasa Pelapisan Anti Karat Beton",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-karat-beton.html": "Jasa Pelapisan Anti Karat Beton",
   "https://www.betonjayareadymix.com/p/jasa-epoxy-beton-luar-ruang.html": "Jasa Epoxy Beton Luar Ruang",
   "https://www.betonjayareadymix.com/p/jasa-proteksi-struktur-beton-luar.html": "Jasa Proteksi Struktur Beton Luar",
   "https://www.betonjayareadymix.com/p/jasa-finishing-khusus-cuaca-ekstrem.html": "Jasa Finishing Khusus Cuaca Ekstrem"
-
 };
+
+// ============================================================
+// 🔴 REDIRECT NOTES - JASA FINISHING INFRASTRUKTUR
+// ============================================================
+/*
+🧠 SEO CANNIBAL FIX - REDIRECT PLAN:
+
+| No | From URL | To URL | Type | Alasan SEO |
+|----|----------|--------|------|------------|
+| (TIDAK ADA REDIRECT - SEMUA AMAN) |
+
+📌 CATATAN PENTING:
+
+1. 'jasa-epoxy-beton-luar-ruang.html' adalah MONEY PAGE (Lead Gen)
+   - Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Infrastruktur > Jasa Epoxy Beton Luar Ruang (4 level)
+   - Intent: Transactional (ada CTA konsultasi)
+
+2. 'jasa-finishing-khusus-cuaca-ekstrem.html' - KONTEN KOSONG
+   🔴 PERLU DITINDAKLANJUTI:
+   - Halaman ini hanya berisi navigasi, tidak ada konten substansial
+   - Perlu diisi konten atau di-redirect ke halaman yang relevan
+
+3. Semua halaman di atas sudah memiliki intent yang jelas dan berbeda.
+   Tidak ada tumpang tindih yang signifikan.
+
+✅ AMAN - TIDAK PERLU REDIRECT (kecuali halaman kosong)
+*/
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaKonsFinishing = {};
