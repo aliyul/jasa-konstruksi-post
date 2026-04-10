@@ -1,53 +1,203 @@
 //SUB MAPPING JASA BONGKAR BANGUNAN
-// JasaBongkarTower
+// ============================================================
+// JASA BONGKAR TOWER - BLOG POST
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah MONEY PAGE dengan intent transaksional.
+// Konten: Harga bongkar tower berdasarkan jenis dan tinggi, layanan profesional.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Jasa Bongkar Tower (4 level)
+// ============================================================
+
 const urlMappingJasaBongkarTower = {
+  // [MONEY PAGE] - BONGKAR TOWER
   "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower.html": "Jasa Bongkar Tower",
   "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower-triangle.html": "Jasa Bongkar Tower Triangle"
 };
 
-// JasaBongkarRumah
+// ============================================================
+// 🟡 SEO NOTE - JASA BONGKAR TOWER
+// ============================================================
+/*
+📌 BREADCRUMB:
+Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Jasa Bongkar Tower (4 level - masih aman)
+
+📌 SARAN ITEM BARU:
+// "https://www.betonjayareadymix.com/2019/08/harga-bongkar-tower-bts.html": "Harga Bongkar Tower BTS",
+// Status: [MONEY PAGE] - di bawah Jasa Bongkar Tower
+
+✅ AMAN - TIDAK PERLU REDIRECT
+*/
+
+// ============================================================
+// JASA BONGKAR RUMAH - BLOG POST
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah MONEY PAGE dengan intent transaksional.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Harga Jasa Bongkar Bangunan (4 level)
+// ============================================================
+
 const urlMappingJasaBongkarRumah = {
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-bongkar-bangunan.html": "Harga Jasa Bongkar Bangunan"
+  // [MONEY PAGE] - HARGA BONGKAR BANGUNAN
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-bongkar-bangunan.html": "Harga Jasa Bongkar Bangunan"
 };
+
+// ============================================================
+// 🟡 SEO NOTE - JASA BONGKAR RUMAH
+// ============================================================
+/*
+📌 BREADCRUMB:
+Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Harga Jasa Bongkar Bangunan (4 level)
+
+📌 SARAN ITEM BARU:
+// "https://www.betonjayareadymix.com/2019/08/jasa-bongkar-rumah-tinggal.html": "Jasa Bongkar Rumah Tinggal",
+// Status: [MONEY PAGE] - di bawah Jasa Bongkar Rumah
+
+✅ AMAN - TIDAK PERLU REDIRECT
+*/
+// ============================================================
+// JASA BONGKAR BETON - BLOG POST
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah MONEY PAGE dengan intent transaksional.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Harga Bongkar Beton (4 level)
+// ============================================================
+
 const urlMappingJasaBongkarBeton = {
-"https://www.betonjayareadymix.com/2019/06/harga-bongkar-beton.html": "Harga Bongkar Beton",
-"https://www.betonjayareadymix.com/2019/06/harga-bongkar-beton-per-m3.html": "Harga Bongkar Beton Per m3",
- "https://www.betonjayareadymix.com/2019/06/harga-bobok-beton-per-m2.html": "Harga Bobok Beton per m2",
+  // [MONEY PAGE] - HARGA BONGKAR BETON
+  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-beton.html": "Harga Bongkar Beton",
+  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-beton-per-m3.html": "Harga Bongkar Beton Per m3",
+  "https://www.betonjayareadymix.com/2019/06/harga-bobok-beton-per-m2.html": "Harga Bobok Beton per m2",
   "https://www.betonjayareadymix.com/2018/06/harga-jasa-bobok-beton.html": "Harga Jasa Bobok Beton"
-
 };
-const urlMappingJasaBongkarAtap = {
 
-};
+// ============================================================
+// 🟡 SEO NOTE - JASA BONGKAR BETON
+// ============================================================
+/*
+📌 BREADCRUMB:
+Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Harga Bongkar Beton (4 level)
+
+⚠️ PERHATIAN: Ada potensi cannibal antar keempat URL ini karena keyword mirip.
+Rekomendasi: Pilih 1 master page, redirect 3 lainnya.
+
+📌 REDIRECT PLAN:
+| From | To | Type |
+|------|-----|------|
+| /2019/06/harga-bongkar-beton-per-m3.html | /2019/06/harga-bongkar-beton.html | 301 |
+| /2019/06/harga-bobok-beton-per-m2.html | /2019/06/harga-bongkar-beton.html | 301 |
+| /2018/06/harga-jasa-bobok-beton.html | /2019/06/harga-bongkar-beton.html | 301 |
+*/
 const urlMappingJasaBongkarKeramik = {
 };
+// ============================================================
+// JASA BONGKAR TEMBOK - BLOG POST
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah MONEY PAGE dengan intent transaksional.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Jasa Bobok Tembok (4 level)
+// ============================================================
+
 const urlMappingJasaBongkarTembok = {
-"https://www.betonjayareadymix.com/2019/06/jasa-bobok-tembok-per-meter.html": "Jasa Bobok Tembok Per Meter",
+  // [MONEY PAGE] - JASA BOBOK TEMBOK
+  "https://www.betonjayareadymix.com/2019/06/jasa-bobok-tembok-per-meter.html": "Jasa Bobok Tembok Per Meter",
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bobok-tembok.html": "Harga Jasa Bobok Tembok",
   "https://www.betonjayareadymix.com/2019/06/jasa-tukang-bobok-tembok.html": "Jasa Tukang Bobok Tembok"
-
 };
+
+// ============================================================
+// 🟡 SEO NOTE - JASA BONGKAR TEMBOK
+// ============================================================
+/*
+📌 BREADCRUMB:
+Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Jasa Bobok Tembok (4 level)
+
+⚠️ PERHATIAN: Overlap dengan urlMappingJasaBongkarDinding ("tembok" vs "dinding").
+Rekomendasi: Gabungkan atau bedakan angle dengan jelas.
+
+✅ AMAN - TIDAK PERLU REDIRECT (jika konten dibedakan)
+*/
+// ============================================================
+// JASA BONGKAR DINDING - BLOG POST
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah MONEY PAGE dengan intent transaksional.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Harga Jasa Bongkar Dinding (4 level)
+// ============================================================
+
 const urlMappingJasaBongkarDinding = {
-"https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-dinding.html": "Harga Jasa Bongkar Dinding",
- "https://www.betonjayareadymix.com/2019/06/harga-bongkar-dinding-bata-per-m2.html": "Harga Jasa Bongkar Dinding Bata Per M2"
+  // [MONEY PAGE] - HARGA BONGKAR DINDING
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-dinding.html": "Harga Jasa Bongkar Dinding",
+  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-dinding-bata-per-m2.html": "Harga Jasa Bongkar Dinding Bata Per M2"
 };
-const urlMappingJasaBongkarPlafon = {
 
-};
-const urlMappingJasaBongkarPartisi = {
+// ============================================================
+// 🟡 SEO NOTE - JASA BONGKAR DINDING
+// ============================================================
+/*
+📌 BREADCRUMB:
+Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Harga Jasa Bongkar Dinding (4 level)
 
+⚠️ PERHATIAN: Overlap dengan urlMappingJasaBongkarTembok.
+Rekomendasi: Bedakan angle - "tembok" fokus ke dinding luar/struktural, "dinding" fokus ke partisi dalam.
+
+✅ AMAN - TIDAK PERLU REDIRECT (jika angle dibedakan)
+*/
+// ============================================================
+// CONST KOSONG - SARAN ITEM BARU (PERLU DIBUAT)
+// ============================================================
+
+// 1. JASA BONGKAR ATAP
+const urlMappingJasaBongkarAtap = {
+  // SARAN: Buat halaman untuk bongkar atap
+  // "https://www.betonjayareadymix.com/2019/06/harga-bongkar-atap-rumah.html": "Harga Bongkar Atap Rumah",
+  // Status: [MONEY PAGE] - di bawah Jasa Bongkar Bangunan
+  // "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-baja-ringan.html": "Jasa Bongkar Atap Baja Ringan",
+  // Status: [MONEY PAGE] - di bawah Jasa Bongkar Bangunan
 };
+
+// 2. JASA BONGKAR KERAMIK
+const urlMappingJasaBongkarKeramik = {
+  // SARAN: Buat halaman untuk bongkar keramik
+  // "https://www.betonjayareadymix.com/2019/06/harga-bongkar-keramik-per-m2.html": "Harga Bongkar Keramik per M2",
+  // Status: [MONEY PAGE] - di bawah Jasa Bongkar Lantai
+};
+
+// 3. JASA BONGKAR PAGAR
 const urlMappingJasaBongkarPagar = {
-
+  // SARAN: Buat halaman untuk bongkar pagar
+  // "https://www.betonjayareadymix.com/2019/06/harga-bongkar-pagar-beton.html": "Harga Bongkar Pagar Beton",
+  // Status: [MONEY PAGE] - di bawah Jasa Bongkar Bangunan
+  // "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-besi.html": "Jasa Bongkar Pagar Besi",
+  // Status: [MONEY PAGE] - di bawah Jasa Bongkar Bangunan
 };
+
+// 4. JASA BONGKAR PLAFON
+const urlMappingJasaBongkarPlafon = {
+  // SARAN: Buat halaman untuk bongkar plafon
+  // "https://www.betonjayareadymix.com/2019/06/harga-bongkar-plafon-gypsum.html": "Harga Bongkar Plafon Gypsum",
+  // Status: [MONEY PAGE] - di bawah Jasa Bongkar Bangunan
+};
+
+// 5. JASA BONGKAR PARTISI
+const urlMappingJasaBongkarPartisi = {
+  // SARAN: Buat halaman untuk bongkar partisi
+  // "https://www.betonjayareadymix.com/2019/06/harga-bongkar-partisi-gypsum.html": "Harga Bongkar Partisi Gypsum",
+  // Status: [MONEY PAGE] - di bawah Jasa Bongkar Bangunan
+};
+
+// ============================================================
+// CATATAN: ITEM DI ATAS HANYA SARAN, BELUM AKTIF
+// ============================================================
+// ============================================================
+// JASA BONGKAR LANTAI - BLOG POST
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah MONEY PAGE dengan intent transaksional.
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Harga Bongkar Lantai (4 level)
+// ============================================================
+
 const urlMappingJasaBongkarLantai = {
- "https://www.betonjayareadymix.com/2019/06/jasa-bobok-lantai-beton.html": "Jasa Bobok Lantai Beton",
- "https://www.betonjayareadymix.com/2019/06/jasa-bobok-lantai-lama.html": "Jasa Bobok Lantai Lama",
+  // [MONEY PAGE] - BONGKAR LANTAI
+  "https://www.betonjayareadymix.com/2019/06/jasa-bobok-lantai-beton.html": "Jasa Bobok Lantai Beton",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bobok-lantai-lama.html": "Jasa Bobok Lantai Lama",
   "https://www.betonjayareadymix.com/2019/06/biaya-bongkar-lantai-keramik.html": "Biaya Bongkar Lantai Keramik",
   "https://www.betonjayareadymix.com/2019/06/harga-bongkar-lantai-keramik.html": "Harga Bongkar Lantai Keramik",
   "https://www.betonjayareadymix.com/2019/06/harga-borongan-bongkar-keramik-lantai.html": "Harga Borongan Bongkar Keramik Lantai",
-
- "https://www.betonjayareadymix.com/2019/06/harga-bobok-lantai-keramik.html": "Harga Bobok Lantai Keramik",
+  "https://www.betonjayareadymix.com/2019/06/harga-bobok-lantai-keramik.html": "Harga Bobok Lantai Keramik",
   "https://www.betonjayareadymix.com/2019/06/harga-bobok-lantai.html": "Harga Bobok Lantai",
   "https://www.betonjayareadymix.com/2019/06/harga-bobok-lantai-beton-per-m2.html": "Harga Bobok Lantai Beton per M2",
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bobok-lantai-beton.html": "Harga Jasa Bobok Lantai Beton",
@@ -55,13 +205,38 @@ const urlMappingJasaBongkarLantai = {
   "https://www.betonjayareadymix.com/2018/06/harga-upah-bobok-lantai-beton.html": "Harga Upah Bobok Lantai Beton",
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-lantai.html": "Harga Jasa Bongkar Lantai",
   "https://www.betonjayareadymix.com/2019/06/harga-bongkar-lantai-beton.html": "Harga Bongkar Lantai Beton"
-
 };
 
-//SUB MAPPING JASA BUANG PUING
-// 
+// ============================================================
+// 🔴 REDIRECT NOTES - JASA BONGKAR LANTAI
+// ============================================================
+/*
+🧠 SEO CANNIBAL FIX - REDIRECT PLAN:
+
+| No | From URL | To URL | Type | Alasan SEO |
+|----|----------|--------|------|------------|
+| 1 | /2019/06/harga-bongkar-lantai-keramik.html | /2019/06/harga-jasa-bongkar-lantai.html | 301 | Duplikasi intent |
+| 2 | /2019/06/harga-borongan-bongkar-keramik-lantai.html | /2019/06/harga-jasa-bongkar-lantai.html | 301 | Duplikasi intent |
+| 3 | /2019/06/harga-bobok-lantai-keramik.html | /2019/06/harga-jasa-bobok-lantai-beton.html | 301 | Duplikasi intent |
+| 4 | /2019/06/harga-bobok-lantai.html | /2019/06/harga-jasa-bobok-lantai-beton.html | 301 | Terlalu umum |
+| 5 | /2019/06/harga-borongan-bobok-lantai-beton.html | /2019/06/harga-jasa-bobok-lantai-beton.html | 301 | Duplikasi |
+| 6 | /2018/06/harga-upah-bobok-lantai-beton.html | /2019/06/harga-jasa-bobok-lantai-beton.html | 301 | Duplikasi |
+
+📌 PERTAHANKAN SEBAGAI MASTER:
+- /2019/06/harga-jasa-bongkar-lantai.html (untuk bongkar lantai umum)
+- /2019/06/harga-jasa-bobok-lantai-beton.html (untuk bobok lantai beton)
+*/
+
+// ============================================================
+// JASA BUANG PUING - BLOG POST
+// ============================================================
+// 🧠 SEO NOTE: Halaman ini adalah MONEY PAGE dengan intent transaksional (lokasi).
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Buang Puing > [Lokasi] (4 level)
+// ============================================================
+
 const urlMappingJasaBuangPuing = {
- "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-surabaya.html": "Jasa Buang Puing Surabaya",
+  // [MONEY PAGE] - JASA BUANG PUING PER LOKASI
+  "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-surabaya.html": "Jasa Buang Puing Surabaya",
   "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-karawang.html": "Jasa Buang Puing Karawang",
   "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-bekasi.html": "Jasa Buang Puing Bekasi",
   "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-tangerang.html": "Jasa Buang Puing Tangerang",
@@ -71,36 +246,65 @@ const urlMappingJasaBuangPuing = {
   "https://www.betonjayareadymix.com/2019/10/jasa-buang-puing-terdekat.html": "Jasa Buang Puing Terdekat"
 };
 
+// ============================================================
+// 🟡 SEO NOTE - JASA BUANG PUING
+// ============================================================
+/*
+📌 BREADCRUMB:
+Home > Jasa Konstruksi > Jasa Buang Puing > Jasa Buang Puing Jakarta (4 level)
+
+📌 SARAN ITEM BARU:
+// "https://www.betonjayareadymix.com/2019/10/harga-buang-puing-per-truk.html": "Harga Buang Puing Per Truk",
+// Status: [MONEY PAGE] - master page untuk harga buang puing
+
+✅ AMAN - TIDAK PERLU REDIRECT
+*/
+
 //SUB MAPPING JASA PERAWATAN & PERBAIKAN BANGUNAN
-// JasaPerbaikanAtapBocorPost
+// ============================================================
+// JASA PERAWATAN & PERBAIKAN BANGUNAN - CONST KOSONG
+// ============================================================
+// 🧠 SEO NOTE: Const berikut masih kosong, perlu ditambahkan item URL.
+
 const urlMappingJasaPerbaikanAtapBocor = {
-
+  // SARAN: Buat halaman untuk perbaikan atap bocor
+  // "https://www.betonjayareadymix.com/2019/07/harga-perbaikan-atap-bocor.html": "Harga Perbaikan Atap Bocor",
+  // Status: [MONEY PAGE] - di bawah Jasa Perawatan Perbaikan Bangunan
 };
 
-//JasaPerbaikanDindingRetakPost
 const urlMappingJasaPerbaikanDindingRetak = {
-
+  // SARAN: Buat halaman untuk perbaikan dinding retak
+  // "https://www.betonjayareadymix.com/2019/07/harga-perbaikan-dinding-retak.html": "Harga Perbaikan Dinding Retak",
+  // Status: [MONEY PAGE] - di bawah Jasa Perawatan Perbaikan Bangunan
 };
 
-//JasaPerbaikanRembesanAirPost
 const urlMappingJasaPerbaikanRembesanAir = {
-
+  // SARAN: Buat halaman untuk perbaikan rembesan air
+  // "https://www.betonjayareadymix.com/2019/07/jasa-perbaikan-rembesan-air.html": "Jasa Perbaikan Rembesan Air",
+  // Status: [MONEY PAGE] - di bawah Jasa Perbaikan Kebocoran Waterproofing
 };
 
-//JasaPerbaikanPlafonRusakPost
 const urlMappingJasaPerbaikanPlafonRusak = {
-
+  // SARAN: Buat halaman untuk perbaikan plafon rusak
+  // "https://www.betonjayareadymix.com/2019/07/harga-perbaikan-plafon-rusak.html": "Harga Perbaikan Plafon Rusak",
+  // Status: [MONEY PAGE] - di bawah Jasa Perawatan Perbaikan Bangunan
 };
 
-//JasaPerbaikanDakBetonBocorPost
 const urlMappingJasaPerbaikanDakBetonBocor = {
-
+  // SARAN: Buat halaman untuk perbaikan dak beton bocor
+  // "https://www.betonjayareadymix.com/2019/07/jasa-perbaikan-dak-beton-bocor.html": "Jasa Perbaikan Dak Beton Bocor",
+  // Status: [MONEY PAGE] - di bawah Jasa Perbaikan Kebocoran Waterproofing
 };
 
-//JasaPerbaikanTalangBocorPost
 const urlMappingJasaPerbaikanTalangBocor = {
-
+  // SARAN: Buat halaman untuk perbaikan talang bocor
+  // "https://www.betonjayareadymix.com/2019/07/harga-perbaikan-talang-bocor.html": "Harga Perbaikan Talang Bocor",
+  // Status: [MONEY PAGE] - di bawah Jasa Perbaikan Atap Drainase Bangunan
 };
+
+// ============================================================
+// CATATAN: ITEM DI ATAS HANYA SARAN, BELUM AKTIF
+// ============================================================
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaKonsBongkarBangunanPost = {};
