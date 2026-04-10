@@ -11,7 +11,7 @@ const urlMappingJasaKons = {
   // ============================================================
   // [PILLAR] - TOPICAL AUTHORITY
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi.html": "Jasa Konstruksi",
+  //"https://www.betonjayareadymix.com/p/jasa-konstruksi.html": "Jasa Konstruksi",
 
   // ============================================================
   // [SUB2] - SUB-PILLAR TIPE 2 (KATEGORI LAYANAN UTAMA)
