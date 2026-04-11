@@ -680,7 +680,7 @@ document.addEventListener("DOMContentLoaded", function() {
    //SUB MAPPING JASA JALAN & PERKERASAN
     if (urlMappingJasaPembangunanInfrastrukturJalan[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
-        restoreCondition('JasaPembangunanInfrastrukturJalanSub');
+        //restoreCondition('JasaPembangunanInfrastrukturJalanSub');
      
         //hapus elemen div id lain
 	removeCondition('ProdukInFur');
@@ -706,7 +706,9 @@ JasaPembangunanInfrastrukturJalanSub
 JasaPemadatanPersiapanTanahJalanSub
 JasaPerkerasanJalanSub
 */
-
+	//skip breadcrumbs level 4 nya atau hapus, jadi level 5 turun ke 4
+    removeCondition('JasaPembangunanInfrastrukturJalanSub');
+		
         //hapus elemen SUB jasa jalan & perkerasan lain
         removeCondition('JasaPemadatanPersiapanTanahJalanSub');
         removeCondition('JasaPerkerasanJalanSub');
