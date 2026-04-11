@@ -210,13 +210,14 @@ const urlMappingBongkarBangunan = {
   // [MONEY PAGE] - MASTER BONGKAR BANGUNAN
   // 🧠 SEO NOTE: Halaman ini adalah master untuk semua layanan bongkar.
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Bongkar Bangunan
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html": "Jasa Bongkar Bangunan",
-  
-  // [SUB2] - TETAP DIPERTAHANKAN (MASIH RELEVAN)
+// MONEY PAGE MASTER (PERLU DIBUAT)
+// "https://www.betonjayareadymix.com/2025/04/harga-jasa-bongkar-bangunan.html": "Harga Jasa Bongkar Bangunan",
+	
+   // HANYA SUB2 TURUNAN (BUKAN MASTER)
   "https://www.betonjayareadymix.com/p/jasa-bongkar-tower.html": "Jasa Bongkar Tower",
   "https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html": "Jasa Bongkar Rumah",
   "https://www.betonjayareadymix.com/p/jasa-bongkar-beton.html": "Jasa Bongkar Beton",
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-atap.html": "Jasa Bongkar Atap"
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-atap.html": "Jasa Bongkar Atap
 };
 
 // ============================================================
