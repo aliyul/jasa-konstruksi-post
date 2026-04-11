@@ -4,27 +4,36 @@
 // ============================================================
 // 🧠 SEO NOTE: Halaman ini adalah MONEY PAGE dengan intent transaksional.
 // Konten: Harga bongkar tower berdasarkan jenis dan tinggi, layanan profesional.
+// Parent: Jasa Bongkar Tower (SUB2 - /p/jasa-bongkar-tower.html)
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Jasa Bongkar Tower (4 level)
 // ============================================================
 
 const urlMappingJasaBongkarTower = {
+  // ============================================================
   // [MONEY PAGE] - BONGKAR TOWER
-  "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower.html": "Jasa Bongkar Tower",
-  "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower-triangle.html": "Jasa Bongkar Tower Triangle"
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-bongkar-tower.html": "Harga Jasa Bongkar Tower",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-bongkar-tower-triangle.html": "Harga Jasa Bongkar Tower Triangle"
 };
 
 // ============================================================
-// 🟡 SEO NOTE - JASA BONGKAR TOWER
+// 🟡 SARAN TAMBAHAN URL (OPTIONAL - PERLU DIBUAT)
 // ============================================================
 /*
-📌 BREADCRUMB:
-Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Jasa Bongkar Tower (4 level - masih aman)
+📌 URL YANG DISARANKAN UNTUK DITAMBAHKAN (JIKA KONTEN MEMADAI):
 
-📌 SARAN ITEM BARU:
-// "https://www.betonjayareadymix.com/2019/08/harga-bongkar-tower-bts.html": "Harga Bongkar Tower BTS",
-// Status: [MONEY PAGE] - di bawah Jasa Bongkar Tower
+| URL | Nama Halaman | Status | Parent | Alasan SEO |
+|-----|--------------|--------|--------|------------|
+| /2019/08/harga-bongkar-tower-bts.html | Harga Bongkar Tower BTS | ⚠️ PERLU DIBUAT (404) | Jasa Bongkar Tower | Menarget keyword spesifik tower BTS |
 
-✅ AMAN - TIDAK PERLU REDIRECT
+📌 BREADCRUMB (jika halaman dibuat):
+Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Jasa Bongkar Tower > Harga Bongkar Tower BTS
+⚠️ PERHATIAN: Ini akan menjadi 5 level! Solusi: skip "Jasa Bongkar Tower" di breadcrumb.
+
+📌 BREADCRUMB YANG BENAR UNTUK MONEY PAGE (SKIP SUB2):
+Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Harga Bongkar Tower BTS (4 level)
+
+✅ AMAN - TIDAK PERLU REDIRECT untuk URL yang sudah ada
 */
 
 // ============================================================
@@ -511,7 +520,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		,
 		urlMappingJasaBongkarRumah,
 		urlMappingJasaBongkarBeton,
 		urlMappingJasaBongkarAtap,
