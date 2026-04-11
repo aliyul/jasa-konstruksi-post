@@ -396,7 +396,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingJasaBongkarTower,
+		,
 		urlMappingJasaBongkarRumah,
 		urlMappingJasaBongkarBeton,
 		urlMappingJasaBongkarAtap,
@@ -511,7 +511,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingJasaBongkarTower,
+		,
 		urlMappingJasaBongkarRumah,
 		urlMappingJasaBongkarBeton,
 		urlMappingJasaBongkarAtap,
@@ -694,7 +694,7 @@ if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
         restoreCondition('JasaBongkarBangunanPost');
-        restoreCondition('JasaBongkarTowerPost');
+        // level 4 skip restoreCondition('JasaBongkarTowerPost');
      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
@@ -716,8 +716,10 @@ if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	
-        //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarTowerPost
+
+	    
+        //hapus elemen SUB jasa JasaBongkarBangunanPost semua JasaBongkarTowerPost hapus juga
+        removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarRumahPost');
         removeCondition('JasaBongkarBetonPost');
         removeCondition('JasaBongkarAtapPost');
@@ -747,7 +749,7 @@ if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
 	//TAMPILKAN JasaBongkarBangunanPost
         JasaBongkarBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarTowerPost
-	JasaBongkarTowerPostLink.style.visibility = 'visible';
+	//JasaBongkarTowerPostLink.style.visibility = 'visible';
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost];
     }
@@ -775,15 +777,17 @@ if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
                    "name": "Jasa Bongkar Bangunan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
                },
+			   /*
                {
                    "@type": "ListItem",
                    "position": 4,
                    "name": "Jasa Bongkar Tower",
                    "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-tower.html"
                },
+			   */
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 4,
                    "name": urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost],
                    "item": cleanUrlJasaKonsBongkarBangunanPost
                }
@@ -800,7 +804,7 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
         restoreCondition('JasaBongkarBangunanPost');
-        restoreCondition('JasaBongkarRumahPost');
+        //skip restoreCondition('JasaBongkarRumahPost');
      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
@@ -825,7 +829,9 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
 	
 	
 	
-        //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarRumahPost
+        //hapus elemen SUB jasa JasaBongkarBangunanPost semua hapus juga JasaBongkarRumahPost
+        removeCondition('JasaBongkarRumahPost');
+	
         removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarBetonPost');
         removeCondition('JasaBongkarAtapPost');
@@ -857,7 +863,7 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
 	//TAMPILKAN JasaBongkarBangunanPost
         JasaBongkarBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarRumahPost
-	JasaBongkarRumahPostLink.style.visibility = 'visible';
+	//skip level 4 JasaBongkarRumahPostLink.style.visibility = 'visible';
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost];
     }
@@ -885,15 +891,17 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
                    "name": "Jasa Bongkar Bangunan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
                },
+			   /*
                {
                    "@type": "ListItem",
                    "position": 4,
                    "name": "Jasa Bongkar Rumah",
                    "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html"
                },
+			   */
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 4,
                    "name": urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost],
                    "item": cleanUrlJasaKonsBongkarBangunanPost
                }
@@ -910,7 +918,7 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
         restoreCondition('JasaBongkarBangunanPost');
-        restoreCondition('JasaBongkarBetonPost');
+        // skip level 4 restoreCondition('JasaBongkarBetonPost');
      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
@@ -936,7 +944,8 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
 			//hapus JasaBuangPuingPost
 	removeCondition('JasaBuangPuingPost');
 		
-        //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarBetonPost
+        //hapus elemen SUB jasa JasaBongkarBangunanPost semua skip dg hapus JasaBongkarBetonPost
+	removeCondition('JasaBongkarBetonPost');
 	removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarRumahPost');
         removeCondition('JasaBongkarAtapPost');
@@ -965,7 +974,7 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
 	//TAMPILKAN JasaBongkarBangunanPost
         JasaBongkarBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarBetonPost
-	JasaBongkarBetonPostLink.style.visibility = 'visible';
+	//skip level 4 JasaBongkarBetonPostLink.style.visibility = 'visible';
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarBeton[cleanUrlJasaKonsBongkarBangunanPost];
     }
@@ -993,15 +1002,16 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
                    "name": "Jasa Bongkar Bangunan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
                },
+			   /*
                {
                    "@type": "ListItem",
                    "position": 4,
                    "name": "Jasa Bongkar Beton",
                    "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-beton.html"
-               },
+               },*/
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 4,
                    "name": urlMappingJasaBongkarBeton[cleanUrlJasaKonsBongkarBangunanPost],
                    "item": cleanUrlJasaKonsBongkarBangunanPost
                }
@@ -1017,7 +1027,7 @@ if (urlMappingJasaBongkarAtap[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
         restoreCondition('JasaBongkarBangunanPost');
-        restoreCondition('JasaBongkarAtapPost');
+        //restoreCondition('JasaBongkarAtapPost');
      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
