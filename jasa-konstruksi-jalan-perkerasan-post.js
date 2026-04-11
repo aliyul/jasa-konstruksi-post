@@ -69,26 +69,92 @@ const urlMappingJasaPengerasanJalan = {
   
 };
 */
+/*
+.
+
+📊 RINGKASAN STATUS
+Const										Jumlah URL	Valid	Kontak Halaman (Konten)	Perlu Redirect	Saran Tambah
+urlMappingJasaPavingBlockJalanPost			0		-	-		-						5+ URL 			(saran)
+urlMappingJasaPengecoranJalanBetonPost		16		14	2 URL 	konten tipis			1 URL (404)				0
+urlMappingJasaPengaspalanJalanPost			0		-	-		-						5+ URL			(saran)
+urlMappingJasaPerkerasanAgregatJalanPost	0		-	-		-						3+ URL 			(saran)
+*/
+// ============================================================
+// JASA PAVING BLOCK JALAN - BLOG POST (MONEY PAGE & INFORMASIONAL)
+// ============================================================
+// 🧠 SEO NOTE: Cluster ini kosong. Disarankan untuk menambahkan URL berikut.
+// Parent: Jasa Perkerasan Jalan (/p/jasa-perkerasan-jalan.html)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Perkerasan Jalan > [Nama Layanan] (4 level)
+// ============================================================
+
+const urlMappingJasaPavingBlockJalanPost = {
+  // ============================================================
+  // [MONEY PAGE] - HARGA PASANG PAVING BLOCK (TRANSACTIONAL)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-per-m2.html": "Harga Pasang Paving Block per M2", // [SARAN DITAMBAHKAN]
+  
+  // ============================================================
+  // [MONEY PAGE] - HARGA PER LOKASI (TRANSACTIONAL)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-jakarta.html": "Harga Pasang Paving Block Jakarta", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-bogor.html": "Harga Pasang Paving Block Bogor", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-bekasi.html": "Harga Pasang Paving Block Bekasi", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-tangerang.html": "Harga Pasang Paving Block Tangerang", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-depok.html": "Harga Pasang Paving Block Depok", // [SARAN DITAMBAHKAN]
+  
+  // ============================================================
+  // [SUB2] - JENIS PAVING BLOCK (INFORMASIONAL)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/01/jenis-paving-block-untuk-jalan.html": "Jenis Paving Block untuk Jalan", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/cara-memasang-paving-block.html": "Cara Memasang Paving Block", // [SARAN DITAMBAHKAN]
+};
 
 // ============================================================
-// JASA PENGECORAN JALAN BETON - POST (SETELAH REVISI)
+// 🟡 SARAN PENAMBAHAN URL
 // ============================================================
-// 🧠 SEO NOTE: Cluster ini fokus ke layanan pengecoran jalan beton.
-// Intent: Transactional (user cari harga borongan cor beton jalan).
+/*
+📌 DAFTAR URL YANG DISARANKAN UNTUK DITAMBAHKAN:
+
+| No | URL | Nama Halaman | Status SEO | Parent | Alasan |
+|----|-----|--------------|------------|--------|--------|
+| 1 | /2019/01/harga-pasang-paving-block-per-m2.html | Harga Pasang Paving Block per M2 | [MONEY PAGE] | Jasa Perkerasan Jalan | Menarget keyword transaksional |
+| 2 | /2019/01/harga-pasang-paving-block-jakarta.html | Harga Pasang Paving Block Jakarta | [MONEY PAGE] | Jasa Perkerasan Jalan | Target lokasi spesifik |
+| 3 | /2019/01/harga-pasang-paving-block-bogor.html | Harga Pasang Paving Block Bogor | [MONEY PAGE] | Jasa Perkerasan Jalan | Target lokasi spesifik |
+| 4 | /2019/01/harga-pasang-paving-block-bekasi.html | Harga Pasang Paving Block Bekasi | [MONEY PAGE] | Jasa Perkerasan Jalan | Target lokasi spesifik |
+| 5 | /2019/01/harga-pasang-paving-block-tangerang.html | Harga Pasang Paving Block Tangerang | [MONEY PAGE] | Jasa Perkerasan Jalan | Target lokasi spesifik |
+| 6 | /2019/01/harga-pasang-paving-block-depok.html | Harga Pasang Paving Block Depok | [MONEY PAGE] | Jasa Perkerasan Jalan | Target lokasi spesifik |
+| 7 | /2019/01/jenis-paving-block-untuk-jalan.html | Jenis Paving Block untuk Jalan | [SUB2] | Jasa Perkerasan Jalan | Informasional, edukasi |
+| 8 | /2019/01/cara-memasang-paving-block.html | Cara Memasang Paving Block | [SUB1] | Jasa Perkerasan Jalan | Bridge ke MONEY page |
+*/
+// ============================================================
+// JASA PENGECORAN JALAN BETON - BLOG POST (MONEY PAGE & INFORMASIONAL)
+// ============================================================
+// 🧠 SEO NOTE: Cluster ini berisi harga borongan cor beton jalan per lokasi dan per jenis.
+// Parent: Jasa Perkerasan Jalan (/p/jasa-perkerasan-jalan.html)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Perkerasan Jalan > [Nama Layanan] (4 level)
 // ============================================================
 
 const urlMappingJasaPengecoranJalanBetonPost = {
   // ============================================================
-  // [MONEY PAGE] - MASTER HARGA COR BETON JALAN
-  // 🧠 SEO NOTE: Halaman ini adalah master untuk semua harga cor beton jalan.
-  // Breadcrumb: Home > Jasa Konstruksi > Harga Cor Beton Jalan (3 level)
+  // [MONEY PAGE] - MASTER HARGA (TRANSACTIONAL)
+  // 🧠 SEO NOTE: Halaman ini adalah master untuk harga cor beton jalan.
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Perkerasan Jalan > Harga Cor Beton Jalan
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/05/harga-cor-beton-jalan-per-meter.html": "Harga Cor Beton Jalan Per Meter [MASTER]",
+  "https://www.betonjayareadymix.com/2018/05/harga-cor-beton-jalan-per-meter.html": "Harga Cor Beton Jalan Per Meter",
+  "https://www.betonjayareadymix.com/2021/12/harga-cor-beton-untuk-jalan.html": "Harga Cor Beton Untuk Jalan",
   
   // ============================================================
-  // [MONEY PAGE] - HARGA COR BETON JALAN PER LOKASI
-  // 🧠 SEO NOTE: Setiap URL menarget keyword spesifik per kota.
-  // Breadcrumb: Home > Jasa Konstruksi > Harga Cor Beton Jalan [Kota] (3 level)
+  // [MONEY PAGE] - BORONGAN COR BETON PER LOKASI (TRANSACTIONAL)
+  // 🧠 SEO NOTE: Masing-masing URL menarget keyword "borongan cor beton jalan" + lokasi.
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-desa.html": "Borongan Cor Beton Jalan Desa",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-raya.html": "Borongan Cor Beton Jalan Raya",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-tol.html": "Borongan Cor Beton Jalan Tol",
+  
+  // ============================================================
+  // [MONEY PAGE] - HARGA COR BETON JALAN PER LOKASI (TRANSACTIONAL)
+  // 🧠 SEO NOTE: URL dengan konten tipis tetap dipertahankan karena menarget keyword lokasi.
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Perkerasan Jalan > Harga Cor Beton Jalan [Kota]
   // ============================================================
   "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-tasikmalaya.html": "Harga Cor Beton Jalan Tasikmalaya",
   "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-sukabumi.html": "Harga Cor Beton Jalan Sukabumi",
@@ -106,75 +172,132 @@ const urlMappingJasaPengecoranJalanBetonPost = {
 };
 
 // ============================================================
-// 🔴 REDIRECT NOTES - JASA PENGECORAN JALAN BETON
+// 🔴 REDIRECT NOTES - URL 404 & DUPLIKASI
 // ============================================================
 /*
 🧠 SEO CANNIBAL FIX - REDIRECT PLAN:
 
 | No | From URL | To URL | Type | Alasan SEO |
 |----|----------|--------|------|------------|
-| 1 | /2018/09/borongan-cor-beton-jalan-desa.html | /2018/05/harga-cor-beton-jalan-per-meter.html | 301 | Konten tipis, intent sama dengan master |
-| 2 | /2018/09/borongan-cor-beton-jalan-raya.html | /2018/05/harga-cor-beton-jalan-per-meter.html | 301 | Konten tipis, intent sama dengan master |
-| 3 | /2018/09/borongan-cor-beton-jalan-tol.html | /2018/05/harga-cor-beton-jalan-per-meter.html | 301 | Konten tipis, intent sama dengan master |
-| 4 | /2021/12/harga-cor-beton-untuk-jalan.html | /2018/05/harga-cor-beton-jalan-per-meter.html | 301 | Duplikasi intent dengan master |
-
-📌 ALASAN SEO UTAMA:
-1. Halaman 'borongan-cor-beton-jalan-desa.html' hanya berisi 1 paragraf tipis (konten tidak cukup)
-2. Google lebih menyukai 1 halaman komprehensif daripada banyak halaman tipis
-3. Master page 'harga-cor-beton-jalan-per-meter.html' sudah memiliki konten lengkap (tabel harga, mutu, lokasi)
-4. User lebih mudah navigasi dengan 1 master page yang lengkap
+| 1 | /2018/09/borongan-cor-beton-jala | /2018/09/borongan-cor-beton-jalan-desa.html | 301 | URL tidak lengkap (404), redirect ke URL terdekat |
 
 📌 CATATAN TAMBAHAN:
-- URL lokasi (per kota) TETAP DIPERTAHANKAN karena menarget keyword spesifik
-- Master page harus memiliki internal link ke semua halaman lokasi
+- URL 'borongan-cor-beton-jalan-desa.html' kontennya sangat tipis (hanya 1 paragraf).
+  Disarankan untuk memperkaya konten dengan informasi detail (metode, harga, spesifikasi).
+- URL 'harga-cor-beton-jalan-bekasi.html' dan 'harga-cor-beton-jalan-depok.html' 
+  kontennya tipis, tetapi masih valid sebagai MONEY PAGE lokasi.
+  Disarankan untuk menambahkan tabel harga spesifik per kota.
+*/
+
+// ============================================================
+// 🟢 SEO NOTE - STATUS SEMUA URL
+// ============================================================
+/*
+✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
+✅ Masing-masing menarget keyword spesifik (harga + lokasi).
+✅ Tidak ada duplikasi intent karena lokasi berbeda.
+
+📌 REKOMENDASI:
+1. Perkaya konten 'borongan-cor-beton-jalan-desa.html' dengan detail harga dan metode
+2. Perkaya konten 'harga-cor-beton-jalan-[kota].html' dengan tabel harga spesifik per kota
+3. Tambahkan internal link antar sesama URL lokasi
+4. Pastikan semua URL memiliki CTA ke form pemesanan jasa cor beton
 */
 // ============================================================
-// JASA PEMASANGAN PAVING BLOCK JALAN - POST
+// JASA PENGASPALAN JALAN - BLOG POST (MONEY PAGE & INFORMASIONAL)
 // ============================================================
-// 🧠 SEO NOTE: Cluster ini untuk layanan pemasangan paving block.
-// Intent: Transactional (user cari jasa pasang paving block).
+// 🧠 SEO NOTE: Cluster ini kosong. Disarankan untuk menambahkan URL berikut.
+// Parent: Jasa Perkerasan Jalan (/p/jasa-perkerasan-jalan.html)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Perkerasan Jalan > [Nama Layanan] (4 level)
 // ============================================================
 
-const urlMappingJasaPavingBlockJalanPost = {
+const urlMappingJasaPengaspalanJalanPost = {
   // ============================================================
-  // [MONEY PAGE] - MASTER HARGA PASANG PAVING BLOCK
-  // 🧠 SEO NOTE: Halaman master untuk semua layanan paving block.
-  // Breadcrumb: Home > Jasa Konstruksi > Harga Pasang Paving Block (3 level)
+  // [MONEY PAGE] - HARGA PENGASPALAN JALAN (TRANSACTIONAL)
   // ============================================================
-  // SARAN: Buat halaman baru
-  // "https://www.betonjayareadymix.com/2025/04/harga-pasang-paving-block-per-m2.html": "Harga Pasang Paving Block Per M2 [MASTER]",
+  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-per-meter.html": "Harga Pengaspalan Jalan Per Meter", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-hotmix-per-meter.html": "Harga Hotmix Per Meter", // [SARAN DITAMBAHKAN]
   
   // ============================================================
-  // [MONEY PAGE] - HARGA PER LOKASI
+  // [MONEY PAGE] - HARGA PER LOKASI (TRANSACTIONAL)
   // ============================================================
-  // SARAN: Buat halaman per kota (jika perlu)
-  // "https://www.betonjayareadymix.com/2025/04/harga-pasang-paving-block-jakarta.html": "Harga Pasang Paving Block Jakarta",
-  // "https://www.betonjayareadymix.com/2025/04/harga-pasang-paving-block-bogor.html": "Harga Pasang Paving Block Bogor",
-  // "https://www.betonjayareadymix.com/2025/04/harga-pasang-paving-block-bekasi.html": "Harga Pasang Paving Block Bekasi",
+  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-jakarta.html": "Harga Pengaspalan Jalan Jakarta", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-bogor.html": "Harga Pengaspalan Jalan Bogor", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-bekasi.html": "Harga Pengaspalan Jalan Bekasi", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-tangerang.html": "Harga Pengaspalan Jalan Tangerang", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-depok.html": "Harga Pengaspalan Jalan Depok", // [SARAN DITAMBAHKAN]
   
   // ============================================================
-  // [SUB2] - INFORMASI JASA PEMASANGAN
+  // [SUB2] - JENIS PENGASPALAN (INFORMASIONAL)
   // ============================================================
-  // SARAN: Buat halaman informasional
-  // "https://www.betonjayareadymix.com/2025/04/jasa-pemasangan-paving-block.html": "Jasa Pemasangan Paving Block",
-  // Status: [SUB2] - di bawah Jasa Jalan & Perkerasan
+  // "https://www.betonjayareadymix.com/2019/01/jenis-pengaspalan-jalan-hotmix.html": "Jenis Pengaspalan Jalan Hotmix", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/cara-pengaspalan-jalan.html": "Cara Pengaspalan Jalan", // [SARAN DITAMBAHKAN]
 };
 
+// ============================================================
+// 🟡 SARAN PENAMBAHAN URL
+// ============================================================
 /*
-📌 SARAN PRIORITAS UNTUK CLUSTER INI:
+📌 DAFTAR URL YANG DISARANKAN UNTUK DITAMBAHKAN:
 
-1. BUAT MASTER PAGE terlebih dahulu: 'harga-pasang-paving-block-per-m2.html'
-   Konten harus mencakup:
-   - Tabel harga per jenis paving (bata, cacing, hexagon, topi uskup)
-   - Tabel harga per mutu (K-200, K-250, K-300)
-   - Faktor yang mempengaruhi harga (ketebalan, volume, lokasi)
-   - FAQ tentang pemasangan paving block
-
-2. BUAT HALAMAN LOKASI jika volume pencarian tinggi (Jabodetabek, Surabaya, Bandung)
-
-3. PASTIKAN ada internal link dari master page ke semua halaman lokasi
+| No | URL | Nama Halaman | Status SEO | Parent | Alasan |
+|----|-----|--------------|------------|--------|--------|
+| 1 | /2019/01/harga-pengaspalan-jalan-per-meter.html | Harga Pengaspalan Jalan Per Meter | [MONEY PAGE] | Jasa Perkerasan Jalan | Menarget keyword transaksional |
+| 2 | /2019/01/harga-hotmix-per-meter.html | Harga Hotmix Per Meter | [MONEY PAGE] | Jasa Perkerasan Jalan | Keyword populer "hotmix" |
+| 3 | /2019/01/harga-pengaspalan-jalan-jakarta.html | Harga Pengaspalan Jalan Jakarta | [MONEY PAGE] | Jasa Perkerasan Jalan | Target lokasi spesifik |
+| 4 | /2019/01/harga-pengaspalan-jalan-bogor.html | Harga Pengaspalan Jalan Bogor | [MONEY PAGE] | Jasa Perkerasan Jalan | Target lokasi spesifik |
+| 5 | /2019/01/jenis-pengaspalan-jalan-hotmix.html | Jenis Pengaspalan Jalan Hotmix | [SUB2] | Jasa Perkerasan Jalan | Informasional, edukasi |
+| 6 | /2019/01/cara-pengaspalan-jalan.html | Cara Pengaspalan Jalan | [SUB1] | Jasa Perkerasan Jalan | Bridge ke MONEY page |
 */
+// ============================================================
+// JASA PERKERASAN AGREGAT JALAN - BLOG POST (MONEY PAGE & INFORMASIONAL)
+// ============================================================
+// 🧠 SEO NOTE: Cluster ini kosong. Disarankan untuk menambahkan URL berikut.
+// Parent: Jasa Perkerasan Jalan (/p/jasa-perkerasan-jalan.html)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Perkerasan Jalan > [Nama Layanan] (4 level)
+// ============================================================
 
+const urlMappingJasaPerkerasanAgregatJalanPost = {
+  // ============================================================
+  // [MONEY PAGE] - HARGA PERKERASAN AGREGAT (TRANSACTIONAL)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-agregat-jalan.html": "Harga Perkerasan Agregat Jalan", // [SARAN DITAMBAHKAN]
+  
+  // ============================================================
+  // [SUB2] - JENIS PERKERASAN AGREGAT (INFORMASIONAL)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/01/jenis-perkerasan-agregat-untuk-jalan.html": "Jenis Perkerasan Agregat untuk Jalan", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/cara-pemasangan-perkerasan-agregat.html": "Cara Pemasangan Perkerasan Agregat", // [SARAN DITAMBAHKAN]
+};
+
+// ============================================================
+// 🟡 SARAN PENAMBAHAN URL
+// ============================================================
+/*
+📌 DAFTAR URL YANG DISARANKAN UNTUK DITAMBAHKAN:
+
+| No | URL | Nama Halaman | Status SEO | Parent | Alasan |
+|----|-----|--------------|------------|--------|--------|
+| 1 | /2019/01/harga-perkerasan-agregat-jalan.html | Harga Perkerasan Agregat Jalan | [MONEY PAGE] | Jasa Perkerasan Jalan | Menarget keyword transaksional |
+| 2 | /2019/01/jenis-perkerasan-agregat-untuk-jalan.html | Jenis Perkerasan Agregat untuk Jalan | [SUB2] | Jasa Perkerasan Jalan | Informasional, edukasi |
+| 3 | /2019/01/cara-pemasangan-perkerasan-agregat.html | Cara Pemasangan Perkerasan Agregat | [SUB1] | Jasa Perkerasan Jalan | Bridge ke MONEY page |
+*/
+/*
+📋 RINGKASAN SARAN & TINDAKAN
+No	Tindakan																			Target	Prioritas
+1	Redirect 404 borongan-cor-beton-jala	ke borongan-cor-beton-jalan-desa.html		🔴 HIGH
+2	Perkaya konten borongan-cor-beton-jalan-desa.html	Tambah detail harga & metode	🟡 MEDIUM
+3	Perkaya konten harga-cor-beton-jalan-[kota].html	Tambah tabel harga spesifik per kota	🟡 MEDIUM
+4	Tambahkan URL untuk cluster paving block	5-8 URL									🟢 LOW
+5	Tambahkan URL untuk cluster pengaspalan	5-8 URL										🟢 LOW
+6	Tambahkan URL untuk cluster perkerasan agregat	3-5 URL								🟢 LOW
+✅ STATUS FINAL
+Const										Jumlah URL	Valid	Perlu Perhatian		Redirect	Saran Tambah
+urlMappingJasaPavingBlockJalanPost			0			0		0					0			5+
+urlMappingJasaPengecoranJalanBetonPost		16			14		2 (konten tipis)	1			0
+urlMappingJasaPengaspalanJalanPost			0			0		0					0			5+
+urlMappingJasaPerkerasanAgregatJalanPost	0			0		0					0			3+
+*/
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaJalanPerkerasanKonsPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
