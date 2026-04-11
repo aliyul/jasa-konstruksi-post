@@ -719,7 +719,7 @@ document.addEventListener("DOMContentLoaded", function() {
     urlMappingJasaPlesteranAcianDinding,
     urlMappingJasaFinishingGroutingStrukturBeton,
     urlMappingJasaPelapisanCoatingStruktur,
-    urlMappingJasaFinishingKolomBalok,
+    //urlMappingJasaFinishingKolomBalok,
     urlMappingJasaPelapisanWaterproofingStruktur,
     urlMappingJasaFinishingLantaiBeton,
     urlMappingJasaEpoxyDinding,
