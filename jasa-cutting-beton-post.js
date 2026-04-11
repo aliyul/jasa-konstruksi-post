@@ -1181,7 +1181,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaSondir,
 		urlMappingJasaCpt,
 		urlMappingJasaBoringTanah,
-		urlMappingJasaLabTanaH,
+		urlMappingJasaLabTanah,
 		urlMappingJasaUjiPenetrasi,
 		urlMappingJasaPemotonganBukitLahan,
 		urlMappingJasaPengupasanLahanTanah,
