@@ -680,6 +680,8 @@ document.addEventListener("DOMContentLoaded", function() {
    //SUB MAPPING JASA JALAN & PERKERASAN
     if (urlMappingJasaPembangunanInfrastrukturJalan[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
+		 restoreCondition('JasaJalanPerkerasanSub');
+		
         //restoreCondition('JasaPembangunanInfrastrukturJalanSub');
      
         //hapus elemen div id lain
@@ -736,7 +738,7 @@ JasaPerkerasanJalanSub
         JasaKonstruksiJalanPerkerasanSubLink.style.visibility = 'visible';
         JasaJalanPerkerasanSubLink.style.visibility = 'visible';
 	    
-        JasaPembangunanInfrastrukturJalanSubLink.style.visibility = 'visible';
+        //skip level 4 JasaPembangunanInfrastrukturJalanSubLink.style.visibility = 'visible';
         pageNameJasaKonsJalanPerkerasan.textContent = urlMappingJasaPembangunanInfrastrukturJalan[cleanUrlJasaJalanPerkerasanKons];
     }
    // ✅ Tambahkan JSON-LD Breadcrumb otomatis
@@ -760,7 +762,9 @@ const jsonLDBreadcrumb = {
        
    if (urlMappingJasaPemadatanPersiapanTanahJalan[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
-        restoreCondition('JasaPemadatanPersiapanTanahJalanSub');
+	   restoreCondition('JasaJalanPerkerasanSub');
+	   
+        // skip level 4 restoreCondition('JasaPemadatanPersiapanTanahJalanSub');
      
         //hapus elemen div id lain
 	removeCondition('ProdukInFur');
@@ -781,7 +785,7 @@ const jsonLDBreadcrumb = {
         removeCondition('JasaPembangunanInfrastrukturJalanSub');
         removeCondition('JasaPerkerasanJalanSub');
 
-
+     removeCondition('JasaPemadatanPersiapanTanahJalanSub');
 	//hapus elemen SUB JASA PERKERASAN LAIN SEMUA NYA
 	removeCondition('JasaPengerasanJalanSub');
 	removeCondition('JasaPavingBlockJalanSub');
@@ -804,7 +808,7 @@ const jsonLDBreadcrumb = {
         JasaKonstruksiJalanPerkerasanSubLink.style.visibility = 'visible';
         JasaJalanPerkerasanSubLink.style.visibility = 'visible';
 	    
-        JasaPemadatanPersiapanTanahJalanSubLink.style.visibility = 'visible';
+        //level 4 breadcrumbs di skip JasaPemadatanPersiapanTanahJalanSubLink.style.visibility = 'visible';
         pageNameJasaKonsJalanPerkerasan.textContent = urlMappingJasaPemadatanPersiapanTanahJalan[cleanUrlJasaJalanPerkerasanKons];
     }
  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
@@ -832,15 +836,16 @@ const jsonLDBreadcrumb = {
                    "name": "Jasa Jalan & Perkerasan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html"
                },
+			   /*skip aja 
                {
                    "@type": "ListItem",
                    "position": 4,
                    "name": "Jasa Pemadatan dan Persiapan Tanah Jalan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pemadatan-dan-persiapan-tanah-jalan.html"
-               },
+               },*/
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 4,
                    "name": urlMappingJasaPemadatanPersiapanTanahJalan[cleanUrlJasaJalanPerkerasanKons],
                    "item": cleanUrlJasaJalanPerkerasanKons
                }
@@ -854,7 +859,7 @@ const jsonLDBreadcrumb = {
    }    
    if (urlMappingJasaPerkerasanJalan[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
-        restoreCondition('JasaPerkerasanJalanSub');
+        restoreCondition('JasaJalanPerkerasanSub');
      
         //hapus elemen div id lain
 	removeCondition('ProdukInFur');
@@ -875,6 +880,7 @@ const jsonLDBreadcrumb = {
         removeCondition('JasaPemadatanPersiapanTanahJalanSub');
         removeCondition('JasaPembangunanInfrastrukturJalanSub');
 
+	removeCondition('JasaPerkerasanJalanSub');
 	//hapus elemen SUB JASA PERKERASAN LAIN SEMUA NYA
 	removeCondition('JasaPengerasanJalanSub');
 	removeCondition('JasaPavingBlockJalanSub');
@@ -896,8 +902,8 @@ const jsonLDBreadcrumb = {
 	
         JasaKonstruksiJalanPerkerasanSubLink.style.visibility = 'visible';
         JasaJalanPerkerasanSubLink.style.visibility = 'visible';
-	    
-        JasaPerkerasanJalanSubLink.style.visibility = 'visible';
+	  
+        //JasaPerkerasanJalanSubLink.style.visibility = 'visible';
         pageNameJasaKonsJalanPerkerasan.textContent = urlMappingJasaPerkerasanJalan[cleanUrlJasaJalanPerkerasanKons];
     }
  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
@@ -925,15 +931,16 @@ const jsonLDBreadcrumb = {
                    "name": "Jasa Jalan & Perkerasan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html"
                },
+			   /*skip level
                {
                    "@type": "ListItem",
                    "position": 4,
                    "name": "Jasa Perkerasan Jalan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html"
-               },
+               },*/
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 4,
                    "name": urlMappingJasaPerkerasanJalan[cleanUrlJasaJalanPerkerasanKons],
                    "item": cleanUrlJasaJalanPerkerasanKons
                }
@@ -954,10 +961,8 @@ const jsonLDBreadcrumb = {
 
 if (urlMappingJasaPengerasanJalan[cleanUrlJasaJalanPerkerasanKons]) {
         restoreCondition('JasaKonsJalanPerkerasan');
-        restoreCondition('JasaPerkerasanJalanSub');
+	   restoreCondition('JasaJalanPerkerasanSub');
 
-	restoreCondition('JasaPengerasanJalanSub');
-     
         //hapus elemen div id lain
 	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
@@ -977,6 +982,9 @@ if (urlMappingJasaPengerasanJalan[cleanUrlJasaJalanPerkerasanKons]) {
         removeCondition('JasaPemadatanPersiapanTanahJalanSub');
         removeCondition('JasaPembangunanInfrastrukturJalanSub');
 
+	 removeCondition('JasaPerkerasanJalanSub');
+	 removeCondition('JasaPengerasanJalanSub');
+    
 	//hapus elemen SUB JASA PERKERASAN LAIN SEMUA NYA SELAIN JasaPengerasanJalanSub
         removeCondition('JasaPavingBlockJalanSub');
         removeCondition('JasaPengaspalanJalanSub');
@@ -996,11 +1004,10 @@ if (urlMappingJasaPengerasanJalan[cleanUrlJasaJalanPerkerasanKons]) {
     	
 	
         JasaKonstruksiJalanPerkerasanSubLink.style.visibility = 'visible';
+	   //pengerasan jalan bagian dari jasa jalan & perkerasan
         JasaJalanPerkerasanSubLink.style.visibility = 'visible';
 	    
-        JasaPerkerasanJalanSubLink.style.visibility = 'visible';
-
-	JasaPengerasanJalanSubLink.style.visibility = 'visible';
+	    //skip level 4 JasaPengerasanJalanSubLink.style.visibility = 'visible';
         pageNameJasaKonsJalanPerkerasan.textContent = urlMappingJasaPengerasanJalan[cleanUrlJasaJalanPerkerasanKons];
     }
 	
