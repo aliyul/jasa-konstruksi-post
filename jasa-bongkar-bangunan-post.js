@@ -84,8 +84,6 @@ Rekomendasi: Pilih 1 master page, redirect 3 lainnya.
 | /2019/06/harga-bobok-beton-per-m2.html | /2019/06/harga-bongkar-beton.html | 301 |
 | /2018/06/harga-jasa-bobok-beton.html | /2019/06/harga-bongkar-beton.html | 301 |
 */
-const urlMappingJasaBongkarKeramik = {
-};
 // ============================================================
 // JASA BONGKAR TEMBOK - BLOG POST
 // ============================================================
