@@ -13,7 +13,7 @@ const urlMappingJasaBongkarTower = {
   // [MONEY PAGE] - BONGKAR TOWER
   // ============================================================
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-bongkar-tower.html": "Harga Jasa Bongkar Tower",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-bongkar-tower-triangle.html": "Harga Jasa Bongkar Tower Triangle"
+  "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower-triangle.html": "Jasa Bongkar Tower Triangle"
 };
 
 // ============================================================
