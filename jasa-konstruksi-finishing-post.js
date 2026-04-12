@@ -1562,13 +1562,13 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
 		})();
 
      // Menemukan elemen menggunakan Id
-    var JasaKonsFinishingPost = document.getElementById("JasaKonsFinishingPost");
-    if (!JasaKonsFinishingPost) {
-        console.log("elemen Id JasaKonsFinishing kondisi terhapus");
+    var JasaKonsFinishingPostLink = document.getElementById("JasaKonsFinishingPost");
+    if (!JasaKonsFinishingPostLink) {
+        console.log("elemen Id JasaKonsFinishingPost kondisi terhapus");
         return;
     }
 
-     var JasaKonstruksiFinishingPostLink = document.getElementById("JasaKonstruksiFinishingPost");
+    // var JasaKonsFinishingPostLink = document.getElementById("JasaKonsFinishingPost");
      var JasaFinishingPostLink = document.getElementById("JasaFinishingPost");
      var JasaFinishingBangunanPostLink = document.getElementById("JasaFinishingBangunanPost");
      var JasaFinishingInfrastrukturPostLink = document.getElementById("JasaFinishingInfrastrukturPost");
@@ -1673,102 +1673,118 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
 
     //SUB FINISHING BANGUNAN
 	//FINISHING STRUKTUR
+// ============================================================
+// MONEY PAGE: Harga Finishing Dak Beton
+// ============================================================
+
 if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
-        //restoreCondition('JasaFinishingBangunanPost');
-        //restoreCondition('JasaFinishingBangunanStrukturPost');
-         restoreCondition('JasaFinishingPost');
-        restoreCondition('JasaFinishingDakBetonPost');
-           
-	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
-	removeCondition('JasaDesInPost');
-        removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-        removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-        removeCondition('JasaKonsCuttingBetonPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	
-	 // hapus elemen id FINISHING STRUKTUR lain NYA SELAIN JasaFinishingBetonExposePost
-	removeCondition('JasaFinishingBetonExposePost');
-        removeCondition('JasaFinishingLantaiBetonPost');
-        //removeCondition('JasaPlesteranAcianDindingPost');
-        removeCondition('JasaFinishingGroutingStrukturBetonPost');
-        removeCondition('JasaPelapisanCoatingStrukturPost');
-        removeCondition('JasaFinishingKolomdanBalokPost');
-        removeCondition('JasaPelapisanWaterproofingStrukturPost');
-        removeCondition('JasaPlesteranAcianDindingPost');
-        removeCondition('JasaPelindungRetakStrukturPost');
-         // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua
-	    
-	    removeCondition('JasaEpoxyDindingPost');
-		removeCondition('JasaEpoxyLantaiPost');
-		
-        removeCondition('JasaInteriorFurnitureCustomePost');
-	removeCondition('JasaInteriorFurniturePost');
-        removeCondition('JasaGantiKeramikLantaiPost');
-        removeCondition('JasaCatInteriorRumahPost');
-        removeCondition('JasaPasangWallpaperDindingPost');
-        //removeCondition('JasaPasangLantaiVinylPost');
-        //removeCondition('JasaPasangPlafonGypsumPost');
-        removeCondition('JasaGantiLampuInteriorPost');
-        removeCondition('JasaGantiKitchenSetPost');
-        removeCondition('JasaFinishingInteriorMinimalisPost');
-        removeCondition('JasaFinishingInteriorKlasikPost');
-        removeCondition('JasaFinishingInteriorModernPost');
-         // hapus elemen id sub JasaFinishingBangunanEksteriorPost Semua
-        removeCondition('JasaCatEksteriorRumahPost');
-        removeCondition('JasaFinishingFasadEksteriorPost');
-        removeCondition('JasaPelapisanAntiCuacaPost');
-        removeCondition('JasaPelapisanDindingLuarPost');
-        removeCondition('JasaFinishingTamanRumahPost');
-        removeCondition('JasaPelapisanBatuAlamEksteriorPost');
-        removeCondition('JasaPelapisanGentengDakPost');
-
-	    //skip level pillar utama buat money
-        removeCondition('JasaKonsFinishingPost');
-	  //skip juga
-        removeCondition('JasaFinishingBangunanStrukturPost');
-        removeCondition('JasaFinishingBangunanPost');
-	   
-         // hapus elemen id FINISHING UTAMA lain NYA
-        removeCondition('JasaFinishingBangunanEksteriorPost');
-        removeCondition('JasaFinishingBangunanInteriorPost');
-
-          // hapus elemen id Infrastruktur Semua
-        removeCondition('JasaFinishingInfrastrukturPost');
-        removeCondition('JasaFinishingInfrastrukturJalanPost');
-        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
-        removeCondition('JasaFinishingInfrastrukturSaluranPost');
-        removeCondition('JasaFinishingInfrastrukturStrukturPost');
-        removeCondition('JasaFinishingInfrastrukturProteksiPost');
-
-	   // hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
-	   removeCondition('JasaFinishingInteriorModernWpcPost');
-	   removeCondition('JasaFinishingInteriorModernVinylPost');
-	   removeCondition('JasaFinishingInteriorModernPlafonPost');
-	   removeCondition('JasaFinishingInteriorModernPvcPost');
-	
-        JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
-        JasaFinishingPostLink.style.visibility = 'visible';
-        //JasaFinishingBangunanPostLink.style.visibility = 'visible';
-        //sub finishing bangunan
-        //JasaFinishingStrukturPostLink.style.visibility = 'visible';
-        //sub finishing STRUKKTUR
-        JasaFinishingDakBetonPostLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost];
+    
+    // ============================================================
+    // 1. RESTORE ELEMEN YANG DIPERLUKAN (TAMPILKAN)
+    // ============================================================
+    restoreCondition('JasaFinishingPost');           // Jasa Finishing (level 2)
+    restoreCondition('JasaFinishingDakBetonPost');   // Jasa Finishing Dak Beton (parent terdekat)
+    
+    // ============================================================
+    // 2. HIDE/SEMBUNYIKAN ELEMEN LAIN (tidak diperlukan)
+    // ============================================================
+    // HIDE PILLAR & GRANDPARENT
+    removeCondition('JasaKonsFinishingPost');              // PILLAR (Jasa Konstruksi) - SKIP
+    removeCondition('JasaFinishingBangunanPost');          // Jasa Finishing Bangunan - SKIP
+    removeCondition('JasaFinishingBangunanStrukturPost');  // Jasa Finishing Struktur - SKIP
+    
+    // HIDE SEMUA SUB FINISHING INTERIOR
+    removeCondition('JasaEpoxyDindingPost');
+    removeCondition('JasaEpoxyLantaiPost');
+    removeCondition('JasaInteriorFurnitureCustomePost');
+    removeCondition('JasaGantiKeramikLantaiPost');
+    removeCondition('JasaCatInteriorRumahPost');
+    removeCondition('JasaPasangWallpaperDindingPost');
+    removeCondition('JasaGantiLampuInteriorPost');
+    removeCondition('JasaGantiKitchenSetPost');
+    removeCondition('JasaFinishingInteriorMinimalisPost');
+    removeCondition('JasaFinishingInteriorKlasikPost');
+    removeCondition('JasaFinishingInteriorModernPost');
+    removeCondition('JasaFinishingInteriorModernWpcPost');
+    removeCondition('JasaFinishingInteriorModernVinylPost');
+    removeCondition('JasaFinishingInteriorModernPlafonPost');
+    removeCondition('JasaFinishingInteriorModernPvcPost');
+    
+    // HIDE SEMUA SUB FINISHING EKSTERIOR
+    removeCondition('JasaCatEksteriorRumahPost');
+    removeCondition('JasaFinishingFasadEksteriorPost');
+    removeCondition('JasaPelapisanAntiCuacaPost');
+    removeCondition('JasaPelapisanDindingLuarPost');
+    removeCondition('JasaFinishingTamanRumahPost');
+    removeCondition('JasaPelapisanBatuAlamEksteriorPost');
+    removeCondition('JasaPelapisanGentengDakPost');
+    
+    // HIDE SEMUA SUB FINISHING STRUKTUR (kecuali JasaFinishingDakBetonPost)
+    removeCondition('JasaFinishingBetonExposePost');
+    removeCondition('JasaFinishingLantaiBetonPost');
+    removeCondition('JasaPlesteranAcianDindingPost');
+    removeCondition('JasaFinishingGroutingStrukturBetonPost');
+    removeCondition('JasaPelapisanCoatingStrukturPost');
+    removeCondition('JasaFinishingKolomdanBalokPost');
+    removeCondition('JasaPelapisanWaterproofingStrukturPost');
+    removeCondition('JasaPelindungRetakStrukturPost');
+    
+    // HIDE FINISHING INFRASTRUKTUR (semua)
+    removeCondition('JasaFinishingInfrastrukturPost');
+    removeCondition('JasaFinishingInfrastrukturJalanPost');
+    removeCondition('JasaFinishingInfrastrukturTrotoarPost');
+    removeCondition('JasaFinishingInfrastrukturSaluranPost');
+    removeCondition('JasaFinishingInfrastrukturStrukturPost');
+    removeCondition('JasaFinishingInfrastrukturProteksiPost');
+    
+    // HIDE KATEGORI FINISHING LAINNYA
+    removeCondition('JasaFinishingBangunanEksteriorPost');
+    removeCondition('JasaFinishingBangunanInteriorPost');
+    
+    // HIDE CLUSTER LAIN (Jasa Konstruksi lainnya)
+    removeCondition('JasaDesInPost');
+    removeCondition('ProdukInFurPost');
+    removeCondition('ProdukKonsSaluranPost');
+    removeCondition('ProdukKonsPembatasPost');
+    removeCondition('ProdukKonsDindingModularPost');
+    removeCondition('ProdukKonsPost');
+    removeCondition('MaterialKonsStukturPost');
+    removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+    removeCondition('MaterialKonsAtapPenutupPost');
+    removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+    removeCondition('JasaKonsPondasiTanahPost');
+    removeCondition('JasaKonsPembatasPost');
+    removeCondition('JasaKonsPerbaikanPost');
+    removeCondition('JasaKonsCuttingBetonPost');
+    removeCondition('JasaKonsPengeboranPost');
+    removeCondition('JasaKonsBongkarBangunanPost');
+    removeCondition('JasaKonsStrukturPost');
+    removeCondition('JasaKonsAlatKonstruksiPost');
+    removeCondition('JasaKonsJalanPerkerasanPost');
+    
+    // ============================================================
+    // 3. TAMPILKAN BREADCRUMB YANG DIPERLUKAN (3 level)
+    // ============================================================
+    // Pastikan elemen utama visible
+    const container = document.getElementById('JasaKonsFinishingPost');
+    if (container) container.style.display = 'inline'; // atau 'block'
+    
+    // Tampilkan elemen yang sudah direstore
+    const jasaFinishing = document.getElementById('JasaFinishingPost');
+    if (jasaFinishing) jasaFinishing.style.display = 'inline';
+    
+    const jasaFinishingDakBeton = document.getElementById('JasaFinishingDakBetonPost');
+    if (jasaFinishingDakBeton) jasaFinishingDakBeton.style.display = 'inline';
+    
+    // Update page name
+    const pageNameElement = document.getElementById("pageNameJasaKonsFinishingPost");
+    if (pageNameElement) {
+        pageNameElement.textContent = urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost];
     }
+    
+    // ============================================================
+    // 4. GENERATE BREADCRUMB SCHEMA (3 level)
+    // ============================================================
 // ✅ Tambahkan JSON-LD Breadcrumb otomatis
    if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
        const jsonLDBreadcrumb = {
@@ -1823,10 +1839,12 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
                }
            ]
        };
-   	const script = document.createElement('script');
+   		const script = document.createElement('script');
        script.type = 'application/ld+json';
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
+
+	console.log('[Breadcrumb] Money page detected - 4 level breadcrumb applied');
    }
 	
     if (urlMappingJasaFinishingBetonExpose[cleanUrlJasaKonsFinishingPost]) {
