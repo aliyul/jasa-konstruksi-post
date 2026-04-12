@@ -1674,9 +1674,9 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
     //SUB FINISHING BANGUNAN
 	//FINISHING STRUKTUR
 if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
-        restoreCondition('JasaFinishingBangunanPost');
-        restoreCondition('JasaFinishingBangunanStrukturPost');
-    
+        //restoreCondition('JasaFinishingBangunanPost');
+        //restoreCondition('JasaFinishingBangunanStrukturPost');
+         restoreCondition('JasaFinishingSubPost');
         restoreCondition('JasaFinishingDakBetonPost');
            
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
@@ -1737,7 +1737,13 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaFinishingTamanRumahPost');
         removeCondition('JasaPelapisanBatuAlamEksteriorPost');
         removeCondition('JasaPelapisanGentengDakPost');
-      
+
+	    //skip level pillar utama buat money
+        removeCondition('JasaKonstruksiFinishingPostLink');
+	  //skip juga
+        removeCondition('JasaFinishingStrukturPost');
+        removeCondition('JasaFinishingBangunanPost');
+	   
          // hapus elemen id FINISHING UTAMA lain NYA
         removeCondition('JasaFinishingBangunanEksteriorPost');
         removeCondition('JasaFinishingBangunanInteriorPost');
@@ -1758,9 +1764,9 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
 	
         JasaKonstruksiFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
-        JasaFinishingBangunanPostLink.style.visibility = 'visible';
+        //JasaFinishingBangunanPostLink.style.visibility = 'visible';
         //sub finishing bangunan
-        JasaFinishingStrukturPostLink.style.visibility = 'visible';
+        //JasaFinishingStrukturPostLink.style.visibility = 'visible';
         //sub finishing STRUKKTUR
         JasaFinishingDakBetonPostLink.style.visibility = 'visible';
         pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost];
@@ -1777,18 +1783,21 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
 	      "name": "Beton Jaya Readymix",
 	      "item": "https://www.betonjayareadymix.com/"
 	    },
+			   /*skip level pillar buat money
                {
                    "@type": "ListItem",
                    "position": 2,
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
+			   */
                {
                    "@type": "ListItem",
-                   "position": 3,
+                   "position": 2,
                    "name": "Jasa Finishing",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
                },
+			   /*skip level
                {
                    "@type": "ListItem",
                    "position": 4,
@@ -1801,15 +1810,16 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
                    "name": "Jasa Finishing Struktur",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html"
                },
+			   */
                {
                    "@type": "ListItem",
-                   "position": 6,
+                   "position": 3,
                    "name": "Jasa Finishing Dak Beton",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 7,
+                   "position": 4,
                    "name": urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost],
                    "item": cleanUrlJasaKonsFinishingPost
                }
