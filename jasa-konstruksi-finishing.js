@@ -593,7 +593,6 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
      
-     
           // hapus elemen id Infrastruktur Semua
         removeCondition('JasaFinishingInfrastrukturSub');
         removeCondition('JasaFinishingInfrastrukturJalan');
@@ -602,13 +601,16 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaFinishingInfrastrukturStruktur');
         removeCondition('JasaFinishingInfrastrukturProteksi');
 
+		//skip level 3
+        removeCondition('JasaFinishingSub');
+		
         // hapus elemen id bangunan sub semua
         removeCondition('JasaFinishingBangunanEksterior');
         removeCondition('JasaFinishingBangunanInterior');
         removeCondition('JasaFinishingBangunanStruktur');
        
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
-        JasaFinishingSubLink.style.visibility = 'visible';
+        //skip level 3 JasaFinishingSubLink.style.visibility = 'visible';
         JasaFinishingBangunanLink.style.visibility = 'visible';
         pageNameJasaKonsFinishing.textContent = urlMappingFinishingBangunan[cleanUrlJasaKonsFinishing];
     }
@@ -630,27 +632,24 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
+			   /*skip level
                {
                    "@type": "ListItem",
                    "position": 3,
                    "name": "Jasa Finishing",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
                },
+			   */
                {
                    "@type": "ListItem",
-                   "position": 4,
+                   "position": 3,
                    "name": "Jasa Finishing Bangunan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html"
                },
+            
                {
                    "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Finishing Struktur",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 6,
+                   "position": 4,
                    "name": urlMappingFinishingBangunan[cleanUrlJasaKonsFinishing],
                    "item": cleanUrlJasaKonsFinishing
                }
@@ -663,6 +662,7 @@ document.addEventListener("DOMContentLoaded", function() {
    }
     if (urlMappingFinishingInfrastruktur[cleanUrlJasaKonsFinishing]) {
         restoreCondition('JasaFinishingInfrastrukturSub');
+		
           // hapus elemen id DIV Lain
 	removeCondition('ProdukInFur');
         removeCondition('MaterialKons');
@@ -692,7 +692,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaFinishingInfrastrukturProteksi');
        
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
-        JasaFinishingSubLink.style.visibility = 'visible';
+        //skip levelJasaFinishingSubLink.style.visibility = 'visible';
         JasaFinishingInfrastrukturLink.style.visibility = 'visible';
         pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastruktur[cleanUrlJasaKonsFinishing];
 
@@ -715,21 +715,23 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
+			   /*
                {
                    "@type": "ListItem",
                    "position": 3,
                    "name": "Jasa Finishing",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
                },
+			   */
                {
                    "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Finishing Struktur",
+                   "position": 3,
+                   "name": "Jasa Finishing Infrastruktur",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 4,
                    "name": urlMappingFinishingInfrastruktur[cleanUrlJasaKonsFinishing],
                    "item": cleanUrlJasaKonsFinishing
                }
@@ -742,7 +744,7 @@ document.addEventListener("DOMContentLoaded", function() {
    }
 //Sub FinishingBangunan
    if (urlMappingFinishingBangunanInterior[cleanUrlJasaKonsFinishing]) {
-        restoreCondition('JasaFinishingBangunanSub');
+        //skip level restoreCondition('JasaFinishingBangunanSub');
         restoreCondition('JasaFinishingBangunanInterior');
         //restoreCondition('JasaChippingBeton');
            // hapus elemen id DIV Lain
@@ -759,8 +761,10 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
-     
-       
+
+	   //skip level
+	   removeCondition('JasaFinishingSub');
+	   removeCondition('JasaFinishingBangunanSub');
           // hapus elemen id lain
         removeCondition('JasaFinishingBangunanStruktur');
         removeCondition('JasaFinishingBangunanEksterior');
@@ -775,8 +779,10 @@ document.addEventListener("DOMContentLoaded", function() {
        
 
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
+	   /*skip level
         JasaFinishingSubLink.style.visibility = 'visible';
         JasaFinishingBangunanLink.style.visibility = 'visible';
+		*/
         JasaFinishingInteriorLink.style.visibility = 'visible';
         pageNameJasaKonsFinishing.textContent = urlMappingFinishingBangunanInterior[cleanUrlJasaKonsFinishing];
     }
@@ -798,6 +804,7 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
+			   /*skip level
                {
                    "@type": "ListItem",
                    "position": 3,
@@ -816,9 +823,10 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Finishing Interior",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html"
                },
+			   */
                {
                    "@type": "ListItem",
-                   "position": 6,
+                   "position": 4,
                    "name": urlMappingFinishingBangunanInterior[cleanUrlJasaKonsFinishing],
                    "item": cleanUrlJasaKonsFinishing
                }
@@ -830,7 +838,7 @@ document.addEventListener("DOMContentLoaded", function() {
        document.head.appendChild(script);
    }
    if (urlMappingFinishingBangunanEksterior[cleanUrlJasaKonsFinishing]) {
-        restoreCondition('JasaFinishingBangunanSub');
+        //restoreCondition('JasaFinishingBangunanSub');
         restoreCondition('JasaFinishingBangunanEksterior');
         //restoreCondition('JasaChippingBeton');
            // hapus elemen id DIV Lain
@@ -848,7 +856,9 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
      
-       
+        //skip level
+        removeCondition('JasaFinishingBangunanSub');
+        removeCondition('JasaFinishingSub');
          // hapus elemen id lain
         removeCondition('JasaFinishingBangunanStruktur');
         removeCondition('JasaFinishingBangunanInterior');
@@ -862,8 +872,10 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaFinishingInfrastrukturProteksi');
        
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
+	   /*skip level
         JasaFinishingSubLink.style.visibility = 'visible';
         JasaFinishingBangunanLink.style.visibility = 'visible';
+		*/
         //sub finish bagunan
         JasaFinishingEksteriorLink.style.visibility = 'visible';
         pageNameJasaKonsFinishing.textContent = urlMappingFinishingBangunanEksterior[cleanUrlJasaKonsFinishing];
@@ -886,6 +898,7 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
+			   /* skip level
                {
                    "@type": "ListItem",
                    "position": 3,
@@ -898,15 +911,16 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Finishing Bangunan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html"
                },
+			   */
                {
                    "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Finishing Interior",
+                   "position": 3,
+                   "name": "Jasa Finishing Eksterior",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 6,
+                   "position": 4,
                    "name": urlMappingFinishingBangunanEksterior[cleanUrlJasaKonsFinishing],
                    "item": cleanUrlJasaKonsFinishing
                }
@@ -918,7 +932,7 @@ document.addEventListener("DOMContentLoaded", function() {
        document.head.appendChild(script);
    }
    if (urlMappingFinishingBangunanStruktur[cleanUrlJasaKonsFinishing]) {
-        restoreCondition('JasaFinishingBangunanSub');
+        //restoreCondition('JasaFinishingBangunanSub');
         restoreCondition('JasaFinishingBangunanStruktur');
     
         //restoreCondition('JasaChippingBeton');
@@ -936,7 +950,10 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
-     
+
+	   //skip level
+        removeCondition('JasaFinishingBangunanSub');
+        removeCondition('JasaFinishingSub');
          // hapus elemen id lain
         removeCondition('JasaFinishingBangunanEksterior');
         removeCondition('JasaFinishingBangunanInterior');
@@ -950,8 +967,11 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaFinishingInfrastrukturProteksi');
        
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
+	   /*skip level
         JasaFinishingSubLink.style.visibility = 'visible';
         JasaFinishingBangunanLink.style.visibility = 'visible';
+		*/
+	   
         //sub finishing bangunan
         JasaFinishingStrukturLink.style.visibility = 'visible';
         pageNameJasaKonsFinishing.textContent = urlMappingFinishingBangunanStruktur[cleanUrlJasaKonsFinishing];
@@ -974,6 +994,7 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
+			   /*
                {
                    "@type": "ListItem",
                    "position": 3,
@@ -986,15 +1007,16 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Finishing Bangunan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html"
                },
+			   */
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 3,
                    "name": "Jasa Finishing Struktur",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 6,
+                   "position": 4,
                    "name": urlMappingFinishingBangunanStruktur[cleanUrlJasaKonsFinishing],
                    "item": cleanUrlJasaKonsFinishing
                }
@@ -1007,7 +1029,7 @@ document.addEventListener("DOMContentLoaded", function() {
    }
  //Sub Finishing Infrastruktur
     if (urlMappingFinishingInfrastrukturJalan[cleanUrlJasaKonsFinishing]) {
-        restoreCondition('JasaFinishingInfrastrukturSub');
+        //restoreCondition('JasaFinishingInfrastrukturSub');
        restoreCondition('JasaFinishingInfrastrukturJalan');
      
           // hapus elemen id DIV Lain
@@ -1024,8 +1046,11 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
-     
-     
+
+		//skip level
+        removeCondition('JasaFinishingInfrastrukturSub');
+		removeCondition('JasaFinishingSub');
+		
             // hapus elemen id lain nya
         removeCondition('JasaFinishingInfrastrukturProteksi');
         removeCondition('JasaFinishingInfrastrukturTrotoar');
@@ -1038,8 +1063,10 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaFinishingBangunanStruktur');
     
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
+		/*skip level
         JasaFinishingSubLink.style.visibility = 'visible';
         JasaFinishingInfrastrukturLink.style.visibility = 'visible';
+		*/
        //sub finish infrastruktur
         JasaFinishingJalanLink.style.visibility = 'visible';
      
@@ -1064,6 +1091,7 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
+			   /*
                {
                    "@type": "ListItem",
                    "position": 3,
@@ -1076,17 +1104,17 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Finishing Infrastruktur",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html"
                },
-	      
+	            */
                {
                    "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Finishing Struktur",
+                   "position": 3,
+                   "name": "Jasa Finishing Jalan Jembatan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-jembatan.html"
                },
 		   
                {
                    "@type": "ListItem",
-                   "position": 6,
+                   "position": 4,
                    "name": urlMappingFinishingInfrastrukturJalan[cleanUrlJasaKonsFinishing],
                    "item": cleanUrlJasaKonsFinishing
                }
@@ -1098,7 +1126,7 @@ document.addEventListener("DOMContentLoaded", function() {
        document.head.appendChild(script);
    }
    if (urlMappingFinishingInfrastrukturTrotoar[cleanUrlJasaKonsFinishing]) {
-        restoreCondition('JasaFinishingInfrastrukturSub');
+        //restoreCondition('JasaFinishingInfrastrukturSub');
         restoreCondition('JasaFinishingTrotoar');
     
           // hapus elemen id DIV Lain
@@ -1115,8 +1143,10 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
-       
-  
+
+	   //skip level
+        removeCondition('JasaFinishingInfrastrukturSub');
+        removeCondition('JasaFinishingSub');
             // hapus elemen id lain nya
         removeCondition('JasaFinishingInfrastrukturJalan');
         removeCondition('JasaFinishingInfrastrukturProteksi');
@@ -1129,8 +1159,10 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaFinishingBangunanStruktur');
     
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
+	   /*skip level
         JasaFinishingSubLink.style.visibility = 'visible';
         JasaFinishingInfrastrukturLink.style.visibility = 'visible';
+		*/
        //sub finish infrastruktur
         JasaFinishingTrotoarLink.style.visibility = 'visible';
     
@@ -1156,6 +1188,7 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
+			   /*
                {
                    "@type": "ListItem",
                    "position": 3,
@@ -1168,15 +1201,16 @@ document.addEventListener("DOMContentLoaded", function() {
                     "name": "Jasa Finishing Infrastruktur",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html"
                },
+			   */
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 3,
                    "name": "Jasa Finishing Trotoar Area Publik",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar-area-publik.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 6,
+                   "position": 4,
                    "name": urlMappingFinishingInfrastrukturTrotoar[cleanUrlJasaKonsFinishing],
                    "item": cleanUrlJasaKonsFinishing
                }
@@ -1188,7 +1222,7 @@ document.addEventListener("DOMContentLoaded", function() {
        document.head.appendChild(script);
    }
    if (urlMappingFinishingInfrastrukturSaluran[cleanUrlJasaKonsFinishing]) {
-        restoreCondition('JasaFinishingInfrastrukturSub');
+        //restoreCondition('JasaFinishingInfrastrukturSub');
         restoreCondition('JasaFinishingSaluran');
     
           // hapus elemen id DIV Lain
@@ -1206,7 +1240,9 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
 
-  
+        //skip level
+        removeCondition('JasaFinishingInfrastrukturSub');
+        removeCondition('JasaFinishingSub');
        
             // hapus elemen id lain nya
         removeCondition('JasaFinishingInfrastrukturJalan');
@@ -1220,8 +1256,10 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaFinishingBangunanStruktur');
     
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
+	   /*skip level
         JasaFinishingSubLink.style.visibility = 'visible';
         JasaFinishingInfrastrukturLink.style.visibility = 'visible';
+		*/
        //sub finish infrastruktur
         JasaFinishingSaluranLink.style.visibility = 'visible';
    
@@ -1246,6 +1284,7 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
+			   /*skip level
                {
                    "@type": "ListItem",
                    "position": 3,
@@ -1258,15 +1297,16 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Finishing Infrastruktur",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html"
                },
+			   */
                {
                    "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Finishing Trotoar Area Publik",
+                   "position": 3,
+                   "name": "Jasa Finishing Saluran Drainase",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-saluran-drainase.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 6,
+                   "position": 4,
                    "name": urlMappingFinishingInfrastrukturSaluran[cleanUrlJasaKonsFinishing],
                    "item": cleanUrlJasaKonsFinishing
                }
@@ -1278,7 +1318,7 @@ document.addEventListener("DOMContentLoaded", function() {
        document.head.appendChild(script);
    }
   if (urlMappingFinishingInfrastrukturStruktur[cleanUrlJasaKonsFinishing]) {
-        restoreCondition('JasaFinishingInfrastrukturSub');
+       // restoreCondition('JasaFinishingInfrastrukturSub');
         restoreCondition('JasaFinishingInfrastrukturStruktur');
           // hapus elemen id DIV Lain
 	removeCondition('ProdukInFur');
@@ -1295,6 +1335,9 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
 
+	  //hapus skip level
+        removeCondition('JasaFinishingInfrastrukturSub');
+        removeCondition('JasaFinishingSub');
              // hapus elemen id lain nya
         removeCondition('JasaFinishingInfrastrukturJalan');
         removeCondition('JasaFinishingInfrastrukturTrotoar');
@@ -1307,8 +1350,10 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaFinishingBangunanStruktur');
      
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
+	  /*
         JasaFinishingSubLink.style.visibility = 'visible';
         JasaFinishingInfrastrukturLink.style.visibility = 'visible';
+		*/
         //sub finish infrastruktur
         JasaFinishingStrukturLink.style.visibility = 'visible';
    
@@ -1334,27 +1379,31 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
+			    /*skip level
                {
                    "@type": "ListItem",
                    "position": 3,
                    "name": "Jasa Finishing",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
                },
+			  
                {
                    "@type": "ListItem",
                    "position": 4,
                    "name": "Jasa Finishing Infrastruktur",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html"
                },
+			   */
+			   
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 3,
                    "name": "Jasa Finishing Struktur Utilitas",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-utilitas.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 6,
+                   "position": 4,
                    "name": urlMappingFinishingInfrastrukturStruktur[cleanUrlJasaKonsFinishing],
                    "item": cleanUrlJasaKonsFinishing
                }
@@ -1366,7 +1415,7 @@ document.addEventListener("DOMContentLoaded", function() {
        document.head.appendChild(script);
    }
   if (urlMappingFinishingInfrastrukturProteksi[cleanUrlJasaKonsFinishing]) {
-        restoreCondition('JasaFinishingInfrastrukturSub');
+       // restoreCondition('JasaFinishingInfrastrukturSub');
         restoreCondition('JasaFinishingInfrastrukturProteksi');
        
           // hapus elemen id DIV Lain
@@ -1383,7 +1432,10 @@ document.addEventListener("DOMContentLoaded", function() {
        	removeCondition('JasaKons');
         removeCondition('JasaKonsSub');
         removeCondition('MenuKons');
-     
+
+	  //skip level
+        removeCondition('JasaFinishingInfrastrukturSub');
+        removeCondition('JasaFinishingSub');
        
         // hapus elemen id lain nya
         removeCondition('JasaFinishingInfrastrukturJalan');
@@ -1397,8 +1449,10 @@ document.addEventListener("DOMContentLoaded", function() {
         removeCondition('JasaFinishingBangunanStruktur');
        
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
+	  /*skip level
         JasaFinishingSubLink.style.visibility = 'visible';
         JasaFinishingInfrastrukturLink.style.visibility = 'visible';
+		*/
        //sub finish infrastruktur
         JasaFinishingProteksiLink.style.visibility = 'visible';
    
@@ -1423,6 +1477,7 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
+			   /*skip level
                {
                    "@type": "ListItem",
                    "position": 3,
@@ -1435,15 +1490,16 @@ document.addEventListener("DOMContentLoaded", function() {
                    "name": "Jasa Finishing Infrastruktur",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html"
                },
+			   */
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 3,
                    "name": "Jasa Finishing Proteksi Beton",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-proteksi-beton.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 6,
+                   "position": 4,
                    "name": urlMappingFinishingInfrastrukturProteksi[cleanUrlJasaKonsFinishing],
                    "item": cleanUrlJasaKonsFinishing
                }
