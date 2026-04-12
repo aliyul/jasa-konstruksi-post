@@ -1884,9 +1884,7 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
     removeCondition('JasaKonstruksiFinishingPost');                    // PILLAR (Jasa Konstruksi)
     removeCondition('JasaFinishingBangunanPost');             // Jasa Finishing Bangunan
     removeCondition('JasaFinishingBangunanStrukturPost');     // Jasa Finishing Struktur
-		
-        restoreCondition('JasaFinishingBetonExposePost');
-           
+       
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -1994,7 +1992,7 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
     // Update page name
     const pageNameElement = document.getElementById("pageNameJasaKonsFinishingPost");
     if (pageNameElement) {
-        pageNameElement.textContent = urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost];
+        pageNameElement.textContent = urlMappingJasaFinishingBetonExpose[cleanUrlJasaKonsFinishingPost];
         pageNameElement.style.display = 'inline';
     }
 	
