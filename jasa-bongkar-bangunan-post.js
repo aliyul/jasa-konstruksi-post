@@ -520,6 +520,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
+		urlMappingJasaBongkarTower,
 		urlMappingJasaBongkarRumah,
 		urlMappingJasaBongkarBeton,
 		urlMappingJasaBongkarAtap,
