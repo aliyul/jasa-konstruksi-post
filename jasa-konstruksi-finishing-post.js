@@ -2257,11 +2257,17 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+	
    if (urlMappingJasaPlesteranAcianDinding[cleanUrlJasaKonsFinishingPost]) {
-        restoreCondition('JasaFinishingBangunanPost');
-        restoreCondition('JasaFinishingBangunanStrukturPost');
+          // ============================================================
+    // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
+    // ============================================================
     
-        restoreCondition('JasaPlesteranAcianDindingPost');
+    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
+    removeCondition('JasaKonstruksiFinishingPost');                    // PILLAR (Jasa Konstruksi)
+    removeCondition('JasaFinishingBangunanPost');             // Jasa Finishing Bangunan
+    removeCondition('JasaFinishingBangunanStrukturPost');     // Jasa Finishing Struktur
+
            
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
 	removeCondition('JasaDesInPost');
@@ -2336,7 +2342,8 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
 	   removeCondition('JasaFinishingInteriorModernVinylPost');
 	   removeCondition('JasaFinishingInteriorModernPlafonPost');
 	   removeCondition('JasaFinishingInteriorModernPvcPost');
-	   
+
+	   /*
         JasaKonsFinishingPostLink.style.visibility = 'visible';
         JasaFinishingPostLink.style.visibility = 'visible';
         JasaFinishingBangunanPostLink.style.visibility = 'visible';
@@ -2345,7 +2352,44 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
         //sub finishing STRUKKTUR
         JasaPlesteranAcianDindingPostLink.style.visibility = 'visible';
         pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaPlesteranAcianDinding[cleanUrlJasaKonsFinishingPost];
+		*/
+	   // ============================================================
+    // 2. TAMPILKAN ELEMEN YANG DIPERLUKAN (RESTORE JIKA PERLU)
+    // ============================================================
+    
+    // Pastikan container utama visible
+    const container = document.getElementById('JasaKonsFinishingPost');
+    if (container) {
+        container.style.display = 'inline';
+        container.style.visibility = 'visible';
     }
+    
+    // Tampilkan Jasa Finishing (level 2)
+    let jasaFinishing = document.getElementById('JasaFinishingPost');
+    if (jasaFinishing) {
+        jasaFinishing.style.display = 'inline';
+        jasaFinishing.style.visibility = 'visible';
+    } else {
+        // Jika sudah di-remove, restore
+        restoreCondition('JasaFinishingPost');
+    }
+    
+    // Tampilkan JasaPlesteranAcianDinding (parent terdekat)
+    let jasaFinishingDakBeton = document.getElementById('JasaPlesteranAcianDindingPost');
+    if (jasaFinishingDakBeton) {
+        jasaFinishingDakBeton.style.display = 'inline';
+        jasaFinishingDakBeton.style.visibility = 'visible';
+    } else {
+        restoreCondition('JasaPlesteranAcianDindingPost');
+    }
+    
+    // Update page name
+    const pageNameElement = document.getElementById("pageNameJasaKonsFinishingPost");
+    if (pageNameElement) {
+        pageNameElement.textContent = urlMappingJasaPlesteranAcianDinding[cleanUrlJasaKonsFinishingPost];
+        pageNameElement.style.display = 'inline';
+    }
+}
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
    if (urlMappingJasaPlesteranAcianDinding[cleanUrlJasaKonsFinishingPost]) {
        const jsonLDBreadcrumb = {
@@ -2358,18 +2402,20 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
 	      "name": "Beton Jaya Readymix",
 	      "item": "https://www.betonjayareadymix.com/"
 	    },
+			   /*
                {
                    "@type": "ListItem",
                    "position": 2,
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
+               },*/
                {
                    "@type": "ListItem",
-                   "position": 3,
+                   "position": 2,
                    "name": "Jasa Finishing",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
                },
+			   /*
                {
                    "@type": "ListItem",
                    "position": 4,
@@ -2382,15 +2428,16 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
                    "name": "Jasa Finishing Struktur",
                    "item": "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html"
                },
+			   */
                {
                    "@type": "ListItem",
-                   "position": 6,
+                   "position": 3,
                    "name": "Jasa Plesteran Acian Dinding",
                    "item": "https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 7,
+                   "position": 4,
                    "name": urlMappingJasaPlesteranAcianDinding[cleanUrlJasaKonsFinishingPost],
                    "item": cleanUrlJasaKonsFinishingPost
                }
