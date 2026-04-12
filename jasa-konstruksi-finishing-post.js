@@ -1676,7 +1676,7 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
 if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
         //restoreCondition('JasaFinishingBangunanPost');
         //restoreCondition('JasaFinishingBangunanStrukturPost');
-         restoreCondition('JasaFinishingSubPost');
+         restoreCondition('JasaFinishingPost');
         restoreCondition('JasaFinishingDakBetonPost');
            
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
@@ -1699,9 +1699,7 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaKonsStrukturPost');
         removeCondition('JasaKonsAlatKonstruksiPost');
         removeCondition('JasaKonsJalanPerkerasanPost');
-	    
-     //   removeCondition('JasaKonsFinishingPost');
-
+	
 	 // hapus elemen id FINISHING STRUKTUR lain NYA SELAIN JasaFinishingBetonExposePost
 	removeCondition('JasaFinishingBetonExposePost');
         removeCondition('JasaFinishingLantaiBetonPost');
@@ -1739,9 +1737,9 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
         removeCondition('JasaPelapisanGentengDakPost');
 
 	    //skip level pillar utama buat money
-        removeCondition('JasaKonstruksiFinishingPostLink');
+        removeCondition('JasaKonsFinishingPost');
 	  //skip juga
-        removeCondition('JasaFinishingStrukturPost');
+        removeCondition('JasaFinishingBangunanStrukturPost');
         removeCondition('JasaFinishingBangunanPost');
 	   
          // hapus elemen id FINISHING UTAMA lain NYA
