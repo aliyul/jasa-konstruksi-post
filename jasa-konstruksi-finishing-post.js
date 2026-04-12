@@ -2375,10 +2375,10 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
     }
     
     // Tampilkan JasaPlesteranAcianDinding (parent terdekat)
-    let jasaFinishingDakBeton = document.getElementById('JasaPlesteranAcianDindingPost');
-    if (jasaFinishingDakBeton) {
-        jasaFinishingDakBeton.style.display = 'inline';
-        jasaFinishingDakBeton.style.visibility = 'visible';
+    let jasaPlesteranAcianDinding = document.getElementById('JasaPlesteranAcianDindingPost');
+    if (jasaPlesteranAcianDinding) {
+        jasaPlesteranAcianDinding.style.display = 'inline';
+        jasaPlesteranAcianDinding.style.visibility = 'visible';
     } else {
         restoreCondition('JasaPlesteranAcianDindingPost');
     }
