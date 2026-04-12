@@ -1320,29 +1320,47 @@ const urlMappingFinishingInfrastrukturProteksi = {
 };
 */
 
+// Fungsi untuk menghapus elemen berdasarkan ID
+// ============================================================
+// FUNGSI REMOVE & RESTORE (TIDAK MENGHAPUS CONTAINER)
+// ============================================================
+
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaKonsFinishingPost = {};
-// Fungsi untuk menghapus elemen berdasarkan ID
-function removeCondition(conditionId) {
-    const conditionElement = document.getElementById(conditionId);
 
+// 🔥 MODIFIKASI: HAPUS ELEMEN, TAPI JANGAN HAPUS CONTAINER UTAMA
+function removeCondition(conditionId) {
+    // JANGAN hapus container utama!
+    if (conditionId === 'JasaKonsFinishingPost') {
+        console.warn(`[Breadcrumb] Tidak boleh menghapus container utama: ${conditionId}`);
+        return;
+    }
+    
+    const conditionElement = document.getElementById(conditionId);
     if (conditionElement) {
-        // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
+        // Simpan elemen yang dihapus
         removedElementsJasaKonsFinishingPost[conditionId] = conditionElement;
-        conditionElement.remove(); // Menghapus elemen tersebut
+        conditionElement.remove();
+        console.log(`[Breadcrumb] Removed: ${conditionId}`);
     }
 }
 
 // Fungsi untuk mengembalikan elemen yang telah dihapus
 function restoreCondition(conditionId) {
-    const breadcrumb = document.querySelector('.breadcrumb');
-    const elementToRestore = removedElementsJasaKonsFinishingPost[conditionId]; // Mendapatkan elemen yang disimpan
-
+    const elementToRestore = removedElementsJasaKonsFinishingPost[conditionId];
+    
     if (elementToRestore) {
-        breadcrumb.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
-        delete removedElementsJasaKonsFinishingPost[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
+        // Cari container untuk menambahkan kembali
+        const container = document.getElementById('JasaKonsFinishingPost');
+        if (container) {
+            container.appendChild(elementToRestore);
+            delete removedElementsJasaKonsFinishingPost[conditionId];
+            console.log(`[Breadcrumb] Restored: ${conditionId}`);
+        } else {
+            console.error(`[Breadcrumb] Container not found for restore: ${conditionId}`);
+        }
     } else {
-        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaKonsFinishingPost.`);
+        console.log(`[Breadcrumb] Element ${conditionId} not found in removedElements`);
     }
 }
 
@@ -1679,21 +1697,19 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
 
 if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
     
-    // ============================================================
-    // 1. RESTORE ELEMEN YANG DIPERLUKAN (TAMPILKAN)
-    // ============================================================
-    restoreCondition('JasaFinishingPost');           // Jasa Finishing (level 2)
-    restoreCondition('JasaFinishingDakBetonPost');   // Jasa Finishing Dak Beton (parent terdekat)
+    console.log('[Breadcrumb] Money page detected - Harga Finishing Dak Beton');
     
     // ============================================================
-    // 2. HIDE/SEMBUNYIKAN ELEMEN LAIN (tidak diperlukan)
+    // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
     // ============================================================
-    // HIDE PILLAR & GRANDPARENT
-    removeCondition('JasaKonsFinishingPost');              // PILLAR (Jasa Konstruksi) - SKIP
-    removeCondition('JasaFinishingBangunanPost');          // Jasa Finishing Bangunan - SKIP
-    removeCondition('JasaFinishingBangunanStrukturPost');  // Jasa Finishing Struktur - SKIP
+    
+    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
+    removeCondition('JasaKonstruksiPost');                    // PILLAR (Jasa Konstruksi)
+    removeCondition('JasaFinishingBangunanPost');             // Jasa Finishing Bangunan
+    removeCondition('JasaFinishingBangunanStrukturPost');     // Jasa Finishing Struktur
     
     // HIDE SEMUA SUB FINISHING INTERIOR
+    removeCondition('JasaFinishingBangunanInteriorPost');
     removeCondition('JasaEpoxyDindingPost');
     removeCondition('JasaEpoxyLantaiPost');
     removeCondition('JasaInteriorFurnitureCustomePost');
@@ -1711,6 +1727,7 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
     removeCondition('JasaFinishingInteriorModernPvcPost');
     
     // HIDE SEMUA SUB FINISHING EKSTERIOR
+    removeCondition('JasaFinishingBangunanEksteriorPost');
     removeCondition('JasaCatEksteriorRumahPost');
     removeCondition('JasaFinishingFasadEksteriorPost');
     removeCondition('JasaPelapisanAntiCuacaPost');
@@ -1719,7 +1736,7 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
     removeCondition('JasaPelapisanBatuAlamEksteriorPost');
     removeCondition('JasaPelapisanGentengDakPost');
     
-    // HIDE SEMUA SUB FINISHING STRUKTUR (kecuali JasaFinishingDakBetonPost)
+    // HIDE SEMUA SUB FINISHING STRUKTUR LAINNYA
     removeCondition('JasaFinishingBetonExposePost');
     removeCondition('JasaFinishingLantaiBetonPost');
     removeCondition('JasaPlesteranAcianDindingPost');
@@ -1736,10 +1753,6 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
     removeCondition('JasaFinishingInfrastrukturSaluranPost');
     removeCondition('JasaFinishingInfrastrukturStrukturPost');
     removeCondition('JasaFinishingInfrastrukturProteksiPost');
-    
-    // HIDE KATEGORI FINISHING LAINNYA
-    removeCondition('JasaFinishingBangunanEksteriorPost');
-    removeCondition('JasaFinishingBangunanInteriorPost');
     
     // HIDE CLUSTER LAIN (Jasa Konstruksi lainnya)
     removeCondition('JasaDesInPost');
@@ -1763,23 +1776,40 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
     removeCondition('JasaKonsJalanPerkerasanPost');
     
     // ============================================================
-    // 3. TAMPILKAN BREADCRUMB YANG DIPERLUKAN (3 level)
+    // 2. TAMPILKAN ELEMEN YANG DIPERLUKAN (RESTORE JIKA PERLU)
     // ============================================================
-    // Pastikan elemen utama visible
+    
+    // Pastikan container utama visible
     const container = document.getElementById('JasaKonsFinishingPost');
-    if (container) container.style.display = 'inline'; // atau 'block'
+    if (container) {
+        container.style.display = 'inline';
+        container.style.visibility = 'visible';
+    }
     
-    // Tampilkan elemen yang sudah direstore
-    const jasaFinishing = document.getElementById('JasaFinishingPost');
-    if (jasaFinishing) jasaFinishing.style.display = 'inline';
+    // Tampilkan Jasa Finishing (level 2)
+    let jasaFinishing = document.getElementById('JasaFinishingPost');
+    if (jasaFinishing) {
+        jasaFinishing.style.display = 'inline';
+        jasaFinishing.style.visibility = 'visible';
+    } else {
+        // Jika sudah di-remove, restore
+        restoreCondition('JasaFinishingPost');
+    }
     
-    const jasaFinishingDakBeton = document.getElementById('JasaFinishingDakBetonPost');
-    if (jasaFinishingDakBeton) jasaFinishingDakBeton.style.display = 'inline';
+    // Tampilkan Jasa Finishing Dak Beton (parent terdekat)
+    let jasaFinishingDakBeton = document.getElementById('JasaFinishingDakBetonPost');
+    if (jasaFinishingDakBeton) {
+        jasaFinishingDakBeton.style.display = 'inline';
+        jasaFinishingDakBeton.style.visibility = 'visible';
+    } else {
+        restoreCondition('JasaFinishingDakBetonPost');
+    }
     
     // Update page name
     const pageNameElement = document.getElementById("pageNameJasaKonsFinishingPost");
     if (pageNameElement) {
         pageNameElement.textContent = urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost];
+        pageNameElement.style.display = 'inline';
     }
 }
     // ============================================================
@@ -1843,8 +1873,8 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
        script.type = 'application/ld+json';
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
-
-	console.log('[Breadcrumb] Money page detected - 4 level breadcrumb applied');
+   console.log('[Breadcrumb] Money page - 4 level breadcrumb applied');
+    console.log('[Breadcrumb] Final structure: Home > Jasa Finishing > Jasa Finishing Dak Beton > Harga');
    }
 	
     if (urlMappingJasaFinishingBetonExpose[cleanUrlJasaKonsFinishingPost]) {
