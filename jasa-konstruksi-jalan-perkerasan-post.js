@@ -965,7 +965,7 @@ if (urlMappingJasaPengaspalanJalanPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
 
 if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
         restoreCondition('JasaKonsJalanPerkerasanPost');
-        restoreCondition('JasaPerkerasanJalanSubPost');
+        //restoreCondition('JasaPerkerasanJalanSubPost');
 
 	restoreCondition('JasaPengecoranJalanBetonSubPost');
      
@@ -993,14 +993,20 @@ if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost])
         removeCondition('JasaKonsAlatKonstruksiPost');
         removeCondition('JasaKonsStrukturPost');
 
+	   // skip level
+	   removeCondition('JasaJalanPerkerasanSubPos');
+	   removeCondition('JasaPerkerasanJalanSubPost');
+	
         //hapus elemen SUB jasa JALAN & PERKERASAN lain SELAIN JasaPerkerasanJalanSubPost
         removeCondition('JasaPemadatanPersiapanTanahJalanSubPost');
-        removeCondition('JasaPembangunanInfrastrukturJalanSubPost');
+        removeCondition('JasaPembangunanInfrastrukturJalanSubPost'); 
+	    removeCondition('JasaPengerasanJalanSubPost');
+	
 
 	//hapus elemen SUB JASA PERKERASAN LAIN SEMUA NYA SELAIN JasaPengerasanJalanSubPost
         removeCondition('JasaPavingBlockJalanSubPost');
         removeCondition('JasaPengaspalanJalanSubPost');
-        removeCondition('JasaPengerasanJalanSubPost');
+        
 
 	
         removeCondition('JasaPerkerasanAgregatJalanSubPost');
@@ -1016,11 +1022,12 @@ if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost])
     	
 	
         JasaKonstruksiJalanPerkerasanSubPostLink.style.visibility = 'visible';
-        JasaJalanPerkerasanSubPostLink.style.visibility = 'visible';
-	    
+        /*
+		skip level
+	JasaJalanPerkerasanSubPostLink.style.visibility = 'visible';
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
-
-	JasaPengecoranJalanBetonSubPostLink.style.visibility = 'visible';
+      */
+		JasaPengecoranJalanBetonSubPostLink.style.visibility = 'visible';
         pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost];
     }
    // ✅ Tambahkan JSON-LD Breadcrumb otomatis
@@ -1042,6 +1049,7 @@ if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost])
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
+			   /*skip level
                {
                    "@type": "ListItem",
                    "position": 3,
@@ -1054,16 +1062,16 @@ if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost])
                    "name": "Jasa Perkerasan Jalan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html"
                },
-		   
+		      */
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 3,
                    "name": "Jasa Pengecoran Jalan Beton",
                    "item": "https://www.betonjayareadymix.com/p/jasa-pengecoran-jalan-beton.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 6,
+                   "position": 4,
                    "name": urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost],
                    "item": cleanUrlJasaJalanPerkerasanKonsPost
                }
@@ -1077,9 +1085,8 @@ if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost])
    }
 if (urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
         restoreCondition('JasaKonsJalanPerkerasanPost');
-        restoreCondition('JasaPerkerasanJalanSubPost');
-
-	restoreCondition('JasaPerkerasanAgregatJalanSubPost');
+        //restoreCondition('JasaPerkerasanJalanSubPost');
+	   restoreCondition('JasaPerkerasanAgregatJalanSubPost');
      
         //hapus elemen div id lain
 	
@@ -1107,15 +1114,17 @@ if (urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKonsPost
         //hapus elemen SUB jasa JALAN & PERKERASAN lain SELAIN JasaPerkerasanJalanSubPost
         removeCondition('JasaPemadatanPersiapanTanahJalanSubPost');
         removeCondition('JasaPembangunanInfrastrukturJalanSubPost');
+        removeCondition('JasaPembangunanInfrastrukturJalanSubPost');
+        removeCondition('JasaPengerasanJalanSubPost');
+
+	   //skip level
+	    removeCondition('JasaJalanPerkerasanSubPost');
+	    removeCondition('JasaPerkerasanJalanSubPost');
 
 	//hapus elemen SUB JASA PERKERASAN LAIN SEMUA NYA SELAIN JasaPengerasanJalanSubPost
         removeCondition('JasaPavingBlockJalanSubPost');
         removeCondition('JasaPengaspalanJalanSubPost');
         removeCondition('JasaPengecoranJalanBetonSubPost');
-
-	
-        removeCondition('JasaPengerasanJalanSubPost');
-
 	
         removeCondition('JasaTimbunanSubbaseJalanSubPost');
         removeCondition('JasaPerkerasanBaseCourseJalanSubPost');
@@ -1127,11 +1136,12 @@ if (urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKonsPost
     	
 	
         JasaKonstruksiJalanPerkerasanSubPostLink.style.visibility = 'visible';
+	   /*skip level
         JasaJalanPerkerasanSubPostLink.style.visibility = 'visible';
-	    
         JasaPerkerasanJalanSubPostLink.style.visibility = 'visible';
-
-	JasaPerkerasanAgregatJalanSubPostLink.style.visibility = 'visible';
+      */
+	
+	   JasaPerkerasanAgregatJalanSubPostLink.style.visibility = 'visible';
         pageNameJasaKonsJalanPerkerasanPost.textContent = urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKonsPost];
     }
    // ✅ Tambahkan JSON-LD Breadcrumb otomatis
@@ -1153,6 +1163,7 @@ if (urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKonsPost
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
+			   /*skip level
                {
                    "@type": "ListItem",
                    "position": 3,
@@ -1165,16 +1176,16 @@ if (urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKonsPost
                    "name": "Jasa Perkerasan Jalan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html"
                },
-		   
+		       */
                {
                    "@type": "ListItem",
-                   "position": 5,
+                   "position": 3,
                    "name": "Jasa Perkerasan Agregat Jalan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-perkerasan-agregat-jalan.html"
                },
                {
                    "@type": "ListItem",
-                   "position": 6,
+                   "position": 4,
                    "name": urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKonsPost],
                    "item": cleanUrlJasaJalanPerkerasanKonsPost
                }
