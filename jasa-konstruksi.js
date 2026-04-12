@@ -374,10 +374,11 @@ Tetap 4 level (masih aman)
 // ============================================================
 
 const urlMappingJalan = {
-  // [SUB2] - SUB-PILLAR TIPE 2 (LAYANAN JALAN)
+  // [SUB2] - SUB-PILLAR TIPE 2 (LAYANAN JALAN & PERKERASAN)
   "https://www.betonjayareadymix.com/p/jasa-pembangunan-infrastruktur-jalan.html": "Jasa Pembangunan Infrastruktur Jalan",
   "https://www.betonjayareadymix.com/p/jasa-pemadatan-dan-persiapan-tanah-jalan.html": "Jasa Pemadatan dan Persiapan Tanah Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html": "Jasa Perkerasan Jalan"
+  "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html": "Jasa Perkerasan Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan.html": "Jasa Pengerasan Jalan"
 };
 
 // ============================================================
