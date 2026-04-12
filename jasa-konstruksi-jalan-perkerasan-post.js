@@ -994,7 +994,7 @@ if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost])
         removeCondition('JasaKonsStrukturPost');
 
 	   // skip level
-	   removeCondition('JasaJalanPerkerasanSubPos');
+	   removeCondition('JasaJalanPerkerasanSubPost');
 	   removeCondition('JasaPerkerasanJalanSubPost');
 	
         //hapus elemen SUB jasa JALAN & PERKERASAN lain SELAIN JasaPerkerasanJalanSubPost
