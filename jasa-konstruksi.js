@@ -200,48 +200,90 @@ const urlMappingPondasi = {
 ✅ AMAN - TIDAK PERLU REDIRECT (asalkan konten master komprehensif)
 */
 // ============================================================
-// JASA BONGKAR BANGUNAN - SUB2 & TURUNAN
+// BONGKAR BANGUNAN - SEMUA VARIANT (KONTEN SPESIFIK & TEBAL)
 // ============================================================
-// 🧠 SEO NOTE: Master page untuk semua layanan bongkar bangunan.
-// Intent: Transactional.
+// 🧠 SEO NOTE: Semua halaman dipertahankan karena konten spesifik dan tebal.
+// Parent: Jasa Bongkar Bangunan (/p/jasa-bongkar-bangunan.html)
 // ============================================================
 
 const urlMappingBongkarBangunan = {
-  // [MONEY PAGE] - MASTER BONGKAR BANGUNAN
-  // 🧠 SEO NOTE: Halaman ini adalah master untuk semua layanan bongkar.
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Bongkar Bangunan
-// MONEY PAGE MASTER (PERLU DIBUAT)
-// "https://www.betonjayareadymix.com/2025/04/harga-jasa-bongkar-bangunan.html": "Harga Jasa Bongkar Bangunan",
-	
-   // HANYA SUB2 TURUNAN (BUKAN MASTER)
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-tower.html": "Jasa Bongkar Tower",
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html": "Jasa Bongkar Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-beton.html": "Jasa Bongkar Beton",
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-atap.html": "Jasa Bongkar Atap"
+  // ============================================================
+  // [SUB2] - BONGKAR TOWER
+  // 🧠 SEO NOTE: Objek spesifik (tower BTS, SUTET, menara industri)
+  // Konten: Tebal, spesifik, metode khusus
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-tower.html": "Jasa Bongkar Tower [SUB2]",
+
+  // ============================================================
+  // [SUB2] - BONGKAR RUMAH
+  // 🧠 SEO NOTE: Halaman utama untuk bongkar rumah tinggal
+  // Konten: Tebal, mencakup semua aspek bongkar rumah
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html": "Jasa Bongkar Rumah [SUB2]",
+
+  // ============================================================
+  // [SUB2] - BONGKAR BETON
+  // 🧠 SEO NOTE: Objek spesifik (beton, dak, pondasi, kolom, balok)
+  // Konten: Tebal, spesifik, metode khusus
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-beton.html": "Jasa Bongkar Beton [SUB2]",
+
+  // ============================================================
+  // [SUB2] - BONGKAR ATAP
+  // 🧠 SEO NOTE: Bagian dari rumah dengan metode spesifik
+  // Konten: Tebal, spesifik (genteng, rangka, baja ringan)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-atap.html": "Jasa Bongkar Atap [SUB2]",
+
+  // ============================================================
+  // [SUB2] - BONGKAR KERAMIK
+  // 🧠 SEO NOTE: Bagian dari lantai, tetap dipertahankan karena konten tebal
+  // Konten: Tebal, spesifik (keramik lantai & dinding)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-keramik.html": "Jasa Bongkar Keramik [SUB2]",
+
+  // ============================================================
+  // [SUB2] - BONGKAR TEMBOK
+  // 🧠 SEO NOTE: Sama dengan dinding, tapi konten tebal dan spesifik
+  // Konten: Tebal, spesifik (tembok bata, hebel, beton)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-tembok.html": "Jasa Bongkar Tembok [SUB2]",
+
+  // ============================================================
+  // [SUB2] - BONGKAR DINDING
+  // 🧠 SEO NOTE: Bagian dari rumah, komponen utama
+  // Konten: Tebal, spesifik (dinding bata, hebel, beton)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-dinding.html": "Jasa Bongkar Dinding [SUB2]",
+
+  // ============================================================
+  // [SUB2] - BONGKAR PLAFON
+  // 🧠 SEO NOTE: Bagian dari rumah, konten tebal dan spesifik
+  // Konten: Tebal, spesifik (plafon gypsum, PVC, GRC)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-plafon.html": "Jasa Bongkar Plafon [SUB2]",
+
+  // ============================================================
+  // [SUB2] - BONGKAR PARTISI
+  // 🧠 SEO NOTE: Bagian dari dinding interior, konten tebal
+  // Konten: Tebal, spesifik (partisi gypsum, GRC, kayu)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-partisi.html": "Jasa Bongkar Partisi [SUB2]",
+
+  // ============================================================
+  // [SUB2] - BONGKAR PAGAR
+  // 🧠 SEO NOTE: Objek spesifik (pagar beton, besi, bata)
+  // Konten: Tebal, spesifik, metode khusus
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-pagar.html": "Jasa Bongkar Pagar [SUB2]",
+
+  // ============================================================
+  // [SUB2] - BONGKAR LANTAI
+  // 🧠 SEO NOTE: Bagian dari rumah, komponen utama
+  // Konten: Tebal, spesifik (lantai keramik, granit, beton, kayu)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-lantai.html": "Jasa Bongkar Lantai [SUB2]"
 };
-
-// ============================================================
-// 🔴 REDIRECT NOTES - JASA BONGKAR (TERLALU DETAIL)
-// ============================================================
-/*
-🧠 SEO CANNIBAL FIX - REDIRECT PLAN:
-
-| No | From URL | To URL | Type | Alasan SEO |
-|----|----------|--------|------|------------|
-| 1 | /p/jasa-bongkar-keramik.html | /p/jasa-bongkar-bangunan.html | 301 | Terlalu detail, cukup sebagai section di master page |
-| 2 | /p/jasa-bongkar-tembok.html | /p/jasa-bongkar-bangunan.html | 301 | Intent sama dengan master, duplikasi konten |
-| 3 | /p/jasa-bongkar-dinding.html | /p/jasa-bongkar-bangunan.html | 301 | Intent sama dengan master |
-| 4 | /p/jasa-bongkar-plafon.html | /p/jasa-bongkar-bangunan.html | 301 | Intent sama dengan master |
-| 5 | /p/jasa-bongkar-partisi.html | /p/jasa-bongkar-bangunan.html | 301 | Intent sama dengan master |
-| 6 | /p/jasa-bongkar-pagar.html | /p/jasa-bongkar-bangunan.html | 301 | Intent sama dengan master |
-| 7 | /p/jasa-bongkar-lantai.html | /p/jasa-bongkar-bangunan.html | 301 | Intent sama dengan master |
-
-📌 ALASAN SEO UTAMA:
-1. Breadcrumb tidak boleh lebih dari 4 level (halaman terlalu dalam)
-2. Link equity akan terbagi terlalu banyak jika membuat banyak halaman tipis
-3. Google lebih menyukai 1 halaman komprehensif daripada 10 halaman tipis
-4. User lebih mudah navigasi dengan 1 master page yang lengkap
-*/
 // ============================================================
 // JASA RENOVASI - SUB2 & TURUNAN
 // ============================================================
