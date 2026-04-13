@@ -199,6 +199,15 @@ const urlMappingJasaPagarBangunan = {
   // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-bangunan.html": "Jasa Pagar Bangunan",
   // "https://www.betonjayareadymix.com/2019/08/harga-pagar-bangunan-per-meter.html": "Harga Pagar Bangunan per Meter",
 };
+/*📝 SARAN BREADCRUMB 4 LEVEL (SKIP PILLAR)
+Halaman									Breadcrumb
+Jasa Pagar Beton Precast				Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Beton Precast
+Harga Pasang Pagar Panel Beton			Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pasang Pagar Panel Beton
+Jasa Pasang Pagar Panel Beton Jakarta	Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton Jakarta
+Harga Pagar Besi Ulir					Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pagar Besi Ulir
+Jasa Pasang Pagar Rumah					Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Rumah
+Keunggulan Jasa Pasang Pagar Rumah		Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Keunggulan Jasa Pasang Pagar Rumah
+*/
 
 /*const urlMappingPengamananSisiJalan = {
 "https://www.betonjayareadymix.com/p/jasa-pemasangan-guardrail-besi.html": "Jasa Pemasangan Guardrail Besi",
@@ -250,6 +259,31 @@ const urlMappingJasaKanstinJalan = {
 | Jual Kanstin Beton Terdekat | /2022/01/jual-kanstin-beton-terdekat.html | [MONEY PAGE] | Menargetkan transaksi pembelian kanstin |
 | Perbedaan Jenis Kanstin | /2022/01/perbedaan-jenis-kanstin.html | [SUB1] | Edukasi perbedaan tipe kanstin |
 */
+// ============================================================
+// 🧠 SEO NOTES - JASA KANSTIN JALAN
+// ============================================================
+
+/*
+📌 KESIMPULAN:
+
+1. Semua URL adalah [MONEY PAGE] atau [SUB1] di bawah VARIANT Jasa Kanstin Jalan
+2. Tidak ada [SUB2] baru karena Kanstin adalah VARIANT langsung dari Jasa Pengaman Sisi Jalan
+3. Halaman dengan keyword "harga" atau "pemasangan" → [MONEY PAGE]
+4. Halaman dengan keyword "cara", "metode", "analisa" → [SUB1] (bridge ke money page)
+5. Breadcrumb maksimal 4 level (skip PILLAR Jasa Konstruksi)
+
+📌 YANG PERLU DITAMBAHKAN:
+- Jasa Pemasangan Kanstin Profesional ([MONEY PAGE])
+- Harga Borongan Pasang Kanstin ([MONEY PAGE])
+- Jual Kanstin Beton Terdekat ([MONEY PAGE])
+
+📌 BREADCRUMB UNTUK MONEY PAGE (4 level):
+Home > Jasa Pembatas & Pengaman > Jasa Pengaman Sisi Jalan > Harga Pemasangan Kanstin
+
+📌 BREADCRUMB UNTUK SUB1 (4 level):
+Home > Jasa Pembatas & Pengaman > Jasa Pengaman Sisi Jalan > Cara Pasang Kanstin Taman
+*/
+
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPembatasKonsPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
