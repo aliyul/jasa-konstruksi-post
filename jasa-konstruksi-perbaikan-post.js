@@ -1,55 +1,68 @@
-//SUB JasaRenovasiPerbaikanStruktur
-//Sub Perbaikan Struktur
-//Sub PerbaikanStrukturUmum
-const urlMappingJasaPerbaikanRetakStruktur= {
-	
-};
-const urlMappingJasaPenguatanStrukturBangunan= {
-	
-};
-const urlMappingJasaRenovasiStrukturBeton= {
-	
-};
-const urlMappingJasaPerkuatanStrukturBeton= {
-	
-};
-const urlMappingJasaPerbaikanRetakBeton= {
-	
-};
-const urlMappingJasaRepairStrukturBeton= {
-	
-};
-const urlMappingJasaPerbaikanStrukturBeton= {
- // Berdasarkan Jenis Kerusakan / Metode
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-retak-struktural-beton.html": "Jasa Perbaikan Retak Struktural Beton",
-  "https://www.betonjayareadymix.com/2018/09/jasa-rehabilitasi-struktur-beton-lama.html": "Jasa Rehabilitasi Struktur Beton Lama",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-akibat-korosi.html": "Jasa Perbaikan Beton Akibat Korosi",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-mengelupas.html": "Jasa Perbaikan Beton Mengelupas",
-  "https://www.betonjayareadymix.com/2018/09/jasa-retrofit-struktur-beton-eksisting.html": "Jasa Retrofit Struktur Beton Eksisting",
-  "https://www.betonjayareadymix.com/2018/09/jasa-peningkatan-kapasitas-struktur-beton.html": "Jasa Peningkatan Kapasitas Struktur Beton",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-akibat-overload.html": "Jasa Perbaikan Beton Akibat Overload",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-area-pesisir.html": "Jasa Perbaikan Beton Area Pesisir",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-akibat-asr.html": "Jasa Perbaikan Beton Akibat ASR (Alkali Silica Reaction)",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-serangan-sulfat.html": "Jasa Perbaikan Beton Akibat Serangan Sulfat",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-area-industri.html": "Jasa Perbaikan Beton Area Industri",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perpanjangan-umur-struktur-beton.html": "Jasa Perpanjangan Umur Struktur Beton",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-delaminasi.html": "Jasa Perbaikan Beton Delaminasi",
+/*
+JASA PERBAIKAN STRUKTUR (SUB2 - /p/jasa-perbaikan-struktur.html)
+│
+├── [VARIANT] Jasa Perbaikan Struktur Beton
+│   │
+│   ├── [SUB-VARIANT - POST] Berdasarkan Jenis Kerusakan/Metode (13 URL)
+│   │
+│   └── [SUB-VARIANT - POST] Berdasarkan Lokasi (7 URL)
+│
+└── (VARIANT lainnya)
+*/
+// ============================================================
+// JASA PERBAIKAN STRUKTUR BETON - LENGKAP
+// ============================================================
+// 🧠 SEO NOTE: Semua halaman di bawah Jasa Perbaikan Struktur Beton
+// Parent: Jasa Perbaikan Struktur Beton (/p/jasa-perbaikan-struktur-beton.html)
+// ============================================================
 
-  // Berdasarkan Lokasi
+const urlMappingJasaPerbaikanStrukturBeton = {
+  // ============================================================
+  // [SUB-VARIANT - POST] - BERDASARKAN JENIS KERUSAKAN / METODE
+  // 🧠 SEO NOTE: Fokus ke edukasi teknis & metode perbaikan
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton > [Nama Halaman]
+  // ============================================================
+  
+  // Jenis Kerusakan
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-retak-struktural-beton.html": "Jasa Perbaikan Retak Struktural Beton [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-delaminasi.html": "Jasa Perbaikan Beton Delaminasi [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-mengelupas.html": "Jasa Perbaikan Beton Mengelupas [SUB-VARIANT]",
+  
+  // Penyebab Kerusakan
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-akibat-korosi.html": "Jasa Perbaikan Beton Akibat Korosi [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-akibat-overload.html": "Jasa Perbaikan Beton Akibat Overload [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-akibat-asr.html": "Jasa Perbaikan Beton Akibat ASR [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-serangan-sulfat.html": "Jasa Perbaikan Beton Akibat Serangan Sulfat [SUB-VARIANT]",
+  
+  // Metode & Pendekatan
+  "https://www.betonjayareadymix.com/2018/09/jasa-rehabilitasi-struktur-beton-lama.html": "Jasa Rehabilitasi Struktur Beton Lama [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/2018/09/jasa-retrofit-struktur-beton-eksisting.html": "Jasa Retrofit Struktur Beton Eksisting [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/2018/09/jasa-peningkatan-kapasitas-struktur-beton.html": "Jasa Peningkatan Kapasitas Struktur Beton [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perpanjangan-umur-struktur-beton.html": "Jasa Perpanjangan Umur Struktur Beton [SUB-VARIANT]",
+  
+  // Kondisi Khusus
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-area-pesisir.html": "Jasa Perbaikan Beton Area Pesisir [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-area-industri.html": "Jasa Perbaikan Beton Area Industri [SUB-VARIANT]",
+
+  // ============================================================
+  // [MONEY PAGE - POST] - BERDASARKAN LOKASI
+  // 🧠 SEO NOTE: Fokus ke harga & layanan per lokasi (transaksional)
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton > [Nama Halaman]
+  // ============================================================
+  
+  // Jabodetabek
   "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-struktur-beton-jakarta.html": "Jasa Perbaikan Struktur Beton Jakarta",
   "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-struktur-beton-bogor.html": "Jasa Perbaikan Struktur Beton Bogor",
   "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-struktur-beton-depok.html": "Jasa Perbaikan Struktur Beton Depok",
   "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-struktur-beton-tangerang.html": "Jasa Perbaikan Struktur Beton Tangerang",
   "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-struktur-beton-bekasi.html": "Jasa Perbaikan Struktur Beton Bekasi",
+  
+  // Jawa Barat
   "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-struktur-beton-karawang.html": "Jasa Perbaikan Struktur Beton Karawang",
   "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-struktur-beton-bandung.html": "Jasa Perbaikan Struktur Beton Bandung"
+};
 
- 
-};
-const urlMappingJasaRenovasiPerbaikanRetakStruktur= {
-	
-};
-//Akhir Sub PerbaikanStrukturUmum
+//Akhir Sub JasaPerbaikanStrukturBeton
 
 //Sub PerbaikanStrukturKolomBalokBeton
 const urlMappingJasaPerbaikanKolomBeton = {
@@ -425,11 +438,11 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
     // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingJasaPerbaikanRetakStruktur,
+		//urlMappingJasaPerbaikanRetakStruktur,
 		urlMappingJasaPenguatanStrukturBangunan,
 		urlMappingJasaRenovasiStrukturBeton,
 		urlMappingJasaPerkuatanStrukturBeton,
-		urlMappingJasaPerbaikanRetakBeton,
+		//urlMappingJasaPerbaikanRetakBeton,
 		urlMappingJasaRepairStrukturBeton,
 		urlMappingJasaPerbaikanStrukturBeton,
 		urlMappingJasaRenovasiPerbaikanRetakStruktur,
@@ -598,13 +611,13 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
     const urlMappingGabungan = Object.assign(
       {},
 		urlMappingJasaPerbaikanRetakStruktur,
-		urlMappingJasaPenguatanStrukturBangunan,
-		urlMappingJasaRenovasiStrukturBeton,
-		urlMappingJasaPerkuatanStrukturBeton,
+		//urlMappingJasaPenguatanStrukturBangunan,
+		//urlMappingJasaRenovasiStrukturBeton,
+		//urlMappingJasaPerkuatanStrukturBeton,
 		urlMappingJasaPerbaikanRetakBeton,
-		urlMappingJasaRepairStrukturBeton,
+		//urlMappingJasaRepairStrukturBeton,
 		urlMappingJasaPerbaikanStrukturBeton,
-		urlMappingJasaRenovasiPerbaikanRetakStruktur,
+		//urlMappingJasaRenovasiPerbaikanRetakStruktur,
 		urlMappingJasaPerbaikanKolomBeton,
 		urlMappingJasaPerbaikanBalokBeton,
 		urlMappingJasaPerbaikanStrukturKolomBeton,
