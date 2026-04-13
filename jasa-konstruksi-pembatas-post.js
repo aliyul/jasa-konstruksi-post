@@ -47,7 +47,7 @@ const urlMappingJasaPagarBetonPrecast = {
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Beton Precast
   // ============================================================
   // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-beton-precast.html": "Jasa Pagar Beton Precast",
-  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-beton-precast.html": "Harga Pagar Beton Precast [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-beton-precast.html": "Harga Pagar Beton Precast",
 };
 
 const urlMappingJasaPagarPanelBeton = {
@@ -55,9 +55,9 @@ const urlMappingJasaPagarPanelBeton = {
   // [MONEY PAGE] - MASTER HARGA
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pasang Pagar Panel Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-pasang-pagar-panel-beton.html": "Harga Pasang Pagar Panel Beton [MONEY PAGE]",
-  "https://www.betonjayareadymix.com/2018/09/biaya-pasang-pagar-panel-beton.html": "Biaya Pasang Pagar Panel Beton [MONEY PAGE]",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton [MONEY PAGE]",
+  "https://www.betonjayareadymix.com/2018/09/harga-pasang-pagar-panel-beton.html": "Harga Pasang Pagar Panel Beton",
+  "https://www.betonjayareadymix.com/2018/09/biaya-pasang-pagar-panel-beton.html": "Biaya Pasang Pagar Panel Beton",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton",
 
   // ============================================================
   // [VARIANT - POST] - JASA PASANG PAGAR PANEL BETON
@@ -122,7 +122,7 @@ const urlMappingJasaPagarBesi = {
   // [MONEY PAGE] - HARGA PAGAR BESI
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pagar Besi Ulir
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/harga-pagar-besi-ulir.html": "Harga Pagar Besi Ulir [MONEY PAGE]",
+  "https://www.betonjayareadymix.com/2018/11/harga-pagar-besi-ulir.html": "Harga Pagar Besi Ulir",
   
   // ============================================================
   // SARAN ITEM BARU - JASA PAGAR BESI
@@ -140,7 +140,7 @@ const urlMappingJasaDindingBata = {
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Dinding Bata
   // ============================================================
   // "https://www.betonjayareadymix.com/2019/08/jasa-dinding-bata.html": "Jasa Dinding Bata",
-  // "https://www.betonjayareadymix.com/2019/08/harga-dinding-bata-per-m2.html": "Harga Dinding Bata per M2 [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-dinding-bata-per-m2.html": "Harga Dinding Bata per M2",
 };
 
 const urlMappingJasaPagarKawat = {
@@ -150,7 +150,7 @@ const urlMappingJasaPagarKawat = {
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Kawat
   // ============================================================
   // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-kawat.html": "Jasa Pagar Kawat",
-  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-kawat-per-meter.html": "Harga Pagar Kawat per Meter [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-kawat-per-meter.html": "Harga Pagar Kawat per Meter",
 };
 
 const urlMappingJasaPagarBRC = {
@@ -160,7 +160,7 @@ const urlMappingJasaPagarBRC = {
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar BRC
   // ============================================================
   // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-brc.html": "Jasa Pagar BRC",
-  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-brc-per-meter.html": "Harga Pagar BRC per Meter [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-brc-per-meter.html": "Harga Pagar BRC per Meter",
 };
 
 const urlMappingJasaPagarRumah = {
@@ -168,8 +168,8 @@ const urlMappingJasaPagarRumah = {
   // [MONEY PAGE] - HARGA & BIAYA
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Jasa Pasang Pagar Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah.html": "Harga Jasa Pasang Pagar Rumah [MONEY PAGE]",
-  "https://www.betonjayareadymix.com/2018/11/biaya-jasa-pasang-pagar-rumah.html": "Biaya Jasa Pasang Pagar Rumah [MONEY PAGE]",
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah.html": "Harga Jasa Pasang Pagar Rumah",
+  "https://www.betonjayareadymix.com/2018/11/biaya-jasa-pasang-pagar-rumah.html": "Biaya Jasa Pasang Pagar Rumah",
 
   // ============================================================
   // [VARIANT - POST] - JASA PASANG PAGAR RUMAH
@@ -197,7 +197,7 @@ const urlMappingJasaPagarBangunan = {
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Bangunan
   // ============================================================
   // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-bangunan.html": "Jasa Pagar Bangunan",
-  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-bangunan-per-meter.html": "Harga Pagar Bangunan per Meter [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-bangunan-per-meter.html": "Harga Pagar Bangunan per Meter",
 };
 
 /*const urlMappingPengamananSisiJalan = {
@@ -209,17 +209,47 @@ const urlMappingJasaPagarBangunan = {
 
 };*/
 
-//SUB urlMappingPengamananSisiJalan
+// ============================================================
+// JASA KANSTIN JALAN (VARIANT)
+// ============================================================
+
 const urlMappingJasaKanstinJalan = {
-"https://www.betonjayareadymix.com/2021/04/harga-pemasangan-kanstin.html": "Harga Pemasangan Kanstin",
- "https://www.betonjayareadymix.com/2021/08/pemasangan-kanstin-jalan.html": "Pemasangan Kanstin Jalan",
-"https://www.betonjayareadymix.com/2021/09/cara-pasang-kanstin-taman.html": "Cara Pasang Kanstin Taman",
-"https://www.betonjayareadymix.com/2021/08/cara-pasang-kanstin-trotoar.html": "Cara Pasang Kanstin Trotoar",
+  // ============================================================
+  // [MONEY PAGE] - HARGA PEMASANGAN KANSTIN
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pengaman Sisi Jalan > Harga Pemasangan Kanstin
+  // ============================================================
+  "https://www.betonjayareadymix.com/2021/04/harga-pemasangan-kanstin.html": "Harga Pemasangan Kanstin",
+
+  // ============================================================
+  // [MONEY PAGE] - PEMASANGAN KANSTIN JALAN
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pengaman Sisi Jalan > Pemasangan Kanstin Jalan
+  // ============================================================
+  "https://www.betonjayareadymix.com/2021/08/pemasangan-kanstin-jalan.html": "Pemasangan Kanstin Jalan",
+
+  // ============================================================
+  // [SUB1] - PANDUAN / BRIDGE (CARA PASANG, METODE, ANALISA)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pengaman Sisi Jalan > Cara Pasang Kanstin Taman
+  // ============================================================
+  "https://www.betonjayareadymix.com/2021/09/cara-pasang-kanstin-taman.html": "Cara Pasang Kanstin Taman",
+  "https://www.betonjayareadymix.com/2021/08/cara-pasang-kanstin-trotoar.html": "Cara Pasang Kanstin Trotoar",
   "https://www.betonjayareadymix.com/2021/04/metode-pemasangan-kanstin.html": "Metode Pemasangan Kanstin",
   "https://www.betonjayareadymix.com/2021/04/analisa-pemasangan-kanstin.html": "Analisa Pemasangan Kanstin",
   "https://www.betonjayareadymix.com/2021/04/analisa-pekerjaan-kanstin-beton.html": "Analisa Pekerjaan Kanstin Beton"
 };
 
+// ============================================================
+// SARAN ITEM BARU - JASA KANSTIN JALAN
+// ============================================================
+/*
+📌 SARAN ITEM BARU (UNTUK DITAMBAHKAN):
+
+| Nama Halaman | URL | Status | Alasan |
+|--------------|-----|--------|--------|
+| Jasa Pemasangan Kanstin Profesional | /2022/01/jasa-pemasangan-kanstin-profesional.html | [MONEY PAGE] | Menargetkan keyword jasa, bukan harga |
+| Harga Borongan Pasang Kanstin | /2022/01/harga-borongan-pasang-kanstin.html | [MONEY PAGE] | Variasi keyword borongan |
+| Jual Kanstin Beton Terdekat | /2022/01/jual-kanstin-beton-terdekat.html | [MONEY PAGE] | Menargetkan transaksi pembelian kanstin |
+| Perbedaan Jenis Kanstin | /2022/01/perbedaan-jenis-kanstin.html | [SUB1] | Edukasi perbedaan tipe kanstin |
+*/
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPembatasKonsPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
