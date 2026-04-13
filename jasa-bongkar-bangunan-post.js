@@ -903,7 +903,7 @@ if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 	    
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua JasaBongkarTowerPost hapus juga
-        removeCondition('JasaBongkarTowerPost');
+        //removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarRumahPost');
         removeCondition('JasaBongkarBetonPost');
         removeCondition('JasaBongkarAtapPost');
@@ -1334,11 +1334,12 @@ if (urlMappingJasaBongkarBeton[cleanUrlJasaKonsBongkarBangunanPost]) {
        document.head.appendChild(script);
    }
 if (urlMappingJasaBongkarAtap[cleanUrlJasaKonsBongkarBangunanPost]) {
-        restoreCondition('JasaKonsBongkarBangunanPost');
+ // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
+    // ============================================================
+    
+    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
+    removeCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
 	
-        restoreCondition('JasaBongkarBangunanPost');
-        //restoreCondition('JasaBongkarAtapPost');
-     
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -1442,10 +1443,12 @@ if (urlMappingJasaBongkarAtap[cleanUrlJasaKonsBongkarBangunanPost]) {
        document.head.appendChild(script);
    }
 if (urlMappingJasaBongkarKeramik[cleanUrlJasaKonsBongkarBangunanPost]) {
-        restoreCondition('JasaKonsBongkarBangunanPost');
-	
-        restoreCondition('JasaBongkarBangunanPost');
-        restoreCondition('JasaBongkarKeramikPost');
+ // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
+    // ============================================================
+    
+    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
+    removeCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
+
      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
@@ -1549,10 +1552,12 @@ if (urlMappingJasaBongkarKeramik[cleanUrlJasaKonsBongkarBangunanPost]) {
        document.head.appendChild(script);
    }
 if (urlMappingJasaBongkarTembok[cleanUrlJasaKonsBongkarBangunanPost]) {
-        restoreCondition('JasaKonsBongkarBangunanPost');
-	
-        restoreCondition('JasaBongkarBangunanPost');
-        restoreCondition('JasaBongkarTembokPost');
+ // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
+    // ============================================================
+    
+    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
+    removeCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
+
      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
@@ -1656,10 +1661,12 @@ if (urlMappingJasaBongkarTembok[cleanUrlJasaKonsBongkarBangunanPost]) {
        document.head.appendChild(script);
    }
 if (urlMappingJasaBongkarDinding[cleanUrlJasaKonsBongkarBangunanPost]) {
-        restoreCondition('JasaKonsBongkarBangunanPost');
-	
-        restoreCondition('JasaBongkarBangunanPost');
-        restoreCondition('JasaBongkarDindingPost');
+ // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
+    // ============================================================
+    
+    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
+    removeCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
+
      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
@@ -1763,10 +1770,12 @@ if (urlMappingJasaBongkarDinding[cleanUrlJasaKonsBongkarBangunanPost]) {
        document.head.appendChild(script);
    }
 if (urlMappingJasaBongkarPlafon[cleanUrlJasaKonsBongkarBangunanPost]) {
-        restoreCondition('JasaKonsBongkarBangunanPost');
-	
-        restoreCondition('JasaBongkarBangunanPost');
-        restoreCondition('JasaBongkarPlafonPost');
+ // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
+    // ============================================================
+    
+    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
+    removeCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
+
      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
@@ -1870,10 +1879,12 @@ if (urlMappingJasaBongkarPlafon[cleanUrlJasaKonsBongkarBangunanPost]) {
        document.head.appendChild(script);
    }
 if (urlMappingJasaBongkarPartisi[cleanUrlJasaKonsBongkarBangunanPost]) {
-        restoreCondition('JasaKonsBongkarBangunanPost');
-	
-        restoreCondition('JasaBongkarBangunanPost');
-        restoreCondition('JasaBongkarPartisiPost');
+ // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
+    // ============================================================
+    
+    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
+    removeCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
+
      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
@@ -1977,10 +1988,12 @@ if (urlMappingJasaBongkarPartisi[cleanUrlJasaKonsBongkarBangunanPost]) {
        document.head.appendChild(script);
    }
 if (urlMappingJasaBongkarPagar[cleanUrlJasaKonsBongkarBangunanPost]) {
-        restoreCondition('JasaKonsBongkarBangunanPost');
-	
-        restoreCondition('JasaBongkarBangunanPost');
-        restoreCondition('JasaBongkarPagarPost');
+ // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
+    // ============================================================
+    
+    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
+    removeCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
+
      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
@@ -2084,10 +2097,12 @@ if (urlMappingJasaBongkarPagar[cleanUrlJasaKonsBongkarBangunanPost]) {
        document.head.appendChild(script);
    }
 if (urlMappingJasaBongkarLantai[cleanUrlJasaKonsBongkarBangunanPost]) {
-        restoreCondition('JasaKonsBongkarBangunanPost');
-	
-        restoreCondition('JasaBongkarBangunanPost');
-        restoreCondition('JasaBongkarLantaiPost');
+ // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
+    // ============================================================
+    
+    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
+    removeCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
+
      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
@@ -2193,9 +2208,7 @@ if (urlMappingJasaBongkarLantai[cleanUrlJasaKonsBongkarBangunanPost]) {
 
 //SUB urlMappingJasaBuangPuing
 if (urlMappingJasaBuangPuing[cleanUrlJasaKonsBongkarBangunanPost]) {
-        restoreCondition('JasaKonsBongkarBangunanPost');
-        restoreCondition('JasaBuangPuingPost'); 
-     
+
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -2244,14 +2257,51 @@ if (urlMappingJasaBuangPuing[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaBongkarPagarPost');
         removeCondition('JasaBongkarLantaiPost');
 
-	
-       
+	/*
         JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarBangunanPost
       JasaBuangPuingPostLink.style.visibility = 'visible';
 
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBuangPuing[cleanUrlJasaKonsBongkarBangunanPost];
+	*/
+	// ============================================================
+    // 2. TAMPILKAN ELEMEN YANG DIPERLUKAN (RESTORE JIKA PERLU)
+    // ============================================================
+    
+    // Pastikan container utama visible
+    const container = document.getElementById('JasaKonsBongkarBangunanPost');
+    if (container) {
+        container.style.display = 'inline';
+        container.style.visibility = 'visible';
+     } else {
+        // Jika sudah di-remove, restore
+        restoreCondition('JasaKonsBongkarBangunanPost');
     }
+    
+
+    let jasaVariable1 = document.getElementById('JasaKonstruksiBongkarBangunanPost');
+    if (jasaVariable1) {
+        jasaVariable1.style.display = 'inline';
+        jasaVariable1.style.visibility = 'visible';
+    } else {
+        // Jika sudah di-remove, restore
+        restoreCondition('JasaKonstruksiBongkarBangunanPost');
+    }
+     let jasaVariable2 = document.getElementById('JasaBuangPuingPost');
+    if (jasaVariable2) {
+        jasaVariable2.style.display = 'inline';
+        jasaVariable2.style.visibility = 'visible';
+    } else {
+        // Jika sudah di-remove, restore
+        restoreCondition('JasaBuangPuingPost');
+    }
+    // Update page name
+    const pageNameElement = document.getElementById("pageNameJasaKonsBongkarBangunanPost");
+    if (pageNameElement) {
+        pageNameElement.textContent = urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost];
+        pageNameElement.style.display = 'inline';
+    }
+}
       // ✅ Tambahkan JSON-LD Breadcrumb otomatis
    if (urlMappingJasaBuangPuing[cleanUrlJasaKonsBongkarBangunanPost]) {
        const jsonLDBreadcrumb = {
