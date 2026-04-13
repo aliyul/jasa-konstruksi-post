@@ -5,7 +5,7 @@
 
 const urlMappingJasaBongkarBangunan = {
   // [SUB2] - MASTER PAGE
-  //"https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html": "Jasa Bongkar Bangunan [SUB2]",
+  //"https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html": "Jasa Bongkar Bangunan",
   
   // [MONEY PAGE - MASTER] - HARGA BONGKAR BANGUNAN
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-bongkar-bangunan.html": "Harga Jasa Bongkar Bangunan"
