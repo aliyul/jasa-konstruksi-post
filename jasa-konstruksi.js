@@ -212,77 +212,77 @@ const urlMappingBongkarBangunan = {
   // 🧠 SEO NOTE: Objek spesifik (tower BTS, SUTET, menara industri)
   // Konten: Tebal, spesifik, metode khusus
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-tower.html": "Jasa Bongkar Tower [SUB2]",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-tower.html": "Jasa Bongkar Tower",
 
   // ============================================================
   // [SUB2] - BONGKAR RUMAH
   // 🧠 SEO NOTE: Halaman utama untuk bongkar rumah tinggal
   // Konten: Tebal, mencakup semua aspek bongkar rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html": "Jasa Bongkar Rumah [SUB2]",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html": "Jasa Bongkar Rumah",
 
   // ============================================================
   // [SUB2] - BONGKAR BETON
   // 🧠 SEO NOTE: Objek spesifik (beton, dak, pondasi, kolom, balok)
   // Konten: Tebal, spesifik, metode khusus
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-beton.html": "Jasa Bongkar Beton [SUB2]",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-beton.html": "Jasa Bongkar Beton",
 
   // ============================================================
   // [SUB2] - BONGKAR ATAP
   // 🧠 SEO NOTE: Bagian dari rumah dengan metode spesifik
   // Konten: Tebal, spesifik (genteng, rangka, baja ringan)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-atap.html": "Jasa Bongkar Atap [SUB2]",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-atap.html": "Jasa Bongkar Atap",
 
   // ============================================================
   // [SUB2] - BONGKAR KERAMIK
   // 🧠 SEO NOTE: Bagian dari lantai, tetap dipertahankan karena konten tebal
   // Konten: Tebal, spesifik (keramik lantai & dinding)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-keramik.html": "Jasa Bongkar Keramik [SUB2]",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-keramik.html": "Jasa Bongkar Keramik",
 
   // ============================================================
   // [SUB2] - BONGKAR TEMBOK
   // 🧠 SEO NOTE: Sama dengan dinding, tapi konten tebal dan spesifik
   // Konten: Tebal, spesifik (tembok bata, hebel, beton)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-tembok.html": "Jasa Bongkar Tembok [SUB2]",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-tembok.html": "Jasa Bongkar Tembok",
 
   // ============================================================
   // [SUB2] - BONGKAR DINDING
   // 🧠 SEO NOTE: Bagian dari rumah, komponen utama
   // Konten: Tebal, spesifik (dinding bata, hebel, beton)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-dinding.html": "Jasa Bongkar Dinding [SUB2]",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-dinding.html": "Jasa Bongkar Dinding",
 
   // ============================================================
   // [SUB2] - BONGKAR PLAFON
   // 🧠 SEO NOTE: Bagian dari rumah, konten tebal dan spesifik
   // Konten: Tebal, spesifik (plafon gypsum, PVC, GRC)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-plafon.html": "Jasa Bongkar Plafon [SUB2]",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-plafon.html": "Jasa Bongkar Plafon",
 
   // ============================================================
   // [SUB2] - BONGKAR PARTISI
   // 🧠 SEO NOTE: Bagian dari dinding interior, konten tebal
   // Konten: Tebal, spesifik (partisi gypsum, GRC, kayu)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-partisi.html": "Jasa Bongkar Partisi [SUB2]",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-partisi.html": "Jasa Bongkar Partisi",
 
   // ============================================================
   // [SUB2] - BONGKAR PAGAR
   // 🧠 SEO NOTE: Objek spesifik (pagar beton, besi, bata)
   // Konten: Tebal, spesifik, metode khusus
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-pagar.html": "Jasa Bongkar Pagar [SUB2]",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-pagar.html": "Jasa Bongkar Pagar",
 
   // ============================================================
   // [SUB2] - BONGKAR LANTAI
   // 🧠 SEO NOTE: Bagian dari rumah, komponen utama
   // Konten: Tebal, spesifik (lantai keramik, granit, beton, kayu)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-lantai.html": "Jasa Bongkar Lantai [SUB2]"
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-lantai.html": "Jasa Bongkar Lantai"
 };
 // ============================================================
 // JASA RENOVASI - SUB2 & TURUNAN
