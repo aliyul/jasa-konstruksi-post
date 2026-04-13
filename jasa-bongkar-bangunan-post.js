@@ -1,5 +1,18 @@
 //SUB MAPPING JASA BONGKAR BANGUNAN
 // ============================================================
+// JASA BONGKAR BANGUNAN (SUB2) - DENGAN MASTER HARGA
+// ============================================================
+
+const urlMappingJasaBongkarBangunan = {
+  // [SUB2] - MASTER PAGE
+  //"https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html": "Jasa Bongkar Bangunan [SUB2]",
+  
+  // [MONEY PAGE - MASTER] - HARGA BONGKAR BANGUNAN
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-bongkar-bangunan.html": "Harga Jasa Bongkar Bangunan [MASTER]"
+};
+
+
+// ============================================================
 // JASA BONGKAR TOWER - BLOG POST
 // ============================================================
 // 🧠 SEO NOTE: Halaman ini adalah MONEY PAGE dengan intent transaksional.
@@ -37,17 +50,21 @@ Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Harga Bongkar Tower BTS (4 leve
 */
 
 // ============================================================
-// JASA BONGKAR RUMAH - BLOG POST
-// ============================================================
-// 🧠 SEO NOTE: Halaman ini adalah MONEY PAGE dengan intent transaksional.
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Harga Jasa Bongkar Bangunan (4 level)
+// JASA BONGKAR RUMAH - SARAN ITEM BARU
 // ============================================================
 
 const urlMappingJasaBongkarRumah = {
-  // [MONEY PAGE] - HARGA BONGKAR BANGUNAN
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-bongkar-bangunan.html": "Harga Jasa Bongkar Bangunan"
+  // [SUB2] - JASA BONGKAR RUMAH (PAGE)
+  //"https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html": "Jasa Bongkar Rumah [SUB2]",
+  
+  // ============================================================
+  // SARAN ITEM BARU (MONEY PAGE) - LANGSUNG DI BAWAH RUMAH
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-bongkar-rumah-tinggal.html": "Harga Bongkar Rumah Tinggal [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-bongkar-rumah-2-lantai.html": "Jasa Bongkar Rumah 2 Lantai [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-bongkar-rumah-permanen.html": "Jasa Bongkar Rumah Permanen [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-bongkar-rumah-semi-permanen.html": "Jasa Bongkar Rumah Semi Permanen [MONEY PAGE]"
 };
-
 // ============================================================
 // 🟡 SEO NOTE - JASA BONGKAR RUMAH
 // ============================================================
@@ -520,6 +537,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
+		urlMappingJasaBongkarBangunan,
 		urlMappingJasaBongkarTower,
 		urlMappingJasaBongkarRumah,
 		urlMappingJasaBongkarBeton,
@@ -699,11 +717,168 @@ document.addEventListener("DOMContentLoaded", function() {
      pageNameJasaKonsBongkarBangunanPost.textContent = "";
 	
 //SUB urlMappingJasaKonsBongkarBangunanPost
-if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
-        restoreCondition('JasaKonsBongkarBangunanPost');
+if (urlMappingJasaBongkarBangunan[cleanUrlJasaKonsBongkarBangunanPost]) {
+	  // ============================================================
+    // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
+    // ============================================================
+    
+    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
+    removeCondition('JasaBongkarRumahPost'); 
+        
+        //hapus elemen div id lain
+	removeCondition('JasaDesInPost');
+        removeCondition('ProdukInFurPost');
+	removeCondition('ProdukKonsSaluranPost');
+        removeCondition('ProdukKonsPembatasPost');
+        removeCondition('ProdukKonsDindingModularPost');
+        removeCondition('ProdukKonsPost');
+        removeCondition('MaterialKonsStukturPost');
+        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
+	removeCondition('MaterialKonsAtapPenutupPost');
+        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
+        removeCondition('JasaKonsPondasiTanahPost');
+        removeCondition('JasaKonsPembatasPost');
+        removeCondition('JasaKonsPerbaikanPost');
+        removeCondition('JasaKonsCuttingBetonPost');
+        removeCondition('JasaKonsPengeboranPost');
+        removeCondition('JasaKonsFinishingPost');
+        removeCondition('JasaKonsStrukturPost');
+        removeCondition('JasaKonsAlatKonstruksiPost');
+        removeCondition('JasaKonsJalanPerkerasanPost');
 	
+	
+	
+        //hapus elemen SUB jasa JasaBongkarBangunanPost semua hapus juga JasaBongkarRumahPost
+        removeCondition('JasaBongkarRumahPost');
+        removeCondition('JasaBongkarTowerPost');
+        removeCondition('JasaBongkarBetonPost');
+        removeCondition('JasaBongkarAtapPost');
+        removeCondition('JasaBongkarKeramikPost');
+        removeCondition('JasaBongkarTembokPost');
+        removeCondition('JasaBongkarDindingPost');
+        removeCondition('JasaBongkarPlafonPost');
+        removeCondition('JasaBongkarPartisiPost');
+        removeCondition('JasaBongkarPagarPost');
+        removeCondition('JasaBongkarLantaiPost');
+
+		//hapus JasaBuangPuingPost
+	removeCondition('JasaBuangPuingPost');
+	
+//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
+        removeCondition('JasaPerawatanPerbaikanBangunanPost');
+	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
+	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
+	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
+	
+        removeCondition('JasaPerbaikanAtapBocorPost');
+        removeCondition('JasaPerbaikanDindingRetakPost');
+        removeCondition('JasaPerbaikanRembesanAirPost');
+        removeCondition('JasaPerbaikanPlafonRusakPost');
+        removeCondition('JasaPerbaikanDakBetonBocorPost');
+        removeCondition('JasaPerbaikanTalangBocorPost');
+    /*
+        JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaBongkarBangunanPost
+        JasaBongkarBangunanPostLink.style.visibility = 'visible';
+	//TAMPILKAN JasaBongkarRumahPost
+	//skip level 4 JasaBongkarRumahPostLink.style.visibility = 'visible';
+	
+	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarBangunan[cleanUrlJasaKonsBongkarBangunanPost];
+	*/
+	 // ============================================================
+    // 2. TAMPILKAN ELEMEN YANG DIPERLUKAN (RESTORE JIKA PERLU)
+    // ============================================================
+    
+    // Pastikan container utama visible
+    const container = document.getElementById('JasaKonsBongkarBangunanPost');
+    if (container) {
+        container.style.display = 'inline';
+        container.style.visibility = 'visible';
+     } else {
+        // Jika sudah di-remove, restore
+        restoreCondition('JasaKonsBongkarBangunanPost');
+    }
+    
+    let jasaVariable1 = document.getElementById('JasaKonstruksiBongkarBangunanPost');
+    if (jasaVariable1) {
+        jasaVariable1.style.display = 'inline';
+        jasaVariable1.style.visibility = 'visible';
+    } else {
+        // Jika sudah di-remove, restore
+        restoreCondition('JasaKonstruksiBongkarBangunanPost');
+    }
+    
+    // Tampilkan Jasa Finishing Dak Beton (parent terdekat)
+    let jasaVariable2 = document.getElementById('JasaBongkarBangunanPost');
+    if (jasaVariable2) {
+        jasaVariable2.style.display = 'inline';
+        jasaVariable2.style.visibility = 'visible';
+    } else {
         restoreCondition('JasaBongkarBangunanPost');
-        // level 4 skip restoreCondition('JasaBongkarTowerPost');
+    }
+    
+    // Update page name
+    const pageNameElement = document.getElementById("pageNameJasaKonsBongkarBangunanPost");
+    if (pageNameElement) {
+        pageNameElement.textContent = urlMappingJasaBongkarBangunan[cleanUrlJasaKonsBongkarBangunanPost];
+        pageNameElement.style.display = 'inline';
+    }
+}
+  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaBongkarBangunan[cleanUrlJasaKonsBongkarBangunanPost]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Bongkar Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
+               },
+			   /*
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": "Jasa Bongkar Rumah",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html"
+               },
+			   */
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": urlMappingJasaBongkarBangunan[cleanUrlJasaKonsBongkarBangunanPost],
+                   "item": cleanUrlJasaKonsBongkarBangunanPost
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+	
+if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
+	   // ============================================================
+    // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
+    // ============================================================
+    
+    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
+    removeCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
+
      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
@@ -753,7 +928,7 @@ if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaPerbaikanPlafonRusakPost');
         removeCondition('JasaPerbaikanDakBetonBocorPost');
         removeCondition('JasaPerbaikanTalangBocorPost');
-       
+       /*
         JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarBangunanPost
         JasaBongkarBangunanPostLink.style.visibility = 'visible';
@@ -761,7 +936,47 @@ if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
 	//JasaBongkarTowerPostLink.style.visibility = 'visible';
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost];
+	*/
+	 // ============================================================
+    // 2. TAMPILKAN ELEMEN YANG DIPERLUKAN (RESTORE JIKA PERLU)
+    // ============================================================
+    
+    // Pastikan container utama visible
+    const container = document.getElementById('JasaKonsBongkarBangunanPost');
+    if (container) {
+        container.style.display = 'inline';
+        container.style.visibility = 'visible';
+     } else {
+        // Jika sudah di-remove, restore
+        restoreCondition('JasaKonsBongkarBangunanPost');
     }
+    
+    // Tampilkan Jasa Finishing (level 2)
+    let jasaVariable1 = document.getElementById('JasaBongkarBangunanPost');
+    if (jasaVariable1) {
+        jasaVariable1.style.display = 'inline';
+        jasaVariable1.style.visibility = 'visible';
+    } else {
+        // Jika sudah di-remove, restore
+        restoreCondition('JasaBongkarBangunanPost');
+    }
+    
+    // Tampilkan Jasa Finishing Dak Beton (parent terdekat)
+    let jasaVariable2 = document.getElementById('JasaBongkarTowerPost');
+    if (jasaVariable2) {
+        jasaVariable2.style.display = 'inline';
+        jasaVariable2.style.visibility = 'visible';
+    } else {
+        restoreCondition('JasaBongkarTowerPost');
+    }
+    
+    // Update page name
+    const pageNameElement = document.getElementById("pageNameJasaKonsBongkarBangunanPost");
+    if (pageNameElement) {
+        pageNameElement.textContent = urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost];
+        pageNameElement.style.display = 'inline';
+    }
+}
       // ✅ Tambahkan JSON-LD Breadcrumb otomatis
    if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
        const jsonLDBreadcrumb = {
@@ -774,26 +989,27 @@ if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
 	      "name": "Beton Jaya Readymix",
 	      "item": "https://www.betonjayareadymix.com/"
 	    },
+			   /*
                {
                    "@type": "ListItem",
                    "position": 2,
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
+               },*/
                {
                    "@type": "ListItem",
-                   "position": 3,
+                   "position": 2,
                    "name": "Jasa Bongkar Bangunan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
                },
-			   /*
+			
                {
                    "@type": "ListItem",
-                   "position": 4,
+                   "position": 3,
                    "name": "Jasa Bongkar Tower",
                    "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-tower.html"
                },
-			   */
+			
                {
                    "@type": "ListItem",
                    "position": 4,
@@ -810,11 +1026,13 @@ if (urlMappingJasaBongkarTower[cleanUrlJasaKonsBongkarBangunanPost]) {
    }
 
 if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
-        restoreCondition('JasaKonsBongkarBangunanPost');
-	
-        restoreCondition('JasaBongkarBangunanPost');
-        //skip restoreCondition('JasaBongkarRumahPost');
-     
+	  // ============================================================
+    // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
+    // ============================================================
+    
+    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
+    removeCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
+        
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -839,7 +1057,7 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
 	
 	
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua hapus juga JasaBongkarRumahPost
-        removeCondition('JasaBongkarRumahPost');
+        //removeCondition('JasaBongkarRumahPost');
 	
         removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarBetonPost');
@@ -867,7 +1085,7 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaPerbaikanPlafonRusakPost');
         removeCondition('JasaPerbaikanDakBetonBocorPost');
         removeCondition('JasaPerbaikanTalangBocorPost');
-    
+    /*
         JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarBangunanPost
         JasaBongkarBangunanPostLink.style.visibility = 'visible';
@@ -875,7 +1093,47 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
 	//skip level 4 JasaBongkarRumahPostLink.style.visibility = 'visible';
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost];
+	*/
+	 // ============================================================
+    // 2. TAMPILKAN ELEMEN YANG DIPERLUKAN (RESTORE JIKA PERLU)
+    // ============================================================
+    
+    // Pastikan container utama visible
+    const container = document.getElementById('JasaKonsBongkarBangunanPost');
+    if (container) {
+        container.style.display = 'inline';
+        container.style.visibility = 'visible';
+     } else {
+        // Jika sudah di-remove, restore
+        restoreCondition('JasaKonsBongkarBangunanPost');
     }
+    
+    // Tampilkan Jasa Finishing (level 2)
+    let jasaVariable1 = document.getElementById('JasaBongkarBangunanPost');
+    if (jasaVariable1) {
+        jasaVariable1.style.display = 'inline';
+        jasaVariable1.style.visibility = 'visible';
+    } else {
+        // Jika sudah di-remove, restore
+        restoreCondition('JasaBongkarBangunanPost');
+    }
+    
+    // Tampilkan Jasa Finishing Dak Beton (parent terdekat)
+    let jasaVariable2 = document.getElementById('JasaBongkarRumahPost');
+    if (jasaVariable2) {
+        jasaVariable2.style.display = 'inline';
+        jasaVariable2.style.visibility = 'visible';
+    } else {
+        restoreCondition('JasaBongkarRumahPost');
+    }
+    
+    // Update page name
+    const pageNameElement = document.getElementById("pageNameJasaKonsBongkarBangunanPost");
+    if (pageNameElement) {
+        pageNameElement.textContent = urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost];
+        pageNameElement.style.display = 'inline';
+    }
+}
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
    if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
        const jsonLDBreadcrumb = {
@@ -888,26 +1146,25 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
 	      "name": "Beton Jaya Readymix",
 	      "item": "https://www.betonjayareadymix.com/"
 	    },
+			   /*
                {
                    "@type": "ListItem",
                    "position": 2,
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },*/
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Bongkar Bangunan",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
                },
                {
                    "@type": "ListItem",
                    "position": 3,
-                   "name": "Jasa Bongkar Bangunan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
-               },
-			   /*
-               {
-                   "@type": "ListItem",
-                   "position": 4,
                    "name": "Jasa Bongkar Rumah",
                    "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html"
                },
-			   */
                {
                    "@type": "ListItem",
                    "position": 4,
@@ -923,12 +1180,14 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
        document.head.appendChild(script);
    }
 	
-    if (urlMappingJasaBongkarBeton[cleanUrlJasaKonsBongkarBangunanPost]) {
-        restoreCondition('JasaKonsBongkarBangunanPost');
-	
-        restoreCondition('JasaBongkarBangunanPost');
-        // skip level 4 restoreCondition('JasaBongkarBetonPost');
-     
+if (urlMappingJasaBongkarBeton[cleanUrlJasaKonsBongkarBangunanPost]) {
+	   // ============================================================
+    // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
+    // ============================================================
+    
+    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
+    removeCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
+
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -978,7 +1237,8 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
         removeCondition('JasaPerbaikanPlafonRusakPost');
         removeCondition('JasaPerbaikanDakBetonBocorPost');
         removeCondition('JasaPerbaikanTalangBocorPost');
-    
+
+	 /*
         JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaBongkarBangunanPost
         JasaBongkarBangunanPostLink.style.visibility = 'visible';
@@ -986,7 +1246,47 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
 	//skip level 4 JasaBongkarBetonPostLink.style.visibility = 'visible';
 	
 	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarBeton[cleanUrlJasaKonsBongkarBangunanPost];
+	*/
+	 // ============================================================
+    // 2. TAMPILKAN ELEMEN YANG DIPERLUKAN (RESTORE JIKA PERLU)
+    // ============================================================
+    
+    // Pastikan container utama visible
+    const container = document.getElementById('JasaKonsBongkarBangunanPost');
+    if (container) {
+        container.style.display = 'inline';
+        container.style.visibility = 'visible';
+     } else {
+        // Jika sudah di-remove, restore
+        restoreCondition('JasaKonsBongkarBangunanPost');
     }
+    
+    // Tampilkan Jasa Finishing (level 2)
+    let jasaVariable1 = document.getElementById('JasaBongkarBangunanPost');
+    if (jasaVariable1) {
+        jasaVariable1.style.display = 'inline';
+        jasaVariable1.style.visibility = 'visible';
+    } else {
+        // Jika sudah di-remove, restore
+        restoreCondition('JasaBongkarBangunanPost');
+    }
+    
+    // Tampilkan Jasa Finishing Dak Beton (parent terdekat)
+    let jasaVariable2 = document.getElementById('JasaBongkarBetonPost');
+    if (jasaVariable2) {
+        jasaVariable2.style.display = 'inline';
+        jasaVariable2.style.visibility = 'visible';
+    } else {
+        restoreCondition('JasaBongkarBetonPost');
+    }
+    
+    // Update page name
+    const pageNameElement = document.getElementById("pageNameJasaKonsBongkarBangunanPost");
+    if (pageNameElement) {
+        pageNameElement.textContent = urlMappingJasaBongkarBeton[cleanUrlJasaKonsBongkarBangunanPost];
+        pageNameElement.style.display = 'inline';
+    }
+}
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
    if (urlMappingJasaBongkarBeton[cleanUrlJasaKonsBongkarBangunanPost]) {
        const jsonLDBreadcrumb = {
@@ -999,25 +1299,26 @@ if (urlMappingJasaBongkarRumah[cleanUrlJasaKonsBongkarBangunanPost]) {
 	      "name": "Beton Jaya Readymix",
 	      "item": "https://www.betonjayareadymix.com/"
 	    },
+			   /*
                {
                    "@type": "ListItem",
                    "position": 2,
                    "name": "Jasa Konstruksi",
                    "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
                },
+			   */
                {
                    "@type": "ListItem",
-                   "position": 3,
+                   "position": 2,
                    "name": "Jasa Bongkar Bangunan",
                    "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html"
                },
-			   /*
                {
                    "@type": "ListItem",
-                   "position": 4,
+                   "position": 3,
                    "name": "Jasa Bongkar Beton",
                    "item": "https://www.betonjayareadymix.com/p/jasa-bongkar-beton.html"
-               },*/
+               },
                {
                    "@type": "ListItem",
                    "position": 4,
