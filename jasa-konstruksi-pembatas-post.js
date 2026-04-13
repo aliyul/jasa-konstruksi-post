@@ -36,27 +36,76 @@ const urlMappingPembuatanPagarDinding = {
 
 };
 */
-//SUB urlMappingPembuatanPagarDinding
-const urlMappingJasaPagarBetonPrecast = {
+// ============================================================
+// JASA PEMBUATAN PAGAR DINDING PEMBATAS (SUB2)
+// ============================================================
 
+const urlMappingJasaPagarBetonPrecast = {
+  // ============================================================
+  // SARAN ITEM BARU - JASA PAGAR BETON PRECAST
+  // Status: [VARIANT - POST] di bawah Jasa Pembuatan Pagar Dinding Pembatas
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Beton Precast
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-beton-precast.html": "Jasa Pagar Beton Precast",
+  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-beton-precast.html": "Harga Pagar Beton Precast [MONEY PAGE]",
 };
+
 const urlMappingJasaPagarPanelBeton = {
- "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton.html": "Jasa Pasang Pagar Panel Beton",
- "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton",
+  // ============================================================
+  // [MONEY PAGE] - MASTER HARGA
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pasang Pagar Panel Beton
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/09/harga-pasang-pagar-panel-beton.html": "Harga Pasang Pagar Panel Beton [MONEY PAGE]",
+  "https://www.betonjayareadymix.com/2018/09/biaya-pasang-pagar-panel-beton.html": "Biaya Pasang Pagar Panel Beton [MONEY PAGE]",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton [MONEY PAGE]",
+
+  // ============================================================
+  // [VARIANT - POST] - JASA PASANG PAGAR PANEL BETON
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton.html": "Jasa Pasang Pagar Panel Beton",
   "https://www.betonjayareadymix.com/2018/09/pagar-panel-beton-terpasang.html": "Pagar Panel Beton Terpasang",
-  "https://www.betonjayareadymix.com/2018/09/harga-pasang-pagar-panel-beton.html": "Harga Pasang Pagar Panel Beton",
-  "https://www.betonjayareadymix.com/2018/09/biaya-pasang-pagar-panel-beton.html": "Biaya Pasang Pagar Panel Beton",
-"https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-perumahan.html": "Jasa Pasang Pagar Panel Beton Perumahan",
+
+  // ============================================================
+  // [VARIANT - POST] - LOKASI (JABODETABEK)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton Jakarta
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-jakarta.html": "Jasa Pasang Pagar Panel Beton Jakarta",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bogor.html": "Jasa Pasang Pagar Panel Beton Bogor",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-depok.html": "Jasa Pasang Pagar Panel Beton Depok",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-tangerang.html": "Jasa Pasang Pagar Panel Beton Tangerang",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bekasi.html": "Jasa Pasang Pagar Panel Beton Bekasi",
+
+  // ============================================================
+  // [VARIANT - POST] - LOKASI (JAWA BARAT)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton Bandung
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bandung.html": "Jasa Pasang Pagar Panel Beton Bandung",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-karawang.html": "Jasa Pasang Pagar Panel Beton Karawang",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-cianjur.html": "Jasa Pasang Pagar Panel Beton Cianjur",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-cirebon.html": "Jasa Pasang Pagar Panel Beton Cirebon",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-ciamis.html": "Jasa Pasang Pagar Panel Beton Ciamis",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-kuningan.html": "Jasa Pasang Pagar Panel Beton Kuningan",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-indramayu.html": "Jasa Pasang Pagar Panel Beton Indramayu",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-majalengka.html": "Jasa Pasang Pagar Panel Beton Majalengka",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-tasikmalaya.html": "Jasa Pasang Pagar Panel Beton Tasikmalaya",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-purwakarta.html": "Jasa Pasang Pagar Panel Beton Purwakarta",
+
+  // ============================================================
+  // [VARIANT - POST] - APLIKASI KHUSUS
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton Pabrik
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-perumahan.html": "Jasa Pasang Pagar Panel Beton Perumahan",
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pabrik.html": "Jasa Pasang Pagar Panel Beton Pabrik",
-    "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-gudang.html": "Jasa Pasang Pagar Panel Beton Gudang",
-    "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-lahan-kosong.html": "Jasa Pasang Pagar Panel Beton Lahan Kosong",
-    "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-kandang-ternak.html": "Jasa Pasang Pagar Panel Beton Kandang Ternak",
-    "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pertambangan.html": "Jasa Pasang Pagar Panel Beton Pertambangan",
-    "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-sekolah.html": "Jasa Pasang Pagar Panel Beton Sekolah",
-    "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-rumah-sakit.html": "Jasa Pasang Pagar Panel Beton Rumah Sakit",
-    "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tempat-ibadah.html": "Jasa Pasang Pagar Panel Beton Tempat Ibadah",
-    "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pembatas-lahan.html": "Jasa Pasang Pagar Panel Beton Pembatas Lahan",
-    "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-keamanan.html": "Jasa Pasang Pagar Panel Beton Keamanan",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-gudang.html": "Jasa Pasang Pagar Panel Beton Gudang",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-lahan-kosong.html": "Jasa Pasang Pagar Panel Beton Lahan Kosong",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-kandang-ternak.html": "Jasa Pasang Pagar Panel Beton Kandang Ternak",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pertambangan.html": "Jasa Pasang Pagar Panel Beton Pertambangan",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-sekolah.html": "Jasa Pasang Pagar Panel Beton Sekolah",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-rumah-sakit.html": "Jasa Pasang Pagar Panel Beton Rumah Sakit",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tempat-ibadah.html": "Jasa Pasang Pagar Panel Beton Tempat Ibadah",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pembatas-lahan.html": "Jasa Pasang Pagar Panel Beton Pembatas Lahan",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-keamanan.html": "Jasa Pasang Pagar Panel Beton Keamanan",
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-kedap-suara.html": "Jasa Pasang Pagar Panel Beton Kedap Suara",
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tahan-lama.html": "Jasa Pasang Pagar Panel Beton Tahan Lama",
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-cepat-dipasang.html": "Jasa Pasang Pagar Panel Beton Cepat Dipasang",
@@ -65,54 +114,90 @@ const urlMappingJasaPagarPanelBeton = {
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-polosan.html": "Jasa Pasang Pagar Panel Beton Polosan",
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-custom.html": "Jasa Pasang Pagar Panel Beton Custom",
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tinggi.html": "Jasa Pasang Pagar Panel Beton Tinggi",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-rendah.html": "Jasa Pasang Pagar Panel Beton Rendah",
-	
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-jakarta.html": "Jasa Pasang Pagar Panel Beton Jakarta",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bogor.html": "Jasa Pasang Pagar Panel Beton Bogor",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bekasi.html": "Jasa Pasang Pagar Panel Beton Bekasi",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-depok.html": "Jasa Pasang Pagar Panel Beton Depok",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-tangerang.html": "Jasa Pasang Pagar Panel Beton Tangerang",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-karawang.html": "Jasa Pasang Pagar Panel Beton Karawang",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-cianjur.html": "Jasa Pasang Pagar Panel Beton Cianjur",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-cirebon.html": "Jasa Pasang Pagar Panel Beton Cirebon",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-ciamis.html": "Jasa Pasang Pagar Panel Beton Ciamis",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-kuningan.html": "Jasa Pasang Pagar Panel Beton Kuningan",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bandung.html": "Jasa Pasang Pagar Panel Beton Bandung",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-indramayu.html": "Jasa Pasang Pagar Panel Beton Indramayu",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-majalengka.html": "Jasa Pasang Pagar Panel Beton Majalengka",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-tasikmalaya.html": "Jasa Pasang Pagar Panel Beton Tasikmalaya",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-purwakarta.html": "Jasa Pasang Pagar Panel Beton Purwakarta",
-	
-    
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-rendah.html": "Jasa Pasang Pagar Panel Beton Rendah"
 };
+
 const urlMappingJasaPagarBesi = {
- "https://www.betonjayareadymix.com/2018/11/harga-pagar-besi-ulir.html": "Harga Pagar Besi Ulir"
-
+  // ============================================================
+  // [MONEY PAGE] - HARGA PAGAR BESI
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pagar Besi Ulir
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/11/harga-pagar-besi-ulir.html": "Harga Pagar Besi Ulir [MONEY PAGE]",
+  
+  // ============================================================
+  // SARAN ITEM BARU - JASA PAGAR BESI
+  // Status: [VARIANT - POST] di bawah Jasa Pembuatan Pagar Dinding Pembatas
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Besi
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-besi.html": "Jasa Pagar Besi",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pasang-pagar-besi.html": "Jasa Pasang Pagar Besi",
 };
+
 const urlMappingJasaDindingBata = {
-
+  // ============================================================
+  // SARAN ITEM BARU - JASA DINDING BATA
+  // Status: [VARIANT - POST] di bawah Jasa Pembuatan Pagar Dinding Pembatas
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Dinding Bata
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/jasa-dinding-bata.html": "Jasa Dinding Bata",
+  // "https://www.betonjayareadymix.com/2019/08/harga-dinding-bata-per-m2.html": "Harga Dinding Bata per M2 [MONEY PAGE]",
 };
+
 const urlMappingJasaPagarKawat = {
-
+  // ============================================================
+  // SARAN ITEM BARU - JASA PAGAR KAWAT
+  // Status: [VARIANT - POST] di bawah Jasa Pembuatan Pagar Dinding Pembatas
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Kawat
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-kawat.html": "Jasa Pagar Kawat",
+  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-kawat-per-meter.html": "Harga Pagar Kawat per Meter [MONEY PAGE]",
 };
+
 const urlMappingJasaPagarBRC = {
-
+  // ============================================================
+  // SARAN ITEM BARU - JASA PAGAR BRC
+  // Status: [VARIANT - POST] di bawah Jasa Pembuatan Pagar Dinding Pembatas
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar BRC
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-brc.html": "Jasa Pagar BRC",
+  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-brc-per-meter.html": "Harga Pagar BRC per Meter [MONEY PAGE]",
 };
+
 const urlMappingJasaPagarRumah = {
-"https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah.html": "Jasa Pasang Pagar Rumah",
-"https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-terdekat.html": "Jasa Pasang Pagar Rumah Terdekat",
-    "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah.html": "Harga Jasa Pasang Pagar Rumah",
-    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-besi-beton-kayu.html": "Jasa Pasang Pagar Rumah Besi Beton Kayu",
-    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-minimalis-mewah.html": "Jasa Pasang Pagar Rumah Minimalis Mewah",
-    "https://www.betonjayareadymix.com/2018/11/biaya-jasa-pasang-pagar-rumah.html": "Biaya Jasa Pasang Pagar Rumah",
-    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-profesional.html": "Jasa Pasang Pagar Rumah Profesional",
-    "https://www.betonjayareadymix.com/2018/11/keunggulan-jasa-pasang-pagar-rumah.html": "Keunggulan Jasa Pasang Pagar Rumah",
-    "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-pondasi-kuat.html": "Jasa Pasang Pagar Rumah Pondasi Kuat",
-    "https://www.betonjayareadymix.com/2018/11/tukang-pasang-pagar-rumah.html": "Tukang Pasang Pagar Rumah"
- 
-};
-const urlMappingJasaPagarBangunan = {
+  // ============================================================
+  // [MONEY PAGE] - HARGA & BIAYA
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Jasa Pasang Pagar Rumah
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah.html": "Harga Jasa Pasang Pagar Rumah [MONEY PAGE]",
+  "https://www.betonjayareadymix.com/2018/11/biaya-jasa-pasang-pagar-rumah.html": "Biaya Jasa Pasang Pagar Rumah [MONEY PAGE]",
 
+  // ============================================================
+  // [VARIANT - POST] - JASA PASANG PAGAR RUMAH
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Rumah
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah.html": "Jasa Pasang Pagar Rumah",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-terdekat.html": "Jasa Pasang Pagar Rumah Terdekat",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-besi-beton-kayu.html": "Jasa Pasang Pagar Rumah Besi Beton Kayu",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-minimalis-mewah.html": "Jasa Pasang Pagar Rumah Minimalis Mewah",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-profesional.html": "Jasa Pasang Pagar Rumah Profesional",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-pondasi-kuat.html": "Jasa Pasang Pagar Rumah Pondasi Kuat",
+  
+  // ============================================================
+  // [SUB1] - PANDUAN / BRIDGE
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Keunggulan Jasa Pasang Pagar Rumah
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/11/keunggulan-jasa-pasang-pagar-rumah.html": "Keunggulan Jasa Pasang Pagar Rumah",
+  "https://www.betonjayareadymix.com/2018/11/tukang-pasang-pagar-rumah.html": "Tukang Pasang Pagar Rumah"
+};
+
+const urlMappingJasaPagarBangunan = {
+  // ============================================================
+  // SARAN ITEM BARU - JASA PAGAR BANGUNAN (GEDUNG/KOMERSIAL)
+  // Status: [VARIANT - POST] di bawah Jasa Pembuatan Pagar Dinding Pembatas
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Bangunan
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-bangunan.html": "Jasa Pagar Bangunan",
+  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-bangunan-per-meter.html": "Harga Pagar Bangunan per Meter [MONEY PAGE]",
 };
 
 /*const urlMappingPengamananSisiJalan = {
