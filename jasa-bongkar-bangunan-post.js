@@ -1213,7 +1213,7 @@ if (urlMappingJasaBongkarBeton[cleanUrlJasaKonsBongkarBangunanPost]) {
 	removeCondition('JasaBuangPuingPost');
 		
         //hapus elemen SUB jasa JasaBongkarBangunanPost semua skip dg hapus JasaBongkarBetonPost
-	removeCondition('JasaBongkarBetonPost');
+	//removeCondition('JasaBongkarBetonPost');
 	removeCondition('JasaBongkarTowerPost');
         removeCondition('JasaBongkarRumahPost');
         removeCondition('JasaBongkarAtapPost');
