@@ -1,4 +1,4 @@
-
+/*
 const urlMappingJasaPondasiBangunan = {
 //"https://www.betonjayareadymix.com/p/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi",
 "https://www.betonjayareadymix.com/p/jasa-pondasi-cakar-ayam.html": "Jasa Pondasi Cakar Ayam",
@@ -37,6 +37,220 @@ const urlMappingJasaRetrofittingPondasi = {
   "https://www.betonjayareadymix.com/p/jasa-grouting-pondasi.html": "Jasa Grouting Pondasi"
 	
 };
+*/
+// ============================================================
+// JASA PONDASI BANGUNAN (VARIANT)
+// Parent: Jasa Pondasi & Perkuatan Tanah
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan
+// ============================================================
+
+const urlMappingJasaPondasiBangunan = {
+  // ============================================================
+  // [MONEY PAGE] - JASA BORONGAN PONDASI
+  // 🧠 STATUS: 404 - URL TIDAK DITEMUKAN
+  // 📌 SARAN: Buat halaman baru atau hapus dari const
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi [MONEY PAGE - 404]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA PONDASI CAKAR AYAM
+  // 🧠 STATUS: AKTIF (konten lengkap)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Pondasi Cakar Ayam
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pondasi-cakar-ayam.html": "Jasa Pondasi Cakar Ayam [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA PONDASI TAPAK
+  // 🧠 STATUS: AKTIF (konten lengkap)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Pondasi Tapak
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pondasi-tapak.html": "Jasa Pondasi Tapak [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA TIANG PANCANG
+  // 🧠 STATUS: PERLU DICEK KONTEN (belum ada URL yang dikonfirmasi)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Tiang Pancang
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html": "Jasa Tiang Pancang [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA PONDASI SUMURAN
+  // 🧠 STATUS: PERLU DICEK KONTEN (belum ada URL yang dikonfirmasi)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pondasi-sumuran.html": "Jasa Pondasi Sumuran [SUB-VARIANT]",
+
+  // ============================================================
+  // SARAN ITEM BARU
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-pondasi-cakar-ayam.html": "Harga Pondasi Cakar Ayam [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-pondasi-tapak.html": "Harga Pondasi Tapak [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-tiang-pancang.html": "Harga Tiang Pancang [MONEY PAGE]"
+};
+// ============================================================
+// JASA PEMADATAN & PERSIAPAN PONDASI (VARIANT)
+// Parent: Jasa Pondasi & Perkuatan Tanah
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pemadatan & Persiapan Pondasi
+// ============================================================
+
+const urlMappingJasaPemadatanPersiapanPondasi = {
+  // ============================================================
+  // [SUB-VARIANT] - JASA PEMADATAN PONDASI BANGUNAN
+  // 🧠 STATUS: PERLU DICEK KONTEN
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pemadatan & Persiapan Pondasi > Jasa Pemadatan Pondasi Bangunan
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pemadatan-pondasi-bangunan.html": "Jasa Pemadatan Pondasi Bangunan [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA CUT AND FILL PONDASI
+  // 🧠 STATUS: PERLU DICEK KONTEN
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pemadatan & Persiapan Pondasi > Jasa Cut and Fill Pondasi
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-cut-and-fill-pondasi.html": "Jasa Cut and Fill Pondasi [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA LEVELING TANAH PROYEK GEDUNG
+  // 🧠 STATUS: PERLU DICEK KONTEN
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pemadatan & Persiapan Pondasi > Jasa Leveling Tanah Proyek Gedung
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-leveling-tanah-proyek-gedung.html": "Jasa Leveling Tanah Proyek Gedung [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA PEMBERSIHAN LAHAN KONSTRUKSI
+  // 🧠 STATUS: PERLU DICEK KONTEN
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pemadatan & Persiapan Pondasi > Jasa Pembersihan Lahan Konstruksi
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pembersihan-lahan-konstruksi.html": "Jasa Pembersihan Lahan Konstruksi [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA UJI KEPADATAN TANAH PONDASI
+  // 🧠 STATUS: PERLU DICEK KONTEN
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pemadatan & Persiapan Pondasi > Jasa Uji Kepadatan Tanah Pondasi
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-uji-kepadatan-tanah-pondasi.html": "Jasa Uji Kepadatan Tanah Pondasi [SUB-VARIANT]",
+
+  // ============================================================
+  // SARAN ITEM BARU
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-pemadatan-tanah.html": "Harga Pemadatan Tanah [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pemadatan-tanah-untuk-pondasi.html": "Jasa Pemadatan Tanah untuk Pondasi [MONEY PAGE]"
+};
+// ============================================================
+// JASA PERKUATAN TANAH (VARIANT)
+// Parent: Jasa Pondasi & Perkuatan Tanah
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Perkuatan Tanah
+// ============================================================
+
+const urlMappingJasaPerkuatanTanah = {
+  // ============================================================
+  // [SUB-VARIANT] - JASA SOIL IMPROVEMENT
+  // 🧠 STATUS: PERLU DICEK KONTEN
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Perkuatan Tanah > Jasa Soil Improvement
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-soil-improvement.html": "Jasa Soil Improvement [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA PERKUATAN TANAH GEOTEXTILE
+  // 🧠 STATUS: PERLU DICEK KONTEN
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Perkuatan Tanah > Jasa Perkuatan Tanah Geotextile
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-geotextile.html": "Jasa Perkuatan Tanah Geotextile [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA PERKUATAN TANAH STONE COLUMN
+  // 🧠 STATUS: PERLU DICEK KONTEN
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Perkuatan Tanah > Jasa Perkuatan Tanah Stone Column
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-stone-column.html": "Jasa Perkuatan Tanah Stone Column [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA VERTICAL DRAIN
+  // 🧠 STATUS: PERLU DICEK KONTEN
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Perkuatan Tanah > Jasa Vertical Drain
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-vertical-drain.html": "Jasa Vertical Drain [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA SOIL NAILING
+  // 🧠 STATUS: PERLU DICEK KONTEN
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Perkuatan Tanah > Jasa Soil Nailing
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-soil-nailing.html": "Jasa Soil Nailing [SUB-VARIANT]",
+
+  // ============================================================
+  // SARAN ITEM BARU
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-soil-improvement.html": "Harga Soil Improvement [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-stone-column.html": "Harga Stone Column [MONEY PAGE]"
+};
+// ============================================================
+// JASA RETROFITTING PONDASI (VARIANT)
+// Parent: Jasa Pondasi & Perkuatan Tanah
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Retrofitting Pondasi
+// ============================================================
+
+const urlMappingJasaRetrofittingPondasi = {
+  // ============================================================
+  // [SUB-VARIANT] - JASA PERKUATAN PONDASI BANGUNAN LAMA
+  // 🧠 STATUS: PERLU DICEK KONTEN
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Retrofitting Pondasi > Jasa Perkuatan Pondasi Bangunan Lama
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-pondasi-bangunan-lama.html": "Jasa Perkuatan Pondasi Bangunan Lama [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA PONDASI UNTUK PENURUNAN TANAH
+  // 🧠 STATUS: PERLU DICEK KONTEN
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Retrofitting Pondasi > Jasa Pondasi Untuk Penurunan Tanah
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pondasi-untuk-penurunan-tanah.html": "Jasa Pondasi Untuk Penurunan Tanah [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA PERBAIKAN PONDASI PENURUNAN TANAH
+  // 🧠 STATUS: PERLU DICEK KONTEN
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Retrofitting Pondasi > Jasa Perbaikan Pondasi Penurunan Tanah
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-penurunan-tanah.html": "Jasa Perbaikan Pondasi Penurunan Tanah [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - RETROFITTING PONDASI PENAMBAHAN LANTAI
+  // 🧠 STATUS: KONTEN TIPIS (hanya breadcrumb, tidak ada konten utama)
+  // 📌 SARAN: Perbaiki konten atau redirect ke halaman yang lebih relevan
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Retrofitting Pondasi > Retrofitting Pondasi Penambahan Lantai
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/retrofitting-pondasi-penambahan-lantai.html": "Retrofitting Pondasi Penambahan Lantai [SUB-VARIANT - KONTEN TIPIS]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA UNDERPINNING PONDASI
+  // 🧠 STATUS: KONTEN TIPIS (hanya breadcrumb, tidak ada konten utama)
+  // 📌 SARAN: Perbaiki konten atau redirect ke halaman yang lebih relevan
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Retrofitting Pondasi > Jasa Underpinning Pondasi
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-underpinning-pondasi.html": "Jasa Underpinning Pondasi [SUB-VARIANT - KONTEN TIPIS]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA GROUTING PONDASI
+  // 🧠 STATUS: KONTEN TIPIS (hanya breadcrumb, tidak ada konten utama)
+  // 📌 SARAN: Perbaiki konten atau redirect ke halaman yang lebih relevan
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Retrofitting Pondasi > Jasa Grouting Pondasi
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-grouting-pondasi.html": "Jasa Grouting Pondasi [SUB-VARIANT - KONTEN TIPIS]",
+
+  // ============================================================
+  // SARAN ITEM BARU
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-retrofitting-pondasi.html": "Harga Retrofitting Pondasi [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-underpinning-pondasi.html": "Harga Underpinning Pondasi [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-grouting-pondasi.html": "Harga Grouting Pondasi [MONEY PAGE]"
+};
+/*
+🧠 SARAN BREADCRUMB 4 LEVEL (SKIP PILLAR JASA KONSTRUKSI)
+Halaman						Breadcrumb
+Jasa Pondasi Cakar Ayam		Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Pondasi Cakar Ayam
+Jasa Pondasi Tapak			Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Pondasi Tapak
+Jasa Soil Improvement		Home > Jasa Pondasi & Perkuatan Tanah > Jasa Perkuatan Tanah > Jasa Soil Improvement
+Jasa Underpinning Pondasi	Home > Jasa Pondasi & Perkuatan Tanah > Jasa Retrofitting Pondasi > Jasa Underpinning Pondasi
+
+*/
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasapondasiPerkuatanTanahKons = {};
