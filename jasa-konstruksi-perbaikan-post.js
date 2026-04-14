@@ -1591,11 +1591,11 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
 	// --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingJasaPerbaikanRetakStruktur,
+		//urlMappingJasaPerbaikanRetakStruktur,
 		//urlMappingJasaPenguatanStrukturBangunan,
 		//urlMappingJasaRenovasiStrukturBeton,
 		//urlMappingJasaPerkuatanStrukturBeton,
-		urlMappingJasaPerbaikanRetakBeton,
+		//urlMappingJasaPerbaikanRetakBeton,
 		//urlMappingJasaRepairStrukturBeton,
 		urlMappingJasaPerbaikanStrukturBeton,
 		//urlMappingJasaRenovasiPerbaikanRetakStruktur,
