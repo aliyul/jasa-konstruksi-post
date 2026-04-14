@@ -1528,10 +1528,10 @@ JASA RENOVASI (SUB2 - /p/jasa-renovasi.html)
 
 const urlMappingRenovasiBangunan = {
   // ============================================================
-  // [VARIANT] - JASA RENOVASI TEMPAT IBADAH
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Tempat Ibadah
+  // [VARIANT] - Jasa Renovasi Fasilitas Umum
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Fasilitas Umum
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat Ibadah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-umum.html": "Jasa Renovasi Fasilitas Umum",
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI PABRIK
@@ -1581,180 +1581,398 @@ const urlMappingRenovasiBangunan = {
 | Jasa Renovasi Ruko | /p/jasa-renovasi-ruko.html | [VARIANT] | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Ruko |
 | Harga Jasa Renovasi Bangunan | /2019/08/harga-renovasi-bangunan.html | [MONEY PAGE] | Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Bangunan |
 */
+
+/*
+JASA RENOVASI (SUB2 - /p/jasa-renovasi.html)
+│
+├── Jasa Renovasi Bangunan (VARIANT)
+│   │
+│   ├── Jasa Renovasi Tempat Ibadah (SUB-VARIANT)
+│   │   ├── Jasa Renovasi Masjid
+│   │   ├── Jasa Renovasi Gereja
+│   │   ├── Jasa Renovasi Pura
+│   │   ├── Jasa Renovasi Vihara
+│   │   └── Jasa Renovasi Klenteng
+│   │
+│   ├── Jasa Renovasi Pabrik (SUB-VARIANT)
+│   │   ├── Jasa Renovasi Pabrik Makanan
+│   │   ├── Jasa Renovasi Pabrik Tekstil
+│   │   └── Jasa Renovasi Pabrik Farmasi
+│   │
+│   └── Jasa Renovasi Rumah (SUB-VARIANT)
+│       ├── Jasa Renovasi Rumah Minimalis
+│       ├── Jasa Renovasi Rumah Type 36
+│       ├── Jasa Renovasi Rumah Type 45
+│       ├── Jasa Renovasi Rumah 2 Lantai
+│       ├── Jasa Renovasi Perbaikan Atap Rumah
+│       ├── Jasa Renovasi Dinding Rumah
+│       ├── Jasa Renovasi Kosmetik Rumah
+│       └── Jasa Renovasi Rumah Tumbuh
+│
+├── Jasa Renovasi Interior (VARIANT)
+│
+└── Jasa Renovasi Eksterior Bangunan (VARIANT)
+*/
 // ============================================================
-// JASA RENOVASI TEMPAT IBADAH
-// Parent: Jasa Renovasi Bangunan
+// SUB JASA RENOVASI TEMPAT IBADAH
+// Parent: Jasa Renovasi Bangunan (/p/jasa-renovasi-bangunan.html)
 // ============================================================
 
 const urlMappingRenovasiBangunanIbadah = {
   // ============================================================
-  // SARAN ITEM BARU
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Tempat Ibadah > [Nama Item]
+  // [SUB-VARIANT] - JASA RENOVASI MASJID
+  // 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Masjid
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-masjid.html": "Jasa Renovasi Masjid",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gereja.html": "Jasa Renovasi Gereja",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-pura.html": "Jasa Renovasi Pura",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-vihara.html": "Jasa Renovasi Vihara",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-klenteng.html": "Jasa Renovasi Klenteng",
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-masjid.html": "Harga Renovasi Masjid"
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-masjid.html": "Jasa Renovasi Masjid [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA RENOVASI GEREJA
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Gereja
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gereja.html": "Jasa Renovasi Gereja [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA RENOVASI PURA
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Pura
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-pura.html": "Jasa Renovasi Pura [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA RENOVASI VIHARA
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Vihara
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-vihara.html": "Jasa Renovasi Vihara [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA RENOVASI KLENTENG
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Klenteng
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-klenteng.html": "Jasa Renovasi Klenteng [SUB-VARIANT]",
+
+  // ============================================================
+  // [MONEY PAGE] - HARGA RENOVASI MASJID
+  // 🧠 STATUS: PERLU DIBUAT (POST)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Masjid
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-masjid.html": "Harga Renovasi Masjid [MONEY PAGE]"
 };
 // ============================================================
-// JASA RENOVASI PABRIK
-// Parent: Jasa Renovasi Bangunan
+// SUB JASA RENOVASI PABRIK
+// Parent: Jasa Renovasi Bangunan (/p/jasa-renovasi-bangunan.html)
 // ============================================================
 
 const urlMappingRenovasiBangunanPabrik = {
   // ============================================================
-  // SARAN ITEM BARU
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Pabrik > [Nama Item]
+  // [SUB-VARIANT] - JASA RENOVASI PABRIK MAKANAN
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Pabrik > Jasa Renovasi Pabrik Makanan
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik-makanan.html": "Jasa Renovasi Pabrik Makanan",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik-tekstil.html": "Jasa Renovasi Pabrik Tekstil",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik-farmasi.html": "Jasa Renovasi Pabrik Farmasi",
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-pabrik.html": "Harga Renovasi Pabrik"
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik-makanan.html": "Jasa Renovasi Pabrik Makanan [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA RENOVASI PABRIK TEKSTIL
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Pabrik > Jasa Renovasi Pabrik Tekstil
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik-tekstil.html": "Jasa Renovasi Pabrik Tekstil [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA RENOVASI PABRIK FARMASI
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Pabrik > Jasa Renovasi Pabrik Farmasi
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik-farmasi.html": "Jasa Renovasi Pabrik Farmasi [SUB-VARIANT]",
+
+  // ============================================================
+  // [MONEY PAGE] - HARGA RENOVASI PABRIK
+  // 🧠 STATUS: PERLU DIBUAT (POST)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Pabrik
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-pabrik.html": "Harga Renovasi Pabrik [MONEY PAGE]"
 };
 // ============================================================
-// JASA RENOVASI RUMAH (VARIANT) & TURUNANNYA
-// Parent: Jasa Renovasi Bangunan
+// SUB JASA RENOVASI RUMAH
+// Parent: Jasa Renovasi Bangunan (/p/jasa-renovasi-bangunan.html)
 // ============================================================
 
 const urlMappingRenovasiBangunanRumah = {
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI RUMAH MINIMALIS
+  // 🧠 STATUS: SUDAH ADA (PAGE)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Minimalis
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-minimalis.html": "Jasa Renovasi Rumah Minimalis",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-minimalis.html": "Jasa Renovasi Rumah Minimalis [SUB-VARIANT]",
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI RUMAH TYPE 36
+  // 🧠 STATUS: SUDAH ADA (PAGE)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Type 36
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-type-36.html": "Jasa Renovasi Rumah Type 36",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-type-36.html": "Jasa Renovasi Rumah Type 36 [SUB-VARIANT]",
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI RUMAH TYPE 45
+  // 🧠 STATUS: SUDAH ADA (PAGE)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Type 45
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-type-45.html": "Jasa Renovasi Rumah Type 45",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-type-45.html": "Jasa Renovasi Rumah Type 45 [SUB-VARIANT]",
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI RUMAH 2 LANTAI
+  // 🧠 STATUS: SUDAH ADA (PAGE)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah 2 Lantai
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-2-lantai.html": "Jasa Renovasi Rumah 2 Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-2-lantai.html": "Jasa Renovasi Rumah 2 Lantai [SUB-VARIANT]",
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI PERBAIKAN ATAP RUMAH
+  // 🧠 STATUS: SUDAH ADA (PAGE)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Perbaikan Atap Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-rumah.html": "Jasa Renovasi Perbaikan Atap Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-rumah.html": "Jasa Renovasi Perbaikan Atap Rumah [SUB-VARIANT]",
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI DINDING RUMAH
+  // 🧠 STATUS: SUDAH ADA (PAGE)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Dinding Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-rumah.html": "Jasa Renovasi Dinding Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-rumah.html": "Jasa Renovasi Dinding Rumah [SUB-VARIANT]",
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI KOSMETIK RUMAH
+  // 🧠 STATUS: SUDAH ADA (PAGE)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Kosmetik Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kosmetik-rumah.html": "Jasa Renovasi Kosmetik Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kosmetik-rumah.html": "Jasa Renovasi Kosmetik Rumah [SUB-VARIANT]",
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI RUMAH TUMBUH
+  // 🧠 STATUS: SUDAH ADA (PAGE)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Tumbuh
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-tumbuh.html": "Jasa Renovasi Rumah Tumbuh"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-tumbuh.html": "Jasa Renovasi Rumah Tumbuh [SUB-VARIANT]",
 
   // ============================================================
   // 🟡 CATATAN: URL LOKASI (Jakarta, Bogor, dll) DI-COMMENT
-  // Sebaiknya dibuat sebagai POST terpisah, bukan PAGE
+  // 🧠 STATUS: PERLU DIBUAT sebagai POST (bukan PAGE)
+  // Alasan: Konten lokasi lebih cocok sebagai POST dengan intent transaksional
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Rumah Jakarta [MONEY PAGE]
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-jakarta.html": "Jasa Renovasi Rumah Jakarta",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-bogor.html": "Jasa Renovasi Rumah Bogor",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-depok.html": "Jasa Renovasi Rumah Depok",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-tangerang.html": "Jasa Renovasi Rumah Tangerang",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-bekasi.html": "Jasa Renovasi Rumah Bekasi",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-karawang.html": "Jasa Renovasi Rumah Karawang",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-semarang.html": "Jasa Renovasi Rumah Semarang",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-jogja.html": "Jasa Renovasi Rumah Jogja",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-surabaya.html": "Jasa Renovasi Rumah Surabaya"
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-jakarta.html": "Jasa Renovasi Rumah Jakarta [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-bogor.html": "Jasa Renovasi Rumah Bogor [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-depok.html": "Jasa Renovasi Rumah Depok [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-tangerang.html": "Jasa Renovasi Rumah Tangerang [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-bekasi.html": "Jasa Renovasi Rumah Bekasi [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-karawang.html": "Jasa Renovasi Rumah Karawang [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-semarang.html": "Jasa Renovasi Rumah Semarang [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-jogja.html": "Jasa Renovasi Rumah Jogja [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-surabaya.html": "Jasa Renovasi Rumah Surabaya [MONEY PAGE]"
 };
-
 // ============================================================
 // 🟡 SARAN ITEM BARU - JASA RENOVASI RUMAH
 // ============================================================
 /*
-| Nama Halaman | URL Saran | Page Type | Breadcrumb (4 level) |
-|--------------|-----------|-----------|----------------------|
-| Harga Jasa Renovasi Rumah | /2019/08/harga-renovasi-rumah.html | [MONEY PAGE] | Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Rumah |
-| Jasa Renovasi Rumah Modern | /p/jasa-renovasi-rumah-modern.html | [SUB-VARIANT] | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Modern |
-| Jasa Renovasi Rumah Klasik | /p/jasa-renovasi-rumah-klasik.html | [SUB-VARIANT] | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Klasik |
-| Jasa Renovasi Rumah Subsidi | /p/jasa-renovasi-rumah-subsidi.html | [SUB-VARIANT] | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Subsidi |
+📌 SARAN ITEM BARU (TAMBAHKAN JIKA KONTEN TERSEDIA):
+
+| Nama Halaman | URL Saran | Page Type | Status | Breadcrumb (4 level) |
+|--------------|-----------|-----------|--------|----------------------|
+| Harga Jasa Renovasi Rumah | /2019/08/harga-renovasi-rumah.html | [MONEY PAGE] | PERLU DIBUAT | Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Rumah |
+| Jasa Renovasi Rumah Modern | /p/jasa-renovasi-rumah-modern.html | [SUB-VARIANT] | PERLU DIBUAT | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Modern |
+| Jasa Renovasi Rumah Klasik | /p/jasa-renovasi-rumah-klasik.html | [SUB-VARIANT] | PERLU DIBUAT | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Klasik |
+| Jasa Renovasi Rumah Subsidi | /p/jasa-renovasi-rumah-subsidi.html | [SUB-VARIANT] | PERLU DIBUAT | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Subsidi |
+
+📌 CATATAN UNTUK URL LOKASI:
+- URL lokasi (Jakarta, Bogor, dll) sebaiknya dibuat sebagai [MONEY PAGE] dengan format POST
+- Breadcrumb cukup 4 level: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Rumah Jakarta
+- Tidak perlu menyertakan semua level hierarki (Bangunan > Rumah) karena akan membuat breadcrumb terlalu panjang
 */
+
+/*JASA RENOVASI (SUB2 - /p/jasa-renovasi.html)
+│
+└── Jasa Renovasi Bangunan (VARIANT - /p/jasa-renovasi-bangunan.html)
+    │
+    ├── Jasa Renovasi Kantor (SUB-VARIANT)
+    │   ├── Jasa Renovasi Kantor Modern
+    │   ├── Jasa Renovasi Ruang Kerja
+    │   ├── Jasa Renovasi Lobby Kantor
+    │   └── Harga Renovasi Kantor
+    │
+    ├── Jasa Renovasi Gedung (SUB-VARIANT)
+    │   ├── Jasa Renovasi Gedung Perkantoran
+    │   ├── Jasa Renovasi Gedung Pemerintah
+    │   ├── Jasa Renovasi Gedung Komersial
+    │   └── Harga Renovasi Gedung
+    │
+    ├── Jasa Renovasi Gudang (SUB-VARIANT)
+    │   ├── Jasa Renovasi Gudang Logistik
+    │   ├── Jasa Renovasi Gudang Penyimpanan
+    │   ├── Jasa Renovasi Gudang Dingin
+    │   └── Harga Renovasi Gudang
+    │
+    └── Jasa Renovasi Hotel Apartemen (SUB-VARIANT)
+        ├── Jasa Renovasi Hotel Bintang 5
+        ├── Jasa Renovasi Hotel Melati
+        ├── Jasa Renovasi Apartemen Studio
+        ├── Jasa Renovasi Apartemen 2 Kamar
+        ├── Harga Renovasi Hotel
+        └── Harga Renovasi Apartemen
+		*/
 // ============================================================
-// JASA RENOVASI KANTOR
-// Parent: Jasa Renovasi Bangunan
+// SUB JASA RENOVASI KANTOR
+// Parent: Jasa Renovasi Bangunan (/p/jasa-renovasi-bangunan.html)
 // ============================================================
 
 const urlMappingRenovasiBangunanKantor = {
   // ============================================================
-  // SARAN ITEM BARU
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Kantor > [Nama Item]
+  // [SUB-VARIANT] - JASA RENOVASI KANTOR MODERN
+  // 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Kantor > Jasa Renovasi Kantor Modern
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-kantor-modern.html": "Jasa Renovasi Kantor Modern",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-kerja.html": "Jasa Renovasi Ruang Kerja",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-lobby-kantor.html": "Jasa Renovasi Lobby Kantor",
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-kantor.html": "Harga Renovasi Kantor"
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-kantor-modern.html": "Jasa Renovasi Kantor Modern [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA RENOVASI RUANG KERJA
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Kantor > Jasa Renovasi Ruang Kerja
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-kerja.html": "Jasa Renovasi Ruang Kerja [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA RENOVASI LOBBY KANTOR
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Kantor > Jasa Renovasi Lobby Kantor
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-lobby-kantor.html": "Jasa Renovasi Lobby Kantor [SUB-VARIANT]",
+
+  // ============================================================
+  // [MONEY PAGE] - HARGA RENOVASI KANTOR
+  // 🧠 STATUS: PERLU DIBUAT (POST)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Kantor
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-kantor.html": "Harga Renovasi Kantor [MONEY PAGE]"
 };
 // ============================================================
-// JASA RENOVASI GEDUNG
-// Parent: Jasa Renovasi Bangunan
+// SUB JASA RENOVASI GEDUNG
+// Parent: Jasa Renovasi Bangunan (/p/jasa-renovasi-bangunan.html)
 // ============================================================
 
 const urlMappingRenovasiBangunanGedung = {
   // ============================================================
-  // SARAN ITEM BARU
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gedung > [Nama Item]
+  // [SUB-VARIANT] - JASA RENOVASI GEDUNG PERKANTORAN
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gedung > Jasa Renovasi Gedung Perkantoran
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung-perkantoran.html": "Jasa Renovasi Gedung Perkantoran",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung-pemerintah.html": "Jasa Renovasi Gedung Pemerintah",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung-komersial.html": "Jasa Renovasi Gedung Komersial",
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-gedung.html": "Harga Renovasi Gedung"
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung-perkantoran.html": "Jasa Renovasi Gedung Perkantoran [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA RENOVASI GEDUNG PEMERINTAH
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gedung > Jasa Renovasi Gedung Pemerintah
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung-pemerintah.html": "Jasa Renovasi Gedung Pemerintah [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA RENOVASI GEDUNG KOMERSIAL
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gedung > Jasa Renovasi Gedung Komersial
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung-komersial.html": "Jasa Renovasi Gedung Komersial [SUB-VARIANT]",
+
+  // ============================================================
+  // [MONEY PAGE] - HARGA RENOVASI GEDUNG
+  // 🧠 STATUS: PERLU DIBUAT (POST)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Gedung
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-gedung.html": "Harga Renovasi Gedung [MONEY PAGE]"
 };
 // ============================================================
-// JASA RENOVASI GUDANG
-// Parent: Jasa Renovasi Bangunan
+// SUB JASA RENOVASI GUDANG
+// Parent: Jasa Renovasi Bangunan (/p/jasa-renovasi-bangunan.html)
 // ============================================================
 
 const urlMappingRenovasiBangunanGudang = {
   // ============================================================
-  // SARAN ITEM BARU
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gudang > [Nama Item]
+  // [SUB-VARIANT] - JASA RENOVASI GUDANG LOGISTIK
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gudang > Jasa Renovasi Gudang Logistik
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gudang-logistik.html": "Jasa Renovasi Gudang Logistik",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gudang-penyimpanan.html": "Jasa Renovasi Gudang Penyimpanan",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gudang-dingin.html": "Jasa Renovasi Gudang Dingin",
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-gudang.html": "Harga Renovasi Gudang"
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gudang-logistik.html": "Jasa Renovasi Gudang Logistik [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA RENOVASI GUDANG PENYIMPANAN
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gudang > Jasa Renovasi Gudang Penyimpanan
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gudang-penyimpanan.html": "Jasa Renovasi Gudang Penyimpanan [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA RENOVASI GUDANG DINGIN
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gudang > Jasa Renovasi Gudang Dingin
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gudang-dingin.html": "Jasa Renovasi Gudang Dingin [SUB-VARIANT]",
+
+  // ============================================================
+  // [MONEY PAGE] - HARGA RENOVASI GUDANG
+  // 🧠 STATUS: PERLU DIBUAT (POST)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Gudang
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-gudang.html": "Harga Renovasi Gudang [MONEY PAGE]"
 };
 // ============================================================
-// JASA RENOVASI HOTEL APARTEMEN
-// Parent: Jasa Renovasi Bangunan
+// SUB JASA RENOVASI HOTEL APARTEMEN
+// Parent: Jasa Renovasi Bangunan (/p/jasa-renovasi-bangunan.html)
 // ============================================================
 
 const urlMappingRenovasiBangunanHotel = {
   // ============================================================
-  // SARAN ITEM BARU
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Hotel Apartemen > [Nama Item]
+  // [SUB-VARIANT] - JASA RENOVASI HOTEL BINTANG 5
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Hotel Apartemen > Jasa Renovasi Hotel Bintang 5
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-bintang-5.html": "Jasa Renovasi Hotel Bintang 5",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-melati.html": "Jasa Renovasi Hotel Melati",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-apartemen-studio.html": "Jasa Renovasi Apartemen Studio",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-apartemen-2-kamar.html": "Jasa Renovasi Apartemen 2 Kamar",
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-hotel.html": "Harga Renovasi Hotel",
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-apartemen.html": "Harga Renovasi Apartemen"
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-bintang-5.html": "Jasa Renovasi Hotel Bintang 5 [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA RENOVASI HOTEL MELATI
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Hotel Apartemen > Jasa Renovasi Hotel Melati
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-melati.html": "Jasa Renovasi Hotel Melati [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA RENOVASI APARTEMEN STUDIO
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Hotel Apartemen > Jasa Renovasi Apartemen Studio
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-apartemen-studio.html": "Jasa Renovasi Apartemen Studio [SUB-VARIANT]",
+
+  // ============================================================
+  // [SUB-VARIANT] - JASA RENOVASI APARTEMEN 2 KAMAR
+  // 🧠 STATUS: PERLU DIBUAT
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Hotel Apartemen > Jasa Renovasi Apartemen 2 Kamar
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-apartemen-2-kamar.html": "Jasa Renovasi Apartemen 2 Kamar [SUB-VARIANT]",
+
+  // ============================================================
+  // [MONEY PAGE] - HARGA RENOVASI HOTEL
+  // 🧠 STATUS: PERLU DIBUAT (POST)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Hotel
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-hotel.html": "Harga Renovasi Hotel [MONEY PAGE]",
+
+  // ============================================================
+  // [MONEY PAGE] - HARGA RENOVASI APARTEMEN
+  // 🧠 STATUS: PERLU DIBUAT (POST)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Apartemen
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-apartemen.html": "Harga Renovasi Apartemen [MONEY PAGE]"
 };
+
 
 /*
 JASA RENOVASI FASILITAS UMUM (SUB2 - /p/jasa-renovasi-fasilitas-umum.html)
