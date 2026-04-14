@@ -191,20 +191,88 @@ const urlMappingPerbaikanStrukturBangunanTua = {
 };
 
 // ============================================================
+// JASA PERBAIKAN GEDUNG BERTINGKAT
+// Parent: Jasa Perbaikan Struktur
+// ============================================================
+
+const urlMappingPerbaikanStrukturGedungBertingkat = {
+  // ============================================================
+  // [VARIANT] - JASA PERBAIKAN GEDUNG BERTINGKAT
+  // 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Gedung Bertingkat
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-gedung-bertingkat.html": "Jasa Perbaikan Gedung Bertingkat [VARIANT]",
+  
+  // ============================================================
+  // [SUB-VARIANT] - JASA PERKUATAN GEDUNG BERTINGKAT
+  // 🧠 STATUS: PERLU DIBUAT (opsional, jika diperlukan)
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Gedung Bertingkat > Jasa Perkuatan Gedung Bertingkat
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-perkuatan-gedung-bertingkat.html": "Jasa Perkuatan Gedung Bertingkat [SUB-VARIANT]",
+  
+  // ============================================================
+  // [MONEY PAGE] - HARGA PERBAIKAN GEDUNG BERTINGKAT
+  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Gedung Bertingkat > Harga Perbaikan Gedung Bertingkat
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-gedung-bertingkat.html": "Harga Perbaikan Gedung Bertingkat [MONEY PAGE]"
+};
+
+// ============================================================
+// JASA PERBAIKAN STRUKTUR BANGUNAN TUA
+// Parent: Jasa Perbaikan Struktur
+// ============================================================
+
+const urlMappingPerbaikanStrukturBangunanTua = {
+  // ============================================================
+  // [VARIANT] - JASA PERBAIKAN STRUKTUR BANGUNAN TUA
+  // 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Tua
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-tua.html": "Jasa Perbaikan Struktur Bangunan Tua [VARIANT]",
+  
+  // ============================================================
+  // [SUB-VARIANT] - JASA RESTORASI BANGUNAN TUA
+  // 🧠 STATUS: PERLU DIBUAT (opsional, jika diperlukan)
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Tua > Jasa Restorasi Bangunan Tua
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-restorasi-bangunan-tua.html": "Jasa Restorasi Bangunan Tua [SUB-VARIANT]",
+  
+  // ============================================================
+  // [MONEY PAGE] - HARGA PERBAIKAN BANGUNAN TUA
+  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Tua > Harga Perbaikan Bangunan Tua
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-bangunan-tua.html": "Harga Perbaikan Bangunan Tua [MONEY PAGE]"
+};
+
+// ============================================================
 // JASA PERBAIKAN STRUKTUR BANGUNAN MIRING
 // Parent: Jasa Perbaikan Struktur
 // ============================================================
 
 const urlMappingPerbaikanStrukturBangunanMiring = {
   // ============================================================
-  // SARAN ITEM BARU
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Miring > [Nama Item]
+  // [VARIANT] - JASA PERBAIKAN STRUKTUR BANGUNAN MIRING
+  // 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Miring
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-miring.html": "Jasa Perbaikan Struktur Bangunan Miring",
-  // "https://www.betonjayareadymix.com/p/jasa-straightening-bangunan-miring.html": "Jasa Straightening Bangunan Miring",
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-bangunan-miring.html": "Harga Perbaikan Bangunan Miring"
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-miring.html": "Jasa Perbaikan Struktur Bangunan Miring [VARIANT]",
+  
+  // ============================================================
+  // [SUB-VARIANT] - JASA STRAIGHTENING BANGUNAN MIRING
+  // 🧠 STATUS: PERLU DIBUAT (opsional, jika diperlukan)
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Miring > Jasa Straightening Bangunan Miring
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-straightening-bangunan-miring.html": "Jasa Straightening Bangunan Miring [SUB-VARIANT]",
+  
+  // ============================================================
+  // [MONEY PAGE] - HARGA PERBAIKAN BANGUNAN MIRING
+  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Miring > Harga Perbaikan Bangunan Miring
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-bangunan-miring.html": "Harga Perbaikan Bangunan Miring [MONEY PAGE]"
 };
-
 
 // ============================================================
 // JASA PERBAIKAN KOLOM & BALOK
