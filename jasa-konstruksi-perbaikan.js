@@ -167,36 +167,6 @@ const urlMappingPerbaikanStrukturUmum = {
 
 const urlMappingPerbaikanStrukturGedungBertingkat = {
   // ============================================================
-  // SARAN ITEM BARU
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Gedung Bertingkat > [Nama Item]
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-gedung-bertingkat.html": "Jasa Perbaikan Gedung Bertingkat",
-  // "https://www.betonjayareadymix.com/p/jasa-perkuatan-gedung-bertingkat.html": "Jasa Perkuatan Gedung Bertingkat",
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-gedung-bertingkat.html": "Harga Perbaikan Gedung Bertingkat"
-};
-
-// ============================================================
-// JASA PERBAIKAN STRUKTUR BANGUNAN TUA
-// Parent: Jasa Perbaikan Struktur
-// ============================================================
-
-const urlMappingPerbaikanStrukturBangunanTua = {
-  // ============================================================
-  // SARAN ITEM BARU
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Tua > [Nama Item]
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-tua.html": "Jasa Perbaikan Struktur Bangunan Tua",
-  // "https://www.betonjayareadymix.com/p/jasa-restorasi-bangunan-tua.html": "Jasa Restorasi Bangunan Tua",
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-bangunan-tua.html": "Harga Perbaikan Bangunan Tua"
-};
-
-// ============================================================
-// JASA PERBAIKAN GEDUNG BERTINGKAT
-// Parent: Jasa Perbaikan Struktur
-// ============================================================
-
-const urlMappingPerbaikanStrukturGedungBertingkat = {
-  // ============================================================
   // [VARIANT] - JASA PERBAIKAN GEDUNG BERTINGKAT
   // 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Gedung Bertingkat
