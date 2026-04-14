@@ -1,62 +1,127 @@
-// sub jasa-perkuatan-tanah-longsor-post
+// ============================================================
+// JASA PERKUATAN TANAH LONGSOR (SUB2)
+// Parent: Jasa Konstruksi > Jasa Perkuatan Tanah Longsor
+// ============================================================
+
+// ============================================================
+// [VARIANT] - JASA BRONJONG PENAHAN LONGSOR
+// 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Perkuatan Tanah Longsor > Jasa Bronjong Penahan Longsor
+// ============================================================
+
 const urlMappingJasaBronjong = {
-
-
+  // "https://www.betonjayareadymix.com/p/jasa-bronjong-penahan-longsor.html": "Jasa Bronjong Penahan Longsor [VARIANT]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-bronjong-penahan-longsor.html": "Harga Bronjong Penahan Longsor [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pemasangan-bronjong.html": "Jasa Pemasangan Bronjong [MONEY PAGE]"
 };
+
+// ============================================================
+// [VARIANT] - JASA SOIL NAILING TEBING
+// 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Perkuatan Tanah Longsor > Jasa Soil Nailing Tebing
+// ============================================================
 
 const urlMappingJasaSoilNailingLongsor = {
-
-
+  // "https://www.betonjayareadymix.com/p/jasa-soil-nailing-tebing.html": "Jasa Soil Nailing Tebing [VARIANT]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-soil-nailing-per-meter.html": "Harga Soil Nailing Per Meter [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-soil-nailing-jakarta.html": "Jasa Soil Nailing Jakarta [MONEY PAGE]"
 };
+
+// ============================================================
+// [VARIANT] - JASA DINDING PENAHAN TANAH LONGSOR
+// 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Perkuatan Tanah Longsor > Jasa Dinding Penahan Tanah Longsor
+// ============================================================
 
 const urlMappingJasaDindingPenahanLongsor = {
-
+  // "https://www.betonjayareadymix.com/p/jasa-dinding-penahan-tanah-longsor.html": "Jasa Dinding Penahan Tanah Longsor [VARIANT]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-dinding-penahan-tanah.html": "Harga Dinding Penahan Tanah [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pemasangan-dinding-penahan-tanah.html": "Jasa Pemasangan Dinding Penahan Tanah [MONEY PAGE]"
 };
+
+// ============================================================
+// [VARIANT] - JASA GEOTEXTILE PERKUATAN LERENG
+// 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Perkuatan Tanah Longsor > Jasa Geotextile Perkuatan Lereng
+// ============================================================
 
 const urlMappingJasaGeotextileLongsor = {
-
-
-
+  // "https://www.betonjayareadymix.com/p/jasa-geotextile-perkuatan-lereng.html": "Jasa Geotextile Perkuatan Lereng [VARIANT]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-geotextile-per-meter.html": "Harga Geotextile Per Meter [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pemasangan-geotextile.html": "Jasa Pemasangan Geotextile [MONEY PAGE]"
 };
+
+// ============================================================
+// [VARIANT] - JASA SHEET PILE PENAHAN LONGSOR
+// 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Perkuatan Tanah Longsor > Jasa Sheet Pile Penahan Longsor
+// ============================================================
 
 const urlMappingJasaSheetPileLongsor = {
-
-
-
+  // "https://www.betonjayareadymix.com/p/jasa-sheet-pile-penahan-longsor.html": "Jasa Sheet Pile Penahan Longsor [VARIANT]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-sheet-pile-penahan-longsor.html": "Harga Sheet Pile Penahan Longsor [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pemasangan-sheet-pile.html": "Jasa Pemasangan Sheet Pile [MONEY PAGE]"
 };
+
+// ============================================================
+// [VARIANT] - JASA STABILISASI TANAH LABIL
+// 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Perkuatan Tanah Longsor > Jasa Stabilisasi Tanah Labil
+// ============================================================
 
 const urlMappingJasaStabilisasiLongsor = {
-
-
-
+  // "https://www.betonjayareadymix.com/p/jasa-stabilisasi-tanah-labil.html": "Jasa Stabilisasi Tanah Labil [VARIANT]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-stabilisasi-tanah.html": "Harga Stabilisasi Tanah [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-grouting-stabilisasi-tanah.html": "Jasa Grouting Stabilisasi Tanah [MONEY PAGE]"
 };
+
+// ============================================================
+// [VARIANT] - JASA PERKUATAN TANAH LONGSOR RUMAH
+// 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Perkuatan Tanah Longsor > Jasa Perkuatan Tanah Longsor Rumah
+// ============================================================
 
 const urlMappingJasaPerkuatanRumahLongsor = {
-
-
-
+  // "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-rumah.html": "Jasa Perkuatan Tanah Longsor Rumah [VARIANT]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-perkuatan-tanah-rumah-longsor.html": "Harga Perkuatan Tanah Rumah Longsor [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-perkuatan-tebing-rumah.html": "Jasa Perkuatan Tebing Rumah [MONEY PAGE]"
 };
+
+// ============================================================
+// [VARIANT] - JASA PERKUATAN TEBING JALAN
+// 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Perkuatan Tanah Longsor > Jasa Perkuatan Tebing Jalan
+// ============================================================
 
 const urlMappingJasaPerkuatanTebingLongsor = {
-
-
-
+  // "https://www.betonjayareadymix.com/p/jasa-perkuatan-tebing-jalan.html": "Jasa Perkuatan Tebing Jalan [VARIANT]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-perkuatan-tebing-jalan.html": "Harga Perkuatan Tebing Jalan [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-perkuatan-tebing-jalan-raya.html": "Jasa Perkuatan Tebing Jalan Raya [MONEY PAGE]"
 };
 
-const urlMappingJasaPerkuatanPerkebunanLongsor  = {
+// ============================================================
+// [VARIANT] - JASA PERKUATAN LONGSOR PERKEBUNAN
+// 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Perkuatan Tanah Longsor > Jasa Perkuatan Longsor Perkebunan
+// ============================================================
 
-
-
+const urlMappingJasaPerkuatanPerkebunanLongsor = {
+  // "https://www.betonjayareadymix.com/p/jasa-perkuatan-longsor-perkebunan.html": "Jasa Perkuatan Longsor Perkebunan [VARIANT]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-perkuatan-longsor-perkebunan.html": "Harga Perkuatan Longsor Perkebunan [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-perkuatan-tebing-kebun.html": "Jasa Perkuatan Tebing Kebun [MONEY PAGE]"
 };
 
+// ============================================================
+// [VARIANT] - JASA DRAINASE ANTI LONGSOR
+// 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Perkuatan Tanah Longsor > Jasa Drainase Anti Longsor
+// ============================================================
 
-const urlMappingJasaDrainaseAntiLongsor  = {
-
-
-
+const urlMappingJasaDrainaseAntiLongsor = {
+  // "https://www.betonjayareadymix.com/p/jasa-drainase-anti-longsor.html": "Jasa Drainase Anti Longsor [VARIANT]",
+  // "https://www.betonjayareadymix.com/2019/08/harga-drainase-anti-longsor.html": "Harga Drainase Anti Longsor [MONEY PAGE]",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pembuatan-drainase-tebing.html": "Jasa Pembuatan Drainase Tebing [MONEY PAGE]"
 };
-
-
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsPerkuatanTanahLongsorKonsPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
