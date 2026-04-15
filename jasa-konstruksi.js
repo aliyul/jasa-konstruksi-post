@@ -36,24 +36,10 @@ const urlMappingJasaKons = {
   "https://www.betonjayareadymix.com/p/jasa-finishing.html": "Jasa Finishing",
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik.html": "Jasa Instalasi Listrik",
   "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html": "Jasa Perawatan Perbaikan Bangunan",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html": "Jasa Perbaikan Infrastruktur",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html": "Jasa Perbaikan Infrastruktur"
 
-  // ============================================================
-  // [SUB1] - SUB-PILLAR TIPE 1 (PANDUAN / BRIDGE)
-  // 🧠 SEO NOTE: SUB1 berfungsi sebagai jembatan (bridge) ke MONEY page.
-  // Intent: Informational (edukasi) + Pre-commercial.
-  // Breadcrumb: Home > Jasa Konstruksi > Panduan [Nama] (3 level)
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/panduan-membangun-bangunan.html": "Panduan Membangun Bangunan",
-  "https://www.betonjayareadymix.com/p/panduan-renovasi-bangunan.html": "Panduan Renovasi Bangunan",
-  "https://www.betonjayareadymix.com/p/panduan-perbaikan-bangunan.html": "Panduan Perbaikan Bangunan",
-  "https://www.betonjayareadymix.com/p/panduan-finishing-bangunan.html": "Panduan Finishing Bangunan",
-  "https://www.betonjayareadymix.com/p/panduan-pembuatan-infrastruktur.html": "Panduan Pembuatan Infrastruktur",
-  "https://www.betonjayareadymix.com/p/panduan-renovasi-infrastruktur.html": "Panduan Renovasi Infrastruktur",
-  "https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur",
-  "https://www.betonjayareadymix.com/p/panduan-finishing-infrastruktur.html": "Panduan Finishing Infrastruktur"
+ 
 };
-
 // ============================================================
 // 🔴 REDIRECT NOTES - JASA KONSTRUKSI (PILLAR)
 // ============================================================
@@ -69,6 +55,52 @@ const urlMappingJasaKons = {
 CATATAN: Hanya URL yang benar-benar duplikat yang di-redirect.
 Semua SUB2 di atas sudah memiliki intent yang berbeda dan spesifik.
 */
+const urlMappingStrukturBridgeSub1 = {
+   // ============================================================
+  // [SUB1] - SUB-PILLAR TIPE 1 (PANDUAN / BRIDGE)
+  // 🧠 SEO NOTE: SUB1 berfungsi sebagai jembatan (bridge) ke MONEY page.
+  // Intent: Informational (edukasi) + Pre-commercial.
+  // Breadcrumb: Home > Jasa Konstruksi > Panduan [Nama] (3 level)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/panduan-membangun-bangunan.html": "Panduan Membangun Bangunan"
+};
+const urlMappingRenovasiBridgeSub1 = {
+  // [SUB1] - SUB-PILLAR TIPE 1 (PANDUAN / BRIDGE)
+  // 🧠 SEO NOTE: SUB1 berfungsi sebagai jembatan (bridge) ke MONEY page.
+  // Intent: Informational (edukasi) + Pre-commercial.
+  // Breadcrumb: Home > Jasa Konstruksi > Panduan [Nama] (3 level)
+  // ============================================================
+
+  "https://www.betonjayareadymix.com/p/panduan-renovasi-bangunan.html": "Panduan Renovasi Bangunan",
+  "https://www.betonjayareadymix.com/p/panduan-renovasi-infrastruktur.html": "Panduan Renovasi Infrastruktur"
+};
+const urlMappingFinishingBridgeSub1 = {
+  // [SUB1] - SUB-PILLAR TIPE 1 (PANDUAN / BRIDGE)
+  // 🧠 SEO NOTE: SUB1 berfungsi sebagai jembatan (bridge) ke MONEY page.
+  // Intent: Informational (edukasi) + Pre-commercial.
+  // Breadcrumb: Home > Jasa Konstruksi > Panduan [Nama] (3 level)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/panduan-finishing-bangunan.html": "Panduan Finishing Bangunan,
+   "https://www.betonjayareadymix.com/p/panduan-finishing-infrastruktur.html": "Panduan Finishing Infrastruktur"
+};
+const urlMappingPerawatanPerbaikanBridgeSub1 = {
+ // [SUB1] - SUB-PILLAR TIPE 1 (PANDUAN / BRIDGE)
+  // 🧠 SEO NOTE: SUB1 berfungsi sebagai jembatan (bridge) ke MONEY page.
+  // Intent: Informational (edukasi) + Pre-commercial.
+  // Breadcrumb: Home > Jasa Konstruksi > Panduan [Nama] (3 level)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/panduan-perbaikan-bangunan.html": "Panduan Perbaikan Bangunan",
+  "https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"
+};
+const urlMappingJalanPerkerasanBridgeSub1 = {
+  // [SUB1] - SUB-PILLAR TIPE 1 (PANDUAN / BRIDGE)
+  // 🧠 SEO NOTE: SUB1 berfungsi sebagai jembatan (bridge) ke MONEY page.
+  // Intent: Informational (edukasi) + Pre-commercial.
+  // Breadcrumb: Home > Jasa Konstruksi > Panduan [Nama] (3 level)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/panduan-pembuatan-infrastruktur.html": "Panduan Pembuatan Infrastruktur"
+};
+
 // ============================================================
 // JASA ALAT KONSTRUKSI - SUB2 & TURUNAN
 // ============================================================
