@@ -35,9 +35,7 @@ const urlMappingJasaKons = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi.html": "Jasa Renovasi",
   "https://www.betonjayareadymix.com/p/jasa-finishing.html": "Jasa Finishing",
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik.html": "Jasa Instalasi Listrik",
-  "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html": "Jasa Perawatan Perbaikan Bangunan",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html": "Jasa Perbaikan Infrastruktur"
-
+  "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html": "Jasa Perawatan Perbaikan Bangunan"
  
 };
 // ============================================================
@@ -89,8 +87,7 @@ const urlMappingPerawatanPerbaikanBridgeSub1 = {
   // Intent: Informational (edukasi) + Pre-commercial.
   // Breadcrumb: Home > Jasa Konstruksi > Panduan [Nama] (3 level)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/panduan-perbaikan-bangunan.html": "Panduan Perbaikan Bangunan",
-  "https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"
+  "https://www.betonjayareadymix.com/p/panduan-perbaikan-bangunan.html": "Panduan Perbaikan Bangunan"
 };
 const urlMappingJalanPerkerasanBridgeSub1 = {
   // [SUB1] - SUB-PILLAR TIPE 1 (PANDUAN / BRIDGE)
@@ -100,7 +97,14 @@ const urlMappingJalanPerkerasanBridgeSub1 = {
   // ============================================================
   "https://www.betonjayareadymix.com/p/panduan-pembuatan-infrastruktur.html": "Panduan Pembuatan Infrastruktur"
 };
-
+const urlMappingPerbaikanInfrastrukturBridgeSub1 = {
+ // [SUB1] - SUB-PILLAR TIPE 1 (PANDUAN / BRIDGE)
+  // 🧠 SEO NOTE: SUB1 berfungsi sebagai jembatan (bridge) ke MONEY page.
+  // Intent: Informational (edukasi) + Pre-commercial.
+  // Breadcrumb: Home > Jasa Konstruksi > Panduan [Nama] (3 level)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"
+};
 // ============================================================
 // JASA ALAT KONSTRUKSI - SUB2 & TURUNAN
 // ============================================================
