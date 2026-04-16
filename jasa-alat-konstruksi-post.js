@@ -1107,19 +1107,29 @@ const urlMappingSewaAlatPancang = {
 */
 
 // ============================================================
-// SEWA ALAT KONSTRUKSI RINGAN - BLOG POST
-// ============================================================
-// 🧠 SEO NOTE: Post ini adalah MONEY page untuk sewa alat konstruksi ringan.
-// Intent: Transactional.
-// Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Konstruksi Ringan > [Nama Alat] (4 level)
+// SEWA ALAT KONSTRUKSI RINGAN - MONEY PAGE MASTER
+// 📅 LAST UPDATED: 2026-04-16
+// 🎯 RULE: MONEY PAGE Master berada di bawah SUB2 Turunan (Sewa Alat Konstruksi Ringan)
+// 📍 BREADCRUMB: Home > Jasa Konstruksi > Sewa Alat Konstruksi > Sewa Alat Ringan > [Nama Alat] (5 level)
 // ============================================================
 
 const urlMappingSewaAlatKonstruksiRingan = {
-  // [MONEY PAGE] - SEWA ALAT CLEANING
+  // ============================================================
+  // [MONEY PAGE MASTER] - SEWA ALAT CLEANING
+  // 🧠 STATUS: AKTIF (konten lengkap)
+  // Parent: Sewa Alat Konstruksi Ringan (SUB2 Turunan)
+  // Intent: Transactional
+  // ============================================================
   "https://www.betonjayareadymix.com/2019/02/jasa-sewa-alat-cleaning.html": "Jasa Sewa Alat Cleaning",
   "https://www.betonjayareadymix.com/2019/02/sewa-mesin-polisher.html": "Sewa Mesin Polisher",
-  
-  // [MONEY PAGE] - SEWA ALAT POTONG & BOR
+
+  // ============================================================
+  // [MONEY PAGE MASTER] - SEWA ALAT POTONG & BOR
+  // 🧠 STATUS: AKTIF (konten lengkap)
+  // Parent: Sewa Alat Konstruksi Ringan (SUB2 Turunan)
+  // Intent: Transactional
+  // ⚠️ CATATAN: Harga Sewa Concrete Cutter dan Sewa Concrete Cutter sebaiknya digabung atau satu di-redirect
+  // ============================================================
   "https://www.betonjayareadymix.com/2019/02/sewa-concrete-cutter.html": "Sewa Concrete Cutter",
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-concrete-cutter.html": "Harga Sewa Concrete Cutter",
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-jack-hammer.html": "Harga Sewa Jack Hammer",
@@ -1127,60 +1137,68 @@ const urlMappingSewaAlatKonstruksiRingan = {
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-vibrator-beton.html": "Harga Sewa Mesin Vibrator Beton",
   "https://www.betonjayareadymix.com/2019/02/sewa-vibrator-beton.html": "Sewa Vibrator Beton",
 
-  // [MONEY PAGE] - SEWA MESIN MOLEN
+  // ============================================================
+  // [MONEY PAGE MASTER] - SEWA MESIN MOLEN
+  // 🧠 STATUS: AKTIF (konten dari URL yang diberikan menunjukkan Harga Sewa Mesin Molen ada)
+  // Parent: Sewa Alat Konstruksi Ringan (SUB2 Turunan)
+  // Intent: Transactional
+  // ============================================================
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-molen.html": "Harga Sewa Mesin Molen",
   "https://www.betonjayareadymix.com/2019/02/sewa-mesin-molen.html": "Sewa Mesin Molen",
 
-  // [MONEY PAGE] - SEWA GENSET & KOMPRESOR
+  // ============================================================
+  // [MONEY PAGE MASTER] - SEWA GENSET & KOMPRESOR
+  // 🧠 STATUS: AKTIF (konten lengkap)
+  // Parent: Sewa Alat Konstruksi Ringan (SUB2 Turunan)
+  // Intent: Transactional
+  // ============================================================
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-genset.html": "Harga Sewa Mesin Genset",
   "https://www.betonjayareadymix.com/2019/02/sewa-genset.html": "Sewa Genset",
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-compressor.html": "Harga Sewa Mesin Compressor",
   "https://www.betonjayareadymix.com/2019/02/sewa-mesin-compressor.html": "Sewa Mesin Compressor",
 
-  // [MONEY PAGE] - SEWA CUTTING BETON
+  // ============================================================
+  // [MONEY PAGE MASTER] - SEWA CUTTING BETON
+  // 🧠 STATUS: AKTIF (konten lengkap)
+  // Parent: Sewa Alat Konstruksi Ringan (SUB2 Turunan)
+  // Intent: Transactional
+  // ============================================================
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-cutting-beton.html": "Harga Sewa Mesin Cutting Beton",
   "https://www.betonjayareadymix.com/2019/02/sewa-cutting-beton-terdekat.html": "Sewa Cutting Beton Terdekat",
 
-  // [MONEY PAGE] - SEWA ALAT TAMAN
+  // ============================================================
+  // [MONEY PAGE MASTER] - SEWA ALAT TAMAN
+  // 🧠 STATUS: AKTIF (konten dari URL yang diberikan menunjukkan Harga Sewa Mesin Potong Rumput ada)
+  // Parent: Sewa Alat Konstruksi Ringan (SUB2 Turunan)
+  // Intent: Transactional
+  // ============================================================
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-potong-rumput.html": "Harga Sewa Mesin Potong Rumput",
   "https://www.betonjayareadymix.com/2019/02/sewa-mesin-potong-rumput.html": "Sewa Mesin Potong Rumput",
 
-  // [MONEY PAGE] - SEWA ALAT FINISHING
+  // ============================================================
+  // [MONEY PAGE MASTER] - SEWA ALAT FINISHING
+  // 🧠 STATUS: AKTIF (konten lengkap dari Sewa Screed & Sewa Trowel)
+  // Parent: Sewa Alat Konstruksi Ringan (SUB2 Turunan)
+  // Intent: Transactional
+  // ============================================================
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-trowel.html": "Harga Sewa Mesin Trowel",
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-screed.html": "Harga Sewa Mesin Screed",
+  "https://www.betonjayareadymix.com/2019/02/sewa-screed.html": "Sewa Screed",
+  "https://www.betonjayareadymix.com/2019/02/sewa-trowel.html": "Sewa Trowel",
 
-  // [MONEY PAGE] - SEWA POMPA & STAMPER
+  // ============================================================
+  // [MONEY PAGE MASTER] - SEWA POMPA & STAMPER
+  // 🧠 STATUS: AKTIF (konten lengkap dari Harga Sewa Stamper & Sewa Stamper)
+  // Parent: Sewa Alat Konstruksi Ringan (SUB2 Turunan)
+  // Intent: Transactional
+  // ⚠️ CATATAN: Harga Sewa Stamper dan Sewa Stamper memiliki konten yang mirip, pertimbangkan canonical
+  // ============================================================
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-pompa-air.html": "Harga Sewa Pompa Air",
   "https://www.betonjayareadymix.com/2019/02/sewa-pompa-air.html": "Sewa Pompa Air",
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-stamper.html": "Harga Sewa Stamper",
-  "https://www.betonjayareadymix.com/2019/02/sewa-stamper.html": "Sewa Stamper",
-
-  // [MONEY PAGE] - LAINNYA
-  "https://www.betonjayareadymix.com/2019/02/sewa-screed.html": "Sewa Screed",
-  "https://www.betonjayareadymix.com/2019/02/sewa-trowel.html": "Sewa Trowel"
+  "https://www.betonjayareadymix.com/2019/02/sewa-stamper.html": "Sewa Stamper"
 };
 
-// ============================================================
-// 🟡 REKOMENDASI URL TAMBAHAN
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DITAMBAHKAN:
-
-| Jenis | Contoh URL | Keterangan |
-|-------|------------|-------------|
-| Sewa alat las | /2019/02/sewa-mesin-las.html | Perlu ditambahkan |
-| Sewa alat gerinda | /2019/02/sewa-gerinda.html | Perlu ditambahkan |
-| Sewa alat bor tembok | /2019/02/sewa-bor-tembok.html | Perlu ditambahkan |
-
-📌 BREADCRUMB SKIP LEVEL:
-Breadcrumb asli (5 level):
-Home > Jasa Konstruksi > Sewa Alat Konstruksi > Sewa Alat Konstruksi Ringan > Sewa Concrete Cutter
-
-Menjadi (4 level):
-Home > Jasa Konstruksi > Sewa Alat Konstruksi Ringan > Sewa Concrete Cutter
-
-Alasan skip: "Sewa Alat Konstruksi" (SUB1) di-skip.
-*/
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaKonsAlatKonstruksiPost = {};
@@ -1425,7 +1443,158 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaAlatKonstruksiRingan
 	
     );
-
+function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbNames = [], pillarType = 'JASA_KONSTRUKSI') {
+    
+    const MAX_LEVEL = 4;
+    
+    // Validasi pillar type
+    const validPillarTypes = ['PRODUK_KONSTRUKSI', 'MATERIAL_KONSTRUKSI', 'JASA_KONSTRUKSI', 'PRODUK_INTERIOR', 'JASA_DESAIN_INTERIOR'];
+    if (!validPillarTypes.includes(pillarType)) {
+        console.error(`❌ ERROR: "${pillarType}" BUKAN PILLAR TYPE yang valid!`);
+        return null;
+    }
+    
+    const pageTitle = mappingObj[currentUrl];
+    if (!pageTitle) {
+        console.error(`❌ ERROR: URL "${currentUrl}" tidak ditemukan di mapping`);
+        return null;
+    }
+    
+    // ============================================================
+    // FUNGSI DETEKSI TYPE DARI NAMA
+    // ============================================================
+    function detectPageType(pageName) {
+        const lowerName = pageName.toLowerCase();
+        if (lowerName.includes('konsultasi')) return 'MONEY_LEADGEN';
+        if (lowerName.includes('harga') || lowerName.includes('sewa ') || lowerName.includes('jual ')) return 'MONEY_MASTER';
+        if (lowerName.includes('panduan') || lowerName.includes('cara memilih')) return 'SUB1';
+        if (lowerName.includes('sewa alat berat') || lowerName.includes('sewa alat ringan')) return 'SUB2_TURUNAN';
+        if (lowerName.includes('produk konstruksi') || lowerName.includes('jasa konstruksi')) return 'PILLAR';
+        return 'SUB2';
+    }
+    
+    // ============================================================
+    // BANGUN LEVELS DARI ARRAY NAMA
+    // ============================================================
+    const allLevels = [];
+    
+    // Tambahkan semua level dari array breadcrumbNames
+    for (let i = 0; i < breadcrumbNames.length; i++) {
+        const name = breadcrumbNames[i];
+        // Buat URL dari nama (convert ke slug)
+        const url = '/p/' + name.toLowerCase().replace(/ /g, '-') + '.html';
+        
+        allLevels.push({
+            name: name,
+            url: url,
+            type: detectPageType(name)
+        });
+    }
+    
+    // ============================================================
+    // TENTUKAN LEVEL YANG AKAN DITAMPILKAN (SKIP OTOMATIS)
+    // ============================================================
+    const selectedLevels = [];
+    
+    // Home (WAJIB)
+    selectedLevels.push({
+        position: 1,
+        name: 'Beton Jaya Readymix',
+        url: 'https://www.betonjayareadymix.com/'
+    });
+    
+    // Parent terdekat (level terakhir) - WAJIB tampil
+    let parentTerdekat = null;
+    if (allLevels.length > 0) {
+        parentTerdekat = allLevels[allLevels.length - 1];
+        selectedLevels.push({
+            position: selectedLevels.length + 1,
+            name: parentTerdekat.name,
+            url: parentTerdekat.url
+        });
+    }
+    
+    // Level lainnya (boleh skip)
+    for (let i = 0; i < allLevels.length - 1; i++) {
+        const level = allLevels[i];
+        
+        // Cek batas level
+        if (selectedLevels.length + 1 >= MAX_LEVEL) {
+            console.log(`📌 Skip "${level.name}" (${level.type}) karena batas ${MAX_LEVEL} level`);
+            continue;
+        }
+        
+        // Type yang BOLEH skip: PILLAR, SUB2, SUB2_TURUNAN
+        if (level.type === 'PILLAR' || level.type === 'SUB2' || level.type === 'SUB2_TURUNAN') {
+            console.log(`📌 Skip "${level.name}" (${level.type}) karena type boleh skip`);
+            continue;
+        }
+        
+        selectedLevels.push({
+            position: selectedLevels.length + 1,
+            name: level.name,
+            url: level.url
+        });
+    }
+    
+    // Halaman saat ini (WAJIB)
+    selectedLevels.push({
+        position: selectedLevels.length + 1,
+        name: pageTitle,
+        url: currentUrl
+    });
+    
+    // ============================================================
+    // INJECT KE DOM
+    // ============================================================
+    document.querySelector('.breadcrumb-nav')?.remove();
+    document.querySelector('script[data-breadcrumb="true"]')?.remove();
+    
+    const breadcrumbHtml = `
+        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                ${selectedLevels.map(item => {
+                    const isLast = item.url === currentUrl;
+                    return `
+                        <li class="breadcrumb-item${isLast ? ' active' : ''}" 
+                            itemprop="itemListElement" 
+                            itemscope itemtype="https://schema.org/ListItem">
+                            ${!isLast ? `<a href="${item.url}" itemprop="item">` : ''}
+                                <span itemprop="name">${item.name === 'Beton Jaya Readymix' ? '🏠 ' + item.name : item.name}</span>
+                            ${!isLast ? '</a>' : ''}
+                            <meta itemprop="position" content="${item.position}" />
+                        </li>
+                    `;
+                }).join('')}
+            </ol>
+        </nav>
+    `;
+    
+    const mainContent = document.querySelector('main, article, .content, #main-content, .post-content');
+    if (mainContent?.firstChild) {
+        mainContent.insertAdjacentHTML('afterbegin', breadcrumbHtml);
+    } else {
+        document.body.insertAdjacentHTML('afterbegin', breadcrumbHtml);
+    }
+    
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-breadcrumb', 'true');
+    script.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": selectedLevels.map(item => ({
+            "@type": "ListItem",
+            "position": item.position,
+            "name": item.name,
+            "item": item.url
+        }))
+    }, null, 2);
+    document.head.appendChild(script);
+    
+    console.log(`✅ Breadcrumb: ${selectedLevels.map(l => l.name).join(' → ')}`);
+    return { breadcrumbHtml, levels: selectedLevels };
+}
     // --- validasi URL terdaftar ---
     if (!urlMappingGabungan[cleanUrlJasaKonsAlatKonstruksiPost]) {
       console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaKonsAlatKonstruksiPost}`);
@@ -4256,62 +4425,19 @@ if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
     }
 // ✅ Tambahkan JSON-LD Breadcrumb otomatis
    if (urlMappingSewaExcavator[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Excavator",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-excavator.html"
-               },
+// ✅ CUKUP KIRIM ARRAY NAMA (URUT DARI ATAS KE BAWAH)
+    generateBreadcrumbForMapping(
+        urlMappingSewaExcavator,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            'Jasa Konstruksi',
+            'Jasa Alat Konstruksi',
+            'Sewa Alat Konstruksi',
+            'Sewa Alat Berat'
+        ],
+        'JASA_KONSTRUKSI'
+    );
 
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaExcavator[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
    }	
     if (urlMappingSewaBackhoeLoader[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
