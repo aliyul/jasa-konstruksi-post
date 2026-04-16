@@ -78,7 +78,7 @@ const urlMappingFinishingBridgeSub1 = {
   // Intent: Informational (edukasi) + Pre-commercial.
   // Breadcrumb: Home > Jasa Konstruksi > Panduan [Nama] (3 level)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/panduan-finishing-bangunan.html": "Panduan Finishing Bangunan,
+  "https://www.betonjayareadymix.com/p/panduan-finishing-bangunan.html": "Panduan Finishing Bangunan",
    "https://www.betonjayareadymix.com/p/panduan-finishing-infrastruktur.html": "Panduan Finishing Infrastruktur"
 };
 const urlMappingPerawatanPerbaikanBridgeSub1 = {
@@ -112,26 +112,54 @@ const urlMappingPerbaikanInfrastrukturBridgeSub1 = {
 // Intent: Transactional (user siap sewa alat).
 // ============================================================
 
+// ============================================================
+// JASA SEWA ALAT KONSTRUKSI - FULL REVISI
+// 📅 LAST UPDATED: 2026-04-16
+// 🎯 RULE REFERENSI: 
+//    - SUB1 WAJIB memiliki parent SUB2 (TIDAK BOLEH langsung dari PILLAR)
+//    - SUB2 Turunan boleh di bawah SUB2
+//    - MONEY Master boleh di bawah SUB2 Turunan
+// ============================================================
+
+// ============================================================
+// [SUB2] - KATEGORI UTAMA SEWA ALAT KONSTRUKSI
+// 🧠 SEO NOTE: Halaman ini adalah SUB2 (bukan SUB1) karena:
+//    1. Berada langsung di bawah PILLAR Jasa Konstruksi
+//    2. Membahas kategori layanan sewa secara umum
+//    3. Intent: Commercial Investigation (user mulai membandingkan)
+// 📍 BREADCRUMB: Home > Jasa Konstruksi > Sewa Alat Konstruksi (3 level)
+// 🔗 PARENT: PILLAR Jasa Konstruksi
+// ============================================================
 const urlMappingJasaAlatKonstruksi = {
-  // [SUB1] - BRIDGE PAGE (PANDUAN SEWA ALAT)
-  // 🧠 SEO NOTE: SUB1 berfungsi sebagai jembatan (bridge) dari PILLAR ke layanan sewa spesifik.
-  // Konten: Panduan memilih rental, konsep sewa, perbandingan sewa vs beli, SOP keselamatan.
-  // Intent: Informational + Pre-commercial.
-  // Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Konstruksi (3 level)
   "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html": "Sewa Alat Konstruksi"
 };
 
+// ============================================================
+// [SUB2 TURUNAN] - KATEGORI SEWA SPESIFIK
+// 🧠 SEO NOTE: Halaman ini adalah SUB2 Turunan (nested) karena:
+//    1. Berada di bawah Sewa Alat Konstruksi (SUB2)
+//    2. Membagi layanan sewa ke dalam kategori yang lebih spesifik
+//    3. Intent: Commercial Investigation (spesifik per kategori)
+// 📍 BREADCRUMB: Home > Jasa Konstruksi > Sewa Alat Konstruksi > [Nama Kategori] (4 level)
+// 🔗 PARENT: Sewa Alat Konstruksi (SUB2)
+// ============================================================
 const urlMappingJasaSewaAlatKonstruksi = {
-  // [SUB2] - SUB-PILLAR TIPE 2 (KATEGORI SEWA)
   "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html": "Sewa Alat Proyek",
   "https://www.betonjayareadymix.com/p/sewa-alat-berat.html": "Sewa Alat Berat",
   "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi-ringan.html": "Sewa Alat Konstruksi Ringan"
 };
 
+// ============================================================
+// [MONEY PAGE MASTER] - SEWA PER JENIS ALAT BERAT
+// 🧠 SEO NOTE: Setiap URL adalah MONEY PAGE Master dengan intent transaksional.
+//    1. Parent: Sewa Alat Berat (SUB2 Turunan)
+//    2. Konten: Harga sewa, spesifikasi alat, minimum order, term & condition
+//    3. Wajib memiliki FAQ dan form pemesanan
+// 📍 BREADCRUMB: Home > Jasa Konstruksi > Sewa Alat Konstruksi > Sewa Alat Berat > [Nama Alat] (5 level)
+// 🔗 PARENT: Sewa Alat Berat (SUB2 Turunan)
+// ✅ AMAN: Masing-masing target keyword alat spesifik, tidak tumpang tindih
+// ============================================================
 const urlMappingJasaSewaAlatBerat = {
-  // [MONEY PAGE] - SEWA PER JENIS ALAT
-  // 🧠 SEO NOTE: Setiap URL adalah MONEY page dengan intent transaksional.
-  // Breadcrumb: Home > Jasa Konstruksi > Sewa [Nama Alat] (3 level)
   "https://www.betonjayareadymix.com/p/sewa-forklift.html": "Sewa Forklift",
   "https://www.betonjayareadymix.com/p/sewa-crane.html": "Sewa Crane",
   "https://www.betonjayareadymix.com/p/sewa-self-loader.html": "Sewa Self Loader",
@@ -149,19 +177,54 @@ const urlMappingJasaSewaAlatBerat = {
   "https://www.betonjayareadymix.com/p/sewa-alat-pancang.html": "Sewa Alat Pancang"
 };
 
+// ============================================================
+// [MONEY PAGE MASTER] - SEWA ALAT KONSTRUKSI RINGAN
+// 🧠 SEO NOTE: Akan ditambahkan kemudian untuk alat-alat ringan seperti:
+//    - Sewa Gerbang Tangan
+//    - Sewa Concrete Mixer
+//    - Sewa Stamping Tool
+//    - dll.
+// 📍 BREADCRUMB: Home > Jasa Konstruksi > Sewa Alat Konstruksi > Sewa Alat Ringan > [Nama Alat] (5 level)
+// 🔗 PARENT: Sewa Alat Konstruksi Ringan (SUB2 Turunan)
+// ============================================================
 const urlMappingJasaSewaAlatKonstruksiRingan = {
-  // [MONEY PAGE] - SEWA ALAT RINGAN
-  // (URL akan ditambahkan kemudian)
+  // URL akan ditambahkan kemudian
+  // Contoh:
+  // "https://www.betonjayareadymix.com/p/sewa-gerbang-tangan.html": "Sewa Gerbang Tangan",
+  // "https://www.betonjayareadymix.com/p/sewa-concrete-mixer.html": "Sewa Concrete Mixer",
 };
 
 // ============================================================
-// 🟡 SEO NOTE - JASA SEWA ALAT BERAT
+// 🟡 SEO NOTE - JASA SEWA ALAT BERAT (REVISED)
 // ============================================================
 /*
-🧠 SEMUA URL di atas sudah optimal karena:
+🧠 KOREKSI YANG DILAKUKAN:
+
+1. LEVEL:
+   - Sebelum: "Sewa Alat Konstruksi" dianggap SUB1 ❌
+   - Sesudah: "Sewa Alat Konstruksi" menjadi SUB2 ✅
+
+2. PARENT:
+   - Sebelum: Parent tidak jelas untuk Sewa Alat Berat ❌
+   - Sesudah: Parent = Sewa Alat Konstruksi (SUB2) ✅
+
+3. BREADCRUMB DEPTH:
+   - Sebelum: Hanya 3 level untuk MONEY page ❌
+   - Sesudah: 5 level (lengkap sesuai hierarchy) ✅
+
+4. STRUKTUR HIERARCHY:
+   Sebelum (SALAH):
+   PILLAR → Sewa Alat Konstruksi (SUB1) → MONEY (langsung) ❌
+   
+   Sesudah (BENAR):
+   PILLAR → Sewa Alat Konstruksi (SUB2) → Sewa Alat Berat (SUB2 Turunan) → MONEY ✅
+
+✅ SEMUA URL di atas sudah optimal karena:
 1. Masing-masing menarget keyword alat spesifik (tidak tumpang tindih)
 2. Intent transaksional (user sudah tahu alat yang dibutuhkan)
 3. Tidak ada cannibal antar sesama sewa alat berat
+4. Breadcrumb sudah sesuai rule hierarchy (depth 5)
+5. Parent mapping jelas dan konsisten
 
 ✅ AMAN - TIDAK PERLU REDIRECT
 */
