@@ -533,7 +533,65 @@ const urlMappingJasaBekistingdanPembesian = {
   // ============================================================
   "https://www.betonjayareadymix.com/2021/08/jasa-bekisting-rumah.html": "Jasa Bekisting Rumah"
 };
-
+const urlMappingJasaKanopiBajadanBesi = {
+    // ============================================================
+    // [MONEY_MASTER] - HARGA / JASA KANOPI
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/harga-jasa-kanopi-baja.html": "Harga Jasa Kanopi Baja",
+    "https://www.betonjayareadymix.com/p/harga-jasa-kanopi-besi.html": "Harga Jasa Kanopi Besi",
+    "https://www.betonjayareadymix.com/p/jasa-kanopi-baja-ringan.html": "Jasa Kanopi Baja Ringan",
+    "https://www.betonjayareadymix.com/p/jasa-kanopi-galeri.html": "Jasa Kanopi Galeri",
+    
+    // ============================================================
+    // [VARIANT] - JENIS KANOPI SPESIFIK
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/jasa-kanopi-minimalis.html": "Jasa Kanopi Minimalis",
+    "https://www.betonjayareadymix.com/p/jasa-kanopi-modern.html": "Jasa Kanopi Modern",
+    "https://www.betonjayareadymix.com/p/jasa-kanopi-lengkung.html": "Jasa Kanopi Lengkung",
+    "https://www.betonjayareadymix.com/p/jasa-kanopi-flat.html": "Jasa Kanopi Flat",
+    
+    // ============================================================
+    // [MONEY_CHILD] - SPESIFIK LOKASI
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/harga-jasa-kanopi-baja-jakarta.html": "Harga Jasa Kanopi Baja Jakarta",
+    "https://www.betonjayareadymix.com/p/harga-jasa-kanopi-baja-bekasi.html": "Harga Jasa Kanopi Baja Bekasi",
+    "https://www.betonjayareadymix.com/p/jasa-kanopi-baja-ringan-bandung.html": "Jasa Kanopi Baja Ringan Bandung",
+    
+    // ============================================================
+    // [SUB1] - PANDUAN (jika ada konten edukasi)
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/panduan-memilih-kanopi-baja.html": "Panduan Memilih Kanopi Baja",
+    "https://www.betonjayareadymix.com/p/cara-memilih-kanopi-besi.html": "Cara Memilih Kanopi Besi"
+};
+const urlMappingJasaStrukturBajaGudang = {
+    // ============================================================
+    // [MONEY_MASTER] - HARGA / JASA STRUKTUR BAJA GUDANG
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/harga-jasa-struktur-baja-gudang.html": "Harga Jasa Struktur Baja Gudang",
+    "https://www.betonjayareadymix.com/p/jasa-pemasangan-struktur-baja-gudang.html": "Jasa Pemasangan Struktur Baja Gudang",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-gudang.html": "Jasa Konstruksi Baja Gudang",
+    
+    // ============================================================
+    // [VARIANT] - JENIS STRUKTUR BAJA SPESIFIK
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/jasa-struktur-baja-wf-gudang.html": "Jasa Struktur Baja WF Gudang",
+    "https://www.betonjayareadymix.com/p/jasa-struktur-baja-h-beam-gudang.html": "Jasa Struktur Baja H-Beam Gudang",
+    "https://www.betonjayareadymix.com/p/jasa-struktur-baja-kuda-kuda-gudang.html": "Jasa Struktur Baja Kuda-Kuda Gudang",
+    "https://www.betonjayareadymix.com/p/jasa-struktur-baja-kolom-gudang.html": "Jasa Struktur Baja Kolom Gudang",
+    
+    // ============================================================
+    // [MONEY_CHILD] - SPESIFIK LOKASI
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/harga-jasa-struktur-baja-gudang-jakarta.html": "Harga Jasa Struktur Baja Gudang Jakarta",
+    "https://www.betonjayareadymix.com/p/harga-jasa-struktur-baja-gudang-surabaya.html": "Harga Jasa Struktur Baja Gudang Surabaya",
+    "https://www.betonjayareadymix.com/p/jasa-struktur-baja-gudang-cikarang.html": "Jasa Struktur Baja Gudang Cikarang",
+    
+    // ============================================================
+    // [SUB1] - PANDUAN (jika ada konten edukasi)
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/panduan-struktur-baja-gudang.html": "Panduan Struktur Baja Gudang",
+    "https://www.betonjayareadymix.com/p/cara-memilih-struktur-baja-gudang.html": "Cara Memilih Struktur Baja Gudang"
+};
 // ============================================================
 // [SUB2] - JASA PENGECORAN KOLOM BETON
 // 🧠 STATUS: AKTIF (konten lengkap)
