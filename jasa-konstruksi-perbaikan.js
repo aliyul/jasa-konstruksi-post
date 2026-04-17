@@ -8,80 +8,61 @@
 const urlMappingPerbaikanStruktur = {
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR RUMAH
-  // 🧠 SEO NOTE: Fokus ke perbaikan struktur rumah tinggal
+  // 🧠 TYPE: VARIANT (WAJIB tampil, parent: SUB2)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-rumah.html": "Jasa Perbaikan Struktur Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-rumah.html": "Jasa Perbaikan Struktur Rumah",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR BANGUNAN TUA
-  // 🧠 SEO NOTE: Fokus ke perbaikan bangunan cagar budaya/bangunan tua
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Tua
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-tua.html": "Jasa Perbaikan Struktur Bangunan Tua",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-tua.html": "Jasa Perbaikan Struktur Bangunan Tua",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN GEDUNG BERTINGKAT
-  // 🧠 SEO NOTE: Fokus ke perbaikan gedung tinggi
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Gedung Bertingkat
+  // ⚠️ PERLU DICEK: URL 404 (tidak ditemukan)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-gedung-bertingkat.html": "Jasa Perbaikan Gedung Bertingkat",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-gedung-bertingkat.html": "Jasa Perbaikan Gedung Bertingkat",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR BANGUNAN MIRING
-  // 🧠 SEO NOTE: Fokus ke perbaikan bangunan miring/ambles
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Miring
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-miring.html": "Jasa Perbaikan Struktur Bangunan Miring",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-miring.html": "Jasa Perbaikan Struktur Bangunan Miring",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR BETON
-  // 🧠 SEO NOTE: Fokus ke perbaikan struktur beton (dak, kolom, balok)
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-beton.html": "Jasa Perbaikan Struktur Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-beton.html": "Jasa Perbaikan Struktur Beton",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR KOLOM BALOK
-  // 🧠 SEO NOTE: Fokus ke perbaikan kolom dan balok beton
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Kolom Balok Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-kolom-balok.html": "Jasa Perbaikan Struktur Kolom Balok Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-kolom-balok.html": "Jasa Perbaikan Struktur Kolom Balok Beton",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR PONDASI
-  // 🧠 SEO NOTE: Fokus ke perbaikan pondasi bangunan
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Pondasi
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-pondasi.html": "Jasa Perbaikan Struktur Pondasi",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-pondasi.html": "Jasa Perbaikan Struktur Pondasi",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR LANTAI BETON
-  // 🧠 SEO NOTE: Fokus ke perbaikan lantai beton (retak, amblas)
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-lantai-beton.html": "Jasa Perbaikan Struktur Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-lantai-beton.html": "Jasa Perbaikan Struktur Lantai Beton",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR DINDING
-  // 🧠 SEO NOTE: Fokus ke perbaikan dinding struktural (retak, miring)
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Dinding
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-dinding.html": "Jasa Perbaikan Struktur Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-dinding.html": "Jasa Perbaikan Struktur Dinding",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR ATAP
-  // 🧠 SEO NOTE: Fokus ke perbaikan struktur atap (rangka, kuda-kuda)
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Atap
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-atap.html": "Jasa Perbaikan Struktur Atap",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-atap.html": "Jasa Perbaikan Struktur Atap",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA REHABILITASI BETON
-  // 🧠 SEO NOTE: Fokus ke rehabilitasi beton yang rusak (korosi, keropos)
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton.html": "Jasa Rehabilitasi Beton"
+  "https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton.html": "Jasa Rehabilitasi Beton"  // TYPE: VARIANT
 };
 
 // ============================================================
@@ -91,14 +72,14 @@ const urlMappingPerbaikanStruktur = {
 /*
 📌 SARAN ITEM BARU - JASA PERBAIKAN STRUKTUR
 
-| Nama Halaman | URL Saran | Page Type | Parent |
-|--------------|-----------|-----------|--------|
-| Jasa Perkuatan Struktur | /p/jasa-perkuatan-struktur.html | [VARIANT] | Jasa Perbaikan Struktur |
-| Jasa Perbaikan Struktur Pasca Gempa | /p/jasa-perbaikan-struktur-pasca-gempa.html | [VARIANT] | Jasa Perbaikan Struktur |
-| Jasa Perbaikan Struktur Gedung Komersial | /p/jasa-perbaikan-struktur-gedung-komersial.html | [VARIANT] | Jasa Perbaikan Struktur |
-| Jasa Perbaikan Struktur Pabrik | /p/jasa-perbaikan-struktur-pabrik.html | [VARIANT] | Jasa Perbaikan Struktur |
-| Harga Jasa Perbaikan Struktur | /2019/08/harga-perbaikan-struktur.html | [MONEY PAGE] | Jasa Perbaikan Struktur |
-| Konsultasi Perbaikan Struktur | /p/konsultasi-perbaikan-struktur.html | [MONEY PAGE - Lead Gen] | Jasa Perbaikan Struktur |
+| Nama Halaman | URL Saran | Type | Parent |
+|--------------|-----------|------|--------|
+| Jasa Perkuatan Struktur | /p/jasa-perkuatan-struktur.html | VARIANT | Jasa Perbaikan Struktur |
+| Jasa Perbaikan Struktur Pasca Gempa | /p/jasa-perbaikan-struktur-pasca-gempa.html | VARIANT | Jasa Perbaikan Struktur |
+| Jasa Perbaikan Struktur Gedung Komersial | /p/jasa-perbaikan-struktur-gedung-komersial.html | VARIANT | Jasa Perbaikan Struktur |
+| Jasa Perbaikan Struktur Pabrik | /p/jasa-perbaikan-struktur-pabrik.html | VARIANT | Jasa Perbaikan Struktur |
+| Harga Jasa Perbaikan Struktur | /2019/08/harga-perbaikan-struktur.html | MONEY_MASTER | Jasa Perbaikan Struktur |
+| Konsultasi Perbaikan Struktur | /p/konsultasi-perbaikan-struktur.html | MONEY_LEADGEN | Jasa Perbaikan Struktur |
 */
 
 // ============================================================
@@ -111,40 +92,13 @@ const urlMappingPerbaikanStruktur = {
 | URL | Masalah | Solusi |
 |-----|---------|--------|
 | /p/jasa-perbaikan-gedung-bertingkat.html | 404 (tidak ditemukan) | Buat konten atau redirect |
-| /p/jasa-renovasi-dinding-bangunan.html | Konten tidak sesuai (breadcrumb menunjukkan ini adalah halaman jasa, tapi judul "Jasa Renovasi Dinding Bangunan 2025" - tidak ada konten yang terlihat) | Periksa dan lengkapi konten |
+| /p/jasa-renovasi-dinding-bangunan.html | Konten tidak sesuai (ini jasa renovasi, bukan perbaikan struktur) | Pindahkan ke mapping yang sesuai |
 
 📌 YANG TIDAK DIMASUKKAN KE CONST (DI-COMMENT):
 - "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur.html" → DI-COMMENT (belum ada konten)
 - "https://www.betonjayareadymix.com/p/jasa-perbaikan-teknik-beton.html" → DI-COMMENT (belum ada konten)
 - "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-bangunan.html" → TIDAK MASUK (ini adalah jasa renovasi, bukan perbaikan struktur)
 */
-
-// ============================================================
-// 📊 RINGKASAN STATUS & TYPE
-// ============================================================
-
-/*
-| Const | Status | Page Type | Jumlah URL |
-|-------|--------|-----------|------------|
-| urlMappingPerbaikanStruktur | ✅ Terisi | [VARIANT] | 11 URL |
-
-📌 BREADCRUMB 4 LEVEL (SKIP PILLAR Jasa Konstruksi):
-
-| Halaman | Breadcrumb |
-|---------|------------|
-| Jasa Perbaikan Struktur Rumah | Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Rumah |
-| Jasa Perbaikan Struktur Bangunan Tua | Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Tua |
-| Jasa Perbaikan Gedung Bertingkat | Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Gedung Bertingkat |
-| Jasa Perbaikan Struktur Bangunan Miring | Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Miring |
-| Jasa Perbaikan Struktur Beton | Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton |
-| Jasa Perbaikan Struktur Kolom Balok Beton | Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Kolom Balok Beton |
-| Jasa Perbaikan Struktur Pondasi | Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Pondasi |
-| Jasa Perbaikan Struktur Lantai Beton | Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton |
-| Jasa Perbaikan Struktur Dinding | Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Dinding |
-| Jasa Perbaikan Struktur Atap | Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Atap |
-| Jasa Rehabilitasi Beton | Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton |
-*/
-
 //Sub Perbaikan Struktur
 /* hilang kan saja meenjadi satu kesatuan di JasaPerbaikanStrukturBeton
 const urlMappingPerbaikanStrukturUmum = {
@@ -162,324 +116,361 @@ const urlMappingPerbaikanStrukturUmum = {
 
 // ============================================================
 // JASA PERBAIKAN GEDUNG BERTINGKAT
-// Parent: Jasa Perbaikan Struktur
+// Parent: Jasa Perbaikan Struktur (/p/jasa-perbaikan-struktur.html)
 // ============================================================
 
 const urlMappingPerbaikanStrukturGedungBertingkat = {
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN GEDUNG BERTINGKAT
-  // 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Gedung Bertingkat
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-gedung-bertingkat.html": "Jasa Perbaikan Gedung Bertingkat [VARIANT]",
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-gedung-bertingkat.html": "Jasa Perbaikan Gedung Bertingkat",  // TYPE: VARIANT
   
   // ============================================================
   // [SUB-VARIANT] - JASA PERKUATAN GEDUNG BERTINGKAT
-  // 🧠 STATUS: PERLU DIBUAT (opsional, jika diperlukan)
+  // 🧠 TYPE: VARIANT (WAJIB tampil, parent: VARIANT di atas)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Gedung Bertingkat > Jasa Perkuatan Gedung Bertingkat
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-perkuatan-gedung-bertingkat.html": "Jasa Perkuatan Gedung Bertingkat",
+  // "https://www.betonjayareadymix.com/p/jasa-perkuatan-gedung-bertingkat.html": "Jasa Perkuatan Gedung Bertingkat",  // TYPE: VARIANT
   
   // ============================================================
-  // [MONEY PAGE] - HARGA PERBAIKAN GEDUNG BERTINGKAT
-  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
+  // [MONEY_MASTER] - HARGA PERBAIKAN GEDUNG BERTINGKAT
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil, parent: VARIANT)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Gedung Bertingkat > Harga Perbaikan Gedung Bertingkat
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-gedung-bertingkat.html": "Harga Perbaikan Gedung Bertingkat"
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-gedung-bertingkat.html": "Harga Perbaikan Gedung Bertingkat"  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
 // JASA PERBAIKAN STRUKTUR BANGUNAN TUA
-// Parent: Jasa Perbaikan Struktur
+// Parent: Jasa Perbaikan Struktur (/p/jasa-perbaikan-struktur.html)
 // ============================================================
 
 const urlMappingPerbaikanStrukturBangunanTua = {
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR BANGUNAN TUA
-  // 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+  // 🧠 TYPE: VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Tua
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-tua.html": "Jasa Perbaikan Struktur Bangunan Tua [VARIANT]",
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-tua.html": "Jasa Perbaikan Struktur Bangunan Tua",  // TYPE: VARIANT
   
   // ============================================================
   // [SUB-VARIANT] - JASA RESTORASI BANGUNAN TUA
-  // 🧠 STATUS: PERLU DIBUAT (opsional, jika diperlukan)
+  // 🧠 TYPE: VARIANT (parent: VARIANT di atas)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Tua > Jasa Restorasi Bangunan Tua
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-restorasi-bangunan-tua.html": "Jasa Restorasi Bangunan Tua",
+  // "https://www.betonjayareadymix.com/p/jasa-restorasi-bangunan-tua.html": "Jasa Restorasi Bangunan Tua",  // TYPE: VARIANT
   
   // ============================================================
-  // [MONEY PAGE] - HARGA PERBAIKAN BANGUNAN TUA
-  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
+  // [MONEY_MASTER] - HARGA PERBAIKAN BANGUNAN TUA
+  // 🧠 TYPE: MONEY_MASTER (parent: VARIANT)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Tua > Harga Perbaikan Bangunan Tua
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-bangunan-tua.html": "Harga Perbaikan Bangunan Tua"
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-bangunan-tua.html": "Harga Perbaikan Bangunan Tua"  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
 // JASA PERBAIKAN STRUKTUR BANGUNAN MIRING
-// Parent: Jasa Perbaikan Struktur
+// Parent: Jasa Perbaikan Struktur (/p/jasa-perbaikan-struktur.html)
 // ============================================================
 
 const urlMappingPerbaikanStrukturBangunanMiring = {
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR BANGUNAN MIRING
-  // 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+  // 🧠 TYPE: VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Miring
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-miring.html": "Jasa Perbaikan Struktur Bangunan Miring [VARIANT]",
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-miring.html": "Jasa Perbaikan Struktur Bangunan Miring",  // TYPE: VARIANT
   
   // ============================================================
   // [SUB-VARIANT] - JASA STRAIGHTENING BANGUNAN MIRING
-  // 🧠 STATUS: PERLU DIBUAT (opsional, jika diperlukan)
+  // 🧠 TYPE: VARIANT (parent: VARIANT di atas)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Miring > Jasa Straightening Bangunan Miring
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-straightening-bangunan-miring.html": "Jasa Straightening Bangunan Miring",
+  // "https://www.betonjayareadymix.com/p/jasa-straightening-bangunan-miring.html": "Jasa Straightening Bangunan Miring",  // TYPE: VARIANT
   
   // ============================================================
-  // [MONEY PAGE] - HARGA PERBAIKAN BANGUNAN MIRING
-  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
+  // [MONEY_MASTER] - HARGA PERBAIKAN BANGUNAN MIRING
+  // 🧠 TYPE: MONEY_MASTER (parent: VARIANT)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Miring > Harga Perbaikan Bangunan Miring
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-bangunan-miring.html": "Harga Perbaikan Bangunan Miring"
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-bangunan-miring.html": "Harga Perbaikan Bangunan Miring"  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
 // JASA PERBAIKAN KOLOM & BALOK
-// Parent: Jasa Perbaikan Struktur Beton
+// Parent: Jasa Perbaikan Struktur Beton (/p/jasa-perbaikan-struktur-beton.html)
 // ============================================================
 
 const urlMappingPerbaikanStrukturKolomBalok = {
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN KOLOM BETON
+  // 🧠 TYPE: VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton > Jasa Perbaikan Kolom Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-beton.html": "Jasa Perbaikan Kolom Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-beton.html": "Jasa Perbaikan Kolom Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN BALOK BETON
+  // 🧠 TYPE: VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton > Jasa Perbaikan Balok Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-beton.html": "Jasa Perbaikan Balok Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-beton.html": "Jasa Perbaikan Balok Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [SUB-VARIANT] - JASA PERBAIKAN STRUKTUR KOLOM BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton > Jasa Perbaikan Kolom Beton > Jasa Perbaikan Struktur Kolom Beton
+  // 🧠 TYPE: VARIANT (parent: VARIANT di atas)
+  // Breadcrumb: Home > ... > Jasa Perbaikan Kolom Beton > Jasa Perbaikan Struktur Kolom Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-kolom-beton.html": "Jasa Perbaikan Struktur Kolom Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-kolom-beton.html": "Jasa Perbaikan Struktur Kolom Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [SUB-VARIANT] - JASA PERBAIKAN STRUKTUR BALOK BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton > Jasa Perbaikan Balok Beton > Jasa Perbaikan Struktur Balok Beton
+  // 🧠 TYPE: VARIANT (parent: VARIANT di atas)
+  // Breadcrumb: Home > ... > Jasa Perbaikan Balok Beton > Jasa Perbaikan Struktur Balok Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-balok-beton.html": "Jasa Perbaikan Struktur Balok Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-balok-beton.html": "Jasa Perbaikan Struktur Balok Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [SUB-VARIANT] - JASA PERKUATAN KOLOM BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton > Jasa Perbaikan Kolom Beton > Jasa Perkuatan Kolom Beton
+  // 🧠 TYPE: VARIANT
+  // Breadcrumb: Home > ... > Jasa Perbaikan Kolom Beton > Jasa Perkuatan Kolom Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-kolom-beton.html": "Jasa Perkuatan Kolom Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-kolom-beton.html": "Jasa Perkuatan Kolom Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [SUB-VARIANT] - JASA PERKUATAN BALOK BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton > Jasa Perbaikan Balok Beton > Jasa Perkuatan Balok Beton
+  // 🧠 TYPE: VARIANT
+  // Breadcrumb: Home > ... > Jasa Perbaikan Balok Beton > Jasa Perkuatan Balok Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-balok-beton.html": "Jasa Perkuatan Balok Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-balok-beton.html": "Jasa Perkuatan Balok Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [SUB-VARIANT] - JASA JACKETING KOLOM BALOK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton > Jasa Perbaikan Kolom Balok > Jasa Jacketing Kolom Balok
+  // 🧠 TYPE: VARIANT
+  // Breadcrumb: Home > ... > Jasa Perbaikan Kolom Balok > Jasa Jacketing Kolom Balok
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-jacketing-kolom-balok.html": "Jasa Jacketing Kolom Balok",
+  "https://www.betonjayareadymix.com/p/jasa-jacketing-kolom-balok.html": "Jasa Jacketing Kolom Balok",  // TYPE: VARIANT
   
   // ============================================================
   // [SUB-VARIANT] - JASA PERBAIKAN BALOK GANTUNG
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton > Jasa Perbaikan Balok Beton > Jasa Perbaikan Balok Gantung
+  // 🧠 TYPE: VARIANT
+  // Breadcrumb: Home > ... > Jasa Perbaikan Balok Beton > Jasa Perbaikan Balok Gantung
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-gantung.html": "Jasa Perbaikan Balok Gantung",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-gantung.html": "Jasa Perbaikan Balok Gantung",  // TYPE: VARIANT
   
   // ============================================================
   // [SUB-VARIANT] - JASA PERBAIKAN STRUKTUR TIANG BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton > Jasa Perbaikan Kolom Beton > Jasa Perbaikan Struktur Tiang Beton
+  // 🧠 TYPE: VARIANT
+  // Breadcrumb: Home > ... > Jasa Perbaikan Kolom Beton > Jasa Perbaikan Struktur Tiang Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-tiang-beton.html": "Jasa Perbaikan Struktur Tiang Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-tiang-beton.html": "Jasa Perbaikan Struktur Tiang Beton",  // TYPE: VARIANT
   
   // ============================================================
-  // SARAN ITEM BARU
+  // [MONEY_MASTER] - HARGA PERBAIKAN KOLOM BETON (SARAN)
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > ... > Jasa Perbaikan Kolom Beton > Harga Perbaikan Kolom Beton
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-kolom-beton.html": "Harga Perbaikan Kolom Beton",
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-balok-beton.html": "Harga Perbaikan Balok Beton"
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-kolom-beton.html": "Harga Perbaikan Kolom Beton",  // TYPE: MONEY_MASTER
+  
+  // ============================================================
+  // [MONEY_MASTER] - HARGA PERBAIKAN BALOK BETON (SARAN)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-balok-beton.html": "Harga Perbaikan Balok Beton"  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
 // JASA PERBAIKAN STRUKTUR PONDASI
-// Parent: Jasa Perbaikan Struktur
+// Parent: Jasa Perbaikan Struktur (/p/jasa-perbaikan-struktur.html)
 // ============================================================
 
 const urlMappingPerbaikanStrukturPondasi = {
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN PONDASI BANGUNAN
+  // 🧠 TYPE: VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Pondasi > Jasa Perbaikan Pondasi Bangunan
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-bangunan.html": "Jasa Perbaikan Pondasi Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-bangunan.html": "Jasa Perbaikan Pondasi Bangunan",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN PONDASI RUMAH
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Pondasi > Jasa Perbaikan Pondasi Rumah
+  // 🧠 TYPE: VARIANT
+  // Breadcrumb: Home > ... > Jasa Perbaikan Struktur Pondasi > Jasa Perbaikan Pondasi Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-rumah.html": "Jasa Perbaikan Pondasi Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-rumah.html": "Jasa Perbaikan Pondasi Rumah",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PENGUATAN PONDASI BANGUNAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Pondasi > Jasa Penguatan Pondasi Bangunan
+  // 🧠 TYPE: VARIANT
+  // Breadcrumb: Home > ... > Jasa Perbaikan Struktur Pondasi > Jasa Penguatan Pondasi Bangunan
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-penguatan-pondasi-bangunan.html": "Jasa Penguatan Pondasi Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-penguatan-pondasi-bangunan.html": "Jasa Penguatan Pondasi Bangunan",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR PONDASI RUMAH
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Pondasi > Jasa Perbaikan Struktur Pondasi Rumah
+  // 🧠 TYPE: VARIANT
+  // Breadcrumb: Home > ... > Jasa Perbaikan Struktur Pondasi > Jasa Perbaikan Struktur Pondasi Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-pondasi-rumah.html": "Jasa Perbaikan Struktur Pondasi Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-pondasi-rumah.html": "Jasa Perbaikan Struktur Pondasi Rumah",  // TYPE: VARIANT
   
   // ============================================================
-  // SARAN ITEM BARU
+  // [MONEY_MASTER] - HARGA PERBAIKAN PONDASI (SARAN)
+  // 🧠 TYPE: MONEY_MASTER
+  // Breadcrumb: Home > ... > Jasa Perbaikan Struktur Pondasi > Harga Perbaikan Pondasi
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-pondasi.html": "Harga Perbaikan Pondasi",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-cakar-ayam.html": "Jasa Perbaikan Pondasi Cakar Ayam"
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-pondasi.html": "Harga Perbaikan Pondasi",  // TYPE: MONEY_MASTER
+  
+  // ============================================================
+  // [VARIANT] - JASA PERBAIKAN PONDASI CAKAR AYAM (SARAN)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-cakar-ayam.html": "Jasa Perbaikan Pondasi Cakar Ayam"  // TYPE: VARIANT
 };
 
 // ============================================================
 // JASA PERBAIKAN STRUKTUR LANTAI
-// Parent: Jasa Perbaikan Struktur
+// Parent: Jasa Perbaikan Struktur Beton (/p/jasa-perbaikan-struktur-beton.html)
 // ============================================================
 
 const urlMappingPerbaikanStrukturLantai = {
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN LANTAI STRUKTUR
+  // 🧠 TYPE: VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Perbaikan Lantai Struktur
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-struktur.html": "Jasa Perbaikan Lantai Struktur",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-struktur.html": "Jasa Perbaikan Lantai Struktur",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR LANTAI BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Perbaikan Struktur Lantai Beton
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-lantai-beton.html": "Jasa Perbaikan Struktur Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-lantai-beton.html": "Jasa Perbaikan Struktur Lantai Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN RETAKAN LANTAI BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Perbaikan Retakan Lantai Beton
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-retakan-lantai-beton.html": "Jasa Perbaikan Retakan Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-retakan-lantai-beton.html": "Jasa Perbaikan Retakan Lantai Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERKUATAN LANTAI BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Perkuatan Lantai Beton
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-lantai-beton.html": "Jasa Perkuatan Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-lantai-beton.html": "Jasa Perkuatan Lantai Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN LANTAI
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Perbaikan Lantai
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai.html": "Jasa Perbaikan Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai.html": "Jasa Perbaikan Lantai",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA LANTAI AMBLES
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Lantai Ambles
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-lantai-ambles.html": "Jasa Lantai Ambles",
+  "https://www.betonjayareadymix.com/p/jasa-lantai-ambles.html": "Jasa Lantai Ambles",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN LANTAI RUSAK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Perbaikan Lantai Rusak
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-rusak.html": "Jasa Perbaikan Lantai Rusak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-rusak.html": "Jasa Perbaikan Lantai Rusak",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA RENOVASI LANTAI
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Renovasi Lantai
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai.html": "Jasa Renovasi Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai.html": "Jasa Renovasi Lantai",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA RENOVASI LANTAI RUSAK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Renovasi Lantai Rusak
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-rusak.html": "Jasa Renovasi Lantai Rusak",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-rusak.html": "Jasa Renovasi Lantai Rusak",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN LANTAI AMBLES
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Perbaikan Lantai Ambles
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-ambles.html": "Jasa Perbaikan Lantai Ambles",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-ambles.html": "Jasa Perbaikan Lantai Ambles",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA GANTI LANTAI AMBLES
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Ganti Lantai Ambles
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-ganti-lantai-ambles.html": "Jasa Ganti Lantai Ambles",
+  "https://www.betonjayareadymix.com/p/jasa-ganti-lantai-ambles.html": "Jasa Ganti Lantai Ambles",  // TYPE: VARIANT
   
   // ============================================================
-  // SARAN ITEM BARU
+  // [MONEY_MASTER] - HARGA PERBAIKAN LANTAI BETON (SARAN)
+  // 🧠 TYPE: MONEY_MASTER
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-lantai-beton.html": "Harga Perbaikan Lantai Beton",
-  // "https://www.betonjayareadymix.com/p/jasa-epoxy-lantai-retak.html": "Jasa Epoxy Lantai Retak"
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-lantai-beton.html": "Harga Perbaikan Lantai Beton",  // TYPE: MONEY_MASTER
+  
+  // ============================================================
+  // [VARIANT] - JASA EPOXY LANTAI RETAK (SARAN)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-epoxy-lantai-retak.html": "Jasa Epoxy Lantai Retak"  // TYPE: VARIANT
 };
 
 // ============================================================
 // JASA PERBAIKAN STRUKTUR DINDING
-// Parent: Jasa Perbaikan Struktur
+// Parent: Jasa Perbaikan Struktur (/p/jasa-perbaikan-struktur.html)
 // ============================================================
 
 const urlMappingPerbaikanStrukturDinding = {
   // ============================================================
   // [VARIANT] - JASA INJEKSI DINDING RETAK
+  // 🧠 TYPE: VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Dinding > Jasa Injeksi Dinding Retak
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-injeksi-dinding-retak.html": "Jasa Injeksi Dinding Retak",
+  "https://www.betonjayareadymix.com/p/jasa-injeksi-dinding-retak.html": "Jasa Injeksi Dinding Retak",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN DINDING RETAK STRUKTUR
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Dinding > Jasa Perbaikan Dinding Retak Struktur
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-retak-struktur.html": "Jasa Perbaikan Dinding Retak Struktur",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-retak-struktur.html": "Jasa Perbaikan Dinding Retak Struktur",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR DINDING RETAK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Dinding > Jasa Perbaikan Struktur Dinding Retak
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-dinding-retak.html": "Jasa Perbaikan Struktur Dinding Retak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-dinding-retak.html": "Jasa Perbaikan Struktur Dinding Retak",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA BOBOK DINDING INSTALASI
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Dinding > Jasa Bobok Dinding Instalasi
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bobok-dinding-instalasi.html": "Jasa Bobok Dinding Instalasi",
+  "https://www.betonjayareadymix.com/p/jasa-bobok-dinding-instalasi.html": "Jasa Bobok Dinding Instalasi",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR DINDING LEMBAB
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Dinding > Jasa Perbaikan Struktur Dinding Lembab
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-dinding-lembab.html": "Jasa Perbaikan Struktur Dinding Lembab",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-dinding-lembab.html": "Jasa Perbaikan Struktur Dinding Lembab",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA RENOVASI PENGGANTIAN DINDING BATA
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Dinding > Jasa Renovasi Penggantian Dinding Bata
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-penggantian-dinding-bata.html": "Jasa Renovasi Penggantian Dinding Bata",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-penggantian-dinding-bata.html": "Jasa Renovasi Penggantian Dinding Bata",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN PENGGANTIAN DINDING BATA
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Dinding > Jasa Perbaikan Penggantian Dinding Bata
+  // 🧠 TYPE: VARIANT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-penggantian-dinding-bata.html": "Jasa Perbaikan Penggantian Dinding Bata",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-penggantian-dinding-bata.html": "Jasa Perbaikan Penggantian Dinding Bata",  // TYPE: VARIANT
   
   // ============================================================
-  // SARAN ITEM BARU
+  // [MONEY_MASTER] - HARGA PERBAIKAN DINDING RETAK (SARAN)
+  // 🧠 TYPE: MONEY_MASTER
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-dinding-retak.html": "Harga Perbaikan Dinding Retak",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-ambles.html": "Jasa Perbaikan Dinding Ambles"
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-dinding-retak.html": "Harga Perbaikan Dinding Retak",  // TYPE: MONEY_MASTER
+  
+  // ============================================================
+  // [VARIANT] - JASA PERBAIKAN DINDING AMBLES (SARAN)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-ambles.html": "Jasa Perbaikan Dinding Ambles"  // TYPE: VARIANT
 };
 
 /*
@@ -492,139 +483,152 @@ const urlMappingPerbaikanStrukturBangunan = {
 
 // ============================================================
 // JASA REHABILITASI BETON
-// Parent: Jasa Perbaikan Struktur
+// Parent: Jasa Perbaikan Struktur (/p/jasa-perbaikan-struktur.html)
 // ============================================================
 
 const urlMappingRehabilitasiBeton = {
   // ============================================================
   // [VARIANT] - JASA PERKUATAN STRUKTUR CFRP
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Perkuatan Struktur CFRP
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-cfrp.html": "Jasa Perkuatan Struktur CFRP",
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-cfrp.html": "Jasa Perkuatan Struktur CFRP",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PELAPISAN ANTI KOROSI BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Pelapisan Anti Korosi Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-korosi-beton.html": "Jasa Pelapisan Anti Korosi Beton",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-korosi-beton.html": "Jasa Pelapisan Anti Korosi Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN SAMBUNGAN BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Perbaikan Sambungan Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-sambungan-beton.html": "Jasa Perbaikan Sambungan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-sambungan-beton.html": "Jasa Perbaikan Sambungan Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA WATERPROOFING BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Waterproofing Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-waterproofing-beton.html": "Jasa Waterproofing Beton",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-beton.html": "Jasa Waterproofing Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PATCHING BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Patching Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-patching-beton.html": "Jasa Patching Beton",
+  "https://www.betonjayareadymix.com/p/jasa-patching-beton.html": "Jasa Patching Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA INJEKSI BETON RETAK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Injeksi Beton Retak
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-injeksi-beton-retak.html": "Jasa Injeksi Beton Retak",
+  "https://www.betonjayareadymix.com/p/jasa-injeksi-beton-retak.html": "Jasa Injeksi Beton Retak",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA SHOTCRETE BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Shotcrete Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-shotcrete-beton.html": "Jasa Shotcrete Beton",
+  "https://www.betonjayareadymix.com/p/jasa-shotcrete-beton.html": "Jasa Shotcrete Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA GROUTING STRUKTUR BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Grouting Struktur Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-grouting-struktur-beton.html": "Jasa Grouting Struktur Beton",
+  "https://www.betonjayareadymix.com/p/jasa-grouting-struktur-beton.html": "Jasa Grouting Struktur Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN BETON MENGELUPAS
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Perbaikan Beton Mengelupas
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-mengelupas.html": "Jasa Perbaikan Beton Mengelupas",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-mengelupas.html": "Jasa Perbaikan Beton Mengelupas",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN BETON KEROPOS
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Perbaikan Beton Keropos
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-keropos.html": "Jasa Perbaikan Beton Keropos",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-keropos.html": "Jasa Perbaikan Beton Keropos",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN BETON RETAK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Perbaikan Beton Retak
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-retak.html": "Jasa Perbaikan Beton Retak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-retak.html": "Jasa Perbaikan Beton Retak",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA CHIPPING BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Chipping Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-chipping-beton.html": "Jasa Chipping Beton",
+  "https://www.betonjayareadymix.com/p/jasa-chipping-beton.html": "Jasa Chipping Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA BOBOK BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Bobok Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bobok-beton.html": "Jasa Bobok Beton",
+  "https://www.betonjayareadymix.com/p/jasa-bobok-beton.html": "Jasa Bobok Beton",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA BETON KARBONASI
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Beton Karbonasi
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-beton-karbonasi.html": "Jasa Beton Karbonasi",
+  "https://www.betonjayareadymix.com/p/jasa-beton-karbonasi.html": "Jasa Beton Karbonasi",  // TYPE: VARIANT
   
   // ============================================================
-  // SARAN ITEM BARU
+  // [MONEY_MASTER] - HARGA REHABILITASI BETON (SARAN)
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > ... > Jasa Rehabilitasi Beton > Harga Rehabilitasi Beton
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-rehabilitasi-beton.html": "Harga Rehabilitasi Beton",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-retak-rambut.html": "Jasa Perbaikan Beton Retak Rambut"
+  // "https://www.betonjayareadymix.com/2019/08/harga-rehabilitasi-beton.html": "Harga Rehabilitasi Beton",  // TYPE: MONEY_MASTER
+  
+  // ============================================================
+  // [SUB-VARIANT] - JASA PERBAIKAN BETON RETAK RAMBUT (SARAN)
+  // 🧠 TYPE: VARIANT (parent: Jasa Perbaikan Beton Retak)
+  // Breadcrumb: Home > ... > Jasa Rehabilitasi Beton > Jasa Perbaikan Beton Retak > Jasa Perbaikan Beton Retak Rambut
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-retak-rambut.html": "Jasa Perbaikan Beton Retak Rambut"  // TYPE: VARIANT
 };
 
 // ============================================================
 // JASA PERBAIKAN STRUKTUR ATAP
-// Parent: Jasa Perbaikan Struktur
+// Parent: Jasa Perbaikan Struktur (/p/jasa-perbaikan-struktur.html)
 // ============================================================
 
 const urlMappingPerbaikanStrukturAtap = {
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR RANGKA ATAP
+  // 🧠 TYPE: VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Atap > Jasa Perbaikan Struktur Rangka Atap
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-stuktur-rangka-atap.html": "Jasa Perbaikan Struktur Rangka Atap",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-stuktur-rangka-atap.html": "Jasa Perbaikan Struktur Rangka Atap",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR ATAP GUDANG
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Atap > Jasa Perbaikan Struktur Atap Gudang
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-atap-gudang.html": "Jasa Perbaikan Struktur Atap Gudang",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-atap-gudang.html": "Jasa Perbaikan Struktur Atap Gudang",  // TYPE: VARIANT
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN RANGKA ATAP BAJA RINGAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Atap > Jasa Perbaikan Rangka Atap Baja Ringan
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-rangka-atap-baja-ringan.html": "Jasa Perbaikan Rangka Atap Baja Ringan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-rangka-atap-baja-ringan.html": "Jasa Perbaikan Rangka Atap Baja Ringan",  // TYPE: VARIANT
   
   // ============================================================
-  // SARAN ITEM BARU
+  // [MONEY_MASTER] - HARGA PERBAIKAN ATAP (SARAN)
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > ... > Jasa Perbaikan Struktur Atap > Harga Perbaikan Atap
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-atap.html": "Harga Perbaikan Atap",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-kuda-kuda-atap.html": "Jasa Perbaikan Kuda-kuda Atap",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-genting-bocor.html": "Jasa Perbaikan Genting Bocor"
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-atap.html": "Harga Perbaikan Atap",  // TYPE: MONEY_MASTER
+  
+  // ============================================================
+  // [SUB-VARIANT] - JASA PERBAIKAN KUDA-KUDA ATAP (SARAN)
+  // 🧠 TYPE: VARIANT (parent: Jasa Perbaikan Struktur Rangka Atap)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-kuda-kuda-atap.html": "Jasa Perbaikan Kuda-kuda Atap",  // TYPE: VARIANT
+  
+  // ============================================================
+  // [SUB-VARIANT] - JASA PERBAIKAN GENTING BOCOR (SARAN)
+  // 🧠 TYPE: VARIANT
+  // ============================================================
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-genting-bocor.html": "Jasa Perbaikan Genting Bocor"  // TYPE: VARIANT
 };
 /*
-📋 RINGKASAN BREADCRUMB 4 LEVEL (UNTUK SETIAP JENIS)
+;
+📋 RINGKASAN BREADCRUMB 4 LEVEL (SKIP PILLAR JASA KONSTRUKSI)
 Jenis Halaman	Breadcrumb (4 level)
 VARIANT (langsung di bawah SUB2)	Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > [Nama Halaman]
 SUB-VARIANT (di bawah VARIANT)	Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > [Parent VARIANT] > [Nama Halaman]
+MONEY_MASTER	Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > [Nama Halaman]
+📊 CONTOH BREADCRUMB UNTUK MASING-MASING JENIS
+Halaman	Type	Breadcrumb
+Jasa Perkuatan Struktur CFRP	VARIANT	Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Perkuatan Struktur CFRP
+Jasa Perbaikan Beton Retak	VARIANT	Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Perbaikan Beton Retak
+Jasa Perbaikan Struktur Rangka Atap	VARIANT	Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Atap > Jasa Perbaikan Struktur Rangka Atap
 */
-
 //Jasa PerawatanPerbaikanBangunan
 /*
 const urlMappingPerawatanPerbaikanBangunan = {
@@ -635,73 +639,70 @@ const urlMappingPerawatanPerbaikanBangunan = {
 	
 };
 */
-//Sub Jasa PerawatanPerbaikanBangunan
 // ============================================================
-// JASA PERBAIKAN KEBOCORAN & WATERPROOFING (SUB2)
+// JASA PERAWATAN & PERBAIKAN BANGUNAN (SUB2)
+// Parent: Jasa Perawatan & Perbaikan Bangunan
+// ============================================================
+
+// ============================================================
+// JASA PERBAIKAN KEBOCORAN & WATERPROOFING (SUB2 - TURUNAN)
 // Parent: Jasa Perawatan & Perbaikan Bangunan
 // ============================================================
 
 const urlMappingPerbaikanKebocoranWaterproofing = {
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN REMBESAN AIR
+  // [MONEY_MASTER] - JASA PERBAIKAN REMBESAN AIR
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil, parent: SUB2)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Perbaikan Rembesan Air
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-rembesan-air.html": "Jasa Perbaikan Rembesan Air",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-rembesan-air.html": "Jasa Perbaikan Rembesan Air",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN DAK BETON BOCOR
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Perbaikan Dak Beton Bocor
+  // [MONEY_MASTER] - JASA PERBAIKAN DAK BETON BOCOR
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dak-beton-bocor.html": "Jasa Perbaikan Dak Beton Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dak-beton-bocor.html": "Jasa Perbaikan Dak Beton Bocor",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN TALANG BOCOR
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Perbaikan Talang Bocor
+  // [MONEY_MASTER] - JASA PERBAIKAN TALANG BOCOR
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-bocor.html": "Jasa Perbaikan Talang Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-bocor.html": "Jasa Perbaikan Talang Bocor",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN GENTENG BOCOR
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Perbaikan Genteng Bocor
+  // [MONEY_MASTER] - JASA PERBAIKAN GENTENG BOCOR
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-genteng-bocor.html": "Jasa Perbaikan Genteng Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-genteng-bocor.html": "Jasa Perbaikan Genteng Bocor",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA WATERPROOFING DAK BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Waterproofing Dak Beton
+  // [MONEY_MASTER] - JASA WATERPROOFING DAK BETON
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-waterproofing-dak-beton.html": "Jasa Waterproofing Dak Beton",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-dak-beton.html": "Jasa Waterproofing Dak Beton",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA WATERPROOFING BASEMENT
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Waterproofing Basement
+  // [MONEY_MASTER] - JASA WATERPROOFING BASEMENT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-waterproofing-basement.html": "Jasa Waterproofing Basement",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-basement.html": "Jasa Waterproofing Basement",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA WATERPROOFING DINDING
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Waterproofing Dinding
+  // [MONEY_MASTER] - JASA WATERPROOFING DINDING
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-waterproofing-dinding.html": "Jasa Waterproofing Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-dinding.html": "Jasa Waterproofing Dinding",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA INJEKSI ANTI BOCOR
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Injeksi Anti Bocor
+  // [MONEY_MASTER] - JASA INJEKSI ANTI BOCOR
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-injeksi-anti-bocor.html": "Jasa Injeksi Anti Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-injeksi-anti-bocor.html": "Jasa Injeksi Anti Bocor",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA COATING WATERPROOFING
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Coating Waterproofing
+  // [MONEY_MASTER] - JASA COATING WATERPROOFING
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-coating-waterproofing.html": "Jasa Coating Waterproofing"
+  "https://www.betonjayareadymix.com/p/jasa-coating-waterproofing.html": "Jasa Coating Waterproofing"  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
 // 🧠 SEO NOTES - PERBAIKAN KEBOCORAN & WATERPROOFING
 // ============================================================
 /*
-📌 SEMUA URL adalah [MONEY PAGE] karena:
+📌 SEMUA URL adalah [MONEY_MASTER] karena:
 1. Konten membahas layanan spesifik dengan harga/estimasi
 2. Intent transaksional (user mencari solusi kebocoran)
 3. Ada CTA dan ajakan konsultasi
@@ -710,70 +711,64 @@ const urlMappingPerbaikanKebocoranWaterproofing = {
 Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > [Nama Halaman]
 
 📌 SARAN ITEM BARU (jika diperlukan):
-// "https://www.betonjayareadymix.com/p/jasa-waterproofing-kolam-renang.html": "Jasa Waterproofing Kolam Renang",
-// "https://www.betonjayareadymix.com/p/jasa-waterproofing-dinding-eksterior.html": "Jasa Waterproofing Dinding Eksterior",
+// "https://www.betonjayareadymix.com/p/jasa-waterproofing-kolam-renang.html": "Jasa Waterproofing Kolam Renang",  // TYPE: MONEY_MASTER
+// "https://www.betonjayareadymix.com/p/jasa-waterproofing-dinding-eksterior.html": "Jasa Waterproofing Dinding Eksterior",  // TYPE: MONEY_MASTER
 */
 
 // ============================================================
-// JASA PERBAIKAN ELEMEN ARSITEKTURAL (SUB2)
+// JASA PERBAIKAN ELEMEN ARSITEKTURAL (SUB2 - TURUNAN)
 // Parent: Jasa Perawatan & Perbaikan Bangunan
 // ============================================================
 
 const urlMappingPerbaikanElemenArsitektural = {
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN DINDING RETAK
+  // [MONEY_MASTER] - JASA PERBAIKAN DINDING RETAK
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil, parent: SUB2)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Elemen Arsitektural > Jasa Perbaikan Dinding Retak
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-retak.html": "Jasa Perbaikan Dinding Retak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-retak.html": "Jasa Perbaikan Dinding Retak",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN PLAFON RUSAK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Elemen Arsitektural > Jasa Perbaikan Plafon Rusak
+  // [MONEY_MASTER] - JASA PERBAIKAN PLAFON RUSAK
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon-rusak.html": "Jasa Perbaikan Plafon Rusak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon-rusak.html": "Jasa Perbaikan Plafon Rusak",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN PLESTER RETAK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Elemen Arsitektural > Jasa Perbaikan Plester Retak
+  // [MONEY_MASTER] - JASA PERBAIKAN PLESTER RETAK
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-plester-retak.html": "Jasa Perbaikan Plester Retak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-plester-retak.html": "Jasa Perbaikan Plester Retak",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN CAT MENGELUPAS
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Elemen Arsitektural > Jasa Perbaikan Cat Mengelupas
+  // [MONEY_MASTER] - JASA PERBAIKAN CAT MENGELUPAS
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-cat-mengelupas.html": "Jasa Perbaikan Cat Mengelupas",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-cat-mengelupas.html": "Jasa Perbaikan Cat Mengelupas",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN LANTAI RETAK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Elemen Arsitektural > Jasa Perbaikan Lantai Retak
+  // [MONEY_MASTER] - JASA PERBAIKAN LANTAI RETAK
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-retak.html": "Jasa Perbaikan Lantai Retak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-retak.html": "Jasa Perbaikan Lantai Retak",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN KERAMIK MENGGEMBUNG
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Elemen Arsitektural > Jasa Perbaikan Keramik Menggelembung
+  // [MONEY_MASTER] - JASA PERBAIKAN KERAMIK MENGGEMBUNG
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-keramik-menggelembung.html": "Jasa Perbaikan Keramik Menggelembung",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-keramik-menggelembung.html": "Jasa Perbaikan Keramik Menggelembung",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN TANGGA RETAK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Elemen Arsitektural > Jasa Perbaikan Tangga Retak
+  // [MONEY_MASTER] - JASA PERBAIKAN TANGGA RETAK
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-tangga-retak.html": "Jasa Perbaikan Tangga Retak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-tangga-retak.html": "Jasa Perbaikan Tangga Retak",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN PARTISI RUSAK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Elemen Arsitektural > Jasa Perbaikan Partisi Rusak
+  // [MONEY_MASTER] - JASA PERBAIKAN PARTISI RUSAK
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-partisi-rusak.html": "Jasa Perbaikan Partisi Rusak"
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-partisi-rusak.html": "Jasa Perbaikan Partisi Rusak"  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
 // 🧠 SEO NOTES - PERBAIKAN ELEMEN ARSITEKTURAL
 // ============================================================
 /*
-📌 SEMUA URL adalah [MONEY PAGE] karena:
+📌 SEMUA URL adalah [MONEY_MASTER] karena:
 1. Membahas layanan perbaikan spesifik
 2. Intent transaksional (user mencari jasa perbaikan)
 3. Konten mengarah ke konsultasi dan penawaran
@@ -782,53 +777,50 @@ const urlMappingPerbaikanElemenArsitektural = {
 Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Elemen Arsitektural > [Nama Halaman]
 
 📌 SARAN ITEM BARU (jika diperlukan):
-// "https://www.betonjayareadymix.com/p/jasa-perbaikan-lisplang-retak.html": "Jasa Perbaikan Lisplang Retak",
-// "https://www.betonjayareadymix.com/p/jasa-perbaikan-kusen-rusak.html": "Jasa Perbaikan Kusen Rusak",
-// "https://www.betonjayareadymix.com/p/jasa-perbaikan-pintu-dan-jendela.html": "Jasa Perbaikan Pintu dan Jendela",
+// "https://www.betonjayareadymix.com/p/jasa-perbaikan-lisplang-retak.html": "Jasa Perbaikan Lisplang Retak",  // TYPE: MONEY_MASTER
+// "https://www.betonjayareadymix.com/p/jasa-perbaikan-kusen-rusak.html": "Jasa Perbaikan Kusen Rusak",  // TYPE: MONEY_MASTER
+// "https://www.betonjayareadymix.com/p/jasa-perbaikan-pintu-dan-jendela.html": "Jasa Perbaikan Pintu dan Jendela",  // TYPE: MONEY_MASTER
 */
 
 // ============================================================
-// JASA PERBAIKAN ATAP & DRAINASE BANGUNAN (SUB2)
+// JASA PERBAIKAN ATAP & DRAINASE BANGUNAN (SUB2 - TURUNAN)
 // Parent: Jasa Perawatan & Perbaikan Bangunan
 // ============================================================
 
 const urlMappingPerbaikanAtapDrainaseBangunan = {
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN ATAP BOCOR
+  // [MONEY_MASTER] - JASA PERBAIKAN ATAP BOCOR
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil, parent: SUB2)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Atap & Drainase Bangunan > Jasa Perbaikan Atap Bocor
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-bocor.html": "Jasa Perbaikan Atap Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-bocor.html": "Jasa Perbaikan Atap Bocor",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN RANGKA ATAP
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Atap & Drainase Bangunan > Jasa Perbaikan Rangka Atap
+  // [MONEY_MASTER] - JASA PERBAIKAN RANGKA ATAP
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-rangka-atap.html": "Jasa Perbaikan Rangka Atap",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-rangka-atap.html": "Jasa Perbaikan Rangka Atap",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN SALURAN AIR TERSUMBAT
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Atap & Drainase Bangunan > Jasa Perbaikan Saluran Air Tersumbat
+  // [MONEY_MASTER] - JASA PERBAIKAN SALURAN AIR TERSUMBAT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air-tersumbat.html": "Jasa Perbaikan Saluran Air Tersumbat",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air-tersumbat.html": "Jasa Perbaikan Saluran Air Tersumbat",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN PIPA BOCOR
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Atap & Drainase Bangunan > Jasa Perbaikan Pipa Bocor
+  // [MONEY_MASTER] - JASA PERBAIKAN PIPA BOCOR
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-bocor.html": "Jasa Perbaikan Pipa Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-bocor.html": "Jasa Perbaikan Pipa Bocor",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - JASA PERBAIKAN ROOF DECK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Atap & Drainase Bangunan > Jasa Perbaikan Roof Deck
+  // [MONEY_MASTER] - JASA PERBAIKAN ROOF DECK
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-roof-deck.html": "Jasa Perbaikan Roof Deck"
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-roof-deck.html": "Jasa Perbaikan Roof Deck"  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
 // 🧠 SEO NOTES - PERBAIKAN ATAP & DRAINASE BANGUNAN
 // ============================================================
 /*
-📌 SEMUA URL adalah [MONEY PAGE] karena:
+📌 SEMUA URL adalah [MONEY_MASTER] karena:
 1. Membahas layanan perbaikan spesifik
 2. Intent transaksional (user mencari jasa perbaikan)
 3. Ada estimasi harga, metode, dan CTA konsultasi
@@ -837,9 +829,9 @@ const urlMappingPerbaikanAtapDrainaseBangunan = {
 Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Atap & Drainase Bangunan > [Nama Halaman]
 
 📌 SARAN ITEM BARU (jika diperlukan):
-// "https://www.betonjayareadymix.com/p/jasa-perbaikan-sistem-drainase-atap.html": "Jasa Perbaikan Sistem Drainase Atap",
-// "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-air-atap.html": "Jasa Perbaikan Talang Air Atap",
-// "https://www.betonjayareadymix.com/p/jasa-perbaikan-selokan-tersumbat.html": "Jasa Perbaikan Selokan Tersumbat",
+// "https://www.betonjayareadymix.com/p/jasa-perbaikan-sistem-drainase-atap.html": "Jasa Perbaikan Sistem Drainase Atap",  // TYPE: MONEY_MASTER
+// "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-air-atap.html": "Jasa Perbaikan Talang Air Atap",  // TYPE: MONEY_MASTER
+// "https://www.betonjayareadymix.com/p/jasa-perbaikan-selokan-tersumbat.html": "Jasa Perbaikan Selokan Tersumbat",  // TYPE: MONEY_MASTER
 */
 
 //Jasa Renovasi Perbaikan Infrastruktur
@@ -854,33 +846,10 @@ const urlMappingPerbaikanInfrastruktur = {
 };
 */
 
-//SUB Jasa Perbaikan Infrastruktur
-/*
-JASA PERBAIKAN INFRASTRUKTUR (SUB2 - /p/jasa-perbaikan-infrastruktur.html)
-│
-├── [VARIANT] Jasa Perbaikan Jalan
-│   ├── [SUB-VARIANT] Jasa Perbaikan Jalan Berlubang
-│   ├── [SUB-VARIANT] Jasa Perbaikan Jalan Ambles
-│   ├── [SUB-VARIANT] Jasa Perbaikan Jalan Retak
-│   ├── [SUB-VARIANT] Jasa Perbaikan Jalan Aspal
-│   ├── [SUB-VARIANT] Jasa Perbaikan Jalan Beton
-│   └── [SUB-VARIANT] Jasa Perbaikan Jalan Paving
-│
-├── [VARIANT] Jasa Perbaikan Trotoar
-│   ├── [SUB-VARIANT] Jasa Perbaikan Trotoar Jalan Rusak
-│   └── [SUB-VARIANT] Jasa Perbaikan Trotoar Beton
-│
-├── [VARIANT] Jasa Perbaikan Jembatan
-│   ├── [SUB-VARIANT] Jasa Perbaikan Struktur Jembatan
-│   ├── [SUB-VARIANT] Jasa Perbaikan Jembatan Beton
-│   ├── [SUB-VARIANT] Jasa Perbaikan Jembatan Besi
-│   └── [SUB-VARIANT] Jasa Rehabilitasi Jembatan
-│
-└── [VARIANT] Jasa Perbaikan Saluran
-    ├── [SUB-VARIANT] Jasa Perbaikan Saluran Air
-    ├── [SUB-VARIANT] Jasa Perbaikan Saluran Air Kotor
-    └── [SUB-VARIANT] Jasa Perbaikan Saluran Air Hujan
-	*/
+// ============================================================
+// JASA PERBAIKAN INFRASTRUKTUR (SUB2)
+// Parent: Jasa Perawatan & Perbaikan Bangunan
+// ============================================================
 
 // ============================================================
 // JASA PERBAIKAN JALAN (VARIANT)
@@ -889,125 +858,109 @@ JASA PERBAIKAN INFRASTRUKTUR (SUB2 - /p/jasa-perbaikan-infrastruktur.html)
 
 const urlMappingPerbaikanInfrastrukturJalan = {
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN JALAN BERLUBANG
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Perbaikan Jalan Berlubang
+  // [MONEY_MASTER] - JASA PERBAIKAN JALAN BERLUBANG
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan Berlubang
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-berlubang.html": "Jasa Perbaikan Jalan Berlubang",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-berlubang.html": "Jasa Perbaikan Jalan Berlubang",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN JALAN AMBLES
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Perbaikan Jalan Ambles
+  // [MONEY_MASTER] - JASA PERBAIKAN JALAN AMBLES
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-ambles.html": "Jasa Perbaikan Jalan Ambles",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-ambles.html": "Jasa Perbaikan Jalan Ambles",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN JALAN RETAK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Perbaikan Jalan Retak
+  // [MONEY_MASTER] - JASA PERBAIKAN JALAN RETAK
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-retak.html": "Jasa Perbaikan Jalan Retak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-retak.html": "Jasa Perbaikan Jalan Retak",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN PERMUKAAN JALAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Perbaikan Permukaan Jalan
+  // [MONEY_MASTER] - JASA PERBAIKAN PERMUKAAN JALAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-permukaan-jalan.html": "Jasa Perbaikan Permukaan Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-permukaan-jalan.html": "Jasa Perbaikan Permukaan Jalan",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN JALAN RUSAK BERAT
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Perbaikan Jalan Rusak Berat
+  // [MONEY_MASTER] - JASA PERBAIKAN JALAN RUSAK BERAT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-rusak-berat.html": "Jasa Perbaikan Jalan Rusak Berat",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-rusak-berat.html": "Jasa Perbaikan Jalan Rusak Berat",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN JALAN ASPAL
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Perbaikan Jalan Aspal
+  // [MONEY_MASTER] - JASA PERBAIKAN JALAN ASPAL
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-aspal.html": "Jasa Perbaikan Jalan Aspal",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-aspal.html": "Jasa Perbaikan Jalan Aspal",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN JALAN BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Perbaikan Jalan Beton
+  // [MONEY_MASTER] - JASA PERBAIKAN JALAN BETON
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-beton.html": "Jasa Perbaikan Jalan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-beton.html": "Jasa Perbaikan Jalan Beton",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN JALAN PAVING
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Perbaikan Jalan Paving
+  // [MONEY_MASTER] - JASA PERBAIKAN JALAN PAVING
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-paving.html": "Jasa Perbaikan Jalan Paving",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-paving.html": "Jasa Perbaikan Jalan Paving",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN JALAN CORING BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Perbaikan Jalan Coring Beton
+  // [MONEY_MASTER] - JASA PERBAIKAN JALAN CORING BETON
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-coring-beton.html": "Jasa Perbaikan Jalan Coring Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-coring-beton.html": "Jasa Perbaikan Jalan Coring Beton",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA OVERLAY JALAN ASPAL
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Overlay Jalan Aspal
+  // [MONEY_MASTER] - JASA OVERLAY JALAN ASPAL
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-overlay-jalan-aspal.html": "Jasa Overlay Jalan Aspal",
+  "https://www.betonjayareadymix.com/p/jasa-overlay-jalan-aspal.html": "Jasa Overlay Jalan Aspal",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA REKONSTRUKSI JALAN BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Rekonstruksi Jalan Beton
+  // [MONEY_MASTER] - JASA REKONSTRUKSI JALAN BETON
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-rekonstruksi-jalan-beton.html": "Jasa Rekonstruksi Jalan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-rekonstruksi-jalan-beton.html": "Jasa Rekonstruksi Jalan Beton",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PENAMBALAN JALAN BERLUBANG
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Penambalan Jalan Berlubang
+  // [MONEY_MASTER] - JASA PENAMBALAN JALAN BERLUBANG
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-penambalan-jalan-berlubang.html": "Jasa Penambalan Jalan Berlubang",
+  "https://www.betonjayareadymix.com/p/jasa-penambalan-jalan-berlubang.html": "Jasa Penambalan Jalan Berlubang",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA BONGKAR PASANG JALAN PAVING
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Bongkar Pasang Jalan Paving
+  // [MONEY_MASTER] - JASA BONGKAR PASANG JALAN PAVING
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bongkar-pasang-jalan-paving.html": "Jasa Bongkar Pasang Jalan Paving",
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-pasang-jalan-paving.html": "Jasa Bongkar Pasang Jalan Paving",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN JALAN KOMPLEK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Perbaikan Jalan Komplek
+  // [MONEY_MASTER] - JASA PERBAIKAN JALAN KOMPLEK
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-komplek.html": "Jasa Perbaikan Jalan Komplek",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-komplek.html": "Jasa Perbaikan Jalan Komplek",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN JALAN RAYA
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Perbaikan Jalan Raya
+  // [MONEY_MASTER] - JASA PERBAIKAN JALAN RAYA
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-raya.html": "Jasa Perbaikan Jalan Raya",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-raya.html": "Jasa Perbaikan Jalan Raya",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN JALAN PERUSAHAAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Perbaikan Jalan Perusahaan
+  // [MONEY_MASTER] - JASA PERBAIKAN JALAN PERUSAHAAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-perusahaan.html": "Jasa Perbaikan Jalan Perusahaan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-perusahaan.html": "Jasa Perbaikan Jalan Perusahaan",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN JALAN PERUMAHAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Perbaikan Jalan Perumahan
+  // [MONEY_MASTER] - JASA PERBAIKAN JALAN PERUMAHAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-perumahan.html": "Jasa Perbaikan Jalan Perumahan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-perumahan.html": "Jasa Perbaikan Jalan Perumahan",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA REPAIR JALAN DENGAN COLD MIX
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Repair Jalan dengan Cold Mix
+  // [MONEY_MASTER] - JASA REPAIR JALAN DENGAN COLD MIX
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-repair-jalan-dengan-cold-mix.html": "Jasa Repair Jalan dengan Cold Mix",
+  "https://www.betonjayareadymix.com/p/jasa-repair-jalan-dengan-cold-mix.html": "Jasa Repair Jalan dengan Cold Mix",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA MARKING JALAN DAN REPAIR
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jalan > Jasa Marking Jalan dan Repair
+  // [MONEY_MASTER] - JASA MARKING JALAN DAN REPAIR
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-marking-jalan-dan-repair.html": "Jasa Marking Jalan dan Repair",
+  "https://www.betonjayareadymix.com/p/jasa-marking-jalan-dan-repair.html": "Jasa Marking Jalan dan Repair",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // SARAN ITEM BARU
+  // SARAN ITEM BARU (BELUM AKTIF)
+  // 🧠 TYPE: MONEY_MASTER
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-hotmix.html": "Jasa Perbaikan Jalan Hotmix",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-rigid.html": "Jasa Perbaikan Jalan Rigid",
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-jalan.html": "Harga Perbaikan Jalan"
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-hotmix.html": "Jasa Perbaikan Jalan Hotmix",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-rigid.html": "Jasa Perbaikan Jalan Rigid",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-jalan.html": "Harga Perbaikan Jalan"  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
@@ -1017,23 +970,24 @@ const urlMappingPerbaikanInfrastrukturJalan = {
 
 const urlMappingPerbaikanInfrastrukturTrotoar = {
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN TROTOAR JALAN RUSAK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Trotoar > Jasa Perbaikan Trotoar Jalan Rusak
+  // [MONEY_MASTER] - JASA PERBAIKAN TROTOAR JALAN RUSAK
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Trotoar Jalan Rusak
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan-rusak.html": "Jasa Perbaikan Trotoar Jalan Rusak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan-rusak.html": "Jasa Perbaikan Trotoar Jalan Rusak",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN TROTOAR BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Trotoar > Jasa Perbaikan Trotoar Beton
+  // [MONEY_MASTER] - JASA PERBAIKAN TROTOAR BETON
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-beton.html": "Jasa Perbaikan Trotoar Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-beton.html": "Jasa Perbaikan Trotoar Beton",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // SARAN ITEM BARU
+  // SARAN ITEM BARU (BELUM AKTIF)
+  // 🧠 TYPE: MONEY_MASTER
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-paving.html": "Jasa Perbaikan Trotoar Paving",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-ambles.html": "Jasa Perbaikan Trotoar Ambles",
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-trotoar.html": "Harga Perbaikan Trotoar"
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-paving.html": "Jasa Perbaikan Trotoar Paving",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-ambles.html": "Jasa Perbaikan Trotoar Ambles",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-trotoar.html": "Harga Perbaikan Trotoar"  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
@@ -1043,113 +997,99 @@ const urlMappingPerbaikanInfrastrukturTrotoar = {
 
 const urlMappingPerbaikanInfrastrukturJembatan = {
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN STRUKTUR JEMBATAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Perbaikan Struktur Jembatan
+  // [MONEY_MASTER] - JASA PERBAIKAN STRUKTUR JEMBATAN
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Struktur Jembatan
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-jembatan.html": "Jasa Perbaikan Struktur Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-jembatan.html": "Jasa Perbaikan Struktur Jembatan",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN JEMBATAN BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Perbaikan Jembatan Beton
+  // [MONEY_MASTER] - JASA PERBAIKAN JEMBATAN BETON
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan-beton.html": "Jasa Perbaikan Jembatan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan-beton.html": "Jasa Perbaikan Jembatan Beton",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN JEMBATAN BESI
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Perbaikan Jembatan Besi
+  // [MONEY_MASTER] - JASA PERBAIKAN JEMBATAN BESI
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan-besi.html": "Jasa Perbaikan Jembatan Besi",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan-besi.html": "Jasa Perbaikan Jembatan Besi",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA REHABILITASI JEMBATAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Rehabilitasi Jembatan
+  // [MONEY_MASTER] - JASA REHABILITASI JEMBATAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-rehabilitasi-jembatan.html": "Jasa Rehabilitasi Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-rehabilitasi-jembatan.html": "Jasa Rehabilitasi Jembatan",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI JEMBATAN GANTUNG
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Renovasi Jembatan Gantung
+  // [MONEY_MASTER] - JASA RENOVASI JEMBATAN GANTUNG
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-jembatan-gantung.html": "Jasa Renovasi Jembatan Gantung",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-jembatan-gantung.html": "Jasa Renovasi Jembatan Gantung",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN FONDASI JEMBATAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Perbaikan Fondasi Jembatan
+  // [MONEY_MASTER] - JASA PERBAIKAN FONDASI JEMBATAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-fondasi-jembatan.html": "Jasa Perbaikan Fondasi Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-fondasi-jembatan.html": "Jasa Perbaikan Fondasi Jembatan",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI JEMBATAN BERTINGKAT
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Renovasi Jembatan Bertingkat
+  // [MONEY_MASTER] - JASA RENOVASI JEMBATAN BERTINGKAT
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-jembatan-bertingkat.html": "Jasa Renovasi Jembatan Bertingkat",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-jembatan-bertingkat.html": "Jasa Renovasi Jembatan Bertingkat",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERKUATAN STRUKTUR JEMBATAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Perkuatan Struktur Jembatan
+  // [MONEY_MASTER] - JASA PERKUATAN STRUKTUR JEMBATAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-jembatan.html": "Jasa Perkuatan Struktur Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-jembatan.html": "Jasa Perkuatan Struktur Jembatan",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI JEMBATAN RUSAK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Renovasi Jembatan Rusak
+  // [MONEY_MASTER] - JASA RENOVASI JEMBATAN RUSAK
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-jembatan-rusak.html": "Jasa Renovasi Jembatan Rusak",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-jembatan-rusak.html": "Jasa Renovasi Jembatan Rusak",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN RETAK JEMBATAN BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Perbaikan Retak Jembatan Beton
+  // [MONEY_MASTER] - JASA PERBAIKAN RETAK JEMBATAN BETON
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-retak-jembatan-beton.html": "Jasa Perbaikan Retak Jembatan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-retak-jembatan-beton.html": "Jasa Perbaikan Retak Jembatan Beton",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN LANTAI JEMBATAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Perbaikan Lantai Jembatan
+  // [MONEY_MASTER] - JASA PERBAIKAN LANTAI JEMBATAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-jembatan.html": "Jasa Perbaikan Lantai Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-jembatan.html": "Jasa Perbaikan Lantai Jembatan",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA REKONSTRUKSI JEMBATAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Rekonstruksi Jembatan
+  // [MONEY_MASTER] - JASA REKONSTRUKSI JEMBATAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-rekonstruksi-jembatan.html": "Jasa Rekonstruksi Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-rekonstruksi-jembatan.html": "Jasa Rekonstruksi Jembatan",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN BALOK JEMBATAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Perbaikan Balok Jembatan
+  // [MONEY_MASTER] - JASA PERBAIKAN BALOK JEMBATAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-jembatan.html": "Jasa Perbaikan Balok Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-jembatan.html": "Jasa Perbaikan Balok Jembatan",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN TIANG PENYANGGA JEMBATAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Perbaikan Tiang Penyangga Jembatan
+  // [MONEY_MASTER] - JASA PERBAIKAN TIANG PENYANGGA JEMBATAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-tiang-penyangga-jembatan.html": "Jasa Perbaikan Tiang Penyangga Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-tiang-penyangga-jembatan.html": "Jasa Perbaikan Tiang Penyangga Jembatan",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA CHIPPING JEMBATAN BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Chipping Jembatan Beton
+  // [MONEY_MASTER] - JASA CHIPPING JEMBATAN BETON
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-chipping-jembatan-beton.html": "Jasa Chipping Jembatan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-chipping-jembatan-beton.html": "Jasa Chipping Jembatan Beton",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA SHOTCRETE JEMBATAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Shotcrete Jembatan
+  // [MONEY_MASTER] - JASA SHOTCRETE JEMBATAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-shotcrete-jembatan.html": "Jasa Shotcrete Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-shotcrete-jembatan.html": "Jasa Shotcrete Jembatan",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA INJEKSI RETAK JEMBATAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Injeksi Retak Jembatan
+  // [MONEY_MASTER] - JASA INJEKSI RETAK JEMBATAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-injeksi-retak-jembatan.html": "Jasa Injeksi Retak Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-injeksi-retak-jembatan.html": "Jasa Injeksi Retak Jembatan",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // SARAN ITEM BARU
+  // SARAN ITEM BARU (BELUM AKTIF)
+  // 🧠 TYPE: MONEY_MASTER
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan-gantung.html": "Jasa Perbaikan Jembatan Gantung",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan-kayu.html": "Jasa Perbaikan Jembatan Kayu",
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-jembatan.html": "Harga Perbaikan Jembatan"
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan-gantung.html": "Jasa Perbaikan Jembatan Gantung",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan-kayu.html": "Jasa Perbaikan Jembatan Kayu",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-jembatan.html": "Harga Perbaikan Jembatan"  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
@@ -1159,69 +1099,35 @@ const urlMappingPerbaikanInfrastrukturJembatan = {
 
 const urlMappingPerbaikanInfrastrukturSaluran = {
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN SALURAN AIR
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Saluran > Jasa Perbaikan Saluran Air
+  // [MONEY_MASTER] - JASA PERBAIKAN SALURAN AIR
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Saluran Air
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air.html": "Jasa Perbaikan Saluran Air",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air.html": "Jasa Perbaikan Saluran Air",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN SALURAN AIR KOTOR
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Saluran > Jasa Perbaikan Saluran Air Kotor
+  // [MONEY_MASTER] - JASA PERBAIKAN SALURAN AIR KOTOR
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air-kotor.html": "Jasa Perbaikan Saluran Air Kotor",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air-kotor.html": "Jasa Perbaikan Saluran Air Kotor",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN SALURAN AIR HUJAN
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Saluran > Jasa Perbaikan Saluran Air Hujan
+  // [MONEY_MASTER] - JASA PERBAIKAN SALURAN AIR HUJAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air-hujan.html": "Jasa Perbaikan Saluran Air Hujan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air-hujan.html": "Jasa Perbaikan Saluran Air Hujan",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // SARAN ITEM BARU
+  // SARAN ITEM BARU (BELUM AKTIF)
+  // 🧠 TYPE: MONEY_MASTER
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-drainase.html": "Jasa Perbaikan Saluran Drainase",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-tersumbat.html": "Jasa Perbaikan Saluran Tersumbat",
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-saluran-air.html": "Harga Perbaikan Saluran Air"
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-drainase.html": "Jasa Perbaikan Saluran Drainase",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-tersumbat.html": "Jasa Perbaikan Saluran Tersumbat",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-saluran-air.html": "Harga Perbaikan Saluran Air"  // TYPE: MONEY_MASTER
 };
 
-
-/*
-JASA RENOVASI EKSTERIOR BANGUNAN (SUB2 - /p/jasa-renovasi-eksterior-bangunan.html)
-│
-├── [VARIANT] Jasa Renovasi Fasad Bangunan
-│   ├── [SUB-VARIANT] Jasa Renovasi Fasad Kaca Gedung
-│   ├── [SUB-VARIANT] Jasa Renovasi Fasad Aluminium Composite Panel
-│   ├── [SUB-VARIANT] Jasa Pembersihan Fasad Gedung
-│   ├── [SUB-VARIANT] Jasa Renovasi Fasad Gedung Tinggi
-│   ├── [SUB-VARIANT] Jasa Recoating Fasad Gedung
-│   ├── [SUB-VARIANT] Jasa Perbaikan Fasad Gedung Retak
-│   ├── [SUB-VARIANT] Jasa Renovasi Fasad Bangunan Komersial
-│   ├── [SUB-VARIANT] Jasa Renovasi Kanopi Fasad Gedung
-│   ├── [SUB-VARIANT] Jasa Desain Renovasi Fasad Bangunan
-│   ├── [SUB-VARIANT] Jasa Penggantian Fasad Bangunan Lama
-│   ├── [SUB-VARIANT] Jasa Fasad Dekoratif Bangunan
-│   └── [SUB-VARIANT] Jasa Perkuatan Struktur Fasad Bangunan
-│
-├── [VARIANT] Jasa Renovasi Fasad Eksterior
-│
-├── [VARIANT] Jasa Renovasi Arsitektur Eksterior
-│
-├── [VARIANT] Jasa Renovasi Atap
-│
-├── [VARIANT] Jasa Renovasi Kanopi
-│
-├── [VARIANT] Jasa Renovasi Pagar dan Gerbang
-│
-├── [VARIANT] Jasa Renovasi Taman dan Landscape
-│
-├── [VARIANT] Jasa Renovasi Balkon dan Teras
-│
-├── [VARIANT] Jasa Renovasi Penerangan Eksterior
-│
-├── [VARIANT] Jasa Renovasi Jalur Pejalan Kaki dan Aksesibilitas
-│
-└── [VARIANT] Jasa Renovasi Elemen Dekoratif Eksterior
-*/
+// ============================================================
+// JASA RENOVASI EKSTERIOR BANGUNAN (SUB2)
+// Parent: Jasa Renovasi (/p/jasa-renovasi.html)
+// ============================================================
 
 // ============================================================
 // JASA RENOVASI FASAD BANGUNAN (VARIANT)
@@ -1231,169 +1137,169 @@ JASA RENOVASI EKSTERIOR BANGUNAN (SUB2 - /p/jasa-renovasi-eksterior-bangunan.htm
 const urlMappingPerbaikanFasadEksterior = {
   // ============================================================
   // [VARIANT] - JASA RENOVASI FASAD BANGUNAN
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Fasad Bangunan
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-bangunan.html": "Jasa Renovasi Fasad Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-bangunan.html": "Jasa Renovasi Fasad Bangunan",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI FASAD EKSTERIOR
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Fasad Eksterior
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-eksterior.html": "Jasa Renovasi Fasad Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-eksterior.html": "Jasa Renovasi Fasad Eksterior",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI ARSITEKTUR EKSTERIOR
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Arsitektur Eksterior
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-arsitektur-eksterior.html": "Jasa Renovasi Arsitektur Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-arsitektur-eksterior.html": "Jasa Renovasi Arsitektur Eksterior",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI ATAP
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Atap
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-atap.html": "Jasa Renovasi Atap",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-atap.html": "Jasa Renovasi Atap",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI KANOPI
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Kanopi
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kanopi.html": "Jasa Renovasi Kanopi",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kanopi.html": "Jasa Renovasi Kanopi",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI PAGAR DAN GERBANG
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Pagar dan Gerbang
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-pagar-dan-gerbang.html": "Jasa Renovasi Pagar dan Gerbang",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-pagar-dan-gerbang.html": "Jasa Renovasi Pagar dan Gerbang",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI TAMAN DAN LANDSCAPE
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Taman dan Landscape
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-taman-dan-landscape.html": "Jasa Renovasi Taman dan Landscape",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-taman-dan-landscape.html": "Jasa Renovasi Taman dan Landscape",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI BALKON DAN TERAS
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Balkon dan Teras
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-balkon-dan-teras.html": "Jasa Renovasi Balkon dan Teras",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-balkon-dan-teras.html": "Jasa Renovasi Balkon dan Teras",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI PENERANGAN EKSTERIOR
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Penerangan Eksterior
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-penerangan-eksterior.html": "Jasa Renovasi Penerangan Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-penerangan-eksterior.html": "Jasa Renovasi Penerangan Eksterior",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI JALUR PEJALAN KAKI DAN AKSESIBILITAS
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Jalur Pejalan Kaki dan Aksesibilitas
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-jalur-pejalan-akses.html": "Jasa Renovasi Jalur Pejalan Kaki dan Aksesibilitas",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-jalur-pejalan-akses.html": "Jasa Renovasi Jalur Pejalan Kaki dan Aksesibilitas",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI ELEMEN DEKORATIF EKSTERIOR
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Elemen Dekoratif Eksterior
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-elemen-dekoratif-eksterior.html": "Jasa Renovasi Elemen Dekoratif Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-elemen-dekoratif-eksterior.html": "Jasa Renovasi Elemen Dekoratif Eksterior",  // TYPE: VARIANT
 
   // ============================================================
-  // SARAN ITEM BARU (DARI YANG DI-COMMENT)
+  // SARAN ITEM BARU (MASIH COMMENT - PERLU DIBUAT)
+  // 🧠 TYPE: VARIANT (di bawah Jasa Renovasi Eksterior Bangunan)
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap.html": "Jasa Renovasi Perbaikan Atap",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-gudang.html": "Jasa Renovasi Perbaikan Atap Gudang",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-bocor.html": "Jasa Perbaikan Atap Bocor",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-baja-ringan.html": "Jasa Renovasi Perbaikan Atap Baja Ringan",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-air.html": "Jasa Perbaikan Talang Air",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-talang-air.html": "Jasa Renovasi Talang Air",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-renovasi-pagar.html": "Jasa Perbaikan dan Renovasi Pagar",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-dan-drainase.html": "Jasa Perbaikan Saluran dan Drainase"
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap.html": "Jasa Renovasi Perbaikan Atap",  // TYPE: VARIANT
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-gudang.html": "Jasa Renovasi Perbaikan Atap Gudang",  // TYPE: VARIANT
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-bocor.html": "Jasa Perbaikan Atap Bocor",  // TYPE: VARIANT
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-baja-ringan.html": "Jasa Renovasi Perbaikan Atap Baja Ringan",  // TYPE: VARIANT
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-air.html": "Jasa Perbaikan Talang Air",  // TYPE: VARIANT
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-talang-air.html": "Jasa Renovasi Talang Air",  // TYPE: VARIANT
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-dan-renovasi-pagar.html": "Jasa Perbaikan dan Renovasi Pagar",  // TYPE: VARIANT
+  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-dan-drainase.html": "Jasa Perbaikan Saluran dan Drainase"  // TYPE: VARIANT
 };
+
 // ============================================================
 // JASA RENOVASI FASAD (SUB-VARIANT DARI FASAD BANGUNAN)
-// Parent: Jasa Renovasi Fasad Bangunan
+// Parent: Jasa Renovasi Fasad Bangunan (VARIANT)
 // ============================================================
 
 const urlMappingPerbaikanFasadEksteriorFasad = {
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI FASAD KACA GEDUNG
+  // [VARIANT] - JASA RENOVASI FASAD KACA GEDUNG
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Fasad Bangunan > Jasa Renovasi Fasad Kaca Gedung
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-kaca-gedung.html": "Jasa Renovasi Fasad Kaca Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-kaca-gedung.html": "Jasa Renovasi Fasad Kaca Gedung",  // TYPE: VARIANT
 
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI FASAD ALUMINIUM COMPOSITE PANEL
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Fasad Bangunan > Renovasi Fasad Aluminium Composite Panel
+  // [VARIANT] - JASA RENOVASI FASAD ALUMINIUM COMPOSITE PANEL
   // ============================================================
-  "https://www.betonjayareadymix.com/p/renovasi-fasad-aluminium-composite-panel.html": "Jasa Renovasi Fasad Aluminium Composite Panel",
+  "https://www.betonjayareadymix.com/p/renovasi-fasad-aluminium-composite-panel.html": "Jasa Renovasi Fasad Aluminium Composite Panel",  // TYPE: VARIANT
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PEMBERSIHAN FASAD GEDUNG
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Fasad Bangunan > Jasa Pembersihan Fasad Gedung
+  // [VARIANT] - JASA PEMBERSIHAN FASAD GEDUNG
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pembersihan-fasad-gedung.html": "Jasa Pembersihan Fasad Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-pembersihan-fasad-gedung.html": "Jasa Pembersihan Fasad Gedung",  // TYPE: VARIANT
 
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI FASAD GEDUNG TINGGI
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Fasad Bangunan > Jasa Renovasi Fasad Gedung Tinggi
+  // [VARIANT] - JASA RENOVASI FASAD GEDUNG TINGGI
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-gedung-tinggi.html": "Jasa Renovasi Fasad Gedung Tinggi",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-gedung-tinggi.html": "Jasa Renovasi Fasad Gedung Tinggi",  // TYPE: VARIANT
 
   // ============================================================
-  // [SUB-VARIANT] - JASA RECOATING FASAD GEDUNG
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Fasad Bangunan > Jasa Recoating Fasad Gedung
+  // [VARIANT] - JASA RECOATING FASAD GEDUNG
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-recoating-fasad-gedung.html": "Jasa Recoating Fasad Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-recoating-fasad-gedung.html": "Jasa Recoating Fasad Gedung",  // TYPE: VARIANT
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERBAIKAN FASAD GEDUNG RETAK
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Fasad Bangunan > Jasa Perbaikan Fasad Gedung Retak
+  // [VARIANT] - JASA PERBAIKAN FASAD GEDUNG RETAK
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-fasad-gedung-retak.html": "Jasa Perbaikan Fasad Gedung Retak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-fasad-gedung-retak.html": "Jasa Perbaikan Fasad Gedung Retak",  // TYPE: VARIANT
 
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI FASAD BANGUNAN KOMERSIAL
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Fasad Bangunan > Jasa Renovasi Fasad Bangunan Komersial
+  // [VARIANT] - JASA RENOVASI FASAD BANGUNAN KOMERSIAL
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-bangunan-komersial.html": "Jasa Renovasi Fasad Bangunan Komersial",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-bangunan-komersial.html": "Jasa Renovasi Fasad Bangunan Komersial",  // TYPE: VARIANT
 
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI KANOPI FASAD GEDUNG
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Fasad Bangunan > Jasa Renovasi Kanopi Fasad Gedung
+  // [VARIANT] - JASA RENOVASI KANOPI FASAD GEDUNG
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kanopi-fasad-gedung.html": "Jasa Renovasi Kanopi Fasad Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kanopi-fasad-gedung.html": "Jasa Renovasi Kanopi Fasad Gedung",  // TYPE: VARIANT
 
   // ============================================================
-  // [SUB-VARIANT] - JASA DESAIN RENOVASI FASAD BANGUNAN
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Fasad Bangunan > Jasa Desain Renovasi Fasad Bangunan
+  // [VARIANT] - JASA DESAIN RENOVASI FASAD BANGUNAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-desain-renovasi-fasad-bangunan.html": "Jasa Desain Renovasi Fasad Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-desain-renovasi-fasad-bangunan.html": "Jasa Desain Renovasi Fasad Bangunan",  // TYPE: VARIANT
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PENGGANTIAN FASAD BANGUNAN LAMA
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Fasad Bangunan > Jasa Penggantian Fasad Bangunan Lama
+  // [VARIANT] - JASA PENGGANTIAN FASAD BANGUNAN LAMA
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-penggantian-fasad-bangunan-lama.html": "Jasa Penggantian Fasad Bangunan Lama",
+  "https://www.betonjayareadymix.com/p/jasa-penggantian-fasad-bangunan-lama.html": "Jasa Penggantian Fasad Bangunan Lama",  // TYPE: VARIANT
 
   // ============================================================
-  // [SUB-VARIANT] - JASA FASAD DEKORATIF BANGUNAN
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Fasad Bangunan > Jasa Fasad Dekoratif Bangunan
+  // [VARIANT] - JASA FASAD DEKORATIF BANGUNAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-fasad-dekoratif-bangunan.html": "Jasa Fasad Dekoratif Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-fasad-dekoratif-bangunan.html": "Jasa Fasad Dekoratif Bangunan",  // TYPE: VARIANT
 
   // ============================================================
-  // [SUB-VARIANT] - JASA PERKUATAN STRUKTUR FASAD BANGUNAN
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Fasad Bangunan > Jasa Perkuatan Struktur Fasad Bangunan
+  // [VARIANT] - JASA PERKUATAN STRUKTUR FASAD BANGUNAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-fasad-bangunan.html": "Jasa Perkuatan Struktur Fasad Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-fasad-bangunan.html": "Jasa Perkuatan Struktur Fasad Bangunan",  // TYPE: VARIANT
 
   // ============================================================
-  // SARAN ITEM BARU
+  // SARAN ITEM BARU (MASIH COMMENT - PERLU DIBUAT)
+  // 🧠 TYPE: VARIANT (di bawah Jasa Renovasi Fasad Bangunan)
+  // ⚠️ STATUS: 404 (belum ada konten)
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-rumah-tinggal.html": "Jasa Renovasi Fasad Rumah Tinggal",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-ruko.html": "Jasa Renovasi Fasad Ruko",
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-fasad.html": "Harga Renovasi Fasad"
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-rumah-tinggal.html": "Jasa Renovasi Fasad Rumah Tinggal",  // TYPE: VARIANT (404)
+  // "https://www.betonjayareadymix.com/p/jasa-renovasi-fasad-ruko.html": "Jasa Renovasi Fasad Ruko",  // TYPE: VARIANT (404)
+  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-fasad.html": "Harga Renovasi Fasad"  // TYPE: MONEY_MASTER (404)
 };
+/*
+Jasa Renovasi (PILLAR)
+│
+└── Jasa Renovasi Eksterior Bangunan (SUB2)
+    │
+    ├── Jasa Renovasi Fasad Bangunan (VARIANT)
+    │   ├── Jasa Renovasi Fasad Kaca Gedung (VARIANT)
+    │   ├── Jasa Renovasi Fasad Aluminium Composite Panel (VARIANT)
+    │   ├── Jasa Pembersihan Fasad Gedung (VARIANT)
+    │   └── ... (dst)
+    │
+    ├── Jasa Renovasi Atap (VARIANT)
+    ├── Jasa Renovasi Kanopi (VARIANT)
+    ├── Jasa Renovasi Pagar dan Gerbang (VARIANT)
+    └── ... (dst)
 
-
+*/
 /*
 const urlMappingPerbaikanFasadEksteriorEksterior = {
 
@@ -1401,20 +1307,8 @@ const urlMappingPerbaikanFasadEksteriorEksterior = {
 };
 */
 
-/*
-JASA RENOVASI (SUB2 - /p/jasa-renovasi.html)
-│
-└── JASA RENOVASI FASAD EKSTERIOR (SUB2 - /p/jasa-renovasi-fasad-eksterior.html)
-    │
-    └── JASA RENOVASI ARSITEKTUR EKSTERIOR (SUB2 - /p/jasa-renovasi-arsitektur-eksterior.html)
-        │
-        └── [VARIANT] Jasa Desain Eksterior (Rumah, Komersial, Villa, Hunian Vertikal, Fasilitas Publik)
-
-		*/
 // ============================================================
 // JASA RENOVASI ARSITEKTUR EKSTERIOR (SUB2)
-// ============================================================
-// 🧠 SEO NOTE: Halaman ini adalah landing page untuk jasa desain eksterior
 // Parent: Jasa Renovasi Fasad Eksterior (/p/jasa-renovasi-fasad-eksterior.html)
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasad Eksterior > Jasa Renovasi Arsitektur Eksterior
 // ============================================================
@@ -1422,167 +1316,130 @@ JASA RENOVASI (SUB2 - /p/jasa-renovasi.html)
 const urlMappingPerbaikanFasadEksteriorArsitektur = {
   // ============================================================
   // [VARIANT] - JASA DESAIN EKSTERIOR RUMAH
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasad Eksterior > Jasa Desain Eksterior Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-rumah.html": "Jasa Desain Eksterior Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-rumah.html": "Jasa Desain Eksterior Rumah",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA DESAIN EKSTERIOR KOMERSIAL
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasad Eksterior > Jasa Desain Eksterior Komersial
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-komersial.html": "Jasa Desain Eksterior Komersial",
+  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-komersial.html": "Jasa Desain Eksterior Komersial",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA DESAIN EKSTERIOR VILLA DAN RESORT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasad Eksterior > Jasa Desain Eksterior Villa dan Resort
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-villa-dan-resort.html": "Jasa Desain Eksterior Villa dan Resort",
+  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-villa-dan-resort.html": "Jasa Desain Eksterior Villa dan Resort",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA DESAIN EKSTERIOR HUNIAN VERTIKAL
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasad Eksterior > Jasa Desain Eksterior Hunian Vertikal
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-hunian-vertikal.html": "Jasa Desain Eksterior Hunian Vertikal",
+  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-hunian-vertikal.html": "Jasa Desain Eksterior Hunian Vertikal",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA DESAIN EKSTERIOR FASILITAS PUBLIK
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasad Eksterior > Jasa Desain Eksterior Fasilitas Publik
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-fasilitas-publik.html": "Jasa Desain Eksterior Fasilitas Publik"
+  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-fasilitas-publik.html": "Jasa Desain Eksterior Fasilitas Publik"  // TYPE: VARIANT
 };
 
 // ============================================================
 // 🟡 SARAN ITEM BARU (UNTUK DITAMBAHKAN)
 // ============================================================
 
-/*
-📌 SARAN ITEM BARU - JASA DESAIN EKSTERIOR
+const urlMappingJasaDesainEksterior_Additional = {
+  // ============================================================
+  // [VARIANT] - JASA DESAIN EKSTERIOR MINIMALIS
+  // 🧠 TYPE: VARIANT (berdasarkan gaya arsitektur)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasad Eksterior > Jasa Desain Eksterior Minimalis
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-minimalis.html": "Jasa Desain Eksterior Minimalis",  // TYPE: VARIANT
 
-| Nama Halaman | URL Saran | Page Type | Breadcrumb (4 level) |
-|--------------|-----------|-----------|----------------------|
-| Jasa Desain Eksterior Minimalis | /p/jasa-desain-eksterior-minimalis.html | [VARIANT] | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasad Eksterior > Jasa Desain Eksterior Minimalis |
-| Jasa Desain Eksterior Modern | /p/jasa-desain-eksterior-modern.html | [VARIANT] | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasad Eksterior > Jasa Desain Eksterior Modern |
-| Jasa Desain Eksterior Klasik | /p/jasa-desain-eksterior-klasik.html | [VARIANT] | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasad Eksterior > Jasa Desain Eksterior Klasik |
-| Jasa Desain Eksterior Industrial | /p/jasa-desain-eksterior-industrial.html | [VARIANT] | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasad Eksterior > Jasa Desain Eksterior Industrial |
-| Harga Jasa Desain Eksterior | /2019/08/harga-desain-eksterior.html | [MONEY PAGE] | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasad Eksterior > Harga Desain Eksterior |
-| Konsultasi Desain Eksterior | /p/konsultasi-desain-eksterior.html | [MONEY PAGE - Lead Gen] | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasad Eksterior > Konsultasi Desain Eksterior |
-*/
+  // ============================================================
+  // [VARIANT] - JASA DESAIN EKSTERIOR MODERN
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-modern.html": "Jasa Desain Eksterior Modern",  // TYPE: VARIANT
 
+  // ============================================================
+  // [VARIANT] - JASA DESAIN EKSTERIOR KLASIK
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-klasik.html": "Jasa Desain Eksterior Klasik",  // TYPE: VARIANT
 
-/*
-JASA RENOVASI (SUB2 - /p/jasa-renovasi.html)
-│
-├── [VARIANT] Jasa Renovasi Tempat Ibadah
-├── [VARIANT] Jasa Renovasi Pabrik
-├── [VARIANT] Jasa Renovasi Rumah
-│   ├── [SUB-VARIANT] Jasa Renovasi Rumah Minimalis
-│   ├── [SUB-VARIANT] Jasa Renovasi Rumah Type 36
-│   ├── [SUB-VARIANT] Jasa Renovasi Rumah Type 45
-│   ├── [SUB-VARIANT] Jasa Renovasi Rumah 2 Lantai
-│   ├── [SUB-VARIANT] Jasa Renovasi Perbaikan Atap Rumah
-│   ├── [SUB-VARIANT] Jasa Renovasi Dinding Rumah
-│   ├── [SUB-VARIANT] Jasa Renovasi Kosmetik Rumah
-│   └── [SUB-VARIANT] Jasa Renovasi Rumah Tumbuh
-├── [VARIANT] Jasa Renovasi Kantor
-├── [VARIANT] Jasa Renovasi Gedung
-├── [VARIANT] Jasa Renovasi Gudang
-└── [VARIANT] Jasa Renovasi Hotel Apartemen
-*/
+  // ============================================================
+  // [VARIANT] - JASA DESAIN EKSTERIOR INDUSTRIAL
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-industrial.html": "Jasa Desain Eksterior Industrial",  // TYPE: VARIANT
+
+  // ============================================================
+  // [MONEY_MASTER] - HARGA JASA DESAIN EKSTERIOR
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasad Eksterior > Harga Desain Eksterior
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/08/harga-desain-eksterior.html": "Harga Desain Eksterior",  // TYPE: MONEY_MASTER
+
+  // ============================================================
+  // [MONEY_LEADGEN] - KONSULTASI DESAIN EKSTERIOR
+  // 🧠 TYPE: MONEY_LEADGEN (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasad Eksterior > Konsultasi Desain Eksterior
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/konsultasi-desain-eksterior.html": "Konsultasi Desain Eksterior"  // TYPE: MONEY_LEADGEN
+};
+
 // ============================================================
 // JASA RENOVASI BANGUNAN (SUB2 - MASTER)
-// ============================================================
-// 🧠 SEO NOTE: Halaman utama untuk semua layanan renovasi bangunan
 // Parent: Jasa Renovasi (/p/jasa-renovasi.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan
 // ============================================================
 
 const urlMappingRenovasiBangunan = {
   // ============================================================
-  // [VARIANT] - Jasa Renovasi Fasilitas Umum
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Fasilitas Umum
+  // [VARIANT] - JASA RENOVASI FASILITAS UMUM
+  // TYPE: VARIANT (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Fasilitas Umum
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-umum.html": "Jasa Renovasi Fasilitas Umum",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-umum.html": "Jasa Renovasi Fasilitas Umum",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI PABRIK
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Pabrik
+  // TYPE: VARIANT (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Pabrik
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik.html": "Jasa Renovasi Pabrik",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik.html": "Jasa Renovasi Pabrik",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI RUMAH
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah
+  // TYPE: VARIANT (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah.html": "Jasa Renovasi Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah.html": "Jasa Renovasi Rumah",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI KANTOR
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Kantor
+  // TYPE: VARIANT (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Kantor
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kantor.html": "Jasa Renovasi Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kantor.html": "Jasa Renovasi Kantor",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI GEDUNG
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gedung
+  // TYPE: VARIANT (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Gedung
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung.html": "Jasa Renovasi Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung.html": "Jasa Renovasi Gedung",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI GUDANG
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gudang
+  // TYPE: VARIANT (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Gudang
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-gudang.html": "Jasa Renovasi Gudang",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-gudang.html": "Jasa Renovasi Gudang",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI HOTEL APARTEMEN
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Hotel Apartemen
+  // TYPE: VARIANT (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Hotel Apartemen
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-apartemen.html": "Jasa Renovasi Hotel Apartemen"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-apartemen.html": "Jasa Renovasi Hotel Apartemen"  // TYPE: VARIANT
 };
 
-// ============================================================
-// 🟡 SARAN ITEM BARU - JASA RENOVASI BANGUNAN
-// ============================================================
-/*
-| Nama Halaman | URL Saran | Page Type | Breadcrumb (4 level) |
-|--------------|-----------|-----------|----------------------|
-| Jasa Renovasi Rumah Sakit | /p/jasa-renovasi-rumah-sakit.html | [VARIANT] | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah Sakit |
-| Jasa Renovasi Sekolah | /p/jasa-renovasi-sekolah.html | [VARIANT] | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Sekolah |
-| Jasa Renovasi Ruko | /p/jasa-renovasi-ruko.html | [VARIANT] | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Ruko |
-| Harga Jasa Renovasi Bangunan | /2019/08/harga-renovasi-bangunan.html | [MONEY PAGE] | Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Bangunan |
-*/
-
-/*
-JASA RENOVASI (SUB2 - /p/jasa-renovasi.html)
-│
-├── Jasa Renovasi Bangunan (VARIANT)
-│   │
-│   ├── Jasa Renovasi Tempat Ibadah (SUB-VARIANT)
-│   │   ├── Jasa Renovasi Masjid
-│   │   ├── Jasa Renovasi Gereja
-│   │   ├── Jasa Renovasi Pura
-│   │   ├── Jasa Renovasi Vihara
-│   │   └── Jasa Renovasi Klenteng
-│   │
-│   ├── Jasa Renovasi Pabrik (SUB-VARIANT)
-│   │   ├── Jasa Renovasi Pabrik Makanan
-│   │   ├── Jasa Renovasi Pabrik Tekstil
-│   │   └── Jasa Renovasi Pabrik Farmasi
-│   │
-│   └── Jasa Renovasi Rumah (SUB-VARIANT)
-│       ├── Jasa Renovasi Rumah Minimalis
-│       ├── Jasa Renovasi Rumah Type 36
-│       ├── Jasa Renovasi Rumah Type 45
-│       ├── Jasa Renovasi Rumah 2 Lantai
-│       ├── Jasa Renovasi Perbaikan Atap Rumah
-│       ├── Jasa Renovasi Dinding Rumah
-│       ├── Jasa Renovasi Kosmetik Rumah
-│       └── Jasa Renovasi Rumah Tumbuh
-│
-├── Jasa Renovasi Interior (VARIANT)
-│
-└── Jasa Renovasi Eksterior Bangunan (VARIANT)
-*/
 // ============================================================
 // SUB JASA RENOVASI TEMPAT IBADAH
 // Parent: Jasa Renovasi Bangunan (/p/jasa-renovasi-bangunan.html)
@@ -1591,80 +1448,43 @@ JASA RENOVASI (SUB2 - /p/jasa-renovasi.html)
 const urlMappingRenovasiBangunanIbadah = {
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI MASJID
-  // 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Masjid
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-masjid.html": "Jasa Renovasi Masjid",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-masjid.html": "Jasa Renovasi Masjid",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI GEREJA
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Gereja
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-gereja.html": "Jasa Renovasi Gereja",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-gereja.html": "Jasa Renovasi Gereja",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI PURA
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Pura
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-pura.html": "Jasa Renovasi Pura",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-pura.html": "Jasa Renovasi Pura",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI VIHARA
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Vihara
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-   "https://www.betonjayareadymix.com/p/jasa-renovasi-vihara.html": "Jasa Renovasi Vihara",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-vihara.html": "Jasa Renovasi Vihara",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI KLENTENG
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Klenteng
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-klenteng.html": "Jasa Renovasi Klenteng",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-klenteng.html": "Jasa Renovasi Klenteng",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [MONEY PAGE] - HARGA RENOVASI MASJID
-  // 🧠 STATUS: PERLU DIBUAT (POST)
+  // TYPE: MONEY_PAGE (WAJIB tampil)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Masjid
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-renovasi-masjid.html": "Harga Renovasi Masjid"
+  "https://www.betonjayareadymix.com/2019/08/harga-renovasi-masjid.html": "Harga Renovasi Masjid"  // TYPE: MONEY_PAGE
 };
-// ============================================================
-// SUB JASA RENOVASI PABRIK
-// Parent: Jasa Renovasi Bangunan (/p/jasa-renovasi-bangunan.html)
-// ============================================================
 
-const urlMappingRenovasiBangunanPabrik = {
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI PABRIK MAKANAN
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Pabrik > Jasa Renovasi Pabrik Makanan
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik-makanan.html": "Jasa Renovasi Pabrik Makanan",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI PABRIK TEKSTIL
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Pabrik > Jasa Renovasi Pabrik Tekstil
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik-tekstil.html": "Jasa Renovasi Pabrik Tekstil",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI PABRIK FARMASI
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Pabrik > Jasa Renovasi Pabrik Farmasi
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik-farmasi.html": "Jasa Renovasi Pabrik Farmasi",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA RENOVASI PABRIK
-  // 🧠 STATUS: PERLU DIBUAT (POST)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Pabrik
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-pabrik.html": "Harga Renovasi Pabrik"
-};
 // ============================================================
 // SUB JASA RENOVASI RUMAH
 // Parent: Jasa Renovasi Bangunan (/p/jasa-renovasi-bangunan.html)
@@ -1673,365 +1493,104 @@ const urlMappingRenovasiBangunanPabrik = {
 const urlMappingRenovasiBangunanRumah = {
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI RUMAH MINIMALIS
-  // 🧠 STATUS: SUDAH ADA (PAGE)
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Minimalis
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-minimalis.html": "Jasa Renovasi Rumah Minimalis",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-minimalis.html": "Jasa Renovasi Rumah Minimalis",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI RUMAH TYPE 36
-  // 🧠 STATUS: SUDAH ADA (PAGE)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Type 36
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-type-36.html": "Jasa Renovasi Rumah Type 36",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-type-36.html": "Jasa Renovasi Rumah Type 36",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI RUMAH TYPE 45
-  // 🧠 STATUS: SUDAH ADA (PAGE)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Type 45
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-type-45.html": "Jasa Renovasi Rumah Type 45",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-type-45.html": "Jasa Renovasi Rumah Type 45",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI RUMAH 2 LANTAI
-  // 🧠 STATUS: SUDAH ADA (PAGE)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah 2 Lantai
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-2-lantai.html": "Jasa Renovasi Rumah 2 Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-2-lantai.html": "Jasa Renovasi Rumah 2 Lantai",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI PERBAIKAN ATAP RUMAH
-  // 🧠 STATUS: SUDAH ADA (PAGE)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Perbaikan Atap Rumah
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-rumah.html": "Jasa Renovasi Perbaikan Atap Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-rumah.html": "Jasa Renovasi Perbaikan Atap Rumah",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI DINDING RUMAH
-  // 🧠 STATUS: SUDAH ADA (PAGE)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Dinding Rumah
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-rumah.html": "Jasa Renovasi Dinding Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-rumah.html": "Jasa Renovasi Dinding Rumah",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI KOSMETIK RUMAH
-  // 🧠 STATUS: SUDAH ADA (PAGE)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Kosmetik Rumah
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kosmetik-rumah.html": "Jasa Renovasi Kosmetik Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kosmetik-rumah.html": "Jasa Renovasi Kosmetik Rumah",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI RUMAH TUMBUH
-  // 🧠 STATUS: SUDAH ADA (PAGE)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Tumbuh
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-tumbuh.html": "Jasa Renovasi Rumah Tumbuh",
-
-  // ============================================================
-  // 🟡 CATATAN: URL LOKASI (Jakarta, Bogor, dll) DI-COMMENT
-  // 🧠 STATUS: PERLU DIBUAT sebagai POST (bukan PAGE)
-  // Alasan: Konten lokasi lebih cocok sebagai POST dengan intent transaksional
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Rumah Jakarta [MONEY PAGE]
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-jakarta.html": "Jasa Renovasi Rumah Jakarta",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-bogor.html": "Jasa Renovasi Rumah Bogor",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-depok.html": "Jasa Renovasi Rumah Depok",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-tangerang.html": "Jasa Renovasi Rumah Tangerang",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-bekasi.html": "Jasa Renovasi Rumah Bekasi",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-karawang.html": "Jasa Renovasi Rumah Karawang",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-semarang.html": "Jasa Renovasi Rumah Semarang",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-jogja.html": "Jasa Renovasi Rumah Jogja",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-surabaya.html": "Jasa Renovasi Rumah Surabaya"
-};
-// ============================================================
-// 🟡 SARAN ITEM BARU - JASA RENOVASI RUMAH
-// ============================================================
-/*
-📌 SARAN ITEM BARU (TAMBAHKAN JIKA KONTEN TERSEDIA):
-
-| Nama Halaman | URL Saran | Page Type | Status | Breadcrumb (4 level) |
-|--------------|-----------|-----------|--------|----------------------|
-| Harga Jasa Renovasi Rumah | /2019/08/harga-renovasi-rumah.html | [MONEY PAGE] | PERLU DIBUAT | Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Rumah |
-| Jasa Renovasi Rumah Modern | /p/jasa-renovasi-rumah-modern.html | [SUB-VARIANT] | PERLU DIBUAT | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Modern |
-| Jasa Renovasi Rumah Klasik | /p/jasa-renovasi-rumah-klasik.html | [SUB-VARIANT] | PERLU DIBUAT | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Klasik |
-| Jasa Renovasi Rumah Subsidi | /p/jasa-renovasi-rumah-subsidi.html | [SUB-VARIANT] | PERLU DIBUAT | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Subsidi |
-
-📌 CATATAN UNTUK URL LOKASI:
-- URL lokasi (Jakarta, Bogor, dll) sebaiknya dibuat sebagai [MONEY PAGE] dengan format POST
-- Breadcrumb cukup 4 level: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Rumah Jakarta
-- Tidak perlu menyertakan semua level hierarki (Bangunan > Rumah) karena akan membuat breadcrumb terlalu panjang
-*/
-
-/*JASA RENOVASI (SUB2 - /p/jasa-renovasi.html)
-│
-└── Jasa Renovasi Bangunan (VARIANT - /p/jasa-renovasi-bangunan.html)
-    │
-    ├── Jasa Renovasi Kantor (SUB-VARIANT)
-    │   ├── Jasa Renovasi Kantor Modern
-    │   ├── Jasa Renovasi Ruang Kerja
-    │   ├── Jasa Renovasi Lobby Kantor
-    │   └── Harga Renovasi Kantor
-    │
-    ├── Jasa Renovasi Gedung (SUB-VARIANT)
-    │   ├── Jasa Renovasi Gedung Perkantoran
-    │   ├── Jasa Renovasi Gedung Pemerintah
-    │   ├── Jasa Renovasi Gedung Komersial
-    │   └── Harga Renovasi Gedung
-    │
-    ├── Jasa Renovasi Gudang (SUB-VARIANT)
-    │   ├── Jasa Renovasi Gudang Logistik
-    │   ├── Jasa Renovasi Gudang Penyimpanan
-    │   ├── Jasa Renovasi Gudang Dingin
-    │   └── Harga Renovasi Gudang
-    │
-    └── Jasa Renovasi Hotel Apartemen (SUB-VARIANT)
-        ├── Jasa Renovasi Hotel Bintang 5
-        ├── Jasa Renovasi Hotel Melati
-        ├── Jasa Renovasi Apartemen Studio
-        ├── Jasa Renovasi Apartemen 2 Kamar
-        ├── Harga Renovasi Hotel
-        └── Harga Renovasi Apartemen
-		*/
-// ============================================================
-// SUB JASA RENOVASI KANTOR
-// Parent: Jasa Renovasi Bangunan (/p/jasa-renovasi-bangunan.html)
-// ============================================================
-
-const urlMappingRenovasiBangunanKantor = {
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI KANTOR MODERN
-  // 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Kantor > Jasa Renovasi Kantor Modern
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-kantor-modern.html": "Jasa Renovasi Kantor Modern",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI RUANG KERJA
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Kantor > Jasa Renovasi Ruang Kerja
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-kerja.html": "Jasa Renovasi Ruang Kerja",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI LOBBY KANTOR
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Kantor > Jasa Renovasi Lobby Kantor
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-lobby-kantor.html": "Jasa Renovasi Lobby Kantor",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA RENOVASI KANTOR
-  // 🧠 STATUS: PERLU DIBUAT (POST)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Kantor
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-kantor.html": "Harga Renovasi Kantor"
-};
-// ============================================================
-// SUB JASA RENOVASI GEDUNG
-// Parent: Jasa Renovasi Bangunan (/p/jasa-renovasi-bangunan.html)
-// ============================================================
-
-const urlMappingRenovasiBangunanGedung = {
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI GEDUNG PERKANTORAN
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gedung > Jasa Renovasi Gedung Perkantoran
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung-perkantoran.html": "Jasa Renovasi Gedung Perkantoran",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI GEDUNG PEMERINTAH
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gedung > Jasa Renovasi Gedung Pemerintah
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung-pemerintah.html": "Jasa Renovasi Gedung Pemerintah",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI GEDUNG KOMERSIAL
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gedung > Jasa Renovasi Gedung Komersial
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung-komersial.html": "Jasa Renovasi Gedung Komersial",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA RENOVASI GEDUNG
-  // 🧠 STATUS: PERLU DIBUAT (POST)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Gedung
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-gedung.html": "Harga Renovasi Gedung"
-};
-// ============================================================
-// SUB JASA RENOVASI GUDANG
-// Parent: Jasa Renovasi Bangunan (/p/jasa-renovasi-bangunan.html)
-// ============================================================
-
-const urlMappingRenovasiBangunanGudang = {
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI GUDANG LOGISTIK
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gudang > Jasa Renovasi Gudang Logistik
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gudang-logistik.html": "Jasa Renovasi Gudang Logistik",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI GUDANG PENYIMPANAN
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gudang > Jasa Renovasi Gudang Penyimpanan
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gudang-penyimpanan.html": "Jasa Renovasi Gudang Penyimpanan",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI GUDANG DINGIN
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gudang > Jasa Renovasi Gudang Dingin
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gudang-dingin.html": "Jasa Renovasi Gudang Dingin",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA RENOVASI GUDANG
-  // 🧠 STATUS: PERLU DIBUAT (POST)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Gudang
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-gudang.html": "Harga Renovasi Gudang"
-};
-// ============================================================
-// SUB JASA RENOVASI HOTEL APARTEMEN
-// Parent: Jasa Renovasi Bangunan (/p/jasa-renovasi-bangunan.html)
-// ============================================================
-
-const urlMappingRenovasiBangunanHotel = {
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI HOTEL BINTANG 5
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Hotel Apartemen > Jasa Renovasi Hotel Bintang 5
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-bintang-5.html": "Jasa Renovasi Hotel Bintang 5",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI HOTEL MELATI
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Hotel Apartemen > Jasa Renovasi Hotel Melati
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-melati.html": "Jasa Renovasi Hotel Melati",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI APARTEMEN STUDIO
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Hotel Apartemen > Jasa Renovasi Apartemen Studio
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-apartemen-studio.html": "Jasa Renovasi Apartemen Studio",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI APARTEMEN 2 KAMAR
-  // 🧠 STATUS: PERLU DIBUAT
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Hotel Apartemen > Jasa Renovasi Apartemen 2 Kamar
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-apartemen-2-kamar.html": "Jasa Renovasi Apartemen 2 Kamar",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA RENOVASI HOTEL
-  // 🧠 STATUS: PERLU DIBUAT (POST)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Hotel
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-hotel.html": "Harga Renovasi Hotel",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA RENOVASI APARTEMEN
-  // 🧠 STATUS: PERLU DIBUAT (POST)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Apartemen
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-apartemen.html": "Harga Renovasi Apartemen"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-tumbuh.html": "Jasa Renovasi Rumah Tumbuh"  // TYPE: SUB-VARIANT
 };
 
-
-/*
-JASA RENOVASI FASILITAS UMUM (SUB2 - /p/jasa-renovasi-fasilitas-umum.html)
-│
-├── [VARIANT] Jasa Renovasi Taman Kota
-│   └── [SUB-VARIANT] Perbaikan Fasilitas Taman (trotoar, lampu, lansekap, area bermain)
-│
-├── [VARIANT] Jasa Renovasi Sekolah
-│   └── [SUB-VARIANT] Perbaikan Fasilitas Sekolah (ruang kelas, atap, kamar mandi, laboratorium)
-│
-├── [VARIANT] Jasa Renovasi Stadion
-│   └── [SUB-VARIANT] Perbaikan Fasilitas Stadion (tribun, lapangan, atap, pencahayaan)
-│
-├── [VARIANT] Jasa Renovasi Tempat Ibadah
-│   └── [SUB-VARIANT] Perbaikan Fasilitas Ibadah (masjid, gereja, pura, vihara)
-│
-├── [VARIANT] Jasa Renovasi Rumah Sakit
-│
-├── [VARIANT] Jasa Renovasi Terminal
-│   └── [SUB-VARIANT] Perbaikan Fasilitas Terminal (lantai, atap, kanopi, area tunggu)
-│
-└── [VARIANT] Jasa Renovasi Halte
-    └── [SUB-VARIANT] Perbaikan Fasilitas Halte (kanopi, tempat duduk, lantai, penerangan)
-	*/
 // ============================================================
 // JASA RENOVASI FASILITAS UMUM (SUB2) - MASTER CONST
-// ============================================================
-// 🧠 SEO NOTE: Halaman utama untuk semua layanan renovasi fasilitas umum
 // Parent: Jasa Renovasi (/p/jasa-renovasi.html)
-// Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum
 // ============================================================
 
 const urlMappingPerbaikanFasilitasUmum = {
   // ============================================================
   // [VARIANT] - JASA RENOVASI TAMAN KOTA
+  // TYPE: VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Taman Kota
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-taman-kota.html": "Jasa Renovasi Taman Kota",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-taman-kota.html": "Jasa Renovasi Taman Kota",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI SEKOLAH
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Sekolah
+  // TYPE: VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-sekolah.html": "Jasa Renovasi Sekolah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-sekolah.html": "Jasa Renovasi Sekolah",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI STADION
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Stadion
+  // TYPE: VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-stadion.html": "Jasa Renovasi Stadion",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-stadion.html": "Jasa Renovasi Stadion",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI TEMPAT IBADAH
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Tempat Ibadah
+  // TYPE: VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat Ibadah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html": "Jasa Renovasi Tempat Ibadah",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI RUMAH SAKIT
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Rumah Sakit
+  // TYPE: VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-sakit.html": "Jasa Renovasi Rumah Sakit",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-sakit.html": "Jasa Renovasi Rumah Sakit",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI TERMINAL
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Terminal
+  // TYPE: VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-terminal.html": "Jasa Renovasi Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-terminal.html": "Jasa Renovasi Terminal",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI HALTE
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Halte
+  // TYPE: VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-halte.html": "Jasa Renovasi Halte"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-halte.html": "Jasa Renovasi Halte"  // TYPE: VARIANT
 };
 
-// ============================================================
-// SARAN ITEM BARU UNTUK urlMappingPerbaikanFasilitasUmum
-// ============================================================
-/*
-📌 SARAN ITEM BARU (TAMBAHKAN JIKA KONTEN TERSEDIA):
-
-| Nama Halaman | URL Saran | Page Type | Breadcrumb (4 level) |
-|--------------|-----------|-----------|----------------------|
-| Jasa Renovasi Taman Kota | /p/jasa-renovasi-taman-kota.html | [VARIANT] | Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Taman Kota |
-| Jasa Renovasi Kolam Renang Umum | /p/jasa-renovasi-kolam-renang-umum.html | [VARIANT] | Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Kolam Renang Umum |
-| Jasa Renovasi Perpustakaan Umum | /p/jasa-renovasi-perpustakaan-umum.html | [VARIANT] | Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Perpustakaan Umum |
-| Harga Renovasi Fasilitas Umum | /2019/08/harga-renovasi-fasilitas-umum.html | [MONEY PAGE] | Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Harga Renovasi Fasilitas Umum |
-*/
 // ============================================================
 // JASA RENOVASI TAMAN KOTA - TURUNAN
 // Parent: Jasa Renovasi Fasilitas Umum
@@ -2040,47 +1599,42 @@ const urlMappingPerbaikanFasilitasUmum = {
 const urlMappingPerbaikanFasilitasUmumTaman = {
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN TROTOAR JALAN RUSAK
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Taman Kota > Jasa Perbaikan Trotoar Jalan Rusak
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan-rusak.html": "Jasa Perbaikan Trotoar Jalan Rusak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan-rusak.html": "Jasa Perbaikan Trotoar Jalan Rusak",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN JALUR PEDESTRIAN TAMAN
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Taman Kota > Jasa Perbaikan Jalur Pedestrian Taman
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalur-pedestrian-taman.html": "Jasa Perbaikan Jalur Pedestrian Taman",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalur-pedestrian-taman.html": "Jasa Perbaikan Jalur Pedestrian Taman",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI LAMPU TAMAN KOTA
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Taman Kota > Jasa Renovasi Lampu Taman Kota
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-lampu-taman-kota.html": "Jasa Renovasi Lampu Taman Kota",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-lampu-taman-kota.html": "Jasa Renovasi Lampu Taman Kota",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI LANSEKAP TAMAN KOTA
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Taman Kota > Jasa Renovasi Lansekap Taman Kota
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-lansekap-taman-kota.html": "Jasa Renovasi Lansekap Taman Kota",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-lansekap-taman-kota.html": "Jasa Renovasi Lansekap Taman Kota",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN AREA BERMAIN ANAK TAMAN
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Taman Kota > Jasa Perbaikan Area Bermain Anak Taman
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-area-bermain-anak-taman.html": "Jasa Perbaikan Area Bermain Anak Taman",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-area-bermain-anak-taman.html": "Jasa Perbaikan Area Bermain Anak Taman",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN FASILITAS TAMAN
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Taman Kota > Jasa Perbaikan Fasilitas Taman
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-fasilitas-taman.html": "Jasa Perbaikan Fasilitas Taman",
-
-  // ============================================================
-  // SARAN ITEM BARU
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase-taman.html": "Jasa Perbaikan Drainase Taman",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-bangku-taman.html": "Jasa Perbaikan Bangku Taman",
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-taman-kota.html": "Harga Renovasi Taman Kota"
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-fasilitas-taman.html": "Jasa Perbaikan Fasilitas Taman"  // TYPE: SUB-VARIANT
 };
+
 // ============================================================
 // JASA RENOVASI SEKOLAH - TURUNAN
 // Parent: Jasa Renovasi Fasilitas Umum
@@ -2089,92 +1643,54 @@ const urlMappingPerbaikanFasilitasUmumTaman = {
 const urlMappingPerbaikanFasilitasUmumSekolah = {
   // ============================================================
   // [SUB-VARIANT] - RENOVASI RUANG KELAS
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Sekolah > Jasa Renovasi Ruang Kelas
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-kelas.html": "Jasa Renovasi Ruang Kelas",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-kelas.html": "Jasa Renovasi Ruang Kelas",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN ATAP SEKOLAH
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Sekolah > Jasa Perbaikan Atap Sekolah
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-sekolah.html": "Jasa Perbaikan Atap Sekolah",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-sekolah.html": "Jasa Perbaikan Atap Sekolah",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI KAMAR MANDI SEKOLAH
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Sekolah > Jasa Renovasi Kamar Mandi Sekolah
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi-sekolah.html": "Jasa Renovasi Kamar Mandi Sekolah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi-sekolah.html": "Jasa Renovasi Kamar Mandi Sekolah",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI FASILITAS LABORATORIUM
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Sekolah > Jasa Renovasi Fasilitas Laboratorium
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-laboratorium.html": "Jasa Renovasi Fasilitas Laboratorium",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-laboratorium.html": "Jasa Renovasi Fasilitas Laboratorium",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI LAPANGAN SEKOLAH
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Sekolah > Jasa Renovasi Lapangan Sekolah
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-lapangan-sekolah.html": "Jasa Renovasi Lapangan Sekolah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-lapangan-sekolah.html": "Jasa Renovasi Lapangan Sekolah",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN DRAINASE SEKOLAH
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Sekolah > Jasa Perbaikan Drainase Sekolah
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase-sekolah.html": "Jasa Perbaikan Drainase Sekolah",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase-sekolah.html": "Jasa Perbaikan Drainase Sekolah",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI DINDING & LANTAI SEKOLAH
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Sekolah > Jasa Renovasi Dinding & Lantai Sekolah
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-lantai-sekolah.html": "Jasa Renovasi Dinding & Lantai Sekolah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-lantai-sekolah.html": "Jasa Renovasi Dinding & Lantai Sekolah",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN LISTRIK SEKOLAH
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Sekolah > Jasa Perbaikan Listrik Sekolah
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-listrik-sekolah.html": "Jasa Perbaikan Listrik Sekolah",
-
-  // ============================================================
-  // SARAN ITEM BARU
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-perpustakaan-sekolah.html": "Jasa Renovasi Perpustakaan Sekolah",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-pagar-sekolah.html": "Jasa Perbaikan Pagar Sekolah",
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-sekolah.html": "Harga Renovasi Sekolah"
-};
-// ============================================================
-// JASA RENOVASI STADION - TURUNAN (DI-COMMENT)
-// Parent: Jasa Renovasi Fasilitas Umum
-// 🧠 SEO NOTE: Item di bawah ini DI-COMMENT karena kontennya tipis.
-// Jika konten sudah tebal, aktifkan kembali.
-// ============================================================
-
-const urlMappingPerbaikanFasilitasUmumStadion = {
-  /* Buat Post aja - DI-COMMENT SEMENTARA
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-tribun-stadion.html": "Jasa Renovasi Tribun Stadion",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-stadion.html": "Jasa Perbaikan Atap Stadion",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lintasan-atletik.html": "Jasa Perbaikan Lintasan Atletik",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-lapangan-stadion.html": "Jasa Renovasi Lapangan Stadion",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-ganti-stadion.html": "Jasa Renovasi Kamar Ganti Stadion",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pencahayaan-stadion.html": "Jasa Perbaikan Pencahayaan Stadion",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-pagar-stadion.html": "Jasa Renovasi Pagar Stadion",
-  "https://www.betonjayareadymix.com/p/perbaikan-fasilitas-penonton-stadion.html": "Jasa Perbaikan Fasilitas Penonton Stadion",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-stadion.html": "Jasa Perbaikan Struktur Stadion"
-  */
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-listrik-sekolah.html": "Jasa Perbaikan Listrik Sekolah"  // TYPE: SUB-VARIANT
 };
 
-// ============================================================
-// SARAN ITEM BARU UNTUK STADION (AKTIFKAN JIKA KONTEN TERSEDIA)
-// ============================================================
-/*
-📌 SARAN ITEM BARU (untuk di-uncomment jika konten sudah tebal):
-
-| Nama Halaman | URL Saran | Page Type | Breadcrumb (4 level) |
-|--------------|-----------|-----------|----------------------|
-| Jasa Renovasi Tribun Stadion | /p/jasa-renovasi-tribun-stadion.html | [SUB-VARIANT] | Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Stadion > Jasa Renovasi Tribun Stadion |
-| Jasa Perbaikan Atap Stadion | /p/jasa-perbaikan-atap-stadion.html | [SUB-VARIANT] | Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Stadion > Jasa Perbaikan Atap Stadion |
-| Harga Renovasi Stadion | /2019/08/harga-renovasi-stadion.html | [MONEY PAGE] | Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Harga Renovasi Stadion |
-*/
 // ============================================================
 // JASA RENOVASI TEMPAT IBADAH - TURUNAN
 // Parent: Jasa Renovasi Fasilitas Umum
@@ -2183,53 +1699,48 @@ const urlMappingPerbaikanFasilitasUmumStadion = {
 const urlMappingPerbaikanFasilitasIbadah = {
   // ============================================================
   // [SUB-VARIANT] - RENOVASI MASJID
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Masjid
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-masjid.html": "Jasa Renovasi Masjid",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-masjid.html": "Jasa Renovasi Masjid",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI GEREJA
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Gereja
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-gereja.html": "Jasa Renovasi Gereja",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-gereja.html": "Jasa Renovasi Gereja",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI KLENTENG
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Klenteng
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-klenteng.html": "Jasa Renovasi Klenteng",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-klenteng.html": "Jasa Renovasi Klenteng",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI LANGAR
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Langgar
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-langgar.html": "Jasa Renovasi Langgar",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-langgar.html": "Jasa Renovasi Langgar",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI MUSHOLA
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Mushola
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-mushola.html": "Jasa Renovasi Mushola",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-mushola.html": "Jasa Renovasi Mushola",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI VIHARA
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Vihara
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-vihara.html": "Jasa Renovasi Vihara",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-vihara.html": "Jasa Renovasi Vihara",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI PURA
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Tempat Ibadah > Jasa Renovasi Pura
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-pura.html": "Jasa Renovasi Pura",
-
-  // ============================================================
-  // SARAN ITEM BARU
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-kubah-masjid.html": "Jasa Renovasi Kubah Masjid",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-menara-masjid.html": "Jasa Renovasi Menara Masjid",
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-tempat-ibadah.html": "Harga Renovasi Tempat Ibadah"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-pura.html": "Jasa Renovasi Pura"  // TYPE: SUB-VARIANT
 };
+
 // ============================================================
 // JASA RENOVASI TERMINAL - TURUNAN
 // Parent: Jasa Renovasi Fasilitas Umum
@@ -2238,59 +1749,54 @@ const urlMappingPerbaikanFasilitasIbadah = {
 const urlMappingPerbaikanFasilitasUmumTerminal = {
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN LANTAI TERMINAL
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Terminal > Jasa Perbaikan Lantai Terminal
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-terminal.html": "Jasa Perbaikan Lantai Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-terminal.html": "Jasa Perbaikan Lantai Terminal",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN ATAP TERMINAL
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Terminal > Jasa Perbaikan Atap Terminal
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-terminal.html": "Jasa Perbaikan Atap Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-terminal.html": "Jasa Perbaikan Atap Terminal",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI KANOPI TERMINAL
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Terminal > Jasa Renovasi Kanopi Terminal
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kanopi-terminal.html": "Jasa Renovasi Kanopi Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kanopi-terminal.html": "Jasa Renovasi Kanopi Terminal",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN DINDING TERMINAL
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Terminal > Jasa Perbaikan Dinding Terminal
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-terminal.html": "Jasa Perbaikan Dinding Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-terminal.html": "Jasa Perbaikan Dinding Terminal",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN PAGAR TERMINAL
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Terminal > Jasa Perbaikan Pagar Terminal
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pagar-terminal.html": "Jasa Perbaikan Pagar Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pagar-terminal.html": "Jasa Perbaikan Pagar Terminal",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN PENERANGAN TERMINAL
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Terminal > Jasa Perbaikan Penerangan Terminal
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-penerangan-terminal.html": "Jasa Perbaikan Penerangan Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-penerangan-terminal.html": "Jasa Perbaikan Penerangan Terminal",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI AREA TUNGGU TERMINAL
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Terminal > Jasa Renovasi Area Tunggu Terminal
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-area-tunggu-terminal.html": "Jasa Renovasi Area Tunggu Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-area-tunggu-terminal.html": "Jasa Renovasi Area Tunggu Terminal",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI KAMAR MANDI TERMINAL
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Terminal > Jasa Renovasi Kamar Mandi Terminal
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi-terminal.html": "Jasa Renovasi Kamar Mandi Terminal",
-
-  // ============================================================
-  // SARAN ITEM BARU
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-lift-terminal.html": "Jasa Perbaikan Lift Terminal",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-eskalator-terminal.html": "Jasa Perbaikan Eskalator Terminal",
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-terminal.html": "Harga Renovasi Terminal"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi-terminal.html": "Jasa Renovasi Kamar Mandi Terminal"  // TYPE: SUB-VARIANT
 };
+
 // ============================================================
 // JASA RENOVASI HALTE - TURUNAN
 // Parent: Jasa Renovasi Fasilitas Umum
@@ -2299,106 +1805,38 @@ const urlMappingPerbaikanFasilitasUmumTerminal = {
 const urlMappingPerbaikanFasilitasUmumHalte = {
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN KANOPI HALTE
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Halte > Jasa Perbaikan Kanopi Halte
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kanopi-halte.html": "Jasa Perbaikan Kanopi Halte",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kanopi-halte.html": "Jasa Perbaikan Kanopi Halte",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN TEMPAT DUDUK HALTE
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Halte > Jasa Perbaikan Tempat Duduk Halte
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-tempat-duduk-halte.html": "Jasa Perbaikan Tempat Duduk Halte",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-tempat-duduk-halte.html": "Jasa Perbaikan Tempat Duduk Halte",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN PENERANGAN HALTE
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Halte > Jasa Perbaikan Penerangan Halte
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-penerangan-halte.html": "Jasa Perbaikan Penerangan Halte",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-penerangan-halte.html": "Jasa Perbaikan Penerangan Halte",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - PERBAIKAN LANTAI HALTE
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Halte > Jasa Perbaikan Lantai Halte
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-halte.html": "Jasa Perbaikan Lantai Halte",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-halte.html": "Jasa Perbaikan Lantai Halte",  // TYPE: SUB-VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RENOVASI DESAIN HALTE MODERN
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Fasilitas Umum > Jasa Renovasi Halte > Jasa Renovasi Desain Halte Modern
+  // TYPE: SUB-VARIANT (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-desain-halte-modern.html": "Jasa Renovasi Desain Halte Modern",
-
-  // ============================================================
-  // SARAN ITEM BARU
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-papan-informasi-halte.html": "Jasa Perbaikan Papan Informasi Halte",
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-halte.html": "Jasa Perbaikan Atap Halte",
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-halte.html": "Harga Renovasi Halte"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-desain-halte-modern.html": "Jasa Renovasi Desain Halte Modern"  // TYPE: SUB-VARIANT
 };
 
-/*
-JASA RENOVASI INTERIOR (SUB2 - /p/jasa-renovasi-interior.html)
-│
-├── [VARIANT] Jasa Renovasi Interior Rumah
-│   ├── [SUB-VARIANT] Jasa Renovasi Kamar Tidur
-│   ├── [SUB-VARIANT] Jasa Renovasi Dapur
-│   ├── [SUB-VARIANT] Jasa Renovasi Kamar Mandi
-│   ├── [SUB-VARIANT] Jasa Renovasi Ruang Tamu
-│   ├── [SUB-VARIANT] Jasa Renovasi Ruang Keluarga
-│   ├── [SUB-VARIANT] Jasa Renovasi Ruang Belajar
-│   ├── [SUB-VARIANT] Jasa Renovasi Ruang Makan
-│   └── [SUB-VARIANT] Jasa Renovasi Ruang Multifungsi
-│
-├── [VARIANT] Jasa Renovasi Interior Kantor
-│   ├── [SUB-VARIANT] Jasa Renovasi Ruang Kerja Karyawan
-│   ├── [SUB-VARIANT] Jasa Renovasi Ruang Rapat Kantor
-│   ├── [SUB-VARIANT] Jasa Renovasi Lobby dan Resepsionis
-│   ├── [SUB-VARIANT] Jasa Renovasi Ruang Direksi
-│   ├── [SUB-VARIANT] Jasa Renovasi Coworking Space
-│   └── [SUB-VARIANT] Jasa Renovasi Partisi Ruang Kantor
-│
-├── [VARIANT] Jasa Renovasi Interior Apartemen
-│   ├── [SUB-VARIANT] Jasa Renovasi Interior Studio Apartemen
-│   ├── [SUB-VARIANT] Jasa Renovasi Kamar Apartemen
-│   ├── [SUB-VARIANT] Jasa Renovasi Dapur Apartemen
-│   ├── [SUB-VARIANT] Jasa Renovasi Kamar Mandi Apartemen
-│   └── [SUB-VARIANT] Jasa Renovasi Ruang Tamu Apartemen
-│
-├── [VARIANT] Jasa Renovasi Interior Hotel
-│   ├── [SUB-VARIANT] Jasa Renovasi Kamar Hotel
-│   ├── [SUB-VARIANT] Jasa Renovasi Lobi Hotel
-│   ├── [SUB-VARIANT] Jasa Renovasi Ruang Makan Hotel
-│   ├── [SUB-VARIANT] Jasa Renovasi Kamar Mandi Hotel
-│   └── [SUB-VARIANT] Jasa Renovasi Koridor Hotel
-│
-├── [VARIANT] Jasa Renovasi Interior Toko
-│   ├── [SUB-VARIANT] Jasa Renovasi Interior Mini Market
-│   ├── [SUB-VARIANT] Jasa Renovasi Interior Butik
-│   ├── [SUB-VARIANT] Jasa Renovasi Interior Gerai Kuliner
-│   ├── [SUB-VARIANT] Jasa Renovasi Interior Etalase Toko
-│   └── [SUB-VARIANT] Jasa Renovasi Interior Gerai Waralaba
-│
-├── [VARIANT] Jasa Renovasi Furniture
-│
-├── [VARIANT] Jasa Renovasi Interior Custom
-│   ├── [SUB-VARIANT] Jasa Renovasi Interior Custom Rumah
-│   ├── [SUB-VARIANT] Jasa Renovasi Interior Custom Kantor
-│   ├── [SUB-VARIANT] Jasa Renovasi Interior Custom Apartemen
-│   ├── [SUB-VARIANT] Jasa Renovasi Interior Custom Toko
-│   ├── [SUB-VARIANT] Jasa Renovasi Interior Custom Hotel
-│   └── [SUB-VARIANT] Jasa Renovasi Interior Custom Cafe
-│
-└── [VARIANT] Jasa Renovasi Interior Ruangan
-    ├── [SUB-VARIANT] Jasa Renovasi Interior Ruang Tamu
-    ├── [SUB-VARIANT] Jasa Renovasi Interior Dapur
-    ├── [SUB-VARIANT] Jasa Renovasi Interior Kamar Tidur
-    ├── [SUB-VARIANT] Jasa Renovasi Interior Kamar Mandi
-    ├── [SUB-VARIANT] Jasa Renovasi Interior Ruang Kerja
-    └── [SUB-VARIANT] Jasa Renovasi Interior Ruang Keluarga
-	*/
-
 // ============================================================
-// JASA RENOVASI INTERIOR (SUB2) - MASTER CONST
-// ============================================================
+// JASA RENOVASI INTERIOR (SUB2)
 // Parent: Jasa Renovasi (/p/jasa-renovasi.html)
 // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior
 // ============================================================
@@ -2406,222 +1844,188 @@ JASA RENOVASI INTERIOR (SUB2 - /p/jasa-renovasi-interior.html)
 const urlMappingPerbaikanInterior = {
   // ============================================================
   // [VARIANT] - JASA RENOVASI INTERIOR RUMAH
+  // 🧠 TYPE: VARIANT (WAJIB tampil, parent: SUB2)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-rumah.html": "Jasa Renovasi Interior Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-rumah.html": "Jasa Renovasi Interior Rumah",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI INTERIOR KANTOR
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Kantor
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-kantor.html": "Jasa Renovasi Interior Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-kantor.html": "Jasa Renovasi Interior Kantor",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI INTERIOR APARTEMEN
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Apartemen
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-apartemen.html": "Jasa Renovasi Interior Apartemen",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-apartemen.html": "Jasa Renovasi Interior Apartemen",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI INTERIOR HOTEL
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Hotel
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-hotel.html": "Jasa Renovasi Interior Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-hotel.html": "Jasa Renovasi Interior Hotel",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI INTERIOR TOKO
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Toko
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-toko.html": "Jasa Renovasi Interior Toko",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-toko.html": "Jasa Renovasi Interior Toko",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - RENOVASI FURNITURE
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Renovasi Furniture
   // ============================================================
-  "https://www.betonjayareadymix.com/p/renovasi-furniture.html": "Renovasi Furniture",
+  "https://www.betonjayareadymix.com/p/renovasi-furniture.html": "Renovasi Furniture",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI INTERIOR CUSTOM
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Custom
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom.html": "Jasa Renovasi Interior Custom",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom.html": "Jasa Renovasi Interior Custom",  // TYPE: VARIANT
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI INTERIOR RUANGAN
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Ruangan
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruangan.html": "Jasa Renovasi Interior Ruangan"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruangan.html": "Jasa Renovasi Interior Ruangan"  // TYPE: VARIANT
 };
 
 // ============================================================
-// 🟡 CATATAN - ITEM YANG DI-COMMENT (PERLU DIPINDAHKAN)
-// ============================================================
-/*
-📌 ITEM DI BAWAH INI TIDAK MASUK KE urlMappingPerbaikanInterior KARENA:
-
-| URL | Alasan | Harusnya Masuk ke |
-|-----|--------|-------------------|
-| /p/jasa-perbaikan-plafon.html | Perbaikan, bukan renovasi | Jasa Perbaikan Bangunan |
-| /p/jasa-renovasi-plafon.html | Renovasi plafon, bukan interior | Jasa Renovasi Bangunan |
-| /p/jasa-perbaikan-plafon-gypsum.html | Perbaikan, bukan renovasi | Jasa Perbaikan Bangunan |
-| /p/jasa-perbaikan-plafon-pvc.html | Perbaikan, bukan renovasi | Jasa Perbaikan Bangunan |
-| /p/jasa-perbaikan-plafon-rusak-karena-bocor.html | Perbaikan, bukan renovasi | Jasa Perbaikan Bangunan |
-| /p/jasa-renovasi-perbaikan-dinding.html | Terlalu umum | Bisa dihapus atau redirect |
-| /p/jasa-renovasi-dinding-interior.html | Dinding interior | Jasa Renovasi Interior |
-| /p/jasa-renovasi-perbaikan-dinding-gedung.html | Perbaikan gedung | Jasa Perbaikan Bangunan |
-| /p/jasa-perbaikan-dinding-lembab.html | Perbaikan | Jasa Perbaikan Bangunan |
-| /p/jasa-renovasi-dinding-lembab.html | Perbaikan lembab | Jasa Perbaikan Bangunan |
-| /p/jasa-renovasi-perbaikan-dinding-jakarta.html | Lokasi + perbaikan | Redirect ke perbaikan dinding |
-| /p/jasa-renovasi-tiang-beton.html | Perbaikan struktur | Jasa Perbaikan Struktur |
-*/
-// ============================================================
-// JASA RENOVASI INTERIOR RUMAH - TURUNAN
+// JASA RENOVASI INTERIOR RUMAH - TURUNAN (SUB-VARIANT)
 // Parent: Jasa Renovasi Interior Rumah
 // ============================================================
 
 const urlMappingPerbaikanInteriorRumah = {
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI KAMAR TIDUR
+  // [MONEY_PAGE] - JASA RENOVASI KAMAR TIDUR
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil, parent: VARIANT)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Rumah > Jasa Renovasi Kamar Tidur
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-tidur.html": "Jasa Renovasi Kamar Tidur",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-tidur.html": "Jasa Renovasi Kamar Tidur",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI DAPUR
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Rumah > Jasa Renovasi Dapur
+  // [MONEY_PAGE] - JASA RENOVASI DAPUR
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-dapur.html": "Jasa Renovasi Dapur",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-dapur.html": "Jasa Renovasi Dapur",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI KAMAR MANDI
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Rumah > Jasa Renovasi Kamar Mandi
+  // [MONEY_PAGE] - JASA RENOVASI KAMAR MANDI
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi.html": "Jasa Renovasi Kamar Mandi",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi.html": "Jasa Renovasi Kamar Mandi",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI RUANG TAMU
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Rumah > Jasa Renovasi Ruang Tamu
+  // [MONEY_PAGE] - JASA RENOVASI RUANG TAMU
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-tamu.html": "Jasa Renovasi Ruang Tamu",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-tamu.html": "Jasa Renovasi Ruang Tamu",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI RUANG KELUARGA
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Rumah > Jasa Renovasi Ruang Keluarga
+  // [MONEY_PAGE] - JASA RENOVASI RUANG KELUARGA
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-keluarga.html": "Jasa Renovasi Ruang Keluarga",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-keluarga.html": "Jasa Renovasi Ruang Keluarga",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI RUANG BELAJAR
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Rumah > Jasa Renovasi Ruang Belajar
+  // [MONEY_PAGE] - JASA RENOVASI RUANG BELAJAR
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-belajar.html": "Jasa Renovasi Ruang Belajar",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-belajar.html": "Jasa Renovasi Ruang Belajar",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI RUANG MAKAN
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Rumah > Jasa Renovasi Ruang Makan
+  // [MONEY_PAGE] - JASA RENOVASI RUANG MAKAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-makan.html": "Jasa Renovasi Ruang Makan",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-makan.html": "Jasa Renovasi Ruang Makan",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI RUANG MULTIFUNGSI
-  // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Rumah > Jasa Renovasi Ruang Multifungsi
+  // [MONEY_PAGE] - JASA RENOVASI RUANG MULTIFUNGSI
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-multifungsi.html": "Jasa Renovasi Ruang Multifungsi"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-multifungsi.html": "Jasa Renovasi Ruang Multifungsi"  // TYPE: MONEY_MASTER
 };
+
 // ============================================================
-// JASA RENOVASI INTERIOR KANTOR - TURUNAN 
+// JASA RENOVASI INTERIOR KANTOR - TURUNAN (SUB-VARIANT)
 // Parent: Jasa Renovasi Interior Kantor
-// [SUB-VARIANT]
 // ============================================================
 
 const urlMappingPerbaikanInteriorKantor = {
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil, parent: VARIANT)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Kantor > [Nama Item]
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-kerja-karyawan.html": "Jasa Renovasi Ruang Kerja Karyawan",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-rapat-kantor.html": "Jasa Renovasi Ruang Rapat Kantor",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-lobby-dan-resepsionis.html": "Jasa Renovasi Lobby dan Resepsionis",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-direksi.html": "Jasa Renovasi Ruang Direksi",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-coworking-space.html": "Jasa Renovasi Coworking Space",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-partisi-ruang-kantor.html": "Jasa Renovasi Partisi Ruang Kantor"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-kerja-karyawan.html": "Jasa Renovasi Ruang Kerja Karyawan",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-rapat-kantor.html": "Jasa Renovasi Ruang Rapat Kantor",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-lobby-dan-resepsionis.html": "Jasa Renovasi Lobby dan Resepsionis",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-direksi.html": "Jasa Renovasi Ruang Direksi",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-coworking-space.html": "Jasa Renovasi Coworking Space",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-partisi-ruang-kantor.html": "Jasa Renovasi Partisi Ruang Kantor"  // TYPE: MONEY_MASTER
 };
+
 // ============================================================
-// JASA RENOVASI INTERIOR APARTEMEN - TURUNAN
+// JASA RENOVASI INTERIOR APARTEMEN - TURUNAN (SUB-VARIANT)
 // Parent: Jasa Renovasi Interior Apartemen
-// [SUB-VARIANT]
 // ============================================================
 
 const urlMappingPerbaikanInteriorApartemen = {
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil, parent: VARIANT)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Apartemen > [Nama Item]
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-studio-apartemen.html": "Jasa Renovasi Interior Studio Apartemen",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-apartemen.html": "Jasa Renovasi Kamar Apartemen",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-dapur-apartemen.html": "Jasa Renovasi Dapur Apartemen",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi-apartemen.html": "Jasa Renovasi Kamar Mandi Apartemen",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-tamu-apartemen.html": "Jasa Renovasi Ruang Tamu Apartemen"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-studio-apartemen.html": "Jasa Renovasi Interior Studio Apartemen",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-apartemen.html": "Jasa Renovasi Kamar Apartemen",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-dapur-apartemen.html": "Jasa Renovasi Dapur Apartemen",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi-apartemen.html": "Jasa Renovasi Kamar Mandi Apartemen",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-tamu-apartemen.html": "Jasa Renovasi Ruang Tamu Apartemen"  // TYPE: MONEY_MASTER
 };
+
 // ============================================================
-// JASA RENOVASI INTERIOR HOTEL - TURUNAN
+// JASA RENOVASI INTERIOR HOTEL - TURUNAN (SUB-VARIANT)
 // Parent: Jasa Renovasi Interior Hotel
-// [SUB-VARIANT]
 // ============================================================
 
 const urlMappingPerbaikanInteriorHotel = {
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil, parent: VARIANT)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Hotel > [Nama Item]
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-hotel.html": "Jasa Renovasi Kamar Hotel",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-lobi-hotel.html": "Jasa Renovasi Lobi Hotel",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-makan-hotel.html": "Jasa Renovasi Ruang Makan Hotel",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi-hotel.html": "Jasa Renovasi Kamar Mandi Hotel",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-koridor-hotel.html": "Jasa Renovasi Koridor Hotel"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-hotel.html": "Jasa Renovasi Kamar Hotel",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-lobi-hotel.html": "Jasa Renovasi Lobi Hotel",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-makan-hotel.html": "Jasa Renovasi Ruang Makan Hotel",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi-hotel.html": "Jasa Renovasi Kamar Mandi Hotel",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-koridor-hotel.html": "Jasa Renovasi Koridor Hotel"  // TYPE: MONEY_MASTER
 };
+
 // ============================================================
-// JASA RENOVASI INTERIOR TOKO - TURUNAN
+// JASA RENOVASI INTERIOR TOKO - TURUNAN (SUB-VARIANT)
 // Parent: Jasa Renovasi Interior Toko
-// [SUB-VARIANT]
 // ============================================================
 
 const urlMappingPerbaikanInteriorToko = {
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil, parent: VARIANT)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Toko > [Nama Item]
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-mini-market.html": "Jasa Renovasi Interior Mini Market",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-butik.html": "Jasa Renovasi Interior Butik",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-gerai-kuliner.html": "Jasa Renovasi Interior Gerai Kuliner",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-etalase-toko.html": "Jasa Renovasi Interior Etalase Toko",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-gerai-waralaba.html": "Jasa Renovasi Interior Gerai Waralaba"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-mini-market.html": "Jasa Renovasi Interior Mini Market",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-butik.html": "Jasa Renovasi Interior Butik",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-gerai-kuliner.html": "Jasa Renovasi Interior Gerai Kuliner",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-etalase-toko.html": "Jasa Renovasi Interior Etalase Toko",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-gerai-waralaba.html": "Jasa Renovasi Interior Gerai Waralaba"  // TYPE: MONEY_MASTER
 };
+
 // ============================================================
-// JASA RENOVASI INTERIOR CUSTOM - TURUNAN
+// JASA RENOVASI INTERIOR CUSTOM - TURUNAN (SUB-VARIANT)
 // Parent: Jasa Renovasi Interior Custom
-// [SUB-VARIANT]
 // ============================================================
 
 const urlMappingPerbaikanInteriorCustom = {
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil, parent: VARIANT)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Custom > [Nama Item]
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom-rumah.html": "Jasa Renovasi Interior Custom Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom-kantor.html": "Jasa Renovasi Interior Custom Kantor",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom-apartemen.html": "Jasa Renovasi Interior Custom Apartemen",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom-toko.html": "Jasa Renovasi Interior Custom Toko",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom-hotel.html": "Jasa Renovasi Interior Custom Hotel",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom-cafe.html": "Jasa Renovasi Interior Custom Cafe"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom-rumah.html": "Jasa Renovasi Interior Custom Rumah",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom-kantor.html": "Jasa Renovasi Interior Custom Kantor",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom-apartemen.html": "Jasa Renovasi Interior Custom Apartemen",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom-toko.html": "Jasa Renovasi Interior Custom Toko",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom-hotel.html": "Jasa Renovasi Interior Custom Hotel",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom-cafe.html": "Jasa Renovasi Interior Custom Cafe"  // TYPE: MONEY_MASTER
 };
+
 // ============================================================
-// JASA RENOVASI INTERIOR RUANGAN - TURUNAN
+// JASA RENOVASI INTERIOR RUANGAN - TURUNAN (SUB-VARIANT)
 // Parent: Jasa Renovasi Interior Ruangan
-// [SUB-VARIANT]
 // ============================================================
 
 const urlMappingPerbaikanInteriorRuangan = {
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil, parent: VARIANT)
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Interior > Jasa Renovasi Interior Ruangan > [Nama Item]
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruang-tamu.html": "Jasa Renovasi Interior Ruang Tamu",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-dapur.html": "Jasa Renovasi Interior Dapur",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-kamar-tidur.html": "Jasa Renovasi Interior Kamar Tidur",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-kamar-mandi.html": "Jasa Renovasi Interior Kamar Mandi",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruang-kerja.html": "Jasa Renovasi Interior Ruang Kerja",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruang-keluarga.html": "Jasa Renovasi Interior Ruang Keluarga"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruang-tamu.html": "Jasa Renovasi Interior Ruang Tamu",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-dapur.html": "Jasa Renovasi Interior Dapur",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-kamar-tidur.html": "Jasa Renovasi Interior Kamar Tidur",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-kamar-mandi.html": "Jasa Renovasi Interior Kamar Mandi",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruang-kerja.html": "Jasa Renovasi Interior Ruang Kerja",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruang-keluarga.html": "Jasa Renovasi Interior Ruang Keluarga"  // TYPE: MONEY_MASTER
 };
-/*
-;
-📋 RINGKASAN BREADCRUMB 4 LEVEL
-Jenis Halaman						Breadcrumb
-VARIANT (langsung di bawah SUB2)	Home > Jasa Renovasi > Jasa Renovasi Interior > [Nama Halaman]
-SUB-VARIANT (di bawah VARIANT)		Home > Jasa Renovasi > Jasa Renovasi Interior > [Parent VARIANT] > [Nama Halaman]
-*/
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPerbaikanKons1 = {};
