@@ -46,47 +46,45 @@ const urlMappingJasaRetrofittingPondasi = {
 
 const urlMappingJasaPondasiBangunan = {
   // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI
-  // 🧠 STATUS: 404 - URL TIDAK DITEMUKAN
-  // 📌 SARAN: Buat halaman baru atau hapus dari const
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi [MONEY PAGE - 404]",
-
-  // ============================================================
   // [SUB-VARIANT] - JASA PONDASI CAKAR AYAM
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: AKTIF (konten lengkap)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Pondasi Cakar Ayam
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pondasi-cakar-ayam.html": "Jasa Pondasi Cakar Ayam [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-pondasi-cakar-ayam.html": "Jasa Pondasi Cakar Ayam",  // TYPE: VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA PONDASI TAPAK
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: AKTIF (konten lengkap)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Pondasi Tapak
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pondasi-tapak.html": "Jasa Pondasi Tapak [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-pondasi-tapak.html": "Jasa Pondasi Tapak",  // TYPE: VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA TIANG PANCANG
-  // 🧠 STATUS: PERLU DICEK KONTEN (belum ada URL yang dikonfirmasi)
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
+  // 🧠 STATUS: PERLU DICEK KONTEN
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Tiang Pancang
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html": "Jasa Tiang Pancang [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html": "Jasa Tiang Pancang",  // TYPE: VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA PONDASI SUMURAN
-  // 🧠 STATUS: PERLU DICEK KONTEN (belum ada URL yang dikonfirmasi)
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
+  // 🧠 STATUS: PERLU DICEK KONTEN
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pondasi-sumuran.html": "Jasa Pondasi Sumuran [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-pondasi-sumuran.html": "Jasa Pondasi Sumuran",  // TYPE: VARIANT
 
   // ============================================================
-  // SARAN ITEM BARU
+  // SARAN ITEM BARU (MONEY PAGE)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-pondasi-cakar-ayam.html": "Harga Pondasi Cakar Ayam [MONEY PAGE]",
-  // "https://www.betonjayareadymix.com/2019/08/harga-pondasi-tapak.html": "Harga Pondasi Tapak [MONEY PAGE]",
-  // "https://www.betonjayareadymix.com/2019/08/harga-tiang-pancang.html": "Harga Tiang Pancang [MONEY PAGE]"
+  // "https://www.betonjayareadymix.com/2019/08/harga-pondasi-cakar-ayam.html": "Harga Pondasi Cakar Ayam",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/harga-pondasi-tapak.html": "Harga Pondasi Tapak",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/harga-tiang-pancang.html": "Harga Tiang Pancang",  // TYPE: MONEY_MASTER
 };
+
 // ============================================================
 // JASA PEMADATAN & PERSIAPAN PONDASI (VARIANT)
 // Parent: Jasa Pondasi & Perkuatan Tanah
@@ -96,45 +94,51 @@ const urlMappingJasaPondasiBangunan = {
 const urlMappingJasaPemadatanPersiapanPondasi = {
   // ============================================================
   // [SUB-VARIANT] - JASA PEMADATAN PONDASI BANGUNAN
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: PERLU DICEK KONTEN
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pemadatan & Persiapan Pondasi > Jasa Pemadatan Pondasi Bangunan
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pemadatan-pondasi-bangunan.html": "Jasa Pemadatan Pondasi Bangunan [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-pemadatan-pondasi-bangunan.html": "Jasa Pemadatan Pondasi Bangunan",  // TYPE: VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA CUT AND FILL PONDASI
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: PERLU DICEK KONTEN
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pemadatan & Persiapan Pondasi > Jasa Cut and Fill Pondasi
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-cut-and-fill-pondasi.html": "Jasa Cut and Fill Pondasi [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-cut-and-fill-pondasi.html": "Jasa Cut and Fill Pondasi",  // TYPE: VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA LEVELING TANAH PROYEK GEDUNG
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: PERLU DICEK KONTEN
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pemadatan & Persiapan Pondasi > Jasa Leveling Tanah Proyek Gedung
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-leveling-tanah-proyek-gedung.html": "Jasa Leveling Tanah Proyek Gedung [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-leveling-tanah-proyek-gedung.html": "Jasa Leveling Tanah Proyek Gedung",  // TYPE: VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA PEMBERSIHAN LAHAN KONSTRUKSI
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: PERLU DICEK KONTEN
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pemadatan & Persiapan Pondasi > Jasa Pembersihan Lahan Konstruksi
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pembersihan-lahan-konstruksi.html": "Jasa Pembersihan Lahan Konstruksi [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-pembersihan-lahan-konstruksi.html": "Jasa Pembersihan Lahan Konstruksi",  // TYPE: VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA UJI KEPADATAN TANAH PONDASI
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: PERLU DICEK KONTEN
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Pemadatan & Persiapan Pondasi > Jasa Uji Kepadatan Tanah Pondasi
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-uji-kepadatan-tanah-pondasi.html": "Jasa Uji Kepadatan Tanah Pondasi [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-uji-kepadatan-tanah-pondasi.html": "Jasa Uji Kepadatan Tanah Pondasi",  // TYPE: VARIANT
 
   // ============================================================
-  // SARAN ITEM BARU
+  // SARAN ITEM BARU (MONEY PAGE)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-pemadatan-tanah.html": "Harga Pemadatan Tanah [MONEY PAGE]",
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pemadatan-tanah-untuk-pondasi.html": "Jasa Pemadatan Tanah untuk Pondasi [MONEY PAGE]"
+  // "https://www.betonjayareadymix.com/2019/08/harga-pemadatan-tanah.html": "Harga Pemadatan Tanah",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pemadatan-tanah-untuk-pondasi.html": "Jasa Pemadatan Tanah untuk Pondasi",  // TYPE: MONEY_MASTER
 };
+
 // ============================================================
 // JASA PERKUATAN TANAH (VARIANT)
 // Parent: Jasa Pondasi & Perkuatan Tanah
@@ -144,45 +148,51 @@ const urlMappingJasaPemadatanPersiapanPondasi = {
 const urlMappingJasaPerkuatanTanah = {
   // ============================================================
   // [SUB-VARIANT] - JASA SOIL IMPROVEMENT
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: PERLU DICEK KONTEN
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Perkuatan Tanah > Jasa Soil Improvement
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-soil-improvement.html": "Jasa Soil Improvement [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-soil-improvement.html": "Jasa Soil Improvement",  // TYPE: VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA PERKUATAN TANAH GEOTEXTILE
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: PERLU DICEK KONTEN
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Perkuatan Tanah > Jasa Perkuatan Tanah Geotextile
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-geotextile.html": "Jasa Perkuatan Tanah Geotextile [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-geotextile.html": "Jasa Perkuatan Tanah Geotextile",  // TYPE: VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA PERKUATAN TANAH STONE COLUMN
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: PERLU DICEK KONTEN
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Perkuatan Tanah > Jasa Perkuatan Tanah Stone Column
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-stone-column.html": "Jasa Perkuatan Tanah Stone Column [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-stone-column.html": "Jasa Perkuatan Tanah Stone Column",  // TYPE: VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA VERTICAL DRAIN
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: PERLU DICEK KONTEN
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Perkuatan Tanah > Jasa Vertical Drain
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-vertical-drain.html": "Jasa Vertical Drain [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-vertical-drain.html": "Jasa Vertical Drain",  // TYPE: VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA SOIL NAILING
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: PERLU DICEK KONTEN
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Perkuatan Tanah > Jasa Soil Nailing
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-soil-nailing.html": "Jasa Soil Nailing [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-soil-nailing.html": "Jasa Soil Nailing",  // TYPE: VARIANT
 
   // ============================================================
-  // SARAN ITEM BARU
+  // SARAN ITEM BARU (MONEY PAGE)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-soil-improvement.html": "Harga Soil Improvement [MONEY PAGE]",
-  // "https://www.betonjayareadymix.com/2019/08/harga-stone-column.html": "Harga Stone Column [MONEY PAGE]"
+  // "https://www.betonjayareadymix.com/2019/08/harga-soil-improvement.html": "Harga Soil Improvement",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/harga-stone-column.html": "Harga Stone Column",  // TYPE: MONEY_MASTER
 };
+
 // ============================================================
 // JASA RETROFITTING PONDASI (VARIANT)
 // Parent: Jasa Pondasi & Perkuatan Tanah
@@ -192,66 +202,369 @@ const urlMappingJasaPerkuatanTanah = {
 const urlMappingJasaRetrofittingPondasi = {
   // ============================================================
   // [SUB-VARIANT] - JASA PERKUATAN PONDASI BANGUNAN LAMA
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: PERLU DICEK KONTEN
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Retrofitting Pondasi > Jasa Perkuatan Pondasi Bangunan Lama
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-pondasi-bangunan-lama.html": "Jasa Perkuatan Pondasi Bangunan Lama [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-pondasi-bangunan-lama.html": "Jasa Perkuatan Pondasi Bangunan Lama",  // TYPE: VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA PONDASI UNTUK PENURUNAN TANAH
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: PERLU DICEK KONTEN
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Retrofitting Pondasi > Jasa Pondasi Untuk Penurunan Tanah
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pondasi-untuk-penurunan-tanah.html": "Jasa Pondasi Untuk Penurunan Tanah [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-pondasi-untuk-penurunan-tanah.html": "Jasa Pondasi Untuk Penurunan Tanah",  // TYPE: VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - JASA PERBAIKAN PONDASI PENURUNAN TANAH
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: PERLU DICEK KONTEN
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Retrofitting Pondasi > Jasa Perbaikan Pondasi Penurunan Tanah
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-penurunan-tanah.html": "Jasa Perbaikan Pondasi Penurunan Tanah [SUB-VARIANT]",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-penurunan-tanah.html": "Jasa Perbaikan Pondasi Penurunan Tanah",  // TYPE: VARIANT
 
   // ============================================================
   // [SUB-VARIANT] - RETROFITTING PONDASI PENAMBAHAN LANTAI
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: KONTEN TIPIS (hanya breadcrumb, tidak ada konten utama)
   // 📌 SARAN: Perbaiki konten atau redirect ke halaman yang lebih relevan
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Retrofitting Pondasi > Retrofitting Pondasi Penambahan Lantai
   // ============================================================
-  "https://www.betonjayareadymix.com/p/retrofitting-pondasi-penambahan-lantai.html": "Retrofitting Pondasi Penambahan Lantai [SUB-VARIANT - KONTEN TIPIS]",
+  "https://www.betonjayareadymix.com/p/retrofitting-pondasi-penambahan-lantai.html": "Retrofitting Pondasi Penambahan Lantai",  // TYPE: VARIANT - KONTEN TIPIS
 
   // ============================================================
   // [SUB-VARIANT] - JASA UNDERPINNING PONDASI
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: KONTEN TIPIS (hanya breadcrumb, tidak ada konten utama)
   // 📌 SARAN: Perbaiki konten atau redirect ke halaman yang lebih relevan
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Retrofitting Pondasi > Jasa Underpinning Pondasi
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-underpinning-pondasi.html": "Jasa Underpinning Pondasi [SUB-VARIANT - KONTEN TIPIS]",
+  "https://www.betonjayareadymix.com/p/jasa-underpinning-pondasi.html": "Jasa Underpinning Pondasi",  // TYPE: VARIANT - KONTEN TIPIS
 
   // ============================================================
   // [SUB-VARIANT] - JASA GROUTING PONDASI
+  // 🧠 TYPE: VARIANT (WAJIB tampil di breadcrumb)
   // 🧠 STATUS: KONTEN TIPIS (hanya breadcrumb, tidak ada konten utama)
   // 📌 SARAN: Perbaiki konten atau redirect ke halaman yang lebih relevan
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi & Perkuatan Tanah > Jasa Retrofitting Pondasi > Jasa Grouting Pondasi
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-grouting-pondasi.html": "Jasa Grouting Pondasi [SUB-VARIANT - KONTEN TIPIS]",
+  "https://www.betonjayareadymix.com/p/jasa-grouting-pondasi.html": "Jasa Grouting Pondasi",  // TYPE: VARIANT - KONTEN TIPIS
 
   // ============================================================
-  // SARAN ITEM BARU
+  // SARAN ITEM BARU (MONEY PAGE)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-retrofitting-pondasi.html": "Harga Retrofitting Pondasi [MONEY PAGE]",
-  // "https://www.betonjayareadymix.com/2019/08/harga-underpinning-pondasi.html": "Harga Underpinning Pondasi [MONEY PAGE]",
-  // "https://www.betonjayareadymix.com/2019/08/harga-grouting-pondasi.html": "Harga Grouting Pondasi [MONEY PAGE]"
+  // "https://www.betonjayareadymix.com/2019/08/harga-retrofitting-pondasi.html": "Harga Retrofitting Pondasi",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/harga-underpinning-pondasi.html": "Harga Underpinning Pondasi",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/harga-grouting-pondasi.html": "Harga Grouting Pondasi",  // TYPE: MONEY_MASTER
 };
-/*
-🧠 SARAN BREADCRUMB 4 LEVEL (SKIP PILLAR JASA KONSTRUKSI)
-Halaman						Breadcrumb
-Jasa Pondasi Cakar Ayam		Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Pondasi Cakar Ayam
-Jasa Pondasi Tapak			Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Pondasi Tapak
-Jasa Soil Improvement		Home > Jasa Pondasi & Perkuatan Tanah > Jasa Perkuatan Tanah > Jasa Soil Improvement
-Jasa Underpinning Pondasi	Home > Jasa Pondasi & Perkuatan Tanah > Jasa Retrofitting Pondasi > Jasa Underpinning Pondasi
+// ============================================================
+// FUNGSI GENERATE BREADCRUMB - VERSI FINAL
+// UNTUK SEMUA PILLAR (PRODUK, MATERIAL, JASA, INTERIOR, DLL)
+// MAX_LEVEL = 4 (TERMASUK HOME)
+// SKIP LEVEL BEKERJA UNTUK PILLAR & SUB2
+// ============================================================
 
-*/
-
+function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = [], pillarType = 'JASA_KONSTRUKSI') {
+    
+    const MAX_LEVEL = 4;
+    const DOMAIN = 'https://www.betonjayareadymix.com';
+    
+    // ============================================================
+    // 1. VALIDASI PILLAR TYPE
+    // ============================================================
+    const validPillarTypes = ['PRODUK_KONSTRUKSI', 'MATERIAL_KONSTRUKSI', 'JASA_KONSTRUKSI', 
+                               'PRODUK_INTERIOR', 'JASA_DESAIN_INTERIOR'];
+    if (!validPillarTypes.includes(pillarType)) {
+        console.error(`❌ ERROR: "${pillarType}" BUKAN PILLAR TYPE yang valid!`);
+        console.error(`   Gunakan salah satu dari: ${validPillarTypes.join(', ')}`);
+        return null;
+    }
+    
+    const pageTitle = mappingObj[currentUrl];
+    if (!pageTitle) {
+        console.error(`❌ ERROR: URL "${currentUrl}" tidak ditemukan di mapping`);
+        return null;
+    }
+    
+    // ============================================================
+    // 2. KUMPULKAN SEMUA NAMA HALAMAN DARI MAPPING (UNTUK REFERENSI)
+    // ============================================================
+    const knownPages = [];
+    for (const [url, name] of Object.entries(mappingObj)) {
+        if (name && typeof name === 'string') {
+            knownPages.push(name.toLowerCase());
+        }
+    }
+    
+    // ============================================================
+    // 3. DETEKSI TYPE OTOMATIS
+    // ============================================================
+    function detectPageType(pageName, position, totalLevels) {
+        const lowerName = pageName.toLowerCase();
+        const parts = pageName.split(' ');
+        const lastWord = parts[parts.length - 1].toLowerCase();
+        const firstWord = parts[0].toLowerCase();
+        const wordCount = parts.length;
+        
+        // PILLAR: posisi pertama
+        if (position === 0) return 'PILLAR';
+        
+        // MONEY_LEADGEN
+        if (lowerName.startsWith('konsultasi')) return 'MONEY_LEADGEN';
+        
+        // MONEY_MASTER (deteksi transaksi)
+        const transactionWords = ['harga', 'sewa', 'jual', 'beli', 'pesan', 'booking', 'order', 'rental',
+            'biaya', 'tarif', 'rate', 'cost', 'price', 'fee', 'charge', 'promo', 'diskon', 'obral',
+            'gratis', 'voucher', 'cashback', 'cicilan', 'kredit', 'dp', 'angsuran', 'quote', 'penawaran', 'estimasi'];
+        
+        for (const word of transactionWords) {
+            if (lowerName.startsWith(word + ' ') || lowerName.includes(' ' + word + ' ') || lowerName.endsWith(' ' + word)) {
+                return 'MONEY_MASTER';
+            }
+        }
+        
+        // SUB1 (deteksi panduan)
+        const guideWords = ['panduan', 'cara', 'tips', 'tutorial', 'langkah', 'petunjuk', 'pedoman', 'instruksi',
+            'guide', 'how to', 'step by step', 'strategi', 'metode', 'teknik', 'rahasia', 'kunci sukses',
+            'wajib tahu', 'perlu diketahui', 'edukasi', 'belajar', 'mempelajari', 'pemahaman', 'solusi', 'jawaban'];
+        
+        for (const word of guideWords) {
+            if (lowerName.startsWith(word + ' ') || lowerName.includes(' ' + word + ' ')) {
+                return 'SUB1';
+            }
+        }
+        
+        // VARIANT (deteksi angka atau kata kunci)
+        if (/\d/.test(lowerName)) return 'VARIANT';
+        
+        const variantWords = ['tipe', 'type', 'ukuran', 'model', 'varian', 'warna', 'bentuk', 'seri', 'versi',
+            'grade', 'kelas', 'standar', 'jenis', 'macam', 'ragam', 'kategori', 'spesifikasi', 'detail', 'rinci',
+            'kapasitas', 'volume', 'berat', 'panjang', 'lebar', 'tinggi', 'tebal', 'diameter', 'radius', 'luas',
+            'bahan', 'material', 'komposisi', 'kualitas', 'mutu', 'kode', 'plus', 'minus', 'kelebihan', 'kekurangan',
+            'baru', 'lama', 'bekas', 'second', 'original', 'kw', 'putih', 'hitam', 'merah', 'biru', 'hijau',
+            'kecil', 'besar', 'sedang', 'mini', 'maxi', 'jumbo', 'extra', 'super'];
+        
+        for (const word of variantWords) {
+            if (lowerName.includes(' ' + word + ' ') || lowerName.endsWith(' ' + word)) {
+                return 'VARIANT';
+            }
+        }
+        
+        // MONEY_CHILD (deteksi lokasi)
+        function isLikelyLocation(word) {
+            if (word.length < 3 || word.length > 25) return false;
+            if (!/^[a-zA-Z]+$/.test(word)) return false;
+            if (word === firstWord) return false;
+            
+            const notLocationWords = ['mini', 'maxi', 'super', 'extra', 'plus', 'pro', 'max', 'ultra',
+                'baru', 'lama', 'bekas', 'second', 'original', 'kw', 'grade', 'murah', 'mahal', 'hemat',
+                'premium', 'standar', 'ekonomis', 'kecil', 'besar', 'sedang', 'panjang', 'pendek', 'tebal', 'tipis',
+                'putih', 'hitam', 'merah', 'biru', 'hijau', 'kuning', 'ungu', 'abu', 'coklat'];
+            if (notLocationWords.includes(word)) return false;
+            
+            const isKnownProduct = knownPages.some(known => known === word || (known.includes(word) && word.length > 3));
+            if (isKnownProduct) return false;
+            
+            if (word.length >= 4 && word.length <= 12) return true;
+            if (/[aiueo]$/.test(word) && word.length >= 4) return true;
+            
+            const locationPatterns = ['ang', 'ung', 'eng', 'ong', 'an', 'in', 'un', 'en', 
+                'ap', 'ip', 'op', 'ar', 'ur', 'er', 'or', 'karta', 'jaya', 'pura', 'sari', 'mulya', 'agung', 'asih', 'ayem'];
+            for (const pattern of locationPatterns) {
+                if (word.endsWith(pattern) && word.length >= 4) return true;
+            }
+            
+            if (word.length >= 5 && /[aiueo].*[aiueo]/.test(word)) return true;
+            return false;
+        }
+        
+        if (wordCount >= 2 && isLikelyLocation(lastWord)) return 'MONEY_CHILD';
+        
+        return 'SUB2';
+    }
+    
+    // ============================================================
+    // 4. FUNGSI BANTUAN
+    // ============================================================
+    function generateIdFromName(name) {
+        return name.replace(/[^a-zA-Z0-9]/g, '') + 'Post';
+    }
+    
+    // ============================================================
+    // 5. BANGUN LEVELS DARI ARRAY OBJECT (NAMA + URL)
+    // ============================================================
+    const allLevels = [];
+    for (let i = 0; i < breadcrumbItems.length; i++) {
+        const item = breadcrumbItems[i];
+        const name = typeof item === 'string' ? item : item.name;
+        const url = typeof item === 'string' ? null : item.url;
+        
+        allLevels.push({
+            name: name,
+            url: url,
+            type: detectPageType(name, i, breadcrumbItems.length),
+            id: generateIdFromName(name),
+            position: i
+        });
+    }
+    
+    // ============================================================
+    // 6. VALIDASI & FALLBACK URL
+    // ============================================================
+    for (const level of allLevels) {
+        if (!level.url) {
+            let foundUrl = null;
+            for (const [url, name] of Object.entries(mappingObj)) {
+                if (name === level.name) {
+                    foundUrl = url.startsWith('http') ? url : DOMAIN + url;
+                    break;
+                }
+            }
+            if (!foundUrl) {
+                const slug = level.name.toLowerCase().replace(/ /g, '-');
+                foundUrl = `${DOMAIN}/p/${slug}.html`;
+            }
+            level.url = foundUrl;
+        } else if (!level.url.startsWith('http')) {
+            level.url = DOMAIN + level.url;
+        }
+    }
+    
+    // ============================================================
+    // 7. TENTUKAN LEVEL YANG AKAN DITAMPILKAN (MAX 4 LEVEL)
+    // ============================================================
+    const selectedLevels = [];
+    
+    // Level 1: Home (WAJIB)
+    selectedLevels.push({ name: 'BJR', url: DOMAIN, isHome: true });
+    
+    // Hitung slot tersisa (MAX_LEVEL - 1 untuk home - 1 untuk halaman saat ini)
+    let remainingSlots = MAX_LEVEL - 2;
+    
+    console.log(`📊 ========================================`);
+    console.log(`📊 Breadcrumb Generator - SEO Tercanggih`);
+    console.log(`📊 Max level: ${MAX_LEVEL}, slot untuk parent: ${remainingSlots}`);
+    console.log(`📊 Breadcrumb items: ${allLevels.map(l => l.name).join(' → ')}`);
+    console.log(`📊 ========================================`);
+    
+    // Parent terdekat (level terakhir) - WAJIB tampil
+    let parentTerdekat = null;
+    if (allLevels.length > 0) {
+        parentTerdekat = allLevels[allLevels.length - 1];
+        selectedLevels.push(parentTerdekat);
+        remainingSlots--;
+        console.log(`✅ WAJIB: "${parentTerdekat.name}" (${parentTerdekat.type}) - sisa slot: ${remainingSlots}`);
+    }
+    
+    // Level lainnya (dari awal sampai sebelum parent terdekat)
+    const otherLevels = [...allLevels.slice(0, allLevels.length - 1)].reverse();
+    const canSkipTypes = ['PILLAR', 'SUB2'];
+    
+    for (const level of otherLevels) {
+        if (remainingSlots <= 0) {
+            console.log(`📌 SKIP: "${level.name}" (${level.type}) - tidak ada slot tersisa`);
+            continue;
+        }
+        
+        if (canSkipTypes.includes(level.type)) {
+            console.log(`📌 SKIP: "${level.name}" (${level.type}) - type boleh skip`);
+            continue;
+        }
+        
+        selectedLevels.splice(1, 0, level);
+        remainingSlots--;
+        console.log(`✅ TAMBAH: "${level.name}" (${level.type}) - sisa slot: ${remainingSlots}`);
+    }
+    
+    // Halaman saat ini (WAJIB)
+    const currentFullUrl = currentUrl.startsWith('http') ? currentUrl : DOMAIN + currentUrl;
+    selectedLevels.push({
+        name: pageTitle,
+        url: currentFullUrl,
+        isCurrent: true
+    });
+    
+    // Update position
+    for (let i = 0; i < selectedLevels.length; i++) {
+        selectedLevels[i].position = i + 1;
+    }
+    
+    console.log(`✅ FINAL (${selectedLevels.length} level): ${selectedLevels.map(l => l.name).join(' → ')}`);
+    
+    // ============================================================
+    // 8. GENERATE HTML BREADCRUMB
+    // ============================================================
+    let breadcrumbHtml = `<div class="breadcrumbs">\n<span>\n`;
+    breadcrumbHtml += `<a href="${DOMAIN}/" itemprop="item" title="Beton Jaya Readymix">`;
+    breadcrumbHtml += `<meta content="1" itemprop="position">`;
+    breadcrumbHtml += `<span itemprop="name">BJR</span></a>\n`;
+    breadcrumbHtml += `</span>\n &nbsp;›&nbsp;\n\n`;
+    breadcrumbHtml += `<span>\n<div id="breadcrumbContainer" style="display: inline;">\n`;
+    
+    for (let i = 1; i < selectedLevels.length; i++) {
+        const level = selectedLevels[i];
+        const isLast = (i === selectedLevels.length - 1);
+        
+        if (!isLast) {
+            breadcrumbHtml += `<a href="${level.url}" id="${level.id}" title="${level.name.toUpperCase()}" style="visibility: visible;">`;
+            breadcrumbHtml += `<span id="${level.id}Name">${level.name}</span>&nbsp;›&nbsp;\n`;
+            breadcrumbHtml += `</a>\n`;
+        } else {
+            breadcrumbHtml += `<span id="pageNameBreadcrumb">${level.name}</span>\n`;
+        }
+    }
+    
+    breadcrumbHtml += `</div>\n</span>\n</div>`;
+    
+    // ============================================================
+    // 9. GENERATE JSON-LD SCHEMA
+    // ============================================================
+    const jsonLdItems = [];
+    jsonLdItems.push({ "@type": "ListItem", "position": 1, "name": "Beton Jaya Readymix", "item": DOMAIN });
+    
+    for (let i = 1; i < selectedLevels.length; i++) {
+        jsonLdItems.push({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": selectedLevels[i].name,
+            "item": selectedLevels[i].url
+        });
+    }
+    
+    // ============================================================
+    // 10. HAPUS BREADCRUMB LAMA & INJECT YANG BARU
+    // ============================================================
+    // Hapus semua breadcrumb lama (manual)
+    const oldBreadcrumbs = document.querySelectorAll('.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"]');
+    oldBreadcrumbs.forEach(el => el.remove());
+    
+    // Hapus JSON-LD lama
+    const oldJsonLd = document.querySelector('script[data-breadcrumb="true"]');
+    if (oldJsonLd) oldJsonLd.remove();
+    
+    // Inject HTML breadcrumb baru
+    const mainContent = document.querySelector('main, article, .content, #main-content, .post-content');
+    if (mainContent?.firstChild) {
+        mainContent.insertAdjacentHTML('afterbegin', breadcrumbHtml);
+    } else {
+        document.body.insertAdjacentHTML('afterbegin', breadcrumbHtml);
+    }
+    
+    // Inject JSON-LD baru
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-breadcrumb', 'true');
+    script.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": jsonLdItems
+    });
+    document.head.appendChild(script);
+    
+    console.log(`✅ Breadcrumb injected ke DOM`);
+    return breadcrumbHtml;
+}
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasapondasiPerkuatanTanahKons = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
