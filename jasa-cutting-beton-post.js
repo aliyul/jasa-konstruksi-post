@@ -7,85 +7,66 @@
 
 const urlMappingJasaCuttingBeton = {
   // ============================================================
-  // [SUB2] - SUB-PILLAR TIPE 2 (INFORMASIONAL / EDUKASI)
-  // 🧠 SEO NOTE: Artikel ini adalah panduan teknis pemotongan jalan beton.
-  // Intent: Informational + Commercial Investigation.
+  // [SUB1] - PANDUAN TEKNIS (INFORMASIONAL / EDUKASI)
+  // 🧠 TYPE: SUB1 (WAJIB tampil, bridge ke money page)
+  // 🧠 INTENT: Informational + Commercial Investigation
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Cutting Beton > Jasa Pemotongan Jalan Beton (4 level)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/jasa-pemotongan-jalan-beton.html": "Jasa Pemotongan Jalan Beton",
+  "https://www.betonjayareadymix.com/2019/06/jasa-pemotongan-jalan-beton.html": "Jasa Pemotongan Jalan Beton",  // TYPE: SUB1
   
   // ============================================================
-  // [MONEY PAGE] - MASTER HARGA (TRANSACTIONAL)
-  // 🧠 SEO NOTE: Halaman master untuk semua harga cutting beton.
-  // Intent: Transactional (user mencari harga).
-  // Breadcrumb: Home > Jasa Konstruksi > Harga Jasa Cutting Beton (3 level)
+  // [MONEY_MASTER] - MASTER HARGA (TRANSACTIONAL)
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // 🧠 INTENT: Transactional (user mencari harga nasional/general)
+  // Breadcrumb: Home > Jasa Konstruksi > Harga Jasa Cutting Beton (3 level - skip "Jasa Cutting Beton")
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton.html": "Harga Jasa Cutting Beton",
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton.html": "Harga Jasa Cutting Beton",  // TYPE: MONEY_MASTER
   
   // ============================================================
-  // [MONEY PAGE] - HARGA PER LOKASI (TRANSACTIONAL)
-  // 🧠 SEO NOTE: Masing-masing URL menarget keyword "harga cutting beton" + lokasi.
-  // Intent: Transactional (user mencari harga di lokasi tertentu).
+  // [MONEY_CHILD] - HARGA PER LOKASI (TRANSACTIONAL)
+  // 🧠 TYPE: MONEY_CHILD (WAJIB tampil, spesifik lokasi)
+  // 🧠 INTENT: Transactional (user mencari harga di lokasi tertentu)
   // Breadcrumb: Home > Jasa Konstruksi > Harga Jasa Cutting Beton [Kota] (3 level)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton-jakarta.html": "Harga Jasa Cutting Beton Jakarta",
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton-bogor.html": "Harga Jasa Cutting Beton Bogor",
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton-depok.html": "Harga Jasa Cutting Beton Depok",
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton-tangerang.html": "Harga Jasa Cutting Beton Tangerang",
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton-bekasi.html": "Harga Jasa Cutting Beton Bekasi",
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton-karawang.html": "Harga Jasa Cutting Beton Karawang",
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton-jakarta.html": "Harga Jasa Cutting Beton Jakarta",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton-bogor.html": "Harga Jasa Cutting Beton Bogor",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton-depok.html": "Harga Jasa Cutting Beton Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton-tangerang.html": "Harga Jasa Cutting Beton Tangerang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton-bekasi.html": "Harga Jasa Cutting Beton Bekasi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton-karawang.html": "Harga Jasa Cutting Beton Karawang",  // TYPE: MONEY_CHILD
   
   // ============================================================
-  // [MONEY PAGE] - HARGA CUTTING EXPANSION JOINT (TRANSACTIONAL)
-  // 🧠 SEO NOTE: Halaman spesifik untuk harga cutting expansion joint.
-  // Intent: Transactional.
+  // [MONEY_MASTER] - HARGA CUTTING EXPANSION JOINT (TRANSACTIONAL)
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // 🧠 INTENT: Transactional (spesifik layanan expansion joint)
   // Breadcrumb: Home > Jasa Konstruksi > Harga Jasa Cutting Expansion Joint Beton (3 level)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-expansion-joint.html": "Harga Jasa Cutting Expansion Joint Beton"
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-expansion-joint.html": "Harga Jasa Cutting Expansion Joint Beton"  // TYPE: MONEY_MASTER
 };
-
+/*
 // ============================================================
 // 🟡 SARAN TAMBAHAN URL (OPTIONAL)
 // ============================================================
-/*
+
 📌 URL YANG DISARANKAN UNTUK DITAMBAHKAN (JIKA KONTEN MEMADAI):
 
-| URL | Nama Halaman | Status | Parent | Alasan SEO |
-|-----|--------------|--------|--------|------------|
-| /2019/06/harga-jasa-cutting-beton-cikarang.html | Harga Jasa Cutting Beton Cikarang | ⚠️ SARAN | Jasa Cutting Beton | Cikarang adalah kawasan industri besar, potensi volume pencarian tinggi |
-| /2019/06/harga-jasa-cutting-beton-cibitung.html | Harga Jasa Cutting Beton Cibitung | ⚠️ SARAN | Jasa Cutting Beton | Kawasan industri strategis |
-| /2019/06/harga-jasa-cutting-beton-purwakarta.html | Harga Jasa Cutting Beton Purwakarta | ⚠️ SARAN | Jasa Cutting Beton | Wilayah dengan proyek industri berkembang |
-| /2019/06/harga-jasa-cutting-beton-subang.html | Harga Jasa Cutting Beton Subang | ⚠️ SARAN | Jasa Cutting Beton | Kawasan industri baru |
+| URL | Nama Halaman | Type | Alasan SEO |
+|-----|--------------|------|------------|
+| /2019/06/harga-jasa-cutting-beton-cikarang.html | Harga Jasa Cutting Beton Cikarang | MONEY_CHILD | Kawasan industri besar |
+| /2019/06/harga-jasa-cutting-beton-cibitung.html | Harga Jasa Cutting Beton Cibitung | MONEY_CHILD | Kawasan industri strategis |
+| /2019/06/harga-jasa-cutting-beton-purwakarta.html | Harga Jasa Cutting Beton Purwakarta | MONEY_CHILD | Wilayah industri berkembang |
+| /2019/06/harga-jasa-cutting-beton-subang.html | Harga Jasa Cutting Beton Subang | MONEY_CHILD | Kawasan industri baru |
 
 📌 CATATAN: URL di atas disarankan hanya jika kontennya memadai.
 Jika konten tipis, lebih baik digabung ke halaman induk harga cutting beton.
-*/
 
-// ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dan memiliki konten substansial.
-
-📌 KLASIFIKASI:
-- 'jasa-pemotongan-jalan-beton.html' → [SUB2] (informasional/edukasi)
-- 'harga-jasa-cutting-beton.html' → [MONEY PAGE] (master harga)
-- 'harga-jasa-cutting-beton-[kota].html' → [MONEY PAGE] (harga per lokasi)
-- 'harga-jasa-cutting-expansion-joint.html' → [MONEY PAGE] (harga spesifik)
-
-📌 BREADCRUMB:
-Untuk money page per lokasi, breadcrumb cukup 3 level:
-Home > Jasa Konstruksi > Harga Jasa Cutting Beton Jakarta
-
-Alasan skip level tengah: User yang mencari "harga cutting beton Jakarta"
-tidak perlu melihat "Jasa Cutting Beton" di breadcrumb karena sudah spesifik lokasi.
-
-📌 INTERNAL LINK YANG DISARANKAN:
-1. Dari 'harga-jasa-cutting-beton.html' (master) → link ke semua harga per lokasi
-2. Dari setiap halaman harga per lokasi → link balik ke master
-3. Dari 'jasa-pemotongan-jalan-beton.html' → link ke 'harga-jasa-cutting-beton.html'
-
-✅ TIDAK ADA REDIRECT YANG DIPERLUKAN - SEMUA URL VALID
+📌 SARAN UNTUK DITAMBAHKAN JUGA:
+| URL | Nama Halaman | Type |
+|-----|--------------|------|
+| /2019/06/jasa-cutting-beton.html | Jasa Cutting Beton | SUB2 (halaman utama layanan) |
+| /2019/06/harga-jasa-cutting-beton-surabaya.html | Harga Jasa Cutting Beton Surabaya | MONEY_CHILD |
+| /2019/06/harga-jasa-cutting-beton-bandung.html | Harga Jasa Cutting Beton Bandung | MONEY_CHILD |
+| /2019/06/harga-jasa-cutting-beton-semarang.html | Harga Jasa Cutting Beton Semarang | MONEY_CHILD |
 */
 
 // ============================================================
@@ -99,249 +80,217 @@ tidak perlu melihat "Jasa Cutting Beton" di breadcrumb karena sudah spesifik lok
 
 const urlMappingJasaSondir = {
   // ============================================================
-  // [MONEY PAGE] - LAYANAN SONDIR PER KEBUTUHAN/LOKASI PROYEK
-  // 🧠 SEO NOTE: Masing-masing URL menarget keyword spesifik jenis proyek.
+  // [MONEY_CHILD] - LAYANAN SONDIR PER KEBUTUHAN/LOKASI PROYEK
+  // 🧠 TYPE: MONEY_CHILD (WAJIB tampil, spesifik layanan)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Uji Tanah > Jasa Sondir [Nama]
   // ============================================================
   
-  // ✅ VALID - SEMUA URL MEMILIKI KONTEN
-  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-cepat-jadwal-fleksibel.html": "Jasa Sondir Cepat dengan Jadwal Fleksibel",
-  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-area-perumahan.html": "Jasa Sondir Area Perumahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-lahan-sempit-padat.html": "Jasa Sondir Lahan Sempit & Padat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-laporan-grafik-interpretasi.html": "Jasa Sondir dengan Laporan Grafik & Interpretasi",
-  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-analisis-lapisan-tanah.html": "Jasa Sondir Analisis Lapisan Tanah",
-  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-pondasi-dangkal.html": "Jasa Sondir untuk Pondasi Dangkal",
-  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-daya-dukung-tanah.html": "Jasa Sondir Daya Dukung Tanah",
-  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-portable-akses-terbatas.html": "Jasa Sondir Portable Akses Terbatas",
-  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-tanah-hidrolik.html": "Jasa Sondir Tanah Hidrolik",
-  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-tanah-manual.html": "Jasa Sondir Tanah Manual",
-  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-renovasi-bangunan.html": "Jasa Sondir untuk Renovasi Bangunan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-proyek-skala-kecil.html": "Jasa Sondir Proyek Skala Kecil",
-  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-ruko-komersial.html": "Jasa Sondir Ruko & Bangunan Komersial",
-  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-gedung-bertingkat.html": "Jasa Sondir Gedung Bertingkat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-rumah-tinggal.html": "Jasa Sondir Rumah Tinggal"
+  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-cepat-jadwal-fleksibel.html": "Jasa Sondir Cepat dengan Jadwal Fleksibel",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-area-perumahan.html": "Jasa Sondir Area Perumahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-lahan-sempit-padat.html": "Jasa Sondir Lahan Sempit & Padat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-laporan-grafik-interpretasi.html": "Jasa Sondir dengan Laporan Grafik & Interpretasi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-analisis-lapisan-tanah.html": "Jasa Sondir Analisis Lapisan Tanah",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-pondasi-dangkal.html": "Jasa Sondir untuk Pondasi Dangkal",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-daya-dukung-tanah.html": "Jasa Sondir Daya Dukung Tanah",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-portable-akses-terbatas.html": "Jasa Sondir Portable Akses Terbatas",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-tanah-hidrolik.html": "Jasa Sondir Tanah Hidrolik",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-tanah-manual.html": "Jasa Sondir Tanah Manual",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-renovasi-bangunan.html": "Jasa Sondir untuk Renovasi Bangunan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-proyek-skala-kecil.html": "Jasa Sondir Proyek Skala Kecil",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-ruko-komersial.html": "Jasa Sondir Ruko & Bangunan Komersial",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-gedung-bertingkat.html": "Jasa Sondir Gedung Bertingkat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-sondir-rumah-tinggal.html": "Jasa Sondir Rumah Tinggal"  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// 🟡 SARAN TAMBAHAN URL (OPTIONAL)
-// ============================================================
-/*
-📌 URL YANG DISARANKAN UNTUK DITAMBAHKAN (JIKA KONTEN MEMADAI):
-
-| URL | Nama Halaman | Status | Parent | Alasan SEO |
-|-----|--------------|--------|--------|------------|
-| /2019/09/jasa-sondir-jakarta.html | Jasa Sondir Jakarta | ⚠️ SARAN DITAMBAHKAN | Jasa Uji Tanah | Menarget keyword lokasi (capital city) |
-| /2019/09/jasa-sondir-jabodetabek.html | Jasa Sondir Jabodetabek | ⚠️ SARAN DITAMBAHKAN | Jasa Uji Tanah | Menarget keyword wilayah |
-| /2019/09/jasa-sondir-murah.html | Jasa Sondir Murah | ⚠️ SARAN DITAMBAHKAN | Jasa Uji Tanah | Menarget keyword harga |
-
-📌 CATATAN: URL di atas disarankan hanya jika kontennya memadai.
-Jika konten tipis, lebih baik digabung ke halaman induk.
-*/
-// ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE] - LAYANAN SPESIFIK.
-✅ Masing-masing menarget keyword spesifik (perumahan, gedung, ruko, dll).
-✅ Tidak ada duplikasi intent karena jenis proyek berbeda.
-✅ Breadcrumb maksimal 4 level.
-
-📌 REKOMENDASI:
-1. Pastikan setiap halaman memiliki konten minimal 500 kata (dari data, kontennya panjang)
-2. Tambahkan internal link antar sesama jenis sondir
-3. Pastikan ada CTA ke form pemesanan jasa sondir
-*/
-
-// ============================================================
-// JASA CPT (CONE PENETRATION TEST) - SUB2
+// JASA CPT (CONE PENETRATION TEST) - SUB2 (MONEY PAGE)
 // ============================================================
 // 🧠 SEO NOTE: CPT adalah metode uji tanah yang lebih modern dari sondir.
-// Intent: Commercial Investigation + Transactional.
+// Intent: Transactional (user mencari jasa CPT untuk proyek spesifik).
 // Parent: Jasa Uji Tanah (/p/jasa-uji-tanah.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Uji Tanah > Jasa CPT (3-4 level)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Uji Tanah > Jasa CPT [Nama Layanan] (4 level)
 // ============================================================
 
 const urlMappingJasaCpt = {
   // ============================================================
-  // 🔴 KOSONG - PERLU DIBUAT
+  // [MONEY_MASTER] - HALAMAN UTAMA CPT
+  // 🔴 PRIORITAS HIGH - HARUS DIBUAT
   // ============================================================
+  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-uji-tanah.html": "Jasa CPT Uji Tanah",  // TYPE: MONEY_MASTER
   
-  // 📌 SARAN URL YANG HARUS DIBUAT:
-  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-uji-tanah.html": "Jasa CPT Uji Tanah",
-  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-gedung-bertingkat.html": "Jasa CPT Gedung Bertingkat",
-  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-perumahan.html": "Jasa CPT Perumahan",
-  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-jalan-tol.html": "Jasa CPT Jalan Tol",
-  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-infrastruktur.html": "Jasa CPT Infrastruktur"
+  // ============================================================
+  // [MONEY_CHILD] - CPT PER JENIS PROYEK
+  // 🟡 PRIORITAS MEDIUM - DISARANKAN DIBUAT
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-gedung-bertingkat.html": "Jasa CPT Gedung Bertingkat",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-perumahan.html": "Jasa CPT Perumahan",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-jalan-tol.html": "Jasa CPT Jalan Tol",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-infrastruktur.html": "Jasa CPT Infrastruktur",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-jembatan.html": "Jasa CPT Jembatan",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-bandara.html": "Jasa CPT Bandara",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // [MONEY_CHILD] - CPT PER LOKASI
+  // 🟢 PRIORITAS LOW - OPSIONAL
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-jakarta.html": "Jasa CPT Jakarta",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-surabaya.html": "Jasa CPT Surabaya",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-bandung.html": "Jasa CPT Bandung",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-semarang.html": "Jasa CPT Semarang",  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// 🔴 SARAN PEMBUATAN URL UNTUK JASA CPT
-// ============================================================
-/*
-📌 PRIORITAS URL YANG HARUS DIBUAT (MONEY PAGE):
-
-| No | URL | Nama Halaman | Prioritas | Alasan SEO |
-|----|-----|--------------|-----------|------------|
-| 1 | /2019/09/jasa-cpt-uji-tanah.html | Jasa CPT Uji Tanah | 🔴 HIGH | Halaman utama untuk layanan CPT |
-| 2 | /2019/09/jasa-cpt-gedung-bertingkat.html | Jasa CPT Gedung Bertingkat | 🟡 MEDIUM | Menarget proyek gedung |
-| 3 | /2019/09/jasa-cpt-perumahan.html | Jasa CPT Perumahan | 🟡 MEDIUM | Menarget proyek perumahan |
-| 4 | /2019/09/jasa-cpt-jalan-tol.html | Jasa CPT Jalan Tol | 🟡 MEDIUM | Menarget proyek infrastruktur |
-| 5 | /2019/09/jasa-cpt-murah.html | Jasa CPT Murah | 🟢 LOW | Menarget keyword harga |
-
-📌 STATUS SEO UNTUK URL DI ATAS:
-- Page Type: [MONEY PAGE]
-- Intent: Transactional
-- Parent: Jasa Uji Tanah
-- Breadcrumb: Home > Jasa Konstruksi > Jasa Uji Tanah > Jasa CPT [Nama]
-
-📌 CATATAN: CPT adalah metode yang berbeda dengan sondir.
-Konten harus menjelaskan perbedaan CPT vs Sondir, keunggulan CPT, dan aplikasinya.
-*/
-
-// ============================================================
-// JASA BORING TANAH - SUB2
+// JASA BORING TANAH - SUB2 (MONEY PAGE)
 // ============================================================
 // 🧠 SEO NOTE: Boring tanah adalah metode pengambilan sampel tanah untuk uji laboratorium.
-// Intent: Commercial Investigation + Transactional.
+// Intent: Transactional (user mencari jasa boring tanah untuk proyek spesifik).
 // Parent: Jasa Uji Tanah (/p/jasa-uji-tanah.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Uji Tanah > Jasa Boring Tanah (3-4 level)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Uji Tanah > Jasa Boring Tanah [Nama Layanan] (4 level)
 // ============================================================
 
 const urlMappingJasaBoringTanah = {
   // ============================================================
-  // 🔴 KOSONG - PERLU DIBUAT
+  // [MONEY_MASTER] - HALAMAN UTAMA BORING TANAH
+  // 🔴 PRIORITAS HIGH - HARUS DIBUAT
   // ============================================================
+  // "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah.html": "Jasa Boring Tanah",  // TYPE: MONEY_MASTER
   
-  // 📌 SARAN URL YANG HARUS DIBUAT:
-  // "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah.html": "Jasa Boring Tanah",
-  // "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-rumah-tinggal.html": "Jasa Boring Tanah Rumah Tinggal",
-  // "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-gedung.html": "Jasa Boring Tanah Gedung",
-  // "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-infrastruktur.html": "Jasa Boring Tanah Infrastruktur"
+  // ============================================================
+  // [MONEY_CHILD] - BORING TANAH PER JENIS PROYEK
+  // 🟡 PRIORITAS MEDIUM - DISARANKAN DIBUAT
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-rumah-tinggal.html": "Jasa Boring Tanah Rumah Tinggal",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-gedung.html": "Jasa Boring Tanah Gedung",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-jembatan.html": "Jasa Boring Tanah Jembatan",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-jalan-tol.html": "Jasa Boring Tanah Jalan Tol",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-perumahan.html": "Jasa Boring Tanah Perumahan",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // [SUB1] - PANDUAN BORING TANAH
+  // 🟢 PRIORITAS LOW - OPSIONAL
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/09/panduan-boring-tanah.html": "Panduan Boring Tanah",  // TYPE: SUB1
 };
 
 // ============================================================
-// 🔴 SARAN PEMBUATAN URL UNTUK JASA BORING TANAH
-// ============================================================
-/*
-📌 PRIORITAS URL YANG HARUS DIBUAT (MONEY PAGE):
-
-| No | URL | Nama Halaman | Prioritas | Alasan SEO |
-|----|-----|--------------|-----------|------------|
-| 1 | /2019/09/jasa-boring-tanah.html | Jasa Boring Tanah | 🔴 HIGH | Halaman utama untuk layanan boring tanah |
-| 2 | /2019/09/jasa-boring-tanah-rumah-tinggal.html | Jasa Boring Tanah Rumah Tinggal | 🟡 MEDIUM | Menarget proyek rumah |
-| 3 | /2019/09/jasa-boring-tanah-gedung.html | Jasa Boring Tanah Gedung | 🟡 MEDIUM | Menarget proyek gedung |
-| 4 | /2019/09/jasa-boring-tanah-jembatan.html | Jasa Boring Tanah Jembatan | 🟡 MEDIUM | Menarget proyek infrastruktur |
-
-📌 STATUS SEO UNTUK URL DI ATAS:
-- Page Type: [MONEY PAGE]
-- Intent: Transactional
-- Parent: Jasa Uji Tanah
-- Breadcrumb: Home > Jasa Konstruksi > Jasa Uji Tanah > Jasa Boring Tanah [Nama]
-
-📌 CATATAN: Boring tanah berbeda dengan sondir.
-Konten harus menjelaskan metode boring, alat yang digunakan, dan jenis sampel yang diambil.
-*/
-
-// ============================================================
-// JASA LAB TANAH - SUB2
+// JASA LAB TANAH - SUB2 (MONEY PAGE)
 // ============================================================
 // 🧠 SEO NOTE: Lab tanah adalah layanan pengujian sampel tanah di laboratorium.
-// Intent: Commercial Investigation + Transactional.
+// Intent: Transactional (user mencari jasa uji tanah laboratorium).
 // Parent: Jasa Uji Tanah (/p/jasa-uji-tanah.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Uji Tanah > Jasa Lab Tanah (3-4 level)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Uji Tanah > Jasa Lab Tanah [Nama Layanan] (4 level)
 // ============================================================
 
 const urlMappingJasaLabTanah = {
   // ============================================================
-  // 🔴 KOSONG - PERLU DIBUAT
+  // [MONEY_MASTER] - HALAMAN UTAMA LAB TANAH
+  // 🔴 PRIORITAS HIGH - HARUS DIBUAT
   // ============================================================
+  // "https://www.betonjayareadymix.com/2019/09/jasa-lab-tanah.html": "Jasa Lab Tanah",  // TYPE: MONEY_MASTER
   
-  // 📌 SARAN URL YANG HARUS DIBUAT:
-  // "https://www.betonjayareadymix.com/2019/09/jasa-lab-tanah.html": "Jasa Lab Tanah",
-  // "https://www.betonjayareadymix.com/2019/09/jasa-uji-kuat-tekan-tanah.html": "Jasa Uji Kuat Tekan Tanah",
-  // "https://www.betonjayareadymix.com/2019/09/jasa-uji-kadar-air-tanah.html": "Jasa Uji Kadar Air Tanah",
-  // "https://www.betonjayareadymix.com/2019/09/jasa-uji-kepadatan-tanah.html": "Jasa Uji Kepadatan Tanah"
+  // ============================================================
+  // [MONEY_CHILD] - JENIS PENGUJIAN LAB TANAH
+  // 🟡 PRIORITAS MEDIUM - DISARANKAN DIBUAT
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/09/jasa-uji-kuat-tekan-tanah.html": "Jasa Uji Kuat Tekan Tanah",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-uji-kadar-air-tanah.html": "Jasa Uji Kadar Air Tanah",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-uji-kepadatan-tanah.html": "Jasa Uji Kepadatan Tanah",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-uji-geser-tanah.html": "Jasa Uji Geser Tanah",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-uji-kadar-organik-tanah.html": "Jasa Uji Kadar Organik Tanah",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-uji-kadar-lumpur-tanah.html": "Jasa Uji Kadar Lumpur Tanah",  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// 🔴 SARAN PEMBUATAN URL UNTUK JASA LAB TANAH
-// ============================================================
-/*
-📌 PRIORITAS URL YANG HARUS DIBUAT (MONEY PAGE):
-
-| No | URL | Nama Halaman | Prioritas | Alasan SEO |
-|----|-----|--------------|-----------|------------|
-| 1 | /2019/09/jasa-lab-tanah.html | Jasa Lab Tanah | 🔴 HIGH | Halaman utama untuk layanan lab tanah |
-| 2 | /2019/09/jasa-uji-kuat-tekan-tanah.html | Jasa Uji Kuat Tekan Tanah | 🟡 MEDIUM | Menarget jenis uji spesifik |
-| 3 | /2019/09/jasa-uji-kadar-air-tanah.html | Jasa Uji Kadar Air Tanah | 🟡 MEDIUM | Menarget jenis uji spesifik |
-| 4 | /2019/09/jasa-uji-kepadatan-tanah.html | Jasa Uji Kepadatan Tanah | 🟡 MEDIUM | Menarget jenis uji spesifik |
-
-📌 STATUS SEO UNTUK URL DI ATAS:
-- Page Type: [MONEY PAGE]
-- Intent: Transactional
-- Parent: Jasa Uji Tanah
-- Breadcrumb: Home > Jasa Konstruksi > Jasa Uji Tanah > Jasa Lab Tanah [Nama]
-
-📌 CATATAN: Lab tanah adalah layanan lanjutan setelah boring tanah.
-Konten harus menjelaskan jenis-jenis pengujian laboratorium yang tersedia.
-*/
-
-// ============================================================
-// JASA UJI PENETRASI - SUB2
+// JASA UJI PENETRASI (SPT) - SUB2 (MONEY PAGE)
 // ============================================================
 // 🧠 SEO NOTE: Uji penetrasi (SPT) adalah metode uji tanah standar.
-// Intent: Commercial Investigation + Transactional.
+// Intent: Transactional (user mencari jasa SPT untuk proyek spesifik).
 // Parent: Jasa Uji Tanah (/p/jasa-uji-tanah.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Uji Tanah > Jasa Uji Penetrasi (3-4 level)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Uji Tanah > Jasa SPT [Nama Layanan] (4 level)
 // ============================================================
 
 const urlMappingJasaUjiPenetrasi = {
   // ============================================================
-  // 🔴 KOSONG - PERLU DIBUAT
+  // [MONEY_MASTER] - HALAMAN UTAMA SPT
+  // 🔴 PRIORITAS HIGH - HARUS DIBUAT
   // ============================================================
+  // "https://www.betonjayareadymix.com/2019/09/jasa-uji-penetrasi-spt.html": "Jasa Uji Penetrasi Standar (SPT)",  // TYPE: MONEY_MASTER
   
-  // 📌 SARAN URL YANG HARUS DIBUAT:
-  // "https://www.betonjayareadymix.com/2019/09/jasa-uji-penetrasi-spt.html": "Jasa Uji Penetrasi Standar (SPT)",
-  // "https://www.betonjayareadymix.com/2019/09/jasa-spt-gedung-bertingkat.html": "Jasa SPT Gedung Bertingkat",
-  // "https://www.betonjayareadymix.com/2019/09/jasa-spt-perumahan.html": "Jasa SPT Perumahan",
-  // "https://www.betonjayareadymix.com/2019/09/jasa-spt-jembatan.html": "Jasa SPT Jembatan"
+  // ============================================================
+  // [MONEY_CHILD] - SPT PER JENIS PROYEK
+  // 🟡 PRIORITAS MEDIUM - DISARANKAN DIBUAT
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/09/jasa-spt-gedung-bertingkat.html": "Jasa SPT Gedung Bertingkat",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-spt-perumahan.html": "Jasa SPT Perumahan",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-spt-jembatan.html": "Jasa SPT Jembatan",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-spt-jalan-tol.html": "Jasa SPT Jalan Tol",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-spt-bandara.html": "Jasa SPT Bandara",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // [SUB1] - PANDUAN SPT
+  // 🟢 PRIORITAS LOW - OPSIONAL
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/09/panduan-uji-penetrasi-spt.html": "Panduan Uji Penetrasi SPT",  // TYPE: SUB1
 };
 
 // ============================================================
-// 🔴 SARAN PEMBUATAN URL UNTUK JASA UJI PENETRASI (SPT)
+// 🟡 SARAN TAMBAHAN URL (OPTIONAL) - JASA SONDIR
 // ============================================================
 /*
-📌 PRIORITAS URL YANG HARUS DIBUAT (MONEY PAGE):
+📌 URL YANG DISARANKAN UNTUK DITAMBAHKAN (JIKA KONTEN MEMADAI):
 
-| No | URL | Nama Halaman | Prioritas | Alasan SEO |
-|----|-----|--------------|-----------|------------|
-| 1 | /2019/09/jasa-uji-penetrasi-spt.html | Jasa Uji Penetrasi Standar (SPT) | 🔴 HIGH | Halaman utama untuk layanan SPT |
-| 2 | /2019/09/jasa-spt-gedung-bertingkat.html | Jasa SPT Gedung Bertingkat | 🟡 MEDIUM | Menarget proyek gedung |
-| 3 | /2019/09/jasa-spt-perumahan.html | Jasa SPT Perumahan | 🟡 MEDIUM | Menarget proyek perumahan |
-| 4 | /2019/09/jasa-spt-jembatan.html | Jasa SPT Jembatan | 🟡 MEDIUM | Menarget proyek infrastruktur |
-
-📌 STATUS SEO UNTUK URL DI ATAS:
-- Page Type: [MONEY PAGE]
-- Intent: Transactional
-- Parent: Jasa Uji Tanah
-- Breadcrumb: Home > Jasa Konstruksi > Jasa Uji Tanah > Jasa SPT [Nama]
-
-📌 CATATAN: SPT adalah metode standar untuk uji daya dukung tanah.
-Konten harus menjelaskan prosedur SPT, alat yang digunakan, dan interpretasi hasil.
+| No | URL | Nama Halaman | Type | Prioritas | Alasan SEO |
+|----|-----|--------------|------|-----------|------------|
+| 1 | /2019/09/jasa-sondir-jakarta.html | Jasa Sondir Jakarta | MONEY_CHILD | 🟡 MEDIUM | Menarget keyword lokasi (capital city) |
+| 2 | /2019/09/jasa-sondir-jabodetabek.html | Jasa Sondir Jabodetabek | MONEY_CHILD | 🟡 MEDIUM | Menarget keyword wilayah |
+| 3 | /2019/09/jasa-sondir-murah.html | Jasa Sondir Murah | MONEY_CHILD | 🟢 LOW | Menarget keyword harga |
 */
+
+// ============================================================
+// 📋 RINGKASAN SARAN & TINDAKAN
+// ============================================================
 /*
-📋 RINGKASAN SARAN & TINDAKAN
-No	Tindakan	                                    Target	                       Prioritas
-1	Buat halaman utama jasa-cpt-uji-tanah.html	    urlMappingJasaCpt	           🔴 HIGH
-2	Buat halaman utama jasa-boring-tanah.html	    urlMappingJasaBoringTanah	   🔴 HIGH
-3	Buat halaman utama jasa-lab-tanah.html	        urlMappingJasaLabTanah	       🔴 HIGH
-4	Buat halaman utama jasa-uji-penetrasi-spt.html	urlMappingJasaUjiPenetrasi	   🔴 HIGH
-5	Buat halaman turunan untuk CPT, Boring, Lab, SPT 
-    (sesuai tabel)	                                 Masing-masing const	        🟡 MEDIUM
-6	Tambahkan internal link dari jasa-sondir-*.html ke halaman CPT, Boring, Lab, SPT	Semua URL	🟡 MEDIUM
-7	Pastikan setiap halaman memiliki CTA ke form pemesanan jasa uji tanah	Semua URL	🟡 MEDIUM
+| No | Tindakan | Target | Prioritas |
+|----|----------|--------|-----------|
+| 1 | Buat halaman utama jasa-cpt-uji-tanah.html | urlMappingJasaCpt | 🔴 HIGH |
+| 2 | Buat halaman utama jasa-boring-tanah.html | urlMappingJasaBoringTanah | 🔴 HIGH |
+| 3 | Buat halaman utama jasa-lab-tanah.html | urlMappingJasaLabTanah | 🔴 HIGH |
+| 4 | Buat halaman utama jasa-uji-penetrasi-spt.html | urlMappingJasaUjiPenetrasi | 🔴 HIGH |
+| 5 | Buat halaman turunan untuk CPT, Boring, Lab, SPT (sesuai tabel) | Masing-masing const | 🟡 MEDIUM |
+| 6 | Tambahkan internal link dari jasa-sondir-*.html ke halaman CPT, Boring, Lab, SPT | Semua URL | 🟡 MEDIUM |
+| 7 | Pastikan setiap halaman memiliki CTA ke form pemesanan jasa uji tanah | Semua URL | 🟡 MEDIUM |
+| 8 | Tambahkan jasa-sondir-jakarta.html dan jasa-sondir-jabodetabek.html | urlMappingJasaSondir | 🟡 MEDIUM |
 */
 
+// ============================================================
+// 📊 STATUS FINAL
+// ============================================================
+/*
+| Const | Jumlah URL | Valid | Saran | Kosong |
+|-------|------------|-------|-------|--------|
+| urlMappingJasaSondir | 15 | 15 | 3 | 0 |
+| urlMappingJasaCpt | 0 | 0 | 11 | 1 (perlu dibuat) |
+| urlMappingJasaBoringTanah | 0 | 0 | 7 | 1 (perlu dibuat) |
+| urlMappingJasaLabTanah | 0 | 0 | 7 | 1 (perlu dibuat) |
+| urlMappingJasaUjiPenetrasi | 0 | 0 | 8 | 1 (perlu dibuat) |
+*/
+
+// ============================================================
+// 🟢 SEO NOTE - STATUS SEMUA URL
+// ============================================================
+/*
+✅ SEMUA URL di urlMappingJasaSondir sudah valid dengan status [MONEY_CHILD].
+✅ Masing-masing menarget keyword spesifik (perumahan, gedung, ruko, dll).
+✅ Tidak ada duplikasi intent karena jenis proyek berbeda.
+✅ Breadcrumb maksimal 4 level.
+
+📌 REKOMENDASI UNTUK JASA CPT, BORING, LAB, SPT:
+1. Prioritaskan membuat halaman utama (MONEY_MASTER) terlebih dahulu
+2. Setelah halaman utama selesai, buat halaman turunan (MONEY_CHILD) per jenis proyek
+3. Pastikan setiap halaman memiliki konten minimal 500 kata
+4. Tambahkan internal link antar sesama jenis layanan uji tanah
+5. Pastikan ada CTA ke form pemesanan jasa uji tanah
+*/
 // ============================================================
 // JASA PEMOTONGAN BUKIT LAHAN - MONEY PAGE
 // ============================================================
@@ -350,614 +299,475 @@ No	Tindakan	                                    Target	                       Pr
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Pemotongan Bukit Lahan > [Nama Layanan]
 // ============================================================
 
-//SUB JASA PEMATANGAN LAHAN
 const urlMappingJasaPemotonganBukitLahan = {
-  // [MONEY PAGE] - HARGA & JASA PEMOTONGAN BUKIT LAHAN
-  "https://www.betonjayareadymix.com/2019/09/harga-jasa-pemotongan-bukit-lahan.html": "Harga Jasa Pemotongan Bukit Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-borongan.html": "Jasa Pemotongan Bukit Lahan Borongan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-parkir-lapangan.html": "Jasa Pemotongan Bukit Lahan Parkir & Lapangan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-kavling.html": "Jasa Pemotongan Bukit Lahan Kavling",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-jalan-akses.html": "Jasa Pemotongan Bukit Lahan Jalan Akses",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-luas.html": "Jasa Pemotongan Bukit Lahan Luas",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-rawan-longsor.html": "Jasa Pemotongan Bukit Lahan Rawan Longsor",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-curam-terjal.html": "Jasa Pemotongan Bukit Lahan Curam & Terjal",
-  "https://www.betonjayareadymix.com/2019/09/jasa-cut-fill-bukit-lahan.html": "Jasa Cut & Fill Bukit Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-dengan-alat.html": "Jasa Pemotongan Bukit Lahan dengan Alat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-manual-semi.html": "Jasa Pemotongan Bukit Lahan Manual & Semi Manual"
+  // ============================================================
+  // [MONEY_MASTER] - HARGA & JASA PEMOTONGAN BUKIT (NASIONAL)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/harga-jasa-pemotongan-bukit-lahan.html": "Harga Jasa Pemotongan Bukit Lahan",  // TYPE: MONEY_MASTER
+  
+  // ============================================================
+  // [MONEY_CHILD] - SPESIFIK PER METODE & LOKASI
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-borongan.html": "Jasa Pemotongan Bukit Lahan Borongan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-parkir-lapangan.html": "Jasa Pemotongan Bukit Lahan Parkir & Lapangan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-kavling.html": "Jasa Pemotongan Bukit Lahan Kavling",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-jalan-akses.html": "Jasa Pemotongan Bukit Lahan Jalan Akses",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-luas.html": "Jasa Pemotongan Bukit Lahan Luas",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-rawan-longsor.html": "Jasa Pemotongan Bukit Lahan Rawan Longsor",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-curam-terjal.html": "Jasa Pemotongan Bukit Lahan Curam & Terjal",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-cut-fill-bukit-lahan.html": "Jasa Cut & Fill Bukit Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-dengan-alat.html": "Jasa Pemotongan Bukit Lahan dengan Alat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemotongan-bukit-lahan-manual-semi.html": "Jasa Pemotongan Bukit Lahan Manual & Semi Manual"  // TYPE: MONEY_CHILD
 };
 
-// ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
-✅ Masing-masing menarget keyword spesifik (borongan, kavling, jalan akses, dll).
-✅ Breadcrumb maksimal 5 level, tetapi karena ini adalah blog post (bukan page),
-   breadcrumb yang ditampilkan cukup 3-4 level.
-
-📌 REKOMENDASI BREADCRUMB (4 level):
-   Home > Jasa Konstruksi > Jasa Pematangan Lahan > Harga Jasa Pemotongan Bukit Lahan
-
-📌 REKOMENDASI TAMBAHAN:
-   Tidak ada URL yang perlu di-redirect. Semua sudah optimal.
-*/
 // ============================================================
 // JASA PENGUPASAN LAHAN TANAH - MONEY PAGE
 // ============================================================
-// 🧠 SEO NOTE: Semua URL di bawah adalah MONEY PAGE dengan intent transaksional.
-// Parent: Jasa Pengupasan Lahan Tanah (/p/jasa-pengupasan-lahan-tanah.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Pengupasan Lahan Tanah > [Nama Layanan]
-// ============================================================
 
 const urlMappingJasaPengupasanLahanTanah = {
-  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-proyek-perumahan.html": "Jasa Pengupasan Lahan Tanah Proyek Perumahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-proyek-komersial.html": "Jasa Pengupasan Lahan Tanah Proyek Komersial",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-proyek-infrastruktur.html": "Jasa Pengupasan Lahan Tanah Proyek Infrastruktur",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-kawasan-estate.html": "Jasa Pengupasan Lahan Tanah Kawasan Estate",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-siap-bangun.html": "Jasa Pengupasan Lahan Tanah Siap Bangun",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-siap-pondasi.html": "Jasa Pengupasan Lahan Tanah Siap Pondasi",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-tahap-awal.html": "Jasa Pengupasan Lahan Tanah Tahap Awal",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-untuk-pematangan.html": "Jasa Pengupasan Lahan Tanah untuk Pematangan"
+  // ============================================================
+  // [MONEY_CHILD] - SPESIFIK PER PROYEK
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-proyek-perumahan.html": "Jasa Pengupasan Lahan Tanah Proyek Perumahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-proyek-komersial.html": "Jasa Pengupasan Lahan Tanah Proyek Komersial",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-proyek-infrastruktur.html": "Jasa Pengupasan Lahan Tanah Proyek Infrastruktur",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-kawasan-estate.html": "Jasa Pengupasan Lahan Tanah Kawasan Estate",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-siap-bangun.html": "Jasa Pengupasan Lahan Tanah Siap Bangun",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-siap-pondasi.html": "Jasa Pengupasan Lahan Tanah Siap Pondasi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-tahap-awal.html": "Jasa Pengupasan Lahan Tanah Tahap Awal",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pengupasan-lahan-tanah-untuk-pematangan.html": "Jasa Pengupasan Lahan Tanah untuk Pematangan"  // TYPE: MONEY_CHILD
 };
 
-// ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
-✅ Masing-masing menarget keyword spesifik (perumahan, komersial, infrastruktur, dll).
-
-📌 REKOMENDASI BREADCRUMB (4 level):
-   Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Pengupasan Lahan Tanah Proyek Perumahan
-
-✅ AMAN - TIDAK PERLU REDIRECT
-*/
 // ============================================================
 // JASA TEBANG POHON - MONEY PAGE
 // ============================================================
-// 🧠 SEO NOTE: Semua URL di bawah adalah MONEY PAGE dengan intent transaksional.
-// Parent: Jasa Tebang Pohon (/p/jasa-tebang-pohon.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Tebang Pohon > [Nama Layanan]
-// ============================================================
 
 const urlMappingJasaTebangPohon = {
-  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-besar.html": "Jasa Tebang Pohon Besar",
-  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-dekat-bangunan.html": "Jasa Tebang Pohon Dekat Bangunan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-pematangan-lahan.html": "Jasa Tebang Pohon untuk Pematangan Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-cabut-akar.html": "Jasa Tebang Pohon + Cabut Akar",
-  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-proyek-konstruksi.html": "Jasa Tebang Pohon Proyek Konstruksi",
-  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-aman-bersertifikat.html": "Jasa Tebang Pohon Aman & Bersertifikat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-darurat.html": "Jasa Tebang Pohon Darurat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-pembuangan-limbah.html": "Jasa Tebang Pohon & Pembuangan Limbah",
-  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-area-perkotaan.html": "Jasa Tebang Pohon Area Perkotaan"
+  // ============================================================
+  // [MONEY_CHILD] - SPESIFIK PER KONDISI & LOKASI
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-besar.html": "Jasa Tebang Pohon Besar",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-dekat-bangunan.html": "Jasa Tebang Pohon Dekat Bangunan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-pematangan-lahan.html": "Jasa Tebang Pohon untuk Pematangan Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-cabut-akar.html": "Jasa Tebang Pohon + Cabut Akar",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-proyek-konstruksi.html": "Jasa Tebang Pohon Proyek Konstruksi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-aman-bersertifikat.html": "Jasa Tebang Pohon Aman & Bersertifikat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-darurat.html": "Jasa Tebang Pohon Darurat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-pembuangan-limbah.html": "Jasa Tebang Pohon & Pembuangan Limbah",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-tebang-pohon-area-perkotaan.html": "Jasa Tebang Pohon Area Perkotaan"  // TYPE: MONEY_CHILD
 };
 
-// ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
-✅ Masing-masing menarget keyword spesifik (pohon besar, dekat bangunan, darurat, dll).
-
-📌 REKOMENDASI BREADCRUMB (4 level):
-   Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Tebang Pohon Besar
-
-✅ AMAN - TIDAK PERLU REDIRECT
-*/
 // ============================================================
 // JASA PERATAAN DAN GRADING LAHAN - MONEY PAGE
 // ============================================================
-// 🧠 SEO NOTE: Semua URL di bawah adalah MONEY PAGE dengan intent transaksional.
-// Parent: Jasa Perataan dan Grading Lahan (/p/jasa-perataan-dan-grading-lahan.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Perataan dan Grading Lahan > [Nama Layanan]
-// ============================================================
 
 const urlMappingJasaPerataandanGradingLahan = {
-  "https://www.betonjayareadymix.com/2019/09/jasa-rough-grading-lahan.html": "Jasa Rough Grading Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-fine-grading-lahan.html": "Jasa Fine Grading Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-perataan-akhir-lahan.html": "Jasa Perataan Akhir Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembentukan-elevasi-leveling-lahan.html": "Jasa Pembentukan Elevasi & Leveling Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembentukan-kontur-grading-lahan.html": "Jasa Pembentukan Kontur & Grading Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-perataan-dan-grading-lahan-presisi.html": "Jasa Perataan dan Grading Lahan Presisi",
-  "https://www.betonjayareadymix.com/2019/09/jasa-perataan-dan-grading-lahan-kavling.html": "Jasa Perataan dan Grading Lahan Kavling",
-  "https://www.betonjayareadymix.com/2019/09/jasa-grading-lahan-perumahan.html": "Jasa Grading Lahan Perumahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-grading-lahan-komersial.html": "Jasa Grading Lahan Komersial",
-  "https://www.betonjayareadymix.com/2019/09/jasa-grading-lahan-lahan-kosong.html": "Jasa Grading Lahan Lahan Kosong",
-  "https://www.betonjayareadymix.com/2019/09/jasa-grading-lahan-alat-berat.html": "Jasa Grading Lahan Alat Berat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-grading-lahan-skala-kecil.html": "Jasa Grading Lahan Skala Kecil",
-  "https://www.betonjayareadymix.com/2019/09/jasa-grading-lahan-miring.html": "Jasa Grading Lahan Miring",
-  "https://www.betonjayareadymix.com/2019/09/jasa-perataan-dan-grading-lahan-cepat.html": "Jasa Perataan dan Grading Lahan Cepat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-grading-lahan-siap-jual.html": "Jasa Grading Lahan Siap Jual"
+  // ============================================================
+  // [MONEY_CHILD] - SPESIFIK PER METODE & SKALA
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-rough-grading-lahan.html": "Jasa Rough Grading Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-fine-grading-lahan.html": "Jasa Fine Grading Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-perataan-akhir-lahan.html": "Jasa Perataan Akhir Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembentukan-elevasi-leveling-lahan.html": "Jasa Pembentukan Elevasi & Leveling Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembentukan-kontur-grading-lahan.html": "Jasa Pembentukan Kontur & Grading Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-perataan-dan-grading-lahan-presisi.html": "Jasa Perataan dan Grading Lahan Presisi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-perataan-dan-grading-lahan-kavling.html": "Jasa Perataan dan Grading Lahan Kavling",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-grading-lahan-perumahan.html": "Jasa Grading Lahan Perumahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-grading-lahan-komersial.html": "Jasa Grading Lahan Komersial",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-grading-lahan-lahan-kosong.html": "Jasa Grading Lahan Lahan Kosong",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-grading-lahan-alat-berat.html": "Jasa Grading Lahan Alat Berat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-grading-lahan-skala-kecil.html": "Jasa Grading Lahan Skala Kecil",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-grading-lahan-miring.html": "Jasa Grading Lahan Miring",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-perataan-dan-grading-lahan-cepat.html": "Jasa Perataan dan Grading Lahan Cepat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-grading-lahan-siap-jual.html": "Jasa Grading Lahan Siap Jual"  // TYPE: MONEY_CHILD
 };
 
-// ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
-
-📌 REKOMENDASI BREADCRUMB (4 level):
-   Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Rough Grading Lahan
-
-✅ AMAN - TIDAK PERLU REDIRECT
-*/
 // ============================================================
 // JASA ELEVASI LAHAN - MONEY PAGE
 // ============================================================
-// 🧠 SEO NOTE: Semua URL di bawah adalah MONEY PAGE dengan intent transaksional.
-// Parent: Jasa Elevasi Lahan (/p/jasa-elevasi-lahan.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Elevasi Lahan > [Nama Layanan]
-// ============================================================
 
 const urlMappingJasaElevasiLahan = {
-  "https://www.betonjayareadymix.com/2019/09/harga-jasa-elevasi-lahan-terbaru.html": "Harga Jasa Elevasi Lahan Terbaru",
-  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-borongan.html": "Jasa Elevasi Lahan Borongan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-gudang-area-industri.html": "Jasa Elevasi Lahan Gudang & Area Industri",
-  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-kavling.html": "Jasa Elevasi Lahan Kavling",
-  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-area-parkir-lapangan.html": "Jasa Elevasi Lahan Area Parkir & Lapangan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-jalan-akses-proyek.html": "Jasa Elevasi Lahan Jalan Akses Proyek",
-  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-lunak-bekas-timbunan.html": "Jasa Elevasi Lahan Lunak Bekas Timbunan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-miring-tidak-rata.html": "Jasa Elevasi Lahan Miring & Tidak Rata",
-  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-rata-siap-bangun.html": "Jasa Elevasi Lahan Rata Siap Bangun",
-  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-urugan-pemadatan.html": "Jasa Elevasi Lahan Urugan & Pemadatan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-alat-berat.html": "Jasa Elevasi Lahan Alat Berat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-manual-semi-mekanis.html": "Jasa Elevasi Lahan Manual & Semi Mekanis"
+  // ============================================================
+  // [MONEY_MASTER] - HARGA JASA ELEVASI LAHAN (NASIONAL)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/harga-jasa-elevasi-lahan-terbaru.html": "Harga Jasa Elevasi Lahan Terbaru",  // TYPE: MONEY_MASTER
+  
+  // ============================================================
+  // [MONEY_CHILD] - SPESIFIK PER METODE & LOKASI
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-borongan.html": "Jasa Elevasi Lahan Borongan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-gudang-area-industri.html": "Jasa Elevasi Lahan Gudang & Area Industri",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-kavling.html": "Jasa Elevasi Lahan Kavling",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-area-parkir-lapangan.html": "Jasa Elevasi Lahan Area Parkir & Lapangan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-jalan-akses-proyek.html": "Jasa Elevasi Lahan Jalan Akses Proyek",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-lunak-bekas-timbunan.html": "Jasa Elevasi Lahan Lunak Bekas Timbunan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-miring-tidak-rata.html": "Jasa Elevasi Lahan Miring & Tidak Rata",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-rata-siap-bangun.html": "Jasa Elevasi Lahan Rata Siap Bangun",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-urugan-pemadatan.html": "Jasa Elevasi Lahan Urugan & Pemadatan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-alat-berat.html": "Jasa Elevasi Lahan Alat Berat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-manual-semi-mekanis.html": "Jasa Elevasi Lahan Manual & Semi Mekanis"  // TYPE: MONEY_CHILD
 };
 
-// ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
-
-📌 CATATAN KHUSUS:
-   'harga-jasa-elevasi-lahan-terbaru.html' adalah MASTER MONEY PAGE untuk cluster ini.
-   Sebaiknya halaman ini menjadi yang paling komprehensif di antara yang lain.
-
-✅ AMAN - TIDAK PERLU REDIRECT
-*/
 // ============================================================
 // JASA BADAN LAHAN - MONEY PAGE
 // ============================================================
-// 🧠 SEO NOTE: Semua URL di bawah adalah MONEY PAGE dengan intent transaksional.
-// Parent: Jasa Badan Lahan (/p/jasa-badan-lahan.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Badan Lahan > [Nama Layanan]
-// ============================================================
 
 const urlMappingJasaBadanLahan = {
-  "https://www.betonjayareadymix.com/2019/09/jasa-perataan-badan-lahan.html": "Jasa Perataan Badan Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-badan-lahan.html": "Jasa Pemadatan Badan Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pengurugan-badan-lahan.html": "Jasa Pengurugan Badan Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-penyesuaian-elevasi-badan-lahan.html": "Jasa Penyesuaian Elevasi Badan Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembentukan-kontur-badan-lahan.html": "Jasa Pembentukan Kontur Badan Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-kavling-perumahan.html": "Jasa Badan Lahan Kavling Perumahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-lahan-kosong.html": "Jasa Badan Lahan Lahan Kosong",
-  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-area-komersial.html": "Jasa Badan Lahan Area Komersial",
-  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-kawasan-industri-ringan.html": "Jasa Badan Lahan Kawasan Industri Ringan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-dengan-alat-berat.html": "Jasa Badan Lahan dengan Alat Berat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-skala-kecil-menengah.html": "Jasa Badan Lahan Skala Kecil & Menengah",
-  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-area-miring-tidak-rata.html": "Jasa Badan Lahan Area Miring & Tidak Rata",
-  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-cepat-siap-bangun.html": "Jasa Badan Lahan Cepat Siap Bangun",
-  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-siap-jual.html": "Jasa Badan Lahan Siap Jual"
+  // ============================================================
+  // [MONEY_CHILD] - SPESIFIK PER TAHAPAN & SKALA
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-perataan-badan-lahan.html": "Jasa Perataan Badan Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-badan-lahan.html": "Jasa Pemadatan Badan Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pengurugan-badan-lahan.html": "Jasa Pengurugan Badan Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-penyesuaian-elevasi-badan-lahan.html": "Jasa Penyesuaian Elevasi Badan Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembentukan-kontur-badan-lahan.html": "Jasa Pembentukan Kontur Badan Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-kavling-perumahan.html": "Jasa Badan Lahan Kavling Perumahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-lahan-kosong.html": "Jasa Badan Lahan Lahan Kosong",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-area-komersial.html": "Jasa Badan Lahan Area Komersial",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-kawasan-industri-ringan.html": "Jasa Badan Lahan Kawasan Industri Ringan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-dengan-alat-berat.html": "Jasa Badan Lahan dengan Alat Berat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-skala-kecil-menengah.html": "Jasa Badan Lahan Skala Kecil & Menengah",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-area-miring-tidak-rata.html": "Jasa Badan Lahan Area Miring & Tidak Rata",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-cepat-siap-bangun.html": "Jasa Badan Lahan Cepat Siap Bangun",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-badan-lahan-siap-jual.html": "Jasa Badan Lahan Siap Jual"  // TYPE: MONEY_CHILD
 };
 
-// ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
-
-📌 CATATAN:
-   Perhatikan perbedaan antara 'jasa-badan-lahan' dan 'jasa-pematangan-lahan'.
-   Badan lahan adalah tahap setelah pembersihan lahan, sebelum pondasi.
-
-✅ AMAN - TIDAK PERLU REDIRECT
-*/
 // ============================================================
 // JASA CUT AND FILL LAHAN - MONEY PAGE
 // ============================================================
-// 🧠 SEO NOTE: Semua URL di bawah adalah MONEY PAGE dengan intent transaksional.
-// Parent: Jasa Cut and Fill Lahan (/p/jasa-cut-and-fill-lahan.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Cut and Fill Lahan > [Nama Layanan]
-// ============================================================
 
 const urlMappingJasaCutandFillLahan = {
-  "https://www.betonjayareadymix.com/2019/09/jasa-monitoring-lahan-cut-and-fill.html": "Jasa Monitoring Lahan Cut and Fill",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pematangan-lahan-pertanian.html": "Jasa Pematangan Lahan Pertanian",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pengelolaan-lahan-berbatu-tebing.html": "Jasa Pengelolaan Lahan Berbatu & Tebing",
-  "https://www.betonjayareadymix.com/2019/09/jasa-cut-and-fill-lahan-komersial.html": "Jasa Cut and Fill Lahan Komersial",
-  "https://www.betonjayareadymix.com/2019/09/jasa-cut-and-fill-lahan-perumahan.html": "Jasa Cut and Fill Lahan Perumahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pengerukan-pemindahan-tanah.html": "Jasa Pengerukan & Pemindahan Tanah",
-  "https://www.betonjayareadymix.com/2019/09/jasa-perencanaan-drainase-erosi-lahan.html": "Jasa Perencanaan Drainase & Erosi Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemodelan-kontur-topografi-lahan.html": "Jasa Pemodelan Kontur & Topografi Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-konsultan-cut-and-fill-lahan.html": "Jasa Konsultan Cut and Fill Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-analisis-struktur-kualitas-tanah.html": "Jasa Analisis Struktur & Kualitas Tanah"
+  // ============================================================
+  // [MONEY_CHILD] - SPESIFIK PER LOKASI & METODE
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-monitoring-lahan-cut-and-fill.html": "Jasa Monitoring Lahan Cut and Fill",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pematangan-lahan-pertanian.html": "Jasa Pematangan Lahan Pertanian",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pengelolaan-lahan-berbatu-tebing.html": "Jasa Pengelolaan Lahan Berbatu & Tebing",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-cut-and-fill-lahan-komersial.html": "Jasa Cut and Fill Lahan Komersial",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-cut-and-fill-lahan-perumahan.html": "Jasa Cut and Fill Lahan Perumahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pengerukan-pemindahan-tanah.html": "Jasa Pengerukan & Pemindahan Tanah",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-perencanaan-drainase-erosi-lahan.html": "Jasa Perencanaan Drainase & Erosi Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemodelan-kontur-topografi-lahan.html": "Jasa Pemodelan Kontur & Topografi Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-konsultan-cut-and-fill-lahan.html": "Jasa Konsultan Cut and Fill Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-analisis-struktur-kualitas-tanah.html": "Jasa Analisis Struktur & Kualitas Tanah"  // TYPE: MONEY_CHILD
 };
 
-// ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
-
-📌 CATATAN:
-   'jasa-pematangan-lahan-pertanian.html' memiliki keyword "pertanian" yang berbeda
-   dengan cluster pematangan lahan untuk konstruksi. Ini aman karena intent berbeda.
-
-✅ AMAN - TIDAK PERLU REDIRECT
-*/
 // ============================================================
 // JASA URUGAN TANAH LAHAN - MONEY PAGE
 // ============================================================
-// 🧠 SEO NOTE: Semua URL di bawah adalah MONEY PAGE dengan intent transaksional.
-// Parent: Jasa Urugan Tanah Lahan (/p/jasa-urugan-tanah-lahan.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Urugan Tanah Lahan > [Nama Layanan]
-// ============================================================
 
 const urlMappingJasaUruganTanahLahan = {
-  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-hemat.html": "Jasa Urugan Tanah Lahan Hemat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-stabilitas.html": "Jasa Urugan Tanah Lahan Stabilitas",
-  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-developer.html": "Jasa Urugan Tanah Lahan Developer",
-  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-cepat.html": "Jasa Urugan Tanah Lahan Cepat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-konstruksi.html": "Jasa Urugan Tanah Lahan Konstruksi",
-  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-bergaransi.html": "Jasa Urugan Tanah Lahan Bergaransi",
-  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-alat-berat.html": "Jasa Urugan Tanah Lahan Alat Berat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-infrastruktur.html": "Jasa Urugan Tanah Lahan Infrastruktur",
-  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-perkebunan.html": "Jasa Urugan Tanah Lahan Perkebunan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-perumahan.html": "Jasa Urugan Tanah Lahan Perumahan"
+  // ============================================================
+  // [MONEY_CHILD] - SPESIFIK PER SKALA & LOKASI
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-hemat.html": "Jasa Urugan Tanah Lahan Hemat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-stabilitas.html": "Jasa Urugan Tanah Lahan Stabilitas",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-developer.html": "Jasa Urugan Tanah Lahan Developer",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-cepat.html": "Jasa Urugan Tanah Lahan Cepat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-konstruksi.html": "Jasa Urugan Tanah Lahan Konstruksi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-bergaransi.html": "Jasa Urugan Tanah Lahan Bergaransi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-alat-berat.html": "Jasa Urugan Tanah Lahan Alat Berat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-infrastruktur.html": "Jasa Urugan Tanah Lahan Infrastruktur",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-perkebunan.html": "Jasa Urugan Tanah Lahan Perkebunan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-urugan-tanah-lahan-perumahan.html": "Jasa Urugan Tanah Lahan Perumahan"  // TYPE: MONEY_CHILD
 };
 
-// ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
-
-📌 CATATAN:
-   Perhatikan perbedaan antara 'jasa-urugan-tanah-lahan' dan 'jasa-urugan-tanah-jalan'.
-   Keduanya berbeda konteks (lahan vs jalan), tidak ada cannibal.
-
-✅ AMAN - TIDAK PERLU REDIRECT
-*/
 // ============================================================
 // JASA PEMADATAN TANAH LAHAN - MONEY PAGE
 // ============================================================
-// 🧠 SEO NOTE: Semua URL di bawah adalah MONEY PAGE dengan intent transaksional.
-// Parent: Jasa Pemadatan Tanah Lahan (/p/jasa-pemadatan-tanah-lahan.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Pemadatan Tanah Lahan > [Nama Layanan]
-// ============================================================
 
 const urlMappingJasaPemadatanTanahLahan = {
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-proyek-konstruksi.html": "Jasa Pemadatan Tanah Proyek Konstruksi",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-lahan-sebelum-pembangunan.html": "Jasa Pemadatan Lahan Sebelum Pembangunan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-pondasi-bangunan.html": "Jasa Pemadatan Tanah Pondasi Bangunan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-jalan-infrastruktur.html": "Jasa Pemadatan Tanah Jalan & Infrastruktur",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-perumahan-kavling.html": "Jasa Pemadatan Tanah Perumahan & Kavling",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-vibro-roller.html": "Jasa Pemadatan Tanah Vibro Roller",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-stamper-kodok.html": "Jasa Pemadatan Tanah Stamper Kodok",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-manual-alat-berat.html": "Jasa Pemadatan Tanah Manual & Alat Berat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-lahan-perkebunan-pertanian.html": "Jasa Pemadatan Lahan Perkebunan & Pertanian",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-lahan-gudang-industri.html": "Jasa Pemadatan Lahan Gudang & Industri",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-area-parkir-lapangan.html": "Jasa Pemadatan Tanah Area Parkir & Lapangan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-bergaransi.html": "Jasa Pemadatan Tanah Bergaransi",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-tanah-lunak.html": "Jasa Pemadatan Tanah Lunak"
+  // ============================================================
+  // [MONEY_CHILD] - SPESIFIK PER PROYEK & METODE
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-proyek-konstruksi.html": "Jasa Pemadatan Tanah Proyek Konstruksi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-lahan-sebelum-pembangunan.html": "Jasa Pemadatan Lahan Sebelum Pembangunan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-pondasi-bangunan.html": "Jasa Pemadatan Tanah Pondasi Bangunan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-jalan-infrastruktur.html": "Jasa Pemadatan Tanah Jalan & Infrastruktur",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-perumahan-kavling.html": "Jasa Pemadatan Tanah Perumahan & Kavling",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-vibro-roller.html": "Jasa Pemadatan Tanah Vibro Roller",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-stamper-kodok.html": "Jasa Pemadatan Tanah Stamper Kodok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-manual-alat-berat.html": "Jasa Pemadatan Tanah Manual & Alat Berat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-lahan-perkebunan-pertanian.html": "Jasa Pemadatan Lahan Perkebunan & Pertanian",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-lahan-gudang-industri.html": "Jasa Pemadatan Lahan Gudang & Industri",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-area-parkir-lapangan.html": "Jasa Pemadatan Tanah Area Parkir & Lapangan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-bergaransi.html": "Jasa Pemadatan Tanah Bergaransi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-tanah-lunak.html": "Jasa Pemadatan Tanah Lunak"  // TYPE: MONEY_CHILD
 };
 
-// ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
-
-📌 CATATAN:
-   Perhatikan perbedaan dengan 'jasa-pemadatan-tanah-jalan.html' (yang sudah dianalisa sebelumnya).
-   'jasa-pemadatan-tanah-jalan.html' lebih spesifik ke jalan,
-   sedangkan cluster ini lebih ke lahan secara umum.
-
-✅ AMAN - TIDAK PERLU REDIRECT
-*/
 // ============================================================
 // JASA PEMBERSIHAN LAHAN - MONEY PAGE
 // ============================================================
-// 🧠 SEO NOTE: Semua URL di bawah adalah MONEY PAGE dengan intent transaksional.
-// Parent: Jasa Pembersihan Lahan (/p/jasa-pembersihan-lahan.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Pembersihan Lahan > [Nama Layanan]
-// ============================================================
 
 const urlMappingJasaPembersihanLahan = {
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-sebelum-dijual.html": "Jasa Pembersihan Lahan Sebelum Dijual",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-terlantar.html": "Jasa Pembersihan Lahan Terlantar",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-darurat.html": "Jasa Pembersihan Lahan Darurat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-skala-kecil.html": "Jasa Pembersihan Lahan Skala Kecil",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-cepat-efisien.html": "Jasa Pembersihan Lahan Cepat & Efisien",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-alat-berat.html": "Jasa Pembersihan Lahan Menggunakan Alat Berat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-kavling.html": "Jasa Pembersihan Lahan Kavling",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-komersial-gudang.html": "Jasa Pembersihan Lahan Komersial & Gudang",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-industri-ringan.html": "Jasa Pembersihan Lahan Industri Ringan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-pertanian.html": "Jasa Pembersihan Lahan Pertanian",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-kebun-perkebunan.html": "Jasa Pembersihan Lahan Kebun & Perkebunan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-perumahan-kavling.html": "Jasa Pembersihan Lahan Perumahan & Kavling",
-  "https://www.betonjayareadymix.com/2019/09/jasa-cut-fill-lahan-non-konstruksi.html": "Jasa Cut and Fill Lahan Non Konstruksi",
-  "https://www.betonjayareadymix.com/2019/09/jasa-perataan-awal-lahan.html": "Jasa Perataan Awal Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-sampah-puing.html": "Jasa Pembersihan Lahan dari Sampah & Puing",
-  "https://www.betonjayareadymix.com/2019/09/jasa-cabut-akar-pembersihan-lahan.html": "Jasa Cabut Akar & Pembersihan Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-semak-rumput-liar.html": "Jasa Pembersihan Semak & Rumput Liar",
-  "https://www.betonjayareadymix.com/2019/09/jasa-land-clearing-lahan.html": "Jasa Land Clearing Lahan"
+  // ============================================================
+  // [MONEY_CHILD] - SPESIFIK PER KONDISI & LOKASI
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-sebelum-dijual.html": "Jasa Pembersihan Lahan Sebelum Dijual",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-terlantar.html": "Jasa Pembersihan Lahan Terlantar",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-darurat.html": "Jasa Pembersihan Lahan Darurat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-skala-kecil.html": "Jasa Pembersihan Lahan Skala Kecil",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-cepat-efisien.html": "Jasa Pembersihan Lahan Cepat & Efisien",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-alat-berat.html": "Jasa Pembersihan Lahan Menggunakan Alat Berat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-kavling.html": "Jasa Pembersihan Lahan Kavling",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-komersial-gudang.html": "Jasa Pembersihan Lahan Komersial & Gudang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-industri-ringan.html": "Jasa Pembersihan Lahan Industri Ringan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-pertanian.html": "Jasa Pembersihan Lahan Pertanian",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-kebun-perkebunan.html": "Jasa Pembersihan Lahan Kebun & Perkebunan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-perumahan-kavling.html": "Jasa Pembersihan Lahan Perumahan & Kavling",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-cut-fill-lahan-non-konstruksi.html": "Jasa Cut and Fill Lahan Non Konstruksi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-perataan-awal-lahan.html": "Jasa Perataan Awal Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-lahan-sampah-puing.html": "Jasa Pembersihan Lahan dari Sampah & Puing",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-cabut-akar-pembersihan-lahan.html": "Jasa Cabut Akar & Pembersihan Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-semak-rumput-liar.html": "Jasa Pembersihan Semak & Rumput Liar",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-land-clearing-lahan.html": "Jasa Land Clearing Lahan"  // TYPE: MONEY_CHILD
 };
 
-// ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
-
-📌 CATATAN:
-   'jasa-land-clearing-lahan.html' adalah istilah teknis yang baik untuk SEO.
-   Pastikan kontennya membahas land clearing secara profesional.
-
-✅ AMAN - TIDAK PERLU REDIRECT
-*/
 // ============================================================
 // JASA BASE COURSE LAHAN - MONEY PAGE
 // ============================================================
-// 🧠 SEO NOTE: Semua URL di bawah adalah MONEY PAGE dengan intent transaksional.
-// Parent: Jasa Base Course Lahan (/p/jasa-base-course-lahan.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Base Course Lahan > [Nama Layanan]
-// ============================================================
 
 const urlMappingJasaBaseCourseLahan = {
-  "https://www.betonjayareadymix.com/2019/09/harga-jasa-base-course-lahan-terbaru.html": "Harga Jasa Base Course Lahan Terbaru",
-  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-borongan.html": "Jasa Base Course Borongan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-lahan-miring-tidak-rata.html": "Jasa Base Course Lahan Miring & Tidak Rata",
-  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-lahan-lunak.html": "Jasa Base Course Lahan Lunak",
-  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-gudang-area-industri.html": "Jasa Base Course Gudang & Area Industri",
-  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-kavling-lahan-bangunan.html": "Jasa Base Course Kavling & Lahan Bangunan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-area-parkir-lapangan.html": "Jasa Base Course Area Parkir & Lapangan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-jalan-akses.html": "Jasa Base Course Jalan Akses",
-  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-alat-berat.html": "Jasa Base Course Alat Berat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-manual-semi-mekanis.html": "Jasa Base Course Manual & Semi Mekanis",
-  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-agregat-kelas-c.html": "Jasa Base Course Agregat Kelas C",
-  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-agregat-kelas-b.html": "Jasa Base Course Agregat Kelas B",
-  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-agregat-kelas-a.html": "Jasa Base Course Agregat Kelas A",
-  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-lpb.html": "Jasa Base Course LPB",
-  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-lpa.html": "Jasa Base Course LPA"
+  // ============================================================
+  // [MONEY_MASTER] - HARGA JASA BASE COURSE (NASIONAL)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/harga-jasa-base-course-lahan-terbaru.html": "Harga Jasa Base Course Lahan Terbaru",  // TYPE: MONEY_MASTER
+  
+  // ============================================================
+  // [MONEY_CHILD] - SPESIFIK PER METODE & MATERIAL
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-borongan.html": "Jasa Base Course Borongan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-lahan-miring-tidak-rata.html": "Jasa Base Course Lahan Miring & Tidak Rata",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-lahan-lunak.html": "Jasa Base Course Lahan Lunak",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-gudang-area-industri.html": "Jasa Base Course Gudang & Area Industri",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-kavling-lahan-bangunan.html": "Jasa Base Course Kavling & Lahan Bangunan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-area-parkir-lapangan.html": "Jasa Base Course Area Parkir & Lapangan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-jalan-akses.html": "Jasa Base Course Jalan Akses",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-alat-berat.html": "Jasa Base Course Alat Berat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-manual-semi-mekanis.html": "Jasa Base Course Manual & Semi Mekanis",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-agregat-kelas-c.html": "Jasa Base Course Agregat Kelas C",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-agregat-kelas-b.html": "Jasa Base Course Agregat Kelas B",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-agregat-kelas-a.html": "Jasa Base Course Agregat Kelas A",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-lpb.html": "Jasa Base Course LPB",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-lpa.html": "Jasa Base Course LPA"  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
-
-📌 CATATAN KHUSUS:
-   - 'jasa-base-course-lpb.html' (Lapis Pondasi Bawah) dan 'jasa-base-course-lpa.html' (Lapis Pondasi Atas)
-     adalah istilah teknis yang sangat baik untuk SEO di bidang konstruksi jalan.
-   - Pastikan konten kedua halaman ini menjelaskan perbedaan LPB dan LPA secara teknis.
-
-📌 REKOMENDASI TAMBAHAN:
-   Tidak ada URL yang perlu di-redirect. Semua sudah optimal.
-*/
-/*
-📋 RINGKASAN SARAN & TINDAKAN
-No	Tindakan	 																	Target							Prioritas
-1	Pastikan halaman harga-jasa-elevasi-lahan-terbaru.html 
-    menjadi master MONEY page yang paling komprehensif	  							urlMappingJasaElevasiLahan		🟡 MEDIUM
-2	Pastikan konten jasa-base-course-lpb.html dan jasa-base-course-lpa.html 
-    menjelaskan perbedaan teknis													urlMappingJasaBaseCourseLahan	🟡 MEDIUM
-3	Perhatikan perbedaan antara cluster lahan dan cluster jalan 
-   (tidak boleh tumpang tindih)														Semua cluster					🟢 LOW
-4	Tambahkan internal link antar sesama URL dalam satu cluster						Semua URL						🟢 LOW
-*/
-
-// ============================================================
-// JASA STABILISASI TANAH LAHAN - SUB2 (MONEY PAGE)
-// ============================================================
-// 🧠 SEO NOTE: Cluster ini fokus ke layanan stabilisasi tanah untuk berbagai kondisi/skala.
-// Intent: Commercial Investigation + Transactional (karena ada kata "jasa").
-// Parent: Jasa Stabilisasi Tanah Lahan (dari urlMappingJasaStabilisasiTanahLahan)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Stabilisasi Tanah Lahan > [Nama Layanan] (4-5 level, perlu disederhanakan)
+// JASA STABILISASI TANAH LAHAN - MONEY PAGE
 // ============================================================
 
 const urlMappingJasaStabilisasiTanahLahan = {
   // ============================================================
-  // [MONEY PAGE] - STABILISASI TANAH PER SKALA & METODE
-  // 🧠 SEO NOTE: Masing-masing URL menarget keyword spesifik stabilisasi tanah.
+  // [MONEY_CHILD] - SPESIFIK PER SKALA & METODE
   // ============================================================
-  
-  // ✅ VALID - KONTEN ADA
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-skala-kecil.html": "Jasa Stabilisasi Tanah Skala Kecil",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-manual-semi-mekanis.html": "Jasa Stabilisasi Tanah Manual & Semi Mekanis",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-dengan-alat-berat.html": "Jasa Stabilisasi Tanah dengan Alat Berat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-kawasan-industri.html": "Jasa Stabilisasi Tanah Kawasan Industri",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-area-komersial.html": "Jasa Stabilisasi Tanah Area Komersial",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-lahan-kavling.html": "Jasa Stabilisasi Tanah Lahan Kavling",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-lahan-perumahan.html": "Jasa Stabilisasi Tanah Lahan Perumahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-basah.html": "Jasa Stabilisasi Tanah Basah",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-rawan-longsor.html": "Jasa Stabilisasi Tanah Rawan Longsor",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-berpasir.html": "Jasa Stabilisasi Tanah Berpasir",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-lunak-lembek.html": "Jasa Stabilisasi Tanah Lunak & Lembek",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-geotekstil.html": "Jasa Stabilisasi Tanah dengan Geotekstil",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-mekanis.html": "Jasa Stabilisasi Tanah Mekanis",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-kimia.html": "Jasa Stabilisasi Tanah Kimia",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-dengan-kapur.html": "Jasa Stabilisasi Tanah dengan Kapur",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-dengan-semen.html": "Jasa Stabilisasi Tanah dengan Semen"
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-skala-kecil.html": "Jasa Stabilisasi Tanah Skala Kecil",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-manual-semi-mekanis.html": "Jasa Stabilisasi Tanah Manual & Semi Mekanis",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-dengan-alat-berat.html": "Jasa Stabilisasi Tanah dengan Alat Berat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-kawasan-industri.html": "Jasa Stabilisasi Tanah Kawasan Industri",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-area-komersial.html": "Jasa Stabilisasi Tanah Area Komersial",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-lahan-kavling.html": "Jasa Stabilisasi Tanah Lahan Kavling",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-lahan-perumahan.html": "Jasa Stabilisasi Tanah Lahan Perumahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-basah.html": "Jasa Stabilisasi Tanah Basah",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-rawan-longsor.html": "Jasa Stabilisasi Tanah Rawan Longsor",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-berpasir.html": "Jasa Stabilisasi Tanah Berpasir",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-lunak-lembek.html": "Jasa Stabilisasi Tanah Lunak & Lembek",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-geotekstil.html": "Jasa Stabilisasi Tanah dengan Geotekstil",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-mekanis.html": "Jasa Stabilisasi Tanah Mekanis",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-kimia.html": "Jasa Stabilisasi Tanah Kimia",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-dengan-kapur.html": "Jasa Stabilisasi Tanah dengan Kapur",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-dengan-semen.html": "Jasa Stabilisasi Tanah dengan Semen"  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// 🔴 PERBAIKAN URL - BROKEN LINK & REDIRECT
+// 🔴 SEO NOTE - BROKEN LINK IDENTIFIED
 // ============================================================
 /*
-🧠 SEO CANNIBAL & TECHNICAL FIX:
-
-| No | URL | Masalah | Solusi | Prioritas |
-|----|-----|---------|--------|-----------|
-| 1 | /2019/09/jasa-stabilisasi-tanah-dengan-ala | ❌ 404 (broken link) | ⚠️ HAPUS dari const atau PERBAIKI URL menjadi /2019/09/jasa-stabilisasi-tanah-dengan-alat-berat.html (sudah ada) | 🔴 HIGH |
+⚠️ PERHATIAN: URL berikut TIDAK VALID (broken link / typo):
+- /2019/09/jasa-stabilisasi-tanah-dengan-ala (tidak lengkap)
 
 📌 REKOMENDASI:
-URL 'jasa-stabilisasi-tanah-dengan-ala' adalah URL yang tidak lengkap/typo.
-Kemungkinan yang dimaksud adalah 'jasa-stabilisasi-tanah-dengan-alat-berat.html'
-yang sudah ada di const. Hapus URL yang broken dari const.
+HAPUS URL tersebut dari const karena:
+1. URL tidak lengkap (typo)
+2. Konten yang dimaksud sudah ada di 'jasa-stabilisasi-tanah-dengan-alat-berat.html'
+3. Tidak perlu redirect karena URL tidak pernah dipublish
 
-📌 BREADCRUMB SKIP LEVEL:
-Jika breadcrumb asli: Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Stabilisasi Tanah Lahan > Jasa Stabilisasi Tanah Skala Kecil (5 level)
-Menjadi: Home > Jasa Konstruksi > Jasa Stabilisasi Tanah > Jasa Stabilisasi Tanah Skala Kecil (4 level)
-
-Alasan skip: "Jasa Pematangan Lahan" di-skip karena halaman tersebut terlalu umum,
-tidak perlu muncul di breadcrumb untuk layanan stabilisasi tanah yang sudah spesifik.
+✅ TIDAK PERLU DITAMBAHKAN KE CONST.
 */
 // ============================================================
 // JASA DRAINASE LAHAN - SUB2 (MONEY PAGE)
 // ============================================================
 // 🧠 SEO NOTE: Cluster ini fokus ke layanan drainase lahan untuk berbagai kondisi.
 // Intent: Commercial Investigation + Transactional.
-// Parent: Jasa Drainase Lahan
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Drainase Lahan > [Nama Layanan] (4-5 level, perlu disederhanakan)
+// Parent: Jasa Drainase Lahan (/p/jasa-drainase-lahan.html)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Drainase Lahan > [Nama Layanan] (4 level)
 // ============================================================
 
 const urlMappingJasaDrainaseLahan = {
   // ============================================================
-  // [MONEY PAGE] - DRAINASE LAHAN PER JENIS & LOKASI
+  // [MONEY_MASTER] - DRAINASE LAHAN (MASTER)
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
   // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembuatan-saluran-drainase-lahan.html": "Jasa Pembuatan Saluran Drainase Lahan",  // TYPE: MONEY_MASTER
   
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembuatan-saluran-drainase-lahan.html": "Jasa Pembuatan Saluran Drainase Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-terbuka.html": "Jasa Drainase Lahan Terbuka",
-  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-tertutup.html": "Jasa Drainase Lahan Tertutup",
-  "https://www.betonjayareadymix.com/2019/09/jasa-subdrain-drainase-lahan.html": "Jasa Subdrain Drainase Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-sistem-drainase-air-hujan-lahan.html": "Jasa Sistem Drainase Air Hujan Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembuatan-sumur-resapan.html": "Jasa Pembuatan Sumur Resapan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembuatan-parit-gorong-gorong-lahan.html": "Jasa Pembuatan Parit & Gorong-Gorong Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-kolam-resapan-lahan.html": "Jasa Pembuatan Kolam Resapan Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-normalisasi-drainase-lahan.html": "Jasa Normalisasi Drainase Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-perumahan.html": "Jasa Drainase Lahan Perumahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-kavling-lahan-kosong.html": "Jasa Drainase Lahan Kavling & Lahan Kosong",
-  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-area-komersial.html": "Jasa Drainase Lahan Area Komersial",
-  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-kawasan-industri.html": "Jasa Drainase Lahan Kawasan Industri",
-  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-dengan-alat-berat.html": "Jasa Drainase Lahan Dengan Alat Berat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-manual-semi-mekanis.html": "Jasa Drainase Lahan Manual & Semi Mekanis",
-  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-rawan-banjir.html": "Jasa Drainase Lahan Rawan Banjir",
-  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-cepat-siap-digunakan.html": "Jasa Drainase Lahan Cepat Siap Digunakan"
+  // ============================================================
+  // [MONEY_CHILD] - DRAINASE PER JENIS
+  // 🧠 TYPE: MONEY_CHILD (WAJIB tampil, spesifik jenis)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-terbuka.html": "Jasa Drainase Lahan Terbuka",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-tertutup.html": "Jasa Drainase Lahan Tertutup",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-subdrain-drainase-lahan.html": "Jasa Subdrain Drainase Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-sistem-drainase-air-hujan-lahan.html": "Jasa Sistem Drainase Air Hujan Lahan",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // [MONEY_CHILD] - STRUKTUR DRAINASE
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembuatan-sumur-resapan.html": "Jasa Pembuatan Sumur Resapan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembuatan-parit-gorong-gorong-lahan.html": "Jasa Pembuatan Parit & Gorong-Gorong Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-kolam-resapan-lahan.html": "Jasa Pembuatan Kolam Resapan Lahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-normalisasi-drainase-lahan.html": "Jasa Normalisasi Drainase Lahan",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // [MONEY_CHILD] - DRAINASE PER LOKASI / AREA
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-perumahan.html": "Jasa Drainase Lahan Perumahan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-kavling-lahan-kosong.html": "Jasa Drainase Lahan Kavling & Lahan Kosong",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-area-komersial.html": "Jasa Drainase Lahan Area Komersial",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-kawasan-industri.html": "Jasa Drainase Lahan Kawasan Industri",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // [MONEY_CHILD] - DRAINASE PER METODE
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-dengan-alat-berat.html": "Jasa Drainase Lahan Dengan Alat Berat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-manual-semi-mekanis.html": "Jasa Drainase Lahan Manual & Semi Mekanis",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // [MONEY_CHILD] - DRAINASE KONDISI KHUSUS
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-rawan-banjir.html": "Jasa Drainase Lahan Rawan Banjir",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-drainase-lahan-cepat-siap-digunakan.html": "Jasa Drainase Lahan Cepat Siap Digunakan"  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// 🟡 SARAN TAMBAHAN URL (OPTIONAL)
+// 🟡 SARAN TAMBAHAN URL (OPTIONAL) - JASA DRAINASE LAHAN
 // ============================================================
 /*
 📌 URL YANG DISARANKAN UNTUK DITAMBAHKAN (JIKA KONTEN MEMADAI):
 
-| URL | Nama Halaman | Status | Parent | Alasan SEO |
-|-----|--------------|--------|--------|------------|
-| /2019/09/jasa-drainase-lahan-pertanian.html | Jasa Drainase Lahan Pertanian | ⚠️ SARAN DITAMBAHKAN | Jasa Drainase Lahan | Menarget keyword spesifik lahan pertanian |
-| /2019/09/jasa-drainase-lahan-perkebunan.html | Jasa Drainase Lahan Perkebunan | ⚠️ SARAN DITAMBAHKAN | Jasa Drainase Lahan | Menarget keyword spesifik perkebunan |
+| URL | Nama Halaman | Type | Parent | Alasan SEO |
+|-----|--------------|------|--------|------------|
+| /2019/09/jasa-drainase-lahan-pertanian.html | Jasa Drainase Lahan Pertanian | MONEY_CHILD | Jasa Drainase Lahan | Menarget keyword spesifik lahan pertanian |
+| /2019/09/jasa-drainase-lahan-perkebunan.html | Jasa Drainase Lahan Perkebunan | MONEY_CHILD | Jasa Drainase Lahan | Menarget keyword spesifik perkebunan |
 
 📌 CATATAN: URL di atas disarankan hanya jika kontennya memadai.
-Jika konten tipis, lebih baik digabung ke halaman induk.
 */
 
-// ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
-✅ Masing-masing menarget keyword spesifik (drainase terbuka, tertutup, subdrain, dll).
-✅ Tidak ada duplikasi intent karena jenis drainase berbeda.
-✅ Breadcrumb perlu disederhanakan dari 5 level menjadi 4 level.
-
-📌 REKOMENDASI BREADCRUMB:
-Home > Jasa Konstruksi > Jasa Drainase Lahan > Jasa Drainase Lahan Terbuka (4 level)
-(Skip "Jasa Pematangan Lahan" karena terlalu umum)
-*/
 // ============================================================
 // JASA GEOTEKSTIL LAHAN - SUB2 (MONEY PAGE)
 // ============================================================
 // 🧠 SEO NOTE: Cluster ini fokus ke layanan geotekstil untuk berbagai aplikasi.
-// Intent: Commercial Investigation + Transactional (ada kata "harga" dan "jasa").
-// Parent: Jasa Geotekstil Lahan
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Pematangan Lahan > Jasa Geotekstil Lahan > [Nama Layanan] (4-5 level)
+// Intent: Commercial Investigation + Transactional.
+// Parent: Jasa Geotekstil Lahan (/p/jasa-geotekstil-lahan.html)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Geotekstil Lahan > [Nama Layanan] (4 level)
 // ============================================================
 
 const urlMappingJasaGeotekstilLahan = {
   // ============================================================
-  // [MONEY PAGE] - GEOTEKSTIL PER JENIS & APLIKASI
+  // [MONEY_MASTER] - GEOTEKSTIL (MASTER)
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
   // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/harga-jasa-geotekstil-lahan-terbaru.html": "Harga Jasa Geotekstil Lahan Terbaru",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-borongan.html": "Jasa Geotekstil Borongan",  // TYPE: MONEY_MASTER
   
-  "https://www.betonjayareadymix.com/2019/09/harga-jasa-geotekstil-lahan-terbaru.html": "Harga Jasa Geotekstil Lahan Terbaru",
-  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-borongan.html": "Jasa Geotekstil Borongan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-stabilisasi-subgrade.html": "Jasa Geotekstil Stabilisasi Subgrade",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemasangan-geotekstil-base-course.html": "Jasa Pemasangan Geotekstil Base Course",
-  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-lahan-lunak.html": "Jasa Geotekstil Lahan Lunak",
-  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-fondasi-bangunan-gudang.html": "Jasa Geotekstil Fondasi Bangunan & Gudang",
-  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-area-parkir-lapangan.html": "Jasa Geotekstil Area Parkir & Lapangan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-jalan-akses.html": "Jasa Geotekstil Jalan Akses",
-  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-separator.html": "Jasa Geotekstil Separator",
-  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-non-woven.html": "Jasa Geotekstil Non Woven",
-  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-woven.html": "Jasa Geotekstil Woven"
+  // ============================================================
+  // [MONEY_CHILD] - GEOTEKSTIL PER APLIKASI
+  // 🧠 TYPE: MONEY_CHILD (WAJIB tampil, spesifik aplikasi)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-stabilisasi-subgrade.html": "Jasa Geotekstil Stabilisasi Subgrade",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemasangan-geotekstil-base-course.html": "Jasa Pemasangan Geotekstil Base Course",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-lahan-lunak.html": "Jasa Geotekstil Lahan Lunak",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-fondasi-bangunan-gudang.html": "Jasa Geotekstil Fondasi Bangunan & Gudang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-area-parkir-lapangan.html": "Jasa Geotekstil Area Parkir & Lapangan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-jalan-akses.html": "Jasa Geotekstil Jalan Akses",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-separator.html": "Jasa Geotekstil Separator",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // [MONEY_CHILD] - GEOTEKSTIL PER JENIS MATERIAL
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-non-woven.html": "Jasa Geotekstil Non Woven",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-woven.html": "Jasa Geotekstil Woven"  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// 🟡 SARAN TAMBAHAN URL (OPTIONAL)
+// 🟡 SARAN TAMBAHAN URL (OPTIONAL) - JASA GEOTEKSTIL LAHAN
 // ============================================================
 /*
 📌 URL YANG DISARANKAN UNTUK DITAMBAHKAN (JIKA KONTEN MEMADAI):
 
-| URL | Nama Halaman | Status | Parent | Alasan SEO |
-|-----|--------------|--------|--------|------------|
-| /2019/09/jasa-geotekstil-untuk-drainase.html | Jasa Geotekstil untuk Drainase | ⚠️ SARAN DITAMBAHKAN | Jasa Geotekstil Lahan | Menarget aplikasi spesifik |
-| /2019/09/jasa-geotekstil-untuk-pondasi.html | Jasa Geotekstil untuk Pondasi | ⚠️ SARAN DITAMBAHKAN | Jasa Geotekstil Lahan | Menarget aplikasi spesifik |
+| URL | Nama Halaman | Type | Parent | Alasan SEO |
+|-----|--------------|------|--------|------------|
+| /2019/09/jasa-geotekstil-untuk-drainase.html | Jasa Geotekstil untuk Drainase | MONEY_CHILD | Jasa Geotekstil Lahan | Menarget aplikasi drainase |
+| /2019/09/jasa-geotekstil-untuk-pondasi.html | Jasa Geotekstil untuk Pondasi | MONEY_CHILD | Jasa Geotekstil Lahan | Menarget aplikasi pondasi |
 
 📌 CATATAN: URL di atas disarankan hanya jika kontennya memadai.
 */
 
-// ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
-✅ Ada 1 URL dengan kata "harga" di awal - ini adalah master price page yang bagus.
-✅ Masing-masing menarget keyword spesifik (woven, non-woven, separator, dll).
-
-📌 REKOMENDASI BREADCRUMB:
-Home > Jasa Konstruksi > Jasa Geotekstil Lahan > Jasa Geotekstil Woven (4 level)
-*/
 // ============================================================
 // JASA PERSIAPAN PONDASI LAHAN - SUB2 (MONEY PAGE)
 // ============================================================
 // 🧠 SEO NOTE: Cluster ini fokus ke layanan persiapan lahan untuk pondasi.
 // Intent: Commercial Investigation + Transactional.
-// Parent: Jasa Persiapan Pondasi Lahan
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Persiapan Pondasi Lahan > [Nama Layanan] (3-4 level)
+// Parent: Jasa Persiapan Pondasi Lahan (/p/jasa-persiapan-pondasi-lahan.html)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Persiapan Pondasi Lahan > [Nama Layanan] (4 level)
 // ============================================================
 
 const urlMappingJasaPersiapanPondasiLahan = {
   // ============================================================
-  // [MONEY PAGE] - PERSIAPAN PONDASI PER JENIS PROYEK & METODE
+  // [MONEY_MASTER] - PERSIAPAN PONDASI (MASTER)
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
   // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/harga-jasa-persiapan-pondasi-lahan.html": "Harga Jasa Persiapan Pondasi Lahan",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/09/jasa-persiapan-pondasi-borongan.html": "Jasa Persiapan Pondasi Borongan",  // TYPE: MONEY_MASTER
   
-  "https://www.betonjayareadymix.com/2019/09/harga-jasa-persiapan-pondasi-lahan.html": "Harga Jasa Persiapan Pondasi Lahan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-persiapan-pondasi-borongan.html": "Jasa Persiapan Pondasi Borongan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-persiapan-pondasi-gedung-bertingkat.html": "Jasa Persiapan Pondasi Gedung Bertingkat",
-  "https://www.betonjayareadymix.com/2019/09/jasa-persiapan-pondasi-gudang-pabrik.html": "Jasa Persiapan Pondasi Gudang & Pabrik",
-  "https://www.betonjayareadymix.com/2019/09/jasa-persiapan-pondasi-rumah-tinggal.html": "Jasa Persiapan Pondasi Rumah Tinggal",
-  "https://www.betonjayareadymix.com/2019/09/jasa-persiapan-pondasi-lahan-miring.html": "Jasa Persiapan Pondasi Lahan Miring",
-  "https://www.betonjayareadymix.com/2019/09/jasa-persiapan-pondasi-lahan-lunak.html": "Jasa Persiapan Pondasi Lahan Lunak",
-  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-untuk-pondasi.html": "Jasa Stabilisasi Tanah untuk Pondasi",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemasangan-geotekstil-pondasi.html": "Jasa Pemasangan Geotekstil Pondasi",
-  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-pondasi-bangunan.html": "Jasa Base Course Pondasi Bangunan",
-  "https://www.betonjayareadymix.com/2019/09/jasa-galian-urugan-pondasi.html": "Jasa Galian & Urugan Pondasi",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-pondasi.html": "Jasa Pemadatan Tanah Pondasi",
-  "https://www.betonjayareadymix.com/2019/09/jasa-perataan-grading-lahan-pondasi.html": "Jasa Perataan & Grading Lahan Pondasi",
-  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-clearing-lahan-pondasi.html": "Jasa Pembersihan & Clearing Lahan Pondasi"
+  // ============================================================
+  // [MONEY_CHILD] - PERSIAPAN PONDASI PER JENIS BANGUNAN
+  // 🧠 TYPE: MONEY_CHILD (WAJIB tampil, spesifik jenis bangunan)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-persiapan-pondasi-gedung-bertingkat.html": "Jasa Persiapan Pondasi Gedung Bertingkat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-persiapan-pondasi-gudang-pabrik.html": "Jasa Persiapan Pondasi Gudang & Pabrik",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-persiapan-pondasi-rumah-tinggal.html": "Jasa Persiapan Pondasi Rumah Tinggal",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // [MONEY_CHILD] - PERSIAPAN PONDASI PER KONDISI LAHAN
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-persiapan-pondasi-lahan-miring.html": "Jasa Persiapan Pondasi Lahan Miring",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-persiapan-pondasi-lahan-lunak.html": "Jasa Persiapan Pondasi Lahan Lunak",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-stabilisasi-tanah-untuk-pondasi.html": "Jasa Stabilisasi Tanah untuk Pondasi",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // [MONEY_CHILD] - METODE & MATERIAL PERSIAPAN PONDASI
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemasangan-geotekstil-pondasi.html": "Jasa Pemasangan Geotekstil Pondasi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-base-course-pondasi-bangunan.html": "Jasa Base Course Pondasi Bangunan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-galian-urugan-pondasi.html": "Jasa Galian & Urugan Pondasi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pemadatan-tanah-pondasi.html": "Jasa Pemadatan Tanah Pondasi",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // [MONEY_CHILD] - PEKERJAAN AWAL PERSIAPAN PONDASI
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/09/jasa-perataan-grading-lahan-pondasi.html": "Jasa Perataan & Grading Lahan Pondasi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/09/jasa-pembersihan-clearing-lahan-pondasi.html": "Jasa Pembersihan & Clearing Lahan Pondasi"  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// 🟡 SARAN TAMBAHAN URL (OPTIONAL)
+// 🟡 SARAN TAMBAHAN URL (OPTIONAL) - JASA PERSIAPAN PONDASI LAHAN
 // ============================================================
 /*
 📌 URL YANG DISARANKAN UNTUK DITAMBAHKAN (JIKA KONTEN MEMADAI):
 
-| URL | Nama Halaman | Status | Parent | Alasan SEO |
-|-----|--------------|--------|--------|------------|
-| /2019/09/jasa-persiapan-pondasi-tiang-pancang.html | Jasa Persiapan Pondasi Tiang Pancang | ⚠️ SARAN DITAMBAHKAN | Jasa Persiapan Pondasi Lahan | Menarget metode pondasi spesifik |
-| /2019/09/jasa-persiapan-pondasi-bore-pile.html | Jasa Persiapan Pondasi Bore Pile | ⚠️ SARAN DITAMBAHKAN | Jasa Persiapan Pondasi Lahan | Menarget metode pondasi spesifik |
+| URL | Nama Halaman | Type | Parent | Alasan SEO |
+|-----|--------------|------|--------|------------|
+| /2019/09/jasa-persiapan-pondasi-tiang-pancang.html | Jasa Persiapan Pondasi Tiang Pancang | MONEY_CHILD | Jasa Persiapan Pondasi Lahan | Menarget metode pondasi spesifik |
+| /2019/09/jasa-persiapan-pondasi-bore-pile.html | Jasa Persiapan Pondasi Bore Pile | MONEY_CHILD | Jasa Persiapan Pondasi Lahan | Menarget metode pondasi spesifik |
 
 📌 CATATAN: URL di atas disarankan hanya jika kontennya memadai.
 */
@@ -966,26 +776,322 @@ const urlMappingJasaPersiapanPondasiLahan = {
 // 🟢 SEO NOTE - STATUS SEMUA URL
 // ============================================================
 /*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
-✅ Ada 1 URL dengan kata "harga" di awal - ini adalah master price page yang bagus.
-✅ Masing-masing menarget keyword spesifik (per jenis proyek dan metode).
+✅ SEMUA URL di atas sudah valid dengan status [MONEY_MASTER] atau [MONEY_CHILD].
+✅ Masing-masing menarget keyword spesifik (per jenis, metode, lokasi, aplikasi).
+✅ Tidak ada duplikasi intent karena jenis layanan berbeda.
 
-📌 REKOMENDASI BREADCRUMB:
-Home > Jasa Konstruksi > Jasa Persiapan Pondasi Lahan > Jasa Persiapan Pondasi Rumah Tinggal (4 level)
+📌 REKOMENDASI BREADCRUMB (4 level, skip parent yang tidak perlu):
+   Home > Jasa Konstruksi > Jasa Drainase Lahan > Jasa Drainase Lahan Terbuka
+   Home > Jasa Konstruksi > Jasa Geotekstil Lahan > Jasa Geotekstil Woven
+   Home > Jasa Konstruksi > Jasa Persiapan Pondasi Lahan > Jasa Persiapan Pondasi Rumah Tinggal
+*/
+// ============================================================
+// FUNGSI GENERATE BREADCRUMB - VERSI FINAL
+// UNTUK SEMUA PILLAR (PRODUK, MATERIAL, JASA, INTERIOR, DLL)
+// MAX_LEVEL = 4 (TERMASUK HOME)
+// SKIP LEVEL BEKERJA UNTUK PILLAR & SUB2
+// ============================================================
 
-📌 CATATAN: Halaman 'jasa-perataan-grading-lahan-pondasi.html' dan 
-'jasa-pembersihan-clearing-lahan-pondasi.html' memiliki konten (dari data yang diberikan),
-jadi tetap dipertahankan.
-*/
-/*
-📋 RINGKASAN SARAN & TINDAKAN
-No	Tindakan																Target								Prioritas
-1	Hapus URL broken jasa-stabilisasi-tanah-dengan-ala dari const			urlMappingJasaStabilisasiTanahLahan	🔴 HIGH
-2	Sederhanakan breadcrumb dari 5 level menjadi 4 level					Semua cluster						🟡 MEDIUM
-3	Pastikan setiap halaman memiliki internal link ke parent dan MONEY page	Semua URL							🟡 MEDIUM
-4	Pertimbangkan tambahan URL untuk drainase pertanian/perkebunan			urlMappingJasaDrainaseLahan			🟢 LOW
-5	Pertimbangkan tambahan URL untuk geotekstil drainase/pondasi			urlMappingJasaGeotekstilLahan		🟢 LOW
-*/
+function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = [], pillarType = 'JASA_KONSTRUKSI') {
+    
+    const MAX_LEVEL = 4;
+    const DOMAIN = 'https://www.betonjayareadymix.com';
+    
+    // ============================================================
+    // 1. VALIDASI PILLAR TYPE
+    // ============================================================
+    const validPillarTypes = ['PRODUK_KONSTRUKSI', 'MATERIAL_KONSTRUKSI', 'JASA_KONSTRUKSI', 
+                               'PRODUK_INTERIOR', 'JASA_DESAIN_INTERIOR'];
+    if (!validPillarTypes.includes(pillarType)) {
+        console.error(`❌ ERROR: "${pillarType}" BUKAN PILLAR TYPE yang valid!`);
+        console.error(`   Gunakan salah satu dari: ${validPillarTypes.join(', ')}`);
+        return null;
+    }
+    
+    const pageTitle = mappingObj[currentUrl];
+    if (!pageTitle) {
+        console.error(`❌ ERROR: URL "${currentUrl}" tidak ditemukan di mapping`);
+        return null;
+    }
+    
+    // ============================================================
+    // 2. KUMPULKAN SEMUA NAMA HALAMAN DARI MAPPING (UNTUK REFERENSI)
+    // ============================================================
+    const knownPages = [];
+    for (const [url, name] of Object.entries(mappingObj)) {
+        if (name && typeof name === 'string') {
+            knownPages.push(name.toLowerCase());
+        }
+    }
+    
+    // ============================================================
+    // 3. DETEKSI TYPE OTOMATIS
+    // ============================================================
+    function detectPageType(pageName, position, totalLevels) {
+        const lowerName = pageName.toLowerCase();
+        const parts = pageName.split(' ');
+        const lastWord = parts[parts.length - 1].toLowerCase();
+        const firstWord = parts[0].toLowerCase();
+        const wordCount = parts.length;
+        
+        // PILLAR: posisi pertama
+        if (position === 0) return 'PILLAR';
+        
+        // MONEY_LEADGEN
+        if (lowerName.startsWith('konsultasi')) return 'MONEY_LEADGEN';
+        
+        // MONEY_MASTER (deteksi transaksi)
+        const transactionWords = ['harga', 'sewa', 'jual', 'beli', 'pesan', 'booking', 'order', 'rental',
+            'biaya', 'tarif', 'rate', 'cost', 'price', 'fee', 'charge', 'promo', 'diskon', 'obral',
+            'gratis', 'voucher', 'cashback', 'cicilan', 'kredit', 'dp', 'angsuran', 'quote', 'penawaran', 'estimasi'];
+        
+        for (const word of transactionWords) {
+            if (lowerName.startsWith(word + ' ') || lowerName.includes(' ' + word + ' ') || lowerName.endsWith(' ' + word)) {
+                return 'MONEY_MASTER';
+            }
+        }
+        
+        // SUB1 (deteksi panduan)
+        const guideWords = ['panduan', 'cara', 'tips', 'tutorial', 'langkah', 'petunjuk', 'pedoman', 'instruksi',
+            'guide', 'how to', 'step by step', 'strategi', 'metode', 'teknik', 'rahasia', 'kunci sukses',
+            'wajib tahu', 'perlu diketahui', 'edukasi', 'belajar', 'mempelajari', 'pemahaman', 'solusi', 'jawaban'];
+        
+        for (const word of guideWords) {
+            if (lowerName.startsWith(word + ' ') || lowerName.includes(' ' + word + ' ')) {
+                return 'SUB1';
+            }
+        }
+        
+        // VARIANT (deteksi angka atau kata kunci)
+        if (/\d/.test(lowerName)) return 'VARIANT';
+        
+        const variantWords = ['tipe', 'type', 'ukuran', 'model', 'varian', 'warna', 'bentuk', 'seri', 'versi',
+            'grade', 'kelas', 'standar', 'jenis', 'macam', 'ragam', 'kategori', 'spesifikasi', 'detail', 'rinci',
+            'kapasitas', 'volume', 'berat', 'panjang', 'lebar', 'tinggi', 'tebal', 'diameter', 'radius', 'luas',
+            'bahan', 'material', 'komposisi', 'kualitas', 'mutu', 'kode', 'plus', 'minus', 'kelebihan', 'kekurangan',
+            'baru', 'lama', 'bekas', 'second', 'original', 'kw', 'putih', 'hitam', 'merah', 'biru', 'hijau',
+            'kecil', 'besar', 'sedang', 'mini', 'maxi', 'jumbo', 'extra', 'super'];
+        
+        for (const word of variantWords) {
+            if (lowerName.includes(' ' + word + ' ') || lowerName.endsWith(' ' + word)) {
+                return 'VARIANT';
+            }
+        }
+        
+        // MONEY_CHILD (deteksi lokasi)
+        function isLikelyLocation(word) {
+            if (word.length < 3 || word.length > 25) return false;
+            if (!/^[a-zA-Z]+$/.test(word)) return false;
+            if (word === firstWord) return false;
+            
+            const notLocationWords = ['mini', 'maxi', 'super', 'extra', 'plus', 'pro', 'max', 'ultra',
+                'baru', 'lama', 'bekas', 'second', 'original', 'kw', 'grade', 'murah', 'mahal', 'hemat',
+                'premium', 'standar', 'ekonomis', 'kecil', 'besar', 'sedang', 'panjang', 'pendek', 'tebal', 'tipis',
+                'putih', 'hitam', 'merah', 'biru', 'hijau', 'kuning', 'ungu', 'abu', 'coklat'];
+            if (notLocationWords.includes(word)) return false;
+            
+            const isKnownProduct = knownPages.some(known => known === word || (known.includes(word) && word.length > 3));
+            if (isKnownProduct) return false;
+            
+            if (word.length >= 4 && word.length <= 12) return true;
+            if (/[aiueo]$/.test(word) && word.length >= 4) return true;
+            
+            const locationPatterns = ['ang', 'ung', 'eng', 'ong', 'an', 'in', 'un', 'en', 
+                'ap', 'ip', 'op', 'ar', 'ur', 'er', 'or', 'karta', 'jaya', 'pura', 'sari', 'mulya', 'agung', 'asih', 'ayem'];
+            for (const pattern of locationPatterns) {
+                if (word.endsWith(pattern) && word.length >= 4) return true;
+            }
+            
+            if (word.length >= 5 && /[aiueo].*[aiueo]/.test(word)) return true;
+            return false;
+        }
+        
+        if (wordCount >= 2 && isLikelyLocation(lastWord)) return 'MONEY_CHILD';
+        
+        return 'SUB2';
+    }
+    
+    // ============================================================
+    // 4. FUNGSI BANTUAN
+    // ============================================================
+    function generateIdFromName(name) {
+        return name.replace(/[^a-zA-Z0-9]/g, '') + 'Post';
+    }
+    
+    // ============================================================
+    // 5. BANGUN LEVELS DARI ARRAY OBJECT (NAMA + URL)
+    // ============================================================
+    const allLevels = [];
+    for (let i = 0; i < breadcrumbItems.length; i++) {
+        const item = breadcrumbItems[i];
+        const name = typeof item === 'string' ? item : item.name;
+        const url = typeof item === 'string' ? null : item.url;
+        
+        allLevels.push({
+            name: name,
+            url: url,
+            type: detectPageType(name, i, breadcrumbItems.length),
+            id: generateIdFromName(name),
+            position: i
+        });
+    }
+    
+    // ============================================================
+    // 6. VALIDASI & FALLBACK URL
+    // ============================================================
+    for (const level of allLevels) {
+        if (!level.url) {
+            let foundUrl = null;
+            for (const [url, name] of Object.entries(mappingObj)) {
+                if (name === level.name) {
+                    foundUrl = url.startsWith('http') ? url : DOMAIN + url;
+                    break;
+                }
+            }
+            if (!foundUrl) {
+                const slug = level.name.toLowerCase().replace(/ /g, '-');
+                foundUrl = `${DOMAIN}/p/${slug}.html`;
+            }
+            level.url = foundUrl;
+        } else if (!level.url.startsWith('http')) {
+            level.url = DOMAIN + level.url;
+        }
+    }
+    
+    // ============================================================
+    // 7. TENTUKAN LEVEL YANG AKAN DITAMPILKAN (MAX 4 LEVEL)
+    // ============================================================
+    const selectedLevels = [];
+    
+    // Level 1: Home (WAJIB)
+    selectedLevels.push({ name: 'BJR', url: DOMAIN, isHome: true });
+    
+    // Hitung slot tersisa (MAX_LEVEL - 1 untuk home - 1 untuk halaman saat ini)
+    let remainingSlots = MAX_LEVEL - 2;
+    
+    console.log(`📊 ========================================`);
+    console.log(`📊 Breadcrumb Generator - SEO Tercanggih`);
+    console.log(`📊 Max level: ${MAX_LEVEL}, slot untuk parent: ${remainingSlots}`);
+    console.log(`📊 Breadcrumb items: ${allLevels.map(l => l.name).join(' → ')}`);
+    console.log(`📊 ========================================`);
+    
+    // Parent terdekat (level terakhir) - WAJIB tampil
+    let parentTerdekat = null;
+    if (allLevels.length > 0) {
+        parentTerdekat = allLevels[allLevels.length - 1];
+        selectedLevels.push(parentTerdekat);
+        remainingSlots--;
+        console.log(`✅ WAJIB: "${parentTerdekat.name}" (${parentTerdekat.type}) - sisa slot: ${remainingSlots}`);
+    }
+    
+    // Level lainnya (dari awal sampai sebelum parent terdekat)
+    const otherLevels = [...allLevels.slice(0, allLevels.length - 1)].reverse();
+    const canSkipTypes = ['PILLAR', 'SUB2'];
+    
+    for (const level of otherLevels) {
+        if (remainingSlots <= 0) {
+            console.log(`📌 SKIP: "${level.name}" (${level.type}) - tidak ada slot tersisa`);
+            continue;
+        }
+        
+        if (canSkipTypes.includes(level.type)) {
+            console.log(`📌 SKIP: "${level.name}" (${level.type}) - type boleh skip`);
+            continue;
+        }
+        
+        selectedLevels.splice(1, 0, level);
+        remainingSlots--;
+        console.log(`✅ TAMBAH: "${level.name}" (${level.type}) - sisa slot: ${remainingSlots}`);
+    }
+    
+    // Halaman saat ini (WAJIB)
+    const currentFullUrl = currentUrl.startsWith('http') ? currentUrl : DOMAIN + currentUrl;
+    selectedLevels.push({
+        name: pageTitle,
+        url: currentFullUrl,
+        isCurrent: true
+    });
+    
+    // Update position
+    for (let i = 0; i < selectedLevels.length; i++) {
+        selectedLevels[i].position = i + 1;
+    }
+    
+    console.log(`✅ FINAL (${selectedLevels.length} level): ${selectedLevels.map(l => l.name).join(' → ')}`);
+    
+    // ============================================================
+    // 8. GENERATE HTML BREADCRUMB
+    // ============================================================
+    let breadcrumbHtml = `<div class="breadcrumbs">\n<span>\n`;
+    breadcrumbHtml += `<a href="${DOMAIN}/" itemprop="item" title="Beton Jaya Readymix">`;
+    breadcrumbHtml += `<meta content="1" itemprop="position">`;
+    breadcrumbHtml += `<span itemprop="name">BJR</span></a>\n`;
+    breadcrumbHtml += `</span>\n &nbsp;›&nbsp;\n\n`;
+    breadcrumbHtml += `<span>\n<div id="breadcrumbContainer" style="display: inline;">\n`;
+    
+    for (let i = 1; i < selectedLevels.length; i++) {
+        const level = selectedLevels[i];
+        const isLast = (i === selectedLevels.length - 1);
+        
+        if (!isLast) {
+            breadcrumbHtml += `<a href="${level.url}" id="${level.id}" title="${level.name.toUpperCase()}" style="visibility: visible;">`;
+            breadcrumbHtml += `<span id="${level.id}Name">${level.name}</span>&nbsp;›&nbsp;\n`;
+            breadcrumbHtml += `</a>\n`;
+        } else {
+            breadcrumbHtml += `<span id="pageNameBreadcrumb">${level.name}</span>\n`;
+        }
+    }
+    
+    breadcrumbHtml += `</div>\n</span>\n</div>`;
+    
+    // ============================================================
+    // 9. GENERATE JSON-LD SCHEMA
+    // ============================================================
+    const jsonLdItems = [];
+    jsonLdItems.push({ "@type": "ListItem", "position": 1, "name": "Beton Jaya Readymix", "item": DOMAIN });
+    
+    for (let i = 1; i < selectedLevels.length; i++) {
+        jsonLdItems.push({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": selectedLevels[i].name,
+            "item": selectedLevels[i].url
+        });
+    }
+    
+    // ============================================================
+    // 10. HAPUS BREADCRUMB LAMA & INJECT YANG BARU
+    // ============================================================
+    // Hapus semua breadcrumb lama (manual)
+    const oldBreadcrumbs = document.querySelectorAll('.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"]');
+    oldBreadcrumbs.forEach(el => el.remove());
+    
+    // Hapus JSON-LD lama
+    const oldJsonLd = document.querySelector('script[data-breadcrumb="true"]');
+    if (oldJsonLd) oldJsonLd.remove();
+    
+    // Inject HTML breadcrumb baru
+    const mainContent = document.querySelector('main, article, .content, #main-content, .post-content');
+    if (mainContent?.firstChild) {
+        mainContent.insertAdjacentHTML('afterbegin', breadcrumbHtml);
+    } else {
+        document.body.insertAdjacentHTML('afterbegin', breadcrumbHtml);
+    }
+    
+    // Inject JSON-LD baru
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-breadcrumb', 'true');
+    script.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": jsonLdItems
+    });
+    document.head.appendChild(script);
+    
+    console.log(`✅ Breadcrumb injected ke DOM`);
+    return breadcrumbHtml;
+}
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaCuttingBetonPost = {};
