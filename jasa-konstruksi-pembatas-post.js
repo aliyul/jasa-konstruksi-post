@@ -38,212 +38,236 @@ const urlMappingPembuatanPagarDinding = {
 */
 // ============================================================
 // JASA PEMBUATAN PAGAR DINDING PEMBATAS (SUB2)
+// Parent: Jasa Pembatas & Pengaman (/p/jasa-pembatas-pengaman.html)
+// ============================================================
+
+// ============================================================
+// [VARIANT] - JASA PAGAR BETON PRECAST
 // ============================================================
 
 const urlMappingJasaPagarBetonPrecast = {
   // ============================================================
-  // SARAN ITEM BARU - JASA PAGAR BETON PRECAST
-  // Status: [VARIANT - POST] di bawah Jasa Pembuatan Pagar Dinding Pembatas
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Beton Precast
+  // [MONEY_MASTER] - JASA PAGAR BETON PRECAST
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Beton Precast
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-beton-precast.html": "Jasa Pagar Beton Precast",
-  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-beton-precast.html": "Harga Pagar Beton Precast",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-beton-precast.html": "Jasa Pagar Beton Precast",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-beton-precast.html": "Harga Pagar Beton Precast",  // TYPE: MONEY_MASTER
 };
+
+// ============================================================
+// [VARIANT] - JASA PAGAR PANEL BETON
+// ============================================================
 
 const urlMappingJasaPagarPanelBeton = {
   // ============================================================
-  // [MONEY PAGE] - MASTER HARGA
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pasang Pagar Panel Beton
+  // [MONEY_MASTER] - HARGA PASANG PAGAR PANEL BETON
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pasang Pagar Panel Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-pasang-pagar-panel-beton.html": "Harga Pasang Pagar Panel Beton",
-  "https://www.betonjayareadymix.com/2018/09/biaya-pasang-pagar-panel-beton.html": "Biaya Pasang Pagar Panel Beton",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton",
+  "https://www.betonjayareadymix.com/2018/09/harga-pasang-pagar-panel-beton.html": "Harga Pasang Pagar Panel Beton",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/09/biaya-pasang-pagar-panel-beton.html": "Biaya Pasang Pagar Panel Beton",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [VARIANT - POST] - JASA PASANG PAGAR PANEL BETON
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton
+  // [SUB1] - JASA PASANG PAGAR PANEL BETON (edukasi)
+  // 🧠 TYPE: SUB1 (WAJIB tampil, bridge ke money page)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton.html": "Jasa Pasang Pagar Panel Beton",
-  "https://www.betonjayareadymix.com/2018/09/pagar-panel-beton-terpasang.html": "Pagar Panel Beton Terpasang",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton.html": "Jasa Pasang Pagar Panel Beton",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2018/09/pagar-panel-beton-terpasang.html": "Pagar Panel Beton Terpasang",  // TYPE: SUB1
 
   // ============================================================
-  // [VARIANT - POST] - LOKASI (JABODETABEK)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton Jakarta
+  // [MONEY_CHILD] - LOKASI (JABODETABEK)
+  // 🧠 TYPE: MONEY_CHILD (WAJIB tampil, parent: SUB1)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton Jakarta
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-jakarta.html": "Jasa Pasang Pagar Panel Beton Jakarta",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bogor.html": "Jasa Pasang Pagar Panel Beton Bogor",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-depok.html": "Jasa Pasang Pagar Panel Beton Depok",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-tangerang.html": "Jasa Pasang Pagar Panel Beton Tangerang",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bekasi.html": "Jasa Pasang Pagar Panel Beton Bekasi",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-jakarta.html": "Jasa Pasang Pagar Panel Beton Jakarta",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bogor.html": "Jasa Pasang Pagar Panel Beton Bogor",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-depok.html": "Jasa Pasang Pagar Panel Beton Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-tangerang.html": "Jasa Pasang Pagar Panel Beton Tangerang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bekasi.html": "Jasa Pasang Pagar Panel Beton Bekasi",  // TYPE: MONEY_CHILD
 
   // ============================================================
-  // [VARIANT - POST] - LOKASI (JAWA BARAT)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton Bandung
+  // [MONEY_CHILD] - LOKASI (JAWA BARAT)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bandung.html": "Jasa Pasang Pagar Panel Beton Bandung",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-karawang.html": "Jasa Pasang Pagar Panel Beton Karawang",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-cianjur.html": "Jasa Pasang Pagar Panel Beton Cianjur",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-cirebon.html": "Jasa Pasang Pagar Panel Beton Cirebon",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-ciamis.html": "Jasa Pasang Pagar Panel Beton Ciamis",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-kuningan.html": "Jasa Pasang Pagar Panel Beton Kuningan",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-indramayu.html": "Jasa Pasang Pagar Panel Beton Indramayu",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-majalengka.html": "Jasa Pasang Pagar Panel Beton Majalengka",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-tasikmalaya.html": "Jasa Pasang Pagar Panel Beton Tasikmalaya",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-purwakarta.html": "Jasa Pasang Pagar Panel Beton Purwakarta",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bandung.html": "Jasa Pasang Pagar Panel Beton Bandung",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-karawang.html": "Jasa Pasang Pagar Panel Beton Karawang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-cianjur.html": "Jasa Pasang Pagar Panel Beton Cianjur",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-cirebon.html": "Jasa Pasang Pagar Panel Beton Cirebon",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-ciamis.html": "Jasa Pasang Pagar Panel Beton Ciamis",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-kuningan.html": "Jasa Pasang Pagar Panel Beton Kuningan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-indramayu.html": "Jasa Pasang Pagar Panel Beton Indramayu",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-majalengka.html": "Jasa Pasang Pagar Panel Beton Majalengka",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-tasikmalaya.html": "Jasa Pasang Pagar Panel Beton Tasikmalaya",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-purwakarta.html": "Jasa Pasang Pagar Panel Beton Purwakarta",  // TYPE: MONEY_CHILD
 
   // ============================================================
-  // [VARIANT - POST] - APLIKASI KHUSUS
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton Pabrik
+  // [VARIANT] - APLIKASI KHUSUS
+  // 🧠 TYPE: VARIANT (WAJIB tampil, spesifikasi layanan)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton Perumahan
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-perumahan.html": "Jasa Pasang Pagar Panel Beton Perumahan",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pabrik.html": "Jasa Pasang Pagar Panel Beton Pabrik",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-gudang.html": "Jasa Pasang Pagar Panel Beton Gudang",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-lahan-kosong.html": "Jasa Pasang Pagar Panel Beton Lahan Kosong",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-kandang-ternak.html": "Jasa Pasang Pagar Panel Beton Kandang Ternak",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pertambangan.html": "Jasa Pasang Pagar Panel Beton Pertambangan",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-sekolah.html": "Jasa Pasang Pagar Panel Beton Sekolah",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-rumah-sakit.html": "Jasa Pasang Pagar Panel Beton Rumah Sakit",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tempat-ibadah.html": "Jasa Pasang Pagar Panel Beton Tempat Ibadah",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pembatas-lahan.html": "Jasa Pasang Pagar Panel Beton Pembatas Lahan",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-keamanan.html": "Jasa Pasang Pagar Panel Beton Keamanan",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-kedap-suara.html": "Jasa Pasang Pagar Panel Beton Kedap Suara",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tahan-lama.html": "Jasa Pasang Pagar Panel Beton Tahan Lama",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-cepat-dipasang.html": "Jasa Pasang Pagar Panel Beton Cepat Dipasang",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tahan-banjir.html": "Jasa Pasang Pagar Panel Beton Tahan Banjir",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-motif.html": "Jasa Pasang Pagar Panel Beton Motif",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-polosan.html": "Jasa Pasang Pagar Panel Beton Polosan",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-custom.html": "Jasa Pasang Pagar Panel Beton Custom",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tinggi.html": "Jasa Pasang Pagar Panel Beton Tinggi",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-rendah.html": "Jasa Pasang Pagar Panel Beton Rendah"
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-perumahan.html": "Jasa Pasang Pagar Panel Beton Perumahan",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pabrik.html": "Jasa Pasang Pagar Panel Beton Pabrik",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-gudang.html": "Jasa Pasang Pagar Panel Beton Gudang",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-lahan-kosong.html": "Jasa Pasang Pagar Panel Beton Lahan Kosong",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-kandang-ternak.html": "Jasa Pasang Pagar Panel Beton Kandang Ternak",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pertambangan.html": "Jasa Pasang Pagar Panel Beton Pertambangan",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-sekolah.html": "Jasa Pasang Pagar Panel Beton Sekolah",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-rumah-sakit.html": "Jasa Pasang Pagar Panel Beton Rumah Sakit",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tempat-ibadah.html": "Jasa Pasang Pagar Panel Beton Tempat Ibadah",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pembatas-lahan.html": "Jasa Pasang Pagar Panel Beton Pembatas Lahan",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-keamanan.html": "Jasa Pasang Pagar Panel Beton Keamanan",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-kedap-suara.html": "Jasa Pasang Pagar Panel Beton Kedap Suara",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tahan-lama.html": "Jasa Pasang Pagar Panel Beton Tahan Lama",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-cepat-dipasang.html": "Jasa Pasang Pagar Panel Beton Cepat Dipasang",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tahan-banjir.html": "Jasa Pasang Pagar Panel Beton Tahan Banjir",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-motif.html": "Jasa Pasang Pagar Panel Beton Motif",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-polosan.html": "Jasa Pasang Pagar Panel Beton Polosan",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-custom.html": "Jasa Pasang Pagar Panel Beton Custom",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tinggi.html": "Jasa Pasang Pagar Panel Beton Tinggi",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-rendah.html": "Jasa Pasang Pagar Panel Beton Rendah",  // TYPE: VARIANT
 };
+
+// ============================================================
+// [VARIANT] - JASA PAGAR BESI
+// ============================================================
 
 const urlMappingJasaPagarBesi = {
   // ============================================================
-  // [MONEY PAGE] - HARGA PAGAR BESI
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pagar Besi Ulir
+  // [MONEY_MASTER] - HARGA PAGAR BESI
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pagar Besi Ulir
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/harga-pagar-besi-ulir.html": "Harga Pagar Besi Ulir",
+  "https://www.betonjayareadymix.com/2018/11/harga-pagar-besi-ulir.html": "Harga Pagar Besi Ulir",  // TYPE: MONEY_MASTER
   
   // ============================================================
   // SARAN ITEM BARU - JASA PAGAR BESI
-  // Status: [VARIANT - POST] di bawah Jasa Pembuatan Pagar Dinding Pembatas
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Besi
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Besi
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-besi.html": "Jasa Pagar Besi",
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pasang-pagar-besi.html": "Jasa Pasang Pagar Besi",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-besi.html": "Jasa Pagar Besi",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pasang-pagar-besi.html": "Jasa Pasang Pagar Besi",  // TYPE: MONEY_MASTER
 };
+
+// ============================================================
+// [VARIANT] - JASA DINDING BATA
+// ============================================================
 
 const urlMappingJasaDindingBata = {
   // ============================================================
   // SARAN ITEM BARU - JASA DINDING BATA
-  // Status: [VARIANT - POST] di bawah Jasa Pembuatan Pagar Dinding Pembatas
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Dinding Bata
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Dinding Bata
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-dinding-bata.html": "Jasa Dinding Bata",
-  // "https://www.betonjayareadymix.com/2019/08/harga-dinding-bata-per-m2.html": "Harga Dinding Bata per M2",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-dinding-bata.html": "Jasa Dinding Bata",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/harga-dinding-bata-per-m2.html": "Harga Dinding Bata per M2",  // TYPE: MONEY_MASTER
 };
+
+// ============================================================
+// [VARIANT] - JASA PAGAR KAWAT
+// ============================================================
 
 const urlMappingJasaPagarKawat = {
   // ============================================================
   // SARAN ITEM BARU - JASA PAGAR KAWAT
-  // Status: [VARIANT - POST] di bawah Jasa Pembuatan Pagar Dinding Pembatas
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Kawat
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Kawat
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-kawat.html": "Jasa Pagar Kawat",
-  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-kawat-per-meter.html": "Harga Pagar Kawat per Meter",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-kawat.html": "Jasa Pagar Kawat",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-kawat-per-meter.html": "Harga Pagar Kawat per Meter",  // TYPE: MONEY_MASTER
 };
+
+// ============================================================
+// [VARIANT] - JASA PAGAR BRC
+// ============================================================
 
 const urlMappingJasaPagarBRC = {
   // ============================================================
   // SARAN ITEM BARU - JASA PAGAR BRC
-  // Status: [VARIANT - POST] di bawah Jasa Pembuatan Pagar Dinding Pembatas
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar BRC
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar BRC
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-brc.html": "Jasa Pagar BRC",
-  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-brc-per-meter.html": "Harga Pagar BRC per Meter",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-brc.html": "Jasa Pagar BRC",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-brc-per-meter.html": "Harga Pagar BRC per Meter",  // TYPE: MONEY_MASTER
 };
+
+// ============================================================
+// [VARIANT] - JASA PAGAR RUMAH
+// ============================================================
 
 const urlMappingJasaPagarRumah = {
   // ============================================================
-  // [MONEY PAGE] - HARGA & BIAYA
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Jasa Pasang Pagar Rumah
+  // [MONEY_MASTER] - HARGA & BIAYA
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Jasa Pasang Pagar Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah.html": "Harga Jasa Pasang Pagar Rumah",
-  "https://www.betonjayareadymix.com/2018/11/biaya-jasa-pasang-pagar-rumah.html": "Biaya Jasa Pasang Pagar Rumah",
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah.html": "Harga Jasa Pasang Pagar Rumah",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/11/biaya-jasa-pasang-pagar-rumah.html": "Biaya Jasa Pasang Pagar Rumah",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [VARIANT - POST] - JASA PASANG PAGAR RUMAH
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Rumah
+  // [SUB1] - JASA PASANG PAGAR RUMAH (edukasi)
+  // 🧠 TYPE: SUB1 (WAJIB tampil, bridge ke money page)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah.html": "Jasa Pasang Pagar Rumah",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-terdekat.html": "Jasa Pasang Pagar Rumah Terdekat",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-besi-beton-kayu.html": "Jasa Pasang Pagar Rumah Besi Beton Kayu",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-minimalis-mewah.html": "Jasa Pasang Pagar Rumah Minimalis Mewah",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-profesional.html": "Jasa Pasang Pagar Rumah Profesional",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-pondasi-kuat.html": "Jasa Pasang Pagar Rumah Pondasi Kuat",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah.html": "Jasa Pasang Pagar Rumah",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-terdekat.html": "Jasa Pasang Pagar Rumah Terdekat",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-besi-beton-kayu.html": "Jasa Pasang Pagar Rumah Besi Beton Kayu",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-minimalis-mewah.html": "Jasa Pasang Pagar Rumah Minimalis Mewah",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-profesional.html": "Jasa Pasang Pagar Rumah Profesional",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-pondasi-kuat.html": "Jasa Pasang Pagar Rumah Pondasi Kuat",  // TYPE: SUB1
   
   // ============================================================
-  // [SUB1] - PANDUAN / BRIDGE
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Keunggulan Jasa Pasang Pagar Rumah
+  // [SUB1] - PANDUAN / BRIDGE (keunggulan, tukang)
+  // 🧠 TYPE: SUB1 (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Keunggulan Jasa Pasang Pagar Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/keunggulan-jasa-pasang-pagar-rumah.html": "Keunggulan Jasa Pasang Pagar Rumah",
-  "https://www.betonjayareadymix.com/2018/11/tukang-pasang-pagar-rumah.html": "Tukang Pasang Pagar Rumah"
+  "https://www.betonjayareadymix.com/2018/11/keunggulan-jasa-pasang-pagar-rumah.html": "Keunggulan Jasa Pasang Pagar Rumah",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2018/11/tukang-pasang-pagar-rumah.html": "Tukang Pasang Pagar Rumah",  // TYPE: SUB1
 };
+
+// ============================================================
+// [VARIANT] - JASA PAGAR BANGUNAN (GEDUNG/KOMERSIAL)
+// ============================================================
 
 const urlMappingJasaPagarBangunan = {
   // ============================================================
-  // SARAN ITEM BARU - JASA PAGAR BANGUNAN (GEDUNG/KOMERSIAL)
-  // Status: [VARIANT - POST] di bawah Jasa Pembuatan Pagar Dinding Pembatas
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Bangunan
+  // SARAN ITEM BARU - JASA PAGAR BANGUNAN
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Bangunan
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-bangunan.html": "Jasa Pagar Bangunan",
-  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-bangunan-per-meter.html": "Harga Pagar Bangunan per Meter",
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-bangunan.html": "Jasa Pagar Bangunan",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-bangunan-per-meter.html": "Harga Pagar Bangunan per Meter",  // TYPE: MONEY_MASTER
 };
-/*📝 SARAN BREADCRUMB 4 LEVEL (SKIP PILLAR)
-Halaman									Breadcrumb
-Jasa Pagar Beton Precast				Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar Beton Precast
-Harga Pasang Pagar Panel Beton			Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pasang Pagar Panel Beton
-Jasa Pasang Pagar Panel Beton Jakarta	Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton Jakarta
-Harga Pagar Besi Ulir					Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pagar Besi Ulir
-Jasa Pasang Pagar Rumah					Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Rumah
-Keunggulan Jasa Pasang Pagar Rumah		Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Keunggulan Jasa Pasang Pagar Rumah
-*/
-
-/*const urlMappingPengamananSisiJalan = {
-"https://www.betonjayareadymix.com/p/jasa-pemasangan-guardrail-besi.html": "Jasa Pemasangan Guardrail Besi",
-  "https://www.betonjayareadymix.com/p/jasa-pemasangan-railing-jalan.html": "Jasa Pemasangan Railing Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-bollard-tiang-pengaman-jalan.html": "Jasa Bollard & Tiang Pengaman Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-pagar-pembatas-flyover-jembatan.html": "Jasa Pagar Pembatas Flyover & Jembatan",
-  "https://www.betonjayareadymix.com/p/jasa-pemasangan-kanstin-jalan.html": "Jasa Pemasangan Kanstin Jalan"
-
-};*/
 
 // ============================================================
 // JASA KANSTIN JALAN (VARIANT)
+// Parent: Jasa Pengaman Sisi Jalan (/p/jasa-pengaman-sisi-jalan.html)
 // ============================================================
 
 const urlMappingJasaKanstinJalan = {
   // ============================================================
-  // [MONEY PAGE] - HARGA PEMASANGAN KANSTIN
+  // [MONEY_MASTER] - HARGA PEMASANGAN KANSTIN
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
   // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pengaman Sisi Jalan > Harga Pemasangan Kanstin
   // ============================================================
-  "https://www.betonjayareadymix.com/2021/04/harga-pemasangan-kanstin.html": "Harga Pemasangan Kanstin",
+  "https://www.betonjayareadymix.com/2021/04/harga-pemasangan-kanstin.html": "Harga Pemasangan Kanstin",  // TYPE: MONEY_MASTER
 
   // ============================================================
-  // [MONEY PAGE] - PEMASANGAN KANSTIN JALAN
-  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pengaman Sisi Jalan > Pemasangan Kanstin Jalan
+  // [MONEY_MASTER] - PEMASANGAN KANSTIN JALAN
   // ============================================================
-  "https://www.betonjayareadymix.com/2021/08/pemasangan-kanstin-jalan.html": "Pemasangan Kanstin Jalan",
+  "https://www.betonjayareadymix.com/2021/08/pemasangan-kanstin-jalan.html": "Pemasangan Kanstin Jalan",  // TYPE: MONEY_MASTER
 
   // ============================================================
   // [SUB1] - PANDUAN / BRIDGE (CARA PASANG, METODE, ANALISA)
+  // 🧠 TYPE: SUB1 (WAJIB tampil, bridge ke money page)
   // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pengaman Sisi Jalan > Cara Pasang Kanstin Taman
   // ============================================================
-  "https://www.betonjayareadymix.com/2021/09/cara-pasang-kanstin-taman.html": "Cara Pasang Kanstin Taman",
-  "https://www.betonjayareadymix.com/2021/08/cara-pasang-kanstin-trotoar.html": "Cara Pasang Kanstin Trotoar",
-  "https://www.betonjayareadymix.com/2021/04/metode-pemasangan-kanstin.html": "Metode Pemasangan Kanstin",
-  "https://www.betonjayareadymix.com/2021/04/analisa-pemasangan-kanstin.html": "Analisa Pemasangan Kanstin",
-  "https://www.betonjayareadymix.com/2021/04/analisa-pekerjaan-kanstin-beton.html": "Analisa Pekerjaan Kanstin Beton"
+  "https://www.betonjayareadymix.com/2021/09/cara-pasang-kanstin-taman.html": "Cara Pasang Kanstin Taman",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2021/08/cara-pasang-kanstin-trotoar.html": "Cara Pasang Kanstin Trotoar",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2021/04/metode-pemasangan-kanstin.html": "Metode Pemasangan Kanstin",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2021/04/analisa-pemasangan-kanstin.html": "Analisa Pemasangan Kanstin",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2021/04/analisa-pekerjaan-kanstin-beton.html": "Analisa Pekerjaan Kanstin Beton",  // TYPE: SUB1
 };
 
 // ============================================================
@@ -252,38 +276,320 @@ const urlMappingJasaKanstinJalan = {
 /*
 📌 SARAN ITEM BARU (UNTUK DITAMBAHKAN):
 
-| Nama Halaman | URL | Status | Alasan |
-|--------------|-----|--------|--------|
-| Jasa Pemasangan Kanstin Profesional | /2022/01/jasa-pemasangan-kanstin-profesional.html | [MONEY PAGE] | Menargetkan keyword jasa, bukan harga |
-| Harga Borongan Pasang Kanstin | /2022/01/harga-borongan-pasang-kanstin.html | [MONEY PAGE] | Variasi keyword borongan |
-| Jual Kanstin Beton Terdekat | /2022/01/jual-kanstin-beton-terdekat.html | [MONEY PAGE] | Menargetkan transaksi pembelian kanstin |
-| Perbedaan Jenis Kanstin | /2022/01/perbedaan-jenis-kanstin.html | [SUB1] | Edukasi perbedaan tipe kanstin |
+| Nama Halaman | URL | Type | Alasan |
+|--------------|-----|------|--------|
+| Jasa Pemasangan Kanstin Profesional | /2022/01/jasa-pemasangan-kanstin-profesional.html | MONEY_MASTER | Menargetkan keyword jasa, bukan harga |
+| Harga Borongan Pasang Kanstin | /2022/01/harga-borongan-pasang-kanstin.html | MONEY_MASTER | Variasi keyword borongan |
+| Jual Kanstin Beton Terdekat | /2022/01/jual-kanstin-beton-terdekat.html | MONEY_MASTER | Menargetkan transaksi pembelian kanstin |
+| Perbedaan Jenis Kanstin | /2022/01/perbedaan-jenis-kanstin.html | SUB1 | Edukasi perbedaan tipe kanstin |
 */
 // ============================================================
-// 🧠 SEO NOTES - JASA KANSTIN JALAN
+// FUNGSI GENERATE BREADCRUMB - VERSI FINAL
+// UNTUK SEMUA PILLAR (PRODUK, MATERIAL, JASA, INTERIOR, DLL)
+// MAX_LEVEL = 4 (TERMASUK HOME)
+// SKIP LEVEL BEKERJA UNTUK PILLAR & SUB2
 // ============================================================
 
-/*
-📌 KESIMPULAN:
-
-1. Semua URL adalah [MONEY PAGE] atau [SUB1] di bawah VARIANT Jasa Kanstin Jalan
-2. Tidak ada [SUB2] baru karena Kanstin adalah VARIANT langsung dari Jasa Pengaman Sisi Jalan
-3. Halaman dengan keyword "harga" atau "pemasangan" → [MONEY PAGE]
-4. Halaman dengan keyword "cara", "metode", "analisa" → [SUB1] (bridge ke money page)
-5. Breadcrumb maksimal 4 level (skip PILLAR Jasa Konstruksi)
-
-📌 YANG PERLU DITAMBAHKAN:
-- Jasa Pemasangan Kanstin Profesional ([MONEY PAGE])
-- Harga Borongan Pasang Kanstin ([MONEY PAGE])
-- Jual Kanstin Beton Terdekat ([MONEY PAGE])
-
-📌 BREADCRUMB UNTUK MONEY PAGE (4 level):
-Home > Jasa Pembatas & Pengaman > Jasa Pengaman Sisi Jalan > Harga Pemasangan Kanstin
-
-📌 BREADCRUMB UNTUK SUB1 (4 level):
-Home > Jasa Pembatas & Pengaman > Jasa Pengaman Sisi Jalan > Cara Pasang Kanstin Taman
-*/
-
+function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = [], pillarType = 'JASA_KONSTRUKSI') {
+    
+    const MAX_LEVEL = 4;
+    const DOMAIN = 'https://www.betonjayareadymix.com';
+    
+    // ============================================================
+    // 1. VALIDASI PILLAR TYPE
+    // ============================================================
+    const validPillarTypes = ['PRODUK_KONSTRUKSI', 'MATERIAL_KONSTRUKSI', 'JASA_KONSTRUKSI', 
+                               'PRODUK_INTERIOR', 'JASA_DESAIN_INTERIOR'];
+    if (!validPillarTypes.includes(pillarType)) {
+        console.error(`❌ ERROR: "${pillarType}" BUKAN PILLAR TYPE yang valid!`);
+        console.error(`   Gunakan salah satu dari: ${validPillarTypes.join(', ')}`);
+        return null;
+    }
+    
+    const pageTitle = mappingObj[currentUrl];
+    if (!pageTitle) {
+        console.error(`❌ ERROR: URL "${currentUrl}" tidak ditemukan di mapping`);
+        return null;
+    }
+    
+    // ============================================================
+    // 2. KUMPULKAN SEMUA NAMA HALAMAN DARI MAPPING (UNTUK REFERENSI)
+    // ============================================================
+    const knownPages = [];
+    for (const [url, name] of Object.entries(mappingObj)) {
+        if (name && typeof name === 'string') {
+            knownPages.push(name.toLowerCase());
+        }
+    }
+    
+    // ============================================================
+    // 3. DETEKSI TYPE OTOMATIS
+    // ============================================================
+    function detectPageType(pageName, position, totalLevels) {
+        const lowerName = pageName.toLowerCase();
+        const parts = pageName.split(' ');
+        const lastWord = parts[parts.length - 1].toLowerCase();
+        const firstWord = parts[0].toLowerCase();
+        const wordCount = parts.length;
+        
+        // PILLAR: posisi pertama
+        if (position === 0) return 'PILLAR';
+        
+        // MONEY_LEADGEN
+        if (lowerName.startsWith('konsultasi')) return 'MONEY_LEADGEN';
+        
+        // MONEY_MASTER (deteksi transaksi)
+        const transactionWords = ['harga', 'sewa', 'jual', 'beli', 'pesan', 'booking', 'order', 'rental',
+            'biaya', 'tarif', 'rate', 'cost', 'price', 'fee', 'charge', 'promo', 'diskon', 'obral',
+            'gratis', 'voucher', 'cashback', 'cicilan', 'kredit', 'dp', 'angsuran', 'quote', 'penawaran', 'estimasi'];
+        
+        for (const word of transactionWords) {
+            if (lowerName.startsWith(word + ' ') || lowerName.includes(' ' + word + ' ') || lowerName.endsWith(' ' + word)) {
+                return 'MONEY_MASTER';
+            }
+        }
+        
+        // SUB1 (deteksi panduan)
+        const guideWords = ['panduan', 'cara', 'tips', 'tutorial', 'langkah', 'petunjuk', 'pedoman', 'instruksi',
+            'guide', 'how to', 'step by step', 'strategi', 'metode', 'teknik', 'rahasia', 'kunci sukses',
+            'wajib tahu', 'perlu diketahui', 'edukasi', 'belajar', 'mempelajari', 'pemahaman', 'solusi', 'jawaban'];
+        
+        for (const word of guideWords) {
+            if (lowerName.startsWith(word + ' ') || lowerName.includes(' ' + word + ' ')) {
+                return 'SUB1';
+            }
+        }
+        
+        // VARIANT (deteksi angka atau kata kunci)
+        if (/\d/.test(lowerName)) return 'VARIANT';
+        
+        const variantWords = ['tipe', 'type', 'ukuran', 'model', 'varian', 'warna', 'bentuk', 'seri', 'versi',
+            'grade', 'kelas', 'standar', 'jenis', 'macam', 'ragam', 'kategori', 'spesifikasi', 'detail', 'rinci',
+            'kapasitas', 'volume', 'berat', 'panjang', 'lebar', 'tinggi', 'tebal', 'diameter', 'radius', 'luas',
+            'bahan', 'material', 'komposisi', 'kualitas', 'mutu', 'kode', 'plus', 'minus', 'kelebihan', 'kekurangan',
+            'baru', 'lama', 'bekas', 'second', 'original', 'kw', 'putih', 'hitam', 'merah', 'biru', 'hijau',
+            'kecil', 'besar', 'sedang', 'mini', 'maxi', 'jumbo', 'extra', 'super'];
+        
+        for (const word of variantWords) {
+            if (lowerName.includes(' ' + word + ' ') || lowerName.endsWith(' ' + word)) {
+                return 'VARIANT';
+            }
+        }
+        
+        // MONEY_CHILD (deteksi lokasi)
+        function isLikelyLocation(word) {
+            if (word.length < 3 || word.length > 25) return false;
+            if (!/^[a-zA-Z]+$/.test(word)) return false;
+            if (word === firstWord) return false;
+            
+            const notLocationWords = ['mini', 'maxi', 'super', 'extra', 'plus', 'pro', 'max', 'ultra',
+                'baru', 'lama', 'bekas', 'second', 'original', 'kw', 'grade', 'murah', 'mahal', 'hemat',
+                'premium', 'standar', 'ekonomis', 'kecil', 'besar', 'sedang', 'panjang', 'pendek', 'tebal', 'tipis',
+                'putih', 'hitam', 'merah', 'biru', 'hijau', 'kuning', 'ungu', 'abu', 'coklat'];
+            if (notLocationWords.includes(word)) return false;
+            
+            const isKnownProduct = knownPages.some(known => known === word || (known.includes(word) && word.length > 3));
+            if (isKnownProduct) return false;
+            
+            if (word.length >= 4 && word.length <= 12) return true;
+            if (/[aiueo]$/.test(word) && word.length >= 4) return true;
+            
+            const locationPatterns = ['ang', 'ung', 'eng', 'ong', 'an', 'in', 'un', 'en', 
+                'ap', 'ip', 'op', 'ar', 'ur', 'er', 'or', 'karta', 'jaya', 'pura', 'sari', 'mulya', 'agung', 'asih', 'ayem'];
+            for (const pattern of locationPatterns) {
+                if (word.endsWith(pattern) && word.length >= 4) return true;
+            }
+            
+            if (word.length >= 5 && /[aiueo].*[aiueo]/.test(word)) return true;
+            return false;
+        }
+        
+        if (wordCount >= 2 && isLikelyLocation(lastWord)) return 'MONEY_CHILD';
+        
+        return 'SUB2';
+    }
+    
+    // ============================================================
+    // 4. FUNGSI BANTUAN
+    // ============================================================
+    function generateIdFromName(name) {
+        return name.replace(/[^a-zA-Z0-9]/g, '') + 'Post';
+    }
+    
+    // ============================================================
+    // 5. BANGUN LEVELS DARI ARRAY OBJECT (NAMA + URL)
+    // ============================================================
+    const allLevels = [];
+    for (let i = 0; i < breadcrumbItems.length; i++) {
+        const item = breadcrumbItems[i];
+        const name = typeof item === 'string' ? item : item.name;
+        const url = typeof item === 'string' ? null : item.url;
+        
+        allLevels.push({
+            name: name,
+            url: url,
+            type: detectPageType(name, i, breadcrumbItems.length),
+            id: generateIdFromName(name),
+            position: i
+        });
+    }
+    
+    // ============================================================
+    // 6. VALIDASI & FALLBACK URL
+    // ============================================================
+    for (const level of allLevels) {
+        if (!level.url) {
+            let foundUrl = null;
+            for (const [url, name] of Object.entries(mappingObj)) {
+                if (name === level.name) {
+                    foundUrl = url.startsWith('http') ? url : DOMAIN + url;
+                    break;
+                }
+            }
+            if (!foundUrl) {
+                const slug = level.name.toLowerCase().replace(/ /g, '-');
+                foundUrl = `${DOMAIN}/p/${slug}.html`;
+            }
+            level.url = foundUrl;
+        } else if (!level.url.startsWith('http')) {
+            level.url = DOMAIN + level.url;
+        }
+    }
+    
+    // ============================================================
+    // 7. TENTUKAN LEVEL YANG AKAN DITAMPILKAN (MAX 4 LEVEL)
+    // ============================================================
+    const selectedLevels = [];
+    
+    // Level 1: Home (WAJIB)
+    selectedLevels.push({ name: 'BJR', url: DOMAIN, isHome: true });
+    
+    // Hitung slot tersisa (MAX_LEVEL - 1 untuk home - 1 untuk halaman saat ini)
+    let remainingSlots = MAX_LEVEL - 2;
+    
+    console.log(`📊 ========================================`);
+    console.log(`📊 Breadcrumb Generator - SEO Tercanggih`);
+    console.log(`📊 Max level: ${MAX_LEVEL}, slot untuk parent: ${remainingSlots}`);
+    console.log(`📊 Breadcrumb items: ${allLevels.map(l => l.name).join(' → ')}`);
+    console.log(`📊 ========================================`);
+    
+    // Parent terdekat (level terakhir) - WAJIB tampil
+    let parentTerdekat = null;
+    if (allLevels.length > 0) {
+        parentTerdekat = allLevels[allLevels.length - 1];
+        selectedLevels.push(parentTerdekat);
+        remainingSlots--;
+        console.log(`✅ WAJIB: "${parentTerdekat.name}" (${parentTerdekat.type}) - sisa slot: ${remainingSlots}`);
+    }
+    
+    // Level lainnya (dari awal sampai sebelum parent terdekat)
+    const otherLevels = [...allLevels.slice(0, allLevels.length - 1)].reverse();
+    const canSkipTypes = ['PILLAR', 'SUB2'];
+    
+    for (const level of otherLevels) {
+        if (remainingSlots <= 0) {
+            console.log(`📌 SKIP: "${level.name}" (${level.type}) - tidak ada slot tersisa`);
+            continue;
+        }
+        
+        if (canSkipTypes.includes(level.type)) {
+            console.log(`📌 SKIP: "${level.name}" (${level.type}) - type boleh skip`);
+            continue;
+        }
+        
+        selectedLevels.splice(1, 0, level);
+        remainingSlots--;
+        console.log(`✅ TAMBAH: "${level.name}" (${level.type}) - sisa slot: ${remainingSlots}`);
+    }
+    
+    // Halaman saat ini (WAJIB)
+    const currentFullUrl = currentUrl.startsWith('http') ? currentUrl : DOMAIN + currentUrl;
+    selectedLevels.push({
+        name: pageTitle,
+        url: currentFullUrl,
+        isCurrent: true
+    });
+    
+    // Update position
+    for (let i = 0; i < selectedLevels.length; i++) {
+        selectedLevels[i].position = i + 1;
+    }
+    
+    console.log(`✅ FINAL (${selectedLevels.length} level): ${selectedLevels.map(l => l.name).join(' → ')}`);
+    
+    // ============================================================
+    // 8. GENERATE HTML BREADCRUMB
+    // ============================================================
+    let breadcrumbHtml = `<div class="breadcrumbs">\n<span>\n`;
+    breadcrumbHtml += `<a href="${DOMAIN}/" itemprop="item" title="Beton Jaya Readymix">`;
+    breadcrumbHtml += `<meta content="1" itemprop="position">`;
+    breadcrumbHtml += `<span itemprop="name">BJR</span></a>\n`;
+    breadcrumbHtml += `</span>\n &nbsp;›&nbsp;\n\n`;
+    breadcrumbHtml += `<span>\n<div id="breadcrumbContainer" style="display: inline;">\n`;
+    
+    for (let i = 1; i < selectedLevels.length; i++) {
+        const level = selectedLevels[i];
+        const isLast = (i === selectedLevels.length - 1);
+        
+        if (!isLast) {
+            breadcrumbHtml += `<a href="${level.url}" id="${level.id}" title="${level.name.toUpperCase()}" style="visibility: visible;">`;
+            breadcrumbHtml += `<span id="${level.id}Name">${level.name}</span>&nbsp;›&nbsp;\n`;
+            breadcrumbHtml += `</a>\n`;
+        } else {
+            breadcrumbHtml += `<span id="pageNameBreadcrumb">${level.name}</span>\n`;
+        }
+    }
+    
+    breadcrumbHtml += `</div>\n</span>\n</div>`;
+    
+    // ============================================================
+    // 9. GENERATE JSON-LD SCHEMA
+    // ============================================================
+    const jsonLdItems = [];
+    jsonLdItems.push({ "@type": "ListItem", "position": 1, "name": "Beton Jaya Readymix", "item": DOMAIN });
+    
+    for (let i = 1; i < selectedLevels.length; i++) {
+        jsonLdItems.push({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": selectedLevels[i].name,
+            "item": selectedLevels[i].url
+        });
+    }
+    
+    // ============================================================
+    // 10. HAPUS BREADCRUMB LAMA & INJECT YANG BARU
+    // ============================================================
+    // Hapus semua breadcrumb lama (manual)
+    const oldBreadcrumbs = document.querySelectorAll('.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"]');
+    oldBreadcrumbs.forEach(el => el.remove());
+    
+    // Hapus JSON-LD lama
+    const oldJsonLd = document.querySelector('script[data-breadcrumb="true"]');
+    if (oldJsonLd) oldJsonLd.remove();
+    
+    // Inject HTML breadcrumb baru
+    const mainContent = document.querySelector('main, article, .content, #main-content, .post-content');
+    if (mainContent?.firstChild) {
+        mainContent.insertAdjacentHTML('afterbegin', breadcrumbHtml);
+    } else {
+        document.body.insertAdjacentHTML('afterbegin', breadcrumbHtml);
+    }
+    
+    // Inject JSON-LD baru
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-breadcrumb', 'true');
+    script.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": jsonLdItems
+    });
+    document.head.appendChild(script);
+    
+    console.log(`✅ Breadcrumb injected ke DOM`);
+    return breadcrumbHtml;
+}
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPembatasKonsPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
