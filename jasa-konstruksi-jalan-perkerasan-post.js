@@ -89,43 +89,34 @@ urlMappingJasaPerkerasanAgregatJalanPost	0		-	-		-						3+ URL 			(saran)
 
 const urlMappingJasaPavingBlockJalanPost = {
   // ============================================================
-  // [MONEY PAGE] - HARGA PASANG PAVING BLOCK (TRANSACTIONAL)
+  // [MONEY_MASTER] - HARGA PASANG PAVING BLOCK (TRANSACTIONAL)
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-per-m2.html": "Harga Pasang Paving Block per M2", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-per-m2.html": "Harga Pasang Paving Block per M2", // TYPE: MONEY_MASTER [SARAN DITAMBAHKAN]
   
   // ============================================================
-  // [MONEY PAGE] - HARGA PER LOKASI (TRANSACTIONAL)
+  // [MONEY_CHILD] - HARGA PER LOKASI (TRANSACTIONAL)
+  // 🧠 TYPE: MONEY_CHILD (WAJIB tampil, parent: MONEY_MASTER atau SUB2)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-jakarta.html": "Harga Pasang Paving Block Jakarta", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-bogor.html": "Harga Pasang Paving Block Bogor", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-bekasi.html": "Harga Pasang Paving Block Bekasi", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-tangerang.html": "Harga Pasang Paving Block Tangerang", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-depok.html": "Harga Pasang Paving Block Depok", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-jakarta.html": "Harga Pasang Paving Block Jakarta", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-bogor.html": "Harga Pasang Paving Block Bogor", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-bekasi.html": "Harga Pasang Paving Block Bekasi", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-tangerang.html": "Harga Pasang Paving Block Tangerang", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pasang-paving-block-depok.html": "Harga Pasang Paving Block Depok", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
   
   // ============================================================
   // [SUB2] - JENIS PAVING BLOCK (INFORMASIONAL)
+  // 🧠 TYPE: SUB2 (boleh skip)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/jenis-paving-block-untuk-jalan.html": "Jenis Paving Block untuk Jalan", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/cara-memasang-paving-block.html": "Cara Memasang Paving Block", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/jenis-paving-block-untuk-jalan.html": "Jenis Paving Block untuk Jalan", // TYPE: SUB2 [SARAN DITAMBAHKAN]
+  
+  // ============================================================
+  // [SUB1] - PANDUAN (BRIDGE KE MONEY)
+  // 🧠 TYPE: SUB1 (WAJIB tampil)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/01/cara-memasang-paving-block.html": "Cara Memasang Paving Block", // TYPE: SUB1 [SARAN DITAMBAHKAN]
 };
 
-// ============================================================
-// 🟡 SARAN PENAMBAHAN URL
-// ============================================================
-/*
-📌 DAFTAR URL YANG DISARANKAN UNTUK DITAMBAHKAN:
-
-| No | URL | Nama Halaman | Status SEO | Parent | Alasan |
-|----|-----|--------------|------------|--------|--------|
-| 1 | /2019/01/harga-pasang-paving-block-per-m2.html | Harga Pasang Paving Block per M2 | [MONEY PAGE] | Jasa Perkerasan Jalan | Menarget keyword transaksional |
-| 2 | /2019/01/harga-pasang-paving-block-jakarta.html | Harga Pasang Paving Block Jakarta | [MONEY PAGE] | Jasa Perkerasan Jalan | Target lokasi spesifik |
-| 3 | /2019/01/harga-pasang-paving-block-bogor.html | Harga Pasang Paving Block Bogor | [MONEY PAGE] | Jasa Perkerasan Jalan | Target lokasi spesifik |
-| 4 | /2019/01/harga-pasang-paving-block-bekasi.html | Harga Pasang Paving Block Bekasi | [MONEY PAGE] | Jasa Perkerasan Jalan | Target lokasi spesifik |
-| 5 | /2019/01/harga-pasang-paving-block-tangerang.html | Harga Pasang Paving Block Tangerang | [MONEY PAGE] | Jasa Perkerasan Jalan | Target lokasi spesifik |
-| 6 | /2019/01/harga-pasang-paving-block-depok.html | Harga Pasang Paving Block Depok | [MONEY PAGE] | Jasa Perkerasan Jalan | Target lokasi spesifik |
-| 7 | /2019/01/jenis-paving-block-untuk-jalan.html | Jenis Paving Block untuk Jalan | [SUB2] | Jasa Perkerasan Jalan | Informasional, edukasi |
-| 8 | /2019/01/cara-memasang-paving-block.html | Cara Memasang Paving Block | [SUB1] | Jasa Perkerasan Jalan | Bridge ke MONEY page |
-*/
 // ============================================================
 // JASA PENGECORAN JALAN BETON - BLOG POST (MONEY PAGE & INFORMASIONAL)
 // ============================================================
@@ -136,73 +127,39 @@ const urlMappingJasaPavingBlockJalanPost = {
 
 const urlMappingJasaPengecoranJalanBetonPost = {
   // ============================================================
-  // [MONEY PAGE] - MASTER HARGA (TRANSACTIONAL)
-  // 🧠 SEO NOTE: Halaman ini adalah master untuk harga cor beton jalan.
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Perkerasan Jalan > Harga Cor Beton Jalan
+  // [MONEY_MASTER] - MASTER HARGA (TRANSACTIONAL)
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/05/harga-cor-beton-jalan-per-meter.html": "Harga Cor Beton Jalan Per Meter",
-  "https://www.betonjayareadymix.com/2021/12/harga-cor-beton-untuk-jalan.html": "Harga Cor Beton Untuk Jalan",
+  "https://www.betonjayareadymix.com/2018/05/harga-cor-beton-jalan-per-meter.html": "Harga Cor Beton Jalan Per Meter", // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2021/12/harga-cor-beton-untuk-jalan.html": "Harga Cor Beton Untuk Jalan", // TYPE: MONEY_MASTER
   
   // ============================================================
-  // [MONEY PAGE] - BORONGAN COR BETON PER LOKASI (TRANSACTIONAL)
-  // 🧠 SEO NOTE: Masing-masing URL menarget keyword "borongan cor beton jalan" + lokasi.
+  // [MONEY_CHILD] - BORONGAN COR BETON PER JENIS (TRANSACTIONAL)
+  // 🧠 TYPE: MONEY_CHILD (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-desa.html": "Borongan Cor Beton Jalan Desa",
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-raya.html": "Borongan Cor Beton Jalan Raya",
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-tol.html": "Borongan Cor Beton Jalan Tol",
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-desa.html": "Borongan Cor Beton Jalan Desa", // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-raya.html": "Borongan Cor Beton Jalan Raya", // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jalan-tol.html": "Borongan Cor Beton Jalan Tol", // TYPE: MONEY_CHILD
   
   // ============================================================
-  // [MONEY PAGE] - HARGA COR BETON JALAN PER LOKASI (TRANSACTIONAL)
-  // 🧠 SEO NOTE: URL dengan konten tipis tetap dipertahankan karena menarget keyword lokasi.
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Perkerasan Jalan > Harga Cor Beton Jalan [Kota]
+  // [MONEY_CHILD] - HARGA COR BETON JALAN PER LOKASI (TRANSACTIONAL)
+  // 🧠 TYPE: MONEY_CHILD (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-tasikmalaya.html": "Harga Cor Beton Jalan Tasikmalaya",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-sukabumi.html": "Harga Cor Beton Jalan Sukabumi",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-kuningan.html": "Harga Cor Beton Jalan Kuningan",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-cirebon.html": "Harga Cor Beton Jalan Cirebon",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-karawang.html": "Harga Cor Beton Jalan Karawang",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-majalengka.html": "Harga Cor Beton Jalan Majalengka",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-subang.html": "Harga Cor Beton Jalan Subang",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-ciamis.html": "Harga Cor Beton Jalan Ciamis",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-jakarta.html": "Harga Cor Beton Jalan Jakarta",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-bogor.html": "Harga Cor Beton Jalan Bogor",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-tangerang.html": "Harga Cor Beton Jalan Tangerang",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-bekasi.html": "Harga Cor Beton Jalan Bekasi",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-depok.html": "Harga Cor Beton Jalan Depok"
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-tasikmalaya.html": "Harga Cor Beton Jalan Tasikmalaya", // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-sukabumi.html": "Harga Cor Beton Jalan Sukabumi", // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-kuningan.html": "Harga Cor Beton Jalan Kuningan", // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-cirebon.html": "Harga Cor Beton Jalan Cirebon", // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-karawang.html": "Harga Cor Beton Jalan Karawang", // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-majalengka.html": "Harga Cor Beton Jalan Majalengka", // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-subang.html": "Harga Cor Beton Jalan Subang", // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-ciamis.html": "Harga Cor Beton Jalan Ciamis", // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-jakarta.html": "Harga Cor Beton Jalan Jakarta", // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-bogor.html": "Harga Cor Beton Jalan Bogor", // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-tangerang.html": "Harga Cor Beton Jalan Tangerang", // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-bekasi.html": "Harga Cor Beton Jalan Bekasi", // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-depok.html": "Harga Cor Beton Jalan Depok", // TYPE: MONEY_CHILD
 };
 
-// ============================================================
-// 🔴 REDIRECT NOTES - URL 404 & DUPLIKASI
-// ============================================================
-/*
-🧠 SEO CANNIBAL FIX - REDIRECT PLAN:
-
-| No | From URL | To URL | Type | Alasan SEO |
-|----|----------|--------|------|------------|
-| 1 | /2018/09/borongan-cor-beton-jala | /2018/09/borongan-cor-beton-jalan-desa.html | 301 | URL tidak lengkap (404), redirect ke URL terdekat |
-
-📌 CATATAN TAMBAHAN:
-- URL 'borongan-cor-beton-jalan-desa.html' kontennya sangat tipis (hanya 1 paragraf).
-  Disarankan untuk memperkaya konten dengan informasi detail (metode, harga, spesifikasi).
-- URL 'harga-cor-beton-jalan-bekasi.html' dan 'harga-cor-beton-jalan-depok.html' 
-  kontennya tipis, tetapi masih valid sebagai MONEY PAGE lokasi.
-  Disarankan untuk menambahkan tabel harga spesifik per kota.
-*/
-
-// ============================================================
-// 🟢 SEO NOTE - STATUS SEMUA URL
-// ============================================================
-/*
-✅ SEMUA URL di atas sudah valid dengan status [MONEY PAGE].
-✅ Masing-masing menarget keyword spesifik (harga + lokasi).
-✅ Tidak ada duplikasi intent karena lokasi berbeda.
-
-📌 REKOMENDASI:
-1. Perkaya konten 'borongan-cor-beton-jalan-desa.html' dengan detail harga dan metode
-2. Perkaya konten 'harga-cor-beton-jalan-[kota].html' dengan tabel harga spesifik per kota
-3. Tambahkan internal link antar sesama URL lokasi
-4. Pastikan semua URL memiliki CTA ke form pemesanan jasa cor beton
-*/
 // ============================================================
 // JASA PENGASPALAN JALAN - BLOG POST (MONEY PAGE & INFORMASIONAL)
 // ============================================================
@@ -213,42 +170,31 @@ const urlMappingJasaPengecoranJalanBetonPost = {
 
 const urlMappingJasaPengaspalanJalanPost = {
   // ============================================================
-  // [MONEY PAGE] - HARGA PENGASPALAN JALAN (TRANSACTIONAL)
+  // [MONEY_MASTER] - HARGA PENGASPALAN JALAN (TRANSACTIONAL)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-per-meter.html": "Harga Pengaspalan Jalan Per Meter", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-hotmix-per-meter.html": "Harga Hotmix Per Meter", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-per-meter.html": "Harga Pengaspalan Jalan Per Meter", // TYPE: MONEY_MASTER [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-hotmix-per-meter.html": "Harga Hotmix Per Meter", // TYPE: MONEY_MASTER [SARAN DITAMBAHKAN]
   
   // ============================================================
-  // [MONEY PAGE] - HARGA PER LOKASI (TRANSACTIONAL)
+  // [MONEY_CHILD] - HARGA PER LOKASI (TRANSACTIONAL)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-jakarta.html": "Harga Pengaspalan Jalan Jakarta", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-bogor.html": "Harga Pengaspalan Jalan Bogor", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-bekasi.html": "Harga Pengaspalan Jalan Bekasi", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-tangerang.html": "Harga Pengaspalan Jalan Tangerang", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-depok.html": "Harga Pengaspalan Jalan Depok", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-jakarta.html": "Harga Pengaspalan Jalan Jakarta", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-bogor.html": "Harga Pengaspalan Jalan Bogor", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-bekasi.html": "Harga Pengaspalan Jalan Bekasi", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-tangerang.html": "Harga Pengaspalan Jalan Tangerang", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-pengaspalan-jalan-depok.html": "Harga Pengaspalan Jalan Depok", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
   
   // ============================================================
   // [SUB2] - JENIS PENGASPALAN (INFORMASIONAL)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/jenis-pengaspalan-jalan-hotmix.html": "Jenis Pengaspalan Jalan Hotmix", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/cara-pengaspalan-jalan.html": "Cara Pengaspalan Jalan", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/jenis-pengaspalan-jalan-hotmix.html": "Jenis Pengaspalan Jalan Hotmix", // TYPE: SUB2 [SARAN DITAMBAHKAN]
+  
+  // ============================================================
+  // [SUB1] - PANDUAN (BRIDGE KE MONEY)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/01/cara-pengaspalan-jalan.html": "Cara Pengaspalan Jalan", // TYPE: SUB1 [SARAN DITAMBAHKAN]
 };
 
-// ============================================================
-// 🟡 SARAN PENAMBAHAN URL
-// ============================================================
-/*
-📌 DAFTAR URL YANG DISARANKAN UNTUK DITAMBAHKAN:
-
-| No | URL | Nama Halaman | Status SEO | Parent | Alasan |
-|----|-----|--------------|------------|--------|--------|
-| 1 | /2019/01/harga-pengaspalan-jalan-per-meter.html | Harga Pengaspalan Jalan Per Meter | [MONEY PAGE] | Jasa Perkerasan Jalan | Menarget keyword transaksional |
-| 2 | /2019/01/harga-hotmix-per-meter.html | Harga Hotmix Per Meter | [MONEY PAGE] | Jasa Perkerasan Jalan | Keyword populer "hotmix" |
-| 3 | /2019/01/harga-pengaspalan-jalan-jakarta.html | Harga Pengaspalan Jalan Jakarta | [MONEY PAGE] | Jasa Perkerasan Jalan | Target lokasi spesifik |
-| 4 | /2019/01/harga-pengaspalan-jalan-bogor.html | Harga Pengaspalan Jalan Bogor | [MONEY PAGE] | Jasa Perkerasan Jalan | Target lokasi spesifik |
-| 5 | /2019/01/jenis-pengaspalan-jalan-hotmix.html | Jenis Pengaspalan Jalan Hotmix | [SUB2] | Jasa Perkerasan Jalan | Informasional, edukasi |
-| 6 | /2019/01/cara-pengaspalan-jalan.html | Cara Pengaspalan Jalan | [SUB1] | Jasa Perkerasan Jalan | Bridge ke MONEY page |
-*/
 // ============================================================
 // JASA PERKERASAN AGREGAT JALAN - BLOG POST (MONEY PAGE & INFORMASIONAL)
 // ============================================================
@@ -259,58 +205,21 @@ const urlMappingJasaPengaspalanJalanPost = {
 
 const urlMappingJasaPerkerasanAgregatJalanPost = {
   // ============================================================
-  // [MONEY PAGE] - HARGA PERKERASAN AGREGAT (TRANSACTIONAL)
+  // [MONEY_MASTER] - HARGA PERKERASAN AGREGAT (TRANSACTIONAL)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-agregat-jalan.html": "Harga Perkerasan Agregat Jalan", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-agregat-jalan.html": "Harga Perkerasan Agregat Jalan", // TYPE: MONEY_MASTER [SARAN DITAMBAHKAN]
   
   // ============================================================
   // [SUB2] - JENIS PERKERASAN AGREGAT (INFORMASIONAL)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/jenis-perkerasan-agregat-untuk-jalan.html": "Jenis Perkerasan Agregat untuk Jalan", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/cara-pemasangan-perkerasan-agregat.html": "Cara Pemasangan Perkerasan Agregat", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/jenis-perkerasan-agregat-untuk-jalan.html": "Jenis Perkerasan Agregat untuk Jalan", // TYPE: SUB2 [SARAN DITAMBAHKAN]
+  
+  // ============================================================
+  // [SUB1] - PANDUAN (BRIDGE KE MONEY)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/01/cara-pemasangan-perkerasan-agregat.html": "Cara Pemasangan Perkerasan Agregat", // TYPE: SUB1 [SARAN DITAMBAHKAN]
 };
 
-// ============================================================
-// 🟡 SARAN PENAMBAHAN URL
-// ============================================================
-/*
-📌 DAFTAR URL YANG DISARANKAN UNTUK DITAMBAHKAN:
-
-| No | URL | Nama Halaman | Status SEO | Parent | Alasan |
-|----|-----|--------------|------------|--------|--------|
-| 1 | /2019/01/harga-perkerasan-agregat-jalan.html | Harga Perkerasan Agregat Jalan | [MONEY PAGE] | Jasa Perkerasan Jalan | Menarget keyword transaksional |
-| 2 | /2019/01/jenis-perkerasan-agregat-untuk-jalan.html | Jenis Perkerasan Agregat untuk Jalan | [SUB2] | Jasa Perkerasan Jalan | Informasional, edukasi |
-| 3 | /2019/01/cara-pemasangan-perkerasan-agregat.html | Cara Pemasangan Perkerasan Agregat | [SUB1] | Jasa Perkerasan Jalan | Bridge ke MONEY page |
-*/
-/*
-📋 RINGKASAN SARAN & TINDAKAN
-No	Tindakan																			Target	Prioritas
-1	Redirect 404 borongan-cor-beton-jala	ke borongan-cor-beton-jalan-desa.html		🔴 HIGH
-2	Perkaya konten borongan-cor-beton-jalan-desa.html	Tambah detail harga & metode	🟡 MEDIUM
-3	Perkaya konten harga-cor-beton-jalan-[kota].html	Tambah tabel harga spesifik per kota	🟡 MEDIUM
-4	Tambahkan URL untuk cluster paving block	5-8 URL									🟢 LOW
-5	Tambahkan URL untuk cluster pengaspalan	5-8 URL										🟢 LOW
-6	Tambahkan URL untuk cluster perkerasan agregat	3-5 URL								🟢 LOW
-✅ STATUS FINAL
-Const										Jumlah URL	Valid	Perlu Perhatian		Redirect	Saran Tambah
-urlMappingJasaPavingBlockJalanPost			0			0		0					0			5+
-urlMappingJasaPengecoranJalanBetonPost		16			14		2 (konten tipis)	1			0
-urlMappingJasaPengaspalanJalanPost			0			0		0					0			5+
-urlMappingJasaPerkerasanAgregatJalanPost	0			0		0					0			3+
-*/
-
-/*
-📊 RINGKASAN STATUS CLUSTER JASA PERKERASAN JALAN
-Const											Jumlah URL	Status	Prioritas
-urlMappingJasaPerkerasanJalan (parent SUB2)		3	✅ SUDAH VALID	-
-urlMappingJasaPavingBlockJalanPost				0	⚠️ KOSONG	🟡 MEDIUM
-urlMappingJasaPengecoranJalanBetonPost			16	✅ SUDAH DI ANALISA	-
-urlMappingJasaPengaspalanJalanPost				0	⚠️ KOSONG	🟡 MEDIUM
-urlMappingJasaPerkerasanAgregatJalanPost		0	⚠️ KOSONG	🟢 LOW
-urlMappingJasaPerkerasanJalanBetonPost			0	⚠️ KOSONG (BARU)	🟡 MEDIUM
-urlMappingJasaPerkerasanJalanAspalPost			0	⚠️ KOSONG (BARU)	🟡 MEDIUM
-urlMappingJasaPerkerasanJalanKompositPost		0	⚠️ KOSONG (BARU)	🟢 LOW
-*/
 // ============================================================
 // JASA PERKERASAN JALAN BETON - BLOG POST (MONEY PAGE & INFORMASIONAL)
 // ============================================================
@@ -321,48 +230,33 @@ urlMappingJasaPerkerasanJalanKompositPost		0	⚠️ KOSONG (BARU)	🟢 LOW
 
 const urlMappingJasaPerkerasanJalanBetonPost = {
   // ============================================================
-  // [MONEY PAGE] - MASTER HARGA (TRANSACTIONAL)
+  // [MONEY_MASTER] - MASTER HARGA (TRANSACTIONAL)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-beton-per-m2.html": "Harga Perkerasan Jalan Beton per M2", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-beton-per-m2.html": "Harga Perkerasan Jalan Beton per M2", // TYPE: MONEY_MASTER [SARAN DITAMBAHKAN]
   
   // ============================================================
-  // [MONEY PAGE] - HARGA PER LOKASI (TRANSACTIONAL)
+  // [MONEY_CHILD] - HARGA PER LOKASI (TRANSACTIONAL)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-beton-jakarta.html": "Harga Perkerasan Jalan Beton Jakarta", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-beton-bogor.html": "Harga Perkerasan Jalan Beton Bogor", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-beton-bekasi.html": "Harga Perkerasan Jalan Beton Bekasi", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-beton-tangerang.html": "Harga Perkerasan Jalan Beton Tangerang", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-beton-depok.html": "Harga Perkerasan Jalan Beton Depok", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-beton-jakarta.html": "Harga Perkerasan Jalan Beton Jakarta", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-beton-bogor.html": "Harga Perkerasan Jalan Beton Bogor", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-beton-bekasi.html": "Harga Perkerasan Jalan Beton Bekasi", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-beton-tangerang.html": "Harga Perkerasan Jalan Beton Tangerang", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-beton-depok.html": "Harga Perkerasan Jalan Beton Depok", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
   
   // ============================================================
   // [SUB2] - INFORMASI TEKNIS (INFORMASIONAL)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/spesifikasi-perkerasan-jalan-beton.html": "Spesifikasi Perkerasan Jalan Beton", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/metode-pengerjaan-perkerasan-jalan-beton.html": "Metode Pengerjaan Perkerasan Jalan Beton", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/standar-mutu-perkerasan-jalan-beton.html": "Standar Mutu Perkerasan Jalan Beton", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/spesifikasi-perkerasan-jalan-beton.html": "Spesifikasi Perkerasan Jalan Beton", // TYPE: SUB2 [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/metode-pengerjaan-perkerasan-jalan-beton.html": "Metode Pengerjaan Perkerasan Jalan Beton", // TYPE: SUB2 [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/standar-mutu-perkerasan-jalan-beton.html": "Standar Mutu Perkerasan Jalan Beton", // TYPE: SUB2 [SARAN DITAMBAHKAN]
   
   // ============================================================
   // [SUB1] - PANDUAN (BRIDGE KE MONEY)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/cara-memilih-perkerasan-jalan-beton.html": "Cara Memilih Perkerasan Jalan Beton", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/panduan-perkerasan-jalan-beton.html": "Panduan Perkerasan Jalan Beton" // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/cara-memilih-perkerasan-jalan-beton.html": "Cara Memilih Perkerasan Jalan Beton", // TYPE: SUB1 [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/panduan-perkerasan-jalan-beton.html": "Panduan Perkerasan Jalan Beton", // TYPE: SUB1 [SARAN DITAMBAHKAN]
 };
 
-// ============================================================
-// 🟡 SARAN PENAMBAHAN URL - PERKERASAN JALAN BETON
-// ============================================================
-/*
-📌 DAFTAR URL YANG DISARANKAN UNTUK DITAMBAHKAN:
-
-| No | URL | Nama Halaman | Status SEO | Parent | Alasan |
-|----|-----|--------------|------------|--------|--------|
-| 1 | /2019/01/harga-perkerasan-jalan-beton-per-m2.html | Harga Perkerasan Jalan Beton per M2 | [MONEY PAGE] | Jasa Perkerasan Jalan Beton | Menarget keyword transaksional |
-| 2 | /2019/01/harga-perkerasan-jalan-beton-jakarta.html | Harga Perkerasan Jalan Beton Jakarta | [MONEY PAGE] | Jasa Perkerasan Jalan Beton | Target lokasi spesifik |
-| 3 | /2019/01/spesifikasi-perkerasan-jalan-beton.html | Spesifikasi Perkerasan Jalan Beton | [SUB2] | Jasa Perkerasan Jalan Beton | Informasional teknis |
-| 4 | /2019/01/metode-pengerjaan-perkerasan-jalan-beton.html | Metode Pengerjaan Perkerasan Jalan Beton | [SUB2] | Jasa Perkerasan Jalan Beton | Informasional teknis |
-| 5 | /2019/01/standar-mutu-perkerasan-jalan-beton.html | Standar Mutu Perkerasan Jalan Beton | [SUB2] | Jasa Perkerasan Jalan Beton | Trust/Authority |
-| 6 | /2019/01/cara-memilih-perkerasan-jalan-beton.html | Cara Memilih Perkerasan Jalan Beton | [SUB1] | Jasa Perkerasan Jalan Beton | Bridge ke MONEY |
-*/
 // ============================================================
 // JASA PERKERASAN JALAN ASPAL - BLOG POST (MONEY PAGE & INFORMASIONAL)
 // ============================================================
@@ -373,49 +267,33 @@ const urlMappingJasaPerkerasanJalanBetonPost = {
 
 const urlMappingJasaPerkerasanJalanAspalPost = {
   // ============================================================
-  // [MONEY PAGE] - MASTER HARGA (TRANSACTIONAL)
+  // [MONEY_MASTER] - MASTER HARGA (TRANSACTIONAL)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-aspal-per-m2.html": "Harga Perkerasan Jalan Aspal per M2", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-hotmix-aspal-per-ton.html": "Harga Hotmix Aspal per Ton", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-aspal-per-m2.html": "Harga Perkerasan Jalan Aspal per M2", // TYPE: MONEY_MASTER [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-hotmix-aspal-per-ton.html": "Harga Hotmix Aspal per Ton", // TYPE: MONEY_MASTER [SARAN DITAMBAHKAN]
   
   // ============================================================
-  // [MONEY PAGE] - HARGA PER LOKASI (TRANSACTIONAL)
+  // [MONEY_CHILD] - HARGA PER LOKASI (TRANSACTIONAL)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-aspal-jakarta.html": "Harga Perkerasan Jalan Aspal Jakarta", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-aspal-bogor.html": "Harga Perkerasan Jalan Aspal Bogor", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-aspal-bekasi.html": "Harga Perkerasan Jalan Aspal Bekasi", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-aspal-tangerang.html": "Harga Perkerasan Jalan Aspal Tangerang", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-aspal-depok.html": "Harga Perkerasan Jalan Aspal Depok", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-aspal-jakarta.html": "Harga Perkerasan Jalan Aspal Jakarta", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-aspal-bogor.html": "Harga Perkerasan Jalan Aspal Bogor", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-aspal-bekasi.html": "Harga Perkerasan Jalan Aspal Bekasi", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-aspal-tangerang.html": "Harga Perkerasan Jalan Aspal Tangerang", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-aspal-depok.html": "Harga Perkerasan Jalan Aspal Depok", // TYPE: MONEY_CHILD [SARAN DITAMBAHKAN]
   
   // ============================================================
   // [SUB2] - INFORMASI TEKNIS (INFORMASIONAL)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/jenis-aspal-untuk-perkerasan-jalan.html": "Jenis Aspal untuk Perkerasan Jalan", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/cara-pengaspalan-jalan-hotmix.html": "Cara Pengaspalan Jalan Hotmix", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/standar-mutu-perkerasan-jalan-aspal.html": "Standar Mutu Perkerasan Jalan Aspal", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/jenis-aspal-untuk-perkerasan-jalan.html": "Jenis Aspal untuk Perkerasan Jalan", // TYPE: SUB2 [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/standar-mutu-perkerasan-jalan-aspal.html": "Standar Mutu Perkerasan Jalan Aspal", // TYPE: SUB2 [SARAN DITAMBAHKAN]
   
   // ============================================================
   // [SUB1] - PANDUAN (BRIDGE KE MONEY)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/cara-memilih-perkerasan-jalan-aspal.html": "Cara Memilih Perkerasan Jalan Aspal", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/panduan-perkerasan-jalan-aspal.html": "Panduan Perkerasan Jalan Aspal" // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/cara-pengaspalan-jalan-hotmix.html": "Cara Pengaspalan Jalan Hotmix", // TYPE: SUB1 [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/cara-memilih-perkerasan-jalan-aspal.html": "Cara Memilih Perkerasan Jalan Aspal", // TYPE: SUB1 [SARAN DITAMBAHKAN]
 };
 
-// ============================================================
-// 🟡 SARAN PENAMBAHAN URL - PERKERASAN JALAN ASPAL
-// ============================================================
-/*
-📌 DAFTAR URL YANG DISARANKAN UNTUK DITAMBAHKAN:
-
-| No | URL | Nama Halaman | Status SEO | Parent | Alasan |
-|----|-----|--------------|------------|--------|--------|
-| 1 | /2019/01/harga-perkerasan-jalan-aspal-per-m2.html | Harga Perkerasan Jalan Aspal per M2 | [MONEY PAGE] | Jasa Perkerasan Jalan Aspal | Menarget keyword transaksional |
-| 2 | /2019/01/harga-hotmix-aspal-per-ton.html | Harga Hotmix Aspal per Ton | [MONEY PAGE] | Jasa Perkerasan Jalan Aspal | Keyword populer "hotmix" |
-| 3 | /2019/01/harga-perkerasan-jalan-aspal-jakarta.html | Harga Perkerasan Jalan Aspal Jakarta | [MONEY PAGE] | Jasa Perkerasan Jalan Aspal | Target lokasi spesifik |
-| 4 | /2019/01/jenis-aspal-untuk-perkerasan-jalan.html | Jenis Aspal untuk Perkerasan Jalan | [SUB2] | Jasa Perkerasan Jalan Aspal | Informasional, edukasi |
-| 5 | /2019/01/cara-pengaspalan-jalan-hotmix.html | Cara Pengaspalan Jalan Hotmix | [SUB1] | Jasa Perkerasan Jalan Aspal | Bridge ke MONEY |
-| 6 | /2019/01/standar-mutu-perkerasan-jalan-aspal.html | Standar Mutu Perkerasan Jalan Aspal | [SUB2] | Jasa Perkerasan Jalan Aspal | Trust/Authority |
-*/
 // ============================================================
 // JASA PERKERASAN JALAN KOMPOSIT - BLOG POST (MONEY PAGE & INFORMASIONAL)
 // ============================================================
@@ -426,111 +304,44 @@ const urlMappingJasaPerkerasanJalanAspalPost = {
 
 const urlMappingJasaPerkerasanJalanKompositPost = {
   // ============================================================
-  // [MONEY PAGE] - MASTER HARGA (TRANSACTIONAL)
+  // [MONEY_MASTER] - MASTER HARGA (TRANSACTIONAL)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-komposit.html": "Harga Perkerasan Jalan Komposit", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-komposit.html": "Harga Perkerasan Jalan Komposit", // TYPE: MONEY_MASTER [SARAN DITAMBAHKAN]
   
   // ============================================================
   // [SUB2] - INFORMASI TEKNIS (INFORMASIONAL)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/apa-itu-perkerasan-jalan-komposit.html": "Apa Itu Perkerasan Jalan Komposit", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/kelebihan-perkerasan-jalan-komposit.html": "Kelebihan Perkerasan Jalan Komposit", // [SARAN DITAMBAHKAN]
-  // "https://www.betonjayareadymix.com/2019/01/perbedaan-perkerasan-beton-aspal-komposit.html": "Perbedaan Perkerasan Beton, Aspal, dan Komposit", // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/apa-itu-perkerasan-jalan-komposit.html": "Apa Itu Perkerasan Jalan Komposit", // TYPE: SUB2 [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/kelebihan-perkerasan-jalan-komposit.html": "Kelebihan Perkerasan Jalan Komposit", // TYPE: SUB2 [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/perbedaan-perkerasan-beton-aspal-komposit.html": "Perbedaan Perkerasan Beton, Aspal, dan Komposit", // TYPE: SUB2 [SARAN DITAMBAHKAN]
   
   // ============================================================
   // [SUB1] - PANDUAN (BRIDGE KE MONEY)
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/01/cara-memilih-perkerasan-jalan-komposit.html": "Cara Memilih Perkerasan Jalan Komposit" // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/cara-memilih-perkerasan-jalan-komposit.html": "Cara Memilih Perkerasan Jalan Komposit", // TYPE: SUB1 [SARAN DITAMBAHKAN]
 };
 
-// ============================================================
-// 🟡 SARAN PENAMBAHAN URL - PERKERASAN JALAN KOMPOSIT
-// ============================================================
-/*
-📌 DAFTAR URL YANG DISARANKAN UNTUK DITAMBAHKAN:
-
-| No | URL | Nama Halaman | Status SEO | Parent | Alasan |
-|----|-----|--------------|------------|--------|--------|
-| 1 | /2019/01/harga-perkerasan-jalan-komposit.html | Harga Perkerasan Jalan Komposit | [MONEY PAGE] | Jasa Perkerasan Jalan | Menarget keyword transaksional |
-| 2 | /2019/01/apa-itu-perkerasan-jalan-komposit.html | Apa Itu Perkerasan Jalan Komposit | [SUB2] | Jasa Perkerasan Jalan | Edukasi konsep dasar |
-| 3 | /2019/01/kelebihan-perkerasan-jalan-komposit.html | Kelebihan Perkerasan Jalan Komposit | [SUB2] | Jasa Perkerasan Jalan | Membantu user membandingkan |
-| 4 | /2019/01/perbedaan-perkerasan-beton-aspal-komposit.html | Perbedaan Perkerasan Beton, Aspal, dan Komposit | [SUB2] | Jasa Perkerasan Jalan | Perbandingan, high value |
-*/
 // ============================================================
 // JASA PERKERASAN JALAN - TURUNAN LAIN (OPTIONAL)
 // ============================================================
-// 🧠 SEO NOTE: Berikut adalah saran tambahan untuk memperkaya cluster perkerasan jalan.
-// ============================================================
 
 // 5.1 PERKERASAN JALAN RABAT BETON
-// ============================================================
 const urlMappingJasaPerkerasanJalanRabatBetonPost = {
-  // [MONEY PAGE]
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-rabat-beton.html": "Harga Perkerasan Jalan Rabat Beton", // [SARAN DITAMBAHKAN]
-  // [SUB2]
-  // "https://www.betonjayareadymix.com/2019/01/cara-membuat-perkerasan-jalan-rabat-beton.html": "Cara Membuat Perkerasan Jalan Rabat Beton" // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-rabat-beton.html": "Harga Perkerasan Jalan Rabat Beton", // TYPE: MONEY_MASTER [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/cara-membuat-perkerasan-jalan-rabat-beton.html": "Cara Membuat Perkerasan Jalan Rabat Beton", // TYPE: SUB1 [SARAN DITAMBAHKAN]
 };
 
 // 5.2 PERKERASAN JALAN SEMI RIGID
-// ============================================================
 const urlMappingJasaPerkerasanJalanSemiRigidPost = {
-  // [MONEY PAGE]
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-semi-rigid.html": "Harga Perkerasan Jalan Semi Rigid", // [SARAN DITAMBAHKAN]
-  // [SUB2]
-  // "https://www.betonjayareadymix.com/2019/01/apa-itu-perkerasan-jalan-semi-rigid.html": "Apa Itu Perkerasan Jalan Semi Rigid" // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-semi-rigid.html": "Harga Perkerasan Jalan Semi Rigid", // TYPE: MONEY_MASTER [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/apa-itu-perkerasan-jalan-semi-rigid.html": "Apa Itu Perkerasan Jalan Semi Rigid", // TYPE: SUB2 [SARAN DITAMBAHKAN]
 };
 
 // 5.3 PERKERASAN JALAN KERIKIL
-// ============================================================
 const urlMappingJasaPerkerasanJalanKerikilPost = {
-  // [MONEY PAGE]
-  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-kerikil.html": "Harga Perkerasan Jalan Kerikil", // [SARAN DITAMBAHKAN]
-  // [SUB2]
-  // "https://www.betonjayareadymix.com/2019/01/jenis-kerikil-untuk-perkerasan-jalan.html": "Jenis Kerikil untuk Perkerasan Jalan" // [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/harga-perkerasan-jalan-kerikil.html": "Harga Perkerasan Jalan Kerikil", // TYPE: MONEY_MASTER [SARAN DITAMBAHKAN]
+  // "https://www.betonjayareadymix.com/2019/01/jenis-kerikil-untuk-perkerasan-jalan.html": "Jenis Kerikil untuk Perkerasan Jalan", // TYPE: SUB2 [SARAN DITAMBAHKAN]
 };
-/*
-📋 RINGKASAN HIERARKI JASA PERKERASAN JALAN
-text
-JASA KONSTRUKSI (PILLAR)
-│
-└── Jasa Jalan & Perkerasan (SUB2 - /p/jasa-jalan-perkerasan.html)
-    │
-    └── Jasa Perkerasan Jalan (SUB2 - /p/jasa-perkerasan-jalan.html)
-        │
-        ├── Jasa Perkerasan Jalan Beton (SUB2 - /p/jasa-perkerasan-jalan-beton.html)
-        │   └── [MONEY PAGE] Harga Perkerasan Jalan Beton (post)
-        │   └── [SUB2] Spesifikasi Perkerasan Jalan Beton (post)
-        │   └── [SUB1] Cara Memilih Perkerasan Jalan Beton (post)
-        │
-        ├── Jasa Perkerasan Jalan Aspal (SUB2 - /p/jasa-perkerasan-jalan-aspal.html)
-        │   └── [MONEY PAGE] Harga Perkerasan Jalan Aspal (post)
-        │   └── [SUB2] Jenis Aspal untuk Perkerasan Jalan (post)
-        │   └── [SUB1] Cara Pengaspalan Jalan Hotmix (post)
-        │
-        ├── Jasa Perkerasan Jalan Komposit (SUB2 - /p/jasa-perkerasan-jalan-komposit.html)
-        │   └── [MONEY PAGE] Harga Perkerasan Jalan Komposit (post)
-        │   └── [SUB2] Apa Itu Perkerasan Jalan Komposit (post)
-        │
-        ├── Jasa Perkerasan Jalan Rabat Beton (opsional)
-        ├── Jasa Perkerasan Jalan Semi Rigid (opsional)
-        └── Jasa Perkerasan Jalan Kerikil (opsional)
-📋 RINGKASAN SARAN & TINDAKAN
-No	Tindakan	Target	Prioritas
-1	Buat parent SUB2 jasa-perkerasan-jalan-beton.html dan jasa-perkerasan-jalan-aspal.html	Halaman page	🔴 HIGH
-2	Tambahkan URL untuk cluster perkerasan jalan beton	6-8 URL	🟡 MEDIUM
-3	Tambahkan URL untuk cluster perkerasan jalan aspal	6-8 URL	🟡 MEDIUM
-4	Tambahkan URL untuk cluster perkerasan jalan komposit	3-4 URL	🟢 LOW
-5	Tambahkan URL untuk cluster perkerasan jalan lainnya (rabat beton, semi rigid, kerikil)	2-3 URL per cluster	🟢 LOW
-✅ STATUS FINAL
-Const	Jumlah URL Saat Ini	Saran Tambah	Prioritas
-urlMappingJasaPerkerasanJalan (parent)	3	0	✅ SUDAH
-urlMappingJasaPerkerasanJalanBetonPost	0	6-8	🟡 MEDIUM
-urlMappingJasaPerkerasanJalanAspalPost	0	6-8	🟡 MEDIUM
-urlMappingJasaPerkerasanJalanKompositPost	0	3-4	🟢 LOW
-urlMappingJasaPerkerasanJalanRabatBetonPost	0	2-3	🟢 LOW
-urlMappingJasaPerkerasanJalanSemiRigidPost	0	2-3	🟢 LOW
-urlMappingJasaPerkerasanJalanKerikilPost	0	2-3	🟢 LOW
-*/
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaJalanPerkerasanKonsPost = {};
