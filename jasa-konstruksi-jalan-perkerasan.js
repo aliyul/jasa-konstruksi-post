@@ -12,24 +12,25 @@
 const urlMappingJasaPembangunanInfrastrukturJalan = {
   // ============================================================
   // [SUB2] - MASTER / HUB PAGE (WAJIB ADA) sudah ada di urlMappingJalan di jasa konstruksi
+  // TYPE: SUB2 (HUB PAGE) - boleh skip di breadcrumb
   // ============================================================
- // "https://www.betonjayareadymix.com/p/jasa-pembangunan-infrastruktur-jalan.html": "Jasa Pembangunan Infrastruktur Jalan [HUB PAGE]",
+ // "https://www.betonjayareadymix.com/p/jasa-pembangunan-infrastruktur-jalan.html": "Jasa Pembangunan Infrastruktur Jalan",  // TYPE: SUB2 (HUB PAGE)
   
   // ============================================================
   // [SUB2] - SUB-PILLAR TIPE 2 (LAYANAN PEMBANGUNAN JALAN PER JENIS LOKASI)
-  // 🧠 SEO NOTE: Masing-masing URL menarget keyword spesifik jenis jalan.
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Jalan & Perkerasan > Jasa Pembangunan Jalan Lingkungan (4 level)
+  // 🧠 TYPE: SUB2 (WAJIB tampil di breadcrumb karena spesifik)
+  // Breadcrumb (4 level, skip HUB PAGE): Home > Jasa Konstruksi > Jasa Jalan & Perkerasan > Jasa Pembangunan Jalan Lingkungan
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-lingkungan.html": "Jasa Pembangunan Jalan Lingkungan",
-  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-perdesaan.html": "Jasa Pembangunan Jalan Perdesaan",
-  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-raya.html": "Jasa Pembangunan Jalan Raya",
-  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-kawasan-industri.html": "Jasa Pembangunan Jalan Kawasan Industri",
-  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-perumahan.html": "Jasa Pembangunan Jalan Perumahan",
-  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-akses-proyek.html": "Jasa Pembangunan Jalan Akses Proyek",
-  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-trotoar.html": "Jasa Pembangunan Jalan Trotoar",
-  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-setapak.html": "Jasa Pembangunan Jalan Setapak",
-  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-setapak-trotoar.html": "Jasa Pembangunan Jalan Setapak Trotoar",
-  "https://www.betonjayareadymix.com/p/jasa-pembangunan-area-pejalan-kaki.html": "Jasa Pembangunan Area Pejalan Kaki"
+  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-lingkungan.html": "Jasa Pembangunan Jalan Lingkungan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-perdesaan.html": "Jasa Pembangunan Jalan Perdesaan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-raya.html": "Jasa Pembangunan Jalan Raya",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-kawasan-industri.html": "Jasa Pembangunan Jalan Kawasan Industri",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-perumahan.html": "Jasa Pembangunan Jalan Perumahan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-akses-proyek.html": "Jasa Pembangunan Jalan Akses Proyek",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-trotoar.html": "Jasa Pembangunan Jalan Trotoar",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-setapak.html": "Jasa Pembangunan Jalan Setapak",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pembangunan-jalan-setapak-trotoar.html": "Jasa Pembangunan Jalan Setapak Trotoar",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pembangunan-area-pejalan-kaki.html": "Jasa Pembangunan Area Pejalan Kaki"  // TYPE: SUB2
 };
 
 // ============================================================
@@ -38,11 +39,11 @@ const urlMappingJasaPembangunanInfrastrukturJalan = {
 /*
 📌 URL YANG DISARANKAN UNTUK DITAMBAHKAN (JIKA KONTEN MEMADAI):
 
-| URL | Nama Halaman | Status | Parent | Alasan SEO |
-|-----|--------------|--------|--------|------------|
-| /p/jasa-pembangunan-jalan-aspal.html | Jasa Pembangunan Jalan Aspal | ⚠️ SARAN DITAMBAHKAN | Jasa Pembangunan Infrastruktur Jalan | Menarget keyword spesifik jenis perkerasan aspal |
-| /p/jasa-pembangunan-jalan-beton.html | Jasa Pembangunan Jalan Beton | ⚠️ SARAN DITAMBAHKAN | Jasa Pembangunan Infrastruktur Jalan | Menarget keyword spesifik jenis perkerasan beton |
-| /p/jasa-pembangunan-jalan-hotmix.html | Jasa Pembangunan Jalan Hotmix | ⚠️ SARAN DITAMBAHKAN | Jasa Pembangunan Infrastruktur Jalan | Menarget keyword populer "hotmix" |
+| URL | Nama Halaman | TYPE | Parent | Alasan SEO |
+|-----|--------------|------|--------|------------|
+| /p/jasa-pembangunan-jalan-aspal.html | Jasa Pembangunan Jalan Aspal | SUB2 | Jasa Pembangunan Infrastruktur Jalan | Menarget keyword spesifik jenis perkerasan aspal |
+| /p/jasa-pembangunan-jalan-beton.html | Jasa Pembangunan Jalan Beton | SUB2 | Jasa Pembangunan Infrastruktur Jalan | Menarget keyword spesifik jenis perkerasan beton |
+| /p/jasa-pembangunan-jalan-hotmix.html | Jasa Pembangunan Jalan Hotmix | SUB2 | Jasa Pembangunan Infrastruktur Jalan | Menarget keyword populer "hotmix" |
 
 📌 CATATAN: URL di atas disarankan hanya jika kontennya memadai.
 Jika konten tipis, lebih baik digabung ke halaman induk.
@@ -70,57 +71,50 @@ Jika konten tipis, lebih baik digabung ke halaman induk.
 // 🧠 SEO NOTE: Cluster ini fokus ke layanan persiapan tanah untuk konstruksi jalan.
 // Intent: Commercial Investigation (user riset jasa persiapan tanah jalan).
 // Parent: Jasa Jalan & Perkerasan (/p/jasa-jalan-perkerasan.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Jalan & Perkerasan > Jasa Pemadatan & Persiapan Tanah Jalan (4 level)
 // ============================================================
 
 const urlMappingJasaPemadatanPersiapanTanahJalan = {
   // ============================================================
-  // [SUB2] - MASTER PAGE (HALAMAN INDUK)
-  // 🧠 SEO NOTE: Halaman ini adalah master untuk semua layanan persiapan tanah jalan.
-  // Konten: Penjelasan umum tentang proses persiapan tanah jalan, tahapan, metode, standar.
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Jalan & Perkerasan > Jasa Pemadatan & Persiapan Tanah Jalan
+  // [SUB2] - MASTER PAGE (HALAMAN INDUK) - sudah ada di urlMappingJalan
+  // TYPE: SUB2 (HUB PAGE) - boleh skip di breadcrumb
   // ============================================================
- //sudah ada di urlMappingJalan di jasa konstruksi  "https://www.betonjayareadymix.com/p/jasa-pemadatan-dan-persiapan-tanah-jalan.html": "Jasa Pemadatan & Persiapan Tanah Jalan",  // [MASTER]
+  // "https://www.betonjayareadymix.com/p/jasa-pemadatan-dan-persiapan-tanah-jalan.html": "Jasa Pemadatan & Persiapan Tanah Jalan",  // TYPE: SUB2 (HUB PAGE)
   
   // ============================================================
   // [SUB2] - TURUNAN (LAYANAN SPESIFIK)
-  // 🧠 SEO NOTE: Masing-masing URL menarget tahapan pekerjaan tanah jalan.
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Jalan & Perkerasan > Jasa Pemadatan & Persiapan Tanah Jalan > [Nama Layanan] (5 level? Perhatikan aturan maksimal 4 level!)
+  // 🧠 TYPE: SUB2 (WAJIB tampil di breadcrumb karena spesifik)
+  // Breadcrumb (4 level, skip HUB PAGE): Home > Jasa Konstruksi > Jasa Jalan & Perkerasan > Jasa Pengupasan Lahan Jalan
   // ============================================================
   
   // ✅ VALID - KONTEN ADA
-  "https://www.betonjayareadymix.com/p/jasa-pengupasan-lahan-jalan.html": "Jasa Pengupasan Lahan Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-cut-and-fill-jalan.html": "Jasa Cut and Fill Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-urugan-tanah-jalan.html": "Jasa Urugan Tanah Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-stabilisasi-tanah-jalan.html": "Jasa Stabilisasi Tanah Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-pengupasan-lahan-jalan.html": "Jasa Pengupasan Lahan Jalan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-cut-and-fill-jalan.html": "Jasa Cut and Fill Jalan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-urugan-tanah-jalan.html": "Jasa Urugan Tanah Jalan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-stabilisasi-tanah-jalan.html": "Jasa Stabilisasi Tanah Jalan",  // TYPE: SUB2
   
   // ============================================================
   // ⚠️ PERLU PERHATIAN - KONTEN KOSONG (HANYA TEMPLATE)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pemadatan-tanah-jalan.html": "Jasa Pemadatan Tanah Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-perkerasan-tanah-subgrade.html": "Jasa Perkerasan Tanah Subgrade"
+  "https://www.betonjayareadymix.com/p/jasa-pemadatan-tanah-jalan.html": "Jasa Pemadatan Tanah Jalan",  // TYPE: SUB2 (⚠️ konten kosong)
+  "https://www.betonjayareadymix.com/p/jasa-perkerasan-tanah-subgrade.html": "Jasa Perkerasan Tanah Subgrade"  // TYPE: SUB2 (⚠️ konten kosong)
 };
 
 // ============================================================
 // 🧠 SEO NOTE - MASALAH BREADCRUMB (5 LEVEL)
 // ============================================================
 /*
-⚠️ PERHATIAN: Breadcrumb untuk halaman turunan akan mencapai 5 level:
+⚠️ PERHATIAN: Breadcrumb untuk halaman turunan mencapai 5 level JIKA menggunakan master page.
 
-Home > Jasa Konstruksi > Jasa Jalan & Perkerasan > Jasa Pemadatan & Persiapan Tanah Jalan > Jasa Pemadatan Tanah Jalan
-(5 level - terlalu dalam!)
-
-📌 SOLUSI BREADCRUMB (SKIP LEVEL):
+📌 SOLUSI BREADCRUMB (SKIP HUB PAGE):
 
 Untuk halaman turunan (seperti Jasa Pemadatan Tanah Jalan), gunakan breadcrumb 4 level:
 Home > Jasa Konstruksi > Jasa Jalan & Perkerasan > Jasa Pemadatan Tanah Jalan
 
-Alasan skip: "Jasa Pemadatan & Persiapan Tanah Jalan" di-skip karena halaman tersebut hanya sebagai hub/pengelompokan,
-tidak perlu muncul di breadcrumb untuk halaman yang sudah spesifik.
+Alasan skip: "Jasa Pemadatan & Persiapan Tanah Jalan" di-skip karena halaman tersebut hanya sebagai hub/pengelompokan.
 
 📌 ATURAN BREADCRUMB YANG DITERAPKAN:
-- Master page (jasa-pemadatan-dan-persiapan-tanah-jalan.html): 4 level
-- Turunan (jasa-pemadatan-tanah-jalan.html): 4 level (skip master)
+- Master page: 4 level (Home > Jasa Konstruksi > Jasa Jalan & Perkerasan > Master)
+- Turunan: 4 level (skip master, langsung ke turunan)
 */
 
 // ============================================================
@@ -131,21 +125,10 @@ tidak perlu muncul di breadcrumb untuk halaman yang sudah spesifik.
 
 | No | URL | Masalah | Solusi | Prioritas |
 |----|-----|---------|--------|-----------|
-| 1 | /p/jasa-pemadatan-tanah-jalan.html | Konten kosong (hanya template) | ⚠️ OPSI A: Isi konten minimal 500 kata tentang pemadatan tanah jalan ⚠️ OPSI B: Redirect ke master page | 🟡 MEDIUM |
-| 2 | /p/jasa-perkerasan-tanah-subgrade.html | Konten kosong (hanya template) | ⚠️ OPSI A: Isi konten tentang subgrade (lapisan tanah dasar) ⚠️ OPSI B: Redirect ke /p/jasa-perkerasan-jalan.html | 🟡 MEDIUM |
+| 1 | /p/jasa-pemadatan-tanah-jalan.html | Konten kosong (hanya template) | ⚠️ OPSI A: Isi konten minimal 500 kata ⚠️ OPSI B: Redirect ke master page | 🟡 MEDIUM |
+| 2 | /p/jasa-perkerasan-tanah-subgrade.html | Konten kosong (hanya template) | ⚠️ OPSI A: Isi konten tentang subgrade ⚠️ OPSI B: Redirect ke /p/jasa-perkerasan-jalan.html | 🟡 MEDIUM |
 
-📌 REKOMENDASI TERBAIK:
-1. Untuk 'jasa-pemadatan-tanah-jalan.html' → ISIKAN KONTEN
-   Topik: metode pemadatan tanah jalan, alat yang digunakan (vibro roller, stamper), standar kepadatan.
-   Status SEO: [SUB2] - SUB-PILLAR TIPE 2 (setara dengan yang lain)
-
-2. Untuk 'jasa-perkerasan-tanah-subgrade.html' → ISIKAN KONTEN
-   Topik: apa itu subgrade, fungsi, metode pengerjaan, standar kelayakan.
-   Status SEO: [SUB2] - SUB-PILLAR TIPE 2
-
-📌 ALTERNATIF (JIKA TIDAK MEMILIKI KONTEN):
-   Redirect 301 ke halaman master /p/jasa-pemadatan-dan-persiapan-tanah-jalan.html
-   karena intent kedua halaman tersebut masih dalam cakupan master page.
+📌 REKOMENDASI TERBAIK: ISIKAN KONTEN untuk kedua halaman tersebut.
 */
 
 // ============================================================
@@ -154,48 +137,44 @@ tidak perlu muncul di breadcrumb untuk halaman yang sudah spesifik.
 // 🧠 SEO NOTE: Cluster ini fokus ke layanan perkerasan jalan (lapisan permukaan).
 // Intent: Commercial Investigation (user riset jenis perkerasan jalan).
 // Parent: Jasa Jalan & Perkerasan (/p/jasa-jalan-perkerasan.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Jalan & Perkerasan > Jasa Perkerasan Jalan (4 level)
 // ============================================================
 
 const urlMappingJasaPerkerasanJalan = {
   // ============================================================
-  // [SUB2] - HUB PAGE (MASTER PERKERASAN JALAN)
-  // 🧠 SEO NOTE: Halaman ini adalah HUB PAGE yang mengelompokkan semua layanan perkerasan jalan.
-  // Fungsi: Menautkan ke halaman-halaman spesifik di bawahnya.
-  // Intent: Navigational (user mencari daftar layanan perkerasan jalan).
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Jalan & Perkerasan > Jasa Perkerasan Jalan
+  // [SUB2] - HUB PAGE (MASTER PERKERASAN JALAN) - sudah ada di urlMappingJalan
+  // TYPE: SUB2 (HUB PAGE) - boleh skip di breadcrumb
   // ============================================================
-  //sudah ada di urlMappingJalan di jasa konstruksi "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html": "Jasa Perkerasan Jalan",
+  // "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html": "Jasa Perkerasan Jalan",  // TYPE: SUB2 (HUB PAGE)
 
   // ============================================================
   // [SUB2] - JENIS PERKERASAN JALAN (LAYANAN UTAMA)
-  // 🧠 SEO NOTE: Masing-masing URL menarget jenis perkerasan yang berbeda.
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Jalan & Perkerasan > Jasa Perkerasan Jalan > [Nama Layanan] (5 level - SKIP di breadcrumb)
+  // 🧠 TYPE: SUB2 (WAJIB tampil di breadcrumb karena spesifik)
+  // Breadcrumb (4 level, skip HUB PAGE): Home > Jasa Konstruksi > Jasa Jalan & Perkerasan > Jasa Perkerasan Jalan Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-beton.html": "Jasa Perkerasan Jalan Beton",
-  "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-aspal.html": "Jasa Perkerasan Jalan Aspal",
-  "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-komposit.html": "Jasa Perkerasan Jalan Komposit",
-  "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-semi-rigid.html": "Jasa Perkerasan Jalan Semi Rigid",
+  "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-beton.html": "Jasa Perkerasan Jalan Beton",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-aspal.html": "Jasa Perkerasan Jalan Aspal",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-komposit.html": "Jasa Perkerasan Jalan Komposit",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-semi-rigid.html": "Jasa Perkerasan Jalan Semi Rigid",  // TYPE: SUB2
 
   // ============================================================
   // [SUB2] - METODE & MATERIAL PERKERASAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perkerasan-base-course-jalan.html": "Jasa Perkerasan Base Course Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-perkerasan-agregat-jalan.html": "Jasa Perkerasan Agregat Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-kerikil.html": "Jasa Perkerasan Jalan Kerikil",
+  "https://www.betonjayareadymix.com/p/jasa-perkerasan-base-course-jalan.html": "Jasa Perkerasan Base Course Jalan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-perkerasan-agregat-jalan.html": "Jasa Perkerasan Agregat Jalan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-kerikil.html": "Jasa Perkerasan Jalan Kerikil",  // TYPE: SUB2
 
   // ============================================================
   // [SUB2] - PROSES & TEKNIK PERKERASAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pengaspalan-jalan.html": "Jasa Pengaspalan Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-pengecoran-jalan-beton.html": "Jasa Pengecoran Jalan Beton",
-  "https://www.betonjayareadymix.com/p/jasa-paving-block-jalan.html": "Jasa Paving Block Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-pengaspalan-jalan.html": "Jasa Pengaspalan Jalan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengecoran-jalan-beton.html": "Jasa Pengecoran Jalan Beton",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-paving-block-jalan.html": "Jasa Paving Block Jalan",  // TYPE: SUB2
 
   // ============================================================
   // [SUB2] - LAPISAN & STRUKTUR JALAN
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-timbunan-subbase-jalan.html": "Jasa Timbunan Subbase Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-dasar-tanah-jalan.html": "Jasa Perkuatan Dasar Tanah Jalan"
+  "https://www.betonjayareadymix.com/p/jasa-timbunan-subbase-jalan.html": "Jasa Timbunan Subbase Jalan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-dasar-tanah-jalan.html": "Jasa Perkuatan Dasar Tanah Jalan"  // TYPE: SUB2
 };
 
 // ============================================================
@@ -213,16 +192,11 @@ const urlMappingJasaPerkerasanJalan = {
 - /p/jasa-pengerasan-jalan.html → sudah ada di urlMappingJasaPengerasanJalan
 - /p/jasa-pengerasan-jalan-*.html → semua sudah ada di urlMappingJasaPengerasanJalan
 
-📌 BREADCRUMB UNTUK CHILD PAGES (5 level):
-Home > Jasa Konstruksi > Jasa Jalan & Perkerasan > Jasa Perkerasan Jalan > Jasa Perkerasan Jalan Beton
+📌 BREADCRUMB UNTUK CHILD PAGES (4 level, skip HUB PAGE):
+Home > Jasa Konstruksi > Jasa Jalan & Perkerasan > Jasa Perkerasan Jalan Beton
 
-📌 REKOMENDASI BREADCRUMB (SKIP LEVEL):
-Karena 5 level terlalu dalam, untuk money page cukup tampilkan:
-Home > Jasa Konstruksi > Jasa Perkerasan Jalan Beton (3 level)
-
-Alasan skip: HUB PAGE "Jasa Perkerasan Jalan" dan "Jasa Jalan & Perkerasan" 
-tidak perlu muncul di breadcrumb untuk halaman yang sudah sangat spesifik.
-*/
+📌 REKOMENDASI BREADCRUMB (SKIP HUB PAGE):
+HUB PAGE "Jasa Perkerasan Jalan" di-skip karena hanya sebagai pengelompokan.
 
 /*  jadi sub post Jasa Paving Block Jalan
   "https://www.betonjayareadymix.com/p/jasa-pemasangan-paving-block.html": "Jasa Pemasangan Paving Block" */
@@ -250,71 +224,52 @@ tidak perlu muncul di breadcrumb untuk halaman yang sudah sangat spesifik.
 const urlMappingJasaPengerasanJalan = {
   // ============================================================
   // [SUB2] - MASTER PENGERASAN JALAN
+  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
   // ============================================================
- // sudah ada di urlMappingJalan  jasa konstruksi  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan.html": "Jasa Pengerasan Jalan",  // [MASTER]
+  // "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan.html": "Jasa Pengerasan Jalan",  // TYPE: SUB2 [MASTER]
   
   // ============================================================
   // [SUB2] - PENGERASAN PER LOKASI/FUNGSI
+  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-proyek.html": "Jasa Pengerasan Jalan Proyek",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-akses.html": "Jasa Pengerasan Jalan Akses",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-perumahan.html": "Jasa Pengerasan Jalan Perumahan",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-lingkungan.html": "Jasa Pengerasan Jalan Lingkungan",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-perdesaan.html": "Jasa Pengerasan Jalan Perdesaan",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-industri.html": "Jasa Pengerasan Jalan Industri",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-area-parkir.html": "Jasa Pengerasan Area Parkir",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-tahan-beban-berat.html": "Jasa Pengerasan Jalan Tahan Beban Berat",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-proyek.html": "Jasa Pengerasan Jalan Proyek",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-akses.html": "Jasa Pengerasan Jalan Akses",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-perumahan.html": "Jasa Pengerasan Jalan Perumahan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-lingkungan.html": "Jasa Pengerasan Jalan Lingkungan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-perdesaan.html": "Jasa Pengerasan Jalan Perdesaan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-industri.html": "Jasa Pengerasan Jalan Industri",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-area-parkir.html": "Jasa Pengerasan Area Parkir",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-tahan-beban-berat.html": "Jasa Pengerasan Jalan Tahan Beban Berat",  // TYPE: SUB2
   
   // ============================================================
   // [SUB2] - PENGERASAN BERDASARKAN MATERIAL
+  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
+  // ⚠️ PERHATIAN: Bedakan dengan perkerasan agregat/base course
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-tanah.html": "Jasa Pengerasan Jalan Tanah",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-batu.html": "Jasa Pengerasan Jalan Batu",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-kerikil.html": "Jasa Pengerasan Jalan Kerikil",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-sirtu.html": "Jasa Pengerasan Jalan Sirtu",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-agregat.html": "Jasa Pengerasan Jalan Agregat",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-makadam.html": "Jasa Pengerasan Jalan Makadam",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-tanah.html": "Jasa Pengerasan Jalan Tanah",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-batu.html": "Jasa Pengerasan Jalan Batu",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-kerikil.html": "Jasa Pengerasan Jalan Kerikil",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-sirtu.html": "Jasa Pengerasan Jalan Sirtu",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-agregat.html": "Jasa Pengerasan Jalan Agregat",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-makadam.html": "Jasa Pengerasan Jalan Makadam",  // TYPE: SUB2
   
   // ============================================================
   // [SUB2] - PENGERASAN BERDASARKAN LAPISAN
+  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
+  // ⚠️ PERHATIAN: Fokus ke base course sebagai LAPISAN PENGERASAN (bukan perkerasan)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-base-course.html": "Jasa Pengerasan Jalan Base Course",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-subbase.html": "Jasa Pengerasan Jalan Sub Base",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-lapis-penetrasi.html": "Jasa Pengerasan Jalan Lapis Penetrasi",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-base-course.html": "Jasa Pengerasan Jalan Base Course",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-subbase.html": "Jasa Pengerasan Jalan Sub Base",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-lapis-penetrasi.html": "Jasa Pengerasan Jalan Lapis Penetrasi",  // TYPE: SUB2
   
   // ============================================================
   // [SUB2] - METODE PENGERASAN LAINNYA
+  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-urugan-material.html": "Jasa Pengerasan Jalan Urugan Material",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-urugan-tanah.html": "Jasa Pengerasan Jalan Urugan Tanah",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-ekonomis.html": "Jasa Pengerasan Jalan Ekonomis"
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-urugan-material.html": "Jasa Pengerasan Jalan Urugan Material",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-urugan-tanah.html": "Jasa Pengerasan Jalan Urugan Tanah",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-ekonomis.html": "Jasa Pengerasan Jalan Ekonomis"  // TYPE: SUB2
 };
-
-// ============================================================
-// 🔴 SARAN PERBAIKAN - REDUNDANSI & KOSONG
-// ============================================================
-/*
-🧠 SEO CANNIBAL & CONTENT FIX:
-
-| No | URL | Masalah | Solusi | Prioritas |
-|----|-----|---------|--------|-----------|
-| 1 | /p/jasa-pengerasan-jalan.html | ✅ MASTER | Pertahankan sebagai master pengerasan jalan | ✅ |
-| 2 | /p/jasa-pengerasan-jalan-agregat.html | Overlap dengan /p/jasa-perkerasan-agregat-jalan.html | Pastikan konten berbeda: fokus ke PROSES pengerasan, bukan jenis perkerasan | 🟡 MEDIUM |
-| 3 | /p/jasa-pengerasan-jalan-base-course.html | Overlap dengan /p/jasa-perkerasan-base-course-jalan.html | Pastikan konten berbeda: base course sebagai bagian dari pengerasan | 🟡 MEDIUM |
-| 4 | /p/jasa-pengerasan-jalan-subbase.html | ✅ UNIK | Pertahankan | ✅ |
-
-📌 SARAN TAMBAHAN URL (OPTIONAL):
-
-| URL | Nama Halaman | Status | Parent | Alasan SEO |
-|-----|--------------|--------|--------|------------|
-| /p/jasa-pengerasan-jalan-stabilisasi-tanah.html | Jasa Pengerasan Jalan Stabilisasi Tanah | ⚠️ SARAN DITAMBAHKAN | Jasa Pengerasan Jalan | Melengkapi metode pengerasan |
-
-📌 CATATAN PENTING:
-- Bedakan dengan jelas antara PERKERASAN (surface/lapisan atas) dan PENGERASAN (subgrade/base course)
-- Perkerasan Jalan: fokus ke aspal, beton, komposit (lapisan akhir)
-- Pengerasan Jalan: fokus ke base course, subbase, agregat, sirtu (lapisan bawah)
-*/
-
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaJalanPerkerasanKons = {};
