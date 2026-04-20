@@ -2604,7 +2604,7 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
     }
     }
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (jasaEpoxyDinding[cleanUrlJasaKonsFinishingPost]) {
+   if (urlMappingJasaEpoxyDinding[cleanUrlJasaKonsFinishingPost]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
