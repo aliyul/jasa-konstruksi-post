@@ -1323,8 +1323,14 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
    - Menjamin detect-evergreen.js dimuat lebih dulu
    - Update <meta dateModified> hanya jika URL terdaftar
    - Stable hash → hasil dateModified konsisten
-   ========================================================== */	  
-	(async function runHybridDateModified() {
+   ========================================================== */	
+	
+	/* ============================================================
+ 🔥 Hybrid Date Modified v6.0 — UNTUK betonjayareadymix.com
+    Custom date berdasarkan hasil deteksi page level
+============================================================ */
+
+(async function runHybridDateModified() {
   try {
     const CURRENT_DOMAIN = window.location.hostname;
     
@@ -1334,6 +1340,9 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
       return;
     }
 
+    // ============================================================
+    // 📌 FUNGSI LOAD EXTERNAL JS
+    // ============================================================
     function loadExternalJS(src) {
       return new Promise((resolve) => {
         if (document.querySelector(`script[src="${src}"]`)) {
@@ -1352,6 +1361,9 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
       });
     }
 
+    // ============================================================
+    // 📌 TUNGGU PAGE LEVEL DETECTOR READY
+    // ============================================================
     function waitForPageLevelDetector() {
       return new Promise((resolve) => {
         if (window.__pageLevelDetectorReady && window.pageLevelDetector) {
@@ -1362,6 +1374,9 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
       });
     }
 
+    // ============================================================
+    // 📌 TUNGGU DETECT EVERGREEN READY
+    // ============================================================
     function waitForDetectEvergreen() {
       return new Promise((resolve) => {
         if (window.__detectEvergreenReady && typeof window.detectEvergreen === "function") {
@@ -1372,6 +1387,9 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
       });
     }
 
+    // ============================================================
+    // 📌 LOAD ALL SCRIPTS
+    // ============================================================
     async function loadAllScripts() {
       // GANTI URL INI DENGAN URL TEMPAT ANDA MENYIMPAN SCRIPT
       const PAGE_LEVEL_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/PageLevelDetector.js";
@@ -1392,6 +1410,9 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
       }
     }
 
+    // ============================================================
+    // 📌 TO ISO WITH TIMEZONE LOCAL
+    // ============================================================
     function toISOWithTimezoneLocal(date, offset = "+07:00") {
       if (!date) return null;
       const d = new Date(date);
@@ -1406,6 +1427,9 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
       return `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${offset}`;
     }
 
+    // ============================================================
+    // 📌 STABLE HASH
+    // ============================================================
     function stableHash(str) {
       let hash = 0;
       for (let i = 0; i < str.length; i++) {
@@ -1415,6 +1439,9 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
       return Math.abs(hash);
     }
 
+    // ============================================================
+    // 📌 UPDATE META DATE MODIFIED
+    // ============================================================
     function updateMetaDateModified(isoDate) {
       const selectors = [
         ['meta[itemprop="dateModified"]', 'itemprop', 'dateModified'],
@@ -1433,31 +1460,128 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
       });
     }
 
+    // ============================================================
+    // 📌 DAFTAR EVERGREEN LEVELS
+    // ============================================================
+    const EVERGREEN_LEVELS = ['pillar', 'sub-pillar-tipe-2', 'sub-pillar-tipe-1', 'variant', 'sub-variant'];
+    const MONEY_LEVELS = ['money-master', 'money-page', 'money-child'];
+
+    // ============================================================
+    // 📌 FUNGSI MENENTUKAN CUSTOM DATE BERDASARKAN PAGE LEVEL
+    // ============================================================
+    function getCustomDateByPageLevel(pageLevel, entityType) {
+      // EVERGREEN: Pillar, Sub-Pillar, Variant, Sub-Variant
+      if (EVERGREEN_LEVELS.includes(pageLevel)) {
+        // Pillar (level tertinggi) pakai tanggal 2024-01-16
+        if (pageLevel === 'pillar') {
+          return "2026-04-01T10:30:00+07:00";
+        }
+        // Sub-Pillar, Variant, Sub-Variant pakai tanggal 2024-06-01
+        return "2026-04-02T00:00:00+07:00";
+      }
+      
+      // MONEY PAGE: biarkan AUTO (return null)
+      if (MONEY_LEVELS.includes(pageLevel)) {
+        return null; // AUTO mode
+      }
+      
+      // Default: AUTO mode
+      return null;
+    }
+
+    // ============================================================
+    // 📌 EKSEKUSI UTAMA
+    // ============================================================
+    
     await loadAllScripts();
     
-    const uniquePageIdentifier = window.location.pathname;
+    // ============================================================
+    // 🔥 STEP 1: DETEKSI PAGE LEVEL (TANPA CUSTOM DATE DAHULU)
+    // ============================================================
+    // Kita perlu deteksi page level terlebih dahulu untuk menentukan custom date
+    // Tapi detectEvergreen() butuh pageLevelDetector yang sudah ready
+    // PageLevelDetector sudah otomatis jalan saat load, kita bisa langsung akses
     
-    // Jalankan detektor
-    await window.detectEvergreen();
+    // Tunggu sebentar agar pageLevelDetector selesai deteksi
+    await new Promise(resolve => setTimeout(resolve, 100));
     
+    // Dapatkan page level dan entity type dari detector yang sudah ready
+    let pageLevel = 'pillar'; // default
+    let entityType = 'produk'; // default
+    
+    if (window.pageLevelDetector) {
+      pageLevel = window.pageLevelDetector.detect();
+      entityType = window.pageLevelDetector.detectEntityType();
+      console.log(`📌 Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
+    } else {
+      console.warn("⚠️ PageLevelDetector not ready, using defaults");
+    }
+    
+    // ============================================================
+    // 🔥 STEP 2: TENTUKAN CUSTOM DATE BERDASARKAN HASIL DETEKSI
+    // ============================================================
+    let customDate = getCustomDateByPageLevel(pageLevel, entityType);
+    let manualMode = customDate !== null;
+    
+    if (manualMode) {
+      console.log(`📌 [CUSTOM DATE] PageLevel=${pageLevel}, EntityType=${entityType} → Using custom date: ${customDate}`);
+    } else {
+      console.log(`📌 [AUTO MODE] PageLevel=${pageLevel}, EntityType=${entityType} → No custom date, using auto calculation`);
+    }
+    
+    // ============================================================
+    // 🔥 STEP 3: JALANKAN DETEKTOR DENGAN ATAU TANPA CUSTOM DATE
+    // ============================================================
+    if (manualMode && customDate) {
+      await window.detectEvergreen({ customDateModified: customDate });
+      console.log(`✅ MANUAL mode executed with custom date: ${customDate}`);
+    } else {
+      await window.detectEvergreen();
+      console.log(`✅ AUTO mode executed`);
+    }
+    
+    // ============================================================
+    // 📌 PASTIKAN AEDMetaDates TERSEDIA
+    // ============================================================
     if (!window.AEDMetaDates || !window.AEDMetaDates.dateModified) {
       console.warn("[HybridDateModified] AEDMetaDates tidak ditemukan, skip update.");
       return;
     }
 
-    const { dateModified, nextUpdate, type, entityType, pageLevel } = window.AEDMetaDates;
+    const { dateModified, nextUpdate, type, entityType: detectedEntityType, pageLevel: detectedPageLevel } = window.AEDMetaDates;
 
-    console.log(`📊 betonjayareadymix.com Page Info: type=${type}, entityType=${entityType}, pageLevel=${pageLevel}`);
+    console.log(`📊 betonjayareadymix.com Page Info:`);
+    console.log(`   - type: ${type}`);
+    console.log(`   - entityType: ${detectedEntityType}`);
+    console.log(`   - pageLevel: ${detectedPageLevel}`);
+    console.log(`   - dateModified: ${dateModified}`);
+    console.log(`   - nextUpdate: ${nextUpdate}`);
 
-    // Hitung variasi tanggal
+    // ============================================================
+    // 📌 HITUNG VARIASI TANGGAL
+    // ============================================================
+    const uniquePageIdentifier = window.location.pathname;
     let hashSource = uniquePageIdentifier;
-    if (pageLevel === 'pillar') hashSource = 'pillar-' + hashSource;
+    
+    if (EVERGREEN_LEVELS.includes(detectedPageLevel)) {
+      hashSource = 'evergreen-' + hashSource;
+      console.log(`📌 Evergreen content (${detectedPageLevel}) → using evergreen hash prefix`);
+    } else if (detectedEntityType === 'jasa') {
+      hashSource = 'jasa-' + hashSource;
+      console.log(`📌 Jasa content (${detectedPageLevel}) → using jasa hash prefix`);
+    } else if (MONEY_LEVELS.includes(detectedPageLevel)) {
+      hashSource = 'money-' + hashSource;
+      console.log(`📌 Money page (${detectedPageLevel}) → using money hash prefix`);
+    }
     
     const hash = stableHash(hashSource);
     const offsetSeconds = hash % 86400;
     const finalDate = new Date(new Date(dateModified).getTime() + offsetSeconds * 1000);
     const isoDate = toISOWithTimezoneLocal(finalDate);
 
+    // ============================================================
+    // 📌 UPDATE META DATEMODIFIED
+    // ============================================================
     updateMetaDateModified(isoDate);
 
     window.AEDMetaDates = {
@@ -1466,7 +1590,9 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
       hashOffset: offsetSeconds
     };
 
-    console.log(`✅ [HybridDateModified] ${uniquePageIdentifier} → ${isoDate} | type=${type}, entityType=${entityType}, pageLevel=${pageLevel}`);
+    console.log(`✅ [HybridDateModified] ${uniquePageIdentifier} → ${isoDate}`);
+    console.log(`   - offsetSeconds: ${offsetSeconds} detik`);
+    console.log(`   - Mode: ${manualMode ? 'MANUAL (custom date based on page level)' : 'AUTO'}`);
     console.log(`📋 Custom config for betonjayareadymix.com applied successfully`);
 
   } catch (err) {
