@@ -1329,7 +1329,7 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
     const CURRENT_DOMAIN = window.location.hostname;
     
     // Khusus untuk betonjayareadymix.com
-    if (CURRENT_DOMAIN !== 'betonjayareadymix.com' && !CURRENT_DOMAIN.includes('localhost')) {
+    if (CURRENT_DOMAIN !== 'www.betonjayareadymix.com' && !CURRENT_DOMAIN.includes('localhost')) {
       console.log(`⏸️ Domain ${CURRENT_DOMAIN} not targeted. Script skipped.`);
       return;
     }
