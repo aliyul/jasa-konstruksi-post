@@ -1275,7 +1275,6 @@ document.addEventListener("DOMContentLoaded", function() {
      //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
     const cleanUrlJasaKonsFinishingPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
 
-	
    const urlMappingGabungan = Object.assign(
     {},
     urlMappingJasaFinishingDakBeton,
@@ -1326,164 +1325,154 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
    - Stable hash → hasil dateModified konsisten
    ========================================================== */	  
 	(async function runHybridDateModified() {
-		  try {
-		
-		    function loadExternalJS(src) {
-		      return new Promise((resolve) => {
-		        if (document.querySelector(`script[src="${src}"]`)) {
-		          resolve();
-		          return;
-		        }
-		
-		        const s = document.createElement("script");
-		        s.src = src;
-		        s.defer = true; // 🔥 PENTING
-		        s.onload = resolve;
-		        s.onerror = () => {
-		          console.warn("[Evergreen] Gagal load:", src);
-		          resolve(); // ❗ jangan reject
-		        };
-		        document.head.appendChild(s);
-		      });
-		    }
-		
-		    function waitForDetectEvergreen() {
-		      return new Promise((resolve) => {
-		        if (
-		          window.__detectEvergreenReady &&
-		          typeof window.detectEvergreen === "function"
-		        ) {
-		          resolve(true);
-		        } else {
-		          window.addEventListener(
-		            "detectEvergreenReady",
-		            () => resolve(true),
-		            { once: true }
-		          );
-		        }
-		      });
-		    }
-		
-		    async function loadEvergreenScript(manualDate = null) {
-		
-		      if (typeof window.detectEvergreen !== "function") {
-		        console.log("⏳ Loading detectEvergreen...");
-		
-		        await loadExternalJS(
-		          "https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js"
-		        );
-		
-		        await waitForDetectEvergreen();
-		        console.log("✅ detectEvergreen READY");
-		      } else {
-		        console.log("⚡ detectEvergreen already available");
-		      }
-		
-		      const config = manualDate
-		        ? { customDateModified: manualDate }
-		        : {};
-		
-		      console.log("🧠 detectEvergreen config:", config);
-		
-		      try {
-		        window.detectEvergreen(config);
-		      } catch (e) {
-		        console.error("[Evergreen] Execution failed:", e);
-		      }
-		    }
-		
-		    // =============================
-		    // MODE PEMANGGILAN
-		    // =============================
-		
-		    // ✔ MANUAL (ONCE UPDATE EVERGREEN)
-		    await loadEvergreenScript("2026-01-16T10:30:00+07:00");
-		
-		    // ✔ AUTO MODE
-		    // await loadEvergreenScript();
-		    function toISOWithTimezoneLocal(date, offset = "+07:00") {
-				  if (!date) return null;
-				  const d = new Date(date);
-				  if (isNaN(d.getTime())) return null;
-				
-				  const pad = (n) => n.toString().padStart(2, "0");
-				  const yyyy = d.getFullYear();
-				  const mm = pad(d.getMonth() + 1);
-				  const dd = pad(d.getDate());
-				  const hh = pad(d.getHours());
-				  const min = pad(d.getMinutes());
-				  const ss = pad(d.getSeconds());
-				
-				  return `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${offset}`;
-				}
-			    // --- pastikan AEDMetaDates sudah tersedia ---
-			    if (!window.AEDMetaDates || !window.AEDMetaDates.dateModified) {
-			      console.warn("[HybridDateModified] AEDMetaDates tidak ditemukan, skip update.");
-			      return;
-			    }
-			
-			    const { dateModified, nextUpdate, type } = window.AEDMetaDates;
-			
-			    // 🔒 Stable hash untuk variasi waktu stabil
-			    function stableHash(str) {
-			      let hash = 0;
-			      for (let i = 0; i < str.length; i++) {
-			        hash = (hash << 5) - hash + str.charCodeAt(i);
-			        hash |= 0;
-			      }
-			      return Math.abs(hash);
-			    }
-			
-			    const hash = stableHash(cleanUrlJasaKonsFinishingPost);
-			    const offsetSeconds = hash % 86400;
-			    const finalDate = new Date(new Date(dateModified).getTime() + offsetSeconds * 1000);
-			    const isoDate = toISOWithTimezoneLocal(finalDate);
-			
-			    // 🧱 Update meta dateModified
-			    [
-			      ['meta[itemprop="dateModified"]', 'itemprop', 'dateModified'],
-			      ['meta[name="dateModified"]', 'name', 'dateModified'],
-			      ['meta[property="article:modified_time"]', 'property', 'article:modified_time']
-			    ].forEach(([selector, attr, val]) => {
-			      let meta = document.querySelector(selector);
-			      if (!meta) {
-			        meta = document.createElement("meta");
-			        meta.setAttribute(attr, val);
-			        document.head.appendChild(meta);
-			      }
-			      meta.setAttribute("content", isoDate);
-			    });
-			
-				
-							// Pastikan AEDMetaDates sudah ada minimal sebagai objek kosong
-				window.AEDMetaDates = window.AEDMetaDates || {};
-				
-				// Update hanya properti dateModified tanpa menghapus lainnya
-				window.AEDMetaDates = {
-				  ...window.AEDMetaDates,
-				  dateModified: isoDate
-				};
-				
-				console.log("✅ AEDMetaDates updated jasa-pengeboran-post:", window.AEDMetaDates);
-			    console.log(`✅ [HybridDateModified v2.5] ${cleanUrlJasaKonsFinishingPost} → ${isoDate} | type=${type || "-"}`);
-			
-			    // 🧩 Perbarui schema jika ada
-			    const schemaEl = document.querySelector('script[data-schema="evergreen-maintenance"]');
-			    if (schemaEl) {
-			      try {
-			        const data = JSON.parse(schemaEl.textContent.trim());
-			        data.dateModified = isoDate;
-			        if (data.maintenanceSchedule) data.maintenanceSchedule.scheduledTime = nextUpdate;
-			        schemaEl.textContent = JSON.stringify(data, null, 2);
-			        console.log(`🔄 Schema maintenance diperbarui → dateModified: ${isoDate}`);
-			      } catch (err) {
-			        console.error("❌ Gagal update schema:", err);
-			      }
-			    }
-		  } catch (err) {
-		    console.error("[HybridDateModified] Fatal:", err);
-		  }
-		})();
+  try {
+    const CURRENT_DOMAIN = window.location.hostname;
+    
+    // Khusus untuk betonjayareadymix.com
+    if (CURRENT_DOMAIN !== 'betonjayareadymix.com' && !CURRENT_DOMAIN.includes('localhost')) {
+      console.log(`⏸️ Domain ${CURRENT_DOMAIN} not targeted. Script skipped.`);
+      return;
+    }
+
+    function loadExternalJS(src) {
+      return new Promise((resolve) => {
+        if (document.querySelector(`script[src="${src}"]`)) {
+          resolve();
+          return;
+        }
+        const s = document.createElement("script");
+        s.src = src;
+        s.defer = true;
+        s.onload = resolve;
+        s.onerror = () => {
+          console.warn("[Evergreen] Gagal load:", src);
+          resolve();
+        };
+        document.head.appendChild(s);
+      });
+    }
+
+    function waitForPageLevelDetector() {
+      return new Promise((resolve) => {
+        if (window.__pageLevelDetectorReady && window.pageLevelDetector) {
+          resolve(true);
+        } else {
+          window.addEventListener("pageLevelDetectorReady", () => resolve(true), { once: true });
+        }
+      });
+    }
+
+    function waitForDetectEvergreen() {
+      return new Promise((resolve) => {
+        if (window.__detectEvergreenReady && typeof window.detectEvergreen === "function") {
+          resolve(true);
+        } else {
+          window.addEventListener("detectEvergreenReady", () => resolve(true), { once: true });
+        }
+      });
+    }
+
+    async function loadAllScripts() {
+      // GANTI URL INI DENGAN URL TEMPAT ANDA MENYIMPAN SCRIPT
+      const PAGE_LEVEL_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/PageLevelDetector.js";
+      const EVERGREEN_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/SmartEvergreenDetector.js";
+      
+      if (typeof window.pageLevelDetector === "undefined") {
+        console.log("⏳ Loading Page Level Detector v13.0...");
+        await loadExternalJS(PAGE_LEVEL_DETECTOR_URL);
+        await waitForPageLevelDetector();
+        console.log("✅ Page Level Detector v13.0 READY");
+      }
+      
+      if (typeof window.detectEvergreen !== "function") {
+        console.log("⏳ Loading Smart Evergreen Detector v13.0...");
+        await loadExternalJS(EVERGREEN_DETECTOR_URL);
+        await waitForDetectEvergreen();
+        console.log("✅ Smart Evergreen Detector v13.0 READY");
+      }
+    }
+
+    function toISOWithTimezoneLocal(date, offset = "+07:00") {
+      if (!date) return null;
+      const d = new Date(date);
+      if (isNaN(d.getTime())) return null;
+      const pad = (n) => n.toString().padStart(2, "0");
+      const yyyy = d.getFullYear();
+      const mm = pad(d.getMonth() + 1);
+      const dd = pad(d.getDate());
+      const hh = pad(d.getHours());
+      const min = pad(d.getMinutes());
+      const ss = pad(d.getSeconds());
+      return `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${offset}`;
+    }
+
+    function stableHash(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        hash = (hash << 5) - hash + str.charCodeAt(i);
+        hash |= 0;
+      }
+      return Math.abs(hash);
+    }
+
+    function updateMetaDateModified(isoDate) {
+      const selectors = [
+        ['meta[itemprop="dateModified"]', 'itemprop', 'dateModified'],
+        ['meta[name="dateModified"]', 'name', 'dateModified'],
+        ['meta[property="article:modified_time"]', 'property', 'article:modified_time']
+      ];
+      
+      selectors.forEach(([selector, attr, val]) => {
+        let meta = document.querySelector(selector);
+        if (!meta) {
+          meta = document.createElement("meta");
+          meta.setAttribute(attr, val);
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute("content", isoDate);
+      });
+    }
+
+    await loadAllScripts();
+    
+    const uniquePageIdentifier = window.location.pathname;
+    
+    // Jalankan detektor
+    await window.detectEvergreen();
+    
+    if (!window.AEDMetaDates || !window.AEDMetaDates.dateModified) {
+      console.warn("[HybridDateModified] AEDMetaDates tidak ditemukan, skip update.");
+      return;
+    }
+
+    const { dateModified, nextUpdate, type, entityType, pageLevel } = window.AEDMetaDates;
+
+    console.log(`📊 betonjayareadymix.com Page Info: type=${type}, entityType=${entityType}, pageLevel=${pageLevel}`);
+
+    // Hitung variasi tanggal
+    let hashSource = uniquePageIdentifier;
+    if (pageLevel === 'pillar') hashSource = 'pillar-' + hashSource;
+    
+    const hash = stableHash(hashSource);
+    const offsetSeconds = hash % 86400;
+    const finalDate = new Date(new Date(dateModified).getTime() + offsetSeconds * 1000);
+    const isoDate = toISOWithTimezoneLocal(finalDate);
+
+    updateMetaDateModified(isoDate);
+
+    window.AEDMetaDates = {
+      ...window.AEDMetaDates,
+      dateModified: isoDate,
+      hashOffset: offsetSeconds
+    };
+
+    console.log(`✅ [HybridDateModified] ${uniquePageIdentifier} → ${isoDate} | type=${type}, entityType=${entityType}, pageLevel=${pageLevel}`);
+    console.log(`📋 Custom config for betonjayareadymix.com applied successfully`);
+
+  } catch (err) {
+    console.error("[HybridDateModified] Fatal:", err);
+  }
+})();
 
      // Menemukan elemen menggunakan Id
     var JasaKonsFinishingPostLink = document.getElementById("JasaKonsFinishingPost");
