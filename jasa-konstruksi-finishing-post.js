@@ -19,7 +19,7 @@ urlMappingJasaPelapisanWaterproofingStruktur	0			🔴 KOSONG	Perlu diisi atau di
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing > Jasa Finishing Struktur > [Nama Layanan] (4-5 level)
 // ============================================================
 
-const urlMappingJasaFinishingDakBeton = {
+const urlMappingJasaFinishingDakBetonFromJasaFinishingStrukturSub2MoneyPage = {
   // ============================================================
   // [SUB2] - INFORMASIONAL (PANDUAN FINISHING DAK)
   // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
@@ -28,11 +28,11 @@ const urlMappingJasaFinishingDakBeton = {
   "https://www.betonjayareadymix.com/2018/10/finishing-dak.html": "Finishing Dak",  // TYPE: SUB2
   
   // ============================================================
-  // [MONEY_MASTER] - HARGA FINISHING DAK BETON
-  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // [MONEY_PAGE] - HARGA FINISHING DAK BETON (JASA TIDAK BOLEH MONEY_MASTER)
+  // 🧠 TYPE: MONEY_PAGE (WAJIB tampil)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing > Harga Finishing Dak Beton (4 level)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-dak-beton.html": "Harga Jasa Finishing Dak Beton",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-dak-beton.html": "Harga Jasa Finishing Dak Beton",  // TYPE: MONEY_PAGE
   
   // ============================================================
   // [REDIRECT] - DUPLIKASI DARI finishing-dak.html
@@ -58,12 +58,12 @@ const urlMappingJasaFinishingDakBeton = {
 // JASA FINISHING BETON EKSPOS - MONEY PAGE
 // ============================================================
 
-const urlMappingJasaFinishingBetonExpose = {
+const urlMappingJasaFinishingBetonExposeFromJasaFinishingStrukturSub2MoneyPage = {
   // ============================================================
-  // [MONEY_MASTER] - HARGA JASA BETON EKSPOS
-  // 🧠 TYPE: MONEY_MASTER
+  // [MONEY_PAGE] - HARGA JASA BETON EKSPOS (JASA TIDAK BOLEH MONEY_MASTER)
+  // 🧠 TYPE: MONEY_PAGE
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-beton-ekspos.html": "Harga Jasa Beton Ekspos",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-beton-ekspos.html": "Harga Jasa Beton Ekspos",  // TYPE: MONEY_PAGE
   
   // ============================================================
   // [SUB2] - PANDUAN FINISHING BETON EKSPOS
@@ -81,11 +81,12 @@ const urlMappingJasaFinishingBetonExpose = {
 // JASA PLESTERAN & ACIAN DINDING - MONEY PAGE (PER LOKASI)
 // ============================================================
 
-const urlMappingJasaPlesteranAcianDinding = {
+const urlMappingJasaPlesteranAcianDindingFromJasaFinishingSub2MoneyPage = {
   // ============================================================
-  // [MONEY_MASTER] - HARGA BORONGAN PLESTERAN ACIAN PER METER (NASIONAL)
+  // [MONEY_PAGE] - HARGA BORONGAN PLESTERAN ACIAN PER METER (NASIONAL)
+  // 🧠 TYPE: MONEY_PAGE (JASA TIDAK BOLEH MONEY_MASTER)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-tenaga-plesteran-dan-acian-per-meter.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/09/harga-borongan-tenaga-plesteran-dan-acian-per-meter.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter",  // TYPE: MONEY_PAGE
   
   // ============================================================
   // [MONEY_CHILD] - HARGA BORONGAN PLESTERAN ACIAN PER LOKASI
@@ -120,7 +121,7 @@ const urlMappingJasaPlesteranAcianDinding = {
 // JASA FINISHING LANTAI BETON - MONEY PAGE
 // ============================================================
 
-const urlMappingJasaFinishingLantaiBeton = {
+const urlMappingJasaFinishingLantaiBetonFromJasaFinishingStrukturSub2MoneyPage = {
   // ============================================================
   // [MONEY_CHILD] - HARGA JASA TROWEL FLOOR HARDENER PER LOKASI
   // ============================================================
@@ -144,10 +145,11 @@ const urlMappingJasaFinishingLantaiBeton = {
   "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-floor-hardener-bandung.html": "Harga Jasa Trowel Floor Hardener Bandung",  // TYPE: MONEY_CHILD
   
   // ============================================================
-  // [MONEY_MASTER] - HARGA JASA FLOOR HARDENER (NASIONAL)
+  // [MONEY_PAGE] - HARGA JASA FLOOR HARDENER (NASIONAL)
+  // 🧠 TYPE: MONEY_PAGE (JASA TIDAK BOLEH MONEY_MASTER)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-floor-hardener.html": "Harga Jasa Floor Hardener",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/10/harga-borongan-floor-hardener.html": "Harga Borongan Floor Hardener",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-floor-hardener.html": "Harga Jasa Floor Hardener",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/10/harga-borongan-floor-hardener.html": "Harga Borongan Floor Hardener",  // TYPE: MONEY_PAGE
   
   // ============================================================
   // [MONEY_CHILD] - HARGA JASA FLOOR HARDENER PER LOKASI
@@ -167,51 +169,51 @@ const urlMappingJasaFinishingLantaiBeton = {
   "https://www.betonjayareadymix.com/2018/10/jasa-screeding.html": "Jasa Screeding",  // TYPE: SUB1
   "https://www.betonjayareadymix.com/2018/10/jasa-trowel.html": "Jasa Trowel",  // TYPE: SUB1
   "https://www.betonjayareadymix.com/2018/10/finishing-screeding.html": "Finishing Screeding",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/2018/10/finising-trowel.html": "Finishing Trowel",  // TYPE: SUB1 (fix typo)
+  "https://www.betonjayareadymix.com/2018/10/finising-trowel.html": "Finishing Trowel",  // TYPE: SUB1
   "https://www.betonjayareadymix.com/2018/10/finishing-lantai-beton-ekspos.html": "Finishing Lantai Beton Ekspos",  // TYPE: SUB1
   "https://www.betonjayareadymix.com/2018/10/jasa-trowel-lantai-beton.html": "Jasa Trowel Lantai Beton",  // TYPE: SUB1
   "https://www.betonjayareadymix.com/2018/10/lapangan-super-flat.html": "Lapangan Super Flat",  // TYPE: SUB1
   "https://www.betonjayareadymix.com/2018/10/lantai-super-flat.html": "Lantai Super Flat",  // TYPE: SUB1
   
   // ============================================================
-  // [MONEY_MASTER] - HARGA JASA SCREEDING & TROWEL
+  // [MONEY_PAGE] - HARGA JASA SCREEDING & TROWEL
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-screeding.html": "Harga Jasa Screeding",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-lantai.html": "Harga Jasa Trowel Lantai",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-floor-hardener.html": "Harga Jasa Trowel Floor Hardener",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-beton.html": "Harga Jasa Trowel Beton",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel.html": "Harga Jasa Trowel",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-screeding.html": "Harga Jasa Finishing Screeding",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-trowel.html": "Harga Jasa Finishing Trowel",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-lantai-gudang.html": "Harga Jasa Finishing Lantai Gudang",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-lantai-beton-ekspos.html": "Harga Jasa Finishing Lantai Beton Ekspos",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-lantai-beton.html": "Harga Jasa Finishing Lantai Beton",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-screeding.html": "Harga Jasa Screeding",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-lantai.html": "Harga Jasa Trowel Lantai",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-floor-hardener.html": "Harga Jasa Trowel Floor Hardener",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-beton.html": "Harga Jasa Trowel Beton",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel.html": "Harga Jasa Trowel",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-screeding.html": "Harga Jasa Finishing Screeding",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-trowel.html": "Harga Jasa Finishing Trowel",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-lantai-gudang.html": "Harga Jasa Finishing Lantai Gudang",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-lantai-beton-ekspos.html": "Harga Jasa Finishing Lantai Beton Ekspos",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-lantai-beton.html": "Harga Jasa Finishing Lantai Beton",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/10/harga-jasa-lapangan-super-flat.html": "Harga Jasa Lapangan Super Flat",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/10/harga-jasa-lantai-super-flat.html": "Harga Jasa Lantai Super Flat",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/10/biaya-floor-lantai.html": "Biaya Floor Lantai",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/10/harga-borongan-floor-lantai.html": "Harga Borongan Floor Lantai"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/10/biaya-floor-lantai.html": "Biaya Floor Lantai",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/10/harga-borongan-floor-lantai.html": "Harga Borongan Floor Lantai"  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
 // JASA EPOXY DINDING - MONEY PAGE
 // ============================================================
 
-const urlMappingJasaEpoxyDinding = {
+const urlMappingJasaEpoxyDindingFromJasaFinishingStrukturSub2MoneyPage = {
   // ============================================================
-  // [MONEY_MASTER] - HARGA JASA EPOXY DINDING
+  // [MONEY_PAGE] - HARGA JASA EPOXY DINDING
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-epoxy-dinding.html": "Harga Jasa Epoxy Dinding"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-epoxy-dinding.html": "Harga Jasa Epoxy Dinding"  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
 // JASA EPOXY LANTAI - MONEY PAGE
 // ============================================================
 
-const urlMappingJasaEpoxyLantai = {
+const urlMappingJasaEpoxyLantaiFromJasaFinishingStrukturSub2MoneyPage = {
   // ============================================================
-  // [MONEY_MASTER] - MASTER HARGA JASA FINISHING EPOXY
+  // [MONEY_PAGE] - MASTER HARGA JASA FINISHING EPOXY
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-epoxy.html": "Harga Jasa Finishing Epoxy",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-epoxy.html": "Harga Jasa Finishing Epoxy",  // TYPE: MONEY_PAGE
   
   // ============================================================
   // [SUB2] - PANDUAN FINISHING EPOXY
@@ -240,11 +242,11 @@ const urlMappingJasaEpoxyLantai = {
 // 🧠 REKOMENDASI: Isi dengan URL berikut atau hapus const
 // Parent: Jasa Finishing Struktur (/p/jasa-finishing-struktur.html)
 // ============================================================
-const urlMappingJasaFinishingGroutingStrukturBeton = {
+const urlMappingJasaFinishingGroutingStrukturBetonFromJasaFinishingStrukturSub2MoneyPage = {
   // SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
-  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-grouting-struktur-beton.html": "Harga Jasa Grouting Struktur Beton",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-grouting-struktur-beton.html": "Harga Jasa Grouting Struktur Beton",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2018/10/jasa-grouting-retak-beton.html": "Jasa Grouting Retak Beton",  // TYPE: SUB1
-  // "https://www.betonjayareadymix.com/2018/10/harga-injeksi-grouting-beton.html": "Harga Injeksi Grouting Beton",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2018/10/harga-injeksi-grouting-beton.html": "Harga Injeksi Grouting Beton",  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
@@ -252,9 +254,9 @@ const urlMappingJasaFinishingGroutingStrukturBeton = {
 // 🧠 REKOMENDASI: Isi dengan URL berikut atau hapus const
 // Parent: Jasa Finishing Struktur (/p/jasa-finishing-struktur.html)
 // ============================================================
-const urlMappingJasaPelapisanCoatingStruktur = {
+const urlMappingJasaPelapisanCoatingStrukturFromJasaFinishingStrukturSub2MoneyPage = {
   // SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
-  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-coating-struktur-beton.html": "Harga Jasa Coating Struktur Beton",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-coating-struktur-beton.html": "Harga Jasa Coating Struktur Beton",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2018/10/jasa-coating-anti-karat-beton.html": "Jasa Coating Anti Karat Beton",  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/2018/10/jasa-coating-lantai-beton.html": "Jasa Coating Lantai Beton",  // TYPE: MONEY_CHILD
 };
@@ -264,9 +266,9 @@ const urlMappingJasaPelapisanCoatingStruktur = {
 // 🧠 REKOMENDASI: Isi dengan URL berikut atau hapus const
 // Parent: Jasa Finishing Struktur (/p/jasa-finishing-struktur.html)
 // ============================================================
-const urlMappingJasaFinishingKolomBalok = {
+const urlMappingJasaFinishingKolomBalokFromJasaFinishingStrukturSub2MoneyPage = {
   // SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
-  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-kolom-balok.html": "Harga Jasa Finishing Kolom Balok",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-kolom-balok.html": "Harga Jasa Finishing Kolom Balok",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2018/10/jasa-finishing-kolom-beton.html": "Jasa Finishing Kolom Beton",  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/2018/10/jasa-finishing-balok-beton.html": "Jasa Finishing Balok Beton",  // TYPE: MONEY_CHILD
 };
@@ -276,9 +278,9 @@ const urlMappingJasaFinishingKolomBalok = {
 // 🧠 REKOMENDASI: Isi dengan URL berikut atau hapus const
 // Parent: Jasa Finishing Struktur (/p/jasa-finishing-struktur.html)
 // ============================================================
-const urlMappingJasaPelapisanWaterproofingStruktur = {
+const urlMappingJasaPelapisanWaterproofingStrukturFromJasaFinishingStrukturSub2MoneyPage = {
   // SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
-  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-waterproofing-struktur.html": "Harga Jasa Waterproofing Struktur",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-waterproofing-struktur.html": "Harga Jasa Waterproofing Struktur",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2018/10/jasa-waterproofing-dak-beton.html": "Jasa Waterproofing Dak Beton",  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/2018/10/jasa-waterproofing-lantai-beton.html": "Jasa Waterproofing Lantai Beton",  // TYPE: MONEY_CHILD
 };
@@ -288,69 +290,26 @@ const urlMappingJasaPelapisanWaterproofingStruktur = {
 // 🧠 REKOMENDASI: Isi dengan URL berikut atau hapus const
 // Parent: Jasa Perbaikan Struktur (/p/jasa-perbaikan-struktur.html)
 // ============================================================
-const urlMappingJasaPelindungRetakStruktur = {
+const urlMappingJasaPelindungRetakStrukturFromJasaPerbaikanStrukturSub2MoneyPage = {
   // SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
-  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-injeksi-retak-struktur.html": "Harga Jasa Injeksi Retak Struktur",  // TYPE: MONEY_MASTER
-  // "https://www.betonjayareadymix.com/2018/10/jasa-perkuatan-struktur-retak.html": "Jasa Perkuatan Struktur Retak",  // TYPE: MONEY_MASTER
-  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-grouting-retak-struktur.html": "Harga Jasa Grouting Retak Struktur",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-injeksi-retak-struktur.html": "Harga Jasa Injeksi Retak Struktur",  // TYPE: MONEY_PAGE
+  // "https://www.betonjayareadymix.com/2018/10/jasa-perkuatan-struktur-retak.html": "Jasa Perkuatan Struktur Retak",  // TYPE: MONEY_PAGE
+  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-grouting-retak-struktur.html": "Harga Jasa Grouting Retak Struktur",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2018/10/jasa-epoxy-injeksi-retak.html": "Jasa Epoxy Injeksi Retak",  // TYPE: MONEY_CHILD
 };
-//AKHIR SUB FinishingBangunanStruktur
-
-/*
-const urlMappingFinishingBangunanInterior = {
-"https://www.betonjayareadymix.com/p/jasa-interior-dan-furniture-custom.html": "Jasa Interior dan Furniture Custome",
-"https://www.betonjayareadymix.com/p/jasa-ganti-keramik-lantai.html": "Jasa Ganti Keramik Lantai",
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-vinyl.html": "Jasa Pasang Lantai Vinyl",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-gypsum.html": "Jasa Pasang Plafon Gypsum",
-  "https://www.betonjayareadymix.com/p/jasa-ganti-lampu-interior.html": "Jasa Ganti Lampu Interior",
-  "https://www.betonjayareadymix.com/p/jasa-ganti-kitchen-set.html": "Jasa Ganti Kitchen Set",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html": "Jasa Finishing Interior Klasik",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern"
-};
-*/
-
-//SUB JasaFinishingBangunanInteriorPost
-/*
-📊 RINGKASAN STATUS
-Const										Jumlah URL	Status	Keterangan
-urlMappingJasaInteriordanFurnitureCustome	0			🔴 KOSONG	Perlu diisi atau dihapus
-urlMappingJasaKeramikLantai					0			🔴 KOSONG	Perlu diisi atau dihapus
-urlMappingJasaCatInteriorRumah				0			🔴 KOSONG	Perlu diisi atau dihapus
-urlMappingJasaPasangWallpaperDinding		0			🔴 KOSONG	Perlu diisi atau dihapus
-urlMappingJasaLampuInterior					0			🔴 KOSONG	Perlu diisi atau dihapus
-urlMappingJasaFinishingInteriorKlasik		11			✅ VALID	Semua URL aktif
-urlMappingJasaFinishingInteriorMinimalis	16			✅ VALID	Semua URL aktif
-urlMappingJasaInteriorFurnitureCustome		25			✅ VALID	Semua URL aktif
-urlMappingJasaFinishingInteriorModern		4			✅ VALID	Semua URL aktif
-urlMappingJasaFinishingInteriorModernWpc	12			✅ VALID	Semua URL aktif
-urlMappingJasaFinishingInteriorModernVinyl	20			✅ VALID	Semua URL aktif
-urlMappingJasaFinishingInteriorModernPvc	18			✅ VALID	Semua URL aktif
-urlMappingJasaFinishingInteriorModernPlafon	22			✅ VALID	Semua URL aktif
-urlMappingJasaKitchenSet					25			✅ VALID	Semua URL aktif
-*/
-
-// ============================================================
-// 🟡 CONST KOSONG - DENGAN SARAN ITEM (PERLU TINDAKAN)
-// ============================================================
 
 // ============================================================
 // JASA INTERIOR DAN FURNITURE CUSTOM
 // 🧠 REKOMENDASI: Isi dengan URL berikut atau hapus const
 // Parent: Jasa Finishing Interior (/p/jasa-finishing-interior.html)
 // ============================================================
-const urlMappingJasaInteriordanFurnitureCustome = {
+const urlMappingJasaInteriordanFurnitureCustomeFromJasaFinishingInteriorSub2MoneyPage = {
   // SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
-  // "https://www.betonjayareadymix.com/p/jasa-interior-custom-rumah.html": "Jasa Interior Custom Rumah",  // TYPE: MONEY_MASTER
-  // "https://www.betonjayareadymix.com/p/jasa-interior-custom-kantor.html": "Jasa Interior Custom Kantor",  // TYPE: MONEY_MASTER
-  // "https://www.betonjayareadymix.com/p/jasa-furniture-custom-jepara.html": "Jasa Furniture Custom Jepara",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/p/jasa-interior-custom-rumah.html": "Jasa Interior Custom Rumah",  // TYPE: MONEY_PAGE
+  // "https://www.betonjayareadymix.com/p/jasa-interior-custom-kantor.html": "Jasa Interior Custom Kantor",  // TYPE: MONEY_PAGE
+  // "https://www.betonjayareadymix.com/p/jasa-furniture-custom-jepara.html": "Jasa Furniture Custom Jepara",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/p/jasa-furniture-custom-per-meter.html": "Jasa Furniture Custom Per Meter",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/p/harga-interior-furniture-custom.html": "Harga Interior Furniture Custom",  // TYPE: MONEY_MASTER
-  
-  // 📌 CATATAN: Jika tidak ada konten, const ini sebaiknya DIHAPUS untuk menghindari kebingungan mapping.
+  // "https://www.betonjayareadymix.com/p/harga-interior-furniture-custom.html": "Harga Interior Furniture Custom",  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
@@ -358,32 +317,26 @@ const urlMappingJasaInteriordanFurnitureCustome = {
 // 🧠 REKOMENDASI: Isi dengan URL berikut atau hapus const
 // Parent: Jasa Finishing Bangunan (/p/jasa-finishing-bangunan.html)
 // ============================================================
-const urlMappingJasaKeramikLantai = {
+const urlMappingJasaKeramikLantaiFromJasaFinishingBangunanSub2MoneyPage = {
   // SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
-  // "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html": "Jasa Pasang Keramik Lantai",  // TYPE: MONEY_MASTER
-  // "https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-per-meter.html": "Harga Jasa Pasang Keramik per Meter",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html": "Jasa Pasang Keramik Lantai",  // TYPE: MONEY_PAGE
+  // "https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-per-meter.html": "Harga Jasa Pasang Keramik per Meter",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/p/jasa-ganti-keramik-lantai.html": "Jasa Ganti Keramik Lantai",  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-jakarta.html": "Jasa Pasang Keramik Lantai Jakarta",  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-bogor.html": "Jasa Pasang Keramik Lantai Bogor",  // TYPE: MONEY_CHILD
-  
-  // 📌 CATATAN: Jika tidak ada konten, const ini sebaiknya DIHAPUS.
 };
 
 // ============================================================
 // JASA CAT INTERIOR RUMAH
 // 🧠 REKOMENDASI: Isi dengan URL berikut atau hapus const
 // Parent: Jasa Finishing Interior (/p/jasa-finishing-interior.html)
-// ⚠️ PERHATIAN: Ada URL /p/jasa-cat-interior-rumah.html di const FinishingBangunanInterior
-// Mungkin ini duplikasi, perlu dicek.
 // ============================================================
-const urlMappingJasaCatInteriorRumah = {
+const urlMappingJasaCatInteriorRumahFromJasaFinishingInteriorSub2MoneyPage = {
   // SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah-jakarta.html": "Jasa Cat Interior Rumah Jakarta",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/p/harga-jasa-cat-interior-per-meter.html": "Harga Jasa Cat Interior per Meter",  // TYPE: MONEY_MASTER
-  // "https://www.betonjayareadymix.com/p/jasa-cat-dinding-interior.html": "Jasa Cat Dinding Interior",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/p/harga-jasa-cat-interior-per-meter.html": "Harga Jasa Cat Interior per Meter",  // TYPE: MONEY_PAGE
+  // "https://www.betonjayareadymix.com/p/jasa-cat-dinding-interior.html": "Jasa Cat Dinding Interior",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah-bogor.html": "Jasa Cat Interior Rumah Bogor",  // TYPE: MONEY_CHILD
-  
-  // 📌 CATATAN: Jika tidak ada konten, const ini sebaiknya DIHAPUS.
 };
 
 // ============================================================
@@ -391,14 +344,12 @@ const urlMappingJasaCatInteriorRumah = {
 // 🧠 REKOMENDASI: Isi dengan URL berikut atau hapus const
 // Parent: Jasa Finishing Interior (/p/jasa-finishing-interior.html)
 // ============================================================
-const urlMappingJasaPasangWallpaperDinding = {
+const urlMappingJasaPasangWallpaperDindingFromJasaFinishingInteriorSub2MoneyPage = {
   // SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding-jakarta.html": "Jasa Pasang Wallpaper Dinding Jakarta",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wallpaper-per-meter.html": "Harga Jasa Pasang Wallpaper per Meter",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wallpaper-per-meter.html": "Harga Jasa Pasang Wallpaper per Meter",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding-bogor.html": "Jasa Pasang Wallpaper Dinding Bogor",  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding-bekasi.html": "Jasa Pasang Wallpaper Dinding Bekasi",  // TYPE: MONEY_CHILD
-  
-  // 📌 CATATAN: Jika tidak ada konten, const ini sebaiknya DIHAPUS.
 };
 
 // ============================================================
@@ -406,14 +357,12 @@ const urlMappingJasaPasangWallpaperDinding = {
 // 🧠 REKOMENDASI: Isi dengan URL berikut atau hapus const
 // Parent: Jasa Finishing Interior (/p/jasa-finishing-interior.html)
 // ============================================================
-const urlMappingJasaLampuInterior = {
+const urlMappingJasaLampuInteriorFromJasaFinishingInteriorSub2MoneyPage = {
   // SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
-  // "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior.html": "Jasa Pasang Lampu Interior",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior.html": "Jasa Pasang Lampu Interior",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/p/jasa-instalasi-lampu-downlight.html": "Jasa Instalasi Lampu Downlight",  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-jakarta.html": "Jasa Pasang Lampu Interior Jakarta",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-interior.html": "Harga Jasa Pasang Lampu Interior",  // TYPE: MONEY_MASTER
-  
-  // 📌 CATATAN: Jika tidak ada konten, const ini sebaiknya DIHAPUS.
+  // "https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-interior.html": "Harga Jasa Pasang Lampu Interior",  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
@@ -424,7 +373,7 @@ const urlMappingJasaLampuInterior = {
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Interior > [Nama Layanan] (4 level)
 // ============================================================
 
-const urlMappingJasaFinishingInteriorKlasik = {
+const urlMappingJasaFinishingInteriorKlasikFromJasaFinishingInteriorSub2MoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - LAYANAN FINISHING INTERIOR KLASIK
   // 🧠 TYPE: MONEY_CHILD (WAJIB tampil)
@@ -449,7 +398,7 @@ const urlMappingJasaFinishingInteriorKlasik = {
 // Parent: Jasa Finishing Interior (/p/jasa-finishing-interior.html)
 // ============================================================
 
-const urlMappingJasaFinishingInteriorMinimalis = {
+const urlMappingJasaFinishingInteriorMinimalisFromJasaFinishingInteriorSub2MoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - LAYANAN FINISHING INTERIOR MINIMALIS
   // 🧠 TYPE: MONEY_CHILD (WAJIB tampil)
@@ -479,7 +428,7 @@ const urlMappingJasaFinishingInteriorMinimalis = {
 // Parent: Jasa Finishing Interior (/p/jasa-finishing-interior.html)
 // ============================================================
 
-const urlMappingJasaInteriorFurnitureCustome = {
+const urlMappingJasaInteriorFurnitureCustomeFromJasaFinishingInteriorSub2MoneyPage = {
   // ============================================================
   // [MONEY_CHILD] - JASA INTERIOR FURNITURE PER LOKASI
   // ============================================================
@@ -509,22 +458,22 @@ const urlMappingJasaInteriorFurnitureCustome = {
   "https://www.betonjayareadymix.com/2018/11/jasa-custom-furniture-bogor.html": "Jasa Custom Furniture Bogor",  // TYPE: MONEY_CHILD
   
   // ============================================================
-  // [MONEY_MASTER] - JASA FURNITURE UMUM & CUSTOM
+  // [MONEY_PAGE] - JASA FURNITURE UMUM & CUSTOM
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/jasa-furniture-interior-exterior.html": "Jasa Furniture Interior Exterior",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/jasa-furniture-custom.html": "Jasa Furniture Custom",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-furniture-custom.html": "Jasa Pembuatan Furniture Custom",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/09/jasa-furniture-interior-exterior.html": "Jasa Furniture Interior Exterior",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/jasa-furniture-custom.html": "Jasa Furniture Custom",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-furniture-custom.html": "Jasa Pembuatan Furniture Custom",  // TYPE: MONEY_PAGE
   
   // ============================================================
-  // [MONEY_MASTER] - HARGA INTERIOR & FURNITURE
+  // [MONEY_PAGE] - HARGA INTERIOR & FURNITURE
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-interior-kamar-tidur.html": "Harga Interior Kamar Tidur",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/harga-interior-kamar.html": "Harga Interior Kamar",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/harga-interior-ruang-tamu.html": "Harga Interior Ruang Tamu",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/harga-interior-per-meter.html": "Harga Interior Per Meter",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-interior.html": "Harga Borongan Interior",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/harga-interior-kamar-tidur-minimalis.html": "Harga Interior Kamar Tidur Minimalis",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/harga-custom-furniture-per-meter.html": "Harga Custom Furniture Per Meter"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/09/harga-interior-kamar-tidur.html": "Harga Interior Kamar Tidur",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-interior-kamar.html": "Harga Interior Kamar",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-interior-ruang-tamu.html": "Harga Interior Ruang Tamu",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-interior-per-meter.html": "Harga Interior Per Meter",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-borongan-interior.html": "Harga Borongan Interior",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-interior-kamar-tidur-minimalis.html": "Harga Interior Kamar Tidur Minimalis",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-custom-furniture-per-meter.html": "Harga Custom Furniture Per Meter"  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
@@ -533,7 +482,7 @@ const urlMappingJasaInteriorFurnitureCustome = {
 // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
 // ============================================================
 
-const urlMappingJasaFinishingInteriorModern = {
+const urlMappingJasaFinishingInteriorModernFromJasaFinishingInteriorSub2Sub2 = {
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-wpc.html": "Jasa Pasang WPC",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl.html": "Jasa Pasang Vinyl",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc.html": "Jasa Pasang PVC",  // TYPE: SUB2
@@ -546,7 +495,7 @@ const urlMappingJasaFinishingInteriorModern = {
 // 🧠 TYPE: MONEY_CHILD (WAJIB tampil)
 // ============================================================
 
-const urlMappingJasaFinishingInteriorModernWpc = {
+const urlMappingJasaFinishingInteriorModernWpcFromJasaPasangWpcSub2MoneyChild = {
   "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-wpc-lantai.html": "Harga Jasa Pasang WPC Lantai",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-panel-dinding-wpc.html": "Jasa Pasang Panel Dinding WPC",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-dinding-wpc.html": "Harga Jasa Pasang Dinding WPC",  // TYPE: MONEY_CHILD
@@ -567,7 +516,7 @@ const urlMappingJasaFinishingInteriorModernWpc = {
 // 🧠 TYPE: MONEY_CHILD (WAJIB tampil)
 // ============================================================
 
-const urlMappingJasaFinishingInteriorModernVinyl = {
+const urlMappingJasaFinishingInteriorModernVinylFromJasaPasangVinylSub2MoneyChild = {
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-lantai-karawang.html": "Jasa Pasang Vinyl Lantai Karawang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-lantai-tangerang.html": "Jasa Pasang Vinyl Lantai Tangerang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-lantai-depok.html": "Jasa Pasang Vinyl Lantai Depok",  // TYPE: MONEY_CHILD
@@ -596,7 +545,7 @@ const urlMappingJasaFinishingInteriorModernVinyl = {
 // 🧠 TYPE: MONEY_CHILD (WAJIB tampil)
 // ============================================================
 
-const urlMappingJasaFinishingInteriorModernPvc = {
+const urlMappingJasaFinishingInteriorModernPvcFromJasaPasangPvcSub2MoneyChild = {
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-lantai.html": "Jasa Pasang Pvc Lantai",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-surabaya.html": "Jasa Pasang Dinding PVC Surabaya",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-dinding-pvc-karawang.html": "Jasa Pasang Dinding PVC Karawang",  // TYPE: MONEY_CHILD
@@ -623,7 +572,7 @@ const urlMappingJasaFinishingInteriorModernPvc = {
 // 🧠 TYPE: MONEY_CHILD (WAJIB tampil)
 // ============================================================
 
-const urlMappingJasaFinishingInteriorModernPlafon = {
+const urlMappingJasaFinishingInteriorModernPlafonFromJasaPasangPlafonSub2MoneyChild = {
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-wpc-premium.html": "Jasa Pasang Plafon WPC Premium",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-plafon-wpc.html": "Harga Jasa Pasang Plafon WPC",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-wpc.html": "Jasa Pasang Plafon WPC",  // TYPE: MONEY_CHILD
@@ -654,7 +603,7 @@ const urlMappingJasaFinishingInteriorModernPlafon = {
 // 🧠 TYPE: MONEY_CHILD (WAJIB tampil)
 // ============================================================
 
-const urlMappingJasaKitchenSet = {
+const urlMappingJasaKitchenSetFromJasaFinishingInteriorSub2MoneyChild = {
   // Harga & Jasa Kitchen Set
   "https://www.betonjayareadymix.com/2018/09/kabinet-dapur.html": "Kabinet Dapur",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/09/harga-kitchen-set-interior.html": "Harga Kitchen Set Interior",  // TYPE: MONEY_CHILD
@@ -687,7 +636,6 @@ const urlMappingJasaKitchenSet = {
   "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-modern.html": "Jasa Kitchen Set Modern",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-minimalis.html": "Jasa Kitchen Set Minimalis"  // TYPE: MONEY_CHILD
 };
-//AKHIR SUB JasaFinishingBangunanInteriorPost
 
 // ============================================================
 // JASA CAT EKSTERIOR RUMAH - KOSONG
@@ -696,12 +644,12 @@ const urlMappingJasaKitchenSet = {
 // Parent: Jasa Finishing Eksterior (/p/jasa-finishing-eksterior.html)
 // ============================================================
 
-const urlMappingJasaCatEksteriorRumah = {
+const urlMappingJasaCatEksteriorRumahFromJasaFinishingEksteriorSub2MoneyPage = {
   // ============================================================
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // ============================================================
   // "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-rumah.html": "Jasa Cat Eksterior Rumah",  // TYPE: SUB2
-  // "https://www.betonjayareadymix.com/p/harga-cat-eksterior-rumah.html": "Harga Cat Eksterior Rumah",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/p/harga-cat-eksterior-rumah.html": "Harga Cat Eksterior Rumah",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/p/harga-cat-eksterior-rumah-jakarta.html": "Harga Cat Eksterior Rumah Jakarta",  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-rumah-murah.html": "Jasa Cat Eksterior Rumah Murah",  // TYPE: MONEY_CHILD
 };
@@ -713,27 +661,25 @@ const urlMappingJasaCatEksteriorRumah = {
 // Parent: Jasa Finishing Eksterior (/p/jasa-finishing-eksterior.html)
 // ============================================================
 
-const urlMappingJasaFinishingFasadEksterior = {
+const urlMappingJasaFinishingFasadEksteriorFromJasaFinishingEksteriorSub2MoneyPage = {
   // ============================================================
-  // [MONEY_MASTER] - HARGA PROFIL BETON (TRANSACTIONAL)
-  // 🧠 TYPE: MONEY_MASTER
+  // [MONEY_PAGE] - HARGA PROFIL BETON (TRANSACTIONAL)
+  // 🧠 TYPE: MONEY_PAGE (JASA TIDAK BOLEH MONEY_MASTER)
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Eksterior > Harga Profil Beton (4 level)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton.html": "Harga Jasa Profil Beton",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-bangunan.html": "Harga Jasa Profil Bangunan",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-rumah.html": "Harga Jasa Profil Rumah",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton.html": "Harga Jasa Profil Beton",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-bangunan.html": "Harga Jasa Profil Bangunan",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-rumah.html": "Harga Jasa Profil Rumah",  // TYPE: MONEY_PAGE
   
   // ============================================================
-  // [MONEY_MASTER] - HARGA JASA PASANG ACP
-  // 🧠 TYPE: MONEY_MASTER
+  // [MONEY_PAGE] - HARGA JASA PASANG ACP
   // ============================================================
-  "https://www.betonjayareadymix.com/2020/01/harga-jasa-pasang-acp.html": "Harga Jasa Pasang ACP",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2020/01/harga-jasa-pasang-acp-per-meter.html": "Harga Jasa Pasang ACP Per Meter",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2020/01/harga-jasa-laser-cutting-acp.html": "Harga Jasa Laser Cutting ACP",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2020/01/harga-jasa-pasang-acp.html": "Harga Jasa Pasang ACP",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2020/01/harga-jasa-pasang-acp-per-meter.html": "Harga Jasa Pasang ACP Per Meter",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2020/01/harga-jasa-laser-cutting-acp.html": "Harga Jasa Laser Cutting ACP",  // TYPE: MONEY_PAGE
   
   // ============================================================
   // [MONEY_CHILD] - JASA ACP PER LOKASI
-  // 🧠 TYPE: MONEY_CHILD (spesifik lokasi)
   // ============================================================
   "https://www.betonjayareadymix.com/2020/01/jasa-pasang-acp-jakarta.html": "Jasa Pasang ACP Jakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2020/01/jasa-pasang-acp-bogor.html": "Jasa Pasang ACP Bogor",  // TYPE: MONEY_CHILD
@@ -761,16 +707,13 @@ const urlMappingJasaFinishingFasadEksterior = {
   
   // ============================================================
   // [REDIRECT] - DUPLIKASI DARI MASTER (301 redirect)
-  // 🧠 SEO NOTE: Halaman ini overlap dengan master money page
   // ============================================================
-  "https://www.betonjayareadymix.com/2020/01/jasa-pasang-acp.html": "Jasa Pasang ACP",  // TYPE: REDIRECT (ke harga-jasa-pasang-acp.html)
-  "https://www.betonjayareadymix.com/2020/01/jasa-pasang-acp-per-meter.html": "Jasa Pasang ACP per Meter",  // TYPE: REDIRECT (ke harga-jasa-pasang-acp-per-meter.html)
-  "https://www.betonjayareadymix.com/2020/01/jasa-laser-cutting-acp.html": "Jasa Laser Cutting ACP",  // TYPE: REDIRECT (ke harga-jasa-laser-cutting-acp.html)
+  "https://www.betonjayareadymix.com/2020/01/jasa-pasang-acp.html": "Jasa Pasang ACP",  // TYPE: REDIRECT
+  "https://www.betonjayareadymix.com/2020/01/jasa-pasang-acp-per-meter.html": "Jasa Pasang ACP per Meter",  // TYPE: REDIRECT
+  "https://www.betonjayareadymix.com/2020/01/jasa-laser-cutting-acp.html": "Jasa Laser Cutting ACP",  // TYPE: REDIRECT
   
   // ============================================================
   // [SUB2] - JASA RELIEF DINDING (INFORMASIONAL)
-  // 🧠 TYPE: SUB2 (boleh skip, edukasi)
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Eksterior > Jasa Relief Dinding (4 level)
   // ============================================================
   "https://www.betonjayareadymix.com/2018/09/jasa-relief-dinding.html": "Jasa Relief Dinding",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-relief-dinding.html": "Jasa Pembuatan Relief Dinding"  // TYPE: SUB2
@@ -783,20 +726,18 @@ const urlMappingJasaFinishingFasadEksterior = {
 // Parent: Jasa Finishing Eksterior (/p/jasa-finishing-eksterior.html)
 // ============================================================
 
-const urlMappingJasaFinishingTamanRumah = {
+const urlMappingJasaFinishingTamanRumahFromJasaFinishingEksteriorSub2MoneyPage = {
   // ============================================================
-  // [MONEY_MASTER] - JASA TAMAN (TRANSACTIONAL)
-  // 🧠 TYPE: MONEY_MASTER
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Eksterior > Jasa Taman (4 level)
+  // [MONEY_PAGE] - JASA TAMAN (TRANSACTIONAL)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/jasa-relief-taman.html": "Jasa Relief Taman",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/jasa-tukang-taman.html": "Jasa Tukang Taman",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/jasa-taman-terdekat.html": "Jasa Taman Terdekat",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/jasa-taman-murah.html": "Jasa Taman Murah",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/jasa-taman.html": "Jasa Taman",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-taman-terdekat.html": "Jasa Pembuatan Taman Terdekat",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-taman-rumah.html": "Jasa Pembuatan Taman Rumah"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/09/jasa-relief-taman.html": "Jasa Relief Taman",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/jasa-tukang-taman.html": "Jasa Tukang Taman",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/jasa-taman-terdekat.html": "Jasa Taman Terdekat",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/jasa-taman-murah.html": "Jasa Taman Murah",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/jasa-taman.html": "Jasa Taman",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-taman-terdekat.html": "Jasa Pembuatan Taman Terdekat",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-taman-rumah.html": "Jasa Pembuatan Taman Rumah"  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
@@ -806,12 +747,12 @@ const urlMappingJasaFinishingTamanRumah = {
 // Parent: Jasa Finishing Eksterior (/p/jasa-finishing-eksterior.html)
 // ============================================================
 
-const urlMappingJasaPelapisanAntiCuaca = {
+const urlMappingJasaPelapisanAntiCuacaFromJasaFinishingEksteriorSub2MoneyPage = {
   // ============================================================
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // ============================================================
   // "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-cuaca.html": "Jasa Pelapisan Anti Cuaca",  // TYPE: SUB2
-  // "https://www.betonjayareadymix.com/p/harga-pelapisan-anti-cuaca.html": "Harga Pelapisan Anti Cuaca",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/p/harga-pelapisan-anti-cuaca.html": "Harga Pelapisan Anti Cuaca",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-cuaca-jakarta.html": "Jasa Pelapisan Anti Cuaca Jakarta",  // TYPE: MONEY_CHILD
 };
 
@@ -819,12 +760,12 @@ const urlMappingJasaPelapisanAntiCuaca = {
 // JASA PELAPISAN DINDING LUAR - KOSONG
 // ============================================================
 
-const urlMappingJasaPelapisanDindingLuar = {
+const urlMappingJasaPelapisanDindingLuarFromJasaFinishingEksteriorSub2MoneyPage = {
   // ============================================================
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // ============================================================
   // "https://www.betonjayareadymix.com/p/jasa-pelapisan-dinding-luar.html": "Jasa Pelapisan Dinding Luar",  // TYPE: SUB2
-  // "https://www.betonjayareadymix.com/p/harga-pelapisan-dinding-luar.html": "Harga Pelapisan Dinding Luar",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/p/harga-pelapisan-dinding-luar.html": "Harga Pelapisan Dinding Luar",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/p/jasa-pelapisan-dinding-luar-murah.html": "Jasa Pelapisan Dinding Luar Murah",  // TYPE: MONEY_CHILD
 };
 
@@ -832,12 +773,12 @@ const urlMappingJasaPelapisanDindingLuar = {
 // JASA FINISHING KANOPI TERAS - KOSONG
 // ============================================================
 
-const urlMappingJasaFinishingKanopiTeras = {
+const urlMappingJasaFinishingKanopiTerasFromJasaFinishingEksteriorSub2MoneyPage = {
   // ============================================================
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // ============================================================
   // "https://www.betonjayareadymix.com/p/jasa-finishing-kanopi-teras.html": "Jasa Finishing Kanopi Teras",  // TYPE: SUB2
-  // "https://www.betonjayareadymix.com/p/harga-finishing-kanopi-teras.html": "Harga Finishing Kanopi Teras",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/p/harga-finishing-kanopi-teras.html": "Harga Finishing Kanopi Teras",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/p/jasa-finishing-kanopi-teras-murah.html": "Jasa Finishing Kanopi Teras Murah",  // TYPE: MONEY_CHILD
 };
 
@@ -845,12 +786,12 @@ const urlMappingJasaFinishingKanopiTeras = {
 // JASA PELAPISAN BATU ALAM EKSTERIOR - KOSONG
 // ============================================================
 
-const urlMappingJasaPelapisanBatuAlamEksterior = {
+const urlMappingJasaPelapisanBatuAlamEksteriorFromJasaFinishingEksteriorSub2MoneyPage = {
   // ============================================================
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // ============================================================
   // "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html": "Jasa Pelapisan Batu Alam Eksterior",  // TYPE: SUB2
-  // "https://www.betonjayareadymix.com/p/harga-pelapisan-batu-alam-eksterior.html": "Harga Pelapisan Batu Alam Eksterior",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/p/harga-pelapisan-batu-alam-eksterior.html": "Harga Pelapisan Batu Alam Eksterior",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior-jakarta.html": "Jasa Pelapisan Batu Alam Eksterior Jakarta",  // TYPE: MONEY_CHILD
 };
 
@@ -858,12 +799,12 @@ const urlMappingJasaPelapisanBatuAlamEksterior = {
 // JASA PELAPISAN GENTENG DAK - KOSONG
 // ============================================================
 
-const urlMappingJasaPelapisanGentengDak = {
+const urlMappingJasaPelapisanGentengDakFromJasaFinishingEksteriorSub2MoneyPage = {
   // ============================================================
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // ============================================================
   // "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak.html": "Jasa Pelapisan Genteng Dak",  // TYPE: SUB2
-  // "https://www.betonjayareadymix.com/p/harga-pelapisan-genteng-dak.html": "Harga Pelapisan Genteng Dak",  // TYPE: MONEY_MASTER
+  // "https://www.betonjayareadymix.com/p/harga-pelapisan-genteng-dak.html": "Harga Pelapisan Genteng Dak",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak-murah.html": "Jasa Pelapisan Genteng Dak Murah",  // TYPE: MONEY_CHILD
 };
 //AKHIR SUB JasaFinishingBangunanEksteriorPost
@@ -1306,7 +1247,7 @@ document.addEventListener("DOMContentLoaded", function() {
     urlMappingJasaFinishingFasadEksterior,
     urlMappingJasaPelapisanAntiCuaca,
     urlMappingJasaPelapisanDindingLuar,
-    urlMappingJasaFinishingTamanRumah,
+    urlMappingJasaFinishingTamanRumahFromJasaFinishingEksteriorSub2MoneyPage,
     urlMappingJasaFinishingKanopiTeras,
     urlMappingJasaPelapisanBatuAlamEksterior,
     urlMappingJasaPelapisanGentengDak
@@ -1326,7 +1267,7 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
    ========================================================== */	
 	
 	/* ============================================================
- 🔥 Hybrid Date Modified v6.0 — UNTUK betonjayareadymix.com
+ 🔥 Hybrid Date Modified v7.0 — UNTUK betonjayareadymix.com
     Custom date berdasarkan hasil deteksi page level
 ============================================================ */
 
@@ -1396,7 +1337,7 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
       const EVERGREEN_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/SmartEvergreenDetector.js";
       
       if (typeof window.pageLevelDetector === "undefined") {
-        console.log("⏳ Loading Page Level Detector v13.0...");
+        console.log("⏳ Loading Page Level Detector v14.0...");
         await loadExternalJS(PAGE_LEVEL_DETECTOR_URL);
         await waitForPageLevelDetector();
         console.log("✅ Page Level Detector v13.0 READY");
@@ -5549,7 +5490,7 @@ if (urlMappingJasaFinishingFasadEksterior[cleanUrlJasaKonsFinishingPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-if (urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost]) {
+if (urlMappingJasaFinishingTamanRumahFromJasaFinishingEksteriorSub2MoneyPage[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanEksteriorPost');
     
@@ -5637,10 +5578,10 @@ if (urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost]) {
         JasaFinishingBangunanEksteriorPostLink.style.visibility = 'visible';
         //JasaFinishingTamanRumahPost
         JasaFinishingTamanRumahPostLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost];
+        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingTamanRumahFromJasaFinishingEksteriorSub2MoneyPage[cleanUrlJasaKonsFinishingPost];
     }
  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost]) {
+   if (urlMappingJasaFinishingTamanRumahFromJasaFinishingEksteriorSub2MoneyPage[cleanUrlJasaKonsFinishingPost]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -5684,7 +5625,7 @@ if (urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost]) {
                {
                    "@type": "ListItem",
                    "position": 7,
-                   "name": urlMappingJasaFinishingTamanRumah[cleanUrlJasaKonsFinishingPost],
+                   "name": urlMappingJasaFinishingTamanRumahFromJasaFinishingEksteriorSub2MoneyPage[cleanUrlJasaKonsFinishingPost],
                    "item": cleanUrlJasaKonsFinishingPost
                }
            ]
