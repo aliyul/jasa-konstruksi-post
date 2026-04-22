@@ -2300,7 +2300,7 @@ if (urlMappingJasaFinishingDakBetonFromSub2MoneyPage[cleanUrlJasaKonsFinishingPo
 }
 
 	
-   if (urlMappingHargaBoronganPlesteranAcianFromJasaFinishingStrukturMoneyPage[cleanUrlJasaKonsFinishingPost]) {
+   if (urlMappingJasaPlesteranAcianDindingFromSub2MoneyPage[cleanUrlJasaKonsFinishingPost]) {
          
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
 	removeCondition('JasaDesInPost');
@@ -2422,12 +2422,12 @@ if (urlMappingJasaFinishingDakBetonFromSub2MoneyPage[cleanUrlJasaKonsFinishingPo
     // Update page name
     const pageNameElement = document.getElementById("pageNameJasaKonsFinishingPost");
     if (pageNameElement) {
-        pageNameElement.textContent = urlMappingHargaBoronganPlesteranAcianFromJasaFinishingStrukturMoneyPage[cleanUrlJasaKonsFinishingPost];
+        pageNameElement.textContent = urlMappingJasaPlesteranAcianDindingFromSub2MoneyPage[cleanUrlJasaKonsFinishingPost];
         pageNameElement.style.display = 'inline';
     }
 
 	generateBreadcrumbForMapping(
-    urlMappingHargaBoronganPlesteranAcianFromJasaFinishingStrukturMoneyPage,
+    urlMappingJasaPlesteranAcianDindingFromSub2MoneyPage,
     currentUrl,
     [
         { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
