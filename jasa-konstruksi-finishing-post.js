@@ -2015,13 +2015,7 @@ if (urlMappingJasaFinishingDakBetonFromSub2MoneyPage[cleanUrlJasaKonsFinishingPo
 }
 
 	
-    if (urlMappingJasaFinishingBetonExpose[cleanUrlJasaKonsFinishingPost]) {
-
-		  // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
-    removeCondition('JasaKonstruksiFinishingPost');                    // PILLAR (Jasa Konstruksi)
-    removeCondition('JasaFinishingBangunanPost');             // Jasa Finishing Bangunan
-    removeCondition('JasaFinishingBangunanStrukturPost');     // Jasa Finishing Struktur
-       
+    if (urlMappingJasaFinishingBetonEksposFromSub2MoneyPage[cleanUrlJasaKonsFinishingPost]) {
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -2108,12 +2102,15 @@ if (urlMappingJasaFinishingDakBetonFromSub2MoneyPage[cleanUrlJasaKonsFinishingPo
     }
     
     // Tampilkan Jasa Finishing (level 2)
-    let jasaFinishing = document.getElementById('JasaFinishingPost');
+    let jasaFinishing = document.getElementById('JasaKonstruksiFinishingPost');
     if (jasaFinishing) {
         jasaFinishing.style.display = 'inline';
         jasaFinishing.style.visibility = 'visible';
     } else {
         // Jika sudah di-remove, restore
+		restoreCondition('JasaKonstruksiFinishingPost');                    // PILLAR (Jasa Konstruksi)
+	    restoreCondition('JasaFinishingBangunanPost');             // Jasa Finishing Bangunan
+	    restoreCondition('JasaFinishingBangunanStrukturPost');     // Jasa Finishing Struktur
         restoreCondition('JasaFinishingPost');
     }
     
@@ -2129,7 +2126,7 @@ if (urlMappingJasaFinishingDakBetonFromSub2MoneyPage[cleanUrlJasaKonsFinishingPo
     // Update page name
     const pageNameElement = document.getElementById("pageNameJasaKonsFinishingPost");
     if (pageNameElement) {
-        pageNameElement.textContent = urlMappingJasaFinishingBetonExpose[cleanUrlJasaKonsFinishingPost];
+        pageNameElement.textContent = urlMappingJasaFinishingBetonEksposFromSub2MoneyPage[cleanUrlJasaKonsFinishingPost];
         pageNameElement.style.display = 'inline';
     }
 	
@@ -2143,77 +2140,25 @@ if (urlMappingJasaFinishingDakBetonFromSub2MoneyPage[cleanUrlJasaKonsFinishingPo
         JasaFinishingBetonExposePostLink.style.visibility = 'visible';
         pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaFinishingBetonExpose[cleanUrlJasaKonsFinishingPost];
 		*/
+	        generateBreadcrumbForMapping(
+	        urlMappingJasaFinishingBetonExpose,
+	        cleanUrlJasaKonsFinishingPost,
+	        [
+	            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+	            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+	            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+	            { name: 'Jasa Finishing Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html' },
+	            { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+	            { name: 'Jasa Finishing Beton Expose', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-beton-expose.html' }
+	        ],
+	        'JASA'
+	    );
+		
     }
 
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaFinishingBetonExpose[cleanUrlJasaKonsFinishingPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-			   /*
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-			   */
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Finishing",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
-               },
-			   /*skip level
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Finishing Bangunan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Finishing Struktur",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html"
-               },
-			   */
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing Beton Expose",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-beton-expose.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingJasaFinishingBetonExpose[cleanUrlJasaKonsFinishingPost],
-                   "item": cleanUrlJasaKonsFinishingPost
-               }
-           ]
-       };
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-  if (urlMappingJasaFinishingLantaiBeton[cleanUrlJasaKonsFinishingPost]) {
-          // ============================================================
-    // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
-    // ============================================================
-    
-    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
-    removeCondition('JasaKonstruksiFinishingPost');                    // PILLAR (Jasa Konstruksi)
-    removeCondition('JasaFinishingBangunanPost');             // Jasa Finishing Bangunan
-    removeCondition('JasaFinishingBangunanStrukturPost');     // Jasa Finishing Struktur
-           
+
+  if (urlMappingJasaFinishingLantaiBetonFromSub2MoneyPage[cleanUrlJasaKonsFinishingPost]) {
+          // ============================================================  
 	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -2311,12 +2256,15 @@ if (urlMappingJasaFinishingDakBetonFromSub2MoneyPage[cleanUrlJasaKonsFinishingPo
     }
     
     // Tampilkan Jasa Finishing (level 2)
-    let jasaFinishing = document.getElementById('JasaFinishingPost');
+    let jasaFinishing = document.getElementById('JasaKonstruksiFinishingPost');
     if (jasaFinishing) {
         jasaFinishing.style.display = 'inline';
         jasaFinishing.style.visibility = 'visible';
     } else {
         // Jika sudah di-remove, restore
+		  restoreCondition('JasaKonstruksiFinishingPost');                    // PILLAR (Jasa Konstruksi)
+		    restoreCondition('JasaFinishingBangunanPost');             // Jasa Finishing Bangunan
+		    restoreCondition('JasaFinishingBangunanStrukturPost');     // Jasa Finishing Struktur
         restoreCondition('JasaFinishingPost');
     }
     
@@ -2332,68 +2280,25 @@ if (urlMappingJasaFinishingDakBetonFromSub2MoneyPage[cleanUrlJasaKonsFinishingPo
     // Update page name
     const pageNameElement = document.getElementById("pageNameJasaKonsFinishingPost");
     if (pageNameElement) {
-        pageNameElement.textContent = urlMappingJasaFinishingLantaiBeton[cleanUrlJasaKonsFinishingPost];
+        pageNameElement.textContent = urlMappingJasaFinishingLantaiBetonFromSub2MoneyPage[cleanUrlJasaKonsFinishingPost];
         pageNameElement.style.display = 'inline';
     }
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaFinishingLantaiBeton[cleanUrlJasaKonsFinishingPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-			   /*
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-			   */
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Finishing",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
-               },
-			   /*
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Finishing Bangunan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Finishing Struktur",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html"
-               },*/
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing Lantai Beton",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingJasaFinishingLantaiBeton[cleanUrlJasaKonsFinishingPost],
-                   "item": cleanUrlJasaKonsFinishingPost
-               }
-           ]
-       };
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+		generateBreadcrumbForMapping(
+        urlMappingJasaFinishingLantaiBetonFromSub2MoneyPage,
+        cleanUrlJasaKonsFinishingPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+            { name: 'Jasa Finishing Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html' },
+            { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+            { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html' }
+        ],
+        'JASA'
+    );
+	  
+}
+
 	
    if (urlMappingHargaBoronganPlesteranAcianFromJasaFinishingStrukturMoneyPage[cleanUrlJasaKonsFinishingPost]) {
          
