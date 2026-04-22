@@ -1891,19 +1891,7 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
 // MONEY PAGE: Harga Finishing Dak Beton
 // ============================================================
 
-if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
-    
-    console.log('[Breadcrumb] Money page detected - Harga Finishing Dak Beton');
-    
-    // ============================================================
-    // 1. SEMBUNYIKAN ELEMEN YANG TIDAK DIPERLUKAN (REMOVE)
-    // ============================================================
-    
-    // HIDE PILLAR & GRANDPARENT (jangan hapus container!)
-    removeCondition('JasaKonstruksiFinishingPost');                    // PILLAR (Jasa Konstruksi)
-    removeCondition('JasaFinishingBangunanPost');             // Jasa Finishing Bangunan
-    removeCondition('JasaFinishingBangunanStrukturPost');     // Jasa Finishing Struktur
-    
+if (urlMappingJasaFinishingDakBetonFromSub2MoneyPage[cleanUrlJasaKonsFinishingPost]) {
     // HIDE SEMUA SUB FINISHING INTERIOR
     removeCondition('JasaFinishingBangunanInteriorPost');
     removeCondition('JasaEpoxyDindingPost');
@@ -1983,12 +1971,15 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
     }
     
     // Tampilkan Jasa Finishing (level 2)
-    let jasaFinishing = document.getElementById('JasaFinishingPost');
+    let jasaFinishing = document.getElementById('JasaKonstruksiFinishingPost');
     if (jasaFinishing) {
         jasaFinishing.style.display = 'inline';
         jasaFinishing.style.visibility = 'visible';
     } else {
         // Jika sudah di-remove, restore
+	     restoreCondition('JasaKonstruksiFinishingPost');                    // PILLAR (Jasa Konstruksi)
+	    restoreCondition('JasaFinishingBangunanPost');             // Jasa Finishing Bangunan
+	    restoreCondition('JasaFinishingBangunanStrukturPost');     // Jasa Finishing Struktur
         restoreCondition('JasaFinishingPost');
     }
     
@@ -2004,74 +1995,25 @@ if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
     // Update page name
     const pageNameElement = document.getElementById("pageNameJasaKonsFinishingPost");
     if (pageNameElement) {
-        pageNameElement.textContent = urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost];
+        pageNameElement.textContent = urlMappingJasaFinishingDakBetonFromSub2MoneyPage[cleanUrlJasaKonsFinishingPost];
         pageNameElement.style.display = 'inline';
     }
+
+	     const breadcrumbItems = [
+        { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+        { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+        { name: 'Jasa Finishing Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html' },
+        { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+        { name: 'Jasa Finishing Dak Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html' },
+        { 
+            name: urlMappingJasaFinishingDakBetonFromSub2MoneyPage[cleanUrlJasaKonsFinishingPost], 
+            url: cleanUrlJasaKonsFinishingPost 
+        }
+    ];
+    
+    generateBreadcrumbForMapping(breadcrumbItems, null, null, 'JASA');
 }
-    // ============================================================
-    // 4. GENERATE BREADCRUMB SCHEMA (3 level)
-    // ============================================================
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-			   /*skip level pillar buat money
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-			   */
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Finishing",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
-               },
-			   /*skip level
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Finishing Bangunan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Finishing Struktur",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html"
-               },
-			   */
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing Dak Beton",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingJasaFinishingDakBeton[cleanUrlJasaKonsFinishingPost],
-                   "item": cleanUrlJasaKonsFinishingPost
-               }
-           ]
-       };
-   		const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   console.log('[Breadcrumb] Money page - 4 level breadcrumb applied');
-    console.log('[Breadcrumb] Final structure: Home > Jasa Finishing > Jasa Finishing Dak Beton > Harga');
-   }
+
 	
     if (urlMappingJasaFinishingBetonExpose[cleanUrlJasaKonsFinishingPost]) {
 
