@@ -1450,7 +1450,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // var currentUrl = window.location.href;
      //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
     const cleanUrlJasaKonsFinishingPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
-
+    const currentUrl = cleanUrlJasaKonsFinishingPost;
    const urlMappingGabungan = Object.assign(
     {},
     urlMappingJasaFinishingDakBetonFromSub2MoneyPage,
