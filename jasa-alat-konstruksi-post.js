@@ -1,17 +1,47 @@
 // ============================================================
-// ============================================================
-// SUB Jasa Alat Konstruksi - SEWA ALAT PROYEK
-// ============================================================
-// 🧠 SEO NOTE: Cluster ini fokus ke layanan sewa alat proyek (non-berat).
-// Intent: Transactional (user siap sewa alat proyek).
-// Parent: Sewa Alat Konstruksi (/p/sewa-alat-konstruksi.html)
-// Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Proyek > [Nama Alat] (4 level - SKIP Sewa Alat Konstruksi)
+// 🔍 ENTITY TYPE: SEWA/RENTAL (Alat Konstruksi & Alat Berat)
+// ATURAN: SEWA/RENTAL BOLEH menggunakan MONEY_MASTER untuk harga nasional
+// ✅ Gunakan: MONEY_MASTER (Transaksional 80%) untuk harga umum
+// ✅ Gunakan: MONEY_PAGE (Transaksional 85%) untuk produk spesifik
+// ✅ Gunakan: MONEY_CHILD (Transaksional 90%) untuk spesifik lokasi
 // ============================================================
 
-const urlMappingSewaAlatProyek = {
+// ============================================================
+// 📁 LEVEL 1 - PILLAR (SEWA ALAT KONSTRUKSI)
+// ============================================================
+/*
+const urlMappingSewaAlatKonstruksiPillar = {
+  // [PILLAR] - Sewa Alat Konstruksi
+  "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html": "Sewa Alat Konstruksi"  // TYPE: PILLAR
+};
+
+// ============================================================
+// 📁 LEVEL 2 - SUB2 (Turunan dari PILLAR Sewa Alat Konstruksi)
+// ============================================================
+
+const urlMappingSewaAlatKonstruksiFromPillarSub2 = {
+  // [SUB2] - Sewa Alat Proyek
+  "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html": "Sewa Alat Proyek",  // TYPE: SUB2
+  
+  // [SUB2] - Sewa Alat Berat
+  "https://www.betonjayareadymix.com/p/sewa-alat-berat.html": "Sewa Alat Berat",  // TYPE: SUB2
+  
+  // [SUB2] - Sewa Alat Konstruksi Ringan
+  "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi-ringan.html": "Sewa Alat Konstruksi Ringan"  // TYPE: SUB2
+};
+*/
+
+// ============================================================
+// 📁 SUB Jasa Alat Konstruksi - SEWA ALAT PROYEK (MONEY PAGE & CHILD)
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE & MONEY_CHILD
+// Parent: Sewa Alat Proyek (SUB2)
+// Breadcrumb: Home > Sewa Alat Konstruksi > Sewa Alat Proyek > [Nama Alat] (4 level)
+// ============================================================
+
+const urlMappingSewaAlatProyekFromSub2MoneyPage = {
   // ============================================================
   // [MONEY_PAGE] - SEWA ALAT PROYEK PER JENIS
-  // 🧠 TYPE: MONEY_PAGE (WAJIB tampil, intent transaksional)
+  // 🧠 TYPE: MONEY_PAGE (WAJIB tampil, intent transaksional 85%)
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/sewa-pompa-dewatering-proyek.html": "Sewa Pompa Dewatering Proyek",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/02/sewa-bekisting-scaffolding.html": "Sewa Bekisting Scaffolding",  // TYPE: MONEY_PAGE
@@ -23,7 +53,7 @@ const urlMappingSewaAlatProyek = {
   
   // ============================================================
   // [MONEY_CHILD] - SEWA ALAT PROYEK PER LOKASI
-  // 🧠 TYPE: MONEY_CHILD (WAJIB tampil, spesifik lokasi)
+  // 🧠 TYPE: MONEY_CHILD (spesifik lokasi, intent transaksional 90%)
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-tangerang.html": "Sewa Alat Proyek Tangerang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-depok.html": "Sewa Alat Proyek Depok",  // TYPE: MONEY_CHILD
@@ -31,24 +61,30 @@ const urlMappingSewaAlatProyek = {
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-bekasi.html": "Sewa Alat Proyek Bekasi",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-bogor.html": "Sewa Alat Proyek Bogor",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-terdekat.html": "Sewa Alat Proyek Terdekat",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-karawang.html": "Sewa Alat Proyek Karawang"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-karawang.html": "Sewa Alat Proyek Karawang",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // 🟡 SARAN ITEM TAMBAHAN (BELUM AKTIF - PERLU DIBUAT KONTEN)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-bandung.html": "Sewa Alat Proyek Bandung",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-surabaya.html": "Sewa Alat Proyek Surabaya",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-semarang.html": "Sewa Alat Proyek Semarang",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-medan.html": "Sewa Alat Proyek Medan",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek-makassar.html": "Sewa Alat Proyek Makassar",  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// SUB Jasa Alat Konstruksi - SEWA POMPA DEWATERING
-// ============================================================
-// 🧠 SEO NOTE: Cluster ini fokus ke layanan sewa pompa dewatering (pompa air).
-// Parent: Sewa Alat Proyek (/p/sewa-alat-proyek.html)
+// 📁 SUB Jasa Alat Konstruksi - SEWA POMPA DEWATERING (MONEY PAGE & CHILD)
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE & MONEY_CHILD
+// Parent: Sewa Alat Proyek (SUB2)
 // ============================================================
 
-const urlMappingSewaAlatProyekPompaDewatering = {
+const urlMappingSewaPompaDewateringFromSub2MoneyPage = {
   // ============================================================
   // [MONEY_PAGE] - SEWA POMPA AIR (BERBAGAI JENIS)
   // 🧠 TYPE: MONEY_PAGE
   // ============================================================
   "https://www.betonjayareadymix.com/2019/03/sewa-mesin-pompa-air.html": "Sewa Mesin Pompa Air",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-mesin-pompa-air-terdekat.html": "Sewa Mesin Pompa Air Terdekat",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-terdekat.html": "Sewa Pompa Air Terdekat",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-diesel.html": "Sewa Pompa Air Diesel",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-kapasitas-besar.html": "Sewa Pompa Air Kapasitas Besar",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-banjir.html": "Sewa Pompa Air Banjir",  // TYPE: MONEY_PAGE
@@ -56,6 +92,7 @@ const urlMappingSewaAlatProyekPompaDewatering = {
   // ============================================================
   // [MONEY_CHILD] - SEWA POMPA AIR PER LOKASI
   // ============================================================
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-terdekat.html": "Sewa Pompa Air Terdekat",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-bogor.html": "Sewa Pompa Air Bogor",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-jakarta.html": "Sewa Pompa Air Jakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-depok.html": "Sewa Pompa Air Depok",  // TYPE: MONEY_CHILD
@@ -76,34 +113,66 @@ const urlMappingSewaAlatProyekPompaDewatering = {
   // [MONEY_PAGE] - SEWA POMPA LUMPUR
   // ============================================================
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur.html": "Sewa Pompa Lumpur",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-terdekat.html": "Sewa Pompa Lumpur Terdekat",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-diesel.html": "Sewa Pompa Lumpur Diesel",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur.html": "Sewa Pompa Sedot Lumpur",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_CHILD] - SEWA POMPA LUMPUR PER LOKASI
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-terdekat.html": "Sewa Pompa Lumpur Terdekat",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-surabaya.html": "Sewa Pompa Lumpur Surabaya",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-bandung.html": "Sewa Pompa Lumpur Bandung"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-bandung.html": "Sewa Pompa Lumpur Bandung",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // 🟡 SARAN ITEM TAMBAHAN (BELUM AKTIF - PERLU DIBUAT KONTEN)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/03/sewa-mesin-pompa-air-terdekat.html": "Sewa Mesin Pompa Air Terdekat",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-cirebon.html": "Sewa Pompa Air Cirebon",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-pekanbaru.html": "Sewa Pompa Air Pekanbaru",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-jakarta.html": "Sewa Pompa Lumpur Jakarta",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-depok.html": "Sewa Pompa Lumpur Depok",  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// SUB Jasa Alat Konstruksi - SEWA BEKISTING & SCAFFOLDING
+// 📁 SUB Jasa Alat Konstruksi - SEWA BEKISTING & SCAFFOLDING
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE & MONEY_MASTER
 // ============================================================
 
-const urlMappingSewaAlatProyekBekistingScaffolding = {
+const urlMappingSewaBekistingScaffoldingFromSub2MoneyPage = {
   // ============================================================
   // [MONEY_PAGE] - SEWA BEKISTING & SCAFFOLDING
   // 🧠 TYPE: MONEY_PAGE
   // ============================================================
   "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-cor-jalan.html": "Sewa Bekisting Cor Jalan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-kolom-balok.html": "Sewa Bekisting Kolom Balok",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_MASTER] - HARGA SEWA SCAFFOLDING (NASIONAL)
+  // 🧠 TYPE: MONEY_MASTER (khusus SEWA, diperbolehkan)
+  // ============================================================
   "https://www.betonjayareadymix.com/2019/03/harga-jasa-sewa-scaffolding.html": "Harga Jasa Sewa Scaffolding",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/03/harga-sewa-scaffolding.html": "Harga Sewa Scaffolding",  // TYPE: MONEY_MASTER
+  
+  // ============================================================
+  // [MONEY_CHILD] - SEWA SCAFFOLDING PER LOKASI
+  // ============================================================
   "https://www.betonjayareadymix.com/2019/03/sewa-scaffolding-terdekat.html": "Sewa Scaffolding Terdekat",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/03/harga-sewa-scaffolding.html": "Harga Sewa Scaffolding"  // TYPE: MONEY_MASTER
+  
+  // ============================================================
+  // 🟡 SARAN ITEM TAMBAHAN (BELUM AKTIF - PERLU DIBUAT KONTEN)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-jakarta.html": "Sewa Bekisting Jakarta",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-per-meter.html": "Sewa Bekisting Per Meter",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/03/sewa-scaffolding-jakarta.html": "Sewa Scaffolding Jakarta",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/03/sewa-scaffolding-per-meter.html": "Sewa Scaffolding Per Meter",  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// SUB Jasa Alat Konstruksi - SEWA PENCAHAYAAN UTILITAS
+// 📁 SUB Jasa Alat Konstruksi - SEWA PENCAHAYAAN UTILITAS
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE & MONEY_CHILD
 // ============================================================
 
-const urlMappingSewaAlatProyekPencahayaanUtilitas = {
+const urlMappingSewaPencahayaanUtilitasFromSub2MoneyPage = {
   // ============================================================
   // [MONEY_PAGE] - SEWA LAMPU PROYEK & TOWER LAMP
   // 🧠 TYPE: MONEY_PAGE
@@ -117,15 +186,15 @@ const urlMappingSewaAlatProyekPencahayaanUtilitas = {
   // ============================================================
   // [MONEY_CHILD] - SEWA TOWER LAMP PER LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp-balikpapan.html": "Sewa Tower Lamp Balikpapan",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp-palembang.html": "Sewa Tower Lamp Palembang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp-terdekat.html": "Sewa Tower Lamp Terdekat",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp-jakarta.html": "Sewa Tower Lamp Jakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp-bogor.html": "Sewa Tower Lamp Bogor",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp-depok.html": "Sewa Tower Lamp Depok",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp-tangerang.html": "Sewa Tower Lamp Tangerang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp-bekasi.html": "Sewa Tower Lamp Bekasi",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp-karawang.html": "Sewa Tower Lamp Karawang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp-terdekat.html": "Sewa Tower Lamp Terdekat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp-balikpapan.html": "Sewa Tower Lamp Balikpapan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp-palembang.html": "Sewa Tower Lamp Palembang",  // TYPE: MONEY_CHILD
 
   // ============================================================
   // [MONEY_CHILD] - SEWA LAMPU SOROT PER LOKASI
@@ -150,17 +219,25 @@ const urlMappingSewaAlatProyekPencahayaanUtilitas = {
   "https://www.betonjayareadymix.com/2019/03/sewa-lampu-tembak-karawang.html": "Sewa Lampu Tembak Karawang",  // TYPE: MONEY_CHILD
 
   // ============================================================
-  // [MONEY_CHILD] - SEWA LAMPU PROYEK & PANEL LISTRIK
+  // [MONEY_CHILD] - SEWA LAMPU PROYEK & PANEL LISTRIK PER LOKASI
   // ============================================================
   "https://www.betonjayareadymix.com/2019/03/sewa-lampu-proyek-terdekat.html": "Sewa Lampu Proyek Terdekat",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/03/sewa-panel-listrik-terdekat.html": "Sewa Panel Listrik Terdekat"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-panel-listrik-terdekat.html": "Sewa Panel Listrik Terdekat",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // 🟡 SARAN ITEM TAMBAHAN (BELUM AKTIF - PERLU DIBUAT KONTEN)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp-bandung.html": "Sewa Tower Lamp Bandung",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp-surabaya.html": "Sewa Tower Lamp Surabaya",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/03/sewa-lampu-proyek-jakarta.html": "Sewa Lampu Proyek Jakarta",  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// SUB Jasa Alat Konstruksi - SEWA ALAT SURVEY PENGUKURAN
+// 📁 SUB Jasa Alat Konstruksi - SEWA ALAT SURVEY PENGUKURAN
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE & MONEY_CHILD
 // ============================================================
 
-const urlMappingSewaAlatProyekSurveyPengukuran = {
+const urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage = {
   // ============================================================
   // [MONEY_PAGE] - SEWA ALAT SURVEY
   // ============================================================
@@ -178,10 +255,15 @@ const urlMappingSewaAlatProyekSurveyPengukuran = {
   "https://www.betonjayareadymix.com/2019/03/sewa-alat-survey-depok.html": "Sewa Alat Survey Depok",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-alat-survey-tangerang.html": "Sewa Alat Survey Tangerang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-alat-survey-bekasi.html": "Sewa Alat Survey Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/03/sewa-alat-survey-karawang.html": "Sewa Alat Survey Karawang"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-alat-survey-karawang.html": "Sewa Alat Survey Karawang",  // TYPE: MONEY_CHILD
 };
 
-const urlMappingSewaAlatProyekSurveyPengukuranTotalStation = {
+// ============================================================
+// 📁 SUB Jasa Alat Konstruksi - SEWA TOTAL STATION (DETAIL LOKASI)
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_CHILD
+// ============================================================
+
+const urlMappingSewaTotalStationFromSub2MoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - SEWA TOTAL STATION PER LOKASI
   // ============================================================
@@ -191,10 +273,15 @@ const urlMappingSewaAlatProyekSurveyPengukuranTotalStation = {
   "https://www.betonjayareadymix.com/2019/03/sewa-total-station-depok.html": "Sewa Total Station Depok",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-total-station-tangerang.html": "Sewa Total Station Tangerang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-total-station-bekasi.html": "Sewa Total Station Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/03/sewa-total-station-karawang.html": "Sewa Total Station Karawang"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-total-station-karawang.html": "Sewa Total Station Karawang",  // TYPE: MONEY_CHILD
 };
 
-const urlMappingSewaAlatProyekSurveyPengukuranWaterpass = {
+// ============================================================
+// 📁 SUB Jasa Alat Konstruksi - SEWA WATERPASS (DETAIL LOKASI)
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_CHILD
+// ============================================================
+
+const urlMappingSewaWaterpassFromSub2MoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - SEWA WATERPASS PER LOKASI
   // ============================================================
@@ -204,10 +291,15 @@ const urlMappingSewaAlatProyekSurveyPengukuranWaterpass = {
   "https://www.betonjayareadymix.com/2019/03/sewa-waterpass-depok.html": "Sewa Waterpass Depok",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-waterpass-tangerang.html": "Sewa Waterpass Tangerang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-waterpass-bekasi.html": "Sewa Waterpass Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/03/sewa-waterpass-karawang.html": "Sewa Waterpass Karawang"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-waterpass-karawang.html": "Sewa Waterpass Karawang",  // TYPE: MONEY_CHILD
 };
 
-const urlMappingSewaAlatProyekSurveyPengukuranTheodolite = {
+// ============================================================
+// 📁 SUB Jasa Alat Konstruksi - SEWA THEODOLITE (DETAIL LOKASI)
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_CHILD
+// ============================================================
+
+const urlMappingSewaTheodoliteFromSub2MoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - SEWA THEODOLITE PER LOKASI
   // ============================================================
@@ -217,14 +309,15 @@ const urlMappingSewaAlatProyekSurveyPengukuranTheodolite = {
   "https://www.betonjayareadymix.com/2019/03/sewa-theodolite-depok.html": "Sewa Theodolite Depok",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-theodolite-tangerang.html": "Sewa Theodolite Tangerang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-theodolite-bekasi.html": "Sewa Theodolite Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/03/sewa-theodolite-karawang.html": "Sewa Theodolite Karawang"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-theodolite-karawang.html": "Sewa Theodolite Karawang",  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// SUB Jasa Alat Konstruksi - SEWA AKSES KEAMANAN PROYEK
+// 📁 SUB Jasa Alat Konstruksi - SEWA AKSES KEAMANAN PROYEK
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE
 // ============================================================
 
-const urlMappingSewaAlatProyekAksesKeamanan = {
+const urlMappingSewaAksesKeamananProyekFromSub2MoneyPage = {
   // ============================================================
   // [MONEY_PAGE] - SEWA AKSES KEAMANAN PROYEK
   // ============================================================
@@ -232,46 +325,51 @@ const urlMappingSewaAlatProyekAksesKeamanan = {
   "https://www.betonjayareadymix.com/2019/03/sewa-mobile-scaffold.html": "Sewa Mobile Scaffold",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/03/sewa-safety-barrier.html": "Sewa Safety Barrier",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/03/sewa-traffic-cone.html": "Sewa Traffic Cone",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-jaring-pengaman.html": "Sewa Jaring Pengaman"  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/03/sewa-jaring-pengaman.html": "Sewa Jaring Pengaman",  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
-// SUB Jasa Alat Konstruksi - SEWA ALAT BOR GROUND WORK
+// 📁 SUB Jasa Alat Konstruksi - SEWA ALAT BOR GROUND WORK
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE & MONEY_CHILD
 // ============================================================
 
-const urlMappingSewaAlatProyekBorGroundWork = {
+const urlMappingSewaAlatBorGroundWorkFromSub2MoneyPage = {
   // ============================================================
   // [MONEY_PAGE] - SEWA ALAT BOR
   // ============================================================
   "https://www.betonjayareadymix.com/2019/03/sewa-alat-bor-sumur.html": "Sewa Alat Bor Sumur",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-alat-bor-sumur-terdekat.html": "Sewa Alat Bor Sumur Terdekat",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-bor-tanah.html": "Sewa Bor Tanah",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-bor-tanah-terdekat.html": "Sewa Bor Tanah Terdekat"  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // [MONEY_CHILD] - SEWA ALAT BOR PER LOKASI
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/03/sewa-alat-bor-sumur-terdekat.html": "Sewa Alat Bor Sumur Terdekat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-bor-tanah-terdekat.html": "Sewa Bor Tanah Terdekat",  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// SUB Jasa Alat Konstruksi - SEWA SISTEM PENDUKUNG PROYEK
+// 📁 SUB Jasa Alat Konstruksi - SEWA SISTEM PENDUKUNG PROYEK
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE
 // ============================================================
 
-const urlMappingSewaAlatProyekSistemPendukung = {
+const urlMappingSewaSistemPendukungProyekFromSub2MoneyPage = {
   // ============================================================
   // [MONEY_PAGE] - SEWA SISTEM PENDUKUNG PROYEK
   // ============================================================
   "https://www.betonjayareadymix.com/2019/03/sewa-bak-air-proyek.html": "Sewa Bak Air Proyek",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/03/sewa-tangki-air.html": "Sewa Tangki Air",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/03/sewa-selang-proyek.html": "Sewa Selang Proyek",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-pipa-proyek.html": "Sewa Pipa Proyek"  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/03/sewa-pipa-proyek.html": "Sewa Pipa Proyek",  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
-// SUB Jasa Alat Konstruksi - SEWA ALAT BERAT
-// ============================================================
-// 🧠 SEO NOTE: Cluster ini fokus ke layanan sewa alat berat.
-// Parent: Sewa Alat Konstruksi (/p/sewa-alat-konstruksi.html)
-// Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Berat > [Jenis Alat / Lokasi] (3-4 level)
+// 📁 SUB Jasa Alat Konstruksi - SEWA ALAT BERAT (MONEY PAGE, CHILD & MASTER)
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE, MONEY_CHILD, MONEY_MASTER
+// Parent: Sewa Alat Berat (SUB2)
+// Breadcrumb: Home > Sewa Alat Konstruksi > Sewa Alat Berat > [Jenis Alat / Lokasi] (4 level)
 // ============================================================
 
-const urlMappingSewaAlatBerat = {
+const urlMappingSewaAlatBeratFromSub2MoneyPage = {
   // ============================================================
   // [MONEY_CHILD] - SEWA ALAT BERAT PER LOKASI (JABODETABEK + JAWA BARAT)
   // ============================================================
@@ -294,11 +392,14 @@ const urlMappingSewaAlatBerat = {
   // [MONEY_PAGE] - INFORMASI & HARGA UMUM
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-murah.html": "Sewa Alat Berat Murah",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/berapa-sewa-alat-berat.html": "Berapa Sewa Alat Berat",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-trakindo.html": "Sewa Alat Berat Trakindo",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-per-hari.html": "Sewa Alat Berat per Hari",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-per-jam.html": "Sewa Alat Berat per Jam",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-all-in.html": "Sewa Alat Berat All In",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_CHILD] - SEWA ALAT BERAT TERDEKAT
+  // ============================================================
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-terdekat.html": "Sewa Alat Berat Terdekat",  // TYPE: MONEY_CHILD
   
   // ============================================================
@@ -320,8 +421,10 @@ const urlMappingSewaAlatBerat = {
   "https://www.betonjayareadymix.com/2019/02/sewa-paver-alat-berat.html": "Sewa Paver Alat Berat",  // TYPE: MONEY_PAGE
   
   // ============================================================
-  // [MONEY_PAGE] - HARGA SEWA PER JENIS ALAT (DETAIL)
+  // [MONEY_MASTER] - HARGA SEWA PER JENIS ALAT (NASIONAL)
+  // 🧠 TYPE: MONEY_MASTER (khusus SEWA, diperbolehkan)
   // ============================================================
+  "https://www.betonjayareadymix.com/2019/02/berapa-sewa-alat-berat.html": "Berapa Sewa Alat Berat",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-roller-alat-berat.html": "Harga Sewa Roller Alat Berat",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-beko.html": "Harga Sewa Alat Berat Beko",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-bego.html": "Harga Sewa Alat Berat Bego",  // TYPE: MONEY_MASTER
@@ -341,9 +444,13 @@ const urlMappingSewaAlatBerat = {
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-per-bulan.html": "Harga Sewa Alat Berat Per Bulan",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-murah.html": "Harga Sewa Alat Berat Murah",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-terbaru.html": "Harga Sewa Alat Berat Terbaru",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-jakarta.html": "Harga Sewa Alat Berat Jakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-paver-alat-berat.html": "Harga Sewa Paver Alat Berat",  // TYPE: MONEY_MASTER
   
+  // ============================================================
+  // [MONEY_CHILD] - HARGA SEWA ALAT BERAT PER LOKASI
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-jakarta.html": "Harga Sewa Alat Berat Jakarta",  // TYPE: MONEY_CHILD
+
   // ============================================================
   // [MONEY_MASTER] - INFORMASI UMUM (DAFTAR HARGA, INFO, LIST, STANDAR)
   // ============================================================
@@ -353,168 +460,52 @@ const urlMappingSewaAlatBerat = {
   "https://www.betonjayareadymix.com/2019/02/berapa-harga-sewa-alat-berat.html": "Berapa Harga Sewa Alat Berat",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/list-harga-sewa-alat-berat.html": "List Harga Sewa Alat Berat",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/daftar-harga-sewa-alat-berat-murah.html": "Daftar Harga Sewa Alat Berat Murah",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/daftar-harga-sewa-alat-berat-per-jam.html": "Daftar Harga Sewa Alat Berat Per Jam"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/02/daftar-harga-sewa-alat-berat-per-jam.html": "Daftar Harga Sewa Alat Berat Per Jam",  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
-// 🟡 REKOMENDASI URL TAMBAHAN (DALAM COMMENT)
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DITAMBAHKAN:
-
-| No | URL Saran | Type | Keterangan |
-|----|-----------|------|-------------|
-| 1 | /2019/02/sewa-alat-berat-surabaya.html | MONEY_CHILD | Tambahan lokasi Surabaya |
-| 2 | /2019/02/sewa-alat-berat-semarang.html | MONEY_CHILD | Tambahan lokasi Semarang |
-| 3 | /2019/02/sewa-alat-berat-medan.html | MONEY_CHILD | Tambahan lokasi Medan |
-| 4 | /2019/02/sewa-alat-berat-makassar.html | MONEY_CHILD | Tambahan lokasi Makassar |
-| 5 | /2019/02/sewa-alat-berat-grader.html | MONEY_PAGE | Jenis alat Grader |
-| 6 | /2019/02/sewa-alat-berat-motor-grader.html | MONEY_PAGE | Jenis alat Motor Grader |
-| 7 | /2019/03/harga-sewa-total-station-per-hari.html | MONEY_MASTER | Harga sewa total station |
-| 8 | /2019/03/sewa-total-station-bandung.html | MONEY_CHILD | Total station Bandung |
-*/
-
-// ============================================================
-// 🔴 BREADCRUMB SKIP LEVEL NOTES
-// ============================================================
-/*
-📌 BREADCRUMB SKIP LEVEL YANG DIPERBOLEHKAN:
-
-Untuk semua MONEY_PAGE dan MONEY_CHILD di atas:
-- Skip: "Sewa Alat Konstruksi" (SUB1 / bridge page)
-- Karena halaman tersebut hanya sebagai pengelompokan, tidak perlu muncul di breadcrumb
-
-Breadcrumb yang benar:
-Home > Jasa Konstruksi > Sewa Alat Proyek > Pompa Dewatering (4 level)
-Home > Jasa Konstruksi > Sewa Alat Berat > Excavator (4 level)
-Home > Jasa Konstruksi > Sewa Alat Berat > Jakarta (4 level)
-
-✅ SEMUA URL di atas sudah valid sebagai MONEY_PAGE / MONEY_CHILD / MONEY_MASTER
-✅ Tidak ada duplikasi konten berisiko tinggi
-✅ Aman untuk SEO
-*/
-/*
-📋 RINGKASAN TYPE YANG DIGUNAKAN
-Type	Jumlah Item	Keterangan
-MONEY_PAGE	~50	Halaman transaksional umum
-MONEY_CHILD	~60	Spesifik lokasi (Jakarta, Bandung, dll)
-MONEY_MASTER	~25	Harga nasional, daftar harga, info umum
-✅ CEKLIST
-Item	Status
-Semua item diberi comment type	✅
-MONEY_PAGE untuk halaman transaksional umum	✅
-MONEY_CHILD untuk spesifik lokasi	✅
-MONEY_MASTER untuk harga nasional/info umum	✅
-Breadcrumb skip level dijelaskan	✅
-Rekomendasi URL tambahan dalam comment	✅
-
-*/
-// ============================================================
-// SUB Jasa Alat Konstruksi - SEWA MOTOR GRADER
-// ============================================================
-// 🧠 SEO NOTE: Cluster ini fokus ke layanan sewa motor grader.
-// Intent: Transactional (user siap sewa motor grader).
+// 📁 SUB Jasa Alat Konstruksi - SEWA MOTOR GRADER (MONEY MASTER)
 // ============================================================
 
-const urlMappingSewaMotorGrader = {
+const urlMappingSewaMotorGraderFromSub2MoneyMaster = {
   // ============================================================
   // [MONEY_MASTER] - SEWA MOTOR GRADER (HARGA NASIONAL)
-  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
-  // Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Berat > Motor Grader (4 level - AMAN)
+  // 🧠 TYPE: MONEY_MASTER (khusus SEWA, diperbolehkan)
+  // Breadcrumb: Home > Sewa Alat Konstruksi > Sewa Alat Berat > Motor Grader (4 level)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-motor-grader.html": "Harga Sewa Motor Grader"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-motor-grader.html": "Harga Sewa Motor Grader",  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
-// 🟡 REKOMENDASI URL TAMBAHAN - SEWA MOTOR GRADER
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DITAMBAHKAN (MONEY_CHILD):
-
-| No | URL Saran | Type | Keterangan |
-|----|-----------|------|-------------|
-| 1 | /2019/02/sewa-motor-grader-jakarta.html | MONEY_CHILD | Motor Grader per lokasi Jakarta |
-| 2 | /2019/02/sewa-motor-grader-bandung.html | MONEY_CHILD | Motor Grader per lokasi Bandung |
-| 3 | /2019/02/sewa-motor-grader-per-hari.html | MONEY_CHILD | Harga sewa per hari |
-| 4 | /2019/02/sewa-motor-grader-dengan-operator.html | MONEY_CHILD | Sewa dengan operator |
-
-📌 CATATAN: Motor grader adalah alat spesifik untuk perataan jalan.
-*/
-
-// ============================================================
-// SUB Jasa Alat Konstruksi - SEWA TRENCHER
-// ============================================================
-// 🧠 SEO NOTE: Cluster ini fokus ke layanan sewa trencher (mesin galian parit).
-// Intent: Transactional (user siap sewa trencher untuk galian parit).
+// 📁 SUB Jasa Alat Konstruksi - SEWA TRENCHER (MONEY MASTER)
 // ============================================================
 
-const urlMappingSewaTrencher = {
+const urlMappingSewaTrencherFromSub2MoneyMaster = {
   // ============================================================
   // [MONEY_MASTER] - SEWA TRENCHER (HARGA NASIONAL)
-  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
-  // Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Berat > Trencher (4 level - AMAN)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-trencher-mesin.html": "Harga Sewa Trencher Mesin"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-trencher-mesin.html": "Harga Sewa Trencher Mesin",  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
-// 🟡 REKOMENDASI URL TAMBAHAN - SEWA TRENCHER
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DITAMBAHKAN (MONEY_CHILD):
-
-| No | URL Saran | Type | Keterangan |
-|----|-----------|------|-------------|
-| 1 | /2019/02/sewa-trencher-jakarta.html | MONEY_CHILD | Trencher per lokasi Jakarta |
-| 2 | /2019/02/sewa-trencher-per-hari.html | MONEY_CHILD | Harga sewa per hari |
-| 3 | /2019/02/sewa-trencher-untuk-kabel.html | MONEY_CHILD | Trencher untuk instalasi kabel |
-| 4 | /2019/02/sewa-trencher-untuk-pipa.html | MONEY_CHILD | Trencher untuk instalasi pipa |
-
-📌 CATATAN: Trencher banyak dicari untuk proyek utilitas (kabel, pipa).
-*/
-
-// ============================================================
-// SUB Jasa Alat Konstruksi - SEWA CONCRETE PAVER
-// ============================================================
-// 🧠 SEO NOTE: Cluster ini fokus ke layanan sewa concrete paver (mesin paving beton).
-// Intent: Transactional (user siap sewa concrete paver untuk jalan).
+// 📁 SUB Jasa Alat Konstruksi - SEWA CONCRETE PAVER (MONEY MASTER)
 // ============================================================
 
-const urlMappingSewaConcretePaver = {
+const urlMappingSewaConcretePaverFromSub2MoneyMaster = {
   // ============================================================
   // [MONEY_MASTER] - SEWA CONCRETE PAVER (HARGA NASIONAL)
-  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
-  // Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Berat > Concrete Paver (4 level - AMAN)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-concrete-paver.html": "Harga Sewa Concrete Paver"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-concrete-paver.html": "Harga Sewa Concrete Paver",  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
-// 🟡 REKOMENDASI URL TAMBAHAN - SEWA CONCRETE PAVER
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DITAMBAHKAN (MONEY_CHILD):
-
-| No | URL Saran | Type | Keterangan |
-|----|-----------|------|-------------|
-| 1 | /2019/02/sewa-concrete-paver-jakarta.html | MONEY_CHILD | Concrete paver per lokasi Jakarta |
-| 2 | /2019/02/sewa-concrete-paver-per-hari.html | MONEY_CHILD | Harga sewa per hari |
-| 3 | /2019/02/sewa-concrete-paver-untuk-jalan.html | MONEY_CHILD | Concrete paver untuk proyek jalan |
-
-📌 CATATAN: Concrete paver digunakan untuk pengecoran jalan beton.
-*/
-
-// ============================================================
-// SUB Jasa Alat Konstruksi - SEWA EXCAVATOR (DETAIL LOKASI)
-// ============================================================
-// 🧠 SEO NOTE: Cluster ini fokus ke layanan sewa excavator dengan detail lokasi.
-// Intent: Transactional (user siap sewa excavator di lokasi tertentu).
+// 📁 SUB Jasa Alat Konstruksi - SEWA EXCAVATOR (DETAIL LOKASI)
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_MASTER & MONEY_CHILD
 // ============================================================
 
-const urlMappingSewaExcavator = {
+const urlMappingSewaExcavatorFromSub2MoneyPage = {
   // ============================================================
-  // [MONEY_MASTER] - SEWA EXCAVATOR MINI & VARIAN
-  // 🧠 TYPE: MONEY_MASTER
+  // [MONEY_MASTER] - SEWA EXCAVATOR MINI & VARIAN (NASIONAL)
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/sewa-excavator-mini.html": "Sewa Excavator Mini",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator.html": "Harga Sewa Excavator",  // TYPE: MONEY_MASTER
@@ -523,7 +514,6 @@ const urlMappingSewaExcavator = {
   
   // ============================================================
   // [MONEY_CHILD] - SEWA EXCAVATOR PER LOKASI (JAWA TENGAH)
-  // 🧠 TYPE: MONEY_CHILD (spesifik lokasi)
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/sewa-excavator-surakarta.html": "Sewa Excavator Surakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/02/sewa-excavator-salatiga.html": "Sewa Excavator Salatiga",  // TYPE: MONEY_CHILD
@@ -579,321 +569,129 @@ const urlMappingSewaExcavator = {
   "https://www.betonjayareadymix.com/2019/02/sewa-excavator-jakarta.html": "Sewa Excavator Jakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/02/sewa-excavator-depok.html": "Sewa Excavator Depok",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/02/sewa-excavator-bekasi.html": "Sewa Excavator Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/02/sewa-excavator-bogor.html": "Sewa Excavator Bogor"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/02/sewa-excavator-bogor.html": "Sewa Excavator Bogor",  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// 🟡 REKOMENDASI URL TAMBAHAN - SEWA EXCAVATOR
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DITAMBAHKAN (MONEY_CHILD):
-
-| No | URL Saran | Type | Keterangan |
-|----|-----------|------|-------------|
-| 1 | /2019/02/sewa-excavator-surabaya.html | MONEY_CHILD | Tambahan lokasi Surabaya |
-| 2 | /2019/02/sewa-excavator-medan.html | MONEY_CHILD | Tambahan lokasi Medan |
-| 3 | /2019/02/sewa-excavator-makassar.html | MONEY_CHILD | Tambahan lokasi Makassar |
-| 4 | /2019/02/sewa-excavator-pc-200.html | MONEY_CHILD | Spesifikasi PC 200 |
-| 5 | /2019/02/sewa-excavator-long-arm.html | MONEY_CHILD | Excavator long arm |
-| 6 | /2019/02/harga-sewa-excavator-per-jam.html | MONEY_CHILD | Harga sewa per jam |
-| 7 | /2019/02/harga-sewa-excavator-per-hari.html | MONEY_CHILD | Harga sewa per hari |
-
-📌 CATATAN: Excavator adalah alat berat yang paling banyak dicari.
-*/
-
-// ============================================================
-// SUB Jasa Alat Konstruksi - SEWA BULLDOZER
+// 📁 SUB Jasa Alat Konstruksi - SEWA BULLDOZER (MONEY MASTER)
 // ============================================================
 
-const urlMappingSewaBulldozer = {
+const urlMappingSewaBulldozerFromSub2MoneyMaster = {
   // ============================================================
   // [MONEY_MASTER] - SEWA BULLDOZER (HARGA NASIONAL)
-  // 🧠 TYPE: MONEY_MASTER
-  // Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Berat > Bulldozer (4 level - AMAN)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-bulldozer.html": "Harga Sewa Bulldozer"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-bulldozer.html": "Harga Sewa Bulldozer",  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
-// 🟡 REKOMENDASI URL TAMBAHAN - SEWA BULLDOZER
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DITAMBAHKAN (MONEY_CHILD):
-
-| No | URL Saran | Type | Keterangan |
-|----|-----------|------|-------------|
-| 1 | /2019/02/sewa-bulldozer-jakarta.html | MONEY_CHILD | Bulldozer per lokasi Jakarta |
-| 2 | /2019/02/sewa-bulldozer-bandung.html | MONEY_CHILD | Bulldozer per lokasi Bandung |
-| 3 | /2019/02/sewa-bulldozer-per-hari.html | MONEY_CHILD | Harga sewa per hari |
-| 4 | /2019/02/sewa-bulldozer-d6.html | MONEY_CHILD | Spesifikasi D6 |
-*/
-
-// ============================================================
-// SUB Jasa Alat Konstruksi - SEWA FORKLIFT
+// 📁 SUB Jasa Alat Konstruksi - SEWA FORKLIFT (MONEY MASTER)
 // ============================================================
 
-const urlMappingSewaForklift = {
+const urlMappingSewaForkliftFromSub2MoneyMaster = {
   // ============================================================
   // [MONEY_MASTER] - SEWA FORKLIFT (HARGA NASIONAL)
-  // 🧠 TYPE: MONEY_MASTER
-  // Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Berat > Forklift (4 level - AMAN)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-forklift.html": "Harga Sewa Forklift"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-forklift.html": "Harga Sewa Forklift",  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
-// 🟡 REKOMENDASI URL TAMBAHAN - SEWA FORKLIFT
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DITAMBAHKAN (MONEY_CHILD):
-
-| No | URL Saran | Type | Keterangan |
-|----|-----------|------|-------------|
-| 1 | /2019/02/sewa-forklift-jakarta.html | MONEY_CHILD | Forklift per lokasi Jakarta |
-| 2 | /2019/02/sewa-forklift-per-hari.html | MONEY_CHILD | Harga sewa per hari |
-| 3 | /2019/02/sewa-forklift-3-ton.html | MONEY_CHILD | Spesifikasi kapasitas 3 ton |
-| 4 | /2019/02/sewa-forklift-dengan-operator.html | MONEY_CHILD | Sewa dengan operator |
-*/
-
-// ============================================================
-// SUB Jasa Alat Konstruksi - SEWA CRANE
+// 📁 SUB Jasa Alat Konstruksi - SEWA CRANE (MONEY MASTER)
 // ============================================================
 
-const urlMappingSewaCrane = {
+const urlMappingSewaCraneFromSub2MoneyMaster = {
   // ============================================================
   // [MONEY_MASTER] - SEWA CRANE (HARGA NASIONAL)
-  // 🧠 TYPE: MONEY_MASTER
-  // Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Berat > Crane (4 level - AMAN)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-crane.html": "Harga Sewa Crane"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-crane.html": "Harga Sewa Crane",  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
-// 🟡 REKOMENDASI URL TAMBAHAN - SEWA CRANE
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DITAMBAHKAN (MONEY_CHILD):
-
-| No | URL Saran | Type | Keterangan |
-|----|-----------|------|-------------|
-| 1 | /2019/02/sewa-crane-jakarta.html | MONEY_CHILD | Crane per lokasi Jakarta |
-| 2 | /2019/02/sewa-crane-per-hari.html | MONEY_CHILD | Harga sewa per hari |
-| 3 | /2019/02/sewa-crane-50-ton.html | MONEY_CHILD | Spesifikasi kapasitas 50 ton |
-| 4 | /2019/02/sewa-crawler-crane.html | MONEY_CHILD | Jenis crawler crane |
-| 5 | /2019/02/sewa-tower-crane.html | MONEY_CHILD | Tower crane untuk gedung tinggi |
-*/
-
-// ============================================================
-// SUB Jasa Alat Konstruksi - SEWA BACKHOE LOADER
+// 📁 SUB Jasa Alat Konstruksi - SEWA BACKHOE LOADER (MONEY MASTER)
 // ============================================================
 
-const urlMappingSewaBackhoeLoader = {
+const urlMappingSewaBackhoeLoaderFromSub2MoneyMaster = {
   // ============================================================
   // [MONEY_MASTER] - SEWA BACKHOE LOADER (HARGA NASIONAL)
-  // 🧠 TYPE: MONEY_MASTER
-  // Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Berat > Backhoe Loader (4 level - AMAN)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-backhoe-loader.html": "Harga Sewa Backhoe Loader"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-backhoe-loader.html": "Harga Sewa Backhoe Loader",  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
-// 🟡 REKOMENDASI URL TAMBAHAN - SEWA BACKHOE LOADER
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DITAMBAHKAN (MONEY_CHILD):
-
-| No | URL Saran | Type | Keterangan |
-|----|-----------|------|-------------|
-| 1 | /2019/02/sewa-backhoe-loader-jakarta.html | MONEY_CHILD | Backhoe loader per lokasi Jakarta |
-| 2 | /2019/02/sewa-backhoe-loader-per-hari.html | MONEY_CHILD | Harga sewa per hari |
-*/
-
-// ============================================================
-// SUB Jasa Alat Konstruksi - SEWA SELF LOADER
-// ============================================================
-// 🧠 SEO NOTE: Cluster ini masih kosong, perlu dibuat kontennya.
+// 📁 SUB Jasa Alat Konstruksi - SEWA SELF LOADER (KOSONG - SARAN ITEM)
 // ============================================================
 
-const urlMappingSewaSelfLoader = {
-  // ============================================================
-  // [MONEY_MASTER] - SEWA SELF LOADER (PERLU DIBUAT)
-  // 🧠 TYPE: MONEY_MASTER (disarankan)
-  // ============================================================
+const urlMappingSewaSelfLoaderFromSub2MoneyMaster = {
+  // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/2019/02/sewa-self-loader.html": "Sewa Self Loader",  // TYPE: MONEY_MASTER
   // "https://www.betonjayareadymix.com/2019/02/harga-sewa-self-loader.html": "Harga Sewa Self Loader",  // TYPE: MONEY_MASTER
   // "https://www.betonjayareadymix.com/2019/02/sewa-self-loader-jakarta.html": "Sewa Self Loader Jakarta",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/02/sewa-self-loader-per-hari.html": "Sewa Self Loader Per Hari"  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/02/sewa-self-loader-per-hari.html": "Sewa Self Loader Per Hari",  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// 🔴 REKOMENDASI URL YANG HARUS DIBUAT - SEWA SELF LOADER
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DIBUAT:
-
-| No | URL Saran | Type | Prioritas | Keterangan |
-|----|-----------|------|-----------|-------------|
-| 1 | /2019/02/sewa-self-loader.html | MONEY_MASTER | 🔴 HIGH | Halaman utama self loader |
-| 2 | /2019/02/harga-sewa-self-loader.html | MONEY_MASTER | 🔴 HIGH | Harga sewa self loader |
-| 3 | /2019/02/sewa-self-loader-jakarta.html | MONEY_CHILD | 🟡 MEDIUM | Lokasi Jakarta |
-| 4 | /2019/02/sewa-self-loader-per-hari.html | MONEY_CHILD | 🟡 MEDIUM | Harga sewa per hari |
-
-📌 CATATAN: Self loader adalah alat untuk memuat material sendiri.
-*/
-
-// ============================================================
-// SUB Jasa Alat Konstruksi - SEWA VIBRO ROLLER
+// 📁 SUB Jasa Alat Konstruksi - SEWA VIBRO ROLLER (MONEY MASTER)
 // ============================================================
 
-const urlMappingSewaVibroRoller = {
+const urlMappingSewaVibroRollerFromSub2MoneyMaster = {
   // ============================================================
   // [MONEY_MASTER] - SEWA VIBRO ROLLER (HARGA NASIONAL)
-  // 🧠 TYPE: MONEY_MASTER
-  // Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Berat > Vibro Roller (4 level - AMAN)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-vibro-roller.html": "Harga Sewa Vibro Roller"  // TYPE: MONEY_MASTER
-  // "https://www.betonjayareadymix.com/2019/02/harga-sewa-roller-alat-berat.html": "Harga Sewa Roller Alat Berat"  // TYPE: MONEY_MASTER (comment - jika duplikat)
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-vibro-roller.html": "Harga Sewa Vibro Roller",  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
-// 🟡 REKOMENDASI URL TAMBAHAN - SEWA VIBRO ROLLER
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DITAMBAHKAN (MONEY_CHILD):
-
-| No | URL Saran | Type | Keterangan |
-|----|-----------|------|-------------|
-| 1 | /2019/02/sewa-vibro-roller-jakarta.html | MONEY_CHILD | Vibro roller per lokasi Jakarta |
-| 2 | /2019/02/sewa-vibro-roller-per-hari.html | MONEY_CHILD | Harga sewa per hari |
-| 3 | /2019/02/sewa-vibro-roller-untuk-jalan.html | MONEY_CHILD | Vibro roller untuk pemadatan jalan |
-*/
-
-// ============================================================
-// SUB Jasa Alat Konstruksi - SEWA WALES STOOM
-// ============================================================
-// 🧠 SEO NOTE: Cluster ini masih kosong, perlu dibuat kontennya.
+// 📁 SUB Jasa Alat Konstruksi - SEWA WALES STOOM (KOSONG - SARAN ITEM)
 // ============================================================
 
-const urlMappingSewaWalesStoom = {
-  // ============================================================
-  // [MONEY_MASTER] - SEWA WALES STOOM (PERLU DIBUAT)
-  // 🧠 TYPE: MONEY_MASTER (disarankan)
-  // ============================================================
+const urlMappingSewaWalesStoomFromSub2MoneyMaster = {
+  // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/2019/02/sewa-wales-stoom.html": "Sewa Wales Stoom",  // TYPE: MONEY_MASTER
   // "https://www.betonjayareadymix.com/2019/02/harga-sewa-wales-stoom.html": "Harga Sewa Wales Stoom",  // TYPE: MONEY_MASTER
-  // "https://www.betonjayareadymix.com/2019/02/sewa-wales-stoom-jakarta.html": "Sewa Wales Stoom Jakarta"  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/02/sewa-wales-stoom-jakarta.html": "Sewa Wales Stoom Jakarta",  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// 🔴 REKOMENDASI URL YANG HARUS DIBUAT - SEWA WALES STOOM
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DIBUAT:
-
-| No | URL Saran | Type | Prioritas | Keterangan |
-|----|-----------|------|-----------|-------------|
-| 1 | /2019/02/sewa-wales-stoom.html | MONEY_MASTER | 🔴 HIGH | Halaman utama wales stoom |
-| 2 | /2019/02/harga-sewa-wales-stoom.html | MONEY_MASTER | 🔴 HIGH | Harga sewa wales stoom |
-| 3 | /2019/02/sewa-wales-stoom-jakarta.html | MONEY_CHILD | 🟡 MEDIUM | Lokasi Jakarta |
-
-📌 CATATAN: Wales stoom adalah alat pemadat tanah (stoomwals).
-*/
-
-// ============================================================
-// SUB Jasa Alat Konstruksi - SEWA TANDEM ROLLER
-// ============================================================
-// 🧠 SEO NOTE: Cluster ini masih kosong, perlu dibuat kontennya.
+// 📁 SUB Jasa Alat Konstruksi - SEWA TANDEM ROLLER (KOSONG - SARAN ITEM)
 // ============================================================
 
-const urlMappingSewaTandemRoller = {
-  // ============================================================
-  // [MONEY_MASTER] - SEWA TANDEM ROLLER (PERLU DIBUAT)
-  // 🧠 TYPE: MONEY_MASTER (disarankan)
-  // ============================================================
+const urlMappingSewaTandemRollerFromSub2MoneyMaster = {
+  // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/2019/02/sewa-tandem-roller.html": "Sewa Tandem Roller",  // TYPE: MONEY_MASTER
   // "https://www.betonjayareadymix.com/2019/02/harga-sewa-tandem-roller.html": "Harga Sewa Tandem Roller",  // TYPE: MONEY_MASTER
-  // "https://www.betonjayareadymix.com/2019/02/sewa-tandem-roller-jakarta.html": "Sewa Tandem Roller Jakarta"  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/02/sewa-tandem-roller-jakarta.html": "Sewa Tandem Roller Jakarta",  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// 🔴 REKOMENDASI URL YANG HARUS DIBUAT - SEWA TANDEM ROLLER
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DIBUAT:
-
-| No | URL Saran | Type | Prioritas | Keterangan |
-|----|-----------|------|-----------|-------------|
-| 1 | /2019/02/sewa-tandem-roller.html | MONEY_MASTER | 🔴 HIGH | Halaman utama tandem roller |
-| 2 | /2019/02/harga-sewa-tandem-roller.html | MONEY_MASTER | 🔴 HIGH | Harga sewa tandem roller |
-| 3 | /2019/02/sewa-tandem-roller-jakarta.html | MONEY_CHILD | 🟡 MEDIUM | Lokasi Jakarta |
-
-📌 CATATAN: Tandem roller digunakan untuk pemadatan aspal.
-*/
-
-// ============================================================
-// SUB Jasa Alat Konstruksi - SEWA BABY ROLLER
+// 📁 SUB Jasa Alat Konstruksi - SEWA BABY ROLLER (MONEY MASTER)
 // ============================================================
 
-const urlMappingSewaBabyRoller = {
+const urlMappingSewaBabyRollerFromSub2MoneyMaster = {
   // ============================================================
   // [MONEY_MASTER] - SEWA BABY ROLLER (HARGA NASIONAL)
-  // 🧠 TYPE: MONEY_MASTER
-  // Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Berat > Baby Roller (4 level - AMAN)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-baby-roller.html": "Harga Sewa Baby Roller"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-baby-roller.html": "Harga Sewa Baby Roller",  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
-// 🟡 REKOMENDASI URL TAMBAHAN - SEWA BABY ROLLER
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DITAMBAHKAN (MONEY_CHILD):
-
-| No | URL Saran | Type | Keterangan |
-|----|-----------|------|-------------|
-| 1 | /2019/02/sewa-baby-roller-jakarta.html | MONEY_CHILD | Baby roller per lokasi Jakarta |
-| 2 | /2019/02/sewa-baby-roller-per-hari.html | MONEY_CHILD | Harga sewa per hari |
-| 3 | /2019/02/sewa-baby-roller-untuk-taman.html | MONEY_CHILD | Baby roller untuk area taman |
-*/
-
-// ============================================================
-// SUB Jasa Alat Konstruksi - SEWA WHEEL LOADER
+// 📁 SUB Jasa Alat Konstruksi - SEWA WHEEL LOADER (MONEY MASTER)
 // ============================================================
 
-const urlMappingSewaWheelLoader = {
+const urlMappingSewaWheelLoaderFromSub2MoneyMaster = {
   // ============================================================
   // [MONEY_MASTER] - SEWA WHEEL LOADER (HARGA NASIONAL)
-  // 🧠 TYPE: MONEY_MASTER
-  // Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Berat > Wheel Loader (4 level - AMAN)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-wheel-loader.html": "Harga Sewa Wheel Loader"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-wheel-loader.html": "Harga Sewa Wheel Loader",  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
-// 🟡 REKOMENDASI URL TAMBAHAN - SEWA WHEEL LOADER
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DITAMBAHKAN (MONEY_CHILD):
-
-| No | URL Saran | Type | Keterangan |
-|----|-----------|------|-------------|
-| 1 | /2019/02/sewa-wheel-loader-jakarta.html | MONEY_CHILD | Wheel loader per lokasi Jakarta |
-| 2 | /2019/02/sewa-wheel-loader-per-hari.html | MONEY_CHILD | Harga sewa per hari |
-| 3 | /2019/02/sewa-wheel-loader-untuk-material.html | MONEY_CHILD | Wheel loader untuk material |
-*/
-
-// ============================================================
-// SEWA ALAT PANCANG - BLOG POST
-// ============================================================
-// 🧠 SEO NOTE: Post ini adalah MONEY page untuk sewa alat pancang.
-// Intent: Transactional.
-// Breadcrumb: Home > Jasa Konstruksi > Sewa Alat Berat > Sewa Alat Pancang (4 level)
+// 📁 SEWA ALAT PANCANG - MONEY PAGE & MASTER
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_MASTER
+// Breadcrumb: Home > Sewa Alat Konstruksi > Sewa Alat Berat > Sewa Alat Pancang (4 level)
 // ============================================================
 
-const urlMappingSewaAlatPancang = {
+const urlMappingSewaAlatPancangFromSub2MoneyMaster = {
   // ============================================================
   // [MONEY_MASTER] - SEWA ALAT PANCANG (BERDASARKAN JENIS ALAT)
-  // 🧠 TYPE: MONEY_MASTER
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-pancang-hidrolik.html": "Sewa Alat Pancang Hidrolik",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-pancang-hspd.html": "Sewa Alat Pancang HSPD",  // TYPE: MONEY_MASTER
@@ -903,7 +701,7 @@ const urlMappingSewaAlatPancang = {
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-pancang-drop-hammer.html": "Sewa Alat Pancang Drop Hammer",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/sewa-pile-driver.html": "Sewa Pile Driver",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/sewa-diesel-hammer.html": "Sewa Diesel Hammer",  // TYPE: MONEY_MASTER
-  
+
   // ============================================================
   // [MONEY_MASTER] - HARGA SEWA ALAT PANCANG
   // ============================================================
@@ -911,66 +709,45 @@ const urlMappingSewaAlatPancang = {
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-diesel-hammer.html": "Harga Sewa Diesel Hammer",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-drop-hammer.html": "Harga Sewa Drop Hammer",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-pancang-drop-hammer.html": "Harga Sewa Alat Pancang Drop Hammer",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-pancang-hspd.html": "Harga Sewa Alat Pancang HSPD"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-pancang-hspd.html": "Harga Sewa Alat Pancang HSPD",  // TYPE: MONEY_MASTER
 };
 
 // ============================================================
-// 🟡 REKOMENDASI URL TAMBAHAN - SEWA ALAT PANCANG
-// ============================================================
-/*
-🧠 URL YANG DISARANKAN UNTUK DITAMBAHKAN:
-
-| No | URL Saran | Type | Keterangan |
-|----|-----------|------|-------------|
-| 1 | /2019/02/sewa-alat-pancang-jakarta.html | MONEY_CHILD | Sewa alat pancang per lokasi Jakarta |
-| 2 | /2019/02/sewa-hydraulic-hammer.html | MONEY_MASTER | Sewa hydraulic hammer |
-| 3 | /2019/02/harga-sewa-hydraulic-hammer.html | MONEY_MASTER | Harga sewa hydraulic hammer |
-
-✅ AMAN - TIDAK PERLU REDIRECT
-*/
-
-// ============================================================
-// SEWA ALAT KONSTRUKSI RINGAN - MONEY PAGE MASTER
-// 📅 LAST UPDATED: 2026-04-17
-// 🎯 RULE: MONEY PAGE Master berada di bawah SUB2 Turunan (Sewa Alat Konstruksi Ringan)
-// 📍 BREADCRUMB: Home > Jasa Konstruksi > Sewa Alat Konstruksi > Sewa Alat Ringan > [Nama Alat] (5 level)
+// 📁 SEWA ALAT KONSTRUKSI RINGAN - MONEY PAGE & MASTER
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_MASTER & MONEY_CHILD
+// Parent: Sewa Alat Konstruksi Ringan (SUB2)
+// Breadcrumb: Home > Sewa Alat Konstruksi > Sewa Alat Ringan > [Nama Alat] (4 level)
 // ============================================================
 
-const urlMappingSewaAlatKonstruksiRingan = {
+const urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster = {
   // ============================================================
   // [MONEY_MASTER] - SEWA ALAT CLEANING
-  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil, intent transaksional)
-  // 🧠 STATUS: AKTIF (konten lengkap)
-  // Parent: Sewa Alat Konstruksi Ringan (SUB2 Turunan)
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/jasa-sewa-alat-cleaning.html": "Jasa Sewa Alat Cleaning",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/sewa-mesin-polisher.html": "Sewa Mesin Polisher",  // TYPE: MONEY_MASTER
 
   // ============================================================
   // [MONEY_MASTER] - SEWA ALAT POTONG & BOR
-  // 🧠 TYPE: MONEY_MASTER
-  // 🧠 STATUS: AKTIF (konten lengkap)
-  // ⚠️ CATATAN: Pasangan harga-sewa & sewa perlu canonical atau redirect
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/sewa-concrete-cutter.html": "Sewa Concrete Cutter",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-concrete-cutter.html": "Harga Sewa Concrete Cutter",  // TYPE: REDIRECT (canonical ke sewa-concrete-cutter.html)
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-jack-hammer.html": "Harga Sewa Jack Hammer",  // TYPE: REDIRECT (canonical ke sewa-jack-hammer.html)
   "https://www.betonjayareadymix.com/2019/02/sewa-jack-hammer.html": "Sewa Jack Hammer",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-vibrator-beton.html": "Harga Sewa Mesin Vibrator Beton",  // TYPE: REDIRECT (canonical ke sewa-vibrator-beton.html)
   "https://www.betonjayareadymix.com/2019/02/sewa-vibrator-beton.html": "Sewa Vibrator Beton",  // TYPE: MONEY_MASTER
 
   // ============================================================
+  // [REDIRECT] - DUPLIKASI (canonical ke halaman sewa)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-concrete-cutter.html": "Harga Sewa Concrete Cutter",  // TYPE: REDIRECT
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-jack-hammer.html": "Harga Sewa Jack Hammer",  // TYPE: REDIRECT
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-vibrator-beton.html": "Harga Sewa Mesin Vibrator Beton",  // TYPE: REDIRECT
+
+  // ============================================================
   // [MONEY_MASTER] - SEWA MESIN MOLEN
-  // 🧠 TYPE: MONEY_MASTER
-  // 🧠 STATUS: AKTIF
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-molen.html": "Harga Sewa Mesin Molen",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/sewa-mesin-molen.html": "Sewa Mesin Molen",  // TYPE: MONEY_MASTER
 
   // ============================================================
   // [MONEY_MASTER] - SEWA GENSET & KOMPRESOR
-  // 🧠 TYPE: MONEY_MASTER
-  // 🧠 STATUS: AKTIF (konten lengkap)
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-genset.html": "Harga Sewa Mesin Genset",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/sewa-genset.html": "Sewa Genset",  // TYPE: MONEY_MASTER
@@ -979,24 +756,22 @@ const urlMappingSewaAlatKonstruksiRingan = {
 
   // ============================================================
   // [MONEY_MASTER] - SEWA CUTTING BETON
-  // 🧠 TYPE: MONEY_MASTER
-  // 🧠 STATUS: AKTIF (konten lengkap)
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-cutting-beton.html": "Harga Sewa Mesin Cutting Beton",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/sewa-cutting-beton-terdekat.html": "Sewa Cutting Beton Terdekat",  // TYPE: MONEY_CHILD (spesifik lokasi "terdekat")
+  
+  // ============================================================
+  // [MONEY_CHILD] - SEWA CUTTING BETON TERDEKAT (LOKASI)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/02/sewa-cutting-beton-terdekat.html": "Sewa Cutting Beton Terdekat",  // TYPE: MONEY_CHILD
 
   // ============================================================
   // [MONEY_MASTER] - SEWA ALAT TAMAN
-  // 🧠 TYPE: MONEY_MASTER
-  // 🧠 STATUS: AKTIF
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-potong-rumput.html": "Harga Sewa Mesin Potong Rumput",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/sewa-mesin-potong-rumput.html": "Sewa Mesin Potong Rumput",  // TYPE: MONEY_MASTER
 
   // ============================================================
   // [MONEY_MASTER] - SEWA ALAT FINISHING
-  // 🧠 TYPE: MONEY_MASTER
-  // 🧠 STATUS: AKTIF (konten lengkap)
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-trowel.html": "Harga Sewa Mesin Trowel",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-screed.html": "Harga Sewa Mesin Screed",  // TYPE: MONEY_MASTER
@@ -1005,16 +780,50 @@ const urlMappingSewaAlatKonstruksiRingan = {
 
   // ============================================================
   // [MONEY_MASTER] - SEWA POMPA & STAMPER
-  // 🧠 TYPE: MONEY_MASTER
-  // 🧠 STATUS: AKTIF (konten lengkap)
-  // ⚠️ CATATAN: Pasangan harga-sewa & sewa perlu canonical atau redirect
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-pompa-air.html": "Harga Sewa Pompa Air",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/sewa-pompa-air.html": "Sewa Pompa Air",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-stamper.html": "Harga Sewa Stamper",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/sewa-stamper.html": "Sewa Stamper"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/02/sewa-stamper.html": "Sewa Stamper",  // TYPE: MONEY_MASTER
 };
 
+// ============================================================
+// 🔴 BREADCRUMB SKIP LEVEL NOTES
+// ============================================================
+/*
+📌 BREADCRUMB SKIP LEVEL YANG DIPERBOLEHKAN:
+
+Untuk semua MONEY_PAGE, MONEY_CHILD, dan MONEY_MASTER di atas:
+- Skip: "Sewa Alat Konstruksi" (PILLAR) dan "Sewa Alat Proyek" (SUB2)
+- Karena halaman tersebut hanya sebagai pengelompokan, tidak perlu muncul di breadcrumb
+
+Breadcrumb yang benar:
+Home > Sewa Alat Proyek > Pompa Dewatering (3 level)
+Home > Sewa Alat Berat > Excavator (3 level)
+Home > Sewa Alat Berat > Jakarta (3 level)
+Home > Sewa Alat Ringan > Stamper (3 level)
+
+✅ SEMUA URL di atas sudah valid sesuai entity type SEWA/RENTAL
+✅ MONEY_MASTER diperbolehkan untuk SEWA (berbeda dengan JASA)
+✅ Tidak ada duplikasi konten berisiko tinggi
+✅ Aman untuk SEO
+*/
+
+// ============================================================
+// 📋 RINGKASAN TYPE YANG DIGUNAKAN (SELURUH FILE)
+// ============================================================
+/*
+Type			Jumlah Item	Keterangan
+PILLAR			1			Halaman utama Sewa Alat Konstruksi
+SUB2			3			Kategori (Proyek, Berat, Ringan)
+MONEY_PAGE		~40			Sewa alat spesifik (transaksional 85%)
+MONEY_CHILD		~80			Sewa alat per lokasi (transaksional 90%)
+MONEY_MASTER	~45			Harga sewa nasional (transaksional 80%) - BOLEH untuk SEWA
+REDIRECT		5			Duplikasi, perlu 301 redirect
+
+✅ ENTITY TYPE: SEWA/RENTAL - semua type di atas VALID
+❌ JASA - tidak ada di file ini (berbeda entity)
+*/ 
 // ============================================================
 // FUNGSI GENERATE BREADCRUMB - VERSI FINAL
 // UNTUK SEMUA PILLAR (PRODUK, MATERIAL, JASA, INTERIOR, DLL)
@@ -1536,12 +1345,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingSewaAlatProyek,
-		urlMappingSewaAlatProyekPompaDewatering,
-		urlMappingSewaAlatProyekBekistingScaffolding,
-		urlMappingSewaAlatProyekPencahayaanUtilitas,
-		urlMappingSewaAlatProyekSurveyPengukuran,
-		urlMappingSewaAlatProyekSurveyPengukuranTotalStation,
+		urlMappingSewaAlatProyekFromSub2MoneyPage,
+		urlMappingSewaPompaDewateringFromSub2MoneyPage,
+		urlMappingSewaBekistingScaffoldingFromSub2MoneyPage,
+		urlMappingSewaPencahayaanUtilitasFromSub2MoneyPage,
+		urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage,
+		urlMappingSewaTotalStationFromSub2MoneyChild,
 		urlMappingSewaAlatProyekSurveyPengukuranWaterpass,
 		urlMappingSewaAlatProyekSurveyPengukuranTheodolite,
 		urlMappingSewaAlatProyekAksesKeamanan,
@@ -1563,9 +1372,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaTandemRoller,
 		urlMappingSewaBabyRoller,
 		urlMappingSewaWheelLoader,
-		urlMappingSewaAlatKonstruksiRingan
+		urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster
 	
     );
+	
 function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbNames = [], pillarType = 'JASA_KONSTRUKSI') {
     
     const MAX_LEVEL = 4;
@@ -1885,7 +1695,7 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbNames = 
      pageNameJasaKonsAlatKonstruksiPost.textContent = "";
 	
     //SUB JasaAlatKonstruksiPost
-if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaAlatProyekFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
         restoreCondition('SewaAlatProyekPost');
@@ -1952,63 +1762,24 @@ if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatKonstruksiPostLink.style.visibility = 'visible';
 	//TAMPILKAN SewaAlatProyekPost
         SewaAlatProyekPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Proyek",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+		generateBreadcrumbForMapping(
+        urlMappingSewaAlatProyekFromSub2MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
+ 
 //SUB SEWA ALAT PROYEK POST
-  if (urlMappingSewaAlatProyekPompaDewatering[cleanUrlJasaKonsAlatKonstruksiPost]) {
+  if (urlMappingSewaPompaDewateringFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
         restoreCondition('SewaAlatProyekPost');
@@ -2075,69 +1846,25 @@ if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
 	//TAMPILKAN SewaAlatProyekPost
         SewaAlatProyekPostLink.style.visibility = 'visible';
 	   SewaAlatProyekPompaDewateringPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekPompaDewatering[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatProyekPompaDewatering[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Proyek",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
-               },
-			  {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Pompa Dewatering Proyek",
-                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-pompa-dewatering-proyek.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaAlatProyekPompaDewatering[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPompaDewateringFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+          generateBreadcrumbForMapping(
+        urlMappingSewaPompaDewateringFromSub2MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+            { name: 'Sewa Pompa Dewatering Proyek', url: 'https://www.betonjayareadymix.com/2019/02/sewa-pompa-dewatering-proyek.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+  }
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
 
- if (urlMappingSewaAlatProyekBekistingScaffolding[cleanUrlJasaKonsAlatKonstruksiPost]) {
+ if (urlMappingSewaBekistingScaffoldingFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
         restoreCondition('SewaAlatProyekPost');
@@ -2204,69 +1931,25 @@ if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
 	//TAMPILKAN SewaAlatProyekPost
         SewaAlatProyekPostLink.style.visibility = 'visible';
 	   SewaAlatProyekBekistingScaffoldingPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekBekistingScaffolding[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatProyekBekistingScaffolding[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Proyek",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
-               },
-			  {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Bekisting Scaffolding",
-                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-bekisting-scaffolding.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaAlatProyekBekistingScaffolding[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBekistingScaffoldingFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+           generateBreadcrumbForMapping(
+        urlMappingSewaBekistingScaffoldingFromSub2MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+            { name: 'Sewa Bekisting Scaffolding', url: 'https://www.betonjayareadymix.com/2019/02/sewa-bekisting-scaffolding.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+ }
+   
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-
- if (urlMappingSewaAlatProyekPencahayaanUtilitas[cleanUrlJasaKonsAlatKonstruksiPost]) {
+ if (urlMappingSewaPencahayaanUtilitasFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
         restoreCondition('SewaAlatProyekPost');
@@ -2333,69 +2016,25 @@ if (urlMappingSewaAlatProyek[cleanUrlJasaKonsAlatKonstruksiPost]) {
 	//TAMPILKAN SewaAlatProyekPost
         SewaAlatProyekPostLink.style.visibility = 'visible';
 	   SewaAlatProyekPencahayaanUtilitasPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekPencahayaanUtilitas[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatProyekPencahayaanUtilitas[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Proyek",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
-               },
-			  {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Pencahayaan Utilitas",
-                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-pencahayaan-utilitas.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaAlatProyekPencahayaanUtilitas[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPencahayaanUtilitasFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+	 generateBreadcrumbForMapping(
+        urlMappingSewaPencahayaanUtilitasFromSub2MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+            { name: 'Sewa Pencahayaan Utilitas', url: 'https://www.betonjayareadymix.com/2019/02/sewa-pencahayaan-utilitas.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+ }
+   
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-
-if (urlMappingSewaAlatProyekSurveyPengukuran[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
         restoreCondition('SewaAlatProyekPost');
@@ -2462,69 +2101,25 @@ if (urlMappingSewaAlatProyekSurveyPengukuran[cleanUrlJasaKonsAlatKonstruksiPost]
 	//TAMPILKAN SewaAlatProyekPost
         SewaAlatProyekPostLink.style.visibility = 'visible';
 	   SewaAlatProyekSurveyPengukuranPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekSurveyPengukuran[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatProyekSurveyPengukuran[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Proyek",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
-               },
-			  {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Alat Survey Pengukuran",
-                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaAlatProyekSurveyPengukuran[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+        generateBreadcrumbForMapping(
+        urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+            { name: 'Sewa Alat Survey Pengukuran', url: 'https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
+   
  //SUB SEWA  ALAT SURVEY
-if (urlMappingSewaAlatProyekSurveyPengukuranTotalStation[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaTotalStationFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
         restoreCondition('SewaAlatProyekPost');
@@ -2594,73 +2189,24 @@ if (urlMappingSewaAlatProyekSurveyPengukuranTotalStation[cleanUrlJasaKonsAlatKon
         SewaAlatProyekPostLink.style.visibility = 'visible';
 	   SewaAlatProyekSurveyPengukuranPostLink.style.visibility = 'visible';
 	  SewaAlatProyekSurveyPengukuranTotalStationPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekSurveyPengukuranTotalStation[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatProyekSurveyPengukuranTotalStation[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Proyek",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
-               },
-			  {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Alat Survey Pengukuran",
-                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html"
-               },
-			   {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": "Sewa Total Station",
-                   "item": "https://www.betonjayareadymix.com/2019/03/sewa-total-station.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 8,
-                   "name": urlMappingSewaAlatProyekSurveyPengukuranTotalStation[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaTotalStationFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
+   
+     generateBreadcrumbForMapping(
+        urlMappingSewaTotalStationFromSub2MoneyChild,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+            { name: 'Sewa Alat Survey Pengukuran', url: 'https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html' },
+            { name: 'Sewa Total Station', url: 'https://www.betonjayareadymix.com/2019/03/sewa-total-station.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
+  
 if (urlMappingSewaAlatProyekSurveyPengukuranWaterpass[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
@@ -5340,11 +4886,10 @@ if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
        document.head.appendChild(script);
    }
 //AKHIR SUB PAGE SEWA ALAT BERAT
-if (urlMappingSewaAlatKonstruksiRingan[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
         restoreCondition('SewaAlatKonstruksiRinganPost');
-	       
      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
@@ -5405,58 +4950,20 @@ if (urlMappingSewaAlatKonstruksiRingan[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatKonstruksiPostLink.style.visibility = 'visible';
 	//TAMPILKAN SewaAlatBeratPost
         SewaAlatKonstruksiRinganPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatKonstruksiRingan[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-     // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatKonstruksiRingan[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Konstruksi Ringan",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi-ringan.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": urlMappingSewaAlatKonstruksiRingan[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+		    generateBreadcrumbForMapping(
+        urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi-ringan.html' }
+        ],
+        'SEWA_RENTAL'
+    );
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-   });
+}
+   
