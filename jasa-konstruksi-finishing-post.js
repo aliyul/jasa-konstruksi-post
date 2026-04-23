@@ -23,7 +23,7 @@ urlMappingJasaPelapisanWaterproofingStruktur	0			🔴 KOSONG	Perlu diisi atau di
 // ============================================================
 
 // [SUB2] - Jasa Finishing (KATEGORI UTAMA)
-const urlMappingJasaFinishingFromPillarSub2 = {
+/*const urlMappingJasaFinishingFromPillarSub2 = {
   // [SUB2] - Jasa Finishing Bangunan
   "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html": "Jasa Finishing Bangunan",  // TYPE: SUB2
   
@@ -36,6 +36,7 @@ const urlMappingJasaFinishingFromPillarSub2 = {
   // [SUB2] - Jasa Finishing Struktur
   "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur",  // TYPE: SUB2
 };
+*/
 
 // ============================================================
 // 📁 JASA FINISHING DAK BETON - MONEY PAGE & TURUNAN
