@@ -1,250 +1,331 @@
 // ============================================================
-// JASA FINISHING BANGUNAN - PAGE (SUB2)
-// ============================================================
-// 🧠 SEO NOTE: Halaman ini adalah SUB2 yang berfungsi sebagai kategori utama finishing bangunan.
-// Konten: Layanan finishing interior, eksterior, dan struktur.
-// Intent: Commercial Investigation (user membandingkan layanan finishing).
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Bangunan (3 level)
+// 📁 JASA FINISHING BANGUNAN - LEVEL 2 (SUB2 dari PILLAR Jasa Konstruksi)
+// 🧠 Parent: Jasa Konstruksi (PILLAR)
 // ============================================================
 
-const urlMappingFinishingBangunan = {
-  // [SUB2] - SUB-PILLAR TIPE 2 (KATEGORI FINISHING BANGUNAN)
-  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
+const urlMappingFinishingBangunanFromJasaKonsPillarSub2 = {
+  // [SUB2] - Jasa Finishing Interior
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html": "Jasa Finishing Interior",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Eksterior
   "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html": "Jasa Finishing Eksterior",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Struktur
   "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur"  // TYPE: SUB2
 };
 
-// ============================================================
-// 🧠 ANALISA KONTEN - JASA FINISHING INTERIOR
-// ============================================================
-/*
-📌 KESIMPULAN: Halaman ini adalah SUB2 dengan konten yang sangat baik.
-- Konten membahas: penyebab kegagalan finishing, kapan perlu jasa profesional, estimasi biaya
-- Intent: Commercial Investigation + Edukasi
-- Tidak ada harga spesifik produk, tidak ada form pemesanan langsung
-- BUKAN MONEY PAGE
-
-✅ AMAN - PERTAHANKAN SEBAGAI SUB2
-*/
 
 // ============================================================
-// JASA FINISHING INTERIOR - PAGE (SUB2 TURUNAN)
-// ============================================================
-// 🧠 SEO NOTE: Halaman ini adalah SUB2 turunan yang lebih spesifik dari Jasa Finishing Bangunan.
-// Konten: Epoxy dinding, epoxy lantai, furniture custom, keramik, cat interior, wallpaper, lampu, kitchen set, finishing interior minimalis/klasik/modern.
-// Intent: Commercial Investigation (user sudah tahu jenis finishing, masih bandingkan).
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Bangunan > Jasa Finishing Interior (4 level)
+// 📁 JASA FINISHING INTERIOR - LEVEL 3 (SUB2 dari SUB2 Jasa Finishing Bangunan)
+// 🧠 Parent: Jasa Finishing Bangunan (SUB2)
 // ============================================================
 
-const urlMappingFinishingBangunanInterior = {
-  // [SUB2] - SUB-PILLAR TIPE 2 (TURUNAN)
-  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
+const urlMappingFinishingBangunanInteriorFromJasaFinishingBangunanSub2Sub2 = {
+  // [SUB2] - Jasa Epoxy Dinding
   "https://www.betonjayareadymix.com/p/jasa-epoxy-dinding.html": "Jasa Epoxy Dinding",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Epoxy Lantai
   "https://www.betonjayareadymix.com/p/jasa-epoxy-lantai.html": "Jasa Epoxy Lantai",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Interior dan Furniture Custom
   "https://www.betonjayareadymix.com/p/jasa-interior-dan-furniture-custom.html": "Jasa Interior dan Furniture Custom",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Keramik Lantai
   "https://www.betonjayareadymix.com/p/jasa-keramik-lantai.html": "Jasa Keramik Lantai",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Cat Interior Rumah
   "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Pasang Wallpaper Dinding
   "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Lampu Interior
   "https://www.betonjayareadymix.com/p/jasa-lampu-interior.html": "Jasa Lampu Interior",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Kitchen Set
   "https://www.betonjayareadymix.com/p/jasa-kitchen-set.html": "Jasa Kitchen Set",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Interior Minimalis
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Interior Klasik
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html": "Jasa Finishing Interior Klasik",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Interior Modern
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern"  // TYPE: SUB2
 };
 
-// ============================================================
-// 🧠 ANALISA KONTEN - JASA EPOKSI BETON LUAR RUANG
-// ============================================================
-/*
-📌 KESIMPULAN: Halaman ini adalah MONEY PAGE (Lead Gen).
-- Konten: Halaman ini adalah landing page untuk jasa epoxy luar ruang.
-- Ada CTA "Konsultasi gratis tersedia hari ini juga"
-- Ada informasi teknis, tren 2025, proses aplikasi
-- Intent: Transactional (Lead Generation)
-
-📌 REKOMENDASI: 
-Halaman ini seharusnya berada di bawah urlMappingFinishingBangunanInterior
-tapi karena kontennya spesifik "epoxy beton luar ruang", ini adalah VARIANT atau MONEY PAGE.
-
-✅ TETAP PERTAHANKAN sebagai MONEY PAGE
-*/
 
 // ============================================================
-// JASA FINISHING EKSTERIOR - PAGE (SUB2 TURUNAN)
-// ============================================================
-// 🧠 SEO NOTE: Halaman ini adalah SUB2 turunan untuk finishing eksterior.
-// Konten: Cat eksterior, finishing fasad, pelapisan anti cuaca, pelapisan dinding luar, finishing taman, finishing kanopi, pelapisan batu alam, pelapisan genteng dak.
-// Intent: Commercial Investigation.
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Bangunan > Jasa Finishing Eksterior (4 level)
+// 📁 JASA FINISHING EKSTERIOR - LEVEL 3 (SUB2 dari SUB2 Jasa Finishing Bangunan)
+// 🧠 Parent: Jasa Finishing Bangunan (SUB2)
 // ============================================================
 
-const urlMappingFinishingBangunanEksterior = {
-  // [SUB2] - SUB-PILLAR TIPE 2 (TURUNAN)
-  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
+const urlMappingFinishingBangunanEksteriorFromJasaFinishingBangunanSub2Sub2 = {
+  // [SUB2] - Jasa Cat Eksterior Rumah
   "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-rumah.html": "Jasa Cat Eksterior Rumah",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Fasad Eksterior
   "https://www.betonjayareadymix.com/p/jasa-finishing-fasad-eksterior.html": "Jasa Finishing Fasad Eksterior",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Pelapisan Anti Cuaca
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-cuaca.html": "Jasa Pelapisan Anti Cuaca",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Pelapisan Dinding Luar
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-dinding-luar.html": "Jasa Pelapisan Dinding Luar",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Taman Rumah
   "https://www.betonjayareadymix.com/p/jasa-finishing-taman-rumah.html": "Jasa Finishing Taman Rumah",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Kanopi Teras
   "https://www.betonjayareadymix.com/p/jasa-finishing-kanopi-teras.html": "Jasa Finishing Kanopi Teras",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Pelapisan Batu Alam Eksterior
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html": "Jasa Pelapisan Batu Alam Eksterior",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Pelapisan Genteng Dak
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak.html": "Jasa Pelapisan Genteng Dak"  // TYPE: SUB2
 };
 
-// ============================================================
-// 🧠 ANALISA KONTEN - JASA FINISHING EKSTERIOR
-// ============================================================
-/*
-📌 KESIMPULAN: Halaman ini adalah SUB2 dengan konten yang sangat baik.
-- Konten membahas: kesalahan finishing, kapan perlu jasa, estimasi biaya, proses kerja
-- Intent: Commercial Investigation + Edukasi
-- BUKAN MONEY PAGE (tidak ada CTA jualan langsung)
-
-✅ AMAN - PERTAHANKAN SEBAGAI SUB2
-*/
 
 // ============================================================
-// JASA FINISHING STRUKTUR - PAGE (SUB2 TURUNAN)
-// ============================================================
-// 🧠 SEO NOTE: Halaman ini adalah SUB2 turunan untuk finishing struktur beton.
-// Konten: Finishing dak beton, beton expose, plesteran acian, grouting, coating, finishing kolom balok, waterproofing, finishing lantai beton.
-// Intent: Commercial Investigation.
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Bangunan > Jasa Finishing Struktur (4 level)
+// 📁 JASA FINISHING STRUKTUR - LEVEL 3 (SUB2 dari SUB2 Jasa Finishing Bangunan)
+// 🧠 Parent: Jasa Finishing Bangunan (SUB2)
 // ============================================================
 
-const urlMappingFinishingBangunanStruktur = {
-  // [SUB2] - SUB-PILLAR TIPE 2 (TURUNAN)
-  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
+const urlMappingFinishingBangunanStrukturFromJasaFinishingBangunanSub2Sub2 = {
+  // [SUB2] - Jasa Finishing Dak Beton
   "https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html": "Jasa Finishing Dak Beton",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Beton Expose
   "https://www.betonjayareadymix.com/p/jasa-finishing-beton-expose.html": "Jasa Finishing Beton Expose",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Plesteran & Acian Dinding
   "https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html": "Jasa Plesteran & Acian Dinding",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Grouting Struktur Beton
   "https://www.betonjayareadymix.com/p/jasa-finishing-grouting-struktur-beton.html": "Jasa Finishing Grouting Struktur Beton",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Pelapisan Coating Struktur
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html": "Jasa Pelapisan Coating Struktur",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Kolom dan Balok
   "https://www.betonjayareadymix.com/p/jasa-finishing-kolom-dan-balok.html": "Jasa Finishing Kolom dan Balok",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Pelapisan Waterproofing Struktur
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html": "Jasa Pelapisan Waterproofing Struktur",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Lantai Beton
   "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html": "Jasa Finishing Lantai Beton",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Pelindung Retak Struktur
   "https://www.betonjayareadymix.com/p/jasa-pelindung-retak-struktur.html": "Jasa Pelindung Retak Struktur"  // TYPE: SUB2
 };
 
-// ============================================================
-// 🧠 ANALISA KONTEN - JASA FINISHING STRUKTUR
-// ============================================================
-/*
-📌 KESIMPULAN: Halaman ini adalah SUB2 dengan konten yang sangat baik.
-- Konten membahas: kapan perlu jasa, kesalahan fatal, proses kerja, estimasi biaya
-- Intent: Commercial Investigation + Edukasi
-- BUKAN MONEY PAGE
-
-✅ AMAN - PERTAHANKAN SEBAGAI SUB2
-*/
 
 // ============================================================
-// JASA FINISHING INFRASTRUKTUR - PAGE (SUB2)
-// ============================================================
-// 🧠 SEO NOTE: Halaman ini adalah SUB2 untuk finishing infrastruktur.
-// Konten: Finishing jalan jembatan, trotoar, saluran drainase, struktur utilitas, proteksi beton.
-// Intent: Commercial Investigation.
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Infrastruktur (3 level)
+// 📁 JASA FINISHING INFRASTRUKTUR - LEVEL 2 (SUB2 dari PILLAR Jasa Konstruksi)
+// 🧠 Parent: Jasa Konstruksi (PILLAR)
 // ============================================================
 
-const urlMappingFinishingInfrastruktur = {
-  // [SUB2] - SUB-PILLAR TIPE 2
-  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
+const urlMappingFinishingInfrastrukturFromJasaKonsPillarSub2 = {
+  // [SUB2] - Jasa Finishing Jalan Jembatan
   "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-jembatan.html": "Jasa Finishing Jalan Jembatan",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Trotoar Area Publik
   "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar-area-publik.html": "Jasa Finishing Trotoar Area Publik",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Saluran Drainase
   "https://www.betonjayareadymix.com/p/jasa-finishing-saluran-drainase.html": "Jasa Finishing Saluran Drainase",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Struktur Utilitas
   "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-utilitas.html": "Jasa Finishing Struktur Utilitas",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Proteksi Beton
   "https://www.betonjayareadymix.com/p/jasa-finishing-proteksi-beton.html": "Jasa Finishing Proteksi Beton"  // TYPE: SUB2
 };
 
+
 // ============================================================
-// [SUB2] - JASA FINISHING INFRASTRUKTUR JALAN (TURUNAN)
+// 📁 JASA FINISHING INFRASTRUKTUR JALAN - LEVEL 3 (SUB2 dari SUB2 Jasa Finishing Infrastruktur)
+// 🧠 Parent: Jasa Finishing Infrastruktur (SUB2)
 // ============================================================
 
-const urlMappingFinishingInfrastrukturJalan = {
-  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
+const urlMappingFinishingInfrastrukturJalanFromJasaFinishingInfrastrukturSub2Sub2 = {
+  // [SUB2] - Jasa Finishing Jembatan Beton
   "https://www.betonjayareadymix.com/p/jasa-finishing-jembatan-beton.html": "Jasa Finishing Jembatan Beton",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Jalan Beton
   "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-beton.html": "Jasa Finishing Jalan Beton",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Pengecatan Marking Jalan
   "https://www.betonjayareadymix.com/p/jasa-pengecatan-marking-jalan.html": "Jasa Pengecatan Marking Jalan",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Pelapisan Jalan Tol
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-jalan-tol.html": "Jasa Pelapisan Jalan Tol",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Coating Jembatan
   "https://www.betonjayareadymix.com/p/jasa-coating-jembatan.html": "Jasa Coating Jembatan"  // TYPE: SUB2
 };
 
+
 // ============================================================
-// [SUB2] - JASA FINISHING INFRASTRUKTUR TROTOAR (TURUNAN)
+// 📁 JASA FINISHING INFRASTRUKTUR TROTOAR - LEVEL 3 (SUB2 dari SUB2 Jasa Finishing Infrastruktur)
 // ============================================================
 
-const urlMappingFinishingInfrastrukturTrotoar = {
-  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
+const urlMappingFinishingInfrastrukturTrotoarFromJasaFinishingInfrastrukturSub2Sub2 = {
+  // [SUB2] - Jasa Finishing Trotoar
   "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar.html": "Jasa Finishing Trotoar",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Penataan Trotoar Beton
   "https://www.betonjayareadymix.com/p/jasa-penataan-trotoar-beton.html": "Jasa Penataan Trotoar Beton",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Epoxy Area Publik
   "https://www.betonjayareadymix.com/p/jasa-epoxy-area-publik.html": "Jasa Epoxy Area Publik",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Pelapisan Area Pejalan Kaki
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-area-pejalan-kaki.html": "Jasa Pelapisan Area Pejalan Kaki"  // TYPE: SUB2
 };
 
+
 // ============================================================
-// [SUB2] - JASA FINISHING INFRASTRUKTUR SALURAN (TURUNAN)
+// 📁 JASA FINISHING INFRASTRUKTUR SALURAN - LEVEL 3 (SUB2 dari SUB2 Jasa Finishing Infrastruktur)
 // ============================================================
 
-const urlMappingFinishingInfrastrukturSaluran = {
-  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
+const urlMappingFinishingInfrastrukturSaluranFromJasaFinishingInfrastrukturSub2Sub2 = {
+  // [SUB2] - Jasa Coating Gorong Gorong
   "https://www.betonjayareadymix.com/p/jasa-coating-gorong-gorong.html": "Jasa Coating Gorong Gorong",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Pelapisan Saluran Beton
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-saluran-beton.html": "Jasa Pelapisan Saluran Beton",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Waterproofing Saluran Air
   "https://www.betonjayareadymix.com/p/jasa-waterproofing-saluran-air.html": "Jasa Waterproofing Saluran Air",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Penutup Saluran
   "https://www.betonjayareadymix.com/p/jasa-finishing-penutup-saluran.html": "Jasa Finishing Penutup Saluran"  // TYPE: SUB2
 };
 
+
 // ============================================================
-// [SUB2] - JASA FINISHING INFRASTRUKTUR STRUKTUR (TURUNAN)
+// 📁 JASA FINISHING INFRASTRUKTUR STRUKTUR UTILITAS - LEVEL 3 (SUB2 dari SUB2)
 // ============================================================
 
-const urlMappingFinishingInfrastrukturStruktur = {
-  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
+const urlMappingFinishingInfrastrukturStrukturFromJasaFinishingInfrastrukturSub2Sub2 = {
+  // [SUB2] - Jasa Finishing Rumah Pompa
   "https://www.betonjayareadymix.com/p/jasa-finishing-rumah-pompa.html": "Jasa Finishing Rumah Pompa",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Pelapisan Box Utilitas
   "https://www.betonjayareadymix.com/p/jasa-pelapisan-box-utilitas.html": "Jasa Pelapisan Box Utilitas",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Epoxy Struktur Publik
   "https://www.betonjayareadymix.com/p/jasa-epoxy-struktur-publik.html": "Jasa Epoxy Struktur Publik",  // TYPE: SUB2
+  
+  // [SUB2] - Jasa Finishing Penutup Kabel Beton
   "https://www.betonjayareadymix.com/p/jasa-finishing-penutup-kabel-beton.html": "Jasa Finishing Penutup Kabel Beton"  // TYPE: SUB2
 };
 
+
 // ============================================================
-// [SUB2] - JASA FINISHING INFRASTRUKTUR PROTEKSI (TURUNAN)
+// 📁 JASA FINISHING INFRASTRUKTUR PROTEKSI - LEVEL 3 (SUB2 dari SUB2)
+// ⚠️ PERINGATAN: JASA TIDAK BOLEH MENGGUNAKAN MONEY_MASTER
+// ============================================================
+// ============================================================
+// ✅ SEMUA MONEY_LEADGEN DALAM 1 CONST
 // ============================================================
 
-const urlMappingFinishingInfrastrukturProteksi = {
-  // 🧠 TYPE: MONEY_MASTER (karena ada CTA konsultasi)
-  "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-karat-beton.html": "Jasa Pelapisan Anti Karat Beton",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/jasa-epoxy-beton-luar-ruang.html": "Jasa Epoxy Beton Luar Ruang",  // TYPE: MONEY_LEADGEN (ada CTA konsultasi)
-  "https://www.betonjayareadymix.com/p/jasa-proteksi-struktur-beton-luar.html": "Jasa Proteksi Struktur Beton Luar",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/jasa-finishing-khusus-cuaca-ekstrem.html": "Jasa Finishing Khusus Cuaca Ekstrem"  // TYPE: SUB2 ⚠️ PERLU DICEK KONTEN
+const urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2MoneyLeadgen = {
+  // [MONEY_LEADGEN] - Jasa Pelapisan Anti Karat Beton
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-karat-beton.html": "Jasa Pelapisan Anti Karat Beton",  // TYPE: MONEY_LEADGEN
+  
+  // [MONEY_LEADGEN] - Jasa Epoxy Beton Luar Ruang
+  "https://www.betonjayareadymix.com/p/jasa-epoxy-beton-luar-ruang.html": "Jasa Epoxy Beton Luar Ruang",  // TYPE: MONEY_LEADGEN
+  
+  // [MONEY_LEADGEN] - Jasa Proteksi Struktur Beton Luar
+  "https://www.betonjayareadymix.com/p/jasa-proteksi-struktur-beton-luar.html": "Jasa Proteksi Struktur Beton Luar",  // TYPE: MONEY_LEADGEN
 };
 
+
 // ============================================================
-// 🔴 REDIRECT NOTES - JASA FINISHING INFRASTRUKTUR
+// 📁 TAMBAHAN SARAN ITEM (BELUM AKTIF - DIMATIKAN DENGAN //)
 // ============================================================
+
+// SARAN UNTUK JASA FINISHING DAK BETON (MONEY PAGE & MONEY CHILD)
+// const urlMappingJasaFinishingDakBetonFromJasaFinishingStrukturMoneyPage = {
+//   "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-dak-beton.html": "Harga Jasa Finishing Dak Beton",  // TYPE: MONEY_PAGE
+// };
+
+// SARAN UNTUK JASA PLESTERAN ACIAN (MONEY CHILD per LOKASI)
+// const urlMappingJasaPlesteranAcianFromMoneyPageMoneyChild = {
+//   "https://www.betonjayareadymix.com/2018/11/harga-borongan-plesteran-acian-jakarta.html": "Harga Borongan Plesteran Acian Jakarta",  // TYPE: MONEY_CHILD
+//   "https://www.betonjayareadymix.com/2018/11/harga-borongan-plesteran-acian-bekasi.html": "Harga Borongan Plesteran Acian Bekasi",  // TYPE: MONEY_CHILD
+//   "https://www.betonjayareadymix.com/2018/11/harga-borongan-plesteran-acian-bogor.html": "Harga Borongan Plesteran Acian Bogor",  // TYPE: MONEY_CHILD
+//   "https://www.betonjayareadymix.com/2018/11/harga-borongan-plesteran-acian-depok.html": "Harga Borongan Plesteran Acian Depok",  // TYPE: MONEY_CHILD
+//   "https://www.betonjayareadymix.com/2018/11/harga-borongan-plesteran-acian-tangerang.html": "Harga Borongan Plesteran Acian Tangerang",  // TYPE: MONEY_CHILD
+// };
+
+// SARAN UNTUK JASA FINISHING LANTAI BETON (MONEY CHILD per LOKASI)
+// const urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyChild = {
+//   "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-lantai-bekasi.html": "Harga Jasa Trowel Lantai Bekasi",  // TYPE: MONEY_CHILD
+//   "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-lantai-depok.html": "Harga Jasa Trowel Lantai Depok",  // TYPE: MONEY_CHILD
+//   "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-lantai-jakarta.html": "Harga Jasa Trowel Lantai Jakarta",  // TYPE: MONEY_CHILD
+//   "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-lantai-tangerang.html": "Harga Jasa Trowel Lantai Tangerang",  // TYPE: MONEY_CHILD
+//   "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-lantai-bogor.html": "Harga Jasa Trowel Lantai Bogor",  // TYPE: MONEY_CHILD
+// };
+
+// SARAN UNTUK JASA KITCHEN SET (MONEY CHILD per JENIS)
+// const urlMappingJasaKitchenSetFromJasaFinishingInteriorMoneyChild = {
+//   "https://www.betonjayareadymix.com/p/jasa-kitchen-set-minimalis.html": "Jasa Kitchen Set Minimalis",  // TYPE: MONEY_CHILD
+//   "https://www.betonjayareadymix.com/p/jasa-kitchen-set-modern.html": "Jasa Kitchen Set Modern",  // TYPE: MONEY_CHILD
+//   "https://www.betonjayareadymix.com/p/jasa-kitchen-set-klasik.html": "Jasa Kitchen Set Klasik",  // TYPE: MONEY_CHILD
+//   "https://www.betonjayareadymix.com/p/jasa-kitchen-set-custom.html": "Jasa Kitchen Set Custom",  // TYPE: MONEY_CHILD
+//   "https://www.betonjayareadymix.com/p/harga-kitchen-set-per-meter.html": "Harga Kitchen Set Per Meter",  // TYPE: MONEY_PAGE
+// };
+
+
+// ============================================================
+// 📋 RINGKASAN TYPE PER CONST
+// ============================================================
+
 /*
-🧠 SEO CANNIBAL FIX - REDIRECT PLAN:
+| Const Name | Level | Type | Parent | Status |
+|------------|-------|------|--------|--------|
+| urlMappingFinishingBangunanFromJasaKonsPillarSub2 | 2 | SUB2 | Jasa Konstruksi | ✅ VALID |
+| urlMappingFinishingBangunanInteriorFromJasaFinishingBangunanSub2Sub2 | 3 | SUB2 | Jasa Finishing Bangunan | ✅ VALID |
+| urlMappingFinishingBangunanEksteriorFromJasaFinishingBangunanSub2Sub2 | 3 | SUB2 | Jasa Finishing Bangunan | ✅ VALID |
+| urlMappingFinishingBangunanStrukturFromJasaFinishingBangunanSub2Sub2 | 3 | SUB2 | Jasa Finishing Bangunan | ✅ VALID |
+| urlMappingFinishingInfrastrukturFromJasaKonsPillarSub2 | 2 | SUB2 | Jasa Konstruksi | ✅ VALID |
+| urlMappingFinishingInfrastrukturJalanFromJasaFinishingInfrastrukturSub2Sub2 | 3 | SUB2 | Jasa Finishing Infrastruktur | ✅ VALID |
+| urlMappingFinishingInfrastrukturTrotoarFromJasaFinishingInfrastrukturSub2Sub2 | 3 | SUB2 | Jasa Finishing Infrastruktur | ✅ VALID |
+| urlMappingFinishingInfrastrukturSaluranFromJasaFinishingInfrastrukturSub2Sub2 | 3 | SUB2 | Jasa Finishing Infrastruktur | ✅ VALID |
+| urlMappingFinishingInfrastrukturStrukturFromJasaFinishingInfrastrukturSub2Sub2 | 3 | SUB2 | Jasa Finishing Infrastruktur | ✅ VALID |
+| urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2Sub2 | 3 | SUB2 | Jasa Finishing Infrastruktur | ✅ VALID |
+| urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2MoneyLeadgen | 4 | MONEY_LEADGEN | Jasa Finishing Infrastruktur | ✅ VALID |
+| urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2Sub2Lanjutan | 3 | SUB2 | Jasa Finishing Infrastruktur | ✅ VALID |
+*/
 
-| No | From URL | To URL | Type | Alasan SEO |
-|----|----------|--------|------|------------|
-| (TIDAK ADA REDIRECT - SEMUA AMAN) |
 
-📌 CATATAN PENTING:
+// ============================================================
+// ⚠️ CATATAN PENTING
+// ============================================================
 
-1. 'jasa-epoxy-beton-luar-ruang.html' adalah MONEY PAGE (Lead Gen)
-   - 🧠 TYPE: MONEY_LEADGEN
-   - Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Infrastruktur > Jasa Epoxy Beton Luar Ruang (4 level)
-   - Intent: Transactional (ada CTA konsultasi)
+/*
+1. SEMUA JASA TIDAK BOLEH MENGGUNAKAN MONEY_MASTER
+   - Jika ada halaman jasa dengan TYPE MONEY_MASTER, segera ubah menjadi MONEY_PAGE atau MONEY_LEADGEN
 
-2. 'jasa-finishing-khusus-cuaca-ekstrem.html' - ⚠️ PERLU DICEK KONTEN
-   - 🔴 PERLU DITINDAKLANJUTI:
-   - Halaman ini mungkin hanya berisi navigasi, tidak ada konten substansial
-   - Perlu diisi konten atau di-redirect ke halaman yang relevan
+2. MONEY_LEADGEN adalah type khusus untuk JASA yang memiliki CTA:
+   - Konsultasi, Survey, Hubungi, Estimasi
+   - BUKAN "Beli Sekarang" atau "Checkout"
 
-3. Semua halaman di atas sudah memiliki intent yang jelas dan berbeda.
-   Tidak ada tumpang tindih yang signifikan.
+3. SUB2 boleh di-skip di breadcrumb (tidak wajib ditampilkan jika slot terbatas)
 
-✅ AMAN - TIDAK PERLU REDIRECT (kecuali halaman kosong)
+4. Nama const mengikuti format:
+   urlMapping[NamaLayanan]From[NamaParent]Level[Level]Type
+
+5. Setiap item yang ditambahkan di masa depan:
+   - Gunakan format yang sama
+   - Awali dengan // jika belum aktif
+   - Tulis TYPE yang sesuai
 */
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaKonsFinishing = {};
@@ -451,16 +532,16 @@ document.addEventListener("DOMContentLoaded", function() {
 	// --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingFinishingBangunan,
-		urlMappingFinishingBangunanInterior,
-		urlMappingFinishingBangunanEksterior,
-		urlMappingFinishingBangunanStruktur,
-		urlMappingFinishingInfrastruktur,
-		urlMappingFinishingInfrastrukturJalan,
-		urlMappingFinishingInfrastrukturTrotoar,
-		urlMappingFinishingInfrastrukturSaluran,
-		urlMappingFinishingInfrastrukturStruktur,
-		urlMappingFinishingInfrastrukturProteksi
+		urlMappingFinishingBangunanFromJasaKonsPillarSub2,
+		urlMappingFinishingBangunanInteriorFromJasaFinishingBangunanSub2Sub2,
+		urlMappingFinishingBangunanEksteriorFromJasaFinishingBangunanSub2Sub2,
+		urlMappingFinishingBangunanStrukturFromJasaFinishingBangunanSub2Sub2,
+		urlMappingFinishingInfrastrukturFromJasaKonsPillarSub2,
+		urlMappingFinishingInfrastrukturJalanFromJasaFinishingInfrastrukturSub2Sub2,
+		urlMappingFinishingInfrastrukturTrotoarFromJasaFinishingInfrastrukturSub2Sub2,
+		urlMappingFinishingInfrastrukturSaluranFromJasaFinishingInfrastrukturSub2Sub2,
+		urlMappingFinishingInfrastrukturStrukturFromJasaFinishingInfrastrukturSub2Sub2,
+		urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2MoneyLeadgen
 		
     );
 
@@ -585,7 +666,7 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaFinishingInfrastrukturLink.style.visibility = 'hidden';
      pageNameJasaKonsFinishing.textContent = "";
 
-    if (urlMappingFinishingBangunan[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingFinishingBangunanFromJasaKonsPillarSub2[cleanUrlJasaKonsFinishing]) {
         restoreCondition('JasaFinishingBangunanSub');
         //restoreCondition('JasaChippingBeton');
      
@@ -623,10 +704,10 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
         //skip level 3 JasaFinishingSubLink.style.visibility = 'visible';
         JasaFinishingBangunanLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishing.textContent = urlMappingFinishingBangunan[cleanUrlJasaKonsFinishing];
+        pageNameJasaKonsFinishing.textContent = urlMappingFinishingBangunanFromJasaKonsPillarSub2[cleanUrlJasaKonsFinishing];
     }
    // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingFinishingBangunan[cleanUrlJasaKonsFinishing]) {
+   if (urlMappingFinishingBangunanFromJasaKonsPillarSub2[cleanUrlJasaKonsFinishing]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -661,7 +742,7 @@ document.addEventListener("DOMContentLoaded", function() {
                {
                    "@type": "ListItem",
                    "position": 4,
-                   "name": urlMappingFinishingBangunan[cleanUrlJasaKonsFinishing],
+                   "name": urlMappingFinishingBangunanFromJasaKonsPillarSub2[cleanUrlJasaKonsFinishing],
                    "item": cleanUrlJasaKonsFinishing
                }
            ]
@@ -671,7 +752,7 @@ document.addEventListener("DOMContentLoaded", function() {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-    if (urlMappingFinishingInfrastruktur[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingFinishingInfrastrukturFromJasaKonsPillarSub2[cleanUrlJasaKonsFinishing]) {
         restoreCondition('JasaFinishingInfrastrukturSub');
 		
           // hapus elemen id DIV Lain
@@ -705,11 +786,11 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
         //skip levelJasaFinishingSubLink.style.visibility = 'visible';
         JasaFinishingInfrastrukturLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastruktur[cleanUrlJasaKonsFinishing];
+        pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastrukturFromJasaKonsPillarSub2[cleanUrlJasaKonsFinishing];
 
     }
       // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingFinishingInfrastruktur[cleanUrlJasaKonsFinishing]) {
+   if (urlMappingFinishingInfrastrukturFromJasaKonsPillarSub2[cleanUrlJasaKonsFinishing]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -743,7 +824,7 @@ document.addEventListener("DOMContentLoaded", function() {
                {
                    "@type": "ListItem",
                    "position": 4,
-                   "name": urlMappingFinishingInfrastruktur[cleanUrlJasaKonsFinishing],
+                   "name": urlMappingFinishingInfrastrukturFromJasaKonsPillarSub2[cleanUrlJasaKonsFinishing],
                    "item": cleanUrlJasaKonsFinishing
                }
            ]
@@ -754,7 +835,7 @@ document.addEventListener("DOMContentLoaded", function() {
        document.head.appendChild(script);
    }
 //Sub FinishingBangunan
-   if (urlMappingFinishingBangunanInterior[cleanUrlJasaKonsFinishing]) {
+   if (urlMappingFinishingBangunanInteriorFromJasaFinishingBangunanSub2Sub2[cleanUrlJasaKonsFinishing]) {
         //skip level restoreCondition('JasaFinishingBangunanSub');
         restoreCondition('JasaFinishingBangunanInterior');
         //restoreCondition('JasaChippingBeton');
@@ -795,10 +876,10 @@ document.addEventListener("DOMContentLoaded", function() {
         JasaFinishingBangunanLink.style.visibility = 'visible';
 		*/
         JasaFinishingInteriorLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishing.textContent = urlMappingFinishingBangunanInterior[cleanUrlJasaKonsFinishing];
+        pageNameJasaKonsFinishing.textContent = urlMappingFinishingBangunanInteriorFromJasaFinishingBangunanSub2Sub2[cleanUrlJasaKonsFinishing];
     }
       // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingFinishingBangunanInterior[cleanUrlJasaKonsFinishing]) {
+   if (urlMappingFinishingBangunanInteriorFromJasaFinishingBangunanSub2Sub2[cleanUrlJasaKonsFinishing]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -838,7 +919,7 @@ document.addEventListener("DOMContentLoaded", function() {
                {
                    "@type": "ListItem",
                    "position": 4,
-                   "name": urlMappingFinishingBangunanInterior[cleanUrlJasaKonsFinishing],
+                   "name": urlMappingFinishingBangunanInteriorFromJasaFinishingBangunanSub2Sub2[cleanUrlJasaKonsFinishing],
                    "item": cleanUrlJasaKonsFinishing
                }
            ]
@@ -848,7 +929,7 @@ document.addEventListener("DOMContentLoaded", function() {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-   if (urlMappingFinishingBangunanEksterior[cleanUrlJasaKonsFinishing]) {
+   if (urlMappingFinishingBangunanEksteriorFromJasaFinishingBangunanSub2Sub2[cleanUrlJasaKonsFinishing]) {
         //restoreCondition('JasaFinishingBangunanSub');
         restoreCondition('JasaFinishingBangunanEksterior');
         //restoreCondition('JasaChippingBeton');
@@ -889,10 +970,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		*/
         //sub finish bagunan
         JasaFinishingEksteriorLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishing.textContent = urlMappingFinishingBangunanEksterior[cleanUrlJasaKonsFinishing];
+        pageNameJasaKonsFinishing.textContent = urlMappingFinishingBangunanEksteriorFromJasaFinishingBangunanSub2Sub2[cleanUrlJasaKonsFinishing];
     }
     // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingFinishingBangunanEksterior[cleanUrlJasaKonsFinishing]) {
+   if (urlMappingFinishingBangunanEksteriorFromJasaFinishingBangunanSub2Sub2[cleanUrlJasaKonsFinishing]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -932,7 +1013,7 @@ document.addEventListener("DOMContentLoaded", function() {
                {
                    "@type": "ListItem",
                    "position": 4,
-                   "name": urlMappingFinishingBangunanEksterior[cleanUrlJasaKonsFinishing],
+                   "name": urlMappingFinishingBangunanEksteriorFromJasaFinishingBangunanSub2Sub2[cleanUrlJasaKonsFinishing],
                    "item": cleanUrlJasaKonsFinishing
                }
            ]
@@ -942,7 +1023,7 @@ document.addEventListener("DOMContentLoaded", function() {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-   if (urlMappingFinishingBangunanStruktur[cleanUrlJasaKonsFinishing]) {
+   if (urlMappingFinishingBangunanStrukturFromJasaFinishingBangunanSub2Sub2[cleanUrlJasaKonsFinishing]) {
         //restoreCondition('JasaFinishingBangunanSub');
         restoreCondition('JasaFinishingBangunanStruktur');
     
@@ -985,61 +1066,26 @@ document.addEventListener("DOMContentLoaded", function() {
 	   
         //sub finishing bangunan
         JasaFinishingStrukturLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishing.textContent = urlMappingFinishingBangunanStruktur[cleanUrlJasaKonsFinishing];
-    }
-    // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingFinishingBangunanStruktur[cleanUrlJasaKonsFinishing]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-			   /*
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Finishing Bangunan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html"
-               },
-			   */
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing Struktur",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingFinishingBangunanStruktur[cleanUrlJasaKonsFinishing],
-                   "item": cleanUrlJasaKonsFinishing
-               }
-           ]
-       };
-   	const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
+        pageNameJasaKonsFinishing.textContent = urlMappingFinishingBangunanStrukturFromJasaFinishingBangunanSub2Sub2[cleanUrlJasaKonsFinishing];
+   
+ 		const breadcrumbItems = [
+        { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+        { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+        { name: 'Jasa Finishing Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html' },
+        { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+        { 
+            name: urlMappingFinishingBangunanStrukturFromJasaFinishingBangunanSub2Sub2[cleanUrlJasaKonsFinishing], 
+            url: cleanUrlJasaKonsFinishing 
+        }
+    ];
+    
+    generateBreadcrumbForMapping(breadcrumbItems, null, null, 'JASA');
+  
    }
+
  //Sub Finishing Infrastruktur
-    if (urlMappingFinishingInfrastrukturJalan[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingFinishingInfrastrukturJalanFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing]) {
         //restoreCondition('JasaFinishingInfrastrukturSub');
        restoreCondition('JasaFinishingInfrastrukturJalan');
      
@@ -1081,62 +1127,22 @@ document.addEventListener("DOMContentLoaded", function() {
        //sub finish infrastruktur
         JasaFinishingJalanLink.style.visibility = 'visible';
      
-        pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastrukturJalan[cleanUrlJasaKonsFinishing];
+        pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastrukturJalanFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing];
+        generateBreadcrumbForMapping(
+        urlMappingFinishingInfrastrukturJalanFromJasaFinishingInfrastrukturSub2Sub2,
+        cleanUrlJasaKonsFinishing,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+            { name: 'Jasa Finishing Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html' },
+            { name: 'Jasa Finishing Jalan Jembatan', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-jalan-jembatan.html' }
+        ],
+        'JASA'
+    );
+}
 
-    }
-     // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingFinishingInfrastrukturJalan[cleanUrlJasaKonsFinishing]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-			   /*
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Finishing Infrastruktur",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html"
-               },
-	            */
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing Jalan Jembatan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-jembatan.html"
-               },
-		   
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingFinishingInfrastrukturJalan[cleanUrlJasaKonsFinishing],
-                   "item": cleanUrlJasaKonsFinishing
-               }
-           ]
-       };
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-   if (urlMappingFinishingInfrastrukturTrotoar[cleanUrlJasaKonsFinishing]) {
+if (urlMappingFinishingInfrastrukturTrotoarFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing]) {
         //restoreCondition('JasaFinishingInfrastrukturSub');
         restoreCondition('JasaFinishingTrotoar');
     
@@ -1177,62 +1183,23 @@ document.addEventListener("DOMContentLoaded", function() {
        //sub finish infrastruktur
         JasaFinishingTrotoarLink.style.visibility = 'visible';
     
-        pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastrukturTrotoar[cleanUrlJasaKonsFinishing];
+        pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastrukturTrotoarFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing];
+       generateBreadcrumbForMapping(
+        urlMappingFinishingInfrastrukturTrotoarFromJasaFinishingInfrastrukturSub2Sub2,
+        cleanUrlJasaKonsFinishing,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+            { name: 'Jasa Finishing Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html' },
+            { name: 'Jasa Finishing Trotoar Area Publik', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-trotoar-area-publik.html' }
+        ],
+        'JASA'
+    );
+}
 
-    }
-
-     // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingFinishingInfrastrukturTrotoar[cleanUrlJasaKonsFinishing]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-			   /*
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                    "name": "Jasa Finishing Infrastruktur",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html"
-               },
-			   */
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing Trotoar Area Publik",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar-area-publik.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingFinishingInfrastrukturTrotoar[cleanUrlJasaKonsFinishing],
-                   "item": cleanUrlJasaKonsFinishing
-               }
-           ]
-       };
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-   if (urlMappingFinishingInfrastrukturSaluran[cleanUrlJasaKonsFinishing]) {
+   
+if (urlMappingFinishingInfrastrukturSaluranFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing]) {
         //restoreCondition('JasaFinishingInfrastrukturSub');
         restoreCondition('JasaFinishingSaluran');
     
@@ -1274,61 +1241,23 @@ document.addEventListener("DOMContentLoaded", function() {
        //sub finish infrastruktur
         JasaFinishingSaluranLink.style.visibility = 'visible';
    
-        pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastrukturSaluran[cleanUrlJasaKonsFinishing];
+        pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastrukturSaluranFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing];
 
-    }
- // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingFinishingInfrastrukturSaluran[cleanUrlJasaKonsFinishing]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-			   /*skip level
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Finishing Infrastruktur",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html"
-               },
-			   */
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing Saluran Drainase",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-saluran-drainase.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingFinishingInfrastrukturSaluran[cleanUrlJasaKonsFinishing],
-                   "item": cleanUrlJasaKonsFinishing
-               }
-           ]
-       };
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-  if (urlMappingFinishingInfrastrukturStruktur[cleanUrlJasaKonsFinishing]) {
+	   generateBreadcrumbForMapping(
+        urlMappingFinishingInfrastrukturSaluranFromJasaFinishingInfrastrukturSub2Sub2,
+        cleanUrlJasaKonsFinishing,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+            { name: 'Jasa Finishing Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html' },
+            { name: 'Jasa Finishing Saluran Drainase', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-saluran-drainase.html' }
+        ],
+        'JASA'
+    );
+}
+
+  if (urlMappingFinishingInfrastrukturStrukturFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing]) {
        // restoreCondition('JasaFinishingInfrastrukturSub');
         restoreCondition('JasaFinishingInfrastrukturStruktur');
           // hapus elemen id DIV Lain
@@ -1368,64 +1297,24 @@ document.addEventListener("DOMContentLoaded", function() {
         //sub finish infrastruktur
         JasaFinishingStrukturLink.style.visibility = 'visible';
    
-        pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastrukturStruktur[cleanUrlJasaKonsFinishing];
+        pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastrukturStrukturFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing];
 
-    }
+	   generateBreadcrumbForMapping(
+        urlMappingFinishingInfrastrukturStrukturFromJasaFinishingInfrastrukturSub2Sub2,
+        cleanUrlJasaKonsFinishing,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+            { name: 'Jasa Finishing Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html' },
+            { name: 'Jasa Finishing Struktur Utilitas', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur-utilitas.html' }
+        ],
+        'JASA'
+    );
+}
 
- // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingFinishingInfrastrukturStruktur[cleanUrlJasaKonsFinishing]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-			    /*skip level
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
-               },
-			  
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Finishing Infrastruktur",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html"
-               },
-			   */
-			   
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing Struktur Utilitas",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-utilitas.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingFinishingInfrastrukturStruktur[cleanUrlJasaKonsFinishing],
-                   "item": cleanUrlJasaKonsFinishing
-               }
-           ]
-       };
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-  if (urlMappingFinishingInfrastrukturProteksi[cleanUrlJasaKonsFinishing]) {
+
+  if (urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2MoneyLeadgen[cleanUrlJasaKonsFinishing]) {
        // restoreCondition('JasaFinishingInfrastrukturSub');
         restoreCondition('JasaFinishingInfrastrukturProteksi');
        
@@ -1467,59 +1356,18 @@ document.addEventListener("DOMContentLoaded", function() {
        //sub finish infrastruktur
         JasaFinishingProteksiLink.style.visibility = 'visible';
    
-        pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastrukturProteksi[cleanUrlJasaKonsFinishing];
-
-    }
- // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingFinishingInfrastrukturProteksi[cleanUrlJasaKonsFinishing]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-			   /*skip level
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Finishing Infrastruktur",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html"
-               },
-			   */
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing Proteksi Beton",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing-proteksi-beton.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingFinishingInfrastrukturProteksi[cleanUrlJasaKonsFinishing],
-                   "item": cleanUrlJasaKonsFinishing
-               }
-           ]
-       };
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-
+        pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2MoneyLeadgen[cleanUrlJasaKonsFinishing];
+        generateBreadcrumbForMapping(
+        urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2MoneyLeadgen,
+        cleanUrlJasaKonsFinishing,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+            { name: 'Jasa Finishing Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html' },
+            { name: 'Jasa Finishing Proteksi Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-proteksi-beton.html' }
+        ],
+        'JASA'
+    );
+}
    });
