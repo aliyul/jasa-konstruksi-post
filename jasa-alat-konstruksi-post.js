@@ -1351,27 +1351,27 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaPencahayaanUtilitasFromSub2MoneyPage,
 		urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage,
 		urlMappingSewaTotalStationFromSub2MoneyChild,
-		urlMappingSewaAlatProyekSurveyPengukuranWaterpass,
-		urlMappingSewaAlatProyekSurveyPengukuranTheodolite,
-		urlMappingSewaAlatProyekAksesKeamanan,
-		urlMappingSewaAlatProyekBorGroundWork,
-		urlMappingSewaAlatProyekSistemPendukung,
-		urlMappingSewaAlatBerat,
-		urlMappingSewaMotorGrader,
-		urlMappingSewaAlatPancang,
-		urlMappingSewaTrencher,
-		urlMappingSewaConcretePaver,
-		urlMappingSewaExcavator,
-		urlMappingSewaBulldozer,
-		urlMappingSewaForklift,
-		urlMappingSewaCrane,
-		urlMappingSewaBackhoeLoader,
-		urlMappingSewaSelfLoader,
-		urlMappingSewaVibroRoller,
-		urlMappingSewaWalesStoom,
-		urlMappingSewaTandemRoller,
-		urlMappingSewaBabyRoller,
-		urlMappingSewaWheelLoader,
+		urlMappingSewaWaterpassFromSub2MoneyChild,
+		urlMappingSewaTheodoliteFromSub2MoneyChild,
+		urlMappingSewaAksesKeamananProyekFromSub2MoneyPage,
+		urlMappingSewaAlatBorGroundWorkFromSub2MoneyPage,
+		urlMappingSewaSistemPendukungProyekFromSub2MoneyPage,
+		urlMappingSewaAlatBeratFromSub2MoneyPage,
+		urlMappingSewaMotorGraderFromSub2MoneyMaster,
+		urlMappingSewaAlatPancangFromSub2MoneyMaster,
+		urlMappingSewaTrencherFromSub2MoneyMaster,
+		urlMappingSewaConcretePaverFromSub2MoneyMaster,
+		urlMappingSewaExcavatorFromSub2MoneyPage,
+		urlMappingSewaBulldozerFromSub2MoneyMaster,
+		urlMappingSewaForkliftFromSub2MoneyMaster,
+		urlMappingSewaCraneFromSub2MoneyMaster,
+		urlMappingSewaBackhoeLoaderFromSub2MoneyMaster,
+		urlMappingSewaSelfLoaderFromSub2MoneyMaster,
+		urlMappingSewaVibroRollerFromSub2MoneyMaster,
+		urlMappingSewaWalesStoomFromSub2MoneyMaster,
+		urlMappingSewaTandemRollerFromSub2MoneyMaster,
+		urlMappingSewaBabyRollerFromSub2MoneyMaster,
+		urlMappingSewaWheelLoaderFromSub2MoneyMaster,
 		urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster
 	
     );
@@ -2207,7 +2207,7 @@ if (urlMappingSewaTotalStationFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiP
     );
 }
   
-if (urlMappingSewaAlatProyekSurveyPengukuranWaterpass[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaWaterpassFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
 	
@@ -2277,74 +2277,25 @@ if (urlMappingSewaAlatProyekSurveyPengukuranWaterpass[cleanUrlJasaKonsAlatKonstr
         SewaAlatProyekPostLink.style.visibility = 'visible';
 	   SewaAlatProyekSurveyPengukuranPostLink.style.visibility = 'visible';
 	   SewaAlatProyekSurveyPengukuranWaterpassPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekSurveyPengukuranWaterpass[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatProyekSurveyPengukuranWaterpass[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Proyek",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
-               },
-			  {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Alat Survey Pengukuran",
-                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html"
-               },
-			   {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": "Sewa Waterpass",
-                   "item": "https://www.betonjayareadymix.com/2019/03/sewa-waterpass.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 8,
-                   "name": urlMappingSewaAlatProyekSurveyPengukuranWaterpass[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-if (urlMappingSewaAlatProyekSurveyPengukuranTheodolite[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaWaterpassFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
+   
+		generateBreadcrumbForMapping(
+        urlMappingSewaWaterpassFromSub2MoneyChild,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+            { name: 'Sewa Alat Survey Pengukuran', url: 'https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html' },
+            { name: 'Sewa Waterpass', url: 'https://www.betonjayareadymix.com/2019/03/sewa-waterpass.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
+  
+if (urlMappingSewaTheodoliteFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
         restoreCondition('SewaAlatProyekPost');
@@ -2413,75 +2364,26 @@ if (urlMappingSewaAlatProyekSurveyPengukuranTheodolite[cleanUrlJasaKonsAlatKonst
         SewaAlatProyekPostLink.style.visibility = 'visible';
 	   SewaAlatProyekSurveyPengukuranPostLink.style.visibility = 'visible';
 	   SewaAlatProyekSurveyPengukuranTheodolitePostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekSurveyPengukuranTheodolite[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatProyekSurveyPengukuranTheodolite[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Proyek",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
-               },
-			  {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Alat Survey Pengukuran",
-                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html"
-               },
-			   {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": "Sewa Theodolite",
-                   "item": "https://www.betonjayareadymix.com/2019/03/sewa-theodolite.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 8,
-                   "name": urlMappingSewaAlatProyekSurveyPengukuranTheodolite[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaTheodoliteFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+		   generateBreadcrumbForMapping(
+        urlMappingSewaTheodoliteFromSub2MoneyChild,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+            { name: 'Sewa Alat Survey Pengukuran', url: 'https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html' },
+            { name: 'Sewa Theodolite', url: 'https://www.betonjayareadymix.com/2019/03/sewa-theodolite.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
+   
 	
-  if (urlMappingSewaAlatProyekAksesKeamanan[cleanUrlJasaKonsAlatKonstruksiPost]) {
+  if (urlMappingSewaAksesKeamananProyekFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
         restoreCondition('SewaAlatProyekPost');
@@ -2549,69 +2451,25 @@ if (urlMappingSewaAlatProyekSurveyPengukuranTheodolite[cleanUrlJasaKonsAlatKonst
 	//TAMPILKAN SewaAlatProyekPost
         SewaAlatProyekPostLink.style.visibility = 'visible';
 	   SewaAlatProyekAksesKeamananPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekAksesKeamanan[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatProyekAksesKeamanan[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Proyek",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
-               },
-			  {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Akses Keamanan Proyek",
-                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-akses-keamanan-proyek.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaAlatProyekAksesKeamanan[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   } 
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAksesKeamananProyekFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+  		    generateBreadcrumbForMapping(
+        urlMappingSewaAksesKeamananProyekFromSub2MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+            { name: 'Sewa Akses Keamanan Proyek', url: 'https://www.betonjayareadymix.com/2019/02/sewa-akses-keamanan-proyek.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+  }
+   
 	
-  if (urlMappingSewaAlatProyekBorGroundWork[cleanUrlJasaKonsAlatKonstruksiPost]) {
+  if (urlMappingSewaAlatBorGroundWorkFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
         restoreCondition('SewaAlatProyekPost');
@@ -2678,69 +2536,24 @@ if (urlMappingSewaAlatProyekSurveyPengukuranTheodolite[cleanUrlJasaKonsAlatKonst
 	//TAMPILKAN SewaAlatProyekPost
         SewaAlatProyekPostLink.style.visibility = 'visible';
 	   SewaAlatProyekBorGroundWorkPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekBorGroundWork[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatProyekBorGroundWork[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Proyek",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
-               },
-			  {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Alat Bor Ground Work",
-                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-alat-bor-ground-work.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaAlatProyekBorGroundWork[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatBorGroundWorkFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
+   
+  		    generateBreadcrumbForMapping(
+        urlMappingSewaAlatBorGroundWorkFromSub2MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+            { name: 'Sewa Alat Bor Ground Work', url: 'https://www.betonjayareadymix.com/2019/02/sewa-alat-bor-ground-work.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+  }
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-	
-	 if (urlMappingSewaAlatProyekSistemPendukung[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaSistemPendukungProyekFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
         restoreCondition('SewaAlatProyekPost');
@@ -2807,70 +2620,26 @@ if (urlMappingSewaAlatProyekSurveyPengukuranTheodolite[cleanUrlJasaKonsAlatKonst
 	//TAMPILKAN SewaAlatProyekPost
         SewaAlatProyekPostLink.style.visibility = 'visible';
 	   SewaAlatProyekSistemPendukungPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekSistemPendukung[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatProyekSistemPendukung[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Proyek",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html"
-               },
-			  {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Sistem Pendukung Proyek",
-                   "item": "https://www.betonjayareadymix.com/2019/02/sewa-sistem-pendukung-proyek.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaAlatProyekSistemPendukung[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaSistemPendukungProyekFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
+   
+		    generateBreadcrumbForMapping(
+        urlMappingSewaSistemPendukungProyekFromSub2MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+            { name: 'Sewa Sistem Pendukung Proyek', url: 'https://www.betonjayareadymix.com/2019/02/sewa-sistem-pendukung-proyek.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
 	
 	//AKHIR SUB SEWA ALAT PROYEK
-if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaAlatBeratFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
@@ -2935,64 +2704,25 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatKonstruksiPostLink.style.visibility = 'visible';
 	//TAMPILKAN SewaAlatBeratPost
         SewaAlatBeratPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatBeratFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+		    generateBreadcrumbForMapping(
+        urlMappingSewaAlatBeratFromSub2MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
     
    //AWAL SUB PAGE SEWA ALAT BERAT
-   if (urlMappingSewaForklift[cleanUrlJasaKonsAlatKonstruksiPost]) {
+   if (urlMappingSewaForkliftFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaForkliftPost');
@@ -3059,69 +2789,24 @@ if (urlMappingSewaAlatBerat[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
 	
         SewaForkliftPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaForklift[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-
-  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaForklift[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Forklift",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-forklift.html"
-               },
-
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaForklift[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaForkliftFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+   		    generateBreadcrumbForMapping(
+        urlMappingSewaForkliftFromSub2MoneyMaster,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Sewa Forklift', url: 'https://www.betonjayareadymix.com/p/sewa-forklift.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
+	
+if (urlMappingSewaCraneFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaCranePost');
@@ -3188,69 +2873,24 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
 	
         SewaCranePostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Crane",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-crane.html"
-               },
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaCraneFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+		    generateBreadcrumbForMapping(
+        urlMappingSewaCraneFromSub2MoneyMaster,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Sewa Crane', url: 'https://www.betonjayareadymix.com/p/sewa-crane.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
 
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }	
-	
-    if (urlMappingSewaSelfLoader[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaSelfLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaSelfLoaderPost');
@@ -3317,69 +2957,25 @@ if (urlMappingSewaCrane[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
 	
         SewaSelfLoaderPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaSelfLoader[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaSelfLoader[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Self Loader",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-self-loader.html"
-               },
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaSelfLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+		    generateBreadcrumbForMapping(
+        urlMappingSewaSelfLoaderFromSub2MoneyMaster,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Sewa Self Loader', url: 'https://www.betonjayareadymix.com/p/sewa-self-loader.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
 
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaSelfLoader[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }	
 	
-if (urlMappingSewaWheelLoader[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaWheelLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaWheelLoaderPost');
@@ -3446,69 +3042,24 @@ if (urlMappingSewaWheelLoader[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
 	
         SewaWheelLoaderPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaWheelLoader[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaWheelLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
 
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaWheelLoader[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Wheel Loader",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-wheel-loader.html"
-               },
+	       generateBreadcrumbForMapping(
+        urlMappingSewaWheelLoaderFromSub2MoneyMaster,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Sewa Wheel Loader', url: 'https://www.betonjayareadymix.com/p/sewa-wheel-loader.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
 
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaWheelLoader[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }	
-    if (urlMappingSewaVibroRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaVibroRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaVibroRollerPost');
@@ -3575,68 +3126,25 @@ if (urlMappingSewaWheelLoader[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
 	
         SewaVibroRollerPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaVibroRoller[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaVibroRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Vibro Roller",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-vibro-roller.html"
-               },
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaVibroRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+		    generateBreadcrumbForMapping(
+        urlMappingSewaVibroRollerFromSub2MoneyMaster,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Sewa Vibro Roller', url: 'https://www.betonjayareadymix.com/p/sewa-vibro-roller.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
 
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaVibroRoller[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }	
-    if (urlMappingSewaWalesStoom[cleanUrlJasaKonsAlatKonstruksiPost]) {
+	
+if (urlMappingSewaWalesStoomFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaWalesStoomPost');
@@ -3704,69 +3212,24 @@ if (urlMappingSewaWheelLoader[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
 	
         SewaWalesStoomPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaWalesStoom[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaWalesStoom[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Wales Stoom",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-wales-stoom.html"
-               },
-
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaWalesStoom[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }	
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaWalesStoomFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+		    generateBreadcrumbForMapping(
+        urlMappingSewaWalesStoomFromSub2MoneyMaster,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Sewa Wales Stoom', url: 'https://www.betonjayareadymix.com/p/sewa-wales-stoom.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}	
 	
-if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaTandemRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaTandemRollerPost');
@@ -3833,69 +3296,25 @@ if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
 	
         SewaTandemRollerPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaTandemRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+		generateBreadcrumbForMapping(
+        urlMappingSewaTandemRollerFromSub2MoneyMaster,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Sewa Tandem Roller', url: 'https://www.betonjayareadymix.com/p/sewa-tandem-roller.html' }
+        ],
+        'SEWA_RENTAL'
+    );
 
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Tandem Roller",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-tandem-roller.html"
-               },
+}
 
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }	
-   if (urlMappingSewaBulldozer[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaBulldozerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaBulldozerPost');
@@ -3962,68 +3381,24 @@ if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
 	
         SewaBulldozerPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBulldozer[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaBulldozer[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Bulldozer",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-bulldozer.html"
-               },
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBulldozerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
+   
+		   generateBreadcrumbForMapping(
+        urlMappingSewaBulldozerFromSub2MoneyMaster,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Sewa Bulldozer', url: 'https://www.betonjayareadymix.com/p/sewa-bulldozer.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
 
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaBulldozer[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }	
-    if (urlMappingSewaExcavator[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaExcavatorFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaExcavatorPost');
@@ -4090,25 +3465,24 @@ if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
 	
         SewaExcavatorPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaExcavator[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaExcavator[cleanUrlJasaKonsAlatKonstruksiPost]) {
-// ✅ CUKUP KIRIM ARRAY NAMA (URUT DARI ATAS KE BAWAH)
-    generateBreadcrumbForMapping(
-        urlMappingSewaExcavator,
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaExcavatorFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+				   generateBreadcrumbForMapping(
+        urlMappingSewaExcavatorFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            'Jasa Konstruksi',
-            'Jasa Alat Konstruksi',
-            'Sewa Alat Konstruksi',
-            'Sewa Alat Berat'
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Sewa Excavator', url: 'https://www.betonjayareadymix.com/p/sewa-excavator.html' }
         ],
-        'JASA_KONSTRUKSI'
+        'SEWA_RENTAL'
     );
+}
 
-   }	
-    if (urlMappingSewaBackhoeLoader[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaBackhoeLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaBackhoeLoaderPost');
@@ -4176,69 +3550,24 @@ if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
 	
         SewaBackhoeLoaderPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBackhoeLoader[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBackhoeLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+		    generateBreadcrumbForMapping(
+        urlMappingSewaBackhoeLoaderFromSub2MoneyMaster,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Sewa Backhoe Loader', url: 'https://www.betonjayareadymix.com/p/sewa-backhoe-loader.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
 
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaBackhoeLoader[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Backhoe Loader",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-backhoe-loader.html"
-               },
-
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaBackhoeLoader[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }	
-  if (urlMappingSewaConcretePaver[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaConcretePaverFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaConcretePaverPost');
@@ -4306,69 +3635,25 @@ if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
 	
         SewaConcretePaverPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaConcretePaver[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaConcretePaver[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Concrete Paver",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-concrete-paver.html"
-               },
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaConcretePaverFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
 
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaConcretePaver[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
+		   generateBreadcrumbForMapping(
+        urlMappingSewaConcretePaverFromSub2MoneyMaster,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Sewa Concrete Paver', url: 'https://www.betonjayareadymix.com/p/sewa-concrete-paver.html' }
+        ],
+        'SEWA_RENTAL'
+    );
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }	
+}
 
-  if (urlMappingSewaTrencher[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaTrencherFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaTrencherPost');
@@ -4436,68 +3721,24 @@ if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
 	
         SewaTrencherPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaTrencher[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaTrencher[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Trencher",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-trencher.html"
-               },
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaTrencherFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
 
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaTrencher[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
+		    generateBreadcrumbForMapping(
+        urlMappingSewaTrencherFromSub2MoneyMaster,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Sewa Trencher', url: 'https://www.betonjayareadymix.com/p/sewa-trencher.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-   if (urlMappingSewaBabyRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaBabyRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaBabyRollerPost');
@@ -4565,68 +3806,25 @@ if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
 	
         SewaBabyRollerPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBabyRoller[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaBabyRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Baby Roller",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-baby-roller.html"
-               },
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBabyRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
 
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaBabyRoller[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
+		    generateBreadcrumbForMapping(
+        urlMappingSewaBabyRollerFromSub2MoneyMaster,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Sewa Baby Roller', url: 'https://www.betonjayareadymix.com/p/sewa-baby-roller.html' }
+        ],
+        'SEWA_RENTAL'
+    );
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-   if (urlMappingSewaAlatPancang[cleanUrlJasaKonsAlatKonstruksiPost]) {
+}
+
+if (urlMappingSewaAlatPancangFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaAlatPancangPost');
@@ -4694,69 +3892,24 @@ if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
 	
         SewaAlatPancangPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatPancang[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
-  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatPancang[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Alat Pancang",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-pancang.html"
-               },
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatPancangFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+		    generateBreadcrumbForMapping(
+        urlMappingSewaAlatPancangFromSub2MoneyMaster,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Sewa Alat Pancang', url: 'https://www.betonjayareadymix.com/p/sewa-alat-pancang.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
 
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaAlatPancang[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-	
-   if (urlMappingSewaMotorGrader[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaMotorGraderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
         restoreCondition('SewaMotorGraderPost');
@@ -4824,67 +3977,23 @@ if (urlMappingSewaTandemRoller[cleanUrlJasaKonsAlatKonstruksiPost]) {
         SewaAlatBeratPostLink.style.visibility = 'visible';
 	
         SewaMotorGraderPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaMotorGrader[cleanUrlJasaKonsAlatKonstruksiPost];
-    }
- // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaMotorGrader[cleanUrlJasaKonsAlatKonstruksiPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
-               },
-	       
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               }, 
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Sewa Alat Berat",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": "Sewa Motor Grader",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-motor-grader.html"
-               },
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaMotorGraderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+		   generateBreadcrumbForMapping(
+        urlMappingSewaMotorGraderFromSub2MoneyMaster,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Sewa Motor Grader', url: 'https://www.betonjayareadymix.com/p/sewa-motor-grader.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
 
-               {
-                   "@type": "ListItem",
-                   "position": 7,
-                   "name": urlMappingSewaMotorGrader[cleanUrlJasaKonsAlatKonstruksiPost],
-                   "item": cleanUrlJasaKonsAlatKonstruksiPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
 //AKHIR SUB PAGE SEWA ALAT BERAT
 if (urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
