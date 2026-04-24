@@ -1659,7 +1659,7 @@ if (urlMappingJasaBongkarTowerFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanP
             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Tower', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-tower.html' }
         ],
-        'JASA'
+         'JASA_KONSTRUKSI'
     );
 }
 
