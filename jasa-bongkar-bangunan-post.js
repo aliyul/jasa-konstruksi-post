@@ -1346,10 +1346,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBuangPuingFromSub2MoneyChild,
 		urlMappingJasaPerbaikanAtapBocorFromSub2MoneyPage,
 		urlMappingJasaPerbaikanDindingRetakFromSub2MoneyPage,
-		urlMappingJasaPerbaikanRembesanAir,
-		urlMappingJasaPerbaikanPlafonRusak,
-		urlMappingJasaPerbaikanDakBetonBocor,
-		urlMappingJasaPerbaikanTalangBocor
+		urlMappingJasaPerbaikanRembesanAirFromSub2MoneyPage,
+		urlMappingJasaPerbaikanPlafonRusakFromSub2MoneyPage,
+		urlMappingJasaPerbaikanDakBetonBocorFromSub2MoneyPage,
+		urlMappingJasaPerbaikanTalangBocorFromSub2MoneyPage
 	
     );
 
@@ -2684,7 +2684,7 @@ if (urlMappingJasaPerbaikanAtapBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBan
  }
  
  //JasaPerbaikanRembesanAirPost
- if (urlMappingJasaPerbaikanRembesanAir[cleanUrlJasaKonsBongkarBangunanPost]) {
+ if (urlMappingJasaPerbaikanRembesanAirFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
         restoreCondition('JasaPerawatanPerbaikanBangunanPost');
@@ -2750,61 +2750,25 @@ if (urlMappingJasaPerbaikanAtapBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBan
 	//TAMPILKAN JasaBongkarTowerPost
 	JasaPerbaikanRembesanAirPostLink.style.visibility = 'visible';
 	
-	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaPerbaikanRembesanAir[cleanUrlJasaKonsBongkarBangunanPost];
-    }
-      // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPerbaikanRembesanAir[cleanUrlJasaKonsBongkarBangunanPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perawatan & Perbaikan Bangunan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html"
-               },
-			   {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Perbaikan Kebocoran & Waterproofing",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Perbaikan Rembesan Air",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-rembesan-air.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": urlMappingJasaPerbaikanRembesanAir[cleanUrlJasaKonsBongkarBangunanPost],
-                   "item": cleanUrlJasaKonsBongkarBangunanPost
-               }
-           ]
-       };
+	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaPerbaikanRembesanAirFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost];
+    
+ 	generateBreadcrumbForMapping(
+        urlMappingJasaPerbaikanRembesanAirFromSub2MoneyPage,
+        cleanUrlJasaKonsBongkarBangunanPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Perawatan & Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Kebocoran & Waterproofing', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html' },
+            { name: 'Jasa Perbaikan Rembesan Air', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-rembesan-air.html' }
+        ],
+        'JASA'
+    );
+ }
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
 
 	 //JasaPerbaikanRembesanAirPost
- if (urlMappingJasaPerbaikanPlafonRusak[cleanUrlJasaKonsBongkarBangunanPost]) {
+ if (urlMappingJasaPerbaikanPlafonRusakFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
         restoreCondition('JasaPerawatanPerbaikanBangunanPost');
@@ -2869,61 +2833,25 @@ if (urlMappingJasaPerbaikanAtapBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBan
 	//TAMPILKAN JasaPerbaikanPlafonRusakPost
 	JasaPerbaikanPlafonRusakPostLink.style.visibility = 'visible';
 	
-	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaPerbaikanPlafonRusak[cleanUrlJasaKonsBongkarBangunanPost];
-    }
-      // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPerbaikanPlafonRusak[cleanUrlJasaKonsBongkarBangunanPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perawatan & Perbaikan Bangunan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html"
-               },
-			  {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Perbaikan Elemen Arsitektural",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-elemen-arsitektural.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Perbaikan Plafon Rusak",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon-rusak.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": urlMappingJasaPerbaikanPlafonRusak[cleanUrlJasaKonsBongkarBangunanPost],
-                   "item": cleanUrlJasaKonsBongkarBangunanPost
-               }
-           ]
-       };
+	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaPerbaikanPlafonRusakFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost];
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+	   generateBreadcrumbForMapping(
+        urlMappingJasaPerbaikanPlafonRusakFromSub2MoneyPage,
+        cleanUrlJasaKonsBongkarBangunanPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Perawatan & Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Elemen Arsitektural', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-elemen-arsitektural.html' },
+            { name: 'Jasa Perbaikan Plafon Rusak', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon-rusak.html' }
+        ],
+        'JASA'
+    );
+ 
+ }
 
 	 //JasaPerbaikanDakBetonBocor
- if (urlMappingJasaPerbaikanDakBetonBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
+ if (urlMappingJasaPerbaikanDakBetonBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
         restoreCondition('JasaPerawatanPerbaikanBangunanPost');
@@ -2986,61 +2914,23 @@ if (urlMappingJasaPerbaikanAtapBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBan
 	//TAMPILKAN JasaPerbaikanPlafonRusakPost
 	JasaPerbaikanDakBetonBocorPostLink.style.visibility = 'visible';
 	
-	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaPerbaikanDakBetonBocor[cleanUrlJasaKonsBongkarBangunanPost];
-    }
-      // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPerbaikanDakBetonBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perawatan & Perbaikan Bangunan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html"
-               },
-			                  {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Perbaikan Kebocoran Waterproofing",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Perbaikan Dak Beton Bocor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-dak-beton-bocor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": urlMappingJasaPerbaikanDakBetonBocor[cleanUrlJasaKonsBongkarBangunanPost],
-                   "item": cleanUrlJasaKonsBongkarBangunanPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-
+	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaPerbaikanDakBetonBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost];
+ 	    generateBreadcrumbForMapping(
+        urlMappingJasaPerbaikanDakBetonBocorFromSub2MoneyPage,
+        cleanUrlJasaKonsBongkarBangunanPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Perawatan & Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Kebocoran Waterproofing', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html' },
+            { name: 'Jasa Perbaikan Dak Beton Bocor', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-dak-beton-bocor.html' }
+        ],
+        'JASA'
+    );  
+ }
+   
 	 //JasaPerbaikanTalangBocorPost
- if (urlMappingJasaPerbaikanTalangBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
+ if (urlMappingJasaPerbaikanTalangBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
         restoreCondition('JasaKonsBongkarBangunanPost');
 	
         restoreCondition('JasaPerawatanPerbaikanBangunanPost');
@@ -3106,57 +2996,21 @@ if (urlMappingJasaPerbaikanAtapBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBan
 	//TAMPILKAN JasaPerbaikanTalangBocorPost
 	JasaPerbaikanTalangBocorPostLink.style.visibility = 'visible';
 	
-	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaPerbaikanTalangBocor[cleanUrlJasaKonsBongkarBangunanPost];
-    }
-      // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPerbaikanTalangBocor[cleanUrlJasaKonsBongkarBangunanPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perawatan & Perbaikan Bangunan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Perbaikan Kebocoran Waterproofing",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html"
-               },
-			{
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Perbaikan Talang Bocor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-bocor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": urlMappingJasaPerbaikanTalangBocor[cleanUrlJasaKonsBongkarBangunanPost],
-                   "item": cleanUrlJasaKonsBongkarBangunanPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaPerbaikanTalangBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost];
+    
+ 	    generateBreadcrumbForMapping(
+        urlMappingJasaPerbaikanTalangBocorFromSub2MoneyPage,
+        cleanUrlJasaKonsBongkarBangunanPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Perawatan & Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Kebocoran Waterproofing', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html' },
+            { name: 'Jasa Perbaikan Talang Bocor', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-bocor.html' }
+        ],
+        'JASA'
+    );
+ }
+    
 
    });
