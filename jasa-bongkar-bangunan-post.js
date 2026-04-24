@@ -2513,7 +2513,8 @@ if (urlMappingJasaBuangPuingFromSub2MoneyChild[cleanUrlJasaKonsBongkarBangunanPo
         ],
         'JASA'
     );
-
+}
+	
 //SUB urlMappingJasaPerawatanPerbaikanBangunanPost
 //JasaPerbaikanAtapBocorPost
 if (urlMappingJasaPerbaikanAtapBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
@@ -3012,5 +3013,4 @@ if (urlMappingJasaPerbaikanAtapBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBan
     );
  }
     
-
-   });
+});
