@@ -587,7 +587,7 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
             const lower = name.toLowerCase();
             
             // JASA tidak boleh menggunakan MONEY_MASTER
-            const isJasaEntity = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(entityType);
+            const isJasaEntity = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA_KONSTRUKSI'].includes(entityType);
             if (isJasaEntity) {
                 return false;
             }
@@ -1580,7 +1580,7 @@ if (urlMappingJasaBongkarBangunanFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangun
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 
 }
@@ -1739,7 +1739,7 @@ if (urlMappingJasaBongkarRumahFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanP
             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 	
 }
@@ -1819,7 +1819,7 @@ if (urlMappingJasaBongkarBetonFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanP
             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Beton', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-beton.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 
 }
@@ -1897,7 +1897,7 @@ if (urlMappingJasaBongkarAtapFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPo
             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Atap', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-atap.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 }
 
@@ -1974,7 +1974,7 @@ if (urlMappingJasaBongkarKeramikFromSub2MoneyPage[cleanUrlJasaKonsBongkarBanguna
             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Keramik', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-keramik.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 }
 
@@ -2051,7 +2051,7 @@ if (urlMappingJasaBongkarTembokFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunan
             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Tembok', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-tembok.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 }
 
@@ -2128,7 +2128,7 @@ if (urlMappingJasaBongkarDindingFromSub2MoneyPage[cleanUrlJasaKonsBongkarBanguna
             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-dinding.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 }
 
@@ -2206,7 +2206,7 @@ if (urlMappingJasaBongkarPlafonFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunan
             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Plafon', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-plafon.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 }
 
@@ -2283,7 +2283,7 @@ if (urlMappingJasaBongkarPartisiFromSub2MoneyPage[cleanUrlJasaKonsBongkarBanguna
             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Partisi', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-partisi.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 }
 
@@ -2358,7 +2358,7 @@ if (urlMappingJasaBongkarPagarFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanP
             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-pagar.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 
 }
@@ -2435,7 +2435,7 @@ if (urlMappingJasaBongkarLantaiFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunan
             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-lantai.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 
 }
@@ -2511,7 +2511,7 @@ if (urlMappingJasaBuangPuingFromSub2MoneyChild[cleanUrlJasaKonsBongkarBangunanPo
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Jasa Buang Puing', url: 'https://www.betonjayareadymix.com/p/jasa-buang-puing.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 }
 	
@@ -2596,7 +2596,7 @@ if (urlMappingJasaPerbaikanAtapBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBan
             { name: 'Jasa Perbaikan Atap & Drainase Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-drainase-bangunan.html' },
             { name: 'Jasa Perbaikan Atap Bocor', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-bocor.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 
 }
@@ -2679,7 +2679,7 @@ if (urlMappingJasaPerbaikanAtapBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBan
             { name: 'Jasa Perbaikan Elemen Arsitektural Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-elemen-arsitektural.html' },
             { name: 'Jasa Perbaikan Dinding Retak', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-retak.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
  
  }
@@ -2763,7 +2763,7 @@ if (urlMappingJasaPerbaikanAtapBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBan
             { name: 'Jasa Perbaikan Kebocoran & Waterproofing', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html' },
             { name: 'Jasa Perbaikan Rembesan Air', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-rembesan-air.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
  }
 
@@ -2846,7 +2846,7 @@ if (urlMappingJasaPerbaikanAtapBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBan
             { name: 'Jasa Perbaikan Elemen Arsitektural', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-elemen-arsitektural.html' },
             { name: 'Jasa Perbaikan Plafon Rusak', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-plafon-rusak.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
  
  }
@@ -2926,7 +2926,7 @@ if (urlMappingJasaPerbaikanAtapBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBan
             { name: 'Jasa Perbaikan Kebocoran Waterproofing', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html' },
             { name: 'Jasa Perbaikan Dak Beton Bocor', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-dak-beton-bocor.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );  
  }
    
@@ -3009,7 +3009,7 @@ if (urlMappingJasaPerbaikanAtapBocorFromSub2MoneyPage[cleanUrlJasaKonsBongkarBan
             { name: 'Jasa Perbaikan Kebocoran Waterproofing', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html' },
             { name: 'Jasa Perbaikan Talang Bocor', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-bocor.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
  }
     
