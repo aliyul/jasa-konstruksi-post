@@ -369,7 +369,7 @@ const urlMappingSewaSistemPendukungProyekFromSub2MoneyPage = {
 // Breadcrumb: Home > Sewa Alat Konstruksi > Sewa Alat Berat > [Jenis Alat / Lokasi] (4 level)
 // ============================================================
 
-const urlMappingSewaAlatBeratFromSub2MoneyPage = {
+const urlMappingSewaAlatBeratPostFromSub2MoneyPage = {
   // ============================================================
   // [MONEY_CHILD] - SEWA ALAT BERAT PER LOKASI (JABODETABEK + JAWA BARAT)
   // ============================================================
@@ -1687,7 +1687,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaAksesKeamananProyekFromSub2MoneyPage,
 		urlMappingSewaAlatBorGroundWorkFromSub2MoneyPage,
 		urlMappingSewaSistemPendukungProyekFromSub2MoneyPage,
-		urlMappingSewaAlatBeratFromSub2MoneyPage,
+		urlMappingSewaAlatBeratPostFromSub2MoneyPage,
 		urlMappingSewaMotorGraderFromSub2MoneyMaster,
 		urlMappingSewaAlatPancangFromSub2MoneyMaster,
 		urlMappingSewaTrencherFromSub2MoneyMaster,
@@ -2970,7 +2970,7 @@ if (urlMappingSewaSistemPendukungProyekFromSub2MoneyPage[cleanUrlJasaKonsAlatKon
 
 	
 	//AKHIR SUB SEWA ALAT PROYEK
-if (urlMappingSewaAlatBeratFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaAlatBeratPostFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
         restoreCondition('JasaKonsAlatKonstruksiPost');
        // restoreCondition('JasaAlatKonstruksiPost');
         restoreCondition('SewaAlatBeratPost');
@@ -3035,10 +3035,10 @@ if (urlMappingSewaAlatBeratFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]
         SewaAlatKonstruksiPostLink.style.visibility = 'visible';
 	//TAMPILKAN SewaAlatBeratPost
         SewaAlatBeratPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatBeratFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatBeratPostFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
     
 		    generateBreadcrumbForMapping(
-        urlMappingSewaAlatBeratFromSub2MoneyPage,
+        urlMappingSewaAlatBeratPostFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
             { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
