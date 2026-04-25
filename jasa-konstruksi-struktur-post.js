@@ -137,7 +137,12 @@ const urlMappingJasaKonstruksiBajaKonvensional = {
   "https://www.betonjayareadymix.com/2018/09/jasa-pemasangan-tower-bts.html": "Jasa Pemasangan Tower BTS",  // TYPE: VARIANT
   "https://www.betonjayareadymix.com/2018/09/jasa-pemasangan-tower-triangle.html": "Jasa Pemasangan Tower Triangle"  // TYPE: VARIANT
 };
+const urlMappingJasaKanopiBajadanBesi = {
 
+};
+const urlMappingJasaStrukturBajaGudang = {
+
+};
 // ============================================================
 // [SUB2] - JASA COR BETON (MASTER)
 // Parent: Jasa Struktur Beton & Pengecoran
