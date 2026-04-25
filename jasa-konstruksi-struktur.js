@@ -1243,7 +1243,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 if (!JasaKonsStruktur) {
      console.error("elemen Id JasaKonsPerbaikanSub kondisi terhapus");	
-} else {
+}
 
 	
      var JasaKonstruksiStrukturSubLink = document.getElementById("JasaKonstruksiStrukturSub");
@@ -1274,7 +1274,7 @@ if (!JasaKonsStruktur) {
 	
      pageNameJasaKonsStruktur.textContent = "";
 	
-    if (urlMappingStrukturGedungHunianFromSub2MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+if (urlMappingStrukturGedungHunianFromSub2MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
         restoreCondition('JasaKonsStruktur');
         restoreCondition('JasaKonstruksiGedungdanHunianSub');
            // hapus elemen id DIV Lain
