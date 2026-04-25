@@ -1,493 +1,222 @@
 // ============================================================
-// JASA PONDASI BANGUNAN (SUB2)
+// 🔍 ENTITY TYPE: JASA (Pondasi Bangunan)
+// ATURAN: JASA TIDAK BOLEH MENGGUNAKAN MONEY_MASTER
+// ✅ Gunakan: MONEY_PAGE (Komersial 60% + Transaksional 40%)
+// ✅ Gunakan: MONEY_CHILD (spesifik lokasi)
+// ❌ Dilarang: MONEY_MASTER
+// ============================================================
+
+// ============================================================
+// 📁 LEVEL 2 - SUB2 (Turunan dari PILLAR Jasa Konstruksi)
 // Parent: Jasa Pondasi & Perkuatan Tanah (/p/jasa-pondasi-perkuatan-tanah.html)
 // ============================================================
 
-// ============================================================
-// [VARIANT] - JASA PONDASI BANGUNAN (MASTER)
-// 🧠 STATUS: SUDAH ADA (dari URL di bawah)
-// Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan
-// ============================================================
-
-const urlMappingJasaPondasi = {
-  // ============================================================
-  // [MONEY PAGE] - BORONGAN PONDASI (MASTER)
-  // 🧠 STATUS: SUDAH ADA (konten lengkap)
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Borongan Pondasi
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/borongan-pondasi.html": "Borongan Pondasi [MONEY PAGE - MASTER]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI
-  // 🧠 STATUS: SUDAH ADA (konten lengkap)
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA BORONGAN PONDASI
-  // 🧠 STATUS: SUDAH ADA (konten lengkap)
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Harga Jasa Borongan Pondasi
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-pondasi.html": "Harga Jasa Borongan Pondasi [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI TERDEKAT
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Terdekat
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-terdekat.html": "Jasa Borongan Pondasi Terdekat [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI MURAH
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Murah
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-murah.html": "Jasa Borongan Pondasi Murah [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI SUMEDANG
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Sumedang
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-sumedang.html": "Jasa Borongan Pondasi Sumedang [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI SUBANG
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Subang
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-subang.html": "Jasa Borongan Pondasi Subang [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI PURWAKARTA
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Purwakarta
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-purwakarta.html": "Jasa Borongan Pondasi Purwakarta [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI PANGANDARAN
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Pangandaran
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-pangandaran.html": "Jasa Borongan Pondasi Pangandaran [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI MAJALENGKA
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Majalengka
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-majalengka.html": "Jasa Borongan Pondasi Majalengka [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI KUNINGAN
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Kuningan
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-kuningan.html": "Jasa Borongan Pondasi Kuningan [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI INDRAMAYU
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Indramayu
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-indramayu.html": "Jasa Borongan Pondasi Indramayu [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI CIREBON
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Cirebon
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-cirebon.html": "Jasa Borongan Pondasi Cirebon [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI CIANJUR
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Cianjur
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-cianjur.html": "Jasa Borongan Pondasi Cianjur [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI CIAMIS
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Ciamis
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-ciamis.html": "Jasa Borongan Pondasi Ciamis [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI GARUT
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Garut
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-garut.html": "Jasa Borongan Pondasi Garut [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI TASIKMALAYA
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Tasikmalaya
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-tasikmalaya.html": "Jasa Borongan Pondasi Tasikmalaya [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI SUKABUMI
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Sukabumi
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-sukabumi.html": "Jasa Borongan Pondasi Sukabumi [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI BANDUNG
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Bandung
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-bandung.html": "Jasa Borongan Pondasi Bandung [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI KARAWANG
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Karawang
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-karawang.html": "Jasa Borongan Pondasi Karawang [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI BEKASI
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Bekasi
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-bekasi.html": "Jasa Borongan Pondasi Bekasi [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI TANGERANG
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Tangerang
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-tangerang.html": "Jasa Borongan Pondasi Tangerang [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI DEPOK
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Depok
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-depok.html": "Jasa Borongan Pondasi Depok [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI BOGOR
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Bogor
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-bogor.html": "Jasa Borongan Pondasi Bogor [MONEY PAGE]",
-  
-  // ============================================================
-  // [MONEY PAGE] - JASA BORONGAN PONDASI JAKARTA
-  // 🧠 STATUS: SUDAH ADA
-  // Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Jakarta
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-jakarta.html": "Jasa Borongan Pondasi Jakarta [MONEY PAGE]"
+const urlMappingJasaPondasiFromPillarSub2 = {
+  // [SUB2] - Jasa Pondasi Bangunan
+  "https://www.betonjayareadymix.com/p/jasa-pondasi-bangunan.html": "Jasa Pondasi Bangunan",  // TYPE: SUB2
 };
 
 // ============================================================
-// [VARIANT] - JASA PONDASI CAKAR AYAM
-// 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
-// Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Pondasi Cakar Ayam
+// 📁 JASA PONDASI (BORONGAN PONDASI) - MONEY PAGE & CHILD
+// 🧠 ENTITY: JASA → TYPE: MONEY_PAGE & MONEY_CHILD
+// Parent: Jasa Pondasi Bangunan (SUB2)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Pondasi Bangunan > [Nama Layanan] (4 level)
 // ============================================================
 
-const urlMappingJasaPondasiCakarAyam = {
-  // "https://www.betonjayareadymix.com/p/jasa-pondasi-cakar-ayam.html": "Jasa Pondasi Cakar Ayam [VARIANT]",
-  // "https://www.betonjayareadymix.com/2019/08/harga-pondasi-cakar-ayam.html": "Harga Pondasi Cakar Ayam [MONEY PAGE]",
-  // "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-cakar-ayam.html": "Jasa Borongan Pondasi Cakar Ayam [MONEY PAGE]"
+const urlMappingJasaPondasiFromSub2MoneyPage = {
+  // ============================================================
+  // [MONEY_PAGE] - BORONGAN PONDASI (LAYANAN UMUM)
+  // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
+  // Intent: Komersial (60%) + Transaksional (40%)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/09/borongan-pondasi.html": "Borongan Pondasi",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - HARGA JASA BORONGAN PONDASI
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-pondasi.html": "Harga Jasa Borongan Pondasi",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_CHILD] - JASA BORONGAN PONDASI PER LOKASI (TERDEKAT & MURAH)
+  // 🧠 TYPE: MONEY_CHILD (spesifik lokasi)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-terdekat.html": "Jasa Borongan Pondasi Terdekat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-murah.html": "Jasa Borongan Pondasi Murah",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // [MONEY_CHILD] - JASA BORONGAN PONDASI PER LOKASI (JAWA BARAT)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-sumedang.html": "Jasa Borongan Pondasi Sumedang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-subang.html": "Jasa Borongan Pondasi Subang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-purwakarta.html": "Jasa Borongan Pondasi Purwakarta",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-pangandaran.html": "Jasa Borongan Pondasi Pangandaran",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-majalengka.html": "Jasa Borongan Pondasi Majalengka",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-kuningan.html": "Jasa Borongan Pondasi Kuningan",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-indramayu.html": "Jasa Borongan Pondasi Indramayu",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-cirebon.html": "Jasa Borongan Pondasi Cirebon",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-cianjur.html": "Jasa Borongan Pondasi Cianjur",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-ciamis.html": "Jasa Borongan Pondasi Ciamis",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-garut.html": "Jasa Borongan Pondasi Garut",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-tasikmalaya.html": "Jasa Borongan Pondasi Tasikmalaya",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-sukabumi.html": "Jasa Borongan Pondasi Sukabumi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-bandung.html": "Jasa Borongan Pondasi Bandung",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-karawang.html": "Jasa Borongan Pondasi Karawang",  // TYPE: MONEY_CHILD
+  
+  // ============================================================
+  // [MONEY_CHILD] - JASA BORONGAN PONDASI PER LOKASI (JABODETABEK)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-bekasi.html": "Jasa Borongan Pondasi Bekasi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-tangerang.html": "Jasa Borongan Pondasi Tangerang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-depok.html": "Jasa Borongan Pondasi Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-bogor.html": "Jasa Borongan Pondasi Bogor",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-jakarta.html": "Jasa Borongan Pondasi Jakarta",  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
-// [VARIANT] - JASA PONDASI TAPAK
-// 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
-// Breadcrumb: Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Pondasi Tapak
+// 📁 JASA PONDASI CAKAR AYAM - KOSONG (SARAN ITEM)
+// 🧠 ENTITY: JASA → TYPE: MONEY_PAGE & MONEY_CHILD
+// Parent: Jasa Pondasi Bangunan (SUB2)
 // ============================================================
 
-const urlMappingJasaPondasiTapak = {
-  // "https://www.betonjayareadymix.com/p/jasa-pondasi-tapak.html": "Jasa Pondasi Tapak [VARIANT]",
-  // "https://www.betonjayareadymix.com/2019/08/harga-pondasi-tapak.html": "Harga Pondasi Tapak [MONEY PAGE]",
-  // "https://www.betonjayareadymix.com/2019/08/jasa-borongan-pondasi-tapak.html": "Jasa Borongan Pondasi Tapak [MONEY PAGE]"
+const urlMappingJasaPondasiCakarAyamFromSub2MoneyPage = {
+  // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam.html": "Jasa Pondasi Cakar Ayam",  // TYPE: MONEY_PAGE
+  // "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-cakar-ayam.html": "Harga Jasa Pondasi Cakar Ayam",  // TYPE: MONEY_PAGE
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam-per-meter.html": "Jasa Pondasi Cakar Ayam Per Meter",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam-jakarta.html": "Jasa Pondasi Cakar Ayam Jakarta",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam-bandung.html": "Jasa Pondasi Cakar Ayam Bandung",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam-terdekat.html": "Jasa Pondasi Cakar Ayam Terdekat",  // TYPE: MONEY_CHILD
 };
+
+// ============================================================
+// 📁 JASA PONDASI TAPAK - KOSONG (SARAN ITEM)
+// 🧠 ENTITY: JASA → TYPE: MONEY_PAGE & MONEY_CHILD
+// Parent: Jasa Pondasi Bangunan (SUB2)
+// ============================================================
+
+const urlMappingJasaPondasiTapakFromSub2MoneyPage = {
+  // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak.html": "Jasa Pondasi Tapak",  // TYPE: MONEY_PAGE
+  // "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tapak.html": "Harga Jasa Pondasi Tapak",  // TYPE: MONEY_PAGE
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak-per-meter.html": "Jasa Pondasi Tapak Per Meter",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak-jakarta.html": "Jasa Pondasi Tapak Jakarta",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak-bandung.html": "Jasa Pondasi Tapak Bandung",  // TYPE: MONEY_CHILD
+};
+
+// ============================================================
+// 📁 JASA PONDASI TIANG PANCANG - MONEY PAGE & CHILD
+// 🧠 ENTITY: JASA → TYPE: MONEY_PAGE & MONEY_CHILD
+// Parent: Jasa Pondasi Bangunan (SUB2)
+// ============================================================
+
+const urlMappingJasaPondasiTiangPancangFromSub2MoneyPage = {
+  // ============================================================
+  // [MONEY_PAGE] - HARGA JASA PANCANG (BERBAGAI METODE)
+  // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pancang-drop-hammer.html": "Harga Jasa Pancang Drop Hammer",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pancang-spun-pile.html": "Harga Jasa Pancang Spun Pile",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pancang-mini-pile.html": "Harga Jasa Pancang Mini Pile",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pemasangan-mini-pile.html": "Harga Jasa Pemasangan Mini Pile",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pancang-hidrolik.html": "Harga Jasa Pancang Hidrolik",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pemasangan-tiang-pancang.html": "Harga Jasa Pemasangan Tiang Pancang",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - HARGA JASA PONDASI TIANG PANCANG
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang.html": "Harga Jasa Pondasi Tiang Pancang",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_CHILD] - JASA PONDASI TIANG PANCANG PER LOKASI
+  // 🧠 TYPE: MONEY_CHILD (spesifik lokasi)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-terdekat.html": "Harga Jasa Pondasi Tiang Pancang Terdekat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-murah.html": "Harga Jasa Pondasi Tiang Pancang Murah",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-karawang.html": "Harga Jasa Pondasi Tiang Pancang Karawang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-bekasi.html": "Harga Jasa Pondasi Tiang Pancang Bekasi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-tangerang.html": "Harga Jasa Pondasi Tiang Pancang Tangerang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-depok.html": "Harga Jasa Pondasi Tiang Pancang Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-bogor.html": "Harga Jasa Pondasi Tiang Pancang Bogor",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-jakarta.html": "Harga Jasa Pondasi Tiang Pancang Jakarta",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-surabaya.html": "Harga Jasa Pondasi Tiang Pancang Surabaya",  // TYPE: MONEY_CHILD
+};
+
+// ============================================================
+// 📁 JASA PONDASI SUMURAN - KOSONG (SARAN ITEM)
+// 🧠 ENTITY: JASA → TYPE: MONEY_PAGE & MONEY_CHILD
+// Parent: Jasa Pondasi Bangunan (SUB2)
+// ============================================================
+
+const urlMappingJasaPondasiSumuranFromSub2MoneyPage = {
+  // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran.html": "Jasa Pondasi Sumuran",  // TYPE: MONEY_PAGE
+  // "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-sumuran.html": "Harga Jasa Pondasi Sumuran",  // TYPE: MONEY_PAGE
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-per-meter.html": "Jasa Pondasi Sumuran Per Meter",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-jakarta.html": "Jasa Pondasi Sumuran Jakarta",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-bandung.html": "Jasa Pondasi Sumuran Bandung",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-terdekat.html": "Jasa Pondasi Sumuran Terdekat",  // TYPE: MONEY_CHILD
+};
+
+// ============================================================
+// 📁 CATATAN: JASA PONDASI BORED PILE
+// 🧠 SUDAH ADA DI PENGEBORAN (urlMappingJasaPengeboranFromSub2MoneyPage)
+// Tidak perlu duplikasi di sini
+// ============================================================
+
+// ============================================================
+// 🔴 BREADCRUMB SKIP LEVEL NOTES
+// ============================================================
 /*
-Jenis TYPE yang digunakan:
+📌 BREADCRUMB SKIP LEVEL YANG DIPERBOLEHKAN:
 
-[MONEY PAGE] — halaman transaksional (harga, jual, beli, borongan)
+Untuk semua MONEY_PAGE dan MONEY_CHILD di atas:
+- Skip: "Jasa Pondasi & Perkuatan Tanah" (SUB2)
+- Karena halaman tersebut hanya sebagai pengelompokan
 
-[MONEY PAGE - MASTER] — halaman master untuk money page
+Breadcrumb yang benar:
+Home > Jasa Konstruksi > Jasa Pondasi Bangunan > Borongan Pondasi (4 level)
+Home > Jasa Konstruksi > Jasa Pondasi Bangunan > Borongan Pondasi Jakarta (4 level)
+Home > Jasa Konstruksi > Jasa Pondasi Bangunan > Harga Jasa Pancang Mini Pile (4 level)
 
-[VARIANT] — halaman di bawah SUB2
-
-🧠 SARAN BREADCRUMB 4 LEVEL (SKIP PILLAR JASA KONSTRUKSI)
-Halaman							Breadcrumb
-Borongan Pondasi [MASTER]		Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Borongan Pondasi
-Jasa Borongan Pondasi Bogor		Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Bogor
-Jasa Borongan Pondasi Jakarta	Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Borongan Pondasi Jakarta
-Jasa Pondasi Cakar Ayam			Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Pondasi Cakar Ayam
-Jasa Pondasi Tapak				Home > Jasa Pondasi & Perkuatan Tanah > Jasa Pondasi Bangunan > Jasa Pondasi Tapak
-*/
-
-/* ini sudah ada di pengeboran
-const urlMappingJasaPondasiBoredPile = {
-
-};
+✅ SEMUA URL di atas sudah valid sebagai MONEY_PAGE / MONEY_CHILD
+✅ Tidak ada MONEY_MASTER (karena ENTITY JASA)
+✅ Tidak ada duplikasi konten berisiko tinggi
+✅ Aman untuk SEO
 */
 
 // ============================================================
-// JASA PONDASI TIANG PANCANG (SUB2)
-// Parent: Jasa Pondasi Bangunan (/p/jasa-pondasi-bangunan.html)
+// 📋 RINGKASAN TYPE YANG DIGUNAKAN
 // ============================================================
-
-const urlMappingJasaPondasiTiangPancang = {
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PANCANG DROP HAMMER
-  // 🧠 STATUS: AKTIF (konten lengkap)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pancang Drop Hammer
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pancang-drop-hammer.html": "Harga Jasa Pancang Drop Hammer [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PANCANG SPUN PILE
-  // 🧠 STATUS: AKTIF (konten lengkap)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pancang Spun Pile
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pancang-spun-pile.html": "Harga Jasa Pancang Spun Pile [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PANCANG MINI PILE
-  // 🧠 STATUS: AKTIF (konten lengkap)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pancang Mini Pile
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pancang-mini-pile.html": "Harga Jasa Pancang Mini Pile [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PEMASANGAN MINI PILE
-  // 🧠 STATUS: AKTIF (konten terintegrasi dengan mini pile)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pemasangan Mini Pile
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pemasangan-mini-pile.html": "Harga Jasa Pemasangan Mini Pile [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PANCANG HIDROLIK
-  // 🧠 STATUS: AKTIF (konten lengkap)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pancang Hidrolik
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pancang-hidrolik.html": "Harga Jasa Pancang Hidrolik [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PEMASANGAN TIANG PANCANG
-  // 🧠 STATUS: AKTIF (konten umum)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pemasangan Tiang Pancang
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pemasangan-tiang-pancang.html": "Harga Jasa Pemasangan Tiang Pancang [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PONDASI TIANG PANCANG (GENERAL)
-  // 🧠 STATUS: AKTIF (konten general)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pondasi Tiang Pancang
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang.html": "Harga Jasa Pondasi Tiang Pancang [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PONDASI TIANG PANCANG TERDEKAT
-  // 🧠 STATUS: AKTIF (konten lokasi)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pondasi Tiang Pancang Terdekat
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-terdekat.html": "Harga Jasa Pondasi Tiang Pancang Terdekat [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PONDASI TIANG PANCANG MURAH
-  // 🧠 STATUS: AKTIF (konten dengan angle hemat)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pondasi Tiang Pancang Murah
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-murah.html": "Harga Jasa Pondasi Tiang Pancang Murah [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PONDASI TIANG PANCANG KARAWANG
-  // 🧠 STATUS: AKTIF (konten spesifik lokasi)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pondasi Tiang Pancang Karawang
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-karawang.html": "Harga Jasa Pondasi Tiang Pancang Karawang [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PONDASI TIANG PANCANG BEKASI
-  // 🧠 STATUS: AKTIF (konten spesifik lokasi)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pondasi Tiang Pancang Bekasi
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-bekasi.html": "Harga Jasa Pondasi Tiang Pancang Bekasi [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PONDASI TIANG PANCANG TANGERANG
-  // 🧠 STATUS: AKTIF (konten spesifik lokasi)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pondasi Tiang Pancang Tangerang
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-tangerang.html": "Harga Jasa Pondasi Tiang Pancang Tangerang [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PONDASI TIANG PANCANG DEPOK
-  // 🧠 STATUS: AKTIF (konten spesifik lokasi)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pondasi Tiang Pancang Depok
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-depok.html": "Harga Jasa Pondasi Tiang Pancang Depok [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PONDASI TIANG PANCANG BOGOR
-  // 🧠 STATUS: AKTIF (konten spesifik lokasi)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pondasi Tiang Pancang Bogor
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-bogor.html": "Harga Jasa Pondasi Tiang Pancang Bogor [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PONDASI TIANG PANCANG JAKARTA
-  // 🧠 STATUS: AKTIF (konten lengkap)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pondasi Tiang Pancang Jakarta
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-jakarta.html": "Harga Jasa Pondasi Tiang Pancang Jakarta [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PONDASI TIANG PANCANG SURABAYA
-  // 🧠 STATUS: AKTIF (konten minimal - perlu pengembangan)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pondasi Tiang Pancang Surabaya
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-surabaya.html": "Harga Jasa Pondasi Tiang Pancang Surabaya [MONEY PAGE]"
-};
 /*
-Jenis TYPE yang digunakan:
+Type			Jumlah Item	Keterangan
+SUB2			1			Jasa Pondasi Bangunan (kategori)
+MONEY_PAGE		~10			Harga & layanan jasa pondasi umum
+MONEY_CHILD		~30			Jasa pondasi per lokasi (Jakarta, Bandung, dll)
 
-[MONEY PAGE] — halaman transaksional (harga, jual, beli, sewa)
-
-tipis
-
-🧠 SARAN BREADCRUMB 4 LEVEL (SKIP PILLAR JASA KONSTRUKSI)
-Halaman										Breadcrumb
-Harga Jasa Pancang Drop Hammer				Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pancang Drop Hammer
-Harga Jasa Pancang Spun Pile				Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pancang Spun Pile
-Harga Jasa Pancang Mini Pile				Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pancang Mini Pile
-Harga Jasa Pancang Hidrolik					Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pancang Hidrolik
-Harga Jasa Pondasi Tiang Pancang Jakarta	Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pondasi Tiang Pancang Jakarta
-Harga Jasa Pondasi Tiang Pancang Surabaya	Home > Jasa Pondasi Bangunan > Jasa Tiang Pancang > Harga Jasa Pondasi Tiang Pancang Surabaya
-
+✅ ENTITY TYPE: JASA - semua MONEY_PAGE dan MONEY_CHILD VALID
+❌ MONEY_MASTER - TIDAK ADA (karena JASA tidak boleh)
 */
 
-/*
-JASA PONDASI & PERKUATAN TANAH (SUB2 - /p/jasa-pondasi-perkuatan-tanah.html)
-│
-└── JASA PONDASI BANGUNAN (SUB2 - /p/jasa-pondasi-bangunan.html)
-    │
-    └── JASA PONDASI SUMURAN (VARIANT - /p/jasa-pondasi-sumuran.html)
-        │
-        ├── [MONEY PAGE] Harga Jasa Pondasi Sumuran
-        ├── [MONEY PAGE] Jasa Pondasi Sumuran Per Titik
-        ├── [MONEY PAGE] Jasa Pondasi Sumuran Rumah Tinggal
-        └── [MONEY PAGE] Jasa Pondasi Sumuran Jakarta, Bogor, Depok, Tangerang, Bekasi
-*/
-//sub Jasa Pondasi Sumuran
 // ============================================================
-// JASA PONDASI SUMURAN (VARIANT)
-// Parent: Jasa Pondasi Bangunan (/p/jasa-pondasi-bangunan.html)
+// 🟡 REKOMENDASI URL TAMBAHAN (GLOBAL)
 // ============================================================
-
-const urlMappingJasaPondasiSumuran = {
-  // ============================================================
-  // [VARIANT] - JASA PONDASI SUMURAN (HALAMAN UTAMA)
-  // 🧠 STATUS: PERLU DIBUAT (halaman PAGE baru)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-pondasi-sumuran.html": "Jasa Pondasi Sumuran [VARIANT]",
-
-  // ============================================================
-  // [MONEY PAGE] - HARGA JASA PONDASI SUMURAN
-  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran > Harga Jasa Pondasi Sumuran
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/harga-pondasi-sumuran.html": "Harga Pondasi Sumuran [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - JASA PONDASI SUMURAN PER TITIK
-  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran > Jasa Pondasi Sumuran Per Titik
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-per-titik.html": "Jasa Pondasi Sumuran Per Titik [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - JASA PONDASI SUMURAN RUMAH TINGGAL
-  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran > Jasa Pondasi Sumuran Rumah Tinggal
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-rumah.html": "Jasa Pondasi Sumuran Rumah Tinggal [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - JASA PONDASI SUMURAN JAKARTA
-  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran > Jasa Pondasi Sumuran Jakarta
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-jakarta.html": "Jasa Pondasi Sumuran Jakarta [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - JASA PONDASI SUMURAN BOGOR
-  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran > Jasa Pondasi Sumuran Bogor
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-bogor.html": "Jasa Pondasi Sumuran Bogor [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - JASA PONDASI SUMURAN DEPOK
-  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran > Jasa Pondasi Sumuran Depok
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-depok.html": "Jasa Pondasi Sumuran Depok [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - JASA PONDASI SUMURAN TANGERANG
-  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran > Jasa Pondasi Sumuran Tangerang
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-tangerang.html": "Jasa Pondasi Sumuran Tangerang [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - JASA PONDASI SUMURAN BEKASI
-  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran > Jasa Pondasi Sumuran Bekasi
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-bekasi.html": "Jasa Pondasi Sumuran Bekasi [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - JASA PONDASI SUMURAN KARAWANG
-  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran > Jasa Pondasi Sumuran Karawang
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-karawang.html": "Jasa Pondasi Sumuran Karawang [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - JASA PONDASI SUMURAN BANDUNG
-  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran > Jasa Pondasi Sumuran Bandung
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-bandung.html": "Jasa Pondasi Sumuran Bandung [MONEY PAGE]",
-
-  // ============================================================
-  // [MONEY PAGE] - JASA PONDASI SUMURAN SURABAYA
-  // 🧠 STATUS: PERLU DIBUAT (halaman POST baru)
-  // Breadcrumb: Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran > Jasa Pondasi Sumuran Surabaya
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-surabaya.html": "Jasa Pondasi Sumuran Surabaya [MONEY PAGE]"
-};
 /*
-Jenis TYPE yang digunakan:
+🧠 URL YANG DISARANKAN UNTUK DITAMBAHKAN:
 
-[VARIANT] — halaman di bawah SUB2
-
-[MONEY PAGE] — halaman transaksional (harga, jual, beli, sewa)
-
-🧠 SARAN BREADCRUMB 4 LEVEL (SKIP PILLAR JASA KONSTRUKSI)
-Halaman							Breadcrumb
-Jasa Pondasi Sumuran (PAGE)		Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran
-Harga Pondasi Sumuran			Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran > Harga Pondasi Sumuran
-Jasa Pondasi Sumuran Jakarta	Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran > Jasa Pondasi Sumuran Jakarta
-Jasa Pondasi Sumuran Bekasi		Home > Jasa Pondasi Bangunan > Jasa Pondasi Sumuran > Jasa Pondasi Sumuran Bekasi
-
-*/
-
+| No | URL Saran | Type | Prioritas | Keterangan |
+|----|-----------|------|-----------|-------------|
+| 1 | /2019/08/jasa-borongan-pondasi-surabaya.html | MONEY_CHILD | 🟡 MEDIUM | Lokasi Surabaya |
+| 2 | /2019/08/jasa-borongan-pondasi-semarang.html | MONEY_CHILD | 🟡 MEDIUM | Lokasi Semarang |
+| 3 | /2019/08/jasa-borongan-pondasi-medan.html | MONEY_CHILD | 🟡 MEDIUM | Lokasi Medan |
+| 4 | /2019/08/jasa-borongan-pondasi-makassar.html | MONEY_CHILD | 🟡 MEDIUM | Lokasi Makassar |
+| 5 | /2019/08/jasa-pondasi-cakar-ayam.html | MONEY_PAGE | 🔴 HIGH | Perlu dibuat konten |
+| 6 | /2019/08/jasa-pondasi-tapak.html | MONEY_PAGE | 🔴 HIGH | Perlu dibuat konten |
+| 7 | /2019/08/jasa-pondasi-sumuran.html | MONEY_PAGE | 🔴 HIGH | Perlu dibuat konten |
+| 8 | /2019/08/jasa-pondasi-batu-kali.html | MONEY_PAGE | 🟡 MEDIUM | Pondasi batu kali |
+| 9 | /2019/08/harga-borongan-pondasi-per-meter.html | MONEY_PAGE | 🟡 MEDIUM | Harga per meter |
+| 10 | /2019/08/jasa-pondasi-rumah-2-lantai.html | MONEY_CHILD | 🟡 MEDIUM | Spesifikasi rumah 2 lantai |
+*/ 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPondasiPerkuatanTanahKonsPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
