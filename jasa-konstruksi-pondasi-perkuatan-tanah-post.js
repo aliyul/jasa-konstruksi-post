@@ -10,11 +10,12 @@
 // 📁 LEVEL 2 - SUB2 (Turunan dari PILLAR Jasa Konstruksi)
 // Parent: Jasa Pondasi & Perkuatan Tanah (/p/jasa-pondasi-perkuatan-tanah.html)
 // ============================================================
-
+/*
 const urlMappingJasaPondasiFromPillarSub2 = {
   // [SUB2] - Jasa Pondasi Bangunan
   "https://www.betonjayareadymix.com/p/jasa-pondasi-bangunan.html": "Jasa Pondasi Bangunan",  // TYPE: SUB2
 };
+*/
 
 // ============================================================
 // 📁 JASA PONDASI (BORONGAN PONDASI) - MONEY PAGE & CHILD
@@ -416,11 +417,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	    // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingJasaPondasi,
-		urlMappingJasaPondasiCakarAyam,
-		urlMappingJasaPondasiTapak,
-		urlMappingJasaPondasiTiangPancang,
-		urlMappingJasaPondasiSumuran		
+		urlMappingJasaPondasiFromSub2MoneyPage,
+		urlMappingJasaPondasiCakarAyamFromSub2MoneyPage,
+		urlMappingJasaPondasiTapakFromSub2MoneyPage,
+		urlMappingJasaPondasiTiangPancangFromSub2MoneyPage,
+		urlMappingJasaPondasiSumuranFromSub2MoneyPage		
     );
    
     // --- validasi URL terdaftar ---
@@ -557,7 +558,7 @@ document.addEventListener("DOMContentLoaded", function() {
      pageNameJasaKonsPondasiTanahPost.textContent = "";
 	
     //SUB urlMappingBangunan
-if (urlMappingJasaPondasi[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+if (urlMappingJasaPondasiFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
         //restoreCondition('JasaPondasiCakarAyamPost');
@@ -622,10 +623,10 @@ if (urlMappingJasaPondasi[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPondasiCakarAyam
        // JasaPondasiCakarAyamPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasi[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
+        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
     }
 // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPondasi[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+   if (urlMappingJasaPondasiFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -657,7 +658,7 @@ if (urlMappingJasaPondasi[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
                {
                    "@type": "ListItem",
                    "position": 5,
-                   "name": urlMappingJasaPondasi[cleanUrlJasaPondasiPerkuatanTanahKonsPost],
+                   "name": urlMappingJasaPondasiFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost],
                    "item": cleanUrlJasaPondasiPerkuatanTanahKonsPost
                }
            ]
@@ -668,7 +669,7 @@ if (urlMappingJasaPondasi[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+if (urlMappingJasaPondasiCakarAyamFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
         restoreCondition('JasaPondasiCakarAyamPost');
@@ -732,11 +733,11 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPondasiCakarAyam
         JasaPondasiCakarAyamPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
+        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiCakarAyamFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
     }
     
 // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+   if (urlMappingJasaPondasiCakarAyamFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -774,7 +775,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
                {
                    "@type": "ListItem",
                    "position": 6,
-                   "name": urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost],
+                   "name": urlMappingJasaPondasiCakarAyamFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost],
                    "item": cleanUrlJasaPondasiPerkuatanTanahKonsPost
                }
            ]
@@ -786,7 +787,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
        document.head.appendChild(script);
    }
 	
-    if (urlMappingJasaPondasiTapak[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+    if (urlMappingJasaPondasiTapakFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
         restoreCondition('JasaPondasiTapakPost');
@@ -835,11 +836,11 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPondasiCakarAyam
         JasaPondasiTapakPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiTapak[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
+        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiTapakFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
     }
 
 // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPondasiTapak[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+   if (urlMappingJasaPondasiTapakFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -877,7 +878,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
                {
                    "@type": "ListItem",
                    "position": 6,
-                   "name": urlMappingJasaPondasiTapak[cleanUrlJasaPondasiPerkuatanTanahKonsPost],
+                   "name": urlMappingJasaPondasiTapakFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost],
                    "item": cleanUrlJasaPondasiPerkuatanTanahKonsPost
                }
            ]
@@ -889,7 +890,7 @@ if (urlMappingJasaPondasiCakarAyam[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
        document.head.appendChild(script);
    }
  
-if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+if (urlMappingJasaPondasiTiangPancangFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
         restoreCondition('JasaPondasiTiangPancangPost');
@@ -938,10 +939,10 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
         JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPondasiCakarAyam
         JasaPondasiTiangPancangPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
+        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiTiangPancangFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
    }
 // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+   if (urlMappingJasaPondasiTiangPancangFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -979,7 +980,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
                {
                    "@type": "ListItem",
                    "position": 6,
-                   "name": urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost],
+                   "name": urlMappingJasaPondasiTiangPancangFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost],
                    "item": cleanUrlJasaPondasiPerkuatanTanahKonsPost
                }
            ]
@@ -990,7 +991,8 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-   if (urlMappingJasaPondasiSumuran[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+	
+if (urlMappingJasaPondasiSumuranFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
         restoreCondition('JasaPondasiSumuranPost');
@@ -1039,11 +1041,11 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
         JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPondasiCakarAyam
         JasaPondasiSumuranPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiSumuran[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
+        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiSumuranFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
    }
 
 // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPondasiSumuran[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+   if (urlMappingJasaPondasiSumuranFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -1081,7 +1083,7 @@ if (urlMappingJasaPondasiTiangPancang[cleanUrlJasaPondasiPerkuatanTanahKonsPost]
                {
                    "@type": "ListItem",
                    "position": 6,
-                   "name": urlMappingJasaPondasiSumuran[cleanUrlJasaPondasiPerkuatanTanahKonsPost],
+                   "name": urlMappingJasaPondasiSumuranFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost],
                    "item": cleanUrlJasaPondasiPerkuatanTanahKonsPost
                }
            ]
