@@ -75,7 +75,7 @@ const urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1 = {
 };
 
 const urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/estimasi-biaya-jasa-alat-konstruksi.html": "Estimasi Biaya Jasa Alat Konstruksi",  // TYPE: MoneyPage
+  "https://www.betonjayareadymix.com/p/estimasi-biaya-jasa-alat-konstruksi.html": "Estimasi Biaya Jasa Alat Konstruksi"  // TYPE: MoneyPage
 };
 
 const urlMappingStrukturBridgeFromSub2Sub1 = {
