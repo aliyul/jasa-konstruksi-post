@@ -1,3 +1,14 @@
+// 🔍 ENTITY TYPE: Jasa Alat Konstruksi MoneyChild
+const urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChild = {
+  "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-surabaya.html": "Estimasi Biaya Jasa Alat Konstruksi Surabaya",
+  "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-bandung.html": "Estimasi Biaya Jasa Alat Konstruksi Bandung",
+  "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-karawang.html": "Estimasi Biaya Jasa Alat Konstruksi Karawang",
+  "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-bekasi.html": "Estimasi Biaya Jasa Alat Konstruksi Bekasi",
+  "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-tangerang.html": "Estimasi Biaya Jasa Alat Konstruksi Tangerang",
+  "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-depok.html": "Estimasi Biaya Jasa Alat Konstruksi Depok",
+  "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-bogor.html": "Estimasi Biaya Jasa Alat Konstruksi Bogor",
+  "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-jakarta.html": "Estimasi Biaya Jasa Alat Konstruksi Jakarta"
+};
 // ============================================================
 // 🔍 ENTITY TYPE: SEWA/RENTAL (Alat Konstruksi & Alat Berat)
 // ATURAN: SEWA/RENTAL BOLEH menggunakan MONEY_MASTER untuk harga nasional
