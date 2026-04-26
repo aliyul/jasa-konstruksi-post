@@ -9,6 +9,18 @@ const urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-bogor.html": "Estimasi Biaya Jasa Alat Konstruksi Bogor",
   "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-jakarta.html": "Estimasi Biaya Jasa Alat Konstruksi Jakarta"
 };
+
+const urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariant = {
+  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-operator-bersertifikat.html": "Jasa Alat Konstruksi Operator Bersertifikat",
+  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-metode-lembur.html": "Jasa Alat Konstruksi Metode Lembur",
+  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-termasuk-bahan-bakar.html": "Jasa Alat Konstruksi Termasuk Bahan Bakar"
+};
+
+const urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariantSubVariant = {
+  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-operator-sio-alat-berat-besat.html": "Jasa Alat Konstruksi Operator SIO Alat Berat Besat",
+  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-lembur-shift-malam.html": "Jasa Alat Konstruksi Lembur Shift Malam",
+  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-termasuk-bbm-proyek-panjang.html": "Jasa Alat Konstruksi Termasuk BBM Proyek Panjang"
+};
 // ============================================================
 // 🔍 ENTITY TYPE: SEWA/RENTAL (Alat Konstruksi & Alat Berat)
 // ATURAN: SEWA/RENTAL BOLEH menggunakan MONEY_MASTER untuk harga nasional
