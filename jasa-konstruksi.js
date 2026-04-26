@@ -79,7 +79,7 @@ const urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage = {
 };
 
 const urlMappingStrukturBridgeFromSub2Sub1 = {
-  "https://www.betonjayareadymix.com/p/panduan-membangun-bangunan.html": "Panduan Membangun Bangunan",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/p/panduan-membangun-bangunan.html": "Panduan Membangun Bangunan"  // TYPE: SUB1
 };
 
 const urlMappingRenovasiBridgeFromSub2Sub1 = {
@@ -89,19 +89,19 @@ const urlMappingRenovasiBridgeFromSub2Sub1 = {
 
 const urlMappingFinishingBridgeFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/panduan-finishing-bangunan.html": "Panduan Finishing Bangunan",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/panduan-finishing-infrastruktur.html": "Panduan Finishing Infrastruktur",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/p/panduan-finishing-infrastruktur.html": "Panduan Finishing Infrastruktur"  // TYPE: SUB1
 };
 
 const urlMappingPerawatanPerbaikanBridgeFromSub2Sub1 = {
-  "https://www.betonjayareadymix.com/p/panduan-perbaikan-bangunan.html": "Panduan Perbaikan Bangunan",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/p/panduan-perbaikan-bangunan.html": "Panduan Perbaikan Bangunan"  // TYPE: SUB1
 };
 
 const urlMappingJalanPerkerasanBridgeFromSub2Sub1 = {
-  "https://www.betonjayareadymix.com/p/panduan-pembuatan-infrastruktur.html": "Panduan Pembuatan Infrastruktur",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/p/panduan-pembuatan-infrastruktur.html": "Panduan Pembuatan Infrastruktur"  // TYPE: SUB1
 };
 
 const urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1 = {
-  "https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
 };
 
 // ============================================================
