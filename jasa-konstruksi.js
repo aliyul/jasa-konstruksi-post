@@ -649,6 +649,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlMappingGabungan = Object.assign(
       {},
 		urlMappingJasaKonsFromPillarSub2,
+		urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1,
+		urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage,
 		//urlMappingJasaAlatKonstruksi, hapus karna isi nya sewa jadi pisahkan 
 		urlMappingSewaAlatFromPillarSub2,
 		urlMappingSewaAlatBeratFromSub2MoneyPage,
@@ -944,7 +946,7 @@ if (!JasaKons || !JasaKonsSub) {
 	//JasaKonstruksiCustomLink.style.visibility = 'hidden';
     pageNameKonstruksi.textContent = "";
     pageNameKonstruksiSub.textContent = "";
-	
+
 if (urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons]) {
         restoreCondition('JasaKons');
 	restoreCondition('JasaKonstruksi');
@@ -1001,6 +1003,187 @@ if (urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+//AWAL JASA KONTRUKSI ALAT
+if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+		restoreCondition('JasaKonsSub');
+		restoreCondition('JasaAlatKonstruksi');
+           // hapus elemen id DIV Lain
+		removeCondition('ProdukInFur');
+        removeCondition('MaterialKons');
+	removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
+        removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPerbaikan');
+	removeCondition('JasaKonsFinishing');
+        removeCondition('JasaKonsStruktur');
+	removeCondition('JasaKons');
+	removeCondition('MenuKons');
+
+	// hapus elemen id DIV Lain
+	removeCondition('SewaAlatKonstruksi');
+	removeCondition('SewaAlatBerat');
+	removeCondition('SewaAlatKonstruksiRingan');
+
+		removeCondition('JasaInstalasiListrik');
+	removeCondition('JasaRenovasiPerbaikan');
+	removeCondition('JasaStrukturKonstruksi');
+        removeCondition('JasaFinishing');
+        removeCondition('JasaPondasiPerkuatan');
+        removeCondition('JasaSaluranDrainase');
+        removeCondition('JasaJalanPerkerasan');
+	removeCondition('JasaPematanganLahan');
+	removeCondition('JasaUjiTanah');
+        removeCondition('JasaPembatasPengaman');
+	removeCondition('JasaPerkuatanTanahLongsor');
+	removeCondition('JasaBongkarBangunan');
+	removeCondition('JasaPerawatanPerbaikanBangunan');
+	removeCondition('JasaPerbaikanInfrastruktur');
+	removeCondition('JasaPengeboran');
+		removeCondition('JasaBorAirSumur');
+		removeCondition('JasaBorPile');
+		removeCondition('JasaCoringBeton');
+		removeCondition('JasaBorBeton');
+		removeCondition('JasaBorTanah');
+		removeCondition('JasaBorHorizontal');
+		removeCondition('JasaBorTembok');
+
+        JasaKonstruksiSubLink.style.visibility = 'visible';
+        JasaAlatKonstruksiLink.style.visibility = 'visible';
+	    
+        pageNameKonstruksiSub.textContent = urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons];
+    }
+// ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons],
+                   "item": cleanUrlJasaKons
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+	
+if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage[cleanUrlJasaKons]) {
+		restoreCondition('JasaKonsSub');
+		restoreCondition('JasaAlatKonstruksi');
+           // hapus elemen id DIV Lain
+		removeCondition('ProdukInFur');
+        removeCondition('MaterialKons');
+	removeCondition('ProdukKons');
+        //removeCondition('ProdukKonsSaluran');
+        //removeCondition('ProdukKonsPembatas');
+        removeCondition('JasaKonsPondasiTanah');
+        removeCondition('JasaKonsPembatas');
+        removeCondition('JasaKonsJalanPerkerasan');
+        removeCondition('JasaKonsPerbaikan');
+	removeCondition('JasaKonsFinishing');
+        removeCondition('JasaKonsStruktur');
+	removeCondition('JasaKons');
+	removeCondition('MenuKons');
+
+	// hapus elemen id DIV Lain
+	removeCondition('SewaAlatKonstruksi');
+	removeCondition('SewaAlatBerat');
+	removeCondition('SewaAlatKonstruksiRingan');
+
+		removeCondition('JasaInstalasiListrik');
+	removeCondition('JasaRenovasiPerbaikan');
+	removeCondition('JasaStrukturKonstruksi');
+        removeCondition('JasaFinishing');
+        removeCondition('JasaPondasiPerkuatan');
+        removeCondition('JasaSaluranDrainase');
+        removeCondition('JasaJalanPerkerasan');
+	removeCondition('JasaPematanganLahan');
+	removeCondition('JasaUjiTanah');
+        removeCondition('JasaPembatasPengaman');
+	removeCondition('JasaPerkuatanTanahLongsor');
+	removeCondition('JasaBongkarBangunan');
+	removeCondition('JasaPerawatanPerbaikanBangunan');
+	removeCondition('JasaPerbaikanInfrastruktur');
+	removeCondition('JasaPengeboran');
+		removeCondition('JasaBorAirSumur');
+		removeCondition('JasaBorPile');
+		removeCondition('JasaCoringBeton');
+		removeCondition('JasaBorBeton');
+		removeCondition('JasaBorTanah');
+		removeCondition('JasaBorHorizontal');
+		removeCondition('JasaBorTembok');
+
+        JasaKonstruksiSubLink.style.visibility = 'visible';
+        JasaAlatKonstruksiLink.style.visibility = 'visible';
+	    
+        pageNameKonstruksiSub.textContent = urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage[cleanUrlJasaKons];
+    }
+// ✅ Tambahkan JSON-LD Breadcrumb otomatis
+   if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage[cleanUrlJasaKons]) {
+       const jsonLDBreadcrumb = {
+           "@context": "https://schema.org",
+           "@type": "BreadcrumbList",
+           "itemListElement": [
+	    {
+	      "@type": "ListItem",
+	      "position": 1,
+	      "name": "Beton Jaya Readymix",
+	      "item": "https://www.betonjayareadymix.com/"
+	    },
+               {
+                   "@type": "ListItem",
+                   "position": 2,
+                   "name": "Jasa Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 3,
+                   "name": "Jasa Alat Konstruksi",
+                   "item": "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html"
+               },
+               {
+                   "@type": "ListItem",
+                   "position": 4,
+                   "name": urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage[cleanUrlJasaKons],
+                   "item": cleanUrlJasaKons
+               }
+           ]
+       };
+
+       const script = document.createElement('script');
+       script.type = 'application/ld+json';
+       script.text = JSON.stringify(jsonLDBreadcrumb);
+       document.head.appendChild(script);
+   }
+	
 /*
   //AWAL JASA KONTRUKSI ALAT
 if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
