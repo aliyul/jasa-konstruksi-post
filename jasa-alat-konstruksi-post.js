@@ -2249,7 +2249,7 @@ if (urlMappingSewaBekistingScaffoldingFromSub2MoneyPage[cleanUrlJasaKonsAlatKons
 	
      removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
      removeCondition('JasaAlatKonstruksiMetodeLemburPost');
-     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
 	    
 	  
         //hapus elemen div id lain
