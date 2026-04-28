@@ -1699,6 +1699,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
+		urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChild,
+		urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariant,
+		urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariantSubVariant,
 		urlMappingSewaAlatProyekFromSub2MoneyPage,
 		urlMappingSewaPompaDewateringFromSub2MoneyPage,
 		urlMappingSewaBekistingScaffoldingFromSub2MoneyPage,
@@ -1827,6 +1830,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }
      var JasaKonstruksiAlatKonstruksiPostLink = document.getElementById("JasaKonstruksiAlatKonstruksiPost");
      var JasaAlatKonstruksiPostLink = document.getElementById("JasaAlatKonstruksiPost");
+var EstimasiBiayaJasaAlatKonstruksiPostLink  = document.getElementById("EstimasiBiayaJasaAlatKonstruksiPost");
+var EstimasiBiayaJasaAlatKonstruksiJakartaPostLink  = document.getElementById("EstimasiBiayaJasaAlatKonstruksiJakartaPost");
+var EstimasiBiayaasaAlatKonstruksiBogorPostLink  = document.getElementById("EstimasiBiayaasaAlatKonstruksiBogorPost");
+var EstimasiBiayaJasaAlatKonstruksiDepokPostLink  = document.getElementById("EstimasiBiayaJasaAlatKonstruksiDepokPost");
+var EstimasiBiayaJasaAlatKonstruksiTangerangPostLink  = document.getElementById("EstimasiBiayaJasaAlatKonstruksiTangerangPost");
+var EstimasiBiayaJasaAlatKonstruksiBekasiPostLink  = document.getElementById("EstimasiBiayaJasaAlatKonstruksiBekasiPost");
+var EstimasiBiayaJasaAlatKonstruksiKarawangPostLink  = document.getElementById("EstimasiBiayaJasaAlatKonstruksiKarawangPost");
+var EstimasiBiayaJasaAlatKonstruksiBandungPostLink  = document.getElementById("EstimasiBiayaJasaAlatKonstruksiBandungPost");
+var EstimasiBiayaJasaAlatKonstruksiSurabayaPostLink  = document.getElementById("EstimasiBiayaJasaAlatKonstruksiSurabayaPost");
+
+var JasaAlatKonstruksiOperatorBersertifikatPostLink  = document.getElementById("JasaAlatKonstruksiOperatorBersertifikatPost");
+var JasaAlatKonstruksiMetodeLemburPostLink  = document.getElementById("JasaAlatKonstruksiMetodeLemburPost");
+var JasaAlatKonstruksiTermasukBahanBakarPostLink  = document.getElementById("JasaAlatKonstruksiTermasukBahanBakarPost");
+	
      var SewaAlatProyekPostLink = document.getElementById("SewaAlatProyekPost");
 		 var SewaAlatProyekPompaDewateringPostLink = document.getElementById("SewaAlatProyekPompaDewateringPost");
 		 var SewaAlatProyekBekistingScaffoldingPostLink = document.getElementById("SewaAlatProyekBekistingScaffoldingPost");
@@ -1907,7 +1924,33 @@ if (urlMappingSewaAlatProyekFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
-     
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -1996,7 +2039,22 @@ if (urlMappingSewaAlatProyekFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
 	   
-	      
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -2084,9 +2142,24 @@ if (urlMappingSewaBekistingScaffoldingFromSub2MoneyPage[cleanUrlJasaKonsAlatKons
 	  
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
-	removeCondition('JasaKonsAlatKonstruksiPost');
+	removeCondition('JasaKonsAlatKonstruksiPost
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');');
 	    
-	      
+	  
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -2176,7 +2249,23 @@ if (urlMappingSewaBekistingScaffoldingFromSub2MoneyPage[cleanUrlJasaKonsAlatKons
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
-	      
+
+	 
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -2264,7 +2353,24 @@ if (urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage[cleanUrlJasaKonsAlatKons
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
-	    
+
+
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -2355,7 +2461,23 @@ if (urlMappingSewaTotalStationFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiP
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
+
 	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -2448,6 +2570,22 @@ if (urlMappingSewaWaterpassFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPost
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
 
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -2540,7 +2678,22 @@ if (urlMappingSewaTheodoliteFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPos
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
 	    
-	      
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');    
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -2633,7 +2786,22 @@ if (urlMappingSewaTheodoliteFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPos
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
 	    
-	      
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');   
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -2722,7 +2890,23 @@ if (urlMappingSewaTheodoliteFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPos
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
-	    
+
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -2810,7 +2994,23 @@ restoreCondition('SewaAlatKonstruksiPost');
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
-	        
+
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -2900,6 +3100,21 @@ if (urlMappingSewaAlatBeratPostFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiP
 	removeCondition('JasaKonsAlatKonstruksiPost');
 	 
     
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -2975,7 +3190,7 @@ if (urlMappingSewaAlatBeratPostFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiP
 
     
    //AWAL SUB PAGE SEWA ALAT BERAT
-   if (urlMappingSewaForkliftFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaForkliftFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
 	    //RESTORE CONTAINER
      restoreCondition('JasaKonsAlatKonstruksiPost');
 
@@ -2985,7 +3200,23 @@ if (urlMappingSewaAlatBeratPostFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiP
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
-     
+
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -3073,7 +3304,22 @@ if (urlMappingSewaCraneFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) 
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
       
-	    
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -3160,7 +3406,23 @@ if (urlMappingSewaSelfLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPo
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
-     
+
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -3248,7 +3510,23 @@ if (urlMappingSewaWheelLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiP
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
-     
+
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -3335,7 +3613,23 @@ if (urlMappingSewaVibroRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiP
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
-     
+
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -3424,7 +3718,22 @@ if (urlMappingSewaWalesStoomFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPo
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
         
-	       
+	 
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');      
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -3512,7 +3821,23 @@ if (urlMappingSewaTandemRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksi
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
-     
+
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -3601,7 +3926,23 @@ if (urlMappingSewaBulldozerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPos
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
-     
+
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -3688,6 +4029,23 @@ if (urlMappingSewaExcavatorFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
+
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
     
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
@@ -3776,6 +4134,22 @@ if (urlMappingSewaBackhoeLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruks
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
 
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -3863,7 +4237,23 @@ if (urlMappingSewaConcretePaverFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruks
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
-     
+
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -3952,7 +4342,23 @@ if (urlMappingSewaTrencherFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');    
-     
+
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -4040,7 +4446,23 @@ if (urlMappingSewaBabyRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPo
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
-     
+
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -4129,7 +4551,23 @@ if (urlMappingSewaAlatPancangFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiP
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');     
-     
+
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -4219,6 +4657,21 @@ if (urlMappingSewaMotorGraderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiP
 	removeCondition('JasaKonsAlatKonstruksiPost');  
 	       
      
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
@@ -4306,7 +4759,23 @@ if (urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster[cleanUrlJasaKonsAlatKo
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
 	removeCondition('JasaKonsAlatKonstruksiPost');
-    
+
+	
+
+	//hapus semua entity jasa alat konstruksi
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
+     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
+     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
+	
+     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
+     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
+     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
         //hapus elemen div id lain
 	removeCondition('JasaDesInPost');
         removeCondition('ProdukInFurPost');
