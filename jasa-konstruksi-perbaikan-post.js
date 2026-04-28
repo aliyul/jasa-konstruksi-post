@@ -1691,7 +1691,7 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
 		urlMappingJasaGantiLantaiAmbles,
 		urlMappingJasaBobokLantaiBeton,
 		urlMappingJasaBobokLantaiLama,
-		urlMappingJasaPerbaikanGedungBertingkat,
+		//urlMappingJasaPerbaikanGedungBertingkat,
 		urlMappingJasaPerbaikanStrukturBangunanTua,
 		urlMappingJasaPerbaikanStrukturBangunanMiring,
 		//urlMappingJasaPerbaikanTempatIbadah,
