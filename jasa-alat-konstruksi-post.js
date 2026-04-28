@@ -2234,7 +2234,7 @@ if (urlMappingSewaBekistingScaffoldingFromSub2MoneyPage[cleanUrlJasaKonsAlatKons
 	  
 	//hapus pillar jasa konstruksi
 	removeCondition('JasaKonstruksiAlatKonstruksiPost');
-	removeCondition('JasaKonsAlatKonstruksiPost
+	removeCondition('JasaKonsAlatKonstruksiPost');
 
 	//hapus semua entity jasa alat konstruksi
      removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
