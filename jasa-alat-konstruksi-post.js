@@ -1811,6 +1811,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariantSubVariant,
 		urlMappingSewaAlatProyekFromMoneyMasterMoneyPage,
 		urlMappingSewaPompaDewateringFromMoneyPageMoneyChild,
+		urlMappingSewaPompaDewateringFromMoneyChildVariant,
+		urlMappingSewaPompaAirDieselFromMoneyPageMoneyChild,
+		urlMappingSewaompaAirDieselFromMoneyChildVariant,
 		urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild,
 		urlMappingSewaPompaLumpurFromMoneyPageMoneyChild,
 		urlMappingSewaBekistingScaffoldingFromSub2MoneyPage,
@@ -2580,6 +2583,25 @@ if (urlMappingSewaAlatProyekFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstru
     );
   }
 
+    if (urlMappingSewaPompaDewateringFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPompaDewateringFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+          generateBreadcrumbForMapping(
+        urlMappingSewaPompaDewateringFromMoneyChildVariant,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
+            { name: 'Harga Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html' },
+            { name: 'Sewa Pompa Dewatering Proyek', url: 'https://www.betonjayareadymix.com/2019/02/sewa-pompa-dewatering-proyek.html' },
+            { name: 'Sewa Pompa Dewatering Jakarta', url: 'https://www.betonjayareadymix.com/2019/03/sewa-pompa-dewatering-jakarta.html' }
+		],
+        'SEWA_RENTAL'
+    );
+  }
+	
   if (urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
 	//RESTORE CONTAINER
      restoreCondition('JasaKonsAlatKonstruksiPost');
