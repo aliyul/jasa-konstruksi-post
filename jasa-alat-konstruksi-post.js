@@ -114,9 +114,24 @@ const urlMappingSewaAlatProyekFromMoneyMasterMoneyPage = {
 };
 
 const urlMappingSewaPompaDewateringFromMoneyPageMoneyChild = {
-
+"https://www.betonjayareadymix.com/2019/03/sewa-pompa-dewatering-jakarta.html": "Sewa Pompa Dewatering Jakarta"  // TYPE: MONEY_CHILD
+};
+const urlMappingSewaPompaDewateringFromMoneyChildVariant = {
+"https://www.betonjayareadymix.com/2019/03/spesifikasi-pompa-dewatering-jakarta.html": "Spesifikasi Pompa Dewatering Jakarta",  // TYPE: VARIANT
+"https://www.betonjayareadymix.com/2019/03/perbandingan-harga-pompa-dewatering-jakarta.html": "Perbandingan Harga Pompa Dewatering Jakarta"  // TYPE: VARIANT
 };
 
+const urlMappingSewaPompaAirDieselFromMoneyPageMoneyChild = {
+"https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-diesel-jakarta.html": "Sewa Pompa Air Diesel Jakarta", 
+"https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-diesel-bekasi.html": "Sewa Pompa Air Diesel Bekasi", 
+"https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-diesel-tangerang.html": "Sewa Pompa Air Diesel Tangerang"  // TYPE: MONEY_CHILD
+};
+const urlMappingSewaompaAirDieselFromMoneyChildVariant = {
+"https://www.betonjayareadymix.com/2019/03/perbandingan-harga-pompa-diesel.html": "Perbandingan Harga Pompa Diesel",
+"https://www.betonjayareadymix.com/2019/03/diskon-sewa-pompa-diesel.html": "Diskon Sewa Pompa Diesel",
+"https://www.betonjayareadymix.com/2019/03/spesifikasi-pompa-air-diesel.html": "Spesifikasi Pompa Air Diesel",  // TYPE: VARIANT
+"https://www.betonjayareadymix.com/2019/03/daftar-harga-pompa-diesel-jakarta.html": "Daftar Harga Pompa Diesel Jakarta"  // TYPE: VARIANT
+};
 // ============================================================
 // 📁 SUB Jasa Alat Konstruksi - SEWA POMPA DEWATERING (MONEY PAGE & CHILD)
 // 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE & MONEY_CHILD
