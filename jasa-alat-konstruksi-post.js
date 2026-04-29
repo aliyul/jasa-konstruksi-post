@@ -2585,7 +2585,7 @@ if (urlMappingSewaAlatProyekFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstru
 
     if (urlMappingSewaPompaDewateringFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPompaDewateringFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost];
-    
+    /*
           generateBreadcrumbForMapping(
         urlMappingSewaPompaDewateringFromMoneyChildVariant,
         cleanUrlJasaKonsAlatKonstruksiPost,
@@ -2599,7 +2599,26 @@ if (urlMappingSewaAlatProyekFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstru
             { name: 'Sewa Pompa Dewatering Jakarta', url: 'https://www.betonjayareadymix.com/2019/03/sewa-pompa-dewatering-jakarta.html' }
 		],
         'SEWA_RENTAL'
-    );
+    );*/
+	 // Eksekusi semua fungsi
+    function init() {
+        console.log('🔧 Variant page detected - removing breadcrumbs...');
+        
+        const removedNav = removeBreadcrumbNavigation();
+        const removedJson = removeBreadcrumbJsonLd();
+        
+        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+        hideBreadcrumbWithCss();
+        
+        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+    }
+    
+    // Jalankan saat DOM sudah siap
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
   }
 
  if (urlMappingSewaPompaAirDieselFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
