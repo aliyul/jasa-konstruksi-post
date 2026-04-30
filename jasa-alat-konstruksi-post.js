@@ -130,6 +130,7 @@ const urlMappingSewaompaAirDieselFromMoneyChildVariant = {
 "https://www.betonjayareadymix.com/2019/03/perbandingan-harga-pompa-diesel.html": "Perbandingan Harga Pompa Diesel",
 "https://www.betonjayareadymix.com/2019/03/diskon-sewa-pompa-diesel.html": "Diskon Sewa Pompa Diesel",
 "https://www.betonjayareadymix.com/2019/03/spesifikasi-pompa-air-diesel.html": "Spesifikasi Pompa Air Diesel",  // TYPE: VARIANT
+"https://www.betonjayareadymix.com/2019/03/daftar-harga-pompa-diesel.html": "Daftar Harga Pompa Diesel",  // TYPE: VARIANT
 "https://www.betonjayareadymix.com/2019/03/daftar-harga-pompa-diesel-jakarta.html": "Daftar Harga Pompa Diesel Jakarta"  // TYPE: VARIANT
 };
 // ============================================================
