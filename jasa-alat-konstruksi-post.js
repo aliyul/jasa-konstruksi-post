@@ -126,7 +126,7 @@ const urlMappingSewaPompaAirDieselFromMoneyPageMoneyChild = {
 "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-diesel-bekasi.html": "Sewa Pompa Air Diesel Bekasi", 
 "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-diesel-tangerang.html": "Sewa Pompa Air Diesel Tangerang"  // TYPE: MONEY_CHILD
 };
-const urlMappingSewaompaAirDieselFromMoneyChildVariant = {
+const urlMappingSewaPompaAirDieselFromMoneyChildVariant = {
 "https://www.betonjayareadymix.com/2019/03/perbandingan-harga-pompa-diesel.html": "Perbandingan Harga Pompa Diesel",
 "https://www.betonjayareadymix.com/2019/03/diskon-sewa-pompa-diesel.html": "Diskon Sewa Pompa Diesel",
 "https://www.betonjayareadymix.com/2019/03/spesifikasi-pompa-air-diesel.html": "Spesifikasi Pompa Air Diesel",  // TYPE: VARIANT
@@ -167,6 +167,10 @@ const urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild = {
   // "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-cirebon.html": "Sewa Pompa Air Cirebon",  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-pekanbaru.html": "Sewa Pompa Air Pekanbaru",  // TYPE: MONEY_CHILD
 
+};
+const urlMappingSewaMesinPompaAirFromMoneyChildVariant = {
+"https://www.betonjayareadymix.com/2019/03/spesifikasi-pompa-air.html": "Spesifikasi Pompa Air",  // TYPE: VARIANT
+"https://www.betonjayareadymix.com/2019/03/daftar-harga-pompa-air.html": "Daftar Harga Pompa Air"
 };
 
 const urlMappingSewaPompaLumpurFromMoneyPageMoneyChild = {
@@ -1814,8 +1818,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaPompaDewateringFromMoneyPageMoneyChild,
 		urlMappingSewaPompaDewateringFromMoneyChildVariant,
 		urlMappingSewaPompaAirDieselFromMoneyPageMoneyChild,
-		urlMappingSewaompaAirDieselFromMoneyChildVariant,
+		urlMappingSewaPompaAirDieselFromMoneyChildVariant,
 		urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild,
+		urlMappingSewaMesinPompaAirFromMoneyChildVariant,
 		urlMappingSewaPompaLumpurFromMoneyPageMoneyChild,
 		urlMappingSewaBekistingScaffoldingFromSub2MoneyPage,
 		urlMappingSewaPencahayaanUtilitasFromSub2MoneyPage,
@@ -2640,8 +2645,8 @@ if (urlMappingSewaAlatProyekFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstru
     );
   }
 
-if (urlMappingSewaompaAirDieselFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaompaAirDieselFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost];
+if (urlMappingSewaPompaAirDieselFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPompaAirDieselFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost];
     /*
           generateBreadcrumbForMapping(
         urlMappingSewaompaAirDieselFromMoneyChildVariant,
@@ -2782,7 +2787,45 @@ if (urlMappingSewaompaAirDieselFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstru
         'SEWA_RENTAL'
     );
   }
-
+	
+  if (urlMappingSewaMesinPompaAirFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaMesinPompaAirFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost];
+    /*
+        generateBreadcrumbForMapping(
+        urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
+            { name: 'Harga Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html' },
+            { name: 'Sewa Mesin Pompa Air', url: 'https://www.betonjayareadymix.com/2019/03/sewa-mesin-pompa-air.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+	*/
+	  	// Eksekusi semua fungsi
+    function init() {
+        console.log('🔧 Variant page detected - removing breadcrumbs...');
+        
+        const removedNav = removeBreadcrumbNavigation();
+        const removedJson = removeBreadcrumbJsonLd();
+        
+        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+        hideBreadcrumbWithCss();
+        
+        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+    }
+    
+    // Jalankan saat DOM sudah siap
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+  }
+	
   if (urlMappingSewaPompaLumpurFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
 	//RESTORE CONTAINER
      restoreCondition('JasaKonsAlatKonstruksiPost');
