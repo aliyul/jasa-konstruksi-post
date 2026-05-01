@@ -1108,6 +1108,41 @@ document.addEventListener("DOMContentLoaded", function() {
      //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
     const cleanUrlJasaKons = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
 
+	// --- gabungkan semua mapping ---
+    const urlMappingGabungan = Object.assign(
+      {},
+		urlMappingJasaKonsFromPillarSub2,
+		urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1,
+		urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage,
+		//urlMappingJasaAlatKonstruksi, hapus karna isi nya sewa jadi pisahkan 
+		urlMappingSewaAlatFromPillarSub2,
+		urlMappingSewaAlatProyekFromSub2Sub1,
+		urlMappingSewaAlatProyekFromSub1MoneyMaster,
+		urlMappingSewaAlatBeratFromSub2MoneyPage,
+		urlMappingSewaAlatKonstruksiRinganFromSub2MoneyPage,
+        urlMappingPerbaikanInfrastrukturFromSub2MoneyPage,
+		urlMappingPerawatanPerbaikanBangunanFromPillarSub2,
+		urlMappingRenovasiFromPillarSub2,
+		urlMappingFinishingFromPillarSub2,
+		urlMappingStrukturFromPillarSub2,
+		urlMappingPondasiFromPillarSub2,
+		urlMappingSaluranFromSub2MoneyPage,
+		urlMappingJalanFromSub2MoneyPage,
+		urlMappingPematanganLahanFromSub2MoneyPage,
+		urlMappingUjiTanahFromSub2MoneyPage,
+		urlMappingPerkuatanTanahLongsorFromSub2MoneyPage,
+		urlMappingBongkarBangunanFromPillarSub2,
+		urlMappingPengeboranFromSub2MoneyPage,
+		urlMappingPembatasFromSub2MoneyPage,
+		urlMappingJasaInstalasiListrikFromSub2MoneyPage
+    );
+
+    // --- validasi URL terdaftar ---
+    if (!urlMappingGabungan[cleanUrlJasaKons]) {
+      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaKons}`);
+      return;
+    }
+	
    /* ============================================================
  🔥 Hybrid Date Modified v7.1 — UNTUK betonjayareadymix.com
     Custom date berdasarkan hasil deteksi page level
