@@ -3090,7 +3090,7 @@ if (urlMappingSewaPipaProyekFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksi
     } else {
         init();
     }
-  },
+  }
 	
  if (urlMappingSewaSelangProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaSelangProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
