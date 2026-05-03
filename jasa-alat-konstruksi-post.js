@@ -182,8 +182,12 @@ const urlMappingSewaPompaLumpurFromMoneyPageMoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - SEWA POMPA LUMPUR PER LOKASI
   // ============================================================
-   // "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-jakarta.html": "Sewa Pompa Lumpur Jakarta",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-depok.html": "Sewa Pompa Lumpur Depok",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-jakarta.html": "Sewa Pompa Lumpur Jakarta",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-bogor.html": "Sewa Pompa Lumpur Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-tangerang.html": "Sewa Pompa Lumpur Tangerang",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-bekasi.html": "Sewa Pompa Lumpur Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-karawang.html": "Sewa Pompa Lumpur Karawang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-depok.html": "Sewa Pompa Lumpur Depok",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-terdekat.html": "Sewa Pompa Lumpur Terdekat",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-surabaya.html": "Sewa Pompa Lumpur Surabaya",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-bandung.html": "Sewa Pompa Lumpur Bandung"  // TYPE: MONEY_CHILD
