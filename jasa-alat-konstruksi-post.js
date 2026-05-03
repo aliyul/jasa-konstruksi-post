@@ -2931,8 +2931,207 @@ if (urlMappingSewaPompaBanjirFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruks
         init();
     }
   }
+
+ if (urlMappingSewaPompaKapasitasBesarFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPompaKapasitasBesarFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+          generateBreadcrumbForMapping(
+        urlMappingSewaPompaKapasitasBesarFromMoneyPageMoneyChild,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
+            { name: 'Harga Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html' },
+            { name: 'Sewa Pompa Kapasitas Besar', url: 'https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-kapasitas-besar.html' }
+		],
+        'SEWA_RENTAL'
+    );
+  }
+
+if (urlMappingSewaPompaKapasitasBesarFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
+     // Eksekusi semua fungsi
+    function init() {
+        console.log('🔧 Variant page detected - removing breadcrumbs...');
+        
+        const removedNav = removeBreadcrumbNavigation();
+        const removedJson = removeBreadcrumbJsonLd();
+        
+        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+        hideBreadcrumbWithCss();
+        
+        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+    }
+    
+    // Jalankan saat DOM sudah siap
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+  }
+
+ if (urlMappingSewaBakAirProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBakAirProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+          generateBreadcrumbForMapping(
+        urlMappingSewaBakAirProyekFromMoneyPageMoneyChild,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
+            { name: 'Harga Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html' },
+            { name: 'Sewa Bak Air Proyek', url: 'https://www.betonjayareadymix.com/2019/03/sewa-bak-air-proyek.html' }
+		],
+        'SEWA_RENTAL'
+    );
+  }
+
+if (urlMappingSewaBakAirProyekFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
+     // Eksekusi semua fungsi
+    function init() {
+        console.log('🔧 Variant page detected - removing breadcrumbs...');
+        
+        const removedNav = removeBreadcrumbNavigation();
+        const removedJson = removeBreadcrumbJsonLd();
+        
+        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+        hideBreadcrumbWithCss();
+        
+        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+    }
+    
+    // Jalankan saat DOM sudah siap
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+  }
+
+ if (urlMappingSewaTangkiAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaTangkiAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+          generateBreadcrumbForMapping(
+        urlMappingSewaTangkiAirFromMoneyPageMoneyChild,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
+            { name: 'Harga Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html' },
+            { name: 'Sewa Tangki Air', url: 'https://www.betonjayareadymix.com/2019/03/sewa-tangki-air.html' }
+		],
+        'SEWA_RENTAL'
+    );
+  }
+
+if (urlMappingSewaTangkiAirFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
+     // Eksekusi semua fungsi
+    function init() {
+        console.log('🔧 Variant page detected - removing breadcrumbs...');
+        
+        const removedNav = removeBreadcrumbNavigation();
+        const removedJson = removeBreadcrumbJsonLd();
+        
+        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+        hideBreadcrumbWithCss();
+        
+        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+    }
+    
+    // Jalankan saat DOM sudah siap
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+  }
 	
-  if (urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
+ if (urlMappingSewaPipaProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPipaProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+          generateBreadcrumbForMapping(
+        urlMappingSewaPipaProyekFromMoneyPageMoneyChild,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
+            { name: 'Harga Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html' },
+            { name: 'Sewa Pipa Proyek', url: 'https://www.betonjayareadymix.com/2019/03/sewa-pipa-proyek.html' }
+		],
+        'SEWA_RENTAL'
+    );
+  }
+
+if (urlMappingSewaPipaProyekFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
+     // Eksekusi semua fungsi
+    function init() {
+        console.log('🔧 Variant page detected - removing breadcrumbs...');
+        
+        const removedNav = removeBreadcrumbNavigation();
+        const removedJson = removeBreadcrumbJsonLd();
+        
+        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+        hideBreadcrumbWithCss();
+        
+        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+    }
+    
+    // Jalankan saat DOM sudah siap
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+  },
+	
+ if (urlMappingSewaSelangProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaSelangProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+          generateBreadcrumbForMapping(
+        urlMappingSewaSelangProyekFromMoneyPageMoneyChild,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
+            { name: 'Harga Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html' },
+            { name: 'Sewa Selang Proyek', url: 'https://www.betonjayareadymix.com/2019/03/sewa-selang-proyek.html' }
+		],
+        'SEWA_RENTAL'
+    );
+  }
+
+if (urlMappingSewaSelangProyekFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
+     // Eksekusi semua fungsi
+    function init() {
+        console.log('🔧 Variant page detected - removing breadcrumbs...');
+        
+        const removedNav = removeBreadcrumbNavigation();
+        const removedJson = removeBreadcrumbJsonLd();
+        
+        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+        hideBreadcrumbWithCss();
+        
+        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+    }
+    
+    // Jalankan saat DOM sudah siap
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+  }
+if (urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
 	//RESTORE CONTAINER
      restoreCondition('JasaKonsAlatKonstruksiPost');
 
