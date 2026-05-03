@@ -110,7 +110,12 @@ const urlMappingSewaAlatProyekFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-diesel.html": "Sewa Pompa Lumpur Diesel",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur.html": "Sewa Pompa Sedot Lumpur",  // TYPE: MONEY_PAGE
   
- 
+   // [MONEY_PAGE] - SEWA SISTEM PENDUKUNG PROYEK
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/03/sewa-bak-air-proyek.html": "Sewa Bak Air Proyek",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/03/sewa-tangki-air.html": "Sewa Tangki Air",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/03/sewa-selang-proyek.html": "Sewa Selang Proyek",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/03/sewa-pipa-proyek.html": "Sewa Pipa Proyek"  // TYPE: MONEY_PAGE
 };
 
 const urlMappingSewaPompaDewateringFromMoneyPageMoneyChild = {
@@ -406,12 +411,7 @@ const urlMappingSewaAlatBorGroundWorkFromSub2MoneyPage = {
 
 const urlMappingSewaSistemPendukungProyekFromSub2MoneyPage = {
   // ============================================================
-  // [MONEY_PAGE] - SEWA SISTEM PENDUKUNG PROYEK
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/03/sewa-bak-air-proyek.html": "Sewa Bak Air Proyek",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-tangki-air.html": "Sewa Tangki Air",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-selang-proyek.html": "Sewa Selang Proyek",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-pipa-proyek.html": "Sewa Pipa Proyek",  // TYPE: MONEY_PAGE
+
 };
 
 // ============================================================
