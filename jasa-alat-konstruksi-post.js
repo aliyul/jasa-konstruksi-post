@@ -3141,6 +3141,24 @@ if (urlMappingSewaPompaAirDieselFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstr
     );
   }
 
+  if (urlMappingSewaPompaSedotLumpurFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        //pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPompaSedotLumpurFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
+    
+          generateBreadcrumbForMapping(
+        urlMappingSewaPompaSedotLumpurFromMoneyPageMoneyChild,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
+			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
+            { name: 'Harga Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html' },
+            { name: 'Sewa Pompa Sedot Lumpur', url: 'https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+  }
+	
 if (urlMappingSewaBekistingScaffoldingFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
 //RESTORE CONTAINER
      restoreCondition('JasaKonsAlatKonstruksiPost');
