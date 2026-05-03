@@ -1790,7 +1790,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild,
 		urlMappingSewaMesinPompaAirFromMoneyChildVariant,
 		urlMappingSewaPompaLumpurFromMoneyPageMoneyChild,
-		urlMappingSewaPompaLumpurFromMoneyChildVariant
+		urlMappingSewaPompaLumpurFromMoneyChildVariant,
 		urlMappingSewaPompaSedotLumpurFromMoneyPageMoneyChild,
 		urlMappingSewaPompaSedotLumpurFromMoneyChildVariant,
 		urlMappingSewaPompaBanjirFromMoneyPageMoneyChild,
