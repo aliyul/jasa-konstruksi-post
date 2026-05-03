@@ -1790,6 +1790,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild,
 		urlMappingSewaMesinPompaAirFromMoneyChildVariant,
 		urlMappingSewaPompaLumpurFromMoneyPageMoneyChild,
+		urlMappingSewaPompaLumpurFromMoneyChildVariant
 		urlMappingSewaPompaSedotLumpurFromMoneyPageMoneyChild,
 		urlMappingSewaPompaSedotLumpurFromMoneyChildVariant,
 		urlMappingSewaPompaBanjirFromMoneyPageMoneyChild,
@@ -2996,7 +2997,7 @@ if (urlMappingSewaPompaAirDieselFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstr
         'SEWA_RENTAL'
     );
   }
-	
+
   if (urlMappingSewaMesinPompaAirFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaMesinPompaAirFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost];
     /*
@@ -3141,6 +3142,28 @@ if (urlMappingSewaPompaAirDieselFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstr
     );
   }
 
+  if (urlMappingSewaPompaLumpurFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
+ 	// Eksekusi semua fungsi
+    function init() {
+        console.log('🔧 Variant page detected - removing breadcrumbs...');
+        
+        const removedNav = removeBreadcrumbNavigation();
+        const removedJson = removeBreadcrumbJsonLd();
+        
+        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+        hideBreadcrumbWithCss();
+        
+        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+    }
+    
+    // Jalankan saat DOM sudah siap
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+  }
+
   if (urlMappingSewaPompaSedotLumpurFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         //pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPompaSedotLumpurFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
     
@@ -3158,7 +3181,29 @@ if (urlMappingSewaPompaAirDieselFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstr
         'SEWA_RENTAL'
     );
   }
-	
+
+  if (urlMappingSewaPompaSedotLumpurFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
+ 	// Eksekusi semua fungsi
+    function init() {
+        console.log('🔧 Variant page detected - removing breadcrumbs...');
+        
+        const removedNav = removeBreadcrumbNavigation();
+        const removedJson = removeBreadcrumbJsonLd();
+        
+        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+        hideBreadcrumbWithCss();
+        
+        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+    }
+    
+    // Jalankan saat DOM sudah siap
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+  }
+
 if (urlMappingSewaBekistingScaffoldingFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
 //RESTORE CONTAINER
      restoreCondition('JasaKonsAlatKonstruksiPost');
