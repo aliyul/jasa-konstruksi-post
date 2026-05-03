@@ -193,7 +193,150 @@ const urlMappingSewaPompaLumpurFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-bandung.html": "Sewa Pompa Lumpur Bandung"  // TYPE: MONEY_CHILD
   
 };
+const urlMappingSewaPompaLumpurFromMoneyChildVariant = {
+"https://www.betonjayareadymix.com/2019/03/spesifikasi-pompa-lumpur.html": "Spesifikasi Pompa Lumpur",  // TYPE: VARIANT
+"https://www.betonjayareadymix.com/2019/03/perbandingan-pompa-lumpur-vs-pompa-air-biasa.html": "Perbandingan Pompa Lumpur VS Pompa Air Biasa"
+};
 
+const urlMappingSewaPompaSedotLumpurFromMoneyPageMoneyChild = {
+  // ============================================================
+  // [MONEY_CHILD] - SEWA POMPA LUMPUR PER LOKASI
+  // ============================================================
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur-jakarta.html": "Sewa Pompa Sedot Lumpur Jakarta"  // TYPE: MONEY_CHILD
+   /*"https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur-bogor.html": "Sewa Pompa Sedot Lumpur Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur-tangerang.html": "Sewa Pompa Sedot Lumpur Tangerang",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur-bekasi.html": "Sewa Pompa Sedot Lumpur Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur-karawang.html": "Sewa Pompa Sedot Lumpur Karawang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur-depok.html": "Sewa Pompa Sedot Lumpur Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur-terdekat.html": "Sewa Pompa Sedot Lumpur Terdekat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur-surabaya.html": "Sewa Pompa Sedot Lumpur Surabaya",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur-bandung.html": "Sewa Pompa Sedot Lumpur Bandung"  // TYPE: MONEY_CHILD
+  */
+};
+const urlMappingSewaPompaSedotLumpurFromMoneyChildVariant = {
+"https://www.betonjayareadymix.com/2019/03/spesifikasi-pompa-sedot-lumpur.html": "Spesifikasi Pompa Sedot Lumpur",  // TYPE: VARIANT
+"https://www.betonjayareadymix.com/2019/03/perbandingan-pompa-sedot-lumpur-vs-biasa.html": "Perbandingan Pompa Sedot Lumpur VS Biasa"
+};
+
+const urlMappingSewaPompaBanjirFromMoneyPageMoneyChild = {
+  // ============================================================
+  // [MONEY_CHILD] - SEWA POMPA LUMPUR PER LOKASI
+  // ============================================================
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-banjir-jakarta.html": "Sewa Pompa Banjir Jakarta"  // TYPE: MONEY_CHILD
+   /*"https://www.betonjayareadymix.com/2019/03/sewa-pompa-banjir-bogor.html": "Sewa Pompa Banjir Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-banjir-tangerang.html": "Sewa Pompa Banjir Tangerang",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-banjir-bekasi.html": "Sewa Pomp Banjir Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-banjir-karawang.html": "Sewa Pompa Banjir Karawang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-banjir-depok.html": "Sewa Pompa Banjir Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-banjir-terdekat.html": "Sewa Pompa Banjir Terdekat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-banjir-surabaya.html": "Sewa Pompa Banjir Surabaya",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-banjir-bandung.html": "Sewa Pompa Banjir Bandung"  // TYPE: MONEY_CHILD
+  */
+};
+const urlMappingSewaPompaBanjirFromMoneyChildVariant = {
+"https://www.betonjayareadymix.com/2019/03/spesifikasi-pompa-banjir.html": "Spesifikasi Pompa Banjir",  // TYPE: VARIANT
+"https://www.betonjayareadymix.com/2019/03/perbandingan-pompa-banjir-diesel-vs-listrik.html": "Perbandingan Pompa Banjir VS Listrik"
+};
+
+const urlMappingSewaPompaKapasitasBesarFromMoneyPageMoneyChild = {
+  // ============================================================
+  // [MONEY_CHILD] - SEWA POMPA KAPASITAS BESAR PER LOKASI
+  // ============================================================
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-jakarta.html": "Sewa Pompa Kapasitas Besar Jakarta"  // TYPE: MONEY_CHILD
+   /*"https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-bogor.html": "Sewa Pompa Kapasitas Besar Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-tangerang.html": "Sewa Pompa Kapasitas Besar Tangerang",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-bekasi.html": "Sewa Pomp Kapasitas Besar Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-karawang.html": "Sewa Pompa Kapasitas Besar Karawang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-depok.html": "Sewa Pompa Kapasitas Besar Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-terdekat.html": "Sewa Pompa Kapasitas Besar Terdekat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-surabaya.html": "Sewa Pompa Kapasitas Besar Surabaya",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-bandung.html": "Sewa Pompa Kapasitas Besar Bandung"  // TYPE: MONEY_CHILD
+  */
+};
+const urlMappingSewaPompaKapasitasBesarFromMoneyChildVariant = {
+"https://www.betonjayareadymix.com/2019/03/spesifikasi-pompa-kapasitas-besar.html": "Spesifikasi Pompa Kapasitas Besar",  // TYPE: VARIANT
+"https://www.betonjayareadymix.com/2019/03/perbandingan-pompa-6-inch-vs-8-inch.html": "Perbandingan Pompa 6 Inch VS 8 Inch"
+};
+
+const urlMappingSewaBakAirProyekFromMoneyPageMoneyChild = {
+  // ============================================================
+  // [MONEY_CHILD] - SEWA BakAirProyek PER LOKASI
+  // ============================================================
+   "https://www.betonjayareadymix.com/2019/03/sewa-bak-air-proyek-jakarta.html": "Sewa Bak Air Proyek Jakarta"  // TYPE: MONEY_CHILD
+   /*"https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-bogor.html": "Sewa Bak Air Proyek Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-tangerang.html": "Sewa Bak Air Proyek Tangerang",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-bekasi.html": "Sewa Bak Air Proyek Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-karawang.html": "Sewa Bak Air Proyek Karawang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-depok.html": "Sewa Bak Air Proyek Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-terdekat.html": "Sewa Bak Air Proyek Terdekat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-surabaya.html": "Sewa Bak Air Proyek Surabaya",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-bandung.html": "Sewa Bak Air Proyek Bandung"  // TYPE: MONEY_CHILD
+  */
+};
+const urlMappingSewaBakAirProyekFromMoneyChildVariant = {
+"https://www.betonjayareadymix.com/2019/03/spesifikasi-bak-air-proyek.html": "Spesifikasi Bak Air Proyek",  // TYPE: VARIANT
+"https://www.betonjayareadymix.com/2019/03/perbandingan-bak-air-plastik-vs-fiber.html": "Perbandingan Bak Air Plastik VS Viber"
+};
+
+const urlMappingSewaTangkiAirFromMoneyPageMoneyChild = {
+  // ============================================================
+  // [MONEY_CHILD] - SEWA BakAirProyek PER LOKASI
+  // ============================================================
+   "https://www.betonjayareadymix.com/2019/03/sewa-tangki-air-jakarta.html": "Sewa Tangki Air Jakarta"  // TYPE: MONEY_CHILD
+   /*"https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-bogor.html": "Sewa Bak Air Proyek Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-tangerang.html": "Sewa Bak Air Proyek Tangerang",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-bekasi.html": "Sewa Bak Air Proyek Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-karawang.html": "Sewa Bak Air Proyek Karawang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-depok.html": "Sewa Bak Air Proyek Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-terdekat.html": "Sewa Bak Air Proyek Terdekat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-surabaya.html": "Sewa Bak Air Proyek Surabaya",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-bandung.html": "Sewa Bak Air Proyek Bandung"  // TYPE: MONEY_CHILD
+  */
+};
+const urlMappingSewaTangkiAirFromMoneyChildVariant = {
+"https://www.betonjayareadymix.com/2019/03/spesifikasi-tangki-air.html": "Spesifikasi Tangki Air",  // TYPE: VARIANT
+"https://www.betonjayareadymix.com/2019/03/perbandingan-tangki-air-plastik-vs-stainless.html": "Perbandingan Tangki Air Plastik VS Stainless"
+};
+
+const urlMappingSewaPipaProyekFromMoneyPageMoneyChild = {
+  // ============================================================
+  // [MONEY_CHILD] - SEWA BakAirProyek PER LOKASI
+  // ============================================================
+   "https://www.betonjayareadymix.com/2019/03/sewa-pipa-proyek-jakarta.html": "Sewa Pipa Proyek Jakarta"  // TYPE: MONEY_CHILD
+   /*"https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-bogor.html": "Sewa Bak Air Proyek Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-tangerang.html": "Sewa Bak Air Proyek Tangerang",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-bekasi.html": "Sewa Bak Air Proyek Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-karawang.html": "Sewa Bak Air Proyek Karawang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-depok.html": "Sewa Bak Air Proyek Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-terdekat.html": "Sewa Bak Air Proyek Terdekat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-surabaya.html": "Sewa Bak Air Proyek Surabaya",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-bandung.html": "Sewa Bak Air Proyek Bandung"  // TYPE: MONEY_CHILD
+  */
+};
+const urlMappingSewaPipaProyekFromMoneyChildVariant = {
+"https://www.betonjayareadymix.com/2019/03/spesifikasi-pipa-proyek.html": "Spesifikasi Pipa Proyek",  // TYPE: VARIANT
+"https://www.betonjayareadymix.com/2019/03/perbandingan-pipa-hdpe-vs-pvc.html": "Perbandingan Pipa HDPE VS PVC"
+};
+
+const urlMappingSewaSelangProyekFromMoneyPageMoneyChild = {
+  // ============================================================
+  // [MONEY_CHILD] - SEWA BakAirProyek PER LOKASI
+  // ============================================================
+   "https://www.betonjayareadymix.com/2019/03/sewa-selang-proyek-jakarta.html": "Sewa Selang Proyek Jakarta"  // TYPE: MONEY_CHILD
+   /*"https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-bogor.html": "Sewa Bak Air Proyek Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-tangerang.html": "Sewa Bak Air Proyek Tangerang",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-bekasi.html": "Sewa Bak Air Proyek Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-karawang.html": "Sewa Bak Air Proyek Karawang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-depok.html": "Sewa Bak Air Proyek Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-terdekat.html": "Sewa Bak Air Proyek Terdekat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-surabaya.html": "Sewa Bak Air Proyek Surabaya",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-kapasitas-besar-bandung.html": "Sewa Bak Air Proyek Bandung"  // TYPE: MONEY_CHILD
+  */
+};
+const urlMappingSewaSelangProyekFromMoneyChildVariant = {
+"https://www.betonjayareadymix.com/2019/03/spesifikasi-selang-proyek.html": "Spesifikasi Selang Proyek",  // TYPE: VARIANT
+"https://www.betonjayareadymix.com/2019/03/perbandingan-selang-karet-vs-pvc.html": "Perbandingan Selang Proyek VS PVC"
+};
 // ============================================================
 // 📁 SUB Jasa Alat Konstruksi - SEWA BEKISTING & SCAFFOLDING
 // 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE & MONEY_MASTER
