@@ -72,7 +72,7 @@ const urlMappingSewaAlatProyekFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html": "Sewa Alat Survey Pengukuran",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/02/sewa-akses-keamanan-proyek.html": "Sewa Akses Keamanan Proyek",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-bor-ground-work.html": "Sewa Alat Bor Ground Work",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-sistem-pendukung-proyek.html": "Sewa Sistem Pendukung Proyek",  // TYPE: MONEY_PAGE
+ // hapus saja "https://www.betonjayareadymix.com/2019/02/sewa-sistem-pendukung-proyek.html": "Sewa Sistem Pendukung Proyek",  // TYPE: MONEY_PAGE
 
  // ============================================================
   // [MONEY_CHILD] - SEWA ALAT PROYEK PER LOKASI
