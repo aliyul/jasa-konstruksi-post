@@ -568,7 +568,54 @@ const urlMappingSewaSistemPendukungProyekFromSub2MoneyPage = {
 // Breadcrumb: Home > Sewa Alat Konstruksi > Sewa Alat Berat > [Jenis Alat / Lokasi] (4 level)
 // ============================================================
 
-const urlMappingSewaAlatBeratPostFromSub2MoneyPage = {
+const urlMappingSewaAlatBeratPostFromSub1MoneyMaster = { 
+// ============================================================
+// [MONEY_MASTER] - PERTAHANKAN (ANGLE UNIK)
+// ============================================================
+"https://www.betonjayareadymix.com/2019/02/standar-harga-sewa-alat-berat.html": "Standar Harga Sewa Alat Berat",  // TYPE: MONEY_MASTER ✅ PERTAHANKAN
+"https://www.betonjayareadymix.com/2019/02/daftar-harga-sewa-alat-berat-per-jam.html": "Daftar Harga Sewa Alat Berat Per Jam",  // TYPE: MONEY_MASTER ✅ PERTAHANKAN
+// ============================================================
+// [MONEY_MASTER] - HARGA SEWA ALAT BERAT (PER DURASI, PAKET HARGA)
+// ============================================================
+"https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-per-hari.html": "Sewa Alat Berat per Hari",  // TYPE: MONEY_MASTER ✅ (fokus harga per durasi)
+"https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-per-jam.html": "Sewa Alat Berat per Jam",  // TYPE: MONEY_MASTER ✅ (fokus harga per durasi)
+"https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-all-in.html": "Sewa Alat Berat All In",  // TYPE: MONEY_MASTER ✅ (fokus paket harga)
+// ============================================================
+// [REDIRECT 301] - DUPLIKAT → KE /harga-sewa-alat-berat/
+// ============================================================
+// "https://.../info-harga-sewa-alat-berat.html"        → 301 redirect ke /harga-sewa-alat-berat.html
+// "https://.../daftar-harga-sewa-alat-berat.html"      → 301 redirect ke /harga-sewa-alat-berat.html
+// "https://.../berapa-harga-sewa-alat-berat.html"      → 301 redirect ke /harga-sewa-alat-berat.html
+// "https://.../list-harga-sewa-alat-berat.html"        → 301 redirect ke /harga-sewa-alat-berat.html
+// "https://.../daftar-harga-sewa-alat-berat-murah.html" → 301 redirect ke /harga-sewa-alat-berat.html
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-roller-alat-berat.html": "Harga Sewa Roller Alat Berat",  // TYPE: MONEY_MASTER ✅
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-beko.html": "Harga Sewa Alat Berat Beko",  // TYPE: MONEY_MASTER ✅
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-bego.html": "Harga Sewa Alat Berat Bego",  // TYPE: MONEY_MASTER ✅
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-breaker.html": "Harga Sewa Alat Berat Breaker",  // TYPE: MONEY_MASTER ✅
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-backhoe-loader.html": "Harga Sewa Alat Berat Backhoe Loader",  // TYPE: MONEY_MASTER ✅
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-crane.html": "Harga Sewa Alat Berat Crane",  // TYPE: MONEY_MASTER ✅
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-wales.html": "Harga Sewa Alat Berat Wales",  // TYPE: MONEY_MASTER ✅
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-tandem-roller.html": "Harga Sewa Alat Berat Tandem Roller",  // TYPE: MONEY_MASTER ✅
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-vibro.html": "Harga Sewa Alat Berat Vibro",  // TYPE: MONEY_MASTER ✅
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-wheel-loader.html": "Harga Sewa Alat Berat Wheel Loader",  // TYPE: MONEY_MASTER ✅
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-dozer.html": "Harga Sewa Alat Berat Dozer",  // TYPE: MONEY_MASTER ✅
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-dump-truck.html": "Harga Sewa Alat Berat Dump Truck",  // TYPE: MONEY_MASTER ✅
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-excavator.html": "Harga Sewa Alat Berat Excavator",  // TYPE: MONEY_MASTER ✅
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-komatsu.html": "Harga Sewa Alat Berat Komatsu",  // TYPE: MONEY_MASTER ✅
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-paver-alat-berat.html": "Harga Sewa Paver Alat Berat"  // TYPE: MONEY_MASTER ✅
+
+};
+const urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage = { 
+// ============================================================
+  // [MONEY_PAGE] - INFORMASI & HARGA UMUM
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat.html": "Sewa Alat Berat",  // TYPE: MONEY_PAGE PARENT
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-murah.html": "Sewa Alat Berat Murah",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-trakindo.html": "Sewa Alat Berat Trakindo"  // TYPE: MONEY_PAGE
+	
+};
+  
+const urlMappingSewaAlatBeratPostFromMoneyPageMoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - SEWA ALAT BERAT PER LOKASI (JABODETABEK + JAWA BARAT)
   // ============================================================
@@ -588,80 +635,18 @@ const urlMappingSewaAlatBeratPostFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-jakarta.html": "Sewa Alat Berat Jakarta",  // TYPE: MONEY_CHILD
   
   // ============================================================
-  // [MONEY_PAGE] - INFORMASI & HARGA UMUM
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-murah.html": "Sewa Alat Berat Murah",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-trakindo.html": "Sewa Alat Berat Trakindo",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-per-hari.html": "Sewa Alat Berat per Hari",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-per-jam.html": "Sewa Alat Berat per Jam",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-all-in.html": "Sewa Alat Berat All In",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
   // [MONEY_CHILD] - SEWA ALAT BERAT TERDEKAT
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-terdekat.html": "Sewa Alat Berat Terdekat",  // TYPE: MONEY_CHILD
   
-  // ============================================================
-  // [MONEY_PAGE] - JENIS ALAT SPESIFIK
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-dump-truck.html": "Sewa Alat Berat Dump Truck",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-cold-milling-machine.html": "Sewa Alat Berat Cold Milling Machine",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-pc-300.html": "Sewa Alat Berat PC 300",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-pc-200.html": "Sewa Alat Berat PC 200",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-pc-75.html": "Sewa Alat Berat PC 75",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-breaker.html": "Sewa Alat Berat Breaker",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-crane.html": "Sewa Alat Berat Crane",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-dozer.html": "Sewa Alat Berat Dozer",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-beko.html": "Sewa Alat Berat Beko",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-wales.html": "Sewa Alat Berat Wales",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-excavator.html": "Sewa Alat Berat Excavator",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-loader.html": "Sewa Alat Berat Loader",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-bore-pile.html": "Sewa Alat Berat Bore Pile",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-paver-alat-berat.html": "Sewa Paver Alat Berat",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_MASTER] - HARGA SEWA PER JENIS ALAT (NASIONAL)
-  // 🧠 TYPE: MONEY_MASTER (khusus SEWA, diperbolehkan)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/berapa-sewa-alat-berat.html": "Berapa Sewa Alat Berat",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-roller-alat-berat.html": "Harga Sewa Roller Alat Berat",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-beko.html": "Harga Sewa Alat Berat Beko",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-bego.html": "Harga Sewa Alat Berat Bego",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-breaker.html": "Harga Sewa Alat Berat Breaker",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-backhoe-loader.html": "Harga Sewa Alat Berat Backhoe Loader",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-crane.html": "Harga Sewa Alat Berat Crane",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-wales.html": "Harga Sewa Alat Berat Wales",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-tandem-roller.html": "Harga Sewa Alat Berat Tandem Roller",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-vibro.html": "Harga Sewa Alat Berat Vibro",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-wheel-loader.html": "Harga Sewa Alat Berat Wheel Loader",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-dozer.html": "Harga Sewa Alat Berat Dozer",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-dump-truck.html": "Harga Sewa Alat Berat Dump Truck",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-excavator.html": "Harga Sewa Alat Berat Excavator",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-komatsu.html": "Harga Sewa Alat Berat Komatsu",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-per-hari.html": "Harga Sewa Alat Berat Per Hari",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-per-jam.html": "Harga Sewa Alat Berat Per Jam",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-per-bulan.html": "Harga Sewa Alat Berat Per Bulan",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-murah.html": "Harga Sewa Alat Berat Murah",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-terbaru.html": "Harga Sewa Alat Berat Terbaru",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-paver-alat-berat.html": "Harga Sewa Paver Alat Berat",  // TYPE: MONEY_MASTER
-  
+
   // ============================================================
   // [MONEY_CHILD] - HARGA SEWA ALAT BERAT PER LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-jakarta.html": "Harga Sewa Alat Berat Jakarta",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-jakarta.html": "Harga Sewa Alat Berat Jakarta"  // TYPE: MONEY_CHILD
 
-  // ============================================================
-  // [MONEY_MASTER] - INFORMASI UMUM (DAFTAR HARGA, INFO, LIST, STANDAR)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/info-harga-sewa-alat-berat.html": "Info Harga Sewa Alat Berat",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/daftar-harga-sewa-alat-berat.html": "Daftar Harga Sewa Alat Berat",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/standar-harga-sewa-alat-berat.html": "Standar Harga Sewa Alat Berat",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/berapa-harga-sewa-alat-berat.html": "Berapa Harga Sewa Alat Berat",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/list-harga-sewa-alat-berat.html": "List Harga Sewa Alat Berat",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/daftar-harga-sewa-alat-berat-murah.html": "Daftar Harga Sewa Alat Berat Murah",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/daftar-harga-sewa-alat-berat-per-jam.html": "Daftar Harga Sewa Alat Berat Per Jam",  // TYPE: MONEY_MASTER
+
 };
-
 // ============================================================
 // 📁 SUB Jasa Alat Konstruksi - SEWA MOTOR GRADER (MONEY MASTER)
 // ============================================================
