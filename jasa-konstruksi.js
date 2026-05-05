@@ -129,7 +129,8 @@ const urlMappingSewaAlatProyekFromSub1MoneyMaster = {
 };
 
 const urlMappingSewaAlatBeratFromSub2Sub1 = {
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html": "Perbandingan Sewa Alat Berat"  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html": "Perbandingan Sewa Alat Berat",  // TYPE: SUB1 PARENT
+   "https://www.betonjayareadymix.com/p/durasi-sewa-alat-berat.html": "Durasi Sewa Alat Berat"  // TYPE: SUB1 pendukung
 };
 const urlMappingSewaAlatBeratFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/harga-sewa-alat-berat.html": "Harga Sewa Alat Berat",  // TYPE: MoneyMaster
