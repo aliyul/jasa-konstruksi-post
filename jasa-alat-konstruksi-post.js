@@ -612,9 +612,54 @@ const urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat.html": "Sewa Alat Berat",  // TYPE: MONEY_PAGE PARENT
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-murah.html": "Sewa Alat Berat Murah",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-berat-trakindo.html": "Sewa Alat Berat Trakindo"  // TYPE: MONEY_PAGE
-	
 };
-  
+
+const urlMappingSewaforkliftPostFromMoneyMasterMoneyPage = { 
+  "https://www.betonjayareadymix.com/2019/02/sewa-forklift.html": "Sewa Forklift"  // TYPE: MONEY_PAGE PARENT
+};
+const urlMappingSewaCranePostFromMoneyMasterMoneyPage = { 
+   "https://www.betonjayareadymix.com/2019/02/sewa-crane.html": "Sewa Crane" // TYPE: MONEY_PAGE PARENT
+};
+const urlMappingSewaSelfLoaderPostFromMoneyMasterMoneyPage = { 
+  "https://www.betonjayareadymix.com/2019/02/sewa-self-loader.html": "Sewa Self Loader"  // TYPE: MONEY_PAGE PARENT
+};
+const urlMappingSewaWheelLoaderPostFromMoneyMasterMoneyPage = { 
+   "https://www.betonjayareadymix.com/2019/02/sewa-wheel-loader.html": "Sewa Wheel Loader" // TYPE: MONEY_PAGE PARENT
+};
+const urlMappingSewaVibroRollerPostFromMoneyMasterMoneyPage = { 
+   "https://www.betonjayareadymix.com/2019/02/sewa-vibro-roller.html": "Sewa Vibro Roller"  // TYPE: MONEY_PAGE PARENT
+};
+const urlMappingSewaWalesStoomPostFromMoneyMasterMoneyPage = { 
+  "https://www.betonjayareadymix.com/2019/02/sewa-wales-stoom.html": "Sewa Wales Stoom"  // TYPE: MONEY_PAGE PARENT
+};
+const urlMappingSewaTandemRollerPostFromMoneyMasterMoneyPage = { 
+  "https://www.betonjayareadymix.com/2019/02/sewa-tandem-roller.html": "Sewa Tandem Roller"  // TYPE: MONEY_PAGE PARENT
+};
+const urlMappingSewaBulldozerPostFromMoneyMasterMoneyPage = { 
+  "https://www.betonjayareadymix.com/p/sewa-bulldozer.html": "Sewa Bulldozer"  // TYPE: MONEY_PAGE PARENT
+};
+const urlMappingSewaExcavatorPostFromMoneyMasterMoneyPage = { 
+ "https://www.betonjayareadymix.com/p/sewa-excavator.html": "Sewa Excavator"  // TYPE: MONEY_PAGE PARENT
+};
+const urlMappingSewaBackhoeLoaderPostFromMoneyMasterMoneyPage = { 
+ "https://www.betonjayareadymix.com/p/sewa-backhoe-loader.html": "Sewa Backhoe Loader"  // TYPE: MONEY_PAGE PARENT
+};
+const urlMappingSewaBabyRollerPostFromMoneyMasterMoneyPage = { 
+   "https://www.betonjayareadymix.com/p/sewa-baby-roller.html": "Sewa Baby Roller"  // TYPE: MONEY_PAGE PARENT
+};
+const urlMappingSewaMotorGraderPostFromMoneyMasterMoneyPage = { 
+ "https://www.betonjayareadymix.com/p/sewa-motor-grader.html": "Sewa Motor Grader" // TYPE: MONEY_PAGE PARENT
+};
+const urlMappingSewaAlatPancangPostFromMoneyMasterMoneyPage = { 
+   "https://www.betonjayareadymix.com/p/sewa-alat-pancang.html": "Sewa Alat Pancang"  // TYPE: MONEY_PAGE PARENT
+};
+const urlMappingSewaConcretePaverPostFromMoneyMasterMoneyPage = { 
+  "https://www.betonjayareadymix.com/p/sewa-concrete-paver.html": "Sewa Concrete Paver"  // TYPE: MONEY_PAGE PARENT
+};
+const urlMappingSewaTrencherPostFromMoneyMasterMoneyPage = { 
+   "https://www.betonjayareadymix.com/p/sewa-trencher.html": "Sewa Trencher"  // TYPE: MONEY_PAGE PARENT
+};
+
 const urlMappingSewaAlatBeratPostFromMoneyPageMoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - SEWA ALAT BERAT PER LOKASI (JABODETABEK + JAWA BARAT)
@@ -652,12 +697,7 @@ const urlMappingSewaAlatBeratPostFromMoneyPageMoneyChild = {
 // ============================================================
 
 const urlMappingSewaMotorGraderFromSub2MoneyMaster = {
-  // ============================================================
-  // [MONEY_MASTER] - SEWA MOTOR GRADER (HARGA NASIONAL)
-  // 🧠 TYPE: MONEY_MASTER (khusus SEWA, diperbolehkan)
-  // Breadcrumb: Home > Sewa Alat Konstruksi > Sewa Alat Berat > Motor Grader (4 level)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-motor-grader.html": "Harga Sewa Motor Grader",  // TYPE: MONEY_MASTER
+ 
 };
 
 // ============================================================
