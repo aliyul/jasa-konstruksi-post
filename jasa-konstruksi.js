@@ -133,6 +133,7 @@ const urlMappingSewaAlatBeratFromSub2Sub1 = {
 };
 const urlMappingSewaAlatBeratFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/harga-sewa-alat-berat.html": "Harga Sewa Alat Berat",  // TYPE: MoneyMaster
+  "https://www.betonjayareadymix.com/p/harga-sewa-excavator.html": "Harga Sewa Excavator",  // TYPE: MoneyMaster
   "https://www.betonjayareadymix.com/p/harga-sewa-forklift.html": "Harga Sewa Forklift",  // TYPE: MoneyMaster
   "https://www.betonjayareadymix.com/p/harga-sewa-bulldozer.html": "Harga Sewa Bulldozer",  // TYPE: MoneyMaster
   "https://www.betonjayareadymix.com/p/harga-sewa-vibro-roller.html": "Harga Sewa Vibro Roller",  // TYPE: MoneyMaster
