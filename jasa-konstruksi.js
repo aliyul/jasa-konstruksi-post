@@ -127,6 +127,21 @@ const urlMappingSewaAlatProyekFromSub2Sub1 = {
 const urlMappingSewaAlatProyekFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html": "Harga Sewa Alat Proyek"  // TYPE: MoneyMaster
 };
+
+const urlMappingSewaAlatBeratFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html": "Perbandingan Sewa Alat Berat"  // TYPE: SUB1
+};
+const urlMappingSewaAlatBeratFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/harga-sewa-alat-berat.html": "Harga Sewa Alat Berat"  // TYPE: MoneyMaster
+};
+
+const urlMappingSewaAlatRinganFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html": "Perbandingan Sewa Alat Ringan"  // TYPE: SUB1
+};
+const urlMappingSewaAlatRinganFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/harga-sewa-alat-ringan.html": "Harga Sewa Alat Ringan"  // TYPE: MoneyMaster
+};
+
 // [MONEY_PAGE] - SEWA PER JENIS ALAT BERAT (ENTITY SEWA/RENTAL - MONEY_PAGE)
 const urlMappingSewaAlatBeratFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/p/sewa-forklift.html": "Sewa Forklift",  // TYPE: MONEY_PAGE
