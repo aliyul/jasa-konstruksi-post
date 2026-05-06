@@ -48,6 +48,7 @@ const urlMappingJasaKonsFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/jasa-finishing.html": "Jasa Finishing",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik.html": "Jasa Instalasi Listrik",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html": "Jasa Perawatan Perbaikan Bangunan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html": "Jasa Perbaikan Infrastruktur"  // TYPE: SUB2
 };
 
 // ============================================================
@@ -1841,7 +1842,6 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage[cleanUrlJasaKons]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-	
 
 	if (urlMappingStrukturBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingStrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
@@ -1858,6 +1858,82 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage[cleanUrlJasaKons]) {
 	
     }
 
+	if (urlMappingRenovasiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingRenovasiBridgeFromSub2Sub1[cleanUrlJasaKons];
+	
+	generateBreadcrumbForMapping(
+        urlMappingRenovasiBridgeFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-removasi.html' }
+        ],
+        'JASA'
+    );
+	
+    }
+
+ 	if (urlMappingFinishingBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingFinishingBridgeFromSub2Sub1[cleanUrlJasaKons];
+	
+	generateBreadcrumbForMapping(
+        urlMappingFinishingBridgeFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' }
+        ],
+        'JASA'
+    );
+	
+    }
+
+if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons];
+	generateBreadcrumbForMapping(
+        urlMappingPerawatanPerbaikanBridgeFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Perawatan Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html' }
+        ],
+        'JASA'
+    );
+	
+    }
+	
+	if (urlMappingJalanPerkerasanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingJalanPerkerasanBridgeFromSub2Sub1[cleanUrlJasaKons];
+	generateBreadcrumbForMapping(
+        urlMappingJalanPerkerasanBridgeFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html' }
+        ],
+        'JASA'
+    );
+	
+    }
+
+	if (urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
+	generateBreadcrumbForMapping(
+        urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html' }
+        ],
+        'JASA'
+    );
+	
+    }
 	
 /*
   //AWAL JASA KONTRUKSI ALAT
