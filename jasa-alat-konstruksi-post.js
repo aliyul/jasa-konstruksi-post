@@ -1840,7 +1840,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaAksesKeamananProyekFromSub2MoneyPage,
 		urlMappingSewaAlatBorGroundWorkFromSub2MoneyPage,
 		urlMappingSewaSistemPendukungProyekFromSub2MoneyPage,
-		urlMappingSewaAlatBeratPostFromSub2MoneyPage,
+		urlMappingSewaAlatBeratPostFromSub1MoneyMaster,
 		urlMappingSewaMotorGraderFromSub2MoneyMaster,
 		urlMappingSewaAlatPancangFromSub2MoneyMaster,
 		urlMappingSewaTrencherFromSub2MoneyMaster,
@@ -4425,7 +4425,7 @@ restoreCondition('SewaAlatKonstruksiPost');
 
 	
 	//AKHIR SUB SEWA ALAT PROYEK
-if (urlMappingSewaAlatBeratPostFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaAlatBeratPostFromSub1MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
        //RESTORE CONTAINER
      restoreCondition('JasaKonsAlatKonstruksiPost');
 
@@ -4510,15 +4510,17 @@ if (urlMappingSewaAlatBeratPostFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiP
         SewaAlatKonstruksiPostLink.style.visibility = 'visible';
 	//TAMPILKAN SewaAlatBeratPost
         SewaAlatBeratPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatBeratPostFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
+        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatBeratPostFromSub1MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
     
 		    generateBreadcrumbForMapping(
-        urlMappingSewaAlatBeratPostFromSub2MoneyPage,
+        urlMappingSewaAlatBeratPostFromSub1MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
             { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
-            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' }
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Perbandingan Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html' }
+
         ],
         'SEWA_RENTAL'
     );
