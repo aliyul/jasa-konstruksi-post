@@ -1842,6 +1842,28 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaSistemPendukungProyekFromSub2MoneyPage,
 		urlMappingSewaAlatBeratPostFromSub1MoneyMaster,
 		urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage,
+		urlMappingSewaAlatBeratPostFromMoneyPageMoneyChild,
+		
+		urlMappingSewaforkliftPostFromMoneyMasterMoneyPage,
+		urlMappingSewaCranePostFromMoneyMasterMoneyPage,
+		urlMappingSewaSelfLoaderPostFromMoneyMasterMoneyPage,
+		urlMappingSewaWheelLoaderPostFromMoneyMasterMoneyPage,
+        urlMappingSewaVibroRollerPostFromMoneyMasterMoneyPage,
+		urlMappingSewaWalesStoomPostFromMoneyMasterMoneyPage,
+		urlMappingSewaTandemRollerPostFromMoneyMasterMoneyPage,
+        urlMappingSewaBulldozerPostFromMoneyMasterMoneyPage,
+		urlMappingSewaExcavatorPostFromMoneyMasterMoneyPage,
+        urlMappingSewaBackhoeLoaderPostFromMoneyMasterMoneyPage,
+		urlMappingSewaBabyRollerPostFromMoneyMasterMoneyPage,
+        urlMappingSewaMotorGraderPostFromMoneyMasterMoneyPage,
+		urlMappingSewaAlatPancangPostFromMoneyMasterMoneyPage,
+		urlMappingSewaConcretePaverPostFromMoneyMasterMoneyPage,
+		urlMappingSewaTrencherPostFromMoneyMasterMoneyPage,
+		
+		
+		
+		
+		
 		urlMappingSewaMotorGraderFromSub2MoneyMaster,
 		urlMappingSewaAlatPancangFromSub2MoneyMaster,
 		urlMappingSewaTrencherFromSub2MoneyMaster,
@@ -4543,7 +4565,23 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         ],
         'SEWA_RENTAL'
     );
-	
+    }
+	if (urlMappingSewaAlatBeratPostFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
+		    generateBreadcrumbForMapping(
+        urlMappingSewaAlatBeratPostFromMoneyPageMoneyChild,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Perbandingan Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html'},
+            { name: 'Harga Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/harga-sewa-alat-berat.html'},
+            { name: 'Harga Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/2019/02/sewa-alat-berat.html'}
+
+        ],
+        'SEWA_RENTAL'
+    );
+	}
    //AWAL SUB PAGE SEWA ALAT BERAT
 if (urlMappingSewaForkliftFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
 	    //RESTORE CONTAINER
