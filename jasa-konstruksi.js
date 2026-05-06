@@ -2254,103 +2254,38 @@ if (urlMappingSewaAlatProyekFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'SEWA_RENTAL'
     );
  }
+
+if (urlMappingSewaAlatBeratFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingSewaAlatBeratFromSub2Sub1[cleanUrlJasaKons];
+
+	   generateBreadcrumbForMapping(
+        urlMappingSewaAlatBeratFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' }
+          //  { name: 'Perbandingan Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+ }
 	
-if (urlMappingSewaAlatBeratFromSub2MoneyPage[cleanUrlJasaKons]) {
-    //RESTORE CONTAINER NYA
-	restoreCondition('JasaKonsSub');
-	//restoreCondition('JasaKonstruksi');
-	restoreCondition('SewaAlatKonstruksi');
-	restoreCondition('SewaAlatBerat');
-	  
-	//hapus pillar PILLAR LAIN
-           // hapus elemen id DIV Lain
-	removeCondition('ProdukInFur');
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-        //removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-	  //hapus pillar jasa konstruksi
-	  	removeCondition('JasaKonstruksiSub');
-	    removeCondition('JasaAlatKonstruksi');
-        removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPerbaikan');
-	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-	removeCondition('JasaKons');
-	removeCondition('MenuKons');
-
-	// hapus elemen id DIV Lain selain SewaAlatKonstruksi dan JasaAlatKonstruksi dan SewaAlatBerat
-	removeCondition('SewaAlatKonstruksiRingan');
-
-	  	removeCondition('JasaInstalasiListrik');
-	removeCondition('JasaRenovasiPerbaikan');
-	removeCondition('JasaStrukturKonstruksi');
-        removeCondition('JasaFinishing');
-        removeCondition('JasaPondasiPerkuatan');
-        removeCondition('JasaSaluranDrainase');
-        removeCondition('JasaJalanPerkerasan');
-	removeCondition('JasaPematanganLahan');
-	removeCondition('JasaUjiTanah');
-        removeCondition('JasaPembatasPengaman');
-	removeCondition('JasaPerkuatanTanahLongsor');
-	removeCondition('JasaBongkarBangunan');
-	removeCondition('JasaPerawatanPerbaikanBangunan');
-	removeCondition('JasaPerbaikanInfrastruktur');
-	removeCondition('JasaPengeboran');
-		removeCondition('JasaBorAirSumur');
-		removeCondition('JasaBorPile');
-		removeCondition('JasaCoringBeton');
-		removeCondition('JasaBorBeton');
-		removeCondition('JasaBorTanah');
-		removeCondition('JasaBorHorizontal');
-		removeCondition('JasaBorTembok');
-
-        //JasaKonstruksiSubLink.style.visibility = 'visible';
-        //JasaAlatKonstruksiLink.style.visibility = 'visible';
-        SewaAlatKonstruksiLink.style.visibility = 'visible';
-        SewaAlatBeratLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingSewaAlatBeratFromSub2MoneyPage[cleanUrlJasaKons];
-    }
- // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatBeratFromSub2MoneyPage[cleanUrlJasaKons]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               },
-	      {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-berat.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingSewaAlatBeratFromSub2MoneyPage[cleanUrlJasaKons],
-                   "item": cleanUrlJasaKons
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
+  
+	   generateBreadcrumbForMapping(
+        urlMappingSewaAlatBeratFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+           	{ name: 'Perbandingan Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+   
+}
 	
  if (urlMappingSewaAlatKonstruksiRinganFromSub2MoneyPage[cleanUrlJasaKons]) {
 	 //CONTAINER
