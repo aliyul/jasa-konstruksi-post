@@ -636,28 +636,28 @@ const urlMappingSewaTandemRollerPostFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/2019/02/sewa-tandem-roller.html": "Sewa Tandem Roller"  // TYPE: MONEY_PAGE PARENT
 };
 const urlMappingSewaBulldozerPostFromMoneyMasterMoneyPage = { 
-  "https://www.betonjayareadymix.com/p/sewa-bulldozer.html": "Sewa Bulldozer"  // TYPE: MONEY_PAGE PARENT
+  "https://www.betonjayareadymix.com/2019/02/sewa-bulldozer.html": "Sewa Bulldozer"  // TYPE: MONEY_PAGE PARENT
 };
 const urlMappingSewaExcavatorPostFromMoneyMasterMoneyPage = { 
- "https://www.betonjayareadymix.com/p/sewa-excavator.html": "Sewa Excavator"  // TYPE: MONEY_PAGE PARENT
+ "https://www.betonjayareadymix.com/2019/02/sewa-excavator.html": "Sewa Excavator"  // TYPE: MONEY_PAGE PARENT
 };
 const urlMappingSewaBackhoeLoaderPostFromMoneyMasterMoneyPage = { 
- "https://www.betonjayareadymix.com/p/sewa-backhoe-loader.html": "Sewa Backhoe Loader"  // TYPE: MONEY_PAGE PARENT
+ "https://www.betonjayareadymix.com/2019/02/sewa-backhoe-loader.html": "Sewa Backhoe Loader"  // TYPE: MONEY_PAGE PARENT
 };
 const urlMappingSewaBabyRollerPostFromMoneyMasterMoneyPage = { 
-   "https://www.betonjayareadymix.com/p/sewa-baby-roller.html": "Sewa Baby Roller"  // TYPE: MONEY_PAGE PARENT
+   "https://www.betonjayareadymix.com/2019/02/sewa-baby-roller.html": "Sewa Baby Roller"  // TYPE: MONEY_PAGE PARENT
 };
 const urlMappingSewaMotorGraderPostFromMoneyMasterMoneyPage = { 
- "https://www.betonjayareadymix.com/p/sewa-motor-grader.html": "Sewa Motor Grader" // TYPE: MONEY_PAGE PARENT
+ "https://www.betonjayareadymix.com/2019/02/sewa-motor-grader.html": "Sewa Motor Grader" // TYPE: MONEY_PAGE PARENT
 };
 const urlMappingSewaAlatPancangPostFromMoneyMasterMoneyPage = { 
-   "https://www.betonjayareadymix.com/p/sewa-alat-pancang.html": "Sewa Alat Pancang"  // TYPE: MONEY_PAGE PARENT
+   "https://www.betonjayareadymix.com/2019/02/sewa-alat-pancang.html": "Sewa Alat Pancang"  // TYPE: MONEY_PAGE PARENT
 };
 const urlMappingSewaConcretePaverPostFromMoneyMasterMoneyPage = { 
-  "https://www.betonjayareadymix.com/p/sewa-concrete-paver.html": "Sewa Concrete Paver"  // TYPE: MONEY_PAGE PARENT
+  "https://www.betonjayareadymix.com/2019/02/sewa-concrete-paver.html": "Sewa Concrete Paver"  // TYPE: MONEY_PAGE PARENT
 };
 const urlMappingSewaTrencherPostFromMoneyMasterMoneyPage = { 
-   "https://www.betonjayareadymix.com/p/sewa-trencher.html": "Sewa Trencher"  // TYPE: MONEY_PAGE PARENT
+   "https://www.betonjayareadymix.com/2019/02/sewa-trencher.html": "Sewa Trencher"  // TYPE: MONEY_PAGE PARENT
 };
 
 const urlMappingSewaAlatBeratPostFromMoneyPageMoneyChild = {
