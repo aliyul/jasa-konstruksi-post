@@ -1661,6 +1661,7 @@ if (urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons]) {
        document.head.appendChild(script);
    }
 //AWAL JASA KONTRUKSI ALAT
+	
 if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 		restoreCondition('JasaKonsSub');
 		restoreCondition('JasaAlatKonstruksi');
@@ -1840,6 +1841,23 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage[cleanUrlJasaKons]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+	
+
+	if (urlMappingStrukturBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingStrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
+	generateBreadcrumbForMapping(
+        urlMappingStrukturBridgeFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html' }
+        ],
+        'JASA'
+    );
+	
+    }
+
 	
 /*
   //AWAL JASA KONTRUKSI ALAT
