@@ -17,7 +17,7 @@ const urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariant =
 };
 
 const urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariantSubVariant = {
-  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-operator-sio-alat-berat-besat.html": "Jasa Alat Konstruksi Operator SIO Alat Berat Besat",
+  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-operator-sio-alat-berat-besar.html": "Jasa Alat Konstruksi Operator SIO Alat Berat Besar",
   "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-lembur-shift-malam.html": "Jasa Alat Konstruksi Lembur Shift Malam",
   "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-termasuk-bbm-proyek-panjang.html": "Jasa Alat Konstruksi Termasuk BBM Proyek Panjang"
 };
