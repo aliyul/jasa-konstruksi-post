@@ -646,7 +646,9 @@ const urlMappingSewaBulldozerPostFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/2019/02/sewa-bulldozer.html": "Sewa Bulldozer"  // TYPE: MONEY_PAGE PARENT
 };
 const urlMappingSewaExcavatorPostFromMoneyMasterMoneyPage = { 
- "https://www.betonjayareadymix.com/2019/02/sewa-excavator.html": "Sewa Excavator"  // TYPE: MONEY_PAGE PARENT
+ "https://www.betonjayareadymix.com/2019/02/sewa-excavator.html": "Sewa Excavator",  // TYPE: MONEY_PAGE PARENT
+   "https://www.betonjayareadymix.com/2019/02/sewa-excavator-mini.html": "Sewa Excavator Mini",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/02/sewa-beko.html": "Sewa Beko"  // TYPE: MONEY_PAGE
 };
 const urlMappingSewaBackhoeLoaderPostFromMoneyMasterMoneyPage = { 
  "https://www.betonjayareadymix.com/2019/02/sewa-backhoe-loader.html": "Sewa Backhoe Loader"  // TYPE: MONEY_PAGE PARENT
@@ -734,16 +736,8 @@ const urlMappingSewaConcretePaverFromSub2MoneyMaster = {
 // 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_MASTER & MONEY_CHILD
 // ============================================================
 
-const urlMappingSewaExcavatorFromSub2MoneyPage = {
-  // ============================================================
-  // [MONEY_MASTER] - SEWA EXCAVATOR MINI & VARIAN (NASIONAL)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/sewa-excavator-mini.html": "Sewa Excavator Mini",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator.html": "Harga Sewa Excavator",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-beko.html": "Harga Sewa Beko",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/sewa-beko.html": "Sewa Beko",  // TYPE: MONEY_MASTER
-  
-  // ============================================================
+const urlMappingSewaExcavatorPostFromMoneyPageMoneyChild = {
+// ============================================================
   // [MONEY_CHILD] - SEWA EXCAVATOR PER LOKASI (JAWA TENGAH)
   // ============================================================
   "https://www.betonjayareadymix.com/2019/02/sewa-excavator-surakarta.html": "Sewa Excavator Surakarta",  // TYPE: MONEY_CHILD
@@ -1861,6 +1855,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaTandemRollerPostFromMoneyMasterMoneyPage,
         urlMappingSewaBulldozerPostFromMoneyMasterMoneyPage,
 		urlMappingSewaExcavatorPostFromMoneyMasterMoneyPage,
+		urlMappingSewaExcavatorPostFromMoneyPageMoneyChild,
+		
         urlMappingSewaBackhoeLoaderPostFromMoneyMasterMoneyPage,
 		urlMappingSewaBabyRollerPostFromMoneyMasterMoneyPage,
         urlMappingSewaMotorGraderPostFromMoneyMasterMoneyPage,
@@ -1875,8 +1871,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaMotorGraderFromSub2MoneyMaster,
 		urlMappingSewaAlatPancangFromSub2MoneyMaster,
 		urlMappingSewaTrencherFromSub2MoneyMaster,
-		urlMappingSewaConcretePaverFromSub2MoneyMaster,
-		urlMappingSewaExcavatorFromSub2MoneyPage,
+		urlMappingSewaConcretePaverFromSub2MoneyMaster,,
 		urlMappingSewaBulldozerFromSub2MoneyMaster,
 		urlMappingSewaForkliftFromSub2MoneyMaster,
 		urlMappingSewaCraneFromSub2MoneyMaster,
@@ -4742,6 +4737,23 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         'SEWA_RENTAL'
     );
 	}	
+   	if (urlMappingSewaExcavatorPostFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
+		    generateBreadcrumbForMapping(
+        urlMappingSewaExcavatorPostFromMoneyPageMoneyChild,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
+            { name: 'Perbandingan Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html'},
+            { name: 'Harga Sewa Excavator', url: 'https://www.betonjayareadymix.com/p/harga-sewa-excavator.html'},
+            { name: 'Sewa Excavator', url: 'https://www.betonjayareadymix.com/p/sewa-excavator.html'}
+
+        ],
+        'SEWA_RENTAL'
+    );
+	}
+	
 	    if (urlMappingSewaBackhoeLoaderPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		    generateBreadcrumbForMapping(
         urlMappingSewaBackhoeLoaderPostFromMoneyMasterMoneyPage,
