@@ -1871,7 +1871,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaMotorGraderFromSub2MoneyMaster,
 		urlMappingSewaAlatPancangFromSub2MoneyMaster,
 		urlMappingSewaTrencherFromSub2MoneyMaster,
-		urlMappingSewaConcretePaverFromSub2MoneyMaster,,
+		urlMappingSewaConcretePaverFromSub2MoneyMaster,
 		urlMappingSewaBulldozerFromSub2MoneyMaster,
 		urlMappingSewaForkliftFromSub2MoneyMaster,
 		urlMappingSewaCraneFromSub2MoneyMaster,
