@@ -131,6 +131,15 @@ const urlMappingSewaAlatProyekFromSub1MoneyMaster = {
 
 const urlMappingSewaAlatBeratFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html": "Perbandingan Sewa Alat Berat",  // TYPE: SUB1 PARENT
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-excavator.html": "Perbandingan Sewa Excavator",  // TYPE: SUB1 PARENT
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-bulldozer.html": "Perbandingan Sewa Bulldozer",  // TYPE: SUB1 PARENT
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-crane.html": "Perbandingan Sewa Crane",  // TYPE: SUB1 PARENT
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-beko.html": "Perbandingan Sewa Beko",  // TYPE: SUB1 PARENT
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-forklift.html": "Perbandingan Sewa Forklift",  // TYPE: SUB1 PARENT
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-wales-stoom.html": "Perbandingan Sewa Wales Stoom",  // TYPE: SUB1 PARENT
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-wheel-loader.html": "Perbandingan Sewa Wheel Loader",  // TYPE: SUB1 PARENT
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-backhoe-loader.html": "Perbandingan Sewa Backhoe Loader",  // TYPE: SUB1 PARENT
+	
    "https://www.betonjayareadymix.com/p/durasi-sewa-alat-berat.html": "Durasi Sewa Alat Berat"  // TYPE: SUB1 pendukung
 };
 const urlMappingSewaAlatBeratFromSub1MoneyMaster = {
@@ -152,6 +161,32 @@ const urlMappingSewaAlatBeratFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/harga-sewa-trencher.html": "Harga Sewa Trencher",  // TYPE: MoneyMaster PARENT
   "https://www.betonjayareadymix.com/p/harga-sewa-concrete-paver.html": "Harga Sewa Concrete Paver"  // TYPE: MoneyMaster PARENT
 };
+/*
+const urlMappingSewaExcavatorFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-excavator.html": "Perbandingan Sewa Excavator"  // TYPE: SUB1
+};
+const urlMappingSewaBulldozerFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-bulldozer.html": "Perbandingan Sewa Bulldozer"  // TYPE: SUB1
+};
+const urlMappingSewaCraneFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-crane.html": "Perbandingan Sewa Crane"  // TYPE: SUB1
+};
+const urlMappingSewaBekoFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-beko.html": "Perbandingan Sewa Beko"  // TYPE: SUB1
+};
+const urlMappingSewaForkliftFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-forklift.html": "Perbandingan Sewa Forklift"  // TYPE: SUB1
+};
+const urlMappingSewaWalesStoomFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-wales-stoom.html": "Perbandingan Sewa Wales Stoom"  // TYPE: SUB1
+};
+const urlMappingSewaWheelLoaderFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-wheel-loader.html": "Perbandingan Sewa Wheel Loader"  // TYPE: SUB1
+};
+const urlMappingSewaBackhoeLoaderFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-backhoe-loader.html": "Perbandingan Sewa Backhoe Loader"  // TYPE: SUB1
+};
+*/
 
 const urlMappingSewaAlatRinganFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html": "Perbandingan Sewa Alat Ringan"  // TYPE: SUB1
@@ -1162,6 +1197,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		//urlMappingSewaAlatBeratFromSub2MoneyPage,
 		urlMappingSewaAlatBeratFromSub2Sub1,
 		urlMappingSewaAlatBeratFromSub1MoneyMaster,
+		
 		urlMappingSewaAlatRinganFromSub2Sub1,
 		urlMappingSewaAlatRinganFromSub1MoneyMaster,
 		
@@ -2270,7 +2306,7 @@ if (urlMappingSewaAlatBeratFromSub2Sub1[cleanUrlJasaKons]) {
         'SEWA_RENTAL'
     );
  }
-	
+
 if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
   
 	   generateBreadcrumbForMapping(
@@ -2286,7 +2322,8 @@ if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
     );
    
 }
-	
+
+
  if (urlMappingSewaAlatKonstruksiRinganFromSub2MoneyPage[cleanUrlJasaKons]) {
 	 //CONTAINER
     restoreCondition('JasaKonsSub');
