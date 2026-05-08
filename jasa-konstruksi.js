@@ -100,7 +100,7 @@ const urlMappingFinishingBridgeFromSub2Sub1 = {
 
 const urlMappingPerawatanPerbaikanBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-bangunan.html": "Panduan Perbaikan Bangunan"  // TYPE: SUB1
-   "https://www.betonjayareadymix.com/p/perbandingan-jasa-perawatan-perbaikan.html": "Perbandingan Jasa Perawatan & Perbaikan Bangunan"  // TYPE: SUB1
+   "https://www.betonjayareadymix.com/p/perawatan-vs-perbaikan-bangunan.html": "Perbandingan Jasa Perawatan & Perbaikan Bangunan"  // TYPE: SUB1
 };
 
 const urlMappingJalanPerkerasanBridgeFromSub2Sub1 = {
@@ -110,7 +110,7 @@ const urlMappingJalanPerkerasanBridgeFromSub2Sub1 = {
 
 const urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-infrastruktur.html": "Perbandingan Jasa Perbaikan Infrastruktur"  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html": "Perbandingan Jasa Perbaikan Infrastruktur"  // TYPE: SUB1
 };
 
 // ============================================================
