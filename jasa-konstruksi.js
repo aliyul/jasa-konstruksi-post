@@ -292,9 +292,9 @@ const urlMappingPerbaikanInfrastrukturFromSub2MoneyPage = {
 // 📁 JASA FINISHING - SUB2 (LEVEL 2)
 // ============================================================
 
-const urlMappingFinishingFromPillarSub2 = {
-  "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html": "Jasa Finishing Bangunan",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html": "Jasa Finishing Infrastruktur",  // TYPE: SUB2
+const urlMappingFinishingFromSub2Sub2 = {
+  "https://www.betonjayareadymix.com/p/daftar-jasa-finishing-bangunan.html": "Daftar Jasa Finishing Bangunan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/daftar-jasa-finishing-infrastruktur.html": "Daftar Jasa Finishing Infrastruktur"  // TYPE: SUB2
 };
 
 // ============================================================
@@ -1267,7 +1267,7 @@ document.addEventListener("DOMContentLoaded", function() {
         urlMappingPerbaikanInfrastrukturFromSub2MoneyPage,
 		urlMappingPerawatanPerbaikanBangunanFromSub2Sub2,
 		urlMappingRenovasiFromPillarSub2,
-		urlMappingFinishingFromPillarSub2,
+		urlMappingFinishingFromSub2Sub2,
 		urlMappingStrukturFromSub2Sub2,
 		urlMappingPondasiFromPillarSub2,
 		urlMappingSaluranFromSub2MoneyPage,
@@ -2636,7 +2636,7 @@ if (urlMappingStrukturFromSub2Sub2[cleanUrlJasaKons]) {
     );
     }
 	
-if (urlMappingFinishingFromPillarSub2[cleanUrlJasaKons]) {
+if (urlMappingFinishingFromSub2Sub2[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaFinishing');
            // hapus elemen id DIV Lain
@@ -2685,46 +2685,19 @@ if (urlMappingFinishingFromPillarSub2[cleanUrlJasaKons]) {
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaFinishingLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingFinishingFromPillarSub2[cleanUrlJasaKons];
-    }
-  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingFinishingFromPillarSub2[cleanUrlJasaKons]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Finishing",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-finishing.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingFinishingFromPillarSub2[cleanUrlJasaKons],
-                   "item": cleanUrlJasaKons
-               }
-           ]
-       };
+        pageNameKonstruksiSub.textContent = urlMappingFinishingFromSub2Sub2[cleanUrlJasaKons];
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+	    generateBreadcrumbForMapping(
+        urlMappingFinishingFromSub2Sub2,
+        cleanUrlJasaKons,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' }
+        ],
+        'JASA'
+    );
+    }
 	
 if (urlMappingPondasiFromPillarSub2[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
@@ -3510,7 +3483,7 @@ if (urlMappingBongkarBangunanFromPillarSub2[cleanUrlJasaKons]) {
         pageNameKonstruksiSub.textContent = urlMappingPerawatanPerbaikanBangunanFromSub2Sub2[cleanUrlJasaKons];
         generateBreadcrumbForMapping(
         urlMappingPerawatanPerbaikanBangunanFromSub2Sub2,
-        cleanUrlJasaKonsAlatKonstruksiPost,
+        cleanUrlJasaKons,
         [
             { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
