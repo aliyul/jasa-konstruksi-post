@@ -361,11 +361,14 @@ const urlMappingRenovasiFromPillarSub2 = {
 // 📁 JASA PERAWATAN & PERBAIKAN BANGUNAN - SUB2 (LEVEL 2)
 // ============================================================
 
-const urlMappingPerawatanPerbaikanBangunanFromPillarSub2 = {
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur.html": "Jasa Perbaikan Struktur",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html": "Jasa Perbaikan Kebocoran Waterproofing",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-elemen-arsitektural.html": "Jasa Perbaikan Elemen Arsitektural",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-drainase-bangunan.html": "Jasa Perbaikan Atap Drainase Bangunan",  // TYPE: SUB2
+const urlMappingPerawatanPerbaikanBangunanFromSub2Sub2 = {
+ "https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-struktur.html": "Daftar Jasa Perbaikan Struktur",
+
+"https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-kebocoran.html": "Daftar Jasa Perbaikan Kebocoran Waterproofing",
+
+"https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-arsitektural.html": "Daftar Jasa Perbaikan Elemen Arsitektural",
+
+"https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-atap.html": "Daftar Jasa Perbaikan Atap Drainase Bangunan"
 };
 
 // ============================================================
@@ -1262,7 +1265,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingSewaAlatKonstruksiRinganFromSub2MoneyPage,
         urlMappingPerbaikanInfrastrukturFromSub2MoneyPage,
-		urlMappingPerawatanPerbaikanBangunanFromPillarSub2,
+		urlMappingPerawatanPerbaikanBangunanFromSub2Sub2,
 		urlMappingRenovasiFromPillarSub2,
 		urlMappingFinishingFromPillarSub2,
 		urlMappingStrukturFromSub2Sub2,
@@ -3455,7 +3458,7 @@ if (urlMappingBongkarBangunanFromPillarSub2[cleanUrlJasaKons]) {
        document.head.appendChild(script);
    }
 
-  if (urlMappingPerawatanPerbaikanBangunanFromPillarSub2[cleanUrlJasaKons]) {
+  if (urlMappingPerawatanPerbaikanBangunanFromSub2Sub2[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPerawatanPerbaikanBangunan');
            // hapus elemen id DIV Lain
@@ -3504,48 +3507,20 @@ if (urlMappingBongkarBangunanFromPillarSub2[cleanUrlJasaKons]) {
        // removeCondition('JasaKonstruksiCustom');
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaPerawatanPerbaikanBangunanLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingPerawatanPerbaikanBangunanFromPillarSub2[cleanUrlJasaKons];
+        pageNameKonstruksiSub.textContent = urlMappingPerawatanPerbaikanBangunanFromSub2Sub2[cleanUrlJasaKons];
+        generateBreadcrumbForMapping(
+        urlMappingPerawatanPerbaikanBangunanFromSub2Sub2,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perawatan & Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perawatan-perbaikan-bangunan.html' }
+        ],
+        'JASA'
+    );
     }
- 
-  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingPerawatanPerbaikanBangunanFromPillarSub2[cleanUrlJasaKons]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perawatan & Perbaikan Bangunan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingPerawatanPerbaikanBangunanFromPillarSub2[cleanUrlJasaKons],
-                   "item": cleanUrlJasaKons
-               }
-           ]
-       };
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-
+	
 if (urlMappingPerbaikanInfrastrukturFromSub2MoneyPage[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPerbaikanInfrastruktur');
