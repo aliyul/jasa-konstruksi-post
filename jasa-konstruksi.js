@@ -113,6 +113,15 @@ const urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html": "Perbandingan Jasa Perbaikan Infrastruktur"  // TYPE: SUB1
 };
 
+const urlMappingPerbandinganJasaPondasiBridgeFromSub2Sub1 = {
+  //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/p/perbandingan-pondasi-perkuatan-tanah.html": "Perbandingan Jasa Pondasi & Perkuatan Tanah"  // TYPE: SUB1
+};
+const urlMappingPerbaikanJasaSaluranDrainaseBridgeFromSub2Sub1 = {
+  //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/p/perbandingan-jasa-saluran-drainase.html": "Jasa Saluran & Drainase"  // TYPE: SUB1
+};
+
 // ============================================================
 // 📁 JASA ALAT KONSTRUKSI (ENTITY: SEWA/RENTAL - BUKAN JASA)
 // ⚠️ PERHATIAN: Ini adalah ENTITY SEWA/RENTAL, BUKAN JASA
