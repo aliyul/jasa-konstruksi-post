@@ -301,14 +301,20 @@ const urlMappingFinishingFromPillarSub2 = {
 // 📁 JASA STRUKTUR KONSTRUKSI - SUB2 (LEVEL 2)
 // ============================================================
 
-const urlMappingStrukturFromPillarSub2 = {
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html": "Jasa Konstruksi Gedung dan Hunian",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-industri-dan-gudang.html": "Jasa Konstruksi Industri dan Gudang",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html": "Jasa Struktur Baja dan Rangka Ringan",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html": "Jasa Struktur Khusus",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-lapangan-olahraga.html": "Jasa Konstruksi Lapangan Olahraga",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html": "Jasa Konstruksi Modular dan Precast",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html": "Jasa Struktur Beton dan Pengecoran",  // TYPE: SUB2
+const urlMappingStrukturFromSub2Sub2= {
+"https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-gedung.html": "Daftar Jasa Konstruksi Gedung dan Hunian",
+
+"https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-industri.html": "Daftar Jasa Konstruksi Industri dan Gudang",
+
+"https://www.betonjayareadymix.com/p/daftar-jasa-struktur-baja.html": "Daftar Jasa Struktur Baja dan Rangka Ringan",
+
+"https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html": "Daftar Jasa Struktur Khusus",
+
+"https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-lapangan.html": "Daftar Jasa Konstruksi Lapangan Olahraga",
+
+"https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-modular.html": "Daftar Jasa Konstruksi Modular dan Precast",
+
+"https://www.betonjayareadymix.com/p/daftar-jasa-struktur-beton.html": "Daftar Jasa Struktur Beton dan Pengecoran"
 };
 
 // ============================================================
@@ -1259,7 +1265,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingPerawatanPerbaikanBangunanFromPillarSub2,
 		urlMappingRenovasiFromPillarSub2,
 		urlMappingFinishingFromPillarSub2,
-		urlMappingStrukturFromPillarSub2,
+		urlMappingStrukturFromSub2Sub2,
 		urlMappingPondasiFromPillarSub2,
 		urlMappingSaluranFromSub2MoneyPage,
 		urlMappingJalanFromSub2MoneyPage,
@@ -2564,7 +2570,7 @@ if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
        document.head.appendChild(script);
    }
 	
-if (urlMappingStrukturFromPillarSub2[cleanUrlJasaKons]) {
+if (urlMappingStrukturFromSub2Sub2[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaStrukturKonstruksi');
            // hapus elemen id DIV Lain
@@ -2613,46 +2619,19 @@ if (urlMappingStrukturFromPillarSub2[cleanUrlJasaKons]) {
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaStrukturKonstruksiLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingStrukturFromPillarSub2[cleanUrlJasaKons];
-    }
-   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingStrukturFromPillarSub2[cleanUrlJasaKons]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Struktur Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingStrukturFromPillarSub2[cleanUrlJasaKons],
-                   "item": cleanUrlJasaKons
-               }
-           ]
-       };
+        pageNameKonstruksiSub.textContent = urlMappingStrukturFromSub2Sub2[cleanUrlJasaKons];
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+	    generateBreadcrumbForMapping(
+        urlMappingStrukturFromSub2Sub2,
+        cleanUrlJasaKons,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html' }
+        ],
+        'JASA'
+    );
+    }
 	
 if (urlMappingFinishingFromPillarSub2[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
