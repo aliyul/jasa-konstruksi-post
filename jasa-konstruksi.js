@@ -282,7 +282,7 @@ const urlMappingSewaAlatKonstruksiRinganFromSub2MoneyPage = {
 // ============================================================
 
 const urlMappingPerbaikanInfrastrukturFromSub2MoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan.html": "Jasa Renovasi Perbaikan Jalan",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan.html": "Jasa Perbaikan Jalan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan.html": "Jasa Perbaikan Jembatan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase.html": "Jasa Perbaikan Drainase",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar.html": "Jasa Perbaikan Trotoar",  // TYPE: MONEY_PAGE
