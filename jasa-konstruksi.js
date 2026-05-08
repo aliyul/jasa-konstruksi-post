@@ -383,7 +383,7 @@ const urlMappingPengeboranFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-bor-tanah.html": "Jasa Bor Tanah",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html": "Jasa Bor Tembok",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html": "Jasa Bor Tembok"  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
@@ -418,7 +418,7 @@ const urlMappingJalanFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-pembangunan-infrastruktur-jalan.html": "Jasa Pembangunan Infrastruktur Jalan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-pemadatan-dan-persiapan-tanah-jalan.html": "Jasa Pemadatan dan Persiapan Tanah Jalan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html": "Jasa Perkerasan Jalan",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan.html": "Jasa Pengerasan Jalan",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan.html": "Jasa Pengerasan Jalan" // TYPE: MONEY_PAGE
 };
 
 // ============================================================
@@ -446,7 +446,7 @@ const urlMappingPematanganLahanFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-drainase-lahan.html": "Jasa Drainase Lahan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-geotekstil-lahan.html": "Jasa Geotekstil Lahan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-persiapan-pondasi-lahan.html": "Jasa Persiapan Pondasi Lahan",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-tebang-pohon.html": "Jasa Tebang Pohon",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-tebang-pohon.html": "Jasa Tebang Pohon" // TYPE: MONEY_PAGE
 };
 
 // ============================================================
@@ -463,7 +463,7 @@ const urlMappingUjiTanahFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-cpt.html": "Jasa CPT",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-lab-tanah.html": "Jasa Lab Tanah",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-boring-tanah.html": "Jasa Boring Tanah",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-uji-penetrasi.html": "Jasa Uji Penetrasi",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-uji-penetrasi.html": "Jasa Uji Penetrasi"  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
@@ -485,7 +485,7 @@ const urlMappingPerkuatanTanahLongsorFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-rumah.html": "Jasa Perkuatan Tanah Longsor Rumah",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-tebing-jalan.html": "Jasa Perkuatan Tebing Jalan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-longsor-perkebunan.html": "Jasa Perkuatan Longsor Perkebunan",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-drainase-anti-longsor.html": "Jasa Drainase Anti Longsor",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-drainase-anti-longsor.html": "Jasa Drainase Anti Longsor"  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
@@ -501,7 +501,7 @@ const urlMappingPembatasFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-pengamanan-area-proyek.html": "Jasa Pengamanan Area Proyek",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-rambu-dan-sistem-keamanan-visual.html": "Jasa Rambu dan Sistem Keamanan Visual",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-pengaman-sisi-jalan-infrastruktur.html": "Jasa Pengaman Sisi Jalan Infrastruktur",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html": "Jasa Pembuatan Pagar Dinding Pembatas",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html": "Jasa Pembuatan Pagar Dinding Pembatas"  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
@@ -520,7 +520,7 @@ const urlMappingJasaInstalasiListrikFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-pemasangan-panel-listrik.html": "Jasa Pemasangan Panel Listrik",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-keamanan-proteksi-listrik.html": "Jasa Keamanan & Proteksi Listrik",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-maintenance-perbaikan-listrik.html": "Jasa Maintenance & Perbaikan Listrik",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-konsultasi-listrik.html": "Jasa Konsultasi Listrik",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-konsultasi-listrik.html": "Jasa Konsultasi Listrik"  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
@@ -3052,8 +3052,8 @@ if (urlMappingJalanFromSub2MoneyPage[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 3,
-                   "name": "Jasa Jalan & Perkerasan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html"
+                   "name": "Daftar Jasa Jalan & Perkerasan",
+                   "item": "https://www.betonjayareadymix.com/p/daftar-jasa-jalan-perkerasan.html"
                },
 	       {
                    "@type": "ListItem",
@@ -3143,8 +3143,8 @@ if (urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 3,
-                   "name": "Jasa Pembatas & Pengaman",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
+                   "name": "Daftar Jasa Pembatas & Pengaman",
+                   "item": "https://www.betonjayareadymix.com/p/daftar-jasa-pembatas-pengaman.html"
                },
 	       {
                    "@type": "ListItem",
@@ -3235,8 +3235,8 @@ if (urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 3,
-                   "name": "Jasa Pematangan Lahan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pematangan-lahan.html"
+                   "name": "Daftar Jasa Pematangan Lahan",
+                   "item": "https://www.betonjayareadymix.com/p/daftar-jasa-pematangan-lahan.html"
                },
 	       {
                    "@type": "ListItem",
@@ -3327,8 +3327,8 @@ if (urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 3,
-                   "name": "Jasa Uji Tanah",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-uji-tanah.html"
+                   "name": "Daftar Jasa Uji Tanah",
+                   "item": "https://www.betonjayareadymix.com/p/daftar-jasa-uji-tanah.html"
                },
 	       {
                    "@type": "ListItem",
@@ -3419,8 +3419,8 @@ if (urlMappingPerkuatanTanahLongsorFromSub2MoneyPage[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 3,
-                   "name": "Jasa Perkuatan Tanah Longsor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html"
+                   "name": "Daftar Jasa Perkuatan Tanah Longsor",
+                   "item": "https://www.betonjayareadymix.com/p/daftar-jasa-perkuatan-tanah-longsor.html"
                },
 	       {
                    "@type": "ListItem",
@@ -3760,8 +3760,8 @@ if (urlMappingPengeboranFromSub2MoneyPage[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 3,
-                   "name": "Jasa Pengeboran",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
+                   "name": "Daftar Jasa Pengeboran",
+                   "item": "https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html"
                },
 	       {
                    "@type": "ListItem",
@@ -3951,8 +3951,8 @@ if (urlMappingJasaInstalasiListrikFromSub2MoneyPage[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 3,
-                   "name": "Jasa Instalasi Listrik",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik.html"
+                   "name": "Daftar Jasa Instalasi Listrik",
+                   "item": "https://www.betonjayareadymix.com/p/daftar-jasa-instalasi-listrik.html"
                },
 	       {
                    "@type": "ListItem",
