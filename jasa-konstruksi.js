@@ -301,20 +301,27 @@ const urlMappingFinishingFromSub2Sub2 = {
 // 📁 JASA STRUKTUR KONSTRUKSI - SUB2 (LEVEL 2)
 // ============================================================
 
-const urlMappingStrukturFromSub2Sub2= {
-"https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-gedung.html": "Daftar Jasa Konstruksi Gedung dan Hunian",
-
-"https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-industri.html": "Daftar Jasa Konstruksi Industri dan Gudang",
-
-"https://www.betonjayareadymix.com/p/daftar-jasa-struktur-baja.html": "Daftar Jasa Struktur Baja dan Rangka Ringan",
-
-"https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html": "Daftar Jasa Struktur Khusus",
-
-"https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-lapangan.html": "Daftar Jasa Konstruksi Lapangan Olahraga",
-
-"https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-modular.html": "Daftar Jasa Konstruksi Modular dan Precast",
-
-"https://www.betonjayareadymix.com/p/daftar-jasa-struktur-beton.html": "Daftar Jasa Struktur Beton dan Pengecoran"
+const urlMappingStrukturToMoneyPage = {
+  // Jasa Konstruksi Gedung
+  "https://www.betonjayareadymix.com/jasa-konstruksi-gedung-hunian.html": "Jasa Konstruksi Gedung dan Hunian Profesional",
+  
+  // Jasa Konstruksi Industri
+  "https://www.betonjayareadymix.com/jasa-konstruksi-industri-gudang.html": "Jasa Konstruksi Industri dan Gudang",
+  
+  // Jasa Struktur Baja
+  "https://www.betonjayareadymix.com/jasa-struktur-baja-ringan.html": "Jasa Struktur Baja dan Rangka Ringan Profesional",
+  
+  // Jasa Struktur Khusus
+  "https://www.betonjayareadymix.com/jasa-struktur-khusus.html": "Jasa Struktur Khusus untuk Proyek Kompleks",
+  
+  // Jasa Konstruksi Lapangan Olahraga
+  "https://www.betonjayareadymix.com/jasa-konstruksi-lapangan-olahraga.html": "Jasa Konstruksi Lapangan Olahraga Profesional",
+  
+  // Jasa Konstruksi Modular
+  "https://www.betonjayareadymix.com/jasa-konstruksi-modular-precast.html": "Jasa Konstruksi Modular dan Precast",
+  
+  // Jasa Struktur Beton
+  "https://www.betonjayareadymix.com/jasa-struktur-beton-pengecoran.html": "Jasa Struktur Beton dan Pengecoran Profesional"
 };
 
 // ============================================================
