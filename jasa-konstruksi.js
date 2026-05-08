@@ -292,9 +292,9 @@ const urlMappingPerbaikanInfrastrukturFromSub2MoneyPage = {
 // 📁 JASA FINISHING - SUB2 (LEVEL 2)
 // ============================================================
 
-const urlMappingFinishingFromSub2Sub2 = {
-  "https://www.betonjayareadymix.com/p/daftar-jasa-finishing-bangunan.html": "Daftar Jasa Finishing Bangunan",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/daftar-jasa-finishing-infrastruktur.html": "Daftar Jasa Finishing Infrastruktur"  // TYPE: SUB2
+const urlMappingFinishingFromSub1MoneyPage = {
+  "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html": "Jasa Finishing Bangunan",  
+  "https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html": "Jasa Finishing Infrastruktur"
 };
 
 // ============================================================
@@ -1262,7 +1262,7 @@ document.addEventListener("DOMContentLoaded", function() {
         urlMappingPerbaikanInfrastrukturFromSub2MoneyPage,
 		urlMappingPerawatanPerbaikanBangunanFromSub2Sub2,
 		urlMappingRenovasiFromPillarSub2,
-		urlMappingFinishingFromSub2Sub2,
+		urlMappingFinishingFromSub1MoneyPage,
 		urlMappingStrukturFromSub1MoneyPage,
 		urlMappingPondasiFromPillarSub2,
 		urlMappingSaluranFromSub2MoneyPage,
@@ -2632,7 +2632,7 @@ if (urlMappingStrukturFromSub1MoneyPage[cleanUrlJasaKons]) {
     );
     }
 	
-if (urlMappingFinishingFromSub2Sub2[cleanUrlJasaKons]) {
+if (urlMappingFinishingFromSub1MoneyPage[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaFinishing');
            // hapus elemen id DIV Lain
@@ -2681,15 +2681,16 @@ if (urlMappingFinishingFromSub2Sub2[cleanUrlJasaKons]) {
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaFinishingLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingFinishingFromSub2Sub2[cleanUrlJasaKons];
+        pageNameKonstruksiSub.textContent = urlMappingFinishingFromSub1MoneyPage[cleanUrlJasaKons];
 
 	    generateBreadcrumbForMapping(
-        urlMappingFinishingFromSub2Sub2,
+        urlMappingFinishingFromSub1MoneyPage,
         cleanUrlJasaKons,
         [
             { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' }
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'}
         ],
         'JASA'
     );
