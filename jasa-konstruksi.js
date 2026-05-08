@@ -81,7 +81,7 @@ const urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage = {
 
 const urlMappingStrukturBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-membangun-bangunan.html": "Panduan Membangun Bangunan"  // TYPE: SUB1
-   "https://www.betonjayareadymix.com/p/perbandingan-jasa-jalan-perkerasan.html": "Perbandingan Jasa Jalan & Perkerasan"  // TYPE: SUB1
+   "https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-konstruksi.html": "Perbandingan Jasa Struktur Konstruksi"  // TYPE: SUB1
 };
 
 const urlMappingRenovasiBridgeFromSub2Sub1 = {
@@ -301,27 +301,15 @@ const urlMappingFinishingFromSub2Sub2 = {
 // 📁 JASA STRUKTUR KONSTRUKSI - SUB2 (LEVEL 2)
 // ============================================================
 
-const urlMappingStrukturToMoneyPage = {
-  // Jasa Konstruksi Gedung
-  "https://www.betonjayareadymix.com/jasa-konstruksi-gedung-hunian.html": "Jasa Konstruksi Gedung dan Hunian Profesional",
-  
-  // Jasa Konstruksi Industri
-  "https://www.betonjayareadymix.com/jasa-konstruksi-industri-gudang.html": "Jasa Konstruksi Industri dan Gudang",
-  
-  // Jasa Struktur Baja
-  "https://www.betonjayareadymix.com/jasa-struktur-baja-ringan.html": "Jasa Struktur Baja dan Rangka Ringan Profesional",
-  
-  // Jasa Struktur Khusus
-  "https://www.betonjayareadymix.com/jasa-struktur-khusus.html": "Jasa Struktur Khusus untuk Proyek Kompleks",
-  
-  // Jasa Konstruksi Lapangan Olahraga
-  "https://www.betonjayareadymix.com/jasa-konstruksi-lapangan-olahraga.html": "Jasa Konstruksi Lapangan Olahraga Profesional",
-  
-  // Jasa Konstruksi Modular
-  "https://www.betonjayareadymix.com/jasa-konstruksi-modular-precast.html": "Jasa Konstruksi Modular dan Precast",
-  
-  // Jasa Struktur Beton
-  "https://www.betonjayareadymix.com/jasa-struktur-beton-pengecoran.html": "Jasa Struktur Beton dan Pengecoran Profesional"
+const urlMappingStrukturFromSub1MoneyPage = {
+   "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html": "Jasa Konstruksi Gedung dan Hunian", 
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-industri-dan-gudang.html": "Jasa Konstruksi Industri dan Gudang",  
+  "https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html": "Jasa Struktur Baja dan Rangka Ringan", 
+  "https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html": "Jasa Struktur Khusus", 
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-lapangan-olahraga.html": "Jasa Konstruksi Lapangan Olahraga", 
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html": "Jasa Konstruksi Modular dan Precast", 
+  "https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html": "Jasa Struktur Beton dan Pengecoran"
+	
 };
 
 // ============================================================
@@ -1275,7 +1263,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingPerawatanPerbaikanBangunanFromSub2Sub2,
 		urlMappingRenovasiFromPillarSub2,
 		urlMappingFinishingFromSub2Sub2,
-		urlMappingStrukturFromSub2Sub2,
+		urlMappingStrukturFromSub1MoneyPage,
 		urlMappingPondasiFromPillarSub2,
 		urlMappingSaluranFromSub2MoneyPage,
 		urlMappingJalanFromSub2MoneyPage,
@@ -2580,7 +2568,7 @@ if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
        document.head.appendChild(script);
    }
 	
-if (urlMappingStrukturFromSub2Sub2[cleanUrlJasaKons]) {
+if (urlMappingStrukturFromSub1MoneyPage[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaStrukturKonstruksi');
            // hapus elemen id DIV Lain
@@ -2629,15 +2617,16 @@ if (urlMappingStrukturFromSub2Sub2[cleanUrlJasaKons]) {
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaStrukturKonstruksiLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingStrukturFromSub2Sub2[cleanUrlJasaKons];
+        pageNameKonstruksiSub.textContent = urlMappingStrukturFromSub1MoneyPage[cleanUrlJasaKons];
 
 	    generateBreadcrumbForMapping(
-        urlMappingStrukturFromSub2Sub2,
+        urlMappingStrukturFromSub1MoneyPage,
         cleanUrlJasaKons,
         [
             { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html' }
+            { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html'},
+            { name: 'Perbandingan Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-struktur-konstruksi.html'}
         ],
         'JASA'
     );
