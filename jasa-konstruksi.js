@@ -118,9 +118,10 @@ const urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1 = {
 
 // [SUB2] - KATEGORI SEWA SPESIFIK (ENTITY SEWA/RENTAL)
 const urlMappingSewaAlatFromPillarSub2 = {
-  "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html": "Sewa Alat Proyek",  // TYPE: SUB2 PARENT
-  "https://www.betonjayareadymix.com/p/sewa-alat-berat.html": "Sewa Alat Berat",  // TYPE: SUB2 PARENT
-  "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi-ringan.html": "Sewa Alat Konstruksi Ringan",  // TYPE: SUB2 PARENT
+  "https://www.betonjayareadymix.com/p/daftar-sewa-alat-proyek.html": "Daftar Sewa Alat Proyek",  // TYPE: SUB2 PARENT
+  "https://www.betonjayareadymix.com/p/daftar-sewa-alat-berat.html": "Daftar Sewa Alat Berat",  // TYPE: SUB2 PARENT
+  "https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html": "Daftar Sewa Alat Ringan",  // TYPE: SUB2 PARENT
+  "https://www.betonjayareadymix.com/p/daftar-sewa-alat-pendukung.html": "Daftar Sewa Alat Pendukung"  // TYPE: SUB2 PARENT
 };
 const urlMappingSewaAlatProyekFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html": "Perbandingan Sewa Alat Proyek"  // TYPE: SUB1 PARENT
