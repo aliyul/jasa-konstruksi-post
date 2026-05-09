@@ -40,7 +40,7 @@ const urlMappingJasaStrukturBajaRangkaRinganFromPillarSub2 = {
 // Parent: Jasa Rangka Atap Baja Ringan (SUB2)
 // ============================================================
 
-const urlMappingJasaRangkaAtapBajaRinganFromSub2MoneyPage = {
+const urlMappingStrukturPostFromSub1MoneyPage = {
   // ============================================================
   // [MONEY_PAGE] - JASA PASANG ATAP & KANOPI BAJA RINGAN
   // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
@@ -48,13 +48,6 @@ const urlMappingJasaRangkaAtapBajaRinganFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-atap-baja-ringan.html": "Jasa Pasang Atap Baja Ringan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/09/jasa-atap-baja-ringan.html": "Jasa Atap Baja Ringan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/09/tukang-baja-ringan.html": "Tukang Baja Ringan",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_CHILD] - JASA PASANG KANOPI BAJA RINGAN PER LOKASI
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-kanopi-baja-ringan-terdekat.html": "Jasa Pasang Kanopi Baja Ringan Terdekat",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-baja-ringan-terdekat.html": "Jasa Pasang Baja Ringan Terdekat",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/tukang-baja-ringan-terdekat.html": "Tukang Baja Ringan Terdekat",  // TYPE: MONEY_CHILD
   
   // ============================================================
   // [MONEY_PAGE] - HARGA JASA PASANG BAJA RINGAN (NASIONAL)
@@ -71,17 +64,27 @@ const urlMappingJasaRangkaAtapBajaRinganFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/2019/04/harga-borongan-baja-ringan.html": "Harga Borongan Baja Ringan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/04/borongan-baja-ringan.html": "Borongan Baja Ringan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/04/harga-borongan-baja-ringan-plus-material.html": "Harga Borongan Baja Ringan Plus Material",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/tukang-baja-ringan-murah.html": "Tukang Baja Ringan Murah",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/tukang-baja-ringan-murah.html": "Tukang Baja Ringan Murah"  // TYPE: MONEY_PAGE
+};
+const urlMappingJasaRangkaAtapBajaRinganFromSub2MoneyPageMoneyChild = {
+  // ============================================================
+  // [MONEY_PAGE] - JASA PASANG ATAP & KANOPI BAJA RINGAN
   
+  // ============================================================
+  // [MONEY_CHILD] - JASA PASANG KANOPI BAJA RINGAN PER LOKASI
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-kanopi-baja-ringan-terdekat.html": "Jasa Pasang Kanopi Baja Ringan Terdekat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-baja-ringan-terdekat.html": "Jasa Pasang Baja Ringan Terdekat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/09/tukang-baja-ringan-terdekat.html": "Tukang Baja Ringan Terdekat",  // TYPE: MONEY_CHILD
+
   // ============================================================
   // [MONEY_CHILD] - HARGA BORONGAN BAJA RINGAN PER LOKASI
   // ============================================================
   "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-bandung.html": "Harga Borongan Baja Ringan Plus Material Bandung",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-jakarta.html": "Harga Borongan Baja Ringan Plus Material Jakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-depok.html": "Harga Borongan Baja Ringan Plus Material Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-kota-bekasi.html": "Harga Borongan Baja Ringan Plus Material Kota Bekasi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-kota-bekasi.html": "Harga Borongan Baja Ringan Plus Material Kota Bekasi"  // TYPE: MONEY_CHILD
 };
-
 // ============================================================
 // 📁 JASA KONSTRUKSI BAJA KONVENSIONAL - MONEY PAGE
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE
@@ -1307,7 +1310,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingJasaRangkaAtapBajaRinganFromSub2MoneyPage,
+		urlMappingStrukturPostFromSub1MoneyPage,
 		urlMappingJasaKonstruksiBajaKonvensionalFromSub2MoneyPage,
 		urlMappingJasaKanopiBajadanBesiFromSub2MoneyPage,
 		urlMappingJasaStrukturBajaGudangFromSub2MoneyPage,
@@ -1562,7 +1565,7 @@ if (!JasaKonsStrukturPost) {
 
 
 //SUB JasaStrukturBajadanRangkaRinganPost
-if (urlMappingJasaRangkaAtapBajaRinganFromSub2MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
+if (urlMappingStrukturPostFromSub1MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
         restoreCondition('JasaKonsStrukturPost');
         restoreCondition('JasaStrukturBajadanRangkaRinganPost');
         restoreCondition('JasaRangkaAtapBajaRinganPost');
@@ -1657,10 +1660,22 @@ JasaStrukturBetondanPengecoranPost
         JasaStrukturBajadanRangkaRinganPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaRangkaAtapBajaRinganPostLink
         JasaRangkaAtapBajaRinganPostLink.style.visibility = 'visible';
-        pageNameJasaKonsStrukturPost.textContent = urlMappingJasaRangkaAtapBajaRinganFromSub2MoneyPage[cleanUrlJasaJasaKonsStrukturPost];
+        pageNameJasaKonsStrukturPost.textContent = urlMappingStrukturPostFromSub1MoneyPage[cleanUrlJasaJasaKonsStrukturPost];
+	   generateBreadcrumbForMapping(
+        urlMappingStrukturPostFromSub1MoneyPage,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
+            { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html'},
+            { name: 'Perbandingan Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-konstruksi.html'}
+        ],
+        'JASA'
+    );
     }
+	/*
 // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaRangkaAtapBajaRinganFromSub2MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
+   if (urlMappingStrukturPostFromSub1MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -1698,7 +1713,7 @@ JasaStrukturBetondanPengecoranPost
                {
                    "@type": "ListItem",
                    "position": 6,
-                   "name": urlMappingJasaRangkaAtapBajaRinganFromSub2MoneyPage[cleanUrlJasaJasaKonsStrukturPost],
+                   "name": urlMappingStrukturPostFromSub1MoneyPage[cleanUrlJasaJasaKonsStrukturPost],
                    "item": cleanUrlJasaJasaKonsStrukturPost
                }
            ]
@@ -1708,7 +1723,7 @@ JasaStrukturBetondanPengecoranPost
        script.type = 'application/ld+json';
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
-   }
+   }*/
 	
 if (urlMappingJasaKonstruksiBajaKonvensionalFromSub2MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
         restoreCondition('JasaKonsStrukturPost');
