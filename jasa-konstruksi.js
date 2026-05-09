@@ -2813,7 +2813,7 @@ if (urlMappingFinishingFromSub1MoneyPage[cleanUrlJasaKons]) {
         [
             { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'}
         ],
         'JASA'
@@ -3588,46 +3588,19 @@ if (urlMappingPerbaikanInfrastrukturFromSub2MoneyPage[cleanUrlJasaKons]) {
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaPerbaikanInfrastrukturLink.style.visibility = 'visible';
         pageNameKonstruksiSub.textContent = urlMappingPerbaikanInfrastrukturFromSub2MoneyPage[cleanUrlJasaKons];
-    }
- 
-  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingPerbaikanInfrastrukturFromSub2MoneyPage[cleanUrlJasaKons]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perbaikan Infrastruktur",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingPerbaikanInfrastrukturFromSub2MoneyPage[cleanUrlJasaKons],
-                   "item": cleanUrlJasaKons
-               }
-           ]
-       };
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+	    generateBreadcrumbForMapping(
+        urlMappingPerbaikanInfrastrukturFromSub2MoneyPage,
+        cleanUrlJasaKons,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html'},
+            { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html'}
+        ],
+        'JASA'
+    );
+    }
 	
 if (urlMappingPengeboranFromSub1MoneyPage[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
