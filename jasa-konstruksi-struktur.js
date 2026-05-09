@@ -16,6 +16,7 @@
 // ============================================================
 
 const urlMappingStrukturGedungHunianFromSub2MoneyPage = {
+/*hapus saja gabung money page ke sub1 struktur
   // ============================================================
   // [MONEY_PAGE] - Jasa Konstruksi Rumah Tinggal
   // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
@@ -57,6 +58,7 @@ const urlMappingStrukturGedungHunianFromSub2MoneyPage = {
   // [MONEY_PAGE] - Jasa Konstruksi Gedung Rumah Sakit
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-rs.html": "Jasa Konstruksi Gedung Rumah Sakit",  // TYPE: MONEY_PAGE
+  */
 };
 
 // ============================================================
@@ -64,6 +66,7 @@ const urlMappingStrukturGedungHunianFromSub2MoneyPage = {
 // ============================================================
 
 const urlMappingStrukturIndustriGudangFromSub2MoneyPage = {
+/*
   // ============================================================
   // [MONEY_PAGE] - Jasa Konstruksi Gudang Logistik
   // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
@@ -90,6 +93,7 @@ const urlMappingStrukturIndustriGudangFromSub2MoneyPage = {
   // [MONEY_PAGE] - Jasa Konstruksi Workshop
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-workshop.html": "Jasa Konstruksi Workshop",  // TYPE: MONEY_PAGE
+  */
 };
 
 // ============================================================
@@ -97,6 +101,7 @@ const urlMappingStrukturIndustriGudangFromSub2MoneyPage = {
 // ============================================================
 
 const urlMappingStrukturBajaRangkaFromSub2MoneyPage = {
+/*
   // ============================================================
   // [MONEY_PAGE] - Jasa Rangka Atap Baja Ringan
   // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
@@ -118,6 +123,7 @@ const urlMappingStrukturBajaRangkaFromSub2MoneyPage = {
   // [MONEY_PAGE] - Jasa Struktur Baja Gudang
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-struktur-baja-gudang.html": "Jasa Struktur Baja Gudang",  // TYPE: MONEY_PAGE
+  */
 };
 
 // ============================================================
@@ -125,6 +131,7 @@ const urlMappingStrukturBajaRangkaFromSub2MoneyPage = {
 // ============================================================
 
 const urlMappingStrukturKhususFromSub2MoneyPage = {
+/*hapus saja gabung money page ke sub1 struktur
   // ============================================================
   // [MONEY_PAGE] - Jasa Pembuatan Kolam Renang
   // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
@@ -156,6 +163,7 @@ const urlMappingStrukturKhususFromSub2MoneyPage = {
   // [MONEY_PAGE] - Jasa Konstruksi Menara Air
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-menara-air.html": "Jasa Konstruksi Menara Air",  // TYPE: MONEY_PAGE
+  */
 };
 
 // ============================================================
@@ -163,6 +171,7 @@ const urlMappingStrukturKhususFromSub2MoneyPage = {
 // ============================================================
 
 const urlMappingStrukturLapanganFromSub2MoneyPage = {
+/*
   // ============================================================
   // [MONEY_PAGE] - Jasa Pembuatan Lapangan Futsal
   // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
@@ -199,6 +208,7 @@ const urlMappingStrukturLapanganFromSub2MoneyPage = {
   // [MONEY_PAGE] - Jasa Pembuatan Lapangan Serbaguna
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-serbaguna.html": "Jasa Pembuatan Lapangan Serbaguna",  // TYPE: MONEY_PAGE
+  */
 };
 
 // ============================================================
@@ -206,6 +216,7 @@ const urlMappingStrukturLapanganFromSub2MoneyPage = {
 // ============================================================
 
 const urlMappingStrukturModularPrecastFromSub2MoneyPage = {
+	/*
   // ============================================================
   // [MONEY_PAGE] - Jasa Panel Beton Precast
   // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
@@ -237,6 +248,7 @@ const urlMappingStrukturModularPrecastFromSub2MoneyPage = {
   // [MONEY_PAGE] - Jasa Rumah Modular Prefab
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-rumah-modular-prefab.html": "Jasa Rumah Modular Prefab",  // TYPE: MONEY_PAGE
+  */
 };
 
 // ============================================================
@@ -244,6 +256,7 @@ const urlMappingStrukturModularPrecastFromSub2MoneyPage = {
 // ============================================================
 
 const urlMappingStrukturBetonPengecoranFromSub2MoneyPage = {
+	/*
   // ============================================================
   // [MONEY_PAGE] - Jasa Cor Beton
   // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
@@ -270,6 +283,7 @@ const urlMappingStrukturBetonPengecoranFromSub2MoneyPage = {
   // [MONEY_PAGE] - Jasa Pengecoran Kolom Beton
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-pengecoran-kolom-beton.html": "Jasa Pengecoran Kolom Beton",  // TYPE: MONEY_PAGE
+  */
 };
 
 // ============================================================
