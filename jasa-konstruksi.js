@@ -2957,9 +2957,9 @@ if (urlMappingStrukturFromSub1MoneyPage[cleanUrlJasaKons]) {
         cleanUrlJasaKons,
         [
             { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
             { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html'},
-            { name: 'Perbandingan Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-struktur-konstruksi.html'}
+            { name: 'Perbandingan Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-konstruksi.html'}
         ],
         'JASA'
     );
