@@ -302,13 +302,222 @@ const urlMappingFinishingFromSub1MoneyPage = {
 // ============================================================
 
 const urlMappingStrukturFromSub1MoneyPage = {
-   "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html": "Jasa Konstruksi Gedung dan Hunian", 
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-industri-dan-gudang.html": "Jasa Konstruksi Industri dan Gudang",  
+   "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html": "Jasa Konstruksi Gedung dan Hunian",
+	  // Breadcrumb: Home > Jasa Struktur Konstruksi > Jasa Konstruksi Gedung & Hunian > Jasa Konstruksi Rumah Tinggal (4 level)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah-tinggal.html": "Jasa Konstruksi Rumah Tinggal",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Konstruksi Ruko dan Kios
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-ruko-dan-kios.html": "Jasa Konstruksi Ruko dan Kios",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Konstruksi Villa
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-villa.html": "Jasa Konstruksi Villa",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Konstruksi Apartemen
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-apartemen.html": "Jasa Konstruksi Apartemen",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Konstruksi Hotel
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-hotel.html": "Jasa Konstruksi Hotel",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Konstruksi Perkantoran
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-perkantoran.html": "Jasa Konstruksi Perkantoran",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Konstruksi Gedung Sekolah
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-sekolah.html": "Jasa Konstruksi Gedung Sekolah",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Konstruksi Gedung Rumah Sakit
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-rs.html": "Jasa Konstruksi Gedung Rumah Sakit",  // TYPE: MONEY_PAGE
+	
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-industri-dan-gudang.html": "Jasa Konstruksi Industri dan Gudang",
+  // [MONEY_PAGE] - Jasa Konstruksi Gudang Logistik
+  // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
+  // Breadcrumb: Home > Jasa Struktur Konstruksi > Jasa Konstruksi Industri & Gudang > Jasa Konstruksi Gudang Logistik (4 level)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gudang-logistik.html": "Jasa Konstruksi Gudang Logistik",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Konstruksi Pabrik
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-pabrik.html": "Jasa Konstruksi Pabrik",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Konstruksi Cold Storage
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-cold-storage.html": "Jasa Konstruksi Cold Storage",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Konstruksi Bengkel
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-bengkel.html": "Jasa Konstruksi Bengkel",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Konstruksi Workshop
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-workshop.html": "Jasa Konstruksi Workshop",  // TYPE: MONEY_PAGE
+	
   "https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html": "Jasa Struktur Baja dan Rangka Ringan", 
+   // [MONEY_PAGE] - Jasa Rangka Atap Baja Ringan
+  // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
+  // Breadcrumb: Home > Jasa Struktur Konstruksi > Jasa Struktur Baja & Rangka Ringan > Jasa Rangka Atap Baja Ringan (4 level)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-rangka-atap-baja-ringan.html": "Jasa Rangka Atap Baja Ringan",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Konstruksi Baja Konvensional
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-konvensional.html": "Jasa Konstruksi Baja Konvensional",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Kanopi Baja dan Besi
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-kanopi-baja-dan-besi.html": "Jasa Kanopi Baja dan Besi",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Struktur Baja Gudang
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-struktur-baja-gudang.html": "Jasa Struktur Baja Gudang",  // TYPE: MONEY_PAGE
+	
   "https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html": "Jasa Struktur Khusus", 
+   // [MONEY_PAGE] - Jasa Pembuatan Kolam Renang
+  // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
+  // Breadcrumb: Home > Jasa Struktur Konstruksi > Jasa Struktur Khusus > Jasa Pembuatan Kolam Renang (4 level)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html": "Jasa Pembuatan Kolam Renang",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Pembuatan Kolam Ikan Koi
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-ikan-koi.html": "Jasa Pembuatan Kolam Ikan Koi",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Septic Tank Beton
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-septic-tank-beton.html": "Jasa Septic Tank Beton",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Pembuatan Tangki Air
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-tangki-air.html": "Jasa Pembuatan Tangki Air",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Pembuatan Bak Penampungan
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-bak-penampungan.html": "Jasa Pembuatan Bak Penampungan",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Konstruksi Menara Air
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-menara-air.html": "Jasa Konstruksi Menara Air",  // TYPE: MONEY_PAGE
+	
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-lapangan-olahraga.html": "Jasa Konstruksi Lapangan Olahraga", 
+   // [MONEY_PAGE] - Jasa Pembuatan Lapangan Futsal
+  // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
+  // Breadcrumb: Home > Jasa Struktur Konstruksi > Jasa Konstruksi Lapangan Olahraga > Jasa Pembuatan Lapangan Futsal (4 level)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-futsal.html": "Jasa Pembuatan Lapangan Futsal",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Pembuatan Lapangan Basket
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-basket.html": "Jasa Pembuatan Lapangan Basket",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Pembuatan Lapangan Sepakbola
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-sepakbola.html": "Jasa Pembuatan Lapangan Sepakbola",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Pembuatan Lapangan Voli
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-voli.html": "Jasa Pembuatan Lapangan Voli",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Pembuatan Lapangan Tenis
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-tenis.html": "Jasa Pembuatan Lapangan Tenis",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Pembuatan Lapangan Badminton
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-badminton.html": "Jasa Pembuatan Lapangan Badminton",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Pembuatan Lapangan Serbaguna
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-serbaguna.html": "Jasa Pembuatan Lapangan Serbaguna",  // TYPE: MONEY_PAGE
+	
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html": "Jasa Konstruksi Modular dan Precast", 
-  "https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html": "Jasa Struktur Beton dan Pengecoran"
+   // [MONEY_PAGE] - Jasa Panel Beton Precast
+  // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
+  // Breadcrumb: Home > Jasa Struktur Konstruksi > Jasa Konstruksi Modular & Precast > Jasa Panel Beton Precast (4 level)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-panel-beton-precast.html": "Jasa Panel Beton Precast",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Dinding Precast Bangunan
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-dinding-precast-bangunan.html": "Jasa Dinding Precast Bangunan",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Tangga Beton Precast
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-tangga-beton-precast.html": "Jasa Tangga Beton Precast",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Balok dan Sloof Precast
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-balok-dan-sloof-precast.html": "Jasa Balok dan Sloof Precast",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Toilet Modular Prefab
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-toilet-modular-prefab.html": "Jasa Toilet Modular Prefab",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Rumah Modular Prefab
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-rumah-modular-prefab.html": "Jasa Rumah Modular Prefab",  // TYPE: MONEY_PAGE
+	
+  "https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html": "Jasa Struktur Beton dan Pengecoran",
+   // [MONEY_PAGE] - Jasa Cor Beton
+  // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
+  // Breadcrumb: Home > Jasa Struktur Konstruksi > Jasa Struktur Beton & Pengecoran > Jasa Cor Beton (4 level)
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-cor-beton.html": "Jasa Cor Beton",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Pengecoran Lantai Dak
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-dak.html": "Jasa Pengecoran Lantai Dak",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Pengecoran Lantai Gudang
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-gudang.html": "Jasa Pengecoran Lantai Gudang",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Bekisting dan Pembesian
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-bekisting-dan-pembesian.html": "Jasa Bekisting dan Pembesian",  // TYPE: MONEY_PAGE
+  
+  // ============================================================
+  // [MONEY_PAGE] - Jasa Pengecoran Kolom Beton
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-pengecoran-kolom-beton.html": "Jasa Pengecoran Kolom Beton"  // TYPE: MONEY_PAGE
 	
 };
 
