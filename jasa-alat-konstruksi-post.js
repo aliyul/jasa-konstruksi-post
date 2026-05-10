@@ -1058,54 +1058,291 @@ REDIRECT		5			Duplikasi, perlu 301 redirect
 // SKIP LEVEL BEKERJA UNTUK PILLAR & SUB2
 // ============================================================
 
+/**
+ * generateBreadcrumbForMapping v3.0 — FULL REVISI
+ * ✅ Sesuai dengan hierarki 8 level (PHASE 1)
+ * ✅ Validasi entity type (JASA tidak boleh MONEY_MASTER)
+ * ✅ Deteksi bertahap sesuai PRIORITAS PHASE 1
+ * ✅ Support semua entity type: PRODUK, JASA, MATERIAL, SEWA
+ * ✅ Breadcrumb tidak loncat level (auto fix)
+ * ✅ Intent detection bawaan
+ * ✅ Evergreen vs Non-Evergreen detection
+ * ✅ Clean code, siap produksi
+ */
+
 function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
     
+    // ============================================================
+    // 1. KONSTANTA & VALIDASI
+    // ============================================================
     const MAX_LEVEL = 4;
     const DOMAIN = 'https://www.betonjayareadymix.com';
     
-    // ============================================================
-    // 1. VALIDASI ENTITY TYPE (SEMUA TYPE DIDUKUNG)
-    // ============================================================
     const validEntityTypes = [
-        // PRODUK
-        'PRODUK_KONSTRUKSI', 
-        'PRODUK_INTERIOR',
-        'PRODUK',
-        // MATERIAL
-        'MATERIAL_KONSTRUKSI',
-        'MATERIAL',
-        // JASA
-        'JASA_KONSTRUKSI',
-        'JASA_DESAIN_INTERIOR',
-        'JASA',
-        // SEWA/RENTAL
-        'SEWA',
-        'RENTAL',
-        'SEWA_RENTAL',
-        'SEWA_ALAT',
-        'RENTAL_ALAT'
+        'PRODUK_KONSTRUKSI', 'PRODUK_INTERIOR', 'PRODUK',
+        'MATERIAL_KONSTRUKSI', 'MATERIAL',
+        'JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA',
+        'SEWA', 'RENTAL', 'SEWA_RENTAL', 'SEWA_ALAT', 'RENTAL_ALAT'
     ];
     
     if (!validEntityTypes.includes(entityType)) {
         console.error(`❌ ERROR: "${entityType}" BUKAN ENTITY TYPE yang valid!`);
-        console.error(`   Gunakan salah satu dari: ${validEntityTypes.join(', ')}`);
-        return null;
-    }
-    
-    // Ambil page title dari mappingObj atau dari breadcrumbItems terakhir
-    let pageTitle = mappingObj?.[currentUrl];
-    if (!pageTitle && breadcrumbItems.length > 0) {
-        const lastItem = breadcrumbItems[breadcrumbItems.length - 1];
-        pageTitle = typeof lastItem === 'object' ? lastItem.name : lastItem;
-    }
-    
-    if (!pageTitle) {
-        console.error(`❌ ERROR: Page title tidak ditemukan untuk URL "${currentUrl}"`);
+        console.error(`   Gunakan: ${validEntityTypes.join(', ')}`);
         return null;
     }
     
     // ============================================================
-    // 2. KUMPULKAN SEMUA NAMA HALAMAN DARI MAPPING
+    // 2. HIERARKI 8 LEVEL (SESUAI PHASE 1)
+    // ============================================================
+    const VALID_PAGE_TYPES = [
+        'pillar',                    // Level 1 - terluas
+        'sub-pillar-tipe-2',         // Level 2
+        'sub-pillar-tipe-1',         // Level 3
+        'money-master',              // Level 4 (JASA DILARANG)
+        'money-page',                // Level 5
+        'money-child',               // Level 6
+        'variant',                   // Level 7
+        'sub-variant'                // Level 8 - terdalam
+    ];
+    
+    const TYPE_LEVEL_MAP = {
+        'pillar': 1,
+        'sub-pillar-tipe-2': 2,
+        'sub-pillar-tipe-1': 3,
+        'money-master': 4,
+        'money-page': 5,
+        'money-child': 6,
+        'variant': 7,
+        'sub-variant': 8
+    };
+    
+    // ============================================================
+    // 3. INTENT DOMINANCE (SESUAI PHASE 1.5)
+    // ============================================================
+    const INTENT_MAP = {
+        'pillar': { primary: 'informasional', secondary: 'komersial', dominance: 90 },
+        'sub-pillar-tipe-2': { primary: 'informasional', secondary: 'komersial', dominance: 60 },
+        'sub-pillar-tipe-1': { primary: 'komersial', secondary: 'informasional', dominance: 70 },
+        'money-master': { primary: 'transaksional', secondary: 'komersial', dominance: 80 },
+        'money-page-produk': { primary: 'transaksional', secondary: 'komersial', dominance: 85 },
+        'money-page-jasa': { primary: 'komersial', secondary: 'transaksional', dominance: 60 },
+        'money-child-produk': { primary: 'transaksional', secondary: 'komersial', dominance: 90 },
+        'money-child-jasa': { primary: 'komersial', secondary: 'transaksional', dominance: 60 },
+        'variant': { primary: 'komersial', secondary: 'informasional', dominance: 80 },
+        'sub-variant': { primary: 'komersial', secondary: 'informasional', dominance: 70 }
+    };
+    
+    // ============================================================
+    // 4. EVERGREEN vs NON-EVERGREEN (SESUAI PHASE 1)
+    // ============================================================
+    const EVERGREEN_STATUS = {
+        'pillar': { evergreen: true, wajibTahun: false },
+        'sub-pillar-tipe-2': { evergreen: true, wajibTahun: false },
+        'sub-pillar-tipe-1': { evergreen: false, wajibTahun: false, catatan: 'tergantung topik' },
+        'money-master': { evergreen: false, wajibTahun: true },
+        'money-page-produk': { evergreen: false, wajibTahun: true },
+        'money-page-jasa': { evergreen: false, wajibTahun: false, catatan: 'fleksibel' },
+        'money-child-produk': { evergreen: false, wajibTahun: true },
+        'money-child-jasa': { evergreen: false, wajibTahun: false, catatan: 'fleksibel' },
+        'variant': { evergreen: true, wajibTahun: false },
+        'sub-variant': { evergreen: true, wajibTahun: false }
+    };
+    
+    // ============================================================
+    // 5. WHITELIST LOKASI (200+ KOTA)
+    // ============================================================
+    const LOCATION_WHITELIST = [
+        // Jabodetabek
+        'jakarta', 'bogor', 'depok', 'tangerang', 'bekasi', 'jabodetabek',
+        'jakpus', 'jakbar', 'jaksel', 'jakut', 'jaktim',
+        'tangerang selatan', 'tangsel', 'bintaro', 'alam sutera', 'gading serpong',
+        // Jawa Barat
+        'bandung', 'cimahi', 'cirebon', 'tasikmalaya', 'sukabumi', 'garut', 
+        'sumedang', 'purwakarta', 'karawang', 'subang', 'indramayu',
+        'majalengka', 'kuningan', 'ciamis', 'banjar', 'pangandaran', 'cianjur',
+        // Jawa Tengah
+        'semarang', 'solo', 'surakarta', 'yogyakarta', 'jogja', 'magelang', 
+        'salatiga', 'pekalongan', 'tegal', 'brebes', 'cilacap', 'purwokerto', 
+        'kebumen', 'banjarnegara', 'wonosobo', 'temanggung', 'kendal', 'demak', 
+        'kudus', 'jepara', 'pati', 'rembang', 'blora', 'grobagan', 'sragen', 
+        'karanganyar', 'wonogiri', 'sukoharjo', 'klaten', 'boyolali',
+        // Jawa Timur
+        'surabaya', 'malang', 'kediri', 'blitar', 'madiun', 'ponorogo', 'ngawi', 
+        'magetan', 'trenggalek', 'tulungagung', 'nganjuk', 'jombang', 'mojokerto', 
+        'gresik', 'sidoarjo', 'pasuruan', 'probolinggo', 'lumajang', 'jember', 
+        'banyuwangi', 'bondowoso', 'situbondo', 'pamekasan', 'sampang', 'sumenep', 
+        'bangkalan', 'bojonegoro', 'tuban', 'lamongan',
+        // Sumatera
+        'medan', 'binjai', 'pematangsiantar', 'tanjungbalai', 'tebingtinggi', 'deli serdang',
+        'padang', 'bukittinggi', 'payakumbuh', 'solok', 'sawahlunto', 'padang panjang',
+        'pekanbaru', 'dumai', 'bengkalis', 'kampar', 'riau', 'batam', 'tanjungpinang',
+        'palembang', 'lubuklinggau', 'prabumulih', 'ogan ilir', 'ogan komering',
+        'bandar lampung', 'metro', 'lampung', 'jambi', 'sungai penuh', 'bengkulu',
+        'pangkalpinang', 'tanjung pandan', 'aceh', 'banda aceh', 'lhonga', 'sigli',
+        // Kalimantan
+        'pontianak', 'singkawang', 'ketapang', 'sambas', 'kalimantan barat',
+        'balikpapan', 'samarinda', 'bontang', 'kutai', 'penajam', 'kalimantan timur',
+        'banjarmasin', 'banjarbaru', 'kalimantan selatan', 'palangkaraya', 'kalimantan tengah',
+        'tanjung selor', 'kalimantan utara',
+        // Sulawesi
+        'makassar', 'parepare', 'palopo', 'sulawesi selatan', 'manado', 'bitung', 'tomohon',
+        'kotamobagu', 'sulawesi utara', 'palu', 'sulawesi tengah', 'kendari', 'baubau',
+        'sulawesi tenggara', 'gorontalo', 'sulawesi barat', 'mamuju',
+        // Bali & Nusa Tenggara
+        'denpasar', 'badung', 'gianyar', 'tabanan', 'bangli', 'klungkung', 'karangasem',
+        'buleleng', 'jembrana', 'bali', 'mataram', 'bima', 'dompu', 'sumbawa', 'lombok',
+        'kupang', 'soe', 'atambua', 'ntt', 'ntb',
+        // Maluku & Papua
+        'ambon', 'tual', 'maluku', 'ternate', 'tidore', 'maluku utara',
+        'jayapura', 'wamena', 'timika', 'merauke', 'biak', 'sorong', 'manokwari', 'nabire',
+        'papua', 'papua barat'
+    ];
+    
+    const NOT_LOCATION_WORDS = [
+        'mini', 'maxi', 'super', 'extra', 'plus', 'pro', 'max', 'ultra', 'deluxe',
+        'baru', 'lama', 'bekas', 'second', 'original', 'kw', 'grade', 
+        'murah', 'mahal', 'hemat', 'premium', 'standar', 'ekonomis', 
+        'kecil', 'besar', 'sedang', 'panjang', 'pendek', 'tebal', 'tipis', 'lebar',
+        'putih', 'hitam', 'merah', 'biru', 'hijau', 'kuning', 'ungu', 'abu', 'coklat',
+        'minimalis', 'modern', 'klasik', 'industrial', 'skandinavia', 'jepang',
+        'hpl', 'mdf', 'jati', 'kayu', 'besi', 'baja', 'aluminium', 'kaca'
+    ];
+    
+    const SPECIFIC_PRODUCT_INDICATORS = [
+        'galvalum', 'spandek', 'bondek', 'hpl', 'mdf', 'jati', 'mahoni',
+        'excavator', 'bulldozer', 'crane', 'dump truck', 'vibro', 'stamper',
+        'minimix', 'jayamix', 'readymix', 'beton cor', 'bata ringan', 'hebel',
+        'pabrikan', 'minimalis', 'modern', 'premium', 'custom', 'bespoke'
+    ];
+    
+    // ============================================================
+    // 6. FUNGSI BANTUAN DETEKSI
+    // ============================================================
+    function isLocation(text) {
+        const words = text.toLowerCase().split(/[\s,-]+/);
+        for (const word of words) {
+            if (NOT_LOCATION_WORDS.includes(word)) continue;
+            if (LOCATION_WHITELIST.includes(word)) return true;
+            if (word.length >= 5 && word.length <= 12) {
+                const vowelCount = (word.match(/[aiueo]/g) || []).length;
+                if (vowelCount >= 2 && !word.match(/[0-9]/)) return true;
+            }
+        }
+        return false;
+    }
+    
+    function isSpecificProduct(text) {
+        const lowerText = text.toLowerCase();
+        for (const indicator of SPECIFIC_PRODUCT_INDICATORS) {
+            if (lowerText.includes(indicator)) return true;
+        }
+        // Deteksi ukuran/dimensi
+        if (/\d+(\.\d+)?\s*(mm|cm|m|inch|meter)/.test(lowerText)) return true;
+        return false;
+    }
+    
+    function getIntentForPageType(pageType, entityType) {
+        const isJasa = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(entityType);
+        
+        if (pageType === 'pillar') return INTENT_MAP.pillar;
+        if (pageType === 'sub-pillar-tipe-2') return INTENT_MAP['sub-pillar-tipe-2'];
+        if (pageType === 'sub-pillar-tipe-1') return INTENT_MAP['sub-pillar-tipe-1'];
+        if (pageType === 'money-master') return INTENT_MAP['money-master'];
+        if (pageType === 'money-page') return isJasa ? INTENT_MAP['money-page-jasa'] : INTENT_MAP['money-page-produk'];
+        if (pageType === 'money-child') return isJasa ? INTENT_MAP['money-child-jasa'] : INTENT_MAP['money-child-produk'];
+        if (pageType === 'variant') return INTENT_MAP.variant;
+        if (pageType === 'sub-variant') return INTENT_MAP['sub-variant'];
+        
+        return { primary: 'informasional', secondary: null, dominance: 50 };
+    }
+    
+    function getEvergreenStatus(pageType, entityType) {
+        const isJasa = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(entityType);
+        
+        if (pageType === 'money-page' && isJasa) return EVERGREEN_STATUS['money-page-jasa'];
+        if (pageType === 'money-child' && isJasa) return EVERGREEN_STATUS['money-child-jasa'];
+        return EVERGREEN_STATUS[pageType] || { evergreen: true, wajibTahun: false };
+    }
+    
+    // ============================================================
+    // 7. DETEKSI PAGE TYPE (PRIORITAS SESUAI PHASE 1)
+    // ============================================================
+    function detectPageType(pageName, position, totalLevels, entityType) {
+        const lowerName = pageName.toLowerCase();
+        const isJasa = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(entityType);
+        
+        // PRIORITAS 1: PILLAR (level 1, posisi pertama)
+        if (position === 0) {
+            return 'pillar';
+        }
+        
+        // PRIORITAS 2: CEK KEYWORD HARGA/SEWA/BIAYA
+        const hasPrice = lowerName.includes('harga ') || lowerName.includes('biaya ') || lowerName.includes('tarif ');
+        const hasRent = lowerName.includes('sewa ') || lowerName.includes('rental ');
+        
+        if (hasPrice || hasRent) {
+            // JASA TIDAK BOLEH MONEY_MASTER
+            if (isJasa) {
+                return 'money-page';
+            }
+            
+            let afterKeyword = '';
+            if (lowerName.includes('harga ')) afterKeyword = lowerName.substring(lowerName.indexOf('harga ') + 6);
+            else if (lowerName.includes('biaya ')) afterKeyword = lowerName.substring(lowerName.indexOf('biaya ') + 6);
+            else if (lowerName.includes('sewa ')) afterKeyword = lowerName.substring(lowerName.indexOf('sewa ') + 5);
+            else if (lowerName.includes('rental ')) afterKeyword = lowerName.substring(lowerName.indexOf('rental ') + 7);
+            
+            // CEK LOKASI (MONEY_CHILD)
+            if (isLocation(afterKeyword)) {
+                return 'money-child';
+            }
+            
+            // CEK PRODUK SPESIFIK (MONEY_PAGE)
+            if (isSpecificProduct(afterKeyword)) {
+                return 'money-page';
+            }
+            
+            // CEK JUMLAH KATA
+            const wordCount = afterKeyword.split(/\s+/).filter(w => w.length > 0).length;
+            if (wordCount <= 2) {
+                return 'money-master';
+            }
+            
+            return 'money-page';
+        }
+        
+        // PRIORITAS 3: SUB-VARIANT (level 8 - paling detail)
+        if (/(\d+(\.\d+)?\s*mm\s*x\s*\d+(\.\d+)?\s*mm)/.test(lowerName) ||
+            (lowerName.includes('tebal') && /\d+\s*mm/.test(lowerName)) ||
+            (lowerName.includes('panjang') && /\d+\s*m/.test(lowerName))) {
+            return 'sub-variant';
+        }
+        
+        // PRIORITAS 4: VARIANT (level 7)
+        const variantKeywords = ['spesifikasi', 'ukuran', 'tipe', 'type', 'model', 'varian', 'warna', 'merk', 'kapasitas'];
+        for (const kw of variantKeywords) {
+            if (lowerName.includes(kw)) return 'variant';
+        }
+        if (/\d+(\.\d+)?\s*(mm|cm|m|kg|ton)/.test(lowerName)) return 'variant';
+        
+        // PRIORITAS 5: SUB-PILLAR TIPE 1 (level 3 - perbandingan)
+        const comparisonKeywords = ['vs', 'versus', 'perbandingan', 'lebih baik', 'mana yang', 'kelebihan', 'kekurangan'];
+        for (const kw of comparisonKeywords) {
+            if (lowerName.includes(kw)) return 'sub-pillar-tipe-1';
+        }
+        
+        // PRIORITAS 6: SUB-PILLAR TIPE 2 (level 2 - jenis/macam)
+        if (lowerName.startsWith('jenis ') || lowerName.startsWith('macam ') || lowerName.startsWith('tipe ') ||
+            lowerName.includes('jenis-jenis') || lowerName.includes('macam-macam')) {
+            return 'sub-pillar-tipe-2';
+        }
+        
+        // DEFAULT: PILLAR
+        return 'pillar';
+    }
+    
+    // ============================================================
+    // 8. KUMPULKAN DATA DARI MAPPING
     // ============================================================
     const allPageNames = [];
     if (mappingObj) {
@@ -1114,296 +1351,6 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
                 allPageNames.push(name.toLowerCase());
             }
         }
-    }
-    
-    // ============================================================
-    // 3. DETEKSI TYPE OTOMATIS (SESUAI STANDAR PHASE 1)
-    // DENGAN DUKUNGAN SEMUA ENTITY TYPE
-    // ============================================================
-    function detectPageType(pageName, position, totalLevels) {
-        const lowerName = pageName.toLowerCase();
-        const words = lowerName.split(' ');
-        const firstWord = words[0];
-        const lastWord = words[words.length - 1];
-        
-        // ============================================================
-        // PRIORITAS 1: PILLAR (level terluas, posisi pertama)
-        // ============================================================
-        if (position === 0) {
-            return 'PILLAR';
-        }
-        
-        // ============================================================
-        // PRIORITAS 2: MONEY_LEADGEN (khusus JASA & SEWA)
-        // ============================================================
-        const leadgenWords = ['konsultasi', 'survey', 'hubungi', 'contact', 'estimasi', 'penawaran'];
-        for (const word of leadgenWords) {
-            if (lowerName.startsWith(word + ' ') || lowerName === word) {
-                return 'MONEY_LEADGEN';
-            }
-        }
-        
-        // ============================================================
-        // PRIORITAS 3: MONEY_MASTER (harga NASIONAL/UMUM)
-        // KHUSUS PRODUK, MATERIAL, SEWA (JASA TIDAK BOLEH)
-        // ============================================================
-        function isMoneyMaster(name) {
-            const lower = name.toLowerCase();
-            
-            // JASA tidak boleh menggunakan MONEY_MASTER
-            const isJasaEntity = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(entityType);
-            if (isJasaEntity) {
-                return false;
-            }
-            
-            // Harus diawali "harga" atau "sewa" (untuk rental)
-            const hasPriceKeyword = lower.startsWith('harga ') || lower.startsWith('sewa ') || lower.startsWith('biaya ');
-            if (!hasPriceKeyword) return false;
-            
-            // Cek apakah ada produk spesifik (bukan kategori umum)
-            let afterKeyword = '';
-            if (lower.startsWith('harga ')) afterKeyword = lower.substring(6);
-            if (lower.startsWith('sewa ')) afterKeyword = lower.substring(5);
-            if (lower.startsWith('biaya ')) afterKeyword = lower.substring(6);
-            
-            // Kata kunci yang menandakan produk SPESIFIK (bukan umum)
-            const specificProductIndicators = [
-                'pabrikan', 'minimalis', 'modern', 'modular', 'siap pakai',
-                'hpl', 'mdf', 'jati', 'bigland', 'pengantin', 'murah',
-                'premium', 'ekonomis', 'standar', 'custom', 'bespoke',
-                '0.', '0,', '1.', '2.', '3.', 'mm', 'cm', 'meter', 'inch',
-                'putih', 'hitam', 'merah', 'biru', 'hijau', 'kuning',
-                'kecil', 'besar', 'sedang', 'mini', 'maxi', 'jumbo',
-                // Untuk sewa/rental
-                'excavator', 'bulldozer', 'crane', 'dump truck', 'vibro',
-                'alat berat', 'alat konstruksi'
-            ];
-            
-            for (const indicator of specificProductIndicators) {
-                if (afterKeyword.includes(indicator)) {
-                    return false; // Ini MONEY_PAGE, bukan MONEY_MASTER
-                }
-            }
-            
-            // Jika hanya "harga [kategori]" atau "sewa [kategori]" -> MONEY_MASTER
-            return true;
-        }
-        
-        if (isMoneyMaster(pageName)) {
-            return 'MONEY_MASTER';
-        }
-        
-        // ============================================================
-        // PRIORITAS 4: MONEY_PAGE (harga PRODUK SPESIFIK)
-        // ============================================================
-        const hasPriceOrRent = lowerName.includes('harga ') || 
-                                lowerName.includes('sewa ') || 
-                                lowerName.includes('biaya ') ||
-                                lowerName.includes('jual ') ||
-                                lowerName.includes('beli ') ||
-                                lowerName.includes('rental ');
-        
-        if (hasPriceOrRent && !isMoneyMaster(pageName)) {
-            return 'MONEY_PAGE';
-        }
-        
-        // ============================================================
-        // PRIORITAS 5: MONEY_PAGE (jual/beli/sewa produk spesifik)
-        // ============================================================
-        const transactionWords = ['jual', 'beli', 'sewa', 'pesan', 'booking', 'rental', 'order'];
-        for (const word of transactionWords) {
-            if (lowerName.startsWith(word + ' ')) {
-                return 'MONEY_PAGE';
-            }
-        }
-        
-        // ============================================================
-        // PRIORITAS 6: MONEY_CHILD (harga + lokasi ATAU sewa + lokasi)
-        // DETEKSI LOKASI DENGAN WHITELIST + POLA (HYBRID METHOD)
-        // ============================================================
-        
-        // Whitelist kota/kabupaten di Indonesia
-        const locationIndicators = [
-            // Jabodetabek
-            'jakarta', 'bogor', 'depok', 'tangerang', 'bekasi', 'jabodetabek',
-            'jakpus', 'jakbar', 'jaksel', 'jakut', 'jaktim',
-            'tangerang selatan', 'tangsel', 'bintaro', 'alam sutera', 'gading serpong',
-            // Jawa Barat
-            'bandung', 'cimahi', 'cirebon', 'tasikmalaya', 'sukabumi', 'garut', 
-            'sumedang', 'purwakarta', 'karawang', 'subang', 'indramayu',
-            'majalengka', 'kuningan', 'ciamis', 'banjar', 'pangandaran', 'cianjur',
-            // Jawa Tengah
-            'semarang', 'solo', 'surakarta', 'yogyakarta', 'jogja', 'magelang', 
-            'salatiga', 'pekalongan', 'tegal', 'brebes', 'cilacap', 'purwokerto', 
-            'kebumen', 'banjarnegara', 'wonosobo', 'temanggung', 'kendal', 'demak', 
-            'kudus', 'jepara', 'pati', 'rembang', 'blora', 'grobagan', 'sragen', 
-            'karanganyar', 'wonogiri', 'sukoharjo', 'klaten', 'boyolali',
-            // Jawa Timur
-            'surabaya', 'malang', 'kediri', 'blitar', 'madiun', 'ponorogo', 'ngawi', 
-            'magetan', 'trenggalek', 'tulungagung', 'nganjuk', 'jombang', 'mojokerto', 
-            'gresik', 'sidoarjo', 'pasuruan', 'probolinggo', 'lumajang', 'jember', 
-            'banyuwangi', 'bondowoso', 'situbondo', 'pamekasan', 'sampang', 'sumenep', 
-            'bangkalan', 'bojonegoro', 'tuban', 'lamongan',
-            // Sumatera
-            'medan', 'binjai', 'pematangsiantar', 'tanjungbalai', 'tebingtinggi', 'deli serdang',
-            'padang', 'bukittinggi', 'payakumbuh', 'solok', 'sawahlunto', 'padang panjang',
-            'pekanbaru', 'dumai', 'bengkalis', 'kampar', 'riau', 'batam', 'tanjungpinang',
-            'palembang', 'lubuklinggau', 'prabumulih', 'ogan ilir', 'ogan komering',
-            'bandar lampung', 'metro', 'lampung', 'jambi', 'sungai penuh', 'bengkulu',
-            'pangkalpinang', 'tanjung pandan', 'aceh', 'banda aceh', 'lhonga', 'sigli',
-            // Kalimantan
-            'pontianak', 'singkawang', 'ketapang', 'sambas', 'kalimantan barat',
-            'balikpapan', 'samarinda', 'bontang', 'kutai', 'penajam', 'kalimantan timur',
-            'banjarmasin', 'banjarbaru', 'kalimantan selatan', 'palangkaraya', 'kalimantan tengah',
-            'tanjung selor', 'kalimantan utara',
-            // Sulawesi
-            'makassar', 'parepare', 'palopo', 'sulawesi selatan', 'manado', 'bitung', 'tomohon',
-            'kotamobagu', 'sulawesi utara', 'palu', 'sulawesi tengah', 'kendari', 'baubau',
-            'sulawesi tenggara', 'gorontalo', 'sulawesi barat', 'mamuju',
-            // Bali & Nusa Tenggara
-            'denpasar', 'badung', 'gianyar', 'tabanan', 'bangli', 'klungkung', 'karangasem',
-            'buleleng', 'jembrana', 'bali', 'mataram', 'bima', 'dompu', 'sumbawa', 'lombok',
-            'kupang', 'soe', 'atambua', 'ntt', 'ntb',
-            // Maluku & Papua
-            'ambon', 'tual', 'maluku', 'ternate', 'tidore', 'maluku utara',
-            'jayapura', 'wamena', 'timika', 'merauke', 'biak', 'sorong', 'manokwari', 'nabire',
-            'papua', 'papua barat'
-        ];
-        
-        // Pola akhiran kota (untuk mendeteksi kota yang tidak ada di whitelist)
-        const citySuffixes = ['karta', 'jaya', 'pura', 'sari', 'mulya', 'agung', 'asih', 'ayem', 'luhur'];
-        
-        // Blacklist kata yang mirip lokasi tapi sebenarnya produk
-        const notLocationWords = [
-            'mini', 'maxi', 'super', 'extra', 'plus', 'pro', 'max', 'ultra',
-            'baru', 'lama', 'bekas', 'second', 'original', 'kw', 'grade', 
-            'murah', 'mahal', 'hemat', 'premium', 'standar', 'ekonomis', 
-            'kecil', 'besar', 'sedang', 'panjang', 'pendek', 'tebal', 'tipis',
-            'putih', 'hitam', 'merah', 'biru', 'hijau', 'kuning', 'ungu', 'abu', 'coklat',
-            'minimalis', 'modern', 'klasik', 'industrial', 'skandinavia', 'jepang'
-        ];
-        
-        function isLocation(word) {
-            const lowerWord = word.toLowerCase();
-            
-            // LEVEL 1: Cek whitelist kota
-            if (locationIndicators.includes(lowerWord)) return true;
-            
-            // LEVEL 2: Cek blacklist kata produk
-            if (notLocationWords.includes(lowerWord)) return false;
-            
-            // LEVEL 3: Cek apakah kata tersebut dikenal sebagai produk (dari mapping)
-            const isKnownProduct = allPageNames.some(known => 
-                known === lowerWord || 
-                known.includes(lowerWord) || 
-                lowerWord.includes(known)
-            );
-            if (isKnownProduct) return false;
-            
-            // LEVEL 4: Cek pola akhiran kota
-            for (const suffix of citySuffixes) {
-                if (lowerWord.endsWith(suffix) && lowerWord.length >= 4) {
-                    return true;
-                }
-            }
-            
-            // LEVEL 5: Cek pola kata dengan 2+ vokal (untuk kata yang panjang)
-            if (lowerWord.length >= 5 && lowerWord.length <= 12) {
-                const vowelCount = (lowerWord.match(/[aiueo]/g) || []).length;
-                if (vowelCount >= 2) {
-                    // Pastikan bukan kata produk umum
-                    const commonProductWords = ['furniture', 'furnitur', 'meja', 'kursi', 'lemari', 'sofa'];
-                    if (!commonProductWords.includes(lowerWord)) {
-                        return true;
-                    }
-                }
-            }
-            
-            return false;
-        }
-        
-        // Cek apakah last word adalah lokasi (minimal 2 kata)
-        if (words.length >= 2 && isLocation(lastWord)) {
-            return 'MONEY_CHILD';
-        }
-        
-        // ============================================================
-        // PRIORITAS 7: SUB1 (perbandingan/evaluasi) - SEMUA ENTITY
-        // ============================================================
-        const comparisonWords = ['vs', 'versus', 'atau', 'lebih baik', 'perbandingan', 
-                                  'banding', 'mana yang', 'kelebihan', 'kekurangan',
-                                  'lebih bagus', 'lebih murah', 'lebih tahan', 'lebih awet',
-                                  'plus minus', 'keunggulan', 'kelemahan'];
-        for (const word of comparisonWords) {
-            if (lowerName.includes(word)) {
-                return 'SUB1';
-            }
-        }
-        
-        // ============================================================
-        // PRIORITAS 8: SUB1 (panduan/cara/tips) - EDUKASI SEMUA ENTITY
-        // ============================================================
-        const guideWords = ['panduan', 'cara', 'tips', 'tutorial', 'langkah', 
-                             'petunjuk', 'pedoman', 'strategi', 'metode', 'teknik',
-                             'rahasia', 'kunci', 'wajib tahu', 'perlu diketahui'];
-        for (const word of guideWords) {
-            if (lowerName.startsWith(word + ' ') || lowerName.includes(' ' + word + ' ')) {
-                return 'SUB1';
-            }
-        }
-        
-        // ============================================================
-        // PRIORITAS 9: VARIANT (spesifikasi teknis) - PRODUK/MATERIAL/SEWA
-        // ============================================================
-        const variantIndicators = [
-            'tipe', 'type', 'ukuran', 'model', 'varian', 'warna', 'bentuk', 'seri', 'versi',
-            'spesifikasi', 'detail', 'rinci', 'bahan', 'material', 'komposisi', 'kualitas',
-            'mutu', 'grade', 'kelas', 'standar', 'kode', 'kapasitas', 'tonase', 'daya'
-        ];
-        
-        for (const word of variantIndicators) {
-            if (lowerName.includes(' ' + word + ' ') || lowerName.endsWith(' ' + word)) {
-                return 'VARIANT';
-            }
-        }
-        
-        // Deteksi angka (ukuran dimensi, tebal, kapasitas, dll)
-        if (/\d+(\.\d+)?\s*(mm|cm|m|inch|meter|kg|gram|ton|liter|cc|pk|hp)/.test(lowerName)) {
-            return 'VARIANT';
-        }
-        
-        // ============================================================
-        // PRIORITAS 10: SUB-VARIANT (sangat detail, level terbawah)
-        // ============================================================
-        if (lowerName.includes('tebal') || 
-            lowerName.includes('ketebalan') ||
-            lowerName.includes('lebar') ||
-            lowerName.includes('panjang') ||
-            lowerName.includes('tinggi') ||
-            /\d+(\.\d+)?\s*mm\s*x\s*\d+(\.\d+)?\s*mm/.test(lowerName)) {
-            return 'SUB_VARIANT';
-        }
-        
-        // ============================================================
-        // PRIORITAS 11: SUB2 (jenis/macam/tipe - konten informasional)
-        // ============================================================
-        if (lowerName.startsWith('jenis ') || 
-            lowerName.startsWith('macam ') || 
-            lowerName.startsWith('tipe ')) {
-            return 'SUB2';
-        }
-        
-        // ============================================================
-        // DEFAULT: SUB2 untuk konten informasional biasa
-        // ============================================================
-        return 'SUB2';
-    }
-    
-    // ============================================================
-    // 4. FUNGSI BANTUAN
-    // ============================================================
-    function generateIdFromName(name) {
-        return name.replace(/[^a-zA-Z0-9]/g, '') + 'Post';
     }
     
     function slugify(text) {
@@ -1415,7 +1362,7 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     }
     
     // ============================================================
-    // 5. BANGUN LEVELS DARI breadcrumbItems (SUPPORT OBJECT & STRING)
+    // 9. BANGUN LEVELS DARI breadcrumbItems
     // ============================================================
     const allLevels = [];
     for (let i = 0; i < breadcrumbItems.length; i++) {
@@ -1430,17 +1377,45 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
             url = null;
         }
         
+        const pageType = detectPageType(name, i, breadcrumbItems.length, entityType);
+        const intentData = getIntentForPageType(pageType, entityType);
+        const evergreenData = getEvergreenStatus(pageType, entityType);
+        
         allLevels.push({
             name: name,
             url: url,
-            type: detectPageType(name, i, breadcrumbItems.length),
-            id: generateIdFromName(name),
+            type: pageType,
+            level: TYPE_LEVEL_MAP[pageType] || 99,
+            intent: intentData,
+            evergreen: evergreenData,
             position: i
         });
     }
     
     // ============================================================
-    // 6. VALIDASI & FALLBACK URL
+    // 10. VALIDASI & PERBAIKI HIERARKI (TIDAK BOLEH LONCAT LEVEL)
+    // ============================================================
+    for (let i = 0; i < allLevels.length - 1; i++) {
+        const current = allLevels[i];
+        const next = allLevels[i + 1];
+        
+        if (next.level - current.level > 1) {
+            console.warn(`⚠️ LEVEL JUMP: ${current.name}(${current.type} L${current.level}) → ${next.name}(${next.type} L${next.level})`);
+            
+            // Perbaiki dengan menaikkan level next
+            const correctedIndex = Math.min(current.level + 1, 8);
+            const correctedType = VALID_PAGE_TYPES[correctedIndex - 1];
+            next.type = correctedType;
+            next.level = correctedIndex;
+            next.intent = getIntentForPageType(correctedType, entityType);
+            next.evergreen = getEvergreenStatus(correctedType, entityType);
+            
+            console.log(`✅ DIPERBAIKI: ${next.name} → ${next.type} L${next.level}`);
+        }
+    }
+    
+    // ============================================================
+    // 11. VALIDASI & FALLBACK URL
     // ============================================================
     for (const level of allLevels) {
         if (!level.url) {
@@ -1464,68 +1439,72 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     }
     
     // ============================================================
-    // 7. TENTUKAN LEVEL YANG AKAN DITAMPILKAN (MAX 4 LEVEL)
+    // 12. TENTUKAN LEVEL YANG DITAMPILKAN (MAX 4 LEVEL)
     // ============================================================
     const selectedLevels = [];
     
-    // Level 1: Home (WAJIB)
+    // Home (WAJIB)
     selectedLevels.push({ 
-        name: 'BJR', 
+        name: 'Beranda', 
         url: DOMAIN, 
         isHome: true,
-        type: 'HOME'
+        type: 'pillar',
+        level: 1,
+        intent: INTENT_MAP.pillar,
+        evergreen: EVERGREEN_STATUS.pillar
     });
     
-    // Hitung slot tersisa (MAX_LEVEL - 1 untuk home - 1 untuk halaman saat ini)
     let remainingSlots = MAX_LEVEL - 2;
     
     console.log(`📊 ========================================`);
-    console.log(`📊 Breadcrumb Generator - SEO Tercanggih`);
+    console.log(`📊 Breadcrumb Generator v3.0 — FULL REVISI`);
     console.log(`📊 Entity Type: ${entityType}`);
-    console.log(`📊 Max level: ${MAX_LEVEL}, slot untuk parent: ${remainingSlots}`);
-    console.log(`📊 Input levels: ${allLevels.map(l => `${l.name}(${l.type})`).join(' → ')}`);
+    console.log(`📊 Max level: ${MAX_LEVEL}`);
     console.log(`📊 ========================================`);
     
-    // Parent terdekat (level terakhir sebelum current page) - WAJIB tampil
+    // Parent terdekat (WAJIB)
     let parentTerdekat = null;
     if (allLevels.length > 0) {
         parentTerdekat = allLevels[allLevels.length - 1];
         selectedLevels.push(parentTerdekat);
         remainingSlots--;
-        console.log(`✅ WAJIB: "${parentTerdekat.name}" (${parentTerdekat.type}) - sisa slot: ${remainingSlots}`);
+        console.log(`✅ WAJIB: "${parentTerdekat.name}" (${parentTerdekat.type} L${parentTerdekat.level})`);
     }
     
-    // Level lainnya (dari awal sampai sebelum parent terdekat)
-    // Di-reverse agar yang terdekat dengan parent diprioritaskan
-    const otherLevels = [...allLevels.slice(0, allLevels.length - 1)].reverse();
-    const canSkipTypes = ['PILLAR', 'SUB2'];
+    // Level lainnya (prioritaskan level tertinggi)
+    const otherLevels = [...allLevels.slice(0, allLevels.length - 1)].sort((a, b) => b.level - a.level);
     
     for (const level of otherLevels) {
         if (remainingSlots <= 0) {
-            console.log(`📌 SKIP: "${level.name}" (${level.type}) - tidak ada slot tersisa`);
+            console.log(`📌 SKIP: "${level.name}" (${level.type} L${level.level}) - slot habis`);
             continue;
         }
         
-        if (canSkipTypes.includes(level.type)) {
-            console.log(`📌 SKIP: "${level.name}" (${level.type}) - type boleh skip`);
-            continue;
-        }
-        
-        // Tambahkan di posisi setelah Home (index 1)
         selectedLevels.splice(1, 0, level);
         remainingSlots--;
-        console.log(`✅ TAMBAH: "${level.name}" (${level.type}) - sisa slot: ${remainingSlots}`);
+        console.log(`✅ TAMBAH: "${level.name}" (${level.type} L${level.level})`);
     }
     
     // Halaman saat ini (WAJIB)
     const currentFullUrl = currentUrl.startsWith('http') ? currentUrl : DOMAIN + currentUrl;
-    const currentPageType = detectPageType(pageTitle, allLevels.length, allLevels.length);
+    const currentPageTitle = (() => {
+        if (mappingObj && mappingObj[currentUrl]) return mappingObj[currentUrl];
+        if (parentTerdekat) return parentTerdekat.name;
+        return 'Halaman';
+    })();
+    
+    const currentPageType = detectPageType(currentPageTitle, allLevels.length, allLevels.length, entityType);
+    const currentIntent = getIntentForPageType(currentPageType, entityType);
+    const currentEvergreen = getEvergreenStatus(currentPageType, entityType);
     
     selectedLevels.push({
-        name: pageTitle,
+        name: currentPageTitle,
         url: currentFullUrl,
         isCurrent: true,
-        type: currentPageType
+        type: currentPageType,
+        level: TYPE_LEVEL_MAP[currentPageType] || 99,
+        intent: currentIntent,
+        evergreen: currentEvergreen
     });
     
     // Update position
@@ -1533,12 +1512,13 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         selectedLevels[i].position = i + 1;
     }
     
-    console.log(`✅ FINAL (${selectedLevels.length} level): ${selectedLevels.map(l => l.name).join(' → ')}`);
+    console.log(`✅ FINAL (${selectedLevels.length} level): ${selectedLevels.map(l => `${l.name}(${l.type})`).join(' → ')}`);
     console.log(`📊 Current page type: ${currentPageType}`);
-    console.log(`📊 Entity Type: ${entityType}`);
+    console.log(`📊 Intent: ${currentIntent.primary} (${currentIntent.dominance}%)`);
+    console.log(`📊 Evergreen: ${currentEvergreen.evergreen ? 'YES' : 'NO'} | Wajib Tahun: ${currentEvergreen.wajibTahun ? 'YES' : 'NO'}`);
     
     // ============================================================
-    // 8. GENERATE HTML BREADCRUMB
+    // 13. GENERATE HTML BREADCRUMB + JSON-LD
     // ============================================================
     let breadcrumbHtml = `<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">\n`;
     
@@ -1565,19 +1545,13 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     
     breadcrumbHtml += `</div>\n`;
     
-    // ============================================================
-    // 9. GENERATE JSON-LD SCHEMA
-    // ============================================================
-    const jsonLdItems = [];
-    for (let i = 0; i < selectedLevels.length; i++) {
-        const level = selectedLevels[i];
-        jsonLdItems.push({
-            "@type": "ListItem",
-            "position": i + 1,
-            "name": level.name,
-            "item": level.url
-        });
-    }
+    // JSON-LD Schema
+    const jsonLdItems = selectedLevels.map((level, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": level.name,
+        "item": level.url
+    }));
     
     const jsonLd = {
         "@context": "https://schema.org",
@@ -1586,18 +1560,14 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     };
     
     // ============================================================
-    // 10. HAPUS BREADCRUMB LAMA & INJECT YANG BARU
+    // 14. INJECT KE DOM
     // ============================================================
-    
-    // Hapus semua breadcrumb lama (manual)
     const oldBreadcrumbs = document.querySelectorAll('.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"]');
     oldBreadcrumbs.forEach(el => el.remove());
     
-    // Hapus JSON-LD breadcrumb lama
     const oldJsonLd = document.querySelector('script[data-breadcrumb="true"]');
     if (oldJsonLd) oldJsonLd.remove();
     
-    // Inject HTML breadcrumb baru
     const targetElement = document.querySelector('main, article, .content, #main-content, .post-content');
     if (targetElement && targetElement.firstChild) {
         targetElement.insertAdjacentHTML('afterbegin', breadcrumbHtml);
@@ -1610,32 +1580,79 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         }
     }
     
-    // Inject JSON-LD baru
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.setAttribute('data-breadcrumb', 'true');
     script.textContent = JSON.stringify(jsonLd);
     document.head.appendChild(script);
     
-    console.log(`✅ Breadcrumb injected to DOM for entity: ${entityType}`);
-    console.log(`📊 ========================================`);
-    console.log(`✅ Breadcrumb generated and injected successfully!`);
-    console.log(`📊 Entity Type: ${entityType} | Page Type: ${currentPageType}`);
+    console.log(`✅ Breadcrumb injected for entity: ${entityType}`);
     console.log(`📊 ========================================`);
     
     // ============================================================
-    // 11. RETURN OUTPUT (LENGKAP)
+    // 15. RETURN LENGKAP
     // ============================================================
     return {
         html: breadcrumbHtml,
         jsonLd: jsonLd,
         selectedLevels: selectedLevels,
         currentPageType: currentPageType,
+        currentIntent: currentIntent,
+        currentEvergreen: currentEvergreen,
         entityType: entityType,
-        isValidType: true
+        isValidType: true,
+        version: '3.0'
     };
 }
 
+// ============================================================
+// CONTOH PENGGUNAAN
+// ============================================================
+
+/*
+// Contoh 1: MATERIAL KONSTRUKSI
+const result1 = generateBreadcrumbForMapping(
+    urlMapping,
+    '/p/ready-mix-beton-cor-jayamix-minimix.html',
+    [
+        { name: 'Material Konstruksi', url: '/p/material-konstruksi.html' },
+        { name: 'Material Struktur Bangunan', url: '/p/material-struktur-bangunan.html' },
+        { name: 'Ready Mix Beton Cor Jayamix Minimix', url: null }
+    ],
+    'MATERIAL_KONSTRUKSI'
+);
+
+// Contoh 2: JASA KONSTRUKSI (otomatis tidak akan jadi money-master)
+const result2 = generateBreadcrumbForMapping(
+    urlMapping,
+    '/p/harga-jasa-konstruksi.html',
+    [
+        { name: 'Jasa Konstruksi', url: '/p/jasa-konstruksi.html' },
+        { name: 'Harga Jasa Konstruksi', url: null }
+    ],
+    'JASA_KONSTRUKSI'
+);
+
+// Contoh 3: PRODUK INTERIOR dengan lokasi (money-child)
+const result3 = generateBreadcrumbForMapping(
+    urlMapping,
+    '/p/harga-kitchen-set-jakarta.html',
+    [
+        { name: 'Produk Interior', url: '/p/produk-interior.html' },
+        { name: 'Kitchen Set', url: '/p/kitchen-set.html' },
+        { name: 'Harga Kitchen Set Jakarta', url: null }
+    ],
+    'PRODUK_INTERIOR'
+);
+
+// Output akan berisi:
+// - html: string HTML breadcrumb
+// - jsonLd: object untuk schema.org
+// - selectedLevels: array level yang ditampilkan
+// - currentPageType: 'money-child'
+// - currentIntent: { primary: 'transaksional', secondary: 'komersial', dominance: 90 }
+// - currentEvergreen: { evergreen: false, wajibTahun: true }
+*/
 // ============================================================
 // CONTOH PANGGILAN DENGAN URL MANUAL PER LEVEL
 // ============================================================
@@ -2387,7 +2404,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChild[cleanUrlJa
         urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
             { name: 'Perbandingan Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-alat-konstruksi.html' },
@@ -2491,7 +2508,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariant[cle
         urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariant,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
             { name: 'Estimasi Biaya Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/estimasi-biaya-jasa-alat-konstruksi.html' }
@@ -2614,7 +2631,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariantSubV
         urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariantSubVariant,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
             { name: 'Estimasi Biaya Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/estimasi-biaya-jasa-alat-konstruksi.html' }
@@ -2735,7 +2752,7 @@ if (urlMappingSewaAlatProyekFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstru
         urlMappingSewaAlatProyekFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
             { name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -2749,7 +2766,7 @@ if (urlMappingSewaAlatProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruk
         urlMappingSewaAlatProyekFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
             { name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -2855,7 +2872,7 @@ if (urlMappingSewaAlatProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruk
         urlMappingSewaPompaDewateringFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
 			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -2873,7 +2890,7 @@ if (urlMappingSewaPompaDewateringFromMoneyChildVariant[cleanUrlJasaKonsAlatKonst
         urlMappingSewaPompaDewateringFromMoneyChildVariant,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
 			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -2911,7 +2928,7 @@ if (urlMappingSewaPompaDewateringFromMoneyChildVariant[cleanUrlJasaKonsAlatKonst
         urlMappingSewaPompaAirDieselFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
 			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -2929,7 +2946,7 @@ if (urlMappingSewaPompaAirDieselFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstr
         urlMappingSewaompaAirDieselFromMoneyChildVariant,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
 			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -2966,7 +2983,7 @@ if (urlMappingSewaPompaAirDieselFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstr
         urlMappingSewaPompaBanjirFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
 			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -3006,7 +3023,7 @@ if (urlMappingSewaPompaBanjirFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruks
         urlMappingSewaPompaKapasitasBesarFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
 			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -3046,7 +3063,7 @@ if (urlMappingSewaPompaKapasitasBesarFromMoneyChildVariant[cleanUrlJasaKonsAlatK
         urlMappingSewaBakAirProyekFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
 			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -3086,7 +3103,7 @@ if (urlMappingSewaBakAirProyekFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruk
         urlMappingSewaTangkiAirFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
 			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -3126,7 +3143,7 @@ if (urlMappingSewaTangkiAirFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiP
         urlMappingSewaPipaProyekFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
 			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -3166,7 +3183,7 @@ if (urlMappingSewaPipaProyekFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksi
         urlMappingSewaSelangProyekFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
 			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -3293,7 +3310,7 @@ if (urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonst
         urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
 			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -3311,7 +3328,7 @@ if (urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonst
         urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
 			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -3437,7 +3454,7 @@ if (urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonst
         urlMappingSewaPompaLumpurFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
 			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -3477,7 +3494,7 @@ if (urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonst
         urlMappingSewaPompaSedotLumpurFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
 			{ name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' },
@@ -3606,7 +3623,7 @@ if (urlMappingSewaBekistingScaffoldingFromSub2MoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaBekistingScaffoldingFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
             { name: 'Sewa Bekisting Scaffolding', url: 'https://www.betonjayareadymix.com/2019/02/sewa-bekisting-scaffolding.html' }
@@ -3711,7 +3728,7 @@ if (urlMappingSewaBekistingScaffoldingFromSub2MoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaPencahayaanUtilitasFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
             { name: 'Sewa Pencahayaan Utilitas', url: 'https://www.betonjayareadymix.com/2019/02/sewa-pencahayaan-utilitas.html' }
@@ -3817,7 +3834,7 @@ if (urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
             { name: 'Sewa Alat Survey Pengukuran', url: 'https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html' }
@@ -3925,7 +3942,7 @@ if (urlMappingSewaTotalStationFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiP
         urlMappingSewaTotalStationFromSub2MoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
             { name: 'Sewa Alat Survey Pengukuran', url: 'https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html' },
@@ -4033,7 +4050,7 @@ if (urlMappingSewaWaterpassFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPost
         urlMappingSewaWaterpassFromSub2MoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
             { name: 'Sewa Alat Survey Pengukuran', url: 'https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html' },
@@ -4141,7 +4158,7 @@ if (urlMappingSewaTheodoliteFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPos
         urlMappingSewaTheodoliteFromSub2MoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
             { name: 'Sewa Alat Survey Pengukuran', url: 'https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html' },
@@ -4248,7 +4265,7 @@ if (urlMappingSewaTheodoliteFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPos
         urlMappingSewaAksesKeamananProyekFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
             { name: 'Sewa Akses Keamanan Proyek', url: 'https://www.betonjayareadymix.com/2019/02/sewa-akses-keamanan-proyek.html' }
@@ -4352,7 +4369,7 @@ if (urlMappingSewaTheodoliteFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPos
         urlMappingSewaAlatBorGroundWorkFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
             { name: 'Sewa Alat Bor Ground Work', url: 'https://www.betonjayareadymix.com/2019/02/sewa-alat-bor-ground-work.html' }
@@ -4456,7 +4473,7 @@ restoreCondition('SewaAlatKonstruksiPost');
         urlMappingSewaSistemPendukungProyekFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
             { name: 'Sewa Sistem Pendukung Proyek', url: 'https://www.betonjayareadymix.com/2019/02/sewa-sistem-pendukung-proyek.html' }
@@ -4558,7 +4575,7 @@ if (urlMappingSewaAlatBeratPostFromSub1MoneyMaster[cleanUrlJasaKonsAlatKonstruks
         urlMappingSewaAlatBeratPostFromSub1MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html' }
@@ -4573,7 +4590,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html'},
@@ -4589,7 +4606,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaAlatBeratPostFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html'},
@@ -4607,7 +4624,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaforkliftPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Forklift', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-forklift.html'},
@@ -4622,7 +4639,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaCranePostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Crane', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-crane.html'},
@@ -4637,7 +4654,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaSelfLoaderPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Self Loader', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-self-loader.html'},
@@ -4652,7 +4669,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaWheelLoaderPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Wheel Loader', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-wheel-loader.html'},
@@ -4667,7 +4684,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaVibroRollerPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Vibro Roller', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-vibro-roller.html'},
@@ -4682,7 +4699,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaWalesStoomPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Wales Stoom', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-wales-stoom.html'},
@@ -4697,7 +4714,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaTandemRollerPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Tandem Roller', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-tandem-roller.html'},
@@ -4712,7 +4729,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaBulldozerPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Bulldozer', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-bulldozer.html'},
@@ -4727,7 +4744,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaExcavatorPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Excavator', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-excavator.html'},
@@ -4742,7 +4759,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaExcavatorPostFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Excavator', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-excavator.html'},
@@ -4759,7 +4776,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaBackhoeLoaderPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Backhoe Loader', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-backhoe-loader.html'},
@@ -4774,7 +4791,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaBabyRollerPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Baby Roller', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-baby-roller.html'},
@@ -4789,7 +4806,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaMotorGraderPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Motor Grader', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-motor-grader.html'},
@@ -4804,7 +4821,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaAlatPancangPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Alat Pancang', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pancang.html'},
@@ -4819,7 +4836,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaConcretePaverPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Concrete Paver', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-concrete-paver.html'},
@@ -4834,7 +4851,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
         urlMappingSewaTrencherPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Perbandingan Sewa Trencher', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-trencher.html'},
@@ -4940,7 +4957,7 @@ if (urlMappingSewaForkliftFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost
         urlMappingSewaForkliftFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Sewa Forklift', url: 'https://www.betonjayareadymix.com/p/sewa-forklift.html' }
@@ -5043,7 +5060,7 @@ if (urlMappingSewaCraneFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) 
         urlMappingSewaCraneFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Sewa Crane', url: 'https://www.betonjayareadymix.com/p/sewa-crane.html' }
@@ -5146,7 +5163,7 @@ if (urlMappingSewaSelfLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPo
         urlMappingSewaSelfLoaderFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Sewa Self Loader', url: 'https://www.betonjayareadymix.com/p/sewa-self-loader.html' }
@@ -5250,7 +5267,7 @@ if (urlMappingSewaWheelLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiP
         urlMappingSewaWheelLoaderFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Sewa Wheel Loader', url: 'https://www.betonjayareadymix.com/p/sewa-wheel-loader.html' }
@@ -5353,7 +5370,7 @@ if (urlMappingSewaVibroRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiP
         urlMappingSewaVibroRollerFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Sewa Vibro Roller', url: 'https://www.betonjayareadymix.com/p/sewa-vibro-roller.html' }
@@ -5458,7 +5475,7 @@ if (urlMappingSewaWalesStoomFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPo
         urlMappingSewaWalesStoomFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Sewa Wales Stoom', url: 'https://www.betonjayareadymix.com/p/sewa-wales-stoom.html' }
@@ -5562,7 +5579,7 @@ if (urlMappingSewaTandemRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksi
         urlMappingSewaTandemRollerFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Sewa Tandem Roller', url: 'https://www.betonjayareadymix.com/p/sewa-tandem-roller.html' }
@@ -5666,7 +5683,7 @@ if (urlMappingSewaBulldozerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPos
         urlMappingSewaBulldozerFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Sewa Bulldozer', url: 'https://www.betonjayareadymix.com/p/sewa-bulldozer.html' }
@@ -5770,7 +5787,7 @@ if (urlMappingSewaExcavatorFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]
         urlMappingSewaExcavatorFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Sewa Excavator', url: 'https://www.betonjayareadymix.com/p/sewa-excavator.html' }
@@ -5874,7 +5891,7 @@ if (urlMappingSewaBackhoeLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruks
         urlMappingSewaBackhoeLoaderFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Sewa Backhoe Loader', url: 'https://www.betonjayareadymix.com/p/sewa-backhoe-loader.html' }
@@ -5978,7 +5995,7 @@ if (urlMappingSewaConcretePaverFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruks
         urlMappingSewaConcretePaverFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Sewa Concrete Paver', url: 'https://www.betonjayareadymix.com/p/sewa-concrete-paver.html' }
@@ -6083,7 +6100,7 @@ if (urlMappingSewaTrencherFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost
         urlMappingSewaTrencherFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Sewa Trencher', url: 'https://www.betonjayareadymix.com/p/sewa-trencher.html' }
@@ -6187,7 +6204,7 @@ if (urlMappingSewaBabyRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPo
         urlMappingSewaBabyRollerFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Sewa Baby Roller', url: 'https://www.betonjayareadymix.com/p/sewa-baby-roller.html' }
@@ -6292,7 +6309,7 @@ if (urlMappingSewaAlatPancangFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiP
         urlMappingSewaAlatPancangFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Sewa Alat Pancang', url: 'https://www.betonjayareadymix.com/p/sewa-alat-pancang.html' }
@@ -6396,7 +6413,7 @@ if (urlMappingSewaMotorGraderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiP
         urlMappingSewaMotorGraderFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
             { name: 'Sewa Motor Grader', url: 'https://www.betonjayareadymix.com/p/sewa-motor-grader.html' }
@@ -6497,7 +6514,7 @@ if (urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster[cleanUrlJasaKonsAlatKo
         urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Sewa Alat Konstruksi Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi-ringan.html' }
         ],
