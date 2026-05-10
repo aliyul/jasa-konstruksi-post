@@ -781,15 +781,6 @@ KOSONG (saran)   ~15          Perlu dibuat kontennya
 // ============================================================
 
 /**
- * generateBreadcrumbForMapping v2.0
- * ✅ Sesuai dengan hierarki 8 level (PHASE 1)
- * ✅ Validasi entity type (JASA tidak boleh MONEY_MASTER)
- * ✅ Deteksi bertahap sesuai PRIORITAS PHASE 1
- * ✅ Support semua entity type: PRODUK, JASA, MATERIAL, SEWA
- * ✅ Breadcrumb tidak loncat level
- */
-
-/**
  * generateBreadcrumbForMapping v3.0 — FULL REVISI
  * ✅ Sesuai dengan hierarki 8 level (PHASE 1)
  * ✅ Validasi entity type (JASA tidak boleh MONEY_MASTER)
@@ -800,7 +791,8 @@ KOSONG (saran)   ~15          Perlu dibuat kontennya
  * ✅ Evergreen vs Non-Evergreen detection
  * ✅ Clean code, siap produksi
  */
-
+(function() {
+    'use strict';
 function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
     
     // ============================================================
@@ -1335,7 +1327,7 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         version: '3.0'
     };
 }
-
+})
 // ============================================================
 // CONTOH PENGGUNAAN
 // ============================================================
@@ -1383,57 +1375,6 @@ const result3 = generateBreadcrumbForMapping(
 // - currentPageType: 'money-child'
 // - currentIntent: { primary: 'transaksional', secondary: 'komersial', dominance: 90 }
 // - currentEvergreen: { evergreen: false, wajibTahun: true }
-*/
-// ============================================================
-// CONTOH PANGGILAN DENGAN URL MANUAL PER LEVEL
-// ============================================================
-
-/*
-// MATERIAL KONSTRUKSI - READY MIX LOKASI
-const result = generateBreadcrumbForMapping(
-    urlMappingReadyMixLokasiPost,
-    cleanUrl,
-    [
-        { name: 'Material Konstruksi', url: 'https://www.betonjayareadymix.com/p/material-konstruksi.html' },
-        { name: 'Material Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/material-struktur-bangunan.html' },
-        { name: 'Ready Mix Beton Cor Jayamix Minimix', url: 'https://www.betonjayareadymix.com/p/ready-mix-beton-cor-jayamix-minimix.html' },
-        { name: 'Ready Mix Lokasi', url: 'https://www.betonjayareadymix.com/p/ready-mix-lokasi.html' }
-    ],
-    'MATERIAL_KONSTRUKSI'
-);
-
-// PRODUK INTERIOR - KITCHEN SET
-const result2 = generateBreadcrumbForMapping(
-    urlMappingKitchenSetPost,
-    currentUrl,
-    [
-        { name: 'Produk Interior', url: 'https://www.betonjayareadymix.com/p/produk-interior.html' },
-        { name: 'Jenis Kitchen Set', url: 'https://www.betonjayareadymix.com/p/jenis-kitchen-set.html' }
-    ],
-    'PRODUK_INTERIOR'
-);
-
-// JASA KONSTRUKSI - KONSULTASI
-const result3 = generateBreadcrumbForMapping(
-    urlMappingJasaPost,
-    currentUrl,
-    [
-        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-        { name: 'Jasa Borongan', url: 'https://www.betonjayareadymix.com/p/jasa-borongan.html' }
-    ],
-    'JASA_KONSTRUKSI'
-);
-
-// SEWA ALAT BERAT - EXCAVATOR
-const result4 = generateBreadcrumbForMapping(
-    urlMappingSewaPost,
-    currentUrl,
-    [
-        { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
-        { name: 'Jenis Excavator', url: 'https://www.betonjayareadymix.com/p/jenis-excavator.html' }
-    ],
-    'SEWA_RENTAL'
-);
 */
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasakonstruksistrukturPost = {};
