@@ -1990,7 +1990,8 @@ JasaStrukturBetondanPengecoranPost
 	//TAMPILKAN JasaRangkaAtapBajaRinganPostLink
         JasaRangkaAtapBajaRinganPostLink.style.visibility = 'visible';
         pageNameJasaKonsStrukturPost.textContent = urlMappingStrukturPostFromSub1MoneyPage[cleanUrlJasaJasaKonsStrukturPost];
-	   generateBreadcrumbForMapping(
+	   
+	generateBreadcrumbForMapping(
         urlMappingStrukturPostFromSub1MoneyPage,
         cleanUrlJasaJasaKonsStrukturPost,
         [
@@ -1999,7 +2000,7 @@ JasaStrukturBetondanPengecoranPost
             { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html'},
             { name: 'Perbandingan Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-konstruksi.html'}
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
     }
 	/*
