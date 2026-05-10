@@ -774,17 +774,14 @@ KOSONG (saran)   ~15          Perlu dibuat kontennya
 ❌ Tidak ada MONEY_MASTER (JASA tidak boleh pakai MONEY_MASTER)
 */
 /**
- * generateBreadcrumbJasaKonstruksiStrukturPost v4.0 — AKURAT UNTUK SEMUA ENTITY TYPE
- * ✅ PRIORITAS DETEKSI SESUAI PHASE 1:
- *    1. Entity Type (JASA → MONEY_MASTER DILARANG)
- *    2. Intent Keyword (panduan, cara, tips → PILLAR)
- *    3. Keyword Harga (harga, biaya, sewa)
- *    4. Tingkat Spesifisitas (jumlah kata, lokasi, spesifikasi)
- * ✅ MONEY_MASTER: PRODUK, MATERIAL, SEWA, ARTIKEL → BOLEH
- * ✅ MONEY_MASTER: JASA → ❌ DILARANG (force ke MONEY_PAGE)
- * ✅ Multi-word detection: "harga bata ringan" = MONEY_MASTER (2 kata)
- * ✅ "harga bata ringan hebel" = MONEY_PAGE (3+ kata)
- * ✅ Location detection: "harga bata ringan di Jakarta" = MONEY_CHILD
+ * generateBreadcrumbJasaKonstruksiStrukturPost v4.1 — FIXED LOCATION DETECTION
+ * ✅ FIX: "ringan", "baja", "pasang" TIDAK terdeteksi sebagai lokasi
+ * ✅ FIX: JASA TIDAK BOLEH MONEY_MASTER (100% terblokir)
+ * ✅ FIX: MONEY_MASTER vs MONEY_PAGE berdasarkan jumlah kata (≤2 = MASTER)
+ * ✅ Support SEMUA ENTITY TYPE: PRODUK, MATERIAL, JASA, SEWA/RENTAL, ARTIKEL
+ * ✅ PRIORITAS DETEKSI SESUAI PHASE 1
+ * ✅ Breadcrumb tidak loncat level (auto fix)
+ * ✅ MAX_LEVEL = 4 (termasuk Home)
  */
 
 function generateBreadcrumbJasaKonstruksiStrukturPost(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
@@ -805,6 +802,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(mappingObj, currentUrl, br
     
     if (!validEntityTypes.includes(entityType)) {
         console.error(`❌ ERROR: "${entityType}" BUKAN ENTITY TYPE yang valid!`);
+        console.error(`   Gunakan: ${validEntityTypes.join(', ')}`);
         return null;
     }
     
@@ -861,62 +859,144 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(mappingObj, currentUrl, br
     // 3. WHITELIST LOKASI (200+ KOTA)
     // ============================================================
     const LOCATION_WHITELIST = [
+        // Jabodetabek
         'jakarta', 'bogor', 'depok', 'tangerang', 'bekasi', 'jabodetabek',
         'jakpus', 'jakbar', 'jaksel', 'jakut', 'jaktim',
         'tangerang selatan', 'tangsel', 'bintaro', 'alam sutera', 'gading serpong',
+        // Jawa Barat
         'bandung', 'cimahi', 'cirebon', 'tasikmalaya', 'sukabumi', 'garut', 
         'sumedang', 'purwakarta', 'karawang', 'subang', 'indramayu',
+        'majalengka', 'kuningan', 'ciamis', 'banjar', 'pangandaran', 'cianjur',
+        // Jawa Tengah
         'semarang', 'solo', 'surakarta', 'yogyakarta', 'jogja', 'magelang', 
         'salatiga', 'pekalongan', 'tegal', 'brebes', 'cilacap', 'purwokerto', 
+        'kebumen', 'banjarnegara', 'wonosobo', 'temanggung', 'kendal', 'demak', 
+        'kudus', 'jepara', 'pati', 'rembang', 'blora', 'grobagan', 'sragen', 
+        'karanganyar', 'wonogiri', 'sukoharjo', 'klaten', 'boyolali',
+        // Jawa Timur
         'surabaya', 'malang', 'kediri', 'blitar', 'madiun', 'gresik', 'sidoarjo',
-        'medan', 'binjai', 'padang', 'pekanbaru', 'batam', 'palembang',
-        'bandar lampung', 'jambi', 'bengkulu', 'aceh', 'banda aceh',
-        'pontianak', 'balikpapan', 'samarinda', 'banjarmasin', 'palangkaraya',
-        'makassar', 'manado', 'palu', 'kendari', 'gorontalo',
-        'denpasar', 'bali', 'mataram', 'kupang', 'ambon', 'jayapura', 'sorong'
+        'ponorogo', 'ngawi', 'magetan', 'trenggalek', 'tulungagung', 'nganjuk',
+        'jombang', 'mojokerto', 'pasuruan', 'probolinggo', 'lumajang', 'jember',
+        'banyuwangi', 'bondowoso', 'situbondo', 'pamekasan', 'sampang', 'sumenep',
+        'bangkalan', 'bojonegoro', 'tuban', 'lamongan',
+        // Sumatera
+        'medan', 'binjai', 'pematangsiantar', 'tanjungbalai', 'tebingtinggi', 'deli serdang',
+        'padang', 'bukittinggi', 'payakumbuh', 'solok', 'sawahlunto', 'padang panjang',
+        'pekanbaru', 'dumai', 'bengkalis', 'kampar', 'riau', 'batam', 'tanjungpinang',
+        'palembang', 'lubuklinggau', 'prabumulih', 'ogan ilir', 'ogan komering',
+        'bandar lampung', 'metro', 'lampung', 'jambi', 'sungai penuh', 'bengkulu',
+        'pangkalpinang', 'tanjung pandan', 'aceh', 'banda aceh', 'lhonga', 'sigli',
+        // Kalimantan
+        'pontianak', 'singkawang', 'ketapang', 'sambas', 'kalimantan barat',
+        'balikpapan', 'samarinda', 'bontang', 'kutai', 'penajam', 'kalimantan timur',
+        'banjarmasin', 'banjarbaru', 'kalimantan selatan', 'palangkaraya', 'kalimantan tengah',
+        'tanjung selor', 'kalimantan utara',
+        // Sulawesi
+        'makassar', 'parepare', 'palopo', 'sulawesi selatan', 'manado', 'bitung', 'tomohon',
+        'kotamobagu', 'sulawesi utara', 'palu', 'sulawesi tengah', 'kendari', 'baubau',
+        'sulawesi tenggara', 'gorontalo', 'sulawesi barat', 'mamuju',
+        // Bali & Nusa Tenggara
+        'denpasar', 'badung', 'gianyar', 'tabanan', 'bangli', 'klungkung', 'karangasem',
+        'buleleng', 'jembrana', 'bali', 'mataram', 'bima', 'dompu', 'sumbawa', 'lombok',
+        'kupang', 'soe', 'atambua', 'ntt', 'ntb',
+        // Maluku & Papua
+        'ambon', 'tual', 'maluku', 'ternate', 'tidore', 'maluku utara',
+        'jayapura', 'wamena', 'timika', 'merauke', 'biak', 'sorong', 'manokwari', 'nabire',
+        'papua', 'papua barat'
     ];
     
-    const NOT_LOCATION_WORDS = [
-        'mini', 'maxi', 'super', 'extra', 'plus', 'pro', 'max', 'ultra',
-        'murah', 'mahal', 'premium', 'standar', 'ekonomis', 'kecil', 'besar',
-        'putih', 'hitam', 'merah', 'biru', 'hijau', 'minimalis', 'modern',
-        'baru', 'lama', 'bekas', 'second', 'original', 'kw', 'grade'
-    ];
-    
-    // PRODUK SPESIFIK (minimal 2 kata setelah keyword harga)
-    const SPECIFIC_PRODUCT_INDICATORS = [
-        'galvalum', 'spandek', 'bondek', 'hpl', 'mdf', 'jati', 'mahoni',
-        'excavator', 'bulldozer', 'crane', 'dump truck', 'vibro', 'stamper',
-        'minimix', 'jayamix', 'readymix', 'hebel'
+    // BLACKLIST kata produk yang TIDAK boleh dianggap sebagai lokasi
+    const PRODUCT_BLACKLIST_FOR_LOCATION = [
+        // Material bangunan
+        'baja', 'ringan', 'galvalum', 'spandek', 'bondek', 'hebel', 'bata', 
+        'kayu', 'besi', 'aluminium', 'kaca', 'semen', 'pasir', 'batu', 'kerikil',
+        'genteng', 'keramik', 'cat', 'pintu', 'jendela', 'kusen', 'atap', 'plafon',
+        'gypsum', 'grbk', 'multiplek', 'triplek', 'blockboard', 'partikel',
+        // Produk interior
+        'kitchen', 'set', 'lemari', 'meja', 'kursi', 'sofa', 'springbed', 'laci',
+        'minimalis', 'modern', 'klasik', 'jati', 'mahoni', 'hpl', 'mdf', 'melamin',
+        'duco', 'finishing', 'furniture', 'furnitur', 'interior', 'exterior',
+        // Jasa
+        'pasang', 'service', 'renovasi', 'bangun', 'borongan', 'kontraktor',
+        'konsultasi', 'survey', 'estimasi', 'perbaiki', 'instalasi', 'pemasangan',
+        'pengerjaan', 'perawatan', 'maintenance', 'konstruksi', 'desain', 'gambar',
+        // Ukuran (sering false positive)
+        'tipis', 'tebal', 'lebar', 'panjang', 'pendek', 'kecil', 'besar', 'sedang',
+        'mini', 'maxi', 'jumbo', 'extra', 'super', 'pro', 'max', 'ultra', 'deluxe',
+        'premium', 'standar', 'ekonomis', 'grade', 'kw', 'original', 'bekas', 'baru',
+        // Warna (sering false positive)
+        'putih', 'hitam', 'merah', 'biru', 'hijau', 'kuning', 'ungu', 'abu', 'coklat',
+        'krem', 'salem', 'tosca', 'navy', 'maroon', 'gold', 'silver', 'kuningan'
     ];
     
     // ============================================================
-    // 4. FUNGSI DETEKSI LOKASI
+    // 4. FUNGSI DETEKSI LOKASI (FIXED v4.1)
     // ============================================================
     function isLocation(text) {
         const lowerText = text.toLowerCase();
         const words = lowerText.split(/[\s,-]+/);
         
+        console.log(`  🔍 isLocation check: "${text.substring(0, 50)}..."`);
+        
+        // PRIORITAS 1: Cek whitelist kota (lokasi valid)
         for (const word of words) {
-            if (NOT_LOCATION_WORDS.includes(word)) continue;
-            if (LOCATION_WHITELIST.includes(word)) return true;
-            
-            // Deteksi pola "di [kota]" atau "kota [nama]"
-            if (lowerText.includes('di ' + word) && word.length >= 4) return true;
-            if (lowerText.includes('kota ' + word) && word.length >= 4) return true;
-            
-            // Fallback: kata dengan 2+ vokal dan panjang 4-12 karakter
-            if (word.length >= 4 && word.length <= 12) {
-                const vowelCount = (word.match(/[aiueo]/g) || []).length;
-                if (vowelCount >= 2 && !word.match(/[0-9]/)) return true;
+            if (LOCATION_WHITELIST.includes(word)) {
+                console.log(`  ✅ Location found (whitelist): "${word}"`);
+                return true;
             }
         }
+        
+        // PRIORITAS 2: Jika kata ada di blacklist produk → BUKAN lokasi
+        for (const word of words) {
+            if (PRODUCT_BLACKLIST_FOR_LOCATION.includes(word)) {
+                console.log(`  ❌ Not location (product blacklist): "${word}"`);
+                return false;
+            }
+        }
+        
+        // PRIORITAS 3: Jika tidak ada indikator lokasi (di, ke, kota, wilayah) → BUKAN lokasi
+        const hasLocationIndicator = lowerText.includes('di ') || 
+                                      lowerText.includes('ke ') || 
+                                      lowerText.includes('kota ') || 
+                                      lowerText.includes('wilayah ') ||
+                                      lowerText.includes('daerah ') ||
+                                      lowerText.includes('kecamatan ');
+        
+        if (!hasLocationIndicator) {
+            console.log(`  ❌ Not location (no indicator: di/kota/wilayah)`);
+            return false;
+        }
+        
+        // PRIORITAS 4: Deteksi dengan pola vokal (hanya jika ada indicator)
+        for (const word of words) {
+            // Skip kata pendek
+            if (word.length < 4) continue;
+            if (word.length > 12) continue;
+            
+            // Skip jika mengandung angka
+            if (word.match(/[0-9]/)) continue;
+            
+            const vowelCount = (word.match(/[aiueo]/g) || []).length;
+            if (vowelCount >= 2) {
+                console.log(`  ✅ Location detected (vowel pattern + indicator): "${word}"`);
+                return true;
+            }
+        }
+        
+        console.log(`  ❌ Not location (fallback)`);
         return false;
     }
     
     // ============================================================
-    // 5. FUNGSI CEK PRODUK SPESIFIK (DENGAN JUMLAH KATA)
+    // 5. FUNGSI CEK PRODUK SPESIFIK
     // ============================================================
+    const SPECIFIC_PRODUCT_INDICATORS = [
+        'galvalum', 'spandek', 'bondek', 'hpl', 'mdf', 'jati', 'mahoni',
+        'excavator', 'bulldozer', 'crane', 'dump truck', 'vibro', 'stamper',
+        'minimix', 'jayamix', 'readymix', 'hebel', 'bata ringan', 'bata interlock',
+        'multiplek', 'triplek', 'blockboard', 'gypsum', 'grc', 'grbk'
+    ];
+    
     function isSpecificProduct(text, wordCountAfterPrice = null) {
         const lowerText = text.toLowerCase();
         
@@ -950,11 +1030,12 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(mappingObj, currentUrl, br
         const lowerName = pageName.toLowerCase();
         const useEntityType = entityTypeParam || entityType;
         const isJasa = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(useEntityType);
+        const isSewa = ['SEWA', 'RENTAL', 'SEWA_RENTAL', 'SEWA_ALAT', 'RENTAL_ALAT'].includes(useEntityType);
         
         console.log(`🔍 Detecting: "${pageName}" | Entity: ${useEntityType} | Position: ${position}`);
         
         // ============================================================
-        // PRIORITAS 1: CEK POSISI (PILLAR jika di level 0)
+        // PRIORITAS 1: PILLAR jika posisi pertama dan bukan satu-satunya
         // ============================================================
         if (position === 0 && totalLevels > 1) {
             console.log(`  → PILLAR (posisi pertama)`);
@@ -962,7 +1043,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(mappingObj, currentUrl, br
         }
         
         // ============================================================
-        // PRIORITAS 2: CEK INTENT KEYWORD (PANDUAN, CARA, TIPS)
+        // PRIORITAS 2: CEK INTENT KEYWORD (PANDUAN, CARA, TIPS, APA ITU)
         // ============================================================
         const informationalKeywords = ['panduan', 'cara ', 'tips ', 'apa itu', 'pengertian', 'edukasi'];
         for (const kw of informationalKeywords) {
@@ -1001,7 +1082,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(mappingObj, currentUrl, br
             afterKeyword = afterKeyword.trim();
             const wordCount = afterKeyword.split(/\s+/).filter(w => w.length > 0).length;
             
-            console.log(`  → After keyword: "${afterKeyword}" | Word count: ${wordCount}`);
+            console.log(`  → After keyword: "${afterKeyword.substring(0, 50)}" | Word count: ${wordCount}`);
             
             // CEK LOKASI (MONEY_CHILD) — PRIORITAS TERTINGGI
             if (isLocation(afterKeyword)) {
@@ -1034,22 +1115,25 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(mappingObj, currentUrl, br
         // JASA tanpa keyword harga
         if (isJasa) {
             const jasaKeywords = ['jasa', 'pasang', 'service', 'kontraktor', 'borongan', 
-                                   'renovasi', 'bangun', 'konsultasi', 'survey', 'estimasi'];
+                                   'renovasi', 'bangun', 'konsultasi', 'survey', 'estimasi',
+                                   'perbaiki', 'instalasi', 'pemasangan', 'pengerjaan'];
             for (const kw of jasaKeywords) {
                 if (lowerName.includes(kw)) {
+                    // Cek apakah mengandung lokasi
                     if (isLocation(lowerName)) {
                         console.log(`  → JASA + location → MONEY-CHILD`);
                         return 'money-child';
                     }
-                    console.log(`  → JASA detected → MONEY-PAGE`);
+                    console.log(`  → JASA detected (no location) → MONEY-PAGE`);
                     return 'money-page';
                 }
             }
         }
         
         // SEWA tanpa keyword harga
-        if (isSewaEntity()) {
-            const sewaKeywords = ['sewa', 'rental', 'lease', 'alat berat'];
+        if (isSewa) {
+            const sewaKeywords = ['sewa', 'rental', 'lease', 'alat berat', 'excavator', 
+                                   'bulldozer', 'crane', 'vibro', 'stamper', 'dump truck'];
             for (const kw of sewaKeywords) {
                 if (lowerName.includes(kw)) {
                     if (isLocation(lowerName)) {
@@ -1319,7 +1403,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(mappingObj, currentUrl, br
     let remainingSlots = MAX_LEVEL - 2;
     
     console.log(`\n📊 ========================================`);
-    console.log(`📊 Breadcrumb Generator v4.0 — AKURAT`);
+    console.log(`📊 Breadcrumb Generator v4.1 — FIXED LOCATION DETECTION`);
     console.log(`📊 Entity Type: ${entityType}`);
     console.log(`📊 JASA Entity: ${isJasaEntity() ? 'YES (MONEY_MASTER DILARANG)' : 'NO'}`);
     console.log(`📊 ========================================`);
@@ -1474,25 +1558,26 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(mappingObj, currentUrl, br
         currentEvergreen: currentEvergreen,
         entityType: entityType,
         isValidType: true,
-        version: '4.0'
+        version: '4.1'
     };
 }
 
 // ============================================================
-// RINGKASAN HASIL DETEKSI PER ENTITY TYPE (v4.0)
+// RINGKASAN HASIL DETEKSI PER ENTITY TYPE (v4.1)
 // ============================================================
 /*
 | Entity Type | Keyword Contoh | Hasil Deteksi | Alasan |
 |-------------|----------------|---------------|--------|
-| MATERIAL | "Harga Bata Ringan" | money-master | 2 kata setelah keyword |
-| MATERIAL | "Harga Bata Ringan Hebel" | money-page | 3 kata + specific product |
-| MATERIAL | "Harga Bata Ringan di Jakarta" | money-child | mengandung lokasi |
-| PRODUK | "Harga Kitchen Set" | money-master | 2 kata setelah keyword |
-| PRODUK | "Harga Kitchen Set Minimalis" | money-page | 3+ kata |
-| SEWA | "Harga Sewa Excavator" | money-master | 2 kata setelah keyword |
-| JASA | "Harga Jasa Konstruksi" | money-page | JASA dilarang money-master |
-| JASA | "Jasa Pasang Atap" | money-page | tanpa keyword harga |
-| ARTIKEL | "Harga Material Bangunan 2026" | money-master | artikel boleh |
+| JASA | "Jasa Pasang Atap Baja Ringan" | money-page ✅ | Tidak ada lokasi, "ringan" di blacklist |
+| JASA | "Jasa Pasang Atap Baja Ringan Jakarta" | money-child ✅ | Mengandung whitelist kota "jakarta" |
+| JASA | "Jasa Pasang Atap Baja Ringan di Bandung" | money-child ✅ | Indicator "di" + whitelist "bandung" |
+| MATERIAL | "Harga Bata Ringan" | money-master ✅ | 2 kata setelah keyword |
+| MATERIAL | "Harga Bata Ringan Hebel" | money-page ✅ | 3 kata + specific product |
+| MATERIAL | "Harga Bata Ringan di Jakarta" | money-child ✅ | mengandung lokasi |
+| PRODUK | "Harga Kitchen Set" | money-master ✅ | 2 kata setelah keyword |
+| PRODUK | "Harga Kitchen Set Minimalis" | money-page ✅ | 3+ kata |
+| SEWA | "Harga Sewa Excavator" | money-master ✅ | 2 kata setelah keyword |
+| SEWA | "Sewa Excavator Jakarta" | money-child ✅ | mengandung lokasi |
 */
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasakonstruksistrukturPost = {};
