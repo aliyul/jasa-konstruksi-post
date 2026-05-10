@@ -1070,7 +1070,7 @@ REDIRECT		5			Duplikasi, perlu 301 redirect
  * ✅ Clean code, siap produksi
  */
 
-function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
+private function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
     
     // ============================================================
     // 1. KONSTANTA & VALIDASI
