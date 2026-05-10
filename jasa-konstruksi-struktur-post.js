@@ -780,54 +780,225 @@ KOSONG (saran)   ~15          Perlu dibuat kontennya
 // SKIP LEVEL BEKERJA UNTUK PILLAR & SUB2
 // ============================================================
 
+/**
+ * generateBreadcrumbForMapping v2.0
+ * ✅ Sesuai dengan hierarki 8 level (PHASE 1)
+ * ✅ Validasi entity type (JASA tidak boleh MONEY_MASTER)
+ * ✅ Deteksi bertahap sesuai PRIORITAS PHASE 1
+ * ✅ Support semua entity type: PRODUK, JASA, MATERIAL, SEWA
+ * ✅ Breadcrumb tidak loncat level
+ */
+
 function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
     
     const MAX_LEVEL = 4;
     const DOMAIN = 'https://www.betonjayareadymix.com';
     
     // ============================================================
-    // 1. VALIDASI ENTITY TYPE (SEMUA TYPE DIDUKUNG)
+    // 1. VALIDASI ENTITY TYPE (8 LEVEL HIERARCHY)
     // ============================================================
     const validEntityTypes = [
-        // PRODUK
-        'PRODUK_KONSTRUKSI', 
-        'PRODUK_INTERIOR',
-        'PRODUK',
-        // MATERIAL
-        'MATERIAL_KONSTRUKSI',
-        'MATERIAL',
-        // JASA
-        'JASA_KONSTRUKSI',
-        'JASA_DESAIN_INTERIOR',
-        'JASA',
-        // SEWA/RENTAL
-        'SEWA',
-        'RENTAL',
-        'SEWA_RENTAL',
-        'SEWA_ALAT',
-        'RENTAL_ALAT'
+        'PRODUK_KONSTRUKSI', 'PRODUK_INTERIOR', 'PRODUK',
+        'MATERIAL_KONSTRUKSI', 'MATERIAL',
+        'JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA',
+        'SEWA', 'RENTAL', 'SEWA_RENTAL', 'SEWA_ALAT', 'RENTAL_ALAT'
     ];
     
     if (!validEntityTypes.includes(entityType)) {
         console.error(`❌ ERROR: "${entityType}" BUKAN ENTITY TYPE yang valid!`);
-        console.error(`   Gunakan salah satu dari: ${validEntityTypes.join(', ')}`);
-        return null;
-    }
-    
-    // Ambil page title dari mappingObj atau dari breadcrumbItems terakhir
-    let pageTitle = mappingObj?.[currentUrl];
-    if (!pageTitle && breadcrumbItems.length > 0) {
-        const lastItem = breadcrumbItems[breadcrumbItems.length - 1];
-        pageTitle = typeof lastItem === 'object' ? lastItem.name : lastItem;
-    }
-    
-    if (!pageTitle) {
-        console.error(`❌ ERROR: Page title tidak ditemukan untuk URL "${currentUrl}"`);
         return null;
     }
     
     // ============================================================
-    // 2. KUMPULKAN SEMUA NAMA HALAMAN DARI MAPPING
+    // 2. HIERARKI VALID (8 LEVEL) - SESUAI PHASE 1
+    // ============================================================
+    const VALID_PAGE_TYPES = [
+        'pillar',                    // Level 1
+        'sub-pillar-tipe-2',         // Level 2
+        'sub-pillar-tipe-1',         // Level 3
+        'money-master',              // Level 4 (JASA DILARANG)
+        'money-page',                // Level 5
+        'money-child',               // Level 6
+        'variant',                   // Level 7
+        'sub-variant'                // Level 8
+    ];
+    
+    const TYPE_LEVEL_MAP = {
+        'pillar': 1,
+        'sub-pillar-tipe-2': 2,
+        'sub-pillar-tipe-1': 3,
+        'money-master': 4,
+        'money-page': 5,
+        'money-child': 6,
+        'variant': 7,
+        'sub-variant': 8
+    };
+    
+    // ============================================================
+    // 3. DETEKSI PAGE TYPE (SESUAI PRIORITAS PHASE 1)
+    // ============================================================
+    function detectPageType(pageName, position, totalLevels, entityType) {
+        const lowerName = pageName.toLowerCase();
+        const words = lowerName.split(' ');
+        const isJasaEntity = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(entityType);
+        
+        // ============================================================
+        // PRIORITAS 1: PILLAR (level 1, posisi pertama)
+        // ============================================================
+        if (position === 0) {
+            return 'pillar';
+        }
+        
+        // ============================================================
+        // PRIORITAS 2: CEK ADA/TIDAKNYA KEYWORD HARGA/SEWA/BIAYA
+        // ============================================================
+        const hasPriceKeyword = lowerName.includes('harga ') || 
+                                lowerName.includes('sewa ') || 
+                                lowerName.includes('biaya ') ||
+                                lowerName.includes('jual ') ||
+                                lowerName.includes('beli ') ||
+                                lowerName.includes('rental ');
+        
+        if (hasPriceKeyword) {
+            // 🔥 KHUSUS: JASA TIDAK BOLEH MONEY_MASTER
+            if (isJasaEntity) {
+                return 'money-page';
+            }
+            
+            // Ekstrak teks setelah keyword harga
+            let afterKeyword = '';
+            if (lowerName.includes('harga ')) afterKeyword = lowerName.substring(lowerName.indexOf('harga ') + 6);
+            else if (lowerName.includes('sewa ')) afterKeyword = lowerName.substring(lowerName.indexOf('sewa ') + 5);
+            else if (lowerName.includes('biaya ')) afterKeyword = lowerName.substring(lowerName.indexOf('biaya ') + 6);
+            
+            // CEK LOKASI (MONEY_CHILD)
+            if (isLocation(afterKeyword)) {
+                return 'money-child';
+            }
+            
+            // CEK SPESIFIKASI PRODUK (MONEY_PAGE)
+            if (isSpecificProduct(afterKeyword)) {
+                return 'money-page';
+            }
+            
+            // Hanya "harga [kategori]" -> MONEY_MASTER
+            const wordCount = afterKeyword.split(/\s+/).filter(w => w.length > 0).length;
+            if (wordCount <= 2) {
+                return 'money-master';
+            }
+            
+            return 'money-page';
+        }
+        
+        // ============================================================
+        // PRIORITAS 3: DETEKSI SUB-VARIANT (level 8 - paling detail)
+        // ============================================================
+        const veryDetailPatterns = [
+            /[0-9]+(\s*mm|\s*cm|\s*m|\s*inch)/i,
+            /[0-9]+(\s*x\s*)[0-9]+(\s*mm|\s*cm|\s*m)/i,
+            /tebal\s+[0-9]+(\s*mm)/i,
+            /ketebalan\s+[0-9]+/i
+        ];
+        
+        let detailScore = 0;
+        for (const pattern of veryDetailPatterns) {
+            if (pattern.test(lowerName)) detailScore++;
+        }
+        
+        if (detailScore >= 2 || (lowerName.includes('x') && lowerName.includes('mm'))) {
+            return 'sub-variant';
+        }
+        
+        // ============================================================
+        // PRIORITAS 4: DETEKSI VARIANT (level 7)
+        // ============================================================
+        const variantIndicators = [
+            'spesifikasi', 'ukuran', 'tipe', 'type', 'model', 'varian', 
+            'warna', 'merk', 'seri', 'versi', 'kapasitas', 'daya', 'bahan'
+        ];
+        
+        for (const word of variantIndicators) {
+            if (lowerName.includes(word)) {
+                return 'variant';
+            }
+        }
+        
+        // Deteksi angka ukuran
+        if (/\d+(\.\d+)?\s*(mm|cm|m|inch|kg|ton)/.test(lowerName)) {
+            return 'variant';
+        }
+        
+        // ============================================================
+        // PRIORITAS 5: DETEKSI SUB-PILLAR TIPE 1 (level 3 - perbandingan)
+        // ============================================================
+        const comparisonWords = ['vs', 'versus', 'atau', 'lebih baik', 'perbandingan', 
+                                  'banding', 'mana yang', 'kelebihan', 'kekurangan',
+                                  'lebih bagus', 'lebih murah', 'lebih tahan'];
+        for (const word of comparisonWords) {
+            if (lowerName.includes(word)) {
+                return 'sub-pillar-tipe-1';
+            }
+        }
+        
+        // ============================================================
+        // PRIORITAS 6: DETEKSI SUB-PILLAR TIPE 2 (level 2 - jenis/macam)
+        // ============================================================
+        if (lowerName.startsWith('jenis ') || 
+            lowerName.startsWith('macam ') || 
+            lowerName.startsWith('tipe ') ||
+            lowerName.includes('jenis-jenis') ||
+            lowerName.includes('macam-macam')) {
+            return 'sub-pillar-tipe-2';
+        }
+        
+        // ============================================================
+        // PRIORITAS 7: DEFAULT (pillar untuk konten umum)
+        // ============================================================
+        return 'pillar';
+    }
+    
+    // ============================================================
+    // 4. FUNGSI BANTUAN DETEKSI LOKASI & PRODUK SPESIFIK
+    // ============================================================
+    const LOCATION_WHITELIST = [
+        'jakarta', 'bogor', 'depok', 'tangerang', 'bekasi', 'bandung', 'semarang',
+        'surabaya', 'medan', 'makassar', 'denpasar', 'yogyakarta', 'jogja', 'malang',
+        'solo', 'surakarta', 'pekanbaru', 'palembang', 'balikpapan', 'manado',
+        'pontianak', 'banjarmasin', 'batam', 'cirebon', 'tasikmalaya', 'purwokerto'
+    ];
+    
+    const NOT_LOCATION_WORDS = [
+        'mini', 'maxi', 'super', 'extra', 'plus', 'pro', 'max', 'ultra',
+        'murah', 'mahal', 'premium', 'standar', 'ekonomis', 'kecil', 'besar',
+        'putih', 'hitam', 'merah', 'biru', 'hijau', 'kuning', 'minimalis', 'modern'
+    ];
+    
+    function isLocation(text) {
+        const words = text.toLowerCase().split(/\s+/);
+        for (const word of words) {
+            if (NOT_LOCATION_WORDS.includes(word)) continue;
+            if (LOCATION_WHITELIST.includes(word)) return true;
+            if (word.length >= 5 && word.length <= 12) {
+                const vowelCount = (word.match(/[aiueo]/g) || []).length;
+                if (vowelCount >= 2) return true;
+            }
+        }
+        return false;
+    }
+    
+    function isSpecificProduct(text) {
+        const specificIndicators = [
+            'galvalum', 'spandek', 'bondek', 'hpl', 'mdf', 'jati', 'mahoni',
+            'excavator', 'bulldozer', 'crane', 'dump truck', 'vibro'
+        ];
+        for (const indicator of specificIndicators) {
+            if (text.includes(indicator)) return true;
+        }
+        return false;
+    }
+    
+    // ============================================================
+    // 5. KUMPULKAN SEMUA NAMA HALAMAN DARI MAPPING
     // ============================================================
     const allPageNames = [];
     if (mappingObj) {
@@ -839,290 +1010,7 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     }
     
     // ============================================================
-    // 3. DETEKSI TYPE OTOMATIS (SESUAI STANDAR PHASE 1)
-    // DENGAN DUKUNGAN SEMUA ENTITY TYPE
-    // ============================================================
-    function detectPageType(pageName, position, totalLevels) {
-        const lowerName = pageName.toLowerCase();
-        const words = lowerName.split(' ');
-        const firstWord = words[0];
-        const lastWord = words[words.length - 1];
-        
-        // ============================================================
-        // PRIORITAS 1: PILLAR (level terluas, posisi pertama)
-        // ============================================================
-        if (position === 0) {
-            return 'PILLAR';
-        }
-        
-        // ============================================================
-        // PRIORITAS 2: MONEY_LEADGEN (khusus JASA & SEWA)
-        // ============================================================
-        const leadgenWords = ['konsultasi', 'survey', 'hubungi', 'contact', 'estimasi', 'penawaran'];
-        for (const word of leadgenWords) {
-            if (lowerName.startsWith(word + ' ') || lowerName === word) {
-                return 'MONEY_LEADGEN';
-            }
-        }
-        
-        // ============================================================
-        // PRIORITAS 3: MONEY_MASTER (harga NASIONAL/UMUM)
-        // KHUSUS PRODUK, MATERIAL, SEWA (JASA TIDAK BOLEH)
-        // ============================================================
-        function isMoneyMaster(name) {
-            const lower = name.toLowerCase();
-            
-            // JASA tidak boleh menggunakan MONEY_MASTER
-            const isJasaEntity = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(entityType);
-            if (isJasaEntity) {
-                return false;
-            }
-            
-            // Harus diawali "harga" atau "sewa" (untuk rental)
-            const hasPriceKeyword = lower.startsWith('harga ') || lower.startsWith('sewa ') || lower.startsWith('biaya ');
-            if (!hasPriceKeyword) return false;
-            
-            // Cek apakah ada produk spesifik (bukan kategori umum)
-            let afterKeyword = '';
-            if (lower.startsWith('harga ')) afterKeyword = lower.substring(6);
-            if (lower.startsWith('sewa ')) afterKeyword = lower.substring(5);
-            if (lower.startsWith('biaya ')) afterKeyword = lower.substring(6);
-            
-            // Kata kunci yang menandakan produk SPESIFIK (bukan umum)
-            const specificProductIndicators = [
-                'pabrikan', 'minimalis', 'modern', 'modular', 'siap pakai',
-                'hpl', 'mdf', 'jati', 'bigland', 'pengantin', 'murah',
-                'premium', 'ekonomis', 'standar', 'custom', 'bespoke',
-                '0.', '0,', '1.', '2.', '3.', 'mm', 'cm', 'meter', 'inch',
-                'putih', 'hitam', 'merah', 'biru', 'hijau', 'kuning',
-                'kecil', 'besar', 'sedang', 'mini', 'maxi', 'jumbo',
-                // Untuk sewa/rental
-                'excavator', 'bulldozer', 'crane', 'dump truck', 'vibro',
-                'alat berat', 'alat konstruksi'
-            ];
-            
-            for (const indicator of specificProductIndicators) {
-                if (afterKeyword.includes(indicator)) {
-                    return false; // Ini MONEY_PAGE, bukan MONEY_MASTER
-                }
-            }
-            
-            // Jika hanya "harga [kategori]" atau "sewa [kategori]" -> MONEY_MASTER
-            return true;
-        }
-        
-        if (isMoneyMaster(pageName)) {
-            return 'MONEY_MASTER';
-        }
-        
-        // ============================================================
-        // PRIORITAS 4: MONEY_PAGE (harga PRODUK SPESIFIK)
-        // ============================================================
-        const hasPriceOrRent = lowerName.includes('harga ') || 
-                                lowerName.includes('sewa ') || 
-                                lowerName.includes('biaya ') ||
-                                lowerName.includes('jual ') ||
-                                lowerName.includes('beli ') ||
-                                lowerName.includes('rental ');
-        
-        if (hasPriceOrRent && !isMoneyMaster(pageName)) {
-            return 'MONEY_PAGE';
-        }
-        
-        // ============================================================
-        // PRIORITAS 5: MONEY_PAGE (jual/beli/sewa produk spesifik)
-        // ============================================================
-        const transactionWords = ['jual', 'beli', 'sewa', 'pesan', 'booking', 'rental', 'order'];
-        for (const word of transactionWords) {
-            if (lowerName.startsWith(word + ' ')) {
-                return 'MONEY_PAGE';
-            }
-        }
-        
-        // ============================================================
-        // PRIORITAS 6: MONEY_CHILD (harga + lokasi ATAU sewa + lokasi)
-        // DETEKSI LOKASI DENGAN WHITELIST + POLA (HYBRID METHOD)
-        // ============================================================
-        
-        // Whitelist kota/kabupaten di Indonesia
-        const locationIndicators = [
-            // Jabodetabek
-            'jakarta', 'bogor', 'depok', 'tangerang', 'bekasi', 'jabodetabek',
-            'jakpus', 'jakbar', 'jaksel', 'jakut', 'jaktim',
-            'tangerang selatan', 'tangsel', 'bintaro', 'alam sutera', 'gading serpong',
-            // Jawa Barat
-            'bandung', 'cimahi', 'cirebon', 'tasikmalaya', 'sukabumi', 'garut', 
-            'sumedang', 'purwakarta', 'karawang', 'subang', 'indramayu',
-            'majalengka', 'kuningan', 'ciamis', 'banjar', 'pangandaran', 'cianjur',
-            // Jawa Tengah
-            'semarang', 'solo', 'surakarta', 'yogyakarta', 'jogja', 'magelang', 
-            'salatiga', 'pekalongan', 'tegal', 'brebes', 'cilacap', 'purwokerto', 
-            'kebumen', 'banjarnegara', 'wonosobo', 'temanggung', 'kendal', 'demak', 
-            'kudus', 'jepara', 'pati', 'rembang', 'blora', 'grobagan', 'sragen', 
-            'karanganyar', 'wonogiri', 'sukoharjo', 'klaten', 'boyolali',
-            // Jawa Timur
-            'surabaya', 'malang', 'kediri', 'blitar', 'madiun', 'ponorogo', 'ngawi', 
-            'magetan', 'trenggalek', 'tulungagung', 'nganjuk', 'jombang', 'mojokerto', 
-            'gresik', 'sidoarjo', 'pasuruan', 'probolinggo', 'lumajang', 'jember', 
-            'banyuwangi', 'bondowoso', 'situbondo', 'pamekasan', 'sampang', 'sumenep', 
-            'bangkalan', 'bojonegoro', 'tuban', 'lamongan',
-            // Sumatera
-            'medan', 'binjai', 'pematangsiantar', 'tanjungbalai', 'tebingtinggi', 'deli serdang',
-            'padang', 'bukittinggi', 'payakumbuh', 'solok', 'sawahlunto', 'padang panjang',
-            'pekanbaru', 'dumai', 'bengkalis', 'kampar', 'riau', 'batam', 'tanjungpinang',
-            'palembang', 'lubuklinggau', 'prabumulih', 'ogan ilir', 'ogan komering',
-            'bandar lampung', 'metro', 'lampung', 'jambi', 'sungai penuh', 'bengkulu',
-            'pangkalpinang', 'tanjung pandan', 'aceh', 'banda aceh', 'lhonga', 'sigli',
-            // Kalimantan
-            'pontianak', 'singkawang', 'ketapang', 'sambas', 'kalimantan barat',
-            'balikpapan', 'samarinda', 'bontang', 'kutai', 'penajam', 'kalimantan timur',
-            'banjarmasin', 'banjarbaru', 'kalimantan selatan', 'palangkaraya', 'kalimantan tengah',
-            'tanjung selor', 'kalimantan utara',
-            // Sulawesi
-            'makassar', 'parepare', 'palopo', 'sulawesi selatan', 'manado', 'bitung', 'tomohon',
-            'kotamobagu', 'sulawesi utara', 'palu', 'sulawesi tengah', 'kendari', 'baubau',
-            'sulawesi tenggara', 'gorontalo', 'sulawesi barat', 'mamuju',
-            // Bali & Nusa Tenggara
-            'denpasar', 'badung', 'gianyar', 'tabanan', 'bangli', 'klungkung', 'karangasem',
-            'buleleng', 'jembrana', 'bali', 'mataram', 'bima', 'dompu', 'sumbawa', 'lombok',
-            'kupang', 'soe', 'atambua', 'ntt', 'ntb',
-            // Maluku & Papua
-            'ambon', 'tual', 'maluku', 'ternate', 'tidore', 'maluku utara',
-            'jayapura', 'wamena', 'timika', 'merauke', 'biak', 'sorong', 'manokwari', 'nabire',
-            'papua', 'papua barat'
-        ];
-        
-        // Pola akhiran kota (untuk mendeteksi kota yang tidak ada di whitelist)
-        const citySuffixes = ['karta', 'jaya', 'pura', 'sari', 'mulya', 'agung', 'asih', 'ayem', 'luhur'];
-        
-        // Blacklist kata yang mirip lokasi tapi sebenarnya produk
-        const notLocationWords = [
-            'mini', 'maxi', 'super', 'extra', 'plus', 'pro', 'max', 'ultra',
-            'baru', 'lama', 'bekas', 'second', 'original', 'kw', 'grade', 
-            'murah', 'mahal', 'hemat', 'premium', 'standar', 'ekonomis', 
-            'kecil', 'besar', 'sedang', 'panjang', 'pendek', 'tebal', 'tipis',
-            'putih', 'hitam', 'merah', 'biru', 'hijau', 'kuning', 'ungu', 'abu', 'coklat',
-            'minimalis', 'modern', 'klasik', 'industrial', 'skandinavia', 'jepang'
-        ];
-        
-        function isLocation(word) {
-            const lowerWord = word.toLowerCase();
-            
-            // LEVEL 1: Cek whitelist kota
-            if (locationIndicators.includes(lowerWord)) return true;
-            
-            // LEVEL 2: Cek blacklist kata produk
-            if (notLocationWords.includes(lowerWord)) return false;
-            
-            // LEVEL 3: Cek apakah kata tersebut dikenal sebagai produk (dari mapping)
-            const isKnownProduct = allPageNames.some(known => 
-                known === lowerWord || 
-                known.includes(lowerWord) || 
-                lowerWord.includes(known)
-            );
-            if (isKnownProduct) return false;
-            
-            // LEVEL 4: Cek pola akhiran kota
-            for (const suffix of citySuffixes) {
-                if (lowerWord.endsWith(suffix) && lowerWord.length >= 4) {
-                    return true;
-                }
-            }
-            
-            // LEVEL 5: Cek pola kata dengan 2+ vokal (untuk kata yang panjang)
-            if (lowerWord.length >= 5 && lowerWord.length <= 12) {
-                const vowelCount = (lowerWord.match(/[aiueo]/g) || []).length;
-                if (vowelCount >= 2) {
-                    // Pastikan bukan kata produk umum
-                    const commonProductWords = ['furniture', 'furnitur', 'meja', 'kursi', 'lemari', 'sofa'];
-                    if (!commonProductWords.includes(lowerWord)) {
-                        return true;
-                    }
-                }
-            }
-            
-            return false;
-        }
-        
-        // Cek apakah last word adalah lokasi (minimal 2 kata)
-        if (words.length >= 2 && isLocation(lastWord)) {
-            return 'MONEY_CHILD';
-        }
-        
-        // ============================================================
-        // PRIORITAS 7: SUB1 (perbandingan/evaluasi) - SEMUA ENTITY
-        // ============================================================
-        const comparisonWords = ['vs', 'versus', 'atau', 'lebih baik', 'perbandingan', 
-                                  'banding', 'mana yang', 'kelebihan', 'kekurangan',
-                                  'lebih bagus', 'lebih murah', 'lebih tahan', 'lebih awet',
-                                  'plus minus', 'keunggulan', 'kelemahan'];
-        for (const word of comparisonWords) {
-            if (lowerName.includes(word)) {
-                return 'SUB1';
-            }
-        }
-        
-        // ============================================================
-        // PRIORITAS 8: SUB1 (panduan/cara/tips) - EDUKASI SEMUA ENTITY
-        // ============================================================
-        const guideWords = ['panduan', 'cara', 'tips', 'tutorial', 'langkah', 
-                             'petunjuk', 'pedoman', 'strategi', 'metode', 'teknik',
-                             'rahasia', 'kunci', 'wajib tahu', 'perlu diketahui'];
-        for (const word of guideWords) {
-            if (lowerName.startsWith(word + ' ') || lowerName.includes(' ' + word + ' ')) {
-                return 'SUB1';
-            }
-        }
-        
-        // ============================================================
-        // PRIORITAS 9: VARIANT (spesifikasi teknis) - PRODUK/MATERIAL/SEWA
-        // ============================================================
-        const variantIndicators = [
-            'tipe', 'type', 'ukuran', 'model', 'varian', 'warna', 'bentuk', 'seri', 'versi',
-            'spesifikasi', 'detail', 'rinci', 'bahan', 'material', 'komposisi', 'kualitas',
-            'mutu', 'grade', 'kelas', 'standar', 'kode', 'kapasitas', 'tonase', 'daya'
-        ];
-        
-        for (const word of variantIndicators) {
-            if (lowerName.includes(' ' + word + ' ') || lowerName.endsWith(' ' + word)) {
-                return 'VARIANT';
-            }
-        }
-        
-        // Deteksi angka (ukuran dimensi, tebal, kapasitas, dll)
-        if (/\d+(\.\d+)?\s*(mm|cm|m|inch|meter|kg|gram|ton|liter|cc|pk|hp)/.test(lowerName)) {
-            return 'VARIANT';
-        }
-        
-        // ============================================================
-        // PRIORITAS 10: SUB-VARIANT (sangat detail, level terbawah)
-        // ============================================================
-        if (lowerName.includes('tebal') || 
-            lowerName.includes('ketebalan') ||
-            lowerName.includes('lebar') ||
-            lowerName.includes('panjang') ||
-            lowerName.includes('tinggi') ||
-            /\d+(\.\d+)?\s*mm\s*x\s*\d+(\.\d+)?\s*mm/.test(lowerName)) {
-            return 'SUB_VARIANT';
-        }
-        
-        // ============================================================
-        // PRIORITAS 11: SUB2 (jenis/macam/tipe - konten informasional)
-        // ============================================================
-        if (lowerName.startsWith('jenis ') || 
-            lowerName.startsWith('macam ') || 
-            lowerName.startsWith('tipe ')) {
-            return 'SUB2';
-        }
-        
-        // ============================================================
-        // DEFAULT: SUB2 untuk konten informasional biasa
-        // ============================================================
-        return 'SUB2';
-    }
-    
-    // ============================================================
-    // 4. FUNGSI BANTUAN
+    // 6. FUNGSI BANTUAN LAINNYA
     // ============================================================
     function generateIdFromName(name) {
         return name.replace(/[^a-zA-Z0-9]/g, '') + 'Post';
@@ -1137,7 +1025,7 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     }
     
     // ============================================================
-    // 5. BANGUN LEVELS DARI breadcrumbItems (SUPPORT OBJECT & STRING)
+    // 7. BANGUN LEVELS DARI breadcrumbItems
     // ============================================================
     const allLevels = [];
     for (let i = 0; i < breadcrumbItems.length; i++) {
@@ -1152,17 +1040,37 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
             url = null;
         }
         
+        const pageType = detectPageType(name, i, breadcrumbItems.length, entityType);
+        
         allLevels.push({
             name: name,
             url: url,
-            type: detectPageType(name, i, breadcrumbItems.length),
+            type: pageType,
+            level: TYPE_LEVEL_MAP[pageType] || 99,
             id: generateIdFromName(name),
             position: i
         });
     }
     
     // ============================================================
-    // 6. VALIDASI & FALLBACK URL
+    // 8. VALIDASI HIERARKI (TIDAK BOLEH LONCAT LEVEL)
+    // ============================================================
+    for (let i = 0; i < allLevels.length - 1; i++) {
+        const current = allLevels[i];
+        const next = allLevels[i + 1];
+        
+        if (next.level - current.level > 1) {
+            console.warn(`⚠️ LEVEL JUMP: ${current.name}(${current.type} L${current.level}) → ${next.name}(${next.type} L${next.level}) | Terjadi loncatan level!`);
+            // Perbaiki dengan menurunkan level next
+            const correctedType = VALID_PAGE_TYPES[current.level] || 'sub-pillar-tipe-2';
+            next.type = correctedType;
+            next.level = TYPE_LEVEL_MAP[correctedType] || current.level + 1;
+            console.log(`✅ DIPERBAIKI: ${next.name} → ${next.type} L${next.level}`);
+        }
+    }
+    
+    // ============================================================
+    // 9. VALIDASI & FALLBACK URL
     // ============================================================
     for (const level of allLevels) {
         if (!level.url) {
@@ -1186,68 +1094,66 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     }
     
     // ============================================================
-    // 7. TENTUKAN LEVEL YANG AKAN DITAMPILKAN (MAX 4 LEVEL)
+    // 10. TENTUKAN LEVEL YAKAN DITAMPILKAN (MAX 4 LEVEL)
     // ============================================================
     const selectedLevels = [];
     
     // Level 1: Home (WAJIB)
     selectedLevels.push({ 
-        name: 'BJR', 
+        name: 'Beranda', 
         url: DOMAIN, 
         isHome: true,
-        type: 'HOME'
+        type: 'pillar',
+        level: 1
     });
     
-    // Hitung slot tersisa (MAX_LEVEL - 1 untuk home - 1 untuk halaman saat ini)
     let remainingSlots = MAX_LEVEL - 2;
     
     console.log(`📊 ========================================`);
-    console.log(`📊 Breadcrumb Generator - SEO Tercanggih`);
+    console.log(`📊 Breadcrumb Generator v2.0 - 8 Level Hierarchy`);
     console.log(`📊 Entity Type: ${entityType}`);
-    console.log(`📊 Max level: ${MAX_LEVEL}, slot untuk parent: ${remainingSlots}`);
-    console.log(`📊 Input levels: ${allLevels.map(l => `${l.name}(${l.type})`).join(' → ')}`);
+    console.log(`📊 Max level: ${MAX_LEVEL}`);
     console.log(`📊 ========================================`);
     
-    // Parent terdekat (level terakhir sebelum current page) - WAJIB tampil
+    // Parent terdekat (WAJIB)
     let parentTerdekat = null;
     if (allLevels.length > 0) {
         parentTerdekat = allLevels[allLevels.length - 1];
         selectedLevels.push(parentTerdekat);
         remainingSlots--;
-        console.log(`✅ WAJIB: "${parentTerdekat.name}" (${parentTerdekat.type}) - sisa slot: ${remainingSlots}`);
+        console.log(`✅ WAJIB: "${parentTerdekat.name}" (${parentTerdekat.type} L${parentTerdekat.level})`);
     }
     
-    // Level lainnya (dari awal sampai sebelum parent terdekat)
-    // Di-reverse agar yang terdekat dengan parent diprioritaskan
-    const otherLevels = [...allLevels.slice(0, allLevels.length - 1)].reverse();
-    const canSkipTypes = ['PILLAR', 'SUB2'];
+    // Level lainnya (prioritaskan level tertinggi)
+    const otherLevels = [...allLevels.slice(0, allLevels.length - 1)].sort((a, b) => b.level - a.level);
     
     for (const level of otherLevels) {
         if (remainingSlots <= 0) {
-            console.log(`📌 SKIP: "${level.name}" (${level.type}) - tidak ada slot tersisa`);
+            console.log(`📌 SKIP: "${level.name}" (${level.type} L${level.level}) - slot habis`);
             continue;
         }
         
-        if (canSkipTypes.includes(level.type)) {
-            console.log(`📌 SKIP: "${level.name}" (${level.type}) - type boleh skip`);
-            continue;
-        }
-        
-        // Tambahkan di posisi setelah Home (index 1)
         selectedLevels.splice(1, 0, level);
         remainingSlots--;
-        console.log(`✅ TAMBAH: "${level.name}" (${level.type}) - sisa slot: ${remainingSlots}`);
+        console.log(`✅ TAMBAH: "${level.name}" (${level.type} L${level.level})`);
     }
     
     // Halaman saat ini (WAJIB)
     const currentFullUrl = currentUrl.startsWith('http') ? currentUrl : DOMAIN + currentUrl;
-    const currentPageType = detectPageType(pageTitle, allLevels.length, allLevels.length);
+    const currentPageTitle = (() => {
+        if (mappingObj && mappingObj[currentUrl]) return mappingObj[currentUrl];
+        if (parentTerdekat) return parentTerdekat.name;
+        return 'Halaman';
+    })();
+    
+    const currentPageType = detectPageType(currentPageTitle, allLevels.length, allLevels.length, entityType);
     
     selectedLevels.push({
-        name: pageTitle,
+        name: currentPageTitle,
         url: currentFullUrl,
         isCurrent: true,
-        type: currentPageType
+        type: currentPageType,
+        level: TYPE_LEVEL_MAP[currentPageType] || 99
     });
     
     // Update position
@@ -1255,12 +1161,11 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         selectedLevels[i].position = i + 1;
     }
     
-    console.log(`✅ FINAL (${selectedLevels.length} level): ${selectedLevels.map(l => l.name).join(' → ')}`);
+    console.log(`✅ FINAL (${selectedLevels.length} level): ${selectedLevels.map(l => `${l.name}(${l.type})`).join(' → ')}`);
     console.log(`📊 Current page type: ${currentPageType}`);
-    console.log(`📊 Entity Type: ${entityType}`);
     
     // ============================================================
-    // 8. GENERATE HTML BREADCRUMB
+    // 11. GENERATE HTML BREADCRUMB + JSON-LD
     // ============================================================
     let breadcrumbHtml = `<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">\n`;
     
@@ -1287,19 +1192,13 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     
     breadcrumbHtml += `</div>\n`;
     
-    // ============================================================
-    // 9. GENERATE JSON-LD SCHEMA
-    // ============================================================
-    const jsonLdItems = [];
-    for (let i = 0; i < selectedLevels.length; i++) {
-        const level = selectedLevels[i];
-        jsonLdItems.push({
-            "@type": "ListItem",
-            "position": i + 1,
-            "name": level.name,
-            "item": level.url
-        });
-    }
+    // JSON-LD Schema
+    const jsonLdItems = selectedLevels.map((level, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": level.name,
+        "item": level.url
+    }));
     
     const jsonLd = {
         "@context": "https://schema.org",
@@ -1308,18 +1207,14 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     };
     
     // ============================================================
-    // 10. HAPUS BREADCRUMB LAMA & INJECT YANG BARU
+    // 12. INJECT KE DOM
     // ============================================================
-    
-    // Hapus semua breadcrumb lama (manual)
     const oldBreadcrumbs = document.querySelectorAll('.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"]');
     oldBreadcrumbs.forEach(el => el.remove());
     
-    // Hapus JSON-LD breadcrumb lama
     const oldJsonLd = document.querySelector('script[data-breadcrumb="true"]');
     if (oldJsonLd) oldJsonLd.remove();
     
-    // Inject HTML breadcrumb baru
     const targetElement = document.querySelector('main, article, .content, #main-content, .post-content');
     if (targetElement && targetElement.firstChild) {
         targetElement.insertAdjacentHTML('afterbegin', breadcrumbHtml);
@@ -1332,22 +1227,15 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         }
     }
     
-    // Inject JSON-LD baru
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.setAttribute('data-breadcrumb', 'true');
     script.textContent = JSON.stringify(jsonLd);
     document.head.appendChild(script);
     
-    console.log(`✅ Breadcrumb injected to DOM for entity: ${entityType}`);
-    console.log(`📊 ========================================`);
-    console.log(`✅ Breadcrumb generated and injected successfully!`);
-    console.log(`📊 Entity Type: ${entityType} | Page Type: ${currentPageType}`);
+    console.log(`✅ Breadcrumb injected for entity: ${entityType}`);
     console.log(`📊 ========================================`);
     
-    // ============================================================
-    // 11. RETURN OUTPUT (LENGKAP)
-    // ============================================================
     return {
         html: breadcrumbHtml,
         jsonLd: jsonLd,
@@ -1357,7 +1245,6 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         isValidType: true
     };
 }
-
 // ============================================================
 // CONTOH PANGGILAN DENGAN URL MANUAL PER LEVEL
 // ============================================================
