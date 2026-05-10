@@ -1905,7 +1905,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
     // --- validasi URL terdaftar ---
     if (!urlMappingGabungan[cleanUrlJasaKonsAlatKonstruksiPost]) {
-      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaKonsAlatKonstruksiPost}`);
+      console.log(`[HybridDateModified] URL jasa-alat-konstruksi-post.js tidak terdaftar: ${cleanUrlJasaKonsAlatKonstruksiPost}`);
       return;
     }
 
@@ -2217,6 +2217,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.error("[HybridDateModified] Fatal:", err);
   }
 })();
+	
      // Menemukan elemen menggunakan Id
     var JasaKonsAlatKonstruksiPost = document.getElementById("JasaKonsAlatKonstruksiPost");
 
