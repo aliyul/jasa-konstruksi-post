@@ -772,7 +772,7 @@ const urlMappingCustom = {
 */
 
 /**
- * generateBreadcrumbForMapping v3.0 — FULL REVISI
+ * generateBreadcrumbJasaKonstruksi v3.0 — FULL REVISI
  * ✅ Sesuai dengan hierarki 8 level (PHASE 1)
  * ✅ Validasi entity type (JASA tidak boleh MONEY_MASTER)
  * ✅ Deteksi bertahap sesuai PRIORITAS PHASE 1
@@ -782,9 +782,8 @@ const urlMappingCustom = {
  * ✅ Evergreen vs Non-Evergreen detection
  * ✅ Clean code, siap produksi
  */
-(function() {
-    'use strict';
-function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
+
+function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
     
     // ============================================================
     // 1. KONSTANTA & VALIDASI
@@ -1318,14 +1317,13 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         version: '3.0'
     };
 }
-})
 // ============================================================
 // CONTOH PENGGUNAAN
 // ============================================================
 
 /*
 // Contoh 1: MATERIAL KONSTRUKSI
-const result1 = generateBreadcrumbForMapping(
+const result1 = generateBreadcrumbJasaKonstruksi(
     urlMapping,
     '/p/ready-mix-beton-cor-jayamix-minimix.html',
     [
@@ -1337,7 +1335,7 @@ const result1 = generateBreadcrumbForMapping(
 );
 
 // Contoh 2: JASA KONSTRUKSI (otomatis tidak akan jadi money-master)
-const result2 = generateBreadcrumbForMapping(
+const result2 = generateBreadcrumbJasaKonstruksi(
     urlMapping,
     '/p/harga-jasa-konstruksi.html',
     [
@@ -1348,7 +1346,7 @@ const result2 = generateBreadcrumbForMapping(
 );
 
 // Contoh 3: PRODUK INTERIOR dengan lokasi (money-child)
-const result3 = generateBreadcrumbForMapping(
+const result3 = generateBreadcrumbJasaKonstruksi(
     urlMapping,
     '/p/harga-kitchen-set-jakarta.html',
     [
@@ -2112,7 +2110,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage[cleanUrlJasaKons]) {
 
 	if (urlMappingStrukturBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingStrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksi(
         urlMappingStrukturBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2128,7 +2126,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage[cleanUrlJasaKons]) {
 	if (urlMappingRenovasiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingRenovasiBridgeFromSub2Sub1[cleanUrlJasaKons];
 	
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksi(
         urlMappingRenovasiBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2144,7 +2142,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage[cleanUrlJasaKons]) {
  	if (urlMappingFinishingBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingFinishingBridgeFromSub2Sub1[cleanUrlJasaKons];
 	
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksi(
         urlMappingFinishingBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2159,7 +2157,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage[cleanUrlJasaKons]) {
 
 if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksi(
         urlMappingPerawatanPerbaikanBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2174,7 +2172,7 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
 	if (urlMappingJalanPerkerasanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingJalanPerkerasanBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksi(
         urlMappingJalanPerkerasanBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2189,7 +2187,7 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 
 	if (urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksi(
         urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2204,7 +2202,7 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
  
 	if (urlMappingPerbandinganJasaPondasiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingPerbandinganJasaPondasiBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksi(
         urlMappingPerbandinganJasaPondasiBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2219,7 +2217,7 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 
 		if (urlMappingPerbaikanJasaSaluranDrainaseBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingPerbaikanJasaSaluranDrainaseBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksi(
         urlMappingPerbaikanJasaSaluranDrainaseBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2233,7 +2231,7 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     }
 		if (urlMappingPerbaikanJasaPematanganLahanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingPerbaikanJasaPematanganLahanBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksi(
         urlMappingPerbaikanJasaPematanganLahanBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2247,7 +2245,7 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     }
 		if (urlMappingPerbaikanJasaJasaUjiTanahBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingPerbaikanJasaJasaUjiTanahBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksi(
         urlMappingPerbaikanJasaJasaUjiTanahBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2261,7 +2259,7 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     }
 		if (urlMappingPerbaikanJasaCuttingBetonBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingPerbaikanJasaCuttingBetonBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksi(
         urlMappingPerbaikanJasaCuttingBetonBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2275,7 +2273,7 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
 	if (urlMappingPerbaikanJasaPengeboranBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingPerbaikanJasaPengeboranBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksi(
         urlMappingPerbaikanJasaPengeboranBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2289,7 +2287,7 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     }
 		if (urlMappingPerbaikanJasaPerkuatanTanahLongsorBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingPerbaikanJasaPerkuatanTanahLongsorBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksi(
         urlMappingPerbaikanJasaPerkuatanTanahLongsorBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2304,7 +2302,7 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
 	if (urlMappingPerbaikanJasaPembatasPengamanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingPerbaikanJasaPembatasPengamanBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksi(
         urlMappingPerbaikanJasaPembatasPengamanBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2556,7 +2554,7 @@ if (urlMappingSewaAlatProyekFromSub2Sub1[cleanUrlJasaKons]) {
 	    
         pageNameKonstruksiSub.textContent = urlMappingSewaAlatProyekFromSub2Sub1[cleanUrlJasaKons];
 
-	   generateBreadcrumbForMapping(
+	   generateBreadcrumbJasaKonstruksi(
         urlMappingSewaAlatProyekFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2624,7 +2622,7 @@ if (urlMappingSewaAlatProyekFromSub1MoneyMaster[cleanUrlJasaKons]) {
 	    
         pageNameKonstruksiSub.textContent = urlMappingSewaAlatProyekFromSub1MoneyMaster[cleanUrlJasaKons];
 
-	   generateBreadcrumbForMapping(
+	   generateBreadcrumbJasaKonstruksi(
         urlMappingSewaAlatProyekFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -2640,7 +2638,7 @@ if (urlMappingSewaAlatProyekFromSub1MoneyMaster[cleanUrlJasaKons]) {
 if (urlMappingSewaAlatBeratFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingSewaAlatBeratFromSub2Sub1[cleanUrlJasaKons];
 
-	   generateBreadcrumbForMapping(
+	   generateBreadcrumbJasaKonstruksi(
         urlMappingSewaAlatBeratFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -2655,7 +2653,7 @@ if (urlMappingSewaAlatBeratFromSub2Sub1[cleanUrlJasaKons]) {
 
 if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
   
-	   generateBreadcrumbForMapping(
+	   generateBreadcrumbJasaKonstruksi(
         urlMappingSewaAlatBeratFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -2908,7 +2906,7 @@ if (urlMappingStrukturFromSub1MoneyPage[cleanUrlJasaKons]) {
         JasaStrukturKonstruksiLink.style.visibility = 'visible';
         pageNameKonstruksiSub.textContent = urlMappingStrukturFromSub1MoneyPage[cleanUrlJasaKons];
 
-	    generateBreadcrumbForMapping(
+	    generateBreadcrumbJasaKonstruksi(
         urlMappingStrukturFromSub1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -2972,7 +2970,7 @@ if (urlMappingFinishingFromSub1MoneyPage[cleanUrlJasaKons]) {
         JasaFinishingLink.style.visibility = 'visible';
         pageNameKonstruksiSub.textContent = urlMappingFinishingFromSub1MoneyPage[cleanUrlJasaKons];
 
-	    generateBreadcrumbForMapping(
+	    generateBreadcrumbJasaKonstruksi(
         urlMappingFinishingFromSub1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -3036,7 +3034,7 @@ if (urlMappingPondasiFromSub1MoneyPage[cleanUrlJasaKons]) {
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaPondasiPerkuatanLink.style.visibility = 'visible';
         pageNameKonstruksiSub.textContent = urlMappingPondasiFromSub1MoneyPage[cleanUrlJasaKons];
-	 generateBreadcrumbForMapping(
+	 generateBreadcrumbJasaKonstruksi(
         urlMappingPondasiFromSub1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -3101,7 +3099,7 @@ if (urlMappingSaluranFromSub1MoneyPage[cleanUrlJasaKons]) {
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaSaluranDrainaseLink.style.visibility = 'visible';
         pageNameKonstruksiSub.textContent = urlMappingSaluranFromSub1MoneyPage[cleanUrlJasaKons];
-	   generateBreadcrumbForMapping(
+	   generateBreadcrumbJasaKonstruksi(
         urlMappingSaluranFromSub1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -3165,7 +3163,7 @@ if (urlMappingJalanFromSub1MoneyPage[cleanUrlJasaKons]) {
         JasaJalanPerkerasanLink.style.visibility = 'visible';
         pageNameKonstruksiSub.textContent = urlMappingJalanFromSub1MoneyPage[cleanUrlJasaKons];
 
-	 generateBreadcrumbForMapping(
+	 generateBreadcrumbJasaKonstruksi(
         urlMappingJalanFromSub1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -3689,7 +3687,7 @@ if (urlMappingBongkarBangunanFromSub1MoneyPage[cleanUrlJasaKons]) {
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaPerawatanPerbaikanBangunanLink.style.visibility = 'visible';
         pageNameKonstruksiSub.textContent = urlMappingPerawatanPerbaikanBangunanFromSub1MoneyPage[cleanUrlJasaKons];
-        generateBreadcrumbForMapping(
+        generateBreadcrumbJasaKonstruksi(
         urlMappingPerawatanPerbaikanBangunanFromSub1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -3754,7 +3752,7 @@ if (urlMappingPerbaikanInfrastrukturFromSub2MoneyPage[cleanUrlJasaKons]) {
         JasaPerbaikanInfrastrukturLink.style.visibility = 'visible';
         pageNameKonstruksiSub.textContent = urlMappingPerbaikanInfrastrukturFromSub2MoneyPage[cleanUrlJasaKons];
 
-	    generateBreadcrumbForMapping(
+	    generateBreadcrumbJasaKonstruksi(
         urlMappingPerbaikanInfrastrukturFromSub2MoneyPage,
         cleanUrlJasaKons,
         [
@@ -3823,7 +3821,7 @@ if (urlMappingPengeboranFromSub1MoneyPage[cleanUrlJasaKons]) {
         JasaPengeboranLink.style.visibility = 'visible';
         pageNameKonstruksiSub.textContent = urlMappingPengeboranFromSub1MoneyPage[cleanUrlJasaKons];
 	
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksi(
         urlMappingStrukturFromSub1MoneyPage,
         cleanUrlJasaKons,
         [
