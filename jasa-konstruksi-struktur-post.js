@@ -774,10 +774,17 @@ KOSONG (saran)   ~15          Perlu dibuat kontennya
 ❌ Tidak ada MONEY_MASTER (JASA tidak boleh pakai MONEY_MASTER)
 */
 /**
- * generateBreadcrumbForMapping v3.3 — FULL REVISI FINAL
- * 
- * FUNGSI YANG AKAN DIPANGGIL: generateBreadcrumbForMapping
- * 
+// ============================================================
+// FUNGSI GENERATE BREADCRUMB - VERSI FINAL
+// UNTUK SEMUA ENTITY TYPE (PRODUK, MATERIAL, JASA, SEWA/RENTAL)
+// SUPPORT: Produk Konstruksi, Material Konstruksi, Jasa Konstruksi, 
+//          Produk Interior, Jasa Desain Interior, Sewa/Rental
+// MAX_LEVEL = 4 (TERMASUK HOME)
+// SKIP LEVEL BEKERJA UNTUK PILLAR & SUB2
+// ============================================================
+
+/**
+ * generateBreadcrumbJasaKonstruksiStrukturPost v3.0 — FULL REVISI
  * ✅ Sesuai dengan hierarki 8 level (PHASE 1)
  * ✅ Validasi entity type (JASA tidak boleh MONEY_MASTER)
  * ✅ Deteksi bertahap sesuai PRIORITAS PHASE 1
@@ -785,86 +792,16 @@ KOSONG (saran)   ~15          Perlu dibuat kontennya
  * ✅ Breadcrumb tidak loncat level (auto fix)
  * ✅ Intent detection bawaan
  * ✅ Evergreen vs Non-Evergreen detection
- * ✅ Bisa dipanggil dari inline script atau internal JS file
- * ⛔ Panggilan dari console, external script, bookmarklet DITOLAK
- * 
- * Cara memanggil:
- * const result = generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems, entityType);
+ * ✅ Clean code, siap produksi
  */
 
-(function() {
-    'use strict';
-    
-    // ============================================================
-    // 0. VALIDASI KONTEKS PEMANGGILAN (CALLER CONTEXT)
-    // ============================================================
-    
-    /**
-     * Mendeteksi apakah fungsi dipanggil dari konteks yang valid
-     * Valid: inline script, internal JS file (satu domain)
-     * Invalid: console, bookmarklet, extension, external domain
-     */
-    function isValidCallerContext() {
-        // LAYER 1: Stack trace analysis
-        const stack = new Error().stack || '';
-        const stackLines = stack.split('\n');
-        
-        // Deteksi panggilan dari console
-        const isFromConsole = stackLines.some(line => 
-            line.includes('<anonymous>') && 
-            (line.includes('debugger') || line.includes('console') || line.includes('eval'))
-        );
-        
-        if (isFromConsole) {
-            return false;
-        }
-        
-        // Deteksi panggilan dari bookmarklet
-        const isFromBookmarklet = stackLines.some(line => 
-            line.includes('javascript:') || line.includes('bookmarklet')
-        );
-        
-        if (isFromBookmarklet) {
-            return false;
-        }
-        
-        // LAYER 2: Cek apakah dipanggil dari script eksternal
-        try {
-            const scripts = document.querySelectorAll('script');
-            for (const script of scripts) {
-                if (script.src && stack.includes(script.src)) {
-                    // Cek apakah script berasal dari domain yang sama
-                    const scriptDomain = new URL(script.src).hostname;
-                    const currentDomain = window.location.hostname;
-                    
-                    if (scriptDomain !== currentDomain) {
-                        return false;
-                    }
-                }
-            }
-        } catch(e) {}
-        
-        // LAYER 3: Cek jika dipanggil dari iframe dengan origin berbeda
-        try {
-            if (window.parent !== window) {
-                const parentOrigin = document.referrer || (window.parent.location && window.parent.location.origin);
-                if (parentOrigin && !parentOrigin.includes(window.location.hostname)) {
-                    return false;
-                }
-            }
-        } catch(e) {
-            // Cross-origin access denied -> berarti berbeda origin
-            return false;
-        }
-        
-        return true;
-    }
+function generateBreadcrumbJasaKonstruksiStrukturPost(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
     
     // ============================================================
     // 1. KONSTANTA & VALIDASI
     // ============================================================
     const MAX_LEVEL = 4;
-    const DOMAIN = window.location.origin;
+    const DOMAIN = 'https://www.betonjayareadymix.com';
     
     const validEntityTypes = [
         'PRODUK_KONSTRUKSI', 'PRODUK_INTERIOR', 'PRODUK',
@@ -872,6 +809,12 @@ KOSONG (saran)   ~15          Perlu dibuat kontennya
         'JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA',
         'SEWA', 'RENTAL', 'SEWA_RENTAL', 'SEWA_ALAT', 'RENTAL_ALAT'
     ];
+    
+    if (!validEntityTypes.includes(entityType)) {
+        console.error(`❌ ERROR: "${entityType}" BUKAN ENTITY TYPE yang valid!`);
+        console.error(`   Gunakan: ${validEntityTypes.join(', ')}`);
+        return null;
+    }
     
     // ============================================================
     // 2. HIERARKI 8 LEVEL (SESUAI PHASE 1)
@@ -917,28 +860,18 @@ KOSONG (saran)   ~15          Perlu dibuat kontennya
     // ============================================================
     // 4. EVERGREEN vs NON-EVERGREEN (SESUAI PHASE 1)
     // ============================================================
-    function getEvergreenStatus(pageType, entityType) {
-        const isJasa = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(entityType);
-        
-        // Jasa specific
-        if (pageType === 'money-page' && isJasa) {
-            return { evergreen: false, wajibTahun: false, catatan: 'fleksibel' };
-        }
-        if (pageType === 'money-child' && isJasa) {
-            return { evergreen: false, wajibTahun: false, catatan: 'fleksibel' };
-        }
-        
-        // Money types (non-evergreen, wajib tahun)
-        if (pageType === 'money-master') return { evergreen: false, wajibTahun: true };
-        if (pageType === 'money-page') return { evergreen: false, wajibTahun: true };
-        if (pageType === 'money-child') return { evergreen: false, wajibTahun: true };
-        
-        // Sub types (tergantung topik)
-        if (pageType === 'sub-pillar-tipe-1') return { evergreen: false, wajibTahun: false, catatan: 'tergantung topik' };
-        
-        // Evergreen types
-        return { evergreen: true, wajibTahun: false };
-    }
+    const EVERGREEN_STATUS = {
+        'pillar': { evergreen: true, wajibTahun: false },
+        'sub-pillar-tipe-2': { evergreen: true, wajibTahun: false },
+        'sub-pillar-tipe-1': { evergreen: false, wajibTahun: false, catatan: 'tergantung topik' },
+        'money-master': { evergreen: false, wajibTahun: true },
+        'money-page-produk': { evergreen: false, wajibTahun: true },
+        'money-page-jasa': { evergreen: false, wajibTahun: false, catatan: 'fleksibel' },
+        'money-child-produk': { evergreen: false, wajibTahun: true },
+        'money-child-jasa': { evergreen: false, wajibTahun: false, catatan: 'fleksibel' },
+        'variant': { evergreen: true, wajibTahun: false },
+        'sub-variant': { evergreen: true, wajibTahun: false }
+    };
     
     // ============================================================
     // 5. WHITELIST LOKASI (200+ KOTA)
@@ -1048,7 +981,18 @@ KOSONG (saran)   ~15          Perlu dibuat kontennya
         return { primary: 'informasional', secondary: null, dominance: 50 };
     }
     
-    function detectPageType(pageName, position, entityType) {
+    function getEvergreenStatus(pageType, entityType) {
+        const isJasa = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(entityType);
+        
+        if (pageType === 'money-page' && isJasa) return EVERGREEN_STATUS['money-page-jasa'];
+        if (pageType === 'money-child' && isJasa) return EVERGREEN_STATUS['money-child-jasa'];
+        return EVERGREEN_STATUS[pageType] || { evergreen: true, wajibTahun: false };
+    }
+    
+    // ============================================================
+    // 7. DETEKSI PAGE TYPE (PRIORITAS SESUAI PHASE 1)
+    // ============================================================
+    function detectPageType(pageName, position, totalLevels, entityType) {
         const lowerName = pageName.toLowerCase();
         const isJasa = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(entityType);
         
@@ -1122,6 +1066,18 @@ KOSONG (saran)   ~15          Perlu dibuat kontennya
         return 'pillar';
     }
     
+    // ============================================================
+    // 8. KUMPULKAN DATA DARI MAPPING
+    // ============================================================
+    const allPageNames = [];
+    if (mappingObj) {
+        for (const [url, name] of Object.entries(mappingObj)) {
+            if (name && typeof name === 'string') {
+                allPageNames.push(name.toLowerCase());
+            }
+        }
+    }
+    
     function slugify(text) {
         return text.toLowerCase()
             .replace(/[^\w\s-]/g, '')
@@ -1131,398 +1087,255 @@ KOSONG (saran)   ~15          Perlu dibuat kontennya
     }
     
     // ============================================================
-    // 7. FUNGSI UTAMA generateBreadcrumbForMapping
+    // 9. BANGUN LEVELS DARI breadcrumbItems
     // ============================================================
-    function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
+    const allLevels = [];
+    for (let i = 0; i < breadcrumbItems.length; i++) {
+        const item = breadcrumbItems[i];
         
-        // 🔒 VALIDASI KONTEKS PEMANGGILAN
-        if (!isValidCallerContext()) {
-            console.error('❌ generateBreadcrumbForMapping: Fungsi hanya bisa dipanggil dari halaman ini!');
-            console.error('   Panggilan dari console, external script, bookmarklet, atau extension DITOLAK.');
-            return {
-                error: 'INVALID_CALLER_CONTEXT',
-                message: 'Fungsi hanya bisa dipanggil dari script yang berada di halaman ini'
-            };
+        let name, url;
+        if (typeof item === 'object' && item !== null) {
+            name = item.name;
+            url = item.url || null;
+        } else {
+            name = item;
+            url = null;
         }
         
-        // Validasi entity type
-        if (!validEntityTypes.includes(entityType)) {
-            console.error(`❌ ERROR: "${entityType}" BUKAN ENTITY TYPE yang valid!`);
-            console.error(`   Gunakan: ${validEntityTypes.join(', ')}`);
-            return null;
-        }
+        const pageType = detectPageType(name, i, breadcrumbItems.length, entityType);
+        const intentData = getIntentForPageType(pageType, entityType);
+        const evergreenData = getEvergreenStatus(pageType, entityType);
         
-        // ============================================================
-        // 8. BANGUN LEVELS DARI breadcrumbItems
-        // ============================================================
-        const allLevels = [];
-        for (let i = 0; i < breadcrumbItems.length; i++) {
-            const item = breadcrumbItems[i];
-            
-            let name, url;
-            if (typeof item === 'object' && item !== null) {
-                name = item.name;
-                url = item.url || null;
-            } else {
-                name = item;
-                url = null;
-            }
-            
-            const pageType = detectPageType(name, i, entityType);
-            const intentData = getIntentForPageType(pageType, entityType);
-            const evergreenData = getEvergreenStatus(pageType, entityType);
-            
-            allLevels.push({
-                name: name,
-                url: url,
-                type: pageType,
-                level: TYPE_LEVEL_MAP[pageType] || 99,
-                intent: intentData,
-                evergreen: evergreenData,
-                position: i
-            });
-        }
+        allLevels.push({
+            name: name,
+            url: url,
+            type: pageType,
+            level: TYPE_LEVEL_MAP[pageType] || 99,
+            intent: intentData,
+            evergreen: evergreenData,
+            position: i
+        });
+    }
+    
+    // ============================================================
+    // 10. VALIDASI & PERBAIKI HIERARKI (TIDAK BOLEH LONCAT LEVEL)
+    // ============================================================
+    for (let i = 0; i < allLevels.length - 1; i++) {
+        const current = allLevels[i];
+        const next = allLevels[i + 1];
         
-        // ============================================================
-        // 9. VALIDASI & PERBAIKI HIERARKI (TIDAK BOLEH LONCAT LEVEL)
-        // ============================================================
-        for (let i = 0; i < allLevels.length - 1; i++) {
-            const current = allLevels[i];
-            const next = allLevels[i + 1];
+        if (next.level - current.level > 1) {
+            console.warn(`⚠️ LEVEL JUMP: ${current.name}(${current.type} L${current.level}) → ${next.name}(${next.type} L${next.level})`);
             
-            if (next.level - current.level > 1) {
-                console.warn(`⚠️ LEVEL JUMP: ${current.name}(${current.type} L${current.level}) → ${next.name}(${next.type} L${next.level})`);
-                
-                // Perbaiki dengan menaikkan level next
-                const correctedIndex = Math.min(current.level + 1, 8);
-                const correctedType = VALID_PAGE_TYPES[correctedIndex - 1];
-                next.type = correctedType;
-                next.level = correctedIndex;
-                next.intent = getIntentForPageType(correctedType, entityType);
-                next.evergreen = getEvergreenStatus(correctedType, entityType);
-                
-                console.log(`✅ DIPERBAIKI: ${next.name} → ${next.type} L${next.level}`);
-            }
+            // Perbaiki dengan menaikkan level next
+            const correctedIndex = Math.min(current.level + 1, 8);
+            const correctedType = VALID_PAGE_TYPES[correctedIndex - 1];
+            next.type = correctedType;
+            next.level = correctedIndex;
+            next.intent = getIntentForPageType(correctedType, entityType);
+            next.evergreen = getEvergreenStatus(correctedType, entityType);
+            
+            console.log(`✅ DIPERBAIKI: ${next.name} → ${next.type} L${next.level}`);
         }
-        
-        // ============================================================
-        // 10. VALIDASI & FALLBACK URL
-        // ============================================================
-        for (const level of allLevels) {
-            if (!level.url) {
-                let foundUrl = null;
-                if (mappingObj) {
-                    for (const [url, name] of Object.entries(mappingObj)) {
-                        if (name === level.name) {
-                            foundUrl = url.startsWith('http') ? url : DOMAIN + url;
-                            break;
-                        }
+    }
+    
+    // ============================================================
+    // 11. VALIDASI & FALLBACK URL
+    // ============================================================
+    for (const level of allLevels) {
+        if (!level.url) {
+            let foundUrl = null;
+            if (mappingObj) {
+                for (const [url, name] of Object.entries(mappingObj)) {
+                    if (name === level.name) {
+                        foundUrl = url.startsWith('http') ? url : DOMAIN + url;
+                        break;
                     }
                 }
-                if (!foundUrl) {
-                    const slug = slugify(level.name);
-                    foundUrl = `${DOMAIN}/p/${slug}.html`;
-                }
-                level.url = foundUrl;
-            } else if (!level.url.startsWith('http')) {
-                level.url = DOMAIN + level.url;
             }
-        }
-        
-        // ============================================================
-        // 11. TENTUKAN LEVEL YANG DITAMPILKAN (MAX 4 LEVEL)
-        // ============================================================
-        const selectedLevels = [];
-        
-        // Home (WAJIB)
-        selectedLevels.push({ 
-            name: 'Beranda', 
-            url: DOMAIN, 
-            isHome: true,
-            type: 'pillar',
-            level: 1,
-            intent: INTENT_MAP.pillar,
-            evergreen: { evergreen: true, wajibTahun: false }
-        });
-        
-        let remainingSlots = MAX_LEVEL - 2;
-        
-        console.log(`📊 ========================================`);
-        console.log(`📊 Breadcrumb Generator v3.3 — FULL REVISI`);
-        console.log(`📊 Entity Type: ${entityType}`);
-        console.log(`📊 Max level: ${MAX_LEVEL}`);
-        console.log(`📊 ========================================`);
-        
-        // Parent terdekat (WAJIB)
-        let parentTerdekat = null;
-        if (allLevels.length > 0) {
-            parentTerdekat = allLevels[allLevels.length - 1];
-            selectedLevels.push(parentTerdekat);
-            remainingSlots--;
-            console.log(`✅ WAJIB: "${parentTerdekat.name}" (${parentTerdekat.type} L${parentTerdekat.level})`);
-        }
-        
-        // Level lainnya (prioritaskan level tertinggi)
-        const otherLevels = [...allLevels.slice(0, allLevels.length - 1)].sort((a, b) => b.level - a.level);
-        
-        for (const level of otherLevels) {
-            if (remainingSlots <= 0) {
-                console.log(`📌 SKIP: "${level.name}" (${level.type} L${level.level}) - slot habis`);
-                continue;
+            if (!foundUrl) {
+                const slug = slugify(level.name);
+                foundUrl = `${DOMAIN}/p/${slug}.html`;
             }
-            
-            selectedLevels.splice(1, 0, level);
-            remainingSlots--;
-            console.log(`✅ TAMBAH: "${level.name}" (${level.type} L${level.level})`);
+            level.url = foundUrl;
+        } else if (!level.url.startsWith('http')) {
+            level.url = DOMAIN + level.url;
         }
-        
-        // Halaman saat ini (WAJIB)
-        const currentFullUrl = currentUrl.startsWith('http') ? currentUrl : DOMAIN + currentUrl;
-        const currentPageTitle = (() => {
-            if (mappingObj && mappingObj[currentUrl]) return mappingObj[currentUrl];
-            if (parentTerdekat) return parentTerdekat.name;
-            return 'Halaman';
-        })();
-        
-        const currentPageType = detectPageType(currentPageTitle, allLevels.length, entityType);
-        const currentIntent = getIntentForPageType(currentPageType, entityType);
-        const currentEvergreen = getEvergreenStatus(currentPageType, entityType);
-        
-        selectedLevels.push({
-            name: currentPageTitle,
-            url: currentFullUrl,
-            isCurrent: true,
-            type: currentPageType,
-            level: TYPE_LEVEL_MAP[currentPageType] || 99,
-            intent: currentIntent,
-            evergreen: currentEvergreen
-        });
-        
-        // Update position
-        for (let i = 0; i < selectedLevels.length; i++) {
-            selectedLevels[i].position = i + 1;
-        }
-        
-        console.log(`✅ FINAL (${selectedLevels.length} level): ${selectedLevels.map(l => `${l.name}(${l.type})`).join(' → ')}`);
-        console.log(`📊 Current page type: ${currentPageType}`);
-        console.log(`📊 Intent: ${currentIntent.primary} (${currentIntent.dominance}%)`);
-        console.log(`📊 Evergreen: ${currentEvergreen.evergreen ? 'YES' : 'NO'} | Wajib Tahun: ${currentEvergreen.wajibTahun ? 'YES' : 'NO'}`);
-        
-        // ============================================================
-        // 12. GENERATE HTML BREADCRUMB + JSON-LD
-        // ============================================================
-        let breadcrumbHtml = `<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">\n`;
-        
-        for (let i = 0; i < selectedLevels.length; i++) {
-            const level = selectedLevels[i];
-            const isLast = (i === selectedLevels.length - 1);
-            const position = i + 1;
-            
-            if (!isLast) {
-                breadcrumbHtml += `<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">\n`;
-                breadcrumbHtml += `<a href="${level.url}" itemprop="item" title="${level.name}">\n`;
-                breadcrumbHtml += `<span itemprop="name">${level.name}</span>\n`;
-                breadcrumbHtml += `</a>\n`;
-                breadcrumbHtml += `<meta itemprop="position" content="${position}" />\n`;
-                breadcrumbHtml += `</span>\n`;
-                breadcrumbHtml += `<span class="separator"> › </span>\n`;
-            } else {
-                breadcrumbHtml += `<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">\n`;
-                breadcrumbHtml += `<span itemprop="name">${level.name}</span>\n`;
-                breadcrumbHtml += `<meta itemprop="position" content="${position}" />\n`;
-                breadcrumbHtml += `</span>\n`;
-            }
-        }
-        
-        breadcrumbHtml += `</div>\n`;
-        
-        // JSON-LD Schema
-        const jsonLdItems = selectedLevels.map((level, idx) => ({
-            "@type": "ListItem",
-            "position": idx + 1,
-            "name": level.name,
-            "item": level.url
-        }));
-        
-        const jsonLd = {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": jsonLdItems
-        };
-        
-        console.log(`✅ Breadcrumb generated for entity: ${entityType}`);
-        console.log(`📊 ========================================`);
-        
-        // ============================================================
-        // 13. RETURN LENGKAP
-        // ============================================================
-        return {
-            html: breadcrumbHtml,
-            jsonLd: jsonLd,
-            selectedLevels: selectedLevels,
-            currentPageType: currentPageType,
-            currentIntent: currentIntent,
-            currentEvergreen: currentEvergreen,
-            entityType: entityType,
-            isValidType: true,
-            version: '3.3'
-        };
     }
     
     // ============================================================
-    // 14. EXPOSE KE WINDOW
+    // 12. TENTUKAN LEVEL YANG DITAMPILKAN (MAX 4 LEVEL)
     // ============================================================
-    window.generateBreadcrumbForMapping = generateBreadcrumbForMapping;
-    window.__breadcrumbGeneratorReady = true;
+    const selectedLevels = [];
     
-    console.log('✅ generateBreadcrumbForMapping v3.3 siap digunakan');
-    console.log('   ⚠️ Fungsi hanya akan berfungsi jika dipanggil dari script di halaman ini');
-    console.log('   ⛔ Panggilan dari console, external script, bookmarklet akan DITOLAK');
+    // Home (WAJIB)
+    selectedLevels.push({ 
+        name: 'Beranda', 
+        url: DOMAIN, 
+        isHome: true,
+        type: 'pillar',
+        level: 1,
+        intent: INTENT_MAP.pillar,
+        evergreen: EVERGREEN_STATUS.pillar
+    });
     
-})();
-
-// ============================================================
-// CONTOH PENGGUNAAN (Taruh di inline script atau internal JS file)
-// ============================================================
-
-/*
-
-// ============================================================
-// CONTOH 1: PRODUK INTERIOR (Kitchen Set Jakarta)
-// ============================================================
-(function() {
-    // Mapping URL ke Page Title
-    const urlMapping = {
-        '/produk-interior': 'Produk Interior',
-        '/jenis-kitchen-set': 'Jenis Kitchen Set',
-        '/harga-kitchen-set-jakarta': 'Harga Kitchen Set Jakarta'
-    };
+    let remainingSlots = MAX_LEVEL - 2;
     
-    // Breadcrumb items sesuai hierarki
-    const breadcrumbItems = [
-        { name: 'Produk Interior', url: '/produk-interior' },
-        { name: 'Jenis Kitchen Set', url: '/jenis-kitchen-set' },
-        { name: 'Harga Kitchen Set Jakarta', url: null }  // null = halaman saat ini
-    ];
+    console.log(`📊 ========================================`);
+    console.log(`📊 Breadcrumb Generator v3.0 — FULL REVISI`);
+    console.log(`📊 Entity Type: ${entityType}`);
+    console.log(`📊 Max level: ${MAX_LEVEL}`);
+    console.log(`📊 ========================================`);
     
-    // Panggil fungsi
-    const result = generateBreadcrumbForMapping(
-        urlMapping,
-        window.location.pathname,
-        breadcrumbItems,
-        'PRODUK_INTERIOR'
-    );
+    // Parent terdekat (WAJIB)
+    let parentTerdekat = null;
+    if (allLevels.length > 0) {
+        parentTerdekat = allLevels[allLevels.length - 1];
+        selectedLevels.push(parentTerdekat);
+        remainingSlots--;
+        console.log(`✅ WAJIB: "${parentTerdekat.name}" (${parentTerdekat.type} L${parentTerdekat.level})`);
+    }
     
-    if (result && !result.error) {
-        // Hapus breadcrumb lama jika ada
-        document.querySelectorAll('.breadcrumbs, .breadcrumb-nav').forEach(el => el.remove());
+    // Level lainnya (prioritaskan level tertinggi)
+    const otherLevels = [...allLevels.slice(0, allLevels.length - 1)].sort((a, b) => b.level - a.level);
+    
+    for (const level of otherLevels) {
+        if (remainingSlots <= 0) {
+            console.log(`📌 SKIP: "${level.name}" (${level.type} L${level.level}) - slot habis`);
+            continue;
+        }
         
-        // Hapus JSON-LD lama
-        const oldJsonLd = document.querySelector('script[data-breadcrumb="true"]');
-        if (oldJsonLd) oldJsonLd.remove();
+        selectedLevels.splice(1, 0, level);
+        remainingSlots--;
+        console.log(`✅ TAMBAH: "${level.name}" (${level.type} L${level.level})`);
+    }
+    
+    // Halaman saat ini (WAJIB)
+    const currentFullUrl = currentUrl.startsWith('http') ? currentUrl : DOMAIN + currentUrl;
+    const currentPageTitle = (() => {
+        if (mappingObj && mappingObj[currentUrl]) return mappingObj[currentUrl];
+        if (parentTerdekat) return parentTerdekat.name;
+        return 'Halaman';
+    })();
+    
+    const currentPageType = detectPageType(currentPageTitle, allLevels.length, allLevels.length, entityType);
+    const currentIntent = getIntentForPageType(currentPageType, entityType);
+    const currentEvergreen = getEvergreenStatus(currentPageType, entityType);
+    
+    selectedLevels.push({
+        name: currentPageTitle,
+        url: currentFullUrl,
+        isCurrent: true,
+        type: currentPageType,
+        level: TYPE_LEVEL_MAP[currentPageType] || 99,
+        intent: currentIntent,
+        evergreen: currentEvergreen
+    });
+    
+    // Update position
+    for (let i = 0; i < selectedLevels.length; i++) {
+        selectedLevels[i].position = i + 1;
+    }
+    
+    console.log(`✅ FINAL (${selectedLevels.length} level): ${selectedLevels.map(l => `${l.name}(${l.type})`).join(' → ')}`);
+    console.log(`📊 Current page type: ${currentPageType}`);
+    console.log(`📊 Intent: ${currentIntent.primary} (${currentIntent.dominance}%)`);
+    console.log(`📊 Evergreen: ${currentEvergreen.evergreen ? 'YES' : 'NO'} | Wajib Tahun: ${currentEvergreen.wajibTahun ? 'YES' : 'NO'}`);
+    
+    // ============================================================
+    // 13. GENERATE HTML BREADCRUMB + JSON-LD
+    // ============================================================
+    let breadcrumbHtml = `<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">\n`;
+    
+    for (let i = 0; i < selectedLevels.length; i++) {
+        const level = selectedLevels[i];
+        const isLast = (i === selectedLevels.length - 1);
+        const position = i + 1;
         
-        // Inject HTML breadcrumb ke container
-        const container = document.querySelector('main, article, .content, #main-content');
-        if (container && container.firstChild) {
-            container.insertAdjacentHTML('afterbegin', result.html);
+        if (!isLast) {
+            breadcrumbHtml += `<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">\n`;
+            breadcrumbHtml += `<a href="${level.url}" itemprop="item" title="${level.name}">\n`;
+            breadcrumbHtml += `<span itemprop="name">${level.name}</span>\n`;
+            breadcrumbHtml += `</a>\n`;
+            breadcrumbHtml += `<meta itemprop="position" content="${position}" />\n`;
+            breadcrumbHtml += `</span>\n`;
+            breadcrumbHtml += `<span class="separator"> › </span>\n`;
         } else {
-            document.body.insertAdjacentHTML('afterbegin', result.html);
+            breadcrumbHtml += `<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">\n`;
+            breadcrumbHtml += `<span itemprop="name">${level.name}</span>\n`;
+            breadcrumbHtml += `<meta itemprop="position" content="${position}" />\n`;
+            breadcrumbHtml += `</span>\n`;
         }
-        
-        // Inject JSON-LD
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.setAttribute('data-breadcrumb', 'true');
-        script.textContent = JSON.stringify(result.jsonLd);
-        document.head.appendChild(script);
-        
-        console.log('✅ Breadcrumb berhasil dipasang');
-        console.log('   Page Type:', result.currentPageType);
-        console.log('   Intent:', result.currentIntent.primary, `(${result.currentIntent.dominance}%)`);
-        console.log('   Evergreen:', result.currentEvergreen.evergreen ? 'YES' : 'NO');
-        console.log('   Wajib Tahun:', result.currentEvergreen.wajibTahun ? 'YES' : 'NO');
-    } else if (result && result.error === 'INVALID_CALLER_CONTEXT') {
-        console.error('❌ Panggilan fungsi ditolak! Fungsi hanya bisa dipanggil dari halaman ini.');
     }
-})();
-
-// ============================================================
-// CONTOH 2: JASA KONSTRUKSI (otomatis tidak akan jadi money-master)
-// ============================================================
-(function() {
-    const urlMapping = {
-        '/jasa-konstruksi': 'Jasa Konstruksi',
-        '/harga-jasa-konstruksi': 'Harga Jasa Konstruksi'
+    
+    breadcrumbHtml += `</div>\n`;
+    
+    // JSON-LD Schema
+    const jsonLdItems = selectedLevels.map((level, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": level.name,
+        "item": level.url
+    }));
+    
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": jsonLdItems
     };
     
-    const breadcrumbItems = [
-        { name: 'Jasa Konstruksi', url: '/jasa-konstruksi' },
-        { name: 'Harga Jasa Konstruksi', url: null }
-    ];
+    // ============================================================
+    // 14. INJECT KE DOM
+    // ============================================================
+    const oldBreadcrumbs = document.querySelectorAll('.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"]');
+    oldBreadcrumbs.forEach(el => el.remove());
     
-    const result = generateBreadcrumbForMapping(
-        urlMapping,
-        window.location.pathname,
-        breadcrumbItems,
-        'JASA_KONSTRUKSI'
-    );
+    const oldJsonLd = document.querySelector('script[data-breadcrumb="true"]');
+    if (oldJsonLd) oldJsonLd.remove();
     
-    if (result && !result.error) {
-        // Inject ke DOM
-        const target = document.querySelector('main');
-        if (target) target.insertAdjacentHTML('afterbegin', result.html);
-        console.log('Page Type (JASA):', result.currentPageType); // Akan 'money-page', bukan 'money-master'
+    const targetElement = document.querySelector('main, article, .content, #main-content, .post-content');
+    if (targetElement && targetElement.firstChild) {
+        targetElement.insertAdjacentHTML('afterbegin', breadcrumbHtml);
+    } else {
+        const container = document.querySelector('.container, #content, .wrapper');
+        if (container && container.firstChild) {
+            container.insertAdjacentHTML('afterbegin', breadcrumbHtml);
+        } else {
+            document.body.insertAdjacentHTML('afterbegin', breadcrumbHtml);
+        }
     }
-})();
-
-// ============================================================
-// CONTOH 3: MATERIAL KONSTRUKSI (Ready Mix)
-// ============================================================
-(function() {
-    const urlMapping = {
-        '/material-konstruksi': 'Material Konstruksi',
-        '/ready-mix-beton-cor': 'Ready Mix Beton Cor Jayamix Minimix'
+    
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-breadcrumb', 'true');
+    script.textContent = JSON.stringify(jsonLd);
+    document.head.appendChild(script);
+    
+    console.log(`✅ Breadcrumb injected for entity: ${entityType}`);
+    console.log(`📊 ========================================`);
+    
+    // ============================================================
+    // 15. RETURN LENGKAP
+    // ============================================================
+    return {
+        html: breadcrumbHtml,
+        jsonLd: jsonLd,
+        selectedLevels: selectedLevels,
+        currentPageType: currentPageType,
+        currentIntent: currentIntent,
+        currentEvergreen: currentEvergreen,
+        entityType: entityType,
+        isValidType: true,
+        version: '3.0'
     };
-    
-    const breadcrumbItems = [
-        { name: 'Material Konstruksi', url: '/material-konstruksi' },
-        { name: 'Ready Mix Beton Cor Jayamix Minimix', url: null }
-    ];
-    
-    const result = generateBreadcrumbForMapping(
-        urlMapping,
-        window.location.pathname,
-        breadcrumbItems,
-        'MATERIAL_KONSTRUKSI'
-    );
-    
-    if (result && !result.error) {
-        document.querySelector('.container')?.insertAdjacentHTML('afterbegin', result.html);
-        console.log('Breadcrumb HTML:', result.html.substring(0, 200) + '...');
-    }
-})();
-
-// ============================================================
-// ⚠️ PERINGATAN: PEMANGGILAN DARI CONSOLE AKAN DITOLAK
-// ============================================================
-// Jika Anda coba panggil dari console browser:
-// > generateBreadcrumbForMapping(...)
-// 
-// Maka akan menghasilkan:
-// ❌ generateBreadcrumbForMapping: DIPANGGIL DARI CONSOLE - DITOLAK
-// return { error: 'INVALID_CALLER_CONTEXT', message: '...' }
-*/
-
-console.log('📚 generateBreadcrumbForMapping v3.3 telah dimuat');
-console.log('   Cara memanggil: generateBreadcrumbForMapping(mappingObj, currentUrl, items, entityType)');
-console.log('   Contoh: generateBreadcrumbForMapping({"/produk":"Produk"}, "/produk", [{name:"Produk",url:null}], "PRODUK")');
+}
 // ============================================================
 // CONTOH PENGGUNAAN
 // ============================================================
 
 /*
 // Contoh 1: MATERIAL KONSTRUKSI
-const result1 = generateBreadcrumbForMapping(
+const result1 = generateBreadcrumbJasaKonstruksiStrukturPost(
     urlMapping,
     '/p/ready-mix-beton-cor-jayamix-minimix.html',
     [
@@ -1534,7 +1347,7 @@ const result1 = generateBreadcrumbForMapping(
 );
 
 // Contoh 2: JASA KONSTRUKSI (otomatis tidak akan jadi money-master)
-const result2 = generateBreadcrumbForMapping(
+const result2 = generateBreadcrumbJasaKonstruksiStrukturPost(
     urlMapping,
     '/p/harga-jasa-konstruksi.html',
     [
@@ -1545,7 +1358,51 @@ const result2 = generateBreadcrumbForMapping(
 );
 
 // Contoh 3: PRODUK INTERIOR dengan lokasi (money-child)
-const result3 = generateBreadcrumbForMapping(
+const result3 = generateBreadcrumbJasaKonstruksiStrukturPost(
+    urlMapping,
+    '/p/harga-kitchen-set-jakarta.html',
+    [
+        { name: 'Produk Interior', url: '/p/produk-interior.html' },
+        { name: 'Kitchen Set', url: '/p/kitchen-set.html' },
+        { name: 'Harga Kitchen Set Jakarta', url: null }
+    ],
+    'PRODUK_INTERIOR'
+);
+
+// Output akan berisi:
+// - html: string HTML breadcrumb
+// - jsonLd: object untuk schema.org
+// - selectedLevels: array level yang ditampilkan
+// - currentPageType: 'money-child'
+// - currentIntent: { primary: 'transaksional', secondary: 'komersial', dominance: 90 }
+// - currentEvergreen: { evergreen: false, wajibTahun: true }
+*/
+/*
+// Contoh 1: MATERIAL KONSTRUKSI
+const result1 = generateBreadcrumbJasaKonstruksiStrukturPost(
+    urlMapping,
+    '/p/ready-mix-beton-cor-jayamix-minimix.html',
+    [
+        { name: 'Material Konstruksi', url: '/p/material-konstruksi.html' },
+        { name: 'Material Struktur Bangunan', url: '/p/material-struktur-bangunan.html' },
+        { name: 'Ready Mix Beton Cor Jayamix Minimix', url: null }
+    ],
+    'MATERIAL_KONSTRUKSI'
+);
+
+// Contoh 2: JASA KONSTRUKSI (otomatis tidak akan jadi money-master)
+const result2 = generateBreadcrumbJasaKonstruksiStrukturPost(
+    urlMapping,
+    '/p/harga-jasa-konstruksi.html',
+    [
+        { name: 'Jasa Konstruksi', url: '/p/jasa-konstruksi.html' },
+        { name: 'Harga Jasa Konstruksi', url: null }
+    ],
+    'JASA_KONSTRUKSI'
+);
+
+// Contoh 3: PRODUK INTERIOR dengan lokasi (money-child)
+const result3 = generateBreadcrumbJasaKonstruksiStrukturPost(
     urlMapping,
     '/p/harga-kitchen-set-jakarta.html',
     [
@@ -2147,7 +2004,7 @@ JasaStrukturBetondanPengecoranPost
         JasaRangkaAtapBajaRinganPostLink.style.visibility = 'visible';
         pageNameJasaKonsStrukturPost.textContent = urlMappingStrukturPostFromSub1MoneyPage[cleanUrlJasaJasaKonsStrukturPost];
 	   */
-	generateBreadcrumbForMapping(
+	generateBreadcrumbJasaKonstruksiStrukturPost(
         urlMappingStrukturPostFromSub1MoneyPage,
         cleanUrlJasaJasaKonsStrukturPost,
         [
