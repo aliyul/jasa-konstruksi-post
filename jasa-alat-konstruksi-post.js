@@ -1059,19 +1059,17 @@ REDIRECT		5			Duplikasi, perlu 301 redirect
 // ============================================================
 
 /**
- * generateBreadcrumbForMapping v3.0 — FULL REVISI
- * ✅ Sesuai dengan hierarki 8 level (PHASE 1)
- * ✅ Validasi entity type (JASA tidak boleh MONEY_MASTER)
- * ✅ Deteksi bertahap sesuai PRIORITAS PHASE 1
- * ✅ Support semua entity type: PRODUK, JASA, MATERIAL, SEWA
+ * generateBreadcrumbJasaAlatKonstruksiPost v4.1 — FIXED LOCATION DETECTION
+ * ✅ FIX: "ringan", "baja", "pasang" TIDAK terdeteksi sebagai lokasi
+ * ✅ FIX: JASA TIDAK BOLEH MONEY_MASTER (100% terblokir)
+ * ✅ FIX: MONEY_MASTER vs MONEY_PAGE berdasarkan jumlah kata (≤2 = MASTER)
+ * ✅ Support SEMUA ENTITY TYPE: PRODUK, MATERIAL, JASA, SEWA/RENTAL, ARTIKEL
+ * ✅ PRIORITAS DETEKSI SESUAI PHASE 1
  * ✅ Breadcrumb tidak loncat level (auto fix)
- * ✅ Intent detection bawaan
- * ✅ Evergreen vs Non-Evergreen detection
- * ✅ Clean code, siap produksi
+ * ✅ MAX_LEVEL = 4 (termasuk Home)
  */
-(function() {  
-    'use strict';
-function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
+
+function generateBreadcrumbJasaAlatKonstruksiPost(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
     
     // ============================================================
     // 1. KONSTANTA & VALIDASI
@@ -1083,7 +1081,8 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         'PRODUK_KONSTRUKSI', 'PRODUK_INTERIOR', 'PRODUK',
         'MATERIAL_KONSTRUKSI', 'MATERIAL',
         'JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA',
-        'SEWA', 'RENTAL', 'SEWA_RENTAL', 'SEWA_ALAT', 'RENTAL_ALAT'
+        'SEWA', 'RENTAL', 'SEWA_RENTAL', 'SEWA_ALAT', 'RENTAL_ALAT',
+        'ARTIKEL'
     ];
     
     if (!validEntityTypes.includes(entityType)) {
@@ -1092,18 +1091,15 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         return null;
     }
     
-    // ============================================================
-    // 2. HIERARKI 8 LEVEL (SESUAI PHASE 1)
-    // ============================================================
     const VALID_PAGE_TYPES = [
-        'pillar',                    // Level 1 - terluas
+        'pillar',                    // Level 1
         'sub-pillar-tipe-2',         // Level 2
         'sub-pillar-tipe-1',         // Level 3
         'money-master',              // Level 4 (JASA DILARANG)
         'money-page',                // Level 5
         'money-child',               // Level 6
         'variant',                   // Level 7
-        'sub-variant'                // Level 8 - terdalam
+        'sub-variant'                // Level 8
     ];
     
     const TYPE_LEVEL_MAP = {
@@ -1118,39 +1114,34 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     };
     
     // ============================================================
-    // 3. INTENT DOMINANCE (SESUAI PHASE 1.5)
+    // 2. FUNGSI BANTUAN ENTITY TYPE
     // ============================================================
-    const INTENT_MAP = {
-        'pillar': { primary: 'informasional', secondary: 'komersial', dominance: 90 },
-        'sub-pillar-tipe-2': { primary: 'informasional', secondary: 'komersial', dominance: 60 },
-        'sub-pillar-tipe-1': { primary: 'komersial', secondary: 'informasional', dominance: 70 },
-        'money-master': { primary: 'transaksional', secondary: 'komersial', dominance: 80 },
-        'money-page-produk': { primary: 'transaksional', secondary: 'komersial', dominance: 85 },
-        'money-page-jasa': { primary: 'komersial', secondary: 'transaksional', dominance: 60 },
-        'money-child-produk': { primary: 'transaksional', secondary: 'komersial', dominance: 90 },
-        'money-child-jasa': { primary: 'komersial', secondary: 'transaksional', dominance: 60 },
-        'variant': { primary: 'komersial', secondary: 'informasional', dominance: 80 },
-        'sub-variant': { primary: 'komersial', secondary: 'informasional', dominance: 70 }
-    };
+    function isJasaEntity() {
+        return ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(entityType);
+    }
+    
+    function isSewaEntity() {
+        return ['SEWA', 'RENTAL', 'SEWA_RENTAL', 'SEWA_ALAT', 'RENTAL_ALAT'].includes(entityType);
+    }
+    
+    function isProdukEntity() {
+        return ['PRODUK_KONSTRUKSI', 'PRODUK_INTERIOR', 'PRODUK'].includes(entityType);
+    }
+    
+    function isMaterialEntity() {
+        return ['MATERIAL_KONSTRUKSI', 'MATERIAL'].includes(entityType);
+    }
+    
+    function isArtikelEntity() {
+        return entityType === 'ARTIKEL';
+    }
+    
+    function isProdukMaterialSewaArtikel() {
+        return isProdukEntity() || isMaterialEntity() || isSewaEntity() || isArtikelEntity();
+    }
     
     // ============================================================
-    // 4. EVERGREEN vs NON-EVERGREEN (SESUAI PHASE 1)
-    // ============================================================
-    const EVERGREEN_STATUS = {
-        'pillar': { evergreen: true, wajibTahun: false },
-        'sub-pillar-tipe-2': { evergreen: true, wajibTahun: false },
-        'sub-pillar-tipe-1': { evergreen: false, wajibTahun: false, catatan: 'tergantung topik' },
-        'money-master': { evergreen: false, wajibTahun: true },
-        'money-page-produk': { evergreen: false, wajibTahun: true },
-        'money-page-jasa': { evergreen: false, wajibTahun: false, catatan: 'fleksibel' },
-        'money-child-produk': { evergreen: false, wajibTahun: true },
-        'money-child-jasa': { evergreen: false, wajibTahun: false, catatan: 'fleksibel' },
-        'variant': { evergreen: true, wajibTahun: false },
-        'sub-variant': { evergreen: true, wajibTahun: false }
-    };
-    
-    // ============================================================
-    // 5. WHITELIST LOKASI (200+ KOTA)
+    // 3. WHITELIST LOKASI (200+ KOTA)
     // ============================================================
     const LOCATION_WHITELIST = [
         // Jabodetabek
@@ -1168,10 +1159,10 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         'kudus', 'jepara', 'pati', 'rembang', 'blora', 'grobagan', 'sragen', 
         'karanganyar', 'wonogiri', 'sukoharjo', 'klaten', 'boyolali',
         // Jawa Timur
-        'surabaya', 'malang', 'kediri', 'blitar', 'madiun', 'ponorogo', 'ngawi', 
-        'magetan', 'trenggalek', 'tulungagung', 'nganjuk', 'jombang', 'mojokerto', 
-        'gresik', 'sidoarjo', 'pasuruan', 'probolinggo', 'lumajang', 'jember', 
-        'banyuwangi', 'bondowoso', 'situbondo', 'pamekasan', 'sampang', 'sumenep', 
+        'surabaya', 'malang', 'kediri', 'blitar', 'madiun', 'gresik', 'sidoarjo',
+        'ponorogo', 'ngawi', 'magetan', 'trenggalek', 'tulungagung', 'nganjuk',
+        'jombang', 'mojokerto', 'pasuruan', 'probolinggo', 'lumajang', 'jember',
+        'banyuwangi', 'bondowoso', 'situbondo', 'pamekasan', 'sampang', 'sumenep',
         'bangkalan', 'bojonegoro', 'tuban', 'lamongan',
         // Sumatera
         'medan', 'binjai', 'pematangsiantar', 'tanjungbalai', 'tebingtinggi', 'deli serdang',
@@ -1199,151 +1190,378 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         'papua', 'papua barat'
     ];
     
-    const NOT_LOCATION_WORDS = [
-        'mini', 'maxi', 'super', 'extra', 'plus', 'pro', 'max', 'ultra', 'deluxe',
-        'baru', 'lama', 'bekas', 'second', 'original', 'kw', 'grade', 
-        'murah', 'mahal', 'hemat', 'premium', 'standar', 'ekonomis', 
-        'kecil', 'besar', 'sedang', 'panjang', 'pendek', 'tebal', 'tipis', 'lebar',
+    // BLACKLIST kata produk yang TIDAK boleh dianggap sebagai lokasi
+    const PRODUCT_BLACKLIST_FOR_LOCATION = [
+        // Material bangunan
+        'baja', 'ringan', 'galvalum', 'spandek', 'bondek', 'hebel', 'bata', 
+        'kayu', 'besi', 'aluminium', 'kaca', 'semen', 'pasir', 'batu', 'kerikil',
+        'genteng', 'keramik', 'cat', 'pintu', 'jendela', 'kusen', 'atap', 'plafon',
+        'gypsum', 'grbk', 'multiplek', 'triplek', 'blockboard', 'partikel',
+        // Produk interior
+        'kitchen', 'set', 'lemari', 'meja', 'kursi', 'sofa', 'springbed', 'laci',
+        'minimalis', 'modern', 'klasik', 'jati', 'mahoni', 'hpl', 'mdf', 'melamin',
+        'duco', 'finishing', 'furniture', 'furnitur', 'interior', 'exterior',
+        // Jasa
+        'pasang', 'service', 'renovasi', 'bangun', 'borongan', 'kontraktor',
+        'konsultasi', 'survey', 'estimasi', 'perbaiki', 'instalasi', 'pemasangan',
+        'pengerjaan', 'perawatan', 'maintenance', 'konstruksi', 'desain', 'gambar',
+        // Ukuran (sering false positive)
+        'tipis', 'tebal', 'lebar', 'panjang', 'pendek', 'kecil', 'besar', 'sedang',
+        'mini', 'maxi', 'jumbo', 'extra', 'super', 'pro', 'max', 'ultra', 'deluxe',
+        'premium', 'standar', 'ekonomis', 'grade', 'kw', 'original', 'bekas', 'baru',
+        // Warna (sering false positive)
         'putih', 'hitam', 'merah', 'biru', 'hijau', 'kuning', 'ungu', 'abu', 'coklat',
-        'minimalis', 'modern', 'klasik', 'industrial', 'skandinavia', 'jepang',
-        'hpl', 'mdf', 'jati', 'kayu', 'besi', 'baja', 'aluminium', 'kaca'
+        'krem', 'salem', 'tosca', 'navy', 'maroon', 'gold', 'silver', 'kuningan'
     ];
     
+    // ============================================================
+    // 4. FUNGSI DETEKSI LOKASI (FIXED v4.1)
+    // ============================================================
+    function isLocation(text) {
+        const lowerText = text.toLowerCase();
+        const words = lowerText.split(/[\s,-]+/);
+        
+        console.log(`  🔍 isLocation check: "${text.substring(0, 50)}..."`);
+        
+        // PRIORITAS 1: Cek whitelist kota (lokasi valid)
+        for (const word of words) {
+            if (LOCATION_WHITELIST.includes(word)) {
+                console.log(`  ✅ Location found (whitelist): "${word}"`);
+                return true;
+            }
+        }
+        
+        // PRIORITAS 2: Jika kata ada di blacklist produk → BUKAN lokasi
+        for (const word of words) {
+            if (PRODUCT_BLACKLIST_FOR_LOCATION.includes(word)) {
+                console.log(`  ❌ Not location (product blacklist): "${word}"`);
+                return false;
+            }
+        }
+        
+        // PRIORITAS 3: Jika tidak ada indikator lokasi (di, ke, kota, wilayah) → BUKAN lokasi
+        const hasLocationIndicator = lowerText.includes('di ') || 
+                                      lowerText.includes('ke ') || 
+                                      lowerText.includes('kota ') || 
+                                      lowerText.includes('wilayah ') ||
+                                      lowerText.includes('daerah ') ||
+                                      lowerText.includes('kecamatan ');
+        
+        if (!hasLocationIndicator) {
+            console.log(`  ❌ Not location (no indicator: di/kota/wilayah)`);
+            return false;
+        }
+        
+        // PRIORITAS 4: Deteksi dengan pola vokal (hanya jika ada indicator)
+        for (const word of words) {
+            // Skip kata pendek
+            if (word.length < 4) continue;
+            if (word.length > 12) continue;
+            
+            // Skip jika mengandung angka
+            if (word.match(/[0-9]/)) continue;
+            
+            const vowelCount = (word.match(/[aiueo]/g) || []).length;
+            if (vowelCount >= 2) {
+                console.log(`  ✅ Location detected (vowel pattern + indicator): "${word}"`);
+                return true;
+            }
+        }
+        
+        console.log(`  ❌ Not location (fallback)`);
+        return false;
+    }
+    
+    // ============================================================
+    // 5. FUNGSI CEK PRODUK SPESIFIK
+    // ============================================================
     const SPECIFIC_PRODUCT_INDICATORS = [
         'galvalum', 'spandek', 'bondek', 'hpl', 'mdf', 'jati', 'mahoni',
         'excavator', 'bulldozer', 'crane', 'dump truck', 'vibro', 'stamper',
-        'minimix', 'jayamix', 'readymix', 'beton cor', 'bata ringan', 'hebel',
-        'pabrikan', 'minimalis', 'modern', 'premium', 'custom', 'bespoke'
+        'minimix', 'jayamix', 'readymix', 'hebel', 'bata ringan', 'bata interlock',
+        'multiplek', 'triplek', 'blockboard', 'gypsum', 'grc', 'grbk'
     ];
     
-    // ============================================================
-    // 6. FUNGSI BANTUAN DETEKSI
-    // ============================================================
-    function isLocation(text) {
-        const words = text.toLowerCase().split(/[\s,-]+/);
-        for (const word of words) {
-            if (NOT_LOCATION_WORDS.includes(word)) continue;
-            if (LOCATION_WHITELIST.includes(word)) return true;
-            if (word.length >= 5 && word.length <= 12) {
-                const vowelCount = (word.match(/[aiueo]/g) || []).length;
-                if (vowelCount >= 2 && !word.match(/[0-9]/)) return true;
-            }
-        }
-        return false;
-    }
-    
-    function isSpecificProduct(text) {
+    function isSpecificProduct(text, wordCountAfterPrice = null) {
         const lowerText = text.toLowerCase();
+        
+        // Jika jumlah kata setelah harga <= 2, BUKAN specific product
+        if (wordCountAfterPrice !== null && wordCountAfterPrice <= 2) {
+            return false;
+        }
+        
+        // Cek indicators
         for (const indicator of SPECIFIC_PRODUCT_INDICATORS) {
             if (lowerText.includes(indicator)) return true;
         }
-        // Deteksi ukuran/dimensi
+        
+        // Cek ukuran/dimensi
         if (/\d+(\.\d+)?\s*(mm|cm|m|inch|meter)/.test(lowerText)) return true;
+        
+        // Cek merk/tipe (minimal 2 kata)
+        const words = lowerText.split(/\s+/);
+        if (words.length >= 2) {
+            const hasMerk = ['brand', 'merk', 'tipe', 'type', 'seri'].some(kw => lowerText.includes(kw));
+            if (hasMerk) return true;
+        }
+        
         return false;
     }
     
-    function getIntentForPageType(pageType, entityType) {
-        const isJasa = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(entityType);
-        
-        if (pageType === 'pillar') return INTENT_MAP.pillar;
-        if (pageType === 'sub-pillar-tipe-2') return INTENT_MAP['sub-pillar-tipe-2'];
-        if (pageType === 'sub-pillar-tipe-1') return INTENT_MAP['sub-pillar-tipe-1'];
-        if (pageType === 'money-master') return INTENT_MAP['money-master'];
-        if (pageType === 'money-page') return isJasa ? INTENT_MAP['money-page-jasa'] : INTENT_MAP['money-page-produk'];
-        if (pageType === 'money-child') return isJasa ? INTENT_MAP['money-child-jasa'] : INTENT_MAP['money-child-produk'];
-        if (pageType === 'variant') return INTENT_MAP.variant;
-        if (pageType === 'sub-variant') return INTENT_MAP['sub-variant'];
-        
-        return { primary: 'informasional', secondary: null, dominance: 50 };
-    }
-    
-    function getEvergreenStatus(pageType, entityType) {
-        const isJasa = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(entityType);
-        
-        if (pageType === 'money-page' && isJasa) return EVERGREEN_STATUS['money-page-jasa'];
-        if (pageType === 'money-child' && isJasa) return EVERGREEN_STATUS['money-child-jasa'];
-        return EVERGREEN_STATUS[pageType] || { evergreen: true, wajibTahun: false };
-    }
-    
     // ============================================================
-    // 7. DETEKSI PAGE TYPE (PRIORITAS SESUAI PHASE 1)
+    // 6. FUNGSI DETEKSI PAGE TYPE (PRIORITAS SESUAI PHASE 1)
     // ============================================================
-    function detectPageType(pageName, position, totalLevels, entityType) {
+    function detectPageType(pageName, position, totalLevels, entityTypeParam = null) {
         const lowerName = pageName.toLowerCase();
-        const isJasa = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(entityType);
+        const useEntityType = entityTypeParam || entityType;
+        const isJasa = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(useEntityType);
+        const isSewa = ['SEWA', 'RENTAL', 'SEWA_RENTAL', 'SEWA_ALAT', 'RENTAL_ALAT'].includes(useEntityType);
         
-        // PRIORITAS 1: PILLAR (level 1, posisi pertama)
-        if (position === 0) {
+        console.log(`🔍 Detecting: "${pageName}" | Entity: ${useEntityType} | Position: ${position}`);
+        
+        // ============================================================
+        // PRIORITAS 1: PILLAR jika posisi pertama dan bukan satu-satunya
+        // ============================================================
+        if (position === 0 && totalLevels > 1) {
+            console.log(`  → PILLAR (posisi pertama)`);
             return 'pillar';
         }
         
-        // PRIORITAS 2: CEK KEYWORD HARGA/SEWA/BIAYA
+        // ============================================================
+        // PRIORITAS 2: CEK INTENT KEYWORD (PANDUAN, CARA, TIPS, APA ITU)
+        // ============================================================
+        const informationalKeywords = ['panduan', 'cara ', 'tips ', 'apa itu', 'pengertian', 'edukasi'];
+        for (const kw of informationalKeywords) {
+            if (lowerName.includes(kw)) {
+                if (lowerName.includes('jenis') || lowerName.includes('macam')) {
+                    console.log(`  → SUB-PILLAR-TIPE-2 (jenis/macam)`);
+                    return 'sub-pillar-tipe-2';
+                }
+                console.log(`  → PILLAR (informational keyword: ${kw})`);
+                return 'pillar';
+            }
+        }
+        
+        // ============================================================
+        // PRIORITAS 3: CEK KEYWORD HARGA/SEWA/BIAYA
+        // ============================================================
         const hasPrice = lowerName.includes('harga ') || lowerName.includes('biaya ') || lowerName.includes('tarif ');
         const hasRent = lowerName.includes('sewa ') || lowerName.includes('rental ');
         
         if (hasPrice || hasRent) {
-            // JASA TIDAK BOLEH MONEY_MASTER
+            console.log(`  → Price/rent keyword detected`);
+            
+            // 🔥 KRITIS: JASA TIDAK BOLEH MONEY_MASTER
             if (isJasa) {
+                console.log(`  → JASA detected → MONEY-PAGE (forced, not master)`);
                 return 'money-page';
             }
             
+            // Ekstrak teks setelah keyword
             let afterKeyword = '';
             if (lowerName.includes('harga ')) afterKeyword = lowerName.substring(lowerName.indexOf('harga ') + 6);
             else if (lowerName.includes('biaya ')) afterKeyword = lowerName.substring(lowerName.indexOf('biaya ') + 6);
             else if (lowerName.includes('sewa ')) afterKeyword = lowerName.substring(lowerName.indexOf('sewa ') + 5);
             else if (lowerName.includes('rental ')) afterKeyword = lowerName.substring(lowerName.indexOf('rental ') + 7);
             
-            // CEK LOKASI (MONEY_CHILD)
+            afterKeyword = afterKeyword.trim();
+            const wordCount = afterKeyword.split(/\s+/).filter(w => w.length > 0).length;
+            
+            console.log(`  → After keyword: "${afterKeyword.substring(0, 50)}" | Word count: ${wordCount}`);
+            
+            // CEK LOKASI (MONEY_CHILD) — PRIORITAS TERTINGGI
             if (isLocation(afterKeyword)) {
+                console.log(`  → Location detected → MONEY-CHILD`);
                 return 'money-child';
             }
             
-            // CEK PRODUK SPESIFIK (MONEY_PAGE)
-            if (isSpecificProduct(afterKeyword)) {
-                return 'money-page';
-            }
-            
             // CEK JUMLAH KATA
-            const wordCount = afterKeyword.split(/\s+/).filter(w => w.length > 0).length;
+            // wordCount <= 2 → MONEY_MASTER (contoh: "harga bata ringan" = 2 kata)
             if (wordCount <= 2) {
+                console.log(`  → ${wordCount} kata → MONEY-MASTER`);
                 return 'money-master';
             }
             
+            // wordCount >= 3 → cek apakah specific product
+            if (isSpecificProduct(afterKeyword, wordCount)) {
+                console.log(`  → ${wordCount} kata + specific product → MONEY-PAGE`);
+                return 'money-page';
+            }
+            
+            // Default untuk 3+ kata tanpa specific indicator → tetap MONEY_PAGE
+            console.log(`  → ${wordCount} kata → MONEY-PAGE`);
             return 'money-page';
         }
         
-        // PRIORITAS 3: SUB-VARIANT (level 8 - paling detail)
+        // ============================================================
+        // PRIORITAS 4: CEK ENTITY TYPE KHUSUS (tanpa keyword harga)
+        // ============================================================
+        
+        // JASA tanpa keyword harga
+        if (isJasa) {
+            const jasaKeywords = ['jasa', 'pasang', 'service', 'kontraktor', 'borongan', 
+                                   'renovasi', 'bangun', 'konsultasi', 'survey', 'estimasi',
+                                   'perbaiki', 'instalasi', 'pemasangan', 'pengerjaan'];
+            for (const kw of jasaKeywords) {
+                if (lowerName.includes(kw)) {
+                    // Cek apakah mengandung lokasi
+                    if (isLocation(lowerName)) {
+                        console.log(`  → JASA + location → MONEY-CHILD`);
+                        return 'money-child';
+                    }
+                    console.log(`  → JASA detected (no location) → MONEY-PAGE`);
+                    return 'money-page';
+                }
+            }
+        }
+        
+        // SEWA tanpa keyword harga
+        if (isSewa) {
+            const sewaKeywords = ['sewa', 'rental', 'lease', 'alat berat', 'excavator', 
+                                   'bulldozer', 'crane', 'vibro', 'stamper', 'dump truck'];
+            for (const kw of sewaKeywords) {
+                if (lowerName.includes(kw)) {
+                    if (isLocation(lowerName)) {
+                        console.log(`  → SEWA + location → MONEY-CHILD`);
+                        return 'money-child';
+                    }
+                    console.log(`  → SEWA detected → MONEY-PAGE`);
+                    return 'money-page';
+                }
+            }
+        }
+        
+        // ============================================================
+        // PRIORITAS 5: SUB-VARIANT (level 8 - paling detail)
+        // ============================================================
         if (/(\d+(\.\d+)?\s*mm\s*x\s*\d+(\.\d+)?\s*mm)/.test(lowerName) ||
-            (lowerName.includes('tebal') && /\d+\s*mm/.test(lowerName)) ||
-            (lowerName.includes('panjang') && /\d+\s*m/.test(lowerName))) {
+            (lowerName.includes('tebal') && /\d+\s*mm/.test(lowerName) && lowerName.includes('x')) ||
+            (lowerName.includes('ukuran') && lowerName.includes('panjang') && /\d+\s*m/.test(lowerName))) {
+            console.log(`  → SUB-VARIANT (very detailed specs)`);
             return 'sub-variant';
         }
         
-        // PRIORITAS 4: VARIANT (level 7)
-        const variantKeywords = ['spesifikasi', 'ukuran', 'tipe', 'type', 'model', 'varian', 'warna', 'merk', 'kapasitas'];
+        // ============================================================
+        // PRIORITAS 6: VARIANT (level 7)
+        // ============================================================
+        const variantKeywords = ['spesifikasi', 'ukuran', 'tipe ', 'type ', 'model', 
+                                  'varian', 'warna', 'merk', 'kapasitas', 'dimensi'];
         for (const kw of variantKeywords) {
-            if (lowerName.includes(kw)) return 'variant';
+            if (lowerName.includes(kw)) {
+                console.log(`  → VARIANT (${kw})`);
+                return 'variant';
+            }
         }
-        if (/\d+(\.\d+)?\s*(mm|cm|m|kg|ton)/.test(lowerName)) return 'variant';
         
-        // PRIORITAS 5: SUB-PILLAR TIPE 1 (level 3 - perbandingan)
-        const comparisonKeywords = ['vs', 'versus', 'perbandingan', 'lebih baik', 'mana yang', 'kelebihan', 'kekurangan'];
+        if (/\d+(\.\d+)?\s*(mm|cm|m|kg|ton)/.test(lowerName) && !lowerName.includes('x')) {
+            console.log(`  → VARIANT (dimension)`);
+            return 'variant';
+        }
+        
+        // ============================================================
+        // PRIORITAS 7: SUB-PILLAR TIPE 1 (level 3 - perbandingan)
+        // ============================================================
+        const comparisonKeywords = [' vs ', 'versus', 'perbandingan', 'lebih baik', 
+                                     'mana yang', 'kelebihan', 'kekurangan', 'perbedaan'];
         for (const kw of comparisonKeywords) {
-            if (lowerName.includes(kw)) return 'sub-pillar-tipe-1';
+            if (lowerName.includes(kw)) {
+                console.log(`  → SUB-PILLAR-TIPE-1 (comparison: ${kw})`);
+                return 'sub-pillar-tipe-1';
+            }
         }
         
-        // PRIORITAS 6: SUB-PILLAR TIPE 2 (level 2 - jenis/macam)
-        if (lowerName.startsWith('jenis ') || lowerName.startsWith('macam ') || lowerName.startsWith('tipe ') ||
-            lowerName.includes('jenis-jenis') || lowerName.includes('macam-macam')) {
+        // ============================================================
+        // PRIORITAS 8: SUB-PILLAR TIPE 2 (level 2 - jenis/macam)
+        // ============================================================
+        if (lowerName.startsWith('jenis ') || lowerName.startsWith('macam ') || 
+            lowerName.startsWith('tipe ') || lowerName.includes('jenis-jenis') || 
+            lowerName.includes('macam-macam') || lowerName.includes('kategori ')) {
+            console.log(`  → SUB-PILLAR-TIPE-2 (category listing)`);
             return 'sub-pillar-tipe-2';
         }
         
+        // ============================================================
         // DEFAULT: PILLAR
+        // ============================================================
+        console.log(`  → PILLAR (default)`);
         return 'pillar';
     }
     
     // ============================================================
-    // 8. KUMPULKAN DATA DARI MAPPING
+    // 7. INTENT DOMINANCE (SESUAI PHASE 1.5)
+    // ============================================================
+    function getIntentForPageType(pageType, entityTypeParam = null) {
+        const useEntityType = entityTypeParam || entityType;
+        const isJasa = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(useEntityType);
+        const isSewa = ['SEWA', 'RENTAL', 'SEWA_RENTAL', 'SEWA_ALAT', 'RENTAL_ALAT'].includes(useEntityType);
+        
+        const intentMap = {
+            'pillar': { primary: 'informasional', secondary: 'komersial', dominance: 90 },
+            'sub-pillar-tipe-2': { primary: 'informasional', secondary: 'komersial', dominance: 60 },
+            'sub-pillar-tipe-1': { primary: 'komersial', secondary: 'informasional', dominance: 70 },
+            'variant': { primary: 'komersial', secondary: 'informasional', dominance: 80 },
+            'sub-variant': { primary: 'komersial', secondary: 'informasional', dominance: 70 }
+        };
+        
+        if (intentMap[pageType]) return intentMap[pageType];
+        
+        // MONEY_MASTER
+        if (pageType === 'money-master') {
+            if (isJasa) return { primary: 'komersial', secondary: 'transaksional', dominance: 60 };
+            if (isSewa) return { primary: 'transaksional', secondary: 'komersial', dominance: 80 };
+            return { primary: 'transaksional', secondary: 'komersial', dominance: 80 };
+        }
+        
+        // MONEY_PAGE
+        if (pageType === 'money-page') {
+            if (isJasa || isSewa) return { primary: 'komersial', secondary: 'transaksional', dominance: 60 };
+            return { primary: 'transaksional', secondary: 'komersial', dominance: 85 };
+        }
+        
+        // MONEY_CHILD
+        if (pageType === 'money-child') {
+            if (isJasa || isSewa) return { primary: 'komersial', secondary: 'transaksional', dominance: 60 };
+            return { primary: 'transaksional', secondary: 'komersial', dominance: 90 };
+        }
+        
+        return { primary: 'informasional', secondary: null, dominance: 50 };
+    }
+    
+    // ============================================================
+    // 8. EVERGREEN vs NON-EVERGREEN
+    // ============================================================
+    function getEvergreenStatus(pageType, entityTypeParam = null) {
+        const useEntityType = entityTypeParam || entityType;
+        const isJasa = ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(useEntityType);
+        const isSewa = ['SEWA', 'RENTAL', 'SEWA_RENTAL', 'SEWA_ALAT', 'RENTAL_ALAT'].includes(useEntityType);
+        
+        // EVERGREEN (tidak perlu tahun)
+        if (['pillar', 'sub-pillar-tipe-2', 'variant', 'sub-variant'].includes(pageType)) {
+            return { evergreen: true, wajibTahun: false };
+        }
+        
+        // SUB-PILLAR TIPE 1 (fleksibel)
+        if (pageType === 'sub-pillar-tipe-1') {
+            return { evergreen: false, wajibTahun: false, catatan: 'tergantung topik perbandingan' };
+        }
+        
+        // MONEY_MASTER
+        if (pageType === 'money-master') {
+            if (isJasa) return { evergreen: false, wajibTahun: false, catatan: 'JASA tidak boleh money-master' };
+            return { evergreen: false, wajibTahun: true };
+        }
+        
+        // MONEY_PAGE & MONEY_CHILD
+        if (['money-page', 'money-child'].includes(pageType)) {
+            if (isJasa || isSewa) return { evergreen: false, wajibTahun: false, catatan: 'fleksibel, tidak wajib tahun' };
+            return { evergreen: false, wajibTahun: true };
+        }
+        
+        return { evergreen: true, wajibTahun: false };
+    }
+    
+    // ============================================================
+    // 9. KUMPULKAN DATA DARI MAPPING
     // ============================================================
     const allPageNames = [];
     if (mappingObj) {
@@ -1363,7 +1581,7 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     }
     
     // ============================================================
-    // 9. BANGUN LEVELS DARI breadcrumbItems
+    // 10. BANGUN LEVELS DARI breadcrumbItems
     // ============================================================
     const allLevels = [];
     for (let i = 0; i < breadcrumbItems.length; i++) {
@@ -1394,7 +1612,7 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     }
     
     // ============================================================
-    // 10. VALIDASI & PERBAIKI HIERARKI (TIDAK BOLEH LONCAT LEVEL)
+    // 11. VALIDASI & PERBAIKI HIERARKI (TIDAK BOLEH LONCAT LEVEL)
     // ============================================================
     for (let i = 0; i < allLevels.length - 1; i++) {
         const current = allLevels[i];
@@ -1403,7 +1621,6 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         if (next.level - current.level > 1) {
             console.warn(`⚠️ LEVEL JUMP: ${current.name}(${current.type} L${current.level}) → ${next.name}(${next.type} L${next.level})`);
             
-            // Perbaiki dengan menaikkan level next
             const correctedIndex = Math.min(current.level + 1, 8);
             const correctedType = VALID_PAGE_TYPES[correctedIndex - 1];
             next.type = correctedType;
@@ -1416,7 +1633,20 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     }
     
     // ============================================================
-    // 11. VALIDASI & FALLBACK URL
+    // 12. VALIDASI KHUSUS: JASA TIDAK BOLEH MONEY_MASTER
+    // ============================================================
+    for (const level of allLevels) {
+        if (isJasaEntity() && level.type === 'money-master') {
+            console.warn(`⚠️ JASA cannot be money-master: ${level.name} → forced to money-page`);
+            level.type = 'money-page';
+            level.level = 5;
+            level.intent = getIntentForPageType('money-page', entityType);
+            level.evergreen = getEvergreenStatus('money-page', entityType);
+        }
+    }
+    
+    // ============================================================
+    // 13. VALIDASI & FALLBACK URL
     // ============================================================
     for (const level of allLevels) {
         if (!level.url) {
@@ -1440,7 +1670,7 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     }
     
     // ============================================================
-    // 12. TENTUKAN LEVEL YANG DITAMPILKAN (MAX 4 LEVEL)
+    // 14. TENTUKAN LEVEL YANG DITAMPILKAN (MAX 4 LEVEL)
     // ============================================================
     const selectedLevels = [];
     
@@ -1451,16 +1681,16 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         isHome: true,
         type: 'pillar',
         level: 1,
-        intent: INTENT_MAP.pillar,
-        evergreen: EVERGREEN_STATUS.pillar
+        intent: getIntentForPageType('pillar', entityType),
+        evergreen: getEvergreenStatus('pillar', entityType)
     });
     
     let remainingSlots = MAX_LEVEL - 2;
     
-    console.log(`📊 ========================================`);
-    console.log(`📊 Breadcrumb Generator v3.0 — FULL REVISI`);
+    console.log(`\n📊 ========================================`);
+    console.log(`📊 Breadcrumb Generator v4.1 — FIXED LOCATION DETECTION`);
     console.log(`📊 Entity Type: ${entityType}`);
-    console.log(`📊 Max level: ${MAX_LEVEL}`);
+    console.log(`📊 JASA Entity: ${isJasaEntity() ? 'YES (MONEY_MASTER DILARANG)' : 'NO'}`);
     console.log(`📊 ========================================`);
     
     // Parent terdekat (WAJIB)
@@ -1469,21 +1699,29 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         parentTerdekat = allLevels[allLevels.length - 1];
         selectedLevels.push(parentTerdekat);
         remainingSlots--;
-        console.log(`✅ WAJIB: "${parentTerdekat.name}" (${parentTerdekat.type} L${parentTerdekat.level})`);
+        console.log(`✅ WAJIB: "${parentTerdekat.name}" → ${parentTerdekat.type} (L${parentTerdekat.level})`);
     }
     
-    // Level lainnya (prioritaskan level tertinggi)
-    const otherLevels = [...allLevels.slice(0, allLevels.length - 1)].sort((a, b) => b.level - a.level);
+    // Level lainnya (prioritaskan level tertinggi yang unik)
+    const otherLevels = [...allLevels.slice(0, allLevels.length - 1)]
+        .sort((a, b) => b.level - a.level)
+        .filter((v, i, self) => self.findIndex(t => t.name === v.name) === i); // unique by name
     
     for (const level of otherLevels) {
         if (remainingSlots <= 0) {
-            console.log(`📌 SKIP: "${level.name}" (${level.type} L${level.level}) - slot habis`);
+            console.log(`📌 SKIP: "${level.name}" (${level.type}) - slot habis`);
+            continue;
+        }
+        
+        // Hindari duplikasi dengan parent atau home
+        if (selectedLevels.some(s => s.name === level.name)) {
+            console.log(`📌 SKIP: "${level.name}" - already in breadcrumb`);
             continue;
         }
         
         selectedLevels.splice(1, 0, level);
         remainingSlots--;
-        console.log(`✅ TAMBAH: "${level.name}" (${level.type} L${level.level})`);
+        console.log(`✅ TAMBAH: "${level.name}" → ${level.type} (L${level.level})`);
     }
     
     // Halaman saat ini (WAJIB)
@@ -1513,13 +1751,17 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         selectedLevels[i].position = i + 1;
     }
     
-    console.log(`✅ FINAL (${selectedLevels.length} level): ${selectedLevels.map(l => `${l.name}(${l.type})`).join(' → ')}`);
-    console.log(`📊 Current page type: ${currentPageType}`);
+    console.log(`\n✅ FINAL (${selectedLevels.length} level):`);
+    selectedLevels.forEach((l, i) => {
+        console.log(`   ${i+1}. ${l.name} → ${l.type} (L${l.level})`);
+    });
+    console.log(`\n📊 Current page type: ${currentPageType}`);
     console.log(`📊 Intent: ${currentIntent.primary} (${currentIntent.dominance}%)`);
-    console.log(`📊 Evergreen: ${currentEvergreen.evergreen ? 'YES' : 'NO'} | Wajib Tahun: ${currentEvergreen.wajibTahun ? 'YES' : 'NO'}`);
+    console.log(`📊 Wajib Tahun di H1: ${currentEvergreen.wajibTahun ? 'YES' : 'NO'}`);
+    console.log(`📊 ========================================\n`);
     
     // ============================================================
-    // 13. GENERATE HTML BREADCRUMB + JSON-LD
+    // 15. GENERATE HTML BREADCRUMB + JSON-LD
     // ============================================================
     let breadcrumbHtml = `<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">\n`;
     
@@ -1561,7 +1803,7 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     };
     
     // ============================================================
-    // 14. INJECT KE DOM
+    // 16. INJECT KE DOM
     // ============================================================
     const oldBreadcrumbs = document.querySelectorAll('.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"]');
     oldBreadcrumbs.forEach(el => el.remove());
@@ -1588,10 +1830,9 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
     document.head.appendChild(script);
     
     console.log(`✅ Breadcrumb injected for entity: ${entityType}`);
-    console.log(`📊 ========================================`);
     
     // ============================================================
-    // 15. RETURN LENGKAP
+    // 17. RETURN LENGKAP
     // ============================================================
     return {
         html: breadcrumbHtml,
@@ -1602,115 +1843,27 @@ function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = 
         currentEvergreen: currentEvergreen,
         entityType: entityType,
         isValidType: true,
-        version: '3.0'
+        version: '4.1'
     };
 }
-})
-// ============================================================
-// CONTOH PENGGUNAAN
-// ============================================================
 
+// ============================================================
+// RINGKASAN HASIL DETEKSI PER ENTITY TYPE (v4.1)
+// ============================================================
 /*
-// Contoh 1: MATERIAL KONSTRUKSI
-const result1 = generateBreadcrumbForMapping(
-    urlMapping,
-    '/p/ready-mix-beton-cor-jayamix-minimix.html',
-    [
-        { name: 'Material Konstruksi', url: '/p/material-konstruksi.html' },
-        { name: 'Material Struktur Bangunan', url: '/p/material-struktur-bangunan.html' },
-        { name: 'Ready Mix Beton Cor Jayamix Minimix', url: null }
-    ],
-    'MATERIAL_KONSTRUKSI'
-);
-
-// Contoh 2: JASA KONSTRUKSI (otomatis tidak akan jadi money-master)
-const result2 = generateBreadcrumbForMapping(
-    urlMapping,
-    '/p/harga-jasa-konstruksi.html',
-    [
-        { name: 'Jasa Konstruksi', url: '/p/jasa-konstruksi.html' },
-        { name: 'Harga Jasa Konstruksi', url: null }
-    ],
-    'JASA_KONSTRUKSI'
-);
-
-// Contoh 3: PRODUK INTERIOR dengan lokasi (money-child)
-const result3 = generateBreadcrumbForMapping(
-    urlMapping,
-    '/p/harga-kitchen-set-jakarta.html',
-    [
-        { name: 'Produk Interior', url: '/p/produk-interior.html' },
-        { name: 'Kitchen Set', url: '/p/kitchen-set.html' },
-        { name: 'Harga Kitchen Set Jakarta', url: null }
-    ],
-    'PRODUK_INTERIOR'
-);
-
-// Output akan berisi:
-// - html: string HTML breadcrumb
-// - jsonLd: object untuk schema.org
-// - selectedLevels: array level yang ditampilkan
-// - currentPageType: 'money-child'
-// - currentIntent: { primary: 'transaksional', secondary: 'komersial', dominance: 90 }
-// - currentEvergreen: { evergreen: false, wajibTahun: true }
+| Entity Type | Keyword Contoh | Hasil Deteksi | Alasan |
+|-------------|----------------|---------------|--------|
+| JASA | "Jasa Pasang Atap Baja Ringan" | money-page ✅ | Tidak ada lokasi, "ringan" di blacklist |
+| JASA | "Jasa Pasang Atap Baja Ringan Jakarta" | money-child ✅ | Mengandung whitelist kota "jakarta" |
+| JASA | "Jasa Pasang Atap Baja Ringan di Bandung" | money-child ✅ | Indicator "di" + whitelist "bandung" |
+| MATERIAL | "Harga Bata Ringan" | money-master ✅ | 2 kata setelah keyword |
+| MATERIAL | "Harga Bata Ringan Hebel" | money-page ✅ | 3 kata + specific product |
+| MATERIAL | "Harga Bata Ringan di Jakarta" | money-child ✅ | mengandung lokasi |
+| PRODUK | "Harga Kitchen Set" | money-master ✅ | 2 kata setelah keyword |
+| PRODUK | "Harga Kitchen Set Minimalis" | money-page ✅ | 3+ kata |
+| SEWA | "Harga Sewa Excavator" | money-master ✅ | 2 kata setelah keyword |
+| SEWA | "Sewa Excavator Jakarta" | money-child ✅ | mengandung lokasi |
 */
-// ============================================================
-// CONTOH PANGGILAN DENGAN URL MANUAL PER LEVEL
-// ============================================================
-
-/*
-// MATERIAL KONSTRUKSI - READY MIX LOKASI
-const result = generateBreadcrumbForMapping(
-    urlMappingReadyMixLokasiPost,
-    cleanUrl,
-    [
-        { name: 'Material Konstruksi', url: 'https://www.betonjayareadymix.com/p/material-konstruksi.html' },
-        { name: 'Material Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/material-struktur-bangunan.html' },
-        { name: 'Ready Mix Beton Cor Jayamix Minimix', url: 'https://www.betonjayareadymix.com/p/ready-mix-beton-cor-jayamix-minimix.html' },
-        { name: 'Ready Mix Lokasi', url: 'https://www.betonjayareadymix.com/p/ready-mix-lokasi.html' }
-    ],
-    'MATERIAL_KONSTRUKSI'
-);
-
-// PRODUK INTERIOR - KITCHEN SET
-const result2 = generateBreadcrumbForMapping(
-    urlMappingKitchenSetPost,
-    currentUrl,
-    [
-        { name: 'Produk Interior', url: 'https://www.betonjayareadymix.com/p/produk-interior.html' },
-        { name: 'Jenis Kitchen Set', url: 'https://www.betonjayareadymix.com/p/jenis-kitchen-set.html' }
-    ],
-    'PRODUK_INTERIOR'
-);
-
-// JASA KONSTRUKSI - KONSULTASI
-const result3 = generateBreadcrumbForMapping(
-    urlMappingJasaPost,
-    currentUrl,
-    [
-        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-        { name: 'Jasa Borongan', url: 'https://www.betonjayareadymix.com/p/jasa-borongan.html' }
-    ],
-    'JASA_KONSTRUKSI'
-);
-
-// SEWA ALAT BERAT - EXCAVATOR
-const result4 = generateBreadcrumbForMapping(
-    urlMappingSewaPost,
-    currentUrl,
-    [
-        { name: 'Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/sewa-alat-berat.html' },
-        { name: 'Jenis Excavator', url: 'https://www.betonjayareadymix.com/p/jenis-excavator.html' }
-    ],
-    'SEWA_RENTAL'
-);
-*/
-
-/**
- * HAPUS BREADCRUMB PADA HALAMAN VARIANT
- * Script ini akan menghapus breadcrumb navigation dan JSON-LD BreadcrumbList
- * Tanpa menghapus schema lainnya (FAQPage, Product, dll)
- */
  
     // Fungsi untuk menghapus elemen breadcrumb navigation
     function removeBreadcrumbNavigation() {
@@ -2402,7 +2555,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChild[cleanUrlJa
     EstimasiBiayaJasaAlatKonstruksiPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
     
-		generateBreadcrumbForMapping(
+		generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -2506,7 +2659,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariant[cle
     EstimasiBiayaJasaAlatKonstruksiPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost];
    /* Variant ga penting buat seo
-		generateBreadcrumbForMapping(
+		generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariant,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -2629,7 +2782,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariantSubV
     EstimasiBiayaJasaAlatKonstruksiPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariantSubVariant[cleanUrlJasaKonsAlatKonstruksiPost];
     /*SubVariant ga penting buat seo
-		generateBreadcrumbForMapping(
+		generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChildVariantSubVariant,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -2750,7 +2903,7 @@ if (urlMappingSewaAlatProyekFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstru
         SewaAlatProyekPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatProyekFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
     
-		generateBreadcrumbForMapping(
+		generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaAlatProyekFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -2764,7 +2917,7 @@ if (urlMappingSewaAlatProyekFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstru
     );
 }
 if (urlMappingSewaAlatProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		generateBreadcrumbForMapping(
+		generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaAlatProyekFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -2870,7 +3023,7 @@ if (urlMappingSewaAlatProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruk
 	   SewaAlatProyekPompaDewateringPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPompaDewateringFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
     
-          generateBreadcrumbForMapping(
+          generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaPompaDewateringFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -2888,7 +3041,7 @@ if (urlMappingSewaAlatProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruk
 if (urlMappingSewaPompaDewateringFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPompaDewateringFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost];
     /*
-          generateBreadcrumbForMapping(
+          generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaPompaDewateringFromMoneyChildVariant,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -2926,7 +3079,7 @@ if (urlMappingSewaPompaDewateringFromMoneyChildVariant[cleanUrlJasaKonsAlatKonst
   if (urlMappingSewaPompaAirDieselFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         //pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPompaAirDieselFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
     
-          generateBreadcrumbForMapping(
+          generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaPompaAirDieselFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -2944,7 +3097,7 @@ if (urlMappingSewaPompaDewateringFromMoneyChildVariant[cleanUrlJasaKonsAlatKonst
 if (urlMappingSewaPompaAirDieselFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPompaAirDieselFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost];
     /*
-          generateBreadcrumbForMapping(
+          generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaompaAirDieselFromMoneyChildVariant,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -2981,7 +3134,7 @@ if (urlMappingSewaPompaAirDieselFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstr
  if (urlMappingSewaPompaBanjirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPompaBanjirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
     
-          generateBreadcrumbForMapping(
+          generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaPompaBanjirFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -3021,7 +3174,7 @@ if (urlMappingSewaPompaBanjirFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruks
  if (urlMappingSewaPompaKapasitasBesarFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPompaKapasitasBesarFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
     
-          generateBreadcrumbForMapping(
+          generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaPompaKapasitasBesarFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -3061,7 +3214,7 @@ if (urlMappingSewaPompaKapasitasBesarFromMoneyChildVariant[cleanUrlJasaKonsAlatK
  if (urlMappingSewaBakAirProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBakAirProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
     
-          generateBreadcrumbForMapping(
+          generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaBakAirProyekFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -3101,7 +3254,7 @@ if (urlMappingSewaBakAirProyekFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruk
  if (urlMappingSewaTangkiAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaTangkiAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
     
-          generateBreadcrumbForMapping(
+          generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaTangkiAirFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -3141,7 +3294,7 @@ if (urlMappingSewaTangkiAirFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiP
  if (urlMappingSewaPipaProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPipaProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
     
-          generateBreadcrumbForMapping(
+          generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaPipaProyekFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -3181,7 +3334,7 @@ if (urlMappingSewaPipaProyekFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksi
  if (urlMappingSewaSelangProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaSelangProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
     
-          generateBreadcrumbForMapping(
+          generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaSelangProyekFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -3308,7 +3461,7 @@ if (urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonst
 	   SewaAlatProyekPompaDewateringPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
     
-          generateBreadcrumbForMapping(
+          generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -3326,7 +3479,7 @@ if (urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonst
   if (urlMappingSewaMesinPompaAirFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaMesinPompaAirFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost];
     /*
-        generateBreadcrumbForMapping(
+        generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -3452,7 +3605,7 @@ if (urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonst
 	   SewaAlatProyekPompaDewateringPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPompaLumpurFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
     
-          generateBreadcrumbForMapping(
+          generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaPompaLumpurFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -3492,7 +3645,7 @@ if (urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonst
   if (urlMappingSewaPompaSedotLumpurFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         //pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPompaSedotLumpurFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
     
-          generateBreadcrumbForMapping(
+          generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaPompaSedotLumpurFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -3621,7 +3774,7 @@ if (urlMappingSewaBekistingScaffoldingFromSub2MoneyPage[cleanUrlJasaKonsAlatKons
 	   	SewaAlatProyekBekistingScaffoldingPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBekistingScaffoldingFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
     
-           generateBreadcrumbForMapping(
+           generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaBekistingScaffoldingFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -3726,7 +3879,7 @@ if (urlMappingSewaBekistingScaffoldingFromSub2MoneyPage[cleanUrlJasaKonsAlatKons
 	   SewaAlatProyekPencahayaanUtilitasPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaPencahayaanUtilitasFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
     
-	 generateBreadcrumbForMapping(
+	 generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaPencahayaanUtilitasFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -3832,7 +3985,7 @@ if (urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage[cleanUrlJasaKonsAlatKons
 	   SewaAlatProyekSurveyPengukuranPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
     
-        generateBreadcrumbForMapping(
+        generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -3940,7 +4093,7 @@ if (urlMappingSewaTotalStationFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiP
 	  	SewaAlatProyekSurveyPengukuranTotalStationPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaTotalStationFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
    
-     generateBreadcrumbForMapping(
+     generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaTotalStationFromSub2MoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4048,7 +4201,7 @@ if (urlMappingSewaWaterpassFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPost
 	   SewaAlatProyekSurveyPengukuranWaterpassPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaWaterpassFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
    
-		generateBreadcrumbForMapping(
+		generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaWaterpassFromSub2MoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4156,7 +4309,7 @@ if (urlMappingSewaTheodoliteFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPos
 	   	SewaAlatProyekSurveyPengukuranTheodolitePostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaTheodoliteFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPost];
     
-		   generateBreadcrumbForMapping(
+		   generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaTheodoliteFromSub2MoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4263,7 +4416,7 @@ if (urlMappingSewaTheodoliteFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPos
 	   	SewaAlatProyekAksesKeamananPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAksesKeamananProyekFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
     
-  		    generateBreadcrumbForMapping(
+  		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaAksesKeamananProyekFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4367,7 +4520,7 @@ if (urlMappingSewaTheodoliteFromSub2MoneyChild[cleanUrlJasaKonsAlatKonstruksiPos
 	   SewaAlatProyekBorGroundWorkPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatBorGroundWorkFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
    
-  		    generateBreadcrumbForMapping(
+  		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaAlatBorGroundWorkFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4471,7 +4624,7 @@ restoreCondition('SewaAlatKonstruksiPost');
 	   SewaAlatProyekSistemPendukungPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaSistemPendukungProyekFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
    
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaSistemPendukungProyekFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4573,7 +4726,7 @@ if (urlMappingSewaAlatBeratPostFromSub1MoneyMaster[cleanUrlJasaKonsAlatKonstruks
         SewaAlatBeratPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatBeratPostFromSub1MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
     
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaAlatBeratPostFromSub1MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4588,7 +4741,7 @@ if (urlMappingSewaAlatBeratPostFromSub1MoneyMaster[cleanUrlJasaKonsAlatKonstruks
 }
 
 if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4604,7 +4757,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     }
 	
 	if (urlMappingSewaAlatBeratPostFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaAlatBeratPostFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4622,7 +4775,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
 		
    //AWAL SUB PAGE SEWA ALAT BERAT
 		if (urlMappingSewaforkliftPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaforkliftPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4637,7 +4790,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}
 	if (urlMappingSewaCranePostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaCranePostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4652,7 +4805,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}
 	if (urlMappingSewaSelfLoaderPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaSelfLoaderPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4667,7 +4820,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}
 	if (urlMappingSewaWheelLoaderPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaWheelLoaderPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4682,7 +4835,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}
 	if (urlMappingSewaVibroRollerPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaVibroRollerPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4697,7 +4850,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}
 	if (urlMappingSewaWalesStoomPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaWalesStoomPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4712,7 +4865,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}
 		if (urlMappingSewaTandemRollerPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaTandemRollerPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4727,7 +4880,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}
     if (urlMappingSewaBulldozerPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaBulldozerPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4742,7 +4895,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}	
 	if (urlMappingSewaExcavatorPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaExcavatorPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4757,7 +4910,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}	
    	if (urlMappingSewaExcavatorPostFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaExcavatorPostFromMoneyPageMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4774,7 +4927,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
 	}
 	
 	    if (urlMappingSewaBackhoeLoaderPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaBackhoeLoaderPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4789,7 +4942,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}	
 	    if (urlMappingSewaBabyRollerPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaBabyRollerPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4804,7 +4957,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}	
 	    if (urlMappingSewaMotorGraderPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaMotorGraderPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4819,7 +4972,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}	
 	    if (urlMappingSewaAlatPancangPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaAlatPancangPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4834,7 +4987,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}	
 	    if (urlMappingSewaConcretePaverPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaConcretePaverPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4849,7 +5002,7 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}	
 	    if (urlMappingSewaTrencherPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaTrencherPostFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -4955,7 +5108,7 @@ if (urlMappingSewaForkliftFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost
         SewaForkliftPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaForkliftFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
     
-   		    generateBreadcrumbForMapping(
+   		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaForkliftFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -5058,7 +5211,7 @@ if (urlMappingSewaCraneFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) 
         SewaCranePostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaCraneFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
     
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaCraneFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -5161,7 +5314,7 @@ if (urlMappingSewaSelfLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPo
         SewaSelfLoaderPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaSelfLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
     
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaSelfLoaderFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -5265,7 +5418,7 @@ if (urlMappingSewaWheelLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiP
         SewaWheelLoaderPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaWheelLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
 
-	       generateBreadcrumbForMapping(
+	       generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaWheelLoaderFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -5368,7 +5521,7 @@ if (urlMappingSewaVibroRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiP
         SewaVibroRollerPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaVibroRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
     
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaVibroRollerFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -5473,7 +5626,7 @@ if (urlMappingSewaWalesStoomFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPo
         SewaWalesStoomPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaWalesStoomFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
     
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaWalesStoomFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -5577,7 +5730,7 @@ if (urlMappingSewaTandemRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksi
         SewaTandemRollerPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaTandemRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
     
-		generateBreadcrumbForMapping(
+		generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaTandemRollerFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -5681,7 +5834,7 @@ if (urlMappingSewaBulldozerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPos
         SewaBulldozerPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBulldozerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
    
-		   generateBreadcrumbForMapping(
+		   generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaBulldozerFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -5785,7 +5938,7 @@ if (urlMappingSewaExcavatorFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]
         SewaExcavatorPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaExcavatorFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
     
-				   generateBreadcrumbForMapping(
+				   generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaExcavatorFromSub2MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -5889,7 +6042,7 @@ if (urlMappingSewaBackhoeLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruks
         SewaBackhoeLoaderPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBackhoeLoaderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
     
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaBackhoeLoaderFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -5993,7 +6146,7 @@ if (urlMappingSewaConcretePaverFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruks
         SewaConcretePaverPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaConcretePaverFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
 
-		   generateBreadcrumbForMapping(
+		   generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaConcretePaverFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -6098,7 +6251,7 @@ if (urlMappingSewaTrencherFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost
         SewaTrencherPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaTrencherFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
 
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaTrencherFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -6202,7 +6355,7 @@ if (urlMappingSewaBabyRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPo
         SewaBabyRollerPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBabyRollerFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
 
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaBabyRollerFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -6307,7 +6460,7 @@ if (urlMappingSewaAlatPancangFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiP
         SewaAlatPancangPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatPancangFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
     
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaAlatPancangFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -6411,7 +6564,7 @@ if (urlMappingSewaMotorGraderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiP
         SewaMotorGraderPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaMotorGraderFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
     
-		   generateBreadcrumbForMapping(
+		   generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaMotorGraderFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
@@ -6512,7 +6665,7 @@ if (urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster[cleanUrlJasaKonsAlatKo
         SewaAlatKonstruksiRinganPostLink.style.visibility = 'visible';
         pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
     
-		    generateBreadcrumbForMapping(
+		    generateBreadcrumbJasaAlatKonstruksiPost(
         urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
