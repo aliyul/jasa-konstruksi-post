@@ -793,7 +793,7 @@ const urlMappingCustom = {
  * @date 2026-01-15
  */
 
-function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
+function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
     
     // ============================================================
     // 1. KONSTANTA & VALIDASI
