@@ -1069,8 +1069,9 @@ REDIRECT		5			Duplikasi, perlu 301 redirect
  * ✅ Evergreen vs Non-Evergreen detection
  * ✅ Clean code, siap produksi
  */
-
-private function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
+(function() {  
+    'use strict';
+function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
     
     // ============================================================
     // 1. KONSTANTA & VALIDASI
@@ -1604,7 +1605,7 @@ private function generateBreadcrumbForMapping(mappingObj, currentUrl, breadcrumb
         version: '3.0'
     };
 }
-
+})
 // ============================================================
 // CONTOH PENGGUNAAN
 // ============================================================
