@@ -1993,7 +1993,7 @@ if (urlMappingStrukturPostFromSub1MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
 
 	
       
-	/*
+	
 JasaKonstruksiGedungdanHunianPost
 JasaKonstruksiIndustridanGudangPost
 JasaStrukturBajadanRangkaRinganPost
@@ -2001,7 +2001,7 @@ JasaStrukturKhusus
 JasaKonstruksiLapanganOlahragaPost
 JasaKonstruksiModulardanPrecastPost
 JasaStrukturBetondanPengecoranPost
-*/
+
        //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaStrukturBajadanRangkaRinganPost
         removeCondition('JasaKonstruksiIndustridanGudangPost');
         removeCondition('JasaKonstruksiGedungdanHunianPost');
