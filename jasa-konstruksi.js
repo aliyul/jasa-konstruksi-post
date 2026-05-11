@@ -2097,9 +2097,9 @@ if (urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons]) {
 
         JasaKonstruksiLink.style.visibility = 'visible';
         pageNameKonstruksi.textContent = urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons];
-
+	
 	   generateBreadcrumbJasaKonstruksi(
-        urlMappingStrukturBridgeFromSub2Sub1,
+        urlMappingJasaKonsFromPillarSub2,
         cleanUrlJasaKons,
        [
            // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
