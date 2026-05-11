@@ -2097,7 +2097,20 @@ if (urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons]) {
 
         JasaKonstruksiLink.style.visibility = 'visible';
         pageNameKonstruksi.textContent = urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons];
+
+	   generateBreadcrumbJasaKonstruksi(
+        urlMappingStrukturBridgeFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' }
+           // { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+	
     }
+	/*
    // ✅ Tambahkan JSON-LD Breadcrumb otomatis
    if (urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons]) {
        const jsonLDBreadcrumb = {
@@ -2130,6 +2143,8 @@ if (urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+	*/
+	
 //AWAL JASA KONTRUKSI ALAT
 	
 if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
