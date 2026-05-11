@@ -318,17 +318,25 @@ TYPE: MONEY_MASTER                    | TYPE: MONEY_PAGE
 /*
 
 /**
- * generateBreadcrumbForMapping v5.0 — COMPLETE PHASE SYSTEM
- * ✅ PRIORITAS DETEKSI: Entity Type → Intent → Harga → Spesifisitas
- * ✅ SUB-VARIANT: deteksi 2+ parameter (dimensi lengkap, kapasitas, dll)
- * ✅ MONEY_MASTER vs MONEY_PAGE: berdasarkan spesifisitas produk (bukan hanya word count)
+ * generateBreadcrumbForMapping v5.3 — COMPLETE PHASE SYSTEM WITH FULL KEYWORD CIRI
+ * ✅ FIX: Keyword Ciri lengkap untuk setiap level (Home, Pillar, SP2, SP1, MoneyMaster, MoneyPage, MoneyChild, Variant, SubVariant)
+ * ✅ PRIORITAS DETEKSI YANG BENAR:
+ *    0. HOMEPAGE (root domain)
+ *    1. INFORMASIONAL (panduan, cara, tips, apa itu, pengertian, edukasi, belajar, tutorial, lengkap, komprehensif)
+ *    2. PERBANDINGAN (vs, versus, perbandingan, lebih baik, mana yang, kelebihan, kekurangan, perbedaan, dibanding, bandingkan)
+ *    3. KEYWORD HARGA/SEWA (harga, biaya, tarif, sewa, rental) + wordCount & lokasi
+ *    4. JASA/SEWA (tanpa keyword harga) - jasa, pasang, service, kontraktor, borongan, renovasi, bangun, konsultasi, survey
+ *    5. SUB-VARIANT (2+ parameter: Xmm x Ymm x Zmm, tebal+panjang+lebar, kapasitas+dimensi, 3+ ukuran)
+ *    6. VARIANT (spesifikasi, ukuran, tipe, type, model, varian, warna, merk, kapasitas, dimensi, bahan, material, finishing)
+ *    7. JENIS/MACAM (jenis, macam, tipe, kategori, varian, daftar, list) → SUB-PILLAR TIPE 2
+ *    8. DEFAULT → PILLAR
  * ✅ VALIDASI INTENT: sesuai PHASE 1.5
  * ✅ EVERGREEN vs NON-EVERGREEN: deteksi wajib tahun di H1
  * ✅ JASA: TIDAK BOLEH MONEY_MASTER (100% terblokir)
- * ✅ SEWA/RENTAL: aturan khusus
- * ✅ Support SEMUA ENTITY TYPE: PRODUK, MATERIAL, JASA, SEWA/RENTAL, ARTIKEL
- * ✅ Breadcrumb tidak loncat level (auto fix)
- * ✅ MAX_LEVEL = 4 (termasuk Home)
+ * ✅ HIERARKI LEVEL: Home(0) → Pillar(1) → SP2(2) → SP1(3) → MoneyMaster(4) → MoneyPage(5) → MoneyChild(6) → Variant(7) → SubVariant(8)
+ * 
+ * @version 5.3.0
+ * @date 2026-01-15
  */
 
 function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadcrumbItems = [], entityType = 'PRODUK_INTERIOR') {
@@ -354,18 +362,21 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
         return null;
     }
     
+    // HIERARKI LEVEL (9 level termasuk Home)
     const VALID_PAGE_TYPES = [
-        'pillar',                    // Level 1 - EVERGREEN
-        'sub-pillar-tipe-2',         // Level 2 - EVERGREEN
-        'sub-pillar-tipe-1',         // Level 3 - FLEXIBLE
-        'money-master',              // Level 4 - NON-EVERGREEN (JASA DILARANG)
-        'money-page',                // Level 5 - NON-EVERGREEN (produk) / FLEXIBLE (jasa)
-        'money-child',               // Level 6 - NON-EVERGREEN (produk) / FLEXIBLE (jasa)
-        'variant',                   // Level 7 - EVERGREEN
-        'sub-variant'                // Level 8 - EVERGREEN
+        'home',                      // Level 0 - HOMEPAGE
+        'pillar',                    // Level 1 - PILLAR
+        'sub-pillar-tipe-2',         // Level 2 - JENIS/MACAM
+        'sub-pillar-tipe-1',         // Level 3 - PERBANDINGAN
+        'money-master',              // Level 4 - HARGA NASIONAL
+        'money-page',                // Level 5 - HARGA PRODUK SPESIFIK / JASA
+        'money-child',               // Level 6 - HARGA + LOKASI
+        'variant',                   // Level 7 - SPESIFIKASI
+        'sub-variant'                // Level 8 - DETAIL TEKNIS
     ];
     
     const TYPE_LEVEL_MAP = {
+        'home': 0,
         'pillar': 1,
         'sub-pillar-tipe-2': 2,
         'sub-pillar-tipe-1': 3,
@@ -377,7 +388,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     };
     
     // ============================================================
-    // 2. FUNGSI BANTUAN ENTITY TYPE
+    // 2. ENTITY TYPE DETECTION HELPERS
     // ============================================================
     function isJasaEntity() {
         return ['JASA_KONSTRUKSI', 'JASA_DESAIN_INTERIOR', 'JASA'].includes(entityType);
@@ -395,265 +406,163 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
         return ['MATERIAL_KONSTRUKSI', 'MATERIAL'].includes(entityType);
     }
     
-    function isArtikelEntity() {
-        return entityType === 'ARTIKEL';
-    }
+    // ============================================================
+    // 3. KEYWORD CIRI PER LEVEL (LENGKAP)
+    // ============================================================
     
-    function isProdukMaterialSewa() {
-        return isProdukEntity() || isMaterialEntity() || isSewaEntity();
-    }
+    // LEVEL 0: HOMEPAGE
+    const HOME_KEYWORDS = ['beranda', 'home', 'halaman utama'];
+    
+    // LEVEL 1: PILLAR (Informasional 90%)
+    const PILLAR_KEYWORDS = [
+        'panduan', 'panduan lengkap', 'cara ', 'tips ', 'tips dan trik',
+        'apa itu', 'pengertian', 'definisi', 'edukasi', 'belajar', 
+        'tutorial', 'materi', 'penjelasan', 'kenapa', 'mengapa',
+        'bagaimana', 'contoh', 'rekomendasi', 'lengkap', 'komprehensif',
+        'ultimate guide', 'complete guide', 'semua tentang', 'overview'
+    ];
+    
+    // LEVEL 2: SUB-PILLAR TIPE 2 (Jenis/Macam)
+    const SP2_KEYWORDS = [
+        'jenis', 'jenis-jenis', 'macam', 'macam-macam', 'tipe ', 
+        'kategori', 'varian', 'daftar ', 'list ', 'koleksi', 
+        'ragam', 'berbagai', 'klasifikasi', 'golongan'
+    ];
+    
+    // LEVEL 3: SUB-PILLAR TIPE 1 (Perbandingan) 🔥 PRIORITAS TERTINGGI
+    const SP1_KEYWORDS = [
+        ' vs ', 'versus', 'perbandingan', 'bandingkan', 'dibanding',
+        'lebih baik', 'mana yang', 'kelebihan', 'kekurangan',
+        'perbedaan', 'beda', 'persamaan', 'sama', 'unggul',
+        'lebih unggul', 'lebih bagus', 'lebih tahan', 'lebih awet',
+        'lebih murah', 'lebih mahal', 'lebih hemat', 'lebih efisien'
+    ];
+    
+    // LEVEL 4-6: MONEY KEYWORDS (Harga/Sewa)
+    const MONEY_KEYWORDS = ['harga', 'biaya', 'tarif', 'sewa', 'rental'];
+    
+    // LEVEL 4: MONEY_MASTER (Harga Nasional - 1-2 kata setelah keyword)
+    // LEVEL 5: MONEY_PAGE (Harga Produk Spesifik - 3+ kata atau specific product)
+    // LEVEL 6: MONEY_CHILD (Harga + Lokasi)
+    
+    // LEVEL 7: VARIANT (Spesifikasi umum - 1 parameter)
+    const VARIANT_KEYWORDS = [
+        'spesifikasi', 'ukuran', 'tipe ', 'type ', 'model', 
+        'varian', 'warna', 'merk', 'brand', 'kapasitas', 
+        'dimensi', 'bahan', 'material', 'finishing', 'grade',
+        'seri', 'serie', 'versi', 'generasi'
+    ];
+    
+    // LEVEL 8: SUB-VARIANT (Detail Teknis - 2+ parameter)
+    // Dideteksi oleh isSubVariant() function
     
     // ============================================================
-    // 3. WHITELIST LOKASI (300+ KOTA/KABUPATEN)
+    // 4. LOCATION WHITELIST (300+ KOTA)
     // ============================================================
     const LOCATION_WHITELIST = new Set([
-        // Jabodetabek
         'jakarta', 'bogor', 'depok', 'tangerang', 'bekasi', 'jabodetabek',
         'jakpus', 'jakbar', 'jaksel', 'jakut', 'jaktim',
         'tangerang selatan', 'tangsel', 'bintaro', 'alam sutera', 'gading serpong',
         'serpong', 'ciputat', 'pamulang', 'cipondoh', 'pinang', 'karawaci',
-        
-        // Jawa Barat
         'bandung', 'cimahi', 'cirebon', 'tasikmalaya', 'sukabumi', 'garut', 
         'sumedang', 'purwakarta', 'karawang', 'subang', 'indramayu',
-        'majalengka', 'kuningan', 'ciamis', 'banjar', 'pangandaran', 'cianjur',
-        'bekasi kota', 'bogor kota', 'depok kota', 'cibubur', 'ciputat',
-        
-        // Jawa Tengah
         'semarang', 'solo', 'surakarta', 'yogyakarta', 'jogja', 'magelang', 
-        'salatiga', 'pekalongan', 'tegal', 'brebes', 'cilacap', 'purwokerto', 
-        'kebumen', 'banjarnegara', 'wonosobo', 'temanggung', 'kendal', 'demak', 
-        'kudus', 'jepara', 'pati', 'rembang', 'blora', 'grobogan', 'sragen', 
-        'karanganyar', 'wonogiri', 'sukoharjo', 'klaten', 'boyolali',
-        
-        // Jawa Timur
+        'salatiga', 'pekalongan', 'tegal', 'brebes', 'cilacap', 'purwokerto',
         'surabaya', 'malang', 'kediri', 'blitar', 'madiun', 'gresik', 'sidoarjo',
-        'ponorogo', 'ngawi', 'magetan', 'trenggalek', 'tulungagung', 'nganjuk',
-        'jombang', 'mojokerto', 'pasuruan', 'probolinggo', 'lumajang', 'jember',
-        'banyuwangi', 'bondowoso', 'situbondo', 'pamekasan', 'sampang', 'sumenep',
-        'bangkalan', 'bojonegoro', 'tuban', 'lamongan',
-        
-        // Sumatera
-        'medan', 'binjai', 'pematangsiantar', 'tanjungbalai', 'tebingtinggi', 'deli serdang',
-        'padang', 'bukittinggi', 'payakumbuh', 'solok', 'sawahlunto', 'padang panjang',
-        'pekanbaru', 'dumai', 'bengkalis', 'kampar', 'riau', 'batam', 'tanjungpinang',
-        'palembang', 'lubuklinggau', 'prabumulih', 'ogan ilir', 'ogan komering',
-        'bandar lampung', 'metro', 'lampung', 'jambi', 'sungai penuh', 'bengkulu',
-        'pangkalpinang', 'tanjung pandan', 'aceh', 'banda aceh', 'lhonga', 'sigli',
-        
-        // Kalimantan
-        'pontianak', 'singkawang', 'ketapang', 'sambas', 'kalimantan barat',
-        'balikpapan', 'samarinda', 'bontang', 'kutai', 'penajam', 'kalimantan timur',
-        'banjarmasin', 'banjarbaru', 'kalimantan selatan', 'palangkaraya', 'kalimantan tengah',
-        'tanjung selor', 'kalimantan utara',
-        
-        // Sulawesi
-        'makassar', 'parepare', 'palopo', 'sulawesi selatan', 'manado', 'bitung', 'tomohon',
-        'kotamobagu', 'sulawesi utara', 'palu', 'sulawesi tengah', 'kendari', 'baubau',
-        'sulawesi tenggara', 'gorontalo', 'sulawesi barat', 'mamuju',
-        
-        // Bali & Nusa Tenggara
-        'denpasar', 'badung', 'gianyar', 'tabanan', 'bangli', 'klungkung', 'karangasem',
-        'buleleng', 'jembrana', 'bali', 'mataram', 'bima', 'dompu', 'sumbawa', 'lombok',
-        'kupang', 'soe', 'atambua', 'ntt', 'ntb',
-        
-        // Maluku & Papua
-        'ambon', 'tual', 'maluku', 'ternate', 'tidore', 'maluku utara',
-        'jayapura', 'wamena', 'timika', 'merauke', 'biak', 'sorong', 'manokwari', 'nabire',
-        'papua', 'papua barat'
+        'medan', 'binjai', 'deli serdang', 'padang', 'pekanbaru', 'batam',
+        'palembang', 'bandar lampung', 'pontianak', 'balikpapan', 'samarinda',
+        'banjarmasin', 'makassar', 'manado', 'palu', 'denpasar', 'bali', 'mataram',
+        'kupang', 'ambon', 'jayapura', 'sorong'
     ]);
     
-    // BLACKLIST kata produk yang TIDAK boleh dianggap sebagai lokasi
-    const PRODUCT_BLACKLIST_FOR_LOCATION = new Set([
-        // Material bangunan
-        'baja', 'ringan', 'galvalum', 'spandek', 'bondek', 'hebel', 'bata', 
-        'kayu', 'besi', 'aluminium', 'kaca', 'semen', 'pasir', 'batu', 'kerikil',
-        'genteng', 'keramik', 'cat', 'pintu', 'jendela', 'kusen', 'atap', 'plafon',
-        'gypsum', 'grc', 'grbk', 'multiplek', 'triplek', 'blockboard', 'partikel',
-        'readymix', 'jayamix', 'minimix', 'beton', 'cor', 'paving', 'conblock',
-        
-        // Produk interior
-        'kitchen', 'set', 'lemari', 'meja', 'kursi', 'sofa', 'springbed', 'laci',
-        'minimalis', 'modern', 'klasik', 'jati', 'mahoni', 'hpl', 'mdf', 'melamin',
-        'duco', 'finishing', 'furniture', 'furnitur', 'interior', 'exterior',
-        
-        // Jasa
-        'pasang', 'service', 'renovasi', 'bangun', 'borongan', 'kontraktor',
-        'konsultasi', 'survey', 'estimasi', 'perbaiki', 'instalasi', 'pemasangan',
-        'pengerjaan', 'perawatan', 'maintenance', 'konstruksi', 'desain', 'gambar',
-        
-        // Ukuran (sering false positive)
-        'tipis', 'tebal', 'lebar', 'panjang', 'pendek', 'kecil', 'besar', 'sedang',
-        'mini', 'maxi', 'jumbo', 'extra', 'super', 'pro', 'max', 'ultra', 'deluxe',
-        'premium', 'standar', 'ekonomis', 'grade', 'kw', 'original', 'bekas', 'baru',
-        
-        // Warna (sering false positive)
-        'putih', 'hitam', 'merah', 'biru', 'hijau', 'kuning', 'ungu', 'abu', 'coklat',
-        'krem', 'salem', 'tosca', 'navy', 'maroon', 'gold', 'silver', 'kuningan'
+    const PRODUCT_BLACKLIST = new Set([
+        'baja', 'ringan', 'galvalum', 'spandek', 'bondek', 'hebel', 'bata',
+        'kayu', 'besi', 'aluminium', 'kaca', 'semen', 'pasir', 'batu',
+        'pasang', 'service', 'kontraktor', 'renovasi', 'borongan',
+        'tipis', 'tebal', 'lebar', 'panjang', 'pendek', 'kecil', 'besar',
+        'premium', 'standar', 'ekonomis', 'mini', 'maxi', 'pro', 'max'
     ]);
     
-    // ============================================================
-    // 4. FUNGSI DETEKSI LOKASI (v5.0 - ENHANCED)
-    // ============================================================
     function isLocation(text) {
         const lowerText = text.toLowerCase();
         const words = lowerText.split(/[\s,-]+/);
         
-        console.log(`  🔍 isLocation check: "${text.substring(0, 50)}..."`);
-        
-        // PRIORITAS 1: Cek whitelist kota (lokasi valid)
         for (const word of words) {
-            if (LOCATION_WHITELIST.has(word)) {
-                console.log(`  ✅ Location found (whitelist): "${word}"`);
+            if (LOCATION_WHITELIST.has(word)) return true;
+        }
+        
+        for (const word of words) {
+            if (PRODUCT_BLACKLIST.has(word)) return false;
+        }
+        
+        const hasIndicator = /di |ke |kota |wilayah |daerah /.test(lowerText);
+        if (!hasIndicator) return false;
+        
+        for (const word of words) {
+            if (word.length >= 4 && word.length <= 12 && /[aiueo]{2,}/.test(word)) {
                 return true;
             }
         }
-        
-        // PRIORITAS 2: Jika kata ada di blacklist produk → BUKAN lokasi
-        for (const word of words) {
-            if (PRODUCT_BLACKLIST_FOR_LOCATION.has(word)) {
-                console.log(`  ❌ Not location (product blacklist): "${word}"`);
-                return false;
-            }
-        }
-        
-        // PRIORITAS 3: Jika tidak ada indikator lokasi → BUKAN lokasi
-        const hasLocationIndicator = /di |ke |kota |wilayah |daerah |kecamatan |kelurahan|provinsi/i.test(lowerText);
-        
-        if (!hasLocationIndicator) {
-            console.log(`  ❌ Not location (no indicator: di/kota/wilayah)`);
-            return false;
-        }
-        
-        // PRIORITAS 4: Deteksi kata dengan pola vokal (hanya jika ada indicator)
-        for (const word of words) {
-            if (word.length < 4) continue;
-            if (word.length > 15) continue;
-            if (/\d/.test(word)) continue;
-            if (PRODUCT_BLACKLIST_FOR_LOCATION.has(word)) continue;
-            
-            const vowelCount = (word.match(/[aiueo]/gi) || []).length;
-            if (vowelCount >= 2) {
-                console.log(`  ✅ Location detected (vowel pattern + indicator): "${word}"`);
-                return true;
-            }
-        }
-        
-        console.log(`  ❌ Not location (fallback)`);
         return false;
     }
     
     // ============================================================
-    // 5. FUNGSI DETEKSI PRODUK SPESIFIK (ENHANCED)
+    // 5. SPECIFIC PRODUCT DETECTION
     // ============================================================
-    const SPECIFIC_PRODUCT_INDICATORS = new Set([
-        'galvalum', 'spandek', 'bondek', 'hpl', 'mdf', 'jati', 'mahoni',
-        'excavator', 'bulldozer', 'crane', 'dump truck', 'vibro', 'stamper',
-        'minimix', 'jayamix', 'readymix', 'hebel', 'bata ringan', 'bata interlock',
-        'multiplek', 'triplek', 'blockboard', 'gypsum', 'grc', 'grbk',
-        'albumin', 'zincalume', 'roofing', 'insulation', 'waterproof'
+    const SPECIFIC_PRODUCTS = new Set([
+        'galvalum', 'spandek', 'bondek', 'hebel', 'bata ringan',
+        'excavator', 'bulldozer', 'crane', 'dump truck',
+        'hpl', 'mdf', 'jati', 'mahoni', 'multiplek', 'triplek'
     ]);
     
     function isSpecificProduct(text, wordCountAfterPrice = null) {
         const lowerText = text.toLowerCase();
+        if (wordCountAfterPrice !== null && wordCountAfterPrice <= 2) return false;
         
-        // Jika jumlah kata setelah harga <= 2, BUKAN specific product
-        if (wordCountAfterPrice !== null && wordCountAfterPrice <= 2) {
-            return false;
+        for (const product of SPECIFIC_PRODUCTS) {
+            if (lowerText.includes(product)) return true;
         }
-        
-        // Cek indicators
-        for (const indicator of SPECIFIC_PRODUCT_INDICATORS) {
-            if (lowerText.includes(indicator)) return true;
-        }
-        
-        // Cek ukuran/dimensi
-        if (/\d+(\.\d+)?\s*(mm|cm|m|inch|meter)/i.test(lowerText)) return true;
-        
-        // Cek merk/tipe (minimal 2 kata setelah keyword)
-        if (wordCountAfterPrice !== null && wordCountAfterPrice >= 3) {
-            const words = lowerText.split(/\s+/);
-            if (words.length >= 2) {
-                const hasMerk = /(brand|merk|tipe|type|seri|serie)/i.test(lowerText);
-                if (hasMerk) return true;
-            }
-        }
-        
+        if (/\d+(\.\d+)?\s*(mm|cm|m|inch)/.test(lowerText)) return true;
         return false;
     }
     
     // ============================================================
-    // 6. FUNGSI DETEKSI SUB-VARIANT (Level 8 - 2+ parameter)
+    // 6. SUB-VARIANT DETECTION (2+ PARAMETER)
     // ============================================================
     function isSubVariant(text) {
         const lowerText = text.toLowerCase();
         let score = 0;
         
-        // Pola 1: Dimensi lengkap 3 sisi (mm x mm x mm)
-        if (/(\d+(\.\d+)?\s*mm\s*x\s*\d+(\.\d+)?\s*mm\s*x\s*\d+(\.\d+)?\s*mm)/i.test(lowerText)) {
-            score++;
-            console.log(`  ✅ Sub-variant: full 3D dimension (mm)`);
-        }
+        // Pola dimensi lengkap (Xmm x Ymm x Zmm)
+        if (/(\d+(\.\d+)?\s*mm\s*x\s*\d+(\.\d+)?\s*mm\s*x\s*\d+(\.\d+)?\s*mm)/i.test(lowerText)) score++;
+        if (/(\d+(\.\d+)?\s*cm\s*x\s*\d+(\.\d+)?\s*cm\s*x\s*\d+(\.\d+)?\s*cm)/i.test(lowerText)) score++;
         
-        // Pola 2: Dimensi lengkap 3 sisi (cm x cm x cm)
-        if (/(\d+(\.\d+)?\s*cm\s*x\s*\d+(\.\d+)?\s*cm\s*x\s*\d+(\.\d+)?\s*cm)/i.test(lowerText)) {
-            score++;
-            console.log(`  ✅ Sub-variant: full 3D dimension (cm)`);
-        }
+        // Tebal + panjang + lebar
+        if (lowerText.includes('tebal') && lowerText.includes('panjang') && lowerText.includes('lebar')) score++;
         
-        // Pola 3: Tebal + panjang + lebar dalam satu string
-        if (lowerText.includes('tebal') && lowerText.includes('panjang') && lowerText.includes('lebar')) {
-            score++;
-            console.log(`  ✅ Sub-variant: tebal+panjang+lebar`);
-        }
+        // 3+ ukuran berbeda
+        const dimensions = lowerText.match(/\d+(\.\d+)?\s*(mm|cm|m|ton|kg)/gi) || [];
+        if (dimensions.length >= 3) score++;
         
-        // Pola 4: 3+ ukuran berbeda
-        const dimensionMatches = lowerText.match(/\d+(\.\d+)?\s*(mm|cm|m|inch|meter|ton|kg|liter)/gi) || [];
-        if (dimensionMatches.length >= 3) {
-            score++;
-            console.log(`  ✅ Sub-variant: ${dimensionMatches.length} dimensions found`);
-        }
+        // Kapasitas + dimensi
+        if (lowerText.includes('kapasitas') && dimensions.length >= 2) score++;
         
-        // Pola 5: Kapasitas + dimensi
-        if (lowerText.includes('kapasitas') && dimensionMatches.length >= 2) {
-            score++;
-            console.log(`  ✅ Sub-variant: kapasitas + dimensions`);
-        }
-        
-        // Pola 6: Ukuran sangat detail dengan 2+ angka dan 'x'
+        // Multiple 'x' dan 3+ angka
         const hasMultipleX = (lowerText.match(/x/g) || []).length >= 2;
-        const hasNumbers = (lowerText.match(/\d+/g) || []).length >= 3;
-        if (hasMultipleX && hasNumbers) {
-            score++;
-            console.log(`  ✅ Sub-variant: multiple 'x' and numbers`);
-        }
+        const hasManyNumbers = (lowerText.match(/\d+/g) || []).length >= 3;
+        if (hasMultipleX && hasManyNumbers) score++;
         
         return score >= 2;
     }
     
     // ============================================================
-    // 7. FUNGSI VALIDASI INTENT (PHASE 1.5)
+    // 7. INTENT VALIDATION (PHASE 1.5)
     // ============================================================
-    function validateIntent(pageType, intentDetected) {
-        const requiredIntent = getRequiredIntent(pageType);
-        
-        if (requiredIntent.primary === intentDetected) {
-            return { valid: true, message: `Intent ${intentDetected} sesuai dengan ${pageType}` };
-        }
-        
-        if (requiredIntent.secondary === intentDetected) {
-            return { valid: true, message: `Intent ${intentDetected} (secondary) sesuai dengan ${pageType}`, isSecondary: true };
-        }
-        
-        return { 
-            valid: false, 
-            message: `❌ Intent mismatch: ${pageType} seharusnya ${requiredIntent.primary} (${requiredIntent.dominance}%), tapi terdeteksi ${intentDetected}`,
-            expected: requiredIntent.primary,
-            detected: intentDetected
-        };
-    }
-    
     function getRequiredIntent(pageType) {
+        if (pageType === 'home') {
+            return { primary: 'navigasional', secondary: 'transaksional', dominance: 70 };
+        }
+        
         const intentMap = {
             'pillar': { primary: 'informasional', secondary: null, dominance: 90 },
             'sub-pillar-tipe-2': { primary: 'informasional', secondary: 'komersial', dominance: 60 },
@@ -664,269 +573,241 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
         
         if (intentMap[pageType]) return intentMap[pageType];
         
-        // MONEY_MASTER
         if (pageType === 'money-master') {
-            if (isJasaEntity()) {
-                return { primary: 'komersial', secondary: 'transaksional', dominance: 60 };
-            }
-            if (isSewaEntity()) {
-                return { primary: 'transaksional', secondary: 'komersial', dominance: 80 };
-            }
+            if (isJasaEntity()) return { primary: 'komersial', secondary: 'transaksional', dominance: 60 };
             return { primary: 'transaksional', secondary: 'komersial', dominance: 80 };
         }
         
-        // MONEY_PAGE
         if (pageType === 'money-page') {
-            if (isJasaEntity() || isSewaEntity()) {
-                return { primary: 'komersial', secondary: 'transaksional', dominance: 60 };
-            }
+            if (isJasaEntity() || isSewaEntity()) return { primary: 'komersial', secondary: 'transaksional', dominance: 60 };
             return { primary: 'transaksional', secondary: 'komersial', dominance: 85 };
         }
         
-        // MONEY_CHILD
         if (pageType === 'money-child') {
-            if (isJasaEntity() || isSewaEntity()) {
-                return { primary: 'komersial', secondary: 'transaksional', dominance: 60 };
-            }
+            if (isJasaEntity() || isSewaEntity()) return { primary: 'komersial', secondary: 'transaksional', dominance: 60 };
             return { primary: 'transaksional', secondary: 'komersial', dominance: 90 };
         }
         
         return { primary: 'informasional', secondary: null, dominance: 50 };
     }
     
-    // ============================================================
-    // 8. FUNGSI DETEKSI INTENT DARI TEXT
-    // ============================================================
     function detectIntentFromText(text) {
         const lowerText = text.toLowerCase();
         
-        // Cek transaksional (prioritas tertinggi untuk Money Page)
-        const transactionalKeywords = ['harga', 'biaya', 'tarif', 'beli', 'jual', 'sewa', 'booking', 'pesan', 'order'];
-        for (const kw of transactionalKeywords) {
-            if (lowerText.includes(kw)) {
-                return 'transaksional';
-            }
+        for (const kw of MONEY_KEYWORDS) {
+            if (lowerText.includes(kw)) return 'transaksional';
         }
-        
-        // Cek komersial
-        const commercialKeywords = ['perbandingan', 'vs', 'terbaik', 'rekomendasi', 'spesifikasi', 'ukuran', 'tipe', 'merk'];
-        for (const kw of commercialKeywords) {
-            if (lowerText.includes(kw)) {
-                return 'komersial';
-            }
+        for (const kw of SP1_KEYWORDS) {
+            if (lowerText.includes(kw)) return 'komersial';
         }
-        
-        // Default informasional
+        for (const kw of VARIANT_KEYWORDS) {
+            if (lowerText.includes(kw)) return 'komersial';
+        }
         return 'informasional';
     }
     
-    // ============================================================
-    // 9. FUNGSI EVERGREEN STATUS (STEP 6.2)
-    // ============================================================
-    function getEvergreenStatus(pageType) {
-        // EVERGREEN (tidak perlu tahun)
-        if (['pillar', 'sub-pillar-tipe-2', 'variant', 'sub-variant'].includes(pageType)) {
-            return { evergreen: true, wajibTahun: false, reason: 'EVERGREEN - konten abadi' };
-        }
-        
-        // SUB-PILLAR TIPE 1 (fleksibel)
-        if (pageType === 'sub-pillar-tipe-1') {
-            return { evergreen: false, wajibTahun: false, reason: 'FLEXIBLE - tergantung topik perbandingan' };
-        }
-        
-        // MONEY_MASTER
-        if (pageType === 'money-master') {
-            if (isJasaEntity()) {
-                return { evergreen: false, wajibTahun: false, reason: 'JASA - tidak wajib tahun' };
-            }
-            return { evergreen: false, wajibTahun: true, reason: 'NON-EVERGREEN - WAJIB tahun di H1' };
-        }
-        
-        // MONEY_PAGE & MONEY_CHILD
-        if (['money-page', 'money-child'].includes(pageType)) {
-            if (isJasaEntity() || isSewaEntity()) {
-                return { evergreen: false, wajibTahun: false, reason: 'JASA/SEWA - fleksibel, tidak wajib tahun' };
-            }
-            return { evergreen: false, wajibTahun: true, reason: 'NON-EVERGREEN (PRODUK) - WAJIB tahun di H1' };
-        }
-        
-        return { evergreen: true, wajibTahun: false, reason: 'default' };
+    function validateIntent(pageType, intentDetected) {
+        const required = getRequiredIntent(pageType);
+        if (required.primary === intentDetected) return { valid: true };
+        if (required.secondary === intentDetected) return { valid: true, isSecondary: true };
+        return { valid: false, message: `${pageType} harusnya ${required.primary}` };
     }
     
     // ============================================================
-    // 10. FUNGSI DETEKSI PAGE TYPE UTAMA (PRIORITAS PHASE 1)
+    // 8. EVERGREEN STATUS (STEP 6.2)
     // ============================================================
-    function detectPageType(pageName) {
+    function getEvergreenStatus(pageType) {
+        if (pageType === 'home') {
+            return { evergreen: true, wajibTahun: false };
+        }
+        if (['pillar', 'sub-pillar-tipe-2', 'variant', 'sub-variant'].includes(pageType)) {
+            return { evergreen: true, wajibTahun: false };
+        }
+        if (pageType === 'sub-pillar-tipe-1') {
+            return { evergreen: false, wajibTahun: false };
+        }
+        if (pageType === 'money-master') {
+            if (isJasaEntity()) return { evergreen: false, wajibTahun: false };
+            return { evergreen: false, wajibTahun: true };
+        }
+        if (['money-page', 'money-child'].includes(pageType)) {
+            if (isJasaEntity() || isSewaEntity()) return { evergreen: false, wajibTahun: false };
+            return { evergreen: false, wajibTahun: true };
+        }
+        return { evergreen: true, wajibTahun: false };
+    }
+    
+    // ============================================================
+    // 9. PAGE TYPE DETECTION (PRIORITAS LENGKAP DENGAN KEYWORD CIRI)
+    // ============================================================
+    function detectPageType(pageName, isHome = false) {
+        // PRIORITAS 0: HOMEPAGE
+        if (isHome || HOME_KEYWORDS.includes(pageName.toLowerCase())) {
+            console.log(`  🏠 HOMEPAGE detected → home (L0)`);
+            return 'home';
+        }
+        
         const lowerName = pageName.toLowerCase();
         
-        console.log(`🔍 detectPageType: "${pageName}" | Entity: ${entityType}`);
-        
         // ============================================================
-        // PRIORITAS 1: CEK INTENT KEYWORD (INFORMASIONAL)
+        // PRIORITAS 1: PILLAR / SUB-PILLAR TIPE 2 (Informasional)
         // ============================================================
-        const informationalKeywords = ['panduan', 'cara ', 'tips ', 'apa itu', 'pengertian', 'edukasi', 'belajar', 'tutorial'];
-        for (const kw of informationalKeywords) {
+        for (const kw of PILLAR_KEYWORDS) {
             if (lowerName.includes(kw)) {
-                if (lowerName.includes('jenis') || lowerName.includes('macam')) {
-                    console.log(`  → sub-pillar-tipe-2 (jenis/macam + informasional)`);
-                    return 'sub-pillar-tipe-2';
+                // Cek apakah ini JENIS/MACAM (SP2)
+                for (const sp2kw of SP2_KEYWORDS) {
+                    if (lowerName.includes(sp2kw)) {
+                        console.log(`  📚 SUB-PILLAR TIPE 2 detected (${kw} + ${sp2kw}) → sub-pillar-tipe-2 (L2)`);
+                        return 'sub-pillar-tipe-2';
+                    }
                 }
-                console.log(`  → pillar (informational: ${kw})`);
+                console.log(`  🏛️ PILLAR detected (${kw}) → pillar (L1)`);
                 return 'pillar';
             }
         }
         
         // ============================================================
-        // PRIORITAS 2: CEK KEYWORD HARGA/BIAYA/SEWA
+        // PRIORITAS 2: SUB-PILLAR TIPE 1 (Perbandingan) 🔥 PRIORITAS TERTINGGI
         // ============================================================
-        const hasPrice = /harga|biaya|tarif/.test(lowerName);
-        const hasRent = /sewa|rental/.test(lowerName);
-        
-        if (hasPrice || hasRent) {
-            console.log(`  → Price/rent keyword detected`);
-            
-            // 🔥 KRITIS: JASA TIDAK BOLEH MONEY_MASTER
-            if (isJasaEntity()) {
-                console.log(`  → JASA → money-page (forced, not master)`);
-                return 'money-page';
+        for (const kw of SP1_KEYWORDS) {
+            if (lowerName.includes(kw)) {
+                console.log(`  ⚖️ SUB-PILLAR TIPE 1 detected (${kw}) → sub-pillar-tipe-1 (L3)`);
+                return 'sub-pillar-tipe-1';
             }
-            
-            // Ekstrak setelah keyword
-            let afterKeyword = '';
-            if (lowerName.includes('harga')) afterKeyword = lowerName.substring(lowerName.indexOf('harga') + 5);
-            else if (lowerName.includes('biaya')) afterKeyword = lowerName.substring(lowerName.indexOf('biaya') + 5);
-            else if (lowerName.includes('sewa')) afterKeyword = lowerName.substring(lowerName.indexOf('sewa') + 4);
-            else if (lowerName.includes('rental')) afterKeyword = lowerName.substring(lowerName.indexOf('rental') + 6);
-            
-            afterKeyword = afterKeyword.trim();
-            const words = afterKeyword.split(/\s+/).filter(w => w.length > 0);
-            const wordCount = words.length;
-            
-            console.log(`  → After keyword: "${afterKeyword.substring(0, 50)}" | Words: ${wordCount}`);
-            
-            // CEK LOKASI (MONEY_CHILD) — PRIORITAS TERTINGGI
-            if (isLocation(afterKeyword)) {
-                console.log(`  → Location detected → money-child`);
-                return 'money-child';
-            }
-            
-            // CEK APAKAH PRODUK SPESIFIK
-            const isSpecific = isSpecificProduct(afterKeyword, wordCount);
-            
-            // MONEY_MASTER: 1-2 kata ATAU 3 kata tapi masih kategori umum (bukan spesifik)
-            if (wordCount <= 2 || (wordCount === 3 && !isSpecific)) {
-                console.log(`  → money-master (${wordCount} kata, specific=${isSpecific})`);
-                return 'money-master';
-            }
-            
-            // MONEY_PAGE: 3+ kata DAN spesifik
-            console.log(`  → money-page (${wordCount} kata, specific=${isSpecific})`);
-            return 'money-page';
         }
         
         // ============================================================
-        // PRIORITAS 3: CEK JASA/SEWA (tanpa keyword harga)
+        // PRIORITAS 3: MONEY LEVEL (Harga/Sewa)
+        // ============================================================
+        for (const kw of MONEY_KEYWORDS) {
+            if (lowerName.includes(kw)) {
+                console.log(`  💰 Money keyword detected: ${kw}`);
+                
+                // JASA tidak boleh MONEY_MASTER
+                if (isJasaEntity()) {
+                    console.log(`  → JASA + harga → money-page (L5)`);
+                    return 'money-page';
+                }
+                
+                // Ekstrak setelah keyword
+                let afterKw = '';
+                const kwIndex = lowerName.indexOf(kw);
+                afterKw = lowerName.substring(kwIndex + kw.length).trim();
+                const words = afterKw.split(/\s+/).filter(w => w.length > 0);
+                const wordCount = words.length;
+                
+                console.log(`  → After keyword: "${afterKw.substring(0, 50)}" | Words: ${wordCount}`);
+                
+                // CEK LOKASI (MONEY_CHILD)
+                if (isLocation(afterKw)) {
+                    console.log(`  → Location detected → money-child (L6)`);
+                    return 'money-child';
+                }
+                
+                // CEK SPESIFISITAS
+                const isSpecific = isSpecificProduct(afterKw, wordCount);
+                
+                // MONEY_MASTER: 1-2 kata ATAU 3 kata tapi masih umum
+                if (wordCount <= 2 || (wordCount === 3 && !isSpecific)) {
+                    console.log(`  → money-master (${wordCount} kata) → money-master (L4)`);
+                    return 'money-master';
+                }
+                
+                // MONEY_PAGE: 3+ kata dan spesifik
+                console.log(`  → money-page (${wordCount} kata, specific=${isSpecific}) → money-page (L5)`);
+                return 'money-page';
+            }
+        }
+        
+        // ============================================================
+        // PRIORITAS 4: JASA/SEWA (tanpa keyword harga)
         // ============================================================
         if (isJasaEntity()) {
             const jasaKeywords = ['jasa', 'pasang', 'service', 'kontraktor', 'borongan', 
-                                   'renovasi', 'bangun', 'konsultasi', 'survey', 'estimasi',
-                                   'perbaiki', 'instalasi', 'pemasangan', 'pengerjaan'];
+                                   'renovasi', 'bangun', 'konsultasi', 'survey', 'estimasi'];
             for (const kw of jasaKeywords) {
                 if (lowerName.includes(kw)) {
+                    // Double-check perbandingan
+                    for (const cmp of SP1_KEYWORDS) {
+                        if (lowerName.includes(cmp)) {
+                            console.log(`  ⚠️ JASA + perbandingan → sub-pillar-tipe-1 (L3)`);
+                            return 'sub-pillar-tipe-1';
+                        }
+                    }
                     if (isLocation(lowerName)) {
-                        console.log(`  → money-child (JASA + location)`);
+                        console.log(`  → JASA + location → money-child (L6)`);
                         return 'money-child';
                     }
-                    console.log(`  → money-page (JASA)`);
+                    console.log(`  → JASA detected → money-page (L5)`);
                     return 'money-page';
                 }
             }
         }
         
         if (isSewaEntity()) {
-            const sewaKeywords = ['sewa', 'rental', 'lease', 'alat berat', 'excavator', 
-                                   'bulldozer', 'crane', 'vibro', 'stamper', 'dump truck'];
+            const sewaKeywords = ['sewa', 'rental', 'alat berat', 'excavator', 'bulldozer', 'crane'];
             for (const kw of sewaKeywords) {
                 if (lowerName.includes(kw)) {
+                    for (const cmp of SP1_KEYWORDS) {
+                        if (lowerName.includes(cmp)) {
+                            console.log(`  ⚠️ SEWA + perbandingan → sub-pillar-tipe-1 (L3)`);
+                            return 'sub-pillar-tipe-1';
+                        }
+                    }
                     if (isLocation(lowerName)) {
-                        console.log(`  → money-child (SEWA + location)`);
+                        console.log(`  → SEWA + location → money-child (L6)`);
                         return 'money-child';
                     }
-                    console.log(`  → money-page (SEWA)`);
+                    console.log(`  → SEWA detected → money-page (L5)`);
                     return 'money-page';
                 }
             }
         }
         
         // ============================================================
-        // PRIORITAS 4: CEK SUB-VARIANT (Level 8 - 2+ parameter)
+        // PRIORITAS 5: SUB-VARIANT (Level 8 - 2+ parameter)
         // ============================================================
         if (isSubVariant(lowerName)) {
-            console.log(`  → sub-variant (2+ parameters detected)`);
+            console.log(`  🔬 SUB-VARIANT detected (2+ parameters) → sub-variant (L8)`);
             return 'sub-variant';
         }
         
         // ============================================================
-        // PRIORITAS 5: CEK VARIANT (Level 7)
+        // PRIORITAS 6: VARIANT (Level 7 - Spesifikasi umum)
         // ============================================================
-        const variantKeywords = ['spesifikasi', 'ukuran', 'tipe ', 'type ', 'model', 
-                                  'varian', 'warna', 'merk', 'kapasitas', 'dimensi',
-                                  'bahan', 'material', 'finishing'];
-        for (const kw of variantKeywords) {
+        for (const kw of VARIANT_KEYWORDS) {
             if (lowerName.includes(kw)) {
-                console.log(`  → variant (${kw})`);
+                console.log(`  🔧 VARIANT detected (${kw}) → variant (L7)`);
                 return 'variant';
             }
         }
         
         // Single dimension (tanpa 'x')
         if (/\d+(\.\d+)?\s*(mm|cm|m|kg|ton)/.test(lowerName) && !lowerName.includes('x')) {
-            console.log(`  → variant (single dimension)`);
+            console.log(`  🔧 VARIANT detected (single dimension) → variant (L7)`);
             return 'variant';
         }
         
         // ============================================================
-        // PRIORITAS 6: CEK SUB-PILLAR TIPE 1 (perbandingan)
+        // PRIORITAS 7: SUB-PILLAR TIPE 2 (Jenis/Macam)
         // ============================================================
-        const comparisonKeywords = [' vs ', 'versus', 'perbandingan', 'lebih baik', 
-                                     'mana yang', 'kelebihan', 'kekurangan', 'perbedaan',
-                                     'dibanding', 'bandingkan'];
-        for (const kw of comparisonKeywords) {
-            if (lowerName.includes(kw)) {
-                console.log(`  → sub-pillar-tipe-1 (comparison: ${kw})`);
-                return 'sub-pillar-tipe-1';
+        for (const kw of SP2_KEYWORDS) {
+            if (lowerName.startsWith(kw) || lowerName.includes(kw + ' ') || lowerName.includes(kw + '-')) {
+                console.log(`  📚 SUB-PILLAR TIPE 2 detected (${kw}) → sub-pillar-tipe-2 (L2)`);
+                return 'sub-pillar-tipe-2';
             }
-        }
-        
-        // ============================================================
-        // PRIORITAS 7: CEK SUB-PILLAR TIPE 2 (jenis/macam)
-        // ============================================================
-        if (lowerName.startsWith('jenis ') || lowerName.startsWith('macam ') || 
-            lowerName.startsWith('tipe ') || lowerName.includes('jenis-jenis') || 
-            lowerName.includes('macam-macam') || lowerName.includes('kategori ')) {
-            console.log(`  → sub-pillar-tipe-2 (category listing)`);
-            return 'sub-pillar-tipe-2';
         }
         
         // ============================================================
         // DEFAULT: PILLAR
         // ============================================================
-        console.log(`  → pillar (default)`);
+        console.log(`  🏛️ PILLAR (default) → pillar (L1)`);
         return 'pillar';
     }
     
     // ============================================================
-    // 11. KUMPULKAN DATA DARI MAPPING
+    // 10. BUILD LEVELS FROM BREADCRUMB ITEMS
     // ============================================================
-    const allPageNames = [];
-    if (mappingObj) {
-        for (const [url, name] of Object.entries(mappingObj)) {
-            if (name && typeof name === 'string') {
-                allPageNames.push(name.toLowerCase());
-            }
-        }
-    }
-    
     function slugify(text) {
         return text.toLowerCase()
             .replace(/[^\w\s-]/g, '')
@@ -935,10 +816,8 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
             .trim();
     }
     
-    // ============================================================
-    // 12. BANGUN LEVELS DARI breadcrumbItems
-    // ============================================================
     const allLevels = [];
+    
     for (let i = 0; i < breadcrumbItems.length; i++) {
         const item = breadcrumbItems[i];
         
@@ -951,10 +830,10 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
             url = null;
         }
         
-        const pageType = detectPageType(name);
+        const isHomePage = (name.toLowerCase() === 'beranda' || name.toLowerCase() === 'home');
+        const pageType = detectPageType(name, isHomePage);
         const intentDetected = detectIntentFromText(name);
         const intentValidation = validateIntent(pageType, intentDetected);
-        const intentData = getRequiredIntent(pageType);
         const evergreenData = getEvergreenStatus(pageType);
         
         allLevels.push({
@@ -964,31 +843,32 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
             level: TYPE_LEVEL_MAP[pageType] || 99,
             intentDetected: intentDetected,
             intentValid: intentValidation.valid,
-            intentRequired: intentData,
+            intentRequired: getRequiredIntent(pageType),
             evergreen: evergreenData,
             position: i
         });
     }
     
     // ============================================================
-    // 13. VALIDASI & PERBAIKI HIERARKI (TIDAK BOLEH LONCAT LEVEL)
+    // 11. VALIDASI HIERARKI (TIDAK BOLEH LONCAT LEVEL)
     // ============================================================
     for (let i = 0; i < allLevels.length - 1; i++) {
         const current = allLevels[i];
         const next = allLevels[i + 1];
         
+        if (current.level === 0) continue;
+        
         if (next.level - current.level > 1) {
             console.warn(`⚠️ LEVEL JUMP: ${current.name}(${current.type} L${current.level}) → ${next.name}(${next.type} L${next.level})`);
             
             const correctedIndex = Math.min(current.level + 1, 8);
-            const correctedType = VALID_PAGE_TYPES[correctedIndex - 1];
+            const correctedType = VALID_PAGE_TYPES[correctedIndex];
             const correctedIntent = detectIntentFromText(next.name);
-            const correctedIntentValidation = validateIntent(correctedType, correctedIntent);
             
             next.type = correctedType;
             next.level = correctedIndex;
             next.intentDetected = correctedIntent;
-            next.intentValid = correctedIntentValidation.valid;
+            next.intentValid = validateIntent(correctedType, correctedIntent).valid;
             next.intentRequired = getRequiredIntent(correctedType);
             next.evergreen = getEvergreenStatus(correctedType);
             
@@ -997,7 +877,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     }
     
     // ============================================================
-    // 14. VALIDASI KHUSUS: JASA TIDAK BOLEH MONEY_MASTER
+    // 12. JASA TIDAK BOLEH MONEY_MASTER
     // ============================================================
     for (const level of allLevels) {
         if (isJasaEntity() && level.type === 'money-master') {
@@ -1012,7 +892,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     }
     
     // ============================================================
-    // 15. VALIDASI & FALLBACK URL
+    // 13. FALLBACK URL
     // ============================================================
     for (const level of allLevels) {
         if (!level.url) {
@@ -1036,73 +916,61 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     }
     
     // ============================================================
-    // 16. TENTUKAN LEVEL YANG DITAMPILKAN (MAX 4 LEVEL)
+    // 14. SELECT LEVELS FOR BREADCRUMB (MAX 4 LEVELS)
     // ============================================================
     const selectedLevels = [];
     
-    // Home (WAJIB)
+    // Home (WAJIB) - Level 0
     selectedLevels.push({ 
         name: 'Beranda', 
         url: DOMAIN, 
         isHome: true,
-        type: 'pillar',
-        level: 1,
-        intentDetected: 'informasional',
+        type: 'home',
+        level: 0,
+        intentDetected: 'navigasional',
         intentValid: true,
-        intentRequired: getRequiredIntent('pillar'),
-        evergreen: getEvergreenStatus('pillar')
+        intentRequired: getRequiredIntent('home'),
+        evergreen: getEvergreenStatus('home')
     });
     
     let remainingSlots = MAX_LEVEL - 2;
     
     console.log(`\n📊 ========================================`);
-    console.log(`📊 Breadcrumb Generator v5.0 — COMPLETE PHASE SYSTEM`);
+    console.log(`📊 Breadcrumb Generator v5.3 — FULL KEYWORD CIRI`);
     console.log(`📊 Entity Type: ${entityType}`);
-    console.log(`📊 JASA Entity: ${isJasaEntity() ? 'YES (MONEY_MASTER DILARANG)' : 'NO'}`);
-    console.log(`📊 SEWA Entity: ${isSewaEntity() ? 'YES' : 'NO'}`);
+    console.log(`📊 JASA Entity: ${isJasaEntity() ? 'YES' : 'NO'}`);
     console.log(`📊 ========================================`);
     
     // Parent terdekat (WAJIB)
     let parentTerdekat = null;
-    if (allLevels.length > 0) {
-        parentTerdekat = allLevels[allLevels.length - 1];
+    const nonHomeLevels = allLevels.filter(l => l.type !== 'home');
+    if (nonHomeLevels.length > 0) {
+        parentTerdekat = nonHomeLevels[nonHomeLevels.length - 1];
         selectedLevels.push(parentTerdekat);
         remainingSlots--;
         console.log(`✅ WAJIB: "${parentTerdekat.name}" → ${parentTerdekat.type} (L${parentTerdekat.level})`);
-        if (!parentTerdekat.intentValid) {
-            console.warn(`   ⚠️ Intent Warning: ${parentTerdekat.intentRequired.primary} required, got ${parentTerdekat.intentDetected}`);
-        }
         if (parentTerdekat.evergreen.wajibTahun) {
-            console.log(`   📅 WAJIB contain year ${CURRENT_YEAR} in H1`);
+            console.log(`   📅 WAJIB mengandung tahun ${CURRENT_YEAR} di H1`);
         }
     }
     
-    // Level lainnya (prioritaskan level tertinggi yang unik)
-    const otherLevels = [...allLevels.slice(0, allLevels.length - 1)]
+    // Level lainnya (prioritaskan level tertinggi)
+    const otherLevels = [...nonHomeLevels]
+        .slice(0, nonHomeLevels.length - 1)
         .sort((a, b) => b.level - a.level)
         .filter((v, i, self) => self.findIndex(t => t.name === v.name) === i);
     
     for (const level of otherLevels) {
-        if (remainingSlots <= 0) {
-            console.log(`📌 SKIP: "${level.name}" (${level.type}) - slot habis`);
-            continue;
-        }
-        
-        if (selectedLevels.some(s => s.name === level.name)) {
-            console.log(`📌 SKIP: "${level.name}" - already in breadcrumb`);
-            continue;
-        }
+        if (remainingSlots <= 0) break;
+        if (selectedLevels.some(s => s.name === level.name)) continue;
         
         selectedLevels.splice(1, 0, level);
         remainingSlots--;
         console.log(`✅ TAMBAH: "${level.name}" → ${level.type} (L${level.level})`);
-        if (!level.intentValid) {
-            console.warn(`   ⚠️ Intent Warning: ${level.intentRequired.primary} required, got ${level.intentDetected}`);
-        }
     }
     
     // ============================================================
-    // 17. HALAMAN SAAT INI (WAJIB)
+    // 15. CURRENT PAGE
     // ============================================================
     const currentFullUrl = currentUrl.startsWith('http') ? currentUrl : DOMAIN + currentUrl;
     const currentPageTitle = (() => {
@@ -1111,10 +979,10 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
         return 'Halaman';
     })();
     
-    const currentPageType = detectPageType(currentPageTitle);
+    const isCurrentHome = (currentPageTitle.toLowerCase() === 'beranda' || currentPageTitle.toLowerCase() === 'home');
+    const currentPageType = detectPageType(currentPageTitle, isCurrentHome);
     const currentIntentDetected = detectIntentFromText(currentPageTitle);
     const currentIntentValidation = validateIntent(currentPageType, currentIntentDetected);
-    const currentIntentRequired = getRequiredIntent(currentPageType);
     const currentEvergreen = getEvergreenStatus(currentPageType);
     
     selectedLevels.push({
@@ -1125,7 +993,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
         level: TYPE_LEVEL_MAP[currentPageType] || 99,
         intentDetected: currentIntentDetected,
         intentValid: currentIntentValidation.valid,
-        intentRequired: currentIntentRequired,
+        intentRequired: getRequiredIntent(currentPageType),
         evergreen: currentEvergreen
     });
     
@@ -1134,29 +1002,24 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
         selectedLevels[i].position = i + 1;
     }
     
-    console.log(`\n✅ FINAL (${selectedLevels.length} level):`);
+    console.log(`\n✅ FINAL BREADCRUMB (${selectedLevels.length} level):`);
     selectedLevels.forEach((l, i) => {
-        console.log(`   ${i+1}. ${l.name} → ${l.type} (L${l.level})`);
-        console.log(`      Intent: ${l.intentDetected} | Valid: ${l.intentValid ? '✅' : '❌'}`);
-        if (l.evergreen.wajibTahun) {
-            console.log(`      📅 HARUS mengandung tahun ${CURRENT_YEAR} di H1`);
-        }
+        const icon = l.type === 'home' ? '🏠' : 
+                    (l.type === 'pillar' ? '🏛️' : 
+                    (l.type === 'sub-pillar-tipe-1' ? '⚖️' :
+                    (l.type === 'sub-pillar-tipe-2' ? '📚' :
+                    (l.type.includes('money') ? '💰' :
+                    (l.type === 'variant' ? '🔧' : '🔬')))));
+        console.log(`   ${i+1}. ${icon} ${l.name} → ${l.type} (L${l.level})`);
     });
     
-    console.log(`\n📊 CURRENT PAGE SUMMARY:`);
-    console.log(`   Type: ${currentPageType}`);
-    console.log(`   Intent Required: ${currentIntentRequired.primary} (${currentIntentRequired.dominance}%)`);
-    console.log(`   Intent Detected: ${currentIntentDetected}`);
-    console.log(`   Intent Valid: ${currentIntentValidation.valid ? '✅ YES' : '❌ NO'}`);
-    console.log(`   Evergreen: ${currentEvergreen.evergreen ? 'YES' : 'NO'}`);
-    console.log(`   Wajib Tahun di H1: ${currentEvergreen.wajibTahun ? `✅ WAJIB (${CURRENT_YEAR})` : '❌ TIDAK'}`);
-    if (!currentIntentValidation.valid) {
-        console.warn(`   ⚠️ INTENT WARNING: ${currentIntentValidation.message}`);
-    }
+    console.log(`\n📊 CURRENT PAGE: ${currentPageType} (L${TYPE_LEVEL_MAP[currentPageType] || '?'})`);
+    console.log(`   Intent: ${currentIntentDetected} | Valid: ${currentIntentValidation.valid ? '✅' : '❌'}`);
+    console.log(`   Wajib Tahun: ${currentEvergreen.wajibTahun ? `✅ WAJIB ${CURRENT_YEAR}` : '❌ TIDAK'}`);
     console.log(`📊 ========================================\n`);
     
     // ============================================================
-    // 18. GENERATE HTML BREADCRUMB + JSON-LD
+    // 16. GENERATE HTML + JSON-LD
     // ============================================================
     let breadcrumbHtml = `<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">\n`;
     
@@ -1183,7 +1046,6 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     
     breadcrumbHtml += `</div>\n`;
     
-    // JSON-LD Schema
     const jsonLdItems = selectedLevels.map((level, idx) => ({
         "@type": "ListItem",
         "position": idx + 1,
@@ -1197,25 +1059,18 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
         "itemListElement": jsonLdItems
     };
     
-    // ============================================================
-    // 19. INJECT KE DOM
-    // ============================================================
-    const oldBreadcrumbs = document.querySelectorAll('.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"]');
+    // Inject ke DOM
+    const oldBreadcrumbs = document.querySelectorAll('.breadcrumbs, .breadcrumb-nav');
     oldBreadcrumbs.forEach(el => el.remove());
     
     const oldJsonLd = document.querySelector('script[data-breadcrumb="true"]');
     if (oldJsonLd) oldJsonLd.remove();
     
-    const targetElement = document.querySelector('main, article, .content, #main-content, .post-content');
+    const targetElement = document.querySelector('main, article, .content, #main-content');
     if (targetElement && targetElement.firstChild) {
         targetElement.insertAdjacentHTML('afterbegin', breadcrumbHtml);
     } else {
-        const container = document.querySelector('.container, #content, .wrapper');
-        if (container && container.firstChild) {
-            container.insertAdjacentHTML('afterbegin', breadcrumbHtml);
-        } else {
-            document.body.insertAdjacentHTML('afterbegin', breadcrumbHtml);
-        }
+        document.body.insertAdjacentHTML('afterbegin', breadcrumbHtml);
     }
     
     const script = document.createElement('script');
@@ -1224,49 +1079,41 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     script.textContent = JSON.stringify(jsonLd);
     document.head.appendChild(script);
     
-    console.log(`✅ Breadcrumb injected for entity: ${entityType}`);
+    console.log(`✅ Breadcrumb injected for ${entityType}`);
     
-    // ============================================================
-    // 20. RETURN LENGKAP
-    // ============================================================
     return {
         html: breadcrumbHtml,
         jsonLd: jsonLd,
         selectedLevels: selectedLevels,
         currentPageType: currentPageType,
         currentIntent: {
-            required: currentIntentRequired,
+            required: getRequiredIntent(currentPageType),
             detected: currentIntentDetected,
-            valid: currentIntentValidation.valid,
-            message: currentIntentValidation.message
+            valid: currentIntentValidation.valid
         },
         currentEvergreen: currentEvergreen,
         currentYear: CURRENT_YEAR,
         entityType: entityType,
-        isValidType: true,
-        version: '5.0'
+        version: '5.3'
     };
 }
 
 // ============================================================
-// RINGKASAN HASIL DETEKSI PER ENTITY TYPE (v5.0)
+// RINGKASAN HASIL DETEKSI v5.3
 // ============================================================
 /*
-| Entity Type | Keyword Contoh | Hasil Deteksi | Intent | Wajib Tahun |
-|-------------|----------------|---------------|--------|-------------|
-| JASA | "Jasa Pasang Atap Baja Ringan" | money-page | komersial (60%) | TIDAK |
-| JASA | "Jasa Pasang Atap Baja Ringan Jakarta" | money-child | komersial (60%) | TIDAK |
-| JASA | "Harga Jasa Pasang Atap" | money-page (forced) | komersial (60%) | TIDAK |
-| MATERIAL | "Harga Bata Ringan" | money-master | transaksional (80%) | WAJIB |
-| MATERIAL | "Harga Bata Ringan Hebel" | money-page | transaksional (85%) | WAJIB |
-| MATERIAL | "Harga Bata Ringan di Jakarta" | money-child | transaksional (90%) | WAJIB |
-| PRODUK | "Harga Kitchen Set" | money-master | transaksional (80%) | WAJIB |
-| PRODUK | "Harga Kitchen Set Minimalis Modern" | money-page | transaksional (85%) | WAJIB |
-| PRODUK | "Kitchen Set Minimalis Ukuran 2x3" | variant | komersial (80%) | TIDAK |
-| PRODUK | "Kitchen Set HPL 0.8mm x 1.2m x 2.4m" | sub-variant | komersial (70%) | TIDAK |
-| SEWA | "Harga Sewa Excavator" | money-master | transaksional (80%) | WAJIB |
-| SEWA | "Sewa Excavator Jakarta" | money-child | transaksional (90%) | WAJIB |
-| ARTIKEL | "Panduan Memilih Atap Baja Ringan" | pillar | informasional (90%) | TIDAK |
+| Keyword Contoh | Hasil Deteksi | Level | Keyword Ciri yang Dipakai |
+|----------------|---------------|-------|---------------------------|
+| Beranda | home | L0 | HOME_KEYWORDS |
+| Panduan Lengkap Konstruksi | pillar | L1 | PILLAR_KEYWORDS |
+| Jenis Bata Ringan | sub-pillar-tipe-2 | L2 | SP2_KEYWORDS |
+| Perbandingan Jasa Struktur Konstruksi | sub-pillar-tipe-1 | L3 | SP1_KEYWORDS |
+| Harga Bata Ringan | money-master | L4 | MONEY_KEYWORDS + wordCount≤2 |
+| Harga Bata Ringan Hebel | money-page | L5 | MONEY_KEYWORDS + specific product |
+| Harga Bata Ringan Jakarta | money-child | L6 | MONEY_KEYWORDS + location |
+| Jasa Pasang Atap | money-page | L5 | Jasa detection |
+| Spesifikasi Bata Ringan | variant | L7 | VARIANT_KEYWORDS |
+| Bata Ringan 10x20x60cm | sub-variant | L8 | isSubVariant() |
 */
 
 // Menyimpan elemen yang dihapus dalam variabel
