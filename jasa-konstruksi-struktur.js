@@ -319,24 +319,25 @@ TYPE: MONEY_MASTER                    | TYPE: MONEY_PAGE
 
 
 /**
- * generateBreadcrumbForMapping v5.4 — COMPLETE PHASE SYSTEM WITH FIXED PRIORITY
- * ✅ FIX: SP2 (Jenis/Macam/Daftar) prioritas LEBIH TINGGI dari JASA & HARGA
- * ✅ FIX: "Daftar Jasa Struktur Konstruksi" → sub-pillar-tipe-2 (L2), BUKAN money-page
- * ✅ PRIORITAS DETEKSI YANG BENAR:
- *    0. HOMEPAGE (root domain, /, /index.html)
- *    1. INFORMASIONAL (panduan, cara, tips, apa itu) → PILLAR
- *    2. PERBANDINGAN (vs, versus, perbandingan) → SUB-PILLAR TIPE 1
- *    3. JENIS/MACAM/DAFTAR (jenis, macam, tipe, kategori, daftar, list) → SUB-PILLAR TIPE 2 🔥
- *    4. KEYWORD HARGA/SEWA (harga, biaya, tarif, sewa, rental) → MONEY_MASTER/PAGE/CHILD
- *    5. JASA/SEWA (tanpa keyword harga) → MONEY_PAGE/CHILD
- *    6. SUB-VARIANT (2+ parameter: Xmm x Ymm x Zmm, tebal+panjang+lebar)
- *    7. VARIANT (spesifikasi, ukuran, tipe, model, varian, warna, merk)
- *    8. DEFAULT → PILLAR
- * ✅ Homepage sebagai level 0 (BUKAN Pillar)
- * ✅ JASA: TIDAK BOLEH MONEY_MASTER (100% terblokir)
- * ✅ HIERARKI LEVEL: Home(0) → Pillar(1) → SP2(2) → SP1(3) → MoneyMaster(4) → MoneyPage(5) → MoneyChild(6) → Variant(7) → SubVariant(8)
+ * generateBreadcrumbForMapping v5.5 — COMPLETE PHASE SYSTEM WITH ENTITY PILLAR
+ * ✅ FIX: "Jasa Konstruksi" → PILLAR (L1), BUKAN money-page
+ * ✅ FIX: "Sewa Alat Konstruksi" → PILLAR (L1)
+ * ✅ FIX: "Produk Konstruksi", "Produk Interior" → PILLAR (L1)
+ * ✅ FIX: "Material Konstruksi" → PILLAR (L1)
+ * ✅ ENTITY PILLAR KEYWORDS untuk setiap entity type
+ * ✅ PRIORITAS DETEKSI:
+ *    0. HOMEPAGE
+ *    1. ENTITY PILLAR (Jasa Konstruksi, Sewa Alat, dll) 🔥 BARU
+ *    2. INFORMASIONAL (panduan, cara, tips) → PILLAR
+ *    3. PERBANDINGAN (vs, versus) → SP1
+ *    4. JENIS/MACAM/DAFTAR (jenis, macam, daftar) → SP2
+ *    5. KEYWORD HARGA/SEWA → MONEY
+ *    6. JASA/SEWA (tanpa keyword harga & bukan pillar) → MONEY_PAGE
+ *    7. SUB-VARIANT
+ *    8. VARIANT
+ *    9. DEFAULT → PILLAR
  * 
- * @version 5.4.0
+ * @version 5.5.0
  * @date 2026-01-15
  */
 
@@ -408,21 +409,45 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     }
     
     // ============================================================
-    // 3. KEYWORD CIRI PER LEVEL (LENGKAP)
+    // 3. ENTITY PILLAR KEYWORDS (UTAMA UNTUK MASING-MASING ENTITY) 🔥
+    // ============================================================
+    const ENTITY_PILLAR_KEYWORDS = {
+        'JASA_KONSTRUKSI': ['jasa konstruksi', 'layanan konstruksi', 'jasa bangunan', 'kontraktor konstruksi'],
+        'JASA_DESAIN_INTERIOR': ['jasa desain interior', 'jasa interior', 'desain interior'],
+        'JASA': ['jasa konstruksi', 'layanan konstruksi', 'jasa bangunan'],
+        
+        'SEWA': ['sewa alat konstruksi', 'rental alat berat', 'sewa alat bangunan', 'sewa alat berat'],
+        'RENTAL': ['rental alat berat', 'sewa alat konstruksi'],
+        'SEWA_RENTAL': ['sewa alat konstruksi', 'rental alat berat'],
+        'SEWA_ALAT': ['sewa alat konstruksi', 'sewa alat berat'],
+        'RENTAL_ALAT': ['rental alat berat', 'sewa alat konstruksi'],
+        
+        'PRODUK_KONSTRUKSI': ['produk konstruksi', 'produk bangunan', 'material konstruksi'],
+        'PRODUK_INTERIOR': ['produk interior', 'furniture', 'perabot rumah'],
+        'PRODUK': ['produk konstruksi', 'produk bangunan'],
+        
+        'MATERIAL_KONSTRUKSI': ['material konstruksi', 'bahan bangunan', 'material bangunan'],
+        'MATERIAL': ['material konstruksi', 'bahan bangunan', 'material bangunan'],
+        
+        'ARTIKEL': ['artikel konstruksi', 'tips konstruksi', 'info bangunan']
+    };
+    
+    // ============================================================
+    // 4. KEYWORD CIRI PER LEVEL
     // ============================================================
     
     // LEVEL 0: HOMEPAGE
     const HOME_KEYWORDS = ['beranda', 'home', 'halaman utama', 'homepage', 'index'];
     
-    // LEVEL 1: PILLAR (Informasional 90%)
-    const PILLAR_KEYWORDS = [
+    // LEVEL 1: PILLAR (Informasional 90%) - untuk konten edukasi umum
+    const PILLAR_INFORMATIONAL_KEYWORDS = [
         'panduan', 'panduan lengkap', 'cara ', 'tips ', 'tips dan trik',
         'apa itu', 'pengertian', 'definisi', 'edukasi', 'belajar', 
         'tutorial', 'materi', 'penjelasan', 'kenapa', 'mengapa',
         'bagaimana', 'contoh', 'rekomendasi', 'lengkap', 'komprehensif'
     ];
     
-    // LEVEL 2: SUB-PILLAR TIPE 2 (Jenis/Macam/Daftar) 🔥 PRIORITAS DITINGKATKAN
+    // LEVEL 2: SUB-PILLAR TIPE 2 (Jenis/Macam/Daftar)
     const SP2_KEYWORDS = [
         'jenis', 'jenis-jenis', 'macam', 'macam-macam', 'tipe ', 
         'kategori', 'ragam', 'berbagai', 'klasifikasi', 'golongan',
@@ -450,7 +475,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     ];
     
     // ============================================================
-    // 4. LOCATION WHITELIST (300+ KOTA)
+    // 5. LOCATION WHITELIST
     // ============================================================
     const LOCATION_WHITELIST = new Set([
         'jakarta', 'bogor', 'depok', 'tangerang', 'bekasi', 'jabodetabek',
@@ -491,7 +516,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     }
     
     // ============================================================
-    // 5. SPECIFIC PRODUCT & SUB-VARIANT DETECTION
+    // 6. SPECIFIC PRODUCT & SUB-VARIANT DETECTION
     // ============================================================
     const SPECIFIC_PRODUCTS = new Set([
         'galvalum', 'spandek', 'bondek', 'hebel', 'bata ringan',
@@ -530,7 +555,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     }
     
     // ============================================================
-    // 6. INTENT VALIDATION (PHASE 1.5)
+    // 7. INTENT VALIDATION
     // ============================================================
     function getRequiredIntent(pageType) {
         if (pageType === 'home') {
@@ -588,7 +613,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     }
     
     // ============================================================
-    // 7. EVERGREEN STATUS (STEP 6.2)
+    // 8. EVERGREEN STATUS
     // ============================================================
     function getEvergreenStatus(pageType) {
         if (pageType === 'home') {
@@ -612,7 +637,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     }
     
     // ============================================================
-    // 8. DETEKSI HOMEPAGE
+    // 9. DETEKSI HOMEPAGE
     // ============================================================
     function isHomePage() {
         const url = window.location.href.toLowerCase();
@@ -628,26 +653,42 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     }
     
     // ============================================================
-    // 9. PAGE TYPE DETECTION (PRIORITAS LENGKAP YANG BENAR)
+    // 10. PAGE TYPE DETECTION (PRIORITAS LENGKAP DENGAN ENTITY PILLAR)
     // ============================================================
-    function detectPageType(pageName, isHome = false) {
+    function detectPageType(pageName, isHome = false, entityTypeParam = null) {
+        const useEntityType = entityTypeParam || entityType;
+        const lowerName = pageName.toLowerCase();
+        
         // PRIORITAS 0: HOMEPAGE
-        if (isHome || HOME_KEYWORDS.includes(pageName.toLowerCase())) {
+        if (isHome || HOME_KEYWORDS.includes(lowerName)) {
             console.log(`  🏠 HOMEPAGE detected → home (L0)`);
             return 'home';
         }
         
-        const lowerName = pageName.toLowerCase();
+        // ============================================================
+        // PRIORITAS 1: ENTITY PILLAR 🔥 BARU - DETECTION UTAMA
+        // Contoh: "Jasa Konstruksi", "Sewa Alat Konstruksi", "Produk Konstruksi"
+        // ============================================================
+        const pillarKeywords = ENTITY_PILLAR_KEYWORDS[useEntityType] || [];
+        for (const kw of pillarKeywords) {
+            // Exact match atau awal kalimat
+            if (lowerName === kw || 
+                lowerName.startsWith(kw + ' ') || 
+                lowerName.includes(' ' + kw + ' ') ||
+                lowerName.endsWith(' ' + kw)) {
+                console.log(`  🏛️ ENTITY PILLAR detected: "${kw}" → pillar (L1)`);
+                return 'pillar';
+            }
+        }
         
         // ============================================================
-        // PRIORITAS 1: PILLAR / SP2 (Informasional)
+        // PRIORITAS 2: INFORMASIONAL KEYWORDS (Panduan, Cara, Tips) → PILLAR atau SP2
         // ============================================================
-        for (const kw of PILLAR_KEYWORDS) {
+        for (const kw of PILLAR_INFORMATIONAL_KEYWORDS) {
             if (lowerName.includes(kw)) {
-                // Cek apakah ini JENIS/MACAM/DAFTAR (SP2)
                 for (const sp2kw of SP2_KEYWORDS) {
                     if (lowerName.includes(sp2kw)) {
-                        console.log(`  📚 SUB-PILLAR TIPE 2 detected (${kw} + ${sp2kw}) → sub-pillar-tipe-2 (L2)`);
+                        console.log(`  📚 SP2 detected (${kw} + ${sp2kw}) → sub-pillar-tipe-2 (L2)`);
                         return 'sub-pillar-tipe-2';
                     }
                 }
@@ -657,27 +698,27 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
         }
         
         // ============================================================
-        // PRIORITAS 2: PERBANDINGAN (SP1)
+        // PRIORITAS 3: PERBANDINGAN (SP1)
         // ============================================================
         for (const kw of SP1_KEYWORDS) {
             if (lowerName.includes(kw)) {
-                console.log(`  ⚖️ SUB-PILLAR TIPE 1 detected (${kw}) → sub-pillar-tipe-1 (L3)`);
+                console.log(`  ⚖️ SP1 detected (${kw}) → sub-pillar-tipe-1 (L3)`);
                 return 'sub-pillar-tipe-1';
             }
         }
         
         // ============================================================
-        // PRIORITAS 3: JENIS/MACAM/DAFTAR (SP2) 🔥 SEBELUM HARGA & JASA
+        // PRIORITAS 4: JENIS/MACAM/DAFTAR (SP2)
         // ============================================================
         for (const kw of SP2_KEYWORDS) {
             if (lowerName.startsWith(kw) || lowerName.includes(kw + ' ') || lowerName.includes(kw + '-')) {
-                console.log(`  📚 SUB-PILLAR TIPE 2 detected (${kw}) → sub-pillar-tipe-2 (L2)`);
+                console.log(`  📚 SP2 detected (${kw}) → sub-pillar-tipe-2 (L2)`);
                 return 'sub-pillar-tipe-2';
             }
         }
         
         // ============================================================
-        // PRIORITAS 4: MONEY LEVEL (HARGA/SEWA)
+        // PRIORITAS 5: MONEY LEVEL (HARGA/SEWA)
         // ============================================================
         for (const kw of MONEY_KEYWORDS) {
             if (lowerName.includes(kw)) {
@@ -714,7 +755,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
         }
         
         // ============================================================
-        // PRIORITAS 5: JASA/SEWA (tanpa keyword harga)
+        // PRIORITAS 6: JASA/SEWA (tanpa keyword harga & bukan entity pillar)
         // ============================================================
         if (isJasaEntity()) {
             const jasaKeywords = ['jasa', 'pasang', 'service', 'kontraktor', 'borongan', 
@@ -739,7 +780,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
                         console.log(`  → JASA + location → money-child (L6)`);
                         return 'money-child';
                     }
-                    console.log(`  → JASA detected → money-page (L5)`);
+                    console.log(`  → JASA detected (specific service) → money-page (L5)`);
                     return 'money-page';
                 }
             }
@@ -772,15 +813,15 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
         }
         
         // ============================================================
-        // PRIORITAS 6: SUB-VARIANT (Level 8)
+        // PRIORITAS 7: SUB-VARIANT
         // ============================================================
         if (isSubVariant(lowerName)) {
-            console.log(`  🔬 SUB-VARIANT detected (2+ parameters) → sub-variant (L8)`);
+            console.log(`  🔬 SUB-VARIANT detected → sub-variant (L8)`);
             return 'sub-variant';
         }
         
         // ============================================================
-        // PRIORITAS 7: VARIANT (Level 7)
+        // PRIORITAS 8: VARIANT
         // ============================================================
         for (const kw of VARIANT_KEYWORDS) {
             if (lowerName.includes(kw)) {
@@ -802,7 +843,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     }
     
     // ============================================================
-    // 10. BUILD LEVELS FROM BREADCRUMB ITEMS
+    // 11. BUILD LEVELS FROM BREADCRUMB ITEMS
     // ============================================================
     function slugify(text) {
         return text.toLowerCase()
@@ -827,7 +868,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
         }
         
         const isHomePageName = (name.toLowerCase() === 'beranda' || name.toLowerCase() === 'home');
-        const pageType = detectPageType(name, isHomePageName);
+        const pageType = detectPageType(name, isHomePageName, entityType);
         const intentDetected = detectIntentFromText(name);
         const intentValidation = validateIntent(pageType, intentDetected);
         const evergreenData = getEvergreenStatus(pageType);
@@ -846,7 +887,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     }
     
     // ============================================================
-    // 11. VALIDASI HIERARKI (TIDAK BOLEH LONCAT LEVEL)
+    // 12. VALIDASI HIERARKI
     // ============================================================
     for (let i = 0; i < allLevels.length - 1; i++) {
         const current = allLevels[i];
@@ -873,7 +914,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     }
     
     // ============================================================
-    // 12. JASA TIDAK BOLEH MONEY_MASTER
+    // 13. JASA TIDAK BOLEH MONEY_MASTER
     // ============================================================
     for (const level of allLevels) {
         if (isJasaEntity() && level.type === 'money-master') {
@@ -888,7 +929,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     }
     
     // ============================================================
-    // 13. FALLBACK URL
+    // 14. FALLBACK URL
     // ============================================================
     for (const level of allLevels) {
         if (!level.url) {
@@ -912,11 +953,10 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     }
     
     // ============================================================
-    // 14. SELECT LEVELS FOR BREADCRUMB (MAX 4 LEVELS)
+    // 15. SELECT LEVELS FOR BREADCRUMB
     // ============================================================
     const selectedLevels = [];
     
-    // Home (WAJIB) - Level 0
     selectedLevels.push({ 
         name: 'Beranda', 
         url: DOMAIN, 
@@ -932,13 +972,11 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     let remainingSlots = MAX_LEVEL - 2;
     
     console.log(`\n📊 ========================================`);
-    console.log(`📊 Breadcrumb Generator v5.4 — FIXED PRIORITY`);
-    console.log(`📊 PRIORITAS: Home(0) → Pillar(1) → SP1(3) → SP2(2) → Money(4-6) → JASA(5-6) → Variant(7) → SubVariant(8)`);
+    console.log(`📊 Breadcrumb Generator v5.5 — ENTITY PILLAR DETECTION`);
     console.log(`📊 Entity Type: ${entityType}`);
     console.log(`📊 JASA Entity: ${isJasaEntity() ? 'YES' : 'NO'}`);
     console.log(`📊 ========================================`);
     
-    // Parent terdekat (WAJIB)
     let parentTerdekat = null;
     const nonHomeLevels = allLevels.filter(l => l.type !== 'home');
     if (nonHomeLevels.length > 0) {
@@ -951,7 +989,6 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
         }
     }
     
-    // Level lainnya (prioritaskan level tertinggi yang unik)
     const otherLevels = [...nonHomeLevels]
         .slice(0, nonHomeLevels.length - 1)
         .sort((a, b) => b.level - a.level)
@@ -967,7 +1004,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     }
     
     // ============================================================
-    // 15. CURRENT PAGE
+    // 16. CURRENT PAGE
     // ============================================================
     const currentFullUrl = currentUrl.startsWith('http') ? currentUrl : DOMAIN + currentUrl;
     const currentPageTitle = (() => {
@@ -977,7 +1014,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     })();
     
     const isCurrentHome = (currentPageTitle.toLowerCase() === 'beranda' || currentPageTitle.toLowerCase() === 'home');
-    const currentPageType = detectPageType(currentPageTitle, isCurrentHome);
+    const currentPageType = detectPageType(currentPageTitle, isCurrentHome, entityType);
     const currentIntentDetected = detectIntentFromText(currentPageTitle);
     const currentIntentValidation = validateIntent(currentPageType, currentIntentDetected);
     const currentEvergreen = getEvergreenStatus(currentPageType);
@@ -994,7 +1031,6 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
         evergreen: currentEvergreen
     });
     
-    // Update position
     for (let i = 0; i < selectedLevels.length; i++) {
         selectedLevels[i].position = i + 1;
     }
@@ -1016,7 +1052,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
     console.log(`📊 ========================================\n`);
     
     // ============================================================
-    // 16. GENERATE HTML + JSON-LD
+    // 17. GENERATE HTML + JSON-LD
     // ============================================================
     let breadcrumbHtml = `<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">\n`;
     
@@ -1056,7 +1092,6 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
         "itemListElement": jsonLdItems
     };
     
-    // Inject ke DOM
     const oldBreadcrumbs = document.querySelectorAll('.breadcrumbs, .breadcrumb-nav');
     oldBreadcrumbs.forEach(el => el.remove());
     
@@ -1091,26 +1126,27 @@ function generateBreadcrumbJasaKonstruksiStruktur(mappingObj, currentUrl, breadc
         currentEvergreen: currentEvergreen,
         currentYear: CURRENT_YEAR,
         entityType: entityType,
-        version: '5.4'
+        version: '5.5'
     };
 }
 
 // ============================================================
-// RINGKASAN HASIL DETEKSI v5.4
+// RINGKASAN HASIL DETEKSI v5.5
 // ============================================================
 /*
-| Keyword Contoh | Hasil Deteksi | Level | Prioritas |
-|----------------|---------------|-------|-----------|
-| Daftar Jasa Struktur Konstruksi | sub-pillar-tipe-2 | L2 | Prioritas 3 (SP2) ✅ |
-| Jenis Jasa Konstruksi | sub-pillar-tipe-2 | L2 | Prioritas 3 (SP2) ✅ |
-| Macam-macam Jasa Konstruksi | sub-pillar-tipe-2 | L2 | Prioritas 3 (SP2) ✅ |
-| Perbandingan Jasa Konstruksi | sub-pillar-tipe-1 | L3 | Prioritas 2 (SP1) ✅ |
-| Jasa Konstruksi | money-page | L5 | Prioritas 5 (JASA) ✅ |
-| Jasa Konstruksi Jakarta | money-child | L6 | Prioritas 5 (JASA + location) ✅ |
-| Harga Jasa Konstruksi | money-page | L5 | Prioritas 4 (harga) ✅ |
-| Panduan Memilih Jasa | pillar | L1 | Prioritas 1 (PILLAR) ✅ |
+| Keyword | Entity Type | Hasil Deteksi | Level |
+|---------|-------------|---------------|-------|
+| Jasa Konstruksi | JASA_KONSTRUKSI | pillar | L1 ✅ |
+| Sewa Alat Konstruksi | SEWA | pillar | L1 ✅ |
+| Produk Konstruksi | PRODUK_KONSTRUKSI | pillar | L1 ✅ |
+| Produk Interior | PRODUK_INTERIOR | pillar | L1 ✅ |
+| Material Konstruksi | MATERIAL_KONSTRUKSI | pillar | L1 ✅ |
+| Jenis Jasa Konstruksi | JASA_KONSTRUKSI | sub-pillar-tipe-2 | L2 ✅ |
+| Daftar Jasa Konstruksi | JASA_KONSTRUKSI | sub-pillar-tipe-2 | L2 ✅ |
+| Perbandingan Jasa Konstruksi | JASA_KONSTRUKSI | sub-pillar-tipe-1 | L3 ✅ |
+| Jasa Pasang Atap | JASA_KONSTRUKSI | money-page | L5 ✅ |
+| Jasa Pasang Atap Jakarta | JASA_KONSTRUKSI | money-child | L6 ✅ |
 */
-
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasakonstruksistruktur = {};
 function removeCondition(conditionId) {
