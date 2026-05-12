@@ -2107,17 +2107,10 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
     console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaKonsFinishingPost}`);
     return;
 }
-		/* ==========================================================
-   🧩 HybridDateModified v2.5 — StableHash + Safe Load Order
-   Fitur:
-   - Menjamin detect-evergreen.js dimuat lebih dulu
-   - Update <meta dateModified> hanya jika URL terdaftar
-   - Stable hash → hasil dateModified konsisten
-   ========================================================== */	
-	
 	/* ============================================================
- 🔥 Hybrid Date Modified v7.0 — UNTUK betonjayareadymix.com
+ 🔥 Hybrid Date Modified v7.1 — UNTUK betonjayareadymix.com
     Custom date berdasarkan hasil deteksi page level
+    ✅ Support MONEY_LEADGEN
 ============================================================ */
 
 (async function runHybridDateModified() {
@@ -2181,15 +2174,14 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
     // 📌 LOAD ALL SCRIPTS
     // ============================================================
     async function loadAllScripts() {
-      // GANTI URL INI DENGAN URL TEMPAT ANDA MENYIMPAN SCRIPT
       const PAGE_LEVEL_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/PageLevelDetector.js";
       const EVERGREEN_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/SmartEvergreenDetector.js";
       
       if (typeof window.pageLevelDetector === "undefined") {
-        console.log("⏳ Loading Page Level Detector v14.0...");
+        console.log("⏳ Loading Page Level Detector v15.0...");
         await loadExternalJS(PAGE_LEVEL_DETECTOR_URL);
         await waitForPageLevelDetector();
-        console.log("✅ Page Level Detector v13.0 READY");
+        console.log("✅ Page Level Detector v15.0 READY");
       }
       
       if (typeof window.detectEvergreen !== "function") {
@@ -2251,31 +2243,72 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
     }
 
     // ============================================================
-    // 📌 DAFTAR EVERGREEN LEVELS
+    // 📌 DAFTAR EVERGREEN LEVELS & MONEY LEVELS (LENGKAP)
     // ============================================================
     const EVERGREEN_LEVELS = ['pillar', 'sub-pillar-tipe-2', 'sub-pillar-tipe-1', 'variant', 'sub-variant'];
-    const MONEY_LEVELS = ['money-master', 'money-page', 'money-child'];
+    const MONEY_LEVELS = ['money-master', 'money-page', 'money-child', 'money-leadgen'];
 
     // ============================================================
     // 📌 FUNGSI MENENTUKAN CUSTOM DATE BERDASARKAN PAGE LEVEL
     // ============================================================
     function getCustomDateByPageLevel(pageLevel, entityType) {
-      // EVERGREEN: Pillar, Sub-Pillar, Variant, Sub-Variant
+      // ============================================================
+      // LEVEL 1: EVERGREEN (tidak perlu update sering)
+      // ============================================================
       if (EVERGREEN_LEVELS.includes(pageLevel)) {
-        // Pillar (level tertinggi) pakai tanggal 2024-01-16
+        // Pillar (level tertinggi) - paling stabil
         if (pageLevel === 'pillar') {
           return "2026-04-01T10:30:00+07:00";
         }
-        // Sub-Pillar, Variant, Sub-Variant pakai tanggal 2024-06-01
-        return "2026-04-02T00:00:00+07:00";
+        // Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant
+        //return "2026-04-02T00:00:00+07:00";
+		  		  // JASA KONSTRUKSI FINISHING POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-15T00:00:00+07:00";
+        /*
+		        // JASA ALAT KONSTRUKSI POST : Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-03T00:00:00+07:00";
+		          // JASA KONSTRUKSI STRUKTUR: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-04T00:00:00+07:00";
+		          // JASA KONSTRUKSI PERBAIKAN: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-05T00:00:00+07:00";
+		          // JASA KONSTRUKSI PEMBATAS: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-06T00:00:00+07:00";
+		          // JASA KONSTRUKSI FINISHING: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-07T00:00:00+07:00";
+		          // JASA KONSTRUKSI PONDASI PERKUATAN TANAH: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-08T00:00:00+07:00";
+		  // JASA KONSTRUKSI JALAN PERKERASAN: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-09T00:00:00+07:00";
+		  // JASA KONSTRUKSI STRUKTUR POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-10T00:00:00+07:00";
+		  // JASA KONSTRUKSI PONDASI PERKUATAN TANAH POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-11T00:00:00+07:00";
+		  // JASA KONSTRUKSI PERBAIKAN POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-12T00:00:00+07:00";
+		  // JASA KONSTRUKSI PEMBATAS POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-13T00:00:00+07:00";
+		  // JASA KONSTRUKSI JALAN PERKERASAN POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-14T00:00:00+07:00";
+
+		  // JASA KONSTRUKSI CUTTING BETON POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-16T00:00:00+07:00";
+		  // JASA KONSTRUKSI BONGKAR BANGUNAN POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-17T00:00:00+07:00";
+		  */
       }
       
-      // MONEY PAGE: biarkan AUTO (return null)
+      // ============================================================
+      // LEVEL 2: MONEY PAGES (perlu update berkala)
+      // Kembalikan null agar SmartEvergreenDetector menghitung otomatis
+      // money-master, money-page, money-child, money-leadgen
+      // ============================================================
       if (MONEY_LEVELS.includes(pageLevel)) {
         return null; // AUTO mode
       }
       
-      // Default: AUTO mode
+      // ============================================================
+      // DEFAULT: AUTO mode
+      // ============================================================
       return null;
     }
 
@@ -2284,13 +2317,6 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
     // ============================================================
     
     await loadAllScripts();
-    
-    // ============================================================
-    // 🔥 STEP 1: DETEKSI PAGE LEVEL (TANPA CUSTOM DATE DAHULU)
-    // ============================================================
-    // Kita perlu deteksi page level terlebih dahulu untuk menentukan custom date
-    // Tapi detectEvergreen() butuh pageLevelDetector yang sudah ready
-    // PageLevelDetector sudah otomatis jalan saat load, kita bisa langsung akses
     
     // Tunggu sebentar agar pageLevelDetector selesai deteksi
     await new Promise(resolve => setTimeout(resolve, 100));
