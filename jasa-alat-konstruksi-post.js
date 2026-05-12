@@ -2156,9 +2156,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaTrencherPostFromMoneyMasterMoneyPage,
 		
 		
-		
-		
-		
 		urlMappingSewaMotorGraderFromSub2MoneyMaster,
 		urlMappingSewaAlatPancangFromSub2MoneyMaster,
 		urlMappingSewaTrencherFromSub2MoneyMaster,
