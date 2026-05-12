@@ -2051,7 +2051,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // ============================================================
     async function loadAllScripts() {
       // Gunakan Page Level Detector v18.2 (terbaru)
-      const PAGE_LEVEL_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/PageLevelDetectorV18.js";
+      const PAGE_LEVEL_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/PageLevelDetector.js";
       const EVERGREEN_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/SmartEvergreenDetector.js";
       
       if (typeof window.pageLevelDetectorV18 === "undefined" && 
