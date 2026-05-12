@@ -108,7 +108,7 @@ const urlMappingJalanPerkerasanBridgeFromSub2Sub1 = {
  "https://www.betonjayareadymix.com/p/perbandingan-jasa-jalan-perkerasan.html": "Perbandingan Jasa Jalan & Perkerasan"  // TYPE: SUB1
 };
 
-const urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1 = {
+const urlMappingInfrastrukturBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html": "Perbandingan Jasa Perbaikan Infrastruktur"  // TYPE: SUB1
 };
@@ -117,42 +117,46 @@ const urlMappingPerbandinganJasaPondasiBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/perbandingan-pondasi-perkuatan-tanah.html": "Perbandingan Jasa Pondasi & Perkuatan Tanah"  // TYPE: SUB1
 };
-const urlMappingPerbaikanJasaSaluranDrainaseBridgeFromSub2Sub1 = {
+const urlMappingJasaSaluranDrainaseBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-saluran-drainase.html": "Perbandingan Jasa Saluran & Drainase"  // TYPE: SUB1
 };
 
-const urlMappingPerbaikanJasaPematanganLahanBridgeFromSub2Sub1 = {
+const urlMappingJasaPematanganLahanBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-pematangan-lahan.html": "Perbandingan Jasa Pematangan Lahan"  // TYPE: SUB1
 };
-const urlMappingPerbaikanJasaJasaUjiTanahBridgeFromSub2Sub1 = {
+const urlMappingJasaJasaUjiTanahBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-uji-tanah.html": "Perbandingan Jasa Jasa Uji Tanah"  // TYPE: SUB1
 };
-const urlMappingPerbaikanJasaCuttingBetonBridgeFromSub2Sub1 = {
+const urlMappingJasaCuttingBetonBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-saluran-drainase.html": "Perbandingan Jasa Cutting Beton"  // TYPE: SUB1
 };
-const urlMappingPerbaikanJasaBongkarBangunanBridgeFromSub2Sub1 = {
+const urlMappingJasaBongkarBangunanBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html": "Perbandingan Jasa Bongkar Bangunan"  // TYPE: SUB1
 };
-const urlMappingPerbaikanJasaBuangPuingBridgeFromSub2Sub1 = {
+const urlMappingJasaBuangPuingBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-buang-puing.html": "Perbandingan Jasa Buang Puing"  // TYPE: SUB1
 };
-const urlMappingPerbaikanJasaPengeboranBridgeFromSub2Sub1 = {
+const urlMappingJasaPengeboranBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html": "Perbandingan Jasa Pengeboran"  // TYPE: SUB1
 };
-const urlMappingPerbaikanJasaPerkuatanTanahLongsorBridgeFromSub2Sub1 = {
+const urlMappingJasaPerkuatanTanahLongsorBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-perkuatan-tanah.html": "Perbandingan Jasa Perkuatan Tanah Longsor"  // TYPE: SUB1
 };
-const urlMappingPerbaikanJasaPembatasPengamanBridgeFromSub2Sub1 = {
+const urlMappingJasaPembatasPengamanBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-pembatas-pengaman.html": "Perbandingan Jasa Pembatas Pengaman"  // TYPE: SUB1
+};
+const urlMappingInfrastrukturBridgeFromSub2Sub1 = {
+  //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/p/perbandingan-jasa-instalasi-listrik.html": "Perbandingan Jasa Instalasi Listrik"  // TYPE: SUB1
 };
 // ============================================================
 // 📁 JASA ALAT KONSTRUKSI (ENTITY: SEWA/RENTAL - BUKAN JASA)
@@ -281,7 +285,7 @@ const urlMappingSewaAlatKonstruksiRinganFromSub2MoneyPage = {
 // 🧠 TYPE: MONEY_PAGE (bukan MONEY_MASTER)
 // ============================================================
 
-const urlMappingPerbaikanInfrastrukturFromSub2MoneyPage = {
+const urlMappingInfrastrukturFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan.html": "Jasa Perbaikan Jalan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan.html": "Jasa Perbaikan Jembatan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase.html": "Jasa Perbaikan Drainase",  // TYPE: MONEY_PAGE
@@ -1757,17 +1761,17 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingFinishingBridgeFromSub2Sub1,
 		urlMappingPerawatanPerbaikanBridgeFromSub2Sub1,
 		urlMappingJalanPerkerasanBridgeFromSub2Sub1,
-		urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1,
+		urlMappingInfrastrukturBridgeFromSub2Sub1,
         urlMappingPerbandinganJasaPondasiBridgeFromSub2Sub1,
-		urlMappingPerbaikanJasaSaluranDrainaseBridgeFromSub2Sub1,
-        urlMappingPerbaikanJasaPematanganLahanBridgeFromSub2Sub1,
-		urlMappingPerbaikanJasaJasaUjiTanahBridgeFromSub2Sub1,
-        urlMappingPerbaikanJasaCuttingBetonBridgeFromSub2Sub1,
-		urlMappingPerbaikanJasaBongkarBangunanBridgeFromSub2Sub1,
-        urlMappingPerbaikanJasaBuangPuingBridgeFromSub2Sub1,
-		urlMappingPerbaikanJasaPengeboranBridgeFromSub2Sub1,
-		urlMappingPerbaikanJasaPerkuatanTanahLongsorBridgeFromSub2Sub1,
-        urlMappingPerbaikanJasaPembatasPengamanBridgeFromSub2Sub1,
+		urlMappingJasaSaluranDrainaseBridgeFromSub2Sub1,
+        urlMappingJasaPematanganLahanBridgeFromSub2Sub1,
+		urlMappingJasaJasaUjiTanahBridgeFromSub2Sub1,
+        urlMappingJasaCuttingBetonBridgeFromSub2Sub1,
+		urlMappingJasaBongkarBangunanBridgeFromSub2Sub1,
+        urlMappingJasaBuangPuingBridgeFromSub2Sub1,
+		urlMappingJasaPengeboranBridgeFromSub2Sub1,
+		urlMappingJasaPerkuatanTanahLongsorBridgeFromSub2Sub1,
+        urlMappingJasaPembatasPengamanBridgeFromSub2Sub1,
 		
 		urlMappingSewaAlatFromPillarSub2,
 		urlMappingSewaAlatProyekFromSub2Sub1,
@@ -1780,7 +1784,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaAlatRinganFromSub1MoneyMaster,
 		
 		urlMappingSewaAlatKonstruksiRinganFromSub2MoneyPage,
-        urlMappingPerbaikanInfrastrukturFromSub2MoneyPage,
+        urlMappingInfrastrukturFromSub2MoneyPage,
 		urlMappingPerawatanPerbaikanBangunanFromSub1MoneyPage,
 		urlMappingRenovasiFromSub1MoneyPage,
 		urlMappingFinishingFromSub1MoneyPage,
@@ -2663,10 +2667,10 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
     }
 
-	if (urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-        //pageNameKonstruksiSub.textContent = urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
+	if (urlMappingInfrastrukturBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingInfrastrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
 	generateBreadcrumbJasaKonstruksi(
-        urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1,
+        urlMappingInfrastrukturBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -2693,10 +2697,10 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
     }
 
-		if (urlMappingPerbaikanJasaSaluranDrainaseBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-        //pageNameKonstruksiSub.textContent = urlMappingPerbaikanJasaSaluranDrainaseBridgeFromSub2Sub1[cleanUrlJasaKons];
+		if (urlMappingJasaSaluranDrainaseBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingJasaSaluranDrainaseBridgeFromSub2Sub1[cleanUrlJasaKons];
 	generateBreadcrumbJasaKonstruksi(
-        urlMappingPerbaikanJasaSaluranDrainaseBridgeFromSub2Sub1,
+        urlMappingJasaSaluranDrainaseBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -2707,10 +2711,10 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
 	
     }
-		if (urlMappingPerbaikanJasaPematanganLahanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-        //pageNameKonstruksiSub.textContent = urlMappingPerbaikanJasaPematanganLahanBridgeFromSub2Sub1[cleanUrlJasaKons];
+		if (urlMappingJasaPematanganLahanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingJasaPematanganLahanBridgeFromSub2Sub1[cleanUrlJasaKons];
 	generateBreadcrumbJasaKonstruksi(
-        urlMappingPerbaikanJasaPematanganLahanBridgeFromSub2Sub1,
+        urlMappingJasaPematanganLahanBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
            // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -2721,10 +2725,10 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
 	
     }
-		if (urlMappingPerbaikanJasaJasaUjiTanahBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-        //pageNameKonstruksiSub.textContent = urlMappingPerbaikanJasaJasaUjiTanahBridgeFromSub2Sub1[cleanUrlJasaKons];
+		if (urlMappingJasaJasaUjiTanahBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingJasaJasaUjiTanahBridgeFromSub2Sub1[cleanUrlJasaKons];
 	generateBreadcrumbJasaKonstruksi(
-        urlMappingPerbaikanJasaJasaUjiTanahBridgeFromSub2Sub1,
+        urlMappingJasaJasaUjiTanahBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -2735,10 +2739,10 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
 	
     }
-		if (urlMappingPerbaikanJasaCuttingBetonBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-        //pageNameKonstruksiSub.textContent = urlMappingPerbaikanJasaCuttingBetonBridgeFromSub2Sub1[cleanUrlJasaKons];
+		if (urlMappingJasaCuttingBetonBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingJasaCuttingBetonBridgeFromSub2Sub1[cleanUrlJasaKons];
 	generateBreadcrumbJasaKonstruksi(
-        urlMappingPerbaikanJasaCuttingBetonBridgeFromSub2Sub1,
+        urlMappingJasaCuttingBetonBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
            // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -2749,10 +2753,10 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
 	}
 	
-	if (urlMappingPerbaikanJasaPengeboranBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-        //pageNameKonstruksiSub.textContent = urlMappingPerbaikanJasaPengeboranBridgeFromSub2Sub1[cleanUrlJasaKons];
+	if (urlMappingJasaPengeboranBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingJasaPengeboranBridgeFromSub2Sub1[cleanUrlJasaKons];
 	generateBreadcrumbJasaKonstruksi(
-        urlMappingPerbaikanJasaPengeboranBridgeFromSub2Sub1,
+        urlMappingJasaPengeboranBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
            // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -2763,10 +2767,10 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
 	
     }
-		if (urlMappingPerbaikanJasaPerkuatanTanahLongsorBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-        //pageNameKonstruksiSub.textContent = urlMappingPerbaikanJasaPerkuatanTanahLongsorBridgeFromSub2Sub1[cleanUrlJasaKons];
+		if (urlMappingJasaPerkuatanTanahLongsorBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingJasaPerkuatanTanahLongsorBridgeFromSub2Sub1[cleanUrlJasaKons];
 	generateBreadcrumbJasaKonstruksi(
-        urlMappingPerbaikanJasaPerkuatanTanahLongsorBridgeFromSub2Sub1,
+        urlMappingJasaPerkuatanTanahLongsorBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -2778,10 +2782,10 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
     }
 	
-	if (urlMappingPerbaikanJasaPembatasPengamanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-        //pageNameKonstruksiSub.textContent = urlMappingPerbaikanJasaPembatasPengamanBridgeFromSub2Sub1[cleanUrlJasaKons];
+	if (urlMappingJasaPembatasPengamanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingJasaPembatasPengamanBridgeFromSub2Sub1[cleanUrlJasaKons];
 	generateBreadcrumbJasaKonstruksi(
-        urlMappingPerbaikanJasaPembatasPengamanBridgeFromSub2Sub1,
+        urlMappingJasaPembatasPengamanBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -4179,7 +4183,7 @@ if (urlMappingBongkarBangunanFromSub1MoneyPage[cleanUrlJasaKons]) {
     }
 
 	
-if (urlMappingPerbaikanInfrastrukturFromSub2MoneyPage[cleanUrlJasaKons]) {
+if (urlMappingInfrastrukturFromSub2MoneyPage[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPerbaikanInfrastruktur');
            // hapus elemen id DIV Lain
@@ -4228,10 +4232,10 @@ if (urlMappingPerbaikanInfrastrukturFromSub2MoneyPage[cleanUrlJasaKons]) {
        // removeCondition('JasaKonstruksiCustom');
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaPerbaikanInfrastrukturLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingPerbaikanInfrastrukturFromSub2MoneyPage[cleanUrlJasaKons];
+        pageNameKonstruksiSub.textContent = urlMappingInfrastrukturFromSub2MoneyPage[cleanUrlJasaKons];
 
 	    generateBreadcrumbJasaKonstruksi(
-        urlMappingPerbaikanInfrastrukturFromSub2MoneyPage,
+        urlMappingInfrastrukturFromSub2MoneyPage,
         cleanUrlJasaKons,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
