@@ -1443,7 +1443,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		 urlMappingJasaPondasiFromSub1MoneyPage,	,
+		 urlMappingJasaPondasiFromSub1MoneyPage,
 		urlMappingJasaPemadatanPersiapanPondasiFromSub2Sub2,
 		urlMappingJasaPerkuatanTanahFromSub2Sub2,
 		urlMappingJasaRetrofittingPondasiFromSub2Sub2
