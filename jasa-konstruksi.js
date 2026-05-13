@@ -113,7 +113,7 @@ const urlMappingInfrastrukturBridgeFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html": "Perbandingan Jasa Perbaikan Infrastruktur"  // TYPE: SUB1
 };
 
-const urlMappingPerbandinganJasaPondasiBridgeFromSub2Sub1 = {
+const urlMappingJasaPondasiBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/perbandingan-pondasi-perkuatan-tanah.html": "Perbandingan Jasa Pondasi & Perkuatan Tanah"  // TYPE: SUB1
 };
@@ -253,7 +253,7 @@ const urlMappingSewaAlatRinganFromSub1MoneyMaster = {
 };
 
 // [MONEY_PAGE] - SEWA PER JENIS ALAT BERAT (ENTITY SEWA/RENTAL - MONEY_PAGE)
-const urlMappingSewaAlatBeratFromSub2MoneyPage = {
+const urlMappingSewaAlatBeratFromSub1MoneyPage = {
 	/*hapus pindah ke post aja
   "https://www.betonjayareadymix.com/p/sewa-forklift.html": "Sewa Forklift",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/sewa-crane.html": "Sewa Crane",  // TYPE: MONEY_PAGE
@@ -274,7 +274,7 @@ const urlMappingSewaAlatBeratFromSub2MoneyPage = {
 };
 
 // [MONEY_PAGE] - SEWA ALAT KONSTRUKSI RINGAN (SARAN ITEM)
-const urlMappingSewaAlatKonstruksiRinganFromSub2MoneyPage = {
+const urlMappingSewaAlatKonstruksiRinganFromSub1MoneyPage = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/p/sewa-gerbang-tangan.html": "Sewa Gerbang Tangan",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/p/sewa-concrete-mixer.html": "Sewa Concrete Mixer",  // TYPE: MONEY_PAGE
@@ -284,8 +284,13 @@ const urlMappingSewaAlatKonstruksiRinganFromSub2MoneyPage = {
 // 📁 JASA PERBAIKAN INFRASTRUKTUR (ENTITY: JASA)
 // 🧠 TYPE: MONEY_PAGE (bukan MONEY_MASTER)
 // ============================================================
-
-const urlMappingInfrastrukturFromSub2MoneyPage = {
+const urlMappingJasaPondasiFromSub1MoneyPage = {
+  "https://www.betonjayareadymix.com/p/jasa-pondasi.html": "Jasa Pondasi",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/borongan-pondasi.html": "Borongan Pondasi",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/harga-jasa-borongan-pondasi.html": "Harga Jasa Borongan Pondasi"  // TYPE: MONEY_PAGE
+};
+const urlMappingInfrastrukturFromSub1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan.html": "Jasa Perbaikan Jalan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan.html": "Jasa Perbaikan Jembatan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase.html": "Jasa Perbaikan Drainase",  // TYPE: MONEY_PAGE
@@ -640,7 +645,7 @@ const urlMappingPematanganLahanFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/jasa-pematangan-lahan.html": "Jasa Pematangan Lahan",  // TYPE: SUB2
 };*/
 
-const urlMappingPematanganLahanFromSub2MoneyPage = {
+const urlMappingPematanganLahanFromSub1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-galian-tanah.html": "Jasa Galian Tanah",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-pengupasan-lahan-tanah.html": "Jasa Pengupasan Lahan Tanah",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-pembersihan-lahan.html": "Jasa Pembersihan Lahan",  // TYPE: MONEY_PAGE
@@ -668,7 +673,7 @@ const urlMappingUjiTanahFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/jasa-uji-tanah.html": "Jasa Uji Tanah",  // TYPE: SUB2
 };*/
 
-const urlMappingUjiTanahFromSub2MoneyPage = {
+const urlMappingUjiTanahFromSub1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-sondir.html": "Jasa Sondir",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-cpt.html": "Jasa CPT",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-lab-tanah.html": "Jasa Lab Tanah",  // TYPE: MONEY_PAGE
@@ -685,7 +690,7 @@ const urlMappingPerkuatanTanahLongsorFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html": "Jasa Perkuatan Tanah Longsor",  // TYPE: SUB2
 };*/
 
-const urlMappingPerkuatanTanahLongsorFromSub2MoneyPage = {
+const urlMappingPerkuatanTanahLongsorFromSub1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-bronjong-penahan-longsor.html": "Jasa Bronjong Penahan Longsor",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-soil-nailing-tebing.html": "Jasa Soil Nailing Tebing",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-dinding-penahan-tanah-longsor.html": "Jasa Dinding Penahan Tanah Longsor",  // TYPE: MONEY_PAGE
@@ -707,7 +712,7 @@ const urlMappingPembatasFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html": "Jasa Pembatas Pengaman",  // TYPE: SUB2
 };*/
 
-const urlMappingPembatasFromSub2MoneyPage = {
+const urlMappingPembatasFromSub1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-pengamanan-area-proyek.html": "Jasa Pengamanan Area Proyek",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-rambu-dan-sistem-keamanan-visual.html": "Jasa Rambu dan Sistem Keamanan Visual",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-pengaman-sisi-jalan-infrastruktur.html": "Jasa Pengaman Sisi Jalan Infrastruktur",  // TYPE: MONEY_PAGE
@@ -723,7 +728,7 @@ const urlMappingJasaInstalasiListrikFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik.html": "Jasa Instalasi Listrik",  // TYPE: SUB2
 };*/
 
-const urlMappingJasaInstalasiListrikFromSub2MoneyPage = {
+const urlMappingJasaInstalasiListrikFromSub1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-instalasi-solar-panel.html": "Jasa Instalasi Solar Panel",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik-rumah.html": "Jasa Instalasi Listrik Rumah",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik-komersial.html": "Jasa Instalasi Listrik Komersial",  // TYPE: MONEY_PAGE
@@ -1762,7 +1767,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingPerawatanPerbaikanBridgeFromSub2Sub1,
 		urlMappingJalanPerkerasanBridgeFromSub2Sub1,
 		urlMappingInfrastrukturBridgeFromSub2Sub1,
-        urlMappingPerbandinganJasaPondasiBridgeFromSub2Sub1,
+        urlMappingJasaPondasiBridgeFromSub2Sub1,
 		urlMappingJasaSaluranDrainaseBridgeFromSub2Sub1,
         urlMappingJasaPematanganLahanBridgeFromSub2Sub1,
 		urlMappingJasaJasaUjiTanahBridgeFromSub2Sub1,
@@ -1777,15 +1782,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaAlatFromPillarSub2,
 		urlMappingSewaAlatProyekFromSub2Sub1,
 		urlMappingSewaAlatProyekFromSub1MoneyMaster,
-		//urlMappingSewaAlatBeratFromSub2MoneyPage,
+		//urlMappingSewaAlatBeratFromSub1MoneyPage,
 		urlMappingSewaAlatBeratFromSub2Sub1,
 		urlMappingSewaAlatBeratFromSub1MoneyMaster,
 		
 		urlMappingSewaAlatRinganFromSub2Sub1,
 		urlMappingSewaAlatRinganFromSub1MoneyMaster,
 		
-		urlMappingSewaAlatKonstruksiRinganFromSub2MoneyPage,
-        urlMappingInfrastrukturFromSub2MoneyPage,
+		urlMappingSewaAlatKonstruksiRinganFromSub1MoneyPage,
+	    urlMappingJasaPondasiFromSub1MoneyPage,	
+        urlMappingInfrastrukturFromSub1MoneyPage,
 		urlMappingPerawatanPerbaikanBangunanFromSub1MoneyPage,
 		urlMappingRenovasiFromSub1MoneyPage,
 		urlMappingFinishingFromSub1MoneyPage,
@@ -1793,13 +1799,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingPondasiFromSub1MoneyPage,
 		urlMappingSaluranFromSub1MoneyPage,
 		urlMappingJalanFromSub1MoneyPage,
-		urlMappingPematanganLahanFromSub2MoneyPage,
-		urlMappingUjiTanahFromSub2MoneyPage,
-		urlMappingPerkuatanTanahLongsorFromSub2MoneyPage,
+		urlMappingPematanganLahanFromSub1MoneyPage,
+		urlMappingUjiTanahFromSub1MoneyPage,
+		urlMappingPerkuatanTanahLongsorFromSub1MoneyPage,
 		urlMappingBongkarBangunanFromSub1MoneyPage,
 		urlMappingPengeboranFromSub1MoneyPage,
-		urlMappingPembatasFromSub2MoneyPage,
-		urlMappingJasaInstalasiListrikFromSub2MoneyPage
+		urlMappingPembatasFromSub1MoneyPage,
+		urlMappingJasaInstalasiListrikFromSub1MoneyPage
     );
 
     // --- validasi URL terdaftar ---
@@ -2683,10 +2689,10 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
     }
  
-	if (urlMappingPerbandinganJasaPondasiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-        //pageNameKonstruksiSub.textContent = urlMappingPerbandinganJasaPondasiBridgeFromSub2Sub1[cleanUrlJasaKons];
+	if (urlMappingJasaPondasiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingJasaPondasiBridgeFromSub2Sub1[cleanUrlJasaKons];
 	generateBreadcrumbJasaKonstruksi(
-        urlMappingPerbandinganJasaPondasiBridgeFromSub2Sub1,
+        urlMappingJasaPondasiBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -3167,7 +3173,7 @@ if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
 }
 
 
- if (urlMappingSewaAlatKonstruksiRinganFromSub2MoneyPage[cleanUrlJasaKons]) {
+ if (urlMappingSewaAlatKonstruksiRinganFromSub1MoneyPage[cleanUrlJasaKons]) {
 	 //CONTAINER
     restoreCondition('JasaKonsSub');
 	restoreCondition('SewaAlatKonstruksi');
@@ -3221,10 +3227,10 @@ if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
         //JasaAlatKonstruksiLink.style.visibility = 'visible';
         SewaAlatKonstruksiLink.style.visibility = 'visible';
         SewaAlatKonstruksiRinganLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingSewaAlatKonstruksiRinganFromSub2MoneyPage[cleanUrlJasaKons];
+        pageNameKonstruksiSub.textContent = urlMappingSewaAlatKonstruksiRinganFromSub1MoneyPage[cleanUrlJasaKons];
     }
  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatKonstruksiRinganFromSub2MoneyPage[cleanUrlJasaKons]) {
+   if (urlMappingSewaAlatKonstruksiRinganFromSub1MoneyPage[cleanUrlJasaKons]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -3250,7 +3256,7 @@ if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
                {
                    "@type": "ListItem",
                    "position": 4,
-                   "name": urlMappingSewaAlatKonstruksiRinganFromSub2MoneyPage[cleanUrlJasaKons],
+                   "name": urlMappingSewaAlatKonstruksiRinganFromSub1MoneyPage[cleanUrlJasaKons],
                    "item": cleanUrlJasaKons
                }
            ]
@@ -3677,7 +3683,7 @@ if (urlMappingJalanFromSub1MoneyPage[cleanUrlJasaKons]) {
     }
   
 	
-if (urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons]) {
+if (urlMappingPembatasFromSub1MoneyPage[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPembatasPengaman');
            // hapus elemen id DIV Lain
@@ -3727,10 +3733,10 @@ if (urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons]) {
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaPembatasPengamanLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons];
+        pageNameKonstruksiSub.textContent = urlMappingPembatasFromSub1MoneyPage[cleanUrlJasaKons];
     }
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons]) {
+   if (urlMappingPembatasFromSub1MoneyPage[cleanUrlJasaKons]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -3756,7 +3762,7 @@ if (urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons]) {
 	       {
                    "@type": "ListItem",
                    "position": 4,
-                   "name": urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons],
+                   "name": urlMappingPembatasFromSub1MoneyPage[cleanUrlJasaKons],
                    "item": cleanUrlJasaKons
                }
            ]
@@ -3768,7 +3774,7 @@ if (urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons]) {
        document.head.appendChild(script);
    }
 	
-  if (urlMappingPematanganLahanFromSub2MoneyPage[cleanUrlJasaKons]) {
+  if (urlMappingPematanganLahanFromSub1MoneyPage[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPematanganLahan');
            // hapus elemen id DIV Lain
@@ -3818,11 +3824,11 @@ if (urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons]) {
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaPematanganLahanLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingPematanganLahanFromSub2MoneyPage[cleanUrlJasaKons];
+        pageNameKonstruksiSub.textContent = urlMappingPematanganLahanFromSub1MoneyPage[cleanUrlJasaKons];
     }
 
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingPematanganLahanFromSub2MoneyPage[cleanUrlJasaKons]) {
+   if (urlMappingPematanganLahanFromSub1MoneyPage[cleanUrlJasaKons]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -3848,7 +3854,7 @@ if (urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons]) {
 	       {
                    "@type": "ListItem",
                    "position": 4,
-                   "name": urlMappingPematanganLahanFromSub2MoneyPage[cleanUrlJasaKons],
+                   "name": urlMappingPematanganLahanFromSub1MoneyPage[cleanUrlJasaKons],
                    "item": cleanUrlJasaKons
                }
            ]
@@ -3860,7 +3866,7 @@ if (urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons]) {
        document.head.appendChild(script);
    }
 	
-   if (urlMappingUjiTanahFromSub2MoneyPage[cleanUrlJasaKons]) {
+   if (urlMappingUjiTanahFromSub1MoneyPage[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaUjiTanah');
            // hapus elemen id DIV Lain
@@ -3910,11 +3916,11 @@ if (urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons]) {
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaUjiTanahLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingUjiTanahFromSub2MoneyPage[cleanUrlJasaKons];
+        pageNameKonstruksiSub.textContent = urlMappingUjiTanahFromSub1MoneyPage[cleanUrlJasaKons];
     }
    
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingUjiTanahFromSub2MoneyPage[cleanUrlJasaKons]) {
+   if (urlMappingUjiTanahFromSub1MoneyPage[cleanUrlJasaKons]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -3940,7 +3946,7 @@ if (urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons]) {
 	       {
                    "@type": "ListItem",
                    "position": 4,
-                   "name": urlMappingUjiTanahFromSub2MoneyPage[cleanUrlJasaKons],
+                   "name": urlMappingUjiTanahFromSub1MoneyPage[cleanUrlJasaKons],
                    "item": cleanUrlJasaKons
                }
            ]
@@ -3952,7 +3958,7 @@ if (urlMappingPembatasFromSub2MoneyPage[cleanUrlJasaKons]) {
        document.head.appendChild(script);
    }
 
-if (urlMappingPerkuatanTanahLongsorFromSub2MoneyPage[cleanUrlJasaKons]) {
+if (urlMappingPerkuatanTanahLongsorFromSub1MoneyPage[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPerkuatanTanahLongsor');
            // hapus elemen id DIV Lain
@@ -4002,11 +4008,11 @@ if (urlMappingPerkuatanTanahLongsorFromSub2MoneyPage[cleanUrlJasaKons]) {
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaUjiTanahLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingPerkuatanTanahLongsorFromSub2MoneyPage[cleanUrlJasaKons];
+        pageNameKonstruksiSub.textContent = urlMappingPerkuatanTanahLongsorFromSub1MoneyPage[cleanUrlJasaKons];
     }
   
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingPerkuatanTanahLongsorFromSub2MoneyPage[cleanUrlJasaKons]) {
+   if (urlMappingPerkuatanTanahLongsorFromSub1MoneyPage[cleanUrlJasaKons]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -4032,7 +4038,7 @@ if (urlMappingPerkuatanTanahLongsorFromSub2MoneyPage[cleanUrlJasaKons]) {
 	       {
                    "@type": "ListItem",
                    "position": 4,
-                   "name": urlMappingPerkuatanTanahLongsorFromSub2MoneyPage[cleanUrlJasaKons],
+                   "name": urlMappingPerkuatanTanahLongsorFromSub1MoneyPage[cleanUrlJasaKons],
                    "item": cleanUrlJasaKons
                }
            ]
@@ -4199,8 +4205,22 @@ if (urlMappingBongkarBangunanFromSub1MoneyPage[cleanUrlJasaKons]) {
     );
     }
 
-	
-if (urlMappingInfrastrukturFromSub2MoneyPage[cleanUrlJasaKons]) {
+
+if (urlMappingJasaPondasiFromSub1MoneyPage[cleanUrlJasaKons]) {
+        generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaPondasiFromSub1MoneyPage,
+        cleanUrlJasaKons,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi-perkuatan-tanah.html' },
+			{ name: 'Perbandingan Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/perbandingan-pondasi-perkuatan-tanah.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+
+}
+if (urlMappingInfrastrukturFromSub1MoneyPage[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPerbaikanInfrastruktur');
            // hapus elemen id DIV Lain
@@ -4249,10 +4269,10 @@ if (urlMappingInfrastrukturFromSub2MoneyPage[cleanUrlJasaKons]) {
        // removeCondition('JasaKonstruksiCustom');
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaPerbaikanInfrastrukturLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingInfrastrukturFromSub2MoneyPage[cleanUrlJasaKons];
+        pageNameKonstruksiSub.textContent = urlMappingInfrastrukturFromSub1MoneyPage[cleanUrlJasaKons];
 
 	    generateBreadcrumbJasaKonstruksi(
-        urlMappingInfrastrukturFromSub2MoneyPage,
+        urlMappingInfrastrukturFromSub1MoneyPage,
         cleanUrlJasaKons,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -4432,7 +4452,7 @@ if (urlMappingJasaBorAirSumur[cleanUrlJasaKons]) {
    */
 	
 //JASA INSTALASI LISTRIK
-if (urlMappingJasaInstalasiListrikFromSub2MoneyPage[cleanUrlJasaKons]) {
+if (urlMappingJasaInstalasiListrikFromSub1MoneyPage[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaInstalasiListrik');
            // hapus elemen id DIV Lain
@@ -4482,11 +4502,11 @@ if (urlMappingJasaInstalasiListrikFromSub2MoneyPage[cleanUrlJasaKons]) {
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaInstalasiListrikLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingJasaInstalasiListrikFromSub2MoneyPage[cleanUrlJasaKons];
+        pageNameKonstruksiSub.textContent = urlMappingJasaInstalasiListrikFromSub1MoneyPage[cleanUrlJasaKons];
     }
 
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaInstalasiListrikFromSub2MoneyPage[cleanUrlJasaKons]) {
+   if (urlMappingJasaInstalasiListrikFromSub1MoneyPage[cleanUrlJasaKons]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -4512,7 +4532,7 @@ if (urlMappingJasaInstalasiListrikFromSub2MoneyPage[cleanUrlJasaKons]) {
 	       {
                    "@type": "ListItem",
                    "position": 4,
-                   "name": urlMappingJasaInstalasiListrikFromSub2MoneyPage[cleanUrlJasaKons],
+                   "name": urlMappingJasaInstalasiListrikFromSub1MoneyPage[cleanUrlJasaKons],
                    "item": cleanUrlJasaKons
                }
            ]
