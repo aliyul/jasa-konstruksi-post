@@ -284,12 +284,7 @@ const urlMappingSewaAlatKonstruksiRinganFromSub1MoneyPage = {
 // 📁 JASA PERBAIKAN INFRASTRUKTUR (ENTITY: JASA)
 // 🧠 TYPE: MONEY_PAGE (bukan MONEY_MASTER)
 // ============================================================
-const urlMappingJasaPondasiFromSub1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-pondasi.html": "Jasa Pondasi",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/borongan-pondasi.html": "Borongan Pondasi",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/harga-jasa-borongan-pondasi.html": "Harga Jasa Borongan Pondasi"  // TYPE: MONEY_PAGE
-};
+
 const urlMappingInfrastrukturFromSub1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan.html": "Jasa Perbaikan Jalan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan.html": "Jasa Perbaikan Jembatan",  // TYPE: MONEY_PAGE
@@ -1790,7 +1785,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaAlatRinganFromSub1MoneyMaster,
 		
 		urlMappingSewaAlatKonstruksiRinganFromSub1MoneyPage,
-	    urlMappingJasaPondasiFromSub1MoneyPage,	
+	   
         urlMappingInfrastrukturFromSub1MoneyPage,
 		urlMappingPerawatanPerbaikanBangunanFromSub1MoneyPage,
 		urlMappingRenovasiFromSub1MoneyPage,
@@ -4206,20 +4201,6 @@ if (urlMappingBongkarBangunanFromSub1MoneyPage[cleanUrlJasaKons]) {
     }
 
 
-if (urlMappingJasaPondasiFromSub1MoneyPage[cleanUrlJasaKons]) {
-        generateBreadcrumbJasaKonstruksi(
-        urlMappingJasaPondasiFromSub1MoneyPage,
-        cleanUrlJasaKons,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi-perkuatan-tanah.html' },
-			{ name: 'Perbandingan Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/perbandingan-pondasi-perkuatan-tanah.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-
-}
 if (urlMappingInfrastrukturFromSub1MoneyPage[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPerbaikanInfrastruktur');
