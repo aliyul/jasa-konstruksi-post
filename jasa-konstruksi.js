@@ -154,7 +154,7 @@ const urlMappingJasaPembatasPengamanBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-pembatas-pengaman.html": "Perbandingan Jasa Pembatas Pengaman"  // TYPE: SUB1
 };
-const urlMappingInfrastrukturBridgeFromSub2Sub1 = {
+const urlMappingJasaInstalasiListrikBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-instalasi-listrik.html": "Perbandingan Jasa Instalasi Listrik"  // TYPE: SUB1
 };
@@ -1772,6 +1772,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPengeboranBridgeFromSub2Sub1,
 		urlMappingJasaPerkuatanTanahLongsorBridgeFromSub2Sub1,
         urlMappingJasaPembatasPengamanBridgeFromSub2Sub1,
+		urlMappingJasaInstalasiListrikBridgeFromSub2Sub1,
 		
 		urlMappingSewaAlatFromPillarSub2,
 		urlMappingSewaAlatProyekFromSub2Sub1,
@@ -2797,6 +2798,22 @@ if (urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
     }
 
+if (urlMappingJasaInstalasiListrikBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+	
+	generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaInstalasiListrikBridgeFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Instalasi Listrik', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-instalasi-listrik.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+	
+    }
+	
+ 
 /*
   //AWAL JASA KONTRUKSI ALAT
 if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
