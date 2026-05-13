@@ -1910,7 +1910,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
      pageNameJasaKonsPondasiTanah.textContent = "";
 	
-	if (urlMappingJasaPondasiFromSub1MoneyPage[cleanUrlJasaKons]) {
+	if (urlMappingJasaPondasiFromSub1MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
         generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanah(
         urlMappingJasaPondasiFromSub1MoneyPage,
         cleanUrlJasaPondasiPerkuatanTanahKons,
