@@ -75,7 +75,14 @@ const urlMappingJasaPondasiFromSub1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-pondasi-tapak.html": "Jasa Pondasi Tapak", // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-pondasi-tapak-per-meter.html": "Jasa Pondasi Tapak Per Meter", // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/harga-jasa-pondasi-tapak.html": "Harga Jasa Pondasi Tapak", // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html": "Jasa Tiang Pancang", // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-pondasi-tiang-pancang.html": "Jasa Pondasi Tiang Pancang", // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/harga-jasa-pancang-drop-hammer.html": "Harga Jasa Pancang Drop Hammer",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/harga-jasa-pancang-spun-pile.html": "Harga Jasa Pancang Spun Pile",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/harga-jasa-pancang-mini-pile.html": "Harga Jasa Pancang Mini Pile",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/harga-jasa-pemasangan-mini-pile.html": "Harga Jasa Pemasangan Mini Pile",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/harga-jasa-pancang-hidrolik.html": "Harga Jasa Pancang Hidrolik",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/harga-jasa-pemasangan-tiang-pancang.html": "Harga Jasa Pemasangan Tiang Pancang",  // TYPE: MONEY_PAGE
+	
   "https://www.betonjayareadymix.com/p/jasa-pondasi-sumuran.html": "Jasa Pondasi Sumuran", // TYPE: MONEY_PAGE
 	
   "https://www.betonjayareadymix.com/p/jasa-pondasi.html": "Jasa Pondasi",  // TYPE: MONEY_PAGE
