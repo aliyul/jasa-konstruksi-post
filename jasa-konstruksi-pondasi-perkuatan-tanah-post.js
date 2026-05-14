@@ -1380,7 +1380,7 @@ document.addEventListener("DOMContentLoaded", function() {
       {},
 		urlMappingJasaBoronganPondasiFromMoneyPageMoneyChild,
 		urlMappingJasaPondasiCakarAyamFromMoneyPageMoneyChild,
-		urlMappingJasaPondasiTapakFromSub2MoneyPage,
+		urlMappingJasaPondasiTapakFromMoneyPageMoneyChild,
 		urlMappingJasaPondasiTiangPancangFromSub2MoneyPage,
 		urlMappingJasaPondasiSumuranFromSub2MoneyPage		
     );
@@ -2119,7 +2119,7 @@ if (urlMappingJasaPondasiCakarAyamFromMoneyPageMoneyChild[cleanUrlJasaPondasiPer
    }
    */
 	
-    if (urlMappingJasaPondasiTapakFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+    if (urlMappingJasaPondasiTapakFromMoneyPageMoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
         restoreCondition('JasaPondasiTapakPost');
@@ -2168,9 +2168,23 @@ if (urlMappingJasaPondasiCakarAyamFromMoneyPageMoneyChild[cleanUrlJasaPondasiPer
         JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPondasiCakarAyam
         JasaPondasiTapakPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiTapakFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
+        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiTapakFromMoneyPageMoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
+		
+	generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
+        urlMappingJasaPondasiTapakFromMoneyPageMoneyChild,
+        cleanUrlJasaPondasiPerkuatanTanahKonsPost,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi-perkuatan-tanah.html' },
+			{ name: 'Perbandingan Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/perbandingan-pondasi-perkuatan-tanah.html' },
+			{ name: 'Jasa Pondasi Tapak', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi-tapak.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+	
     }
-
+/*
 // ✅ Tambahkan JSON-LD Breadcrumb otomatis
    if (urlMappingJasaPondasiTapakFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
        const jsonLDBreadcrumb = {
@@ -2221,7 +2235,8 @@ if (urlMappingJasaPondasiCakarAyamFromMoneyPageMoneyChild[cleanUrlJasaPondasiPer
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
- 
+ */
+	
 if (urlMappingJasaPondasiTiangPancangFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
