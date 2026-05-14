@@ -80,7 +80,7 @@ const urlMappingJasaBoronganPondasiFromMoneyPageMoneyChild = {
 // Parent: Jasa Pondasi Bangunan (SUB2)
 // ============================================================
 
-const urlMappingJasaPondasiCakarAyamFromSub2MoneyPage = {
+const urlMappingJasaPondasiCakarAyamFromMoneyPageMoneyChild = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam.html": "Jasa Pondasi Cakar Ayam",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-cakar-ayam.html": "Harga Jasa Pondasi Cakar Ayam",  // TYPE: MONEY_PAGE
@@ -1367,7 +1367,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlMappingGabungan = Object.assign(
       {},
 		urlMappingJasaBoronganPondasiFromMoneyPageMoneyChild,
-		urlMappingJasaPondasiCakarAyamFromSub2MoneyPage,
+		urlMappingJasaPondasiCakarAyamFromMoneyPageMoneyChild,
 		urlMappingJasaPondasiTapakFromSub2MoneyPage,
 		urlMappingJasaPondasiTiangPancangFromSub2MoneyPage,
 		urlMappingJasaPondasiSumuranFromSub2MoneyPage		
@@ -1928,6 +1928,7 @@ if (urlMappingJasaBoronganPondasiFromMoneyPageMoneyChild[cleanUrlJasaPondasiPerk
         'JASA_KONSTRUKSI'
     );
 }
+	/*
 // ✅ Tambahkan JSON-LD Breadcrumb otomatis
    if (urlMappingJasaPondasiFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
        const jsonLDBreadcrumb = {
@@ -1972,7 +1973,9 @@ if (urlMappingJasaBoronganPondasiFromMoneyPageMoneyChild[cleanUrlJasaPondasiPerk
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-if (urlMappingJasaPondasiCakarAyamFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+   */
+	
+if (urlMappingJasaPondasiCakarAyamFromMoneyPageMoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
         restoreCondition('JasaPondasiBangunanSubPost');
         restoreCondition('JasaPondasiCakarAyamPost');
@@ -2036,9 +2039,22 @@ if (urlMappingJasaPondasiCakarAyamFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatan
         JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
 	//TAMPILKAN JasaPondasiCakarAyam
         JasaPondasiCakarAyamPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiCakarAyamFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
-    }
-    
+        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiCakarAyamFromMoneyPageMoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
+	
+	generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
+        urlMappingJasaPondasiCakarAyamFromMoneyPageMoneyChild,
+        cleanUrlJasaPondasiPerkuatanTanahKonsPost,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi-perkuatan-tanah.html' },
+			{ name: 'Perbandingan Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/perbandingan-pondasi-perkuatan-tanah.html' },
+			{ name: 'Jasa Pondasi Cakar Ayam', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi-cakar-ayam.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+    /*
 // ✅ Tambahkan JSON-LD Breadcrumb otomatis
    if (urlMappingJasaPondasiCakarAyamFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
        const jsonLDBreadcrumb = {
@@ -2089,6 +2105,7 @@ if (urlMappingJasaPondasiCakarAyamFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatan
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
+   */
 	
     if (urlMappingJasaPondasiTapakFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         restoreCondition('JasaKonsPondasiTanahPost');
