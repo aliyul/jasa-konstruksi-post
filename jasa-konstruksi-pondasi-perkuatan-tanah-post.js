@@ -102,13 +102,19 @@ const urlMappingJasaPondasiCakarAyamFromMoneyPageMoneyChild = {
 // Parent: Jasa Pondasi Bangunan (SUB2)
 // ============================================================
 
-const urlMappingJasaPondasiTapakFromSub2MoneyPage = {
+const urlMappingJasaPondasiTapakFromMoneyPageMoneyChild = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak.html": "Jasa Pondasi Tapak",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tapak.html": "Harga Jasa Pondasi Tapak",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak-per-meter.html": "Jasa Pondasi Tapak Per Meter",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak-jakarta.html": "Jasa Pondasi Tapak Jakarta",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak-bandung.html": "Jasa Pondasi Tapak Bandung",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak-jakarta.html": "Jasa Pondasi Tapak Jakarta",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak-bogor.html": "Jasa Pondasi Tapak Bogor",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak-depok.html": "Jasa Pondasi Tapak Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak-Tangerang.html": "Jasa Pondasi Tapak Tangerang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak-bekasi.html": "Jasa Pondasi Tapak Bekasi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak-karawang.html": "Jasa Pondasi Tapak Karawang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak-cianjur.html": "Jasa Pondasi Tapak Cianjur",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak-bandung.html": "Jasa Pondasi Tapak Bandung"  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
