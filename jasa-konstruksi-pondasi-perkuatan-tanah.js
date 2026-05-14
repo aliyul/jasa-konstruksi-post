@@ -85,7 +85,7 @@ const urlMappingJasaPondasiFromSub1MoneyPage = {
   "https://www.betonjayareadymix.com/p/harga-jasa-pemasangan-tiang-pancang.html": "Harga Jasa Pemasangan Tiang Pancang",  // TYPE: MONEY_PAGE
 	
   "https://www.betonjayareadymix.com/p/jasa-pondasi-sumuran.html": "Jasa Pondasi Sumuran", // TYPE: MONEY_PAGE
-	
+  "https://www.betonjayareadymix.com/p/harga-jasa-pondasi-sumuran.html": "Harga Jasa Pondasi Sumuran", // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-pondasi.html": "Jasa Pondasi",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/borongan-pondasi.html": "Borongan Pondasi",  // TYPE: MONEY_PAGE
