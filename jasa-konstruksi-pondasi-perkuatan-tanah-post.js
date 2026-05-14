@@ -86,12 +86,12 @@ const urlMappingJasaPondasiCakarAyamFromMoneyPageMoneyChild = {
   // "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-cakar-ayam.html": "Harga Jasa Pondasi Cakar Ayam",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam-per-meter.html": "Jasa Pondasi Cakar Ayam Per Meter",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam-jakarta.html": "Jasa Pondasi Cakar Ayam Jakarta",  // TYPE: MONEY_CHILD
-	 "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam-jakarta.html": "Jasa Pondasi Cakar Ayam Jakarta",  // TYPE: MONEY_CHILD
 	 "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam-bogor.html": "Jasa Pondasi Cakar Ayam Bogor",  // TYPE: MONEY_CHILD
 	 "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam-depok.html": "Jasa Pondasi Cakar Ayam Depok",  // TYPE: MONEY_CHILD
 	 "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam-tangerang.html": "Jasa Pondasi Cakar Ayam Tangerang",  // TYPE: MONEY_CHILD
 	 "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam-bekasi.html": "Jasa Pondasi Cakar Ayam Bekasi",  // TYPE: MONEY_CHILD
 	 "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam-karawang.html": "Jasa Pondasi Cakar Ayam Karawang",  // TYPE: MONEY_CHILD
+	 "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam-cianjur.html": "Jasa Pondasi Cakar Ayam Cianjur",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam-bandung.html": "Jasa Pondasi Cakar Ayam Bandung",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-cakar-ayam-terdekat.html": "Jasa Pondasi Cakar Ayam Terdekat"  // TYPE: MONEY_CHILD
 };
