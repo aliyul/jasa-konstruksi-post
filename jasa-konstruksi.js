@@ -3096,7 +3096,7 @@ if (urlMappingSewaAlatRinganFromSub2Sub1[cleanUrlJasaKons]) {
         ],
         'SEWA_RENTAL'
     );
-)
+ }
 if (urlMappingSewaAlatProyekFromSub1MoneyMaster[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	//restoreCondition('JasaKonstruksi');
