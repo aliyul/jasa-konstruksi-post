@@ -179,12 +179,6 @@ const urlMappingSewaAlatFromPillarSub2 = {
 const urlMappingSewaAlatProyekFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html": "Perbandingan Sewa Alat Proyek"  // TYPE: SUB1 PARENT
 };
-const urlMappingSewaAlatRinganFromSub2Sub1 = {
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html": "Perbandingan Sewa Alat Ringan"  // TYPE: SUB1 PARENT
-};
-const urlMappingSewaAlatPendukungFromSub2Sub1 = {
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pendukung.html": "Perbandingan Sewa Alat Pendukung"  // TYPE: SUB1 PARENT
-};
 const urlMappingSewaAlatProyekFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html": "Harga Sewa Alat Proyek"  // TYPE: MoneyMaster
 };
@@ -257,7 +251,9 @@ const urlMappingSewaAlatRinganFromSub2Sub1 = {
 const urlMappingSewaAlatRinganFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/harga-sewa-alat-ringan.html": "Harga Sewa Alat Ringan"  // TYPE: MoneyMaster PARENT
 };
-
+const urlMappingSewaAlatPendukungFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pendukung.html": "Perbandingan Sewa Alat Pendukung"  // TYPE: SUB1 PARENT
+};
 // [MONEY_PAGE] - SEWA PER JENIS ALAT BERAT (ENTITY SEWA/RENTAL - MONEY_PAGE)
 const urlMappingSewaAlatBeratFromSub1MoneyPage = {
 	/*hapus pindah ke post aja
@@ -1791,7 +1787,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaAlatRinganFromSub1MoneyMaster,
 		
 		urlMappingSewaAlatKonstruksiRinganFromSub1MoneyPage,
-	   
+
+		urlMappingSewaAlatPendukungFromSub2Sub1,
+		
         urlMappingInfrastrukturFromSub1MoneyPage,
 		urlMappingPerawatanPerbaikanBangunanFromSub1MoneyPage,
 		urlMappingRenovasiFromSub1MoneyPage,
@@ -3071,7 +3069,30 @@ if (urlMappingSewaAlatProyekFromSub2Sub1[cleanUrlJasaKons]) {
         'SEWA_RENTAL'
     );
  }
-
+if (urlMappingSewaAlatRinganFromSub2Sub1[cleanUrlJasaKons]) {
+   	   generateBreadcrumbJasaKonstruksi(
+        urlMappingSewaAlatRinganFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+)
+	if (urlMappingSewaAlatPendukungFromSub2Sub1[cleanUrlJasaKons]) {
+   	   generateBreadcrumbJasaKonstruksi(
+        urlMappingSewaAlatPendukungFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Pendukung', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-pendukung.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+)
 if (urlMappingSewaAlatProyekFromSub1MoneyMaster[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	//restoreCondition('JasaKonstruksi');
