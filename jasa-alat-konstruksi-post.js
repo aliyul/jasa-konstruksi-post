@@ -92,7 +92,7 @@ const urlMappingSewaAlatPendukungFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/2019/03/sewa-tangki-air.html": "Sewa Tangki Air",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/03/sewa-selang-proyek.html": "Sewa Selang Proyek",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/03/sewa-pipa-proyek.html": "Sewa Pipa Proyek"  // TYPE: MONEY_PAGE
-)
+};
 	
 const urlMappingSewaAlatProyekFromMoneyMasterMoneyPage = {
  
