@@ -254,6 +254,9 @@ const urlMappingSewaAlatRinganFromSub1MoneyMaster = {
 const urlMappingSewaAlatPendukungFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pendukung.html": "Perbandingan Sewa Alat Pendukung"  // TYPE: SUB1 PARENT
 };
+const urlMappingSewaAlatPendukungFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/harga-sewa-alat-pendukung.html": "Harga Sewa Alat Pendukung"  // TYPE: MoneyMaster
+};
 // [MONEY_PAGE] - SEWA PER JENIS ALAT BERAT (ENTITY SEWA/RENTAL - MONEY_PAGE)
 const urlMappingSewaAlatBeratFromSub1MoneyPage = {
 	/*hapus pindah ke post aja
@@ -1789,6 +1792,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaAlatKonstruksiRinganFromSub1MoneyPage,
 
 		urlMappingSewaAlatPendukungFromSub2Sub1,
+		urlMappingSewaAlatPendukungFromSub1MoneyMaster,
 		
         urlMappingInfrastrukturFromSub1MoneyPage,
 		urlMappingPerawatanPerbaikanBangunanFromSub1MoneyPage,
@@ -3161,7 +3165,34 @@ if (urlMappingSewaAlatProyekFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'SEWA_RENTAL'
     );
  }
+if (urlMappingSewaAlatRinganFromSub1MoneyMaster[cleanUrlJasaKons]) {
+    generateBreadcrumbJasaKonstruksi(
+        urlMappingSewaAlatRinganFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' }
+        ],
+        'SEWA_RENTAL'
+    );
 
+}
+if (urlMappingSewaAlatPendukungFromSub1MoneyMaster[cleanUrlJasaKons]) {
+    generateBreadcrumbJasaKonstruksi(
+        urlMappingSewaAlatPendukungFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Pendukung', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-pendukung.html' },
+            { name: 'Perbandingan Sewa Alat Pendukung', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pendukung.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+
+}
 if (urlMappingSewaAlatBeratFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingSewaAlatBeratFromSub2Sub1[cleanUrlJasaKons];
 
