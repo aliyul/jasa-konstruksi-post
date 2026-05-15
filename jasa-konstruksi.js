@@ -3084,7 +3084,7 @@ if (urlMappingSewaAlatRinganFromSub2Sub1[cleanUrlJasaKons]) {
         ],
         'SEWA_RENTAL'
     );
-)
+ }
 	if (urlMappingSewaAlatPendukungFromSub2Sub1[cleanUrlJasaKons]) {
    	   generateBreadcrumbJasaKonstruksi(
         urlMappingSewaAlatPendukungFromSub2Sub1,
