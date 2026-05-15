@@ -170,6 +170,10 @@ const urlMappingJasaPondasiSumuranFromMoneyPageMoneyChild = {
   // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-per-meter.html": "Jasa Pondasi Sumuran Per Meter",  // TYPE: MONEY_CHILD
    "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-jakarta.html": "Jasa Pondasi Sumuran Jakarta",  // TYPE: MONEY_CHILD
    "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-bogor.html": "Jasa Pondasi Sumuran Bogor",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-depok.html": "Jasa Pondasi Sumuran Depok",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-tangerang.html": "Jasa Pondasi Sumuran Tangerang",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-bekasi.html": "Jasa Pondasi Sumuran Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-karawang.html": "Jasa Pondasi Sumuran Karawang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-bandung.html": "Jasa Pondasi Sumuran Bandung",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran-terdekat.html": "Jasa Pondasi Sumuran Terdekat" // TYPE: MONEY_CHILD
 };
