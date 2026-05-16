@@ -61,6 +61,19 @@ const urlMappingSewaAlatKonstruksiFromPillarSub2 = {
 // Breadcrumb: Home > Sewa Alat Konstruksi > Sewa Alat Proyek > [Nama Alat] (4 level)
 // ============================================================
 const urlMappingSewaAlatPendukungFromMoneyMasterMoneyPage = {
+ "https://www.betonjayareadymix.com/p/sewa-pompa-dewatering-proyek.html": "Sewa Pompa Dewatering Proyek",
+    "https://www.betonjayareadymix.com/p/sewa-alat-survey-pengukuran.html": "Sewa Alat Survey Pengukuran",
+    "https://www.betonjayareadymix.com/p/sewa-akses-keamanan-proyek.html": "Sewa Akses Keamanan Proyek",
+    "https://www.betonjayareadymix.com/p/sewa-alat-bor-ground-work.html": "Sewa Alat Bor Ground Work",
+    "https://www.betonjayareadymix.com/p/sewa-mesin-pompa-air.html": "Sewa Mesin Pompa Air",
+    "https://www.betonjayareadymix.com/p/sewa-pompa-air-diesel.html": "Sewa Pompa Air Diesel",
+    "https://www.betonjayareadymix.com/p/sewa-pompa-air-kapasitas-besar.html": "Sewa Pompa Air Kapasitas Besar",
+    "https://www.betonjayareadymix.com/p/sewa-pompa-air-banjir.html": "Sewa Pompa Air Banjir",
+    "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur-diesel.html": "Sewa Pompa Lumpur Diesel",
+    "https://www.betonjayareadymix.com/p/sewa-pompa-sedot-lumpur.html": "Sewa Pompa Sedot Lumpur",
+    "https://www.betonjayareadymix.com/p/sewa-bak-air-proyek.html": "Sewa Bak Air Proyek"
+
+/*
  // ============================================================
   // [MONEY_PAGE] - SEWA ALAT PROYEK PER JENIS
   // 🧠 TYPE: MONEY_PAGE (WAJIB tampil, intent transaksional 85%)
@@ -92,6 +105,7 @@ const urlMappingSewaAlatPendukungFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/2019/03/sewa-tangki-air.html": "Sewa Tangki Air",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/03/sewa-selang-proyek.html": "Sewa Selang Proyek",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/03/sewa-pipa-proyek.html": "Sewa Pipa Proyek"  // TYPE: MONEY_PAGE
+  */
 };
 	
 const urlMappingSewaAlatProyekFromMoneyMasterMoneyPage = {
