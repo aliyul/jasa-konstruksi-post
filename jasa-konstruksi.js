@@ -1923,39 +1923,51 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // ============================================================
-    // 📌 TUNGGU PAGE LEVEL DETECTOR v18 READY
     // ============================================================
-    function waitForPageLevelDetector() {
-      return new Promise((resolve) => {
-        // Cek v18
-        if (window.__pageLevelDetectorV18Ready && window.pageLevelDetectorV18) {
-          console.log("✅ Page Level Detector v18 already ready");
-          resolve(true);
-          return;
-        }
-        // Cek v17 (fallback)
-        if (window.__pageLevelDetectorV17Ready && window.pageLevelDetectorV17) {
-          console.log("✅ Page Level Detector v17 already ready");
-          resolve(true);
-          return;
-        }
-        // Event listener untuk v18
-        window.addEventListener("pageLevelDetectorV18Ready", () => {
-          console.log("✅ Page Level Detector v18 ready (event)");
-          resolve(true);
-        }, { once: true });
-        // Fallback timeout 5 detik
-        setTimeout(() => {
-          if (window.pageLevelDetectorV18 || window.pageLevelDetectorV17 || window.pageLevelDetector) {
-            console.log("✅ Page Level Detector ready (timeout fallback)");
-            resolve(true);
-          } else {
-            console.warn("⚠️ PageLevelDetector timeout, using defaults");
-            resolve(false);
-          }
-        }, 5000);
-      });
+// 📌 TUNGGU PAGE LEVEL DETECTOR v19 READY
+// ============================================================
+function waitForPageLevelDetector() {
+  return new Promise((resolve) => {
+    // Cek v19
+    if (window.__pageLevelDetectorV19Ready && window.pageLevelDetectorV19) {
+      console.log("✅ Page Level Detector v19 already ready");
+      resolve(true);
+      return;
     }
+    // Cek v18 (fallback)
+    if (window.__pageLevelDetectorV18Ready && window.pageLevelDetectorV18) {
+      console.log("✅ Page Level Detector v18 already ready");
+      resolve(true);
+      return;
+    }
+    // Cek v17 (fallback)
+    if (window.__pageLevelDetectorV17Ready && window.pageLevelDetectorV17) {
+      console.log("✅ Page Level Detector v17 already ready");
+      resolve(true);
+      return;
+    }
+    // Event listener untuk v19
+    window.addEventListener("pageLevelDetectorV19Ready", () => {
+      console.log("✅ Page Level Detector v19 ready (event)");
+      resolve(true);
+    }, { once: true });
+    // Fallback untuk v18
+    window.addEventListener("pageLevelDetectorV18Ready", () => {
+      console.log("✅ Page Level Detector v18 ready (event fallback)");
+      resolve(true);
+    }, { once: true });
+    // Fallback timeout 5 detik
+    setTimeout(() => {
+      if (window.pageLevelDetectorV19 || window.pageLevelDetectorV18 || window.pageLevelDetectorV17 || window.pageLevelDetector) {
+        console.log("✅ Page Level Detector ready (timeout fallback)");
+        resolve(true);
+      } else {
+        console.warn("⚠️ PageLevelDetector timeout, using defaults");
+        resolve(false);
+      }
+    }, 5000);
+  });
+}
 
     // ============================================================
     // 📌 TUNGGU DETECT EVERGREEN READY
