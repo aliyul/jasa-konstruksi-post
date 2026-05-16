@@ -1864,11 +1864,11 @@ document.addEventListener("DOMContentLoaded", function() {
       return;
     }
 	
-  	/* ============================================================
- 🔥 Hybrid Date Modified v7.3 — UNTUK betonjayareadymix.com
+ /* ============================================================
+ 🔥 Hybrid Date Modified v7.4 — UNTUK betonjayareadymix.com
+    ✅ FIX: Support Page Level Detector v19.0
+    ✅ FIX: Event listener untuk v19, v18, v17 (multiple version support)
     ✅ FIX: 'home' TIDAK termasuk EVERGREEN_LEVELS (homepage dinamis)
-    ✅ FIX: Page Level Detector v18.2 (sinkron dengan sistem terbaru)
-    ✅ FIX: Event listener untuk v18
     ✅ FIX: KATEGORISASI YANG BENAR:
         - EVERGREEN: pillar, sub-pillar-tipe-2, variant, sub-variant
         - FLEXIBLE: sub-pillar-tipe-1 (perbandingan)
@@ -1923,51 +1923,50 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // ============================================================
+    // 📌 TUNGGU PAGE LEVEL DETECTOR READY (MULTI VERSION SUPPORT) 🔥
     // ============================================================
-// 📌 TUNGGU PAGE LEVEL DETECTOR v19 READY
-// ============================================================
-function waitForPageLevelDetector() {
-  return new Promise((resolve) => {
-    // Cek v19
-    if (window.__pageLevelDetectorV19Ready && window.pageLevelDetectorV19) {
-      console.log("✅ Page Level Detector v19 already ready");
-      resolve(true);
-      return;
+    function waitForPageLevelDetector() {
+      return new Promise((resolve) => {
+        // Cek v19
+        if (window.__pageLevelDetectorV19Ready && window.pageLevelDetectorV19) {
+          console.log("✅ Page Level Detector v19 already ready");
+          resolve(true);
+          return;
+        }
+        // Cek v18 (fallback)
+        if (window.__pageLevelDetectorV18Ready && window.pageLevelDetectorV18) {
+          console.log("✅ Page Level Detector v18 already ready");
+          resolve(true);
+          return;
+        }
+        // Cek v17 (fallback)
+        if (window.__pageLevelDetectorV17Ready && window.pageLevelDetectorV17) {
+          console.log("✅ Page Level Detector v17 already ready");
+          resolve(true);
+          return;
+        }
+        // Event listener untuk v19
+        window.addEventListener("pageLevelDetectorV19Ready", () => {
+          console.log("✅ Page Level Detector v19 ready (event)");
+          resolve(true);
+        }, { once: true });
+        // Event listener untuk v18 (fallback)
+        window.addEventListener("pageLevelDetectorV18Ready", () => {
+          console.log("✅ Page Level Detector v18 ready (event fallback)");
+          resolve(true);
+        }, { once: true });
+        // Fallback timeout 5 detik
+        setTimeout(() => {
+          if (window.pageLevelDetectorV19 || window.pageLevelDetectorV18 || window.pageLevelDetectorV17 || window.pageLevelDetector) {
+            console.log("✅ Page Level Detector ready (timeout fallback)");
+            resolve(true);
+          } else {
+            console.warn("⚠️ PageLevelDetector timeout, using defaults");
+            resolve(false);
+          }
+        }, 5000);
+      });
     }
-    // Cek v18 (fallback)
-    if (window.__pageLevelDetectorV18Ready && window.pageLevelDetectorV18) {
-      console.log("✅ Page Level Detector v18 already ready");
-      resolve(true);
-      return;
-    }
-    // Cek v17 (fallback)
-    if (window.__pageLevelDetectorV17Ready && window.pageLevelDetectorV17) {
-      console.log("✅ Page Level Detector v17 already ready");
-      resolve(true);
-      return;
-    }
-    // Event listener untuk v19
-    window.addEventListener("pageLevelDetectorV19Ready", () => {
-      console.log("✅ Page Level Detector v19 ready (event)");
-      resolve(true);
-    }, { once: true });
-    // Fallback untuk v18
-    window.addEventListener("pageLevelDetectorV18Ready", () => {
-      console.log("✅ Page Level Detector v18 ready (event fallback)");
-      resolve(true);
-    }, { once: true });
-    // Fallback timeout 5 detik
-    setTimeout(() => {
-      if (window.pageLevelDetectorV19 || window.pageLevelDetectorV18 || window.pageLevelDetectorV17 || window.pageLevelDetector) {
-        console.log("✅ Page Level Detector ready (timeout fallback)");
-        resolve(true);
-      } else {
-        console.warn("⚠️ PageLevelDetector timeout, using defaults");
-        resolve(false);
-      }
-    }, 5000);
-  });
-}
 
     // ============================================================
     // 📌 TUNGGU DETECT EVERGREEN READY
@@ -1994,17 +1993,18 @@ function waitForPageLevelDetector() {
     // 📌 LOAD ALL SCRIPTS
     // ============================================================
     async function loadAllScripts() {
-      // Gunakan Page Level Detector v18.2 (terbaru)
+      // Gunakan Page Level Detector v19.0 (terbaru)
       const PAGE_LEVEL_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/PageLevelDetector.js";
       const EVERGREEN_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/SmartEvergreenDetector.js";
       
-      if (typeof window.pageLevelDetectorV18 === "undefined" && 
+      if (typeof window.pageLevelDetectorV19 === "undefined" && 
+          typeof window.pageLevelDetectorV18 === "undefined" &&
           typeof window.pageLevelDetectorV17 === "undefined" &&
           typeof window.pageLevelDetector === "undefined") {
-        console.log("⏳ Loading Page Level Detector v18.2...");
+        console.log("⏳ Loading Page Level Detector v19.0...");
         await loadExternalJS(PAGE_LEVEL_DETECTOR_URL);
         await waitForPageLevelDetector();
-        console.log("✅ Page Level Detector v18.2 READY");
+        console.log("✅ Page Level Detector v19.0 READY");
       }
       
       if (typeof window.detectEvergreen !== "function") {
@@ -2078,48 +2078,15 @@ function waitForPageLevelDetector() {
           return "2026-04-01T10:30:00+07:00";
         }
         // sub-pillar-tipe-2, variant, sub-variant
-
-        return "2026-05-08T00:00:00+07:00";
+        return "2026-04-02T00:00:00+07:00";
       }
-              /*
-		        // JASA ALAT KONSTRUKSI POST : Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-03T00:00:00+07:00";
-		          // JASA KONSTRUKSI STRUKTUR: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-04T00:00:00+07:00";
-		          // JASA KONSTRUKSI PERBAIKAN: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-05T00:00:00+07:00";
-		          // JASA KONSTRUKSI PEMBATAS: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-06T00:00:00+07:00";
-		          // JASA KONSTRUKSI FINISHING: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-07T00:00:00+07:00";
-		          // JASA KONSTRUKSI PONDASI PERKUATAN TANAH: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-08T00:00:00+07:00";
-		  // JASA KONSTRUKSI JALAN PERKERASAN: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-09T00:00:00+07:00";
-		  // JASA KONSTRUKSI STRUKTUR POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-10T00:00:00+07:00";
-		  // JASA KONSTRUKSI PONDASI PERKUATAN TANAH POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-11T00:00:00+07:00";
-		  // JASA KONSTRUKSI PERBAIKAN POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-12T00:00:00+07:00";
-		  // JASA KONSTRUKSI PEMBATAS POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-13T00:00:00+07:00";
-		  // JASA KONSTRUKSI JALAN PERKERASAN POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-14T00:00:00+07:00";
-		  // JASA KONSTRUKSI FINISHING POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-15T00:00:00+07:00";
-
-		  // JASA KONSTRUKSI BONGKAR BANGUNAN POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-17T00:00:00+07:00";
-		  */
+      
       // ============================================================
       // LEVEL 2: FLEXIBLE (sub-pillar-tipe-1 - Perbandingan)
       // Semi evergreen, update lebih sering dari pillar
       // ============================================================
       if (FLEXIBLE_LEVELS.includes(pageLevel)) {
-           		  // JASA KONSTRUKSI CUTTING BETON POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-		
-        return "2026-05-08T00:00:00+07:00";
+        return "2026-04-15T00:00:00+07:00";
       }
       
       // ============================================================
@@ -2166,16 +2133,21 @@ function waitForPageLevelDetector() {
     await new Promise(resolve => setTimeout(resolve, 200));
     
     // ============================================================
-    // 🔥 DAPATKAN PAGE LEVEL DARI DETECTOR (PRIORITAS v18 > v17 > legacy)
+    // 🔥 DAPATKAN PAGE LEVEL DARI DETECTOR (PRIORITAS v19 > v18 > v17 > legacy)
     // ============================================================
     let pageLevel = 'pillar';
     let entityType = 'produk';
     let detectorVersion = 'unknown';
     
-    if (window.pageLevelDetectorV18) {
+    if (window.pageLevelDetectorV19) {
+      pageLevel = window.pageLevelDetectorV19.detect();
+      entityType = window.pageLevelDetectorV19.detectEntityType();
+      detectorVersion = 'v19.0';
+      console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
+    } else if (window.pageLevelDetectorV18) {
       pageLevel = window.pageLevelDetectorV18.detect();
       entityType = window.pageLevelDetectorV18.detectEntityType();
-      detectorVersion = 'v18.2';
+      detectorVersion = 'v18.7';
       console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
     } else if (window.pageLevelDetectorV17) {
       pageLevel = window.pageLevelDetectorV17.detect();
