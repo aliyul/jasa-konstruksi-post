@@ -200,7 +200,7 @@ const urlMappingSewaAlatBeratFromSub2Sub1 = {
    "https://www.betonjayareadymix.com/p/durasi-sewa-alat-berat.html": "Durasi Sewa Alat Berat"  // TYPE: SUB1 pendukung
 };
 const urlMappingSewaAlatBeratFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/harga-sewa-alat-berat.html": "Harga Sewa Alat Berat",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-alat-berat.html": "Harga Sewa Alat Berat",  // TYPE: MoneyMaster PARENT
   "https://www.betonjayareadymix.com/p/harga-sewa-excavator.html": "Harga Sewa Excavator",  // TYPE: MoneyMaster PARENT
  // "https://www.betonjayareadymix.com/p/harga-sewa-beko.html": "Harga Sewa Beko",  // TYPE: MoneyMaster PARENT
   "https://www.betonjayareadymix.com/p/harga-sewa-forklift.html": "Harga Sewa Forklift",  // TYPE: MoneyMaster PARENT
@@ -780,34 +780,31 @@ const urlMappingCustom = {
 };
 */
 
+
 /**
- * generateBreadcrumbForMapping v5.8 — COMPLETE PHASE SYSTEM WITH ENTITY PILLAR EXACT MATCH
- * ✅ FIX: PRIORITAS MONEY: HARGA dulu, baru SEWA (sinkron dengan v5.9)
+ * generateBreadcrumbForMapping v6.0 — FINAL HIERARCHY WITH ENTITY PILLAR EXACT MATCH
+ * ✅ FIX: SEWA tanpa "harga" → MONEY MASTER (L4)
+ * ✅ FIX: SEWA dengan "harga" → MONEY PAGE (L5)
+ * ✅ FIX: "sewa excavator" → money-master (L4)
+ * ✅ FIX: "harga sewa excavator" → money-page (L5)
+ * ✅ FIX: PRIORITAS MONEY: HARGA dulu, baru SEWA
  * ✅ FIX: LOCATION_WHITELIST ditambah karawang, cikarang, purwakarta, dll
  * ✅ FIX: ENTITY PILLAR hanya EXACT MATCH berdasarkan CLEAN URL
- * ✅ FIX: "produk konstruksi" → PILLAR (L1)
- * ✅ FIX: "standar mutu produk konstruksi" → VARIANT (L7) BUKAN pillar
- * ✅ FIX: "jasa konstruksi" → PILLAR (L1)
- * ✅ FIX: "jasa konstruksi gedung sekolah" → MONEY_PAGE (L5) BUKAN pillar
- * ✅ FIX: "Sewa Alat Konstruksi" → PILLAR (L1)
- * ✅ FIX: "Produk Konstruksi", "Produk Interior" → PILLAR (L1)
- * ✅ FIX: "Material Konstruksi" → PILLAR (L1)
- * ✅ ENTITY PILLAR KEYWORDS untuk setiap entity type (EXACT MATCH)
  * ✅ VARIANT_KEYWORDS ditambah: standar, mutu, kualitas, quality, spec
- * ✅ SINKRON DENGAN Page Level Detector v18.7 dan AUTO-SCHEMA v5.9
+ * ✅ SINKRON DENGAN Page Level Detector v19.0 dan AUTO-SCHEMA v6.0
  * ✅ PRIORITAS DETEKSI:
  *    0. HOMEPAGE
  *    1. ENTITY PILLAR (EXACT MATCH dari CLEAN URL) 🔥
- *    2. INFORMASIONAL (panduan, cara, tips) → PILLAR
- *    3. PERBANDINGAN (vs, versus) → SP1
- *    4. JENIS/MACAM/DAFTAR (jenis, macam, daftar) → SP2
- *    5. MONEY (harga, biaya, tarif, sewa, rental) → HARGA dulu, baru SEWA 🔥
+ *    2. MONEY (harga, biaya, tarif, sewa, rental) → HARGA dulu, baru SEWA 🔥
+ *    3. INFORMASIONAL (panduan, cara, tips) → PILLAR
+ *    4. PERBANDINGAN (vs, versus) → SP1
+ *    5. JENIS/MACAM/DAFTAR (jenis, macam, daftar) → SP2
  *    6. JASA/SEWA (tanpa keyword harga & bukan entity pillar) → MONEY_PAGE
  *    7. SUB-VARIANT (2+ parameter spesifikasi)
  *    8. VARIANT (spesifikasi, ukuran, standar, mutu, dll)
  *    9. DEFAULT → PILLAR
  * 
- * @version 5.8.0
+ * @version 6.0.0
  * @date 2026-01-15
  */
 
@@ -840,9 +837,9 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
         'pillar',                    // Level 1 - PILLAR
         'sub-pillar-tipe-2',         // Level 2 - JENIS/MACAM/DAFTAR
         'sub-pillar-tipe-1',         // Level 3 - PERBANDINGAN
-        'money-master',              // Level 4 - HARGA NASIONAL
-        'money-page',                // Level 5 - HARGA PRODUK SPESIFIK / JASA
-        'money-child',               // Level 6 - HARGA + LOKASI
+        'money-master',              // Level 4 - ENTITY MASTER (SEWA tanpa harga)
+        'money-page',                // Level 5 - COMMERCIAL SUPPORT (SEWA dengan harga)
+        'money-child',               // Level 6 - LOKASI PRICE PAGE / LOKASI MONEY PAGE
         'variant',                   // Level 7 - SPESIFIKASI
         'sub-variant'                // Level 8 - DETAIL TEKNIS
     ];
@@ -936,7 +933,7 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
         'JASA_DESAIN_INTERIOR': ['jasa desain interior', 'jasa interior', 'desain interior'],
         'JASA': ['jasa konstruksi', 'layanan konstruksi', 'jasa bangunan', 'jasa kontraktor', 'jasa pemborong', 'jasa renovasi'],
         
-        'SEWA': ['sewa alat konstruksi', 'sewa alat berat', 'rental alat berat', 'sewa alat bangunan', 'rental konstruksi', 'sewa excavator'],
+        'SEWA': ['sewa alat konstruksi', 'sewa alat berat', 'rental alat berat', 'sewa alat bangunan', 'rental konstruksi'],
         'RENTAL': ['rental alat berat', 'sewa alat konstruksi'],
         'SEWA_RENTAL': ['sewa alat konstruksi', 'rental alat berat'],
         'SEWA_ALAT': ['sewa alat konstruksi', 'sewa alat berat'],
@@ -1151,13 +1148,17 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
             'sub-pillar-tipe-2': { primary: 'informasional', secondary: 'komersial', dominance: 60 },
             'sub-pillar-tipe-1': { primary: 'komersial', secondary: 'informasional', dominance: 70 },
             'variant': { primary: 'komersial', secondary: 'informasional', dominance: 80 },
-            'sub-variant': { primary: 'komersial', secondary: 'informasional', dominance: 70 }
+            'sub-variant': { primary: 'komersial', secondary: 'informasional', dominance: 70 },
+            'money-master': { primary: 'komersial', secondary: 'transaksional', dominance: 70 },
+            'money-page': { primary: 'transaksional', secondary: 'komersial', dominance: 75 },
+            'money-child': { primary: 'transaksional', secondary: 'komersial', dominance: 80 }
         };
         
         if (intentMap[pageType]) return intentMap[pageType];
         
         if (pageType === 'money-master') {
             if (isJasaEntity()) return { primary: 'komersial', secondary: 'transaksional', dominance: 60 };
+            if (isSewaEntity()) return { primary: 'komersial', secondary: 'transaksional', dominance: 70 };
             return { primary: 'transaksional', secondary: 'komersial', dominance: 80 };
         }
         
@@ -1290,14 +1291,21 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
                     return 'money-page';
                 }
                 
-                // 🔥 KHUSUS SEWA: hitung wordCount
+                // 🔥 KHUSUS SEWA: aturan final
                 if (isSewaEntity()) {
-                    if (wordCount <= 2) {
-                        console.log(`  → SEWA money-master (${wordCount} kata) → money-master (L4)`);
-                        return 'money-master';
-                    } else {
-                        console.log(`  → SEWA money-page (${wordCount} kata) → money-page (L5)`);
+                    if (kw === 'harga' || kw === 'biaya' || kw === 'tarif') {
+                        // SEWA dengan harga → money-page (L5)
+                        console.log(`  → SEWA dengan "${kw}" → money-page (L5)`);
                         return 'money-page';
+                    } else if (kw === 'sewa' || kw === 'rental') {
+                        // SEWA tanpa harga: wordCount menentukan
+                        if (wordCount <= 2) {
+                            console.log(`  → SEWA money-master (${wordCount} kata) → money-master (L4)`);
+                            return 'money-master';
+                        } else {
+                            console.log(`  → SEWA money-page (${wordCount} kata) → money-page (L5)`);
+                            return 'money-page';
+                        }
                     }
                 }
                 
@@ -1358,51 +1366,24 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
                                    'renovasi', 'bangun', 'konsultasi', 'survey', 'estimasi'];
             for (const kw of jasaKeywords) {
                 if (lowerName.includes(kw)) {
-                    // Double-check SP2
-                    for (const sp2kw of SP2_KEYWORDS) {
-                        if (lowerName.includes(sp2kw)) {
-                            console.log(`  📚 JASA + SP2 (${sp2kw}) → sub-pillar-tipe-2 (L2)`);
-                            return 'sub-pillar-tipe-2';
-                        }
-                    }
-                    // Double-check perbandingan
-                    for (const cmp of SP1_KEYWORDS) {
-                        if (lowerName.includes(cmp)) {
-                            console.log(`  ⚖️ JASA + perbandingan → sub-pillar-tipe-1 (L3)`);
-                            return 'sub-pillar-tipe-1';
-                        }
-                    }
                     if (isLocation(lowerName)) {
                         console.log(`  → JASA + location → money-child (L6)`);
                         return 'money-child';
                     }
-                    console.log(`  → JASA detected (specific service) → money-page (L5)`);
+                    console.log(`  → JASA detected → money-page (L5)`);
                     return 'money-page';
                 }
             }
         }
         
         if (isSewaEntity()) {
-            const sewaKeywords = ['sewa', 'rental', 'alat berat', 'excavator', 'bulldozer', 'crane'];
+            const sewaKeywords = ['sewa', 'rental'];
             for (const kw of sewaKeywords) {
                 if (lowerName.includes(kw)) {
-                    for (const sp2kw of SP2_KEYWORDS) {
-                        if (lowerName.includes(sp2kw)) {
-                            console.log(`  📚 SEWA + SP2 (${sp2kw}) → sub-pillar-tipe-2 (L2)`);
-                            return 'sub-pillar-tipe-2';
-                        }
-                    }
-                    for (const cmp of SP1_KEYWORDS) {
-                        if (lowerName.includes(cmp)) {
-                            console.log(`  ⚖️ SEWA + perbandingan → sub-pillar-tipe-1 (L3)`);
-                            return 'sub-pillar-tipe-1';
-                        }
-                    }
                     if (isLocation(lowerName)) {
                         console.log(`  → SEWA + location → money-child (L6)`);
                         return 'money-child';
                     }
-                    // Hitung wordCount setelah "sewa"
                     const afterSewa = lowerName.split(kw)[1]?.trim() || '';
                     const wordCount = afterSewa.split(/\s+/).filter(w => w.length > 0).length;
                     if (wordCount <= 2) {
@@ -1424,7 +1405,7 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
         }
         
         // ============================================================
-        // PRIORITAS 8: VARIANT (Level 7) - termasuk standar, mutu, kualitas 🔥
+        // PRIORITAS 8: VARIANT (Level 7)
         // ============================================================
         for (const kw of VARIANT_KEYWORDS) {
             if (lowerName.includes(kw)) {
@@ -1576,11 +1557,12 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
     let remainingSlots = MAX_LEVEL - 2;
     
     console.log(`\n📊 ========================================`);
-    console.log(`📊 Breadcrumb Generator v5.8 — ENTITY PILLAR EXACT MATCH`);
+    console.log(`📊 Breadcrumb Generator v6.0 — FINAL HIERARCHY`);
     console.log(`📊 Entity Type: ${entityType}`);
     console.log(`📊 JASA Entity: ${isJasaEntity() ? 'YES' : 'NO'}`);
     console.log(`📊 SEWA Entity: ${isSewaEntity() ? 'YES' : 'NO'}`);
-    console.log(`📊 PRIORITAS: HOME → ENTITY PILLAR → MONEY(HARGA dulu) → INFORMASIONAL → SP1 → SP2 → JASA/SEWA → SUB-VARIANT → VARIANT`);
+    console.log(`📊 ATURAN: SEWA tanpa harga = MONEY MASTER (L4)`);
+    console.log(`📊 ATURAN: SEWA dengan harga = MONEY PAGE (L5)`);
     console.log(`📊 ========================================`);
     
     // Parent terdekat (WAJIB)
@@ -1616,7 +1598,6 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
     // ============================================================
     const currentFullUrl = currentUrl.startsWith('http') ? currentUrl : DOMAIN + currentUrl;
     
-    // PRIORITAS: URL clean > mappingObj > parentTerdekat
     let currentPageTitle = getCleanPageNameFromUrl(currentFullUrl);
     
     if (!currentPageTitle || currentPageTitle === '') {
@@ -1634,7 +1615,6 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
     console.log(`   Clean URL: "${currentPageTitle}"`);
     
     const isCurrentHome = (currentPageTitle.toLowerCase() === 'beranda' || currentPageTitle.toLowerCase() === 'home');
-    // Deteksi dari URL clean (isFromUrl = true)
     const currentPageType = detectPageType(currentPageTitle, isCurrentHome, entityType, true);
     const currentIntentDetected = detectIntentFromText(currentPageTitle);
     const currentIntentValidation = validateIntent(currentPageType, currentIntentDetected);
@@ -1653,7 +1633,6 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
         fromUrl: true
     });
     
-    // Update position
     for (let i = 0; i < selectedLevels.length; i++) {
         selectedLevels[i].position = i + 1;
     }
@@ -1664,8 +1643,10 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
                     (l.type === 'pillar' ? '🏛️' : 
                     (l.type === 'sub-pillar-tipe-1' ? '⚖️' :
                     (l.type === 'sub-pillar-tipe-2' ? '📚' :
-                    (l.type.includes('money') ? '💰' :
-                    (l.type === 'variant' ? '🔧' : '🔬')))));
+                    (l.type === 'money-master' ? '💰' :
+                    (l.type === 'money-page' ? '💳' :
+                    (l.type === 'money-child' ? '📍' :
+                    (l.type === 'variant' ? '🔧' : '🔬')))))));
         console.log(`   ${i+1}. ${icon} ${l.name} → ${l.type} (L${l.level})${l.fromUrl ? ' [from URL]' : ''}`);
     });
     
@@ -1706,7 +1687,6 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
     
     breadcrumbHtml += `</div>\n`;
     
-    // JSON-LD Schema
     const jsonLdItems = selectedLevels.map((level, idx) => ({
         "@type": "ListItem",
         "position": idx + 1,
@@ -1720,7 +1700,6 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
         "itemListElement": jsonLdItems
     };
     
-    // Inject ke DOM
     const oldBreadcrumbs = document.querySelectorAll('.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"]');
     oldBreadcrumbs.forEach(el => el.remove());
     
@@ -1747,9 +1726,6 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
     
     console.log(`✅ Breadcrumb injected for entity: ${entityType}`);
     
-    // ============================================================
-    // 20. RETURN LENGKAP
-    // ============================================================
     return {
         html: breadcrumbHtml,
         jsonLd: jsonLd,
@@ -1765,12 +1741,12 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
         currentYear: CURRENT_YEAR,
         entityType: entityType,
         isValidType: true,
-        version: '5.8'
+        version: '6.0'
     };
 }
 
 // ============================================================
-// RINGKASAN HASIL DETEKSI v5.8
+// RINGKASAN HASIL DETEKSI v6.0
 // ============================================================
 /*
 | Clean URL | Hasil Deteksi | Level |
@@ -1785,7 +1761,10 @@ function generateBreadcrumbJasaKonstruksi(mappingObj, currentUrl, breadcrumbItem
 | jasa konstruksi gedung sekolah | money-page | L5 ✅ |
 | jasa pondasi sumuran karawang | money-child | L6 ✅ |
 | sewa alat konstruksi | pillar | L1 ✅ |
-| sewa alat konstruksi jakarta | money-child | L6 ✅ |
+| sewa excavator | money-master | L4 ✅ |
+| harga sewa excavator | money-page | L5 ✅ |
+| sewa excavator jakarta | money-child | L6 ✅ |
+| harga sewa excavator jakarta | money-child | L6 ✅ |
 | sewa tower lamp | money-master | L4 ✅ |
 | harga sewa tower lamp | money-page | L5 ✅ |
 | material konstruksi | pillar | L1 ✅ |
