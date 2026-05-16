@@ -180,7 +180,8 @@ const urlMappingSewaAlatProyekFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html": "Perbandingan Sewa Alat Proyek"  // TYPE: SUB1 PARENT
 };
 const urlMappingSewaAlatProyekFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html": "Harga Sewa Alat Proyek"  // TYPE: MoneyMaster
+  //"https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html": "Harga Sewa Alat Proyek"  // TYPE: MoneyMaster
+   "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html": "Sewa Alat Proyek"  // TYPE: MoneyMaster
 };
 
 const urlMappingSewaAlatBeratFromSub2Sub1 = {
@@ -200,7 +201,25 @@ const urlMappingSewaAlatBeratFromSub2Sub1 = {
    "https://www.betonjayareadymix.com/p/durasi-sewa-alat-berat.html": "Durasi Sewa Alat Berat"  // TYPE: SUB1 pendukung
 };
 const urlMappingSewaAlatBeratFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/sewa-alat-berat.html": "Harga Sewa Alat Berat",  // TYPE: MoneyMaster PARENT
+   "https://www.betonjayareadymix.com/p/sewa-alat-berat.html": "Sewa Alat Berat",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-excavator.html": "Sewa Excavator",  // TYPE: MoneyMaster PARENT
+ // "https://www.betonjayareadymix.com/p/sewa-beko.html": "Sewa Beko",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-forklift.html": "Sewa Forklift",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-bulldozer.html": "Sewa Bulldozer",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-vibro-roller.html": "Sewa Vibro Roller",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-wales-stoom.html": "Sewa Wales Stoom",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-crane.html": "Sewa Crane",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-self-loader.html": "Sewa Self Loader",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-wheel-loader.html": "Sewa Wheel Loader",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-tandem-roller.html": "Sewa Tandem Roller",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-backhoe-loader.html": "Sewa Backhoe Loader",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-baby-roller.html": "Sewa Baby Roller",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-motor-grader.html": "Sewa Motor Grader",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-alat-pancang.html": "Sewa Alat Pancang",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-trencher.html": "Sewa Trencher",  // TYPE: MoneyMaster PARENT
+  "https://www.betonjayareadymix.com/p/sewa-concrete-paver.html": "Sewa Concrete Paver"  // TYPE: MoneyMaster PARENT
+/*
+  "https://www.betonjayareadymix.com/p/harga-sewa-alat-berat.html": "Harga Sewa Alat Berat",  // TYPE: MoneyMaster PARENT
   "https://www.betonjayareadymix.com/p/harga-sewa-excavator.html": "Harga Sewa Excavator",  // TYPE: MoneyMaster PARENT
  // "https://www.betonjayareadymix.com/p/harga-sewa-beko.html": "Harga Sewa Beko",  // TYPE: MoneyMaster PARENT
   "https://www.betonjayareadymix.com/p/harga-sewa-forklift.html": "Harga Sewa Forklift",  // TYPE: MoneyMaster PARENT
@@ -217,6 +236,7 @@ const urlMappingSewaAlatBeratFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/harga-sewa-alat-pancang.html": "Harga Sewa Alat Pancang",  // TYPE: MoneyMaster PARENT
   "https://www.betonjayareadymix.com/p/harga-sewa-trencher.html": "Harga Sewa Trencher",  // TYPE: MoneyMaster PARENT
   "https://www.betonjayareadymix.com/p/harga-sewa-concrete-paver.html": "Harga Sewa Concrete Paver"  // TYPE: MoneyMaster PARENT
+  */
 };
 /*
 const urlMappingSewaExcavatorFromSub2Sub1 = {
@@ -255,27 +275,8 @@ const urlMappingSewaAlatPendukungFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pendukung.html": "Perbandingan Sewa Alat Pendukung"  // TYPE: SUB1 PARENT
 };
 const urlMappingSewaAlatPendukungFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/harga-sewa-alat-pendukung.html": "Harga Sewa Alat Pendukung"  // TYPE: MoneyMaster
-};
-// [MONEY_PAGE] - SEWA PER JENIS ALAT BERAT (ENTITY SEWA/RENTAL - MONEY_PAGE)
-const urlMappingSewaAlatBeratFromSub1MoneyPage = {
-	/*hapus pindah ke post aja
-  "https://www.betonjayareadymix.com/p/sewa-forklift.html": "Sewa Forklift",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/sewa-crane.html": "Sewa Crane",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/sewa-self-loader.html": "Sewa Self Loader",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/sewa-wheel-loader.html": "Sewa Wheel Loader",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/sewa-vibro-roller.html": "Sewa Vibro Roller",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/sewa-wales-stoom.html": "Sewa Wales Stoom",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/sewa-tandem-roller.html": "Sewa Tandem Roller",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/sewa-bulldozer.html": "Sewa Bulldozer",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/sewa-excavator.html": "Sewa Excavator",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/sewa-backhoe-loader.html": "Sewa Backhoe Loader",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/sewa-trencher.html": "Sewa Trencher",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/sewa-concrete-paver.html": "Sewa Concrete Paver",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/sewa-baby-roller.html": "Sewa Baby Roller",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/sewa-motor-grader.html": "Sewa Motor Grader",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/sewa-alat-pancang.html": "Sewa Alat Pancang"  // TYPE: MONEY_PAGE
-  */
+  //"https://www.betonjayareadymix.com/p/harga-sewa-alat-pendukung.html": "Harga Sewa Alat Pendukung"  // TYPE: MoneyMaster
+  "https://www.betonjayareadymix.com/p/sewa-alat-pendukung.html": "Sewa Alat Pendukung"  // TYPE: MoneyMaster
 };
 
 // [MONEY_PAGE] - SEWA ALAT KONSTRUKSI RINGAN (SARAN ITEM)
