@@ -3169,7 +3169,7 @@ if (urlMappingSewaAlatProyekFromSub2Sub1[cleanUrlJasaKons]) {
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Daftar Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-proyek.html' }
         ],
-        'SEWA_RENTAL'
+        'SEWA_ALAT_KONSTRUKSI'
     );
  }
 if (urlMappingSewaAlatRinganFromSub2Sub1[cleanUrlJasaKons]) {
@@ -3181,7 +3181,7 @@ if (urlMappingSewaAlatRinganFromSub2Sub1[cleanUrlJasaKons]) {
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' }
         ],
-        'SEWA_RENTAL'
+        'SEWA_ALAT_KONSTRUKSI'
     );
  }
 	if (urlMappingSewaAlatPendukungFromSub2Sub1[cleanUrlJasaKons]) {
@@ -3193,7 +3193,7 @@ if (urlMappingSewaAlatRinganFromSub2Sub1[cleanUrlJasaKons]) {
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Daftar Sewa Alat Pendukung', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-pendukung.html' }
         ],
-        'SEWA_RENTAL'
+        'SEWA_ALAT_KONSTRUKSI'
     );
  }
 if (urlMappingSewaAlatProyekFromSub1MoneyMaster[cleanUrlJasaKons]) {
@@ -3261,7 +3261,7 @@ if (urlMappingSewaAlatProyekFromSub1MoneyMaster[cleanUrlJasaKons]) {
             { name: 'Daftar Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-proyek.html' },
             { name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' }
         ],
-        'SEWA_RENTAL'
+        'SEWA_ALAT_KONSTRUKSI'
     );
  }
 if (urlMappingSewaAlatRinganFromSub1MoneyMaster[cleanUrlJasaKons]) {
@@ -3274,7 +3274,7 @@ if (urlMappingSewaAlatRinganFromSub1MoneyMaster[cleanUrlJasaKons]) {
             { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
             { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' }
         ],
-        'SEWA_RENTAL'
+        'SEWA_ALAT_KONSTRUKSI'
     );
 
 }
@@ -3288,7 +3288,7 @@ if (urlMappingSewaAlatPendukungFromSub1MoneyMaster[cleanUrlJasaKons]) {
             { name: 'Daftar Sewa Alat Pendukung', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-pendukung.html' },
             { name: 'Perbandingan Sewa Alat Pendukung', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pendukung.html' }
         ],
-        'SEWA_RENTAL'
+        'SEWA_ALAT_KONSTRUKSI'
     );
 
 }
@@ -3304,7 +3304,7 @@ if (urlMappingSewaAlatBeratFromSub2Sub1[cleanUrlJasaKons]) {
             { name: 'Daftar Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-berat.html' }
           //  { name: 'Perbandingan Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html' }
         ],
-        'SEWA_RENTAL'
+        'SEWA_ALAT_KONSTRUKSI'
     );
  }
 
@@ -3319,7 +3319,7 @@ if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
             { name: 'Daftar Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-berat.html' },
            	{ name: 'Perbandingan Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html' }
         ],
-        'SEWA_RENTAL'
+        'SEWA_ALAT_KONSTRUKSI'
     );
    
 }
