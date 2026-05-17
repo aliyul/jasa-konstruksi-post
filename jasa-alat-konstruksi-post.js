@@ -53,6 +53,86 @@ const urlMappingSewaAlatKonstruksiFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi-ringan.html": "Sewa Alat Konstruksi Ringan"  // TYPE: SUB2
 };
 */
+const urlMappingSewaPompaDewateringFromMoneyMasterMoneyPage = {
+ "https://www.betonjayareadymix.com/2019/02/sewa-pompa-dewatering-proyek.html": "Sewa Pompa Dewatering Proyek",
+  "https://www.betonjayareadymix.com/p/sewa-pompa-dewatering-basement.html": "Sewa Pompa Dewatering Basement", //belum dibuat
+  "https://www.betonjayareadymix.com/p/sewa-pompa-dewatering-tambang.html": "Sewa Pompa Dewatering Tambang" //belum dibuat
+};
+const urlMappingSewaPompaAirFromMoneyMasterMoneyPage = {
+    "https://www.betonjayareadymix.com/2019/02/sewa-mesin-pompa-air.html": "Sewa Mesin Pompa Air",
+    "https://www.betonjayareadymix.com/2019/02/sewa-pompa-air-diesel.html": "Sewa Pompa Air Diesel",
+    "https://www.betonjayareadymix.com/2019/02/sewa-pompa-air-kapasitas-besar.html": "Sewa Pompa Air Kapasitas Besar",
+    "https://www.betonjayareadymix.com/2019/02/sewa-pompa-air-banjir.html": "Sewa Pompa Air Banjir",
+  "https://www.betonjayareadymix.com/2019/02/sewa-pompa-air-irigasi.html": "Sewa Pompa Air Irigasi" //belum dibuat
+};
+const urlMappingSewaPompaLumpurFromMoneyMasterMoneyPage = {
+    "https://www.betonjayareadymix.com/2019/02/sewa-pompa-lumpur-diesel.html": "Sewa Pompa Lumpur Diesel",
+    "https://www.betonjayareadymix.com/2019/02/sewa-pompa-sedot-lumpur.html": "Sewa Pompa Sedot Lumpur",
+    "https://www.betonjayareadymix.com/p/sewa-pompa-sedot-lumpur.html": "Sewa Pompa Sedot Lumpur",
+
+  "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur-proyek.html": "Sewa Pompa Lumpur Proyek", //belum dibuat
+    "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur-tambang.html": "Sewa Pompa Lumpur Tambang"  //belum dibuat
+};
+const urlMappingSewaBekistingFromMoneyMasterMoneyPage = {
+ // MONEY PAGE
+  "https://www.betonjayareadymix.com/2019/02/sewa-bekisting-scaffolding.html": "Sewa Bekisting Scaffolding",
+  "https://www.betonjayareadymix.com/2019/02/sewa-bekisting-kolom.html": "Sewa Bekisting Kolom",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/02/sewa-bekisting-balok.html": "Sewa Bekisting Balok",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/02/sewa-bekisting-plat-lantai.html": "Sewa Bekisting Plat Lantai"  //belum dibuat
+
+};
+const urlMappingSewaPencahayaanProyekFromMoneyMasterMoneyPage = {
+// MONEY PAGE
+  "https://www.betonjayareadymix.com/2019/02/sewa-pencahayaan-utilitas.html": "Sewa Pencahayaan Utilitas",
+  "https://www.betonjayareadymix.com/2019/02/sewa-lampu-proyek.html": "Sewa Lampu Proyek", //belum dibuat
+  "https://www.betonjayareadymix.com/2019/02/sewa-tower-lamp.html": "Sewa Tower Lamp", //belum dibuat
+  "https://www.betonjayareadymix.com/2019/02/sewa-lampu-penerangan-jalan.html": "Sewa Lampu Penerangan Jalan"  //belum dibuat 
+
+};
+const urlMappingSewaAlatSurveyFromMoneyMasterMoneyPage = {
+ // MONEY PAGE
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html": "Sewa Alat Survey Pengukuran",
+  "https://www.betonjayareadymix.com/2019/02/sewa-total-station.html": "Sewa Total Station",  //belum dibuat 
+  "https://www.betonjayareadymix.com/2019/02/sewa-waterpass.html": "Sewa Waterpass",  //belum dibuat 
+  "https://www.betonjayareadymix.com/2019/02/sewa-theodolite.html": "Sewa Theodolite"  //belum dibuat 
+};
+const urlMappingSewaAlatBorFromMoneyMasterMoneyPage = {
+  // MONEY PAGE
+  "https://www.betonjayareadymix.com/2019/02/sewa-alat-bor-ground-work.html": "Sewa Alat Bor Ground Work",
+  "https://www.betonjayareadymix.com/2019/02/sewa-bor-tanah.html": "Sewa Bor Tanah",   //belum dibuat
+  "https://www.betonjayareadymix.com/2019/02/sewa-bor-beton.html": "Sewa Bor Beton",  //belum dibuat 
+  "https://www.betonjayareadymix.com/2019/02/sewa-bor-pancang.html": "Sewa Bor Pancang"  //belum dibuat 
+
+};
+const urlMappingSewaTangkiAirFromMoneyMasterMoneyPage = {
+  // MONEY PAGE
+  "https://www.betonjayareadymix.com/2019/02/sewa-bak-air-proyek.html": "Sewa Bak Air Proyek", //belum dibuat 
+  "https://www.betonjayareadymix.com/2019/02/sewa-tandon-air.html": "Sewa Tandon Air",   //belum dibuat 
+  "https://www.betonjayareadymix.com/2019/02/sewa-tangki-air-proyek.html": "Sewa Tangki Air Proyek", //belum dibuat 
+  "https://www.betonjayareadymix.com/2019/02/sewa-tangki-air-industri.html": "Sewa Tangki Air Industri" //belum dibuat
+
+};
+const urlMappingSewaAksesKeamananProyekFromMoneyMasterMoneyPage = {
+  // MONEY PAGE
+  "https://www.betonjayareadymix.com/2019/02/sewa-barrier-proyek.html": "Sewa Barrier Proyek",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/02/sewa-pagar-proyek.html": "Sewa Pagar Proyek",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/02/sewa-gerbang-proyek.html":  "Sewa Gerbang Proyek",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/02/sewa-pos-keamanan-proyek.html": "Sewa Pos Keamanan Proyek"  //belum dibuat
+};
+const urlMappingSewaSelangProyekProyekFromMoneyMasterMoneyPage = {
+ // MONEY PAGE
+  "https://www.betonjayareadymix.com/2019/02/sewa-selang-air.html": "Sewa Selang Air",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/02/sewa-selang-pompa.html": "Sewa Selang Pompa",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/02/sewa-selang-lumpur.html": "Sewa Selang Lumpur",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/02/sewa-selang-industrial.html": "Sewa Selang Industrial"  //belum dibuat
+};
+const urlMappingSewaPipaProyekFromMoneyMasterMoneyPage = {
+// MONEY PAGE
+  "https://www.betonjayareadymix.com/2019/02/sewa-pipa-air.html": "Sewa Pipa Air",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/02p/sewa-pipa-dewatering.html": "Sewa Pipa Dewatering",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/02/sewa-pipa-hdpe.html": "Sewa Pipa HDPE",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/02/sewa-pipa-industrial.html": "Sewa Pipa Industrial"  //belum dibuat
+};
 
 // ============================================================
 // 📁 SUB Jasa Alat Konstruksi - SEWA ALAT PROYEK (MONEY PAGE & CHILD)
@@ -61,17 +141,17 @@ const urlMappingSewaAlatKonstruksiFromPillarSub2 = {
 // Breadcrumb: Home > Sewa Alat Konstruksi > Sewa Alat Proyek > [Nama Alat] (4 level)
 // ============================================================
 const urlMappingSewaAlatPendukungFromMoneyMasterMoneyPage = {
- "https://www.betonjayareadymix.com/p/sewa-pompa-dewatering-proyek.html": "Sewa Pompa Dewatering Proyek",
-    "https://www.betonjayareadymix.com/p/sewa-alat-survey-pengukuran.html": "Sewa Alat Survey Pengukuran",
-    "https://www.betonjayareadymix.com/p/sewa-akses-keamanan-proyek.html": "Sewa Akses Keamanan Proyek",
-    "https://www.betonjayareadymix.com/p/sewa-alat-bor-ground-work.html": "Sewa Alat Bor Ground Work",
-    "https://www.betonjayareadymix.com/p/sewa-mesin-pompa-air.html": "Sewa Mesin Pompa Air",
-    "https://www.betonjayareadymix.com/p/sewa-pompa-air-diesel.html": "Sewa Pompa Air Diesel",
-    "https://www.betonjayareadymix.com/p/sewa-pompa-air-kapasitas-besar.html": "Sewa Pompa Air Kapasitas Besar",
-    "https://www.betonjayareadymix.com/p/sewa-pompa-air-banjir.html": "Sewa Pompa Air Banjir",
-    "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur-diesel.html": "Sewa Pompa Lumpur Diesel",
-    "https://www.betonjayareadymix.com/p/sewa-pompa-sedot-lumpur.html": "Sewa Pompa Sedot Lumpur",
-    "https://www.betonjayareadymix.com/p/sewa-bak-air-proyek.html": "Sewa Bak Air Proyek"
+ "https://www.betonjayareadymix.com/2019/02/sewa-pompa-dewatering-proyek.html": "Sewa Pompa Dewatering Proyek",
+    "https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html": "Sewa Alat Survey Pengukuran",
+    "https://www.betonjayareadymix.com/2019/02/sewa-akses-keamanan-proyek.html": "Sewa Akses Keamanan Proyek",
+    "https://www.betonjayareadymix.com/2019/02/sewa-alat-bor-ground-work.html": "Sewa Alat Bor Ground Work",
+    "https://www.betonjayareadymix.com/2019/02/sewa-mesin-pompa-air.html": "Sewa Mesin Pompa Air",
+    "https://www.betonjayareadymix.com/2019/02/sewa-pompa-air-diesel.html": "Sewa Pompa Air Diesel",
+    "https://www.betonjayareadymix.com/2019/02/sewa-pompa-air-kapasitas-besar.html": "Sewa Pompa Air Kapasitas Besar",
+    "https://www.betonjayareadymix.com/2019/02/sewa-pompa-air-banjir.html": "Sewa Pompa Air Banjir",
+    "https://www.betonjayareadymix.com/2019/02/sewa-pompa-lumpur-diesel.html": "Sewa Pompa Lumpur Diesel",
+    "https://www.betonjayareadymix.com/2019/02/sewa-pompa-sedot-lumpur.html": "Sewa Pompa Sedot Lumpur",
+    "https://www.betonjayareadymix.com/2019/02/sewa-bak-air-proyek.html": "Sewa Bak Air Proyek"
 
 /*
  // ============================================================
