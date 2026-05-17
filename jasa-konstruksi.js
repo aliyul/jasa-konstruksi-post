@@ -276,7 +276,7 @@ const urlMappingSewaAlatPendukungFromSub2Sub1 = {
 };
 const urlMappingSewaAlatPendukungFromSub1MoneyMaster = {
   //"https://www.betonjayareadymix.com/p/harga-sewa-alat-pendukung.html": "Harga Sewa Alat Pendukung"  // TYPE: MoneyMaster
-  "https://www.betonjayareadymix.com/p/sewa-alat-pendukung.html": "Sewa Alat Pendukung"  // TYPE: MoneyMaster
+  "https://www.betonjayareadymix.com/p/sewa-alat-pendukung.html": "Sewa Alat Pendukung",  // TYPE: MoneyMaster
  "https://www.betonjayareadymix.com/p/sewa-bekisting-scaffolding.html": "Sewa Bekisting Scaffolding",
     "https://www.betonjayareadymix.com/p/sewa-pencahayaan-utilitas.html": "Sewa Pencahayaan Utilitas",
     "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur.html": "Sewa Pompa Lumpur",
