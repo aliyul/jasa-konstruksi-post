@@ -276,10 +276,17 @@ const urlMappingSewaAlatPendukungFromSub2Sub1 = {
 };
 const urlMappingSewaAlatPendukungFromSub1MoneyMaster = {
   //"https://www.betonjayareadymix.com/p/harga-sewa-alat-pendukung.html": "Harga Sewa Alat Pendukung"  // TYPE: MoneyMaster
+"https://www.betonjayareadymix.com/p/sewa-akses-keamanan-proyek.html": "Sewa Akses Keamanan Proyek",
+  "https://www.betonjayareadymix.com/p/sewa-alat-survey.html": "Sewa Alat Survey",
   "https://www.betonjayareadymix.com/p/sewa-alat-pendukung.html": "Sewa Alat Pendukung",  // TYPE: MoneyMaster
- "https://www.betonjayareadymix.com/p/sewa-bekisting-scaffolding.html": "Sewa Bekisting Scaffolding",
-    "https://www.betonjayareadymix.com/p/sewa-pencahayaan-utilitas.html": "Sewa Pencahayaan Utilitas",
+    "https://www.betonjayareadymix.com/p/sewa-pencahayaan-proyek.html": "Sewa Pencahayaan Proyek",
+// "https://www.betonjayareadymix.com/p/sewa-bekisting-scaffolding.html": "Sewa Bekisting Scaffolding",
+ //   "https://www.betonjayareadymix.com/p/sewa-pencahayaan-utilitas.html": "Sewa Pencahayaan Utilitas",
+	"https://www.betonjayareadymix.com/p/sewa-bekisting.html": "Sewa Bekisting",
+	"https://www.betonjayareadymix.com/p/sewa-pompa-dewatering.html": "Sewa Pompa Dewatering",
+	"https://www.betonjayareadymix.com/p/sewa-pompa-air.html": "Sewa Pompa Air",
     "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur.html": "Sewa Pompa Lumpur",
+	"https://www.betonjayareadymix.com/p/sewa-alat-bor.html": "Sewa Alat Bor",
     "https://www.betonjayareadymix.com/p/sewa-tangki-air.html": "Sewa Tangki Air",
     "https://www.betonjayareadymix.com/p/sewa-selang-proyek.html": "Sewa Selang Proyek",
     "https://www.betonjayareadymix.com/p/sewa-pipa-proyek.html": "Sewa Pipa Proyek"
