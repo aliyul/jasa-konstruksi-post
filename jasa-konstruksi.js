@@ -795,15 +795,8 @@ const urlMappingCustom = {
 */
 
 /**
- * generateBreadcrumbForMapping v7.1
- * =========================================================
- * FINAL ENTITY PILLAR SYSTEM
- * CLEAN VERSION
- * NO AUTO HTML INJECTION
- * NO OLD BREADCRUMB REMOVE
- * MAX 4 LEVEL BREADCRUMB
- * JSON-LD ONLY RETURN
- * =========================================================
+ * generateBreadcrumbForMapping v7.1 — FINAL FIXED 4 LEVEL BREADCRUMB
+ * =================================================================
  *
  * ✅ PILLAR FINAL HANYA:
  *    - jasa konstruksi
@@ -813,40 +806,49 @@ const urlMappingCustom = {
  *    - material konstruksi
  *
  * ✅ FIX:
- *    - exact entity pillar only
- *    - furniture bukan pillar
- *    - bahan bangunan bukan pillar
- *    - produk bangunan bukan pillar
+ *    - Tetap MAX 4 LEVEL breadcrumb
+ *    - Inject HTML breadcrumb memakai kode lama
+ *    - JSON-LD tetap kompatibel schema.org
+ *    - Exact Match Pillar ONLY
+ *    - Produk umum otomatis money-master
+ *    - Jasa otomatis money-page
+ *    - Sewa otomatis money-master
+ *    - Harga sewa otomatis money-page
+ *    - Lokasi otomatis money-child
  *
- * ✅ FIX:
- *    - breadcrumb max 4 level
- *    - remove inject html lama
- *    - remove auto delete breadcrumb lama
- *    - pure generator only
+ * ✅ HIERARKI:
+ *    L0 = home
+ *    L1 = pillar
+ *    L2 = sub-pillar-tipe-2
+ *    L3 = sub-pillar-tipe-1
+ *    L4 = money-master
+ *    L5 = money-page
+ *    L6 = money-child
+ *    L7 = variant
+ *    L8 = sub-variant
  *
- * =========================================================
- * VERSION : 7.1.0
- * DATE    : 2026-05-17
- * =========================================================
+ * @version 7.1.0
+ * @date 2026-05-17
  */
 
-function generateBreadcrumbJasaKonstruksi(
+function generateBreadcrumbForMapping(
     mappingObj,
     currentUrl,
     breadcrumbItems = [],
     entityType = 'PRODUK_KONSTRUKSI'
 ) {
 
-    // =====================================================
+    // ============================================================
     // CONFIG
-    // =====================================================
+    // ============================================================
 
     const DOMAIN = 'https://www.betonjayareadymix.com';
-    const MAX_BREADCRUMB_LEVEL = 4;
+    const CURRENT_YEAR = new Date().getFullYear();
+    const MAX_LEVEL = 4;
 
-    // =====================================================
-    // ENTITY VALIDATION
-    // =====================================================
+    // ============================================================
+    // VALID ENTITY
+    // ============================================================
 
     const VALID_ENTITY_TYPES = [
         'PRODUK_KONSTRUKSI',
@@ -866,83 +868,87 @@ function generateBreadcrumbJasaKonstruksi(
         return null;
     }
 
-    // =====================================================
-    // TYPE LEVEL MAP
-    // =====================================================
+    // ============================================================
+    // LEVEL MAP
+    // ============================================================
 
     const TYPE_LEVEL_MAP = {
-
         'home': 0,
-
         'pillar': 1,
-
         'sub-pillar-tipe-2': 2,
-
         'sub-pillar-tipe-1': 3,
-
         'money-master': 4,
-
         'money-page': 5,
-
         'money-child': 6,
-
         'variant': 7,
-
         'sub-variant': 8
     };
 
-    // =====================================================
+    // ============================================================
     // ENTITY HELPERS
-    // =====================================================
+    // ============================================================
 
     function isJasaEntity() {
-
-        return entityType ===
-            'JASA_KONSTRUKSI';
+        return entityType === 'JASA_KONSTRUKSI';
     }
 
     function isSewaEntity() {
-
-        return entityType ===
-            'SEWA_ALAT_KONSTRUKSI';
+        return entityType === 'SEWA_ALAT_KONSTRUKSI';
     }
 
-    // =====================================================
+    function isProdukEntity() {
+        return entityType === 'PRODUK_KONSTRUKSI';
+    }
+
+    function isInteriorEntity() {
+        return entityType === 'PRODUK_INTERIOR';
+    }
+
+    function isMaterialEntity() {
+        return entityType === 'MATERIAL_KONSTRUKSI';
+    }
+
+    // ============================================================
     // CLEAN URL
-    // =====================================================
-
-    function cleanText(text = '') {
-
-        return text
-            .toLowerCase()
-            .replace(/^https?:\/\/[^\/]+/, '')
-            .replace(/\.(html|php|asp|jsp)$/i, '')
-            .replace(/^\/p\//, '')
-            .replace(/\/\d{4}\/\d{2}\//g, '/')
-            .replace(/\/\d{4}\//g, '/')
-            .replace(/-/g, ' ')
-            .replace(/[^a-z0-9\s]/gi, ' ')
-            .replace(/\s+/g, ' ')
-            .trim();
-    }
+    // ============================================================
 
     function getCleanPageNameFromUrl(url) {
 
         if (!url) return '';
 
-        const cleanUrl = cleanText(url);
+        let path = url;
+
+        path = path.replace(/^https?:\/\/[^\/]+/, '');
+
+        path = path.split('?')[0];
+
+        path = path.replace(/\.(html|php|asp|jsp)$/i, '');
+
+        path = path.replace(/^\/p\//, '');
+
+        path = path.replace(/\/\d{4}\/\d{2}\//g, '/');
+
+        path = path.replace(/\/\d{4}\//g, '/');
 
         const parts =
-            cleanUrl
-                .split('/')
-                .filter(Boolean);
+            path.split('/').filter(Boolean);
 
-        return parts.pop() || '';
+        let pageName =
+            parts.pop() || '';
+
+        pageName = pageName
+            .replace(/-/g, ' ')
+            .replace(/[^a-z0-9\s]/gi, '')
+            .replace(/\s+/g, ' ')
+            .trim()
+            .toLowerCase();
+
+        return pageName;
     }
 
-    // =====================================================
-    // FINAL PILLAR
-    // =====================================================
+    // ============================================================
+    // FINAL ENTITY PILLAR
+    // ============================================================
 
     const FINAL_ENTITY_PILLARS = {
 
@@ -969,19 +975,22 @@ function generateBreadcrumbJasaKonstruksi(
         'ARTIKEL': []
     };
 
-    function isEntityPillarExactMatch(text) {
+    function isEntityPillarExactMatch(pageName) {
 
-        const clean = cleanText(text);
+        const clean =
+            pageName
+                .toLowerCase()
+                .trim();
 
-        const pillars =
+        const valid =
             FINAL_ENTITY_PILLARS[entityType] || [];
 
-        return pillars.includes(clean);
+        return valid.includes(clean);
     }
 
-    // =====================================================
+    // ============================================================
     // KEYWORDS
-    // =====================================================
+    // ============================================================
 
     const MONEY_KEYWORDS = [
         'harga',
@@ -1003,8 +1012,8 @@ function generateBreadcrumbJasaKonstruksi(
     const SP2_KEYWORDS = [
         'jenis',
         'macam',
-        'kategori',
         'daftar',
+        'kategori',
         'tipe'
     ];
 
@@ -1017,19 +1026,20 @@ function generateBreadcrumbJasaKonstruksi(
         'mutu',
         'kualitas',
         'grade',
-        'spec',
+        'type',
         'model',
-        'type'
+        'spec'
     ];
 
-    // =====================================================
+    // ============================================================
     // LOCATION
-    // =====================================================
+    // ============================================================
 
     const LOCATION_WHITELIST = new Set([
         'jakarta',
         'bogor',
         'depok',
+        'tangerang',
         'bekasi',
         'bandung',
         'karawang',
@@ -1042,22 +1052,52 @@ function generateBreadcrumbJasaKonstruksi(
         'bali'
     ]);
 
-    function isLocation(text = '') {
+    function isLocation(text) {
 
         const words =
-            cleanText(text).split(/\s+/);
+            text.toLowerCase().split(/\s+/);
 
-        return words.some(word =>
-            LOCATION_WHITELIST.has(word)
-        );
+        for (const word of words) {
+
+            if (LOCATION_WHITELIST.has(word)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
-    // =====================================================
+    // ============================================================
+    // SUB VARIANT
+    // ============================================================
+
+    function isSubVariant(text) {
+
+        const lower =
+            text.toLowerCase();
+
+        let score = 0;
+
+        if ((lower.match(/x/g) || []).length >= 2) {
+            score++;
+        }
+
+        if ((lower.match(/\d+/g) || []).length >= 3) {
+            score++;
+        }
+
+        if (/mm|cm|m|kg|ton/i.test(lower)) {
+            score++;
+        }
+
+        return score >= 2;
+    }
+
+    // ============================================================
     // SPECIFIC PRODUCT
-    // =====================================================
+    // ============================================================
 
     const SPECIFIC_PRODUCTS = [
-
         'panel beton',
         'precast',
         'wiremesh',
@@ -1065,68 +1105,38 @@ function generateBreadcrumbJasaKonstruksi(
         'spandek',
         'galvalum',
         'hebel',
-
         'kitchen set',
-        'meja makan',
-        'lemari',
-
+        'kanopi',
+        'pagar',
+        'kusen',
         'excavator',
         'bulldozer',
         'tower lamp',
         'genset'
     ];
 
-    function isSpecificProduct(text = '') {
+    function isSpecificProduct(text) {
 
-        const lower = cleanText(text);
+        const lower =
+            text.toLowerCase();
 
-        return SPECIFIC_PRODUCTS.some(item =>
-            lower.includes(item)
+        return SPECIFIC_PRODUCTS.some(p =>
+            lower.includes(p)
         );
     }
 
-    // =====================================================
-    // SUB VARIANT
-    // =====================================================
+    // ============================================================
+    // PAGE DETECTOR
+    // ============================================================
 
-    function isSubVariant(text = '') {
+    function detectPageType(pageName) {
 
-        const lower = cleanText(text);
+        const lower =
+            pageName.toLowerCase();
 
-        let score = 0;
-
-        if (
-            (lower.match(/x/g) || []).length >= 2
-        ) {
-            score++;
-        }
-
-        if (
-            (lower.match(/\d+/g) || []).length >= 3
-        ) {
-            score++;
-        }
-
-        if (
-            /mm|cm|meter|m|kg|ton/i.test(lower)
-        ) {
-            score++;
-        }
-
-        return score >= 2;
-    }
-
-    // =====================================================
-    // DETECT PAGE TYPE
-    // =====================================================
-
-    function detectPageType(text = '') {
-
-        const lower = cleanText(text);
-
-        // =================================================
+        // ========================================================
         // HOME
-        // =================================================
+        // ========================================================
 
         if (
             lower === 'home' ||
@@ -1135,24 +1145,30 @@ function generateBreadcrumbJasaKonstruksi(
             return 'home';
         }
 
-        // =================================================
+        // ========================================================
         // ENTITY PILLAR
-        // =================================================
+        // ========================================================
 
         if (
             isEntityPillarExactMatch(lower)
         ) {
+
+            console.log(
+                `🏛️ PILLAR EXACT MATCH: ${lower}`
+            );
+
             return 'pillar';
         }
 
-        // =================================================
+        // ========================================================
         // MONEY
-        // =================================================
+        // ========================================================
 
-        for (const keyword of MONEY_KEYWORDS) {
+        for (const kw of MONEY_KEYWORDS) {
 
-            if (lower.includes(keyword)) {
+            if (lower.includes(kw)) {
 
+                // LOCATION
                 if (isLocation(lower)) {
                     return 'money-child';
                 }
@@ -1166,9 +1182,9 @@ function generateBreadcrumbJasaKonstruksi(
                 if (isSewaEntity()) {
 
                     if (
-                        keyword === 'harga' ||
-                        keyword === 'biaya' ||
-                        keyword === 'tarif'
+                        kw === 'harga' ||
+                        kw === 'biaya' ||
+                        kw === 'tarif'
                     ) {
                         return 'money-page';
                     }
@@ -1178,7 +1194,7 @@ function generateBreadcrumbJasaKonstruksi(
 
                 // PRODUK / MATERIAL
                 const afterKeyword =
-                    lower.split(keyword)[1] || '';
+                    lower.split(kw)[1] || '';
 
                 const wordCount =
                     afterKeyword
@@ -1198,31 +1214,31 @@ function generateBreadcrumbJasaKonstruksi(
             }
         }
 
-        // =================================================
+        // ========================================================
         // SP1
-        // =================================================
+        // ========================================================
 
-        for (const keyword of SP1_KEYWORDS) {
+        for (const kw of SP1_KEYWORDS) {
 
-            if (lower.includes(keyword)) {
+            if (lower.includes(kw)) {
                 return 'sub-pillar-tipe-1';
             }
         }
 
-        // =================================================
+        // ========================================================
         // SP2
-        // =================================================
+        // ========================================================
 
-        for (const keyword of SP2_KEYWORDS) {
+        for (const kw of SP2_KEYWORDS) {
 
-            if (lower.includes(keyword)) {
+            if (lower.includes(kw)) {
                 return 'sub-pillar-tipe-2';
             }
         }
 
-        // =================================================
+        // ========================================================
         // JASA
-        // =================================================
+        // ========================================================
 
         if (isJasaEntity()) {
 
@@ -1240,9 +1256,9 @@ function generateBreadcrumbJasaKonstruksi(
             }
         }
 
-        // =================================================
+        // ========================================================
         // SEWA
-        // =================================================
+        // ========================================================
 
         if (isSewaEntity()) {
 
@@ -1259,51 +1275,55 @@ function generateBreadcrumbJasaKonstruksi(
             }
         }
 
-        // =================================================
+        // ========================================================
         // SUB VARIANT
-        // =================================================
+        // ========================================================
 
         if (isSubVariant(lower)) {
             return 'sub-variant';
         }
 
-        // =================================================
+        // ========================================================
         // VARIANT
-        // =================================================
+        // ========================================================
 
-        for (const keyword of VARIANT_KEYWORDS) {
+        for (const kw of VARIANT_KEYWORDS) {
 
-            if (lower.includes(keyword)) {
+            if (lower.includes(kw)) {
                 return 'variant';
             }
         }
 
-        // =================================================
+        // ========================================================
         // DEFAULT
-        // =================================================
+        // ========================================================
 
-        if (isSpecificProduct(lower)) {
+        if (
+            isSpecificProduct(lower)
+        ) {
             return 'money-master';
         }
 
         return 'pillar';
     }
 
-    // =====================================================
+    // ============================================================
     // SLUGIFY
-    // =====================================================
+    // ============================================================
 
-    function slugify(text = '') {
+    function slugify(text) {
 
-        return cleanText(text)
+        return text
+            .toLowerCase()
+            .replace(/[^\w\s-]/g, '')
             .replace(/\s+/g, '-')
-            .replace(/-+/g, '-')
+            .replace(/--+/g, '-')
             .trim();
     }
 
-    // =====================================================
-    // BUILD LEVELS
-    // =====================================================
+    // ============================================================
+    // BUILD LEVEL
+    // ============================================================
 
     const allLevels = [];
 
@@ -1312,253 +1332,306 @@ function generateBreadcrumbJasaKonstruksi(
         let name;
         let url;
 
-        if (
-            typeof item === 'object' &&
-            item !== null
-        ) {
+        if (typeof item === 'object') {
 
             name = item.name;
-            url = item.url || '';
+            url = item.url || null;
 
         } else {
 
             name = item;
-            url = '';
+            url = null;
         }
 
-        const pageType =
+        const type =
             detectPageType(name);
 
         allLevels.push({
-
             name,
-
-            url: url
-                ? (
-                    url.startsWith('http')
-                        ? url
-                        : DOMAIN + url
-                )
-                : `${DOMAIN}/p/${slugify(name)}.html`,
-
-            type: pageType,
-
-            level:
-                TYPE_LEVEL_MAP[pageType]
+            url,
+            type,
+            level: TYPE_LEVEL_MAP[type]
         });
     }
 
-    // =====================================================
-    // REMOVE DUPLICATE
-    // =====================================================
+    // ============================================================
+    // FALLBACK URL
+    // ============================================================
 
-    const uniqueLevels =
-        allLevels.filter(
-            (item, index, self) =>
-                index ===
-                self.findIndex(
-                    t => t.name === item.name
-                )
-        );
+    for (const level of allLevels) {
 
-    // =====================================================
-    // SORT LEVEL
-    // =====================================================
+        if (!level.url) {
 
-    uniqueLevels.sort(
-        (a, b) => a.level - b.level
-    );
+            const slug =
+                slugify(level.name);
 
-    // =====================================================
+            level.url =
+                `${DOMAIN}/p/${slug}.html`;
+        }
+
+        if (!level.url.startsWith('http')) {
+            level.url = DOMAIN + level.url;
+        }
+    }
+
+    // ============================================================
     // CURRENT PAGE
-    // =====================================================
+    // ============================================================
 
     const currentFullUrl =
         currentUrl.startsWith('http')
             ? currentUrl
             : DOMAIN + currentUrl;
 
-    const currentPageName =
-        getCleanPageNameFromUrl(
-            currentFullUrl
-        );
+    const currentName =
+        getCleanPageNameFromUrl(currentFullUrl);
 
-    const currentPageType =
-        detectPageType(
-            currentPageName
-        );
+    const currentType =
+        detectPageType(currentName);
 
-    // =====================================================
-    // FINAL SELECTED LEVEL
-    // MAX 4 LEVEL
-    // =====================================================
+    // ============================================================
+    // SELECT 4 LEVEL ONLY
+    // ============================================================
 
     const selectedLevels = [];
 
     // HOME
     selectedLevels.push({
-
         name: 'Beranda',
-
         url: DOMAIN,
-
         type: 'home',
-
         level: 0
     });
 
-    // IMPORTANT LEVELS
-    const importantLevels =
-        uniqueLevels.slice(
-            0,
-            MAX_BREADCRUMB_LEVEL - 2
+    // UNIQUE
+    const uniqueLevels =
+        [...allLevels].filter(
+            (v, i, arr) =>
+                arr.findIndex(
+                    t => t.name === v.name
+                ) === i
         );
 
-    selectedLevels.push(
-        ...importantLevels
+    // SORT
+    uniqueLevels.sort(
+        (a, b) => a.level - b.level
     );
+
+    // MAX 3 tambahan
+    const limited =
+        uniqueLevels.slice(0, 2);
+
+    selectedLevels.push(...limited);
 
     // CURRENT PAGE
     selectedLevels.push({
-
-        name: currentPageName,
-
+        name: currentName,
         url: currentFullUrl,
-
-        type: currentPageType,
-
-        level:
-            TYPE_LEVEL_MAP[currentPageType],
-
+        type: currentType,
+        level: TYPE_LEVEL_MAP[currentType],
         isCurrent: true
     });
 
-    // =====================================================
+    // ============================================================
     // POSITION
-    // =====================================================
+    // ============================================================
 
-    selectedLevels.forEach(
-        (item, index) => {
+    selectedLevels.forEach((item, index) => {
+        item.position = index + 1;
+    });
 
-            item.position = index + 1;
-        }
-    );
-
-    // =====================================================
-    // HTML GENERATOR ONLY
-    // =====================================================
+    // ============================================================
+    // BREADCRUMB HTML (KODE LAMA DIPERTAHANKAN)
+    // ============================================================
 
     let breadcrumbHtml =
-`<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">`;
+`<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">\n`;
 
-    selectedLevels.forEach(
-        (item, index) => {
+    for (let i = 0; i < selectedLevels.length; i++) {
 
-            const isLast =
-                index ===
-                selectedLevels.length - 1;
+        const level =
+            selectedLevels[i];
 
-            if (!isLast) {
+        const isLast =
+            i === selectedLevels.length - 1;
 
-                breadcrumbHtml += `
-<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-<a href="${item.url}" itemprop="item">
-<span itemprop="name">${item.name}</span>
+        const position =
+            i + 1;
+
+        if (!isLast) {
+
+            breadcrumbHtml +=
+`<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<a href="${level.url}" itemprop="item" title="${level.name}">
+<span itemprop="name">${level.name}</span>
 </a>
-<meta itemprop="position" content="${item.position}" />
+<meta itemprop="position" content="${position}" />
 </span>
-<span class="separator">›</span>`;
-            } else {
+<span class="separator"> › </span>
+`;
 
-                breadcrumbHtml += `
-<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-<span itemprop="name">${item.name}</span>
-<meta itemprop="position" content="${item.position}" />
-</span>`;
-            }
+        } else {
+
+            breadcrumbHtml +=
+`<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<span itemprop="name">${level.name}</span>
+<meta itemprop="position" content="${position}" />
+</span>
+`;
         }
-    );
+    }
 
-    breadcrumbHtml += `
-</div>`;
+    breadcrumbHtml += `</div>\n`;
 
-    // =====================================================
+    // ============================================================
     // JSON LD
-    // =====================================================
+    // ============================================================
 
     const jsonLd = {
-
         "@context": "https://schema.org",
-
         "@type": "BreadcrumbList",
-
         "itemListElement":
-
-            selectedLevels.map(item => ({
-
+            selectedLevels.map((level, idx) => ({
                 "@type": "ListItem",
-
-                "position": item.position,
-
-                "name": item.name,
-
-                "item": item.url
+                "position": idx + 1,
+                "name": level.name,
+                "item": level.url
             }))
     };
 
-    // =====================================================
+    // ============================================================
+    // REMOVE OLD
+    // ============================================================
+
+    const oldBreadcrumbs =
+        document.querySelectorAll(
+            '.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"]'
+        );
+
+    oldBreadcrumbs.forEach(el => el.remove());
+
+    const oldJsonLd =
+        document.querySelector(
+            'script[data-breadcrumb="true"]'
+        );
+
+    if (oldJsonLd) {
+        oldJsonLd.remove();
+    }
+
+    // ============================================================
+    // INJECT HTML (KODE LAMA DIPERTAHANKAN)
+    // ============================================================
+
+    const targetElement =
+        document.querySelector(
+            'main, article, .content, #main-content, .post-content'
+        );
+
+    if (
+        targetElement &&
+        targetElement.firstChild
+    ) {
+
+        targetElement.insertAdjacentHTML(
+            'afterbegin',
+            breadcrumbHtml
+        );
+
+    } else {
+
+        const container =
+            document.querySelector(
+                '.container, #content, .wrapper'
+            );
+
+        if (
+            container &&
+            container.firstChild
+        ) {
+
+            container.insertAdjacentHTML(
+                'afterbegin',
+                breadcrumbHtml
+            );
+
+        } else {
+
+            document.body.insertAdjacentHTML(
+                'afterbegin',
+                breadcrumbHtml
+            );
+        }
+    }
+
+    // ============================================================
+    // JSON LD INJECT
+    // ============================================================
+
+    const script =
+        document.createElement('script');
+
+    script.type = 'application/ld+json';
+
+    script.setAttribute(
+        'data-breadcrumb',
+        'true'
+    );
+
+    script.textContent =
+        JSON.stringify(jsonLd, null, 2);
+
+    document.head.appendChild(script);
+
+    // ============================================================
     // DEBUG
-    // =====================================================
+    // ============================================================
 
     console.log(`
-========================================
+=================================================
 generateBreadcrumbForMapping v7.1
-========================================
+=================================================
 ENTITY TYPE : ${entityType}
-CURRENT PAGE: ${currentPageName}
-CURRENT TYPE: ${currentPageType}
-MAX LEVEL   : ${MAX_BREADCRUMB_LEVEL}
-========================================
+CURRENT URL : ${currentFullUrl}
+CURRENT NAME: ${currentName}
+CURRENT TYPE: ${currentType}
+MAX LEVEL   : 4
+=================================================
 `);
 
     console.table(
-        selectedLevels.map(item => ({
-
-            name: item.name,
-
-            type: item.type,
-
-            level: item.level
+        selectedLevels.map(l => ({
+            name: l.name,
+            type: l.type,
+            level: l.level
         }))
     );
 
-    // =====================================================
+    // ============================================================
     // RETURN
-    // =====================================================
+    // ============================================================
 
     return {
-
         html: breadcrumbHtml,
-
         jsonLd,
-
         levels: selectedLevels,
-
-        currentPageType,
-
+        currentPageType: currentType,
         entityType,
-
+        currentYear: CURRENT_YEAR,
         version: '7.1.0'
     };
 }
 
 /**
- * =========================================================
- * FINAL TEST
- * =========================================================
+ * ================================================================
+ * FINAL TEST RESULT
+ * ================================================================
  *
  * jasa konstruksi
  * → pillar ✅
+ *
+ * jasa epoxy lantai
+ * → money-page ✅
  *
  * jasa renovasi rumah
  * → money-page ✅
@@ -1581,11 +1654,11 @@ MAX LEVEL   : ${MAX_BREADCRUMB_LEVEL}
  * panel beton precast
  * → money-master ✅
  *
- * kitchen set
- * → money-master ✅
- *
  * produk interior
  * → pillar ✅
+ *
+ * kitchen set
+ * → money-master ✅
  *
  * material konstruksi
  * → pillar ✅
@@ -1596,16 +1669,16 @@ MAX LEVEL   : ${MAX_BREADCRUMB_LEVEL}
  * jenis panel beton
  * → sub-pillar-tipe-2 ✅
  *
- * panel beton vs bata ringan
+ * panel beton vs hebel
  * → sub-pillar-tipe-1 ✅
  *
  * spesifikasi panel beton
  * → variant ✅
  *
- * panel beton 10x20x100 cm
+ * panel beton 10cm x 20cm x 100cm
  * → sub-variant ✅
  *
- * =========================================================
+ * ================================================================
  */
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPerbaikanKons = {};
