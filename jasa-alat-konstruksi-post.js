@@ -116,7 +116,7 @@ const urlMappingSewaAlatProyekFromMoneyMasterMoneyPage = {
   // [MONEY_CHILD] - SEWA ALAT PROYEK PER LOKASI
   // 🧠 TYPE: MONEY_CHILD (spesifik lokasi, intent transaksional 90%)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/sewa-alat-proyek.html": "Sewa Alat Proyek"  // TYPE: MONEY_PAGE PARENT
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-proyek.html": "Harga Sewa Alat Proyek"  // TYPE: MONEY_PAGE PARENT
 
  
 };
