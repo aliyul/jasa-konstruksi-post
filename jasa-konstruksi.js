@@ -276,6 +276,7 @@ const urlMappingSewaAlatPendukungFromSub1MoneyMaster = {
 // "https://www.betonjayareadymix.com/p/sewa-bekisting-scaffolding.html": "Sewa Bekisting Scaffolding",
  //   "https://www.betonjayareadymix.com/p/sewa-pencahayaan-utilitas.html": "Sewa Pencahayaan Utilitas",
 	"https://www.betonjayareadymix.com/p/sewa-bekisting.html": "Sewa Bekisting",
+	"https://www.betonjayareadymix.com/p/sewa-scaffolding.html": "Sewa Scaffolding",
 	"https://www.betonjayareadymix.com/p/sewa-pompa-dewatering.html": "Sewa Pompa Dewatering",
 	"https://www.betonjayareadymix.com/p/sewa-pompa-air.html": "Sewa Pompa Air",
     "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur.html": "Sewa Pompa Lumpur",
