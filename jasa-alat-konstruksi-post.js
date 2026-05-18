@@ -55,83 +55,83 @@ const urlMappingSewaAlatKonstruksiFromPillarSub2 = {
 */
 const urlMappingSewaPompaDewateringFromMoneyMasterMoneyPage = {
  "https://www.betonjayareadymix.com/2019/02/sewa-pompa-dewatering-proyek.html": "Sewa Pompa Dewatering Proyek",
-  "https://www.betonjayareadymix.com/2019/02/sewa-pompa-dewatering-basement.html": "Sewa Pompa Dewatering Basement", //belum dibuat
-  "https://www.betonjayareadymix.com/2019/02/sewa-pompa-dewatering-tambang.html": "Sewa Pompa Dewatering Tambang" //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-dewatering-basement.html": "Sewa Pompa Dewatering Basement", //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-dewatering-tambang.html": "Sewa Pompa Dewatering Tambang" //belum dibuat
 };
 const urlMappingSewaPompaAirFromMoneyMasterMoneyPage = {
-    "https://www.betonjayareadymix.com/2019/02/sewa-mesin-pompa-air.html": "Sewa Mesin Pompa Air",
-    "https://www.betonjayareadymix.com/2019/02/sewa-pompa-air-diesel.html": "Sewa Pompa Air Diesel",
-    "https://www.betonjayareadymix.com/2019/02/sewa-pompa-air-kapasitas-besar.html": "Sewa Pompa Air Kapasitas Besar",
-    "https://www.betonjayareadymix.com/2019/02/sewa-pompa-air-banjir.html": "Sewa Pompa Air Banjir",
-  "https://www.betonjayareadymix.com/2019/02/sewa-pompa-air-irigasi.html": "Sewa Pompa Air Irigasi" //belum dibuat
+    "https://www.betonjayareadymix.com/2019/03/sewa-mesin-pompa-air.html": "Sewa Mesin Pompa Air",
+    "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-diesel.html": "Sewa Pompa Air Diesel",
+    "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-kapasitas-besar.html": "Sewa Pompa Air Kapasitas Besar",
+    "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-banjir.html": "Sewa Pompa Air Banjir",
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-irigasi.html": "Sewa Pompa Air Irigasi" //belum dibuat
 };
 const urlMappingSewaPompaLumpurFromMoneyMasterMoneyPage = {
-    "https://www.betonjayareadymix.com/2019/02/sewa-pompa-lumpur-diesel.html": "Sewa Pompa Lumpur Diesel",
-    "https://www.betonjayareadymix.com/2019/02/sewa-pompa-sedot-lumpur.html": "Sewa Pompa Sedot Lumpur",
-    "https://www.betonjayareadymix.com/p/sewa-pompa-sedot-lumpur.html": "Sewa Pompa Sedot Lumpur",
+    "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-diesel.html": "Sewa Pompa Lumpur Diesel",
+    "https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur.html": "Sewa Pompa Sedot Lumpur",
+    "https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur.html": "Sewa Pompa Sedot Lumpur",
 
-  "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur-proyek.html": "Sewa Pompa Lumpur Proyek", //belum dibuat
-    "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur-tambang.html": "Sewa Pompa Lumpur Tambang"  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-proyek.html": "Sewa Pompa Lumpur Proyek", //belum dibuat
+    "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-tambang.html": "Sewa Pompa Lumpur Tambang"  //belum dibuat
 };
 const urlMappingSewaBekistingFromMoneyMasterMoneyPage = {
  // MONEY PAGE
   "https://www.betonjayareadymix.com/2019/02/sewa-bekisting-scaffolding.html": "Sewa Bekisting Scaffolding",
-  "https://www.betonjayareadymix.com/2019/02/sewa-bekisting-kolom.html": "Sewa Bekisting Kolom",  //belum dibuat
-  "https://www.betonjayareadymix.com/2019/02/sewa-bekisting-balok.html": "Sewa Bekisting Balok",  //belum dibuat
-  "https://www.betonjayareadymix.com/2019/02/sewa-bekisting-plat-lantai.html": "Sewa Bekisting Plat Lantai"  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-kolom.html": "Sewa Bekisting Kolom",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-balok.html": "Sewa Bekisting Balok",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-plat-lantai.html": "Sewa Bekisting Plat Lantai"  //belum dibuat
 
 };
 const urlMappingSewaPencahayaanProyekFromMoneyMasterMoneyPage = {
 // MONEY PAGE
   "https://www.betonjayareadymix.com/2019/02/sewa-pencahayaan-utilitas.html": "Sewa Pencahayaan Utilitas",
-  "https://www.betonjayareadymix.com/2019/02/sewa-lampu-proyek.html": "Sewa Lampu Proyek", //belum dibuat
-  "https://www.betonjayareadymix.com/2019/02/sewa-tower-lamp.html": "Sewa Tower Lamp", //belum dibuat
-  "https://www.betonjayareadymix.com/2019/02/sewa-lampu-penerangan-jalan.html": "Sewa Lampu Penerangan Jalan"  //belum dibuat 
+  "https://www.betonjayareadymix.com/2019/03/sewa-lampu-proyek.html": "Sewa Lampu Proyek", //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp.html": "Sewa Tower Lamp", //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-lampu-penerangan-jalan.html": "Sewa Lampu Penerangan Jalan"  //belum dibuat 
 
 };
 const urlMappingSewaAlatSurveyFromMoneyMasterMoneyPage = {
  // MONEY PAGE
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html": "Sewa Alat Survey Pengukuran",
-  "https://www.betonjayareadymix.com/2019/02/sewa-total-station.html": "Sewa Total Station",  //belum dibuat 
-  "https://www.betonjayareadymix.com/2019/02/sewa-waterpass.html": "Sewa Waterpass",  //belum dibuat 
-  "https://www.betonjayareadymix.com/2019/02/sewa-theodolite.html": "Sewa Theodolite"  //belum dibuat 
+  "https://www.betonjayareadymix.com/2019/03/sewa-total-station.html": "Sewa Total Station", 
+  "https://www.betonjayareadymix.com/2019/03/sewa-waterpass.html": "Sewa Waterpass",  
+  "https://www.betonjayareadymix.com/2019/03/sewa-theodolite.html": "Sewa Theodolite" 
 };
 const urlMappingSewaAlatBorFromMoneyMasterMoneyPage = {
   // MONEY PAGE
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-bor-ground-work.html": "Sewa Alat Bor Ground Work",
-  "https://www.betonjayareadymix.com/2019/02/sewa-bor-tanah.html": "Sewa Bor Tanah",   //belum dibuat
-  "https://www.betonjayareadymix.com/2019/02/sewa-bor-beton.html": "Sewa Bor Beton",  //belum dibuat 
-  "https://www.betonjayareadymix.com/2019/02/sewa-bor-pancang.html": "Sewa Bor Pancang"  //belum dibuat 
+  "https://www.betonjayareadymix.com/2019/03/sewa-bor-tanah.html": "Sewa Bor Tanah",   //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-bor-beton.html": "Sewa Bor Beton",  //belum dibuat 
+  "https://www.betonjayareadymix.com/2019/03/sewa-bor-pancang.html": "Sewa Bor Pancang"  //belum dibuat 
 
 };
 const urlMappingSewaTangkiAirFromMoneyMasterMoneyPage = {
   // MONEY PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-bak-air-proyek.html": "Sewa Bak Air Proyek", //belum dibuat 
-  "https://www.betonjayareadymix.com/2019/02/sewa-tandon-air.html": "Sewa Tandon Air",   //belum dibuat 
-  "https://www.betonjayareadymix.com/2019/02/sewa-tangki-air-proyek.html": "Sewa Tangki Air Proyek", //belum dibuat 
-  "https://www.betonjayareadymix.com/2019/02/sewa-tangki-air-industri.html": "Sewa Tangki Air Industri" //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-bak-air-proyek.html": "Sewa Bak Air Proyek",
+  "https://www.betonjayareadymix.com/2019/03/sewa-tandon-air.html": "Sewa Tandon Air",   
+  "https://www.betonjayareadymix.com/2019/03/sewa-tangki-air-proyek.html": "Sewa Tangki Air Proyek", //belum dibuat 
+  "https://www.betonjayareadymix.com/2019/03/sewa-tangki-air-industri.html": "Sewa Tangki Air Industri" //belum dibuat
 
 };
 const urlMappingSewaAksesKeamananProyekFromMoneyMasterMoneyPage = {
   // MONEY PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-barrier-proyek.html": "Sewa Barrier Proyek",  //belum dibuat
-  "https://www.betonjayareadymix.com/2019/02/sewa-pagar-proyek.html": "Sewa Pagar Proyek",  //belum dibuat
-  "https://www.betonjayareadymix.com/2019/02/sewa-gerbang-proyek.html":  "Sewa Gerbang Proyek",  //belum dibuat
-  "https://www.betonjayareadymix.com/2019/02/sewa-pos-keamanan-proyek.html": "Sewa Pos Keamanan Proyek"  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-barrier-proyek.html": "Sewa Barrier Proyek",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-pagar-proyek.html": "Sewa Pagar Proyek",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-gerbang-proyek.html":  "Sewa Gerbang Proyek",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-pos-keamanan-proyek.html": "Sewa Pos Keamanan Proyek"  //belum dibuat
 };
 const urlMappingSewaSelangProyekProyekFromMoneyMasterMoneyPage = {
  // MONEY PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-selang-air.html": "Sewa Selang Air",  //belum dibuat
-  "https://www.betonjayareadymix.com/2019/02/sewa-selang-pompa.html": "Sewa Selang Pompa",  //belum dibuat
-  "https://www.betonjayareadymix.com/2019/02/sewa-selang-lumpur.html": "Sewa Selang Lumpur",  //belum dibuat
-  "https://www.betonjayareadymix.com/2019/02/sewa-selang-industrial.html": "Sewa Selang Industrial"  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-selang-air.html": "Sewa Selang Air",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-selang-pompa.html": "Sewa Selang Pompa",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-selang-lumpur.html": "Sewa Selang Lumpur",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-selang-industrial.html": "Sewa Selang Industrial"  //belum dibuat
 };
 const urlMappingSewaPipaProyekFromMoneyMasterMoneyPage = {
 // MONEY PAGE
-  "https://www.betonjayareadymix.com/2019/02/sewa-pipa-air.html": "Sewa Pipa Air",  //belum dibuat
-  "https://www.betonjayareadymix.com/2019/02p/sewa-pipa-dewatering.html": "Sewa Pipa Dewatering",  //belum dibuat
-  "https://www.betonjayareadymix.com/2019/02/sewa-pipa-hdpe.html": "Sewa Pipa HDPE",  //belum dibuat
-  "https://www.betonjayareadymix.com/2019/02/sewa-pipa-industrial.html": "Sewa Pipa Industrial"  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-pipa-air.html": "Sewa Pipa Air",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-pipa-dewatering.html": "Sewa Pipa Dewatering",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-pipa-hdpe.html": "Sewa Pipa HDPE",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/sewa-pipa-industrial.html": "Sewa Pipa Industrial"  //belum dibuat
 };
 
 // ============================================================
@@ -240,7 +240,7 @@ const urlMappingSewaPompaAirDieselFromMoneyPageMoneyChild = {
 };
 const urlMappingSewaPompaAirDieselFromMoneyChildVariant = {
 "https://www.betonjayareadymix.com/2019/03/perbandingan-harga-pompa-diesel.html": "Perbandingan Harga Pompa Diesel",
-"https://www.betonjayareadymix.com/2019/03/diskon-sewa-pompa-diesel.html": "Diskon Sewa Pompa Diesel",
+//"https://www.betonjayareadymix.com/2019/03/diskon-sewa-pompa-diesel.html": "Diskon Sewa Pompa Diesel",
 "https://www.betonjayareadymix.com/2019/03/spesifikasi-pompa-air-diesel.html": "Spesifikasi Pompa Air Diesel",  // TYPE: VARIANT
 "https://www.betonjayareadymix.com/2019/03/daftar-harga-pompa-diesel.html": "Daftar Harga Pompa Diesel",  // TYPE: VARIANT
 "https://www.betonjayareadymix.com/2019/03/daftar-harga-pompa-diesel-jakarta.html": "Daftar Harga Pompa Diesel Jakarta"  // TYPE: VARIANT
