@@ -162,11 +162,12 @@ const urlMappingSewaPencahayaanProyekFromMoneyMasterMoneyMaster1 = {
     "https://www.betonjayareadymix.com/2019/03/sewa-lampu-penerangan-jalan.html": "Sewa Lampu Penerangan Jalan" //belum dibuat 
 };
 const urlMappingSewaAlatSurveyFromMoneyMasterMoneyMaster1 = {
- // MONEY PAGE
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html": "Sewa Alat Survey Pengukuran",
   "https://www.betonjayareadymix.com/2019/03/sewa-total-station.html": "Sewa Total Station", 
   "https://www.betonjayareadymix.com/2019/03/sewa-waterpass.html": "Sewa Waterpass",  
-  "https://www.betonjayareadymix.com/2019/03/sewa-theodolite.html": "Sewa Theodolite" 
+  "https://www.betonjayareadymix.com/2019/03/sewa-theodolite.html": "Sewa Theodolite",
+	
+  "https://www.betonjayareadymix.com/2019/03/sewa-laser-level.html": "Sewa Laser Level"  // TYPE: MONEY_PAGE
 };
 const urlMappingSewaAlatBorFromMoneyMasterMoneyMaster1 = {
   // MONEY PAGE
@@ -592,15 +593,7 @@ const urlMappingSewaPanelListrikFromMoneyMaster1MoneyChild = {
 // 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE & MONEY_CHILD
 // ============================================================
 
-const urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage = {
-  // ============================================================
-  // [MONEY_PAGE] - SEWA ALAT SURVEY
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/03/sewa-total-station.html": "Sewa Total Station",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-waterpass.html": "Sewa Waterpass",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-theodolite.html": "Sewa Theodolite",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-laser-level.html": "Sewa Laser Level",  // TYPE: MONEY_PAGE
-  
+const urlMappingSewaAlatSurveyFromMoneyMasterMoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - SEWA ALAT SURVEY PER LOKASI
   // ============================================================
@@ -610,7 +603,7 @@ const urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/2019/03/sewa-alat-survey-depok.html": "Sewa Alat Survey Depok",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-alat-survey-tangerang.html": "Sewa Alat Survey Tangerang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/03/sewa-alat-survey-bekasi.html": "Sewa Alat Survey Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/03/sewa-alat-survey-karawang.html": "Sewa Alat Survey Karawang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/03/sewa-alat-survey-karawang.html": "Sewa Alat Survey Karawang"  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
@@ -2247,7 +2240,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingSewaScaffoldingFromMoneyMasterMoneyPage,
 		urlMappingSewaTowerLampFromMoneyMaster1MoneyChild,
-		urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage,
+		urlMappingSewaAlatSurveyFromMoneyMasterMoneyChild,
 		urlMappingSewaTotalStationFromSub2MoneyChild,
 		urlMappingSewaWaterpassFromSub2MoneyChild,
 		urlMappingSewaTheodoliteFromMoneyMaster1MoneyChild,
@@ -4201,107 +4194,15 @@ if (urlMappingSewaScaffoldingFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstr
     );
  }
    
-if (urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-//RESTORE CONTAINER
-     restoreCondition('JasaKonsAlatKonstruksiPost');
-
-	restoreCondition('SewaAlatKonstruksiPost');
-    restoreCondition('SewaAlatProyekPost');
-   	restoreCondition('SewaAlatProyekSurveyPengukuranPost');
-	  
-	//hapus pillar jasa konstruksi
-	removeCondition('JasaKonstruksiAlatKonstruksiPost');
-	removeCondition('JasaKonsAlatKonstruksiPost');
-
-
-	
-
-	//hapus semua entity jasa alat konstruksi
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
-     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
-	
-     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
-     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
-     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-        removeCondition('ProdukInFurPost');
-	      removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-        removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	      removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPerbaikanPost');
-        removeCondition('JasaKonsCuttingBetonPost');
-        removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	   //hapus elemen SUB SewaAlatProyekPost lain selain SewaAlatProyekSurveyPengukuranPost
-	  removeCondition('SewaAlatProyekPompaDewateringPost');
-	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
-	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
-	  //removeCondition('SewaAlatProyekSurveyPengukuranPost');
-	  removeCondition('SewaAlatProyekAksesKeamananPost');
-	  removeCondition('SewaAlatProyekBorGroundWorkPost');
-	  removeCondition('SewaAlatProyekSistemPendukungPost');
-
-		 //HAPUS SEMUA SUB SewaAlatProyekSurveyPengukuranPost
-     removeCondition('SewaAlatProyekSurveyPengukuranTotalStationPost');
-	 removeCondition('SewaAlatProyekSurveyPengukuranWaterpassPost');
-     removeCondition('SewaAlatProyekSurveyPengukuranTheodolitePost');
-	
-        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
-        removeCondition('SewaAlatBeratPost');
-		 removeCondition('SewaForkliftPost');
-		 removeCondition('SewaCranePost');
-		 removeCondition('SewaSelfLoaderPost');
-		 removeCondition('SewaWheelLoaderPost');
-		 removeCondition('SewaVibroRollerPost');
-		 removeCondition('SewaWalesStoomPost');
-		 removeCondition('SewaTandemRollerPost');
-		 removeCondition('SewaBulldozerPost');
-		 removeCondition('SewaExcavatorPost');
-		 removeCondition('SewaBackhoeLoaderPost');
-		 removeCondition('SewaConcretePaverPost');
-		 removeCondition('SewaTrencherPost');
-		 removeCondition('SewaBabyRollerPost');
-		 removeCondition('SewaAlatPancangPost');
-		 removeCondition('SewaMotorGraderPost');
-	
-	
-        removeCondition('SewaAlatKonstruksiRinganPost');
-    
-        //JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
-        //JasaAlatKonstruksiPostLink.style.visibility = 'visible';
-	
-        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
-	//TAMPILKAN SewaAlatProyekPost
-        SewaAlatProyekPostLink.style.visibility = 'visible';
-	   SewaAlatProyekSurveyPengukuranPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
-    
+if (urlMappingSewaAlatSurveyFromMoneyMasterMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         generateBreadcrumbJasaAlatKonstruksiPost(
-        urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage,
+        urlMappingSewaAlatSurveyFromMoneyMasterMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
-            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
-            { name: 'Sewa Alat Survey Pengukuran', url: 'https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html' }
+   { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Pendukung', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-pendukung.html' },
+            { name: 'Perbandingan Sewa Alat Pendukung', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pendukung.html' },
+            { name: 'Sewa Alat Survey', url: 'https://www.betonjayareadymix.com/p/sewa-alat-survey.html' }
         ],
         'SEWA_RENTAL'
     );
