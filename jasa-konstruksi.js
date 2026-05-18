@@ -179,9 +179,7 @@ const urlMappingSewaAlatFromPillarSub2 = {
 const urlMappingSewaAlatProyekFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html": "Perbandingan Sewa Alat Proyek"  // TYPE: SUB1 PARENT
 };
-const urlMappingSewaAlatProyekFromSub2Sub1 = {
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html": "Perbandingan Sewa Alat Proyek"  // TYPE: SUB1 PARENT
-};
+
 const urlMappingSewaAlatProyekFromSub1MoneyMaster = {
   //"https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html": "Harga Sewa Alat Proyek"  // TYPE: MoneyMaster
    "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html": "Sewa Alat Proyek"  // TYPE: MoneyMaster
