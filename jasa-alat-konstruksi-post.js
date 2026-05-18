@@ -760,17 +760,66 @@ const urlMappingSewaBabyRollerPostFromMoneyMasterMoneyPage = {
 const urlMappingSewaMotorGraderPostFromMoneyMasterMoneyPage = { 
 // "https://www.betonjayareadymix.com/2019/02/sewa-motor-grader.html": "Sewa Motor Grader" // TYPE: MONEY_PAGE PARENT
 };
+
 const urlMappingSewaAlatPancangPostFromMoneyMasterMoneyPage = { 
   // "https://www.betonjayareadymix.com/2019/02/sewa-alat-pancang.html": "Sewa Alat Pancang"  // TYPE: MONEY_PAGE PARENT
 	  // ============================================================
-  // ============================================================
+   "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-pancang.html": "Harga Sewa Alat Pancang", // MONEY PAGE
+  "https://www.betonjayareadymix.com/2019/02/biaya-sewa-alat-pancang-per-hari.html": "Biaya Sewa Alat Pancang per Hari", // MONEY PAGE
+  "https://www.betonjayareadymix.com/2019/02/tarif-sewa-alat-pancang-murah.html": "Tarif Sewa Alat Pancang Murah", // MONEY PAGE
+	/*
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-pile-driver.html": "Harga Sewa Pile Driver",  
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-diesel-hammer.html": "Harga Sewa Diesel Hammer",  
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-drop-hammer.html": "Harga Sewa Drop Hammer", 
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-pancang-drop-hammer.html": "Harga Sewa Alat Pancang Drop Hammer",  
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-pancang-hspd.html": "Harga Sewa Alat Pancang HSPD"
+  */
 
 };
+const urlMappingSewaPileDriverPostFromMoneyMasterMoneyPage = { 
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-pile-driver.html": "Harga Sewa Pile Driver", 
+    "https://www.betonjayareadymix.com/2019/02/biaya-sewa-pile-driver-per-hari.html": "Biaya Sewa Pile Driver per Hari", // BELUM DIBUAT
+  "https://www.betonjayareadymix.com/2019/02/tarif-sewa-pile-driver-bulanan.html": "Tarif Sewa Pile Driver Bulanan" // BELUM DIBUAT
+};
+const urlMappingSewaDieselHammerPostFromMoneyMasterMoneyPage = {  
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-diesel-hammer.html": "Harga Sewa Diesel Hammer",  
+ "https://www.betonjayareadymix.com/2019/02/biaya-sewa-diesel-hammer-per-hari.html": "Biaya Sewa Diesel Hammer per Hari", // BELUM DIBUAT
+  "https://www.betonjayareadymix.com/2019/02/tarif-sewa-diesel-hammer-murah.html": "Tarif Sewa Diesel Hammer Murah" // BELUM DIBUAT
+  */
+
+};
+const urlMappingSewaAlatPancangHidrolikPostFromMoneyMasterMoneyPage = {   
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-pancang-hidrolik.html": "Harga Sewa Alat Pancang Hidrolik", // BELUM DIBUAT
+  "https://www.betonjayareadymix.com/2019/02/biaya-sewa-alat-pancang-hidrolik.html": "Biaya Sewa Alat Pancang Hidrolik", // BELUM DIBUAT
+  "https://www.betonjayareadymix.com/2019/02/tarif-sewa-alat-pancang-hidrolik-per-hari.html": "Tarif Sewa Alat Pancang Hidrolik per Hari" // BELUM DIBUAT
+};
+const urlMappingSewaAlatPancangHSPDPostFromMoneyMasterMoneyPage = { 
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-pancang-hspd.html": "Harga Sewa Alat Pancang HSPD",
+  "https://www.betonjayareadymix.com/2019/02/biaya-sewa-alat-pancang-hspd.html": "Biaya Sewa Alat Pancang HSPD", // BELUM DIBUAT
+  "https://www.betonjayareadymix.com/2019/02/tarif-sewa-alat-pancang-hspd-murah.html": "Tarif Sewa Alat Pancang HSPD Murah" // BELUM DIBUAT
+
+};
+const urlMappingSewaAlatPancangSheetPilePostFromMoneyMasterMoneyPage = { 
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-pancang-sheet-pile.html": "Harga Sewa Alat Pancang Sheet Pile", // BELUM DIBUAT
+  "https://www.betonjayareadymix.com/2019/02/biaya-sewa-alat-pancang-sheet-pile.html": "Biaya Sewa Alat Pancang Sheet Pile", // BELUM DIBUAT
+  "https://www.betonjayareadymix.com/2019/02/tarif-sewa-alat-pancang-sheet-pile-per-hari.html": "Tarif Sewa Alat Pancang Sheet Pile per Hari" // BELUM DIBUAT
+};
+const urlMappingSewaAlatPancangMiniPilePostFromMoneyMasterMoneyPage = { 
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-pancang-mini-pile.html": "Harga Sewa Alat Pancang Mini Pile", // BELUM DIBUAT
+  "https://www.betonjayareadymix.com/2019/02/biaya-sewa-alat-pancang-mini-pile.html": "Biaya Sewa Alat Pancang Mini Pile", // BELUM DIBUAT
+  "https://www.betonjayareadymix.com/2019/02/tarif-sewa-alat-pancang-mini-pile-murah.html": "Tarif Sewa Alat Pancang Mini Pile Murah" // BELUM DIBUAT
+};
+const urlMappingSewaAlatPancangDieselHammerPostFromMoneyMasterMoneyPage = { 
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-pancang-diesel-hammer.html": "Harga Sewa Alat Pancang Diesel Hammer", // BELUM DIBUAT
+  "https://www.betonjayareadymix.com/2019/02/biaya-sewa-alat-pancang-diesel-hammer.html": "Biaya Sewa Alat Pancang Diesel Hammer", // BELUM DIBUAT
+  "https://www.betonjayareadymix.com/2019/02/tarif-sewa-alat-pancang-diesel-hammer-per-hari.html": "Tarif Sewa Alat Pancang Diesel Hammer per Hari" // BELUM DIBUAT
+};
+const urlMappingSewaAlatPancangDropHammerPostFromMoneyMasterMoneyPage = { 
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-pancang-drop-hammer.html": "Harga Sewa Alat Pancang Drop Hammer", // MONEY PAGE
+  "https://www.betonjayareadymix.com/2019/02/biaya-sewa-alat-pancang-drop-hammer.html": "Biaya Sewa Alat Pancang Drop Hammer", // MONEY PAGE
+  "https://www.betonjayareadymix.com/2019/02/tarif-sewa-alat-pancang-drop-hammer-murah.html": "Tarif Sewa Alat Pancang Drop Hammer Murah" // MONEY PAGE
+};
+
 const urlMappingSewaConcretePaverPostFromMoneyMasterMoneyPage = { 
   //"https://www.betonjayareadymix.com/2019/02/sewa-concrete-paver.html": "Sewa Concrete Paver"  // TYPE: MONEY_PAGE PARENT
 };
@@ -1026,7 +1075,7 @@ const urlMappingSewaWheelLoaderFromSub2MoneyMaster = {
 // Breadcrumb: Home > Sewa Alat Konstruksi > Sewa Alat Ringan > [Nama Alat] (4 level)
 // ============================================================
 
-const urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster = {
+const urlMappingSewaAlatKonstruksiRinganFromMoneyMasterMoneyPage = {
   // ============================================================
   // [MONEY_MASTER] - SEWA ALAT CLEANING
   // ============================================================
