@@ -179,6 +179,9 @@ const urlMappingSewaAlatFromPillarSub2 = {
 const urlMappingSewaAlatProyekFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html": "Perbandingan Sewa Alat Proyek"  // TYPE: SUB1 PARENT
 };
+const urlMappingSewaAlatProyekFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html": "Perbandingan Sewa Alat Proyek"  // TYPE: SUB1 PARENT
+};
 const urlMappingSewaAlatProyekFromSub1MoneyMaster = {
   //"https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html": "Harga Sewa Alat Proyek"  // TYPE: MoneyMaster
    "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html": "Sewa Alat Proyek"  // TYPE: MoneyMaster
@@ -262,7 +265,50 @@ const urlMappingSewaAlatRinganFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html": "Perbandingan Sewa Alat Ringan"  // TYPE: SUB1
 };
 const urlMappingSewaAlatRinganFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/harga-sewa-alat-ringan.html": "Harga Sewa Alat Ringan"  // TYPE: MoneyMaster PARENT
+ // "https://www.betonjayareadymix.com/p/harga-sewa-alat-ringan.html": "Harga Sewa Alat Ringan"  // TYPE: MoneyMaster PARENT
+ // ============================================================
+// MONEY MASTER (MM)
+// ROOT COMMERCIAL ENTITY
+// ============================================================
+
+"https://www.betonjayareadymix.com/2019/02/jasa-sewa-alat-cleaning.html":
+  "Jasa Sewa Alat Cleaning",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-mesin-polisher.html":
+  "Sewa Mesin Polisher",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-concrete-cutter.html":
+  "Sewa Concrete Cutter",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-jack-hammer.html":
+  "Sewa Jack Hammer",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-vibrator-beton.html":
+  "Sewa Vibrator Beton",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-mesin-molen.html":
+  "Sewa Mesin Molen",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-genset.html":
+  "Sewa Genset",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-mesin-compressor.html":
+  "Sewa Mesin Compressor",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-cutting-beton.html":
+  "Sewa Cutting Beton",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-mesin-potong-rumput.html":
+  "Sewa Mesin Potong Rumput",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-screed.html":
+  "Sewa Screed",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-trowel.html":
+  "Sewa Trowel",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-stamper.html":
+  "Sewa Stamper"
 };
 const urlMappingSewaAlatPendukungFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pendukung.html": "Perbandingan Sewa Alat Pendukung"  // TYPE: SUB1 PARENT
