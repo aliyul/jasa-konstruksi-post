@@ -785,8 +785,6 @@ const urlMappingSewaDieselHammerPostFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-diesel-hammer.html": "Harga Sewa Diesel Hammer",  
  "https://www.betonjayareadymix.com/2019/02/biaya-sewa-diesel-hammer-per-hari.html": "Biaya Sewa Diesel Hammer per Hari", // BELUM DIBUAT
   "https://www.betonjayareadymix.com/2019/02/tarif-sewa-diesel-hammer-murah.html": "Tarif Sewa Diesel Hammer Murah" // BELUM DIBUAT
-  */
-
 };
 const urlMappingSewaAlatPancangHidrolikPostFromMoneyMasterMoneyPage = {   
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-pancang-hidrolik.html": "Harga Sewa Alat Pancang Hidrolik", // BELUM DIBUAT
