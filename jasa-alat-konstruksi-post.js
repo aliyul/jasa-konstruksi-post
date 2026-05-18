@@ -1001,75 +1001,159 @@ const urlMappingSewaExcavatorPostFromMoneyPageMoneyChild = {
 // Parent: Sewa Alat Konstruksi Ringan (SUB2)
 // Breadcrumb: Home > Sewa Alat Konstruksi > Sewa Alat Ringan > [Nama Alat] (4 level)
 // ============================================================
+/*
+const urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1 = {
+  // ============================================================
+// MONEY MASTER (MM)
+// ROOT COMMERCIAL ENTITY
+// ============================================================
 
-const urlMappingSewaAlatKonstruksiRinganFromMoneyMasterMoneyPage = {
-  // ============================================================
-  // [MONEY_MASTER] - SEWA ALAT CLEANING
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/jasa-sewa-alat-cleaning.html": "Jasa Sewa Alat Cleaning",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/sewa-mesin-polisher.html": "Sewa Mesin Polisher",  // TYPE: MONEY_MASTER
+"https://www.betonjayareadymix.com/2019/02/jasa-sewa-alat-cleaning.html":
+  "Jasa Sewa Alat Cleaning",
 
-  // ============================================================
-  // [MONEY_MASTER] - SEWA ALAT POTONG & BOR
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/sewa-concrete-cutter.html": "Sewa Concrete Cutter",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/sewa-jack-hammer.html": "Sewa Jack Hammer",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/sewa-vibrator-beton.html": "Sewa Vibrator Beton",  // TYPE: MONEY_MASTER
+"https://www.betonjayareadymix.com/2019/02/sewa-mesin-polisher.html":
+  "Sewa Mesin Polisher",
 
-  // ============================================================
-  // [REDIRECT] - DUPLIKASI (canonical ke halaman sewa)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-concrete-cutter.html": "Harga Sewa Concrete Cutter",  // TYPE: REDIRECT
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-jack-hammer.html": "Harga Sewa Jack Hammer",  // TYPE: REDIRECT
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-vibrator-beton.html": "Harga Sewa Mesin Vibrator Beton",  // TYPE: REDIRECT
+"https://www.betonjayareadymix.com/2019/02/sewa-concrete-cutter.html":
+  "Sewa Concrete Cutter",
 
-  // ============================================================
-  // [MONEY_MASTER] - SEWA MESIN MOLEN
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-molen.html": "Harga Sewa Mesin Molen",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/sewa-mesin-molen.html": "Sewa Mesin Molen",  // TYPE: MONEY_MASTER
+"https://www.betonjayareadymix.com/2019/02/sewa-jack-hammer.html":
+  "Sewa Jack Hammer",
 
-  // ============================================================
-  // [MONEY_MASTER] - SEWA GENSET & KOMPRESOR
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-genset.html": "Harga Sewa Mesin Genset",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/sewa-genset.html": "Sewa Genset",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-compressor.html": "Harga Sewa Mesin Compressor",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/sewa-mesin-compressor.html": "Sewa Mesin Compressor",  // TYPE: MONEY_MASTER
+"https://www.betonjayareadymix.com/2019/02/sewa-vibrator-beton.html":
+  "Sewa Vibrator Beton",
 
-  // ============================================================
-  // [MONEY_MASTER] - SEWA CUTTING BETON
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-cutting-beton.html": "Harga Sewa Mesin Cutting Beton",  // TYPE: MONEY_MASTER
-  
-  // ============================================================
-  // [MONEY_CHILD] - SEWA CUTTING BETON TERDEKAT (LOKASI)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/sewa-cutting-beton-terdekat.html": "Sewa Cutting Beton Terdekat",  // TYPE: MONEY_CHILD
+"https://www.betonjayareadymix.com/2019/02/sewa-mesin-molen.html":
+  "Sewa Mesin Molen",
 
-  // ============================================================
-  // [MONEY_MASTER] - SEWA ALAT TAMAN
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-potong-rumput.html": "Harga Sewa Mesin Potong Rumput",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/sewa-mesin-potong-rumput.html": "Sewa Mesin Potong Rumput",  // TYPE: MONEY_MASTER
+"https://www.betonjayareadymix.com/2019/02/sewa-genset.html":
+  "Sewa Genset",
 
-  // ============================================================
-  // [MONEY_MASTER] - SEWA ALAT FINISHING
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-trowel.html": "Harga Sewa Mesin Trowel",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-screed.html": "Harga Sewa Mesin Screed",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/sewa-screed.html": "Sewa Screed",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/sewa-trowel.html": "Sewa Trowel",  // TYPE: MONEY_MASTER
+"https://www.betonjayareadymix.com/2019/02/sewa-mesin-compressor.html":
+  "Sewa Mesin Compressor",
 
-  // ============================================================
-  // [MONEY_MASTER] - SEWA POMPA & STAMPER
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-pompa-air.html": "Harga Sewa Pompa Air",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/sewa-pompa-air.html": "Sewa Pompa Air",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-stamper.html": "Harga Sewa Stamper",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/02/sewa-stamper.html": "Sewa Stamper",  // TYPE: MONEY_MASTER
+"https://www.betonjayareadymix.com/2019/02/sewa-cutting-beton.html":
+  "Sewa Cutting Beton",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-mesin-potong-rumput.html":
+  "Sewa Mesin Potong Rumput",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-screed.html":
+  "Sewa Screed",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-trowel.html":
+  "Sewa Trowel",
+
+"https://www.betonjayareadymix.com/2019/02/sewa-stamper.html":
+  "Sewa Stamper"
+
+};
+*/
+const urlMappingSewaConcreteCutterFromMoneyMasterMoneyPage = {
+// ============================================================
+// MONEY PAGE (MP)
+// DETAIL COMMERCIAL / PRICING / DETAIL INTENT
+// ============================================================
+
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-concrete-cutter.html":
+  "Harga Sewa Concrete Cutter"
+
+};
+const urlMappingSewaJackHammerFromMoneyMaster1MoneyPage = {
+// ============================================================
+// MONEY PAGE (MP)
+// DETAIL COMMERCIAL / PRICING / DETAIL INTENT
+// ============================================================
+
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-jack-hammer.html":
+  "Harga Sewa Jack Hammer"
+
+};
+const urlMappingSewaVibratorBetonFromMoneyMaster1MoneyPage = {
+// ============================================================
+// MONEY PAGE (MP)
+// DETAIL COMMERCIAL / PRICING / DETAIL INTENT
+// ============================================================
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-vibrator-beton.html":
+  "Harga Sewa Mesin Vibrator Beton"
+
+};
+const urlMappingSewaMesinMolenFromMoneyMaster1MoneyPage = {
+// ============================================================
+// MONEY PAGE (MP)
+// DETAIL COMMERCIAL / PRICING / DETAIL INTENT
+// ============================================================
+
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-molen.html":
+  "Harga Sewa Mesin Molen"
+};
+const urlMappingSewaGensetFromMoneyMaster1MoneyPage = {
+// ============================================================
+// MONEY PAGE (MP)
+// DETAIL COMMERCIAL / PRICING / DETAIL INTENT
+// ============================================================
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-genset.html":
+  "Harga Sewa Mesin Genset"
+
+};
+const urlMappingSewaMesinCompressorFromMoneyMaster1MoneyPage = {
+// ============================================================
+// MONEY PAGE (MP)
+// DETAIL COMMERCIAL / PRICING / DETAIL INTENT
+// ============================================================
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-compressor.html":
+  "Harga Sewa Mesin Compressor"
+
+};
+const urlMappingSewaCuttingBetonFromMoneyMaster1MoneyPage = {
+// ============================================================
+// MONEY PAGE (MP)
+// DETAIL COMMERCIAL / PRICING / DETAIL INTENT
+// ============================================================
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-cutting-beton.html":
+  "Harga Sewa Mesin Cutting Beton"
+};
+const urlMappingSewaMesinPotongRumputFromMoneyMaster1MoneyPage = {
+// ============================================================
+// MONEY PAGE (MP)
+// DETAIL COMMERCIAL / PRICING / DETAIL INTENT
+// ============================================================
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-potong-rumput.html":
+  "Harga Sewa Mesin Potong Rumput"
+};
+const urlMappingSewaMesinTrowelFromMoneyMaster1MoneyPage = {
+// ============================================================
+// MONEY PAGE (MP)
+// DETAIL COMMERCIAL / PRICING / DETAIL INTENT
+// ============================================================
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-trowel.html":
+  "Harga Sewa Mesin Trowel"
+
+};
+const urlMappingSewaMesinScreedFromMoneyMaster1MoneyPage = {
+// ============================================================
+// MONEY PAGE (MP)
+// DETAIL COMMERCIAL / PRICING / DETAIL INTENT
+// ============================================================
+
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-screed.html":
+  "Harga Sewa Mesin Screed"
+
+};
+const urlMappingSewaStamperFromMoneyMaster1MoneyPage = {
+// ============================================================
+// MONEY PAGE (MP)
+// DETAIL COMMERCIAL / PRICING / DETAIL INTENT
+// ============================================================
+"https://www.betonjayareadymix.com/2019/02/harga-sewa-stamper.html":
+  "Harga Sewa Stamper"
+
 };
 
+const urlMappingSewaCuttingBetonFromMoneyMaster1MoneyChild = {
+  "https://www.betonjayareadymix.com/2019/02/sewa-cutting-beton-terdekat.html":
+  "Sewa Cutting Beton Terdekat"
+};
 // ============================================================
 // 🔴 BREADCRUMB SKIP LEVEL NOTES
 // ============================================================
@@ -2215,7 +2299,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaConcretePaverPostFromMoneyMasterMoneyPage,
 		urlMappingSewaTrencherPostFromMoneyMasterMoneyPage,
 
-		urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster
+		urlMappingSewaConcreteCutterFromMoneyMasterMoneyPage
 	
     );
 	
@@ -5253,100 +5337,16 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}	
 //AKHIR SUB PAGE SEWA ALAT BERAT
-if (urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost]) {
- //RESTORE CONTAINER
-     restoreCondition('JasaKonsAlatKonstruksiPost');
-
-	restoreCondition('SewaAlatKonstruksiPost');
-	restoreCondition('SewaAlatKonstruksiRinganPost');
-	//hapus pillar jasa konstruksi
-	removeCondition('JasaKonstruksiAlatKonstruksiPost');
-	removeCondition('JasaKonsAlatKonstruksiPost');
-
-	
-
-	//hapus semua entity jasa alat konstruksi
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
-     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
-	
-     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
-     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
-     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-        removeCondition('ProdukInFurPost');
-	      removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-        removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	      removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPerbaikanPost');
-        removeCondition('JasaKonsCuttingBetonPost');
-        removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-
-	//hapus elemen SUB SewaAlatProyekPost 
-	  removeCondition('SewaAlatProyekPompaDewateringPost');
-	  removeCondition('SewaAlatProyekBekistingScaffoldingPost');
-	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
-	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
-	  removeCondition('SewaAlatProyekAksesKeamananPost');
-	  removeCondition('SewaAlatProyekBorGroundWorkPost');
-	  removeCondition('SewaAlatProyekSistemPendukungPost');
-
-	  //HAPUS SEMUA SUB SEWA ALAT SURVEY 
-     removeCondition('SewaAlatProyekSurveyPengukuranTotalStationPost');
-	 removeCondition('SewaAlatProyekSurveyPengukuranWaterpassPost');
-     removeCondition('SewaAlatProyekSurveyPengukuranTheodolitePost');
-	  
-        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatKonstruksiRinganPost
-        removeCondition('SewaAlatProyekPost');
-        removeCondition('SewaAlatBeratPost');
-		 removeCondition('SewaForkliftPost');
-		 removeCondition('SewaCranePost');
-		 removeCondition('SewaSelfLoaderPost');
-		 removeCondition('SewaWheelLoaderPost');
-		 removeCondition('SewaVibroRollerPost');
-		 removeCondition('SewaWalesStoomPost');
-		 removeCondition('SewaTandemRollerPost');
-		 removeCondition('SewaBulldozerPost');
-		 removeCondition('SewaExcavatorPost');
-		 removeCondition('SewaBackhoeLoaderPost');
-		 removeCondition('SewaConcretePaverPost');
-		 removeCondition('SewaTrencherPost');
-		 removeCondition('SewaBabyRollerPost');
-		 removeCondition('SewaAlatPancangPost');
-		 removeCondition('SewaMotorGraderPost');
-    
-        //JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
-        //JasaAlatKonstruksiPostLink.style.visibility = 'visible';
-        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
-	//TAMPILKAN SewaAlatBeratPost
-        SewaAlatKonstruksiRinganPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster[cleanUrlJasaKonsAlatKonstruksiPost];
-    
+if (urlMappingSewaConcreteCutterFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		    generateBreadcrumbJasaAlatKonstruksiPost(
-        urlMappingSewaAlatKonstruksiRinganFromSub2MoneyMaster,
+        urlMappingSewaConcreteCutterFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
-            { name: 'Sewa Alat Konstruksi Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi-ringan.html' }
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' },
+            { name: 'Sewa Concrete Cutter', url: 'https://www.betonjayareadymix.com/p/sewa-concrete-cutter.html' }
         ],
         'SEWA_RENTAL'
     );
