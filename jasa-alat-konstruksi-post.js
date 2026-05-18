@@ -67,28 +67,99 @@ const urlMappingSewaPompaAirFromMoneyMasterMoneyMaster1 = {
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-air-irigasi.html": "Sewa Pompa Air Irigasi" //belum dibuat
 };
 const urlMappingSewaPompaLumpurFromMoneyMasterMoneyMaster1 = {
+	  /* CIRI MM TURUNAN
+  Walau tanpa harga, tetap MM bila:
+entity alat berbeda
+market berbeda
+bisa berdiri sendiri
+punya turunan sendiri
+*/
     "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-diesel.html": "Sewa Pompa Lumpur Diesel",
     "https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur.html": "Sewa Pompa Sedot Lumpur",
-    "https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur.html": "Sewa Pompa Sedot Lumpur",
+   // "https://www.betonjayareadymix.com/2019/03/sewa-pompa-sedot-lumpur.html": "Sewa Pompa Sedot Lumpur",
 
   "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-proyek.html": "Sewa Pompa Lumpur Proyek", //belum dibuat
     "https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur-tambang.html": "Sewa Pompa Lumpur Tambang"  //belum dibuat
 };
-const urlMappingSewaBekistingFromMoneyMasterMoneyMaster1 = {
- // MONEY PAGE
+// ============================================================
+// 📁 SUB Jasa Alat Konstruksi - SEWA BEKISTING & SCAFFOLDING
+// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE & MONEY_MASTER
+// ============================================================
+
+const urlMappingSewaBekistingFromMoneyMasterMoneyPage = {
+  /*bukan MM TURUNANAN KARNA GA ADA CIRI MM TURUNAN
+  Walau tanpa harga, tetap MM bila:
+entity alat berbeda
+market berbeda
+bisa berdiri sendiri
+punya turunan sendiri
+*/
+/*CIRI MP:
+MP → biasanya mulai mengandung:
+harga
+biaya
+tarif
+per jam
+per hari
+per m2
+modifier detail/specifik
+*/
+	
+  // ============================================================
+  // [MONEY_MASTER] - HARGA SEWA SCAFFOLDING (NASIONAL)
+  // 🧠 TYPE: MONEY_MASTER (khusus SEWA, diperbolehkan)
+  // ============================================================
+   // MONEY PAGE
+	
   "https://www.betonjayareadymix.com/2019/02/sewa-bekisting-scaffolding.html": "Sewa Bekisting Scaffolding",
+  "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-cor-jalan.html": "Sewa Bekisting Cor Jalan",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-kolom-balok.html": "Sewa Bekisting Kolom Balok",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-kolom.html": "Sewa Bekisting Kolom",  //belum dibuat
   "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-balok.html": "Sewa Bekisting Balok",  //belum dibuat
-  "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-plat-lantai.html": "Sewa Bekisting Plat Lantai"  //belum dibuat
-
+  "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-plat-lantai.html": "Sewa Bekisting Plat Lantai",  //belum dibuat
+  "https://www.betonjayareadymix.com/2019/03/harga-jasa-sewa-bekisting.html": "Harga Jasa Sewa Bekisting",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/03/harga-sewa-bekisting.html": "Harga Sewa Bekisting",  // TYPE: MONEY_MASTER
+"https://www.betonjayareadymix.com/2019/03/sewa-bekisting-per-meter.html": "Sewa Bekisting Per Meter"  // TYPE: MONEY_CHILD
+  
 };
+const urlMappingSewaBekistingFromMoneyMasterMoneyChild = {
+  // ============================================================
+  // [MONEY_CHILD] - SEWA SCAFFOLDING PER LOKASI
+  // ============================================================
+
+  // ============================================================
+  // 🟡 SARAN ITEM TAMBAHAN (BELUM AKTIF - PERLU DIBUAT KONTEN)
+  // ============================================================
+  // "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-jakarta.html": "Sewa Bekisting Jakarta",  // TYPE: MONEY_CHILD
+ 
+  
+  // "https://www.betonjayareadymix.com/2019/03/sewa-scaffolding-per-meter.html": "Sewa Scaffolding Per Meter",  // TYPE: MONEY_CHILD
+};
+const urlMappingSewaScaffoldingFromMoneyMasterMoneyPage = {
+  
+  // ============================================================
+  // [MONEY_MASTER] - HARGA SEWA SCAFFOLDING (NASIONAL)
+  // 🧠 TYPE: MONEY_MASTER (khusus SEWA, diperbolehkan)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/03/harga-jasa-sewa-scaffolding.html": "Harga Jasa Sewa Scaffolding",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/03/harga-sewa-scaffolding.html": "Harga Sewa Scaffolding"  // TYPE: MONEY_MASTER
+	
+  
+};
+const urlMappingSewaScaffoldingFromMoneyMasterMoneyChild = {
+    "https://www.betonjayareadymix.com/2019/03/sewa-scaffolding-terdekat.html": "Sewa Scaffolding Terdekat",  // TYPE: MONEY_CHILD
+	// "https://www.betonjayareadymix.com/2019/03/sewa-scaffolding-jakarta.html": "Sewa Scaffolding Jakarta",  // TYPE: MONEY_CHILD
+};
+
 const urlMappingSewaPencahayaanProyekFromMoneyMasterMoneyMaster1 = {
 // MONEY PAGE
   "https://www.betonjayareadymix.com/2019/02/sewa-pencahayaan-utilitas.html": "Sewa Pencahayaan Utilitas",
-  "https://www.betonjayareadymix.com/2019/03/sewa-lampu-proyek.html": "Sewa Lampu Proyek", //belum dibuat
-  "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp.html": "Sewa Tower Lamp", //belum dibuat
-  "https://www.betonjayareadymix.com/2019/03/sewa-lampu-penerangan-jalan.html": "Sewa Lampu Penerangan Jalan"  //belum dibuat 
-
+"https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp.html": "Sewa Tower Lamp",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/03/sewa-lampu-proyek.html": "Sewa Lampu Proyek",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/03/sewa-lampu-sorot.html": "Sewa Lampu Sorot",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/03/sewa-lampu-tembak.html": "Sewa Lampu Tembak",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/03/sewa-panel-listrik.html": "Sewa Panel Listrik",  // TYPE: MONEY_PAGE
+    "https://www.betonjayareadymix.com/2019/03/sewa-lampu-penerangan-jalan.html": "Sewa Lampu Penerangan Jalan" //belum dibuat 
 };
 const urlMappingSewaAlatSurveyFromMoneyMasterMoneyMaster1 = {
  // MONEY PAGE
@@ -446,40 +517,6 @@ const urlMappingSewaSelangProyekFromMoneyChildVariant = {
 "https://www.betonjayareadymix.com/2019/03/perbandingan-selang-karet-vs-pvc.html": "Perbandingan Selang Proyek VS PVC"
 };
 // ============================================================
-// 📁 SUB Jasa Alat Konstruksi - SEWA BEKISTING & SCAFFOLDING
-// 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE & MONEY_MASTER
-// ============================================================
-
-const urlMappingSewaBekistingScaffoldingFromSub2MoneyPage = {
-  // ============================================================
-  // [MONEY_PAGE] - SEWA BEKISTING & SCAFFOLDING
-  // 🧠 TYPE: MONEY_PAGE
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-cor-jalan.html": "Sewa Bekisting Cor Jalan",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-kolom-balok.html": "Sewa Bekisting Kolom Balok",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_MASTER] - HARGA SEWA SCAFFOLDING (NASIONAL)
-  // 🧠 TYPE: MONEY_MASTER (khusus SEWA, diperbolehkan)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/03/harga-jasa-sewa-scaffolding.html": "Harga Jasa Sewa Scaffolding",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/03/harga-sewa-scaffolding.html": "Harga Sewa Scaffolding",  // TYPE: MONEY_MASTER
-  
-  // ============================================================
-  // [MONEY_CHILD] - SEWA SCAFFOLDING PER LOKASI
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/03/sewa-scaffolding-terdekat.html": "Sewa Scaffolding Terdekat",  // TYPE: MONEY_CHILD
-  
-  // ============================================================
-  // 🟡 SARAN ITEM TAMBAHAN (BELUM AKTIF - PERLU DIBUAT KONTEN)
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-jakarta.html": "Sewa Bekisting Jakarta",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-per-meter.html": "Sewa Bekisting Per Meter",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/03/sewa-scaffolding-jakarta.html": "Sewa Scaffolding Jakarta",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/03/sewa-scaffolding-per-meter.html": "Sewa Scaffolding Per Meter",  // TYPE: MONEY_CHILD
-};
-
-// ============================================================
 // 📁 SUB Jasa Alat Konstruksi - SEWA PENCAHAYAAN UTILITAS
 // 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE & MONEY_CHILD
 // ============================================================
@@ -489,11 +526,7 @@ const urlMappingSewaPencahayaanUtilitasFromSub2MoneyPage = {
   // [MONEY_PAGE] - SEWA LAMPU PROYEK & TOWER LAMP
   // 🧠 TYPE: MONEY_PAGE
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp.html": "Sewa Tower Lamp",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-lampu-proyek.html": "Sewa Lampu Proyek",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-lampu-sorot.html": "Sewa Lampu Sorot",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-lampu-tembak.html": "Sewa Lampu Tembak",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2019/03/sewa-panel-listrik.html": "Sewa Panel Listrik",  // TYPE: MONEY_PAGE
+
 
   // ============================================================
   // [MONEY_CHILD] - SEWA TOWER LAMP PER LOKASI
@@ -2116,7 +2149,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaPompaDewateringFromMoneyMasterMoneyMaster1,
 		urlMappingSewaPompaAirFromMoneyMasterMoneyMaster1,
 		urlMappingSewaPompaLumpurFromMoneyMasterMoneyMaster1,
-		urlMappingSewaBekistingFromMoneyMasterMoneyMaster1,
+		urlMappingSewaBekistingFromMoneyMasterMoneyPage,
 		urlMappingSewaPencahayaanProyekFromMoneyMasterMoneyMaster1,
 		urlMappingSewaAlatSurveyFromMoneyMasterMoneyMaster1,
 		urlMappingSewaAlatBorFromMoneyMasterMoneyMaster1,
@@ -2150,7 +2183,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaSelangProyekFromMoneyPageMoneyChild,
 		urlMappingSewaSelangProyekFromMoneyChildVariant,
 		
-		urlMappingSewaBekistingScaffoldingFromSub2MoneyPage,
+		urlMappingSewaScaffoldingFromMoneyMasterMoneyPage,
 		urlMappingSewaPencahayaanUtilitasFromSub2MoneyPage,
 		urlMappingSewaAlatSurveyPengukuranFromSub2MoneyPage,
 		urlMappingSewaTotalStationFromSub2MoneyChild,
@@ -3187,10 +3220,10 @@ if (urlMappingSewaPompaDewateringFromMoneyMasterMoneyMaster1[cleanUrlJasaKonsAla
         'SEWA_RENTAL'
     );
 }
-	if (urlMappingSewaBekistingFromMoneyMasterMoneyMaster1[cleanUrlJasaKonsAlatKonstruksiPost]) {
+	if (urlMappingSewaBekistingFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
 
 			generateBreadcrumbJasaAlatKonstruksiPost(
-        urlMappingSewaBekistingFromMoneyMasterMoneyMaster1,
+        urlMappingSewaBekistingFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -4075,106 +4108,16 @@ if (urlMappingSewaMesinPompaAirFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonst
     }
   }
 
-if (urlMappingSewaBekistingScaffoldingFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
-//RESTORE CONTAINER
-     restoreCondition('JasaKonsAlatKonstruksiPost');
-
-	restoreCondition('SewaAlatKonstruksiPost');
-    restoreCondition('SewaAlatProyekPost');
-    restoreCondition('SewaAlatProyekBekistingScaffoldingPost');
-	  
-	//hapus pillar jasa konstruksi
-	removeCondition('JasaKonstruksiAlatKonstruksiPost');
-	removeCondition('JasaKonsAlatKonstruksiPost');
-
-	//hapus semua entity jasa alat konstruksi
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiJakartaPost');
-     removeCondition('EstimasiBiayaasaAlatKonstruksiBogorPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiDepokPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiTangerangPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiBekasiPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiKarawangPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiBandungPost');
-     removeCondition('EstimasiBiayaJasaAlatKonstruksiSurabayaPost');
-	
-     removeCondition('JasaAlatKonstruksiOperatorBersertifikatPost');
-     removeCondition('JasaAlatKonstruksiMetodeLemburPost');
-     removeCondition('JasaAlatKonstruksiTermasukBahanBakarPost');
-	    
-	  
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-        removeCondition('ProdukInFurPost');
-	      removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-        removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	      removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPerbaikanPost');
-        removeCondition('JasaKonsCuttingBetonPost');
-        removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	   //hapus elemen SUB SewaAlatProyekPost lain selain SewaAlatProyekBekistingScaffoldingPost
-	  removeCondition('SewaAlatProyekPompaDewateringPost');
-	  //removeCondition('SewaAlatProyekBekistingScaffoldingPost');
-	  removeCondition('SewaAlatProyekPencahayaanUtilitasPost');
-	  removeCondition('SewaAlatProyekSurveyPengukuranPost');
-	  removeCondition('SewaAlatProyekAksesKeamananPost');
-	  removeCondition('SewaAlatProyekBorGroundWorkPost');
-	  removeCondition('SewaAlatProyekSistemPendukungPost');
-
-	 		 //HAPUS SEMUA SUB SewaAlatProyekSurveyPengukuranPost
-     removeCondition('SewaAlatProyekSurveyPengukuranTotalStationPost');
-	 removeCondition('SewaAlatProyekSurveyPengukuranWaterpassPost');
-     removeCondition('SewaAlatProyekSurveyPengukuranTheodolitePost');
-	 
-        //hapus elemen SUB JasaAlatKonstruksiPost lain selain SewaAlatProyekPost
-        removeCondition('SewaAlatBeratPost');
-		 removeCondition('SewaForkliftPost');
-		 removeCondition('SewaCranePost');
-		 removeCondition('SewaSelfLoaderPost');
-		 removeCondition('SewaWheelLoaderPost');
-		 removeCondition('SewaVibroRollerPost');
-		 removeCondition('SewaWalesStoomPost');
-		 removeCondition('SewaTandemRollerPost');
-		 removeCondition('SewaBulldozerPost');
-		 removeCondition('SewaExcavatorPost');
-		 removeCondition('SewaBackhoeLoaderPost');
-		 removeCondition('SewaConcretePaverPost');
-		 removeCondition('SewaTrencherPost');
-		 removeCondition('SewaBabyRollerPost');
-		 removeCondition('SewaAlatPancangPost');
-		 removeCondition('SewaMotorGraderPost');
-	
-	
-        removeCondition('SewaAlatKonstruksiRinganPost');
-    
-        //JasaKonstruksiAlatKonstruksiPostLink.style.visibility = 'visible';
-        //JasaAlatKonstruksiPostLink.style.visibility = 'visible';
-	
-        SewaAlatKonstruksiPostLink.style.visibility = 'visible';
-	//TAMPILKAN SewaAlatProyekPost
-        SewaAlatProyekPostLink.style.visibility = 'visible';
-	   	SewaAlatProyekBekistingScaffoldingPostLink.style.visibility = 'visible';
-        pageNameJasaKonsAlatKonstruksiPost.textContent = urlMappingSewaBekistingScaffoldingFromSub2MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost];
-    
+if (urlMappingSewaScaffoldingFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
            generateBreadcrumbJasaAlatKonstruksiPost(
-        urlMappingSewaBekistingScaffoldingFromSub2MoneyPage,
+        urlMappingSewaScaffoldingFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
-            { name: 'Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/sewa-alat-proyek.html' },
-            { name: 'Sewa Bekisting Scaffolding', url: 'https://www.betonjayareadymix.com/2019/02/sewa-bekisting-scaffolding.html' }
+ 			{ name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Pendukung', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-pendukung.html' },
+            { name: 'Perbandingan Sewa Alat Pendukung', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pendukung.html' },
+            { name: 'Sewa Scaffolding', url: 'https://www.betonjayareadymix.com/p/sewa-scaffolding.html' }
         ],
         'SEWA_RENTAL'
     );
