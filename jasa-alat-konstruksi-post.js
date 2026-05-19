@@ -2342,7 +2342,7 @@ let currentPageTitle = cleanUrlJasaKonsAlatKonstruksiPost
     function waitForPageLevelDetector() {
       return new Promise((resolve) => {
         // Cek v19
-        if (window.pageLevelDetectorv19Ready && window.pageLevelDetectorV19) {
+        if (window.pageLevelDetectorv19Ready && window.pageLevelDetectorv19) {
           console.log("✅ Page Level Detector v19 already ready");
           resolve(true);
           return;
@@ -2360,7 +2360,7 @@ let currentPageTitle = cleanUrlJasaKonsAlatKonstruksiPost
           return;
         }
         // Event listener untuk v19
-        window.addEventListener("pageLevelDetectorV19Ready", () => {
+        window.addEventListener("pageLevelDetectorv19Ready", () => {
           console.log("✅ Page Level Detector v19 ready (event)");
           resolve(true);
         }, { once: true });
@@ -2376,7 +2376,7 @@ let currentPageTitle = cleanUrlJasaKonsAlatKonstruksiPost
         }, { once: true });
         // Fallback timeout 5 detik
         setTimeout(() => {
-          if (window.pageLevelDetectorV19 || window.pageLevelDetectorV18 || window.pageLevelDetectorV17 || window.pageLevelDetector) {
+          if (window.pageLevelDetectorv19 || window.pageLevelDetectorV18 || window.pageLevelDetectorV17 || window.pageLevelDetector) {
             console.log("✅ Page Level Detector ready (timeout fallback)");
             resolve(true);
           } else {
@@ -2416,7 +2416,7 @@ let currentPageTitle = cleanUrlJasaKonsAlatKonstruksiPost
       const PAGE_LEVEL_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/PageLevelDetector.js";
       const EVERGREEN_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/SmartEvergreenDetector.js";
       
-      if (typeof window.pageLevelDetectorV19 === "undefined" && 
+      if (typeof window.pageLevelDetectorv19 === "undefined" && 
           typeof window.pageLevelDetectorV18 === "undefined" &&
           typeof window.pageLevelDetectorV17 === "undefined" &&
           typeof window.pageLevelDetector === "undefined") {
@@ -2554,14 +2554,14 @@ let currentPageTitle = cleanUrlJasaKonsAlatKonstruksiPost
       let detectorVersion = 'unknown';
       
       // PRIORITAS v19.0
-      if (window.pageLevelDetectorV19 && typeof window.pageLevelDetectorV19.detect === 'function') {
+      if (window.pageLevelDetectorv19 && typeof window.pageLevelDetectorv19.detect === 'function') {
         try {
-          pageLevel = window.pageLevelDetectorV19.detect();
-          entityType = window.pageLevelDetectorV19.detectEntityType();
+          pageLevel = window.pageLevelDetectorv19.detect();
+          entityType = window.pageLevelDetectorv19.detectEntityType();
           detectorVersion = 'v19.0';
           console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
         } catch (e) {
-          console.warn(`⚠️ Error calling pageLevelDetectorV19:`, e);
+          console.warn(`⚠️ Error calling pageLevelDetectorv19:`, e);
         }
       } 
       // FALLBACK v18
