@@ -173,7 +173,7 @@ const urlMappingSewaAlatBorFromMoneyMasterMoneyMaster1 = {
   // MONEY PAGE
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-bor-ground-work.html": "Sewa Alat Bor Ground Work",
   "https://www.betonjayareadymix.com/2019/03/sewa-bor-tanah.html": "Sewa Bor Tanah",  // TYPE: MONEY_PAGE
-    "https://www.betonjayareadymix.com/2019/03/harga-sewa-alat-bor-sumur.html": "Sewa Alat Bor Sumur", // TYPE: MONEY_PAGE 
+    "https://www.betonjayareadymix.com/2019/03/sewa-alat-bor-sumur.html": "Sewa Alat Bor Sumur", // TYPE: MONEY_PAGE 
  // "https://www.betonjayareadymix.com/2019/03/sewa-bor-tanah.html": "Sewa Bor Tanah",   //belum dibuat
   "https://www.betonjayareadymix.com/2019/03/sewa-bor-beton.html": "Sewa Bor Beton",  //belum dibuat 
   "https://www.betonjayareadymix.com/2019/03/sewa-bor-pancang.html": "Sewa Bor Pancang"  //belum dibuat 
@@ -1172,51 +1172,44 @@ REDIRECT		5			Duplikasi, perlu 301 redirect
 ✅ ENTITY TYPE: SEWA/RENTAL - semua type di atas VALID
 ❌ JASA - tidak ada di file ini (berbeda entity)
 */ 
-// ============================================================
-// FUNGSI GENERATE BREADCRUMB - VERSI FINAL
-// UNTUK SEMUA ENTITY TYPE (PRODUK, MATERIAL, JASA, SEWA/RENTAL)
-// SUPPORT: Produk Konstruksi, Material Konstruksi, Jasa Konstruksi, 
-//          Produk Interior, Jasa Desain Interior, Sewa/Rental
-// MAX_LEVEL = 4 (TERMASUK HOME)
-// SKIP LEVEL BEKERJA UNTUK PILLAR & SUB2
-// ============================================================
-
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v7.2 FINAL
+ * generateBreadcrumbJasaKonstruksi v7.3 FINAL
  * UNIVERSAL ENTITY HIERARCHY ENGINE
  * ============================================================
  *
- * ✅ UPDATE v7.2
+ * ✅ UPDATE v7.3
  * ------------------------------------------------------------
- * - MAX LEVEL upgraded menjadi 5
- * - Hierarchy breadcrumb lebih natural
- * - Parent terdekat lebih stabil
- * - SP1/SP2 tidak mudah ter-skip
- * - Money-child bisa langsung turun dari MM
- * - Better SEO hierarchy sequence
- * - Better current page handling
- * - Better duplicate prevention
- * - Better hierarchy preservation
- * - Better level limiting
- * - Better parent ordering
- * - Exact match pillar tetap dipertahankan
+ * - FIX nearest parent wajib tidak skip
+ * - FIX hierarchy graph traversal
+ * - FIX MM tidak hilang
+ * - FIX breadcrumb chain SEO-safe
+ * - FIX isPartOf hierarchy consistency
+ * - FIX parent resolution berbasis chain
+ * - FIX global sort issue
+ * - FIX slice-before-chain bug
+ * - FIX SP1/SP2 preservation
+ * - FIX money hierarchy traversal
+ * - FIX current page hierarchy
+ * - MAX LEVEL tetap 5
  * - Semua logic lama tetap dipertahankan
  *
- * ✅ FIX FINAL:
- * ------------------------------------------------------------
- * - Parent terdekat WAJIB tidak boleh skip
- * - Direct commercial parent diprioritaskan
- * - Money-master diproteksi
- * - Money-page diproteksi
- * - Ancestor lineage lebih natural
- * - Tidak lagi hanya sort level asc
- * - Hierarchy berbasis nearest lineage
- * - isPartOf hierarchy lebih SEO-safe
- * - Breadcrumb lebih sinkron dengan webpage graph
+ * ============================================================
+ * CORE ENGINE v7.3
+ * ============================================================
+ *
+ * OLD SYSTEM:
+ * sort global by level
+ * → rawan skip parent terdekat
+ *
+ * NEW SYSTEM:
+ * current page
+ * → nearest parent
+ * → nearest parent
+ * → root
  *
  * ============================================================
- * @version 7.2.1 FINAL
+ * @version 7.3.0 FINAL
  * @date 2026-05-19
  * ============================================================
  */
@@ -1268,7 +1261,7 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
         };
 
         console.log(
-            `${icons[type] || '📘'} [Breadcrumb v7.2] ${message}`
+            `${icons[type] || '📘'} [Breadcrumb v7.3] ${message}`
         );
     }
 
@@ -1360,15 +1353,32 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
 
     const TYPE_LEVEL_MAP = {
 
-        'home': 0,
-        'pillar': 1,
-        'sub-pillar-tipe-2': 2,
-        'sub-pillar-tipe-1': 3,
-        'money-master': 4,
-        'money-page': 5,
-        'money-child': 6,
-        'variant': 7,
-        'sub-variant': 8
+        'home':
+            0,
+
+        'pillar':
+            1,
+
+        'sub-pillar-tipe-2':
+            2,
+
+        'sub-pillar-tipe-1':
+            3,
+
+        'money-master':
+            4,
+
+        'money-page':
+            5,
+
+        'money-child':
+            6,
+
+        'variant':
+            7,
+
+        'sub-variant':
+            8
     };
 
     // ============================================================
@@ -1966,14 +1976,16 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
         allLevels.push({
 
             name,
+
             url,
+
             type,
 
             level:
                 TYPE_LEVEL_MAP[type] || 99,
 
-            position:
-                i + 1
+            originalIndex:
+                i
         });
     }
 
@@ -2047,15 +2059,12 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
         detectPageType(currentPageTitle);
 
     // ============================================================
-    // 20. SELECT BREADCRUMB LEVELS
+    // 20. BUILD NEAREST PARENT CHAIN
     // ============================================================
 
     const selectedLevels = [];
 
-    // ========================================================
     // HOME
-    // ========================================================
-
     selectedLevels.push({
 
         name:
@@ -2068,208 +2077,102 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
             'home',
 
         level:
-            0,
-
-        position:
-            1
+            0
     });
 
-    // ========================================================
-    // REMOVE DUPLICATE
-    // ========================================================
+    // ============================================================
+    // CHAIN ENGINE
+    // ============================================================
 
-    const uniqueHierarchy = [];
+    const hierarchyChain = [];
 
-    const usedHierarchy = new Set();
+    let currentLevelValue =
+        TYPE_LEVEL_MAP[currentPageType] || 99;
 
-    for (const item of allLevels) {
+    // ============================================================
+    // REVERSE TRAVERSAL
+    // nearest parent first
+    // ============================================================
 
-        const key =
-            item.name.toLowerCase();
-
-        if (usedHierarchy.has(key)) {
-            continue;
-        }
-
-        usedHierarchy.add(key);
-
-        uniqueHierarchy.push(item);
-    }
-
-    // ========================================================
-    // FIND DIRECT PARENTS
-    // ========================================================
-
-    function findNearestParents() {
-
-        const lineage = [];
-
-        const currentLevel =
-            TYPE_LEVEL_MAP[currentPageType] || 99;
-
-        let lastAcceptedLevel =
-            currentLevel;
-
-        for (
-            let i = uniqueHierarchy.length - 1;
-            i >= 0;
-            i--
-        ) {
-
-            const item =
-                uniqueHierarchy[i];
-
-            if (
-                item.level < lastAcceptedLevel
-            ) {
-
-                lineage.unshift(item);
-
-                lastAcceptedLevel =
-                    item.level;
-            }
-        }
-
-        return lineage;
-    }
-
-    // ========================================================
-    // BUILD LINEAGE
-    // ========================================================
-
-    let lineageLevels =
-        findNearestParents();
-
-    // ========================================================
-    // PRIORITIZE ROOT PILLAR
-    // ========================================================
-
-    const rootPillar =
-        lineageLevels.find(
-            item => item.type === 'pillar'
-        );
-
-    // ========================================================
-    // ENSURE DIRECT COMMERCIAL PARENT
-    // ========================================================
-
-    const hasCommercialParent =
-        lineageLevels.some(item =>
-            item.type === 'money-master' ||
-            item.type === 'money-page'
-        );
-
-    if (
-        (
-            currentPageType === 'money-child' ||
-            currentPageType === 'money-page'
-        ) &&
-        !hasCommercialParent
+    for (
+        let i = allLevels.length - 1;
+        i >= 0;
+        i--
     ) {
 
-        const nearestCommercial =
-            [...uniqueHierarchy]
-                .reverse()
-                .find(item =>
-                    item.type === 'money-master' ||
-                    item.type === 'money-page'
-                );
+        const item =
+            allLevels[i];
 
-        if (nearestCommercial) {
-
-            lineageLevels.push(
-                nearestCommercial
-            );
+        // skip invalid upward hierarchy
+        if (
+            item.level >= currentLevelValue
+        ) {
+            continue;
         }
+
+        hierarchyChain.unshift(item);
+
+        currentLevelValue =
+            item.level;
     }
 
-    // ========================================================
-    // REMOVE DUPLICATE AFTER LINEAGE
-    // ========================================================
+    // ============================================================
+    // REMOVE DUPLICATE
+    // ============================================================
 
-    const cleanLineage = [];
+    const chainUnique = [];
 
-    const usedLineage = new Set();
+    const usedNames = new Set();
 
-    for (const item of lineageLevels) {
+    for (const item of hierarchyChain) {
 
         const key =
             item.name.toLowerCase();
 
-        if (usedLineage.has(key)) {
+        if (usedNames.has(key)) {
             continue;
         }
 
-        usedLineage.add(key);
+        usedNames.add(key);
 
-        cleanLineage.push(item);
+        chainUnique.push(item);
     }
 
-    // ========================================================
-    // SORT NATURAL ORDER
-    // ========================================================
-
-    cleanLineage.sort((a, b) => {
-
-        if (a.level !== b.level) {
-
-            return a.level - b.level;
-        }
-
-        return a.position - b.position;
-    });
-
-    // ========================================================
+    // ============================================================
     // MAX LEVEL SAFE
-    // HOME + 3 PARENT + CURRENT
-    // ========================================================
+    // HOME + PARENTS + CURRENT
+    // ============================================================
 
     const MAX_PARENT_LEVELS =
         CONFIG.MAX_LEVEL - 2;
 
-    let finalParents =
-        cleanLineage;
-
-    // ========================================================
-    // IMPORTANT:
-    // NEVER SKIP NEAREST PARENT
-    // ========================================================
+    let limitedChain =
+        chainUnique;
 
     if (
-        cleanLineage.length >
+        chainUnique.length >
         MAX_PARENT_LEVELS
     ) {
 
-        const nearestParent =
-            cleanLineage[
-                cleanLineage.length - 1
-            ];
-
-        const rootParents =
-            cleanLineage.slice(
-                0,
-                MAX_PARENT_LEVELS - 1
+        limitedChain =
+            chainUnique.slice(
+                chainUnique.length -
+                MAX_PARENT_LEVELS
             );
-
-        finalParents = [
-
-            ...rootParents,
-            nearestParent
-        ];
     }
 
-    // ========================================================
+    // ============================================================
     // INSERT PARENTS
-    // ========================================================
+    // ============================================================
 
-    for (const item of finalParents) {
+    for (const item of limitedChain) {
 
         selectedLevels.push(item);
     }
 
-    // ========================================================
-    // ADD CURRENT PAGE
-    // ========================================================
+    // ============================================================
+    // INSERT CURRENT PAGE
+    // ============================================================
 
     const hasCurrentAlready =
         selectedLevels.some(
@@ -2305,18 +2208,18 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
 
     const uniqueLevels = [];
 
-    const usedNames = new Set();
+    const usedFinalNames = new Set();
 
     for (const item of selectedLevels) {
 
         const key =
             item.name.toLowerCase();
 
-        if (usedNames.has(key)) {
+        if (usedFinalNames.has(key)) {
             continue;
         }
 
-        usedNames.add(key);
+        usedFinalNames.add(key);
 
         uniqueLevels.push(item);
     }
@@ -2489,7 +2392,7 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
         entityType,
 
         version:
-            '7.2.1 FINAL',
+            '7.3.0 FINAL',
 
         maxLevel:
             CONFIG.MAX_LEVEL
