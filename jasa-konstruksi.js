@@ -834,70 +834,28 @@ const urlMappingCustom = {
 
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v7.1 FINAL
+ * generateBreadcrumbJasaKonstruksi v7.2 FINAL
  * UNIVERSAL ENTITY HIERARCHY ENGINE
  * ============================================================
  *
- * ✅ FIX v7.1
+ * ✅ UPDATE v7.2
  * ------------------------------------------------------------
- * - MONEY CHILD tidak wajib punya MONEY PAGE
- * - MC bisa langsung turun dari MM
- * - Breadcrumb hierarchy lebih stabil
+ * - MAX LEVEL upgraded menjadi 5
+ * - Hierarchy breadcrumb lebih natural
+ * - Parent terdekat lebih stabil
+ * - SP1/SP2 tidak mudah ter-skip
+ * - Money-child bisa langsung turun dari MM
+ * - Better SEO hierarchy sequence
+ * - Better current page handling
+ * - Better duplicate prevention
+ * - Better hierarchy preservation
+ * - Better level limiting
+ * - Better parent ordering
  * - Exact match pillar tetap dipertahankan
- * - Better money detection
- * - Better sewa hierarchy
- * - Better jasa hierarchy
- * - Better variant detection
- * - Better location detection
- * - Better fallback URL
- * - Better parent selection
- * - Better normalization
- * - No duplicate breadcrumb
- * - Max 4 level tetap dipertahankan
- * - Parent terdekat tidak skip SP1/SP2 jika relevan
- * - Hierarchy sequence lebih natural
- * - Money-child bisa breadcrumb ke MM langsung
- * - Sorting hierarchy lebih SEO-safe
- * - Current page duplicate prevention
+ * - Semua logic lama tetap dipertahankan
  *
  * ============================================================
- * MONEY RULE FINAL
- * ============================================================
- *
- * SEWA:
- *
- * sewa excavator
- * → money-master
- *
- * harga sewa excavator
- * → money-page
- *
- * sewa excavator bandung
- * → money-child
- *
- * harga sewa excavator bandung
- * → money-child
- *
- * JASA:
- *
- * jasa waterproofing
- * → money-page
- *
- * jasa waterproofing jakarta
- * → money-child
- *
- * PRODUK:
- *
- * harga wiremesh
- * → money-master
- *
- * harga wiremesh m8
- * → money-page
- *
- * harga wiremesh m8 jakarta
- * → money-child
- *
- * @version 7.1.0 FINAL
+ * @version 7.2.0 FINAL
  * @date 2026-05-19
  * ============================================================
  */
@@ -909,6 +867,8 @@ function generateBreadcrumbJasaKonstruksi(
     entityType = 'PRODUK_KONSTRUKSI'
 ) {
 
+    //"use strict";
+
     // ============================================================
     // 1. GLOBAL CONFIG
     // ============================================================
@@ -918,8 +878,12 @@ function generateBreadcrumbJasaKonstruksi(
         DOMAIN:
             'https://www.betonjayareadymix.com',
 
+        // ====================================================
+        // MAX LEVEL UPGRADE
+        // ====================================================
+
         MAX_LEVEL:
-            4,
+            5,
 
         DEBUG:
             false,
@@ -947,7 +911,7 @@ function generateBreadcrumbJasaKonstruksi(
         };
 
         console.log(
-            `${icons[type] || '📘'} [Breadcrumb v7.1] ${message}`
+            `${icons[type] || '📘'} [Breadcrumb v7.2] ${message}`
         );
     }
 
@@ -1285,6 +1249,7 @@ function generateBreadcrumbJasaKonstruksi(
         'k225',
         'k250',
         'k300',
+
         'm6',
         'm8',
         'm10',
@@ -1544,7 +1509,7 @@ function generateBreadcrumbJasaKonstruksi(
         ) {
 
             // ================================================
-            // LOCATION = MONEY CHILD
+            // LOCATION
             // ================================================
 
             if (isLocation(lowerName)) {
@@ -1567,8 +1532,6 @@ function generateBreadcrumbJasaKonstruksi(
 
             if (isSewaEntity()) {
 
-                // harga sewa excavator
-
                 if (
                     HAS_PRICE_WORD &&
                     HAS_SEWA_WORD
@@ -1576,8 +1539,6 @@ function generateBreadcrumbJasaKonstruksi(
 
                     return 'money-page';
                 }
-
-                // sewa excavator
 
                 if (
                     !HAS_PRICE_WORD &&
@@ -1842,15 +1803,18 @@ function generateBreadcrumbJasaKonstruksi(
 
     nonHomeLevels.sort((a, b) => {
 
+        // PRIORITAS LEVEL
         if (a.level !== b.level) {
+
             return a.level - b.level;
         }
 
+        // PRIORITAS URUTAN ASLI
         return a.position - b.position;
     });
 
     // ========================================================
-    // REMOVE DUPLICATE BEFORE LIMIT
+    // REMOVE DUPLICATE
     // ========================================================
 
     const filteredLevels = [];
@@ -1872,13 +1836,17 @@ function generateBreadcrumbJasaKonstruksi(
     }
 
     // ========================================================
-    // MAX LEVEL SAFE
+    // MAX LEVEL 5 SAFE
+    // HOME + 3 PARENT + CURRENT PAGE
     // ========================================================
+
+    const MAX_PARENT_LEVELS =
+        CONFIG.MAX_LEVEL - 2;
 
     const limitedLevels =
         filteredLevels.slice(
             0,
-            CONFIG.MAX_LEVEL - 2
+            MAX_PARENT_LEVELS
         );
 
     // ========================================================
@@ -2135,7 +2103,7 @@ function generateBreadcrumbJasaKonstruksi(
         entityType,
 
         version:
-            '7.1.0 FINAL',
+            '7.2.0 FINAL',
 
         maxLevel:
             CONFIG.MAX_LEVEL
