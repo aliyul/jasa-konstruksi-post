@@ -1172,41 +1172,25 @@ REDIRECT		5			Duplikasi, perlu 301 redirect
 ✅ ENTITY TYPE: SEWA/RENTAL - semua type di atas VALID
 ❌ JASA - tidak ada di file ini (berbeda entity)
 */ 
-/**
- * ============================================================
+/* ============================================================
  * generateBreadcrumbJasaKonstruksi v7.3 FINAL
  * UNIVERSAL ENTITY HIERARCHY ENGINE
  * ============================================================
  *
  * ✅ UPDATE v7.3
  * ------------------------------------------------------------
- * - FIX nearest parent wajib tidak skip
- * - FIX hierarchy graph traversal
- * - FIX MM tidak hilang
- * - FIX breadcrumb chain SEO-safe
- * - FIX isPartOf hierarchy consistency
- * - FIX parent resolution berbasis chain
- * - FIX global sort issue
- * - FIX slice-before-chain bug
- * - FIX SP1/SP2 preservation
- * - FIX money hierarchy traversal
- * - FIX current page hierarchy
- * - MAX LEVEL tetap 5
+ * - Parent terdekat WAJIB tidak boleh skip
+ * - Hierarchy dibangun dari current page
+ * - Semantic parent scoring engine
+ * - Fix MM ter-skip pada money-page
+ * - Fix parent chain sewa alat
+ * - Fix breadcrumb hierarchy stability
+ * - Max level 5 tetap dipertahankan
+ * - Better nearest parent detection
+ * - Better semantic token matching
+ * - Better hierarchy preservation
+ * - Better SEO breadcrumb sequence
  * - Semua logic lama tetap dipertahankan
- *
- * ============================================================
- * CORE ENGINE v7.3
- * ============================================================
- *
- * OLD SYSTEM:
- * sort global by level
- * → rawan skip parent terdekat
- *
- * NEW SYSTEM:
- * current page
- * → nearest parent
- * → nearest parent
- * → root
  *
  * ============================================================
  * @version 7.3.0 FINAL
@@ -1984,8 +1968,8 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
             level:
                 TYPE_LEVEL_MAP[type] || 99,
 
-            originalIndex:
-                i
+            position:
+                i + 1
         });
     }
 
@@ -2036,8 +2020,59 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
     }
 
     // ============================================================
-    // 19. CURRENT PAGE
+    // 19. SELECT BREADCRUMB LEVELS
     // ============================================================
+
+    const selectedLevels = [];
+
+    selectedLevels.push({
+
+        name:
+            'Beranda',
+
+        url:
+            CONFIG.DOMAIN,
+
+        type:
+            'home',
+
+        level:
+            0,
+
+        position:
+            1
+    });
+
+    const nonHomeLevels =
+        allLevels.filter(
+            level => level.type !== 'home'
+        );
+
+    // ========================================================
+    // REMOVE DUPLICATE FIRST
+    // ========================================================
+
+    const filteredLevels = [];
+
+    const usedLevelNames = new Set();
+
+    for (const item of nonHomeLevels) {
+
+        const key =
+            cleanText(item.name.toLowerCase());
+
+        if (usedLevelNames.has(key)) {
+            continue;
+        }
+
+        usedLevelNames.add(key);
+
+        filteredLevels.push(item);
+    }
+
+    // ========================================================
+    // CURRENT PAGE ANALYSIS
+    // ========================================================
 
     const currentFullUrl =
         currentUrl.startsWith('http')
@@ -2058,121 +2093,151 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
     const currentPageType =
         detectPageType(currentPageTitle);
 
-    // ============================================================
-    // 20. BUILD NEAREST PARENT CHAIN
-    // ============================================================
+    const currentTokens =
+        cleanText(currentPageTitle)
+            .split(/\s+/)
+            .filter(Boolean);
 
-    const selectedLevels = [];
+    // ========================================================
+    // PARENT SCORING ENGINE
+    // ========================================================
 
-    // HOME
-    selectedLevels.push({
-
-        name:
-            'Beranda',
-
-        url:
-            CONFIG.DOMAIN,
-
-        type:
-            'home',
-
-        level:
-            0
-    });
-
-    // ============================================================
-    // CHAIN ENGINE
-    // ============================================================
-
-    const hierarchyChain = [];
-
-    let currentLevelValue =
-        TYPE_LEVEL_MAP[currentPageType] || 99;
-
-    // ============================================================
-    // REVERSE TRAVERSAL
-    // nearest parent first
-    // ============================================================
-
-    for (
-        let i = allLevels.length - 1;
-        i >= 0;
-        i--
+    function calculateParentScore(
+        candidate,
+        currentTokens
     ) {
 
-        const item =
-            allLevels[i];
+        const candidateTokens =
+            cleanText(candidate.name)
+                .toLowerCase()
+                .split(/\s+/)
+                .filter(Boolean);
 
-        // skip invalid upward hierarchy
+        let score = 0;
+
+        for (const token of candidateTokens) {
+
+            if (currentTokens.includes(token)) {
+                score += 10;
+            }
+        }
+
+        const candidatePhrase =
+            candidateTokens.join(' ');
+
         if (
-            item.level >= currentLevelValue
+            cleanText(currentPageTitle)
+                .toLowerCase()
+                .startsWith(candidatePhrase)
         ) {
-            continue;
+            score += 50;
         }
 
-        hierarchyChain.unshift(item);
-
-        currentLevelValue =
-            item.level;
-    }
-
-    // ============================================================
-    // REMOVE DUPLICATE
-    // ============================================================
-
-    const chainUnique = [];
-
-    const usedNames = new Set();
-
-    for (const item of hierarchyChain) {
-
-        const key =
-            item.name.toLowerCase();
-
-        if (usedNames.has(key)) {
-            continue;
+        if (
+            candidate.level <
+            TYPE_LEVEL_MAP[currentPageType]
+        ) {
+            score += 20;
         }
 
-        usedNames.add(key);
+        const levelDistance =
+            TYPE_LEVEL_MAP[currentPageType]
+            - candidate.level;
 
-        chainUnique.push(item);
+        if (levelDistance > 0) {
+
+            score +=
+                Math.max(
+                    0,
+                    20 - levelDistance
+                );
+        }
+
+        return score;
     }
 
-    // ============================================================
+    // ========================================================
+    // BUILD SEMANTIC PARENT CHAIN
+    // ========================================================
+
+    const scoredParents =
+        filteredLevels
+            .map(item => ({
+
+                ...item,
+
+                parentScore:
+                    calculateParentScore(
+                        item,
+                        currentTokens
+                    )
+            }))
+            .filter(
+                item =>
+                    item.parentScore > 0
+            );
+
+    // ========================================================
+    // SORT BY RELEVANCE
+    // ========================================================
+
+    scoredParents.sort((a, b) => {
+
+        if (
+            b.parentScore !==
+            a.parentScore
+        ) {
+
+            return (
+                b.parentScore -
+                a.parentScore
+            );
+        }
+
+        if (a.level !== b.level) {
+
+            return b.level - a.level;
+        }
+
+        return a.position - b.position;
+    });
+
+    // ========================================================
     // MAX LEVEL SAFE
-    // HOME + PARENTS + CURRENT
-    // ============================================================
+    // ========================================================
 
     const MAX_PARENT_LEVELS =
         CONFIG.MAX_LEVEL - 2;
 
-    let limitedChain =
-        chainUnique;
+    // ========================================================
+    // TAKE BEST PARENTS
+    // ========================================================
 
-    if (
-        chainUnique.length >
-        MAX_PARENT_LEVELS
-    ) {
+    const limitedLevels =
+        scoredParents
+            .slice(0, MAX_PARENT_LEVELS)
+            .sort((a, b) => {
 
-        limitedChain =
-            chainUnique.slice(
-                chainUnique.length -
-                MAX_PARENT_LEVELS
-            );
+                if (a.level !== b.level) {
+
+                    return a.level - b.level;
+                }
+
+                return a.position - b.position;
+            });
+
+    // ========================================================
+    // INSERT TO SELECTED
+    // ========================================================
+
+    for (const level of limitedLevels) {
+
+        selectedLevels.push(level);
     }
 
-    // ============================================================
-    // INSERT PARENTS
-    // ============================================================
-
-    for (const item of limitedChain) {
-
-        selectedLevels.push(item);
-    }
-
-    // ============================================================
-    // INSERT CURRENT PAGE
-    // ============================================================
+    // ========================================================
+    // PREVENT DUPLICATE CURRENT PAGE
+    // ========================================================
 
     const hasCurrentAlready =
         selectedLevels.some(
@@ -2203,29 +2268,29 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
     }
 
     // ============================================================
-    // 21. FINAL UNIQUE LEVELS
+    // 20. FINAL UNIQUE LEVELS
     // ============================================================
 
     const uniqueLevels = [];
 
-    const usedFinalNames = new Set();
+    const usedNames = new Set();
 
     for (const item of selectedLevels) {
 
         const key =
             item.name.toLowerCase();
 
-        if (usedFinalNames.has(key)) {
+        if (usedNames.has(key)) {
             continue;
         }
 
-        usedFinalNames.add(key);
+        usedNames.add(key);
 
         uniqueLevels.push(item);
     }
 
     // ============================================================
-    // 22. POSITION FIX
+    // 21. POSITION FIX
     // ============================================================
 
     uniqueLevels.forEach((item, index) => {
@@ -2235,7 +2300,7 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
     });
 
     // ============================================================
-    // 23. GENERATE HTML
+    // 22. GENERATE HTML
     // ============================================================
 
     let breadcrumbHtml =
@@ -2277,7 +2342,7 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
     breadcrumbHtml += `</div>\n`;
 
     // ============================================================
-    // 24. JSON LD
+    // 23. JSON LD
     // ============================================================
 
     const jsonLd = {
@@ -2306,7 +2371,7 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
     };
 
     // ============================================================
-    // 25. REMOVE OLD
+    // 24. REMOVE OLD
     // ============================================================
 
     document
@@ -2322,7 +2387,7 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
         .forEach(el => el.remove());
 
     // ============================================================
-    // 26. TARGET ELEMENT
+    // 25. TARGET ELEMENT
     // ============================================================
 
     const targetElement =
@@ -2331,7 +2396,7 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
         );
 
     // ============================================================
-    // 27. INJECT HTML
+    // 26. INJECT HTML
     // ============================================================
 
     if (targetElement) {
@@ -2350,7 +2415,7 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
     }
 
     // ============================================================
-    // 28. INJECT JSON LD
+    // 27. INJECT JSON LD
     // ============================================================
 
     const script =
@@ -2374,7 +2439,7 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
     document.head.appendChild(script);
 
     // ============================================================
-    // 29. RETURN
+    // 28. RETURN
     // ============================================================
 
     return {
