@@ -3233,7 +3233,7 @@ if (urlMappingSewaPompaDewateringFromMoneyMasterMoneyMaster1[cleanUrlJasaKonsAla
 if (urlMappingSewaAlatBorFromMoneyMasterMoneyMaster1[cleanUrlJasaKonsAlatKonstruksiPost]) {
   
 	// Cukup ganti URL dan tambahkan di mappingObj
-generateBreadcrumbJasaKonstruksi(
+generateBreadcrumbJasaAlatKonstruksiPost(
 	urlMappingSewaAlatBorFromMoneyMasterMoneyMaster1,
     cleanUrlJasaKonsAlatKonstruksiPost,
     [
