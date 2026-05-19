@@ -2342,7 +2342,7 @@ let currentPageTitle = cleanUrlJasaKonsAlatKonstruksiPost
     function waitForPageLevelDetector() {
       return new Promise((resolve) => {
         // Cek v19
-        if (window.pageLevelDetectorV19 && window.pageLevelDetectorV19Ready) {
+        if (window.pageLevelDetectorv19Ready && window.pageLevelDetectorV19) {
           console.log("✅ Page Level Detector v19 already ready");
           resolve(true);
           return;
