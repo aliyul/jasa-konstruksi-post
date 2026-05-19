@@ -930,8 +930,6 @@ function generateBreadcrumbJasaKonstruksi(
     entityType = 'PRODUK_KONSTRUKSI'
 ) {
 
-    "use strict";
-
     // ============================================================
     // 1. GLOBAL CONFIG
     // ============================================================
