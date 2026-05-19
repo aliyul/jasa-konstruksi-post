@@ -4127,7 +4127,7 @@ if (urlMappingSewaPompaAirFromMoneyMasterMoneyChild[cleanUrlJasaKonsAlatKonstruk
  			{ name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Daftar Sewa Alat Pendukung', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-pendukung.html' },
             { name: 'Perbandingan Sewa Alat Pendukung', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pendukung.html' },
-			{ name: 'Sewa Pompa Sedot Lumpur', url: 'https://www.betonjayareadymix.com/p/sewa-pompa-lumpur.html' }
+			{ name: 'Sewa Pompa Lumpur', url: 'https://www.betonjayareadymix.com/p/sewa-pompa-lumpur.html' }
             //{ name: 'Sewa Pompa Lumpur', url: 'https://www.betonjayareadymix.com/2019/03/sewa-pompa-lumpur.html' }
         ],
         'SEWA_RENTAL'
