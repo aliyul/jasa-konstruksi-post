@@ -269,43 +269,43 @@ const urlMappingSewaAlatRinganFromSub1MoneyMaster = {
 // ROOT COMMERCIAL ENTITY
 // ============================================================
 
-"https://www.betonjayareadymix.com/2019/02/jasa-sewa-alat-cleaning.html":
-  "Jasa Sewa Alat Cleaning",
+"https://www.betonjayareadymix.com/p/sewa-alat-cleaning.html":
+  "Sewa Alat Cleaning",
 
-"https://www.betonjayareadymix.com/2019/02/sewa-mesin-polisher.html":
+"https://www.betonjayareadymix.com/p/sewa-mesin-polisher.html":
   "Sewa Mesin Polisher",
 
-"https://www.betonjayareadymix.com/2019/02/sewa-concrete-cutter.html":
+"https://www.betonjayareadymix.com/p/sewa-concrete-cutter.html":
   "Sewa Concrete Cutter",
 
-"https://www.betonjayareadymix.com/2019/02/sewa-jack-hammer.html":
+"https://www.betonjayareadymix.com/p/sewa-jack-hammer.html":
   "Sewa Jack Hammer",
 
-"https://www.betonjayareadymix.com/2019/02/sewa-vibrator-beton.html":
+"https://www.betonjayareadymix.com/p/sewa-vibrator-beton.html":
   "Sewa Vibrator Beton",
 
-"https://www.betonjayareadymix.com/2019/02/sewa-mesin-molen.html":
+"https://www.betonjayareadymix.com/p/sewa-mesin-molen.html":
   "Sewa Mesin Molen",
 
-"https://www.betonjayareadymix.com/2019/02/sewa-genset.html":
+"https://www.betonjayareadymix.com/p/sewa-genset.html":
   "Sewa Genset",
 
-"https://www.betonjayareadymix.com/2019/02/sewa-mesin-compressor.html":
+"https://www.betonjayareadymix.com/p/sewa-mesin-compressor.html":
   "Sewa Mesin Compressor",
 
-"https://www.betonjayareadymix.com/2019/02/sewa-cutting-beton.html":
+"https://www.betonjayareadymix.com/p/sewa-cutting-beton.html":
   "Sewa Cutting Beton",
 
-"https://www.betonjayareadymix.com/2019/02/sewa-mesin-potong-rumput.html":
+"https://www.betonjayareadymix.com/p/sewa-mesin-potong-rumput.html":
   "Sewa Mesin Potong Rumput",
 
-"https://www.betonjayareadymix.com/2019/02/sewa-screed.html":
+"https://www.betonjayareadymix.com/p/sewa-screed.html":
   "Sewa Screed",
 
-"https://www.betonjayareadymix.com/2019/02/sewa-trowel.html":
+"https://www.betonjayareadymix.com/p/sewa-trowel.html":
   "Sewa Trowel",
 
-"https://www.betonjayareadymix.com/2019/02/sewa-stamper.html":
+"https://www.betonjayareadymix.com/p/sewa-stamper.html":
   "Sewa Stamper"
 };
 const urlMappingSewaAlatPendukungFromSub2Sub1 = {
