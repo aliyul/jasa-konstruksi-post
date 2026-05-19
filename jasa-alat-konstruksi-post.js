@@ -1203,8 +1203,20 @@ REDIRECT		5			Duplikasi, perlu 301 redirect
  * - Exact match pillar tetap dipertahankan
  * - Semua logic lama tetap dipertahankan
  *
+ * ✅ FIX FINAL:
+ * ------------------------------------------------------------
+ * - Parent terdekat WAJIB tidak boleh skip
+ * - Direct commercial parent diprioritaskan
+ * - Money-master diproteksi
+ * - Money-page diproteksi
+ * - Ancestor lineage lebih natural
+ * - Tidak lagi hanya sort level asc
+ * - Hierarchy berbasis nearest lineage
+ * - isPartOf hierarchy lebih SEO-safe
+ * - Breadcrumb lebih sinkron dengan webpage graph
+ *
  * ============================================================
- * @version 7.2.0 FINAL
+ * @version 7.2.1 FINAL
  * @date 2026-05-19
  * ============================================================
  */
@@ -1226,10 +1238,6 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
 
         DOMAIN:
             'https://www.betonjayareadymix.com',
-
-        // ====================================================
-        // MAX LEVEL UPGRADE
-        // ====================================================
 
         MAX_LEVEL:
             5,
@@ -1270,7 +1278,6 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
 
     const ENTITY_TYPE_MAP = {
 
-        // JASA
         'JASA':
             'JASA_KONSTRUKSI',
 
@@ -1283,7 +1290,6 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
         'JASA_DESAIN_INTERIOR':
             'JASA_KONSTRUKSI',
 
-        // SEWA
         'SEWA':
             'SEWA_ALAT_KONSTRUKSI',
 
@@ -1302,25 +1308,21 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
         'SEWA_ALAT_KONSTRUKSI':
             'SEWA_ALAT_KONSTRUKSI',
 
-        // PRODUK
         'PRODUK':
             'PRODUK_KONSTRUKSI',
 
         'PRODUK_KONSTRUKSI':
             'PRODUK_KONSTRUKSI',
 
-        // INTERIOR
         'PRODUK_INTERIOR':
             'PRODUK_INTERIOR',
 
-        // MATERIAL
         'MATERIAL':
             'MATERIAL_KONSTRUKSI',
 
         'MATERIAL_KONSTRUKSI':
             'MATERIAL_KONSTRUKSI',
 
-        // ARTIKEL
         'ARTIKEL':
             'ARTIKEL'
     };
@@ -1358,32 +1360,15 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
 
     const TYPE_LEVEL_MAP = {
 
-        'home':
-            0,
-
-        'pillar':
-            1,
-
-        'sub-pillar-tipe-2':
-            2,
-
-        'sub-pillar-tipe-1':
-            3,
-
-        'money-master':
-            4,
-
-        'money-page':
-            5,
-
-        'money-child':
-            6,
-
-        'variant':
-            7,
-
-        'sub-variant':
-            8
+        'home': 0,
+        'pillar': 1,
+        'sub-pillar-tipe-2': 2,
+        'sub-pillar-tipe-1': 3,
+        'money-master': 4,
+        'money-page': 5,
+        'money-child': 6,
+        'variant': 7,
+        'sub-variant': 8
     };
 
     // ============================================================
@@ -1541,15 +1526,6 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
     // ============================================================
     // 11. KEYWORDS
     // ============================================================
-
-    const MONEY_KEYWORDS = [
-
-        'harga',
-        'biaya',
-        'tarif',
-        'sewa',
-        'rental'
-    ];
 
     const SP1_KEYWORDS = [
 
@@ -1759,10 +1735,6 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
                 pageName.toLowerCase()
             );
 
-        // ====================================================
-        // HOME
-        // ====================================================
-
         if (
             isHome ||
             lowerName === 'home' ||
@@ -1772,10 +1744,6 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
             return 'home';
         }
 
-        // ====================================================
-        // EXACT PILLAR
-        // ====================================================
-
         if (
             isEntityPillarExactMatch(lowerName)
         ) {
@@ -1783,18 +1751,10 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
             return 'pillar';
         }
 
-        // ====================================================
-        // SUB VARIANT
-        // ====================================================
-
         if (isSubVariant(lowerName)) {
 
             return 'sub-variant';
         }
-
-        // ====================================================
-        // VARIANT
-        // ====================================================
 
         for (const kw of VARIANT_KEYWORDS) {
 
@@ -1804,10 +1764,6 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
             }
         }
 
-        // ====================================================
-        // INFORMATIONAL
-        // ====================================================
-
         for (const kw of INFORMATIONAL_KEYWORDS) {
 
             if (lowerName.includes(kw)) {
@@ -1815,10 +1771,6 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
                 return 'pillar';
             }
         }
-
-        // ====================================================
-        // SP1
-        // ====================================================
 
         for (const kw of SP1_KEYWORDS) {
 
@@ -1828,10 +1780,6 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
             }
         }
 
-        // ====================================================
-        // SP2
-        // ====================================================
-
         for (const kw of SP2_KEYWORDS) {
 
             if (lowerName.includes(kw)) {
@@ -1839,10 +1787,6 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
                 return 'sub-pillar-tipe-2';
             }
         }
-
-        // ====================================================
-        // MONEY DETECTION
-        // ====================================================
 
         const HAS_PRICE_WORD =
             /\b(harga|biaya|tarif)\b/i
@@ -1857,27 +1801,15 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
             HAS_SEWA_WORD
         ) {
 
-            // ================================================
-            // LOCATION
-            // ================================================
-
             if (isLocation(lowerName)) {
 
                 return 'money-child';
             }
 
-            // ================================================
-            // JASA
-            // ================================================
-
             if (isJasaEntity()) {
 
                 return 'money-page';
             }
-
-            // ================================================
-            // SEWA
-            // ================================================
 
             if (isSewaEntity()) {
 
@@ -1925,10 +1857,6 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
                 }
             }
 
-            // ================================================
-            // PRODUK / MATERIAL / INTERIOR
-            // ================================================
-
             if (HAS_PRICE_WORD) {
 
                 const cleaned =
@@ -1962,10 +1890,6 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
             }
         }
 
-        // ====================================================
-        // JASA FALLBACK
-        // ====================================================
-
         if (isJasaEntity()) {
 
             const jasaKeywords = [
@@ -1988,10 +1912,6 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
             }
         }
 
-        // ====================================================
-        // SEWA FALLBACK
-        // ====================================================
-
         if (isSewaEntity()) {
 
             if (
@@ -2004,10 +1924,6 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
                     : 'money-page';
             }
         }
-
-        // ====================================================
-        // DEFAULT
-        // ====================================================
 
         return 'pillar';
     }
@@ -2050,9 +1966,7 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
         allLevels.push({
 
             name,
-
             url,
-
             type,
 
             level:
@@ -2110,7 +2024,30 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
     }
 
     // ============================================================
-    // 19. SELECT BREADCRUMB LEVELS
+    // 19. CURRENT PAGE
+    // ============================================================
+
+    const currentFullUrl =
+        currentUrl.startsWith('http')
+            ? currentUrl
+            : CONFIG.DOMAIN + currentUrl;
+
+    let currentPageTitle =
+        getCleanPageNameFromUrl(
+            currentFullUrl
+        );
+
+    if (!currentPageTitle) {
+
+        currentPageTitle =
+            'Halaman';
+    }
+
+    const currentPageType =
+        detectPageType(currentPageTitle);
+
+    // ============================================================
+    // 20. SELECT BREADCRUMB LEVELS
     // ============================================================
 
     const selectedLevels = [];
@@ -2138,100 +2075,200 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
     });
 
     // ========================================================
-    // NON HOME
+    // REMOVE DUPLICATE
     // ========================================================
 
-    const nonHomeLevels =
-        allLevels.filter(
-            level => level.type !== 'home'
+    const uniqueHierarchy = [];
+
+    const usedHierarchy = new Set();
+
+    for (const item of allLevels) {
+
+        const key =
+            item.name.toLowerCase();
+
+        if (usedHierarchy.has(key)) {
+            continue;
+        }
+
+        usedHierarchy.add(key);
+
+        uniqueHierarchy.push(item);
+    }
+
+    // ========================================================
+    // FIND DIRECT PARENTS
+    // ========================================================
+
+    function findNearestParents() {
+
+        const lineage = [];
+
+        const currentLevel =
+            TYPE_LEVEL_MAP[currentPageType] || 99;
+
+        let lastAcceptedLevel =
+            currentLevel;
+
+        for (
+            let i = uniqueHierarchy.length - 1;
+            i >= 0;
+            i--
+        ) {
+
+            const item =
+                uniqueHierarchy[i];
+
+            if (
+                item.level < lastAcceptedLevel
+            ) {
+
+                lineage.unshift(item);
+
+                lastAcceptedLevel =
+                    item.level;
+            }
+        }
+
+        return lineage;
+    }
+
+    // ========================================================
+    // BUILD LINEAGE
+    // ========================================================
+
+    let lineageLevels =
+        findNearestParents();
+
+    // ========================================================
+    // PRIORITIZE ROOT PILLAR
+    // ========================================================
+
+    const rootPillar =
+        lineageLevels.find(
+            item => item.type === 'pillar'
         );
 
     // ========================================================
-    // HIERARCHY SORT
+    // ENSURE DIRECT COMMERCIAL PARENT
     // ========================================================
 
-    nonHomeLevels.sort((a, b) => {
+    const hasCommercialParent =
+        lineageLevels.some(item =>
+            item.type === 'money-master' ||
+            item.type === 'money-page'
+        );
 
-        // PRIORITAS LEVEL
+    if (
+        (
+            currentPageType === 'money-child' ||
+            currentPageType === 'money-page'
+        ) &&
+        !hasCommercialParent
+    ) {
+
+        const nearestCommercial =
+            [...uniqueHierarchy]
+                .reverse()
+                .find(item =>
+                    item.type === 'money-master' ||
+                    item.type === 'money-page'
+                );
+
+        if (nearestCommercial) {
+
+            lineageLevels.push(
+                nearestCommercial
+            );
+        }
+    }
+
+    // ========================================================
+    // REMOVE DUPLICATE AFTER LINEAGE
+    // ========================================================
+
+    const cleanLineage = [];
+
+    const usedLineage = new Set();
+
+    for (const item of lineageLevels) {
+
+        const key =
+            item.name.toLowerCase();
+
+        if (usedLineage.has(key)) {
+            continue;
+        }
+
+        usedLineage.add(key);
+
+        cleanLineage.push(item);
+    }
+
+    // ========================================================
+    // SORT NATURAL ORDER
+    // ========================================================
+
+    cleanLineage.sort((a, b) => {
+
         if (a.level !== b.level) {
 
             return a.level - b.level;
         }
 
-        // PRIORITAS URUTAN ASLI
         return a.position - b.position;
     });
 
     // ========================================================
-    // REMOVE DUPLICATE
-    // ========================================================
-
-    const filteredLevels = [];
-
-    const usedLevelNames = new Set();
-
-    for (const item of nonHomeLevels) {
-
-        const key =
-            item.name.toLowerCase();
-
-        if (usedLevelNames.has(key)) {
-            continue;
-        }
-
-        usedLevelNames.add(key);
-
-        filteredLevels.push(item);
-    }
-
-    // ========================================================
-    // MAX LEVEL 5 SAFE
-    // HOME + 3 PARENT + CURRENT PAGE
+    // MAX LEVEL SAFE
+    // HOME + 3 PARENT + CURRENT
     // ========================================================
 
     const MAX_PARENT_LEVELS =
         CONFIG.MAX_LEVEL - 2;
 
-    const limitedLevels =
-        filteredLevels.slice(
-            0,
-            MAX_PARENT_LEVELS
-        );
+    let finalParents =
+        cleanLineage;
 
     // ========================================================
-    // INSERT TO SELECTED
+    // IMPORTANT:
+    // NEVER SKIP NEAREST PARENT
     // ========================================================
 
-    for (const level of limitedLevels) {
+    if (
+        cleanLineage.length >
+        MAX_PARENT_LEVELS
+    ) {
 
-        selectedLevels.push(level);
+        const nearestParent =
+            cleanLineage[
+                cleanLineage.length - 1
+            ];
+
+        const rootParents =
+            cleanLineage.slice(
+                0,
+                MAX_PARENT_LEVELS - 1
+            );
+
+        finalParents = [
+
+            ...rootParents,
+            nearestParent
+        ];
     }
 
-    // ============================================================
-    // 20. CURRENT PAGE
-    // ============================================================
+    // ========================================================
+    // INSERT PARENTS
+    // ========================================================
 
-    const currentFullUrl =
-        currentUrl.startsWith('http')
-            ? currentUrl
-            : CONFIG.DOMAIN + currentUrl;
+    for (const item of finalParents) {
 
-    let currentPageTitle =
-        getCleanPageNameFromUrl(
-            currentFullUrl
-        );
-
-    if (!currentPageTitle) {
-
-        currentPageTitle =
-            'Halaman';
+        selectedLevels.push(item);
     }
 
-    const currentPageType =
-        detectPageType(currentPageTitle);
-
     // ========================================================
-    // PREVENT DUPLICATE CURRENT PAGE
+    // ADD CURRENT PAGE
     // ========================================================
 
     const hasCurrentAlready =
@@ -2452,13 +2489,12 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
         entityType,
 
         version:
-            '7.2.0 FINAL',
+            '7.2.1 FINAL',
 
         maxLevel:
             CONFIG.MAX_LEVEL
     };
-}    
-
+}
 // Fungsi untuk menghapus elemen breadcrumb navigation
     function removeBreadcrumbNavigation() {
         // Selector umum untuk breadcrumb navigation
