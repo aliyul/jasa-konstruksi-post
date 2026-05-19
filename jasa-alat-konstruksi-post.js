@@ -2043,7 +2043,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // var currentUrl = window.location.href;
      //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
     const cleanUrlJasaKonsAlatKonstruksiPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
-
+    // Ambil nama dari URL (panggil fungsi yang sama)
+let currentPageTitle = cleanUrlJasaKonsAlatKonstruksiPost
+    .split('/').pop()
+    .replace('.html', '')
+    .replace(/-/g, ' ');
+// Hasil: 'sewa bor tanah'
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
@@ -3084,7 +3089,7 @@ if (urlMappingSewaPompaDewateringFromMoneyMasterMoneyMaster1[cleanUrlJasaKonsAla
 }
 		
 if (urlMappingSewaAlatBorFromMoneyMasterMoneyMaster1[cleanUrlJasaKonsAlatKonstruksiPost]) {
-
+  
 	// Cukup ganti URL dan tambahkan di mappingObj
 generateBreadcrumbJasaKonstruksi(
     {
