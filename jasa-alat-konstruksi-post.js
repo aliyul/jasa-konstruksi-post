@@ -280,7 +280,7 @@ const urlMappingSewaAlatProyekFromMoneyMasterMoneyPage = {
 
  
 };
-const urlMappingSewaAlatProyekFromMoneyPageMoneyChild = {
+const urlMappingSewaAlatProyekFromMoneyMasterMoneyChild = {
  // ============================================================
   // [MONEY_CHILD] - SEWA ALAT PROYEK PER LOKASI
   // 🧠 TYPE: MONEY_CHILD (spesifik lokasi, intent transaksional 90%)
@@ -2623,7 +2623,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaPipaProyekFromMoneyMasterMoneyMaster1,
 		
 		
-		urlMappingSewaAlatProyekFromMoneyPageMoneyChild,
+		urlMappingSewaAlatProyekFromMoneyMasterMoneyChild,
 		urlMappingSewaPompaDewateringFromMoneyPageMoneyChild,
 		urlMappingSewaPompaDewateringFromMoneyChildVariant,
 		urlMappingSewaPompaAirDieselFromMoneyMaster1MoneyChild,
@@ -3718,9 +3718,9 @@ if (urlMappingSewaPompaDewateringFromMoneyMasterMoneyMaster1[cleanUrlJasaKonsAla
     );
 }	
 	
-if (urlMappingSewaAlatProyekFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaAlatProyekFromMoneyMasterMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		generateBreadcrumbJasaAlatKonstruksiPost(
-        urlMappingSewaAlatProyekFromMoneyPageMoneyChild,
+        urlMappingSewaAlatProyekFromMoneyMasterMoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
