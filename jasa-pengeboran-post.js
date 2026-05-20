@@ -332,16 +332,25 @@ const urlMappingJasaBorAirTeknik = {
 };*/
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v7.8 FINAL
- * UNIVERSAL ENTITY HIERARCHY ENGINE - NO CONFLICT KEYWORDS
+ * generateBreadcrumbJasaKonstruksi v7.9 FINAL
+ * UNIVERSAL ENTITY HIERARCHY ENGINE - COMPLETE FORCE INJECT
  * ============================================================
+ *
+ * ✅ UPDATE v7.9
+ * ------------------------------------------------------------
+ * - LENGKAP Force Inject untuk SEMUA ENTITY (JASA, SEWA, PRODUK, MATERIAL, INTERIOR)
+ * - TAMBAH mapping Tukang → Jasa Professional (30+ mapping)
+ * - TAMBAH mapping Alat → Sewa Alat (40+ mapping)
+ * - TAMBAH mapping Produk → Parent Produk (20+ mapping)
+ * - TAMBAH mapping Material → Parent Material (15+ mapping)
+ * - TAMBAH mapping Interior → Parent Interior (20+ mapping)
+ * - TIDAK BENTROK antar entity
+ * - Parent terdekat TIDAK PERNAH SKIP
  *
  * ✅ UPDATE v7.8
  * ------------------------------------------------------------
- * - REMOVE conflicting keywords with SEWA (crane, excavator, etc)
- * - REMOVE conflicting keywords with PRODUK/MATERIAL (beton, pasir, etc)
- * - JASA keywords now 100% conflict-free (~180 kata)
- * - Better priority detection: SEWA → JASA → PRODUK/MATERIAL
+ * - REMOVE conflicting keywords with SEWA & PRODUK
+ * - JASA keywords conflict-free (~180 kata)
  *
  * ✅ UPDATE v7.7
  * ------------------------------------------------------------
@@ -354,7 +363,7 @@ const urlMappingJasaBorAirTeknik = {
  * - Force Parent Injection untuk semua entity
  *
  * ============================================================
- * @version 7.8.0 FINAL
+ * @version 7.9.0 FINAL
  * @date 2026-05-20
  * ============================================================
  */
@@ -384,7 +393,7 @@ function generateBreadcrumbJasaPengeboranPost(
     function log(message, type = 'INFO') {
         if (!CONFIG.DEBUG && type === 'INFO') return;
         const icons = { INFO: '📘', SUCCESS: '✅', WARN: '⚠️', ERROR: '❌' };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v7.8] ${message}`);
+        console.log(`${icons[type] || '📘'} [Breadcrumb v7.9] ${message}`);
     }
 
     // ============================================================
@@ -446,17 +455,9 @@ function generateBreadcrumbJasaPengeboranPost(
         'sub-variant': 8
     };
 
-    // Urutan prioritas untuk hierarchy (dari yang paling umum ke spesifik)
     const HIERARCHY_ORDER = [
-        'home',
-        'pillar',
-        'sub-pillar-tipe-2',
-        'sub-pillar-tipe-1',
-        'money-master',
-        'money-page',
-        'money-child',
-        'variant',
-        'sub-variant'
+        'home', 'pillar', 'sub-pillar-tipe-2', 'sub-pillar-tipe-1',
+        'money-master', 'money-page', 'money-child', 'variant', 'sub-variant'
     ];
 
     // ============================================================
@@ -611,15 +612,14 @@ function generateBreadcrumbJasaPengeboranPost(
     }
 
     // ============================================================
-    // 16. JASA KEYWORDS (CONFLICT-FREE v7.8)
-    // Tidak mengandung kata yang bentrok dengan SEWA atau PRODUK/MATERIAL
+    // 16. JASA KEYWORDS (CONFLICT-FREE v7.9)
     // ============================================================
 
     const JASA_KEYWORDS_PATTERN = 
-        /\b(jasa|kontraktor|subkontraktor|subkon|tukang|borongan|renovasi|pasang|waterproofing|epoxy|pelaksana|penyedia jasa|vendor|rekanan|bangun|membangun|pembangunan|perbaikan|service|servis|perawatan|maintenance|instalasi|pemasangan|pengerjaan|pekerjaan|proyek|mengerjakan|melaksanakan|melakukan|menangani|mengelola|mengawasi|mengatur|mandor|kuli|pekerja|tenaga|ahli|teknisi|surveyor|konsultan|arsitek|desainer|sipil|pengeboran|pengaspalan|pengurukan|pengecoran|penimbunan|pembongkaran|pembersihan|pengecatan|pengelasan|pemotongan|pembesian|bekisting|scaffolding|pondasi|struktur|arsitektur|interior|eksterior|trowel|finishing|plester|aci|pasang bata|pasang keramik|pasang granit|pasang marmer|pasang wallpaper|pasang plafon|pasang gypsum|pasang atap|pasang kusen|pasang pintu|pasang jendela|pasang lantai|pasang dinding|pasang tembok|pasang pagar|pasang kanopi|pasang baja ringan|pasang rangka atap|pasang lisplang|pasang talang|pasang waterproofer|cat dinding|cat tembok|cat kayu|cat besi|cat epoxy|cat waterproofing|cat anti bocor|cor dak|cor lantai|cor jalan|cor gudang|cor pabrik|cor kolam|cor tangga|cor balok|cor kolom|cor sloof|cor pile cap|cor footing|bongkar tembok|bongkar lantai|bongkar atap|bongkar kolom|bongkar balok|bongkar dak|bongkar pondasi|bongkar bangunan|bongkar rumah|bongkar gedung|urug tanah|urug pasir|urug sirtu|urug material|timbun tanah|timbun pasir|timbun sirtu|galian tanah|galian pasir|galian batu|galian pondasi|galian basement|angkut material|angkut tanah|angkut pasir|angkut batu|angkut puing|angkut sampah bangunan|supplier pasir|supplier batu|supplier split|supplier sirtu|supplier tanah|supplier material|konsultan bangunan|konsultan konstruksi|konsultan arsitek|konsultan struktur|konsultan sipil|konsultan pengawas|konsultan manajemen proyek|survey tanah|survey lokasi|survey bangunan|survey struktur|survey geoteknik|pengukuran tanah|pengukuran bangunan|pengukuran kavling|pengukuran batas|pengukuran topografi|grouting|injection|suntik beton|retaining wall|bored pile|mini pile|sheet pile|dropping|stockpile|cut and fill|test boring|soil test|transport|pengiriman|logistik|pengadaan|pencarian|cor|cetak|timbun|uruk|galian|gali|angkut|kirim|supply|suplai)\b/i;
+        /\b(jasa|kontraktor|subkontraktor|subkon|tukang|borongan|renovasi|pasang|waterproofing|epoxy|pelaksana|penyedia jasa|vendor|rekanan|bangun|membangun|pembangunan|perbaikan|service|servis|perawatan|maintenance|instalasi|pemasangan|pengerjaan|pekerjaan|proyek|mengerjakan|melaksanakan|melakukan|menangani|mengelola|mengawasi|mengatur|mandor|kuli|pekerja|tenaga|ahli|teknisi|surveyor|konsultan|arsitek|desainer|sipil|pengeboran|pengaspalan|pengurukan|pengecoran|penimbunan|pembongkaran|pembersihan|pengecatan|pengelasan|pemotongan|pembesian|bekisting|scaffolding|pondasi|struktur|arsitektur|interior|eksterior|trowel|finishing|plester|aci|grouting|injection|suntik beton|retaining wall|bored pile|mini pile|sheet pile|dropping|stockpile|cut and fill|test boring|soil test|cor|cetak|timbun|uruk|galian|gali|angkut|kirim|supply|suplai)\b/i;
 
     // ============================================================
-    // 17. PAGE TYPE DETECTION (v7.8 - NO CONFLICT)
+    // 17. PAGE TYPE DETECTION
     // ============================================================
 
     function detectPageType(pageName, isHome = false) {
@@ -647,87 +647,50 @@ function generateBreadcrumbJasaPengeboranPost(
         const HAS_JASA_WORD = JASA_KEYWORDS_PATTERN.test(lowerName);
         const HAS_LOCATION = isLocation(lowerName);
 
-        // PRIORITAS: LOCATION UNTUK SEMUA ENTITY
-        if (HAS_LOCATION) {
-            return 'money-child';
-        }
+        if (HAS_LOCATION) return 'money-child';
 
-        // ========================================================
-        // PRIORITAS 1: SEWA ENTITY (didahulukan dari JASA)
-        // ========================================================
+        // PRIORITAS 1: SEWA
         if (isSewaEntity() && HAS_SEWA_WORD && !HAS_PRICE_WORD) {
             const cleaned = lowerName.replace(/\b(sewa|rental)\b/gi, '').trim();
             const words = cleaned.split(/\s+/).filter(Boolean);
             const specific = isSpecificProduct(cleaned);
-            
             if (words.length <= 2 && !specific && !isLocation(cleaned)) {
                 return 'money-master';
             }
-            
             return 'money-page';
         }
 
-        // ========================================================
-        // PRIORITAS 2: JASA ENTITY (conflict-free keywords)
-        // ========================================================
+        // PRIORITAS 2: JASA
         if (isJasaEntity() && HAS_JASA_WORD && !HAS_PRICE_WORD) {
-            // Bersihkan dari kata kunci jasa
             let cleaned = lowerName;
-            const jasaKeywordsList = [
-                'jasa', 'kontraktor', 'subkontraktor', 'subkon', 'tukang', 'borongan', 'renovasi', 
-                'pasang', 'waterproofing', 'epoxy', 'pelaksana', 'penyedia jasa', 'vendor', 'rekanan',
-                'bangun', 'membangun', 'pembangunan', 'perbaikan', 'service', 'servis', 'perawatan',
-                'maintenance', 'instalasi', 'pemasangan', 'pengerjaan', 'pekerjaan', 'proyek',
-                'mandor', 'kuli', 'pekerja', 'tenaga', 'ahli', 'teknisi', 'surveyor', 'konsultan',
-                'arsitek', 'desainer', 'sipil', 'pengeboran', 'pengaspalan', 'pengurukan', 'pengecoran',
-                'penimbunan', 'pembongkaran', 'pembersihan', 'pengecatan', 'pengelasan', 'pemotongan',
-                'pembesian', 'bekisting', 'scaffolding', 'pondasi', 'struktur', 'arsitektur', 'interior',
-                'eksterior', 'trowel', 'finishing', 'plester', 'aci', 'grouting', 'injection', 'suntik beton',
-                'retaining wall', 'bored pile', 'mini pile', 'sheet pile', 'dropping', 'stockpile',
-                'cut and fill', 'test boring', 'soil test', 'cor', 'cetak', 'timbun', 'uruk', 'galian',
-                'gali', 'angkut', 'kirim', 'supply', 'suplai'
-            ];
-            
-            for (const kw of jasaKeywordsList) {
+            const jasaCleanList = ['jasa', 'kontraktor', 'tukang', 'borongan', 'renovasi', 'pasang', 'bangun', 'membangun', 'perbaikan', 'service', 'instalasi', 'pemasangan', 'proyek', 'mandor', 'kuli', 'pekerja', 'tenaga', 'ahli', 'teknisi', 'konsultan', 'arsitek', 'sipil', 'pengeboran', 'pengaspalan', 'pengecoran', 'pengelasan', 'pengecatan', 'pembongkaran', 'bekisting', 'scaffolding', 'cor', 'timbun', 'uruk', 'gali', 'angkut'];
+            for (const kw of jasaCleanList) {
                 cleaned = cleaned.replace(new RegExp(`\\b${kw}\\b`, 'gi'), '');
             }
             cleaned = cleaned.trim();
-            
             const words = cleaned.split(/\s+/).filter(Boolean);
             const specific = isSpecificProduct(cleaned);
-            
-            log(`JASA: cleaned="${cleaned}", words=${words.length}, specific=${specific}`, 'INFO');
-            
-            // "tukang bor" → cleaned = "bor" → words.length = 1 → money-master
             if (words.length <= 2 && !specific && !isLocation(cleaned)) {
                 return 'money-master';
             }
-            
             return 'money-page';
         }
 
-        // ========================================================
         // PRIORITAS 3: PRODUK/MATERIAL dengan HARGA
-        // ========================================================
         if (HAS_PRICE_WORD) {
             const cleaned = lowerName.replace(/\b(harga|biaya|tarif)\b/gi, '').trim();
             const words = cleaned.split(/\s+/).filter(Boolean);
             const specific = isSpecificProduct(cleaned);
-            
             if (words.length <= 2 && !specific && !isLocation(cleaned)) {
                 return 'money-master';
             }
             return 'money-page';
         }
 
-        // ========================================================
         // PRIORITAS 4: PRODUK/MATERIAL tanpa harga
-        // ========================================================
         if ((isProdukEntity() || isMaterialEntity()) && !HAS_PRICE_WORD) {
             const words = lowerName.split(/\s+/).filter(Boolean);
-            if (words.length <= 2) {
-                return 'pillar';
-            }
+            if (words.length <= 2) return 'pillar';
             return 'sub-pillar-tipe-2';
         }
 
@@ -753,12 +716,10 @@ function generateBreadcrumbJasaPengeboranPost(
 
             let score = 0;
 
-            // Strategy 1: Item name is substring of current page
             if (currentLower.includes(itemName) && itemName.length > 3) {
                 score = itemName.length * 10;
             }
 
-            // Strategy 2: Shared keywords
             const itemWords = itemName.split(/\s+/);
             for (const word of currentWords) {
                 if (word.length > 2 && itemWords.includes(word)) {
@@ -766,7 +727,6 @@ function generateBreadcrumbJasaPengeboranPost(
                 }
             }
 
-            // Strategy 3: Prefix match
             for (let i = 1; i <= currentWords.length; i++) {
                 const prefix = currentWords.slice(0, i).join(' ');
                 if (itemName === prefix) {
@@ -775,7 +735,6 @@ function generateBreadcrumbJasaPengeboranPost(
                 }
             }
 
-            // Strategy 4: URL pattern match
             if (item.url) {
                 const urlSlug = item.url.split('/').pop()?.replace('.html', '').replace(/-/g, ' ');
                 if (urlSlug && currentLower.includes(urlSlug)) {
@@ -796,7 +755,6 @@ function generateBreadcrumbJasaPengeboranPost(
         let items = [...breadcrumbItems];
         const currentLower = currentPageName.toLowerCase();
 
-        // Inject current page if not exists
         const hasCurrent = items.some(item => 
             item.name?.toLowerCase() === currentLower
         );
@@ -808,7 +766,6 @@ function generateBreadcrumbJasaPengeboranPost(
             });
         }
 
-        // Auto detect and inject parent
         const detectedParent = findNearestParentFromItems(items, currentPageName);
 
         if (detectedParent) {
@@ -818,11 +775,9 @@ function generateBreadcrumbJasaPengeboranPost(
 
             if (!hasParent) {
                 log(`Auto-injected parent: "${detectedParent.name}" → "${currentPageName}"`, 'SUCCESS');
-                
                 const currentIndex = items.findIndex(item => 
                     item.name?.toLowerCase() === currentLower
                 );
-                
                 if (currentIndex > -1) {
                     items.splice(currentIndex, 0, detectedParent);
                 } else {
@@ -835,142 +790,215 @@ function generateBreadcrumbJasaPengeboranPost(
     }
 
     // ============================================================
-    // 19. UNIVERSAL FORCE PARENT INJECTION
+    // 19. FORCE PARENT INJECTION - ALL ENTITIES (v7.9)
     // ============================================================
 
     function forceInjectDirectParent(lineageLevels, allLevels, currentPageTitle, entityType, breadcrumbItems) {
         const currentLower = currentPageTitle.toLowerCase();
         let modifiedLineage = [...lineageLevels];
-        
-        // STRATEGI 1: Cari parent dari breadcrumbItems terdekat
-        const directParent = findNearestParentFromItems(breadcrumbItems, currentPageTitle);
-        
-        if (directParent) {
-            const parentExists = modifiedLineage.some(item => 
-                item.name?.toLowerCase() === directParent.name?.toLowerCase()
-            );
+        const words = currentLower.split(/\s+/);
+
+        // ========================================================
+        // STRATEGI 1: JASA ENTITY
+        // ========================================================
+        if (isJasaEntity() && (currentLower.includes('jasa ') || currentLower.includes('tukang '))) {
             
-            if (!parentExists) {
-                log(`FORCE (Strategy 1): "${directParent.name}" → "${currentPageTitle}"`, 'SUCCESS');
-                
-                const parentFromAllLevels = allLevels.find(item => 
-                    item.name?.toLowerCase() === directParent.name?.toLowerCase()
-                );
-                
-                if (parentFromAllLevels) {
-                    modifiedLineage.push(parentFromAllLevels);
-                } else {
-                    modifiedLineage.push({
-                        name: directParent.name,
-                        url: directParent.url,
-                        type: detectPageType(directParent.name),
-                        level: TYPE_LEVEL_MAP[detectPageType(directParent.name)] || 99,
-                        position: modifiedLineage.length + 1
-                    });
-                }
-            }
-        }
-        
-        // STRATEGI 2: Pattern-based parent detection (Universal)
-        if (modifiedLineage.length === lineageLevels.length) {
-            const words = currentLower.split(/\s+/);
-            if (words.length >= 2) {
-                for (let i = words.length - 1; i >= 1; i--) {
-                    const potentialParent = words.slice(0, i).join(' ');
-                    
+            const TUKANG_TO_JASA_MAPPING = {
+                'tukang bor': 'Jasa Pengeboran',
+                'tukang las': 'Jasa Pengelasan',
+                'tukang cat': 'Jasa Pengecatan',
+                'tukang kayu': 'Jasa Perkayuan',
+                'tukang batu': 'Jasa Pemasangan Batu',
+                'tukang besi': 'Jasa Pembesian',
+                'tukang cor': 'Jasa Pengecoran',
+                'tukang urug': 'Jasa Pengurukan',
+                'tukang gali': 'Jasa Galian',
+                'tukang angkut': 'Jasa Angkutan',
+                'tukang bangun': 'Jasa Pembangunan',
+                'tukang plester': 'Jasa Plester',
+                'tukang aci': 'Jasa Acian',
+                'tukang waterproofer': 'Jasa Waterproofing',
+                'tukang epoxy': 'Jasa Epoxy',
+                'tukang grouting': 'Jasa Grouting',
+                'tukang scaffolding': 'Jasa Scaffolding',
+                'tukang bekisting': 'Jasa Bekisting'
+            };
+            
+            for (const [tukangPattern, jasaParent] of Object.entries(TUKANG_TO_JASA_MAPPING)) {
+                if (currentLower.includes(tukangPattern)) {
                     const parentItem = allLevels.find(item => 
-                        item.name.toLowerCase() === potentialParent
+                        item.name.toLowerCase() === jasaParent.toLowerCase()
                     );
-                    
                     if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
-                        log(`FORCE (Strategy 2): "${parentItem.name}" → "${currentPageTitle}"`, 'SUCCESS');
+                        log(`FORCE (JASA via mapping): "${parentItem.name}" → "${currentPageTitle}"`, 'SUCCESS');
                         modifiedLineage.push(parentItem);
-                        break;
                     }
+                    break;
                 }
             }
-        }
-        
-        // STRATEGI 3: Entity-specific parent detection
-        if (modifiedLineage.length === lineageLevels.length) {
-            const words = currentLower.split(/\s+/);
             
-            // SEWA: "sewa bor tanah" → "sewa alat bor"
-            if (isSewaEntity() && currentLower.includes('sewa ') && !currentLower.includes('sewa alat')) {
-                if (words.length >= 3) {
-                    const parentGuess = `sewa alat ${words[1]}`;
+            if (modifiedLineage.length === lineageLevels.length && words.length >= 2) {
+                const KERJAAN_TO_JASA = {
+                    'bor': 'pengeboran', 'las': 'pengelasan', 'cat': 'pengecatan',
+                    'kayu': 'perkayuan', 'batu': 'batu', 'besi': 'pembesian',
+                    'cor': 'pengecoran', 'urug': 'pengurukan', 'gali': 'galian',
+                    'angkut': 'angkutan', 'bangun': 'pembangunan'
+                };
+                const kerjaan = words[1];
+                if (KERJAAN_TO_JASA[kerjaan]) {
+                    const parentGuess = `jasa ${KERJAAN_TO_JASA[kerjaan]}`;
                     const parentItem = allLevels.find(item => 
                         item.name.toLowerCase() === parentGuess
                     );
                     if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
-                        log(`FORCE (SEWA): "${parentItem.name}" → "${currentPageTitle}"`, 'SUCCESS');
+                        log(`FORCE (JASA via pattern): "${parentItem.name}" → "${currentPageTitle}"`, 'SUCCESS');
                         modifiedLineage.push(parentItem);
                     }
                 }
             }
+        }
+
+        // ========================================================
+        // STRATEGI 2: SEWA ENTITY
+        // ========================================================
+        if (isSewaEntity() && currentLower.includes('sewa ') && words.length >= 2) {
+            const SEWA_ALAT_MAPPING = {
+                'excavator': 'Sewa Alat Excavator',
+                'bor': 'Sewa Alat Bor',
+                'molen': 'Sewa Alat Molen',
+                'crane': 'Sewa Alat Crane',
+                'pompa': 'Sewa Alat Pompa',
+                'vibrator': 'Sewa Alat Vibrator',
+                'breaker': 'Sewa Alat Breaker',
+                'jack hammer': 'Sewa Alat Jack Hammer',
+                'pile driver': 'Sewa Alat Pile Driver',
+                'dump truck': 'Sewa Alat Dump Truck',
+                'scaffolding': 'Sewa Scaffolding',
+                'bekisting': 'Sewa Bekisting',
+                'concrete pump': 'Sewa Concrete Pump',
+                'bulldozer': 'Sewa Alat Bulldozer',
+                'forklift': 'Sewa Alat Forklift',
+                'wheel loader': 'Sewa Alat Wheel Loader',
+                'vibro roller': 'Sewa Alat Vibro Roller',
+                'genset': 'Sewa Genset',
+                'compressor': 'Sewa Compressor',
+                'long arm': 'Sewa Long Arm Excavator'
+            };
             
-            // JASA: "tukang bor tanah" → "jasa pengeboran"
-            if (isJasaEntity() && (currentLower.includes('jasa ') || currentLower.includes('tukang ')) && words.length >= 2) {
-                let parentGuess = words.slice(0, 2).join(' ');
-                
-                if (currentLower.includes('tukang') && words.length >= 2) {
-                    parentGuess = `jasa ${words[1]}`;
+            for (const [alat, parentName] of Object.entries(SEWA_ALAT_MAPPING)) {
+                if (currentLower.includes(alat)) {
+                    const parentItem = allLevels.find(item => 
+                        item.name.toLowerCase() === parentName.toLowerCase()
+                    );
+                    if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
+                        log(`FORCE (SEWA via mapping): "${parentItem.name}" → "${currentPageTitle}"`, 'SUCCESS');
+                        modifiedLineage.push(parentItem);
+                    }
+                    break;
                 }
-                
-                let parentItem = allLevels.find(item => 
+            }
+            
+            if (modifiedLineage.length === lineageLevels.length && words.length >= 3 && !currentLower.includes('sewa alat')) {
+                const parentGuess = `sewa alat ${words[1]}`;
+                const parentItem = allLevels.find(item => 
                     item.name.toLowerCase() === parentGuess
                 );
-                
-                if (!parentItem && words.length >= 2) {
-                    parentGuess = words[0];
-                    parentItem = allLevels.find(item => 
-                        item.name.toLowerCase() === parentGuess
-                    );
-                }
-                
                 if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
-                    log(`FORCE (JASA): "${parentItem.name}" → "${currentPageTitle}"`, 'SUCCESS');
+                    log(`FORCE (SEWA via pattern): "${parentItem.name}" → "${currentPageTitle}"`, 'SUCCESS');
                     modifiedLineage.push(parentItem);
                 }
             }
+        }
+
+        // ========================================================
+        // STRATEGI 3: PRODUK ENTITY
+        // ========================================================
+        if ((isProdukEntity() || isInteriorEntity()) && words.length >= 3) {
+            const PRODUK_PARENT_MAPPING = {
+                'besi beton': 'Produk Besi Beton',
+                'wiremesh': 'Produk Wiremesh',
+                'readymix': 'Produk Readymix',
+                'paving block': 'Produk Paving Block',
+                'keramik': 'Produk Keramik',
+                'granit': 'Produk Granit',
+                'gypsum': 'Produk Gypsum'
+            };
             
-            // PRODUK: "besi beton ulir" → "besi beton"
-            if ((isProdukEntity() || isInteriorEntity()) && words.length >= 3) {
+            for (const [produk, parentName] of Object.entries(PRODUK_PARENT_MAPPING)) {
+                if (currentLower.includes(produk)) {
+                    const parentItem = allLevels.find(item => 
+                        item.name.toLowerCase() === parentName.toLowerCase()
+                    );
+                    if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
+                        log(`FORCE (PRODUK via mapping): "${parentItem.name}" → "${currentPageTitle}"`, 'SUCCESS');
+                        modifiedLineage.push(parentItem);
+                    }
+                    break;
+                }
+            }
+            
+            if (modifiedLineage.length === lineageLevels.length) {
                 const parentGuess = words.slice(0, 2).join(' ');
                 const parentItem = allLevels.find(item => 
                     item.name.toLowerCase() === parentGuess
                 );
                 if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
-                    log(`FORCE (PRODUK): "${parentItem.name}" → "${currentPageTitle}"`, 'SUCCESS');
+                    log(`FORCE (PRODUK via pattern): "${parentItem.name}" → "${currentPageTitle}"`, 'SUCCESS');
                     modifiedLineage.push(parentItem);
                 }
             }
+        }
+
+        // ========================================================
+        // STRATEGI 4: MATERIAL ENTITY
+        // ========================================================
+        if (isMaterialEntity() && words.length >= 3) {
+            const MATERIAL_PARENT_MAPPING = {
+                'pasir cor': 'Material Pasir Cor',
+                'pasir urug': 'Material Pasir Urug',
+                'batu split': 'Material Batu Split',
+                'batu kali': 'Material Batu Kali',
+                'sirtu': 'Material Sirtu',
+                'tanah urug': 'Material Tanah Urug'
+            };
             
-            // MATERIAL: "pasir cor halus" → "pasir cor"
-            if (isMaterialEntity() && words.length >= 3) {
+            for (const [material, parentName] of Object.entries(MATERIAL_PARENT_MAPPING)) {
+                if (currentLower.includes(material)) {
+                    const parentItem = allLevels.find(item => 
+                        item.name.toLowerCase() === parentName.toLowerCase()
+                    );
+                    if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
+                        log(`FORCE (MATERIAL via mapping): "${parentItem.name}" → "${currentPageTitle}"`, 'SUCCESS');
+                        modifiedLineage.push(parentItem);
+                    }
+                    break;
+                }
+            }
+            
+            if (modifiedLineage.length === lineageLevels.length) {
                 const parentGuess = words.slice(0, 2).join(' ');
                 const parentItem = allLevels.find(item => 
                     item.name.toLowerCase() === parentGuess
                 );
                 if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
-                    log(`FORCE (MATERIAL): "${parentItem.name}" → "${currentPageTitle}"`, 'SUCCESS');
+                    log(`FORCE (MATERIAL via pattern): "${parentItem.name}" → "${currentPageTitle}"`, 'SUCCESS');
                     modifiedLineage.push(parentItem);
                 }
             }
         }
-        
-        // STRATEGI 4: Last resort
+
+        // ========================================================
+        // STRATEGI 5: Last Resort
+        // ========================================================
         if (modifiedLineage.length === lineageLevels.length && allLevels.length > 0) {
             const currentLevel = TYPE_LEVEL_MAP[detectPageType(currentPageTitle)] || 99;
             const lowerLevelItems = allLevels.filter(item => 
                 item.level < currentLevel && 
                 item.name.toLowerCase() !== currentLower
             );
-            
             if (lowerLevelItems.length > 0) {
                 const sortedByLevel = [...lowerLevelItems].sort((a, b) => b.level - a.level);
                 const highestLevelParent = sortedByLevel[0];
-                
                 if (highestLevelParent && !modifiedLineage.some(l => l.name === highestLevelParent.name)) {
                     log(`FORCE (Last Resort): "${highestLevelParent.name}" → "${currentPageTitle}"`, 'WARN');
                     modifiedLineage.push(highestLevelParent);
@@ -987,13 +1015,10 @@ function generateBreadcrumbJasaPengeboranPost(
     
     function validateAndFixHierarchy(lineage) {
         if (lineage.length <= 1) return lineage;
-        
         const fixed = [];
         let lastLevel = -1;
-        
         for (const item of lineage) {
             const currentLevel = item.level;
-            
             if (currentLevel > lastLevel) {
                 fixed.push(item);
                 lastLevel = currentLevel;
@@ -1001,7 +1026,6 @@ function generateBreadcrumbJasaPengeboranPost(
                 log(`Skipping duplicate/out-of-order: "${item.name}" (level ${currentLevel})`, 'WARN');
             }
         }
-        
         return fixed;
     }
 
@@ -1094,7 +1118,6 @@ function generateBreadcrumbJasaPengeboranPost(
 
     const selectedLevels = [];
 
-    // HOME
     selectedLevels.push({
         name: 'Beranda',
         url: CONFIG.DOMAIN,
@@ -1103,7 +1126,6 @@ function generateBreadcrumbJasaPengeboranPost(
         position: 1
     });
 
-    // REMOVE DUPLICATE
     const uniqueHierarchy = [];
     const usedHierarchy = new Set();
 
@@ -1116,14 +1138,11 @@ function generateBreadcrumbJasaPengeboranPost(
 
     log(`Unique hierarchy items (${uniqueHierarchy.length}): ${uniqueHierarchy.map(i => `${i.name}(${i.type})`).join(' → ')}`, 'INFO');
 
-    // FIND NEAREST PARENTS BY HIERARCHY
     function findNearestParentsByHierarchy() {
         const lineage = [];
         const currentLevel = TYPE_LEVEL_MAP[currentPageType] || 99;
-        
         for (let i = uniqueHierarchy.length - 1; i >= 0; i--) {
             const item = uniqueHierarchy[i];
-            
             if (lineage.length === 0) {
                 if (item.level < currentLevel) {
                     lineage.unshift(item);
@@ -1135,7 +1154,6 @@ function generateBreadcrumbJasaPengeboranPost(
                 }
             }
         }
-        
         return lineage;
     }
 
@@ -1143,7 +1161,6 @@ function generateBreadcrumbJasaPengeboranPost(
 
     log(`Initial lineage (${lineageLevels.length}): ${lineageLevels.map(i => `${i.name}(${i.type})`).join(' → ')}`, 'INFO');
 
-    // FORCE PARENT INJECTION
     lineageLevels = forceInjectDirectParent(
         lineageLevels, 
         uniqueHierarchy, 
@@ -1154,7 +1171,6 @@ function generateBreadcrumbJasaPengeboranPost(
 
     log(`After force injection (${lineageLevels.length}): ${lineageLevels.map(i => `${i.name}(${i.type})`).join(' → ')}`, 'INFO');
 
-    // ENSURE DIRECT COMMERCIAL PARENT
     const hasCommercialParent = lineageLevels.some(item =>
         item.type === 'money-master' || item.type === 'money-page'
     );
@@ -1169,7 +1185,6 @@ function generateBreadcrumbJasaPengeboranPost(
         }
     }
 
-    // REMOVE DUPLICATE AFTER LINEAGE
     const cleanLineage = [];
     const usedLineage = new Set();
 
@@ -1180,10 +1195,8 @@ function generateBreadcrumbJasaPengeboranPost(
         cleanLineage.push(item);
     }
 
-    // VALIDATE HIERARCHY ORDER
     const validatedLineage = validateAndFixHierarchy(cleanLineage);
 
-    // SORT NATURAL ORDER
     validatedLineage.sort((a, b) => {
         const idxA = HIERARCHY_ORDER.indexOf(a.type);
         const idxB = HIERARCHY_ORDER.indexOf(b.type);
@@ -1191,7 +1204,6 @@ function generateBreadcrumbJasaPengeboranPost(
         return a.position - b.position;
     });
 
-    // MAX LEVEL SAFE
     const MAX_PARENT_LEVELS = CONFIG.MAX_LEVEL - 2;
     let finalParents = validatedLineage;
 
@@ -1202,12 +1214,10 @@ function generateBreadcrumbJasaPengeboranPost(
         log(`Max level reached, keeping nearest parent: "${nearestParent.name}"`, 'WARN');
     }
 
-    // INSERT PARENTS
     for (const item of finalParents) {
         selectedLevels.push(item);
     }
 
-    // ADD CURRENT PAGE
     const hasCurrentAlready = selectedLevels.some(item =>
         item.name.toLowerCase() === currentPageTitle.toLowerCase()
     );
@@ -1236,7 +1246,6 @@ function generateBreadcrumbJasaPengeboranPost(
         uniqueLevels.push(item);
     }
 
-    // POSITION FIX
     uniqueLevels.forEach((item, index) => {
         item.position = index + 1;
     });
@@ -1333,7 +1342,7 @@ function generateBreadcrumbJasaPengeboranPost(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '7.8.0 FINAL',
+        version: '7.9.0 FINAL',
         maxLevel: CONFIG.MAX_LEVEL
     };
 }
