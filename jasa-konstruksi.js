@@ -4693,62 +4693,8 @@ if (urlMappingInfrastrukturFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
     }
-	
-if (urlMappingPengeboranFromSub1MoneyPage[cleanUrlJasaKons]) {
-        restoreCondition('JasaKonsSub');
-	restoreCondition('JasaPengeboran');
-           // hapus elemen id DIV Lain
-	removeCondition('ProdukInFur');
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-        //removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-	removeCondition('JasaKons');
-	removeCondition('MenuKons');
-	   
-       // hapus elemen id DIV Lain
-	removeCondition('JasaAlatKonstruksi');
-	removeCondition('SewaAlatKonstruksi');
-	removeCondition('SewaAlatBerat');
-	removeCondition('SewaAlatKonstruksiRingan');
-	   
-		removeCondition('JasaInstalasiListrik');
-	removeCondition('JasaRenovasiPerbaikan');
-        removeCondition('JasaStrukturKonstruksi');
-        removeCondition('JasaFinishing');
-        removeCondition('JasaPondasiPerkuatan');
-        removeCondition('JasaSaluranDrainase');
-        removeCondition('JasaJalanPerkerasan');
-	removeCondition('JasaPembatasPengaman');
-	removeCondition('JasaPematanganLahan');
-	removeCondition('JasaUjiTanah');
-	removeCondition('JasaPerkuatanTanahLongsor');
-	removeCondition('JasaBongkarBangunan');
-    removeCondition('JasaPerawatanPerbaikanBangunan');
-	
-    removeCondition('JasaPerbaikanInfrastruktur');   
-	   
-    //SUB JASA PENGEBORAN
-		removeCondition('JasaBorAirSumur');
-		removeCondition('JasaBorPile');
-		removeCondition('JasaCoringBeton');
-		removeCondition('JasaBorBeton');
-		removeCondition('JasaBorTanah');
-		removeCondition('JasaBorHorizontal');
-		removeCondition('JasaBorTembok');
 
-       // removeCondition('JasaKonstruksiCustom');
-	JasaPengeboranLink.style.visibility = 'hidden';
-	
-        JasaKonstruksiSubLink.style.visibility = 'visible';
-        JasaPengeboranLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingPengeboranFromSub1MoneyPage[cleanUrlJasaKons];
+if (urlMappingPengeboranFromSub1MoneyPage[cleanUrlJasaKons]) {
 	
 	generateBreadcrumbJasaKonstruksi(
         urlMappingStrukturFromSub1MoneyPage,
@@ -4757,7 +4703,8 @@ if (urlMappingPengeboranFromSub1MoneyPage[cleanUrlJasaKons]) {
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
-            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'}
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'}
         ],
         'JASA_KONSTRUKSI'
     );
