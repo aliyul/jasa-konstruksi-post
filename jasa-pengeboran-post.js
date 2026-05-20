@@ -2594,7 +2594,7 @@ if (urlMappingJasaBorTanah[cleanUrlJasaPengeboranPost]) {
    }
 
    if (urlMappingTukangBorFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
-        generateBreadcrumbJasaKonstruksi(
+        generateBreadcrumbJasaPengeboranPost(
         urlMappingTukangBorFromMoneyMaster1MoneyPage,
         cleanUrlJasaPengeboranPost,
         [
