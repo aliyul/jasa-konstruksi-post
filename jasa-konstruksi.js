@@ -342,7 +342,7 @@ const urlMappingSewaAlatKonstruksiRinganFromSub1MoneyPage = {
 // 🧠 TYPE: MONEY_PAGE (bukan MONEY_MASTER)
 // ============================================================
 
-const urlMappingInfrastrukturFromSub1MoneyPage = {
+const urlMappingInfrastrukturFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan.html": "Jasa Perbaikan Jalan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan.html": "Jasa Perbaikan Jembatan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase.html": "Jasa Perbaikan Drainase",  // TYPE: MONEY_PAGE
@@ -2217,7 +2217,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaAlatPendukungFromSub2Sub1,
 		urlMappingSewaAlatPendukungFromSub1MoneyMaster,
 		
-        urlMappingInfrastrukturFromSub1MoneyPage,
+        urlMappingInfrastrukturFromSub1MoneyMaster,
 		urlMappingPerawatanPerbaikanBangunanFromSub1MoneyPage,
 		urlMappingRenovasiFromSub1MoneyPage,
 		urlMappingFinishingFromSub1MoneyPage,
@@ -2241,15 +2241,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 	
 /* ============================================================
- 🔥 Hybrid Date Modified v7.6 — FIXED VERSION FOR betonjayareadymix.com
-    ✅ FIX: Variable name mismatch (pageLevelDetectorv19Ready)
-    ✅ FIX: Event listener case sensitivity
-    ✅ ADD: Retry mechanism for script loading (3x attempts)
-    ✅ ADD: Fallback inline detection when external script fails
-    ✅ FIX: Timeout increased to 10 seconds
-    ✅ FIX: Multiple CDN fallback URLs
-    ✅ FIX: Better error handling and logging
-    ✅ COMPATIBLE: Page Level Detector v19.0, v18, v17, legacy
+ 🔥 Hybrid Date Modified v7.6 — UNTUK betonjayareadymix.com
+    ✅ FIXED: Variable name konsisten dengan PLD v19.0
+    ✅ FIXED: pageLevelDetectorv19Ready (huruf kecil 'v')
+    ✅ FULL COMPATIBLE: Page Level Detector v19.0, v18, v17
+    ✅ FIX: Support JASA MONEY-MASTER detection
+    ✅ FIX: 'home' TIDAK termasuk EVERGREEN_LEVELS
+    ✅ Enhanced logging untuk debug
+    ✅ Better error handling
 ============================================================ */
 
 (async function runHybridDateModified() {
@@ -2262,8 +2261,6 @@ document.addEventListener("DOMContentLoaded", function() {
       return;
     }
 
-    console.log("🔥 Hybrid Date Modified v7.6 - Starting for", CURRENT_DOMAIN);
-
     // ============================================================
     // 📌 KONSTANTA PAGE LEVELS (KATEGORISASI YANG BENAR)
     // ============================================================
@@ -2272,125 +2269,24 @@ document.addEventListener("DOMContentLoaded", function() {
     const MONEY_LEVELS = ['money-master', 'money-page', 'money-child', 'money-leadgen'];
 
     // ============================================================
-    // 📌 FALLBACK DETECTION (jika external script gagal total)
+    // 📌 FUNGSI LOAD EXTERNAL JS
     // ============================================================
-    function getFallbackPageLevel() {
-      const path = window.location.pathname.toLowerCase();
-      const title = document.title.toLowerCase();
-      const h1 = document.querySelector('h1')?.innerText.toLowerCase() || '';
-      const text = path + ' ' + title + ' ' + h1;
-      
-      console.log("📌 Running fallback inline detection...");
-      
-      // Homepage
-      if (path === '/' || path === '/index.html' || path === '/home') {
-        return 'home';
-      }
-      
-      // Deteksi JASA
-      if (text.includes('jasa') || text.includes('borongan') || text.includes('renovasi') || text.includes('pasang') || text.includes('kontraktor')) {
-        // Harga jasa → money-page
-        if (text.includes('harga') || text.includes('biaya') || text.includes('tarif')) {
-          return 'money-page';
+    function loadExternalJS(src) {
+      return new Promise((resolve) => {
+        if (document.querySelector(`script[src="${src}"]`)) {
+          resolve();
+          return;
         }
-        // Jasa + lokasi → money-child
-        if (text.includes('jakarta') || text.includes('bandung') || text.includes('bekasi') || text.includes('tangerang') ||
-            text.includes('bogor') || text.includes('depok') || text.includes('surabaya') || text.includes('semarang')) {
-          return 'money-child';
-        }
-        // Hitung kata untuk menentukan MM
-        const cleanTitle = title.replace(/\b(jasa|kontraktor|renovasi|pasang|borongan)\b/gi, '').trim();
-        const wordCount = cleanTitle.split(/\s+/).filter(w => w.length > 2).length;
-        if (wordCount <= 2) {
-          return 'money-master';
-        }
-        return 'money-page';
-      }
-      
-      // Deteksi SEWA
-      if (text.includes('sewa') || text.includes('rental') || text.includes('alat berat') || text.includes('excavator')) {
-        // Harga sewa → money-page
-        if (text.includes('harga') || text.includes('biaya')) {
-          return 'money-page';
-        }
-        // Sewa + lokasi → money-child
-        if (text.includes('jakarta') || text.includes('bandung') || text.includes('bekasi') || text.includes('tangerang')) {
-          return 'money-child';
-        }
-        // Pure sewa → money-master
-        const cleanTitle = title.replace(/\b(sewa|rental)\b/gi, '').trim();
-        const wordCount = cleanTitle.split(/\s+/).filter(w => w.length > 2).length;
-        if (wordCount <= 2) {
-          return 'money-master';
-        }
-        return 'money-page';
-      }
-      
-      // Deteksi PRODUK dengan harga
-      if (text.includes('harga') && (text.includes('beton') || text.includes('wiremesh') || text.includes('pasir') || text.includes('split'))) {
-        return 'money-page';
-      }
-      
-      // Deteksi SUB PILLAR
-      if (text.includes('daftar') || text.includes('jenis') || text.includes('kategori') || text.includes('macam')) {
-        return 'sub-pillar-tipe-2';
-      }
-      
-      if (text.includes('perbandingan') || text.includes('vs') || text.includes('versus') || text.includes('kelebihan')) {
-        return 'sub-pillar-tipe-1';
-      }
-      
-      // Deteksi VARIANT
-      if (text.includes('spesifikasi') || text.includes('ukuran') || text.includes('dimensi') || text.includes('kapasitas')) {
-        return 'variant';
-      }
-      
-      // Default pillar
-      return 'pillar';
-    }
-
-    // ============================================================
-    // 📌 FUNGSI LOAD EXTERNAL JS DENGAN RETRY
-    // ============================================================
-    async function loadScriptWithRetry(src, maxRetries = 3, retryDelay = 1000) {
-      for (let i = 0; i < maxRetries; i++) {
-        try {
-          console.log(`⏳ Loading: ${src.split('/').pop()} (attempt ${i + 1}/${maxRetries})`);
-          
-          // Hapus script lama jika ada
-          const oldScript = document.querySelector(`script[src="${src}"]`);
-          if (oldScript) oldScript.remove();
-          
-          const script = document.createElement('script');
-          script.src = src;
-          script.defer = true;
-          
-          const loadPromise = new Promise((resolve, reject) => {
-            script.onload = () => resolve(true);
-            script.onerror = () => reject(new Error(`Failed to load ${src}`));
-            document.head.appendChild(script);
-          });
-          
-          await Promise.race([
-            loadPromise,
-            new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout after 8s')), 8000))
-          ]);
-          
-          // Tunggu sedikit agar script initialize
-          await new Promise(r => setTimeout(r, 500));
-          
-          console.log(`✅ Successfully loaded: ${src.split('/').pop()}`);
-          return true;
-        } catch (err) {
-          console.warn(`⚠️ Attempt ${i + 1} failed for ${src.split('/').pop()}:`, err.message);
-          if (i < maxRetries - 1) {
-            console.log(`⏳ Retrying in ${retryDelay}ms...`);
-            await new Promise(r => setTimeout(r, retryDelay));
-          }
-        }
-      }
-      console.error(`❌ Failed to load ${src.split('/').pop()} after ${maxRetries} attempts`);
-      return false;
+        const s = document.createElement("script");
+        s.src = src;
+        s.defer = true;
+        s.onload = resolve;
+        s.onerror = () => {
+          console.warn("[HybridDateModified] Gagal load:", src);
+          resolve();
+        };
+        document.head.appendChild(s);
+      });
     }
 
     // ============================================================
@@ -2398,32 +2294,35 @@ document.addEventListener("DOMContentLoaded", function() {
     // ============================================================
     function waitForPageLevelDetector() {
       return new Promise((resolve) => {
-        // ✅ FIX: Variable name yang benar (perhatikan huruf kecil 'v')
-        if (window.pageLevelDetectorV19 && window.pageLevelDetectorv19Ready) {
+        // ✅ FIXED: Cek v19 dengan variable name yang benar
+        if (window.pageLevelDetectorv19 && window.pageLevelDetectorv19Ready) {
           console.log("✅ Page Level Detector v19 already ready");
           resolve(true);
           return;
         }
         
+        // ✅ FIXED: Cek v18 dengan variable name yang benar
         if (window.pageLevelDetectorV18 && window.pageLevelDetectorv18Ready) {
           console.log("✅ Page Level Detector v18 already ready");
           resolve(true);
           return;
         }
         
+        // ✅ FIXED: Cek v17 dengan variable name yang benar
         if (window.pageLevelDetectorV17 && window.pageLevelDetectorv17Ready) {
           console.log("✅ Page Level Detector v17 already ready");
           resolve(true);
           return;
         }
         
+        // ✅ FIXED: Cek legacy
         if (window.pageLevelDetector && window.__pageLevelDetectorReady) {
-          console.log("✅ Page Level Detector legacy ready");
+          console.log("✅ Page Level Detector legacy already ready");
           resolve(true);
           return;
         }
         
-        // ✅ FIX: Event listener dengan case yang benar (huruf kecil 'v')
+        // ✅ FIXED: Event listener dengan case yang benar
         const onReadyV19 = () => {
           console.log("✅ Page Level Detector v19 ready (event)");
           resolve(true);
@@ -2440,17 +2339,17 @@ document.addEventListener("DOMContentLoaded", function() {
         };
         
         window.addEventListener("pageLevelDetectorv19Ready", onReadyV19, { once: true });
-        window.addEventListener("pageLevelDetectorV19Ready", onReadyV19, { once: true }); // backup uppercase
+        window.addEventListener("pageLevelDetectorV19Ready", onReadyV19, { once: true }); // backup
         window.addEventListener("pageLevelDetectorv18Ready", onReadyV18, { once: true });
         window.addEventListener("pageLevelDetectorReady", onReadyLegacy, { once: true });
         
-        // Timeout 10 detik (lebih panjang)
+        // Fallback timeout 10 detik (diperpanjang)
         setTimeout(() => {
-          if (window.pageLevelDetectorV19 || window.pageLevelDetectorV18 || window.pageLevelDetector) {
+          if (window.pageLevelDetectorv19 || window.pageLevelDetectorV18 || window.pageLevelDetector) {
             console.log("✅ Page Level Detector ready (timeout fallback)");
             resolve(true);
           } else {
-            console.warn("⚠️ PageLevelDetector timeout after 10s, using fallback detection");
+            console.warn("⚠️ PageLevelDetector timeout, using defaults");
             resolve(false);
           }
         }, 10000);
@@ -2479,135 +2378,28 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // ============================================================
-    // 📌 LOAD ALL SCRIPTS DENGAN MULTIPLE FALLBACK
+    // 📌 LOAD ALL SCRIPTS
     // ============================================================
     async function loadAllScripts() {
-      // List CDN URLs (multiple fallback)
-      const PAGE_LEVEL_DETECTOR_URLS = [
-        //"https://cdn.jsdelivr.net/gh/aliyul/solution-blogger@main/PageLevelDetector.js",
-        "https://raw.githack.com/aliyul/solution-blogger/main/PageLevelDetector.js",
-        "https://raw.githubusercontent.com/aliyul/solution-blogger/main/PageLevelDetector.js"
-      ];
+      const PAGE_LEVEL_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/PageLevelDetector.js";
+      const EVERGREEN_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/SmartEvergreenDetector.js";
       
-      const EVERGREEN_DETECTOR_URLS = [
-        //"https://cdn.jsdelivr.net/gh/aliyul/solution-blogger@main/SmartEvergreenDetector.js",
-        "https://raw.githack.com/aliyul/solution-blogger/main/SmartEvergreenDetector.js"
-      ];
-      
-      let detectorLoaded = false;
-      
-      // Cek apakah sudah ada
-      if (window.pageLevelDetectorV19 || window.pageLevelDetectorV18 || window.pageLevelDetector) {
-        console.log("✅ Page Level Detector already loaded");
-        detectorLoaded = true;
-      } else {
-        // Try multiple URLs
-        for (const url of PAGE_LEVEL_DETECTOR_URLS) {
-          console.log(`⏳ Trying Page Level Detector from: ${url.split('/').slice(2,3)}...`);
-          const success = await loadScriptWithRetry(url, 2, 1000);
-          if (success) {
-            detectorLoaded = true;
-            break;
-          }
-        }
-      }
-      
-      if (detectorLoaded) {
+      if (typeof window.pageLevelDetectorv19 === "undefined" && 
+          typeof window.pageLevelDetectorV18 === "undefined" &&
+          typeof window.pageLevelDetectorV17 === "undefined" &&
+          typeof window.pageLevelDetector === "undefined") {
+        console.log("⏳ Loading Page Level Detector v19.0...");
+        await loadExternalJS(PAGE_LEVEL_DETECTOR_URL);
         await waitForPageLevelDetector();
-      } else {
-        console.warn("⚠️ Could not load Page Level Detector from any source, will use fallback");
+        console.log("✅ Page Level Detector v19.0 READY");
       }
       
-      // Load Evergreen detector
       if (typeof window.detectEvergreen !== "function") {
-        for (const url of EVERGREEN_DETECTOR_URLS) {
-          const success = await loadScriptWithRetry(url, 2, 1000);
-          if (success) {
-            await waitForDetectEvergreen();
-            break;
-          }
-        }
+        console.log("⏳ Loading Smart Evergreen Detector...");
+        await loadExternalJS(EVERGREEN_DETECTOR_URL);
+        await waitForDetectEvergreen();
+        console.log("✅ Smart Evergreen Detector READY");
       }
-    }
-
-    // ============================================================
-    // 📌 GET PAGE LEVEL FROM DETECTOR ATAU FALLBACK
-    // ============================================================
-    async function getPageLevelFromDetector() {
-      await new Promise(resolve => setTimeout(resolve, 300));
-      
-      let pageLevel = 'pillar';
-      let entityType = 'produk';
-      let detectorVersion = 'fallback';
-      let detectionMethod = 'fallback';
-      
-      // PRIORITAS v19.0
-      if (window.pageLevelDetectorV19 && typeof window.pageLevelDetectorV19.detect === 'function') {
-        try {
-          pageLevel = window.pageLevelDetectorV19.detect();
-          entityType = window.pageLevelDetectorV19.detectEntityType();
-          detectorVersion = 'v19.0';
-          detectionMethod = 'external';
-          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
-        } catch (e) {
-          console.warn(`⚠️ Error calling pageLevelDetectorV19:`, e);
-        }
-      } 
-      // FALLBACK v18
-      else if (window.pageLevelDetectorV18 && typeof window.pageLevelDetectorV18.detect === 'function') {
-        try {
-          pageLevel = window.pageLevelDetectorV18.detect();
-          entityType = window.pageLevelDetectorV18.detectEntityType();
-          detectorVersion = 'v18.7';
-          detectionMethod = 'external';
-          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
-        } catch (e) {
-          console.warn(`⚠️ Error calling pageLevelDetectorV18:`, e);
-        }
-      } 
-      // FALLBACK v17
-      else if (window.pageLevelDetectorV17 && typeof window.pageLevelDetectorV17.detect === 'function') {
-        try {
-          pageLevel = window.pageLevelDetectorV17.detect();
-          entityType = window.pageLevelDetectorV17.detectEntityType();
-          detectorVersion = 'v17.0';
-          detectionMethod = 'external';
-          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
-        } catch (e) {
-          console.warn(`⚠️ Error calling pageLevelDetectorV17:`, e);
-        }
-      } 
-      // FALLBACK legacy
-      else if (window.pageLevelDetector && typeof window.pageLevelDetector.detect === 'function') {
-        try {
-          pageLevel = window.pageLevelDetector.detect();
-          entityType = window.pageLevelDetector.detectEntityType();
-          detectorVersion = 'legacy';
-          detectionMethod = 'external';
-          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
-        } catch (e) {
-          console.warn(`⚠️ Error calling pageLevelDetector legacy:`, e);
-        }
-      } 
-      
-      // Jika external detector gagal, gunakan fallback
-      if (detectionMethod === 'fallback') {
-        pageLevel = getFallbackPageLevel();
-        // Infer entity type dari page level dan text
-        const text = (window.location.pathname + document.title).toLowerCase();
-        if (text.includes('sewa') || text.includes('rental')) {
-          entityType = 'sewa';
-        } else if (text.includes('jasa') || text.includes('borongan') || text.includes('renovasi')) {
-          entityType = 'jasa';
-        } else if (text.includes('material')) {
-          entityType = 'material';
-        } else {
-          entityType = 'produk';
-        }
-        console.log(`📌 [FALLBACK] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
-      }
-      
-      return { pageLevel, entityType, detectorVersion, detectionMethod };
     }
 
     // ============================================================
@@ -2664,7 +2456,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // 📌 FUNGSI MENENTUKAN CUSTOM DATE BERDASARKAN PAGE LEVEL
     // ============================================================
     function getCustomDateByPageLevel(pageLevel, entityType) {
-      // EVERGREEN: manual mode
       if (EVERGREEN_LEVELS.includes(pageLevel)) {
         if (pageLevel === 'pillar') {
           return "2026-04-01T10:30:00+07:00";
@@ -2672,17 +2463,14 @@ document.addEventListener("DOMContentLoaded", function() {
         return "2026-04-02T00:00:00+07:00";
       }
       
-      // FLEXIBLE: semi manual
       if (FLEXIBLE_LEVELS.includes(pageLevel)) {
         return "2026-04-15T00:00:00+07:00";
       }
       
-      // MONEY pages: auto mode
       if (MONEY_LEVELS.includes(pageLevel)) {
         return null;
       }
       
-      // HOMEPAGE: auto mode
       if (pageLevel === 'home') {
         return null;
       }
@@ -2702,14 +2490,75 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // ============================================================
+    // 📌 GET PAGE LEVEL FROM DETECTOR (FIXED v7.6)
+    // ============================================================
+    async function getPageLevelFromDetector() {
+      await new Promise(resolve => setTimeout(resolve, 300));
+      
+      let pageLevel = 'pillar';
+      let entityType = 'produk';
+      let detectorVersion = 'unknown';
+      
+      // ✅ PRIORITAS v19.0 (variable name yang benar)
+      if (window.pageLevelDetectorv19 && typeof window.pageLevelDetectorv19.detect === 'function') {
+        try {
+          pageLevel = window.pageLevelDetectorv19.detect();
+          entityType = window.pageLevelDetectorv19.detectEntityType();
+          detectorVersion = 'v19.0';
+          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
+        } catch (e) {
+          console.warn(`⚠️ Error calling pageLevelDetectorv19:`, e);
+        }
+      } 
+      // FALLBACK v18
+      else if (window.pageLevelDetectorV18 && typeof window.pageLevelDetectorV18.detect === 'function') {
+        try {
+          pageLevel = window.pageLevelDetectorV18.detect();
+          entityType = window.pageLevelDetectorV18.detectEntityType();
+          detectorVersion = 'v18.7';
+          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
+        } catch (e) {
+          console.warn(`⚠️ Error calling pageLevelDetectorV18:`, e);
+        }
+      } 
+      // FALLBACK v17
+      else if (window.pageLevelDetectorV17 && typeof window.pageLevelDetectorV17.detect === 'function') {
+        try {
+          pageLevel = window.pageLevelDetectorV17.detect();
+          entityType = window.pageLevelDetectorV17.detectEntityType();
+          detectorVersion = 'v17.0';
+          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
+        } catch (e) {
+          console.warn(`⚠️ Error calling pageLevelDetectorV17:`, e);
+        }
+      } 
+      // FALLBACK legacy
+      else if (window.pageLevelDetector && typeof window.pageLevelDetector.detect === 'function') {
+        try {
+          pageLevel = window.pageLevelDetector.detect();
+          entityType = window.pageLevelDetector.detectEntityType();
+          detectorVersion = 'legacy';
+          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
+        } catch (e) {
+          console.warn(`⚠️ Error calling pageLevelDetector legacy:`, e);
+        }
+      } 
+      else {
+        console.warn("⚠️ PageLevelDetector not ready, using defaults (pillar/produk)");
+      }
+      
+      return { pageLevel, entityType, detectorVersion };
+    }
+
+    // ============================================================
     // 📌 EKSEKUSI UTAMA
     // ============================================================
     
-    // Load external scripts (dengan retry & fallback)
+    console.log("🔥 Hybrid Date Modified v7.6 - Starting...");
+    
     await loadAllScripts();
     
-    // Dapatkan page level dari detector atau fallback
-    const { pageLevel, entityType, detectorVersion, detectionMethod } = await getPageLevelFromDetector();
+    const { pageLevel, entityType, detectorVersion } = await getPageLevelFromDetector();
     
     // Validasi page level
     const ALL_KNOWN_LEVELS = [...EVERGREEN_LEVELS, ...FLEXIBLE_LEVELS, ...MONEY_LEVELS, 'home'];
@@ -2728,8 +2577,8 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(`   - Page Level: ${finalPageLevel}`);
     console.log(`   - Entity Type: ${entityType}`);
     console.log(`   - Category: ${categoryLabel}`);
-    console.log(`   - Detector: ${detectorVersion} (${detectionMethod})`);
-    console.log(`   - Mode: ${manualMode ? 'MANUAL (custom date)' : 'AUTO (SmartEvergreenDetector)'}`);
+    console.log(`   - Detector: ${detectorVersion}`);
+    console.log(`   - Mode: ${manualMode ? 'MANUAL (custom date)' : 'AUTO'}`);
     
     if (manualMode && customDate) {
       console.log(`   - Custom Date: ${customDate}`);
@@ -2745,7 +2594,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(`✅ AUTO mode executed`);
       }
     } else {
-      console.warn("⚠️ detectEvergreen function not available, skipping...");
+      console.warn("⚠️ detectEvergreen function not available");
     }
     
     // Pastikan AEDMetaDates tersedia
@@ -2784,16 +2633,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const finalDate = new Date(new Date(dateModified).getTime() + offsetSeconds * 1000);
     const isoDate = toISOWithTimezoneLocal(finalDate);
 
-    // Update meta
     updateMetaDateModified(isoDate);
 
-    // Update window.AEDMetaDates
     window.AEDMetaDates = {
       ...window.AEDMetaDates,
       dateModified: isoDate,
       hashOffset: offsetSeconds,
       detectorVersion: detectorVersion,
-      detectionMethod: detectionMethod,
       category: categoryLabel,
       mode: manualMode ? 'MANUAL' : 'AUTO',
       originalDateModified: dateModified,
@@ -2805,7 +2651,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(`   → Offset: ${offsetSeconds} detik (${Math.floor(offsetSeconds / 3600)} jam ${Math.floor((offsetSeconds % 3600) / 60)} menit)`);
     console.log(`   → Mode: ${manualMode ? 'MANUAL' : 'AUTO'}`);
     console.log(`   → Category: ${categoryLabel}`);
-    console.log(`   → Detector: ${detectorVersion} (${detectionMethod})`);
+    console.log(`   → Detector: ${detectorVersion}`);
     console.log(`📋 Hybrid Date Modified v7.6 applied successfully`);
 
   } catch (err) {
@@ -4833,59 +4679,10 @@ if (urlMappingBongkarBangunanFromSub1MoneyPage[cleanUrlJasaKons]) {
     }
 
 
-if (urlMappingInfrastrukturFromSub1MoneyPage[cleanUrlJasaKons]) {
-        restoreCondition('JasaKonsSub');
-	restoreCondition('JasaPerbaikanInfrastruktur');
-           // hapus elemen id DIV Lain
-	removeCondition('ProdukInFur');
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-        //removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-	removeCondition('JasaKons');
-	removeCondition('MenuKons');
-	   
-       // hapus elemen id DIV Lain
-	removeCondition('JasaBongkarBangunan');
-	removeCondition('JasaAlatKonstruksi');
-	removeCondition('SewaAlatKonstruksi');
-	removeCondition('SewaAlatBerat');
-	removeCondition('SewaAlatKonstruksiRingan');
-
-		removeCondition('JasaInstalasiListrik');
-	removeCondition('JasaRenovasiPerbaikan');
-        removeCondition('JasaStrukturKonstruksi');
-        removeCondition('JasaFinishing');
-        removeCondition('JasaPondasiPerkuatan');
-        removeCondition('JasaSaluranDrainase');
-        removeCondition('JasaJalanPerkerasan');
-	removeCondition('JasaPembatasPengaman');
-	removeCondition('JasaPematanganLahan');
-	removeCondition('JasaUjiTanah');
-	removeCondition('JasaPerkuatanTanahLongsor');
-	removeCondition('JasaPengeboran');
-		removeCondition('JasaBorAirSumur');
-		removeCondition('JasaBorPile');
-		removeCondition('JasaCoringBeton');
-		removeCondition('JasaBorBeton');
-		removeCondition('JasaBorTanah');
-		removeCondition('JasaBorHorizontal');
-		removeCondition('JasaBorTembok');
-	removeCondition('JasaPerawatanPerbaikanBangunan');
-	  
-       // removeCondition('JasaKonstruksiCustom');
-        JasaKonstruksiSubLink.style.visibility = 'visible';
-        JasaPerbaikanInfrastrukturLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingInfrastrukturFromSub1MoneyPage[cleanUrlJasaKons];
+if (urlMappingInfrastrukturFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbJasaKonstruksi(
-        urlMappingInfrastrukturFromSub1MoneyPage,
+        urlMappingInfrastrukturFromSub1MoneyMaster,
         cleanUrlJasaKons,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
