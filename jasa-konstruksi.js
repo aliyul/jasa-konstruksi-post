@@ -2484,13 +2484,13 @@ document.addEventListener("DOMContentLoaded", function() {
     async function loadAllScripts() {
       // List CDN URLs (multiple fallback)
       const PAGE_LEVEL_DETECTOR_URLS = [
-        "https://cdn.jsdelivr.net/gh/aliyul/solution-blogger@main/PageLevelDetector.js",
+        //"https://cdn.jsdelivr.net/gh/aliyul/solution-blogger@main/PageLevelDetector.js",
         "https://raw.githack.com/aliyul/solution-blogger/main/PageLevelDetector.js",
         "https://raw.githubusercontent.com/aliyul/solution-blogger/main/PageLevelDetector.js"
       ];
       
       const EVERGREEN_DETECTOR_URLS = [
-        "https://cdn.jsdelivr.net/gh/aliyul/solution-blogger@main/SmartEvergreenDetector.js",
+        //"https://cdn.jsdelivr.net/gh/aliyul/solution-blogger@main/SmartEvergreenDetector.js",
         "https://raw.githack.com/aliyul/solution-blogger/main/SmartEvergreenDetector.js"
       ];
       
