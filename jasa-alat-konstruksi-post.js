@@ -2526,7 +2526,7 @@ let currentPageTitle = cleanUrlJasaKonsAlatKonstruksiPost
       ];
       
       const EVERGREEN_DETECTOR_URLS = [
-        "https://cdn.jsdelivr.net/gh/aliyul/solution-blogger/main/SmartEvergreenDetector.js",
+        "https://cdn.jsdelivr.net/gh/aliyul/solution-blogger@main/SmartEvergreenDetector.js",
         "https://raw.githack.com/aliyul/solution-blogger/main/SmartEvergreenDetector.js"
       ];
       
