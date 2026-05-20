@@ -174,8 +174,8 @@ const urlMappingSewaAlatBorFromMoneyMasterMoneyMaster1 = {
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-bor-ground-work.html": "Sewa Alat Bor Ground Work",
   "https://www.betonjayareadymix.com/2019/03/sewa-alat-bor-tanah.html": "Sewa Alat Bor Tanah",  // TYPE: MONEY_PAGE
     "https://www.betonjayareadymix.com/2019/03/sewa-alat-bor-sumur.html": "Sewa Alat Bor Sumur", // TYPE: MONEY_PAGE 
-  "https://www.betonjayareadymix.com/2019/03/sewa-bor-beton.html": "Sewa Bor Beton",  //belum dibuat 
-  "https://www.betonjayareadymix.com/2019/03/sewa-bor-pancang.html": "Sewa Bor Pancang"  //belum dibuat 
+  "https://www.betonjayareadymix.com/2019/03/sewa-alst-bor-beton.html": "Sewa Alat Bor Beton",  //belum dibuat 
+  "https://www.betonjayareadymix.com/2019/03/sewa-alst-bor-pancang.html": "Sewa Alat Bor Pancang"  //belum dibuat 
 
 };
 const urlMappingSewaTangkiAirFromMoneyMasterMoneyMaster1 = {
