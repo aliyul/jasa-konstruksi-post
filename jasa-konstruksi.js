@@ -1976,14 +1976,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 	
 /* ============================================================
- 🔥 Hybrid Date Modified v7.8 — UNTUK betonjayareadymix.com
-    ✅ SINKRON dengan Page Level Detector v20.2
-    ✅ FIXED: Support PLD v20.0, v20.1, v20.2
-    ✅ FIXED: Variable name konsisten dengan PLD v20.x
-    ✅ FULL COMPATIBLE: Page Level Detector v20.x, v19.x, v18, v17
+ 🔥 Hybrid Date Modified v7.9 — UNTUK betonjayareadymix.com
+    ✅ SINKRON dengan Page Level Detector v22.1
+    ✅ FIXED: Support PLD v22.0, v22.1, v20.x, v19.x
+    ✅ FIXED: Variable name konsisten dengan PLD v22.x
+    ✅ FULL COMPATIBLE: Page Level Detector v22.x, v20.x, v19.x, v18, v17
     ✅ FIX: Support JASA MONEY-MASTER detection
     ✅ FIX: 'home' TIDAK termasuk EVERGREEN_LEVELS
-    ✅ Enhanced logging untuk debug
+    ✅ ENHANCED: Mendapatkan confidence score dari PLD v22.x
+    ✅ ENHANCED: Enhanced logging dengan confidence dan strategy
     ✅ Better error handling
 ============================================================ */
 
@@ -2026,11 +2027,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // ============================================================
-    // 📌 TUNGGU PAGE LEVEL DETECTOR READY (SUPPORT v20.x, v19.x, v18, v17)
+    // 📌 TUNGGU PAGE LEVEL DETECTOR READY (SUPPORT v22.x, v20.x, v19.x, v18, v17)
     // ============================================================
     function waitForPageLevelDetector() {
       return new Promise((resolve) => {
-        // ✅ SUPPORT v20.0, v20.1, v20.2
+        // ✅ SUPPORT v22.x (v22.0, v22.1)
+        if (window.pageLevelDetectorv22 && window.pageLevelDetectorv22Ready) {
+          console.log("✅ Page Level Detector v22.x already ready");
+          resolve(true);
+          return;
+        }
+        
+        // ✅ SUPPORT v20.x (v20.0, v20.1, v20.2)
         if (window.pageLevelDetectorv20 && window.pageLevelDetectorv20Ready) {
           console.log("✅ Page Level Detector v20.x already ready");
           resolve(true);
@@ -2066,6 +2074,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         
         // ✅ Event listener untuk semua versi
+        const onReadyV22 = () => {
+          console.log("✅ Page Level Detector v22.x ready (event)");
+          resolve(true);
+        };
+        
         const onReadyV20 = () => {
           console.log("✅ Page Level Detector v20.x ready (event)");
           resolve(true);
@@ -2086,6 +2099,7 @@ document.addEventListener("DOMContentLoaded", function() {
           resolve(true);
         };
         
+        window.addEventListener("pageLevelDetectorv22Ready", onReadyV22, { once: true });
         window.addEventListener("pageLevelDetectorv20Ready", onReadyV20, { once: true });
         window.addEventListener("pageLevelDetectorv19Ready", onReadyV19, { once: true });
         window.addEventListener("pageLevelDetectorV19Ready", onReadyV19, { once: true });
@@ -2094,8 +2108,9 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // Fallback timeout 10 detik
         setTimeout(() => {
-          if (window.pageLevelDetectorv20 || window.pageLevelDetectorv19 || 
-              window.pageLevelDetectorV18 || window.pageLevelDetector) {
+          if (window.pageLevelDetectorv22 || window.pageLevelDetectorv20 || 
+              window.pageLevelDetectorv19 || window.pageLevelDetectorV18 || 
+              window.pageLevelDetector) {
             console.log("✅ Page Level Detector ready (timeout fallback)");
             resolve(true);
           } else {
@@ -2131,19 +2146,20 @@ document.addEventListener("DOMContentLoaded", function() {
     // 📌 LOAD ALL SCRIPTS
     // ============================================================
     async function loadAllScripts() {
-      // Gunakan PLD v20.x (terbaru, smart pattern-based)
+      // Gunakan PLD v22.x (terbaru, weighted voting system)
       const PAGE_LEVEL_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/PageLevelDetector.js";
       const EVERGREEN_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/SmartEvergreenDetector.js";
       
-      if (typeof window.pageLevelDetectorv20 === "undefined" && 
+      if (typeof window.pageLevelDetectorv22 === "undefined" && 
+          typeof window.pageLevelDetectorv20 === "undefined" &&
           typeof window.pageLevelDetectorv19 === "undefined" &&
           typeof window.pageLevelDetectorV18 === "undefined" &&
           typeof window.pageLevelDetectorV17 === "undefined" &&
           typeof window.pageLevelDetector === "undefined") {
-        console.log("⏳ Loading Page Level Detector v20.x...");
+        console.log("⏳ Loading Page Level Detector v22.x...");
         await loadExternalJS(PAGE_LEVEL_DETECTOR_URL);
         await waitForPageLevelDetector();
-        console.log("✅ Page Level Detector v20.x READY");
+        console.log("✅ Page Level Detector v22.x READY");
       }
       
       if (typeof window.detectEvergreen !== "function") {
@@ -2242,7 +2258,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // ============================================================
-    // 📌 GET PAGE LEVEL FROM DETECTOR (SUPPORT v20.x, v19.x, v18, v17)
+    // 📌 GET PAGE LEVEL FROM DETECTOR (SUPPORT v22.x, v20.x, v19.x, v18, v17)
     // ============================================================
     async function getPageLevelFromDetector() {
       await new Promise(resolve => setTimeout(resolve, 300));
@@ -2250,9 +2266,35 @@ document.addEventListener("DOMContentLoaded", function() {
       let pageLevel = 'pillar';
       let entityType = 'produk';
       let detectorVersion = 'unknown';
+      let confidence = null;
+      let strategies = null;
+      let strategyCount = null;
       
-      // ✅ PRIORITAS v20.x (smart pattern-based)
-      if (window.pageLevelDetectorv20 && typeof window.pageLevelDetectorv20.detect === 'function') {
+      // ✅ PRIORITAS v22.x (weighted voting system - 100% accuracy)
+      if (window.pageLevelDetectorv22 && typeof window.pageLevelDetectorv22.detect === 'function') {
+        try {
+          pageLevel = window.pageLevelDetectorv22.detect();
+          entityType = window.pageLevelDetectorv22.detectEntityType();
+          detectorVersion = 'v22.x';
+          
+          // Dapatkan confidence score jika tersedia
+          if (typeof window.pageLevelDetectorv22.getConfidenceScore === 'function') {
+            const confidenceScore = window.pageLevelDetectorv22.getConfidenceScore();
+            confidence = confidenceScore.confidence;
+            strategies = confidenceScore.strategies;
+            strategyCount = confidenceScore.strategyCount;
+          }
+          
+          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
+          if (confidence) {
+            console.log(`   🎯 Confidence: ${confidence}% (${strategyCount} strategies: ${strategies?.join(", ")})`);
+          }
+        } catch (e) {
+          console.warn(`⚠️ Error calling pageLevelDetectorv22:`, e);
+        }
+      } 
+      // FALLBACK v20.x
+      else if (window.pageLevelDetectorv20 && typeof window.pageLevelDetectorv20.detect === 'function') {
         try {
           pageLevel = window.pageLevelDetectorv20.detect();
           entityType = window.pageLevelDetectorv20.detectEntityType();
@@ -2310,18 +2352,18 @@ document.addEventListener("DOMContentLoaded", function() {
         console.warn("⚠️ PageLevelDetector not ready, using defaults (pillar/produk)");
       }
       
-      return { pageLevel, entityType, detectorVersion };
+      return { pageLevel, entityType, detectorVersion, confidence, strategies, strategyCount };
     }
 
     // ============================================================
     // 📌 EKSEKUSI UTAMA
     // ============================================================
     
-    console.log("🔥 Hybrid Date Modified v7.8 - Starting...");
+    console.log("🔥 Hybrid Date Modified v7.9 - Starting...");
     
     await loadAllScripts();
     
-    const { pageLevel, entityType, detectorVersion } = await getPageLevelFromDetector();
+    const { pageLevel, entityType, detectorVersion, confidence, strategies, strategyCount } = await getPageLevelFromDetector();
     
     // Validasi page level
     const ALL_KNOWN_LEVELS = [...EVERGREEN_LEVELS, ...FLEXIBLE_LEVELS, ...MONEY_LEVELS, 'home'];
@@ -2341,6 +2383,12 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(`   - Entity Type: ${entityType}`);
     console.log(`   - Category: ${categoryLabel}`);
     console.log(`   - Detector: ${detectorVersion}`);
+    if (confidence) {
+      console.log(`   - Confidence: ${confidence}%`);
+    }
+    if (strategies && strategyCount) {
+      console.log(`   - Strategies: ${strategyCount} strategies (${strategies.join(", ")})`);
+    }
     console.log(`   - Mode: ${manualMode ? 'MANUAL (custom date)' : 'AUTO'}`);
     
     if (manualMode && customDate) {
@@ -2406,7 +2454,10 @@ document.addEventListener("DOMContentLoaded", function() {
       category: categoryLabel,
       mode: manualMode ? 'MANUAL' : 'AUTO',
       originalDateModified: dateModified,
-      hybridVersion: '7.8'
+      hybridVersion: '7.9',
+      detectionConfidence: confidence,
+      detectionStrategies: strategies,
+      detectionStrategyCount: strategyCount
     };
 
     console.log(`✅ [HybridDateModified] ${uniquePageIdentifier}`);
@@ -2415,7 +2466,10 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(`   → Mode: ${manualMode ? 'MANUAL' : 'AUTO'}`);
     console.log(`   → Category: ${categoryLabel}`);
     console.log(`   → Detector: ${detectorVersion}`);
-    console.log(`📋 Hybrid Date Modified v7.8 applied successfully`);
+    if (confidence) {
+      console.log(`   → Detection Confidence: ${confidence}%`);
+    }
+    console.log(`📋 Hybrid Date Modified v7.9 applied successfully`);
 
   } catch (err) {
     console.error("[HybridDateModified] Fatal error:", err);
