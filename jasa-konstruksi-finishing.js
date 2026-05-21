@@ -1481,10 +1481,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 /* ============================================================
- 🔥 Hybrid Date Modified v7.6 — UNTUK betonjayareadymix.com
-    ✅ FIXED: Variable name konsisten dengan PLD v19.0
-    ✅ FIXED: pageLevelDetectorv19Ready (huruf kecil 'v')
-    ✅ FULL COMPATIBLE: Page Level Detector v19.0, v18, v17
+ 🔥 Hybrid Date Modified v7.7 — UNTUK betonjayareadymix.com
+    ✅ SINKRON dengan Page Level Detector v20.0
+    ✅ FIXED: Variable name konsisten dengan PLD v20.0
+    ✅ FIXED: pageLevelDetectorv20Ready (support v20.0)
+    ✅ FULL COMPATIBLE: Page Level Detector v20.0, v19.0, v18, v17
     ✅ FIX: Support JASA MONEY-MASTER detection
     ✅ FIX: 'home' TIDAK termasuk EVERGREEN_LEVELS
     ✅ Enhanced logging untuk debug
@@ -1530,41 +1531,53 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // ============================================================
-    // 📌 TUNGGU PAGE LEVEL DETECTOR READY (FIXED v7.6)
+    // 📌 TUNGGU PAGE LEVEL DETECTOR READY (SUPPORT v20.0, v19, v18, v17)
     // ============================================================
     function waitForPageLevelDetector() {
       return new Promise((resolve) => {
-        // ✅ FIXED: Cek v19 dengan variable name yang benar
-        if (window.pageLevelDetectorv19 && window.pageLevelDetectorv19Ready) {
-          console.log("✅ Page Level Detector v19 already ready");
+        // ✅ SUPPORT v20.0 (smart pattern-based)
+        if (window.pageLevelDetectorv20 && window.pageLevelDetectorv20Ready) {
+          console.log("✅ Page Level Detector v20.0 already ready");
           resolve(true);
           return;
         }
         
-        // ✅ FIXED: Cek v18 dengan variable name yang benar
+        // ✅ SUPPORT v19.0
+        if (window.pageLevelDetectorv19 && window.pageLevelDetectorv19Ready) {
+          console.log("✅ Page Level Detector v19.0 already ready");
+          resolve(true);
+          return;
+        }
+        
+        // ✅ SUPPORT v18
         if (window.pageLevelDetectorV18 && window.pageLevelDetectorv18Ready) {
           console.log("✅ Page Level Detector v18 already ready");
           resolve(true);
           return;
         }
         
-        // ✅ FIXED: Cek v17 dengan variable name yang benar
+        // ✅ SUPPORT v17
         if (window.pageLevelDetectorV17 && window.pageLevelDetectorv17Ready) {
           console.log("✅ Page Level Detector v17 already ready");
           resolve(true);
           return;
         }
         
-        // ✅ FIXED: Cek legacy
+        // ✅ SUPPORT legacy
         if (window.pageLevelDetector && window.__pageLevelDetectorReady) {
           console.log("✅ Page Level Detector legacy already ready");
           resolve(true);
           return;
         }
         
-        // ✅ FIXED: Event listener dengan case yang benar
+        // ✅ Event listener untuk semua versi
+        const onReadyV20 = () => {
+          console.log("✅ Page Level Detector v20.0 ready (event)");
+          resolve(true);
+        };
+        
         const onReadyV19 = () => {
-          console.log("✅ Page Level Detector v19 ready (event)");
+          console.log("✅ Page Level Detector v19.0 ready (event)");
           resolve(true);
         };
         
@@ -1578,14 +1591,16 @@ document.addEventListener("DOMContentLoaded", function() {
           resolve(true);
         };
         
+        window.addEventListener("pageLevelDetectorv20Ready", onReadyV20, { once: true });
         window.addEventListener("pageLevelDetectorv19Ready", onReadyV19, { once: true });
-        window.addEventListener("pageLevelDetectorV19Ready", onReadyV19, { once: true }); // backup
+        window.addEventListener("pageLevelDetectorV19Ready", onReadyV19, { once: true });
         window.addEventListener("pageLevelDetectorv18Ready", onReadyV18, { once: true });
         window.addEventListener("pageLevelDetectorReady", onReadyLegacy, { once: true });
         
         // Fallback timeout 10 detik (diperpanjang)
         setTimeout(() => {
-          if (window.pageLevelDetectorv19 || window.pageLevelDetectorV18 || window.pageLevelDetector) {
+          if (window.pageLevelDetectorv20 || window.pageLevelDetectorv19 || 
+              window.pageLevelDetectorV18 || window.pageLevelDetector) {
             console.log("✅ Page Level Detector ready (timeout fallback)");
             resolve(true);
           } else {
@@ -1621,17 +1636,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // 📌 LOAD ALL SCRIPTS
     // ============================================================
     async function loadAllScripts() {
+      // Gunakan PLD v20.0 (terbaru, smart pattern-based)
       const PAGE_LEVEL_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/PageLevelDetector.js";
       const EVERGREEN_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/SmartEvergreenDetector.js";
       
-      if (typeof window.pageLevelDetectorv19 === "undefined" && 
+      if (typeof window.pageLevelDetectorv20 === "undefined" && 
+          typeof window.pageLevelDetectorv19 === "undefined" &&
           typeof window.pageLevelDetectorV18 === "undefined" &&
           typeof window.pageLevelDetectorV17 === "undefined" &&
           typeof window.pageLevelDetector === "undefined") {
-        console.log("⏳ Loading Page Level Detector v19.0...");
+        console.log("⏳ Loading Page Level Detector v20.0...");
         await loadExternalJS(PAGE_LEVEL_DETECTOR_URL);
         await waitForPageLevelDetector();
-        console.log("✅ Page Level Detector v19.0 READY");
+        console.log("✅ Page Level Detector v20.0 READY");
       }
       
       if (typeof window.detectEvergreen !== "function") {
@@ -1730,7 +1747,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // ============================================================
-    // 📌 GET PAGE LEVEL FROM DETECTOR (FIXED v7.6)
+    // 📌 GET PAGE LEVEL FROM DETECTOR (SUPPORT v20.0, v19, v18, v17)
     // ============================================================
     async function getPageLevelFromDetector() {
       await new Promise(resolve => setTimeout(resolve, 300));
@@ -1739,8 +1756,19 @@ document.addEventListener("DOMContentLoaded", function() {
       let entityType = 'produk';
       let detectorVersion = 'unknown';
       
-      // ✅ PRIORITAS v19.0 (variable name yang benar)
-      if (window.pageLevelDetectorv19 && typeof window.pageLevelDetectorv19.detect === 'function') {
+      // ✅ PRIORITAS v20.0 (smart pattern-based)
+      if (window.pageLevelDetectorv20 && typeof window.pageLevelDetectorv20.detect === 'function') {
+        try {
+          pageLevel = window.pageLevelDetectorv20.detect();
+          entityType = window.pageLevelDetectorv20.detectEntityType();
+          detectorVersion = 'v20.0';
+          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
+        } catch (e) {
+          console.warn(`⚠️ Error calling pageLevelDetectorv20:`, e);
+        }
+      } 
+      // FALLBACK v19.0
+      else if (window.pageLevelDetectorv19 && typeof window.pageLevelDetectorv19.detect === 'function') {
         try {
           pageLevel = window.pageLevelDetectorv19.detect();
           entityType = window.pageLevelDetectorv19.detectEntityType();
@@ -1794,7 +1822,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 📌 EKSEKUSI UTAMA
     // ============================================================
     
-    console.log("🔥 Hybrid Date Modified v7.6 - Starting...");
+    console.log("🔥 Hybrid Date Modified v7.7 - Starting...");
     
     await loadAllScripts();
     
@@ -1883,7 +1911,7 @@ document.addEventListener("DOMContentLoaded", function() {
       category: categoryLabel,
       mode: manualMode ? 'MANUAL' : 'AUTO',
       originalDateModified: dateModified,
-      hybridVersion: '7.6'
+      hybridVersion: '7.7'
     };
 
     console.log(`✅ [HybridDateModified] ${uniquePageIdentifier}`);
@@ -1892,7 +1920,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(`   → Mode: ${manualMode ? 'MANUAL' : 'AUTO'}`);
     console.log(`   → Category: ${categoryLabel}`);
     console.log(`   → Detector: ${detectorVersion}`);
-    console.log(`📋 Hybrid Date Modified v7.6 applied successfully`);
+    console.log(`📋 Hybrid Date Modified v7.7 applied successfully`);
 
   } catch (err) {
     console.error("[HybridDateModified] Fatal error:", err);
