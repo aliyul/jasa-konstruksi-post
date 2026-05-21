@@ -5,13 +5,13 @@
 
 const urlMappingFinishingBangunanFromJasaKonsPillarSub2 = {
   // [SUB2] - Jasa Finishing Interior
-  "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html": "Jasa Finishing Interior",  // TYPE: SUB2
+ // "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html": "Jasa Finishing Interior",  // TYPE: SUB2
   
   // [SUB2] - Jasa Finishing Eksterior
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html": "Jasa Finishing Eksterior",  // TYPE: SUB2
+ // "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html": "Jasa Finishing Eksterior",  // TYPE: SUB2
   
   // [SUB2] - Jasa Finishing Struktur
-  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur"  // TYPE: SUB2
+ // "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur"  // TYPE: SUB2
 };
 
 
