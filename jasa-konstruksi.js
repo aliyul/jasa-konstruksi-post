@@ -32,6 +32,10 @@ const urlMappingJasaKonsFromPillarSub2 = {
   // Breadcrumb: Home > Jasa Konstruksi > [Nama Layanan] (3 level)
   // ============================================================
   "https://www.betonjayareadymix.com/p/daftar-jasa-alat-konstruksi.html": "Daftar Jasa Alat Konstruksi",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-bangunan.html": "Daftar Jasa Konstruksi Bangunan",  // TYPE: SUB2
+ "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-rumah.html": "Daftar Jasa Konstruksi Rumah",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-gedung.html": "Daftar Jasa Konstruksi Gedung",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-industri.html": "Daftar Jasa Konstruksi Industri",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html": "Daftar Jasa Struktur Konstruksi",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-pondasi-perkuatan-tanah.html": "Daftar Jasa Pondasi & Perkuatan Tanah",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-saluran-drainase.html": "Daftar Jasa Saluran & Drainase",  // TYPE: SUB2
@@ -84,6 +88,18 @@ const urlMappingStrukturBridgeFromSub2Sub1 = {
    "https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-konstruksi.html": "Perbandingan Jasa Struktur Konstruksi"  // TYPE: SUB1
 };
 
+const urlMappingKonstruksiBangunanBridgeFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-bangunan.html": "Perbandingan Jasa Konstruksi Bangunan"
+};
+const urlMappingKonstruksiRumahBridgeFromSub2Sub1 = {
+   "https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-rumah.html": "Perbandingan Jasa Konstruksi Rumah"
+};
+const urlMappingKonstruksiGedungBridgeFromSub2Sub1 = {
+   "https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-gedung.html": "Perbandingan Jasa Konstruksi Gedung"
+};
+const urlMappingKonstruksiIndustriBridgeFromSub2Sub1 = {
+ "https://www.betonjayareadymix.com/p/perbandingan--jasa-konstruksi-industri.html": "Perbandingan Jasa Konstruksi Industri"
+};
 const urlMappingRenovasiBridgeFromSub2Sub1 = {
 /*
   "https://www.betonjayareadymix.com/p/panduan-renovasi-bangunan.html": "Panduan Renovasi Bangunan",  // TYPE: SUB1
@@ -362,6 +378,13 @@ const urlMappingFinishingFromSub1MoneyPage = {
 // 📁 JASA STRUKTUR KONSTRUKSI - SUB2 (LEVEL 2)
 // ============================================================
 
+const urlMappingStrukturFromSub1MoneyMaster = {
+   "https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html": "Jasa Struktur Konstruksi",
+	//"https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html": "Jasa Konstruksi Gedung dan Hunian",
+	"https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung.html": "Jasa Konstruksi Gedung",
+	//  "https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah-tinggal.html": "Jasa Konstruksi Rumah Tinggal",  // TYPE: MONEY_PAGE
+	  "https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah.html": "Jasa Konstruksi Rumah",  // TYPE: MONEY_PAGE
+};
 const urlMappingStrukturFromSub1MoneyPage = {
    "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html": "Jasa Konstruksi Gedung dan Hunian",
 	  // Breadcrumb: Home > Jasa Struktur Konstruksi > Jasa Konstruksi Gedung & Hunian > Jasa Konstruksi Rumah Tinggal (4 level)
