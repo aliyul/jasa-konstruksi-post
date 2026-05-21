@@ -1913,6 +1913,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage,
 		//urlMappingJasaAlatKonstruksi, hapus karna isi nya sewa jadi pisahkan 
 		urlMappingStrukturBridgeFromSub2Sub1,
+		urlMappingKonstruksiBangunanBridgeFromSub2Sub1,
+		urlMappingKonstruksiRumahBridgeFromSub2Sub1,
+		urlMappingKonstruksiGedungBridgeFromSub2Sub1,
+		urlMappingKonstruksiIndustriBridgeFromSub2Sub1,
 		urlMappingRenovasiBridgeFromSub2Sub1,
 		urlMappingFinishingBridgeFromSub2Sub1,
 		urlMappingPerawatanPerbaikanBridgeFromSub2Sub1,
@@ -2758,6 +2762,62 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPage[cleanUrlJasaKons]) {
            // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+	
+    }
+	if (urlMappingKonstruksiBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingStrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
+	generateBreadcrumbJasaKonstruksi(
+        urlMappingKonstruksiBangunanBridgeFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-bangunan.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+	
+    }
+	if (urlMappingKonstruksiRumahBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingStrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
+	generateBreadcrumbJasaKonstruksi(
+        urlMappingKonstruksiRumahBridgeFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Konstruksi Rumah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-rumah.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+	
+    }
+	if (urlMappingKonstruksiGedungBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingStrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
+	generateBreadcrumbJasaKonstruksi(
+        urlMappingKonstruksiGedungBridgeFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Konstruksi Gedung', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-gedung.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+	
+    }
+	if (urlMappingKonstruksiIndustriBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingStrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
+	generateBreadcrumbJasaKonstruksi(
+        urlMappingKonstruksiIndustriBridgeFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Konstruksi Industri', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-industri.html' }
         ],
         'JASA_KONSTRUKSI'
     );
