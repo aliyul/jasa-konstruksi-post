@@ -1077,7 +1077,8 @@ function generateBreadcrumbJasaKonstruksiFinishing(
         enhancedBreadcrumbItems
     );
 
-    log(`After force injection (${lineageLevels.length}): ${lineageLevels.map(i => `${i.name}(${i.type})`).join(' → ')}', 'INFO');
+    // BARIS YANG BENAR (tanpa error)
+log(`After force injection (${lineageLevels.length}): ${lineageLevels.map(i => `${i.name}(${i.type})`).join(' → ')}`, 'INFO');
 
     const hasCommercialParent = lineageLevels.some(item =>
         item.type === 'money-master' || item.type === 'money-page'
