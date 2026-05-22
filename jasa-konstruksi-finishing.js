@@ -3,8 +3,8 @@
 // 🧠 Parent: Jasa Konstruksi (PILLAR)
 // ============================================================
 
-const urlMappingFinishingBangunanFromMoneyMasterMoneyMaster1 = {
-  // [SUB2] - Jasa Finishing Interior
+const urlMappingFinishingBangunanFromMoneyMasterMoneyPage = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-bangunan.html": "Harga Jasa Finishing Bangunan", 
   "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-interior.html": "Jasa Finishing Bangunan Interior", 
   "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-eksterior.html": "Jasa Finishing Bangunan Eksterior", 
   "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-struktur.html": "Jasa Finishing Bangunan Struktur" 
@@ -1580,7 +1580,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingFinishingBangunanFromMoneyMasterMoneyMaster1,
+		urlMappingFinishingBangunanFromMoneyMasterMoneyPage,
 		urlMappingFinishingBangunanInteriorFromJasaFinishingBangunanSub2Sub2,
 		urlMappingFinishingBangunanEksteriorFromJasaFinishingBangunanSub2Sub2,
 		urlMappingFinishingBangunanStrukturFromJasaFinishingBangunanSub2Sub2,
@@ -2133,9 +2133,9 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaFinishingInfrastrukturLink.style.visibility = 'hidden';
      pageNameJasaKonsFinishing.textContent = "";
 
-    if (urlMappingFinishingBangunanFromMoneyMasterMoneyMaster1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingFinishingBangunanFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingFinishingBangunanFromMoneyMasterMoneyMaster1,
+        urlMappingFinishingBangunanFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsFinishing,
         [
            // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
