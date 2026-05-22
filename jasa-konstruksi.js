@@ -370,6 +370,8 @@ const urlMappingInfrastrukturFromSub1MoneyMaster = {
 // ============================================================
 
 const urlMappingFinishingFromSub1MoneyMaster = {
+ 	"https://www.betonjayareadymix.com/p/jasa-dinding-wallpaper.html": "Jasa Dinding & Wallpaper", 
+	"https://www.betonjayareadymix.com/p/jasa-furniture-interior.html": "Jasa Furniture & Interior", 
 	"https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html": "Jasa Finishing Lantai", 
    "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html": "Jasa Finishing Interior", 
   "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html": "Jasa Finishing Eksterior", 
