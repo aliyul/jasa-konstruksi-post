@@ -391,7 +391,7 @@ const urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2
  * ============================================================
  */
 
-function generateBreadcrumbJasaKonstruksi(
+function generateBreadcrumbJasaKonstruksiFinishing(
     mappingObj,
     currentUrl,
     breadcrumbItems = [],
