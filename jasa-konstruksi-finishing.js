@@ -5,9 +5,9 @@
 
 const urlMappingFinishingBangunanFromMoneyMasterMoneyMaster1 = {
   // [SUB2] - Jasa Finishing Interior
-  "https://www.betonjayareadymix.com/p/jasa-finishing-interior.html": "Jasa Finishing Interior", 
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html": "Jasa Finishing Eksterior", 
-  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur" 
+  "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-interior.html": "Jasa Finishing Bangunan Interior", 
+  "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-eksterior.html": "Jasa Finishing Bangunan Eksterior", 
+  "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-struktur.html": "Jasa Finishing Bangunan Struktur" 
 };
 
 
