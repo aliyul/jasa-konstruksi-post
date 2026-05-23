@@ -1453,6 +1453,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingFinishingLampuInteriorFromMoneyMasterMoneyPage,
 		urlMappingFinishingCatInteriorFromMoneyMasterMoneyPage,
 		urlMappingFinishingFurnitureInteriorFromMoneyMasterMoneyPage,
+		urlMappingFinishingDindingWallpaperFromMoneyMasterMoneyPage,
 		
 		urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
 		urlMappingFinishingBangunanEksteriorFromJasaFinishingBangunanSub2Sub2,
@@ -2066,6 +2067,20 @@ document.addEventListener("DOMContentLoaded", function() {
     );
     }
 
+	  if (urlMappingFinishingDindingWallpaperFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
+         generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingFinishingDindingWallpaperFromMoneyMasterMoneyPage,
+        cleanUrlJasaKonsFinishing,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+            { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
     if (urlMappingFinishingInfrastrukturFromJasaKonsPillarSub2[cleanUrlJasaKonsFinishing]) {
         restoreCondition('JasaFinishingInfrastrukturSub');
 		
