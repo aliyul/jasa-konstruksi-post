@@ -37,8 +37,12 @@ const urlMappingFinishingDindingWallpaperFromMoneyMasterMoneyPage = {
  "https://www.betonjayareadymix.com/p/jasa-cat-dinding-eksterior.html": "Jasa Cat Dinding Eksterior"
 };
 const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
-   "https://www.betonjayareadymix.com/p/jasa-epoxy-lantai.html": "Jasa Epoxy Lantai", 
+	"https://www.betonjayareadymix.com/p/jasa-finishing-lantai-keramik.html": "Jasa Finishing Lantai Epoxy",
+	"https://www.betonjayareadymix.com/p/jasa-finishing-lantai-marmer.html": "Jasa Finishing Lantai Epoxy",
+	"https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html": "Jasa Finishing Lantai Epoxy",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-kayu.html": "Jasa Finishing Lantai Epoxy",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-epoxy.html": "Jasa Finishing Lantai Epoxy",
+	 "https://www.betonjayareadymix.com/p/jasa-epoxy-lantai.html": "Jasa Epoxy Lantai", 
 	"https://www.betonjayareadymix.com/p/jasa-keramik-lantai.html": "Jasa Keramik Lantai"
 
 };
