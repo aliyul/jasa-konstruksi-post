@@ -1448,7 +1448,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
 		urlMappingFinishingLampuInteriorFromMoneyMasterMoneyPage,
 		urlMappingFinishingCatInteriorFromMoneyMasterMoneyPage,
-		,
+		urlMappingFinishingFurnitureInteriorFromMoneyMasterMoneyPage,
+		
 		urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
 		urlMappingFinishingBangunanEksteriorFromJasaFinishingBangunanSub2Sub2,
 		urlMappingFinishingBangunanStrukturFromJasaFinishingBangunanSub2Sub2,
