@@ -18,7 +18,7 @@ const urlMappingFinishingBangunanFromMoneyMasterMoneyMaster1 = {
 // 📁 JASA FINISHING INTERIOR - LEVEL 3 (SUB2 dari SUB2 Jasa Finishing Bangunan)
 // 🧠 Parent: Jasa Finishing Bangunan (SUB2)
 // ============================================================
-const urlMappingFinishingFurnitureInteriorFromMoneyMasterMoneyPage = {
+const urlMappingFinishingFurnitureFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set", 
 	"https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set", 
 	"https://www.betonjayareadymix.com/p/jasa-kitchen-set-minimalis.html": "Jasa Kitchen Set Minimalis", 
@@ -27,10 +27,12 @@ const urlMappingFinishingFurnitureInteriorFromMoneyMasterMoneyPage = {
 	"https://www.betonjayareadymix.com/p/jasa-pasang-partisi-ruangan.html": "Jasa Pasang Partisi Ruangan",
 	"https://www.betonjayareadymix.com/p/jasa-pembuatan-partisi-ruangan.html": "Jasa Pembuatan Partisi Ruangan",
 	"https://www.betonjayareadymix.com/p/jasa-rak-dinding-custom.html": "Jasa Rak Dinding Custom",
+	"https://www.betonjayareadymix.com/p/jasa-furniture-interior.html": "Jasa Furniture & Interior", 
 	"https://www.betonjayareadymix.com/p/jasa-interior-furniture-custom.html": "Jasa Interior & Furniture Custom"
   
 };
-const urlMappingFinishingDindingWallpaperFromMoneyMasterMoneyPage = {
+const urlMappingFinishingDindingFromMoneyMasterMoneyPage = {
+"https://www.betonjayareadymix.com/p/jasa-dinding-wallpaper.html": "Jasa Dinding & Wallpaper",
 "https://www.betonjayareadymix.com/p/jasa-epoxy-dinding.html": "Jasa Epoxy Dinding", 
  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-epoxy.html": "Jasa Finishing Dinding Epoxy",
  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",
@@ -1452,8 +1454,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
 		urlMappingFinishingLampuInteriorFromMoneyMasterMoneyPage,
 		urlMappingFinishingCatInteriorFromMoneyMasterMoneyPage,
-		urlMappingFinishingFurnitureInteriorFromMoneyMasterMoneyPage,
-		urlMappingFinishingDindingWallpaperFromMoneyMasterMoneyPage,
+		urlMappingFinishingFurnitureFromMoneyMasterMoneyPage,
+		urlMappingFinishingDindingFromMoneyMasterMoneyPage,
 		
 		urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
 		urlMappingFinishingBangunanEksteriorFromJasaFinishingBangunanSub2Sub2,
@@ -2052,9 +2054,9 @@ document.addEventListener("DOMContentLoaded", function() {
     );
     }
 
-  if (urlMappingFinishingFurnitureInteriorFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
+  if (urlMappingFinishingFurnitureFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingFinishingFurnitureInteriorFromMoneyMasterMoneyPage,
+        urlMappingFinishingFurnitureFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsFinishing,
         [
            // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -2067,9 +2069,9 @@ document.addEventListener("DOMContentLoaded", function() {
     );
     }
 
-	  if (urlMappingFinishingDindingWallpaperFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
+	  if (urlMappingFinishingDindingFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingFinishingDindingWallpaperFromMoneyMasterMoneyPage,
+        urlMappingFinishingDindingFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsFinishing,
         [
            // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
