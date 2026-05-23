@@ -44,6 +44,9 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
 };
 
 const urlMappingFinishingInteriorFromMoneyMasterMoneyPage= {
+	"https://www.betonjayareadymix.com/p/jasa-finishing-interior-kantor.html": "Jasa Finishing Interior Kantor", 
+	"https://www.betonjayareadymix.com/p/jasa-finishing-interior-apartemen.html": "Jasa Finishing Interior Apartemen", 
+	"https://www.betonjayareadymix.com/p/jasa-finishing-interior-rumah.html": "Jasa Finishing Interior Rumah", 
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis", 
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html": "Jasa Finishing Interior Klasik",
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern"
