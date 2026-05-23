@@ -1059,7 +1059,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
 
     let lineageLevels = findNearestParentsByHierarchy();
 
-    log(`Initial lineage (${lineageLevels.length}): ${lineageLevels.map(i => `i.name + '(' + i.type + ')'`).join(' → ')}`, 'INFO');
+  log('Initial lineage (' + lineageLevels.length + '): ' + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
 
     lineageLevels = forceInjectDirectParent(
         lineageLevels, 
@@ -1069,7 +1069,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
         enhancedBreadcrumbItems
     );
 
-    log(`After force injection (${lineageLevels.length}): ${lineageLevels.map(i => `i.name + '(' + i.type + ')'`).join(' → ')}', 'INFO');
+    log(`After force injection (${lineageLevels.length}): ` + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
 
     // REMOVE DUPLICATE
     const cleanLineage = [];
