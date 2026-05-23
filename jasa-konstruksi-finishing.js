@@ -2047,7 +2047,7 @@ document.addEventListener("DOMContentLoaded", function() {
     );
     }
 
-  if ([cleanUrlJasaKonsFinishing]) {
+  if (urlMappingFinishingFurnitureInteriorFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingFinishingFurnitureInteriorFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsFinishing,
