@@ -22,11 +22,12 @@ const urlMappingFinishingFurnitureInteriorFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set", 
 	"https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set", 
 	"https://www.betonjayareadymix.com/p/jasa-kitchen-set-minimalis.html": "Jasa Kitchen Set Minimalis", 
-"https://www.betonjayareadymix.com/p/jasa-lemari-built-in.html": "Jasa Lemari Built In", 
+	"https://www.betonjayareadymix.com/p/jasa-pasang-lemari-built-in.html": "Jasa Pasang Lemari Built In", 
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-lemari-built-in.html": "Jasa Pembuatan Lemari Built In", 
 	"https://www.betonjayareadymix.com/p/jasa-pasang-partisi-ruangan.html": "Jasa Pasang Partisi Ruangan",
 	"https://www.betonjayareadymix.com/p/jasa-pembuatan-partisi-ruangan.html": "Jasa Pembuatan Partisi Ruangan",
 	"https://www.betonjayareadymix.com/p/jasa-rak-dinding-custom.html": "Jasa Rak Dinding Custom",
-	"https://www.betonjayareadymix.com/p/jasa-interior-furniture-custom.html": "Jasa Interior dan Furniture Custom"
+	"https://www.betonjayareadymix.com/p/jasa-interior-furniture-custom.html": "Jasa Interior & Furniture Custom"
   
 };
 const urlMappingFinishingDindingWallpaperFromMoneyMasterMoneyPage = {
@@ -1447,7 +1448,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
 		urlMappingFinishingLampuInteriorFromMoneyMasterMoneyPage,
 		urlMappingFinishingCatInteriorFromMoneyMasterMoneyPage,
-		urlMappingFinishingFurnitureInteriorFromMoneyMasterMoneyPage,
+		,
 		urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
 		urlMappingFinishingBangunanEksteriorFromJasaFinishingBangunanSub2Sub2,
 		urlMappingFinishingBangunanStrukturFromJasaFinishingBangunanSub2Sub2,
@@ -2045,7 +2046,7 @@ document.addEventListener("DOMContentLoaded", function() {
     );
     }
 
-  if (urlMappingFinishingFurnitureInteriorFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
+  if ([cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingFinishingFurnitureInteriorFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsFinishing,
