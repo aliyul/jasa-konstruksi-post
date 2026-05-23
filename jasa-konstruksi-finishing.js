@@ -348,21 +348,26 @@ const urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2
 
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v8.1 FINAL
- * UNIVERSAL ENTITY HIERARCHY ENGINE - MAX LEVEL 5 FIX
+ * generateBreadcrumbJasaKonstruksi v8.2 FINAL
+ * UNIVERSAL ENTITY HIERARCHY ENGINE - MAX LEVEL 5 FIXED
  * ============================================================
+ *
+ * ✅ UPDATE v8.2
+ * ------------------------------------------------------------
+ * - FIX: findNearestParentsByHierarchy() sekarang ambil SEMUA parent
+ * - FIX: Tidak membatasi 1 parent per level lagi
+ * - FIX: Force parent injection lebih agresif untuk MP (level 5)
+ * - FIX: Parent terdekat TIDAK PERNAH SKIP lagi
+ * - FIX: Menggunakan position-based sorting untuk hierarki
  *
  * ✅ UPDATE v8.1
  * ------------------------------------------------------------
- * - FIX: MAX_LEVEL=5 sekarang berfungsi penuh (5 level)
- * - FIX: Sub1 parent MM tidak di-skip lagi
- * - FIX: findNearestParentsByHierarchy() sekarang menerima level <=
- * - ADD: Force parent injection untuk mempertahankan hierarki
- * - ADD: Level padding untuk mencapai MAX_LEVEL
+ * - MAX_LEVEL=5 berfungsi penuh
+ * - Force parent injection untuk MP
  *
  * ============================================================
- * @version 8.1.0 FINAL
- * @date 2026-05-22
+ * @version 8.2.0 FINAL
+ * @date 2026-05-23
  * ============================================================
  */
 
@@ -391,7 +396,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
     function log(message, type = 'INFO') {
         if (!CONFIG.DEBUG && type === 'INFO') return;
         const icons = { INFO: '📘', SUCCESS: '✅', WARN: '⚠️', ERROR: '❌' };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v8.1] ${message}`);
+        console.log(`${icons[type] || '📘'} [Breadcrumb v8.2] ${message}`);
     }
 
     // ============================================================
@@ -793,7 +798,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
     }
 
     // ============================================================
-    // 19. FORCE PARENT INJECTION (FIXED v8.1)
+    // 19. FORCE PARENT INJECTION (FIXED v8.2)
     // ============================================================
 
     function forceInjectDirectParent(lineageLevels, allLevels, currentPageTitle, entityType, breadcrumbItems) {
@@ -829,23 +834,20 @@ function generateBreadcrumbJasaKonstruksiFinishing(
         }
 
         // ========================================================
-        // 🔥 FIX v8.1: STRATEGI KHUSUS UNTUK SUB1 PARENT MM
+        // 🔥 FIX v8.2: FORCE PARENT UNTUK MP (Level 5) - LEBIH AGRESIF
         // ========================================================
         
-        // JIKA current page adalah MP (level 5) dan ada parent MM (level 4) yang belum masuk
         const currentLevel = TYPE_LEVEL_MAP[detectPageType(currentPageTitle)] || 99;
         if (currentLevel === 5) { // current page adalah MP
-            // Cari parent MM (level 4) di allLevels yang belum masuk lineage
-            const missingMMParents = allLevels.filter(item => 
+            // Cari SEMUA parent MM (level 4) yang relevan
+            const allMMParents = allLevels.filter(item => 
                 item.level === 4 && // Money-Master level
-                !modifiedLineage.some(l => l.name === item.name) &&
-                (currentLower.includes(item.name.toLowerCase().replace('jasa ', '')) || 
-                 item.name.toLowerCase().includes(words[1] || ''))
+                !modifiedLineage.some(l => l.name === item.name)
             );
             
-            // Tambahkan semua MM parent yang relevan
-            for (const mmParent of missingMMParents) {
-                log(`FORCE SUB1 PARENT: "${mmParent.name}" (level 4) → MP "${currentPageTitle}"`, 'SUCCESS');
+            // Tambahkan SEMUA MM parent, biarkan MAX_LEVEL nanti yang memfilter
+            for (const mmParent of allMMParents) {
+                log(`FORCE MP PARENT: "${mmParent.name}" (level 4) → MP "${currentPageTitle}"`, 'SUCCESS');
                 modifiedLineage.push(mmParent);
             }
         }
@@ -896,7 +898,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
     }
 
     // ============================================================
-    // 20. HIERARCHY VALIDATOR (FIXED v8.1)
+    // 20. HIERARCHY VALIDATOR
     // ============================================================
     
     function validateAndFixHierarchy(lineage) {
@@ -1028,7 +1030,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
     log(`Unique hierarchy items (${uniqueHierarchy.length}): ${uniqueHierarchy.map(i => `${i.name}(${i.type})`).join(' → ')}`, 'INFO');
 
     // ========================================================
-    // FIND NEAREST PARENTS (FIXED v8.1 - menerima level <=)
+    // FIND NEAREST PARENTS (FIXED v8.2 - AMBIL SEMUA)
     // ========================================================
     
     function findNearestParentsByHierarchy() {
@@ -1038,18 +1040,20 @@ function generateBreadcrumbJasaKonstruksiFinishing(
         // Ambil semua item dengan level < currentLevel
         const candidates = uniqueHierarchy.filter(item => item.level < currentLevel);
         
-        // Urutkan berdasarkan level descending (dari tertinggi ke terendah)
-        const sorted = [...candidates].sort((a, b) => b.level - a.level);
+        // Urutkan berdasarkan position (urutan asli dari breadcrumbItems)
+        // karena position mencerminkan urutan hierarki yang benar
+        const sorted = [...candidates].sort((a, b) => a.position - b.position);
         
-        // Ambil unique berdasarkan level (satu per level)
-        const seenLevels = new Set();
+        // Ambil semua, tidak perlu filter per level
+        // Karena position sudah menjamin urutan yang benar
         for (const item of sorted) {
-            if (!seenLevels.has(item.level)) {
-                seenLevels.add(item.level);
-                lineage.unshift(item); // tambahkan di awal agar urut ascending
+            // Hindari duplikat nama
+            if (!lineage.some(l => l.name === item.name)) {
+                lineage.push(item);
             }
         }
         
+        log(`Candidates: ${candidates.length}, Lineage: ${lineage.length}`, 'INFO');
         return lineage;
     }
 
@@ -1065,7 +1069,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
         enhancedBreadcrumbItems
     );
 
-    log(`After force injection (${lineageLevels.length}): ${lineageLevels.map(i => `${i.name}(${i.type})`).join(' → ')}`, 'INFO');
+    log(`After force injection (${lineageLevels.length}): ${lineageLevels.map(i => `${i.name}(${i.type})`).join(' → ')}', 'INFO');
 
     // REMOVE DUPLICATE
     const cleanLineage = [];
@@ -1090,7 +1094,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
     });
 
     // ========================================================
-    // MAX LEVEL 5 - FULL IMPLEMENTATION (FIXED v8.1)
+    // MAX LEVEL 5 - FULL IMPLEMENTATION (FIXED v8.2)
     // ========================================================
     
     const MAX_PARENT_LEVELS = CONFIG.MAX_LEVEL - 2; // 5 - 2 = 3 parent slots
@@ -1236,7 +1240,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '8.1.0 FINAL',
+        version: '8.2.0 FINAL',
         maxLevel: CONFIG.MAX_LEVEL
     };
 }
