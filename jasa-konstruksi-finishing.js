@@ -42,20 +42,27 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
 };
 
 const urlMappingFinishingInteriorFromMoneyMasterMoneyPage= {
-	"https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
-   
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis", 
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html": "Jasa Finishing Interior Klasik",
   "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern"
 };
 const urlMappingFinishingLampuInteriorFromMoneyMasterMoneyPage= {
-	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior.html": "Jasa PasangLampu Interior",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-modern.html": "Jasa PasangLampu Interior Modern",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-minimalis.html": "Jasa PasangLampu Interior Minimalis",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-rumah.html": "Jasa PasangLampu Interior Rumah",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-gedung.html": "Jasa PasangLampu Interior Gedung"
+	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior.html": "Jasa Pasang Lampu Interior",
+	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-modern.html": "Jasa Pasang Lampu Interior Modern",
+	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-minimalis.html": "Jasa Pasang Lampu Interior Minimalis",
+	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-rumah.html": "Jasa Pasang Lampu Interior Rumah",
+	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-gedung.html": "Jasa Pasang Lampu Interior Gedung"
  
 };
+const urlMappingFinishingCatInteriorFromMoneyMasterMoneyPage= {
+	"https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
+	"https://www.betonjayareadymix.com/p/jasa-cat-interior-modern.html": "Jasa Cat Interior Modern",
+	"https://www.betonjayareadymix.com/p/jasa-cat-interior-minimalis.html": "Jasa Cat Interior Minimalis",
+	"https://www.betonjayareadymix.com/p/jasa-cat-interior-apartemen.html": "Jasa Cat Interior Apartemen",
+	"https://www.betonjayareadymix.com/p/jasa-cat-interior-gedung.html": "Jasa Cat Interior Gedung"
+
+};
+	
 // ============================================================
 // 📁 JASA FINISHING EKSTERIOR - LEVEL 3 (SUB2 dari SUB2 Jasa Finishing Bangunan)
 // 🧠 Parent: Jasa Finishing Bangunan (SUB2)
@@ -1430,6 +1437,7 @@ document.addEventListener("DOMContentLoaded", function() {
       {},
 		urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
 		urlMappingFinishingLampuInteriorFromMoneyMasterMoneyPage,
+		urlMappingFinishingCatInteriorFromMoneyMasterMoneyPage,
 		urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
 		urlMappingFinishingBangunanEksteriorFromJasaFinishingBangunanSub2Sub2,
 		urlMappingFinishingBangunanStrukturFromJasaFinishingBangunanSub2Sub2,
@@ -2007,6 +2015,22 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
            { name: 'Jasa Lampu Interior', url: 'https://www.betonjayareadymix.com/p/jasa-lampu-interior.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+
+	  
+	    if (urlMappingFinishingCatInteriorFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
+         generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingFinishingCatInteriorFromMoneyMasterMoneyPage,
+        cleanUrlJasaKonsFinishing,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+           { name: 'Jasa Cat Interior', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior.html'}
         ],
         'JASA_KONSTRUKSI'
     );
