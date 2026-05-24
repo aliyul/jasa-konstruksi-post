@@ -350,24 +350,24 @@ const urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2
 
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v8.5 FINAL
+ * generateBreadcrumbJasaKonstruksi v8.6 FINAL
  * UNIVERSAL ENTITY HIERARCHY ENGINE - NEAREST PARENT FIXED
  * ============================================================
  *
+ * ✅ UPDATE v8.6
+ * ------------------------------------------------------------
+ * - FIX: Current page TIDAK ikut terpilih sebagai parent
+ * - FIX: Filter current page dari lineage sebelum cari parent terdekat
+ * - Parent terdekat (level 4) PASTI terpilih, bukan current page
+ * - Enhanced logging untuk debugging
+ *
  * ✅ UPDATE v8.5
  * ------------------------------------------------------------
- * - FIX: findNearestParentsByHierarchy() menggunakan <= untuk parent
- * - FIX: Enhanced logging untuk debugging parent detection
- * - FIX: Pastikan parent level 4 (MM) selalu masuk ke lineage
- * - FIX: MAX_LEVEL dihapus, hanya tampilkan parent terdekat
- * - ADD: Detailed logging untuk allLevels, candidates, lineage
- *
- * ✅ UPDATE v8.4
- * ------------------------------------------------------------
- * - Solusi: HANYA tampilkan parent TERDEKAT (level tertinggi)
+ * - findNearestParentsByHierarchy() menggunakan <= untuk parent
+ * - MAX_LEVEL dihapus, hanya tampilkan parent terdekat
  *
  * ============================================================
- * @version 8.5.0 FINAL
+ * @version 8.6.0 FINAL
  * @date 2026-05-24
  * ============================================================
  */
@@ -396,7 +396,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
     function log(message, type = 'INFO') {
         if (!CONFIG.DEBUG && type === 'INFO') return;
         const icons = { INFO: '📘', SUCCESS: '✅', WARN: '⚠️', ERROR: '❌', DEBUG: '🔍' };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v8.5] ${message}`);
+        console.log(`${icons[type] || '📘'} [Breadcrumb v8.6] ${message}`);
     }
 
     // ============================================================
@@ -1027,7 +1027,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
     log('Unique hierarchy items (' + uniqueHierarchy.length + '): ' + uniqueHierarchy.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
 
     // ========================================================
-    // FIND NEAREST PARENTS (FIXED v8.5 - menggunakan <=)
+    // FIND NEAREST PARENTS 
     // ========================================================
     
     function findNearestParentsByHierarchy() {
@@ -1036,14 +1036,12 @@ function generateBreadcrumbJasaKonstruksiFinishing(
         
         log(`Current level: ${currentLevel}`, 'DEBUG');
         
-        // ✅ FIX v8.5: Gunakan <= agar parent dengan level sama bisa masuk
         const candidates = uniqueHierarchy.filter(item => item.level <= currentLevel);
         
         log('Candidates (level <= current): ' + candidates.map(i => i.level + ':' + i.name).join(', '), 'DEBUG');
         
         if (candidates.length === 0) return lineage;
         
-        // Prioritaskan level tertinggi
         const sortedByLevelDesc = [...candidates].sort((a, b) => b.level - a.level);
         
         const seenLevels = new Set();
@@ -1104,22 +1102,29 @@ function generateBreadcrumbJasaKonstruksiFinishing(
     });
 
     // ========================================================
-    // SOLUSI v8.5: HANYA PARENT TERDEKAT (LEVEL TERTINGGI)
+    // SOLUSI v8.6: HANYA PARENT (BUKAN CURRENT PAGE)
     // ========================================================
     
     let finalParents = [];
 
-    if (validatedLineage.length > 0) {
-        // Cari level tertinggi dari parent yang tersedia
-        const highestLevel = Math.max(...validatedLineage.map(i => i.level));
+    // Filter untuk menghilangkan current page dari lineage
+    const parentOnly = validatedLineage.filter(item => 
+        item.name.toLowerCase() !== currentPageTitle.toLowerCase()
+    );
+
+    if (parentOnly.length > 0) {
+        // Cari level tertinggi dari parent (bukan current page)
+        const highestLevel = Math.max(...parentOnly.map(i => i.level));
         
-        // Ambil hanya parent dengan level tertinggi (parent terdekat)
-        finalParents = validatedLineage.filter(item => item.level === highestLevel);
+        // Ambil hanya parent dengan level tertinggi
+        finalParents = parentOnly.filter(item => item.level === highestLevel);
         
         // Urutkan berdasarkan posisi
         finalParents.sort((a, b) => a.position - b.position);
         
         log('Nearest parent(s) level ' + highestLevel + ': ' + finalParents.map(i => i.name).join(', '), 'SUCCESS');
+    } else {
+        log('No parent found (only current page)', 'WARN');
     }
 
     // INSERT PARENTS (hanya parent terdekat)
@@ -1252,10 +1257,11 @@ function generateBreadcrumbJasaKonstruksiFinishing(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '8.5.0 FINAL',
+        version: '8.6.0 FINAL',
         maxLevel: 'NONE (nearest parent only)'
     };
 }
+
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaKonsFinishing = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
