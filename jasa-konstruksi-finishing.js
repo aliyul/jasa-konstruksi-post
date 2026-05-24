@@ -1031,33 +1031,46 @@ function generateBreadcrumbJasaKonstruksiFinishing(
 
     log(`Unique hierarchy items (${uniqueHierarchy.length}): ${uniqueHierarchy.map(i => `i.name + '(' + i.type + ')'`).join(' → ')}`, 'INFO');
 
-    // ========================================================
-    // FIND NEAREST PARENTS (FIXED v8.2 - AMBIL SEMUA)
-    // ========================================================
+// ========================================================
+// FIND NEAREST PARENTS (FIXED v8.3 - PRIORITAS LEVEL TERTINGGI)
+// ========================================================
     
-    function findNearestParentsByHierarchy() {
-        const lineage = [];
-        const currentLevel = TYPE_LEVEL_MAP[currentPageType] || 99;
-        
-        // Ambil semua item dengan level < currentLevel
-        const candidates = uniqueHierarchy.filter(item => item.level < currentLevel);
-        
-        // Urutkan berdasarkan position (urutan asli dari breadcrumbItems)
-        // karena position mencerminkan urutan hierarki yang benar
-        const sorted = [...candidates].sort((a, b) => a.position - b.position);
-        
-        // Ambil semua, tidak perlu filter per level
-        // Karena position sudah menjamin urutan yang benar
-        for (const item of sorted) {
-            // Hindari duplikat nama
-            if (!lineage.some(l => l.name === item.name)) {
-                lineage.push(item);
-            }
+function findNearestParentsByHierarchy() {
+    const lineage = [];
+    const currentLevel = TYPE_LEVEL_MAP[currentPageType] || 99;
+    
+    // Ambil semua item dengan level < currentLevel
+    const candidates = uniqueHierarchy.filter(item => item.level < currentLevel);
+    
+    if (candidates.length === 0) return lineage;
+    
+    // ✅ PRIORITASKAN level tertinggi (parent terdekat) TERLEBIH DAHULU
+    const sortedByLevelDesc = [...candidates].sort((a, b) => b.level - a.level);
+    
+    // ✅ Ambil UNIQUE per level, prioritaskan yang levelnya tinggi
+    const seenLevels = new Set();
+    const prioritized = [];
+    
+    for (const item of sortedByLevelDesc) {
+        if (!seenLevels.has(item.level)) {
+            seenLevels.add(item.level);
+            prioritized.push(item);
         }
-        
-        log(`Candidates: ${candidates.length}, Lineage: ${lineage.length}`, 'INFO');
-        return lineage;
     }
+    
+    // ✅ Urutkan ascending (dari level terendah ke tertinggi) untuk hierarki yang benar
+    const sortedLineage = prioritized.sort((a, b) => a.level - b.level);
+    
+    // ✅ Tambahkan ke lineage
+    for (const item of sortedLineage) {
+        lineage.push(item);
+    }
+    
+    log(`Candidates: ${candidates.map(i => i.level + ':' + i.name).join(', ')}`, 'INFO');
+    log(`Lineage (prioritized): ${lineage.map(i => i.level + ':' + i.name).join(' → ')}`, 'SUCCESS');
+    
+    return lineage;
+}
 
     let lineageLevels = findNearestParentsByHierarchy();
 
