@@ -350,26 +350,25 @@ const urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2
 
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v8.2 FINAL
- * UNIVERSAL ENTITY HIERARCHY ENGINE - MAX LEVEL 5 FIXED
+ * generateBreadcrumbJasaKonstruksi v8.4 FINAL
+ * UNIVERSAL ENTITY HIERARCHY ENGINE - NEAREST PARENT ONLY
  * ============================================================
  *
- * ✅ UPDATE v8.2
+ * ✅ UPDATE v8.4
  * ------------------------------------------------------------
- * - FIX: findNearestParentsByHierarchy() sekarang ambil SEMUA parent
- * - FIX: Tidak membatasi 1 parent per level lagi
- * - FIX: Force parent injection lebih agresif untuk MP (level 5)
- * - FIX: Parent terdekat TIDAK PERNAH SKIP lagi
- * - FIX: Menggunakan position-based sorting untuk hierarki
+ * - SOLUSI: HANYA tampilkan parent TERDEKAT (level tertinggi)
+ * - HAPUS MAX_LEVEL complexity (tidak perlu batasan jumlah)
+ * - Parent terdekat WAJIB MASUK, parent lain DIABAIKAN
+ * - Breadcrumb lebih pendek, fokus, dan tidak pernah skip
+ * - Enhanced logging untuk debugging
  *
- * ✅ UPDATE v8.1
+ * ✅ UPDATE v8.3
  * ------------------------------------------------------------
- * - MAX_LEVEL=5 berfungsi penuh
- * - Force parent injection untuk MP
+ * - findNearestParentsByHierarchy() prioritaskan level tertinggi
  *
  * ============================================================
- * @version 8.2.0 FINAL
- * @date 2026-05-23
+ * @version 8.4.0 FINAL
+ * @date 2026-05-24
  * ============================================================
  */
 
@@ -386,7 +385,6 @@ function generateBreadcrumbJasaKonstruksiFinishing(
 
     const CONFIG = {
         DOMAIN: 'https://www.betonjayareadymix.com',
-        MAX_LEVEL: 5,
         DEBUG: true,
         CURRENT_YEAR: new Date().getFullYear()
     };
@@ -398,7 +396,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
     function log(message, type = 'INFO') {
         if (!CONFIG.DEBUG && type === 'INFO') return;
         const icons = { INFO: '📘', SUCCESS: '✅', WARN: '⚠️', ERROR: '❌' };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v8.2] ${message}`);
+        console.log(`${icons[type] || '📘'} [Breadcrumb v8.4] ${message}`);
     }
 
     // ============================================================
@@ -800,7 +798,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
     }
 
     // ============================================================
-    // 19. FORCE PARENT INJECTION (FIXED v8.2)
+    // 19. FORCE PARENT INJECTION (FIXED v8.4)
     // ============================================================
 
     function forceInjectDirectParent(lineageLevels, allLevels, currentPageTitle, entityType, breadcrumbItems) {
@@ -835,26 +833,19 @@ function generateBreadcrumbJasaKonstruksiFinishing(
             }
         }
 
-        // ========================================================
-        // 🔥 FIX v8.2: FORCE PARENT UNTUK MP (Level 5) - LEBIH AGRESIF
-        // ========================================================
-        
+        // FORCE PARENT UNTUK MP (Level 5) - LEBIH AGRESIF
         const currentLevel = TYPE_LEVEL_MAP[detectPageType(currentPageTitle)] || 99;
-        if (currentLevel === 5) { // current page adalah MP
-            // Cari SEMUA parent MM (level 4) yang relevan
+        if (currentLevel === 5) {
             const allMMParents = allLevels.filter(item => 
-                item.level === 4 && // Money-Master level
-                !modifiedLineage.some(l => l.name === item.name)
+                item.level === 4 && !modifiedLineage.some(l => l.name === item.name)
             );
-            
-            // Tambahkan SEMUA MM parent, biarkan MAX_LEVEL nanti yang memfilter
             for (const mmParent of allMMParents) {
                 log(`FORCE MP PARENT: "${mmParent.name}" (level 4) → MP "${currentPageTitle}"`, 'SUCCESS');
                 modifiedLineage.push(mmParent);
             }
         }
 
-        // STRATEGI 3: Semantic similarity
+        // STRATEGI 3: Semantic similarity (opsional)
         if (modifiedLineage.length === lineageLevels.length) {
             const semanticKeywords = {
                 'finishing': ['finishing', 'cat', 'epoxy', 'lampu', 'wallpaper'],
@@ -907,10 +898,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
         if (lineage.length <= 1) return lineage;
         const fixed = [];
         
-        // Urutkan berdasarkan level (ascending)
         const sorted = [...lineage].sort((a, b) => a.level - b.level);
-        
-        // Hapus duplikat berdasarkan nama
         const uniqueNames = new Set();
         for (const item of sorted) {
             if (!uniqueNames.has(item.name.toLowerCase())) {
@@ -1011,6 +999,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
 
     const selectedLevels = [];
 
+    // HOME
     selectedLevels.push({
         name: 'Beranda',
         url: CONFIG.DOMAIN,
@@ -1019,6 +1008,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
         position: 1
     });
 
+    // UNIQUE HIERARCHY
     const uniqueHierarchy = [];
     const usedHierarchy = new Set();
 
@@ -1029,52 +1019,47 @@ function generateBreadcrumbJasaKonstruksiFinishing(
         uniqueHierarchy.push(item);
     }
 
-    log(`Unique hierarchy items (${uniqueHierarchy.length}): ${uniqueHierarchy.map(i => `i.name + '(' + i.type + ')'`).join(' → ')}`, 'INFO');
+    log('Unique hierarchy items (' + uniqueHierarchy.length + '): ' + uniqueHierarchy.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
 
-// ========================================================
-// FIND NEAREST PARENTS (FIXED v8.3 - PRIORITAS LEVEL TERTINGGI)
-// ========================================================
+    // ========================================================
+    // FIND NEAREST PARENTS (PRIORITAS LEVEL TERTINGGI)
+    // ========================================================
     
-function findNearestParentsByHierarchy() {
-    const lineage = [];
-    const currentLevel = TYPE_LEVEL_MAP[currentPageType] || 99;
-    
-    // Ambil semua item dengan level < currentLevel
-    const candidates = uniqueHierarchy.filter(item => item.level < currentLevel);
-    
-    if (candidates.length === 0) return lineage;
-    
-    // ✅ PRIORITASKAN level tertinggi (parent terdekat) TERLEBIH DAHULU
-    const sortedByLevelDesc = [...candidates].sort((a, b) => b.level - a.level);
-    
-    // ✅ Ambil UNIQUE per level, prioritaskan yang levelnya tinggi
-    const seenLevels = new Set();
-    const prioritized = [];
-    
-    for (const item of sortedByLevelDesc) {
-        if (!seenLevels.has(item.level)) {
-            seenLevels.add(item.level);
-            prioritized.push(item);
+    function findNearestParentsByHierarchy() {
+        const lineage = [];
+        const currentLevel = TYPE_LEVEL_MAP[currentPageType] || 99;
+        
+        const candidates = uniqueHierarchy.filter(item => item.level < currentLevel);
+        
+        if (candidates.length === 0) return lineage;
+        
+        const sortedByLevelDesc = [...candidates].sort((a, b) => b.level - a.level);
+        
+        const seenLevels = new Set();
+        const prioritized = [];
+        
+        for (const item of sortedByLevelDesc) {
+            if (!seenLevels.has(item.level)) {
+                seenLevels.add(item.level);
+                prioritized.push(item);
+            }
         }
+        
+        const sortedLineage = prioritized.sort((a, b) => a.level - b.level);
+        
+        for (const item of sortedLineage) {
+            lineage.push(item);
+        }
+        
+        log('Candidates: ' + candidates.map(i => i.level + ':' + i.name).join(', '), 'INFO');
+        log('Lineage (prioritized): ' + lineage.map(i => i.level + ':' + i.name).join(' → '), 'SUCCESS');
+        
+        return lineage;
     }
-    
-    // ✅ Urutkan ascending (dari level terendah ke tertinggi) untuk hierarki yang benar
-    const sortedLineage = prioritized.sort((a, b) => a.level - b.level);
-    
-    // ✅ Tambahkan ke lineage
-    for (const item of sortedLineage) {
-        lineage.push(item);
-    }
-    
-    log(`Candidates: ${candidates.map(i => i.level + ':' + i.name).join(', ')}`, 'INFO');
-    log(`Lineage (prioritized): ${lineage.map(i => i.level + ':' + i.name).join(' → ')}`, 'SUCCESS');
-    
-    return lineage;
-}
 
     let lineageLevels = findNearestParentsByHierarchy();
 
-  log('Initial lineage (' + lineageLevels.length + '): ' + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
+    log('Initial lineage (' + lineageLevels.length + '): ' + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
 
     lineageLevels = forceInjectDirectParent(
         lineageLevels, 
@@ -1084,7 +1069,7 @@ function findNearestParentsByHierarchy() {
         enhancedBreadcrumbItems
     );
 
-    log(`After force injection (${lineageLevels.length}): ` + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
+    log('After force injection (' + lineageLevels.length + '): ' + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
 
     // REMOVE DUPLICATE
     const cleanLineage = [];
@@ -1109,23 +1094,25 @@ function findNearestParentsByHierarchy() {
     });
 
     // ========================================================
-    // MAX LEVEL 5 - FULL IMPLEMENTATION (FIXED v8.2)
+    // SOLUSI v8.4: HANYA PARENT TERDEKAT (LEVEL TERTINGGI)
     // ========================================================
     
-    const MAX_PARENT_LEVELS = CONFIG.MAX_LEVEL - 2; // 5 - 2 = 3 parent slots
-    let finalParents = validatedLineage;
+    let finalParents = [];
 
-    log(`MAX_LEVEL: ${CONFIG.MAX_LEVEL}, Parent slots: ${MAX_PARENT_LEVELS}, Available parents: ${validatedLineage.length}`, 'INFO');
-
-    if (validatedLineage.length > MAX_PARENT_LEVELS) {
-        // Jika kelebihan, prioritaskan parent terdekat (level tertinggi)
-        const sortedParents = [...validatedLineage].sort((a, b) => b.level - a.level);
-        const nearestParents = sortedParents.slice(0, MAX_PARENT_LEVELS);
-        finalParents = nearestParents.sort((a, b) => a.level - b.level);
-        log(`Max level reached, keeping ${finalParents.length} nearest parents: ${finalParents.map(i => i.name).join(', ')}`, 'WARN');
+    if (validatedLineage.length > 0) {
+        // Cari level tertinggi dari parent yang tersedia
+        const highestLevel = Math.max(...validatedLineage.map(i => i.level));
+        
+        // Ambil hanya parent dengan level tertinggi (parent terdekat)
+        finalParents = validatedLineage.filter(item => item.level === highestLevel);
+        
+        // Urutkan berdasarkan posisi
+        finalParents.sort((a, b) => a.position - b.position);
+        
+        log('Nearest parent(s) level ' + highestLevel + ': ' + finalParents.map(i => i.name).join(', '), 'SUCCESS');
     }
 
-    // INSERT PARENTS
+    // INSERT PARENTS (hanya parent terdekat)
     for (const item of finalParents) {
         selectedLevels.push(item);
     }
@@ -1163,7 +1150,7 @@ function findNearestParentsByHierarchy() {
         item.position = index + 1;
     });
 
-    log(`Final breadcrumb (${uniqueLevels.length}/${CONFIG.MAX_LEVEL} levels): ${uniqueLevels.map(i => i.name).join(' › ')}`, 'SUCCESS');
+    log('Final breadcrumb (' + uniqueLevels.length + ' levels): ' + uniqueLevels.map(i => i.name).join(' › '), 'SUCCESS');
 
     // ============================================================
     // 28. GENERATE HTML
@@ -1255,8 +1242,8 @@ function findNearestParentsByHierarchy() {
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '8.2.0 FINAL',
-        maxLevel: CONFIG.MAX_LEVEL
+        version: '8.4.0 FINAL',
+        maxLevel: 'NONE (nearest parent only)'
     };
 }
 // Menyimpan elemen yang dihapus dalam variabel
