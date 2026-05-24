@@ -370,6 +370,10 @@ const urlMappingInfrastrukturFromSub1MoneyMaster = {
 // ============================================================
 
 const urlMappingFinishingFromSub1MoneyMaster = {
+	"https://www.betonjayareadymix.com/p/jasa-finishing.html": "Jasa Finishing"
+};
+
+const urlMappingFinishingFromMoneyMasterMoneyMaster1 = {
 	"https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html": "Jasa Finishing Dinding", 
 	"https://www.betonjayareadymix.com/p/jasa-finishing-furniture.html": "Jasa Finishing Furniture", 
 		"https://www.betonjayareadymix.com/p/jasa-finishing-cat.html": "Jasa Finishing Cat",
@@ -868,21 +872,26 @@ const urlMappingCustom = {
 
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v8.1 FINAL
- * UNIVERSAL ENTITY HIERARCHY ENGINE - MAX LEVEL 5 FIX
+ * generateBreadcrumbJasaKonstruksi v8.7 FINAL
+ * UNIVERSAL ENTITY HIERARCHY ENGINE - FIXED SAME LEVEL PARENT
  * ============================================================
  *
- * ✅ UPDATE v8.1
+ * ✅ UPDATE v8.7
  * ------------------------------------------------------------
- * - FIX: MAX_LEVEL=5 sekarang berfungsi penuh (5 level)
- * - FIX: Sub1 parent MM tidak di-skip lagi
- * - FIX: findNearestParentsByHierarchy() sekarang menerima level <=
- * - ADD: Force parent injection untuk mempertahankan hierarki
- * - ADD: Level padding untuk mencapai MAX_LEVEL
+ * - FIX: Parent dengan level SAMA dengan current page TIDAK SKIP
+ * - FIX: MM → MM (level 4→4) sekarang berfungsi
+ * - FIX: MP → MP (level 5→5) sekarang berfungsi
+ * - Hapus filter level yang membatasi parent dengan level sama
+ * - Enhanced logging untuk debugging
+ *
+ * ✅ UPDATE v8.6
+ * ------------------------------------------------------------
+ * - FIX: Current page TIDAK ikut terpilih sebagai parent
+ * - Filter current page dari lineage sebelum cari parent terdekat
  *
  * ============================================================
- * @version 8.1.0 FINAL
- * @date 2026-05-22
+ * @version 8.7.0 FINAL
+ * @date 2026-05-24
  * ============================================================
  */
 
@@ -899,7 +908,6 @@ function generateBreadcrumbJasaKonstruksi(
 
     const CONFIG = {
         DOMAIN: 'https://www.betonjayareadymix.com',
-        MAX_LEVEL: 5,
         DEBUG: true,
         CURRENT_YEAR: new Date().getFullYear()
     };
@@ -910,8 +918,8 @@ function generateBreadcrumbJasaKonstruksi(
 
     function log(message, type = 'INFO') {
         if (!CONFIG.DEBUG && type === 'INFO') return;
-        const icons = { INFO: '📘', SUCCESS: '✅', WARN: '⚠️', ERROR: '❌' };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v8.1] ${message}`);
+        const icons = { INFO: '📘', SUCCESS: '✅', WARN: '⚠️', ERROR: '❌', DEBUG: '🔍' };
+        console.log(`${icons[type] || '📘'} [Breadcrumb v8.7] ${message}`);
     }
 
     // ============================================================
@@ -1313,7 +1321,7 @@ function generateBreadcrumbJasaKonstruksi(
     }
 
     // ============================================================
-    // 19. FORCE PARENT INJECTION (FIXED v8.1)
+    // 19. FORCE PARENT INJECTION
     // ============================================================
 
     function forceInjectDirectParent(lineageLevels, allLevels, currentPageTitle, entityType, breadcrumbItems) {
@@ -1348,29 +1356,19 @@ function generateBreadcrumbJasaKonstruksi(
             }
         }
 
-        // ========================================================
-        // 🔥 FIX v8.1: STRATEGI KHUSUS UNTUK SUB1 PARENT MM
-        // ========================================================
-        
-        // JIKA current page adalah MP (level 5) dan ada parent MM (level 4) yang belum masuk
+        // FORCE PARENT UNTUK MP (Level 5)
         const currentLevel = TYPE_LEVEL_MAP[detectPageType(currentPageTitle)] || 99;
-        if (currentLevel === 5) { // current page adalah MP
-            // Cari parent MM (level 4) di allLevels yang belum masuk lineage
-            const missingMMParents = allLevels.filter(item => 
-                item.level === 4 && // Money-Master level
-                !modifiedLineage.some(l => l.name === item.name) &&
-                (currentLower.includes(item.name.toLowerCase().replace('jasa ', '')) || 
-                 item.name.toLowerCase().includes(words[1] || ''))
+        if (currentLevel === 5) {
+            const allMMParents = allLevels.filter(item => 
+                item.level === 4 && !modifiedLineage.some(l => l.name === item.name)
             );
-            
-            // Tambahkan semua MM parent yang relevan
-            for (const mmParent of missingMMParents) {
-                log(`FORCE SUB1 PARENT: "${mmParent.name}" (level 4) → MP "${currentPageTitle}"`, 'SUCCESS');
+            for (const mmParent of allMMParents) {
+                log(`FORCE MP PARENT: "${mmParent.name}" (level 4) → MP "${currentPageTitle}"`, 'SUCCESS');
                 modifiedLineage.push(mmParent);
             }
         }
 
-        // STRATEGI 3: Semantic similarity
+        // STRATEGI 3: Semantic similarity (opsional)
         if (modifiedLineage.length === lineageLevels.length) {
             const semanticKeywords = {
                 'finishing': ['finishing', 'cat', 'epoxy', 'lampu', 'wallpaper'],
@@ -1416,17 +1414,14 @@ function generateBreadcrumbJasaKonstruksi(
     }
 
     // ============================================================
-    // 20. HIERARCHY VALIDATOR (FIXED v8.1)
+    // 20. HIERARCHY VALIDATOR
     // ============================================================
     
     function validateAndFixHierarchy(lineage) {
         if (lineage.length <= 1) return lineage;
         const fixed = [];
         
-        // Urutkan berdasarkan level (ascending)
         const sorted = [...lineage].sort((a, b) => a.level - b.level);
-        
-        // Hapus duplikat berdasarkan nama
         const uniqueNames = new Set();
         for (const item of sorted) {
             if (!uniqueNames.has(item.name.toLowerCase())) {
@@ -1527,6 +1522,7 @@ function generateBreadcrumbJasaKonstruksi(
 
     const selectedLevels = [];
 
+    // HOME
     selectedLevels.push({
         name: 'Beranda',
         url: CONFIG.DOMAIN,
@@ -1535,6 +1531,7 @@ function generateBreadcrumbJasaKonstruksi(
         position: 1
     });
 
+    // UNIQUE HIERARCHY
     const uniqueHierarchy = [];
     const usedHierarchy = new Set();
 
@@ -1545,37 +1542,62 @@ function generateBreadcrumbJasaKonstruksi(
         uniqueHierarchy.push(item);
     }
 
-    log(`Unique hierarchy items (${uniqueHierarchy.length}): ${uniqueHierarchy.map(i => `${i.name}(${i.type})`).join(' → ')}`, 'INFO');
+    log('=== ALL LEVELS DEBUG ===', 'DEBUG');
+    for (const level of allLevels) {
+        log(`  ${level.name} → type: ${level.type}, level: ${level.level}`, 'DEBUG');
+    }
+
+    log('Unique hierarchy items (' + uniqueHierarchy.length + '): ' + uniqueHierarchy.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
 
     // ========================================================
-    // FIND NEAREST PARENTS (FIXED v8.1 - menerima level <=)
+    // FIND NEAREST PARENTS (FIXED v8.7 - IZINKAN LEVEL SAMA)
     // ========================================================
     
     function findNearestParentsByHierarchy() {
         const lineage = [];
         const currentLevel = TYPE_LEVEL_MAP[currentPageType] || 99;
         
-        // Ambil semua item dengan level < currentLevel
-        const candidates = uniqueHierarchy.filter(item => item.level < currentLevel);
+        log(`Current level: ${currentLevel}`, 'DEBUG');
         
-        // Urutkan berdasarkan level descending (dari tertinggi ke terendah)
-        const sorted = [...candidates].sort((a, b) => b.level - a.level);
+        // Ambil SEMUA candidate dengan level <= currentLevel
+        const candidates = uniqueHierarchy.filter(item => item.level <= currentLevel);
         
-        // Ambil unique berdasarkan level (satu per level)
+        log('Candidates (level <= current): ' + candidates.map(i => i.level + ':' + i.name).join(', '), 'DEBUG');
+        
+        if (candidates.length === 0) return lineage;
+        
+        // Prioritaskan level tertinggi
+        const sortedByLevelDesc = [...candidates].sort((a, b) => b.level - a.level);
+        
         const seenLevels = new Set();
-        for (const item of sorted) {
+        const prioritized = [];
+        
+        for (const item of sortedByLevelDesc) {
             if (!seenLevels.has(item.level)) {
                 seenLevels.add(item.level);
-                lineage.unshift(item); // tambahkan di awal agar urut ascending
+                prioritized.push(item);
             }
         }
+        
+        const sortedLineage = prioritized.sort((a, b) => a.level - b.level);
+        
+        // ✅ FIX v8.7: Langsung tambahkan semua, tanpa filter level
+        // Parent dengan level SAMA dengan current page TETAP MASUK
+        for (const item of sortedLineage) {
+            // Hindari duplikat nama
+            if (!lineage.some(l => l.name === item.name)) {
+                lineage.push(item);
+            }
+        }
+        
+        log('Lineage (prioritized): ' + lineage.map(i => i.level + ':' + i.name).join(' → '), 'SUCCESS');
         
         return lineage;
     }
 
     let lineageLevels = findNearestParentsByHierarchy();
 
-    log(`Initial lineage (${lineageLevels.length}): ${lineageLevels.map(i => `${i.name}(${i.type})`).join(' → ')}`, 'INFO');
+    log('Initial lineage (' + lineageLevels.length + '): ' + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
 
     lineageLevels = forceInjectDirectParent(
         lineageLevels, 
@@ -1585,7 +1607,7 @@ function generateBreadcrumbJasaKonstruksi(
         enhancedBreadcrumbItems
     );
 
-    log(`After force injection (${lineageLevels.length}): ${lineageLevels.map(i => `${i.name}(${i.type})`).join(' → ')}`, 'INFO');
+    log('After force injection (' + lineageLevels.length + '): ' + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
 
     // REMOVE DUPLICATE
     const cleanLineage = [];
@@ -1610,23 +1632,32 @@ function generateBreadcrumbJasaKonstruksi(
     });
 
     // ========================================================
-    // MAX LEVEL 5 - FULL IMPLEMENTATION (FIXED v8.1)
+    // SOLUSI v8.7: HANYA PARENT (BUKAN CURRENT PAGE)
     // ========================================================
     
-    const MAX_PARENT_LEVELS = CONFIG.MAX_LEVEL - 2; // 5 - 2 = 3 parent slots
-    let finalParents = validatedLineage;
+    let finalParents = [];
 
-    log(`MAX_LEVEL: ${CONFIG.MAX_LEVEL}, Parent slots: ${MAX_PARENT_LEVELS}, Available parents: ${validatedLineage.length}`, 'INFO');
+    // Filter untuk menghilangkan current page dari lineage
+    const parentOnly = validatedLineage.filter(item => 
+        item.name.toLowerCase() !== currentPageTitle.toLowerCase()
+    );
 
-    if (validatedLineage.length > MAX_PARENT_LEVELS) {
-        // Jika kelebihan, prioritaskan parent terdekat (level tertinggi)
-        const sortedParents = [...validatedLineage].sort((a, b) => b.level - a.level);
-        const nearestParents = sortedParents.slice(0, MAX_PARENT_LEVELS);
-        finalParents = nearestParents.sort((a, b) => a.level - b.level);
-        log(`Max level reached, keeping ${finalParents.length} nearest parents: ${finalParents.map(i => i.name).join(', ')}`, 'WARN');
+    if (parentOnly.length > 0) {
+        // Cari level tertinggi dari parent (bukan current page)
+        const highestLevel = Math.max(...parentOnly.map(i => i.level));
+        
+        // Ambil hanya parent dengan level tertinggi
+        finalParents = parentOnly.filter(item => item.level === highestLevel);
+        
+        // Urutkan berdasarkan posisi
+        finalParents.sort((a, b) => a.position - b.position);
+        
+        log('Nearest parent(s) level ' + highestLevel + ': ' + finalParents.map(i => i.name).join(', '), 'SUCCESS');
+    } else {
+        log('No parent found (only current page)', 'WARN');
     }
 
-    // INSERT PARENTS
+    // INSERT PARENTS (hanya parent terdekat)
     for (const item of finalParents) {
         selectedLevels.push(item);
     }
@@ -1664,7 +1695,7 @@ function generateBreadcrumbJasaKonstruksi(
         item.position = index + 1;
     });
 
-    log(`Final breadcrumb (${uniqueLevels.length}/${CONFIG.MAX_LEVEL} levels): ${uniqueLevels.map(i => i.name).join(' › ')}`, 'SUCCESS');
+    log('Final breadcrumb (' + uniqueLevels.length + ' levels): ' + uniqueLevels.map(i => i.name).join(' › '), 'SUCCESS');
 
     // ============================================================
     // 28. GENERATE HTML
@@ -1756,8 +1787,8 @@ function generateBreadcrumbJasaKonstruksi(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '8.1.0 FINAL',
-        maxLevel: CONFIG.MAX_LEVEL
+        version: '8.7.0 FINAL',
+        maxLevel: 'NONE (nearest parent only)'
     };
 }
 // Menyimpan elemen yang dihapus dalam variabel
@@ -1839,6 +1870,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingPerawatanPerbaikanBangunanFromSub1MoneyPage,
 		urlMappingRenovasiFromSub1MoneyPage,
 		urlMappingFinishingFromSub1MoneyMaster,
+		urlMappingFinishingFromMoneyMasterMoneyMaster1,
 		urlMappingStrukturFromSub1MoneyPage,
 		urlMappingPondasiFromSub1MoneyPage,
 		urlMappingSaluranFromSub1MoneyPage,
@@ -3668,6 +3700,20 @@ if (urlMappingFinishingFromSub1MoneyMaster[cleanUrlJasaKons]) {
     );
     }
 	
+	if (urlMappingFinishingFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingFinishingFromMoneyMasterMoneyMaster1,
+        cleanUrlJasaKons,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
 if (urlMappingPondasiFromSub1MoneyPage[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPondasiPerkuatan');
