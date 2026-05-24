@@ -350,24 +350,25 @@ const urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2
 
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v8.6 FINAL
- * UNIVERSAL ENTITY HIERARCHY ENGINE - NEAREST PARENT FIXED
+ * generateBreadcrumbJasaKonstruksi v8.7 FINAL
+ * UNIVERSAL ENTITY HIERARCHY ENGINE - FIXED SAME LEVEL PARENT
  * ============================================================
+ *
+ * ✅ UPDATE v8.7
+ * ------------------------------------------------------------
+ * - FIX: Parent dengan level SAMA dengan current page TIDAK SKIP
+ * - FIX: MM → MM (level 4→4) sekarang berfungsi
+ * - FIX: MP → MP (level 5→5) sekarang berfungsi
+ * - Hapus filter level yang membatasi parent dengan level sama
+ * - Enhanced logging untuk debugging
  *
  * ✅ UPDATE v8.6
  * ------------------------------------------------------------
  * - FIX: Current page TIDAK ikut terpilih sebagai parent
- * - FIX: Filter current page dari lineage sebelum cari parent terdekat
- * - Parent terdekat (level 4) PASTI terpilih, bukan current page
- * - Enhanced logging untuk debugging
- *
- * ✅ UPDATE v8.5
- * ------------------------------------------------------------
- * - findNearestParentsByHierarchy() menggunakan <= untuk parent
- * - MAX_LEVEL dihapus, hanya tampilkan parent terdekat
+ * - Filter current page dari lineage sebelum cari parent terdekat
  *
  * ============================================================
- * @version 8.6.0 FINAL
+ * @version 8.7.0 FINAL
  * @date 2026-05-24
  * ============================================================
  */
@@ -396,7 +397,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
     function log(message, type = 'INFO') {
         if (!CONFIG.DEBUG && type === 'INFO') return;
         const icons = { INFO: '📘', SUCCESS: '✅', WARN: '⚠️', ERROR: '❌', DEBUG: '🔍' };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v8.6] ${message}`);
+        console.log(`${icons[type] || '📘'} [Breadcrumb v8.7] ${message}`);
     }
 
     // ============================================================
@@ -1027,7 +1028,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
     log('Unique hierarchy items (' + uniqueHierarchy.length + '): ' + uniqueHierarchy.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
 
     // ========================================================
-    // FIND NEAREST PARENTS 
+    // FIND NEAREST PARENTS (FIXED v8.7 - IZINKAN LEVEL SAMA)
     // ========================================================
     
     function findNearestParentsByHierarchy() {
@@ -1036,12 +1037,14 @@ function generateBreadcrumbJasaKonstruksiFinishing(
         
         log(`Current level: ${currentLevel}`, 'DEBUG');
         
+        // Ambil SEMUA candidate dengan level <= currentLevel
         const candidates = uniqueHierarchy.filter(item => item.level <= currentLevel);
         
         log('Candidates (level <= current): ' + candidates.map(i => i.level + ':' + i.name).join(', '), 'DEBUG');
         
         if (candidates.length === 0) return lineage;
         
+        // Prioritaskan level tertinggi
         const sortedByLevelDesc = [...candidates].sort((a, b) => b.level - a.level);
         
         const seenLevels = new Set();
@@ -1056,8 +1059,13 @@ function generateBreadcrumbJasaKonstruksiFinishing(
         
         const sortedLineage = prioritized.sort((a, b) => a.level - b.level);
         
+        // ✅ FIX v8.7: Langsung tambahkan semua, tanpa filter level
+        // Parent dengan level SAMA dengan current page TETAP MASUK
         for (const item of sortedLineage) {
-            lineage.push(item);
+            // Hindari duplikat nama
+            if (!lineage.some(l => l.name === item.name)) {
+                lineage.push(item);
+            }
         }
         
         log('Lineage (prioritized): ' + lineage.map(i => i.level + ':' + i.name).join(' → '), 'SUCCESS');
@@ -1102,7 +1110,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
     });
 
     // ========================================================
-    // SOLUSI v8.6: HANYA PARENT (BUKAN CURRENT PAGE)
+    // SOLUSI v8.7: HANYA PARENT (BUKAN CURRENT PAGE)
     // ========================================================
     
     let finalParents = [];
@@ -1257,7 +1265,7 @@ function generateBreadcrumbJasaKonstruksiFinishing(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '8.6.0 FINAL',
+        version: '8.7.0 FINAL',
         maxLevel: 'NONE (nearest parent only)'
     };
 }
