@@ -141,7 +141,7 @@ const urlMappingSewaScaffoldingFromMoneyMasterMoneyPage = {
   // [MONEY_MASTER] - HARGA SEWA SCAFFOLDING (NASIONAL)
   // 🧠 TYPE: MONEY_MASTER (khusus SEWA, diperbolehkan)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/03/harga-jasa-sewa-scaffolding.html": "Harga Jasa Sewa Scaffolding",  // TYPE: MONEY_PAGE
+//redirect ke bawah  "https://www.betonjayareadymix.com/2019/03/harga-jasa-sewa-scaffolding.html": "Harga Jasa Sewa Scaffolding",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/03/harga-sewa-scaffolding.html": "Harga Sewa Scaffolding"  // TYPE: MONEY_PAGE
 	
   
