@@ -1106,7 +1106,7 @@ const urlMappingSewaMesinPotongRumputFromMoneyMaster1MoneyPage = {
 // DETAIL COMMERCIAL / PRICING / DETAIL INTENT
 // ============================================================
 "https://www.betonjayareadymix.com/2019/02/sewa-mesin-potong-rumput.html":
-  "Sewa Mesin Potong Rumput"
+  "Sewa Mesin Potong Rumput",
 "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-potong-rumput.html":
   "Harga Sewa Mesin Potong Rumput"
 };
