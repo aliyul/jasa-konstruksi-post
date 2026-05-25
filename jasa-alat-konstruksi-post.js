@@ -86,7 +86,7 @@ punya turunan sendiri
 // 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE & MONEY_MASTER
 // ============================================================
 
-const urlMappingSewaBekistingFromMoneyMasterMoneyPage = {
+const urlMappingSewaBekistingFromMoneyMaster1MoneyPage = {
   /*bukan MM TURUNANAN KARNA GA ADA CIRI MM TURUNAN
   Walau tanpa harga, tetap MM bila:
 entity alat berbeda
@@ -2224,7 +2224,7 @@ let currentPageTitle = cleanUrlJasaKonsAlatKonstruksiPost
 		urlMappingSewaPompaDewateringFromMoneyMaster1MoneyPage,
 		urlMappingSewaPompaAirFromMoneyMaster1MoneyPage,
 		urlMappingSewaPompaLumpurFromMoneyMaster1MoneyPage,
-		urlMappingSewaBekistingFromMoneyMasterMoneyPage,
+		urlMappingSewaBekistingFromMoneyMaster1MoneyPage,
 		urlMappingSewaScaffoldingFromMoneyMasterMoneyPage,
 		urlMappingSewaScaffoldingFromMoneyMasterMoneyChild,
 		urlMappingSewaPencahayaanProyekFromMoneyMaster1MoneyMaster2,
@@ -3308,10 +3308,10 @@ if (urlMappingSewaPompaDewateringFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatK
         'SEWA_RENTAL'
     );
 }
-	if (urlMappingSewaBekistingFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+	if (urlMappingSewaBekistingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
 
 			generateBreadcrumbJasaAlatKonstruksiPost(
-        urlMappingSewaBekistingFromMoneyMasterMoneyPage,
+        urlMappingSewaBekistingFromMoneyMaster1MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
