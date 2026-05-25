@@ -17,7 +17,15 @@ const urlMappingFinishingBangunanFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-interior.html": "Jasa Finishing Bangunan Interior",
     "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-eksterior.html": "Jasa Finishing Bangunan Eksterior",
     "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-modern.html": "Jasa Finishing Bangunan Modern",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-minimalis.html": "Jasa Finishing Bangunan Minimalis"
+    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-minimalis.html": "Jasa Finishing Bangunan Minimalis",
+
+	// TAMBAHAN MP UNTUK JASA FINISHING BANGUNAN
+// ============================================================
+"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-kantor.html": "Jasa Finishing Bangunan Kantor",
+"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-toko.html": "Jasa Finishing Bangunan Toko",
+"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-hotel.html": "Jasa Finishing Bangunan Hotel",
+"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-apartemen.html": "Jasa Finishing Bangunan Apartemen",
+"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-mewah.html": "Jasa Finishing Bangunan Mewah"
 };
 
 // ============================================================
@@ -35,7 +43,17 @@ const urlMappingFinishingFurnitureFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-partisi-ruangan.html": "Jasa Pembuatan Partisi Ruangan",
     "https://www.betonjayareadymix.com/p/jasa-rak-dinding-custom.html": "Jasa Rak Dinding Custom",
     "https://www.betonjayareadymix.com/p/jasa-furniture-interior.html": "Jasa Furniture & Interior", 
-    "https://www.betonjayareadymix.com/p/jasa-interior-furniture-custom.html": "Jasa Interior & Furniture Custom"
+    "https://www.betonjayareadymix.com/p/jasa-interior-furniture-custom.html": "Jasa Interior & Furniture Custom",
+
+	// TAMBAHAN MP UNTUK JASA FINISHING FURNITURE
+// ============================================================
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-meja-kursi.html": "Jasa Pembuatan Meja Kursi",
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-sofa-custom.html": "Jasa Pembuatan Sofa Custom",
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-tempat-tidur.html": "Jasa Pembuatan Tempat Tidur",
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-rak-buku.html": "Jasa Pembuatan Rak Buku",
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-pintu-sliding.html": "Jasa Pembuatan Pintu Sliding",
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-wadrobe.html": "Jasa Pembuatan Wadrobe"
+
 };
 
 // ============================================================
@@ -50,7 +68,15 @@ const urlMappingFinishingDindingFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-epoxy.html": "Jasa Finishing Dinding Epoxy",
     "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",
     "https://www.betonjayareadymix.com/p/jasa-cat-dinding-interior.html": "Jasa Cat Dinding Interior",
-    "https://www.betonjayareadymix.com/p/jasa-cat-dinding-eksterior.html": "Jasa Cat Dinding Eksterior"
+    "https://www.betonjayareadymix.com/p/jasa-cat-dinding-eksterior.html": "Jasa Cat Dinding Eksterior",
+
+	// TAMBAHAN MP UNTUK JASA FINISHING DINDING
+// ============================================================
+"https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-dinding.html": "Jasa Pasang Batu Alam Dinding",
+"https://www.betonjayareadymix.com/p/jasa-pasang-panel-dinding-3d.html": "Jasa Pasang Panel Dinding 3D",
+"https://www.betonjayareadymix.com/p/jasa-pasang-grc-dinding.html": "Jasa Pasang GRC Dinding",
+"https://www.betonjayareadymix.com/p/jasa-pasang-hpl-dinding.html": "Jasa Pasang HPL Dinding",
+"https://www.betonjayareadymix.com/p/jasa-finishing-dinding-ekspos.html": "Jasa Finishing Dinding Ekspos"
 };
 
 // ============================================================
@@ -66,8 +92,18 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html": "Jasa Finishing Lantai Granit",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-kayu.html": "Jasa Finishing Lantai Kayu",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-epoxy.html": "Jasa Finishing Lantai Epoxy",
-    "https://www.betonjayareadymix.com/p/jasa-epoxy-lantai.html": "Jasa Epoxy Lantai", 
-    "https://www.betonjayareadymix.com/p/jasa-keramik-lantai.html": "Jasa Keramik Lantai"
+    //"https://www.betonjayareadymix.com/p/jasa-epoxy-lantai.html": "Jasa Epoxy Lantai", 
+   // "https://www.betonjayareadymix.com/p/jasa-keramik-lantai.html": "Jasa Keramik Lantai",
+
+	// TAMBAHAN MP UNTUK JASA FINISHING LANTAI
+// ============================================================
+"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-lantai.html": "Jasa Pasang Vinyl Lantai",
+"https://www.betonjayareadymix.com/p/jasa-pasang-spc-lantai.html": "Jasa Pasang SPC Lantai",
+"https://www.betonjayareadymix.com/p/jasa-pasang-lantai-parket.html": "Jasa Pasang Lantai Parket",
+"https://www.betonjayareadymix.com/p/jasa-poles-lantai-marmer.html": "Jasa Poles Lantai Marmer",
+"https://www.betonjayareadymix.com/p/jasa-poles-lantai-granit.html": "Jasa Poles Lantai Granit",
+"https://www.betonjayareadymix.com/p/jasa-grinding-lantai-beton.html": "Jasa Grinding Lantai Beton"
+	
 };
 
 // ============================================================
