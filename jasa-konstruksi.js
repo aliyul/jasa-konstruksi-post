@@ -279,6 +279,9 @@ const urlMappingSewaAlatRinganFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html": "Perbandingan Sewa Alat Ringan"  // TYPE: SUB1
 };
 const urlMappingSewaAlatRinganFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi-ringan.html": "Sewa Alat Konstruksi Ringan"  // TYPE: SUB1
+};
+const urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1 = {
  // "https://www.betonjayareadymix.com/p/harga-sewa-alat-ringan.html": "Harga Sewa Alat Ringan"  // TYPE: MoneyMaster PARENT
  // ============================================================
 // MONEY MASTER (MM)
@@ -1867,6 +1870,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingSewaAlatRinganFromSub2Sub1,
 		urlMappingSewaAlatRinganFromSub1MoneyMaster,
+		urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1,
 		
 		urlMappingSewaAlatKonstruksiRinganFromSub1MoneyPage,
 
@@ -3396,6 +3400,22 @@ if (urlMappingSewaAlatRinganFromSub1MoneyMaster[cleanUrlJasaKons]) {
     );
 
 }
+	if (urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
+    generateBreadcrumbJasaKonstruksi(
+        urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' },
+		       { name: 'Sewa Alat Konstruksi Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi-ringan.html' }
+        ],
+        'SEWA_ALAT_KONSTRUKSI'
+    );
+
+}
+	
 if (urlMappingSewaAlatPendukungFromSub1MoneyMaster[cleanUrlJasaKons]) {
     generateBreadcrumbJasaKonstruksi(
         urlMappingSewaAlatPendukungFromSub1MoneyMaster,
