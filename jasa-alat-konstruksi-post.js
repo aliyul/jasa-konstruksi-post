@@ -117,7 +117,7 @@ modifier detail/specifik
  //ga usah  "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-kolom.html": "Sewa Bekisting Kolom",  //belum dibuat
   //ga usah "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-balok.html": "Sewa Bekisting Balok",  //belum dibuat
   "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-plat-lantai.html": "Sewa Bekisting Plat Lantai",  //belum dibuat
-  "https://www.betonjayareadymix.com/2019/03/harga-jasa-sewa-bekisting.html": "Harga Jasa Sewa Bekisting",  
+  // redirect "https://www.betonjayareadymix.com/2019/03/harga-jasa-sewa-bekisting.html": "Harga Jasa Sewa Bekisting",  
   "https://www.betonjayareadymix.com/2019/03/harga-sewa-bekisting.html": "Harga Sewa Bekisting", 
 "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-per-meter.html": "Sewa Bekisting Per Meter"  
   
@@ -151,17 +151,17 @@ const urlMappingSewaScaffoldingFromMoneyMasterMoneyChild = {
 	"https://www.betonjayareadymix.com/2019/03/sewa-scaffolding-jakarta.html": "Sewa Scaffolding Jakarta"  //belum dibuat TYPE: MONEY_CHILD
 };
 
-const urlMappingSewaPencahayaanProyekFromMoneyMasterMoneyMaster1 = {
+const urlMappingSewaPencahayaanProyekFromMoneyMaster1MoneyMaster2 = {
 // MONEY PAGE
   "https://www.betonjayareadymix.com/2019/02/sewa-pencahayaan-utilitas.html": "Sewa Pencahayaan Utilitas",  // TYPE: MONEY_MASTER
 "https://www.betonjayareadymix.com/2019/03/sewa-tower-lamp.html": "Sewa Tower Lamp",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/03/sewa-lampu-proyek.html": "Sewa Lampu Proyek",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/03/sewa-lampu-sorot.html": "Sewa Lampu Sorot",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/03/sewa-lampu-tembak.html": "Sewa Lampu Tembak",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/03/sewa-panel-listrik.html": "Sewa Panel Listrik",  // TYPE: MONEY_MASTER
-   // "https://www.betonjayareadymix.com/2019/03/sewa-lampu-penerangan-jalan.html": "Sewa Lampu Penerangan Jalan" //belum dibuat 
+  "https://www.betonjayareadymix.com/2019/03/sewa-panel-listrik.html": "Sewa Panel Listrik"  // TYPE: MONEY_MASTER
+   // "https://www.betonjayareadymix.com/2019/03/sewa-lampu-penerangan-jalan.html": "Sewa Lampu Penerangan Jalan" //belum dibuat MONEY_PAGE
 };
-const urlMappingSewaAlatSurveyFromMoneyMasterMoneyMaster1 = {
+const urlMappingSewaAlatSurveyFromMoneyMaster1MoneyMaster2 = {
  // "https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html": "Sewa Alat Survey Pengukuran",
   "https://www.betonjayareadymix.com/2019/03/sewa-total-station.html": "Sewa Total Station", 
   "https://www.betonjayareadymix.com/2019/03/sewa-waterpass.html": "Sewa Waterpass",  
@@ -169,7 +169,7 @@ const urlMappingSewaAlatSurveyFromMoneyMasterMoneyMaster1 = {
 	
   "https://www.betonjayareadymix.com/2019/03/sewa-laser-level.html": "Sewa Laser Level"  // TYPE: MONEY_MASTER
 };
-const urlMappingSewaAlatSurveyFromMoneyMasterMoneyPage = {
+const urlMappingSewaAlatSurveyFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-survey-pengukuran.html": "Sewa Alat Survey Pengukuran" // TYPE: MONEY_PAGE
 };
 const urlMappingSewaAlatBorFromMoneyMasterMoneyMaster1 = {
@@ -609,7 +609,7 @@ const urlMappingSewaPanelListrikFromMoneyMaster1MoneyChild = {
 // 🧠 ENTITY: SEWA/RENTAL → TYPE: MONEY_PAGE & MONEY_CHILD
 // ============================================================
 
-const urlMappingSewaAlatSurveyFromMoneyMasterMoneyChild = {
+const urlMappingSewaAlatSurveyFromMoneyMaster1MoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - SEWA ALAT SURVEY PER LOKASI
   // ============================================================
@@ -2227,9 +2227,9 @@ let currentPageTitle = cleanUrlJasaKonsAlatKonstruksiPost
 		urlMappingSewaBekistingFromMoneyMasterMoneyPage,
 		urlMappingSewaScaffoldingFromMoneyMasterMoneyPage,
 		urlMappingSewaScaffoldingFromMoneyMasterMoneyChild,
-		urlMappingSewaPencahayaanProyekFromMoneyMasterMoneyMaster1,
-		urlMappingSewaAlatSurveyFromMoneyMasterMoneyMaster1,
-		urlMappingSewaAlatSurveyFromMoneyMasterMoneyPage,
+		urlMappingSewaPencahayaanProyekFromMoneyMaster1MoneyMaster2,
+		urlMappingSewaAlatSurveyFromMoneyMaster1MoneyMaster2,
+		urlMappingSewaAlatSurveyFromMoneyMaster1MoneyPage,
 		urlMappingSewaAlatBorFromMoneyMasterMoneyMaster1,
 		urlMappingSewaTangkiAirFromMoneyMasterMoneyMaster1,
 		urlMappingSewaAksesKeamananFromMoneyMaster1MoneyMaster2,
@@ -2263,7 +2263,7 @@ let currentPageTitle = cleanUrlJasaKonsAlatKonstruksiPost
 		urlMappingSewaSelangProyekFromMoneyChildVariant,
 	
 		urlMappingSewaTowerLampFromMoneyMaster1MoneyChild,
-		urlMappingSewaAlatSurveyFromMoneyMasterMoneyChild,
+		urlMappingSewaAlatSurveyFromMoneyMaster1MoneyChild,
 		urlMappingSewaTotalStationFromMoneyMaster1MoneyChild,
 		urlMappingSewaWaterpassFromMoneyMaster1MoneyChild,
 		urlMappingSewaTheodoliteFromMoneyMaster1MoneyChild,
@@ -3358,10 +3358,10 @@ if (urlMappingSewaPompaDewateringFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatK
         'SEWA_RENTAL'
     );
 }
-		if (urlMappingSewaPencahayaanProyekFromMoneyMasterMoneyMaster1[cleanUrlJasaKonsAlatKonstruksiPost]) {
+		if (urlMappingSewaPencahayaanProyekFromMoneyMaster1MoneyMaster2[cleanUrlJasaKonsAlatKonstruksiPost]) {
 
 			generateBreadcrumbJasaAlatKonstruksiPost(
-        urlMappingSewaPencahayaanProyekFromMoneyMasterMoneyMaster1,
+        urlMappingSewaPencahayaanProyekFromMoneyMaster1MoneyMaster2,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -3374,10 +3374,10 @@ if (urlMappingSewaPompaDewateringFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatK
         'SEWA_RENTAL'
     );
 }
-	if (urlMappingSewaAlatSurveyFromMoneyMasterMoneyMaster1[cleanUrlJasaKonsAlatKonstruksiPost]) {
+	if (urlMappingSewaAlatSurveyFromMoneyMaster1MoneyMaster2[cleanUrlJasaKonsAlatKonstruksiPost]) {
 
 			generateBreadcrumbJasaAlatKonstruksiPost(
-        urlMappingSewaAlatSurveyFromMoneyMasterMoneyMaster1,
+        urlMappingSewaAlatSurveyFromMoneyMaster1MoneyMaster2,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -3391,10 +3391,10 @@ if (urlMappingSewaPompaDewateringFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatK
     );
 }
 
-	if (urlMappingSewaAlatSurveyFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+	if (urlMappingSewaAlatSurveyFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
 
 			generateBreadcrumbJasaAlatKonstruksiPost(
-        urlMappingSewaAlatSurveyFromMoneyMasterMoneyPage,
+        urlMappingSewaAlatSurveyFromMoneyMaster1MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -4010,9 +4010,9 @@ if (urlMappingSewaPompaAirFromMoneyMasterMoneyChild[cleanUrlJasaKonsAlatKonstruk
     );
  }
    
-if (urlMappingSewaAlatSurveyFromMoneyMasterMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaAlatSurveyFromMoneyMaster1MoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         generateBreadcrumbJasaAlatKonstruksiPost(
-        urlMappingSewaAlatSurveyFromMoneyMasterMoneyChild,
+        urlMappingSewaAlatSurveyFromMoneyMaster1MoneyChild,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
