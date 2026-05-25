@@ -336,7 +336,7 @@ const urlMappingSewaAlatPendukungFromSub1MoneyMaster = {
 
 const urlMappingSewaAlatPendukungFromMoneyMasterMoneyMaster1 = {
   //"https://www.betonjayareadymix.com/p/harga-sewa-alat-pendukung.html": "Harga Sewa Alat Pendukung"  // TYPE: MoneyMaster
-"https://www.betonjayareadymix.com/p/sewa-akses-keamanan-proyek.html": "Sewa Akses Keamanan Proyek",
+"https://www.betonjayareadymix.com/p/sewa-akses-keamanan.html": "Sewa Akses Keamanan",
   "https://www.betonjayareadymix.com/p/sewa-alat-survey.html": "Sewa Alat Survey",
 //  "https://www.betonjayareadymix.com/p/sewa-alat-pendukung.html": "Sewa Alat Pendukung",  // TYPE: MoneyMaster
     "https://www.betonjayareadymix.com/p/sewa-pencahayaan-proyek.html": "Sewa Pencahayaan Proyek",
