@@ -3139,149 +3139,19 @@ if (urlMappingJasaAlatKonstruksi[cleanUrlJasaKons]) {
 	
 	//SUB DARI PILLAR SEWA ALAT KONSTRUKSI
 if (urlMappingSewaAlatFromPillarSub2[cleanUrlJasaKons]) {
-        restoreCondition('JasaKonsSub');
-	//restoreCondition('JasaKonstruksi');
-	restoreCondition('SewaAlatKonstruksi');
-
-	//hapus pillar jasa konstruksi
-	removeCondition('JasaKonstruksiSub');
-           // hapus elemen id DIV Lain
-	removeCondition('ProdukInFur');
-        removeCondition('MaterialKons');
-	removeCondition('JasaAlatKonstruksi');
-	removeCondition('ProdukKons');
-        //removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPerbaikan');
-	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-	removeCondition('JasaKons');
-	removeCondition('MenuKons');
-
-	// hapus elemen id DIV Lain selain SewaAlatKonstruksi dan JasaAlatKonstruksi
-	removeCondition('SewaAlatBerat');
-	removeCondition('SewaAlatKonstruksiRingan');
-
-	   	removeCondition('JasaInstalasiListrik');
-	removeCondition('JasaRenovasiPerbaikan');
-	removeCondition('JasaStrukturKonstruksi');
-        removeCondition('JasaFinishing');
-        removeCondition('JasaPondasiPerkuatan');
-        removeCondition('JasaSaluranDrainase');
-        removeCondition('JasaJalanPerkerasan');
-	removeCondition('JasaPematanganLahan');
-	removeCondition('JasaUjiTanah');
-        removeCondition('JasaPembatasPengaman');
-	removeCondition('JasaPerkuatanTanahLongsor');
-	removeCondition('JasaBongkarBangunan');
-	removeCondition('JasaPerawatanPerbaikanBangunan');
-	removeCondition('JasaPerbaikanInfrastruktur');
-	removeCondition('JasaPengeboran');
-		removeCondition('JasaBorAirSumur');
-		removeCondition('JasaBorPile');
-		removeCondition('JasaCoringBeton');
-		removeCondition('JasaBorBeton');
-		removeCondition('JasaBorTanah');
-		removeCondition('JasaBorHorizontal');
-		removeCondition('JasaBorTembok');
-
-        //JasaKonstruksiSubLink.style.visibility = 'visible';
-       // JasaAlatKonstruksiLink.style.visibility = 'visible';
-        SewaAlatKonstruksiLink.style.visibility = 'visible';
-	    
-        pageNameKonstruksiSub.textContent = urlMappingSewaAlatFromPillarSub2[cleanUrlJasaKons];
-    }
- // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingSewaAlatFromPillarSub2[cleanUrlJasaKons]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	      {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Sewa Alat Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": urlMappingSewaAlatFromPillarSub2[cleanUrlJasaKons],
-                   "item": cleanUrlJasaKons
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+	 generateBreadcrumbJasaKonstruksi(
+        urlMappingSewaAlatFromPillarSub2,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' }
+            //{ name: 'Daftar Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-proyek.html' }
+        ],
+        'SEWA_ALAT_KONSTRUKSI'
+    );
+}
 
 if (urlMappingSewaAlatProyekFromSub2Sub1[cleanUrlJasaKons]) {
-        restoreCondition('JasaKonsSub');
-	//restoreCondition('JasaKonstruksi');
-	restoreCondition('SewaAlatKonstruksi');
-
-	//hapus pillar jasa konstruksi
-	removeCondition('JasaKonstruksiSub');
-           // hapus elemen id DIV Lain
-	removeCondition('ProdukInFur');
-        removeCondition('MaterialKons');
-	removeCondition('JasaAlatKonstruksi');
-	removeCondition('ProdukKons');
-        //removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPerbaikan');
-	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-	removeCondition('JasaKons');
-	removeCondition('MenuKons');
-
-	// hapus elemen id DIV Lain selain SewaAlatKonstruksi dan JasaAlatKonstruksi
-	removeCondition('SewaAlatBerat');
-	removeCondition('SewaAlatKonstruksiRingan');
-
-	   	removeCondition('JasaInstalasiListrik');
-	removeCondition('JasaRenovasiPerbaikan');
-	removeCondition('JasaStrukturKonstruksi');
-        removeCondition('JasaFinishing');
-        removeCondition('JasaPondasiPerkuatan');
-        removeCondition('JasaSaluranDrainase');
-        removeCondition('JasaJalanPerkerasan');
-	removeCondition('JasaPematanganLahan');
-	removeCondition('JasaUjiTanah');
-        removeCondition('JasaPembatasPengaman');
-	removeCondition('JasaPerkuatanTanahLongsor');
-	removeCondition('JasaBongkarBangunan');
-	removeCondition('JasaPerawatanPerbaikanBangunan');
-	removeCondition('JasaPerbaikanInfrastruktur');
-	removeCondition('JasaPengeboran');
-		removeCondition('JasaBorAirSumur');
-		removeCondition('JasaBorPile');
-		removeCondition('JasaCoringBeton');
-		removeCondition('JasaBorBeton');
-		removeCondition('JasaBorTanah');
-		removeCondition('JasaBorHorizontal');
-		removeCondition('JasaBorTembok');
-
-        //JasaKonstruksiSubLink.style.visibility = 'visible';
-       // JasaAlatKonstruksiLink.style.visibility = 'visible';
-        SewaAlatKonstruksiLink.style.visibility = 'visible';
-	    
-        pageNameKonstruksiSub.textContent = urlMappingSewaAlatProyekFromSub2Sub1[cleanUrlJasaKons];
 
 	   generateBreadcrumbJasaKonstruksi(
         urlMappingSewaAlatProyekFromSub2Sub1,
