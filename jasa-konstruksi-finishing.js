@@ -66,7 +66,25 @@ const urlMappingFinishingLampuInteriorFromMoneyMasterMoneyPage= {
 	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-gedung.html": "Jasa Pasang Lampu Interior Gedung"
  
 };
-const urlMappingFinishingCatInteriorFromMoneyMasterMoneyPage= {
+const urlMappingFinishingCatFromMoneyMaster1MoneyPage= {
+	// ============================================================
+    // MP TURUNAN: Jasa Finishing Cat (Level 5)
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-interior.html": "Jasa Finishing Cat Interior",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-eksterior.html": "Jasa Finishing Cat Eksterior",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-dinding.html": "Jasa Finishing Cat Dinding",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-kayu.html": "Jasa Finishing Cat Kayu",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-besi.html": "Jasa Finishing Cat Besi",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-modern.html": "Jasa Finishing Cat Modern",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-minimalis.html": "Jasa Finishing Cat Minimalis",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-mewah.html": "Jasa Finishing Cat Mewah",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-tahan-lama.html": "Jasa Finishing Cat Tahan Lama",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-anti-bocor.html": "Jasa Finishing Cat Anti Bocor",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-epoxy.html": "Jasa Finishing Cat Epoxy",
+    
+    // ============================================================
+    // MP TURUNAN: Jasa Cat Interior (Level 5)
+
 	"https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
 	"https://www.betonjayareadymix.com/p/jasa-cat-interior-modern.html": "Jasa Cat Interior Modern",
 	"https://www.betonjayareadymix.com/p/jasa-cat-interior-minimalis.html": "Jasa Cat Interior Minimalis",
@@ -1477,7 +1495,7 @@ document.addEventListener("DOMContentLoaded", function() {
       {},
 		urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
 		urlMappingFinishingLampuInteriorFromMoneyMasterMoneyPage,
-		urlMappingFinishingCatInteriorFromMoneyMasterMoneyPage,
+		urlMappingFinishingCatFromMoneyMaster1MoneyPage,
 		urlMappingFinishingFurnitureFromMoneyMasterMoneyPage,
 		urlMappingFinishingDindingFromMoneyMasterMoneyPage,
 		
@@ -2065,9 +2083,9 @@ document.addEventListener("DOMContentLoaded", function() {
     );
     }
 
-	if (urlMappingFinishingCatInteriorFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
+	if (urlMappingFinishingCatFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingFinishingCatInteriorFromMoneyMasterMoneyPage,
+        urlMappingFinishingCatFromMoneyMaster1MoneyPage,
         cleanUrlJasaKonsFinishing,
         [
            // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -2075,7 +2093,7 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
 			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-           { name: 'Jasa Cat Interior', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior.html'}
+            { name: 'Jasa Finishing Cat', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-cat.html'}
         ],
         'JASA_KONSTRUKSI'
     );
