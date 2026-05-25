@@ -1036,7 +1036,7 @@ const urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1 = {
 
 };
 */
-const urlMappingSewaConcreteCutterFromMoneyMasterMoneyPage = {
+const urlMappingSewaConcreteCutterFromMoneyMaster1MoneyPage = {
 // ============================================================
 // MONEY PAGE (MP)
 // DETAIL COMMERCIAL / PRICING / DETAIL INTENT
@@ -1105,6 +1105,8 @@ const urlMappingSewaMesinPotongRumputFromMoneyMaster1MoneyPage = {
 // MONEY PAGE (MP)
 // DETAIL COMMERCIAL / PRICING / DETAIL INTENT
 // ============================================================
+"https://www.betonjayareadymix.com/2019/02/sewa-mesin-potong-rumput.html":
+  "Sewa Mesin Potong Rumput"
 "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-potong-rumput.html":
   "Harga Sewa Mesin Potong Rumput"
 };
@@ -2292,7 +2294,20 @@ let currentPageTitle = cleanUrlJasaKonsAlatKonstruksiPost
 		urlMappingSewaConcretePaverPostFromMoneyMasterMoneyPage,
 		urlMappingSewaTrencherPostFromMoneyMasterMoneyPage,
 
-		urlMappingSewaConcreteCutterFromMoneyMasterMoneyPage
+		urlMappingSewaConcreteCutterFromMoneyMaster1MoneyPage,
+		urlMappingSewaJackHammerFromMoneyMaster1MoneyPage,
+		urlMappingSewaVibratorBetonFromMoneyMaster1MoneyPage,
+		urlMappingSewaMesinMolenFromMoneyMaster1MoneyPage,
+		urlMappingSewaGensetFromMoneyMaster1MoneyPage,
+		urlMappingSewaMesinCompressorFromMoneyMaster1MoneyPage,
+		urlMappingSewaCuttingBetonFromMoneyMaster1MoneyPage,
+		urlMappingSewaMesinPotongRumputFromMoneyMaster1MoneyPage,
+		urlMappingSewaMesinTrowelFromMoneyMaster1MoneyPage,
+		urlMappingSewaMesinScreedFromMoneyMaster1MoneyPage,
+		urlMappingSewaStamperFromMoneyMaster1MoneyPage,
+		urlMappingSewaCuttingBetonFromMoneyMaster1MoneyChild
+		
+		
 	
     );
 	
@@ -4368,9 +4383,9 @@ if (urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKons
     );
 	}	
 //AKHIR SUB PAGE SEWA ALAT BERAT
-if (urlMappingSewaConcreteCutterFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+if (urlMappingSewaConcreteCutterFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
 		    generateBreadcrumbJasaAlatKonstruksiPost(
-        urlMappingSewaConcreteCutterFromMoneyMasterMoneyPage,
+        urlMappingSewaConcreteCutterFromMoneyMaster1MoneyPage,
         cleanUrlJasaKonsAlatKonstruksiPost,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -4384,5 +4399,178 @@ if (urlMappingSewaConcreteCutterFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKon
     );
 
 }
-   
+	
+if (urlMappingSewaJackHammerFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+		    generateBreadcrumbJasaAlatKonstruksiPost(
+        urlMappingSewaJackHammerFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' },
+			{ name: 'Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-ringan.html' },
+            { name: 'Sewa Jack Hammer', url: 'https://www.betonjayareadymix.com/p/sewa-jack-hammer.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+
+}
+	
+ if (urlMappingSewaVibratorBetonFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+		    generateBreadcrumbJasaAlatKonstruksiPost(
+        urlMappingSewaVibratorBetonFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' },
+			{ name: 'Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-ringan.html' },
+            { name: 'Sewa Vibrator Beton', url: 'https://www.betonjayareadymix.com/p/sewa-vibrator-beton.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}  
+	
+	 if (urlMappingSewaMesinMolenFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+		    generateBreadcrumbJasaAlatKonstruksiPost(
+        urlMappingSewaMesinMolenFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' },
+			{ name: 'Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-ringan.html' },
+            { name: 'Sewa Mesin Molen', url: 'https://www.betonjayareadymix.com/p/sewa-mesin-molen.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+} 
+	
+	if (urlMappingSewaGensetFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+		    generateBreadcrumbJasaAlatKonstruksiPost(
+        urlMappingSewaGensetFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' },
+			{ name: 'Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-ringan.html' },
+            { name: 'Sewa Sewa Genset', url: 'https://www.betonjayareadymix.com/p/sewa-genset.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+} 
+		if (urlMappingSewaMesinCompressorFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+		    generateBreadcrumbJasaAlatKonstruksiPost(
+        urlMappingSewaMesinCompressorFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' },
+			{ name: 'Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-ringan.html' },
+            { name: 'Sewa Mesin Compressor', url: 'https://www.betonjayareadymix.com/p/sewa-mesin-compressor.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
+	
+		if (urlMappingSewaCuttingBetonFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+		    generateBreadcrumbJasaAlatKonstruksiPost(
+        urlMappingSewaCuttingBetonFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' },
+			{ name: 'Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-ringan.html' },
+            { name: 'Sewa Cutting Beton', url: 'https://www.betonjayareadymix.com/p/sewa-cutting-beton.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}	
+	
+		if (urlMappingSewaCuttingBetonFromMoneyMaster1MoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
+		    generateBreadcrumbJasaAlatKonstruksiPost(
+        urlMappingSewaCuttingBetonFromMoneyMaster1MoneyChild,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' },
+			{ name: 'Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-ringan.html' },
+            { name: 'Sewa Cutting Beton', url: 'https://www.betonjayareadymix.com/p/sewa-cutting-beton.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
+		if (urlMappingSewaMesinPotongRumputFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+		    generateBreadcrumbJasaAlatKonstruksiPost(
+        urlMappingSewaMesinPotongRumputFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' },
+			{ name: 'Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-ringan.html' },
+            { name: 'Sewa Mesin Rumput', url: 'https://www.betonjayareadymix.com/p/sewa-mesin-rumput.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
+	
+		if (urlMappingSewaMesinTrowelFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+		    generateBreadcrumbJasaAlatKonstruksiPost(
+        urlMappingSewaMesinTrowelFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' },
+			{ name: 'Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-ringan.html' },
+            { name: 'Sewa Mesin Trowel', url: 'https://www.betonjayareadymix.com/p/sewa-mesin-trowel.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
+			if (urlMappingSewaMesinScreedFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+		    generateBreadcrumbJasaAlatKonstruksiPost(
+        urlMappingSewaMesinScreedFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' },
+			{ name: 'Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-ringan.html' },
+            { name: 'Sewa Mesin Screed', url: 'https://www.betonjayareadymix.com/p/sewa-mesin-screed.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
+	
+	if (urlMappingSewaStamperFromMoneyMaster1MoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+		    generateBreadcrumbJasaAlatKonstruksiPost(
+        urlMappingSewaStamperFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsAlatKonstruksiPost,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' },
+			{ name: 'Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-ringan.html' },
+            { name: 'Sewa Stamper', url: 'https://www.betonjayareadymix.com/p/sewa-stamper.html' }
+        ],
+        'SEWA_RENTAL'
+    );
+}
 });
