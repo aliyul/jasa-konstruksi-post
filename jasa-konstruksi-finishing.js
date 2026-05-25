@@ -68,7 +68,7 @@ const urlMappingFinishingLampuFromMoneyMaster1MoneyPage= {
 // 🟢 PRIORITAS RENDAH
 "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-cafe.html": "Jasa Finishing Lampu Cafe",
 "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-hotel.html": "Jasa Finishing Lampu Hotel",
-"https://www.betonjayareadymix.com/p/jasa-finishing-lampu-kantor.html": "Jasa Finishing Lampu Kantor",
+"https://www.betonjayareadymix.com/p/jasa-finishing-lampu-kantor.html": "Jasa Finishing Lampu Kantor"
  
 };
 const urlMappingPasangLampuInteriorFromMoneyPageMoneyPage1= {
