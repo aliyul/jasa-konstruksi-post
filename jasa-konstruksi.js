@@ -315,8 +315,8 @@ const urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1 = {
 "https://www.betonjayareadymix.com/p/sewa-cutting-beton.html":
   "Sewa Cutting Beton",
 
-"https://www.betonjayareadymix.com/p/sewa-mesin-potong-rumput.html":
-  "Sewa Mesin Potong Rumput",
+"https://www.betonjayareadymix.com/p/sewa-mesin-rumput.html":
+  "Sewa Mesin Rumput",
 
 "https://www.betonjayareadymix.com/p/sewa-screed.html":
   "Sewa Screed",
