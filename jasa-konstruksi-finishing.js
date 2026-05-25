@@ -3,8 +3,19 @@
 // 🧠 Parent: Jasa Konstruksi (PILLAR)
 // ============================================================
 
-const urlMappingFinishingBangunanFromMoneyMasterMoneyMaster1 = {
+const urlMappingFinishingBangunanFromMoneyMaster1MoneyPage = {
+ // ============================================================
+// MP DARI MM "JASA FINISHING BANGUNAN"
+// ============================================================
 
+"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-rumah.html": "Jasa Finishing Bangunan Rumah",
+"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-gedung.html": "Jasa Finishing Bangunan Gedung",
+"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-ruko.html": "Jasa Finishing Bangunan Ruko",
+"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-pabrik.html": "Jasa Finishing Bangunan Pabrik",
+"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-interior.html": "Jasa Finishing Bangunan Interior",
+"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-eksterior.html": "Jasa Finishing Bangunan Eksterior",
+"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-modern.html": "Jasa Finishing Bangunan Modern",
+"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-minimalis.html": "Jasa Finishing Bangunan Minimalis"
 /*
   "https://www.betonjayareadymix.com/p/harga-jasa-finishing-bangunan.html": "Harga Jasa Finishing Bangunan", 
   "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-interior.html": "Jasa Finishing Bangunan Interior", 
@@ -1430,6 +1441,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
+		urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
 		urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
 		urlMappingFinishingLampuFromMoneyMaster1MoneyPage,
 		urlMappingPasangLampuInteriorFromMoneyPageMoneyPage1,
@@ -1983,7 +1995,22 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaFinishingBangunanLink.style.visibility = 'hidden';
      JasaFinishingInfrastrukturLink.style.visibility = 'hidden';
      pageNameJasaKonsFinishing.textContent = "";
-
+    
+	 if (urlMappingFinishingBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+         generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsFinishing,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+           { name: 'Jasa Finishing Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
     if (urlMappingFinishingInteriorFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
