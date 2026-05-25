@@ -4377,6 +4377,7 @@ if (urlMappingSewaConcreteCutterFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKon
             { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
             { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
             { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' },
+			{ name: 'Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/sewa-alat-ringan.html' },
             { name: 'Sewa Concrete Cutter', url: 'https://www.betonjayareadymix.com/p/sewa-concrete-cutter.html' }
         ],
         'SEWA_RENTAL'
