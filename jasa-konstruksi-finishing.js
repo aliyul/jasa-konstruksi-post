@@ -3,98 +3,125 @@
 // 🧠 Parent: Jasa Konstruksi (PILLAR)
 // ============================================================
 
-const urlMappingFinishingBangunanFromMoneyMaster1MoneyPage = {
- // ============================================================
-// MP DARI MM "JASA FINISHING BANGUNAN"
+// ============================================================
+// 📁 JASA FINISHING BANGUNAN - LEVEL 3 (MP dari MM Jasa Finishing Bangunan)
+// 🧠 Parent: Jasa Finishing Bangunan (L4)
 // ============================================================
 
-"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-rumah.html": "Jasa Finishing Bangunan Rumah",
-"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-gedung.html": "Jasa Finishing Bangunan Gedung",
-"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-ruko.html": "Jasa Finishing Bangunan Ruko",
-"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-pabrik.html": "Jasa Finishing Bangunan Pabrik",
-"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-interior.html": "Jasa Finishing Bangunan Interior",
-"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-eksterior.html": "Jasa Finishing Bangunan Eksterior",
-"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-modern.html": "Jasa Finishing Bangunan Modern",
-"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-minimalis.html": "Jasa Finishing Bangunan Minimalis"
-/*
-  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-bangunan.html": "Harga Jasa Finishing Bangunan", 
-  "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-interior.html": "Jasa Finishing Bangunan Interior", 
-  "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-eksterior.html": "Jasa Finishing Bangunan Eksterior", 
-  "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-struktur.html": "Jasa Finishing Bangunan Struktur" 
-  */
+const urlMappingFinishingBangunanFromMoneyMaster1MoneyPage = {
+    // MP DARI MM "JASA FINISHING BANGUNAN"
+    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-rumah.html": "Jasa Finishing Bangunan Rumah",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-gedung.html": "Jasa Finishing Bangunan Gedung",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-ruko.html": "Jasa Finishing Bangunan Ruko",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-pabrik.html": "Jasa Finishing Bangunan Pabrik",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-interior.html": "Jasa Finishing Bangunan Interior",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-eksterior.html": "Jasa Finishing Bangunan Eksterior",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-modern.html": "Jasa Finishing Bangunan Modern",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-minimalis.html": "Jasa Finishing Bangunan Minimalis"
 };
 
+// ============================================================
+// 📁 JASA FINISHING FURNITURE - MP dari MM Jasa Finishing Furniture
+// 🧠 Parent: Jasa Finishing Furniture (L4)
+// ============================================================
 
-// ============================================================
-// 📁 JASA FINISHING INTERIOR - LEVEL 3 (SUB2 dari SUB2 Jasa Finishing Bangunan)
-// 🧠 Parent: Jasa Finishing Bangunan (SUB2)
-// ============================================================
 const urlMappingFinishingFurnitureFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set", 
-	"https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set", 
-	"https://www.betonjayareadymix.com/p/jasa-kitchen-set-minimalis.html": "Jasa Kitchen Set Minimalis", 
-	"https://www.betonjayareadymix.com/p/jasa-pasang-lemari-built-in.html": "Jasa Pasang Lemari Built In", 
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set", 
+    "https://www.betonjayareadymix.com/p/jasa-kitchen-set-minimalis.html": "Jasa Kitchen Set Minimalis", 
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lemari-built-in.html": "Jasa Pasang Lemari Built In", 
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-lemari-built-in.html": "Jasa Pembuatan Lemari Built In", 
-	"https://www.betonjayareadymix.com/p/jasa-pasang-partisi-ruangan.html": "Jasa Pasang Partisi Ruangan",
-	"https://www.betonjayareadymix.com/p/jasa-pembuatan-partisi-ruangan.html": "Jasa Pembuatan Partisi Ruangan",
-	"https://www.betonjayareadymix.com/p/jasa-rak-dinding-custom.html": "Jasa Rak Dinding Custom",
-	"https://www.betonjayareadymix.com/p/jasa-furniture-interior.html": "Jasa Furniture & Interior", 
-	"https://www.betonjayareadymix.com/p/jasa-interior-furniture-custom.html": "Jasa Interior & Furniture Custom"
-  
+    "https://www.betonjayareadymix.com/p/jasa-pasang-partisi-ruangan.html": "Jasa Pasang Partisi Ruangan",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-partisi-ruangan.html": "Jasa Pembuatan Partisi Ruangan",
+    "https://www.betonjayareadymix.com/p/jasa-rak-dinding-custom.html": "Jasa Rak Dinding Custom",
+    "https://www.betonjayareadymix.com/p/jasa-furniture-interior.html": "Jasa Furniture & Interior", 
+    "https://www.betonjayareadymix.com/p/jasa-interior-furniture-custom.html": "Jasa Interior & Furniture Custom"
 };
+
+// ============================================================
+// 📁 JASA FINISHING DINDING - MP dari MM Jasa Finishing Dinding
+// 🧠 Parent: Jasa Finishing Dinding (L4)
+// ============================================================
+
 const urlMappingFinishingDindingFromMoneyMasterMoneyPage = {
-"https://www.betonjayareadymix.com/p/jasa-dinding-wallpaper.html": "Jasa Dinding & Wallpaper",
-"https://www.betonjayareadymix.com/p/jasa-epoxy-dinding.html": "Jasa Epoxy Dinding", 
- "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-epoxy.html": "Jasa Finishing Dinding Epoxy",
- "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",
- "https://www.betonjayareadymix.com/p/jasa-cat-dinding-interior.html": "Jasa Cat Dinding Interior",
- "https://www.betonjayareadymix.com/p/jasa-cat-dinding-eksterior.html": "Jasa Cat Dinding Eksterior"
+	"https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html": "Jasa Plesteran & Acian Dinding", // → MILIK Jasa Finishing Dinding
+    "https://www.betonjayareadymix.com/p/jasa-dinding-wallpaper.html": "Jasa Dinding & Wallpaper",
+    "https://www.betonjayareadymix.com/p/jasa-epoxy-dinding.html": "Jasa Epoxy Dinding", 
+    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-epoxy.html": "Jasa Finishing Dinding Epoxy",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",
+    "https://www.betonjayareadymix.com/p/jasa-cat-dinding-interior.html": "Jasa Cat Dinding Interior",
+    "https://www.betonjayareadymix.com/p/jasa-cat-dinding-eksterior.html": "Jasa Cat Dinding Eksterior"
 };
+
+// ============================================================
+// 📁 JASA FINISHING LANTAI - MP dari MM Jasa Finishing Lantai
+// 🧠 Parent: Jasa Finishing Lantai (L4)
+// ============================================================
+
 const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
-	"https://www.betonjayareadymix.com/p/jasa-finishing-lantai-keramik.html": "Jasa Finishing Lantai Epoxy",
-	"https://www.betonjayareadymix.com/p/jasa-finishing-lantai-marmer.html": "Jasa Finishing Lantai Epoxy",
-	"https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html": "Jasa Finishing Lantai Epoxy",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-kayu.html": "Jasa Finishing Lantai Epoxy",
+    // ✅ DIPERBAIKI - setiap MP memiliki nama yang sesuai
+	 "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html": "Jasa Finishing Lantai Beton", // → MILIK Jasa Finishing Lantai
+    "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-keramik.html": "Jasa Finishing Lantai Keramik",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-marmer.html": "Jasa Finishing Lantai Marmer",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html": "Jasa Finishing Lantai Granit",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-kayu.html": "Jasa Finishing Lantai Kayu",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-epoxy.html": "Jasa Finishing Lantai Epoxy",
-	 "https://www.betonjayareadymix.com/p/jasa-epoxy-lantai.html": "Jasa Epoxy Lantai", 
-	"https://www.betonjayareadymix.com/p/jasa-keramik-lantai.html": "Jasa Keramik Lantai"
-
+    "https://www.betonjayareadymix.com/p/jasa-epoxy-lantai.html": "Jasa Epoxy Lantai", 
+    "https://www.betonjayareadymix.com/p/jasa-keramik-lantai.html": "Jasa Keramik Lantai"
 };
 
-const urlMappingFinishingInteriorFromMoneyMasterMoneyPage= {
-	"https://www.betonjayareadymix.com/p/jasa-pasang-acp-interior.html": "Jasa Pasang ACP Interior",
-	"https://www.betonjayareadymix.com/p/jasa-finishing-interior-kantor.html": "Jasa Finishing Interior Kantor", 
-	"https://www.betonjayareadymix.com/p/jasa-finishing-interior-apartemen.html": "Jasa Finishing Interior Apartemen", 
-	"https://www.betonjayareadymix.com/p/jasa-finishing-interior-rumah.html": "Jasa Finishing Interior Rumah", 
-  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis", 
-  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html": "Jasa Finishing Interior Klasik",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern"
-};
-const urlMappingFinishingLampuFromMoneyMaster1MoneyPage= {
-	// 🔴 PRIORITAS WAJIB
-	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior.html": "Jasa Pasang Lampu Interior",
-	// 🟡 PRIORITAS SEDANG
-"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-eksterior.html": "Jasa Pasang Lampu Eksterior",
-"https://www.betonjayareadymix.com/p/jasa-finishing-lampu-taman.html": "Jasa Finishing Lampu Taman",
+// ============================================================
+// 📁 JASA FINISHING INTERIOR - MP dari MM Jasa Finishing Interior
+// 🧠 Parent: Jasa Finishing Interior (L4)
+// ============================================================
 
-// 🟢 PRIORITAS RENDAH
-"https://www.betonjayareadymix.com/p/jasa-finishing-lampu-cafe.html": "Jasa Finishing Lampu Cafe",
-"https://www.betonjayareadymix.com/p/jasa-finishing-lampu-hotel.html": "Jasa Finishing Lampu Hotel",
-"https://www.betonjayareadymix.com/p/jasa-finishing-lampu-kantor.html": "Jasa Finishing Lampu Kantor"
- 
+const urlMappingFinishingInteriorFromMoneyMasterMoneyPage = {
+    "https://www.betonjayareadymix.com/p/jasa-pasang-acp-interior.html": "Jasa Pasang ACP Interior",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-kantor.html": "Jasa Finishing Interior Kantor", 
+    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-apartemen.html": "Jasa Finishing Interior Apartemen", 
+    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-rumah.html": "Jasa Finishing Interior Rumah", 
+    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis", 
+    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html": "Jasa Finishing Interior Klasik",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern"
 };
-const urlMappingPasangLampuInteriorFromMoneyPageMoneyPage1= {
-	// 🟠 PRIORITAS TINGGI
-   "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-modern.html": "Jasa Pasang Lampu Interior Modern",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-minimalis.html": "Jasa Pasang Lampu Interior Minimalis",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-rumah.html": "Jasa Pasang Lampu Interior Rumah",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-gedung.html": "Jasa Pasang Lampu Interior Gedung"
- 
+
+// ============================================================
+// 📁 JASA FINISHING LAMPU - MP dari MM Jasa Finishing Lampu
+// 🧠 Parent: Jasa Finishing Lampu (L4)
+// ============================================================
+
+const urlMappingFinishingLampuFromMoneyMaster1MoneyPage = {
+    // 🔴 PRIORITAS WAJIB
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior.html": "Jasa Pasang Lampu Interior",
+    // 🟡 PRIORITAS SEDANG
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-eksterior.html": "Jasa Pasang Lampu Eksterior",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-taman.html": "Jasa Finishing Lampu Taman",
+    // 🟢 PRIORITAS RENDAH
+    "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-cafe.html": "Jasa Finishing Lampu Cafe",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-hotel.html": "Jasa Finishing Lampu Hotel",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-kantor.html": "Jasa Finishing Lampu Kantor"
 };
-const urlMappingFinishingCatFromMoneyMaster1MoneyPage= {
-	// ============================================================
-    // MP TURUNAN: Jasa Finishing Cat (Level 5)
-    // ============================================================
+
+// ============================================================
+// 📁 JASA PASANG LAMPU INTERIOR (Turunan dari MP) - Level 6 (Money-Child)
+// 🧠 Parent: Jasa Pasang Lampu Interior (MP Level 5)
+// ============================================================
+
+const urlMappingPasangLampuInteriorFromMoneyPageMoneyPage1 = {
+    // 🟠 PRIORITAS TINGGI (Money-Child)
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-modern.html": "Jasa Pasang Lampu Interior Modern",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-minimalis.html": "Jasa Pasang Lampu Interior Minimalis",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-rumah.html": "Jasa Pasang Lampu Interior Rumah",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-gedung.html": "Jasa Pasang Lampu Interior Gedung"
+};
+
+// ============================================================
+// 📁 JASA FINISHING CAT - MP dari MM Jasa Finishing Cat
+// 🧠 Parent: Jasa Finishing Cat (L4)
+// ============================================================
+
+const urlMappingFinishingCatFromMoneyMaster1MoneyPage = {
+    // MP TURUNAN: Jasa Finishing Cat
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-interior.html": "Jasa Finishing Cat Interior",
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-eksterior.html": "Jasa Finishing Cat Eksterior",
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-dinding.html": "Jasa Finishing Cat Dinding",
@@ -107,141 +134,111 @@ const urlMappingFinishingCatFromMoneyMaster1MoneyPage= {
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-anti-bocor.html": "Jasa Finishing Cat Anti Bocor",
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-epoxy.html": "Jasa Finishing Cat Epoxy",
     
-    // ============================================================
-    // MP TURUNAN: Jasa Cat Interior (Level 5)
-
-	"https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
-	"https://www.betonjayareadymix.com/p/jasa-cat-interior-modern.html": "Jasa Cat Interior Modern",
-	"https://www.betonjayareadymix.com/p/jasa-cat-interior-minimalis.html": "Jasa Cat Interior Minimalis",
-	"https://www.betonjayareadymix.com/p/jasa-cat-interior-apartemen.html": "Jasa Cat Interior Apartemen",
-	"https://www.betonjayareadymix.com/p/jasa-cat-interior-gedung.html": "Jasa Cat Interior Gedung"
-
-};
-	
-// ============================================================
-// 📁 JASA FINISHING EKSTERIOR - LEVEL 3 (SUB2 dari SUB2 Jasa Finishing Bangunan)
-// 🧠 Parent: Jasa Finishing Bangunan (SUB2)
-// ============================================================
-const urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage= {
-// ============================================================
-// MP DARI MM "JASA FINISHING EKSTERIOR"
-// FINAL VERSION - LENGKAP & TANPA DUPLIKAT
-// ============================================================
-
-// ============================================================
-// 1. LAYANAN INTI FINISHING EKSTERIOR
-// ============================================================
-
-"https://www.betonjayareadymix.com/p/jasa-finishing-fasad-eksterior.html": "Jasa Finishing Fasad Eksterior",
-"https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-cuaca.html": "Jasa Pelapisan Anti Cuaca",
-"https://www.betonjayareadymix.com/p/jasa-pelapisan-dinding-luar.html": "Jasa Pelapisan Dinding Luar",
-"https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html": "Jasa Pelapisan Batu Alam Eksterior",
-
-// ============================================================
-// 2. PASANG MATERIAL EKSTERIOR (ACP, GRC, KACA, DLL)
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-pasang-acp-eksterior.html": "Jasa Pasang ACP Eksterior",
-"https://www.betonjayareadymix.com/p/jasa-pasang-grc-eksterior.html": "Jasa Pasang GRC Eksterior",
-"https://www.betonjayareadymix.com/p/jasa-pasang-kaca-fasad.html": "Jasa Pasang Kaca Fasad",
-"https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-fasad.html": "Jasa Pasang Batu Alam Fasad",
-"https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-eksterior.html": "Jasa Pasang Wood Plank Eksterior",
-"https://www.betonjayareadymix.com/p/jasa-pasang-hpl-eksterior.html": "Jasa Pasang HPL Eksterior",
-
-// ============================================================
-// 3. BERDASARKAN JENIS PROPERTI
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-rumah.html": "Jasa Finishing Eksterior Rumah",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gedung.html": "Jasa Finishing Eksterior Gedung",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-ruko.html": "Jasa Finishing Eksterior Ruko",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-pabrik.html": "Jasa Finishing Eksterior Pabrik",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kantor.html": "Jasa Finishing Eksterior Kantor",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-hotel.html": "Jasa Finishing Eksterior Hotel",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-cafe.html": "Jasa Finishing Eksterior Cafe",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-restoran.html": "Jasa Finishing Eksterior Restoran",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-sekolah.html": "Jasa Finishing Eksterior Sekolah",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-rumah-sakit.html": "Jasa Finishing Eksterior Rumah Sakit",
-
-// ============================================================
-// 4. BERDASARKAN GAYA / MODEL
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-modern.html": "Jasa Finishing Eksterior Modern",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-minimalis.html": "Jasa Finishing Eksterior Minimalis",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-klasik.html": "Jasa Finishing Eksterior Klasik",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-mewah.html": "Jasa Finishing Eksterior Mewah",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-industrial.html": "Jasa Finishing Eksterior Industrial",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-skandinavian.html": "Jasa Finishing Eksterior Skandinavian",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kontemporer.html": "Jasa Finishing Eksterior Kontemporer",
-
-// ============================================================
-// 5. BERDASARKAN ELEMEN BANGUNAN
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-dinding.html": "Jasa Finishing Eksterior Dinding",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-pagar.html": "Jasa Finishing Eksterior Pagar",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-balkon.html": "Jasa Finishing Eksterior Balkon",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-teras.html": "Jasa Finishing Eksterior Teras",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kanopi.html": "Jasa Finishing Eksterior Kanopi",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-taman.html": "Jasa Finishing Eksterior Taman",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kolam-renang.html": "Jasa Finishing Eksterior Kolam Renang",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-plafon-terbuka.html": "Jasa Finishing Eksterior Plafon Terbuka",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-tangga-luar.html": "Jasa Finishing Eksterior Tangga Luar",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gazebo.html": "Jasa Finishing Eksterior Gazebo",
-
-// ============================================================
-// 6. LAYANAN FINISHING TAMBAHAN
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-toko.html": "Jasa Finishing Eksterior Toko",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-showroom.html": "Jasa Finishing Eksterior Showroom",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gudang.html": "Jasa Finishing Eksterior Gudang",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-mushola.html": "Jasa Finishing Eksterior Mushola",
-"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-masjid.html": "Jasa Finishing Eksterior Masjid"
+    // MP TURUNAN: Jasa Cat Interior
+    "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
+    "https://www.betonjayareadymix.com/p/jasa-cat-interior-modern.html": "Jasa Cat Interior Modern",
+    "https://www.betonjayareadymix.com/p/jasa-cat-interior-minimalis.html": "Jasa Cat Interior Minimalis",
+    "https://www.betonjayareadymix.com/p/jasa-cat-interior-apartemen.html": "Jasa Cat Interior Apartemen",
+    "https://www.betonjayareadymix.com/p/jasa-cat-interior-gedung.html": "Jasa Cat Interior Gedung"
 };
 
 // ============================================================
-// 📁 JASA FINISHING STRUKTUR - LEVEL 3 (SUB2 dari SUB2 Jasa Finishing Bangunan)
-// 🧠 Parent: Jasa Finishing Bangunan (SUB2)
+// 📁 JASA FINISHING EKSTERIOR - MP dari MM Jasa Finishing Eksterior
+// 🧠 Parent: Jasa Finishing Eksterior (L4)
 // ============================================================
 
+const urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage = {
+    // 1. LAYANAN INTI FINISHING EKSTERIOR
+    "https://www.betonjayareadymix.com/p/jasa-finishing-fasad-eksterior.html": "Jasa Finishing Fasad Eksterior",
+    "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-cuaca.html": "Jasa Pelapisan Anti Cuaca",
+    "https://www.betonjayareadymix.com/p/jasa-pelapisan-dinding-luar.html": "Jasa Pelapisan Dinding Luar",
+    "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html": "Jasa Pelapisan Batu Alam Eksterior",
+
+    // 2. PASANG MATERIAL EKSTERIOR
+    "https://www.betonjayareadymix.com/p/jasa-pasang-acp-eksterior.html": "Jasa Pasang ACP Eksterior",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-grc-eksterior.html": "Jasa Pasang GRC Eksterior",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-kaca-fasad.html": "Jasa Pasang Kaca Fasad",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-fasad.html": "Jasa Pasang Batu Alam Fasad",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-eksterior.html": "Jasa Pasang Wood Plank Eksterior",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-eksterior.html": "Jasa Pasang HPL Eksterior",
+
+    // 3. BERDASARKAN JENIS PROPERTI
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-rumah.html": "Jasa Finishing Eksterior Rumah",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gedung.html": "Jasa Finishing Eksterior Gedung",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-ruko.html": "Jasa Finishing Eksterior Ruko",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-pabrik.html": "Jasa Finishing Eksterior Pabrik",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kantor.html": "Jasa Finishing Eksterior Kantor",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-hotel.html": "Jasa Finishing Eksterior Hotel",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-cafe.html": "Jasa Finishing Eksterior Cafe",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-restoran.html": "Jasa Finishing Eksterior Restoran",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-sekolah.html": "Jasa Finishing Eksterior Sekolah",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-rumah-sakit.html": "Jasa Finishing Eksterior Rumah Sakit",
+
+    // 4. BERDASARKAN GAYA
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-modern.html": "Jasa Finishing Eksterior Modern",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-minimalis.html": "Jasa Finishing Eksterior Minimalis",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-klasik.html": "Jasa Finishing Eksterior Klasik",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-mewah.html": "Jasa Finishing Eksterior Mewah",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-industrial.html": "Jasa Finishing Eksterior Industrial",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-skandinavian.html": "Jasa Finishing Eksterior Skandinavian",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kontemporer.html": "Jasa Finishing Eksterior Kontemporer",
+
+    // 5. BERDASARKAN ELEMEN BANGUNAN
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-dinding.html": "Jasa Finishing Eksterior Dinding",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-pagar.html": "Jasa Finishing Eksterior Pagar",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-balkon.html": "Jasa Finishing Eksterior Balkon",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-teras.html": "Jasa Finishing Eksterior Teras",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kanopi.html": "Jasa Finishing Eksterior Kanopi",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-taman.html": "Jasa Finishing Eksterior Taman",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kolam-renang.html": "Jasa Finishing Eksterior Kolam Renang",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-plafon-terbuka.html": "Jasa Finishing Eksterior Plafon Terbuka",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-tangga-luar.html": "Jasa Finishing Eksterior Tangga Luar",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gazebo.html": "Jasa Finishing Eksterior Gazebo",
+
+    // 6. LAYANAN FINISHING TAMBAHAN
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-toko.html": "Jasa Finishing Eksterior Toko",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-showroom.html": "Jasa Finishing Eksterior Showroom",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gudang.html": "Jasa Finishing Eksterior Gudang",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-mushola.html": "Jasa Finishing Eksterior Mushola",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-masjid.html": "Jasa Finishing Eksterior Masjid"
+};
+
+// ============================================================
+// 📁 JASA FINISHING STRUKTUR - MP dari MM Jasa Finishing Struktur
+// 🧠 Parent: Jasa Finishing Struktur (L4)
+// ============================================================
+
+// ✅ DIPERBAIKI - menghilangkan deklarasi ganda
 const urlMappingFinishingStrukturFromMoneyMaster1MoneyPage = {
- // ============================================================
-// KONFIGURASI URL UNTUK MP DARI MM "JASA FINISHING STRUKTUR"
-// ============================================================
-const urlMappingFinishingStruktur = {
-    // Parent MM
-   // "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur",
-
-    // MP (Money-Page) - Sudah sesuai
+    // MP (Money-Page) dari MM Jasa Finishing Struktur
     "https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html": "Jasa Finishing Dak Beton",
     "https://www.betonjayareadymix.com/p/jasa-finishing-beton-expose.html": "Jasa Finishing Beton Expose",
     "https://www.betonjayareadymix.com/p/jasa-finishing-grouting-struktur-beton.html": "Jasa Finishing Grouting Struktur Beton",
     "https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html": "Jasa Pelapisan Coating Struktur",
     "https://www.betonjayareadymix.com/p/jasa-finishing-kolom-dan-balok.html": "Jasa Finishing Kolom dan Balok",
     "https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html": "Jasa Pelapisan Waterproofing Struktur",
-    "https://www.betonjayareadymix.com/p/jasa-pelindung-retak-struktur.html": "Jasa Pelindung Retak Struktur",
+    "https://www.betonjayareadymix.com/p/jasa-pelindung-retak-struktur.html": "Jasa Pelindung Retak Struktur"
+    
 };
 
 // ============================================================
-// KONFIGURASI UNTUK MP YANG BERpindah MM (HANYA UNTUK REFERENSI)
+// 📁 JASA FINISHING INFRASTRUKTUR - MP dari MM Jasa Finishing Infrastruktur
+// 🧠 Parent: Jasa Finishing Infrastruktur (L4)
 // ============================================================
-// 1. Jasa Plesteran & Acian Dinding → MILIK MM "Jasa Finishing Dinding"
-"https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html": "Jasa Plesteran & Acian Dinding",
-
-// 2. Jasa Finishing Lantai Beton → MILIK MM "Jasa Finishing Lantai"
-"https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html": "Jasa Finishing Lantai Beton",
-};
 
 const urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage = {
- // === Struktur & Utilitas ===
+    // Struktur & Utilitas
     "https://www.betonjayareadymix.com/p/jasa-finishing-rumah-pompa.html": "Jasa Finishing Rumah Pompa",
     "https://www.betonjayareadymix.com/p/jasa-pelapisan-box-utilitas.html": "Jasa Pelapisan Box Utilitas",
     "https://www.betonjayareadymix.com/p/jasa-epoxy-struktur-publik.html": "Jasa Epoxy Struktur Publik",
     "https://www.betonjayareadymix.com/p/jasa-finishing-penutup-kabel-beton.html": "Jasa Finishing Penutup Kabel Beton",
 
-    // === Proteksi & Epoxy Luar Ruang ===
+    // Proteksi & Epoxy Luar Ruang
     "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-karat-beton.html": "Jasa Pelapisan Anti Karat Beton",
     "https://www.betonjayareadymix.com/p/jasa-epoxy-beton-luar-ruang.html": "Jasa Epoxy Beton Luar Ruang",
     "https://www.betonjayareadymix.com/p/jasa-proteksi-struktur-beton-luar.html": "Jasa Proteksi Struktur Beton Luar",
     
-    // === Jalan, Jembatan, Trotoar, Saluran ===
+    // Jalan, Jembatan, Trotoar, Saluran
     "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-jembatan.html": "Jasa Finishing Jalan Jembatan",
     "https://www.betonjayareadymix.com/p/jasa-finishing-jembatan-beton.html": "Jasa Finishing Jembatan Beton",
     "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-beton.html": "Jasa Finishing Jalan Beton",
@@ -259,10 +256,9 @@ const urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-waterproofing-saluran-air.html": "Jasa Waterproofing Saluran Air",
     "https://www.betonjayareadymix.com/p/jasa-finishing-penutup-saluran.html": "Jasa Finishing Penutup Saluran",
 
-    // === Proteksi Beton Umum ===
+    // Proteksi Beton Umum
     "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-utilitas.html": "Jasa Finishing Struktur Utilitas",
     "https://www.betonjayareadymix.com/p/jasa-finishing-proteksi-beton.html": "Jasa Finishing Proteksi Beton"
-
 };
 // ============================================================
 // 📁 TAMBAHAN SARAN ITEM (BELUM AKTIF - DIMATIKAN DENGAN //)
