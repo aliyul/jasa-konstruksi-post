@@ -138,15 +138,23 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
     // MP UNTUK FINISHING LANTAI BETON (EXPOSE/POLISHED CONCRETE) ✅
     // ============================================================
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html": "Jasa Finishing Lantai Beton",
+	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai-beton.html": "Harga Jasa Finishing Lantai Beton",
     "https://www.betonjayareadymix.com/p/jasa-poles-lantai-beton.html": "Jasa Poles Lantai Beton",
-    "https://www.betonjayareadymix.com/p/jasa-expose-lantai-beton.html": "Jasa Expose Lantai Beton",
+	"https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton-ekspos.html": "Jasa Finishing Lantai Beton Ekspos",
+   // "https://www.betonjayareadymix.com/p/jasa-ekspos-lantai-beton.html": "Jasa Ekspos Lantai Beton",
 
     // ============================================================
     // 🆕 METODE FINISHING LANTAI BETON (TAMBAHAN)
     // ============================================================
-
+	"https://www.betonjayareadymix.com/p/jasa-lantai-super-flat.html": "Jasa Lantai Super Flat",
+    "https://www.betonjayareadymix.com/p/jasa-lapangan-super-flat.html": "Jasa Lapangan Super Flat",
+	"https://www.betonjayareadymix.com/p/harga-jasa-lapangan-super-flat.html": "Harga Jasa Lapangan Super Flat",
+	"https://www.betonjayareadymix.com/p/harga-jasa-lantai-super-flat.html": "Harga Jasa Lantai Super Flat",
     // 1. Jasa Trowel Lantai (finishing dengan mesin trowel)
     "https://www.betonjayareadymix.com/p/jasa-trowel-lantai-beton.html": "Jasa Trowel Lantai Beton",
+	"https://www.betonjayareadymix.com/p/harga-jasa-trowel-lantai.html": "Harga Jasa Trowel Lantai",
+	"https://www.betonjayareadymix.com/p/harga-jasa-trowel-floor-hardener.html": "Harga Jasa Trowel Floor Hardener",
+	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-trowel.html": "Harga Jasa finishing Trowel",
     
     // 2. Jasa Screeding Lantai (perataan lantai beton)
     "https://www.betonjayareadymix.com/p/jasa-screeding-lantai-beton.html": "Jasa Screeding Lantai Beton",
@@ -154,6 +162,7 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
 
     // 3. Jasa Floor Hardener (pengeras lantai)
     "https://www.betonjayareadymix.com/p/jasa-floor-hardener-lantai.html": "Jasa Floor Hardener Lantai",
+	"https://www.betonjayareadymix.com/p/harga-jasa-floor-hardener.html": "Harga Jasa Floor Hardener",
     
     // 4. Jasa Self Leveling (lantai rata sempurna)
     "https://www.betonjayareadymix.com/p/jasa-self-leveling-lantai.html": "Jasa Self Leveling Lantai",
