@@ -2247,7 +2247,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     ];
     
-    generateBreadcrumbJasaKonstruksiFinishing(breadcrumbItems, null, null, 'JASA');
+    generateBreadcrumbJasaKonstruksiFinishing(breadcrumbItems, null, null, 'JASA_KONSTRUKSI');
   
    }
 
