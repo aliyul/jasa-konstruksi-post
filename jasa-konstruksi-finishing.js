@@ -68,34 +68,64 @@ const urlMappingFinishingFurnitureFromMoneyMasterMoneyPage = {
 // ============================================================
 
 const urlMappingFinishingDindingFromMoneyMasterMoneyPage = {
-    // Parent MM
- //   "https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html": "Jasa Finishing Dinding",
-    
     // ============================================================
-    // MP (Money-Page) Level 5 - SEMUA 3+ KATA
+    // PARENT MM (DIKOMENTARKAN, TETAP DIPERTAHANKAN)
+    // ============================================================
+    // "https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html": "Jasa Finishing Dinding",
+
+    // ============================================================
+    // MP (Money-Page) Level 5 - SEMUA 3+ KATA (TETAP DIPERTAHANKAN)
     // ============================================================
     
-    // ✅ DIPERBAIKI: dari "jasa-dinding-wallpaper" (2 kata) 
-    //    menjadi "jasa-finishing-dinding-wallpaper" (3 kata)
+    // Wallpaper & Cat
     "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-wallpaper.html": "Jasa Finishing Dinding Wallpaper",
-    
-    // ✅ DIPERBAIKI: dari "jasa-epoxy-dinding" (2 kata)
-    //    menjadi "jasa-finishing-epoxy-dinding" (3 kata)
-    "https://www.betonjayareadymix.com/p/jasa-finishing-epoxy-dinding.html": "Jasa Finishing Epoxy Dinding",
-    
-    // ✅ SUDAH MP (3 kata)
-   // "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-epoxy.html": "Jasa Finishing Dinding Epoxy",
     "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",
     "https://www.betonjayareadymix.com/p/jasa-cat-dinding-interior.html": "Jasa Cat Dinding Interior",
     "https://www.betonjayareadymix.com/p/jasa-cat-dinding-eksterior.html": "Jasa Cat Dinding Eksterior",
-    "https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html": "Jasa Plesteran & Acian Dinding",
     
-    // ✅ TAMBAHAN MP (semua 3+ kata)
-    "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-dinding.html": "Jasa Pasang Batu Alam Dinding",
+    // Epoxy & Finishing Khusus
+    "https://www.betonjayareadymix.com/p/jasa-finishing-epoxy-dinding.html": "Jasa Finishing Epoxy Dinding",
+    // "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-epoxy.html": "Jasa Finishing Dinding Epoxy", // (Dikomentari, tetap dipertahankan jika perlu)
+    
+    // Plesteran, Acian, Ekspos
+    "https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html": "Jasa Plesteran & Acian Dinding",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-ekspos.html": "Jasa Finishing Dinding Ekspos",
+    
+    // Material Panel & Lembaran
     "https://www.betonjayareadymix.com/p/jasa-pasang-panel-dinding-3d.html": "Jasa Pasang Panel Dinding 3D",
     "https://www.betonjayareadymix.com/p/jasa-pasang-grc-dinding.html": "Jasa Pasang GRC Dinding",
     "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-dinding.html": "Jasa Pasang HPL Dinding",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-ekspos.html": "Jasa Finishing Dinding Ekspos"
+    "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-dinding.html": "Jasa Pasang Batu Alam Dinding",
+
+    // ============================================================
+    // 🆕 TAMBAHAN MP (MATERIAL FINISHING DINDING LAINNYA)
+    // ============================================================
+
+    // 1. WPC (Wood Plastic Composite) - Material tren untuk dinding
+    "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-wpc-dinding.html": "Jasa Finishing WPC Dinding",
+
+    // 2. PVC Panel - Untuk dinding dan plafon
+    "https://www.betonjayareadymix.com/p/jasa-pasang-pvc-dinding.html": "Jasa Pasang PVC Dinding",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-pvc-dinding.html": "Jasa Finishing PVC Dinding",
+
+    // 3. Conwood (Kayu Komposit) - Material premium untuk dinding
+    "https://www.betonjayareadymix.com/p/jasa-pasang-conwood-dinding.html": "Jasa Pasang Conwood Dinding",
+
+    // 4. Wall Moulding - Lis dinding dekoratif
+    "https://www.betonjayareadymix.com/p/jasa-pasang-wall-moulding.html": "Jasa Pasang Wall Moulding",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-wall-moulding.html": "Jasa Finishing Wall Moulding",
+
+    // 5. Finishing untuk Dinding Eksterior (Fasad)
+    "https://www.betonjayareadymix.com/p/jasa-finishing-fasad-eksterior.html": "Jasa Finishing Fasad Eksterior",
+    "https://www.betonjayareadymix.com/p/jasa-pelapisan-dinding-luar.html": "Jasa Pelapisan Dinding Luar",
+    "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-cuaca.html": "Jasa Pelapisan Anti Cuaca",
+
+    // 6. Finishing Dinding Berdasarkan Jenis Properti
+    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-rumah.html": "Jasa Finishing Dinding Rumah",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-kantor.html": "Jasa Finishing Dinding Kantor",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-hotel.html": "Jasa Finishing Dinding Hotel",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-restoran.html": "Jasa Finishing Dinding Restoran"
 };
 // ============================================================
 // 📁 JASA FINISHING LANTAI - MP dari MM Jasa Finishing Lantai
