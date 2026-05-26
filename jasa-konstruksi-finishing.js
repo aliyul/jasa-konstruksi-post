@@ -137,15 +137,33 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
     // ============================================================
     // MP UNTUK FINISHING LANTAI BETON (EXPOSE/POLISHED CONCRETE) ✅
     // ============================================================
-    // Halaman ini membahas floor hardener, epoxy coating, poles beton halus.
-    // Istilah "poles" dan "expose" untuk lantai beton bisa disamakan di sini.
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html": "Jasa Finishing Lantai Beton",
-    
-    // Untuk lebih spesifik membedakan dengan exposed concrete untuk dinding/struktur,
-    // kita bisa buat halaman lanjutan dengan kata kunci "polished" atau "poles".
-    // Contoh (halaman baru jika diperlukan):
     "https://www.betonjayareadymix.com/p/jasa-poles-lantai-beton.html": "Jasa Poles Lantai Beton",
     "https://www.betonjayareadymix.com/p/jasa-expose-lantai-beton.html": "Jasa Expose Lantai Beton",
+
+    // ============================================================
+    // 🆕 METODE FINISHING LANTAI BETON (TAMBAHAN)
+    // ============================================================
+
+    // 1. Jasa Trowel Lantai (finishing dengan mesin trowel)
+    "https://www.betonjayareadymix.com/p/jasa-trowel-lantai-beton.html": "Jasa Trowel Lantai Beton",
+    
+    // 2. Jasa Screeding Lantai (perataan lantai beton)
+    "https://www.betonjayareadymix.com/p/jasa-screeding-lantai-beton.html": "Jasa Screeding Lantai Beton",
+    "https://www.betonjayareadymix.com/p/jasa-perataan-lantai-beton.html": "Jasa Perataan Lantai Beton",
+
+    // 3. Jasa Floor Hardener (pengeras lantai)
+    "https://www.betonjayareadymix.com/p/jasa-floor-hardener-lantai.html": "Jasa Floor Hardener Lantai",
+    
+    // 4. Jasa Self Leveling (lantai rata sempurna)
+    "https://www.betonjayareadymix.com/p/jasa-self-leveling-lantai.html": "Jasa Self Leveling Lantai",
+
+    // 5. Jasa Coating Lantai (pelapis lantai)
+    "https://www.betonjayareadymix.com/p/jasa-coating-lantai-beton.html": "Jasa Coating Lantai Beton",
+    "https://www.betonjayareadymix.com/p/jasa-pelapisan-lantai-beton.html": "Jasa Pelapisan Lantai Beton",
+
+    // 6. Jasa Grinding & Poles (existing)
+    "https://www.betonjayareadymix.com/p/jasa-grinding-lantai-beton.html": "Jasa Grinding Lantai Beton",
 
     // ============================================================
     // MP UNTUK MATERIAL LANTAI LAINNYA (tetap dipertahankan)
@@ -163,8 +181,7 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-pasang-spc-lantai.html": "Jasa Pasang SPC Lantai",
     "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-parket.html": "Jasa Pasang Lantai Parket",
     "https://www.betonjayareadymix.com/p/jasa-poles-lantai-marmer.html": "Jasa Poles Lantai Marmer",
-    "https://www.betonjayareadymix.com/p/jasa-poles-lantai-granit.html": "Jasa Poles Lantai Granit",
-    "https://www.betonjayareadymix.com/p/jasa-grinding-lantai-beton.html": "Jasa Grinding Lantai Beton"
+    "https://www.betonjayareadymix.com/p/jasa-poles-lantai-granit.html": "Jasa Poles Lantai Granit"
 };
 
 // ============================================================
