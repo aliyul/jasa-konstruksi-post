@@ -91,7 +91,10 @@ const urlMappingFinishingDindingFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html": "Jasa Plesteran & Acian Dinding",
     "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-ekspos.html": "Jasa Finishing Dinding Ekspos",
     
-    // Material Panel & Lembaran (INTERIOR & EKSTERIOR)
+    // 🆕 BETON EKSPOS UNTUK DINDING (TAMBAHAN)
+    "https://www.betonjayareadymix.com/p/jasa-finishing-beton-ekspos-dinding.html": "Jasa Finishing Beton Ekspos Dinding",
+    
+    // Material Panel & Lembaran
     "https://www.betonjayareadymix.com/p/jasa-pasang-panel-dinding-3d.html": "Jasa Pasang Panel Dinding 3D",
     "https://www.betonjayareadymix.com/p/jasa-pasang-grc-dinding.html": "Jasa Pasang GRC Dinding",
     "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-dinding.html": "Jasa Pasang HPL Dinding",
@@ -101,30 +104,29 @@ const urlMappingFinishingDindingFromMoneyMasterMoneyPage = {
     // TAMBAHAN MP MATERIAL FINISHING DINDING
     // ============================================================
 
-    // 1. WPC (Wood Plastic Composite)
+    // WPC (Wood Plastic Composite)
     "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding",
     "https://www.betonjayareadymix.com/p/jasa-finishing-wpc-dinding.html": "Jasa Finishing WPC Dinding",
 
-    // 2. PVC Panel
+    // PVC Panel
     "https://www.betonjayareadymix.com/p/jasa-pasang-pvc-dinding.html": "Jasa Pasang PVC Dinding",
     "https://www.betonjayareadymix.com/p/jasa-finishing-pvc-dinding.html": "Jasa Finishing PVC Dinding",
 
-    // 3. Conwood (Kayu Komposit)
+    // Conwood (Kayu Komposit)
     "https://www.betonjayareadymix.com/p/jasa-pasang-conwood-dinding.html": "Jasa Pasang Conwood Dinding",
 
-    // 4. Wall Moulding
+    // Wall Moulding
     "https://www.betonjayareadymix.com/p/jasa-pasang-wall-moulding.html": "Jasa Pasang Wall Moulding",
     "https://www.betonjayareadymix.com/p/jasa-finishing-wall-moulding.html": "Jasa Finishing Wall Moulding",
 
-    // 5. Finishing Dinding Berdasarkan Jenis Properti
+    // Finishing Dinding Berdasarkan Jenis Properti
     "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-rumah.html": "Jasa Finishing Dinding Rumah",
     "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-kantor.html": "Jasa Finishing Dinding Kantor",
     "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-hotel.html": "Jasa Finishing Dinding Hotel",
     "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-restoran.html": "Jasa Finishing Dinding Restoran"
     
-    // ❌ DIHAPUS: jasa-finishing-fasad-eksterior.html (milik Eksterior)
-    // ❌ DIHAPUS: jasa-pelapisan-dinding-luar.html (milik Eksterior)
-    // ❌ DIHAPUS: jasa-pelapisan-anti-cuaca.html (milik Eksterior)
+    // ❌ (Konten berikut sudah benar, hanya sebagai pengingat)
+    // Hapus duplikasi konten eksterior yang tidak relevan dengan finishing dinding.
 };
 // ============================================================
 // 📁 JASA FINISHING LANTAI - MP dari MM Jasa Finishing Lantai
@@ -132,25 +134,37 @@ const urlMappingFinishingDindingFromMoneyMasterMoneyPage = {
 // ============================================================
 
 const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
-    // ✅ DIPERBAIKI - setiap MP memiliki nama yang sesuai
-	 "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html": "Jasa Finishing Lantai Beton", // → MILIK Jasa Finishing Lantai
+    // ============================================================
+    // MP UNTUK FINISHING LANTAI BETON (EXPOSE/POLISHED CONCRETE) ✅
+    // ============================================================
+    // Halaman ini membahas floor hardener, epoxy coating, poles beton halus.
+    // Istilah "poles" dan "expose" untuk lantai beton bisa disamakan di sini.
+    "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html": "Jasa Finishing Lantai Beton",
+    
+    // Untuk lebih spesifik membedakan dengan exposed concrete untuk dinding/struktur,
+    // kita bisa buat halaman lanjutan dengan kata kunci "polished" atau "poles".
+    // Contoh (halaman baru jika diperlukan):
+    "https://www.betonjayareadymix.com/p/jasa-poles-lantai-beton.html": "Jasa Poles Lantai Beton",
+    "https://www.betonjayareadymix.com/p/jasa-expose-lantai-beton.html": "Jasa Expose Lantai Beton",
+
+    // ============================================================
+    // MP UNTUK MATERIAL LANTAI LAINNYA (tetap dipertahankan)
+    // ============================================================
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-keramik.html": "Jasa Finishing Lantai Keramik",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-marmer.html": "Jasa Finishing Lantai Marmer",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html": "Jasa Finishing Lantai Granit",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-kayu.html": "Jasa Finishing Lantai Kayu",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-epoxy.html": "Jasa Finishing Lantai Epoxy",
-    //"https://www.betonjayareadymix.com/p/jasa-epoxy-lantai.html": "Jasa Epoxy Lantai", 
-   // "https://www.betonjayareadymix.com/p/jasa-keramik-lantai.html": "Jasa Keramik Lantai",
-
-	// TAMBAHAN MP UNTUK JASA FINISHING LANTAI
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-lantai.html": "Jasa Pasang Vinyl Lantai",
-"https://www.betonjayareadymix.com/p/jasa-pasang-spc-lantai.html": "Jasa Pasang SPC Lantai",
-"https://www.betonjayareadymix.com/p/jasa-pasang-lantai-parket.html": "Jasa Pasang Lantai Parket",
-"https://www.betonjayareadymix.com/p/jasa-poles-lantai-marmer.html": "Jasa Poles Lantai Marmer",
-"https://www.betonjayareadymix.com/p/jasa-poles-lantai-granit.html": "Jasa Poles Lantai Granit",
-"https://www.betonjayareadymix.com/p/jasa-grinding-lantai-beton.html": "Jasa Grinding Lantai Beton"
-	
+    
+    // ============================================================
+    // TAMBAHAN MP UNTUK JASA FINISHING LANTAI
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-lantai.html": "Jasa Pasang Vinyl Lantai",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-spc-lantai.html": "Jasa Pasang SPC Lantai",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-parket.html": "Jasa Pasang Lantai Parket",
+    "https://www.betonjayareadymix.com/p/jasa-poles-lantai-marmer.html": "Jasa Poles Lantai Marmer",
+    "https://www.betonjayareadymix.com/p/jasa-poles-lantai-granit.html": "Jasa Poles Lantai Granit",
+    "https://www.betonjayareadymix.com/p/jasa-grinding-lantai-beton.html": "Jasa Grinding Lantai Beton"
 };
 
 // ============================================================
@@ -296,6 +310,7 @@ const urlMappingFinishingStrukturFromMoneyMaster1MoneyPage = {
     // MP (Money-Page) dari MM Jasa Finishing Struktur
     "https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html": "Jasa Finishing Dak Beton",
     "https://www.betonjayareadymix.com/p/jasa-finishing-beton-expose.html": "Jasa Finishing Beton Expose",
+	"https://www.betonjayareadymix.com/p/harga-jasa-beton-ekspos.html": "Harga Jasa Beton Expose",
     "https://www.betonjayareadymix.com/p/jasa-finishing-grouting-struktur-beton.html": "Jasa Finishing Grouting Struktur Beton",
     "https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html": "Jasa Pelapisan Coating Struktur",
     "https://www.betonjayareadymix.com/p/jasa-finishing-kolom-dan-balok.html": "Jasa Finishing Kolom dan Balok",
