@@ -61,24 +61,42 @@ const urlMappingFinishingFurnitureFromMoneyMasterMoneyPage = {
 // 🧠 Parent: Jasa Finishing Dinding (L4)
 // ============================================================
 
+// ============================================================
+// 📁 JASA FINISHING DINDING - MP dari MM Jasa Finishing Dinding
+// 🧠 Parent: Jasa Finishing Dinding (L4)
+// ✅ SEMUA URL SUDAH MP (MINIMAL 3 KATA)
+// ============================================================
+
 const urlMappingFinishingDindingFromMoneyMasterMoneyPage = {
-	"https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html": "Jasa Plesteran & Acian Dinding", // → MILIK Jasa Finishing Dinding
-    "https://www.betonjayareadymix.com/p/jasa-dinding-wallpaper.html": "Jasa Dinding & Wallpaper",
-    "https://www.betonjayareadymix.com/p/jasa-epoxy-dinding.html": "Jasa Epoxy Dinding", 
-    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-epoxy.html": "Jasa Finishing Dinding Epoxy",
+    // Parent MM
+ //   "https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html": "Jasa Finishing Dinding",
+    
+    // ============================================================
+    // MP (Money-Page) Level 5 - SEMUA 3+ KATA
+    // ============================================================
+    
+    // ✅ DIPERBAIKI: dari "jasa-dinding-wallpaper" (2 kata) 
+    //    menjadi "jasa-finishing-dinding-wallpaper" (3 kata)
+    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-wallpaper.html": "Jasa Finishing Dinding Wallpaper",
+    
+    // ✅ DIPERBAIKI: dari "jasa-epoxy-dinding" (2 kata)
+    //    menjadi "jasa-finishing-epoxy-dinding" (3 kata)
+    "https://www.betonjayareadymix.com/p/jasa-finishing-epoxy-dinding.html": "Jasa Finishing Epoxy Dinding",
+    
+    // ✅ SUDAH MP (3 kata)
+   // "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-epoxy.html": "Jasa Finishing Dinding Epoxy",
     "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",
     "https://www.betonjayareadymix.com/p/jasa-cat-dinding-interior.html": "Jasa Cat Dinding Interior",
     "https://www.betonjayareadymix.com/p/jasa-cat-dinding-eksterior.html": "Jasa Cat Dinding Eksterior",
-
-	// TAMBAHAN MP UNTUK JASA FINISHING DINDING
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-dinding.html": "Jasa Pasang Batu Alam Dinding",
-"https://www.betonjayareadymix.com/p/jasa-pasang-panel-dinding-3d.html": "Jasa Pasang Panel Dinding 3D",
-"https://www.betonjayareadymix.com/p/jasa-pasang-grc-dinding.html": "Jasa Pasang GRC Dinding",
-"https://www.betonjayareadymix.com/p/jasa-pasang-hpl-dinding.html": "Jasa Pasang HPL Dinding",
-"https://www.betonjayareadymix.com/p/jasa-finishing-dinding-ekspos.html": "Jasa Finishing Dinding Ekspos"
+    "https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html": "Jasa Plesteran & Acian Dinding",
+    
+    // ✅ TAMBAHAN MP (semua 3+ kata)
+    "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-dinding.html": "Jasa Pasang Batu Alam Dinding",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-panel-dinding-3d.html": "Jasa Pasang Panel Dinding 3D",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-grc-dinding.html": "Jasa Pasang GRC Dinding",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-dinding.html": "Jasa Pasang HPL Dinding",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-ekspos.html": "Jasa Finishing Dinding Ekspos"
 };
-
 // ============================================================
 // 📁 JASA FINISHING LANTAI - MP dari MM Jasa Finishing Lantai
 // 🧠 Parent: Jasa Finishing Lantai (L4)
