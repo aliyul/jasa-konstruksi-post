@@ -220,7 +220,16 @@ const urlMappingFinishingInteriorFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-finishing-interior-rumah.html": "Jasa Finishing Interior Rumah", 
     "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis", 
     "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html": "Jasa Finishing Interior Klasik",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern"
+    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern",
+
+	 // ============================================================
+    // LEVEL 5 (MP) - HALAMAN HARGA INTERIOR
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/harga-jasa-interior-per-meter.html": "Harga Jasa Interior Per Meter",
+    "https://www.betonjayareadymix.com/p/harga-jasa-borongan-interior.html": "Harga Jasa Borongan Interior",
+    //"https://www.betonjayareadymix.com/p/harga-interior-kamar.html": "Harga Jasa Interior Kamar",
+    "https://www.betonjayareadymix.com/p/harga-jasa-interior-kamar-tidur.html": "Harga Jasa Interior Kamar Tidur",
+    "https://www.betonjayareadymix.com/p/harga-jasa-interior-ruang-tamu.html": "Harga Jasa Interior Ruang Tamu"
 };
 
 // ============================================================
