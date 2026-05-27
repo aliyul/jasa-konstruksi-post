@@ -147,6 +147,7 @@ const urlMappingFinishingDindingFromMoneyMasterMoneyPage = {
 // ============================================================
 
 const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
+	"https://www.betonjayareadymix.com/p/jasa-waterproofing-lantai-beton-baru.html": "Jasa Waterproofing Lantai Beton Baru",
     // ============================================================
     // MP UNTUK FINISHING LANTAI BETON (EXPOSE/POLISHED CONCRETE) ✅
     // ============================================================
@@ -411,6 +412,7 @@ const urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage = {
 // ✅ DIPERBAIKI - menghilangkan deklarasi ganda
 const urlMappingFinishingStrukturFromMoneyMaster1MoneyPage = {
     // MP (Money-Page) dari MM Jasa Finishing Struktur
+	"https://www.betonjayareadymix.com/p/jasa-waterproofing-dak-beton-baru.html": "Jasa Waterproofing Dak Beton Baru",
     "https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html": "Jasa Finishing Dak Beton",
 	"https://www.betonjayareadymix.com/p/harga-jasa-dak-beton.html": "Harga Jasa Dak Beton",
     "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-beton-ekspos.html": "Jasa Finishing Struktur Beton Ekspos",
@@ -419,6 +421,7 @@ const urlMappingFinishingStrukturFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html": "Jasa Pelapisan Coating Struktur",
     "https://www.betonjayareadymix.com/p/jasa-finishing-kolom-dan-balok.html": "Jasa Finishing Kolom dan Balok",
     "https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html": "Jasa Pelapisan Waterproofing Struktur",
+	"https://www.betonjayareadymix.com/p/harga-jasa-waterproofing-struktur.html": "Harga Jasa Waterproofing Struktur",
     "https://www.betonjayareadymix.com/p/jasa-pelindung-retak-struktur.html": "Jasa Pelindung Retak Struktur"
     
 };
