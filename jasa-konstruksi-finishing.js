@@ -222,6 +222,7 @@ const urlMappingFinishingInteriorFromMoneyMasterMoneyPage = {
 
 const urlMappingFinishingLampuFromMoneyMaster1MoneyPage = {
     // 🔴 PRIORITAS WAJIB
+	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-downlight.html": "Jasa Pasang Lampu Downlight",
     "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior.html": "Jasa Pasang Lampu Interior",
 	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-interior.html": "Harga Jasa Pasang Lampu Interior",
     // 🟡 PRIORITAS SEDANG
