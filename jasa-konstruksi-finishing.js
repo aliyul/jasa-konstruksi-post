@@ -232,10 +232,11 @@ const urlMappingFinishingLampuFromMoneyMaster1MoneyPage = {
 	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-taman.html": "Harga Jasa Pasang Lampu Taman",
     // 🟢 PRIORITAS RENDAH
     "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-cafe.html": "Jasa Finishing Lampu Cafe",
-	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-cafe.html": "Harga Jasa Pasang Lampu Cafe",
+	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lampu-cafe.html": "Harga Jasa Finishing Lampu Cafe",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-hotel.html": "Jasa Finishing Lampu Hotel",
-	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-hotel.html": "Harga Jasa Pasang Lampu Hotel",
+	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lampu-hotel.html": "Harga Jasa Finishing Lampu Hotel",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-kantor.html": "Jasa Finishing Lampu Kantor"
+	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lampu-kantor.html": "Harga Jasa Finishing Lampu Kantor"
 };
 
 // ============================================================
