@@ -162,8 +162,8 @@ const urlMappingHargaJasaTrowelLantaiFromMoneyPageMoneyChild = {
   // ============================================================
   // [SUB1] - PANDUAN / INFORMASIONAL (Komersial 70%)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/10/jasa-screeding.html": "Jasa Screeding",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/2018/10/finishing-screeding.html": "Finishing Screeding",  // TYPE: SUB1
+  //"https://www.betonjayareadymix.com/2018/10/jasa-screeding.html": "Jasa Screeding",  // TYPE: SUB1
+ // "https://www.betonjayareadymix.com/2018/10/finishing-screeding.html": "Finishing Screeding",  // TYPE: SUB1
  // "https://www.betonjayareadymix.com/2018/10/finishing-lantai-beton-ekspos.html": "Finishing Lantai Beton Ekspos",  // TYPE: SUB1
   //"https://www.betonjayareadymix.com/2018/10/jasa-trowel-lantai-beton.html": "Jasa Trowel Lantai Beton",  // TYPE: SUB1
  // "https://www.betonjayareadymix.com/2018/10/lantai-super-flat.html": "Lantai Super Flat",  // TYPE: SUB1
@@ -171,15 +171,15 @@ const urlMappingHargaJasaTrowelLantaiFromMoneyPageMoneyChild = {
   // ============================================================
   // [MONEY_PAGE] - HARGA JASA SCREEDING & TROWEL
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-screeding.html": "Harga Jasa Screeding",  // TYPE: MONEY_PAGE
+ // "https://www.betonjayareadymix.com/2018/10/harga-jasa-screeding.html": "Harga Jasa Screeding",  // TYPE: MONEY_PAGE
  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-lantai.html": "Harga Jasa Trowel Lantai",  // TYPE: MONEY_PAGE
   //"https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-floor-hardener.html": "Harga Jasa Trowel Floor Hardener",  // TYPE: MONEY_PAGE
  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-beton.html": "Harga Jasa Trowel Beton",  // TYPE: MONEY_PAGE
   //"https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel.html": "Harga Jasa Trowel",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-screeding.html": "Harga Jasa Finishing Screeding",  // TYPE: MONEY_PAGE
+  //"https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-screeding.html": "Harga Jasa Finishing Screeding",  // TYPE: MONEY_PAGE
   //"https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-trowel.html": "Harga Jasa Finishing Trowel",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-lantai-gudang.html": "Harga Jasa Finishing Lantai Gudang",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-lantai-beton-ekspos.html": "Harga Jasa Finishing Lantai Beton Ekspos",  // TYPE: MONEY_PAGE
+ // "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-lantai-gudang.html": "Harga Jasa Finishing Lantai Gudang",  // TYPE: MONEY_PAGE
+ // "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-lantai-beton-ekspos.html": "Harga Jasa Finishing Lantai Beton Ekspos",  // TYPE: MONEY_PAGE
  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-lantai-beton.html": "Harga Jasa Finishing Lantai Beton",  // TYPE: MONEY_PAGE
   //"https://www.betonjayareadymix.com/2018/10/harga-jasa-lapangan-super-flat.html": "Harga Jasa Lapangan Super Flat",  // TYPE: MONEY_CHILD
   //"https://www.betonjayareadymix.com/2018/10/harga-jasa-lantai-super-flat.html": "Harga Jasa Lantai Super Flat",  // TYPE: MONEY_CHILD
