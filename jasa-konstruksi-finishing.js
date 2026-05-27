@@ -57,10 +57,12 @@ const urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage = {
 
     "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set", 
 	"https://www.betonjayareadymix.com/p/jasa-pasang-lemari-built-in.html": "Jasa Pasang Lemari Built In", 
-	"https://www.betonjayareadymix.com/p/jasa-pasang-partisi-ruangan.html": "Jasa Pasang Partisi Ruangan"
+	"https://www.betonjayareadymix.com/p/jasa-pasang-partisi-ruangan.html": "Jasa Pasang Partisi Ruangan",
 	
-   "https://www.betonjayareadymix.com/p/jasa-kitchen-set-minimalis.html": "Jasa Kitchen Set Minimalis", 
-   "https://www.betonjayareadymix.com/p/jasa-rak-dinding-custom.html": "Jasa Rak Dinding Custom"
+   "https://www.betonjayareadymix.com/p/jasa-kitchen-set-minimalis.html": "Jasa Kitchen Set Minimalis",
+   "https://www.betonjayareadymix.com/p/jasa-rak-dinding-custom.html": "Jasa Rak Dinding Custom",
+
+	"https://www.betonjayareadymix.com/p/jasa-pembuatan-kamar-set.html": "Jasa Pembuatan Kamar Set"
 
 };
 
