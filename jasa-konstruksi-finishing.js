@@ -287,7 +287,8 @@ const urlMappingFinishingCatFromMoneyMaster1MoneyPage = {
   // [MONEY_PAGE] - HARGA JASA CAT INTERIOR PER METER
   // ============================================================
   "https://www.betonjayareadymix.com/p/harga-jasa-cat-interior-per-meter.html": "Harga Jasa Cat Interior per Meter",  // TYPE: MONEY_PAGE
-  
+  "https://www.betonjayareadymix.com/p/harga-borongan-cat-interior-per-meter.html": "Harga Borongan Cat Interior per Meter",  // TYPE: MONEY_PAGE
+	
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-eksterior.html": "Jasa Finishing Cat Eksterior",
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-dinding.html": "Jasa Finishing Cat Dinding",
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-kayu.html": "Jasa Finishing Cat Kayu",
@@ -298,7 +299,13 @@ const urlMappingFinishingCatFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-tahan-lama.html": "Jasa Finishing Cat Tahan Lama",
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-anti-bocor.html": "Jasa Finishing Cat Anti Bocor",
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-epoxy.html": "Jasa Finishing Cat Epoxy",
+
+	    // Layanan plafon interior
+    "https://www.betonjayareadymix.com/p/jasa-cat-plafon-interior.html": "Jasa Cat Plafon Interior",
     
+    // Layanan kayu interior
+    "https://www.betonjayareadymix.com/p/jasa-cat-kayu-interior.html": "Jasa Cat Kayu Interior",
+
     // MP TURUNAN: Jasa Cat Interior
     "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
     "https://www.betonjayareadymix.com/p/jasa-cat-interior-modern.html": "Jasa Cat Interior Modern",
