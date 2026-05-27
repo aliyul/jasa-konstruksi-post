@@ -193,14 +193,14 @@ const urlMappingHargaJasaTrowelLantaiFromMoneyPageMoneyChild = {
   // "https://www.betonjayareadymix.com/2018/10/panduan-screeding-lantai-beton.html": "Panduan Screeding Lantai Beton",  // TYPE: SUB1
   // "https://www.betonjayareadymix.com/2018/10/panduan-trowel-lantai-beton.html": "Panduan Trowel Lantai Beton",  // TYPE: SUB1
 };
-const urlMappingJasaFinishingFloorHardenerLantaiBetonFromMoneyPageMoneyChild = {
+const urlMappingHargaJasaFloorHardenerFromMoneyPageMoneyChild = {
 
   // ============================================================
   // [MONEY_PAGE] - HARGA JASA FLOOR HARDENER (NASIONAL)
   // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-floor-hardener.html": "Harga Jasa Floor Hardener",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/10/harga-borongan-floor-hardener.html": "Harga Borongan Floor Hardener",  // TYPE: MONEY_PAGE
+ // "https://www.betonjayareadymix.com/2018/10/harga-jasa-floor-hardener.html": "Harga Jasa Floor Hardener",  // TYPE: MONEY_PAGE
+  //"https://www.betonjayareadymix.com/2018/10/harga-borongan-floor-hardener.html": "Harga Borongan Floor Hardener",  // TYPE: MONEY_PAGE
   
   // ============================================================
   // [MONEY_CHILD] - HARGA JASA FLOOR HARDENER PER LOKASI
@@ -2042,6 +2042,7 @@ document.addEventListener("DOMContentLoaded", function() {
     urlMappingJasaFinishingKolomBalokFromSub2MoneyPage,
     urlMappingJasaPelapisanWaterproofingStrukturFromSub2MoneyPage,
     urlMappingHargaJasaTrowelLantaiFromMoneyPageMoneyChild,
+	urlMappingHargaJasaFloorHardenerFromMoneyPageMoneyChild,
     urlMappingJasaEpoxyDindingFromSub2MoneyPage,
     urlMappingJasaEpoxyLantaiFromSub2MoneyPage,
     urlMappingJasaPelindungRetakStrukturFromSub2MoneyPage,
@@ -2511,7 +2512,7 @@ if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinis
 	            { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
 	            { name: 'Jasa Finishing Dak Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html' }
 	        ],
-	        'JASA'
+	        'JASA_KONSTRUKSI'
 	    );
 	}
 
@@ -2529,7 +2530,7 @@ if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinis
 	            { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
 	            { name: 'Jasa Finishing Struktur Beton Ekspos', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur-beton-ekspos.html' }
 	        ],
-	        'JASA'
+	        'JASA_KONSTRUKSI'
 	    );
 		
     }
@@ -2549,11 +2550,28 @@ if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinis
             { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
             { name: 'Harga Jasa Trowel Lantai', url: 'https://www.betonjayareadymix.com/p/harga-jasa-trowel-lantai.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 	  
 }
-
+  if (urlMappingHargaJasaFloorHardenerFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+          // ============================================================  
+		generateBreadcrumbjasaKonstruksiFinishingPost(
+        urlMappingHargaJasaFloorHardenerFromMoneyPageMoneyChild,
+        cleanUrlJasaKonsFinishingPost,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+           { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
+            { name: 'Harga Jasa Floor Hardener', url: 'https://www.betonjayareadymix.com/p/harga-jasa-floor-hardener.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+	  
+}
 	
    if (urlMappingHargaJasaPlesteranAcianDindingPerMeterFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
 	generateBreadcrumbjasaKonstruksiFinishingPost(
