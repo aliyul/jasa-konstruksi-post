@@ -307,6 +307,15 @@ const urlMappingFinishingCatFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-cat-interior-gedung.html": "Jasa Cat Interior Gedung"
 };
 
+const urlMappingFinishingCatInteriorFromMoneyPageMoneyPage1 = {
+ // [MONEY_PAGE] - JASA CAT INTERIOR PER JENIS RUANGAN
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-kamar-tidur.html": "Jasa Cat Interior Kamar Tidur",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-ruang-tamu.html": "Jasa Cat Interior Ruang Tamu",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-dapur.html": "Jasa Cat Interior Dapur",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-ruang-kantor.html": "Jasa Cat Interior Ruang Kantor"  // TYPE: MONEY_PAGE
+
+};
 // ============================================================
 // 📁 JASA FINISHING EKSTERIOR - MP dari MM Jasa Finishing Eksterior
 // 🧠 Parent: Jasa Finishing Eksterior (L4)
@@ -1609,6 +1618,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingFinishingLampuFromMoneyMaster1MoneyPage,
 		urlMappingPasangLampuInteriorFromMoneyPageMoneyPage1,
 		urlMappingFinishingCatFromMoneyMaster1MoneyPage,
+		urlMappingFinishingCatInteriorFromMoneyPageMoneyPage1,
 		urlMappingFinishingFurnitureFromMoneyMasterMoneyPage,
 		urlMappingFinishingDindingFromMoneyMasterMoneyPage,
 		
@@ -2223,7 +2233,6 @@ document.addEventListener("DOMContentLoaded", function() {
     );
     }
 
-
 	if (urlMappingFinishingCatFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingFinishingCatFromMoneyMaster1MoneyPage,
@@ -2240,6 +2249,22 @@ document.addEventListener("DOMContentLoaded", function() {
     );
     }
 
+	if (urlMappingFinishingCatInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+         generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingFinishingCatInteriorFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsFinishing,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+            { name: 'Jasa Finishing Cat', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-cat.html'},
+            { name: 'Jasa Finishing Cat Interior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-cat-interior.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
   if (urlMappingFinishingFurnitureFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingFinishingFurnitureFromMoneyMasterMoneyPage,
