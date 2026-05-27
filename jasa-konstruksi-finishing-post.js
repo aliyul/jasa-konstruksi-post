@@ -340,12 +340,9 @@ const urlMappingJasaFinishingKolomBalokFromSub2MoneyPage = {
 // 🧠 REKOMENDASI: Isi dengan URL berikut atau hapus const
 // Parent: Jasa Finishing Struktur (/p/jasa-finishing-struktur.html)
 // ============================================================
-const urlMappingJasaPelapisanWaterproofingStrukturFromSub2MoneyPage = {
+const urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPageMoneyPage1 = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
-  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-waterproofing-struktur.html": "Harga Jasa Waterproofing Struktur",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2018/10/jasa-waterproofing-dak-beton.html": "Jasa Waterproofing Dak Beton",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2018/10/jasa-waterproofing-lantai-beton.html": "Jasa Waterproofing Lantai Beton",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2018/10/jasa-waterproofing-struktur-jakarta.html": "Jasa Waterproofing Struktur Jakarta",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2018/10/jasa-waterproofing-struktur-jakarta.html": "Jasa Waterproofing Struktur Jakarta"  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/2018/10/panduan-waterproofing-struktur.html": "Panduan Waterproofing Struktur",  // TYPE: SUB1
 };
 
@@ -1976,7 +1973,7 @@ document.addEventListener("DOMContentLoaded", function() {
     urlMappingJasaFinishingGroutingStrukturBetonFromSub2MoneyPage,
     urlMappingJasaPelapisanCoatingStrukturFromSub2MoneyPage,
     urlMappingJasaFinishingKolomBalokFromSub2MoneyPage,
-    urlMappingJasaPelapisanWaterproofingStrukturFromSub2MoneyPage,
+    urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPageMoneyPage1,
     urlMappingHargaJasaTrowelLantaiFromMoneyPageMoneyChild,
 	urlMappingHargaJasaFloorHardenerFromMoneyPageMoneyChild,
     urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyChild,
@@ -2526,6 +2523,21 @@ if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinis
 );
 }
   
+   if (urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishingPost]) {
+	generateBreadcrumbjasaKonstruksiFinishingPost(
+    urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPageMoneyPage1,
+    currentUrl,
+    [
+         { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+           { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+        { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+        { name: 'Jasa Pelapisan Waterproofing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html' }
+    ],
+    'JASA_KONSTRUKSI'
+);
+}
 //AKHIR FINISHING STRUKTUR
 //FINISHING INTERIOR
     if (urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) { 
