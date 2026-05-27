@@ -161,6 +161,7 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
     // 2. Jasa Screeding Lantai (perataan lantai beton)
     "https://www.betonjayareadymix.com/p/jasa-screeding-lantai-beton.html": "Jasa Screeding Lantai Beton",
 	"https://www.betonjayareadymix.com/p/harga-jasa-screeding-per-meter.html": "Harga Jasa Screeding Per Meter",
+	"https://www.betonjayareadymix.com/p/harga-jasa-screeding-lantai.html": "Harga Jasa Screeding Lantai",
     "https://www.betonjayareadymix.com/p/jasa-perataan-lantai-beton.html": "Jasa Perataan Lantai Beton",
 
     // 3. Jasa Floor Hardener (pengeras lantai)
