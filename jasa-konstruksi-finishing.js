@@ -85,6 +85,7 @@ const urlMappingFinishingDindingFromMoneyMasterMoneyPage = {
     
     // Epoxy & Finishing Khusus
     "https://www.betonjayareadymix.com/p/jasa-finishing-epoxy-dinding.html": "Jasa Finishing Epoxy Dinding",
+	"https://www.betonjayareadymix.com/p/harga-jasa-epoxy-dinding-per-meter.html": "Harga Jasa Finishing Epoxy Dinding Per Meter",
     // "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-epoxy.html": "Jasa Finishing Dinding Epoxy",
     
     // Plesteran, Acian, Ekspos
@@ -184,6 +185,7 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html": "Jasa Finishing Lantai Granit",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-kayu.html": "Jasa Finishing Lantai Kayu",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-epoxy.html": "Jasa Finishing Lantai Epoxy",
+	"https://www.betonjayareadymix.com/p/harga-jasa-epoxy-lantai-per-meter.html": "Harga Jasa Finishing Epoxy Lantai Per Meter",
     
     // ============================================================
     // TAMBAHAN MP UNTUK JASA FINISHING LANTAI
