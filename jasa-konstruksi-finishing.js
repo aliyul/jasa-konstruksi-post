@@ -89,6 +89,7 @@ const urlMappingFinishingDindingFromMoneyMasterMoneyPage = {
     
     // Plesteran, Acian, Ekspos
     "https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html": "Jasa Plesteran & Acian Dinding",
+	"https://www.betonjayareadymix.com/p/harga-jasa-plesteran-acian-per-meter.html": "Harga Jasa Plesteran & Acian Per Meter",
     "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-ekspos.html": "Jasa Finishing Dinding Ekspos",
     
     // 🆕 BETON EKSPOS UNTUK DINDING (TAMBAHAN)
