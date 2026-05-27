@@ -135,7 +135,7 @@ const urlMappingHargaJasaPlesteranAcianDindingPerMeterFromMoneyPageMoneyChild = 
 // Parent: Jasa Finishing Struktur (/p/jasa-finishing-struktur.html)
 // ============================================================
 
-const urlMappingJasaFinishingTrowelLantaiBetonFromMoneyPageMoneyChild = {
+const urlMappingHargaJasaTrowelLantaiFromMoneyPageMoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - HARGA JASA TROWEL FLOOR HARDENER PER LOKASI
   // ============================================================
@@ -2041,7 +2041,7 @@ document.addEventListener("DOMContentLoaded", function() {
     urlMappingJasaPelapisanCoatingStrukturFromSub2MoneyPage,
     urlMappingJasaFinishingKolomBalokFromSub2MoneyPage,
     urlMappingJasaPelapisanWaterproofingStrukturFromSub2MoneyPage,
-    urlMappingJasaFinishingTrowelLantaiBetonFromMoneyPageMoneyChild,
+    urlMappingHargaJasaTrowelLantaiFromMoneyPageMoneyChild,
     urlMappingJasaEpoxyDindingFromSub2MoneyPage,
     urlMappingJasaEpoxyLantaiFromSub2MoneyPage,
     urlMappingJasaPelindungRetakStrukturFromSub2MoneyPage,
@@ -2535,10 +2535,10 @@ if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinis
     }
 
 
-  if (urlMappingJasaFinishingTrowelLantaiBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+  if (urlMappingHargaJasaTrowelLantaiFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
           // ============================================================  
 		generateBreadcrumbjasaKonstruksiFinishingPost(
-        urlMappingJasaFinishingTrowelLantaiBetonFromMoneyPageMoneyChild,
+        urlMappingHargaJasaTrowelLantaiFromMoneyPageMoneyChild,
         cleanUrlJasaKonsFinishingPost,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -2546,9 +2546,8 @@ if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinis
            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
             { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-            { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
-            { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html' },
-            { name: 'Jasa Trowel Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-trowel-lantai-beton.html' }
+            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
+            { name: 'Harga Jasa Trowel Lantai', url: 'https://www.betonjayareadymix.com/p/harga-jasa-trowel-lantai.html' }
         ],
         'JASA'
     );
