@@ -283,6 +283,11 @@ const urlMappingPasangLampuInteriorFromMoneyPageMoneyPage1 = {
 const urlMappingFinishingCatFromMoneyMaster1MoneyPage = {
     // MP TURUNAN: Jasa Finishing Cat
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-interior.html": "Jasa Finishing Cat Interior",
+	  // ============================================================
+  // [MONEY_PAGE] - HARGA JASA CAT INTERIOR PER METER
+  // ============================================================
+  "https://www.betonjayareadymix.com/p/harga-jasa-cat-interior-per-meter.html": "Harga Jasa Cat Interior per Meter",  // TYPE: MONEY_PAGE
+  
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-eksterior.html": "Jasa Finishing Cat Eksterior",
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-dinding.html": "Jasa Finishing Cat Dinding",
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-kayu.html": "Jasa Finishing Cat Kayu",
