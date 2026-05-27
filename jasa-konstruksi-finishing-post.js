@@ -85,12 +85,12 @@ const urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyChild = {
 // Parent: Jasa Finishing Bangunan (/p/jasa-finishing-bangunan.html)
 // ============================================================
 
-const urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1 = {
+const urlMappingHargaJasaPlesteranAcianDindingPerMeterFromMoneyPageMoneyChild = {
   // ============================================================
   // [MONEY_PAGE] - HARGA BORONGAN PLESTERAN ACIAN PER METER (NASIONAL)
   // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-tenaga-plesteran-dan-acian-per-meter.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter",  // TYPE: MONEY_PAGE
+ //hapus saja "https://www.betonjayareadymix.com/2018/09/harga-borongan-tenaga-plesteran-dan-acian-per-meter.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter",  // TYPE: MONEY_PAGE
   
   // ============================================================
   // [MONEY_CHILD] - HARGA BORONGAN PLESTERAN ACIAN PER LOKASI
@@ -2036,7 +2036,7 @@ document.addEventListener("DOMContentLoaded", function() {
     {},
     urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild,
     urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyChild,
-    urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1,
+    urlMappingHargaJasaPlesteranAcianDindingPerMeterFromMoneyPageMoneyChild,
     urlMappingJasaFinishingGroutingStrukturBetonFromSub2MoneyPage,
     urlMappingJasaPelapisanCoatingStrukturFromSub2MoneyPage,
     urlMappingJasaFinishingKolomBalokFromSub2MoneyPage,
@@ -2556,9 +2556,9 @@ if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinis
 }
 
 	
-   if (urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishingPost]) {
+   if (urlMappingHargaJasaPlesteranAcianDindingPerMeterFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
 	generateBreadcrumbjasaKonstruksiFinishingPost(
-    urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1,
+    urlMappingHargaJasaPlesteranAcianDindingPerMeterFromMoneyPageMoneyChild,
     currentUrl,
     [
          { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -2566,7 +2566,7 @@ if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinis
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
             { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
         { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
-        { name: 'Jasa Plesteran Acian Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html' }
+        { name: 'Harga Jasa Plesteran Acian Dinding', url: 'https://www.betonjayareadymix.com/p/harga-jasa-plesteran-acian-dinding.html' }
     ],
     'JASA_KONSTRUKSI'
 );
