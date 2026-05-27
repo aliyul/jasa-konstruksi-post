@@ -428,6 +428,7 @@ const urlMappingJasaFinishingFurnitureFromMoneyMaster1MoneyChild = {
     // ============================================================
     "https://www.betonjayareadymix.com/2018/11/jasa-furniture-tangerang.html": "Jasa Furniture Tangerang",
     "https://www.betonjayareadymix.com/2018/11/jasa-furniture-jakarta.html": "Jasa Furniture Jakarta",
+	//aslinya https://www.betonjayareadymix.com/2018/11/jasa-interior-furniture-jakarta.html
     "https://www.betonjayareadymix.com/2018/11/jasa-furniture-bekasi.html": "Jasa Furniture Bekasi",
     "https://www.betonjayareadymix.com/2018/11/jasa-furniture-depok.html": "Jasa Furniture Depok",
     "https://www.betonjayareadymix.com/2018/11/jasa-furniture-bogor.html": "Jasa Furniture Bogor"
