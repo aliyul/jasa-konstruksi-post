@@ -221,8 +221,24 @@ const urlMappingFinishingInteriorFromMoneyMasterMoneyPage = {
 // ============================================================
 
 const urlMappingFinishingLampuFromMoneyMaster1MoneyPage = {
-    // 🔴 PRIORITAS WAJIB
+	// Smart Home (kategori berbeda)
+"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-smart-home.html": "Jasa Pasang Lampu Smart Home",  // TYPE: MONEY_PAGE
+// Perbaikan Lampu Interior (layanan berbeda)
+//"https://www.betonjayareadymix.com/p/jasa-perbaikan-lampu-interior.html": "Jasa Perbaikan Lampu Interior",  // TYPE: MONEY_PAGE
+
+// Harga Borongan (halaman harga)
+"https://www.betonjayareadymix.com/p/harga-borongan-pasang-lampu-interior.html": "Harga Borongan Pasang Lampu Interior",  // TYPE: MONEY_PAGE
+
+	    // ============================================================
+    // MP - PASANG LAMPU (untuk jenis lampu)
+    // ============================================================
 	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-downlight.html": "Jasa Pasang Lampu Downlight",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-led.html": "Jasa Pasang Lampu LED",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-track.html": "Jasa Pasang Lampu Track",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-gantung.html": "Jasa Pasang Lampu Gantung",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-tembak.html": "Jasa Pasang Lampu Tembak",
+
+		    // 🔴 PRIORITAS WAJIB
     "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior.html": "Jasa Pasang Lampu Interior",
 	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-interior.html": "Harga Jasa Pasang Lampu Interior",
     // 🟡 PRIORITAS SEDANG
@@ -245,11 +261,17 @@ const urlMappingFinishingLampuFromMoneyMaster1MoneyPage = {
 // ============================================================
 
 const urlMappingPasangLampuInteriorFromMoneyPageMoneyPage1 = {
-    // 🟠 PRIORITAS TINGGI (Money-Child)
+    // 🟠 PRIORITAS TINGGI 
     "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-modern.html": "Jasa Pasang Lampu Interior Modern",
     "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-minimalis.html": "Jasa Pasang Lampu Interior Minimalis",
     "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-rumah.html": "Jasa Pasang Lampu Interior Rumah",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-gedung.html": "Jasa Pasang Lampu Interior Gedung"
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-gedung.html": "Jasa Pasang Lampu Interior Gedung",
+
+	// Turunan dari Jasa Pasang Lampu Interior
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-kamar-tidur.html": "Jasa Pasang Lampu Kamar Tidur",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-ruang-tamu.html": "Jasa Pasang Lampu Ruang Tamu",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-dapur.html": "Jasa Pasang Lampu Dapur",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-kantor.html": "Jasa Pasang Lampu Kantor"
 };
 
 // ============================================================
