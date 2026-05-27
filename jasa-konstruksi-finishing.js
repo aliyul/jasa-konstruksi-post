@@ -38,6 +38,7 @@ const urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage = {
 	// "https://www.betonjayareadymix.com/p/jasa-pasang-furniture.html": "Jasa Pasang Furniture",
    // "https://www.betonjayareadymix.com/p/jasa-custom-furniture.html": "Jasa Custom Furniture",
 	//  "https://www.betonjayareadymix.com/p/jasa-furniture-interior.html": "Jasa Furniture & Interior"
+	"https://www.betonjayareadymix.com/p/harga-custom-furniture-per-meter.html": "Harga Custom Furniture Per Meter",
     "https://www.betonjayareadymix.com/p/jasa-furniture-interior-exterior.html": "Jasa Furniture Interior Exterior",
 	"https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture-custom.html": "Jasa Pembuatan Furniture Custom",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set", 
