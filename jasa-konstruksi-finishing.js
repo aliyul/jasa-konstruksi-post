@@ -196,6 +196,7 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-keramik.html": "Jasa Finishing Lantai Keramik",
   "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html": "Jasa Pasang Keramik Lantai",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-per-meter.html": "Harga Jasa Pasang Keramik per Meter",  // TYPE: MONEY_PAGE
+    "https://www.betonjayareadymix.com/p/jasa-ganti-keramik-lantai.html": "Jasa Ganti Keramik Lantai",  // TYPE: MONEY_CHILD
   
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-marmer.html": "Jasa Finishing Lantai Marmer",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html": "Jasa Finishing Lantai Granit",
