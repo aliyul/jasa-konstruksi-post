@@ -434,15 +434,15 @@ const urlMappingFinishingStrukturFromMoneyMaster1MoneyPage = {
 	"https://www.betonjayareadymix.com/p/harga-jasa-dak-beton.html": "Harga Jasa Dak Beton",
     "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-beton-ekspos.html": "Jasa Finishing Struktur Beton Ekspos",
 	"https://www.betonjayareadymix.com/p/harga-jasa-struktur-beton-ekspos.html": "Harga Jasa Struktur Beton Ekspos",
-   // "https://www.betonjayareadymix.com/p/jasa-finishing-grouting-struktur-beton.html": "Jasa Finishing Grouting Struktur Beton",
+   //masuk perbaikan "https://www.betonjayareadymix.com/p/jasa-finishing-grouting-struktur-beton.html": "Jasa Finishing Grouting Struktur Beton",
     "https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html": "Jasa Pelapisan Coating Struktur",
 	"https://www.betonjayareadymix.com/p/harga-jasa-coating-struktur-beton.html": "Harga Jasa Coating Struktur Beton",
 	"https://www.betonjayareadymix.com/p/jasa-coating-anti-karat-beton.html": "Jasa Coating Anti Karat Beton", 
     "https://www.betonjayareadymix.com/p/jasa-finishing-kolom-dan-balok.html": "Jasa Finishing Kolom dan Balok",
 	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-kolom-balok.html": "Harga Jasa Finishing Kolom Balok",
     "https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html": "Jasa Pelapisan Waterproofing Struktur",
-	"https://www.betonjayareadymix.com/p/harga-jasa-waterproofing-struktur.html": "Harga Jasa Waterproofing Struktur",
-    "https://www.betonjayareadymix.com/p/jasa-pelindung-retak-struktur.html": "Jasa Pelindung Retak Struktur"
+	"https://www.betonjayareadymix.com/p/harga-jasa-waterproofing-struktur.html": "Harga Jasa Waterproofing Struktur"
+   // masuk perbaikan "https://www.betonjayareadymix.com/p/jasa-pelindung-retak-struktur.html": "Jasa Pelindung Retak Struktur"
     
 };
 
