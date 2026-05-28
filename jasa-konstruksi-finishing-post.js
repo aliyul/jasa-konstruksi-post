@@ -312,15 +312,16 @@ const urlMappingJasaFinishingGroutingStrukturBetonFromSub2MoneyPage = {
 // 🧠 REKOMENDASI: Isi dengan URL berikut atau hapus const
 // Parent: Jasa Finishing Struktur (/p/jasa-finishing-struktur.html)
 // ============================================================
-const urlMappingJasaPelapisanCoatingStrukturFromSub2MoneyPage = {
+const urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyChild = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
-  // "https://www.betonjayareadymix.com/2018/10/harga-jasa-coating-struktur-beton.html": "Harga Jasa Coating Struktur Beton",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2018/10/jasa-coating-anti-karat-beton.html": "Jasa Coating Anti Karat Beton",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2018/10/jasa-coating-lantai-beton.html": "Jasa Coating Lantai Beton",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2018/10/jasa-coating-beton-jakarta.html": "Jasa Coating Beton Jakarta",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/10/jasa-coating-beton-jakarta.html": "Jasa Coating Beton Jakarta" // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/2018/10/panduan-coating-struktur-beton.html": "Panduan Coating Struktur Beton",  // TYPE: SUB1
 };
 
+const urlMappingJasaCoatingLantaiBetonFromMoneyPageMoneyChild = {
+  // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
+  "https://www.betonjayareadymix.com/2018/10/jasa-coating-lantai-beton-jakarta.html": "Jasa Coating Lantai Beton Jakarta" // TYPE: MONEY_CHILD
+};
 // ============================================================
 // 📁 JASA FINISHING KOLOM BALOK - KOSONG
 // 🧠 REKOMENDASI: Isi dengan URL berikut atau hapus const
@@ -382,7 +383,7 @@ const urlMappingJasaFinishingInteriorKlasikFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2020/02/jasa-finishing-wall-panel-moulding-klasik.html": "Jasa Finishing Wall Panel & Moulding Klasik",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2020/02/jasa-finishing-cat-interior-klasik.html": "Jasa Finishing Cat Interior Klasik",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2020/02/jasa-finishing-plafon-interior-klasik.html": "Jasa Finishing Plafon Interior Klasik",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-dinding-interior-klasik.html": "Jasa Finishing Dinding Interior Klasik",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2020/02/jasa-finishing-dinding-interior-klasik.html": "Jasa Finishing Dinding Interior Klasik"  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
@@ -1931,7 +1932,8 @@ document.addEventListener("DOMContentLoaded", function() {
     urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyChild,
     urlMappingHargaJasaPlesteranAcianDindingPerMeterFromMoneyPageMoneyChild,
     urlMappingJasaFinishingGroutingStrukturBetonFromSub2MoneyPage,
-    urlMappingJasaPelapisanCoatingStrukturFromSub2MoneyPage,
+    urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyChild,
+	urlMappingJasaCoatingLantaiBetonFromMoneyPageMoneyChild
     urlMappingJasaFinishingKolomBalokFromSub2MoneyPage,
     urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPageMoneyPage1,
     urlMappingHargaJasaTrowelLantaiFromMoneyPageMoneyChild,
@@ -2494,6 +2496,38 @@ if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinis
             { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
         { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
         { name: 'Jasa Pelapisan Waterproofing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html' }
+    ],
+    'JASA_KONSTRUKSI'
+);
+}
+	
+if (urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+	generateBreadcrumbjasaKonstruksiFinishingPost(
+    urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyChild,
+    cleanUrlJasaKonsFinishingPost,
+    [
+         { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+           { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+        { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+        { name: 'Jasa Pelapisan Coating Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html' }
+    ],
+    'JASA_KONSTRUKSI'
+);
+}
+
+if (urlMappingJasaCoatingLantaiBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+	generateBreadcrumbjasaKonstruksiFinishingPost(
+    urlMappingJasaCoatingLantaiBetonFromMoneyPageMoneyChild,
+    cleanUrlJasaKonsFinishingPost,
+    [
+         { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+           { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+        { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
+        { name: 'Jasa Coating Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-coating-lantai-beton.html' }
     ],
     'JASA_KONSTRUKSI'
 );
