@@ -342,7 +342,7 @@ const urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPageMoneyPage1 = {
    "https://www.betonjayareadymix.com/2018/10/jasa-waterproofing-struktur-jakarta.html": "Jasa Waterproofing Struktur Jakarta"  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/2018/10/panduan-waterproofing-struktur.html": "Panduan Waterproofing Struktur",  // TYPE: SUB1
 };
-
+/* masuk ke perbaikan bangunan
 // ============================================================
 // 📁 JASA PELINDUNG RETAK STRUKTUR - KOSONG
 // 🧠 REKOMENDASI: Isi dengan URL berikut atau hapus const
@@ -357,7 +357,7 @@ const urlMappingJasaPelindungRetakStrukturFromSub2MoneyPage = {
   // "https://www.betonjayareadymix.com/2018/10/jasa-injeksi-retak-struktur-jakarta.html": "Jasa Injeksi Retak Struktur Jakarta",  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/2018/10/panduan-injeksi-retak-struktur.html": "Panduan Injeksi Retak Struktur",  // TYPE: SUB1
 };
-
+*/
 // ============================================================
 // 📁 JASA FINISHING INTERIOR KLASIK - MONEY CHILD
 // 🧠 ENTITY: JASA → TYPE: MONEY_CHILD
