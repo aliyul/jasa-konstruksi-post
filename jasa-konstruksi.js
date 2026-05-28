@@ -384,6 +384,11 @@ const urlMappingFinishingFromSub1MoneyMaster = {
 };
 
 const urlMappingFinishingFromMoneyMasterMoneyMaster1 = {
+	  "https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html": "Jasa Pasang WPC",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-vinyl.html": "Jasa Pasang Vinyl",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-pvc.html": "Jasa Pasang PVC", 
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html": "Jasa Pasang Plafon",  
+	
 	"https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html": "Jasa Finishing Dinding", 
 	"https://www.betonjayareadymix.com/p/jasa-finishing-furniture.html": "Jasa Finishing Furniture", 
 		"https://www.betonjayareadymix.com/p/jasa-finishing-cat.html": "Jasa Finishing Cat",
