@@ -211,6 +211,8 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
     // ============================================================
     // TAMBAHAN MP UNTUK JASA FINISHING LANTAI
     // ============================================================
+	"https://www.betonjayareadymix.com/p/jasa-pasang-wpc-lantai.html": "Jasa Pasang WPC Lantai",
+	 "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-lantai.html": "Harga Jasa Pasang WPC Lantai",
     "https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-lantai.html": "Jasa Pasang Vinyl Lantai",
     "https://www.betonjayareadymix.com/p/jasa-pasang-spc-lantai.html": "Jasa Pasang SPC Lantai",
     "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-parket.html": "Jasa Pasang Lantai Parket",
