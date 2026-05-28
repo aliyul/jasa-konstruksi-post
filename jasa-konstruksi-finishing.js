@@ -8,7 +8,8 @@
 // 🧠 Parent: Jasa Finishing Bangunan (L4)
 // ============================================================
 const urlMappingJasaPasangVinylFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-vinyl-per-meter.html:": "Harga Jasa Pasang Vinyl Per Meter"
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-vinyl-per-meter.html": "Harga Jasa Pasang Vinyl Per Meter",
+	"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-tangga.html": "Jasa Pasang Vinyl Tangga"
 };
 const urlMappingFinishingBangunanFromMoneyMaster1MoneyPage = {
     // MP DARI MM "JASA FINISHING BANGUNAN"
