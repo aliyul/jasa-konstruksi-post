@@ -462,25 +462,11 @@ const urlMappingJasaPembuatanCustomFurnitureFromMoneyPageMoneyChild = {
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Bangunan > Jasa Keramik Lantai (4 level)
 // ============================================================
 
-const urlMappingJasaKeramikLantaiFromSub2MoneyPage = {
-  // ============================================================
-  // [MONEY_PAGE] - JASA PASANG KERAMIK LANTAI (NASIONAL)
-  // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
-  // Intent: Komersial (60%) + Transaksional (40%)
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html": "Jasa Pasang Keramik Lantai",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_PAGE] - HARGA JASA PASANG KERAMIK PER METER
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-per-meter.html": "Harga Jasa Pasang Keramik per Meter",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_CHILD] - JASA GANTI KERAMIK LANTAI (SPESIFIK LOKASI)
-  // 🧠 TYPE: MONEY_CHILD (JASA + layanan spesifik)
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-ganti-keramik-lantai.html": "Jasa Ganti Keramik Lantai",  // TYPE: MONEY_CHILD
-  
+const urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild = {
+   "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-murah.html": "Jasa Pasang Keramik Lantai Murah",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-24-jam.html": "Jasa Pasang Keramik Lantai 24 Jam",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-terdekat.html": "Jasa Pasang Keramik Lantai Terdekat",  // TYPE: MONEY_CHILD
+
   // ============================================================
   // [MONEY_CHILD] - JASA PASANG KERAMIK PER LOKASI
   // ============================================================
@@ -490,33 +476,23 @@ const urlMappingJasaKeramikLantaiFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-tangerang.html": "Jasa Pasang Keramik Lantai Tangerang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-bekasi.html": "Jasa Pasang Keramik Lantai Bekasi",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-bandung.html": "Jasa Pasang Keramik Lantai Bandung",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-surabaya.html": "Jasa Pasang Keramik Lantai Surabaya",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-surabaya.html": "Jasa Pasang Keramik Lantai Surabaya"  // TYPE: MONEY_CHILD
   
   // ============================================================
   // [SUB2] - PANDUAN / INFORMASIONAL (boleh skip di breadcrumb)
   // 🧠 TYPE: SUB2 (intent informasional 60%)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/panduan-pasang-keramik-lantai.html": "Panduan Pasang Keramik Lantai",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/jenis-keramik-lantai.html": "Jenis Keramik Lantai",  // TYPE: SUB2
+ // "https://www.betonjayareadymix.com/p/panduan-pasang-keramik-lantai.html": "Panduan Pasang Keramik Lantai",  // TYPE: SUB2
+ // "https://www.betonjayareadymix.com/p/jenis-keramik-lantai.html": "Jenis Keramik Lantai",  // TYPE: SUB2
   
   // ============================================================
   // [SUB1] - PERBANDINGAN / EVALUASI (Komersial 70%)
   // 🧠 TYPE: SUB1 (jembatan ke MONEY_PAGE)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/keramik-lantai-murah-vs-premium.html": "Keramik Lantai Murah vs Premium",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/cara-memilih-keramik-lantai.html": "Cara Memilih Keramik Lantai yang Tepat",  // TYPE: SUB1
+ // "https://www.betonjayareadymix.com/p/keramik-lantai-murah-vs-premium.html": "Keramik Lantai Murah vs Premium",  // TYPE: SUB1
+ // "https://www.betonjayareadymix.com/p/cara-memilih-keramik-lantai.html": "Cara Memilih Keramik Lantai yang Tepat",  // TYPE: SUB1
   
-  // ============================================================
-  // 🟡 SARAN ITEM TAMBAHAN (BELUM AKTIF - PERLU DIBUAT KONTEN)
-  // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-murah.html": "Jasa Pasang Keramik Lantai Murah",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-24-jam.html": "Jasa Pasang Keramik Lantai 24 Jam",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/p/harga-borongan-pasang-keramik-per-meter.html": "Harga Borongan Pasang Keramik per Meter",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-rumah.html": "Jasa Pasang Keramik Lantai Rumah",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-kantor.html": "Jasa Pasang Keramik Lantai Kantor",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-gudang.html": "Jasa Pasang Keramik Lantai Gudang",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-terdekat.html": "Jasa Pasang Keramik Lantai Terdekat",  // TYPE: MONEY_CHILD
-};
+ };
 
 // ============================================================
 // 📁 JASA CAT INTERIOR RUMAH - MONEY PAGE & MONEY CHILD
@@ -1979,7 +1955,7 @@ document.addEventListener("DOMContentLoaded", function() {
     urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyChild,
     urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoneyChild,
     urlMappingJasaPelindungRetakStrukturFromSub2MoneyPage,
-    urlMappingJasaKeramikLantaiFromSub2MoneyPage,
+    urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild,
     urlMappingJasaCatInteriorRumahFromMoneyPageMoneyChild,
     urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyChild,
     urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyChild,
@@ -3113,99 +3089,9 @@ if (urlMappingJasaCatInteriorRumahFromMoneyPageMoneyChild[cleanUrlJasaKonsFinish
 }
   
 	
-if (urlMappingJasaKeramikLantaiFromSub2MoneyPage[cleanUrlJasaKonsFinishingPost]) {
-        restoreCondition('JasaFinishingBangunanPost');
-        restoreCondition('JasaFinishingBangunanInteriorPost');
-    
-        restoreCondition('JasaGantiKeramikLantaiPost');
-           
-	// hapus elemen id DIV Lain SELAIN JasaKonsFinishingPost
-	removeCondition('JasaDesInPost');
-        removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-        removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-        removeCondition('JasaKonsCuttingBetonPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-     //   removeCondition('JasaKonsFinishingPost');
-
-	 // hapus elemen id FINISHING STRUKTUR SEMUA NYA
-	removeCondition('JasaFinishingDakBetonPost');
-        removeCondition('JasaFinishingBetonExposePost');
-        removeCondition('JasaPlesteranAcianDindingPost');
-        removeCondition('JasaFinishingGroutingStrukturBetonPost');
-        removeCondition('JasaPelapisanCoatingStrukturPost');
-        removeCondition('JasaFinishingKolomdanBalokPost');
-        removeCondition('JasaPelapisanWaterproofingStrukturPost');
-        removeCondition('JasaFinishingLantaiBetonPost');
-        removeCondition('JasaPelindungRetakStrukturPost'); 
-	// hapus elemen id sub JasaFinishingBangunanEksteriorPost Semua
-        removeCondition('JasaCatEksteriorRumahPost');
-        removeCondition('JasaFinishingFasadEksteriorPost');
-        removeCondition('JasaPelapisanAntiCuacaPost');
-        removeCondition('JasaPelapisanDindingLuarPost');
-        removeCondition('JasaFinishingTamanRumahPost');
-        removeCondition('JasaPelapisanBatuAlamEksteriorPost');
-        removeCondition('JasaPelapisanGentengDakPost');
-      
-         // hapus elemen id sub JasaFinishingBangunanInteriorPost Semua selain JasaDesainInteriorPost
-	  
-	    removeCondition('JasaEpoxyDindingPost');
-	  removeCondition('JasaEpoxyLantaiPost');
-        removeCondition('JasaInteriorFurnitureCustomePost');
-        removeCondition('JasaInteriorFurniturePost');
-        removeCondition('JasaFinishingInteriorModernPost');
-        removeCondition('JasaCatInteriorRumahPost');
-        removeCondition('JasaPasangWallpaperDindingPost');
-        //removeCondition('JasaPasangLantaiVinylPost');
-        //removeCondition('JasaPasangPlafonGypsumPost');
-        removeCondition('JasaGantiLampuInteriorPost');
-        removeCondition('JasaGantiKitchenSetPost');
-        removeCondition('JasaFinishingInteriorMinimalisPost');
-        removeCondition('JasaFinishingInteriorKlasikPost');
-        
-       
-         // hapus elemen id FINISHING UTAMA lain NYA
-        removeCondition('JasaFinishingBangunanEksteriorPost');
-        removeCondition('JasaFinishingBangunanStrukturPost');
-
-          // hapus elemen id Infrastruktur Semua
-        removeCondition('JasaFinishingInfrastrukturPost');
-        removeCondition('JasaFinishingInfrastrukturJalanPost');
-        removeCondition('JasaFinishingInfrastrukturTrotoarPost');
-        removeCondition('JasaFinishingInfrastrukturSaluranPost');
-        removeCondition('JasaFinishingInfrastrukturStrukturPost');
-        removeCondition('JasaFinishingInfrastrukturProteksiPost');
-
-	 // hapus SEMUA SUB JASA FINSING INTERIOR MODERN 
-	   removeCondition('JasaFinishingInteriorModernWpcPost');
-	   removeCondition('JasaFinishingInteriorModernVinylPost');
-	   removeCondition('JasaFinishingInteriorModernPlafonPost');
-	   removeCondition('JasaFinishingInteriorModernPvcPost');
-	
-        JasaKonsFinishingPostLink.style.visibility = 'visible';
-        JasaFinishingPostLink.style.visibility = 'visible';
-        JasaFinishingBangunanPostLink.style.visibility = 'visible';
-        //sub finishing bangunan
-        JasaFinishingInteriorPostLink.style.visibility = 'visible';
-        //sub finishing STRUKKTUR
-        JasaGantiKeramikLantaiPostLink.style.visibility = 'visible';
-        pageNameJasaKonsFinishingPostLink.textContent = urlMappingJasaKeramikLantaiFromSub2MoneyPage[cleanUrlJasaKonsFinishingPost];
-    
+if (urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
        generateBreadcrumbjasaKonstruksiFinishingPost(
-        urlMappingJasaKeramikLantaiFromSub2MoneyPage,
+        urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild,
         cleanUrlJasaKonsFinishingPost,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -3213,8 +3099,8 @@ if (urlMappingJasaKeramikLantaiFromSub2MoneyPage[cleanUrlJasaKonsFinishingPost])
             { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
             { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-            { name: 'Jasa Finishing Interior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior.html' },
-            { name: 'Jasa Keramik Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-keramik-lantai.html' }
+            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
+            { name: 'Jasa Pasang Keramik Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html' }
         ],
         'JASA'
     );
