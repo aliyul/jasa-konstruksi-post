@@ -119,6 +119,7 @@ const urlMappingFinishingDindingFromMoneyMaster1MoneyPage = {
 
     // WPC (Wood Plastic Composite)
     "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding",
+	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-dinding.html": "Harga Jasa Pasang WPC Dinding",
     "https://www.betonjayareadymix.com/p/jasa-finishing-wpc-dinding.html": "Jasa Finishing WPC Dinding",
 
     // PVC Panel
