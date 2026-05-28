@@ -77,7 +77,7 @@ const urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage = {
 // ✅ SEMUA URL SUDAH MP (MINIMAL 3 KATA)
 // ============================================================
 
-const urlMappingFinishingDindingFromMoneyMasterMoneyPage = {
+const urlMappingFinishingDindingFromMoneyMaster1MoneyPage = {
     // ============================================================
     // PARENT MM (DIKOMENTARKAN, TETAP DIPERTAHANKAN)
     // ============================================================
@@ -1657,7 +1657,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingFinishingCatFromMoneyMaster1MoneyPage,
 		urlMappingFinishingCatInteriorFromMoneyPageMoneyPage1,
 		urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage,
-		urlMappingFinishingDindingFromMoneyMasterMoneyPage,
+		urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
 		
 		urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
 		urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage,
@@ -2320,9 +2320,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 	
  
-if (urlMappingFinishingDindingFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
+if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingFinishingDindingFromMoneyMasterMoneyPage,
+        urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
         cleanUrlJasaKonsFinishing,
         [
            // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
