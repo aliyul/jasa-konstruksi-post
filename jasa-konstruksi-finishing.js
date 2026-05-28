@@ -2232,7 +2232,7 @@ document.addEventListener("DOMContentLoaded", function() {
            // { name: 'Jasa Finishing Interior Modern', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html' },
             { name: 'Jasa Pasang Vinyl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-vinyl.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 }
 	 if (urlMappingFinishingBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
