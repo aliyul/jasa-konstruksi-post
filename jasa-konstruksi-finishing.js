@@ -7,7 +7,9 @@
 // 📁 JASA FINISHING BANGUNAN - LEVEL 3 (MP dari MM Jasa Finishing Bangunan)
 // 🧠 Parent: Jasa Finishing Bangunan (L4)
 // ============================================================
-
+const urlMappingJasaPasangVinylFromMoneyMaster1MoneyPage = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-vinyl-per-meter.html:": "Harga Jasa Pasang Vinyl Per Meter"
+};
 const urlMappingFinishingBangunanFromMoneyMaster1MoneyPage = {
     // MP DARI MM "JASA FINISHING BANGUNAN"
     "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-rumah.html": "Jasa Finishing Bangunan Rumah",
@@ -1658,6 +1660,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
+		urlMappingJasaPasangVinylFromMoneyMaster1MoneyPage,
 		urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
 		urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
 		urlMappingFinishingLampuFromMoneyMaster1MoneyPage,
@@ -2213,7 +2216,25 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaFinishingBangunanLink.style.visibility = 'hidden';
      JasaFinishingInfrastrukturLink.style.visibility = 'hidden';
      pageNameJasaKonsFinishing.textContent = "";
-    
+	
+     if (urlMappingJasaPasangVinylFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+		// ✅ Generate Breadcrumb untuk Jasa Finishing Interior Modern Vinyl
+		generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaPasangVinylFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsFinishing,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+           // { name: 'Jasa Finishing Interior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior.html' },
+           // { name: 'Jasa Finishing Interior Modern', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html' },
+            { name: 'Jasa Pasang Vinyl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-vinyl.html' }
+        ],
+        'JASA'
+    );
+}
 	 if (urlMappingFinishingBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
