@@ -1911,7 +1911,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	urlMappingHargaJasaFloorHardenerFromMoneyPageMoneyChild,
     urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyChild,
     urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoneyChild,
-    urlMappingJasaPelindungRetakStrukturFromSub2MoneyPage,
     urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild,
     urlMappingJasaCatInteriorRumahFromMoneyPageMoneyChild,
     urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyChild,
