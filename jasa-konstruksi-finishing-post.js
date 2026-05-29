@@ -886,19 +886,15 @@ const urlMappingJasaFinishingKanopiTerasFromSub2MoneyPage = {
 };
 
 // [KOSONG] Jasa Pelapisan Batu Alam Eksterior
-const urlMappingJasaPelapisanBatuAlamEksteriorFromSub2MoneyPage = {
+const urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyChild = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
-  // "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html": "Jasa Pelapisan Batu Alam Eksterior",  // TYPE: SUB2
-  // "https://www.betonjayareadymix.com/p/harga-pelapisan-batu-alam-eksterior.html": "Harga Pelapisan Batu Alam Eksterior",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior-jakarta.html": "Jasa Pelapisan Batu Alam Eksterior Jakarta",  // TYPE: MONEY_CHILD
+   // "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior-jakarta.html": "Jasa Pelapisan Batu Alam Eksterior Jakarta",  // TYPE: MONEY_CHILD
 };
-
 // [KOSONG] Jasa Pelapisan Genteng Dak
-const urlMappingJasaPelapisanGentengDakFromSub2MoneyPage = {
+const urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyChild = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
-  // "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak.html": "Jasa Pelapisan Genteng Dak",  // TYPE: SUB2
-  // "https://www.betonjayareadymix.com/p/harga-pelapisan-genteng-dak.html": "Harga Pelapisan Genteng Dak",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak-murah.html": "Jasa Pelapisan Genteng Dak Murah",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak-jakarta.html": "Jasa Pelapisan Genteng Dak" // TYPE: SUB2
+  
 };
 /*
 const urlMappingFinishingInfrastruktur = {
@@ -1965,8 +1961,8 @@ document.addEventListener("DOMContentLoaded", function() {
     urlMappingJasaPelapisanDindingLuarFromSub2MoneyPage,
     urlMappingJasaFinishingTamanRumahFromSub2MoneyPage,
     urlMappingJasaFinishingKanopiTerasFromSub2MoneyPage,
-    urlMappingJasaPelapisanBatuAlamEksteriorFromSub2MoneyPage,
-    urlMappingJasaPelapisanGentengDakFromSub2MoneyPage
+    urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyChild,
+	urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyChild
 );
 
 // --- validasi URL terdaftar ---
@@ -2750,7 +2746,6 @@ if (urlMappingJasaCustomKitchenSetFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinish
         'JASA'
     );
 }
-
 if (urlMappingJasaFinishingFurnitureFromMoneyMaster1MoneyChild[cleanUrlJasaKonsFinishingPost]) {
     generateBreadcrumbjasaKonstruksiFinishingPost(
         urlMappingJasaFinishingFurnitureFromMoneyMaster1MoneyChild,
@@ -3097,6 +3092,42 @@ if (urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishing
 //AKHIR FINISHING INTERIOR
 
 //SUB JasaFinishingBangunanEksteriorPost
+
+if (urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+	// ✅ Generate Breadcrumb untuk Jasa Kitchen Set
+    generateBreadcrumbjasaKonstruksiFinishingPost(
+        urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyChild,
+        cleanUrlJasaKonsFinishingPost,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+            { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html' },
+            { name: 'Jasa Pelapisan Batu Alam Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html' }
+        ],
+        'JASA'
+    );
+}
+	
+if (urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+	// ✅ Generate Breadcrumb untuk Jasa Kitchen Set
+    generateBreadcrumbjasaKonstruksiFinishingPost(
+        urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyChild,
+        cleanUrlJasaKonsFinishingPost,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+            { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html' },
+            { name: 'Jasa Pelapisan Genteng Dak', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak.html' }
+        ],
+        'JASA'
+    );
+}
 if (urlMappingJasaFinishingFasadEksteriorFromSub2MoneyPage[cleanUrlJasaKonsFinishingPost]) {
         restoreCondition('JasaFinishingBangunanPost');
         restoreCondition('JasaFinishingBangunanEksteriorPost');
