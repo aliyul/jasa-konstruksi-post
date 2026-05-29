@@ -1,12 +1,9 @@
-// ============================================================
-// 📁 JASA FINISHING BANGUNAN - LEVEL 2 (SUB2 dari PILLAR Jasa Konstruksi)
-// 🧠 Parent: Jasa Konstruksi (PILLAR)
-// ============================================================
 
 // ============================================================
-// 📁 JASA FINISHING BANGUNAN - LEVEL 3 (MP dari MM Jasa Finishing Bangunan)
-// 🧠 Parent: Jasa Finishing Bangunan (L4)
-// ============================================================
+const urlMappingJasaProfilBetonFromMoneyMaster1MoneyPage = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-vinyl-per-meter.html": "Harga Jasa Pasang Vinyl Per Meter",
+	"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-tangga.html": "Jasa Pasang Vinyl Tangga"
+};
 const urlMappingJasaPasangVinylFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-vinyl-per-meter.html": "Harga Jasa Pasang Vinyl Per Meter",
 	"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-tangga.html": "Jasa Pasang Vinyl Tangga"
@@ -374,7 +371,15 @@ const urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html": "Jasa Pelapisan Batu Alam Eksterior",
 
     // 2. PASANG MATERIAL EKSTERIOR
-    "https://www.betonjayareadymix.com/p/jasa-pasang-acp-eksterior.html": "Jasa Pasang ACP Eksterior",
+	 // LEVEL 5 (MP) - LAYANAN UTAMA
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/jasa-pasang-acp-fasad.html": "Jasa Pasang ACP Fasad",
+	  "https://www.betonjayareadymix.com/p/jasa-laser-cutting-acp.html": "Jasa Laser Cutting ACP"
+	// LEVEL 5 (MP) - PARENT (PAYUNG LAYANAN)
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/jasa-profil-beton-eksterior.html": "Jasa Profil Beton Eksterior",
+	
+    //"https://www.betonjayareadymix.com/p/jasa-pasang-acp-eksterior.html": "Jasa Pasang ACP Eksterior",
     "https://www.betonjayareadymix.com/p/jasa-pasang-grc-eksterior.html": "Jasa Pasang GRC Eksterior",
     "https://www.betonjayareadymix.com/p/jasa-pasang-kaca-fasad.html": "Jasa Pasang Kaca Fasad",
     "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-fasad.html": "Jasa Pasang Batu Alam Fasad",
@@ -430,6 +435,33 @@ const urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1 = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
    "https://www.betonjayareadymix.com/p/harga-pelapisan-genteng-dak.html": "Harga Pelapisan Genteng Dak",  // TYPE: MONEY_PAGE
    "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak-murah.html": "Jasa Pelapisan Genteng Dak Murah"  // TYPE: MONEY_CHILD
+};
+const urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1 = {
+   //"https://www.betonjayareadymix.com/p/harga-jasa-pasang-acp.html": "Harga Jasa Pasang ACP",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-acp-per-meter.html": "Harga Jasa Pasang ACP Per Meter",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-pasang-acp-per-meter.html": "Jasa Pasang ACP Per Meter"
+};
+
+const urlMappingJasaLaserCuttingACPFromMoneyPageMoneyPage1 = {
+"https://www.betonjayareadymix.com/p/harga-jasa-laser-cutting-acp.html": "Harga Jasa Laser Cutting ACP"
+};
+const urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1 = {
+ // ============================================================
+    // LEVEL 5 (MP) - LAYANAN SPESIFIK (CHILD)
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/jasa-profil-beton-rumah.html": "Jasa Profil Beton Rumah",
+    "https://www.betonjayareadymix.com/p/jasa-profil-beton-kantor.html": "Jasa Profil Beton Kantor",
+    "https://www.betonjayareadymix.com/p/jasa-profil-beton-fasad.html": "Jasa Profil Beton Fasad",
+    "https://www.betonjayareadymix.com/p/jasa-profil-beton-lisplank.html": "Jasa Profil Beton Lisplank",
+    "https://www.betonjayareadymix.com/p/jasa-profil-beton-pilar.html": "Jasa Profil Beton Pilar",
+    
+    // ============================================================
+    // LEVEL 5 (MP) - HALAMAN HARGA (BUKAN MM)
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/harga-jasa-profil-beton-bangunan.html": "Harga Jasa Profil Beton Bangunan"
+};
+const urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2 = {
+ "https://www.betonjayareadymix.com/p/harga-jasa-profil-beton-rumah.html": "Harga Jasa Profil Beton Rumah"
 };
 // ============================================================
 // 📁 JASA FINISHING STRUKTUR - MP dari MM Jasa Finishing Struktur
@@ -1686,6 +1718,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage,
 		urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1,
 		urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1,
+		urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1,
+		urlMappingJasaLaserCuttingACPFromMoneyPageMoneyPage1,
+		urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1,
+		urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2,
 		
 		urlMappingFinishingStrukturFromMoneyMaster1MoneyPage,
 		urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage
@@ -2455,6 +2491,73 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
 			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
             { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html'},
             { name: 'Jasa Pelapisan Genteng Dak', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+	
+	if (urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsFinishing,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+            { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html'},
+            { name: 'Jasa Pasang ACP Fasad', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp-fasad.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+  	if (urlMappingJasaLaserCuttingACPFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaLaserCuttingACPFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsFinishing,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+            { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html'},
+            { name: 'Jasa Laser Cutting ACP', url: 'https://www.betonjayareadymix.com/p/jasa-laser-cutting-acp.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+	
+	  if (urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsFinishing,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+            { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html'},
+            { name: 'Jasa Profil Beton Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton-eksterior.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+	if (urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2,
+        cleanUrlJasaKonsFinishing,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+            { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html'},
+            { name: 'Jasa Profil Beton Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton-eksterior.html'},
+            { name: 'Jasa Profil Beton Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton-rumah.html'}
         ],
         'JASA_KONSTRUKSI'
     );
