@@ -501,7 +501,7 @@ const urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild = {
 const urlMappingJasaCatInteriorRumahFromMoneyPageMoneyChild = {
 	"https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah-murah.html": "Jasa Cat Interior Rumah Murah",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah-24-jam.html": "Jasa Cat Interior Rumah 24 Jam",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah-terdekat.html": "Jasa Cat Interior Rumah Terdekat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah-terdekat.html": "Jasa Cat Interior Rumah Terdekat"  // TYPE: MONEY_CHILD
   
   // ============================================================
   // [MONEY_CHILD] - JASA CAT INTERIOR PER LOKASI
@@ -542,7 +542,13 @@ const urlMappingJasaCatInteriorRumahFromMoneyPageMoneyChild = {
 // Parent: Jasa Finishing Interior (/p/jasa-finishing-interior.html)
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Interior > Jasa Pasang Wallpaper Dinding (4 level)
 // ============================================================
-
+const urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1 = {
+ "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-3d.html": "Jasa Pasang Wallpaper 3D",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-custom.html": "Jasa Pasang Wallpaper Custom",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-kamar-tidur.html": "Jasa Pasang Wallpaper Kamar Tidur",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-ruang-tamu.html": "Jasa Pasang Wallpaper Ruang Tamu"  // TYPE: MONEY_CHILD
+  
+};	
 const urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - JASA PASANG WALLPAPER PER LOKASI
@@ -554,29 +560,22 @@ const urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding-tangerang.html": "Jasa Pasang Wallpaper Dinding Tangerang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding-bekasi.html": "Jasa Pasang Wallpaper Dinding Bekasi",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding-bandung.html": "Jasa Pasang Wallpaper Dinding Bandung",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding-surabaya.html": "Jasa Pasang Wallpaper Dinding Surabaya",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding-surabaya.html": "Jasa Pasang Wallpaper Dinding Surabaya"  // TYPE: MONEY_CHILD
   
-  // ============================================================
-  // [MONEY_CHILD] - JASA PASANG WALLPAPER PER JENIS
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-3d.html": "Jasa Pasang Wallpaper 3D",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-custom.html": "Jasa Pasang Wallpaper Custom",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-kamar-tidur.html": "Jasa Pasang Wallpaper Kamar Tidur",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-ruang-tamu.html": "Jasa Pasang Wallpaper Ruang Tamu",  // TYPE: MONEY_CHILD
-  
+
   // ============================================================
   // [SUB2] - PANDUAN / INFORMASIONAL (boleh skip di breadcrumb)
   // 🧠 TYPE: SUB2 (intent informasional 60%)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/panduan-pasang-wallpaper-dinding.html": "Panduan Pasang Wallpaper Dinding",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/jenis-wallpaper-dinding.html": "Jenis Wallpaper Dinding",  // TYPE: SUB2
+  //"https://www.betonjayareadymix.com/p/panduan-pasang-wallpaper-dinding.html": "Panduan Pasang Wallpaper Dinding",  // TYPE: SUB2
+  //"https://www.betonjayareadymix.com/p/jenis-wallpaper-dinding.html": "Jenis Wallpaper Dinding",  // TYPE: SUB2
   
   // ============================================================
   // [SUB1] - PERBANDINGAN / EVALUASI (Komersial 70%)
   // 🧠 TYPE: SUB1 (jembatan ke MONEY_PAGE)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/wallpaper-vs-cat-dinding.html": "Wallpaper vs Cat Dinding",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/wallpaper-3d-vs-wallpaper-biasa.html": "Wallpaper 3D vs Wallpaper Biasa",  // TYPE: SUB1
+ // "https://www.betonjayareadymix.com/p/wallpaper-vs-cat-dinding.html": "Wallpaper vs Cat Dinding",  // TYPE: SUB1
+  //"https://www.betonjayareadymix.com/p/wallpaper-3d-vs-wallpaper-biasa.html": "Wallpaper 3D vs Wallpaper Biasa",  // TYPE: SUB1
   
   // ============================================================
   // 🟡 SARAN ITEM TAMBAHAN (BELUM AKTIF - PERLU DIBUAT KONTEN)
@@ -1944,6 +1943,7 @@ document.addEventListener("DOMContentLoaded", function() {
     urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild,
     urlMappingJasaCatInteriorRumahFromMoneyPageMoneyChild,
     urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyChild,
+	urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
     urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyChild,
     urlMappingJasaFinishingInteriorKlasikFromMoneyPageMoneyPage1,
     urlMappingJasaFinishingInteriorMinimalisFromMoneyPageMoneyPage1,
@@ -2875,7 +2875,42 @@ if (urlMappingJasaCatInteriorRumahFromMoneyPageMoneyChild[cleanUrlJasaKonsFinish
     );
 }
   
+if (urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishingPost]) {
+
+	generateBreadcrumbjasaKonstruksiFinishingPost(
+        urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsFinishingPost,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+            { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html' },
+            { name: 'Jasa Pasang Wallpaper Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html' }
+        ],
+        'JASA'
+    );
+}
 	
+  if (urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+
+	generateBreadcrumbjasaKonstruksiFinishingPost(
+        urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyChild,
+        cleanUrlJasaKonsFinishingPost,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+            { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html' },
+            { name: 'Jasa Pasang Wallpaper Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html' }
+        ],
+        'JASA'
+    );
+}
+  
 if (urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
        generateBreadcrumbjasaKonstruksiFinishingPost(
         urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild,
