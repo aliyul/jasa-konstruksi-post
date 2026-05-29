@@ -420,6 +420,11 @@ const urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-mushola.html": "Jasa Finishing Eksterior Mushola",
     "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-masjid.html": "Jasa Finishing Eksterior Masjid"
 };
+const urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1 = {
+  // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
+  "https://www.betonjayareadymix.com/p/harga-pelapisan-batu-alam-eksterior.html": "Harga Pelapisan Batu Alam Eksterior"  // TYPE: MONEY_PAGE
+  // "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior-jakarta.html": "Jasa Pelapisan Batu Alam Eksterior Jakarta",  // TYPE: MONEY_CHILD
+};
 
 // ============================================================
 // 📁 JASA FINISHING STRUKTUR - MP dari MM Jasa Finishing Struktur
@@ -1674,6 +1679,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
 		urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage,
+		urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1,
+		
 		urlMappingFinishingStrukturFromMoneyMaster1MoneyPage,
 		urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage
 		
@@ -2408,6 +2415,23 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
 			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
             { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+	
+	   if (urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsFinishing,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+            { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html'},
+            { name: 'Jasa Pelapisan Batu Alam Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html'}
         ],
         'JASA_KONSTRUKSI'
     );
