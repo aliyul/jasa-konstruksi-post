@@ -1,9 +1,5 @@
 
-// ============================================================
-const urlMappingJasaProfilBetonFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-vinyl-per-meter.html": "Harga Jasa Pasang Vinyl Per Meter",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-tangga.html": "Jasa Pasang Vinyl Tangga"
-};
+
 const urlMappingJasaPasangVinylFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-vinyl-per-meter.html": "Harga Jasa Pasang Vinyl Per Meter",
 	"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-tangga.html": "Jasa Pasang Vinyl Tangga"
@@ -374,7 +370,7 @@ const urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage = {
 	 // LEVEL 5 (MP) - LAYANAN UTAMA
     // ============================================================
     "https://www.betonjayareadymix.com/p/jasa-pasang-acp-fasad.html": "Jasa Pasang ACP Fasad",
-	  "https://www.betonjayareadymix.com/p/jasa-laser-cutting-acp.html": "Jasa Laser Cutting ACP"
+	  "https://www.betonjayareadymix.com/p/jasa-laser-cutting-acp.html": "Jasa Laser Cutting ACP",
 	// LEVEL 5 (MP) - PARENT (PAYUNG LAYANAN)
     // ============================================================
     "https://www.betonjayareadymix.com/p/jasa-profil-beton-eksterior.html": "Jasa Profil Beton Eksterior",
