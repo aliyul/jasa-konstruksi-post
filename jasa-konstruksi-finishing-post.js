@@ -501,7 +501,7 @@ const urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild = {
 const urlMappingJasaCatInteriorRumahFromMoneyPageMoneyChild = {
 	"https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah-murah.html": "Jasa Cat Interior Rumah Murah",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah-24-jam.html": "Jasa Cat Interior Rumah 24 Jam",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah-terdekat.html": "Jasa Cat Interior Rumah Terdekat"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah-terdekat.html": "Jasa Cat Interior Rumah Terdekat",  // TYPE: MONEY_CHILD
   
   // ============================================================
   // [MONEY_CHILD] - JASA CAT INTERIOR PER LOKASI
