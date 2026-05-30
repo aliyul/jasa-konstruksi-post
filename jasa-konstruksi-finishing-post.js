@@ -2093,7 +2093,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
     // 9. EXPORT FOR USE
     // ============================================================
     
-    window.generateBreadcrumbJasaKonstruksiFinishing = generateBreadcrumbJasaKonstruksiFinishing;
+    window.generateBreadcrumbJasaKonstruksiFinishing = generateBreadcrumbjasaKonstruksiFinishingPost;
     window.DISTRICTS_DATABASE = DISTRICTS_DATABASE;
     window.getDistrictsForLocation = getDistrictsForLocation;
     window.isVariantPage = isVariantPage;
