@@ -2679,7 +2679,7 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
    }
 
  //Sub Finishing Infrastruktur
- if (urlMappingFinishingInfrastrukturJalanFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing]) {
+/* if (urlMappingFinishingInfrastrukturJalanFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingFinishingInfrastrukturJalanFromJasaFinishingInfrastrukturSub2Sub2,
         cleanUrlJasaKonsFinishing,
@@ -2693,7 +2693,7 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
         'JASA'
     );
 }
-
+*/
 if (urlMappingFinishingInfrastrukturTrotoarFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing]) {
         //restoreCondition('JasaFinishingInfrastrukturSub');
         restoreCondition('JasaFinishingTrotoar');
