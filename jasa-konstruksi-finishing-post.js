@@ -932,22 +932,25 @@ const urlMappingFinishingInfrastrukturProteksi = {
 */
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v9.2
- * VARIANT DETECTION PER ENTITY TYPE + COMPLETE DISTRICTS
+ * generateBreadcrumbJasaKonstruksi v9.3
+ * COMPLETE: VARIANT PER ENTITY + FORCE PARENT INJECTION + DISTRICTS
  * ============================================================
  * 
- * ✅ UPDATE v9.2
+ * ✅ UPDATE v9.3 (GABUNGAN)
  * ------------------------------------------------------------
- * - FIX: Variant keywords berbeda untuk setiap entity
+ * - FIX: Variant keywords berbeda untuk setiap entity (dari v9.2)
  * - PRODUK/MATERIAL: spesifikasi, mutu, ukuran, dimensi, grade, type, tipe
  * - JASA: standar pelayanan, metode kerja, SOP, prosedur
  * - SEWA: spesifikasi alat, kapasitas alat
  * - FIX: K250/K300 tetap MP (bukan variant) untuk semua entity
  * - FIX: "terdekat" TIDAK dikecualikan dari money child
  * - ENHANCED: Complete districts listing for all kabupaten/kota
+ * - ENHANCED: Force parent injection (dari v8.8)
+ * - ENHANCED: Hierarchy validator & semantic matching
+ * - ENHANCED: Last resort parent fallback
  * 
  * ============================================================
- * @version 9.2.0
+ * @version 9.3.0
  * @date 2026-05-30
  * ============================================================
  */
@@ -1145,7 +1148,6 @@ const urlMappingFinishingInfrastrukturProteksi = {
                     return true;
                 }
             }
-            // Jasa TIDAK punya variant untuk spesifikasi teknis produk
             return false;
         }
         
@@ -1155,7 +1157,6 @@ const urlMappingFinishingInfrastrukturProteksi = {
                     return true;
                 }
             }
-            // "spesifikasi excavator" → variant untuk SEWA
             if (lowerName.includes('spesifikasi') && (lowerName.includes('alat') || lowerName.includes('excavator') || lowerName.includes('dump') || lowerName.includes('alat berat'))) {
                 return true;
             }
@@ -1235,8 +1236,8 @@ const urlMappingFinishingInfrastrukturProteksi = {
 
         function log(message, type = 'INFO') {
             if (!CONFIG.DEBUG && type === 'INFO') return;
-            const icons = { INFO: '📘', SUCCESS: '✅', WARN: '⚠️', ERROR: '❌', DEBUG: '🔍', VARIANT: '🔬' };
-            console.log(`${icons[type] || '📘'} [Breadcrumb v9.2] ${message}`);
+            const icons = { INFO: '📘', SUCCESS: '✅', WARN: '⚠️', ERROR: '❌', DEBUG: '🔍', VARIANT: '🔬', LOCATION: '📍' };
+            console.log(`${icons[type] || '📘'} [Breadcrumb v9.3] ${message}`);
         }
 
         // ============================================================
@@ -1360,7 +1361,19 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.10 EXTRACT LOCATION FROM PAGE NAME
+        // 8.10 SLUGIFY
+        // ============================================================
+
+        function slugify(text) {
+            return cleanText(text)
+                .toLowerCase()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/\s+/g, '-')
+                .replace(/--+/g, '-');
+        }
+
+        // ============================================================
+        // 8.11 EXTRACT LOCATION FROM PAGE NAME
         // ============================================================
         
         function extractLocationFromPageName(pageName) {
@@ -1380,7 +1393,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
         
         // ============================================================
-        // 8.11 EXTRACT PRODUCT TYPE FROM PAGE NAME
+        // 8.12 EXTRACT PRODUCT TYPE FROM PAGE NAME
         // ============================================================
         
         function extractProductTypeFromPageName(pageName) {
@@ -1400,7 +1413,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.12 SUB VARIANT DETECTION
+        // 8.13 SUB VARIANT DETECTION
         // ============================================================
 
         function isSubVariant(text) {
@@ -1413,7 +1426,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.13 ENTITY PILLAR EXACT MATCH
+        // 8.14 ENTITY PILLAR EXACT MATCH
         // ============================================================
 
         function isEntityPillarExactMatch(pageName) {
@@ -1423,7 +1436,28 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.14 PAGE TYPE DETECTION (UPDATED v9.2)
+        // 8.15 SPECIFIC PRODUCT DETECTION
+        // ============================================================
+
+        const SPECIFIC_MODIFIERS = ['diesel', 'hidrolik', 'breaker', 'per jam', 'per hari', 'per meter', 'per m2', 'murah', 'kapasitas besar'];
+
+        function isSpecificProduct(text) {
+            if (!text) return false;
+            const lower = text.toLowerCase();
+            for (const mod of SPECIFIC_MODIFIERS) {
+                if (lower.includes(mod)) return true;
+            }
+            return /\d/.test(lower);
+        }
+
+        // ============================================================
+        // 8.16 JASA KEYWORDS PATTERN
+        // ============================================================
+
+        const JASA_KEYWORDS_PATTERN = /\b(jasa|kontraktor|tukang|borongan|renovasi|pasang|bangun|perbaikan|instalasi|proyek|cor|gali|urug|angkut)\b/i;
+
+        // ============================================================
+        // 8.17 PAGE TYPE DETECTION (UPDATED v9.3)
         // ============================================================
 
         function detectPageType(pageName, isHome = false) {
@@ -1435,7 +1469,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
             // Sub-variant detection
             if (isSubVariant(lowerName)) return 'sub-variant';
             
-            // ✅ FIX v9.2: Variant detection per entity
+            // ✅ FIX v9.3: Variant detection per entity
             if (isVariantPage(lowerName, normalizedEntityType)) {
                 log(`Variant detected: "${pageName}" for entity ${normalizedEntityType}`, 'VARIANT');
                 return 'variant';
@@ -1463,22 +1497,10 @@ const urlMappingFinishingInfrastrukturProteksi = {
 
             const HAS_PRICE_WORD = /\b(harga|biaya|tarif)\b/i.test(lowerName);
             const HAS_SEWA_WORD = /\b(sewa|rental)\b/i.test(lowerName);
-            const JASA_KEYWORDS_PATTERN = /\b(jasa|kontraktor|tukang|borongan|renovasi|pasang|bangun|perbaikan|instalasi|proyek|cor|gali|urug|angkut)\b/i;
             const HAS_JASA_WORD = JASA_KEYWORDS_PATTERN.test(lowerName);
             const HAS_LOCATION = isLocation(lowerName);
 
             if (HAS_LOCATION) return 'money-child';
-
-            const SPECIFIC_MODIFIERS = ['diesel', 'hidrolik', 'breaker', 'per jam', 'per hari', 'per meter', 'per m2', 'murah', 'kapasitas besar'];
-
-            function isSpecificProduct(text) {
-                if (!text) return false;
-                const lower = text.toLowerCase();
-                for (const mod of SPECIFIC_MODIFIERS) {
-                    if (lower.includes(mod)) return true;
-                }
-                return /\d/.test(lower);
-            }
 
             if (isSewaEntity() && HAS_SEWA_WORD && !HAS_PRICE_WORD) {
                 const cleaned = lowerName.replace(/\b(sewa|rental)\b/gi, '').trim();
@@ -1525,7 +1547,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.15 AUTO DETECT PARENT
+        // 8.18 AUTO DETECT PARENT (FROM BREADCRUMB ITEMS)
         // ============================================================
 
         function findNearestParentFromItems(items, currentPageName) {
@@ -1569,6 +1591,14 @@ const urlMappingFinishingInfrastrukturProteksi = {
                     }
                 }
 
+                const specificPatterns = ['finishing', 'bangunan', 'interior', 'eksterior', 'lantai', 'dinding'];
+                for (const pattern of specificPatterns) {
+                    if (currentLower.includes(pattern) && itemName.includes(pattern)) {
+                        score += 30;
+                        break;
+                    }
+                }
+
                 if (score > bestScore) {
                     bestScore = score;
                     bestMatch = item;
@@ -1578,6 +1608,10 @@ const urlMappingFinishingInfrastrukturProteksi = {
             log(`Parent detection score: ${bestScore}`, 'INFO');
             return bestScore > 20 ? bestMatch : null;
         }
+
+        // ============================================================
+        // 8.19 INJECT CURRENT PAGE & AUTO PARENT
+        // ============================================================
 
         function injectCurrentPageAndParent(breadcrumbItems, currentPageName, currentFullUrl) {
             let items = [...breadcrumbItems];
@@ -1618,7 +1652,107 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.16 GET CURRENT PAGE INFO
+        // 8.20 FORCE PARENT INJECTION (DARI v8.8)
+        // ============================================================
+
+        function forceInjectDirectParent(lineageLevels, allLevels, currentPageTitle, breadcrumbItems) {
+            const currentLower = currentPageTitle.toLowerCase();
+            let modifiedLineage = [...lineageLevels];
+            const words = currentLower.split(/\s+/);
+
+            // STRATEGI 1: Auto parent dari breadcrumbItems
+            const autoParent = findNearestParentFromItems(breadcrumbItems, currentPageTitle);
+            if (autoParent && !modifiedLineage.some(l => l.name === autoParent.name)) {
+                const parentFromAll = allLevels.find(item => 
+                    item.name?.toLowerCase() === autoParent.name?.toLowerCase()
+                );
+                if (parentFromAll) {
+                    log(`AUTO PARENT: "${parentFromAll.name}"`, 'SUCCESS');
+                    modifiedLineage.push(parentFromAll);
+                }
+            }
+
+            // STRATEGI 2: Pattern-based (prefix match)
+            if (modifiedLineage.length === lineageLevels.length && words.length >= 2) {
+                for (let i = words.length - 1; i >= 1; i--) {
+                    const potentialParent = words.slice(0, i).join(' ');
+                    const parentItem = allLevels.find(item => 
+                        item.name.toLowerCase() === potentialParent
+                    );
+                    if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
+                        log(`PATTERN PARENT: "${parentItem.name}"`, 'SUCCESS');
+                        modifiedLineage.push(parentItem);
+                        break;
+                    }
+                }
+            }
+
+            // STRATEGI 3: Semantic similarity
+            if (modifiedLineage.length === lineageLevels.length) {
+                const semanticKeywords = {
+                    'finishing': ['finishing', 'cat', 'epoxy', 'lampu', 'wallpaper'],
+                    'bangunan': ['bangunan', 'gedung', 'rumah', 'ruko'],
+                    'interior': ['interior', 'dalam', 'ruangan'],
+                    'eksterior': ['eksterior', 'luar', 'halaman'],
+                    'lantai': ['lantai', 'keramik', 'epoxy lantai', 'marmer', 'granit'],
+                    'dinding': ['dinding', 'tembok', 'wallpaper']
+                };
+                
+                for (const [parentKeyword, childKeywords] of Object.entries(semanticKeywords)) {
+                    const isChildMatch = childKeywords.some(kw => currentLower.includes(kw));
+                    if (isChildMatch) {
+                        const parentItem = allLevels.find(item => 
+                            item.name.toLowerCase().includes(parentKeyword)
+                        );
+                        if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
+                            log(`SEMANTIC PARENT: "${parentItem.name}"`, 'SUCCESS');
+                            modifiedLineage.push(parentItem);
+                            break;
+                        }
+                    }
+                }
+            }
+
+            // STRATEGI 4: Last resort
+            const currentLevel = TYPE_LEVEL_MAP[detectPageType(currentPageTitle)] || 99;
+            if (modifiedLineage.length === lineageLevels.length && allLevels.length > 0) {
+                const lowerLevelItems = allLevels.filter(item => 
+                    item.level <= currentLevel && 
+                    item.name.toLowerCase() !== currentLower
+                );
+                if (lowerLevelItems.length > 0) {
+                    const sortedByLevel = [...lowerLevelItems].sort((a, b) => b.level - a.level);
+                    const highestLevelParent = sortedByLevel[0];
+                    if (highestLevelParent && !modifiedLineage.some(l => l.name === highestLevelParent.name)) {
+                        log(`LAST RESORT: "${highestLevelParent.name}"`, 'WARN');
+                        modifiedLineage.push(highestLevelParent);
+                    }
+                }
+            }
+            
+            return modifiedLineage;
+        }
+
+        // ============================================================
+        // 8.21 HIERARCHY VALIDATOR
+        // ============================================================
+        
+        function validateAndFixHierarchy(lineage) {
+            if (lineage.length <= 1) return lineage;
+            const fixed = [];
+            const sorted = [...lineage].sort((a, b) => a.level - b.level);
+            const uniqueNames = new Set();
+            for (const item of sorted) {
+                if (!uniqueNames.has(item.name.toLowerCase())) {
+                    uniqueNames.add(item.name.toLowerCase());
+                    fixed.push(item);
+                }
+            }
+            return fixed;
+        }
+
+        // ============================================================
+        // 8.22 GET CURRENT PAGE INFO
         // ============================================================
 
         const currentFullUrl = currentUrl.startsWith('http')
@@ -1632,7 +1766,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.17 CHECK IF MONEY CHILD AND ADD DISTRICTS HTML
+        // 8.23 CHECK IF MONEY CHILD AND ADD DISTRICTS HTML
         // ============================================================
         
         let additionalHtml = '';
@@ -1641,7 +1775,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
             const productType = extractProductTypeFromPageName(currentPageTitle);
             
             if (location) {
-                log(`Money child detected: "${currentPageTitle}" with location: "${location}"`, 'SUCCESS');
+                log(`Money child detected: "${currentPageTitle}" with location: "${location}"`, 'LOCATION');
                 
                 let districts = getDistrictsForLocation(location);
                 
@@ -1680,7 +1814,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.18 INJECT CURRENT PAGE & AUTO PARENT
+        // 8.24 INJECT CURRENT PAGE & AUTO PARENT
         // ============================================================
 
         const enhancedBreadcrumbItems = injectCurrentPageAndParent(
@@ -1690,7 +1824,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
         );
 
         // ============================================================
-        // 8.19 BUILD ALL LEVELS
+        // 8.25 BUILD ALL LEVELS
         // ============================================================
 
         const allLevels = [];
@@ -1718,16 +1852,8 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.20 URL FALLBACK
+        // 8.26 URL FALLBACK
         // ============================================================
-
-        function slugify(text) {
-            return cleanText(text)
-                .toLowerCase()
-                .replace(/[^\w\s-]/g, '')
-                .replace(/\s+/g, '-')
-                .replace(/--+/g, '-');
-        }
 
         for (const level of allLevels) {
             if (!level.url) {
@@ -1750,18 +1876,19 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.21 CURRENT PAGE TYPE
+        // 8.27 CURRENT PAGE TYPE
         // ============================================================
 
         const currentPageType = detectPageType(currentPageTitle);
         log(`Current page: "${currentPageTitle}" → type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`, 'INFO');
 
         // ============================================================
-        // 8.22 SELECT BREADCRUMB LEVELS
+        // 8.28 SELECT BREADCRUMB LEVELS
         // ============================================================
 
         const selectedLevels = [];
 
+        // HOME
         selectedLevels.push({
             name: 'Beranda',
             url: CONFIG.DOMAIN,
@@ -1770,6 +1897,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
             position: 1
         });
 
+        // UNIQUE HIERARCHY
         const uniqueHierarchy = [];
         const usedHierarchy = new Set();
 
@@ -1787,15 +1915,19 @@ const urlMappingFinishingInfrastrukturProteksi = {
 
         log('Unique hierarchy items (' + uniqueHierarchy.length + '): ' + uniqueHierarchy.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
 
-        // ============================================================
-        // 8.23 FIND NEAREST PARENTS
-        // ============================================================
+        // ========================================================
+        // 8.29 FIND NEAREST PARENTS (FIXED - SEMUA PARENT)
+        // ========================================================
         
         function findNearestParentsByHierarchy() {
             const lineage = [];
             const currentLevel = TYPE_LEVEL_MAP[currentPageType] || 99;
             
+            log(`Current level: ${currentLevel}`, 'DEBUG');
+            
             const candidates = uniqueHierarchy.filter(item => item.level <= currentLevel);
+            
+            log('Candidates (level <= current): ' + candidates.map(i => i.level + ':' + i.name).join(', '), 'DEBUG');
             
             if (candidates.length === 0) return lineage;
             
@@ -1818,11 +1950,29 @@ const urlMappingFinishingInfrastrukturProteksi = {
                 }
             }
             
+            log('Lineage (prioritized): ' + lineage.map(i => i.level + ':' + i.name).join(' → '), 'SUCCESS');
+            
             return lineage;
         }
 
         let lineageLevels = findNearestParentsByHierarchy();
 
+        log('Initial lineage (' + lineageLevels.length + '): ' + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
+
+        // ========================================================
+        // 8.30 FORCE PARENT INJECTION (DARI v8.8)
+        // ========================================================
+
+        lineageLevels = forceInjectDirectParent(
+            lineageLevels, 
+            uniqueHierarchy, 
+            currentPageTitle,
+            enhancedBreadcrumbItems
+        );
+
+        log('After force injection (' + lineageLevels.length + '): ' + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
+
+        // REMOVE DUPLICATE
         const cleanLineage = [];
         const usedLineage = new Set();
 
@@ -1833,20 +1983,24 @@ const urlMappingFinishingInfrastrukturProteksi = {
             cleanLineage.push(item);
         }
 
-        cleanLineage.sort((a, b) => {
+        // VALIDATE HIERARCHY
+        const validatedLineage = validateAndFixHierarchy(cleanLineage);
+
+        // SORT NATURAL ORDER
+        validatedLineage.sort((a, b) => {
             const idxA = HIERARCHY_ORDER.indexOf(a.type);
             const idxB = HIERARCHY_ORDER.indexOf(b.type);
             if (idxA !== idxB) return idxA - idxB;
             return a.position - b.position;
         });
 
-        // ============================================================
-        // 8.24 INSERT PARENTS
-        // ============================================================
+        // ========================================================
+        // 8.31 HANYA PARENT (BUKAN CURRENT PAGE)
+        // ========================================================
         
         let finalParents = [];
 
-        const parentOnly = cleanLineage.filter(item => 
+        const parentOnly = validatedLineage.filter(item => 
             item.name.toLowerCase() !== currentPageTitle.toLowerCase()
         );
 
@@ -1856,12 +2010,15 @@ const urlMappingFinishingInfrastrukturProteksi = {
             finalParents.sort((a, b) => a.position - b.position);
             
             log('Nearest parent(s) level ' + highestLevel + ': ' + finalParents.map(i => i.name).join(', '), 'SUCCESS');
+        } else {
+            log('No parent found (only current page)', 'WARN');
         }
 
         for (const item of finalParents) {
             selectedLevels.push(item);
         }
 
+        // ADD CURRENT PAGE
         const hasCurrentAlready = selectedLevels.some(item =>
             item.name.toLowerCase() === currentPageTitle.toLowerCase()
         );
@@ -1877,7 +2034,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.25 FINAL UNIQUE LEVELS
+        // 8.32 FINAL UNIQUE LEVELS
         // ============================================================
 
         const uniqueLevels = [];
@@ -1897,7 +2054,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
         log('Final breadcrumb (' + uniqueLevels.length + ' levels): ' + uniqueLevels.map(i => i.name).join(' › '), 'SUCCESS');
 
         // ============================================================
-        // 8.26 GENERATE HTML
+        // 8.33 GENERATE HTML
         // ============================================================
 
         let breadcrumbHtml = `<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">\n`;
@@ -1931,7 +2088,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.27 JSON LD
+        // 8.34 JSON LD
         // ============================================================
 
         const jsonLd = {
@@ -1965,7 +2122,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.28 REMOVE OLD
+        // 8.35 REMOVE OLD
         // ============================================================
 
         document.querySelectorAll('.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"], .money-child-districts, .money-child-terdekat')
@@ -1974,7 +2131,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
             .forEach(el => el.remove());
 
         // ============================================================
-        // 8.29 TARGET ELEMENT
+        // 8.36 TARGET ELEMENT
         // ============================================================
 
         const targetElement = document.querySelector('main, article, .content, #main-content, .post-content');
@@ -1986,7 +2143,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.30 ADD CSS STYLES
+        // 8.37 ADD CSS STYLES
         // ============================================================
 
         const styleId = 'money-child-districts-style';
@@ -2046,7 +2203,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.31 INJECT JSON LD
+        // 8.38 INJECT JSON LD
         // ============================================================
 
         const script = document.createElement('script');
@@ -2056,10 +2213,10 @@ const urlMappingFinishingInfrastrukturProteksi = {
         document.head.appendChild(script);
 
         // ============================================================
-        // 8.32 LOG SUMMARY
+        // 8.39 LOG SUMMARY
         // ============================================================
 
-        console.log('📊 PAGE TYPE DETECTION SUMMARY (v9.2):');
+        console.log('📊 PAGE TYPE DETECTION SUMMARY (v9.3):');
         console.log(`   Page: "${currentPageTitle}"`);
         console.log(`   Type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`);
         console.log(`   Entity: ${normalizedEntityType}`);
@@ -2072,7 +2229,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
         }
 
         // ============================================================
-        // 8.33 RETURN
+        // 8.40 RETURN
         // ============================================================
 
         return {
@@ -2081,7 +2238,7 @@ const urlMappingFinishingInfrastrukturProteksi = {
             selectedLevels: uniqueLevels,
             currentPageType,
             entityType: normalizedEntityType,
-            version: '9.2.0',
+            version: '9.3.0',
             isMoneyChild: isMoneyChildWithLocation(currentPageTitle),
             location: extractLocationFromPageName(currentPageTitle),
             districts: isMoneyChildWithLocation(currentPageTitle) ? getDistrictsForLocation(extractLocationFromPageName(currentPageTitle)) : null,
@@ -2099,71 +2256,6 @@ const urlMappingFinishingInfrastrukturProteksi = {
     window.isVariantPage = isVariantPage;
     
 })();
-
-// ============================================================
-// USAGE EXAMPLES
-// ============================================================
-/*
-// Example 1: PRODUK with technical spec (K250) → MP, NOT variant
-generateBreadcrumbJasaKonstruksiFinishing(
-    {},
-    '/ready-mix-k250.html',
-    [
-        { name: 'Produk Konstruksi', url: '/produk-konstruksi.html' },
-        { name: 'Beton Readymix', url: '/beton-readymix.html' }
-    ],
-    'PRODUK_KONSTRUKSI'
-);
-// Result: currentPageType = "money-page" (bukan variant)
-
-// Example 2: PRODUK with variant keyword → variant
-generateBreadcrumbJasaKonstruksiFinishing(
-    {},
-    '/spesifikasi-ready-mix-k250.html',
-    [
-        { name: 'Produk Konstruksi', url: '/produk-konstruksi.html' },
-        { name: 'Beton Readymix', url: '/beton-readymix.html' }
-    ],
-    'PRODUK_KONSTRUKSI'
-);
-// Result: currentPageType = "variant"
-
-// Example 3: JASA with variant keyword for service → variant
-generateBreadcrumbJasaKonstruksiFinishing(
-    {},
-    '/standar-pengerjaan-cor.html',
-    [
-        { name: 'Jasa Konstruksi', url: '/jasa-konstruksi.html' },
-        { name: 'Jasa Cor', url: '/jasa-cor.html' }
-    ],
-    'JASA_KONSTRUKSI'
-);
-// Result: currentPageType = "variant"
-
-// Example 4: JASA with product variant keyword → NOT variant (still MP)
-generateBreadcrumbJasaKonstruksiFinishing(
-    {},
-    '/jasa-spesifikasi-cor-k250.html',
-    [
-        { name: 'Jasa Konstruksi', url: '/jasa-konstruksi.html' },
-        { name: 'Jasa Cor', url: '/jasa-cor.html' }
-    ],
-    'JASA_KONSTRUKSI'
-);
-// Result: currentPageType = "money-page" (bukan variant, karena JASA tidak punya variant untuk spesifikasi teknis)
-
-// Example 5: Money child with "terdekat"
-generateBreadcrumbJasaKonstruksiFinishing(
-    {},
-    '/jasa-kontraktor-terdekat.html',
-    [
-        { name: 'Jasa Konstruksi', url: '/jasa-konstruksi.html' },
-        { name: 'Kontraktor', url: '/kontraktor.html' }
-    ],
-    'JASA_KONSTRUKSI'
-);
-// Result: currentPageType = "money-child" with special "terdekat" districts HTML
-*/
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaKonsFinishingPost = {};
 
