@@ -199,7 +199,7 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
 	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai-gudang.html": "Harga Jasa Finishing Lantai Gudang"
 };
 const urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1 = {
-"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai-beton.html": "Harga Jasa Finishing Lantai Beton"
+"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai-beton.html": "Harga Jasa Finishing Lantai Beton",
       "https://www.betonjayareadymix.com/p/jasa-poles-lantai-beton.html": "Jasa Poles Lantai Beton",
 	"https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton-ekspos.html": "Jasa Finishing Lantai Beton Ekspos",  
 	"https://www.betonjayareadymix.com/p/jasa-waterproofing-lantai-beton-baru.html": "Jasa Waterproofing Lantai Beton Baru",
