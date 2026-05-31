@@ -2944,7 +2944,7 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
 			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
             { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html'},
-            { name: 'Jasa Relief Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-relief-dindingg.html'}
+            { name: 'Jasa Relief Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-relief-dinding.html'}
         ],
         'JASA_KONSTRUKSI'
     );
