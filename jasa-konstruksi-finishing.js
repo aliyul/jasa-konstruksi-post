@@ -490,7 +490,8 @@ const urlMappingJasaTamanFromMoneyMaster2MoneyMaster3 = {
     "https://www.betonjayareadymix.com/p/jasa-taman-murah.html": "Jasa Taman Murah"
 };
 const urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage = {
-   "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman-rumah.html": "Jasa Pembuatan Taman Rumah"
+   "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman-rumah.html": "Jasa Pembuatan Taman Rumah",
+	"https://www.betonjayareadymix.com/p/jasa-pembuatan-taman-relief.html": "Jasa Pembuatan Taman Relief"
 };
 // ============================================================
 // 📁 JASA FINISHING STRUKTUR - MP dari MM Jasa Finishing Struktur
