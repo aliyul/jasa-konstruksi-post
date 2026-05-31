@@ -87,8 +87,7 @@ const urlMappingFinishingDindingFromMoneyMaster1MoneyPage = {
     // Wallpaper & Cat
     "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-wallpaper.html": "Jasa Finishing Dinding Wallpaper",
     "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",
-	  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wallpaper-per-meter.html": "Harga Jasa Pasang Wallpaper per Meter",  // TYPE: MONEY_PAGE
-    "https://www.betonjayareadymix.com/p/jasa-cat-dinding-interior.html": "Jasa Cat Dinding Interior",
+	  "https://www.betonjayareadymix.com/p/jasa-cat-dinding-interior.html": "Jasa Cat Dinding Interior",
     "https://www.betonjayareadymix.com/p/jasa-cat-dinding-eksterior.html": "Jasa Cat Dinding Eksterior",
     
     // Epoxy & Finishing Khusus
@@ -142,6 +141,11 @@ const urlMappingFinishingDindingFromMoneyMaster1MoneyPage = {
     // Hapus duplikasi konten eksterior yang tidak relevan dengan finishing dinding.
 };
 
+const urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1 = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wallpaper-per-meter.html": "Harga Jasa Pasang Wallpaper per Meter"  // TYPE: MONEY_PAGE
+  
+	
+};
 const urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1 = {
 "https://www.betonjayareadymix.com/p/harga-jasa-epoxy-dinding-per-meter.html": "Harga Jasa Finishing Epoxy Dinding Per Meter"
 	
@@ -2154,6 +2158,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingFinishingCatInteriorFromMoneyPageMoneyPage1,
 		urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage,
 		urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
+		urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1,
@@ -2863,6 +2868,22 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
     );
     }
 	
+	if (urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+         generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsFinishing,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+            { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html'},
+            { name: 'Jasa Pasang Wallpaper Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
 	if (urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1,
