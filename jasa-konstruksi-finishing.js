@@ -174,72 +174,24 @@ const urlMappingJasaReliefDindingFromMoneyMaster2MoneyPage = {
 // ============================================================
 
 const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
-	"https://www.betonjayareadymix.com/p/jasa-waterproofing-lantai-beton-baru.html": "Jasa Waterproofing Lantai Beton Baru",
-    // ============================================================
-    // MP UNTUK FINISHING LANTAI BETON (EXPOSE/POLISHED CONCRETE) ✅
-    // ============================================================
-    "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html": "Jasa Finishing Lantai Beton",
-	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai-beton.html": "Harga Jasa Finishing Lantai Beton",
-    "https://www.betonjayareadymix.com/p/jasa-poles-lantai-beton.html": "Jasa Poles Lantai Beton",
-	"https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton-ekspos.html": "Jasa Finishing Lantai Beton Ekspos",
-   // "https://www.betonjayareadymix.com/p/jasa-ekspos-lantai-beton.html": "Jasa Ekspos Lantai Beton",
-
-    // ============================================================
-    // 🆕 METODE FINISHING LANTAI BETON (TAMBAHAN)
-    // ============================================================
-	"https://www.betonjayareadymix.com/p/jasa-lantai-super-flat.html": "Jasa Lantai Super Flat",
-    "https://www.betonjayareadymix.com/p/jasa-lapangan-super-flat.html": "Jasa Lapangan Super Flat",
-	"https://www.betonjayareadymix.com/p/harga-jasa-lapangan-super-flat.html": "Harga Jasa Lapangan Super Flat",
-	"https://www.betonjayareadymix.com/p/harga-jasa-lantai-super-flat.html": "Harga Jasa Lantai Super Flat",
-    // 1. Jasa Trowel Lantai (finishing dengan mesin trowel)
-    "https://www.betonjayareadymix.com/p/jasa-trowel-lantai-beton.html": "Jasa Trowel Lantai Beton",
-	"https://www.betonjayareadymix.com/p/harga-jasa-trowel-lantai.html": "Harga Jasa Trowel Lantai",
-	"https://www.betonjayareadymix.com/p/harga-jasa-trowel-floor-hardener.html": "Harga Jasa Trowel Floor Hardener",
-	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-trowel.html": "Harga Jasa finishing Trowel",
-    
-    // 2. Jasa Screeding Lantai (perataan lantai beton)
-    "https://www.betonjayareadymix.com/p/jasa-screeding-lantai-beton.html": "Jasa Screeding Lantai Beton",
-	"https://www.betonjayareadymix.com/p/harga-jasa-screeding-per-meter.html": "Harga Jasa Screeding Per Meter",
-	"https://www.betonjayareadymix.com/p/harga-jasa-screeding-lantai.html": "Harga Jasa Screeding Lantai",
-    "https://www.betonjayareadymix.com/p/jasa-perataan-lantai-beton.html": "Jasa Perataan Lantai Beton",
-
-    // 3. Jasa Floor Hardener (pengeras lantai)
-    "https://www.betonjayareadymix.com/p/jasa-floor-hardener-lantai.html": "Jasa Floor Hardener Lantai",
-	"https://www.betonjayareadymix.com/p/harga-jasa-floor-hardener.html": "Harga Jasa Floor Hardener",
-    
-    // 4. Jasa Self Leveling (lantai rata sempurna)
-    "https://www.betonjayareadymix.com/p/jasa-self-leveling-lantai.html": "Jasa Self Leveling Lantai",
-
-    // 5. Jasa Coating Lantai (pelapis lantai)
-    "https://www.betonjayareadymix.com/p/jasa-coating-lantai-beton.html": "Jasa Coating Lantai Beton",
-    "https://www.betonjayareadymix.com/p/jasa-pelapisan-lantai-beton.html": "Jasa Pelapisan Lantai Beton",
-
-    // 6. Jasa Grinding & Poles (existing)
-    "https://www.betonjayareadymix.com/p/jasa-grinding-lantai-beton.html": "Jasa Grinding Lantai Beton",
-
+	 "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html": "Jasa Finishing Lantai Beton",
     // ============================================================
     // MP UNTUK MATERIAL LANTAI LAINNYA (tetap dipertahankan)
     // ============================================================
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-keramik.html": "Jasa Finishing Lantai Keramik",
   "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html": "Jasa Pasang Keramik Lantai",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-per-meter.html": "Harga Jasa Pasang Keramik per Meter",  // TYPE: MONEY_PAGE
     "https://www.betonjayareadymix.com/p/jasa-ganti-keramik-lantai.html": "Jasa Ganti Keramik Lantai",  // TYPE: MONEY_PAGE
-   "https://www.betonjayareadymix.com/p/harga-borongan-pasang-keramik-per-meter.html": "Harga Borongan Pasang Keramik per Meter",  // TYPE: MONEY_PAGE
- "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-rumah.html": "Jasa Pasang Keramik Lantai Rumah",  // TYPE: MONEY_PAGE
- "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-kantor.html": "Jasa Pasang Keramik Lantai Kantor",  // TYPE: MONEY_PAGE
- "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-gudang.html": "Jasa Pasang Keramik Lantai Gudang",  // TYPE: MONEY_PAGE
 
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-marmer.html": "Jasa Finishing Lantai Marmer",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html": "Jasa Finishing Lantai Granit",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-kayu.html": "Jasa Finishing Lantai Kayu",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-epoxy.html": "Jasa Finishing Lantai Epoxy",
-	"https://www.betonjayareadymix.com/p/harga-jasa-epoxy-lantai-per-meter.html": "Harga Jasa Finishing Epoxy Lantai Per Meter",
-    
+	
     // ============================================================
     // TAMBAHAN MP UNTUK JASA FINISHING LANTAI
     // ============================================================
 	"https://www.betonjayareadymix.com/p/jasa-pasang-wpc-lantai.html": "Jasa Pasang WPC Lantai",
-	 "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-lantai.html": "Harga Jasa Pasang WPC Lantai",
+	
     "https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-lantai.html": "Jasa Pasang Vinyl Lantai",
 	"https://www.betonjayareadymix.com/p/jasa-pasang-pvc-lantai.html": "Jasa Pasang PVC Lantai",
     "https://www.betonjayareadymix.com/p/jasa-pasang-spc-lantai.html": "Jasa Pasang SPC Lantai",
@@ -249,7 +201,79 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
 
 	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai-gudang.html": "Harga Jasa Finishing Lantai Gudang"
 };
+const urlMappingJasaFinishingLantaiBetonFromMoneyMaster1MoneyPage = {
+"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai-beton.html": "Harga Jasa Finishing Lantai Beton"
+      "https://www.betonjayareadymix.com/p/jasa-poles-lantai-beton.html": "Jasa Poles Lantai Beton",
+	"https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton-ekspos.html": "Jasa Finishing Lantai Beton Ekspos",  
+	"https://www.betonjayareadymix.com/p/jasa-waterproofing-lantai-beton-baru.html": "Jasa Waterproofing Lantai Beton Baru",
+    // ============================================================
+    // MP UNTUK FINISHING LANTAI BETON (EXPOSE/POLISHED CONCRETE) ✅
+    // ============================================================
+   
+   // "https://www.betonjayareadymix.com/p/jasa-ekspos-lantai-beton.html": "Jasa Ekspos Lantai Beton",
 
+    // ============================================================
+    // 🆕 METODE FINISHING LANTAI BETON (TAMBAHAN)
+    // ============================================================
+	"https://www.betonjayareadymix.com/p/jasa-lantai-super-flat.html": "Jasa Lantai Super Flat",
+	  "https://www.betonjayareadymix.com/p/jasa-lapangan-super-flat.html": "Jasa Lapangan Super Flat",
+    // 1. Jasa Trowel Lantai (finishing dengan mesin trowel)
+    "https://www.betonjayareadymix.com/p/jasa-trowel-lantai-beton.html": "Jasa Trowel Lantai Beton",
+    
+    // 2. Jasa Screeding Lantai (perataan lantai beton)
+    "https://www.betonjayareadymix.com/p/jasa-screeding-lantai-beton.html": "Jasa Screeding Lantai Beton",
+    "https://www.betonjayareadymix.com/p/jasa-perataan-lantai-beton.html": "Jasa Perataan Lantai Beton",
+
+    // 3. Jasa Floor Hardener (pengeras lantai)
+    "https://www.betonjayareadymix.com/p/jasa-floor-hardener-lantai.html": "Jasa Floor Hardener Lantai",
+
+    // 4. Jasa Self Leveling (lantai rata sempurna)
+    "https://www.betonjayareadymix.com/p/jasa-self-leveling-lantai.html": "Jasa Self Leveling Lantai",
+
+    // 5. Jasa Coating Lantai (pelapis lantai)
+    "https://www.betonjayareadymix.com/p/jasa-coating-lantai-beton.html": "Jasa Coating Lantai Beton",
+    "https://www.betonjayareadymix.com/p/jasa-pelapisan-lantai-beton.html": "Jasa Pelapisan Lantai Beton",
+
+    // 6. Jasa Grinding & Poles (existing)
+    "https://www.betonjayareadymix.com/p/jasa-grinding-lantai-beton.html": "Jasa Grinding Lantai Beton"
+
+};
+const urlMappingJasaLantaiSuperFlatFromMoneyMasterMoneyPage = {
+	"https://www.betonjayareadymix.com/p/harga-jasa-lapangan-super-flat.html": "Harga Jasa Lapangan Super Flat",
+	"https://www.betonjayareadymix.com/p/harga-jasa-lantai-super-flat.html": "Harga Jasa Lantai Super Flat"
+       
+};
+const urlMappingJasaTrowelLantaiBetonFromMoneyMasterMoneyPage = {
+	"https://www.betonjayareadymix.com/p/harga-jasa-trowel-lantai.html": "Harga Jasa Trowel Lantai",
+	"https://www.betonjayareadymix.com/p/harga-jasa-trowel-floor-hardener.html": "Harga Jasa Trowel Floor Hardener",
+	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-trowel.html": "Harga Jasa finishing Trowel"
+       
+};
+const urlMappingJasaScreedingLantaiBetonFromMoneyMasterMoneyPage = {
+		"https://www.betonjayareadymix.com/p/harga-jasa-screeding-per-meter.html": "Harga Jasa Screeding Per Meter",
+	"https://www.betonjayareadymix.com/p/harga-jasa-screeding-lantai.html": "Harga Jasa Screeding Lantai"
+       
+};
+const urlMappingJasaFloorHardenerLantaiFromMoneyMasterMoneyPage = {
+	"https://www.betonjayareadymix.com/p/harga-jasa-floor-hardener.html": "Harga Jasa Floor Hardener"
+       
+};
+const urlMappingJasaPasangKeramikLantaiFromMoneyMasterMoneyPage = {
+ "https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-per-meter.html": "Harga Jasa Pasang Keramik per Meter",  // TYPE: MONEY_PAGE
+    "https://www.betonjayareadymix.com/p/harga-borongan-pasang-keramik-per-meter.html": "Harga Borongan Pasang Keramik per Meter",  // TYPE: MONEY_PAGE
+ "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-rumah.html": "Jasa Pasang Keramik Lantai Rumah",  // TYPE: MONEY_PAGE
+ "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-kantor.html": "Jasa Pasang Keramik Lantai Kantor",  // TYPE: MONEY_PAGE
+ "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-gudang.html": "Jasa Pasang Keramik Lantai Gudang",  // TYPE: MONEY_PAGE
+
+};
+const urlMappingJasaFinishingLantaiEpoxyFromMoneyMasterMoneyPage = {
+"https://www.betonjayareadymix.com/p/harga-jasa-epoxy-lantai-per-meter.html": "Harga Jasa Finishing Epoxy Lantai Per Meter"
+    
+};
+const urlMappingJasaPasangWPCLantaiFromMoneyMasterMoneyPage = {
+ "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-lantai.html": "Harga Jasa Pasang WPC Lantai"
+	
+};
 // ============================================================
 // 📁 JASA FINISHING INTERIOR - MP dari MM Jasa Finishing Interior
 // 🧠 Parent: Jasa Finishing Interior (L4)
@@ -2165,6 +2189,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaReliefDindingFromMoneyMaster2MoneyPage,
 		
 		urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
+		urlMappingJasaFinishingLantaiBetonFromMoneyMaster1MoneyPage,
+		
 		urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage,
 		urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1,
 		urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1,
@@ -2976,6 +3002,23 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
 			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
             { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+
+	if (urlMappingJasaFinishingLantaiBetonFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaFinishingLantaiBetonFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsFinishing,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'},
+            { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html'}
         ],
         'JASA_KONSTRUKSI'
     );
