@@ -118,8 +118,7 @@ const urlMappingFinishingDindingFromMoneyMaster1MoneyPage = {
 
     // WPC (Wood Plastic Composite)
     "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding-per-meter.html": "Jasa Pasang WPC Dinding Per Meter",
-	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-dinding.html": "Harga Jasa Pasang WPC Dinding",
+
     "https://www.betonjayareadymix.com/p/jasa-finishing-wpc-dinding.html": "Jasa Finishing WPC Dinding",
 
     // PVC Panel
@@ -147,6 +146,12 @@ const urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1 = {
 	"https://www.betonjayareadymix.com/p/harga-borongan-tenaga-plesteran-acian.html": "Harga Jasa Plesteran & Acian Per Meter"
 	
 };
+const urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1 = {
+	"https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding-per-meter.html": "Jasa Pasang WPC Dinding Per Meter",
+	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-dinding.html": "Harga Jasa Pasang WPC Dinding"
+	
+};
+
 const urlMappingJasaReliefDindingFromMoneyMaster2MoneyPage = {
 	"https://www.betonjayareadymix.com/p/jasa-relief-dinding-interior.html": "Jasa Relief Dinding Interior",
     "https://www.betonjayareadymix.com/p/jasa-relief-batu-alam-interior.html": "Jasa Relief Batu Alam Interior",
@@ -2145,6 +2150,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage,
 		urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
 		urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1,
+		urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaReliefDindingFromMoneyMaster2MoneyPage,
 		
 		urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
@@ -2862,11 +2868,28 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
 			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
             { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html'},
-            { name: 'Jasa Plesteran Acian Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dindingg.html'}
+            { name: 'Jasa Plesteran Acian Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html'}
         ],
         'JASA_KONSTRUKSI'
     );
     }
+	if (urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+         generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsFinishing,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+            { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html'},
+            { name: 'Jasa Pasang WPC Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	
 	if (urlMappingJasaReliefDindingFromMoneyMaster2MoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingJasaReliefDindingFromMoneyMaster2MoneyPage,
