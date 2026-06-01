@@ -51,8 +51,6 @@ const urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage = {
 "https://www.betonjayareadymix.com/p/jasa-pembuatan-pintu-sliding.html": "Jasa Pembuatan Pintu Sliding",
 "https://www.betonjayareadymix.com/p/jasa-pembuatan-wadrobe.html": "Jasa Pembuatan Wadrobe",
 
-	"https://www.betonjayareadymix.com/p/jasa-custom-kitchen-set.html": "Jasa Custom Kitchen Set", 
-    "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set", 
 	"https://www.betonjayareadymix.com/p/jasa-pasang-lemari-built-in.html": "Jasa Pasang Lemari Built In", 
 	"https://www.betonjayareadymix.com/p/jasa-pasang-partisi-ruangan.html": "Jasa Pasang Partisi Ruangan",
 	
