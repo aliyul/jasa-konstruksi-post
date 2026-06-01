@@ -394,13 +394,25 @@ const urlMappingInfrastrukturFromSub1MoneyMaster = {
 const urlMappingJasaKitchenSetFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-kitchen-set.html": "Jasa Kitchen Set"
 };
-const urlMappingJasaPasangFromSub1MoneyMaster = {
-	"https://www.betonjayareadymix.com/p/jasa-pasang.html": "Jasa Pasang"
+
+const urlMappingJasaKitchenSetFromMoneyMasterMoneyMaster1 = {
+	"https://www.betonjayareadymix.com/p/jasa-custom-kitchen-set.html": "Jasa Custom Kitchen Set", 
+    "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set"
 };
 const urlMappingJasaPembuatanFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-pembuatan.html": "Jasa Pembuatan"
 };
+
+const urlMappingJasPembuatanFromMoneyMasterMoneyMaster1 = {
+	"https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html": "Jasa Pembuatan Furniture"
+};
+const urlMappingJasaPasangFromSub1MoneyMaster = {
+	"https://www.betonjayareadymix.com/p/jasa-pasang.html": "Jasa Pasang"
+};
+
 const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
+"https://www.betonjayareadymix.com/p/jasa-pasang-furniture.html": "Jasa Pasang Furniture",
+	
 "https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html": "Jasa Pasang WPC",
 "https://www.betonjayareadymix.com/p/jasa-pasang-vinyl.html": "Jasa Pasang Vinyl",
 "https://www.betonjayareadymix.com/p/jasa-pasang-pvc.html": "Jasa Pasang PVC", 
@@ -2082,8 +2094,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaAlatPendukungFromMoneyMasterMoneyMaster1,
 
 		urlMappingJasaKitchenSetFromSub1MoneyMaster,
+		urlMappingJasaKitchenSetFromMoneyMasterMoneyMaster1,
 		urlMappingJasaPasangFromSub1MoneyMaster,
 		urlMappingJasaPembuatanFromSub1MoneyMaster,
+		urlMappingJasPembuatanFromMoneyMasterMoneyMaster1,
 		urlMappingJasaPasangFromMoneyMasterMoneyMaster1,
 		
         urlMappingInfrastrukturFromSub1MoneyMaster,
@@ -4418,6 +4432,21 @@ if (urlMappingJasaKitchenSetFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
+if (urlMappingJasaKitchenSetFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaKitchenSetFromMoneyMasterMoneyMaster1,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-kitchen-set.html'},
+            { name: 'Perbandingan Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-kitchen-set.html'},
+            { name: 'Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/jasa-kitchen-set.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
 
 if (urlMappingJasaPembuatanFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
@@ -4443,6 +4472,22 @@ if (urlMappingJasaPasangFromSub1MoneyMaster[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+	
+if (urlMappingJasPembuatanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingJasPembuatanFromMoneyMasterMoneyMaster1,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'}
         ],
         'JASA_KONSTRUKSI'
     );
