@@ -387,9 +387,9 @@ const urlMappingInfrastrukturFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar.html": "Jasa Perbaikan Trotoar"  // TYPE: MONEY_PAGE
 };
 
-// ============================================================
-// 📁 JASA FINISHING - SUB2 (LEVEL 2)
-// ============================================================
+const urlMappingJasaKitchenSetFromSub1MoneyMaster = {
+	"https://www.betonjayareadymix.com/p/jasa-kitchen-set.html": "Jasa Kitchen Set"
+};
 const urlMappingJasaPasangFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-pasang.html": "Jasa Pasang"
 };
@@ -2073,6 +2073,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaAlatPendukungFromSub1MoneyMaster,
 		urlMappingSewaAlatPendukungFromMoneyMasterMoneyMaster1,
 
+		urlMappingJasaKitchenSetFromSub1MoneyMaster,
 		urlMappingJasaPasangFromSub1MoneyMaster,
 		urlMappingJasaPasangFromMoneyMasterMoneyMaster1,
 		
@@ -4381,6 +4382,20 @@ if (urlMappingBongkarBangunanFromSub1MoneyPage[cleanUrlJasaKons]) {
     );
     }
 
+if (urlMappingJasaKitchenSetFromSub1MoneyMaster[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaKitchenSetFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-kitchen-set.html'},
+            { name: 'Perbandingan Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-kitchen-set.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
 if (urlMappingJasaPasangFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbJasaKonstruksi(
