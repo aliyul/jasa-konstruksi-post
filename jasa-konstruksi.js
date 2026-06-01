@@ -389,18 +389,19 @@ const urlMappingJasaPasangFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-pasang.html": "Jasa Pasang"
 };
 const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
-	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html": "Jasa Pasang Lampu",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper.html": "Jasa Pasang Wallpaper"
+"https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html": "Jasa Pasang WPC",
+"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl.html": "Jasa Pasang Vinyl",
+"https://www.betonjayareadymix.com/p/jasa-pasang-pvc.html": "Jasa Pasang PVC", 
+"https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html": "Jasa Pasang Plafon",
+"https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html": "Jasa Pasang Lampu",
+"https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper.html": "Jasa Pasang Wallpaper"
 };
 const urlMappingFinishingFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-finishing.html": "Jasa Finishing"
 };
 
 const urlMappingFinishingFromMoneyMasterMoneyMaster1 = {
-	  "https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html": "Jasa Pasang WPC",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-vinyl.html": "Jasa Pasang Vinyl",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-pvc.html": "Jasa Pasang PVC", 
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html": "Jasa Pasang Plafon",
+
 //"https://www.betonjayareadymix.com/p/jasa-profil-beton.html": "Jasa Profil Beton",
 	
 	"https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html": "Jasa Finishing Dinding", 
