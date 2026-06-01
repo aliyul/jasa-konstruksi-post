@@ -74,6 +74,9 @@ const urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage = {
 // ✅ SEMUA URL SUDAH MP (MINIMAL 3 KATA)
 // ============================================================
 
+const urlMappingJasaPasangWalpaperFromMoneyMaster1MoneyPage = {
+ "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding"
+};
 const urlMappingFinishingDindingFromMoneyMaster1MoneyPage = {
     // ============================================================
     // PARENT MM (DIKOMENTARKAN, TETAP DIPERTAHANKAN)
@@ -86,7 +89,7 @@ const urlMappingFinishingDindingFromMoneyMaster1MoneyPage = {
     
     // Wallpaper & Cat
     "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-wallpaper.html": "Jasa Finishing Dinding Wallpaper",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding",
+ 
 	  "https://www.betonjayareadymix.com/p/jasa-cat-dinding-interior.html": "Jasa Cat Dinding Interior",
     "https://www.betonjayareadymix.com/p/jasa-cat-dinding-eksterior.html": "Jasa Cat Dinding Eksterior",
     
@@ -1968,6 +1971,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingFinishingCatInteriorFromMoneyPageMoneyPage1,
 		urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage,
 		urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
+		urlMappingJasaPasangWalpaperFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1,
@@ -2772,6 +2776,21 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
     );
     }
 	
+	if (urlMappingJasaPasangWalpaperFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+         generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaPasangWalpaperFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsFinishing,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+			{ name: 'Jasa Pasang Wallpaper', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper.html'}
+           // { name: 'Jasa Pasang Wallpaper Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
 	if (urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
