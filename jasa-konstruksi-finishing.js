@@ -142,8 +142,12 @@ const urlMappingFinishingDindingFromMoneyMaster1MoneyPage = {
 };
 
 const urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wallpaper-per-meter.html": "Harga Jasa Pasang Wallpaper per Meter"  // TYPE: MONEY_PAGE
-  
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wallpaper-per-meter.html": "Harga Jasa Pasang Wallpaper per Meter",  // TYPE: MONEY_PAGE
+   "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-3d.html": "Jasa Pasang Wallpaper 3D",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-custom.html": "Jasa Pasang Wallpaper Custom",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-kamar-tidur.html": "Jasa Pasang Wallpaper Kamar Tidur",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-ruang-tamu.html": "Jasa Pasang Wallpaper Ruang Tamu"  // TYPE: MONEY_CHILD
+
 	
 };
 const urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1 = {
