@@ -36,6 +36,9 @@ const urlMappingJasaKonsFromPillarSub2 = {
 "https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html": "Daftar Jasa Pasang",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-alat-konstruksi.html": "Daftar Jasa Alat Konstruksi",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-bangunan.html": "Daftar Jasa Konstruksi Bangunan",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html": "Daftar Jasa Konstruksi Struktur",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html": "Daftar Jasa Struktur Khusus",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html": "Daftar Jasa Lapangan Olahraga",  // TYPE: SUB2
  "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-rumah.html": "Daftar Jasa Konstruksi Rumah",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-gedung.html": "Daftar Jasa Konstruksi Gedung",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-industri.html": "Daftar Jasa Konstruksi Industri",  // TYPE: SUB2
