@@ -501,81 +501,6 @@ const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
 };
 
 // ============================================================
-// 📁 JASA STRUKTUR KONSTRUKSI - SUB2 (LEVEL 2)
-// ============================================================
-
-const urlMappingStrukturFromSub1MoneyMaster = {
-  // "https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html": "Jasa Struktur Konstruksi",
-	//"https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html": "Jasa Konstruksi Gedung dan Hunian",
-	//"https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung.html": "Jasa Konstruksi Gedung",
-	//  "https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah-tinggal.html": "Jasa Konstruksi Rumah Tinggal",  // TYPE: MONEY_PAGE
-	//  "https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah.html": "Jasa Konstruksi Rumah",  // TYPE: MONEY_PAGE
-};
-const urlMappingStrukturFromSub1MoneyPage = {
-// ============================================================
-// 📌 MONEY-MASTER (MM) LEVEL 4 - JASA KONSTRUKSI BANGUNAN
-// ============================================================
-//"https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html": "Jasa Konstruksi Bangunan",  // MM (L4)
-
-// ============================================================
-// 📌 MONEY-PAGE (MP) DI BAWAH JASA KONSTRUKSI BANGUNAN
-// ============================================================
-
-
-// ============================================================
-// 📌 MONEY-MASTER (MM) LEVEL 4 - JASA KONSTRUKSI STRUKTUR
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html": "Jasa Konstruksi Struktur",  // MM (L4)
-
-// ============================================================
-// 📌 MONEY-PAGE (MP) DI BAWAH JASA KONSTRUKSI STRUKTUR (BAJA & BETON)
-// ============================================================
-
-"https://www.betonjayareadymix.com/p/jasa-rangka-atap-baja-ringan.html": "Jasa Rangka Atap Baja Ringan",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-konvensional.html": "Jasa Konstruksi Baja Konvensional",
-"https://www.betonjayareadymix.com/p/jasa-kanopi-baja-dan-besi.html": "Jasa Kanopi Baja dan Besi",
-"https://www.betonjayareadymix.com/p/jasa-struktur-baja-gudang.html": "Jasa Struktur Baja Gudang",
-
-"https://www.betonjayareadymix.com/p/jasa-cor-beton.html": "Jasa Cor Beton",
-"https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-dak.html": "Jasa Pengecoran Lantai Dak",
-"https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-gudang.html": "Jasa Pengecoran Lantai Gudang",
-"https://www.betonjayareadymix.com/p/jasa-bekisting-dan-pembesian.html": "Jasa Bekisting dan Pembesian",
-"https://www.betonjayareadymix.com/p/jasa-pengecoran-kolom-beton.html": "Jasa Pengecoran Kolom Beton",
-
-
-// ============================================================
-// 📌 MONEY-MASTER (MM) LEVEL 4 - JASA STRUKTUR KHUSUS
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html": "",  // MM (L4)
-
-// ============================================================
-// 📌 MONEY-PAGE (MP) DI BAWAH JASA STRUKTUR KHUSUS
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html": "Jasa Pembuatan Kolam Renang",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-ikan-koi.html": "Jasa Pembuatan Kolam Ikan Koi",
-"https://www.betonjayareadymix.com/p/jasa-septic-tank-beton.html": "Jasa Septic Tank Beton",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-tangki-air.html": "Jasa Pembuatan Tangki Air",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-bak-penampungan.html": "Jasa Pembuatan Bak Penampungan",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-menara-air.html": "Jasa Konstruksi Menara Air",
-
-// ============================================================
-// 📌 MONEY-MASTER (MM) LEVEL 4 - JASA KONSTRUKSI LAPANGAN OLAHRAGA
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-lapangan-olahraga.html": "Jasa Konstruksi Lapangan Olahraga",  // MM (L4)
-
-// ============================================================
-// 📌 MONEY-PAGE (MP) DI BAWAH JASA KONSTRUKSI LAPANGAN OLAHRAGA
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-futsal.html": "Jasa Pembuatan Lapangan Futsal",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-basket.html": "Jasa Pembuatan Lapangan Basket",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-sepakbola.html": "Jasa Pembuatan Lapangan Sepakbola",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-voli.html": "Jasa Pembuatan Lapangan Voli",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-tenis.html": "Jasa Pembuatan Lapangan Tenis",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-badminton.html": "Jasa Pembuatan Lapangan Badminton",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-serbaguna.html": "Jasa Pembuatan Lapangan Serbaguna",
-};
-
-// ============================================================
 // 📁 JASA PONDASI & PERKUATAN TANAH - SUB2 (LEVEL 2)
 // ============================================================
 
@@ -2028,7 +1953,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingPerbaikanBangunanFromSub1MoneyPage,
 		urlMappingRenovasiFromSub1MoneyPage,
 
-		urlMappingStrukturFromSub1MoneyPage,
 		urlMappingPondasiFromSub1MoneyPage,
 		urlMappingSaluranFromSub1MoneyPage,
 		urlMappingJalanFromSub1MoneyPage,
@@ -3905,71 +3829,6 @@ if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
        script.text = JSON.stringify(jsonLDBreadcrumb);
        document.head.appendChild(script);
    }
-	
-if (urlMappingStrukturFromSub1MoneyPage[cleanUrlJasaKons]) {
-        restoreCondition('JasaKonsSub');
-	restoreCondition('JasaStrukturKonstruksi');
-           // hapus elemen id DIV Lain
-	removeCondition('ProdukInFur');
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-        //removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-	removeCondition('JasaKons');
-	removeCondition('MenuKons');
-
-	// hapus elemen id DIV Lain
-	removeCondition('JasaAlatKonstruksi');
-	removeCondition('SewaAlatKonstruksi');
-	removeCondition('SewaAlatBerat');
-	removeCondition('SewaAlatKonstruksiRingan');
-	
-		removeCondition('JasaInstalasiListrik');    
-	removeCondition('JasaRenovasiPerbaikan');
-        removeCondition('JasaFinishing');
-        removeCondition('JasaPondasiPerkuatan');
-        removeCondition('JasaSaluranDrainase');
-        removeCondition('JasaJalanPerkerasan');
-	removeCondition('JasaPematanganLahan');
-	removeCondition('JasaUjiTanah');
-        removeCondition('JasaPembatasPengaman');
-	removeCondition('JasaPerkuatanTanahLongsor');
-	removeCondition('JasaBongkarBangunan');
-	removeCondition('JasaPerawatanPerbaikanBangunan');
-	removeCondition('JasaPerbaikanInfrastruktur');
-	removeCondition('JasaPengeboran');
-		removeCondition('JasaBorAirSumur');
-		removeCondition('JasaBorPile');
-		removeCondition('JasaCoringBeton');
-		removeCondition('JasaBorBeton');
-		removeCondition('JasaBorTanah');
-		removeCondition('JasaBorHorizontal');
-		removeCondition('JasaBorTembok');
-       // removeCondition('JasaKonstruksiCustom');
-
-        JasaKonstruksiSubLink.style.visibility = 'visible';
-        JasaStrukturKonstruksiLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingStrukturFromSub1MoneyPage[cleanUrlJasaKons];
-
-	    generateBreadcrumbJasaKonstruksi(
-        urlMappingStrukturFromSub1MoneyPage,
-        cleanUrlJasaKons,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
-            { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html'},
-            { name: 'Perbandingan Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-konstruksi.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-	
 
 if (urlMappingPondasiFromSub1MoneyPage[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
