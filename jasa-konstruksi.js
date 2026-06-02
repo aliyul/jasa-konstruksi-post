@@ -39,11 +39,11 @@ const urlMappingJasaKonsFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html": "Daftar Jasa Konstruksi Struktur",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html": "Daftar Jasa Struktur Khusus",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html": "Daftar Jasa Lapangan Olahraga",  // TYPE: SUB2
- "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-rumah.html": "Daftar Jasa Konstruksi Rumah",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-gedung.html": "Daftar Jasa Konstruksi Gedung",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-industri.html": "Daftar Jasa Konstruksi Industri",  // TYPE: SUB2
+// "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-rumah.html": "Daftar Jasa Konstruksi Rumah",  // TYPE: SUB2
+//  "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-gedung.html": "Daftar Jasa Konstruksi Gedung",  // TYPE: SUB2
+ // "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-industri.html": "Daftar Jasa Konstruksi Industri",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html": "Daftar Jasa Struktur Konstruksi",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/daftar-jasa-pondasi-perkuatan-tanah.html": "Daftar Jasa Pondasi & Perkuatan Tanah",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/daftar-jasa-pondasi-tanah.html": "Daftar Jasa Pondasi Tanah",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-saluran-drainase.html": "Daftar Jasa Saluran & Drainase",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-jalan-perkerasan.html": "Daftar Jasa Jalan & Perkerasan",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-pematangan-lahan.html": "Daftar Jasa Pematangan Lahan",  // TYPE: SUB2
@@ -52,7 +52,7 @@ const urlMappingJasaKonsFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html": "Daftar Jasa Bongkar Bangunan",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-buang-puing.html": "Daftar Jasa Buang Puing",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html": "Daftar Jasa Pengeboran",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/daftar-jasa-perkuatan-tanah-longsor.html": "Daftar Jasa Perkuatan Tanah Longsor",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/daftar-jasa-perkuatan-tanah.html": "Daftar Jasa Perkuatan Tanah",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-pembatas-pengaman.html": "Daftar Jasa Pembatas Pengaman",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html": "Daftar Jasa Renovasi",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html": "Daftar Jasa Finishing",  // TYPE: SUB2
@@ -130,15 +130,6 @@ const urlMappingKonstruksiBangunanFromSub1MoneyMaster = {
  "https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html": "Jasa Konstruksi Bangunan"  // MM (L4)
 };
 
-const urlMappingKonstruksiRumahBridgeFromSub2Sub1 = {
-   "https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-rumah.html": "Perbandingan Jasa Konstruksi Rumah"
-};
-const urlMappingKonstruksiGedungBridgeFromSub2Sub1 = {
-   "https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-gedung.html": "Perbandingan Jasa Konstruksi Gedung"
-};
-const urlMappingKonstruksiIndustriBridgeFromSub2Sub1 = {
- "https://www.betonjayareadymix.com/p/perbandingan--jasa-konstruksi-industri.html": "Perbandingan Jasa Konstruksi Industri"
-};
 const urlMappingRenovasiBridgeFromSub2Sub1 = {
    "https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html": "Perbandingan Jasa Renovasi"  // TYPE: SUB1
 };
@@ -196,10 +187,10 @@ const urlMappingJalanPerkerasanFromSub1MoneyMaster = {
 
 const urlMappingJasaPondasiBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/perbandingan-pondasi-perkuatan-tanah.html": "Perbandingan Jasa Pondasi & Perkuatan Tanah"  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi-tanah.html": "Perbandingan Jasa Pondasi Tanah"  // TYPE: SUB1
 };
 const urlMappingJasaPondasiFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/jasa-pondasi-perkuatan-tanah.html": "Jasa Pondasi & Perkuatan Tanah"  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pondasi-tanah.html": "Jasa Pondasi Tanah"  // TYPE: SUB2
 };
 const urlMappingJasaSaluranDrainaseBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
@@ -249,11 +240,11 @@ const urlMappingJasaPengeboranFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-pengeboran.html": "Jasa Pengeboran"  // TYPE: SUB2
 };
 
-const urlMappingJasaPerkuatanTanahLongsorBridgeFromSub2Sub1 = {
-   "https://www.betonjayareadymix.com/p/perbandingan-jasa-perkuatan-tanah.html": "Perbandingan Jasa Perkuatan Tanah Longsor"  // TYPE: SUB1
+const urlMappingJasaPerkuatanTanahBridgeFromSub2Sub1 = {
+   "https://www.betonjayareadymix.com/p/perbandingan-jasa-perkuatan-tanah.html": "Perbandingan Jasa Perkuatan Tanah"  // TYPE: SUB1
 };
-const urlMappingJasaPerkuatanTanahLongsorFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html": "Jasa Perkuatan Tanah Longsor"  // TYPE: SUB2
+const urlMappingJasaPerkuatanTanahFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah.html": "Jasa Perkuatan Tanah"  // TYPE: SUB2
 };
 
 const urlMappingJasaPembatasPengamanBridgeFromSub2Sub1 = {
@@ -650,11 +641,11 @@ const urlMappingUjiTanahFromSub1MoneyPage = {
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE
 // ============================================================
 /*
-const urlMappingPerkuatanTanahLongsorFromPillarSub2 = {
+const urlMappingPerkuatanTanahFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html": "Jasa Perkuatan Tanah Longsor",  // TYPE: SUB2
 };*/
 
-const urlMappingPerkuatanTanahLongsorFromSub1MoneyPage = {
+const urlMappingPerkuatanTanahFromSub1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-bronjong-penahan-longsor.html": "Jasa Bronjong Penahan Longsor",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-soil-nailing-tebing.html": "Jasa Soil Nailing Tebing",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-dinding-penahan-tanah-longsor.html": "Jasa Dinding Penahan Tanah Longsor",  // TYPE: MONEY_PAGE
@@ -1873,10 +1864,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingKonstruksiBangunanBridgeFromSub2Sub1,
 		urlMappingKonstruksiBangunanFromSub1MoneyMaster,
 		
-		urlMappingKonstruksiRumahBridgeFromSub2Sub1,
-		urlMappingKonstruksiGedungBridgeFromSub2Sub1,
-		urlMappingKonstruksiIndustriBridgeFromSub2Sub1,
-		urlMappingRenovasiBridgeFromSub2Sub1,
+	    urlMappingRenovasiBridgeFromSub2Sub1,
 		urlMappingRenovasiFromSub1MoneyMaster,
 		
 		urlMappingFinishingBridgeFromSub2Sub1,
@@ -1916,8 +1904,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPengeboranBridgeFromSub2Sub1,
 		urlMappingJasaPengeboranFromSub1MoneyMaster,
 		
-		urlMappingJasaPerkuatanTanahLongsorBridgeFromSub2Sub1,
-		urlMappingJasaPerkuatanTanahLongsorFromSub1MoneyMaster,
+		urlMappingJasaPerkuatanTanahBridgeFromSub2Sub1,
+		urlMappingJasaPerkuatanTanahFromSub1MoneyMaster,
 		
         urlMappingJasaPembatasPengamanBridgeFromSub2Sub1,
 		urlMappingJasaPembatasPengamanFromSub1MoneyMaster,
@@ -1958,7 +1946,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJalanFromSub1MoneyPage,
 		urlMappingPematanganLahanFromSub1MoneyPage,
 		urlMappingUjiTanahFromSub1MoneyPage,
-		urlMappingPerkuatanTanahLongsorFromSub1MoneyPage,
+		urlMappingPerkuatanTanahFromSub1MoneyPage,
 		urlMappingBongkarBangunanFromSub1MoneyPage,
 		urlMappingPengeboranFromSub1MoneyMaster,
 		urlMappingPengeboranFromMoneyMasterMoneyMaster1,
@@ -2847,49 +2835,6 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
     }
 	
-	if (urlMappingKonstruksiRumahBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-        //pageNameKonstruksiSub.textContent = urlMappingStrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
-        urlMappingKonstruksiRumahBridgeFromSub2Sub1,
-        cleanUrlJasaKons,
-       [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Konstruksi Rumah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-rumah.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-	
-    }
-	if (urlMappingKonstruksiGedungBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-        //pageNameKonstruksiSub.textContent = urlMappingStrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
-        urlMappingKonstruksiGedungBridgeFromSub2Sub1,
-        cleanUrlJasaKons,
-       [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Konstruksi Gedung', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-gedung.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-	
-    }
-	if (urlMappingKonstruksiIndustriBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-        //pageNameKonstruksiSub.textContent = urlMappingStrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
-        urlMappingKonstruksiIndustriBridgeFromSub2Sub1,
-        cleanUrlJasaKons,
-       [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Konstruksi Industri', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-industri.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-	
-    }
-
 	if (urlMappingRenovasiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingRenovasiBridgeFromSub2Sub1[cleanUrlJasaKons];
 	
@@ -3251,10 +3196,10 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
     }
 	
-	if (urlMappingJasaPerkuatanTanahLongsorBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-        //pageNameKonstruksiSub.textContent = urlMappingJasaPerkuatanTanahLongsorBridgeFromSub2Sub1[cleanUrlJasaKons];
+	if (urlMappingJasaPerkuatanTanahBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingJasaPerkuatanTanahBridgeFromSub2Sub1[cleanUrlJasaKons];
 	generateBreadcrumbJasaKonstruksi(
-        urlMappingJasaPerkuatanTanahLongsorBridgeFromSub2Sub1,
+        urlMappingJasaPerkuatanTanahBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -3265,9 +3210,9 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
 	
     }
-	if (urlMappingJasaPerkuatanTanahLongsorFromSub1MoneyMaster[cleanUrlJasaKons]) {
+	if (urlMappingJasaPerkuatanTanahFromSub1MoneyMaster[cleanUrlJasaKons]) {
   	generateBreadcrumbJasaKonstruksi(
-        urlMappingJasaPerkuatanTanahLongsorFromSub1MoneyMaster,
+        urlMappingJasaPerkuatanTanahFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -4300,7 +4245,7 @@ if (urlMappingPembatasFromSub1MoneyPage[cleanUrlJasaKons]) {
        document.head.appendChild(script);
    }
 
-if (urlMappingPerkuatanTanahLongsorFromSub1MoneyPage[cleanUrlJasaKons]) {
+if (urlMappingPerkuatanTanahFromSub1MoneyPage[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
 	restoreCondition('JasaPerkuatanTanahLongsor');
            // hapus elemen id DIV Lain
@@ -4350,11 +4295,11 @@ if (urlMappingPerkuatanTanahLongsorFromSub1MoneyPage[cleanUrlJasaKons]) {
 
         JasaKonstruksiSubLink.style.visibility = 'visible';
         JasaUjiTanahLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingPerkuatanTanahLongsorFromSub1MoneyPage[cleanUrlJasaKons];
+        pageNameKonstruksiSub.textContent = urlMappingPerkuatanTanahFromSub1MoneyPage[cleanUrlJasaKons];
     }
   
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingPerkuatanTanahLongsorFromSub1MoneyPage[cleanUrlJasaKons]) {
+   if (urlMappingPerkuatanTanahFromSub1MoneyPage[cleanUrlJasaKons]) {
        const jsonLDBreadcrumb = {
            "@context": "https://schema.org",
            "@type": "BreadcrumbList",
@@ -4380,7 +4325,7 @@ if (urlMappingPerkuatanTanahLongsorFromSub1MoneyPage[cleanUrlJasaKons]) {
 	       {
                    "@type": "ListItem",
                    "position": 4,
-                   "name": urlMappingPerkuatanTanahLongsorFromSub1MoneyPage[cleanUrlJasaKons],
+                   "name": urlMappingPerkuatanTanahFromSub1MoneyPage[cleanUrlJasaKons],
                    "item": cleanUrlJasaKons
                }
            ]
