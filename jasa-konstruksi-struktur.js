@@ -168,7 +168,7 @@ TYPE: MONEY_MASTER                    | TYPE: MONEY_PAGE
  * ============================================================
  */
 
-function generateBreadcrumbJasaKonstruksiFinishing(
+function generateBreadcrumbJasaKonstruksiStruktur(
     mappingObj,
     currentUrl,
     breadcrumbItems = [],
