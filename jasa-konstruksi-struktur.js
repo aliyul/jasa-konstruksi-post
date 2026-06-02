@@ -106,41 +106,6 @@ const urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage = {
 
 
 // ============================================================
-// [SUB2] - Jasa Struktur Beton & Pengecoran (Turunan dari Jasa Struktur Konstruksi)
-// ============================================================
-
-const urlMappingStrukturBetonPengecoranFromSub2MoneyPage = {
-	/*
-  // ============================================================
-  // [MONEY_PAGE] - Jasa Cor Beton
-  // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
-  // Breadcrumb: Home > Jasa Struktur Konstruksi > Jasa Struktur Beton & Pengecoran > Jasa Cor Beton (4 level)
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-cor-beton.html": "Jasa Cor Beton",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_PAGE] - Jasa Pengecoran Lantai Dak
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-dak.html": "Jasa Pengecoran Lantai Dak",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_PAGE] - Jasa Pengecoran Lantai Gudang
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-gudang.html": "Jasa Pengecoran Lantai Gudang",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_PAGE] - Jasa Bekisting dan Pembesian
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bekisting-dan-pembesian.html": "Jasa Bekisting dan Pembesian",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_PAGE] - Jasa Pengecoran Kolom Beton
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pengecoran-kolom-beton.html": "Jasa Pengecoran Kolom Beton",  // TYPE: MONEY_PAGE
-  */
-};
-
-// ============================================================
 // 🔴 REDIRECT NOTES - JASA STRUKTUR
 // ============================================================
 /*
