@@ -106,11 +106,11 @@ const urlMappingJasaKonstruksiStrukturBridgeFromSub2Sub1 = {
 };
 
 const urlMappingJasaStrukturKhususBridgeFromSub2Sub1 = {
-  "https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html": "Daftar Jasa Struktur Khusus"  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html": "Perbandingan Jasa Struktur Khusus"  // TYPE: SUB2
 };
 
 const urlMappingJasaLapanganOlahragaBridgeFromSub2Sub1 = {
- "https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html": "Daftar Jasa Lapangan Olahraga"  // TYPE: SUB2
+ "https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html": "Perbandingan Jasa Lapangan Olahraga"  // TYPE: SUB2
 };
 
 const urlMappingKonstruksiBangunanBridgeFromSub2Sub1 = {
