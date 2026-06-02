@@ -1975,7 +1975,7 @@ if (urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage[cleanUrlJasaJasaKon
             { name: 'Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-Konstruksi-bangunan.html' }
         
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 }
 
@@ -1990,7 +1990,7 @@ if (urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage[cleanUrlJasaJasaKon
              { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
             { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );	
 }
 if (urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
@@ -2004,7 +2004,7 @@ if (urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1[cleanUrlJas
             { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
             { name: 'Jasa Konstruksi Modular dan Precast', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 }
    
@@ -2019,7 +2019,7 @@ if (urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1[cleanUrlJasa
             { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
             { name: 'Jasa Struktur Beton dan Pengecoran', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 }
 	
@@ -2034,7 +2034,7 @@ if (urlMappingJasaStrukturKhususFromMoneyMasterMoneyPage[cleanUrlJasaJasaKonsStr
              { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
             { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );	
 }
 	
@@ -2049,7 +2049,7 @@ if (urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage[cleanUrlJasaJasaKonsS
              { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
             { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' }
         ],
-        'JASA'
+        'JASA_KONSTRUKSI'
     );
 }
  
