@@ -15,50 +15,22 @@
 // [SUB2] - Jasa Konstruksi Gedung & Hunian (Turunan dari Jasa Struktur Konstruksi)
 // ============================================================
 
-const urlMappingStrukturGedungHunianFromSub2MoneyPage = {
-/*hapus saja gabung money page ke sub1 struktur
-  // ============================================================
-  // [MONEY_PAGE] - Jasa Konstruksi Rumah Tinggal
-  // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
-  // Breadcrumb: Home > Jasa Struktur Konstruksi > Jasa Konstruksi Gedung & Hunian > Jasa Konstruksi Rumah Tinggal (4 level)
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah-tinggal.html": "Jasa Konstruksi Rumah Tinggal",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_PAGE] - Jasa Konstruksi Ruko dan Kios
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-ruko-dan-kios.html": "Jasa Konstruksi Ruko dan Kios",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_PAGE] - Jasa Konstruksi Villa
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-villa.html": "Jasa Konstruksi Villa",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_PAGE] - Jasa Konstruksi Apartemen
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-apartemen.html": "Jasa Konstruksi Apartemen",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_PAGE] - Jasa Konstruksi Hotel
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-hotel.html": "Jasa Konstruksi Hotel",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_PAGE] - Jasa Konstruksi Perkantoran
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-perkantoran.html": "Jasa Konstruksi Perkantoran",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_PAGE] - Jasa Konstruksi Gedung Sekolah
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-sekolah.html": "Jasa Konstruksi Gedung Sekolah",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_PAGE] - Jasa Konstruksi Gedung Rumah Sakit
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-rs.html": "Jasa Konstruksi Gedung Rumah Sakit",  // TYPE: MONEY_PAGE
-  */
+const urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage = {
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html": "Jasa Konstruksi Gedung dan Hunian",
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah-tinggal.html": "Jasa Konstruksi Rumah Tinggal",
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-ruko-dan-kios.html": "Jasa Konstruksi Ruko dan Kios",
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-villa-modern.html": "Jasa Konstruksi Villa Modern",
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-apartemen-mewah.html": "Jasa Konstruksi Apartemen Mewah",
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-hotel-bintang.html": "Jasa Konstruksi Hotel Bintang",
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-perkantoran.html": "Jasa Konstruksi Gedung Perkantoran",
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-sekolah.html": "Jasa Konstruksi Gedung Sekolah",
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-rs.html": "Jasa Konstruksi Gedung Rumah Sakit",
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-industri-dan-gudang.html": "Jasa Konstruksi Industri dan Gudang",
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-gudang-logistik.html": "Jasa Konstruksi Gudang Logistik",
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-pabrik-industri.html": "Jasa Konstruksi Pabrik Industri",
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-cold-storage-modern.html": "Jasa Konstruksi Cold Storage Modern",
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-bengkel-modern.html": "Jasa Konstruksi Bengkel Modern",
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-workshop-modern.html": "Jasa Konstruksi Workshop Modern"
 };
 
 // ============================================================
@@ -1460,7 +1432,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingStrukturGedungHunianFromSub2MoneyPage,
+		urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage,
 		urlMappingStrukturIndustriGudangFromSub2MoneyPage,
 		urlMappingStrukturBajaRangkaFromSub2MoneyPage,
 		urlMappingStrukturKhususFromSub2MoneyPage,
@@ -1822,54 +1794,16 @@ if (!JasaKonsStruktur) {
 	
      pageNameJasaKonsStruktur.textContent = "";
 	
-if (urlMappingStrukturGedungHunianFromSub2MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
-        restoreCondition('JasaKonsStruktur');
-        restoreCondition('JasaKonstruksiGedungdanHunianSub');
-           // hapus elemen id DIV Lain
-	removeCondition('ProdukInFur');
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-       // removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
-/*
-JasaKonstruksiGedungdanHunianSub
-JasaKonstruksiIndustridanGudangSub
-JasaStrukturBajadanRangkaRinganSub
-JasaStrukturKhusus
-JasaKonstruksiLapanganOlahragaSub
-JasaKonstruksiModulardanPrecastSub
-JasaStrukturBetondanPengecoranSub
-*/
-       //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunian
-        removeCondition('JasaKonstruksiIndustridanGudangSub');
-        removeCondition('JasaStrukturBajadanRangkaRinganSub');
-        removeCondition('JasaStrukturKhususSub');
-	removeCondition('JasaKonstruksiLapanganOlahragaSub');
-	removeCondition('JasaKonstruksiModulardanPrecastSub');
-	removeCondition('JasaStrukturBetondanPengecoranSub');
-       
-        JasaKonstruksiStrukturSubLink.style.visibility = 'visible';
-        JasaStrukturKonstruksiSubLink.style.visibility = 'visible';
-	//TAMPILKAN JasaKonstruksiGedungdanHunianSubLink
-        JasaKonstruksiGedungdanHunianSubLink.style.visibility = 'visible';
-        pageNameJasaKonsStruktur.textContent = urlMappingStrukturGedungHunianFromSub2MoneyPage[cleanUrlJasaJasaKonsStruktur];
-
+if (urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage[cleanUrlJasaJasaKonsStruktur]) {
 		    generateBreadcrumbJasaKonstruksiStruktur(
-        urlMappingStrukturGedungHunianFromSub2MoneyPage,
+        urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage,
         cleanUrlJasaJasaKonsStruktur,
         [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html' },
-            { name: 'Jasa Konstruksi Gedung dan Hunian', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html' }
+            { name: 'Daftar Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-Konstruksi-bangunan.html' },
+            { name: 'Perbandingan Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-Konstruksi-bangunan.html' },
+            { name: 'Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-Konstruksi-bangunan.html' }
+        
         ],
         'JASA'
     );
