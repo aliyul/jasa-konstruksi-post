@@ -43,7 +43,7 @@ const urlMappingJasaKonsFromPillarSub2 = {
 //  "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-gedung.html": "Daftar Jasa Konstruksi Gedung",  // TYPE: SUB2
  // "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-industri.html": "Daftar Jasa Konstruksi Industri",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html": "Daftar Jasa Struktur Konstruksi",  // TYPE: SUB2
-  "https://www.betonjayareadymix.com/p/daftar-jasa-pondasi-tanah.html": "Daftar Jasa Pondasi Tanah",  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html": "Daftar Jasa Pondasi",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-saluran-drainase.html": "Daftar Jasa Saluran & Drainase",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-jalan-perkerasan.html": "Daftar Jasa Jalan & Perkerasan",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/daftar-jasa-pematangan-lahan.html": "Daftar Jasa Pematangan Lahan",  // TYPE: SUB2
@@ -187,10 +187,10 @@ const urlMappingJalanPerkerasanFromSub1MoneyMaster = {
 
 const urlMappingJasaPondasiBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi-tanah.html": "Perbandingan Jasa Pondasi Tanah"  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html": "Perbandingan Jasa Pondasi"  // TYPE: SUB1
 };
 const urlMappingJasaPondasiFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/jasa-pondasi-tanah.html": "Jasa Pondasi Tanah"  // TYPE: SUB2
+  "https://www.betonjayareadymix.com/p/jasa-pondasi.html": "Jasa Pondasi"  // TYPE: SUB2
 };
 const urlMappingJasaSaluranDrainaseBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
@@ -2974,7 +2974,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
        [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi-perkuatan-tanah.html' }
+            { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' }
         ],
         'JASA_KONSTRUKSI'
     );
@@ -2988,8 +2988,8 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
        [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi-perkuatan-tanah.html' },
-            { name: 'Perbandingan Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/perbandingan-pondasi-perkuatan-tanah.html' }
+            { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+            { name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' }
         ],
         'JASA_KONSTRUKSI'
     );
@@ -3832,8 +3832,8 @@ if (urlMappingPondasiFromSub1MoneyPage[cleanUrlJasaKons]) {
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi-perkuatan-tanah.html' },
-            { name: 'Perbandingan Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/perbandingan-pondasi-perkuatan-tanah.html' }
+            { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+            { name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' }
         ],
         'JASA_KONSTRUKSI'
     );
