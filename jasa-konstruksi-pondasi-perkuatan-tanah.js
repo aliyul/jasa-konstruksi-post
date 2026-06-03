@@ -118,7 +118,7 @@ const urlMappingJasaPerkuatanTanahFromMoneyMasterMoneyPage = {
 };
 
 const urlMappingJasaPerkuatanTanahFromMoneyMasterMoneyMaster1 = {
- "https://www.betonjayareadymix.com/p/jasa-retrofitting-pondasi.html": "Jasa Retrofitting Pondasi"
+ "https://www.betonjayareadymix.com/p/jasa-retrofitting-pondasi.html": "Jasa Retrofitting Pondasi",
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-tanah.html": "Jasa Perbaikan Tanah", // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-geotextile.html": "Jasa Perkuatan Tanah Geotextile", // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-stone-column.html": "Jasa Stone Column", // TYPE: MONEY_PAGE
