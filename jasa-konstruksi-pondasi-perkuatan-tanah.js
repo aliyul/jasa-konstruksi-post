@@ -44,21 +44,6 @@ const urlMappingJasaRetrofittingPondasi = {
 // ✅ Gunakan: SUB2 (Informasional 60%) atau MONEY_PAGE (Komersial+Transaksional)
 // ✅ Gunakan: VARIANT (Komersial 80%) UNTUK SPESIFIKASI TEKNIS YANG SANGAT DETAIL
 // ❌ Dilarang: MONEY_MASTER untuk JASA
-//
-// ⚠️ KOREKSI UTAMA:
-// 1. Halaman dengan konten INFORMASIONAL/EDUKASI → TYPE: SUB2
-// 2. Halaman dengan konten HARGA/TRANSAKSIONAL → TYPE: MONEY_PAGE
-// 3. Halaman dengan SPESIFIKASI TEKNIS SANGAT DETAIL → TYPE: VARIANT
-// 4. SUB2 (Level 2) → SUB2 (Level 3) → MONEY_PAGE (Level 5)
-// 5. SUB2 TIDAK BOLEH LANGSUNG KE VARIANT
-// ============================================================
-
-// ============================================================
-// 📁 LEVEL 2 - SUB2 (Kategori Utama - Turunan dari PILLAR Jasa Konstruksi)
-// ============================================================
-const urlMappingJasaPerkuatanTanahFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html": "Jasa Perkuatan Tanah Longsor"  // TYPE: SUB2
-};
 
 const urlMappingJasaPondasiFromMoneyMasterMoneyMaster1 = {
 // ============================================================
@@ -128,11 +113,15 @@ const urlMappingJasaPemadatanPersiapanPondasiFromSub1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-uji-kepadatan-tanah-pondasi.html": "Jasa Uji Kepadatan Tanah Pondasi"  // TYPE: MONEY_PAGE
 };
 
-const urlMappingJasaPerkuatanTanahFromSub1MoneyPage = {
+const urlMappingJasaPerkuatanTanahFromMoneyMasterMoneyPage = {
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html": "Jasa Perkuatan Tanah Longsor"  // TYPE: SUB2
+};
 
+const urlMappingJasaPerkuatanTanahFromMoneyMasterMoneyMaster1 = {
+ "https://www.betonjayareadymix.com/p/jasa-retrofitting-pondasi.html": "Jasa Retrofitting Pondasi"
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-tanah.html": "Jasa Perbaikan Tanah", // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-geotextile.html": "Jasa Perkuatan Tanah Geotextile", // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-stone-column.html": "Jasa Perkuatan Tanah Stone Column", // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-geotextile.html": "Jasa Perkuatan Tanah Geotextile", // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-stone-column.html": "Jasa Stone Column", // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-vertical-drain.html": "Jasa Vertical Drain",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-soil-nailing.html": "Jasa Soil Nailing" // TYPE: MONEY_PAGE
 };
@@ -1557,10 +1546,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
+		urlMappingJasaPerkuatanTanahFromMoneyMasterMoneyMaster1,
 		urlMappingJasaPerkuatanTanahFromMoneyMasterMoneyPage,
 		 urlMappingJasaPondasiFromMoneyMasterMoneyMaster1,
 		urlMappingJasaPemadatanPersiapanPondasiFromSub1MoneyPage,
-		urlMappingJasaPerkuatanTanahFromSub1MoneyPage,
 		urlMappingJasaRetrofittingPondasiFromSub1MoneyPage
     );
 
@@ -2116,8 +2105,21 @@ document.addEventListener("DOMContentLoaded", function() {
         ],
         'JASA_KONSTRUKSI'
     );
-
 }
+if (urlMappingJasaPerkuatanTanahFromMoneyMasterMoneyMaster1[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+       generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanah(
+        urlMappingJasaPerkuatanTanahFromMoneyMasterMoneyMaster1,
+        cleanUrlJasaPondasiPerkuatanTanahKons,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perkuatan-tanah.html' },
+			{ name: 'Perbandingan Jasa Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perkuatan-tanah.html' },
+			{ name: 'Jasa Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
 	
 	if (urlMappingJasaPondasiFromMoneyMasterMoneyMaster1[cleanUrlJasaPondasiPerkuatanTanahKons]) {
         generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanah(
@@ -2224,19 +2226,7 @@ document.addEventListener("DOMContentLoaded", function() {
     );
     }
 	
-if (urlMappingJasaPerkuatanTanahFromSub1MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
-       generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanah(
-        urlMappingJasaPerkuatanTanahFromSub1MoneyPage,
-        cleanUrlJasaPondasiPerkuatanTanahKons,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi-perkuatan-tanah.html' },
-			{ name: 'Perbandingan Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/perbandingan-pondasi-perkuatan-tanah.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
+
 /*
 // ✅ Tambahkan JSON-LD Breadcrumb otomatis
    if (urlMappingJasaPerkuatanTanahFromSub2Sub2[cleanUrlJasaPondasiPerkuatanTanahKons]) {
