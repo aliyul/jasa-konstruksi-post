@@ -1550,8 +1550,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPerkuatanTanahFromMoneyMasterMoneyMaster1,
 		urlMappingJasaRetrofittingPondasiFromMoneyMaster1MoneyPage,
 		urlMappingJasaPerkuatanTanahFromMoneyMasterMoneyPage,
-		 urlMappingJasaPondasiFromMoneyMasterMoneyMaster1,
-		urlMappingJasaPemadatanPondasiFromMoneyMaster1MoneyPage
+		urlMappingJasaPondasiFromMoneyMasterMoneyMaster1,
+		urlMappingJasaBoronganPondasiFromMoneyMaster1MoneyPage,
+		urlMappingJasaPondasiTanahFromMoneyMaster1MoneyPage,
+		urlMappingJasaPondasiBangunanFromMoneyMaster1MoneyPage,
+		urlMappingJasaCakarAyamFromMoneyMaster1MoneyPage,
+		urlMappingJasaPondasiTapakFromMoneyMaster1MoneyPage,
+		urlMappingJasaTiangPancangFromMoneyMaster1MoneyPage,
+		urlMappingJasaPondasiSumuranFromMoneyMaster1MoneyPage,
+		urlMappingJasaPemadatanPondasiFromMoneyMaster1MoneyPage,
+		urlMappingJasaPersiapanPondasiFromMoneyMaster1MoneyPage
 		
     );
 
@@ -2150,7 +2158,105 @@ if (urlMappingJasaPerkuatanTanahFromMoneyMasterMoneyMaster1[cleanUrlJasaPondasiP
         ],
         'JASA_KONSTRUKSI'
     );
+}
+if (urlMappingJasaBoronganPondasiFromMoneyMaster1MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanah(
+        urlMappingJasaBoronganPondasiFromMoneyMaster1MoneyPage,
+        cleanUrlJasaPondasiPerkuatanTanahKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+			{ name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
+			{ name: 'Jasa Borongan Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-borongan-pondasi.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
 
+}
+if (urlMappingJasaPondasiTanahFromMoneyMaster1MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanah(
+        urlMappingJasaPondasiTanahFromMoneyMaster1MoneyPage,
+        cleanUrlJasaPondasiPerkuatanTanahKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+			{ name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi Tanah', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi-tanah.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaPondasiBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanah(
+        urlMappingJasaPondasiBangunanFromMoneyMaster1MoneyPage,
+        cleanUrlJasaPondasiPerkuatanTanahKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+			{ name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi-bangunan.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaCakarAyamFromMoneyMaster1MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanah(
+        urlMappingJasaCakarAyamFromMoneyMaster1MoneyPage,
+        cleanUrlJasaPondasiPerkuatanTanahKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+			{ name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
+			{ name: 'Jasa Cakar Ayam', url: 'https://www.betonjayareadymix.com/p/jasa-cakar-ayam.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaPondasiTapakFromMoneyMaster1MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanah(
+        urlMappingJasaPondasiTapakFromMoneyMaster1MoneyPage,
+        cleanUrlJasaPondasiPerkuatanTanahKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+			{ name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi Tapak', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi-tapak.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaTiangPancangFromMoneyMaster1MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanah(
+        urlMappingJasaTiangPancangFromMoneyMaster1MoneyPage,
+        cleanUrlJasaPondasiPerkuatanTanahKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+			{ name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
+			{ name: 'Jasa Tiang Pancang', url: 'https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaPondasiSumuranFromMoneyMaster1MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanah(
+        urlMappingJasaPondasiSumuranFromMoneyMaster1MoneyPage,
+        cleanUrlJasaPondasiPerkuatanTanahKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+			{ name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
+			{ name: 'Jasa Tiang Pancang', url: 'https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
 }
    if (urlMappingJasaPemadatanPondasiFromMoneyMaster1MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
 	     generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanah(
@@ -2166,56 +2272,19 @@ if (urlMappingJasaPerkuatanTanahFromMoneyMasterMoneyMaster1[cleanUrlJasaPondasiP
         'JASA_KONSTRUKSI'
     );
     }
-	
-
-/*
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPerkuatanTanahFromSub2Sub2[cleanUrlJasaPondasiPerkuatanTanahKons]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Pondasi & Perkuatan Tanah",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pondasi-perkuatan-tanah.html"
-               },
-		{
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Perkuatan Tanah",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": urlMappingJasaPerkuatanTanahFromSub2Sub2[cleanUrlJasaPondasiPerkuatanTanahKons],
-                   "item": cleanUrlJasaPondasiPerkuatanTanahKons
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-   */
-	
-	
-    //SUB urlMappingPembuatanPagarDinding
+if (urlMappingJasaPersiapanPondasiFromMoneyMaster1MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanah(
+        urlMappingJasaPersiapanPondasiFromMoneyMaster1MoneyPage,
+        cleanUrlJasaPondasiPerkuatanTanahKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+			{ name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
+			{ name: 'Jasa Persiapan Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-persiapan-pondasi.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
    
    });
