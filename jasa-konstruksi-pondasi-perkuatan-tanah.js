@@ -93,6 +93,10 @@ const urlMappingJasaPondasiBangunanFromMoneyMaster1MoneyPage = {
 const urlMappingJasaCakarAyamFromMoneyMaster1MoneyPage = {
 "https://www.betonjayareadymix.com/p/jasa-pondasi-cakar-ayam.html": "Jasa Pondasi Cakar Ayam",  // MP
 };
+const urlMappingJasaCakarAyamFromMoneyPageMoneyPage1 = {
+ "https://www.betonjayareadymix.com/p/harga-jasa-pondasi-cakar-ayam.html": "Harga Jasa Pondasi Cakar Ayam",  // TYPE: MONEY_PAGE
+  // "https://www.betonjayareadymix.com/p/jasa-pondasi-cakar-ayam-per-meter.html": "Jasa Pondasi Cakar Ayam Per Meter"
+};
 const urlMappingJasaPondasiTapakFromMoneyMaster1MoneyPage = {
 //"https://www.betonjayareadymix.com/p/jasa-pondasi-bangunan-rumah.html": "Jasa Pondasi Bangunan Rumah"  // MP (L5)
 
@@ -1568,6 +1572,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPondasiTanahFromMoneyMaster1MoneyPage,
 		urlMappingJasaPondasiBangunanFromMoneyMaster1MoneyPage,
 		urlMappingJasaCakarAyamFromMoneyMaster1MoneyPage,
+		urlMappingJasaCakarAyamFromMoneyPageMoneyPage1,
 		urlMappingJasaPondasiTapakFromMoneyMaster1MoneyPage,
 		urlMappingJasaTiangPancangFromMoneyMaster1MoneyPage,
 		urlMappingJasaPondasiSumuranFromMoneyMaster1MoneyPage,
@@ -2244,6 +2249,23 @@ if (urlMappingJasaCakarAyamFromMoneyMaster1MoneyPage[cleanUrlJasaPondasiPerkuata
         'JASA_KONSTRUKSI'
     );
 }
+if (urlMappingJasaCakarAyamFromMoneyPageMoneyPage1[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanah(
+        urlMappingJasaCakarAyamFromMoneyPageMoneyPage1,
+        cleanUrlJasaPondasiPerkuatanTanahKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+			{ name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
+			{ name: 'Jasa Cakar Ayam', url: 'https://www.betonjayareadymix.com/p/jasa-cakar-ayam.html' },
+			{ name: 'Jasa Pondasi Cakar Ayam', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi-cakar-ayam.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+	
+	
 if (urlMappingJasaPondasiTapakFromMoneyMaster1MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
         generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanah(
         urlMappingJasaPondasiTapakFromMoneyMaster1MoneyPage,
