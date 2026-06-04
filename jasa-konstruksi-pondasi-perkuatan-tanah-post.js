@@ -150,7 +150,7 @@ const urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild = {
 // Parent: Jasa Pondasi Bangunan (SUB2)
 // ============================================================
 
-const urlMappingJasaPondasiSumuranFromMoneyPageMoneyChild = {
+const urlMappingJasaPondasiSumuranFromMoneyMaster1MoneyChild = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-sumuran.html": "Jasa Pondasi Sumuran",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-sumuran.html": "Harga Jasa Pondasi Sumuran",  // TYPE: MONEY_PAGE
@@ -1504,7 +1504,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPondasiCakarAyamFromMoneyPageMoneyChild,
 		urlMappingJasaPondasiTapakFromMoneyPageMoneyChild,
 		urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild,
-		urlMappingJasaPondasiSumuranFromMoneyPageMoneyChild		
+		urlMappingJasaPondasiSumuranFromMoneyMaster1MoneyChild		
     );
    
     // --- validasi URL terdaftar ---
@@ -2439,64 +2439,15 @@ if (urlMappingJasaPondasiCakarAyamFromMoneyPageMoneyChild[cleanUrlJasaPondasiPer
  */
 	
 if (urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
-        restoreCondition('JasaKonsPondasiTanahPost');
-        restoreCondition('JasaPondasiBangunanSubPost');
-        restoreCondition('JasaPondasiTiangPancangPost');
-     
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-        removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaPemadatanPersiapanPondasiSubPost');
-        removeCondition('JasaPerkuatanTanahSubPost');
-        removeCondition('JasaRetrofittingPondasiSubPost');
-
-	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
-        removeCondition('JasaPondasiTapakPost');
-         
-	removeCondition('JasaPondasiCakarAyamPost');
-	removeCondition('JasaPondasiSumuranPost');
-	/*
- JasaPondasiBangunanSubPostLink.style.visibility = 'hidden';
-     JasaPemadatanPersiapanPondasiSubPostLink.style.visibility = 'hidden';
-     JasaPerkuatanTanahSubPostLink.style.visibility = 'hidden';
-     JasaRetrofittingPondasiSubPostLink.style.visibility = 'hidden';
-*/
-       
-        JasaKonstruksiPondasiTanahSubPostLink.style.visibility = 'visible';
-        JasaPondasiTanahSubPostLink.style.visibility = 'visible';
-	//TAMPILKAN PONDASI BANGUNAN
-        JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaPondasiCakarAyam
-        JasaPondasiTiangPancangPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
-	
 		generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
         urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild,
         cleanUrlJasaPondasiPerkuatanTanahKonsPost,
         [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi-perkuatan-tanah.html' },
-			{ name: 'Perbandingan Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/perbandingan-pondasi-perkuatan-tanah.html' },
+             { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+			{ name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
+			{ name: 'Jasa Tiang Pancang', url: 'https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html' },
 			{ name: 'Harga Jasa Pondasi Tiang Pancang', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pondasi-tiang-pancang.html' }
         ],
         'JASA_KONSTRUKSI'
@@ -2556,122 +2507,19 @@ if (urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild[cleanUrlJasaPo
        document.head.appendChild(script);
    }
 	*/
-	
-if (urlMappingJasaPondasiSumuranFromMoneyPageMoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
-        restoreCondition('JasaKonsPondasiTanahPost');
-        restoreCondition('JasaPondasiBangunanSubPost');
-        restoreCondition('JasaPondasiSumuranPost');
-     
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-        removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaPemadatanPersiapanPondasiSubPost');
-        removeCondition('JasaPerkuatanTanahSubPost');
-        removeCondition('JasaRetrofittingPondasiSubPost');
-
-	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SELAIN JasaPagarPanelBeton
-        removeCondition('JasaPondasiTapakPost');
-         
-	removeCondition('JasaPondasiTiangPancangPost');
-	removeCondition('JasaPondasiCakarAyamPost');
-	/*
- JasaPondasiBangunanSubPostLink.style.visibility = 'hidden';
-     JasaPemadatanPersiapanPondasiSubPostLink.style.visibility = 'hidden';
-     JasaPerkuatanTanahSubPostLink.style.visibility = 'hidden';
-     JasaRetrofittingPondasiSubPostLink.style.visibility = 'hidden';
-*/
-       
-        JasaKonstruksiPondasiTanahSubPostLink.style.visibility = 'visible';
-        JasaPondasiTanahSubPostLink.style.visibility = 'visible';
-	//TAMPILKAN PONDASI BANGUNAN
-        JasaPondasiBangunanSubPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaPondasiCakarAyam
-        JasaPondasiSumuranPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPondasiTanahPost.textContent = urlMappingJasaPondasiSumuranFromMoneyPageMoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost];
-
+if (urlMappingJasaPondasiSumuranFromMoneyMaster1MoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
 	generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
-        urlMappingJasaPondasiSumuranFromMoneyPageMoneyChild,
+        urlMappingJasaPondasiSumuranFromMoneyMaster1MoneyChild,
         cleanUrlJasaPondasiPerkuatanTanahKonsPost,
         [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi-perkuatan-tanah.html' },
-			{ name: 'Perbandingan Jasa Pondasi & Perkuatan Tanah', url: 'https://www.betonjayareadymix.com/p/perbandingan-pondasi-perkuatan-tanah.html' },
+           { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+			{ name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
 			{ name: 'Jasa Pondasi Sumuran', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi-sumuran.html' }
         ],
         'JASA_KONSTRUKSI'
     );
    }
-/*
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPondasiSumuranFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Pondasi & Perkuatan Tanah",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pondasi-perkuatan-tanah.html"
-               },
-		{
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Pondasi Bangunan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pondasi-bangunan.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Pondasi Sumuran",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pondasi-sumuran.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": urlMappingJasaPondasiSumuranFromSub2MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKonsPost],
-                   "item": cleanUrlJasaPondasiPerkuatanTanahKonsPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-   */
 
    });
