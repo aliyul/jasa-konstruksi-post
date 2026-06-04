@@ -110,7 +110,13 @@ const urlMappingHargaJasaPondasiTapakFromMoneyPageMoneyPage1 = {
 
 const urlMappingJasaTiangPancangFromMoneyMaster1MoneyPage = {
 "https://www.betonjayareadymix.com/p/jasa-pondasi-tiang-pancang.html": "Jasa Pondasi Tiang Pancang", // MP (L5)
-"https://www.betonjayareadymix.com/p/harga-jasa-pondasi-tiang-pancang.html": "Harga Jasa Pondasi Tiang Pancang"
+"https://www.betonjayareadymix.com/p/harga-jasa-pondasi-tiang-pancang.html": "Harga Jasa Pondasi Tiang Pancang",
+"https://www.betonjayareadymix.com/p/harga-jasa-pancang-drop-hammer.html": "Harga Jasa Pancang Drop Hammer",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/harga-jasa-pancang-spun-pile.html": "Harga Jasa Pancang Spun Pile",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/harga-jasa-pancang-mini-pile.html": "Harga Jasa Pancang Mini Pile",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/harga-jasa-pemasangan-mini-pile.html": "Harga Jasa Pemasangan Mini Pile",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/harga-jasa-pancang-hidrolik.html": "Harga Jasa Pancang Hidrolik",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/harga-jasa-pemasangan-tiang-pancang.html": "Harga Jasa Pemasangan Tiang Pancang"
 };
 const urlMappingJasaPondasiSumuranFromMoneyMaster1MoneyPage = {
 "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-sumuran.html": "Harga Jasa Pondasi Sumuran",  // TYPE: MONEY_PAGE
