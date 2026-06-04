@@ -1183,9 +1183,19 @@ REDIRECT		5			Duplikasi, perlu 301 redirect
 
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v8.8 FINAL
+ * generateBreadcrumbJasaKonstruksi v8.9 FINAL
  * UNIVERSAL ENTITY HIERARCHY ENGINE - FIXED SAME LEVEL PARENT
  * ============================================================
+ *
+ * ✅ UPDATE v8.9
+ * ------------------------------------------------------------
+ * - UPDATED: Daftar lokasi money child diperluas (15+ kota/kabupaten)
+ * - UPDATED: Variant detection per entity type
+ * - PRODUK/MATERIAL: spesifikasi, mutu, ukuran, dimensi, grade, type, tipe
+ * - JASA: standar pelayanan, metode kerja, SOP, prosedur, durasi, garansi
+ * - SEWA: spesifikasi alat, kapasitas alat, spek alat
+ * - FIX: K225/K250/K300 tetap MP (bukan variant)
+ * - FIX: "terdekat" tetap sebagai money child
  *
  * ✅ UPDATE v8.8
  * ------------------------------------------------------------
@@ -1194,17 +1204,11 @@ REDIRECT		5			Duplikasi, perlu 301 redirect
  * - FIX: Tidak ada filter level yang membatasi parent dengan level sama
  * - FIX: Current page tetap tidak ikut terpilih sebagai parent
  * - ENHANCED: Prioritas parent berdasarkan level tertinggi
- * - ENHANCED: Logging lebih detail untuk debugging
- *
- * ✅ UPDATE v8.7
- * ------------------------------------------------------------
- * - Parent dengan level SAMA dengan current page TIDAK SKIP
- * - MM → MM (level 4→4) sekarang berfungsi
- * - MP → MP (level 5→5) sekarang berfungsi
+ * - ENHHCED: Logging lebih detail untuk debugging
  *
  * ============================================================
- * @version 8.8.0 FINAL
- * @date 2026-05-25
+ * @version 8.9.0
+ * @date 2026-05-31
  * ============================================================
  */
 
@@ -1231,8 +1235,8 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
 
     function log(message, type = 'INFO') {
         if (!CONFIG.DEBUG && type === 'INFO') return;
-        const icons = { INFO: '📘', SUCCESS: '✅', WARN: '⚠️', ERROR: '❌', DEBUG: '🔍' };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v8.8] ${message}`);
+        const icons = { INFO: '📘', SUCCESS: '✅', WARN: '⚠️', ERROR: '❌', DEBUG: '🔍', VARIANT: '🔬' };
+        console.log(`${icons[type] || '📘'} [Breadcrumb v8.9] ${message}`);
     }
 
     // ============================================================
@@ -1383,9 +1387,35 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
         'panduan', 'tutorial', 'cara', 'tips', 'apa itu', 'pengertian'
     ];
 
-    const VARIANT_KEYWORDS = [
-        'spesifikasi', 'spec', 'kapasitas', 'dimensi', 'ukuran', 'mutu', 'grade', 'type', 'tipe'
+    // ============================================================
+    // 11a. VARIANT KEYWORDS PER ENTITY (UPDATED v8.9)
+    // ============================================================
+    
+    // Variant keywords untuk PRODUK & MATERIAL
+    const VARIANT_KEYWORDS_PRODUK = [
+        'spesifikasi', 'spec', 'detail spesifikasi',
+        'mutu', 'kualitas', 'quality',
+        'ukuran', 'dimensi',
+        'grade', 'type', 'tipe', 'model',
+        'standar', 'merk', 'brand', 'seri'
     ];
+
+    // Variant keywords untuk JASA (lebih spesifik ke layanan)
+    const VARIANT_KEYWORDS_JASA = [
+        'standar pelayanan', 'sop', 'metode kerja',
+        'prosedur', 'tahapan', 'cara kerja',
+        'durasi', 'waktu pengerjaan', 'garansi',
+        'standar pengerjaan'
+    ];
+
+    // Variant keywords untuk SEWA (hanya untuk spesifikasi alat)
+    const VARIANT_KEYWORDS_SEWA = [
+        'spesifikasi alat', 'kapasitas alat',
+        'spek alat', 'detail alat', 'spesifikasi'
+    ];
+
+    // Technical specs yang TETAP MP (bukan variant) - untuk semua entity
+    const TECHNICAL_SPECS = ['k225', 'k250', 'k300', 'k350', 'k400', 'k500', 'k600', 'fc', 'm6', 'm8', 'm10', 'm12'];
 
     const SPECIFIC_MODIFIERS = [
         'k225', 'k250', 'k300', 'm6', 'm8', 'm10',
@@ -1395,21 +1425,117 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
     ];
 
     // ============================================================
-    // 12. LOCATION DETECTION
+    // 11b. VARIANT DETECTION PER ENTITY (UPDATED v8.9)
+    // ============================================================
+    
+    function isVariantPage(pageName, currentEntityType) {
+        const lowerName = pageName.toLowerCase();
+        
+        // Cek technical specs - BUKAN variant (tetap MP)
+        for (const spec of TECHNICAL_SPECS) {
+            if (lowerName.includes(spec)) {
+                return false;
+            }
+        }
+        
+        // Variant detection berdasarkan ENTITY TYPE
+        if (currentEntityType === 'PRODUK_KONSTRUKSI' || currentEntityType === 'MATERIAL_KONSTRUKSI') {
+            for (const kw of VARIANT_KEYWORDS_PRODUK) {
+                if (lowerName.includes(kw)) {
+                    log(`Variant detected (PRODUK/MATERIAL): "${pageName}" contains "${kw}"`, 'VARIANT');
+                    return true;
+                }
+            }
+        }
+        
+        if (currentEntityType === 'JASA_KONSTRUKSI') {
+            for (const kw of VARIANT_KEYWORDS_JASA) {
+                if (lowerName.includes(kw)) {
+                    log(`Variant detected (JASA): "${pageName}" contains "${kw}"`, 'VARIANT');
+                    return true;
+                }
+            }
+            // Jasa TIDAK punya variant untuk spesifikasi teknis produk
+            return false;
+        }
+        
+        if (currentEntityType === 'SEWA_ALAT_KONSTRUKSI') {
+            for (const kw of VARIANT_KEYWORDS_SEWA) {
+                if (lowerName.includes(kw)) {
+                    log(`Variant detected (SEWA): "${pageName}" contains "${kw}"`, 'VARIANT');
+                    return true;
+                }
+            }
+            // "spesifikasi excavator" → variant untuk SEWA
+            if (lowerName.includes('spesifikasi') && (lowerName.includes('alat') || lowerName.includes('excavator') || lowerName.includes('dump') || lowerName.includes('alat berat'))) {
+                log(`Variant detected (SEWA): "${pageName}" contains spesifikasi + alat`, 'VARIANT');
+                return true;
+            }
+            return false;
+        }
+        
+        return false;
+    }
+
+    // ============================================================
+    // 12. LOCATION DETECTION (UPDATED v8.9 - DAFTAR LENGKAP)
     // ============================================================
 
     const LOCATION_WHITELIST = new Set([
-        'jakarta', 'bogor', 'depok', 'tangerang', 'bekasi',
-        'bandung', 'karawang', 'purwakarta', 'cikarang', 'subang',
-        'cirebon', 'semarang', 'surabaya', 'solo', 'jogja',
-        'yogyakarta', 'medan', 'makassar', 'bali', 'denpasar', 'terdekat'
+        // Jabodetabek
+        'jakarta', 'jakarta pusat', 'jakarta barat', 'jakarta selatan', 'jakarta timur', 'jakarta utara',
+        'bogor', 'kota bogor', 'kabupaten bogor',
+        'depok', 'kota depok',
+        'tangerang', 'kota tangerang', 'kota tangerang selatan', 'kabupaten tangerang',
+        'bekasi', 'kota bekasi', 'kabupaten bekasi',
+        
+        // Jawa Barat
+        'bandung', 'kota bandung', 'kabupaten bandung',
+        'karawang', 'kabupaten karawang',
+        'purwakarta', 'kabupaten purwakarta',
+        'cikarang', 'cikarang barat', 'cikarang pusat', 'cikarang selatan', 'cikarang timur', 'cikarang utara',
+        'subang', 'kabupaten subang',
+        'cirebon', 'kota cirebon', 'kabupaten cirebon',
+        
+        // Jawa Tengah
+        'semarang', 'kota semarang', 'kabupaten semarang',
+        'solo', 'surakarta', 'kota surakarta',
+        'pekalongan', 'tegal', 'magelang', 'sukoharjo', 'boyolali', 'klaten',
+        
+        // DI Yogyakarta
+        'jogja', 'yogyakarta', 'kota yogyakarta', 'kabupaten sleman', 'bantul', 'gunungkidul', 'kulon progo',
+        
+        // Jawa Timur
+        'surabaya', 'kota surabaya',
+        'malang', 'kota malang', 'kabupaten malang',
+        'kediri', 'kota kediri', 'kabupaten kediri',
+        'gresik', 'sidoarjo', 'mojokerto', 'pasuruan', 'probolinggo', 'jember', 'banyuwangi', 'madiun',
+        
+        // Sumatera
+        'medan', 'kota medan',
+        'palembang', 'pekanbaru', 'padang', 'lampung', 'bandar lampung', 'batam', 'tanjungpinang',
+        'aceh', 'banda aceh', 'jambi', 'bengkulu', 'pangkal pinang',
+        
+        // Kalimantan
+        'pontianak', 'balikpapan', 'samarinda', 'banjarmasin', 'palangkaraya',
+        
+        // Sulawesi
+        'makassar', 'kota makassar',
+        'manado', 'palu', 'kendari', 'gorontalo',
+        
+        // Bali & Nusa Tenggara
+        'bali', 'kabupaten badung', 'kota denpasar', 'gianyar', 'tabanan', 'bangli', 'karangasem', 'klungkung', 'buleleng', 'jembrana',
+        'mataram', 'kupang',
+        
+        // Lainnya
+        'terdekat'
     ]);
 
     function isLocation(text) {
         if (!text) return false;
         const lower = text.toLowerCase();
         for (const city of LOCATION_WHITELIST) {
-            if (new RegExp(`\\b${city}\\b`, 'i').test(lower)) return true;
+            if (new RegExp(`\\b${city.replace(/\s+/g, '\\s+')}\\b`, 'i').test(lower)) return true;
         }
         return false;
     }
@@ -1458,7 +1584,7 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
         /\b(jasa|kontraktor|tukang|borongan|renovasi|pasang|bangun|perbaikan|instalasi|proyek|cor|gali|urug|angkut)\b/i;
 
     // ============================================================
-    // 17. PAGE TYPE DETECTION
+    // 17. PAGE TYPE DETECTION (UPDATED v8.9)
     // ============================================================
 
     function detectPageType(pageName, isHome = false) {
@@ -1468,9 +1594,11 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
         if (isEntityPillarExactMatch(lowerName)) return 'pillar';
         if (isSubVariant(lowerName)) return 'sub-variant';
 
-        for (const kw of VARIANT_KEYWORDS) {
-            if (lowerName.includes(kw)) return 'variant';
+        // ✅ UPDATED v8.9: Variant detection per entity
+        if (isVariantPage(lowerName, entityType)) {
+            return 'variant';
         }
+
         for (const kw of INFORMATIONAL_KEYWORDS) {
             if (lowerName.includes(kw)) return 'pillar';
         }
@@ -2098,7 +2226,22 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
     document.head.appendChild(script);
 
     // ============================================================
-    // 34. RETURN
+    // 34. LOG SUMMARY
+    // ============================================================
+
+    console.log('📊 PAGE TYPE DETECTION SUMMARY (v8.9):');
+    console.log(`   Page: "${currentPageTitle}"`);
+    console.log(`   Type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`);
+    console.log(`   Entity: ${entityType}`);
+    if (currentPageType === 'variant') {
+        console.log(`   🔬 Variant detected for entity: ${entityType}`);
+    }
+    if (currentPageType === 'money-child') {
+        console.log(`   📍 Money Child with location detected`);
+    }
+
+    // ============================================================
+    // 35. RETURN
     // ============================================================
 
     return {
@@ -2107,10 +2250,12 @@ function generateBreadcrumbJasaAlatKonstruksiPost(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '8.8.0 FINAL',
-        maxLevel: 'NONE (nearest parent only)'
+        version: '8.9.0',
+        maxLevel: 'NONE (nearest parent only)',
+        isVariant: currentPageType === 'variant'
     };
 }
+
 
 // Fungsi untuk menghapus elemen breadcrumb navigation
     function removeBreadcrumbNavigation() {
