@@ -3490,7 +3490,7 @@ if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
   //AKHIR JASA KONTRUKSI ALAT
  if (urlMappingRenovasiFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 	   generateBreadcrumbJasaKonstruksi(
-        urlMappingRenovasiFromMoneyMasterMoneyPage,
+        urlMappingRenovasiFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -3498,7 +3498,7 @@ if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
            	{ name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
            	{ name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' }
         ],
-        'SEWA_ALAT_KONSTRUKSI'
+        'JASA_KONSTRUKSI'
     );   
 }
 	
