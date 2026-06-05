@@ -1469,31 +1469,31 @@ const urlMappingRenovasiBangunanFromMoneyMaster1MoneyPage = {
   // [VARIANT] - JASA RENOVASI PABRIK
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Pabrik
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik.html": "Jasa Renovasi Pabrik",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-pabrik.html": "Jasa Renovasi Bangunan Pabrik",
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI RUMAH
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah.html": "Jasa Renovasi Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-rumah.html": "Jasa Renovasi Bangunan Rumah",
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI KANTOR
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Kantor
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kantor.html": "Jasa Renovasi Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-kantor.html": "Jasa Renovasi Bangunan Kantor",
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI GEDUNG
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gedung
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung.html": "Jasa Renovasi Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-gedung.html": "Jasa Renovasi Bangunan Gedung",
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI GUDANG
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Gudang
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-gudang.html": "Jasa Renovasi Gudang",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-gudang.html": "Jasa Renovasi Bangunan Gudang",
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI HOTEL APARTEMEN
@@ -1518,39 +1518,41 @@ const urlMappingRenovasiBangunanFromMoneyMaster1MoneyPage = {
 // Parent: Jasa Renovasi Bangunan
 // ============================================================
 
-const urlMappingRenovasiBangunanIbadah = {
+const urlMappingRenovasiTempatIbadahFromMoneyPageMoneyPage1 = {
   // ============================================================
   // SARAN ITEM BARU
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Tempat Ibadah > [Nama Item]
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-masjid.html": "Jasa Renovasi Masjid",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-gereja.html": "Jasa Renovasi Gereja",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-pura.html": "Jasa Renovasi Pura",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-vihara.html": "Jasa Renovasi Vihara",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-klenteng.html": "Jasa Renovasi Klenteng",
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-masjid.html": "Harga Renovasi Masjid"
+   "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-masjid.html": "Jasa Renovasi Bangunan Masjid",
+   "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-gereja.html": "Jasa Renovasi Bangunan Gereja",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-pura.html": "Jasa Renovasi Bangunan Pura",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-vihara.html": "Jasa Renovasi Bangunan Vihara",
+ "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-klenteng.html": "Jasa Renovasi Bangunan Klenteng"
+};
+const urlMappingRenovasiBangunanMasjidFromMoneyPage1MoneyPage2 = {
+ "https://www.betonjayareadymix.com/p/harga-renovasi-bangunan-masjid.html": "Harga Renovasi Bangunan Masjid"
 };
 // ============================================================
 // JASA RENOVASI PABRIK
 // Parent: Jasa Renovasi Bangunan
 // ============================================================
 
-const urlMappingRenovasiBangunanPabrik = {
+const urlMappingRenovasiBangunanPabrikFromMoneyPageMoneyPage1 = {
   // ============================================================
   // SARAN ITEM BARU
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Pabrik > [Nama Item]
   // ============================================================
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik-makanan.html": "Jasa Renovasi Pabrik Makanan",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik-tekstil.html": "Jasa Renovasi Pabrik Tekstil",
-  // "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik-farmasi.html": "Jasa Renovasi Pabrik Farmasi",
-  // "https://www.betonjayareadymix.com/2019/08/harga-renovasi-pabrik.html": "Harga Renovasi Pabrik"
+   "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik-makanan.html": "Jasa Renovasi Pabrik Makanan",
+   "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik-tekstil.html": "Jasa Renovasi Pabrik Tekstil",
+   "https://www.betonjayareadymix.com/p/jasa-renovasi-pabrik-farmasi.html": "Jasa Renovasi Pabrik Farmasi",
+   "https://www.betonjayareadymix.com/2019/08/harga-renovasi-pabrik.html": "Harga Renovasi Pabrik"
 };
 // ============================================================
 // JASA RENOVASI RUMAH (VARIANT) & TURUNANNYA
 // Parent: Jasa Renovasi Bangunan
 // ============================================================
 
-const urlMappingRenovasiBangunanRumah = {
+const urlMappingRenovasiBangunanRumahFromMoneyPageMoneyPage1 = {
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI RUMAH MINIMALIS
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Minimalis
@@ -3701,8 +3703,9 @@ urlMappingPerbaikanAtapDrainaseBangunanFromMoneyPageMoneyPage1,
                 //urlMappingPerbaikanFasadEksteriorEksterior,
                 urlMappingPerbaikanFasadEksteriorArsitektur,
                 urlMappingRenovasiBangunanFromMoneyMaster1MoneyPage,
-                urlMappingRenovasiBangunanIbadah,
-                urlMappingRenovasiBangunanPabrik,
+                urlMappingRenovasiTempatIbadahFromMoneyPageMoneyPage1,
+		        urlMappingRenovasiBangunanMasjidFromMoneyPage1MoneyPage2,
+                urlMappingRenovasiBangunanPabrikFromMoneyPageMoneyPage1,
                 urlMappingRenovasiBangunanRumah,
                 urlMappingRenovasiBangunanKantor,
                 urlMappingRenovasiBangunanGedung,
@@ -4721,7 +4724,70 @@ if (urlMappingPerbaikanElemenArsitekturalFromMoneyPageMoneyPage1[cleanUrlJasaPer
         'JASA_KONSTRUKSI'
     );  
     }
- 
+	if (urlMappingRenovasiTempatIbadahFromMoneyPageMoneyPage1[cleanUrlJasaPerbaikanKonsSub]) {
+       generateBreadcrumbJasaKonstruksiPerbaikan(
+        urlMappingRenovasiTempatIbadahFromMoneyPageMoneyPage1,
+        cleanUrlJasaPerbaikanKonsSub,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
+           	{ name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan.html' },
+           	{ name: 'Jasa Renovasi Tempat Ibadah', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+    }
+ if (urlMappingRenovasiBangunanMasjidFromMoneyPage1MoneyPage2[cleanUrlJasaPerbaikanKonsSub]) {
+       generateBreadcrumbJasaKonstruksiPerbaikan(
+        urlMappingRenovasiBangunanMasjidFromMoneyPage1MoneyPage2,
+        cleanUrlJasaPerbaikanKonsSub,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
+           	{ name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan.html' },
+           	{ name: 'Jasa Renovasi Tempat Ibadah', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html' },
+           	{ name: 'Jasa Renovasi Bangunan Masjid', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-masjid.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+ }
+
+if (urlMappingRenovasiBangunanPabrikFromMoneyPageMoneyPage1[cleanUrlJasaPerbaikanKonsSub]) {
+       generateBreadcrumbJasaKonstruksiPerbaikan(
+        urlMappingRenovasiBangunanPabrikFromMoneyPageMoneyPage1,
+        cleanUrlJasaPerbaikanKonsSub,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
+           	{ name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan.html' },
+           //	{ name: 'Jasa Renovasi Tempat Ibadah', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html' },
+           	{ name: 'Jasa Renovasi Bangunan Pabrik', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-pabrik.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+ }
+ if (urlMappingRenovasiBangunanPabrikFromMoneyPageMoneyPage1[cleanUrlJasaPerbaikanKonsSub]) {
+       generateBreadcrumbJasaKonstruksiPerbaikan(
+        urlMappingRenovasiBangunanPabrikFromMoneyPageMoneyPage1,
+        cleanUrlJasaPerbaikanKonsSub,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
+           	{ name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan.html' },
+           //	{ name: 'Jasa Renovasi Tempat Ibadah', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html' },
+           	{ name: 'Jasa Renovasi Bangunan Pabrik', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-pabrik.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+ }
  //PERBAIKAN INTERIOR
    if (urlMappingRenovasiInteriorFromMoneyMaster1MoneyPage[cleanUrlJasaPerbaikanKonsSub]) {
         generateBreadcrumbJasaKonstruksiPerbaikan(
