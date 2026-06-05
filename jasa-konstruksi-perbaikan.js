@@ -1190,7 +1190,7 @@ JASA RENOVASI EKSTERIOR BANGUNAN (SUB2 - /p/jasa-renovasi-eksterior-bangunan.htm
 // Parent: Jasa Renovasi Eksterior Bangunan
 // ============================================================
 
-const urlMappingPerbaikanFasadEksterior = {
+const urlMappingRenovasiEksteriorFromMoneyMaster1MoneyPage = {
   // ============================================================
   // [VARIANT] - JASA RENOVASI FASAD BANGUNAN
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Fasad Bangunan
@@ -3696,7 +3696,7 @@ urlMappingPerbaikanAtapDrainaseBangunanFromMoneyPageMoneyPage1,
                 urlMappingPerbaikanTrotoarJalanFromMoneyPageMoneyPage1,
                 urlMappingPerbaikanJembatanFromMoneyMaster1MoneyPage,
                 urlMappingPerbaikanDrainaseFromMoneyMaster1MoneyPage,
-                urlMappingPerbaikanFasadEksterior,
+                urlMappingRenovasiEksteriorFromMoneyMaster1MoneyPage,
                 urlMappingPerbaikanFasadEksteriorFasad,
                 //urlMappingPerbaikanFasadEksteriorEksterior,
                 urlMappingPerbaikanFasadEksteriorArsitektur,
@@ -4747,6 +4747,7 @@ if (urlMappingPerbaikanElemenArsitekturalFromMoneyPageMoneyPage1[cleanUrlJasaPer
             { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
            	{ name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
            	{ name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi Interior', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-interior.html' },
            	{ name: 'Jasa Renovasi Interior Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-interior-rumah.html' }
         ],
         'JASA_KONSTRUKSI'
@@ -4761,6 +4762,7 @@ if (urlMappingRenovasiInteriorKantorFromMoneyPageMoneyPage1[cleanUrlJasaPerbaika
             { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
            	{ name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
            	{ name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi Interior', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-interior.html' },
            	{ name: 'Jasa Renovasi Interior Kantor', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-interior-kantor.html' }
         ],
         'JASA_KONSTRUKSI'
@@ -4775,6 +4777,7 @@ if (urlMappingRenovasiInteriorApartemenFromMoneyPageMoneyPage1[cleanUrlJasaPerba
             { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
            	{ name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
            	{ name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi Interior', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-interior.html' },
            	{ name: 'Jasa Renovasi Interior Apartemen', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-interior-apartemen.html' }
         ],
         'JASA_KONSTRUKSI'
@@ -4789,6 +4792,7 @@ if (urlMappingRenovasiInteriorHotelFromMoneyPageMoneyPage1[cleanUrlJasaPerbaikan
             { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
            	{ name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
            	{ name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi Interior', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-interior.html' },
            	{ name: 'Jasa Renovasi Interior Hotel', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-interior-hotel.html' }
         ],
         'JASA_KONSTRUKSI'
@@ -4803,6 +4807,7 @@ if (urlMappingRenovasiInteriorHotelFromMoneyPageMoneyPage1[cleanUrlJasaPerbaikan
             { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
            	{ name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
            	{ name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi Interior', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-interior.html' },
            	{ name: 'Jasa Renovasi Interior Toko', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-interior-toko.html' }
         ],
         'JASA_KONSTRUKSI'
@@ -4817,6 +4822,7 @@ if (urlMappingRenovasiInteriorCustomFromMoneyPageMoneyPage1[cleanUrlJasaPerbaika
             { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
            	{ name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
            	{ name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi Interior', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-interior.html' },
            	{ name: 'Jasa Renovasi Interior Custom', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-interior-custom.html' }
         ],
         'JASA_KONSTRUKSI'
@@ -4831,6 +4837,7 @@ if (urlMappingRenovasiInteriorRuanganFromMoneyPageMoneyPage1[cleanUrlJasaPerbaik
             { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
            	{ name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
            	{ name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi Interior', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-interior.html' },
            	{ name: 'Jasa Renovasi Interior Ruangan', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruangan.html' }
         ],
         'JASA_KONSTRUKSI'
@@ -4838,95 +4845,21 @@ if (urlMappingRenovasiInteriorRuanganFromMoneyPageMoneyPage1[cleanUrlJasaPerbaik
 }
 //FASAD EKSTERIOR
 	
-if (urlMappingPerbaikanFasadEksterior[cleanUrlJasaPerbaikanKonsSub]) {
-        restoreCondition1('JasaKonsPerbaikan');
-        restoreCondition1('JasaRenovasiEksteriorBangunan');
+if (urlMappingRenovasiEksteriorFromMoneyMaster1MoneyPage[cleanUrlJasaPerbaikanKonsSub]) {
+     generateBreadcrumbJasaKonstruksiPerbaikan(
+        urlMappingRenovasiEksteriorFromMoneyMaster1MoneyPage,
+        cleanUrlJasaPerbaikanKonsSub,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
+           	{ name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
+           	{ name: 'Jasa Renovasi Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-eksterior.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );   
 
-	   	   removeCondition1('JasaRenovasiPerbaikanPerawatanPerbaikanBangunan');
-	   restoreCondition1('JasaRenovasiPerbaikanSub');
-	
-          // hapus elemen id DIV Lain
-	removeCondition1('ProdukInFur');
-        removeCondition1('MaterialKons');
-	removeCondition1('ProdukKons');
-        //removeCondition1('ProdukKonsSaluran');
-        //removeCondition1('ProdukKonsPembatas');
-        removeCondition1('JasaKonsPembatas');
-        removeCondition1('JasaKonsJalanPerkerasan');
-        removeCondition1('JasaKonsPondasiTanah');
-	removeCondition1('JasaKons');
-	removeCondition1('JasaKonsSub');
-	removeCondition1('MenuKons');
-	removeCondition1('JasaKonsFinishing');
-        removeCondition1('JasaKonsStruktur');
-        
-       // hapus elemen JasaPerbaikanKons Lain
-        		   removeCondition1('JasaPerbaikanElemenArsitekturalBangunan');
-	   removeCondition1('JasaPerbaikanAtapDrainaseBangunan');
-	   removeCondition1('JasaPerbaikanKebocoranWaterproofing');
-        removeCondition1('JasaRenovasiPerbaikanStruktur');
-	
-        removeCondition1('JasaRenovasiPerbaikanInfrastruktur');
-        removeCondition1('JasaRenovasiPerbaikanBangunan');
-	removeCondition1('JasaRenovasiPerbaikanInterior');
-	removeCondition1('JasaRenovasiPerbaikanFasilitas');
-
-	// hapus elemen id Semua Sub JasaRenovasiPerbaikanStruktur
-	removeCondition1('JasaPerbaikanStrukturBeton');
-		 				removeCondition1('JasaPerbaikanGedungBertingkat');
-			removeCondition1('JasaPerbaikanStrukturBangunanTua');
-			removeCondition1('JasaPerbaikanStrukturBangunanMiring');
-		 
-        removeCondition1('JasaRenovasiPerbaikanStrukturKolomBalok');
-        removeCondition1('JasaRenovasiPerbaikanStrukturPondasi');
-        removeCondition1('JasaRenovasiPerbaikanStrukturLantai');
-	removeCondition1('JasaRenovasiPerbaikanStrukturDinding');
-	removeCondition1('JasaRenovasiPerbaikanStrukturAtap');
-	removeCondition1('JasaRenovasiPerbaikanRehabilitasiBeton');
-       
-        // hapus elemen id Semua Sub JasaRenovasiPerbaikanInfrastruktur
-        removeCondition1('JasaRenovasiPerbaikanInfrastrukturJalan');
-        removeCondition1('JasaRenovasiPerbaikanInfrastrukturJembatan');
-        removeCondition1('JasaRenovasiPerbaikanInfrastrukturSaluran');
-        removeCondition1('JasaRenovasiPerbaikanInfrastrukturTrotoar');
-
-	// hapus elemen id Semua Sub JasaRenovasiPerbaikanBangunan
-        removeCondition1('JasaRenovasiPerbaikanBangunanRumah');
-        removeCondition1('JasaRenovasiPerbaikanBangunanKantor');
-        removeCondition1('JasaRenovasiPerbaikanBangunanPabrik');
-        removeCondition1('JasaRenovasiPerbaikanBangunanGedung');
-        removeCondition1('JasaRenovasiPerbaikanBangunanGudang');
-        removeCondition1('JasaRenovasiPerbaikanBangunanHotel');
-
-	 // hapus elemen id Semua Sub JasaRenovasiPerbaikanInterior
-        removeCondition1('JasaRenovasiInteriorRumah');
-        removeCondition1('JasaRenovasiInteriorKantor');
-        removeCondition1('JasaRenovasiInteriorApartemen');
-        removeCondition1('JasaRenovasiInteriorHotel');
-        removeCondition1('JasaRenovasiInteriorToko');
-        removeCondition1('JasaRenovasiInteriorCustom');
-        removeCondition1('JasaRenovasiInteriorRuangan');
-	     
-       // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
-        removeCondition1('JasaRenovasiFasadBangunan');
-        removeCondition1('JasaRenovasiPerbaikanFasad');
-        removeCondition1('JasaPerbaikanArsitekturEksterior');
-
-	// hapus elemen id Semua Sub JasaRenovasiPerbaikanFasilitas
-        removeCondition1('JasaRenovasiPerbaikanStadionOlahraga');
-        removeCondition1('JasaRenovasiPerbaikanSekolah');
-        removeCondition1('JasaRenovasiPerbaikanRumahSakit');
-        removeCondition1('JasaRenovasiPerbaikanTempatIbadah');
-        removeCondition1('JasaRenovasiPerbaikanTerminal');
-        removeCondition1('JasaRenovasiPerbaikanHalte');
-        removeCondition1('JasaRenovasiPerbaikanTamanKota');
-	
-
-        JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
-        JasaRenovasiEksteriorBangunanLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanFasadEksterior[cleanUrlJasaPerbaikanKonsSub];
-    }
+}
  
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
    if (urlMappingPerbaikanFasadEksterior[cleanUrlJasaPerbaikanKonsSub]) {
@@ -4961,7 +4894,7 @@ if (urlMappingPerbaikanFasadEksterior[cleanUrlJasaPerbaikanKonsSub]) {
 	  {
 	    "@type": "ListItem",
 	     "position": 5,
-	      "name": urlMappingPerbaikanFasadEksterior[cleanUrlJasaPerbaikanKonsSub],
+	      "name": urlMappingRenovasiEksteriorFromMoneyMaster1MoneyPage[cleanUrlJasaPerbaikanKonsSub],
 	      "item": cleanUrlJasaPerbaikanKonsSub
 	   }
 	  ]
