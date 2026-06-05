@@ -550,11 +550,13 @@ const urlMappingBongkarBangunanFromMoneyMasterMoneyPage = {
 // 📁 JASA RENOVASI - SUB2 (LEVEL 2)
 // ============================================================
 
-const urlMappingRenovasiFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-umum.html": "Jasa Renovasi Fasilitas Umum", 
+const urlMappingRenovasiFromMoneyMasterMoneyMaster1 = {
+  //"https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-umum.html": "Jasa Renovasi Fasilitas Umum",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas.html": "Jasa Renovasi Fasilitas", 
   "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan.html": "Jasa Renovasi Bangunan", 
   "https://www.betonjayareadymix.com/p/jasa-renovasi-interior.html": "Jasa Renovasi Interior",  
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-eksterior-bangunan.html": "Jasa Renovasi Eksterior Bangunan"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-eksterior.html": "Jasa Renovasi Eksterior"
+  //"https://www.betonjayareadymix.com/p/jasa-renovasi-eksterior-bangunan.html": "Jasa Renovasi Eksterior Bangunan"
 };
 
 // ============================================================
@@ -1949,7 +1951,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
         urlMappingInfrastrukturFromSub1MoneyMaster,
 		urlMappingPerbaikanBangunanFromMoneyMasterMoneyPage,
-		urlMappingRenovasiFromMoneyMasterMoneyPage,
+		urlMappingRenovasiFromMoneyMasterMoneyMaster1,
 		
 		urlMappingSaluranFromMoneyMasterMoneyPage,
 		
@@ -3486,7 +3488,7 @@ if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
 }
 	
   //AKHIR JASA KONTRUKSI ALAT
- if (urlMappingRenovasiFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+ if (urlMappingRenovasiFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 	   generateBreadcrumbJasaKonstruksi(
         urlMappingRenovasiFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
