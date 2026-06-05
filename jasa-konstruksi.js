@@ -204,9 +204,9 @@ const urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyPage = {
 // MP LANGSUNG DI BAWAH JASA PERBAIKAN INFRASTRUKTUR (LEVEL 5)
 // ============================================================
 // Perbaiki nama agar 3 kata (MP)
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar.html": "Jasa Perbaikan Trotoar Jalan",  // ✅ MP (3 kata)
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-halte.html": "Jasa Perbaikan Halte Bus",  // ✅ MP (3 kata)
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-terminal.html": "Jasa Perbaikan Terminal Penumpang",  // ✅ MP (3 kata)
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan.html": "Jasa Perbaikan Trotoar Jalan",  // ✅ MP (3 kata)
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-halte-bus.html": "Jasa Perbaikan Halte Bus",  // ✅ MP (3 kata)
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-terminal-penumpang.html": "Jasa Perbaikan Terminal Penumpang",  // ✅ MP (3 kata)
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-taman-kota.html": "Jasa Perbaikan Taman Kota"
 };
 
