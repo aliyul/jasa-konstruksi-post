@@ -3635,7 +3635,7 @@ urlMappingPerbaikanAtapDrainaseBangunanFromMoneyPageMoneyPage1,
 		urlMappingRenovasiFasilitasFromMoneyMaster1MoneyPage,
 		urlMappingRenovasiTamaKotaFromMoneyPageMoneyPage1,
 		urlMappingRenovasiGedungSekolahFromMoneyPageMoneyPage1,
-		 urlMappingRenovasiTempatIbadahFromMoneyPageMoneyPage1,,
+		 urlMappingRenovasiTempatIbadahFromMoneyPageMoneyPage1,
 		urlMappingRenovasiTerminalPenumpangFromMoneyPageMoneyPage1,
 		urlMappingRenovasiHalteBusFromMoneyPageMoneyPage1,
 		
