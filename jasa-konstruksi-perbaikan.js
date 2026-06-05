@@ -5,7 +5,7 @@
 // Parent: Jasa Perawatan & Perbaikan Bangunan (/p/jasa-perawatan-perbaikan-bangunan.html)
 // ============================================================
 
-const urlMappingPerbaikanStruktur = {
+const urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1 = {
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR RUMAH
   // 🧠 SEO NOTE: Fokus ke perbaikan struktur rumah tinggal
@@ -3679,7 +3679,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingPerbaikanKebocoranWaterproofing,
 urlMappingPerbaikanElemenArsitektural,
 urlMappingPerbaikanAtapDrainaseBangunan,
-		urlMappingPerbaikanStruktur,
+		urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1,
         urlMappingPerbaikanStrukturGedungBertingkat,
 		urlMappingPerbaikanStrukturBangunanTua,
 		urlMappingPerbaikanStrukturBangunanMiring,
@@ -3732,9 +3732,16 @@ urlMappingPerbaikanAtapDrainaseBangunan,
     }
 
 	/* ============================================================
- 🔥 Hybrid Date Modified v7.1 — UNTUK betonjayareadymix.com
-    Custom date berdasarkan hasil deteksi page level
-    ✅ Support MONEY_LEADGEN
+ 🔥 Hybrid Date Modified v7.9 — UNTUK betonjayareadymix.com
+    ✅ SINKRON dengan Page Level Detector v22.1
+    ✅ FIXED: Support PLD v22.0, v22.1, v20.x, v19.x
+    ✅ FIXED: Variable name konsisten dengan PLD v22.x
+    ✅ FULL COMPATIBLE: Page Level Detector v22.x, v20.x, v19.x, v18, v17
+    ✅ FIX: Support JASA MONEY-MASTER detection
+    ✅ FIX: 'home' TIDAK termasuk EVERGREEN_LEVELS
+    ✅ ENHANCED: Mendapatkan confidence score dari PLD v22.x
+    ✅ ENHANCED: Enhanced logging dengan confidence dan strategy
+    ✅ Better error handling
 ============================================================ */
 
 (async function runHybridDateModified() {
@@ -3746,6 +3753,13 @@ urlMappingPerbaikanAtapDrainaseBangunan,
       console.log(`⏸️ Domain ${CURRENT_DOMAIN} not targeted. Script skipped.`);
       return;
     }
+
+    // ============================================================
+    // 📌 KONSTANTA PAGE LEVELS (KATEGORISASI YANG BENAR)
+    // ============================================================
+    const EVERGREEN_LEVELS = ['pillar', 'sub-pillar-tipe-2', 'variant', 'sub-variant'];
+    const FLEXIBLE_LEVELS = ['sub-pillar-tipe-1'];
+    const MONEY_LEVELS = ['money-master', 'money-page', 'money-child', 'money-leadgen'];
 
     // ============================================================
     // 📌 FUNGSI LOAD EXTERNAL JS
@@ -3761,7 +3775,7 @@ urlMappingPerbaikanAtapDrainaseBangunan,
         s.defer = true;
         s.onload = resolve;
         s.onerror = () => {
-          console.warn("[Evergreen] Gagal load:", src);
+          console.warn("[HybridDateModified] Gagal load:", src);
           resolve();
         };
         document.head.appendChild(s);
@@ -3769,15 +3783,97 @@ urlMappingPerbaikanAtapDrainaseBangunan,
     }
 
     // ============================================================
-    // 📌 TUNGGU PAGE LEVEL DETECTOR READY
+    // 📌 TUNGGU PAGE LEVEL DETECTOR READY (SUPPORT v22.x, v20.x, v19.x, v18, v17)
     // ============================================================
     function waitForPageLevelDetector() {
       return new Promise((resolve) => {
-        if (window.__pageLevelDetectorReady && window.pageLevelDetector) {
+        // ✅ SUPPORT v22.x (v22.0, v22.1)
+        if (window.pageLevelDetectorv22 && window.pageLevelDetectorv22Ready) {
+          console.log("✅ Page Level Detector v22.x already ready");
           resolve(true);
-        } else {
-          window.addEventListener("pageLevelDetectorReady", () => resolve(true), { once: true });
+          return;
         }
+        
+        // ✅ SUPPORT v20.x (v20.0, v20.1, v20.2)
+        if (window.pageLevelDetectorv20 && window.pageLevelDetectorv20Ready) {
+          console.log("✅ Page Level Detector v20.x already ready");
+          resolve(true);
+          return;
+        }
+        
+        // ✅ SUPPORT v19.0
+        if (window.pageLevelDetectorv19 && window.pageLevelDetectorv19Ready) {
+          console.log("✅ Page Level Detector v19 already ready");
+          resolve(true);
+          return;
+        }
+        
+        // ✅ SUPPORT v18
+        if (window.pageLevelDetectorV18 && window.pageLevelDetectorv18Ready) {
+          console.log("✅ Page Level Detector v18 already ready");
+          resolve(true);
+          return;
+        }
+        
+        // ✅ SUPPORT v17
+        if (window.pageLevelDetectorV17 && window.pageLevelDetectorv17Ready) {
+          console.log("✅ Page Level Detector v17 already ready");
+          resolve(true);
+          return;
+        }
+        
+        // ✅ SUPPORT legacy
+        if (window.pageLevelDetector && window.__pageLevelDetectorReady) {
+          console.log("✅ Page Level Detector legacy already ready");
+          resolve(true);
+          return;
+        }
+        
+        // ✅ Event listener untuk semua versi
+        const onReadyV22 = () => {
+          console.log("✅ Page Level Detector v22.x ready (event)");
+          resolve(true);
+        };
+        
+        const onReadyV20 = () => {
+          console.log("✅ Page Level Detector v20.x ready (event)");
+          resolve(true);
+        };
+        
+        const onReadyV19 = () => {
+          console.log("✅ Page Level Detector v19 ready (event)");
+          resolve(true);
+        };
+        
+        const onReadyV18 = () => {
+          console.log("✅ Page Level Detector v18 ready (event fallback)");
+          resolve(true);
+        };
+        
+        const onReadyLegacy = () => {
+          console.log("✅ Page Level Detector legacy ready (event fallback)");
+          resolve(true);
+        };
+        
+        window.addEventListener("pageLevelDetectorv22Ready", onReadyV22, { once: true });
+        window.addEventListener("pageLevelDetectorv20Ready", onReadyV20, { once: true });
+        window.addEventListener("pageLevelDetectorv19Ready", onReadyV19, { once: true });
+        window.addEventListener("pageLevelDetectorV19Ready", onReadyV19, { once: true });
+        window.addEventListener("pageLevelDetectorv18Ready", onReadyV18, { once: true });
+        window.addEventListener("pageLevelDetectorReady", onReadyLegacy, { once: true });
+        
+        // Fallback timeout 10 detik
+        setTimeout(() => {
+          if (window.pageLevelDetectorv22 || window.pageLevelDetectorv20 || 
+              window.pageLevelDetectorv19 || window.pageLevelDetectorV18 || 
+              window.pageLevelDetector) {
+            console.log("✅ Page Level Detector ready (timeout fallback)");
+            resolve(true);
+          } else {
+            console.warn("⚠️ PageLevelDetector timeout, using defaults");
+            resolve(false);
+          }
+        }, 10000);
       });
     }
 
@@ -3788,9 +3884,17 @@ urlMappingPerbaikanAtapDrainaseBangunan,
       return new Promise((resolve) => {
         if (window.__detectEvergreenReady && typeof window.detectEvergreen === "function") {
           resolve(true);
-        } else {
-          window.addEventListener("detectEvergreenReady", () => resolve(true), { once: true });
+          return;
         }
+        window.addEventListener("detectEvergreenReady", () => resolve(true), { once: true });
+        setTimeout(() => {
+          if (typeof window.detectEvergreen === "function") {
+            resolve(true);
+          } else {
+            console.warn("⚠️ detectEvergreen timeout");
+            resolve(false);
+          }
+        }, 5000);
       });
     }
 
@@ -3798,21 +3902,27 @@ urlMappingPerbaikanAtapDrainaseBangunan,
     // 📌 LOAD ALL SCRIPTS
     // ============================================================
     async function loadAllScripts() {
+      // Gunakan PLD v22.x (terbaru, weighted voting system)
       const PAGE_LEVEL_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/PageLevelDetector.js";
       const EVERGREEN_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/SmartEvergreenDetector.js";
       
-      if (typeof window.pageLevelDetector === "undefined") {
-        console.log("⏳ Loading Page Level Detector v15.0...");
+      if (typeof window.pageLevelDetectorv22 === "undefined" && 
+          typeof window.pageLevelDetectorv20 === "undefined" &&
+          typeof window.pageLevelDetectorv19 === "undefined" &&
+          typeof window.pageLevelDetectorV18 === "undefined" &&
+          typeof window.pageLevelDetectorV17 === "undefined" &&
+          typeof window.pageLevelDetector === "undefined") {
+        console.log("⏳ Loading Page Level Detector v22.x...");
         await loadExternalJS(PAGE_LEVEL_DETECTOR_URL);
         await waitForPageLevelDetector();
-        console.log("✅ Page Level Detector v15.0 READY");
+        console.log("✅ Page Level Detector v22.x READY");
       }
       
       if (typeof window.detectEvergreen !== "function") {
-        console.log("⏳ Loading Smart Evergreen Detector v13.0...");
+        console.log("⏳ Loading Smart Evergreen Detector...");
         await loadExternalJS(EVERGREEN_DETECTOR_URL);
         await waitForDetectEvergreen();
-        console.log("✅ Smart Evergreen Detector v13.0 READY");
+        console.log("✅ Smart Evergreen Detector READY");
       }
     }
 
@@ -3867,151 +3977,222 @@ urlMappingPerbaikanAtapDrainaseBangunan,
     }
 
     // ============================================================
-    // 📌 DAFTAR EVERGREEN LEVELS & MONEY LEVELS (LENGKAP)
-    // ============================================================
-    const EVERGREEN_LEVELS = ['pillar', 'sub-pillar-tipe-2', 'sub-pillar-tipe-1', 'variant', 'sub-variant'];
-    const MONEY_LEVELS = ['money-master', 'money-page', 'money-child', 'money-leadgen'];
-
-    // ============================================================
     // 📌 FUNGSI MENENTUKAN CUSTOM DATE BERDASARKAN PAGE LEVEL
     // ============================================================
     function getCustomDateByPageLevel(pageLevel, entityType) {
-      // ============================================================
-      // LEVEL 1: EVERGREEN (tidak perlu update sering)
-      // ============================================================
       if (EVERGREEN_LEVELS.includes(pageLevel)) {
-        // Pillar (level tertinggi) - paling stabil
         if (pageLevel === 'pillar') {
           return "2026-04-01T10:30:00+07:00";
         }
-        // Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant
-        //return "2026-04-02T00:00:00+07:00";
-		  		          // JASA KONSTRUKSI PERBAIKAN: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-05T00:00:00+07:00";
-        /*
-		        // JASA ALAT KONSTRUKSI POST : Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-03T00:00:00+07:00";
-		          // JASA KONSTRUKSI STRUKTUR: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-04T00:00:00+07:00";
-
-		          // JASA KONSTRUKSI PEMBATAS: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-06T00:00:00+07:00";
-		          // JASA KONSTRUKSI FINISHING: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-07T00:00:00+07:00";
-		          // JASA KONSTRUKSI PONDASI PERKUATAN TANAH: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-08T00:00:00+07:00";
-		  // JASA KONSTRUKSI JALAN PERKERASAN: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-09T00:00:00+07:00";
-		  // JASA KONSTRUKSI STRUKTUR POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-10T00:00:00+07:00";
-		  // JASA KONSTRUKSI PONDASI PERKUATAN TANAH POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-11T00:00:00+07:00";
-		  // JASA KONSTRUKSI PERBAIKAN POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-12T00:00:00+07:00";
-		  // JASA KONSTRUKSI PEMBATAS POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-13T00:00:00+07:00";
-		  // JASA KONSTRUKSI JALAN PERKERASAN POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-14T00:00:00+07:00";
-		  // JASA KONSTRUKSI FINISHING POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
+        return "2026-04-02T00:00:00+07:00";
+      }
+      
+      if (FLEXIBLE_LEVELS.includes(pageLevel)) {
         return "2026-04-15T00:00:00+07:00";
-		  // JASA KONSTRUKSI CUTTING BETON POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-16T00:00:00+07:00";
-		  // JASA KONSTRUKSI BONGKAR BANGUNAN POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-17T00:00:00+07:00";
-		  */
       }
       
-      // ============================================================
-      // LEVEL 2: MONEY PAGES (perlu update berkala)
-      // Kembalikan null agar SmartEvergreenDetector menghitung otomatis
-      // money-master, money-page, money-child, money-leadgen
-      // ============================================================
       if (MONEY_LEVELS.includes(pageLevel)) {
-        return null; // AUTO mode
+        return null;
       }
       
-      // ============================================================
-      // DEFAULT: AUTO mode
-      // ============================================================
+      if (pageLevel === 'home') {
+        return null;
+      }
+      
       return null;
+    }
+
+    // ============================================================
+    // 📌 FUNGSI GET CATEGORY LABEL
+    // ============================================================
+    function getCategoryLabel(pageLevel) {
+      if (EVERGREEN_LEVELS.includes(pageLevel)) return 'EVERGREEN';
+      if (FLEXIBLE_LEVELS.includes(pageLevel)) return 'FLEXIBLE';
+      if (MONEY_LEVELS.includes(pageLevel)) return 'MONEY';
+      if (pageLevel === 'home') return 'HOMEPAGE (DYNAMIC)';
+      return 'UNKNOWN';
+    }
+
+    // ============================================================
+    // 📌 GET PAGE LEVEL FROM DETECTOR (SUPPORT v22.x, v20.x, v19.x, v18, v17)
+    // ============================================================
+    async function getPageLevelFromDetector() {
+      await new Promise(resolve => setTimeout(resolve, 300));
+      
+      let pageLevel = 'pillar';
+      let entityType = 'produk';
+      let detectorVersion = 'unknown';
+      let confidence = null;
+      let strategies = null;
+      let strategyCount = null;
+      
+      // ✅ PRIORITAS v22.x (weighted voting system - 100% accuracy)
+      if (window.pageLevelDetectorv22 && typeof window.pageLevelDetectorv22.detect === 'function') {
+        try {
+          pageLevel = window.pageLevelDetectorv22.detect();
+          entityType = window.pageLevelDetectorv22.detectEntityType();
+          detectorVersion = 'v22.x';
+          
+          // Dapatkan confidence score jika tersedia
+          if (typeof window.pageLevelDetectorv22.getConfidenceScore === 'function') {
+            const confidenceScore = window.pageLevelDetectorv22.getConfidenceScore();
+            confidence = confidenceScore.confidence;
+            strategies = confidenceScore.strategies;
+            strategyCount = confidenceScore.strategyCount;
+          }
+          
+          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
+          if (confidence) {
+            console.log(`   🎯 Confidence: ${confidence}% (${strategyCount} strategies: ${strategies?.join(", ")})`);
+          }
+        } catch (e) {
+          console.warn(`⚠️ Error calling pageLevelDetectorv22:`, e);
+        }
+      } 
+      // FALLBACK v20.x
+      else if (window.pageLevelDetectorv20 && typeof window.pageLevelDetectorv20.detect === 'function') {
+        try {
+          pageLevel = window.pageLevelDetectorv20.detect();
+          entityType = window.pageLevelDetectorv20.detectEntityType();
+          detectorVersion = 'v20.x';
+          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
+        } catch (e) {
+          console.warn(`⚠️ Error calling pageLevelDetectorv20:`, e);
+        }
+      } 
+      // FALLBACK v19.0
+      else if (window.pageLevelDetectorv19 && typeof window.pageLevelDetectorv19.detect === 'function') {
+        try {
+          pageLevel = window.pageLevelDetectorv19.detect();
+          entityType = window.pageLevelDetectorv19.detectEntityType();
+          detectorVersion = 'v19.0';
+          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
+        } catch (e) {
+          console.warn(`⚠️ Error calling pageLevelDetectorv19:`, e);
+        }
+      } 
+      // FALLBACK v18
+      else if (window.pageLevelDetectorV18 && typeof window.pageLevelDetectorV18.detect === 'function') {
+        try {
+          pageLevel = window.pageLevelDetectorV18.detect();
+          entityType = window.pageLevelDetectorV18.detectEntityType();
+          detectorVersion = 'v18.7';
+          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
+        } catch (e) {
+          console.warn(`⚠️ Error calling pageLevelDetectorV18:`, e);
+        }
+      } 
+      // FALLBACK v17
+      else if (window.pageLevelDetectorV17 && typeof window.pageLevelDetectorV17.detect === 'function') {
+        try {
+          pageLevel = window.pageLevelDetectorV17.detect();
+          entityType = window.pageLevelDetectorV17.detectEntityType();
+          detectorVersion = 'v17.0';
+          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
+        } catch (e) {
+          console.warn(`⚠️ Error calling pageLevelDetectorV17:`, e);
+        }
+      } 
+      // FALLBACK legacy
+      else if (window.pageLevelDetector && typeof window.pageLevelDetector.detect === 'function') {
+        try {
+          pageLevel = window.pageLevelDetector.detect();
+          entityType = window.pageLevelDetector.detectEntityType();
+          detectorVersion = 'legacy';
+          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
+        } catch (e) {
+          console.warn(`⚠️ Error calling pageLevelDetector legacy:`, e);
+        }
+      } 
+      else {
+        console.warn("⚠️ PageLevelDetector not ready, using defaults (pillar/produk)");
+      }
+      
+      return { pageLevel, entityType, detectorVersion, confidence, strategies, strategyCount };
     }
 
     // ============================================================
     // 📌 EKSEKUSI UTAMA
     // ============================================================
     
+    console.log("🔥 Hybrid Date Modified v7.9 - Starting...");
+    
     await loadAllScripts();
     
-    // Tunggu sebentar agar pageLevelDetector selesai deteksi
-    await new Promise(resolve => setTimeout(resolve, 100));
+    const { pageLevel, entityType, detectorVersion, confidence, strategies, strategyCount } = await getPageLevelFromDetector();
     
-    // Dapatkan page level dan entity type dari detector yang sudah ready
-    let pageLevel = 'pillar'; // default
-    let entityType = 'produk'; // default
-    
-    if (window.pageLevelDetector) {
-      pageLevel = window.pageLevelDetector.detect();
-      entityType = window.pageLevelDetector.detectEntityType();
-      console.log(`📌 Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
-    } else {
-      console.warn("⚠️ PageLevelDetector not ready, using defaults");
+    // Validasi page level
+    const ALL_KNOWN_LEVELS = [...EVERGREEN_LEVELS, ...FLEXIBLE_LEVELS, ...MONEY_LEVELS, 'home'];
+    let finalPageLevel = pageLevel;
+    if (!ALL_KNOWN_LEVELS.includes(finalPageLevel)) {
+      console.warn(`⚠️ Unknown page level: ${finalPageLevel}, defaulting to pillar`);
+      finalPageLevel = 'pillar';
     }
     
-    // ============================================================
-    // 🔥 STEP 2: TENTUKAN CUSTOM DATE BERDASARKAN HASIL DETEKSI
-    // ============================================================
-    let customDate = getCustomDateByPageLevel(pageLevel, entityType);
+    // Tentukan custom date
+    let customDate = getCustomDateByPageLevel(finalPageLevel, entityType);
     let manualMode = customDate !== null;
+    let categoryLabel = getCategoryLabel(finalPageLevel);
     
-    if (manualMode) {
-      console.log(`📌 [CUSTOM DATE] PageLevel=${pageLevel}, EntityType=${entityType} → Using custom date: ${customDate}`);
-    } else {
-      console.log(`📌 [AUTO MODE] PageLevel=${pageLevel}, EntityType=${entityType} → No custom date, using auto calculation`);
+    console.log(`📋 PAGE CLASSIFICATION:`);
+    console.log(`   - Page Level: ${finalPageLevel}`);
+    console.log(`   - Entity Type: ${entityType}`);
+    console.log(`   - Category: ${categoryLabel}`);
+    console.log(`   - Detector: ${detectorVersion}`);
+    if (confidence) {
+      console.log(`   - Confidence: ${confidence}%`);
     }
+    if (strategies && strategyCount) {
+      console.log(`   - Strategies: ${strategyCount} strategies (${strategies.join(", ")})`);
+    }
+    console.log(`   - Mode: ${manualMode ? 'MANUAL (custom date)' : 'AUTO'}`);
     
-    // ============================================================
-    // 🔥 STEP 3: JALANKAN DETEKTOR DENGAN ATAU TANPA CUSTOM DATE
-    // ============================================================
     if (manualMode && customDate) {
-      await window.detectEvergreen({ customDateModified: customDate });
-      console.log(`✅ MANUAL mode executed with custom date: ${customDate}`);
-    } else {
-      await window.detectEvergreen();
-      console.log(`✅ AUTO mode executed`);
+      console.log(`   - Custom Date: ${customDate}`);
     }
     
-    // ============================================================
-    // 📌 PASTIKAN AEDMetaDates TERSEDIA
-    // ============================================================
+    // Jalankan detectEvergreen
+    if (window.detectEvergreen) {
+      if (manualMode && customDate) {
+        await window.detectEvergreen({ customDateModified: customDate });
+        console.log(`✅ MANUAL mode executed with custom date: ${customDate}`);
+      } else {
+        await window.detectEvergreen();
+        console.log(`✅ AUTO mode executed`);
+      }
+    } else {
+      console.warn("⚠️ detectEvergreen function not available");
+    }
+    
+    // Pastikan AEDMetaDates tersedia
     if (!window.AEDMetaDates || !window.AEDMetaDates.dateModified) {
       console.warn("[HybridDateModified] AEDMetaDates tidak ditemukan, skip update.");
       return;
     }
 
-    const { dateModified, nextUpdate, type, entityType: detectedEntityType, pageLevel: detectedPageLevel } = window.AEDMetaDates;
+    const { dateModified, nextUpdate, type: aedType, entityType: detectedEntityType, pageLevel: detectedPageLevel } = window.AEDMetaDates;
 
     console.log(`📊 betonjayareadymix.com Page Info:`);
-    console.log(`   - type: ${type}`);
+    console.log(`   - type: ${aedType}`);
     console.log(`   - entityType: ${detectedEntityType}`);
     console.log(`   - pageLevel: ${detectedPageLevel}`);
     console.log(`   - dateModified: ${dateModified}`);
     console.log(`   - nextUpdate: ${nextUpdate}`);
 
-    // ============================================================
-    // 📌 HITUNG VARIASI TANGGAL
-    // ============================================================
+    // Hitung variasi tanggal
     const uniquePageIdentifier = window.location.pathname;
     let hashSource = uniquePageIdentifier;
     
     if (EVERGREEN_LEVELS.includes(detectedPageLevel)) {
       hashSource = 'evergreen-' + hashSource;
-      console.log(`📌 Evergreen content (${detectedPageLevel}) → using evergreen hash prefix`);
+    } else if (FLEXIBLE_LEVELS.includes(detectedPageLevel)) {
+      hashSource = 'flexible-' + hashSource;
     } else if (detectedEntityType === 'jasa') {
       hashSource = 'jasa-' + hashSource;
-      console.log(`📌 Jasa content (${detectedPageLevel}) → using jasa hash prefix`);
     } else if (MONEY_LEVELS.includes(detectedPageLevel)) {
       hashSource = 'money-' + hashSource;
-      console.log(`📌 Money page (${detectedPageLevel}) → using money hash prefix`);
+    } else if (detectedPageLevel === 'home') {
+      hashSource = 'home-' + hashSource;
     }
     
     const hash = stableHash(hashSource);
@@ -4019,24 +4200,35 @@ urlMappingPerbaikanAtapDrainaseBangunan,
     const finalDate = new Date(new Date(dateModified).getTime() + offsetSeconds * 1000);
     const isoDate = toISOWithTimezoneLocal(finalDate);
 
-    // ============================================================
-    // 📌 UPDATE META DATEMODIFIED
-    // ============================================================
     updateMetaDateModified(isoDate);
 
     window.AEDMetaDates = {
       ...window.AEDMetaDates,
       dateModified: isoDate,
-      hashOffset: offsetSeconds
+      hashOffset: offsetSeconds,
+      detectorVersion: detectorVersion,
+      category: categoryLabel,
+      mode: manualMode ? 'MANUAL' : 'AUTO',
+      originalDateModified: dateModified,
+      hybridVersion: '7.9',
+      detectionConfidence: confidence,
+      detectionStrategies: strategies,
+      detectionStrategyCount: strategyCount
     };
 
-    console.log(`✅ [HybridDateModified] ${uniquePageIdentifier} → ${isoDate}`);
-    console.log(`   - offsetSeconds: ${offsetSeconds} detik`);
-    console.log(`   - Mode: ${manualMode ? 'MANUAL (custom date based on page level)' : 'AUTO'}`);
-    console.log(`📋 Custom config for betonjayareadymix.com applied successfully`);
+    console.log(`✅ [HybridDateModified] ${uniquePageIdentifier}`);
+    console.log(`   → Final Date Modified: ${isoDate}`);
+    console.log(`   → Offset: ${offsetSeconds} detik (${Math.floor(offsetSeconds / 3600)} jam ${Math.floor((offsetSeconds % 3600) / 60)} menit)`);
+    console.log(`   → Mode: ${manualMode ? 'MANUAL' : 'AUTO'}`);
+    console.log(`   → Category: ${categoryLabel}`);
+    console.log(`   → Detector: ${detectorVersion}`);
+    if (confidence) {
+      console.log(`   → Detection Confidence: ${confidence}%`);
+    }
+    console.log(`📋 Hybrid Date Modified v7.9 applied successfully`);
 
   } catch (err) {
-    console.error("[HybridDateModified] Fatal:", err);
+    console.error("[HybridDateModified] Fatal error:", err);
   }
 })();
 
@@ -4197,139 +4389,20 @@ JasaPerbaikanAtapDrainaseBangunanLink.style.visibility = 'hidden';
 
 	
     //Sub JasaRenovasiPerbaikan 
-
-   if (urlMappingPerbaikanStruktur[cleanUrlJasaPerbaikanKonsSub]) {
-        restoreCondition1('JasaKonsPerbaikan');
-	   restoreCondition1('JasaRenovasiPerbaikanPerawatanPerbaikanBangunan');
-	   removeCondition1('JasaRenovasiPerbaikanSub');
-	   
-	   removeCondition1('JasaPerbaikanElemenArsitekturalBangunan');
-	   removeCondition1('JasaPerbaikanAtapDrainaseBangunan');
-	   removeCondition1('JasaPerbaikanKebocoranWaterproofing');
-	   
-        restoreCondition1('JasaRenovasiPerbaikanStruktur');
-           // hapus elemen id DIV Lain
-	removeCondition1('ProdukInFur');
-        removeCondition1('MaterialKons');
-	removeCondition1('ProdukKons');
-       //removeCondition1('ProdukKonsSaluran');
-        //removeCondition1('ProdukKonsPembatas');
-        removeCondition1('JasaKonsPembatas');
-        removeCondition1('JasaKonsJalanPerkerasan');
-        removeCondition1('JasaKonsPondasiTanah');
-	removeCondition1('JasaKons');
-	removeCondition1('JasaKonsSub');
-	removeCondition1('MenuKons');
-	removeCondition1('JasaKonsFinishing');
-        removeCondition1('JasaKonsStruktur');
-	   
-	
-	// hapus elemen id Sub JasaRenovasiPerbaikan yang lain
-        removeCondition1('JasaRenovasiPerbaikanInfrastruktur');
-        removeCondition1('JasaRenovasiPerbaikanBangunan');
-        removeCondition1('JasaRenovasiPerbaikanInterior');
-	removeCondition1('JasaRenovasiPerbaikanFasad');
-	removeCondition1('JasaRenovasiPerbaikanFasilitas');
-
-	// hapus elemen id Semua Sub JasaRenovasiPerbaikanStruktur
-	removeCondition1('JasaPerbaikanStrukturBeton');
-				removeCondition1('JasaPerbaikanGedungBertingkat');
-			removeCondition1('JasaPerbaikanStrukturBangunanTua');
-			removeCondition1('JasaPerbaikanStrukturBangunanMiring');
-	removeCondition1('JasaRenovasiPerbaikanStrukturKolomBalok');
-        removeCondition1('JasaRenovasiPerbaikanStrukturPondasi');
-        removeCondition1('JasaRenovasiPerbaikanStrukturLantai');
-	removeCondition1('JasaRenovasiPerbaikanStrukturDinding');
-	removeCondition1('JasaRenovasiPerbaikanStrukturAtap');
-	removeCondition1('JasaRenovasiPerbaikanRehabilitasiBeton');
-       
-        // hapus elemen id Semua Sub JasaRenovasiPerbaikanInfrastruktur
-        removeCondition1('JasaRenovasiPerbaikanInfrastrukturJalan');
-        removeCondition1('JasaRenovasiPerbaikanInfrastrukturJembatan');
-        removeCondition1('JasaRenovasiPerbaikanInfrastrukturSaluran');
-        removeCondition1('JasaRenovasiPerbaikanInfrastrukturTrotoar');
-
-       // hapus elemen id Semua Sub JasaRenovasiPerbaikanBangunan
-        removeCondition1('JasaRenovasiPerbaikanBangunanRumah');
-        removeCondition1('JasaRenovasiPerbaikanBangunanKantor');
-        removeCondition1('JasaRenovasiPerbaikanBangunanPabrik');
-        removeCondition1('JasaRenovasiPerbaikanBangunanGedung');
-        removeCondition1('JasaRenovasiPerbaikanBangunanGudang');
-        removeCondition1('JasaRenovasiPerbaikanBangunanHotel');
-
-	 // hapus elemen id Semua Sub JasaRenovasiPerbaikanInterior
-        removeCondition1('JasaRenovasiInteriorRumah');
-        removeCondition1('JasaRenovasiInteriorKantor');
-        removeCondition1('JasaRenovasiInteriorApartemen');
-        removeCondition1('JasaRenovasiInteriorHotel');
-        removeCondition1('JasaRenovasiInteriorToko');
-        removeCondition1('JasaRenovasiInteriorCustom');
-        removeCondition1('JasaRenovasiInteriorRuangan');
-	   
-       // hapus elemen id Semua Sub JasaRenovasiPerbaikanFasadEksterior
-        removeCondition1('JasaRenovasiFasadBangunan');
-        removeCondition1('JasaRenovasiEksteriorBangunan');
-        removeCondition1('JasaPerbaikanArsitekturEksterior');
-
-	// hapus elemen id Semua Sub JasaRenovasiPerbaikanFasilitas
-        removeCondition1('JasaRenovasiPerbaikanStadionOlahraga');
-        removeCondition1('JasaRenovasiPerbaikanSekolah');
-        removeCondition1('JasaRenovasiPerbaikanRumahSakit');
-        removeCondition1('JasaRenovasiPerbaikanTempatIbadah');
-        removeCondition1('JasaRenovasiPerbaikanTerminal');
-        removeCondition1('JasaRenovasiPerbaikanHalte');
-        removeCondition1('JasaRenovasiPerbaikanTamanKota');
-	   
-        JasaKonstruksiPerbaikanLinkSub.style.visibility = 'visible';
-        //JasaRenovasiPerbaikanLinkSub.style.visibility = 'visible';
-	    JasaRenovasiPerbaikanPerawatanPerbaikanBangunanLink.style.visibility = 'visible';
-        JasaRenovasiPerbaikanStrukturLink.style.visibility = 'visible';
-        pageNameKonstruksiPerbaikan1.textContent = urlMappingPerbaikanStruktur[cleanUrlJasaPerbaikanKonsSub];
-    }
-	  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-	if (urlMappingPerbaikanStruktur[cleanUrlJasaPerbaikanKonsSub]) {
-	const jsonLDBreadcrumb = {
-	  "@context": "https://schema.org",
-	  "@type": "BreadcrumbList",
-	  "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-	    {
-	      "@type": "ListItem",
-	      "position": 2,
-	      "name": "Jasa Konstruksi",
-	      "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-	    },
-	    {
-	      "@type": "ListItem",
-	      "position": 3,
-	      "name": "Jasa Perawatan & Perbaikan Bangunan",
-	      "item": "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html"
-	    },
-	    {
-	      "@type": "ListItem",
-	      "position": 4,
-	      "name": "Jasa Perbaikan Struktur",
-	      "item": "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur.html"
-	    },
-	  {
-	    "@type": "ListItem",
-	     "position": 5,
-	      "name": urlMappingPerbaikanStruktur[cleanUrlJasaPerbaikanKonsSub],
-	      "item": cleanUrlJasaPerbaikanKonsSub
-	   }
-	  ]
-	};
-	
-	       const script = document.createElement('script');
-	       script.type = 'application/ld+json';
-	       script.text = JSON.stringify(jsonLDBreadcrumb);
-	       document.head.appendChild(script);
-	   }
+if (urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1[cleanUrlJasaPerbaikanKonsSub]) {
+   generateBreadcrumbJasaKonstruksi(
+        urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1,
+        cleanUrlJasaPerbaikanKonsSub,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
+            { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );     
+}
     //SUB JasaRenovasiPerbaikanStruktur
 /* ga perlu
     if (urlMappingPerbaikanStrukturUmum[cleanUrlJasaPerbaikanKonsSub]) {
