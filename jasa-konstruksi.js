@@ -3810,7 +3810,7 @@ if (urlMappingPengeboranFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html'},
-            { name: 'Perbandingan Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-infrastruktur.html'}
+            { name: 'Perbandingan Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-infrastruktur.html'},
            { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html'}
         ],
         'JASA_KONSTRUKSI'
@@ -3823,7 +3823,7 @@ if (urlMappingPengeboranFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html'},
-            { name: 'Perbandingan Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-infrastruktur.html'}
+            { name: 'Perbandingan Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-infrastruktur.html'},
            { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html'}
         ],
         'JASA_KONSTRUKSI'
