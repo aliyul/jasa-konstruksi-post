@@ -194,10 +194,10 @@ const urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyMaster1 = {
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-sekolah.html": "Jasa Perbaikan Sekolah",  // ✅ MM (2 kata)
 // MM TURUNAN - JASA PERBAIKAN RUMAH SAKIT (LEVEL 4)
 // ============================================================
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-rumah-sakit.html": "Jasa Perbaikan Rumah Sakit",  // ✅ MM (2 kata)
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-rs.html": "Jasa Perbaikan RS",  // ✅ MM (2 kata)
 // MM TURUNAN - JASA PERBAIKAN STADION OLAHRAGA (LEVEL 4)
 // ============================================================
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-stadion-olahraga.html": "Jasa Perbaikan Stadion Olahraga"
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-stadion.html": "Jasa Perbaikan Stadion"
 };
 const urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyPage = {
 // ============================================================
