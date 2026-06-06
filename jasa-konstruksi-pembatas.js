@@ -49,20 +49,90 @@ const urlMappingPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1 = {
 // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > [Nama Halaman]
 // ============================================================
 const urlMappingPembuatanPagarDindingPembatasFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/jasa-pagar-beton-precast.html": "Jasa Pagar Beton Precast",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/p/jasa-pagar-panel-beton.html": "Jasa Pagar Panel Beton",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/p/jasa-pagar-besi-hollow-wiremesh.html": "Jasa Pagar Besi Hollow Wiremesh",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/p/jasa-dinding-pembatas-bata-batako.html": "Jasa Dinding Pembatas Bata & Batako",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/p/jasa-pagar-kawat-harmonika.html": "Jasa Pagar Kawat Harmonika",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-brc.html": "Jasa Pembuatan Pagar BRC",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/p/jasa-pagar-plat-cutting-laser.html": "Jasa Pagar Plat Cutting Laser",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-rumah.html.html": "Jasa Pembuatan Pagar Rumah",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/p/jasa-pemasangan-pagar-bangunan.html": "Jasa Pemasangan Pagar Bangunan"  // TYPE: MONEY_MASTER
+ // ============================================================
+// MM - JASA PEMBUATAN PAGAR DINDING PEMBATAS (LEVEL 4)
+// ============================================================
+//"https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html": "Jasa Pembuatan Pagar Dinding Pembatas",  // ✅ MM (2 kata)
+
+// ============================================================
+// ✅ MP - PEMBUATAN (LEVEL 5) - DI BAWAH MM PEMBUATAN
+// ============================================================
+
+// 1. Pembuatan Pagar BRC
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-brc.html": "Jasa Pembuatan Pagar BRC",  // ✅ MP (3 kata)
+
+// 2. Pembuatan Pagar Besi Hollow
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-besi-hollow.html": "Jasa Pembuatan Pagar Besi Hollow",  // ✅ MP (4 kata) - REVISI NAMA
+
+// 3. Pembuatan Pagar Plat Laser
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-plat-laser.html": "Jasa Pembuatan Pagar Plat Laser",  // ✅ MP (4 kata)
+
+// 4. Pembuatan Pagar Rumah
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-rumah.html": "Jasa Pembuatan Pagar Rumah",  // ✅ MP (3 kata) - PERBAIKI URL (.html ganda)
+
+// 5. Pembuatan Pagar Custom
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-custom.html": "Jasa Pembuatan Pagar Custom",  // ✅ MP (3 kata) - URL BARU (opsional)
+
+// 6. Pembuatan Pagar Minimalis
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-minimalis.html": "Jasa Pembuatan Pagar Minimalis",  // ✅ MP (3 kata) - URL BARU (opsional)
+
+// 7. Pembuatan Pagar Industrial
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-industrial.html": "Jasa Pembuatan Pagar Industrial",  // ✅ MP (3 kata) - URL BARU (opsional)
+
+// 8. Pembuatan Pagar Stainless
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-stainless.html": "Jasa Pembuatan Pagar Stainless",  // ✅ MP (3 kata) - URL BARU (opsional)
+
+// 9. Pembuatan Pagar Galvanis
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-galvanis.html": "Jasa Pembuatan Pagar Galvanis",  // ✅ MP (3 kata) - URL BARU (opsional)
+
+// 10. Pembuatan Pagar Aluminium
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-aluminium.html": "Jasa Pembuatan Pagar Aluminium"  // ✅ MP (3 kata) - URL BARU (opsional)
 };
 const urlMappingPasangPagarDindingPembatasFromMoneyPageMoneyPage1 = {
-"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-rumah.html.html": "Jasa Pasang Pagar Rumah",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc.html": "Jasa Pasang Pagar BRC",  // TYPE: MONEY_MASTER
- "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-bangunan.html": "Jasa Pasang Pagar Bangunan"  // TYPE: MONEY_MASTER
+// ============================================================
+// MM - JASA PASANG PAGAR DINDING PEMBATAS (LEVEL 4)
+// ============================================================
+//"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-dinding-pembatas.html": "Jasa Pasang Pagar Dinding Pembatas",  // ✅ MM (2 kata)
+
+// ============================================================
+// ✅ MP - SEMUA DI BAWAH MM (LEVEL 5) - 3+ KATA
+// ============================================================
+
+// 1. Pagar Beton Precast (sudah MP, nama sudah tepat)
+"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-beton-precast.html": "Jasa Pasang Pagar Beton Precast",  // ✅ MP (4 kata)
+
+// 2. Pagar Panel Beton (sudah MP, nama sudah tepat)
+"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-panel-beton.html": "Jasa Pasang Pagar Panel Beton",  // ✅ MP (4 kata)
+
+// 3. Pagar Besi Hollow Wiremesh (perbaiki nama)
+"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-besi-hollow.html": "Jasa Pasang Pagar Besi Hollow",  // ✅ MP (4 kata)
+
+// 4. Dinding Pembatas Bata & Batako
+"https://www.betonjayareadymix.com/p/jasa-pasang-dinding-pembatas-bata.html": "Jasa Pasang Dinding Pembatas Bata",  // ✅ MP (4 kata)
+
+// 5. Pagar Kawat Harmonika
+"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-kawat-harmonika.html": "Jasa Pasang Pagar Kawat Harmonika",  // ✅ MP (4 kata)
+
+// 6. Pagar BRC (pembuatan vs pasang? konten minim, gunakan "Pasang")
+"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc.html": "Jasa Pasang Pagar BRC",  // ✅ MP (3 kata) - PERBAIKI NAMA
+
+// 7. Pagar Plat Cutting Laser
+"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-plat-laser.html": "Jasa Pasang Pagar Plat Laser",  // ✅ MP (4 kata)
+
+// 8. Pagar Rumah (perbaiki URL: ada .html ganda)
+"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-rumah.html": "Jasa Pasang Pagar Rumah",  // ✅ MP (3 kata) - PERBAIKI URL
+
+// 9. Pemasangan Pagar Bangunan
+"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-bangunan.html": "Jasa Pasang Pagar Bangunan",  // ✅ MP (3 kata)
+
+// 10. Pasang Pagar Rumah (perbaiki URL dan nama)
+"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-rumah.html": "Jasa Pasang Pagar Rumah",  // ✅ MP (3 kata) - PERBAIKI URL (.html ganda)
+
+// 11. Pasang Pagar BRC
+"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc.html": "Jasa Pasang Pagar BRC",  // ✅ MP (3 kata)
+
+// 12. Pasang Pagar Bangunan (404 - perlu dibuat konten)
+"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-bangunan.html": "Jasa Pasang Pagar Bangunan"  // ✅ MP (3 kata) - PERLU DIBUAT KONTEN
 };
 //SUB urlMappingPembuatanPagarDinding
 /*
