@@ -54,12 +54,16 @@ const urlMappingPembuatanPagarDindingPembatasFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/p/jasa-pagar-besi-hollow-wiremesh.html": "Jasa Pagar Besi Hollow Wiremesh",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/p/jasa-dinding-pembatas-bata-batako.html": "Jasa Dinding Pembatas Bata & Batako",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/p/jasa-pagar-kawat-harmonika.html": "Jasa Pagar Kawat Harmonika",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/p/jasa-pagar-brc.html": "Jasa Pagar BRC",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-brc.html": "Jasa Pembuatan Pagar BRC",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/p/jasa-pagar-plat-cutting-laser.html": "Jasa Pagar Plat Cutting Laser",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/p/jasa-pagar-rumah.html": "Jasa Pagar Rumah",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/p/jasa-pagar-bangunan.html": "Jasa Pagar Bangunan"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-rumah.html.html": "Jasa Pembuatan Pagar Rumah",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-pagar-bangunan.html": "Jasa Pemasangan Pagar Bangunan"  // TYPE: MONEY_MASTER
 };
-
+const urlMappingPasangPagarDindingPembatasFromMoneyPageMoneyPage1 = {
+"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-rumah.html.html": "Jasa Pasang Pagar Rumah",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc.html": "Jasa Pasang Pagar BRC",  // TYPE: MONEY_MASTER
+ "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-bangunan.html": "Jasa Pasang Pagar Bangunan"  // TYPE: MONEY_MASTER
+};
 //SUB urlMappingPembuatanPagarDinding
 /*
 const urlMappingPagarBetonPrecast = {
@@ -1261,7 +1265,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingPengamananAreaProyekFromMoneyPageMoneyPage1,
 		urlMappingRambudanSistemKeamananVisualFromMoneyPageMoneyPage1,
 		urlMappingPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1,
-		urlMappingPembuatanPagarDindingPembatasFromMoneyPageMoneyPage1
+		urlMappingPembuatanPagarDindingPembatasFromMoneyPageMoneyPage1,
+		urlMappingPasangPagarDindingPembatasFromMoneyPageMoneyPage1
     );
 
     // --- validasi URL terdaftar ---
@@ -1649,7 +1654,21 @@ document.addEventListener("DOMContentLoaded", function() {
         'JASA_KONSTRUKSI'
     );
     }
-
+    if (urlMappingPasangPagarDindingPembatasFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
+       generateBreadcrumbJasaKonstruksiPembatas(
+        urlMappingPasangPagarDindingPembatasFromMoneyPageMoneyPage1,
+        cleanUrlJasaPembatasKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembatas-pengaman.html' },
+            { name: 'Perbandingan Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembatas-pengaman.html' },
+            { name: 'Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html' },
+            { name: 'Jasa Pasang Pagar Diding Pembatas', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-dinding-pembatas.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+ 
     if (urlMappingPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
         generateBreadcrumbJasaKonstruksiPembatas(
         urlMappingPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1,
