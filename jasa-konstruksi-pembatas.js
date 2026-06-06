@@ -21,7 +21,7 @@ const urlMappingPengamananAreaProyekFromMoneyPageMoneyPage1 = {
 // 🧠 INTENT: Informational + Pre-commercial (edukasi & panduan)
 // Breadcrumb: Home > Jasa Pembatas & Pengaman > Rambu & Sistem Keamanan Visual > [Nama Halaman]
 // ============================================================
-const urlMappingRambuSistemKeamananVisual = {
+const urlMappingRambudanSistemKeamananVisualFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/p/jasa-pemasangan-rambu-lalu-lintas.html": "Jasa Pemasangan Rambu Lalu Lintas",  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/jasa-pemasangan-cermin-tikungan.html": "Jasa Pemasangan Cermin Tikungan",  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/jasa-pemasangan-cat-marka-jalan.html": "Jasa Pemasangan Cat Marka Jalan",  // TYPE: SUB1
@@ -34,7 +34,7 @@ const urlMappingRambuSistemKeamananVisual = {
 // 🧠 INTENT: Informational + Pre-commercial (edukasi & panduan)
 // Breadcrumb: Home > Jasa Pembatas & Pengaman > Pengamanan Sisi Jalan > [Nama Halaman]
 // ============================================================
-const urlMappingPengamananSisiJalan = {
+const urlMappingPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/p/jasa-pemasangan-guardrail-besi.html": "Jasa Pemasangan Guardrail Besi",  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/jasa-pemasangan-railing-jalan.html": "Jasa Pemasangan Railing Jalan",  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/jasa-bollard-tiang-pengaman-jalan.html": "Jasa Bollard & Tiang Pengaman Jalan",  // TYPE: SUB1
@@ -48,7 +48,7 @@ const urlMappingPengamananSisiJalan = {
 // 🧠 INTENT: Transactional (harga & layanan)
 // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > [Nama Halaman]
 // ============================================================
-const urlMappingPembuatanPagarDinding = {
+const urlMappingPembuatanPagarDindingPembatasFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/p/jasa-pagar-beton-precast.html": "Jasa Pagar Beton Precast",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/p/jasa-pagar-panel-beton.html": "Jasa Pagar Panel Beton",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/p/jasa-pagar-besi-hollow-wiremesh.html": "Jasa Pagar Besi Hollow Wiremesh",  // TYPE: MONEY_MASTER
@@ -1259,9 +1259,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlMappingGabungan = Object.assign(
       {},
 		urlMappingPengamananAreaProyekFromMoneyPageMoneyPage1,
-		urlMappingRambuSistemKeamananVisual,
-		urlMappingPengamananSisiJalan,
-		urlMappingPembuatanPagarDinding
+		urlMappingRambudanSistemKeamananVisualFromMoneyPageMoneyPage1,
+		urlMappingPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1,
+		urlMappingPembuatanPagarDindingPembatasFromMoneyPageMoneyPage1
     );
 
     // --- validasi URL terdaftar ---
@@ -1635,275 +1635,53 @@ document.addEventListener("DOMContentLoaded", function() {
 	
      pageNameJasaPembatas.textContent = "";
 
-    if (urlMappingPembuatanPagarDinding[cleanUrlJasaPembatasKons]) {
-        restoreCondition('JasaKonsPembatas');
-        restoreCondition('JasaPembuatanPagarDindingPembatas');
-     
-        //hapus elemen div id lain
-	removeCondition('ProdukInFur');
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-        //removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPondasiTanah');
-        //removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsJalanPerkerasan');
-
-
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaPengamanSisiJalanInfrastruktur');
-        removeCondition('JasaRambudanSistemKeamananVisual');
-        removeCondition('JasaPengamananAreaProyek');
-
-	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SEMUA NYA
-	/*
-        removeCondition('JasaPagarBetonPrecast');
-        removeCondition('JasaPagarPanelBeton');
-        removeCondition('JasaPagarBesiHollowWiremesh'); 
-	removeCondition('JasaDindingPembatasBataBatako');
-	removeCondition('JasaPagarKawatHarmonika');
-	removeCondition('JasaPagarBrc');
-	removeCondition('JasaPagarRumah');
-	removeCondition('JasaPagarBangunan');
-       */
-	
-        JasaKonstruksiPembatasLink.style.visibility = 'visible';
-        JasaPembatasLink.style.visibility = 'visible';
-        JasaPembuatanPagarDindingPembatasLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingPembuatanPagarDinding[cleanUrlJasaPembatasKons];
+    if (urlMappingPembuatanPagarDindingPembatasFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
+       generateBreadcrumbJasaKonstruksiPembatas(
+        urlMappingPembuatanPagarDindingPembatasFromMoneyPageMoneyPage1,
+        cleanUrlJasaPembatasKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembatas-pengaman.html' },
+            { name: 'Perbandingan Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembatas-pengaman.html' },
+            { name: 'Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html' },
+            { name: 'Jasa Pembuatan Pagar Diding Pembatas', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
     }
 
- // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingPembuatanPagarDinding[cleanUrlJasaPembatasKons]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Pembatas Pengaman",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Pembuatan Pagar Diding Pembatas",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": urlMappingPembuatanPagarDinding[cleanUrlJasaPembatasKons],
-                   "item": cleanUrlJasaPembatasKons
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-       if (urlMappingPengamananSisiJalan[cleanUrlJasaPembatasKons]) {
-        restoreCondition('JasaKonsPembatas');
-        restoreCondition('JasaPengamanSisiJalanInfrastruktur');
-     
-        //hapus elemen div id lain
-	removeCondition('ProdukInFur');
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-        //removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPondasiTanah');
-        //removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsJalanPerkerasan');
-
-
-        //hapus elemen SUB jasa pembatas lain SELAIN JasaPengamanSisiJalanInfrastruktur
-        removeCondition('JasaPembuatanPagarDindingPembatas');
-        removeCondition('JasaRambudanSistemKeamananVisual');
-        removeCondition('JasaPengamananAreaProyek');
-
-	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SEMUA NYA
-        /*
-        removeCondition('JasaPagarBetonPrecast');
-        removeCondition('JasaPagarPanelBeton');
-        removeCondition('JasaPagarBesiHollowWiremesh'); 
-	removeCondition('JasaDindingPembatasBataBatako');
-	removeCondition('JasaPagarKawatHarmonika');
-	removeCondition('JasaPagarBrc');
-	removeCondition('JasaPagarRumah');
-	removeCondition('JasaPagarBangunan');
-       */
-	
-        JasaKonstruksiPembatasLink.style.visibility = 'visible';
-        JasaPembatasLink.style.visibility = 'visible';
-        JasaPengamanSisiJalanInfrastrukturLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingPengamananSisiJalan[cleanUrlJasaPembatasKons];
+    if (urlMappingPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
+        generateBreadcrumbJasaKonstruksiPembatas(
+        urlMappingPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1,
+        cleanUrlJasaPembatasKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembatas-pengaman.html' },
+            { name: 'Perbandingan Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembatas-pengaman.html' },
+            { name: 'Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html' },
+            { name: 'Jasa Pengaman Sisi Jalan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-pengaman-sisi-jalan-infrastruktur.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
     }
- // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingPengamananSisiJalan[cleanUrlJasaPembatasKons]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Pembatas Pengaman",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Pengaman Sisi Jalan Infrastruktur",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pengaman-sisi-jalan-infrastruktur.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": urlMappingPengamananSisiJalan[cleanUrlJasaPembatasKons],
-                   "item": cleanUrlJasaPembatasKons
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-       if (urlMappingRambuSistemKeamananVisual[cleanUrlJasaPembatasKons]) {
-        restoreCondition('JasaKonsPembatas');
-        restoreCondition('JasaRambudanSistemKeamananVisual');
-     
-        //hapus elemen div id lain
-	removeCondition('ProdukInFur');
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-        //removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPondasiTanah');
-        //removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsJalanPerkerasan');
-
-
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaPengamanSisiJalanInfrastruktur');
-        removeCondition('JasaPembuatanPagarDindingPembatas');
-        removeCondition('JasaPengamananAreaProyek');
-
-	 //hapus elemen sub JasaPembuatanPagarDindingPembatas SEMUA NYA
-	/*
-        removeCondition('JasaPagarBetonPrecast');
-        removeCondition('JasaPagarPanelBeton');
-        removeCondition('JasaPagarBesiHollowWiremesh'); 
-	removeCondition('JasaDindingPembatasBataBatako');
-	removeCondition('JasaPagarKawatHarmonika');
-	removeCondition('JasaPagarBrc');
-	removeCondition('JasaPagarRumah');
-	removeCondition('JasaPagarBangunan');
-       */
-	
-       
-        JasaKonstruksiPembatasLink.style.visibility = 'visible';
-        JasaPembatasLink.style.visibility = 'visible';
-        JasaRambudanSistemKeamananVisualLink.style.visibility = 'visible';
-        pageNameJasaPembatas.textContent = urlMappingRambuSistemKeamananVisual[cleanUrlJasaPembatasKons];
-    }
-
- // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingRambuSistemKeamananVisual[cleanUrlJasaPembatasKons]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Pembatas Pengaman",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Rambu dan Sistem Keamanan Visual",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-rambu-dan-sistem-keamanan-visual.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": urlMappingRambuSistemKeamananVisual[cleanUrlJasaPembatasKons],
-                   "item": cleanUrlJasaPembatasKons
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-
+    if (urlMappingRambudanSistemKeamananVisualFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
+      generateBreadcrumbJasaKonstruksiPembatas(
+        urlMappingRambudanSistemKeamananVisualFromMoneyPageMoneyPage1,
+        cleanUrlJasaPembatasKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembatas-pengaman.html' },
+            { name: 'Perbandingan Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembatas-pengaman.html' },
+            { name: 'Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html' },
+            { name: 'Jasa Rambu dan Sistem Keamanan Visual', url: 'https://www.betonjayareadymix.com/p/jasa-rambu-dan-sistem-keamanan-visual.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
 	if (urlMappingPengamananAreaProyekFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
     generateBreadcrumbJasaKonstruksiPembatas(
         urlMappingPengamananAreaProyekFromMoneyPageMoneyPage1,
-        cleanUrlJasaKons,
+        cleanUrlJasaPembatasKons,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembatas-pengaman.html' },
