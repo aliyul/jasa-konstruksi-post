@@ -603,7 +603,7 @@ const urlMappingPerawatanPerbaikanBangunan = {
 // Parent: Jasa Perawatan & Perbaikan Bangunan
 // ============================================================
 
-const urlMappingPerbaikanKebocoranWaterproofingFromMoneyPageMoneyPage1 = {
+const urlMappingPerbaikanWaterproofingBangunanFromMoneyPageMoneyPage1 = {
   // ============================================================
   // [MONEY PAGE] - JASA PERBAIKAN REMBESAN AIR
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Waterproofing > Jasa Perbaikan Rembesan Air
@@ -3392,7 +3392,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingPerbaikanKebocoranWaterproofingFromMoneyPageMoneyPage1,
+		urlMappingPerbaikanWaterproofingBangunanFromMoneyPageMoneyPage1,
 urlMappingPerbaikanElemenArsitekturalFromMoneyPageMoneyPage1,
 urlMappingPerbaikanAtapDrainaseBangunanFromMoneyPageMoneyPage1,
 		urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1,
@@ -4313,9 +4313,9 @@ if (urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1[cleanUrlJasaPerba
 	       document.head.appendChild(script);
      }
 	 */
-  if (urlMappingPerbaikanKebocoranWaterproofingFromMoneyPageMoneyPage1[cleanUrlJasaPerbaikanKonsSub]) {
+  if (urlMappingPerbaikanWaterproofingBangunanFromMoneyPageMoneyPage1[cleanUrlJasaPerbaikanKonsSub]) {
     generateBreadcrumbJasaKonstruksiPerbaikan(
-        urlMappingPerbaikanKebocoranWaterproofingFromMoneyPageMoneyPage1,
+        urlMappingPerbaikanWaterproofingBangunanFromMoneyPageMoneyPage1,
         cleanUrlJasaPerbaikanKonsSub,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -4323,7 +4323,7 @@ if (urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1[cleanUrlJasaPerba
             { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
             { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
             //{ name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
-            { name: 'Jasa Perbaikan Kebocoran Waterproofing', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-kebocoran-waterproofing.html'}
+            { name: 'Jasa Perbaikan Waterproofing Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-waterproofing-bangunan.html'}
         ],
         'JASA_KONSTRUKSI'
     );     
