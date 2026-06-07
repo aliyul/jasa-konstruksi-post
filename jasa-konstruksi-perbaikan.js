@@ -606,57 +606,49 @@ const urlMappingPerawatanPerbaikanBangunan = {
 const urlMappingPerbaikanKebocoranWaterproofingFromMoneyPageMoneyPage1 = {
   // ============================================================
   // [MONEY PAGE] - JASA PERBAIKAN REMBESAN AIR
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Perbaikan Rembesan Air
+  // Breadcrumb: Home > Jasa Konstruksi > Jasa Waterproofing > Jasa Perbaikan Rembesan Air
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-rembesan-air.html": "Jasa Perbaikan Rembesan Air",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-rembesan-air.html": "Jasa Perbaikan Rembesan Air",  // MP (L5)
 
   // ============================================================
   // [MONEY PAGE] - JASA PERBAIKAN DAK BETON BOCOR
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Perbaikan Dak Beton Bocor
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dak-beton-bocor.html": "Jasa Perbaikan Dak Beton Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dak-beton-bocor.html": "Jasa Perbaikan Dak Beton Bocor",  // MP (L5)
 
   // ============================================================
   // [MONEY PAGE] - JASA PERBAIKAN TALANG BOCOR
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Perbaikan Talang Bocor
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-bocor.html": "Jasa Perbaikan Talang Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-talang-bocor.html": "Jasa Perbaikan Talang Bocor",  // MP (L5)
 
   // ============================================================
   // [MONEY PAGE] - JASA PERBAIKAN GENTENG BOCOR
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Perbaikan Genteng Bocor
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-genteng-bocor.html": "Jasa Perbaikan Genteng Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-genteng-bocor.html": "Jasa Perbaikan Genteng Bocor",  // MP (L5)
 
   // ============================================================
   // [MONEY PAGE] - JASA WATERPROOFING DAK BETON
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Waterproofing Dak Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-waterproofing-dak-beton.html": "Jasa Waterproofing Dak Beton",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-dak-beton.html": "Jasa Waterproofing Dak Beton",  // MP (L5)
 
   // ============================================================
   // [MONEY PAGE] - JASA WATERPROOFING BASEMENT
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Waterproofing Basement
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-waterproofing-basement.html": "Jasa Waterproofing Basement",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-basement-bangunan.html": "Jasa Waterproofing Basement Bangunan",  // MP (L5)
 
   // ============================================================
   // [MONEY PAGE] - JASA WATERPROOFING DINDING
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Waterproofing Dinding
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-waterproofing-dinding.html": "Jasa Waterproofing Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-dinding-bangunan.html": "Jasa Waterproofing Dinding Bangunan",  // MP (L5)
 
   // ============================================================
   // [MONEY PAGE] - JASA INJEKSI ANTI BOCOR
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Injeksi Anti Bocor
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-injeksi-anti-bocor.html": "Jasa Injeksi Anti Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-injeksi-anti-bocor.html": "Jasa Injeksi Anti Bocor",  // MP (L5)
 
   // ============================================================
   // [MONEY PAGE] - JASA COATING WATERPROOFING
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Kebocoran & Waterproofing > Jasa Coating Waterproofing
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-coating-waterproofing.html": "Jasa Coating Waterproofing"
+  "https://www.betonjayareadymix.com/p/jasa-coating-anti-bocor.html": "Jasa Coating Anti Bocor"
 };
 
 // ============================================================
