@@ -55,12 +55,9 @@ const urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1 = {
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-pondasi.html": "Jasa Perbaikan Struktur Pondasi",
 
-  // ============================================================
-  // [VARIANT] - JASA PERBAIKAN STRUKTUR LANTAI BETON
-  // 🧠 SEO NOTE: Fokus ke perbaikan lantai beton (retak, amblas)
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-lantai-beton.html": "Jasa Perbaikan Struktur Lantai Beton",
+   // ============================================================
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-struktur.html": "Jasa Perbaikan Lantai Struktur",
+  
 
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR DINDING
@@ -316,12 +313,7 @@ const urlMappingPerbaikanStrukturPondasiFromMoneyPage1MoneyPage2 = {
 // ============================================================
 
 const urlMappingPerbaikanStrukturLantaiFromMoneyPage1MoneyPage2 = {
-  // ============================================================
-  // [VARIANT] - JASA PERBAIKAN LANTAI STRUKTUR
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Perbaikan Lantai Struktur
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-struktur.html": "Jasa Perbaikan Lantai Struktur",
-  
+
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN STRUKTUR LANTAI BETON
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Perbaikan Struktur Lantai Beton
@@ -4210,7 +4202,7 @@ if (urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1[cleanUrlJasaPerba
             { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
             { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
             { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
-            { name: 'Jasa Perbaikan Struktur Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-lantai-beton.html'}
+            { name: 'Jasa Perbaikan Lantai Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-struktur.html'}
         ],
         'JASA_KONSTRUKSI'
     );      
