@@ -1205,13 +1205,13 @@ const urlMappingRenovasiEksteriorFromMoneyMaster1MoneyPage = {
   // [VARIANT] - JASA RENOVASI ATAP
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Atap
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-atap.html": "Jasa Renovasi Atap",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-atap-bangunan.html": "Jasa Renovasi Atap Bangunan",
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI KANOPI
   // Breadcrumb: Home > Jasa Renovasi > Jasa Renovasi Eksterior Bangunan > Jasa Renovasi Kanopi
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kanopi.html": "Jasa Renovasi Kanopi",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kanopi-bangunan.html": "Jasa Renovasi Kanopi Bangunan",
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI PAGAR DAN GERBANG
