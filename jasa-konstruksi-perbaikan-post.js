@@ -1981,7 +1981,7 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
 		urlMappingJasaBobokLantaiBeton,
 		urlMappingJasaBobokLantaiLama,
 		//urlMappingJasaPerbaikanGedungBertingkat,
-		urlMappingJasaPerbaikanStrukturBangunanTua,
+		//urlMappingJasaPerbaikanStrukturBangunanTua,
 		urlMappingJasaPerbaikanStrukturBangunanMiring,
 		//urlMappingJasaPerbaikanTempatIbadah,
 		urlMappingJasaRenovasiStadion,
