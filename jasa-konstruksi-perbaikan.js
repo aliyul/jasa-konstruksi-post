@@ -80,7 +80,15 @@ const urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1 = {
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton-struktur .html": "Jasa Rehabilitasi Beton Struktur"
 };
+const urlMappingPerbaikanLantaiBangunanFromMoneyPageMoneyPage1 = {
 
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-rusak.html": "Jasa Perbaikan Lantai Rusak",
+
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-ambles.html": "Jasa Perbaikan Lantai Ambles",
+
+  "https://www.betonjayareadymix.com/p/jasa-ganti-lantai-ambles.html": "Jasa Ganti Lantai Ambles"
+	
+};
 // ============================================================
 // 🟡 SARAN ITEM BARU (UNTUK DITAMBAHKAN)
 // ============================================================
@@ -330,49 +338,18 @@ const urlMappingPerbaikanStrukturLantaiFromMoneyPage1MoneyPage2 = {
   // [VARIANT] - JASA PERKUATAN LANTAI BETON
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Perkuatan Lantai Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-lantai-beton.html": "Jasa Perkuatan Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-lantai-beton.html": "Jasa Perkuatan Lantai Beton"
   
-  // ============================================================
-  // [VARIANT] - JASA PERBAIKAN LANTAI
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Perbaikan Lantai
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai.html": "Jasa Perbaikan Lantai",
-  
-  // ============================================================
-  // [VARIANT] - JASA LANTAI AMBLES
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Lantai Ambles
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-lantai-ambles.html": "Jasa Lantai Ambles",
-  
-  // ============================================================
-  // [VARIANT] - JASA PERBAIKAN LANTAI RUSAK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Perbaikan Lantai Rusak
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-rusak.html": "Jasa Perbaikan Lantai Rusak",
-  
-  // ============================================================
-  // [VARIANT] - JASA RENOVASI LANTAI
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Renovasi Lantai
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai.html": "Jasa Renovasi Lantai",
+	// ============================================================
+ // "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai.html": "Jasa Renovasi Lantai",
   
   // ============================================================
   // [VARIANT] - JASA RENOVASI LANTAI RUSAK
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Renovasi Lantai Rusak
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-rusak.html": "Jasa Renovasi Lantai Rusak",
+ // "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-rusak.html": "Jasa Renovasi Lantai Rusak",
   
-  // ============================================================
-  // [VARIANT] - JASA PERBAIKAN LANTAI AMBLES
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Perbaikan Lantai Ambles
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-ambles.html": "Jasa Perbaikan Lantai Ambles",
-  
-  // ============================================================
-  // [VARIANT] - JASA GANTI LANTAI AMBLES
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Ganti Lantai Ambles
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-ganti-lantai-ambles.html": "Jasa Ganti Lantai Ambles",
+
   
   // ============================================================
   // SARAN ITEM BARU
@@ -3387,6 +3364,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingPerbaikanWaterproofingBangunanFromMoneyPageMoneyPage1,
 urlMappingPerbaikanElemenArsitekturalFromMoneyPageMoneyPage1,
 urlMappingPerbaikanAtapDrainaseBangunanFromMoneyPageMoneyPage1,
+		urlMappingPerbaikanLantaiBangunanFromMoneyPageMoneyPage1,
 		urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1,
         urlMappingPerbaikanStrukturGedungBertingkatFromMoneyPage1MoneyPage2,
 		urlMappingPerbaikanStrukturBangunanTuaFromMoneyPage1MoneyPage2,
@@ -4094,9 +4072,22 @@ JasaPerbaikanAtapDrainaseBangunanLink.style.visibility = 'hidden';
 	
      //NAMA DEFAULT BUAT SEMUA DI KOSONGKAN DULU
      pageNameKonstruksiPerbaikan1.textContent = "";
-
 	
-    //Sub JasaRenovasiPerbaikan 
+if (urlMappingPerbaikanLantaiBangunanFromMoneyPageMoneyPage1[cleanUrlJasaPerbaikanKonsSub]) {
+   generateBreadcrumbJasaKonstruksiPerbaikan(
+        urlMappingPerbaikanLantaiBangunanFromMoneyPageMoneyPage1,
+        cleanUrlJasaPerbaikanKonsSub,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
+            { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Lantai Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-bangunan.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );     
+}
+
 if (urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1[cleanUrlJasaPerbaikanKonsSub]) {
    generateBreadcrumbJasaKonstruksiPerbaikan(
         urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1,
