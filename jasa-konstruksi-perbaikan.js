@@ -1495,6 +1495,7 @@ const urlMappingRenovasiBangunanPabrikFromMoneyPageMoneyPage1 = {
 // ============================================================
 
 const urlMappingRenovasiBangunanRumahFromMoneyPageMoneyPage1 = {
+	  "https://www.betonjayareadymix.com/p/harga-jasa-renovasi-rumah.html": "Harga Jasa Renovasi Rumah",
   // ============================================================
   // [SUB-VARIANT] - JASA RENOVASI RUMAH MINIMALIS
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Minimalis
