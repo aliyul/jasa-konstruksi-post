@@ -283,7 +283,7 @@ const urlMappingPerbaikanStrukturKolomBalokFromMoneyPage1MoneyPage2 = {
 // Parent: Jasa Perbaikan Struktur
 // ============================================================
 
-const urlMappingPerbaikanStrukturPondasiFromMoneyPage1MoneyPage2 = {
+const urlMappingPerbaikanPondasiStrukturFromMoneyPage1MoneyPage2 = {
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN PONDASI BANGUNAN
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Pondasi > Jasa Perbaikan Pondasi Bangunan
@@ -306,7 +306,7 @@ const urlMappingPerbaikanStrukturPondasiFromMoneyPage1MoneyPage2 = {
   // [VARIANT] - JASA PERBAIKAN STRUKTUR PONDASI RUMAH
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Pondasi > Jasa Perbaikan Struktur Pondasi Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-pondasi-rumah.html": "Jasa Perbaikan Struktur Pondasi Rumah",
+ // "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-pondasi-rumah.html": "Jasa Perbaikan Struktur Pondasi Rumah",
   
   // ============================================================
   // SARAN ITEM BARU
@@ -3370,7 +3370,7 @@ urlMappingPerbaikanAtapDrainaseBangunanFromMoneyPageMoneyPage1,
 		urlMappingPerbaikanStrukturBangunanTuaFromMoneyPage1MoneyPage2,
 		urlMappingPerbaikanStrukturBangunanMiringFromMoneyPage1MoneyPage2,
 		urlMappingPerbaikanStrukturKolomBalokFromMoneyPage1MoneyPage2,
-		urlMappingPerbaikanStrukturPondasiFromMoneyPage1MoneyPage2,
+		urlMappingPerbaikanPondasiStrukturFromMoneyPage1MoneyPage2,
 		urlMappingPerbaikanStrukturLantaiFromMoneyPage1MoneyPage2,
 		urlMappingPerbaikanStrukturDindingFromMoneyPage1MoneyPage2,
 		//urlMappingPerbaikanStrukturBangunan,
@@ -4167,9 +4167,9 @@ if (urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1[cleanUrlJasaPerba
     );      
     }
 	
-    if (urlMappingPerbaikanStrukturPondasiFromMoneyPage1MoneyPage2[cleanUrlJasaPerbaikanKonsSub]) {
+    if (urlMappingPerbaikanPondasiStrukturFromMoneyPage1MoneyPage2[cleanUrlJasaPerbaikanKonsSub]) {
        generateBreadcrumbJasaKonstruksiPerbaikan(
-        urlMappingPerbaikanStrukturPondasiFromMoneyPage1MoneyPage2,
+        urlMappingPerbaikanPondasiStrukturFromMoneyPage1MoneyPage2,
         cleanUrlJasaPerbaikanKonsSub,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -4177,7 +4177,7 @@ if (urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1[cleanUrlJasaPerba
             { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
             { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
             { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
-            { name: 'Jasa Perbaikan Struktur Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-pondasi.html'}
+            { name: 'Jasa Perbaikan Pondasi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-struktur.html'}
         ],
         'JASA_KONSTRUKSI'
     );      
