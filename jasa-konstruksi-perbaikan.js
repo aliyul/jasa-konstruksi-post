@@ -221,13 +221,13 @@ const urlMappingPerbaikanStrukturKolomBalokFromMoneyPage1MoneyPage2 = {
   // [VARIANT] - JASA PERBAIKAN KOLOM BETON
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton > Jasa Perbaikan Kolom Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-beton.html": "Jasa Perbaikan Kolom Beton",
+ // "https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-beton.html": "Jasa Perbaikan Kolom Beton",
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN BALOK BETON
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton > Jasa Perbaikan Balok Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-beton.html": "Jasa Perbaikan Balok Beton",
+  //"https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-beton.html": "Jasa Perbaikan Balok Beton",
   
   // ============================================================
   // [SUB-VARIANT] - JASA PERBAIKAN STRUKTUR KOLOM BETON
