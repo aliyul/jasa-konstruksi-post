@@ -165,7 +165,6 @@ const urlMappingPerbaikanBalokGantungFromMoneyPage2MoneyChild  = {
 
   // "https://www.betonjayareadymix.com/2019/08/jasa-perbaikan-balok-gantung-jakarta.html": "Jasa Perbaikan Balok Gantung Jakarta"  // TYPE: MONEY_CHILD
 };
-};
 
 // ============================================================
 // [MONEY_PAGE] - JASA PERBAIKAN STRUKTUR TIANG BETON
