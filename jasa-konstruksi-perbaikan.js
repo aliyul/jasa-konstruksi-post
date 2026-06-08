@@ -455,7 +455,7 @@ const urlMappingRehabilitasiBetonStrukturFromMoneyPage1MoneyPage2 = {
   // [VARIANT] - JASA PATCHING BETON
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Patching Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-patching-beton.html": "Jasa Patching Beton",
+  "https://www.betonjayareadymix.com/p/jasa-patching-beton-retak.html": "Jasa Patching Beton Retak",
   
   // ============================================================
   // [VARIANT] - JASA INJEKSI BETON RETAK
@@ -467,7 +467,7 @@ const urlMappingRehabilitasiBetonStrukturFromMoneyPage1MoneyPage2 = {
   // [VARIANT] - JASA SHOTCRETE BETON
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Shotcrete Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-shotcrete-beton.html": "Jasa Shotcrete Beton",
+  "https://www.betonjayareadymix.com/p/jasa-aplikasi-shotcrete-beton.html": "Jasa Aplikasi Shotcrete Beton",
   
   // ============================================================
   // [VARIANT] - JASA GROUTING STRUKTUR BETON
@@ -497,19 +497,19 @@ const urlMappingRehabilitasiBetonStrukturFromMoneyPage1MoneyPage2 = {
   // [VARIANT] - JASA CHIPPING BETON
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Chipping Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-chipping-beton.html": "Jasa Chipping Beton",
+  "https://www.betonjayareadymix.com/p/jasa-chipping-beton-bobok.html": "Jasa Chipping Beton Bobok",
   
   // ============================================================
   // [VARIANT] - JASA BOBOK BETON
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Bobok Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-bobok-beton.html": "Jasa Bobok Beton",
+  "https://www.betonjayareadymix.com/p/jasa-bobok-beton-chipping.html": "Jasa Bobok Beton Chipping",
   
   // ============================================================
   // [VARIANT] - JASA BETON KARBONASI
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton > Jasa Beton Karbonasi
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-beton-karbonasi.html": "Jasa Beton Karbonasi",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-karbonasi.html": "Jasa Perbaikan Beton Karbonasi",
   
   // ============================================================
   // SARAN ITEM BARU
