@@ -1005,7 +1005,7 @@ const urlMappingPerbaikanJembatanFromMoneyMaster1MoneyPage = {
   // [SUB-VARIANT] - JASA RENOVASI JEMBATAN BERTINGKAT
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Renovasi Jembatan Bertingkat
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-jembatan-bertingkat.html": "Jasa Renovasi Jembatan Bertingkat",
+  //"https://www.betonjayareadymix.com/p/jasa-renovasi-jembatan-bertingkat.html": "Jasa Renovasi Jembatan Bertingkat",
 
   // ============================================================
   // [SUB-VARIANT] - JASA PERKUATAN STRUKTUR JEMBATAN
@@ -1017,7 +1017,7 @@ const urlMappingPerbaikanJembatanFromMoneyMaster1MoneyPage = {
   // [SUB-VARIANT] - JASA RENOVASI JEMBATAN RUSAK
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Renovasi Jembatan Rusak
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-jembatan-rusak.html": "Jasa Renovasi Jembatan Rusak",
+ // "https://www.betonjayareadymix.com/p/jasa-renovasi-jembatan-rusak.html": "Jasa Renovasi Jembatan Rusak",
 
   // ============================================================
   // [SUB-VARIANT] - JASA PERBAIKAN RETAK JEMBATAN BETON
@@ -1035,7 +1035,7 @@ const urlMappingPerbaikanJembatanFromMoneyMaster1MoneyPage = {
   // [SUB-VARIANT] - JASA REKONSTRUKSI JEMBATAN
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Rekonstruksi Jembatan
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-rekonstruksi-jembatan.html": "Jasa Rekonstruksi Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-rekonstruksi-jembatan-beton.html": "Jasa Rekonstruksi Jembatan Beton",
 
   // ============================================================
   // [SUB-VARIANT] - JASA PERBAIKAN BALOK JEMBATAN
@@ -1059,7 +1059,7 @@ const urlMappingPerbaikanJembatanFromMoneyMaster1MoneyPage = {
   // [SUB-VARIANT] - JASA SHOTCRETE JEMBATAN
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Shotcrete Jembatan
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-shotcrete-jembatan.html": "Jasa Shotcrete Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-aplikasi-shotcrete-jembatan.html": "Jasa Aplikasi Shotcrete Jembatan",
 
   // ============================================================
   // [SUB-VARIANT] - JASA INJEKSI RETAK JEMBATAN
