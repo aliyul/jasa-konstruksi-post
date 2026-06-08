@@ -93,9 +93,11 @@ const urlMappingJasaPerbaikanStrukturBetonFromMoneyPage1MoneyChild  = {
 // 📌 STATUS: PERLU DIBUAT (halaman baru)
 // ============================================================
 
-const urlMappingJasaPerbaikanKolomBeton = {
+const urlMappingJasaPerbaikanKolomBetonFromMoneyPage1MoneyChild = {
   // "https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-beton.html": "Jasa Perbaikan Kolom Beton",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-kolom-beton.html": "Harga Perbaikan Kolom Beton"  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-kolom-beton.html": "Harga Perbaikan Kolom Beton"  // TYPE: MONEY_PAGE
+	
+  // "https://www.betonjayareadymix.com/2019/08/jasa-perbaikan-kolom-beton-jakarta.html": "Harga Perbaikan Kolom Beton Jakarta"  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
@@ -105,9 +107,13 @@ const urlMappingJasaPerbaikanKolomBeton = {
 // 📌 STATUS: PERLU DIBUAT (halaman baru)
 // ============================================================
 
-const urlMappingJasaPerbaikanBalokBeton = {
+const urlMappingJasaPerbaikanBalokBetonFromMoneyPage1MoneyChild = {
   // "https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-beton.html": "Jasa Perbaikan Balok Beton",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-balok-beton.html": "Harga Perbaikan Balok Beton"  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-balok-beton.html": "Harga Perbaikan Balok Beton"  
+
+	
+  // "https://www.betonjayareadymix.com/2019/08/jasa-perbaikan-kolom-beton-jakarta.html": "Harga Perbaikan Balok Beton Jakarta"  // TYPE: MONEY_CHILD
+
 };
 
 // ============================================================
@@ -116,9 +122,11 @@ const urlMappingJasaPerbaikanBalokBeton = {
 // 📌 STATUS: SUDAH ADA
 // ============================================================
 
-const urlMappingJasaPerbaikanStrukturKolomBeton = {
+const urlMappingJasaPerbaikanStrukturKolomBetonFromMoneyPage2MoneyChild = {
   // "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-kolom-beton.html": "Jasa Perbaikan Struktur Kolom Beton",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-struktur-kolom-beton.html": "Harga Perbaikan Struktur Kolom Beton"  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-struktur-kolom-beton.html": "Harga Perbaikan Struktur Kolom Beton" 
+
+	 // "https://www.betonjayareadymix.com/2019/08/jasa-perbaikan-struktur-kolom-beton-jakarta.html": "Harga Perbaikan Struktur Kolom Beton Jakarta"  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
@@ -127,9 +135,12 @@ const urlMappingJasaPerbaikanStrukturKolomBeton = {
 // 📌 STATUS: SUDAH ADA
 // ============================================================
 
-const urlMappingJasaPerbaikanStrukturBalokBeton = {
+const urlMappingJasaPerbaikanStrukturBalokBetonFromMoneyPage2MoneyChild = {
   // "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-balok-beton.html": "Jasa Perbaikan Struktur Balok Beton",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-struktur-balok-beton.html": "Harga Perbaikan Struktur Balok Beton"  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-struktur-balok-beton.html": "Harga Perbaikan Struktur Balok Beton" 
+
+// "https://www.betonjayareadymix.com/2019/08/jasa-perbaikan-struktur-balok-beton-jakarta.html": "Harga Perbaikan Struktur Balok Beton Jakarta"  // TYPE: MONEY_CHILD
+
 };
 
 // ============================================================
@@ -138,7 +149,7 @@ const urlMappingJasaPerbaikanStrukturBalokBeton = {
 // 📌 STATUS: SUDAH ADA
 // ============================================================
 
-const urlMappingJasaPerkuatanKolomBetomRetak = {
+const urlMappingJasaPerkuatanKolomBetomRetakFromMoneyPage2MoneyChild  = {
   // "https://www.betonjayareadymix.com/p/jasa-perkuatan-kolom-beton.html": "Jasa Perkuatan Kolom Beton",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2019/08/harga-perkuatan-kolom-beton.html": "Harga Perkuatan Kolom Beton"  // TYPE: MONEY_CHILD
 };
@@ -2098,11 +2109,11 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
 		urlMappingJasaPerbaikanStrukturBetonFromMoneyPage1MoneyPage2,
 		urlMappingJasaPerbaikanStrukturBetonFromMoneyPage1MoneyChild,
 		//urlMappingJasaRenovasiPerbaikanRetakStruktur,
-		urlMappingJasaPerbaikanKolomBeton,
-		urlMappingJasaPerbaikanBalokBeton,
-		urlMappingJasaPerbaikanStrukturKolomBeton,
-		urlMappingJasaPerbaikanStrukturBalokBeton,
-		urlMappingJasaPerkuatanKolomBetomRetak,
+		urlMappingJasaPerbaikanKolomBetonFromMoneyPage1MoneyChild,
+		urlMappingJasaPerbaikanBalokBetonFromMoneyPage1MoneyChild,
+		urlMappingJasaPerbaikanStrukturKolomBetonFromMoneyPage2MoneyChild,
+		urlMappingJasaPerbaikanStrukturBalokBetonFromMoneyPage2MoneyChild,
+		urlMappingJasaPerkuatanKolomBetomRetakFromMoneyPage2MoneyChild,
 		urlMappingJasaPerkuatanBalokBeton,
 		urlMappingJasaJacketingKolomBalok,
 		urlMappingPerbaikanBalokGantung,
@@ -3890,7 +3901,91 @@ JasaPerbaikanAtapDrainaseBangunanPostLink.style.visibility = 'hidden';
         'JASA_KONSTRUKSI'
     );     
     }
-  
+	
+	if (urlMappingJasaPerbaikanKolomBetonFromMoneyPage1MoneyChild[cleanUrlJasaKonsPerbaikanPost]) {
+        generateBreadcrumbJasaKonstruksiPerbaikanPost(
+        urlMappingJasaPerbaikanKolomBetonFromMoneyPage1MoneyChild,
+        cleanUrlJasaKonsPerbaikanPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
+            { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
+            { name: 'Jasa Perbaikan Kolom Beton', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-kolom-beton.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );     
+    }
+	
+	if (urlMappingJasaPerbaikanBalokBetonFromMoneyPage1MoneyChild[cleanUrlJasaKonsPerbaikanPost]) {
+        generateBreadcrumbJasaKonstruksiPerbaikanPost(
+        urlMappingJasaPerbaikanBalokBetonFromMoneyPage1MoneyChild,
+        cleanUrlJasaKonsPerbaikanPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
+            { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
+            { name: 'Jasa Perbaikan Balok Beton', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-beton.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );     
+    }
+	
+	if (urlMappingJasaPerbaikanStrukturKolomBetonFromMoneyPage2MoneyChild[cleanUrlJasaKonsPerbaikanPost]) {
+        generateBreadcrumbJasaKonstruksiPerbaikanPost(
+        urlMappingJasaPerbaikanStrukturKolomBetonFromMoneyPage2MoneyChild,
+        cleanUrlJasaKonsPerbaikanPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
+            { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
+            { name: 'Jasa Perbaikan Struktur Kolom Beton', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-kolom-beton.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );     
+    }
+
+	
+	if (urlMappingJasaPerbaikanStrukturBalokBetonFromMoneyPage2MoneyChild[cleanUrlJasaKonsPerbaikanPost]) {
+        generateBreadcrumbJasaKonstruksiPerbaikanPost(
+        urlMappingJasaPerbaikanStrukturBalokBetonFromMoneyPage2MoneyChild,
+        cleanUrlJasaKonsPerbaikanPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
+            { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
+            { name: 'Jasa Perbaikan Struktur Kolom Balok', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-kolom-balok.html'},
+            { name: 'Jasa Perbaikan Struktur Balok Beton', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-balok-beton.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );     
+    }
+	
+	
+	if (urlMappingJasaPerkuatanKolomBetomRetakFromMoneyPage2MoneyChild[cleanUrlJasaKonsPerbaikanPost]) {
+        generateBreadcrumbJasaKonstruksiPerbaikanPost(
+        urlMappingJasaPerkuatanKolomBetomRetakFromMoneyPage2MoneyChild,
+        cleanUrlJasaKonsPerbaikanPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
+            { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
+            { name: 'Jasa Perbaikan Struktur Kolom Balok', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-kolom-balok.html'},
+			{ name: 'Jasa Perkuatan Kolom Beton', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-kolom-beton.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );     
+    }
+	
 //SUB JasaRenovasiPerbaikanBangunanPost
 //SUB JasaRenovasiPerbaikanBangunanRumahPost
 if (urlMappingJasaRenovasiPerbaikanRumah[cleanUrlJasaKonsPerbaikanPost]) {
