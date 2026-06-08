@@ -78,7 +78,7 @@ const urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1 = {
   // 🧠 SEO NOTE: Fokus ke rehabilitasi beton yang rusak (korosi, keropos)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton-struktur .html": "Jasa Rehabilitasi Beton Struktur"
+  "https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton-struktur.html": "Jasa Rehabilitasi Beton Struktur"
 };
 const urlMappingPerbaikanLantaiBangunanFromMoneyPageMoneyPage1 = {
 
