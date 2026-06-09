@@ -80,6 +80,16 @@ const urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1 = {
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton-struktur.html": "Jasa Rehabilitasi Beton Struktur"
 };
+
+
+// ============================================================
+// [MONEY_PAGE] - JASA RENOVASI LANTAI
+// ============================================================
+
+const urlMappingJasaRenovasiLantaiBangunanFromMoneyPageMoneyPage1 = {
+   "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-rusak.html": "Jasa Renovasi Lantai Rusak",  // TYPE: MONEY_PAGE
+   "https://www.betonjayareadymix.com/p/harga-renovasi-lantai-bangunan.html": "Harga Renovasi Lantai Bangunan"  // TYPE: MONEY_PAGE
+};
 const urlMappingPerbaikanLantaiBangunanFromMoneyPageMoneyPage1 = {
 
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-rusak.html": "Jasa Perbaikan Lantai Rusak",
@@ -957,6 +967,7 @@ const urlMappingPerbaikanJembatanFromMoneyMaster1MoneyPage = {
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-jembatan.html": "Jasa Perbaikan Struktur Jembatan",
 
+	
   // ============================================================
   // [SUB-VARIANT] - JASA PERBAIKAN JEMBATAN BETON
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Perbaikan Jembatan Beton
@@ -979,7 +990,7 @@ const urlMappingPerbaikanJembatanFromMoneyMaster1MoneyPage = {
   // [SUB-VARIANT] - JASA RENOVASI JEMBATAN GANTUNG
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Infrastruktur > Jasa Perbaikan Jembatan > Jasa Renovasi Jembatan Gantung
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-jembatan-gantung.html": "Jasa Renovasi Jembatan Gantung",
+  //"https://www.betonjayareadymix.com/p/jasa-renovasi-jembatan-gantung.html": "Jasa Renovasi Jembatan Gantung",
 
   // ============================================================
   // [SUB-VARIANT] - JASA PERBAIKAN FONDASI JEMBATAN
@@ -3289,6 +3300,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingPerbaikanWaterproofingBangunanFromMoneyPageMoneyPage1,
 urlMappingPerbaikanElemenArsitekturalFromMoneyPageMoneyPage1,
 urlMappingPerbaikanAtapDrainaseBangunanFromMoneyPageMoneyPage1,
+		urlMappingJasaRenovasiLantaiBangunanFromMoneyPageMoneyPage1
 		urlMappingPerbaikanLantaiBangunanFromMoneyPageMoneyPage1,
 		urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1,
         urlMappingPerbaikanStrukturGedungBertingkatFromMoneyPage1MoneyPage2,
@@ -3998,6 +4010,21 @@ JasaPerbaikanAtapDrainaseBangunanLink.style.visibility = 'hidden';
      //NAMA DEFAULT BUAT SEMUA DI KOSONGKAN DULU
      pageNameKonstruksiPerbaikan1.textContent = "";
 	
+if (urlMappingJasaRenovasiLantaiBangunanFromMoneyPageMoneyPage1[cleanUrlJasaPerbaikanKonsSub]) {
+   generateBreadcrumbJasaKonstruksiPerbaikan(
+        urlMappingJasaRenovasiLantaiBangunanFromMoneyPageMoneyPage1,
+        cleanUrlJasaPerbaikanKonsSub,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
+            { name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
+            { name: 'Jasa Renovasi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan.html' },
+            { name: 'Jasa Renovasi Lantai Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-bangunan.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );     
+}
+
 if (urlMappingPerbaikanLantaiBangunanFromMoneyPageMoneyPage1[cleanUrlJasaPerbaikanKonsSub]) {
    generateBreadcrumbJasaKonstruksiPerbaikan(
         urlMappingPerbaikanLantaiBangunanFromMoneyPageMoneyPage1,
