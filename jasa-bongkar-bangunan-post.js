@@ -68,7 +68,7 @@ const urlMappingJasaBongkarRumahFromMoneyMaster1MoneyPage = {
 // 📁 JASA BONGKAR BETON - MONEY PAGE (BUKAN MONEY MASTER)
 // ============================================================
 
-const urlMappingJasaBongkarBetonFromSub2MoneyPage = {
+const urlMappingJasaBongkarBetonFromMoneyMaster1MoneyPage = {
   // ============================================================
   // [MONEY_PAGE] - HARGA BONGKAR BETON
   // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
@@ -80,7 +80,7 @@ const urlMappingJasaBongkarBetonFromSub2MoneyPage = {
   // ============================================================
   "https://www.betonjayareadymix.com/2019/06/harga-bongkar-beton-per-m3.html": "Harga Bongkar Beton Per m3",  // TYPE: REDIRECT
   "https://www.betonjayareadymix.com/2019/06/harga-bobok-beton-per-m2.html": "Harga Bobok Beton per m2",  // TYPE: REDIRECT
-  "https://www.betonjayareadymix.com/2018/06/harga-jasa-bobok-beton.html": "Harga Jasa Bobok Beton",  // TYPE: REDIRECT
+  "https://www.betonjayareadymix.com/2018/06/harga-jasa-bobok-beton.html": "Harga Jasa Bobok Beton"  // TYPE: REDIRECT
 };
 
 // ============================================================
@@ -92,11 +92,11 @@ const urlMappingJasaBongkarBetonFromSub2MoneyPage = {
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Harga Jasa Bongkar Atap (4 level)
 // ============================================================
 
-const urlMappingJasaBongkarAtapFromSub2MoneyPage = {
+const urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage = {
   // ============================================================
   // [MONEY_PAGE] - HARGA BONGKAR ATAP PER METER
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-atap-per-meter.html": "Harga Bongkar Atap Per Meter",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-atap-per-meter.html": "Harga Bongkar Atap Per Meter"  // TYPE: MONEY_PAGE
   
   // ============================================================
   // [MONEY_CHILD] - BONGKAR ATAP PER LOKASI (JIKA ADA)
@@ -117,7 +117,7 @@ const urlMappingJasaBongkarAtapFromSub2MoneyPage = {
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Harga Bongkar Keramik (4 level)
 // ============================================================
 
-const urlMappingJasaBongkarKeramikFromSub2MoneyPage = {
+const urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyPage = {
   // ============================================================
   // [MONEY_PAGE] - HARGA JASA BONGKAR KERAMIK (MASTER)
   // ============================================================
@@ -129,19 +129,21 @@ const urlMappingJasaBongkarKeramikFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/2019/06/harga-bongkar-keramik-per-m2.html": "Harga Bongkar Keramik Per M2",  // TYPE: MONEY_PAGE
   
   // ============================================================
+  //  BONGKAR KERAMIK LANTAI vs DINDING
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-keramik-lantai.html": "Harga Bongkar Keramik Lantai",  
+  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-keramik-dinding.html": "Harga Bongkar Keramik Dinding" 
+};
+const urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyChild = {
+  // ============================================================
   // [MONEY_CHILD] - BONGKAR KERAMIK PER LOKASI
   // ============================================================
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-jakarta.html": "Jasa Bongkar Keramik Jakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-bekasi.html": "Jasa Bongkar Keramik Bekasi",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-tangerang.html": "Jasa Bongkar Keramik Tangerang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-depok.html": "Jasa Bongkar Keramik Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-bogor.html": "Jasa Bongkar Keramik Bogor",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-bogor.html": "Jasa Bongkar Keramik Bogor" // TYPE: MONEY_CHILD
   
-  // ============================================================
-  // [MONEY_CHILD] - BONGKAR KERAMIK LANTAI vs DINDING
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-keramik-lantai.html": "Harga Bongkar Keramik Lantai",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-keramik-dinding.html": "Harga Bongkar Keramik Dinding",  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
@@ -1770,9 +1772,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBongkarBangunanFromMoneyMasterMoneyPage,
 		urlMappingJasaBongkarTowerFromMoneyMaster1MoneyPage,
 		urlMappingJasaBongkarRumahFromMoneyMaster1MoneyPage,
-		urlMappingJasaBongkarBetonFromSub2MoneyPage,
-		urlMappingJasaBongkarAtapFromSub2MoneyPage,
-		urlMappingJasaBongkarKeramikFromSub2MoneyPage,
+		urlMappingJasaBongkarBetonFromMoneyMaster1MoneyPage,
+		urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage,
+		urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyPage,
+		urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyChild,
+		
 		urlMappingJasaBongkarTembokFromSub2MoneyPage,
 		urlMappingJasaBongkarDindingFromSub2MoneyPage,
 		urlMappingJasaBongkarPlafonFromSub2MoneyPage,
@@ -2375,6 +2379,7 @@ if (urlMappingJasaBongkarBangunanFromMoneyMasterMoneyPage[cleanUrlJasaKonsBongka
            // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' }
         ],
         'JASA_KONSTRUKSI'
@@ -2389,6 +2394,7 @@ if (urlMappingJasaBongkarTowerFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarB
            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
              { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
              { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Tower', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-tower.html' }
         ],
@@ -2404,6 +2410,7 @@ if (urlMappingJasaBongkarRumahFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarB
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
              { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
              { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html' }
         ],
@@ -2412,79 +2419,15 @@ if (urlMappingJasaBongkarRumahFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarB
 	
 }
 
-if (urlMappingJasaBongkarBetonFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-        removeCondition('ProdukInFurPost');
-	removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-        removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-        removeCondition('JasaKonsCuttingBetonPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-
-			//hapus JasaBuangPuingPost
-	removeCondition('JasaBuangPuingPost');
-		
-        //hapus elemen SUB jasa JasaBongkarBangunanPost semua skip dg hapus JasaBongkarBetonPost
-	//removeCondition('JasaBongkarBetonPost');
-	removeCondition('JasaBongkarTowerPost');
-        removeCondition('JasaBongkarRumahPost');
-        removeCondition('JasaBongkarAtapPost');
-        removeCondition('JasaBongkarKeramikPost');
-        removeCondition('JasaBongkarTembokPost');
-        removeCondition('JasaBongkarDindingPost');
-        removeCondition('JasaBongkarPlafonPost');
-        removeCondition('JasaBongkarPartisiPost');
-        removeCondition('JasaBongkarPagarPost');
-        removeCondition('JasaBongkarLantaiPost');
-
-		//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
-        removeCondition('JasaPerawatanPerbaikanBangunanPost');
-	     	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
-	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
-	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
-		
-        removeCondition('JasaPerbaikanAtapBocorPost');
-        removeCondition('JasaPerbaikanDindingRetakPost');
-        removeCondition('JasaPerbaikanRembesanAirPost');
-        removeCondition('JasaPerbaikanPlafonRusakPost');
-        removeCondition('JasaPerbaikanDakBetonBocorPost');
-        removeCondition('JasaPerbaikanTalangBocorPost');
-
-	    // Jika sudah di-remove, restore
-        restoreCondition('JasaKonsBongkarBangunanPost');
-	    restoreCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
-		restoreCondition('JasaBongkarBangunanPost');
-	    restoreCondition('JasaBongkarBetonPost');
-
-	
-        JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaBongkarBangunanPost
-        JasaBongkarBangunanPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaBongkarBetonPost
-	JasaBongkarBetonPostLink.style.visibility = 'visible';
-	
-	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarBetonFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost];
-
+if (urlMappingJasaBongkarBetonFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
 	    generateBreadcrumbJasaBongkarBangunanPost(
-        urlMappingJasaBongkarBetonFromSub2MoneyPage,
+        urlMappingJasaBongkarBetonFromMoneyMaster1MoneyPage,
         cleanUrlJasaKonsBongkarBangunanPost,
         [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
+            { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Beton', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-beton.html' }
         ],
         'JASA_KONSTRUKSI'
@@ -2492,154 +2435,46 @@ if (urlMappingJasaBongkarBetonFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanP
 
 }
 
-if (urlMappingJasaBongkarAtapFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-        removeCondition('ProdukInFurPost');
-	removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-        removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-        removeCondition('JasaKonsCuttingBetonPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-
-		//hapus JasaBuangPuingPost
-	removeCondition('JasaBuangPuingPost');
-	
-        //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarAtapPost
-	removeCondition('JasaBongkarTowerPost');
-        removeCondition('JasaBongkarBetonPost');
-        removeCondition('JasaBongkarRumahPost');
-        removeCondition('JasaBongkarKeramikPost');
-        removeCondition('JasaBongkarTembokPost');
-        removeCondition('JasaBongkarDindingPost');
-        removeCondition('JasaBongkarPlafonPost');
-        removeCondition('JasaBongkarPartisiPost');
-        removeCondition('JasaBongkarPagarPost');
-        removeCondition('JasaBongkarLantaiPost');
-
-	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
-        removeCondition('JasaPerawatanPerbaikanBangunanPost');
-	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
-	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
-	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
-	
-        removeCondition('JasaPerbaikanAtapBocorPost');
-        removeCondition('JasaPerbaikanDindingRetakPost');
-        removeCondition('JasaPerbaikanRembesanAirPost');
-        removeCondition('JasaPerbaikanPlafonRusakPost');
-        removeCondition('JasaPerbaikanDakBetonBocorPost');
-        removeCondition('JasaPerbaikanTalangBocorPost');
-
-	       // Jika sudah di-remove, restore
-        restoreCondition('JasaKonsBongkarBangunanPost');
-	   restoreCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
-	   restoreCondition('JasaBongkarBangunanPost');
-       restoreCondition('JasaBongkarAtapPost');
-	
-        JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaBongkarBangunanPost
-        JasaBongkarBangunanPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaBongkarAtapPost
-	JasaBongkarAtapPostLink.style.visibility = 'visible';
-	
-	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarAtapFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost];
-
+if (urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
 	   generateBreadcrumbJasaBongkarBangunanPost(
-        urlMappingJasaBongkarAtapFromSub2MoneyPage,
+        urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage,
         cleanUrlJasaKonsBongkarBangunanPost,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
              { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
+             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Atap', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-atap.html' }
         ],
         'JASA_KONSTRUKSI'
     );
 }
 
-if (urlMappingJasaBongkarKeramikFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-        removeCondition('ProdukInFurPost');
-	removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-        removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-        removeCondition('JasaKonsCuttingBetonPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	
-        //hapus elemen SUB jasa JasaBongkarBangunanPost semua SELAIN JasaBongkarKeramikPost
-	removeCondition('JasaBongkarTowerPost');
-        removeCondition('JasaBongkarBetonPost');
-        removeCondition('JasaBongkarAtapPost');
-        removeCondition('JasaBongkarRumahPost');
-        removeCondition('JasaBongkarTembokPost');
-        removeCondition('JasaBongkarDindingPost');
-        removeCondition('JasaBongkarPlafonPost');
-        removeCondition('JasaBongkarPartisiPost');
-        removeCondition('JasaBongkarPagarPost');
-        removeCondition('JasaBongkarLantaiPost');
-
-		//hapus JasaBuangPuingPost
-	removeCondition('JasaBuangPuingPost');
-	
-	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
-        removeCondition('JasaPerawatanPerbaikanBangunanPost');
-	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
-	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
-	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
-	
-        removeCondition('JasaPerbaikanAtapBocorPost');
-        removeCondition('JasaPerbaikanDindingRetakPost');
-        removeCondition('JasaPerbaikanRembesanAirPost');
-        removeCondition('JasaPerbaikanPlafonRusakPost');
-        removeCondition('JasaPerbaikanDakBetonBocorPost');
-        removeCondition('JasaPerbaikanTalangBocorPost');
-
-                // Jika sudah di-remove, restore
-        restoreCondition('JasaBongkarBangunanPost');
-	    restoreCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi) 
-	    restoreCondition('JasaKonsBongkarBangunanPost');
-	     restoreCondition('JasaBongkarKeramikPost');
-	   
-        JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaBongkarBangunanPost
-        JasaBongkarBangunanPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaBongkarKeramikPost
-	JasaBongkarKeramikPostLink.style.visibility = 'visible';
-	
-	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarKeramikFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost];
-
+if (urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
 	    generateBreadcrumbJasaBongkarBangunanPost(
-        urlMappingJasaBongkarKeramikFromSub2MoneyPage,
+        urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyPage,
         cleanUrlJasaKonsBongkarBangunanPost,
         [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
              { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
+             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
+            { name: 'Jasa Bongkar Keramik', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-keramik.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+
+if (urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyChild[cleanUrlJasaKonsBongkarBangunanPost]) {
+	    generateBreadcrumbJasaBongkarBangunanPost(
+        urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyChild,
+        cleanUrlJasaKonsBongkarBangunanPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
+             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Keramik', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-keramik.html' }
         ],
         'JASA_KONSTRUKSI'
