@@ -2110,7 +2110,7 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
 	urlMappingJasaPerbaikanLantaiRusakFromMoneyPage1MoneyChild,
 	urlMappingJasaPerbaikanLantaiAmblesFromMoneyPage1MoneyChild,
 	urlMappingJasaGantiLantaiAmblesFromMoneyPage1MoneyChild,
-		urlMappingJasaRenovasiLantaiBangunanFromMoneyPageMoneyChild
+		urlMappingJasaRenovasiLantaiBangunanFromMoneyPageMoneyChild,
 		urlMappingJasaRenovasiLantaiRusakFromMoneyPage1MoneyChild,
 		urlMappingJasaBobokLantaiBetonFromMoneyPage2MoneyChild,
 		urlMappingJasaBobokLantaiLamaFromMoneyPage2MoneyChild,
