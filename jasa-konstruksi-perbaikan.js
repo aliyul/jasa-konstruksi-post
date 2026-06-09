@@ -513,7 +513,11 @@ const urlMappingRehabilitasiBetonStrukturFromMoneyPage1MoneyPage2 = {
   // "https://www.betonjayareadymix.com/2019/08/harga-rehabilitasi-beton.html": "Harga Rehabilitasi Beton",
   // "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-retak-rambut.html": "Jasa Perbaikan Beton Retak Rambut"
 };
-
+const urlMappingBobokBetonChippingFromMoneyPage2MoneyPage3 = {
+"https://www.betonjayareadymix.com/p/harga-bobok-beton.html": "Harga Bobok Beton",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-bobok-lantai-beton.html": "Jasa Bobok Lantai Beton",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-bobok-lantai-lama.html": "Jasa Bobok Lantai Lama"  // TYPE: MONEY_PAGE
+};
 // ============================================================
 // JASA PERBAIKAN STRUKTUR ATAP
 // Parent: Jasa Perbaikan Struktur
@@ -3313,6 +3317,7 @@ urlMappingPerbaikanAtapDrainaseBangunanFromMoneyPageMoneyPage1,
 		//urlMappingPerbaikanStrukturBangunan,
 		//urlMappingRehabilitasiBeton,
 		urlMappingRehabilitasiBetonStrukturFromMoneyPage1MoneyPage2,
+		urlMappingBobokBetonChippingFromMoneyPage2MoneyPage3,
                 urlMappingPerbaikanStrukturAtapFromMoneyPage1MoneyPage2,
                // urlMappingPerbaikanInfrastruktur,
                 urlMappingPerbaikanJalanFromMoneyMaster1MoneyPage,
@@ -4194,6 +4199,22 @@ if (urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1[cleanUrlJasaPerba
             { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
             { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
             { name: 'Jasa Rehabilitasi Beton Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton-struktur.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );     
+    }   
+    if (urlMappingBobokBetonChippingFromMoneyPage2MoneyPage3[cleanUrlJasaPerbaikanKonsSub]) {
+		 generateBreadcrumbJasaKonstruksiPerbaikan(
+        urlMappingBobokBetonChippingFromMoneyPage2MoneyPage3,
+        cleanUrlJasaPerbaikanKonsSub,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
+            { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
+            { name: 'Jasa Rehabilitasi Beton Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton-struktur.html'},
+            { name: 'Jasa Bobok Beton Chipping', url: 'https://www.betonjayareadymix.com/p/jasa-bobok-beton-chipping.html'}
         ],
         'JASA_KONSTRUKSI'
     );     
