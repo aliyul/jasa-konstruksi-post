@@ -1552,7 +1552,7 @@ function generateBreadcrumbJasaBongkarBangunanPost(
 }
 
 
-*/// Menyimpan elemen yang dihapus dalam variabel
+// Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaKonsBongkarBangunanPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
 function removeCondition(conditionId) {
