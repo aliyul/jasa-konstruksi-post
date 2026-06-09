@@ -548,7 +548,7 @@ const urlMappingJasaPatchingBetonRetakFromMoneyPage2MoneyPage3 = {
 // Parent: Jasa Rehabilitasi Beton (/p/jasa-rehabilitasi-beton.html)
 // ============================================================
 
-const urlMappingJasaShortcreteBeton = {
+const urlMappingJasaAplikasiShotcreteBetonFromMoneyPage2MoneyPage3 = {
   // ============================================================
   // [MONEY_PAGE] - BORONGAN SEMPROT BETON
   // 🧠 TYPE: MONEY_PAGE (BUKAN MONEY_MASTER)
@@ -558,7 +558,7 @@ const urlMappingJasaShortcreteBeton = {
   // ============================================================
   // [MONEY_PAGE] - HARGA JASA SHOTCRETE
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-shotcrete.html": "Harga Jasa Shotcrete",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-shotcrete-beton..html": "Harga Jasa Shotcrete Beton",  // TYPE: MONEY_PAGE
   
   // ============================================================
   // [MONEY_PAGE] - HARGA JASA SEMPROT BETON
@@ -571,18 +571,19 @@ const urlMappingJasaShortcreteBeton = {
 // Parent: Jasa Rehabilitasi Beton (/p/jasa-rehabilitasi-beton.html)
 // ============================================================
 
-const urlMappingJasaGoutingStrukturBeton = {
+const urlMappingJasaGroutingStrukturBetonFromMoneyPage2MoneyPage3 = {
   // ============================================================
   // [MONEY_PAGE] - GROUTING BETON
   // 🧠 TYPE: MONEY_PAGE (BUKAN MONEY_MASTER)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/grouting-beton.html": "Grouting Beton",  // TYPE: MONEY_PAGE
+//  "https://www.betonjayareadymix.com/2018/09/grouting-beton.html": "Grouting Beton",  // TYPE: MONEY_PAGE
   
   // ============================================================
   // [MONEY_PAGE] - HARGA JASA GROUTING BETON
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-grouting-beton.html": "Harga Jasa Grouting Beton",  // TYPE: MONEY_PAGE
-  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-grouting-beton.html": "Harga Jasa Grouting Beton"  // TYPE: MONEY_PAGE
+};
+const urlMappingJasaGroutingStrukturBetonFromMoneyPage2MoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - GROUTING BETON PER LOKASI
   // 🧠 TYPE: MONEY_CHILD (spesifik lokasi)
@@ -593,7 +594,6 @@ const urlMappingJasaGoutingStrukturBeton = {
   "https://www.betonjayareadymix.com/2018/12/grouting-beton-jakarta.html": "Grouting Beton Jakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/12/grouting-beton-bogor.html": "Grouting Beton Bogor"  // TYPE: MONEY_CHILD
 };
-
 // ============================================================
 // SUB JASA CHIPPING BETON - MONEY PAGES
 // Parent: Jasa Rehabilitasi Beton (/p/jasa-rehabilitasi-beton.html)
@@ -2122,8 +2122,9 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
 		urlMappingJasaInjeksiBetonRetakFromMoneyPage2MoneyPage3,
 		urlMappingJasaInjeksiBetonRetakFromMoneyPage2MoneyChild,
 		urlMappingJasaPatchingBetonRetakFromMoneyPage2MoneyPage3,
-		urlMappingJasaShortcreteBeton,
-		urlMappingJasaGoutingStrukturBeton,
+		urlMappingJasaAplikasiShotcreteBetonFromMoneyPage2MoneyPage3,
+		urlMappingJasaGroutingStrukturBetonFromMoneyPage2MoneyPage3,
+		urlMappingJasaGroutingStrukturBetonFromMoneyPage2MoneyChild,
 		//urlMappingJasaPerbaikanBetonMengelupas,
 		//urlMappingJasaPerbaikanBetonKeropos,
 		//urlMappingJasaPerbaikanBetonRetak,
@@ -3668,6 +3669,54 @@ if (urlMappingJasaPatchingBetonRetakFromMoneyPage2MoneyPage3[cleanUrlJasaKonsPer
             { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
             { name: 'Jasa Rehabilitasi Beton Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton-struktur.html'},
             { name: 'Jasa Patching Beton Retak', url: 'https://www.betonjayareadymix.com/p/jasa-patching-beton-retak.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+}
+if (urlMappingJasaAplikasiShotcreteBetonFromMoneyPage2MoneyPage3[cleanUrlJasaKonsPerbaikanPost]) {
+    generateBreadcrumbJasaKonstruksiPerbaikanPost(
+        urlMappingJasaAplikasiShotcreteBetonFromMoneyPage2MoneyPage3,
+        cleanUrlJasaKonsPerbaikanPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
+            { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
+            { name: 'Jasa Rehabilitasi Beton Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton-struktur.html'},
+            { name: 'Jasa Aplikasi Shotcrete Beton', url: 'https://www.betonjayareadymix.com/p/jasa-aplikasi-shotcrete-beton.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+}
+if (urlMappingJasaGroutingStrukturBetonFromMoneyPage2MoneyPage3[cleanUrlJasaKonsPerbaikanPost]) {
+    generateBreadcrumbJasaKonstruksiPerbaikanPost(
+        urlMappingJasaGroutingStrukturBetonFromMoneyPage2MoneyPage3,
+        cleanUrlJasaKonsPerbaikanPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
+            { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
+            { name: 'Jasa Rehabilitasi Beton Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton-struktur.html'},
+            { name: 'Jasa Grouting Struktur Beton', url: 'https://www.betonjayareadymix.com/p/jasa-grouting-struktur-beton.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+}
+if (urlMappingJasaGroutingStrukturBetonFromMoneyPage2MoneyChild[cleanUrlJasaKonsPerbaikanPost]) {
+    generateBreadcrumbJasaKonstruksiPerbaikanPost(
+        urlMappingJasaGroutingStrukturBetonFromMoneyPage2MoneyChild,
+        cleanUrlJasaKonsPerbaikanPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
+            { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
+            { name: 'Jasa Rehabilitasi Beton Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton-struktur.html'},
+            { name: 'Jasa Grouting Struktur Beton', url: 'https://www.betonjayareadymix.com/p/jasa-grouting-struktur-beton.html'}
         ],
         'JASA_KONSTRUKSI'
     );  
