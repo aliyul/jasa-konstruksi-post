@@ -3300,7 +3300,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingPerbaikanWaterproofingBangunanFromMoneyPageMoneyPage1,
 urlMappingPerbaikanElemenArsitekturalFromMoneyPageMoneyPage1,
 urlMappingPerbaikanAtapDrainaseBangunanFromMoneyPageMoneyPage1,
-		urlMappingJasaRenovasiLantaiBangunanFromMoneyPageMoneyPage1
+		urlMappingJasaRenovasiLantaiBangunanFromMoneyPageMoneyPage1,
 		urlMappingPerbaikanLantaiBangunanFromMoneyPageMoneyPage1,
 		urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1,
         urlMappingPerbaikanStrukturGedungBertingkatFromMoneyPage1MoneyPage2,
