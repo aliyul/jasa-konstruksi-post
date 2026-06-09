@@ -532,7 +532,7 @@ const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
 // 📁 BONGKAR BANGUNAN - SUB2 (LEVEL 2)
 // ============================================================
 
-const urlMappingBongkarBangunanFromMoneyMasterMoneyPage = {
+const urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1 = {
   "https://www.betonjayareadymix.com/p/jasa-bongkar-tower.html": "Jasa Bongkar Tower",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html": "Jasa Bongkar Rumah",  // TYPE: SUB2
   "https://www.betonjayareadymix.com/p/jasa-bongkar-beton.html": "Jasa Bongkar Beton",  // TYPE: SUB2
@@ -2024,7 +2024,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSaluranFromMoneyMasterMoneyPage,
 		
 		urlMappingUjiTanahFromSub1MoneyPage,
-		urlMappingBongkarBangunanFromMoneyMasterMoneyPage,
+		urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1,
 		urlMappingPengeboranFromSub1MoneyMaster,
 		urlMappingPengeboranFromMoneyMasterMoneyMaster1,
 		
@@ -3692,9 +3692,9 @@ if (urlMappingSaluranFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
        document.head.appendChild(script);
    }
 
-if (urlMappingBongkarBangunanFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+if (urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 	 generateBreadcrumbJasaKonstruksi(
-        urlMappingBongkarBangunanFromMoneyMasterMoneyPage,
+        urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
