@@ -21,19 +21,18 @@ const urlMappingJasaBongkarBangunanFromPillarSub2 = {
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Bongkar Bangunan > Harga Jasa Bongkar Bangunan (4 level)
 // ============================================================
 
-const urlMappingJasaBongkarBangunanFromSub2MoneyPage = {
+const urlMappingJasaBongkarBangunanFromMoneyMasterMoneyPage = {
   // ============================================================
   // [MONEY_PAGE] - HARGA JASA BONGKAR BANGUNAN
-  // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-bongkar-bangunan.html": "Harga Jasa Bongkar Bangunan",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-bongkar-bangunan.html": "Harga Jasa Bongkar Bangunan"  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
 // 📁 JASA BONGKAR TOWER - MONEY PAGE & CHILD
 // ============================================================
 
-const urlMappingJasaBongkarTowerFromSub2MoneyPage = {
+const urlMappingJasaBongkarTowerFromMoneyMaster1MoneyPage = {
   // ============================================================
   // [MONEY_PAGE] - HARGA JASA BONGKAR TOWER
   // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
@@ -43,7 +42,7 @@ const urlMappingJasaBongkarTowerFromSub2MoneyPage = {
   // ============================================================
   // [MONEY_CHILD] - JASA BONGKAR TOWER TRIANGLE
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower-triangle.html": "Jasa Bongkar Tower Triangle",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower-triangle.html": "Jasa Bongkar Tower Triangle"  // TYPE: MONEY_CHILD
   
   // ============================================================
   // 🟡 SARAN ITEM TAMBAHAN (BELUM AKTIF - PERLU DIBUAT KONTEN)
@@ -56,7 +55,7 @@ const urlMappingJasaBongkarTowerFromSub2MoneyPage = {
 // 📁 JASA BONGKAR RUMAH - SARAN ITEM (BELUM AKTIF)
 // ============================================================
 
-const urlMappingJasaBongkarRumahFromSub2MoneyPage = {
+const urlMappingJasaBongkarRumahFromMoneyMaster1MoneyPage = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html": "Jasa Bongkar Rumah",  // TYPE: SUB2
   // "https://www.betonjayareadymix.com/2019/08/harga-bongkar-rumah-tinggal.html": "Harga Bongkar Rumah Tinggal",  // TYPE: MONEY_PAGE
@@ -1768,9 +1767,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingJasaBongkarBangunanFromSub2MoneyPage,
-		urlMappingJasaBongkarTowerFromSub2MoneyPage,
-		urlMappingJasaBongkarRumahFromSub2MoneyPage,
+		urlMappingJasaBongkarBangunanFromMoneyMasterMoneyPage,
+		urlMappingJasaBongkarTowerFromMoneyMaster1MoneyPage,
+		urlMappingJasaBongkarRumahFromMoneyMaster1MoneyPage,
 		urlMappingJasaBongkarBetonFromSub2MoneyPage,
 		urlMappingJasaBongkarAtapFromSub2MoneyPage,
 		urlMappingJasaBongkarKeramikFromSub2MoneyPage,
@@ -2368,232 +2367,44 @@ document.addEventListener("DOMContentLoaded", function() {
      pageNameJasaKonsBongkarBangunanPost.textContent = "";
 	
 //SUB urlMappingJasaKonsBongkarBangunanPost
-if (urlMappingJasaBongkarBangunanFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {   
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-        removeCondition('ProdukInFurPost');
-	removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-        removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-        removeCondition('JasaKonsCuttingBetonPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	
-        //hapus elemen SUB jasa JasaBongkarBangunanPost semua hapus juga JasaBongkarRumahPost
-        removeCondition('JasaBongkarRumahPost');
-        removeCondition('JasaBongkarTowerPost');
-        removeCondition('JasaBongkarBetonPost');
-        removeCondition('JasaBongkarAtapPost');
-        removeCondition('JasaBongkarKeramikPost');
-        removeCondition('JasaBongkarTembokPost');
-        removeCondition('JasaBongkarDindingPost');
-        removeCondition('JasaBongkarPlafonPost');
-        removeCondition('JasaBongkarPartisiPost');
-        removeCondition('JasaBongkarPagarPost');
-        removeCondition('JasaBongkarLantaiPost');
-
-		//hapus JasaBuangPuingPost
-	removeCondition('JasaBuangPuingPost');
-	
-//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
-        removeCondition('JasaPerawatanPerbaikanBangunanPost');
-	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
-	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
-	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
-	
-        removeCondition('JasaPerbaikanAtapBocorPost');
-        removeCondition('JasaPerbaikanDindingRetakPost');
-        removeCondition('JasaPerbaikanRembesanAirPost');
-        removeCondition('JasaPerbaikanPlafonRusakPost');
-        removeCondition('JasaPerbaikanDakBetonBocorPost');
-        removeCondition('JasaPerbaikanTalangBocorPost');
-
-	     // Jika sudah di-remove, restore
-        restoreCondition('JasaKonsBongkarBangunanPost');
-	    restoreCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
-	    restoreCondition('JasaBongkarBangunanPost');
-    
-        JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaBongkarBangunanPost
-        JasaBongkarBangunanPostLink.style.visibility = 'visible';
-		pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarBangunanFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost];
-	
+if (urlMappingJasaBongkarBangunanFromMoneyMasterMoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {   
 		generateBreadcrumbJasaBongkarBangunanPost(
-        urlMappingJasaBongkarBangunanFromSub2MoneyPage,
+        urlMappingJasaBongkarBangunanFromMoneyMasterMoneyPage,
         cleanUrlJasaKonsBongkarBangunanPost,
         [
            // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' }
+            { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' }
         ],
         'JASA_KONSTRUKSI'
     );
-
 }
  
-	
-if (urlMappingJasaBongkarTowerFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-        removeCondition('ProdukInFurPost');
-	removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-        removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-        removeCondition('JasaKonsCuttingBetonPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-
-	    
-        //hapus elemen SUB jasa JasaBongkarBangunanPost semua JasaBongkarTowerPost hapus juga
-        //removeCondition('JasaBongkarTowerPost');
-        removeCondition('JasaBongkarRumahPost');
-        removeCondition('JasaBongkarBetonPost');
-        removeCondition('JasaBongkarAtapPost');
-        removeCondition('JasaBongkarKeramikPost');
-        removeCondition('JasaBongkarTembokPost');
-        removeCondition('JasaBongkarDindingPost');
-        removeCondition('JasaBongkarPlafonPost');
-        removeCondition('JasaBongkarPartisiPost');
-        removeCondition('JasaBongkarPagarPost');
-        removeCondition('JasaBongkarLantaiPost');
-
-	//hapus JasaBuangPuingPost
-	removeCondition('JasaBuangPuingPost');
-	//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
-        removeCondition('JasaPerawatanPerbaikanBangunanPost');
-	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
-	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
-	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
-        removeCondition('JasaPerbaikanAtapBocorPost');
-        removeCondition('JasaPerbaikanDindingRetakPost');
-        removeCondition('JasaPerbaikanRembesanAirPost');
-        removeCondition('JasaPerbaikanPlafonRusakPost');
-        removeCondition('JasaPerbaikanDakBetonBocorPost');
-        removeCondition('JasaPerbaikanTalangBocorPost');
-
-	      // Jika sudah di-remove, restore
-        restoreCondition('JasaKonsBongkarBangunanPost');
-	    restoreCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
-	     restoreCondition('JasaBongkarBangunanPost');
-         restoreCondition('JasaBongkarTowerPost');
-	
-        JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaBongkarBangunanPost
-        JasaBongkarBangunanPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaBongkarTowerPost
-	JasaBongkarTowerPostLink.style.visibility = 'visible';
-	
-	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarTowerFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost];
-
+if (urlMappingJasaBongkarTowerFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
 	    generateBreadcrumbJasaBongkarBangunanPost(
-        urlMappingJasaBongkarTowerFromSub2MoneyPage,
+        urlMappingJasaBongkarTowerFromMoneyMaster1MoneyPage,
         cleanUrlJasaKonsBongkarBangunanPost,
         [
            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
              { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Tower', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-tower.html' }
         ],
          'JASA_KONSTRUKSI'
     );
 }
 
-if (urlMappingJasaBongkarRumahFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-        removeCondition('ProdukInFurPost');
-	removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-        removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-        removeCondition('JasaKonsCuttingBetonPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	
-        //hapus elemen SUB jasa JasaBongkarBangunanPost semua hapus juga JasaBongkarRumahPost
-        //removeCondition('JasaBongkarRumahPost');
-	
-        removeCondition('JasaBongkarTowerPost');
-        removeCondition('JasaBongkarBetonPost');
-        removeCondition('JasaBongkarAtapPost');
-        removeCondition('JasaBongkarKeramikPost');
-        removeCondition('JasaBongkarTembokPost');
-        removeCondition('JasaBongkarDindingPost');
-        removeCondition('JasaBongkarPlafonPost');
-        removeCondition('JasaBongkarPartisiPost');
-        removeCondition('JasaBongkarPagarPost');
-        removeCondition('JasaBongkarLantaiPost');
-
-		//hapus JasaBuangPuingPost
-	removeCondition('JasaBuangPuingPost');
-	
-//hapus SEMUA elemen SUB jasa JasaPerawatanPerbaikanBangunanPost
-        removeCondition('JasaPerawatanPerbaikanBangunanPost');
-	    	    removeCondition('JasaPerbaikanAtapDrainaseBangunanPost');
-	   removeCondition('JasaPerbaikanElemenArsitekturalPost');
-	    removeCondition('JasaPerbaikanKebocoranWaterproofingPost');
-	
-        removeCondition('JasaPerbaikanAtapBocorPost');
-        removeCondition('JasaPerbaikanDindingRetakPost');
-        removeCondition('JasaPerbaikanRembesanAirPost');
-        removeCondition('JasaPerbaikanPlafonRusakPost');
-        removeCondition('JasaPerbaikanDakBetonBocorPost');
-        removeCondition('JasaPerbaikanTalangBocorPost');
-
-	      // Jika sudah di-remove, restore
-        restoreCondition('JasaKonsBongkarBangunanPost');
-	    restoreCondition('JasaKonstruksiBongkarBangunanPost');  // PILLAR (Jasa Konstruksi)
-		restoreCondition('JasaBongkarBangunanPost');
-	    restoreCondition('JasaBongkarRumahPost');
-
-	
-        JasaKonstruksiBongkarBangunanPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaBongkarBangunanPost
-        JasaBongkarBangunanPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaBongkarRumahPost
-     JasaBongkarRumahPostLink.style.visibility = 'visible';
-	
-	pageNameJasaKonsBongkarBangunanPost.textContent = urlMappingJasaBongkarRumahFromSub2MoneyPage[cleanUrlJasaKonsBongkarBangunanPost];
-
+if (urlMappingJasaBongkarRumahFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
        generateBreadcrumbJasaBongkarBangunanPost(
-        urlMappingJasaBongkarRumahFromSub2MoneyPage,
+        urlMappingJasaBongkarRumahFromMoneyMaster1MoneyPage,
         cleanUrlJasaKonsBongkarBangunanPost,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
              { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html' }
         ],
         'JASA_KONSTRUKSI'
