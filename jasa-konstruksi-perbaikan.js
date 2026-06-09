@@ -396,9 +396,9 @@ const urlMappingPerbaikanStrukturDindingFromMoneyPage1MoneyPage2 = {
   
   // ============================================================
   // [VARIANT] - JASA RENOVASI PENGGANTIAN DINDING BATA
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Dinding > Jasa Renovasi Penggantian Dinding Bata
+  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Dinding > Jasa Penggantian Dinding Bata
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-penggantian-dinding-bata.html": "Jasa Renovasi Penggantian Dinding Bata",
+  "https://www.betonjayareadymix.com/p/jasa-penggantian-dinding-bata.html": "Jasa Penggantian Dinding Bata",
   
   // ============================================================
   // [VARIANT] - JASA PERBAIKAN PENGGANTIAN DINDING BATA
