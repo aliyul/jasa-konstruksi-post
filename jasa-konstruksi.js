@@ -568,13 +568,6 @@ const urlMappingRenovasiFromMoneyMasterMoneyMaster1 = {
 
 const urlMappingRenovasiBangunanFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-bangunan.html": "Jasa Renovasi Lantai Bangunan",
-  
-  // ============================================================
-  // [VARIANT] - JASA RENOVASI LANTAI RUSAK
-  // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Lantai Beton > Jasa Renovasi Lantai Rusak
-  // ============================================================
- // "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-rusak.html": "Jasa Renovasi Lantai Rusak",
-  
 
   // ============================================================
   // [VARIANT] - JASA RENOVASI TEMPAT IBADAH
