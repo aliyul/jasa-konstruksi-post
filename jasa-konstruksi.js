@@ -567,7 +567,7 @@ const urlMappingRenovasiFromMoneyMasterMoneyMaster1 = {
 // ============================================================
 
 const urlMappingRenovasiBangunanFromMoneyMaster1MoneyPage = {
- // "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai.html": "Jasa Renovasi Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-bangunan.html": "Jasa Renovasi Lantai Bangunan",
   
   // ============================================================
   // [VARIANT] - JASA RENOVASI LANTAI RUSAK
