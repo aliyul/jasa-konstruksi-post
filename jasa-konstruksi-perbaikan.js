@@ -1761,7 +1761,17 @@ const urlMappingRenovasiStadionOlahragaFromMoneyPageMoneyPage1 = {
   //"https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-stadion.html": "Jasa Perbaikan Struktur Stadion"
   
 };
+const urlMappingPerbaikanStadionFromMoneyMaster1MoneyPage = {
+	//parent Perbaikan infrastruktur "https://www.betonjayareadymix.com/p/jasa-perbaikan-stadion.html": "Jasa Perbaikan Stadion"
+  //di Post aja redirect kesini
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-stadion.html": "Jasa Perbaikan Atap Stadion",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lintasan-atletik.html": "Jasa Perbaikan Lintasan Atletik",
 
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pencahayaan-stadion.html": "Jasa Perbaikan Pencahayaan Stadion",
+  "https://www.betonjayareadymix.com/p/perbaikan-fasilitas-penonton-stadion.html": "Jasa Perbaikan Fasilitas Penonton Stadion",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-stadion.html": "Jasa Perbaikan Struktur Stadion"
+  
+};
 // ============================================================
 // SARAN ITEM BARU UNTUK STADION (AKTIFKAN JIKA KONTEN TERSEDIA)
 // ============================================================
@@ -3345,6 +3355,7 @@ urlMappingPerbaikanAtapDrainaseBangunanFromMoneyPageMoneyPage1,
 		urlMappingRenovasiHalteBusFromMoneyPageMoneyPage1,
 		
 	    urlMappingRenovasiStadionOlahragaFromMoneyPageMoneyPage1,	
+		urlMappingPerbaikanStadionFromMoneyMaster1MoneyPage,
 		urlMappingRenovasiInteriorFromMoneyMaster1MoneyPage,
 		urlMappingRenovasiInteriorRumahFromMoneyPageMoneyPage1,
 		urlMappingRenovasiInteriorKantorFromMoneyPageMoneyPage1,
@@ -4542,6 +4553,22 @@ if (urlMappingRenovasiStadionOlahragaFromMoneyPageMoneyPage1[cleanUrlJasaPerbaik
         'JASA_KONSTRUKSI'
     );     
 }
+if (urlMappingPerbaikanStadionFromMoneyMaster1MoneyPage[cleanUrlJasaPerbaikanKonsSub]) {
+       generateBreadcrumbJasaKonstruksiPerbaikan(
+        urlMappingPerbaikanStadionFromMoneyMaster1MoneyPage,
+        cleanUrlJasaPerbaikanKonsSub,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html'},
+            { name: 'Perbandingan Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-infrastruktur.html'},
+           { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html'},
+           	{ name: 'Jasa Perbaikan Stadion', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-stadion.html' }
+           //	{ name: 'Jasa Renovasi Hotel Apartemen', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-apartemen.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );     
+}
+
 if (urlMappingRenovasiTempatIbadahFromMoneyPageMoneyPage1[cleanUrlJasaPerbaikanKonsSub]) {
        generateBreadcrumbJasaKonstruksiPerbaikan(
         urlMappingRenovasiTempatIbadahFromMoneyPageMoneyPage1,
