@@ -421,39 +421,27 @@ const urlMappingJasaRenovasiLantaiRusakFromMoneyPage1MoneyChild = {
 };
 
 // ============================================================
-// [MONEY_PAGE] - JASA PERBAIKAN LANTAI AMBLES
+// [MONEY_PAGE] - JASA BOBOK BETON
 // ============================================================
-
-const urlMappingJasaPerbaikanLantaiAmbles = {
-  // "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-ambles.html": "Jasa Perbaikan Lantai Ambles",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2019/08/harga-perbaikan-lantai-ambles.html": "Harga Perbaikan Lantai Ambles"  // TYPE: MONEY_PAGE
-};
-
-// ============================================================
-// [MONEY_PAGE] - JASA GANTI LANTAI AMBLES
-// ============================================================
-
-const urlMappingJasaGantiLantaiAmbles = {
-  // "https://www.betonjayareadymix.com/p/jasa-ganti-lantai-ambles.html": "Jasa Ganti Lantai Ambles",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2019/08/harga-ganti-lantai-ambles.html": "Harga Ganti Lantai Ambles"  // TYPE: MONEY_PAGE
-};
-
-// ============================================================
-// [MONEY_PAGE] - JASA BOBOK LANTAI BETON
-// ============================================================
-
-const urlMappingJasaBobokLantaiBetonFromMoneyPage2MoneyChild = {
- //parent "https://www.betonjayareadymix.com/p/jasa-bobok-beton-chipping.html": "Jasa Bobok Beton Chipping",
-  
+const urlMappingJasaBobokBetonChippingFromMoneyPage2MoneyPage3 = {
+	
+"https://www.betonjayareadymix.com/2018/06/harga-jasa-bobok-beton.html": "Harga Jasa Bobok Beton",  // TYPE: MONEY_PAGE
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/06/jasa-bobok-lantai-beton.html": "Jasa Bobok Lantai Beton",  // TYPE: MONEY_PAGE
+    // [MONEY_PAGE] - HARGA JASA BOBOK LANTAI BETON
+  // ============================================================
+ // "https://www.betonjayareadymix.com/2019/06/harga-jasa-bobok-lantai-beton.html": "Harga Jasa Bobok Lantai Beton",  // TYPE: MONEY_PAGE
 
 };
+const urlMappingHargaJasaBobokBetonFromMoneyPage3MoneyPage4 = {
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bobok-lantai-beton.html": "Harga Jasa Bobok Lantai Beton"  // TYPE: MONEY_PAGE
 
-// ============================================================
-// [MONEY_PAGE] - JASA BOBOK LANTAI LAMA
-// ============================================================
-
-const urlMappingJasaBobokLantaiLamaFromMoneyPage2MoneyChild = {
- //parent "https://www.betonjayareadymix.com/p/jasa-bobok-beton-chipping.html": "Jasa Bobok Beton Chipping",
+};
+const urlMappingHargaJasaBobokLantaiBetonFromMoneyPage4MoneyPage5 = {
+  "https://www.betonjayareadymix.com/2019/06/harga-bobok-lantai-beton-per-m2.html": "Harga Bobok Lantai Beton per M2",  
+  "https://www.betonjayareadymix.com/2019/06/harga-borongan-bobok-lantai-beton.html": "Harga Borongan Bobok Lantai Beton",  
+  "https://www.betonjayareadymix.com/2018/06/harga-upah-bobok-lantai-beton.html": "Harga Upah Bobok Lantai Beton" 
 
 };
 
@@ -2112,8 +2100,6 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
 	urlMappingJasaGantiLantaiAmblesFromMoneyPage1MoneyChild,
 		urlMappingJasaRenovasiLantaiBangunanFromMoneyPageMoneyChild,
 		urlMappingJasaRenovasiLantaiRusakFromMoneyPage1MoneyChild,
-		urlMappingJasaBobokLantaiBetonFromMoneyPage2MoneyChild,
-		urlMappingJasaBobokLantaiLamaFromMoneyPage2MoneyChild,
 		//urlMappingJasaPerbaikanGedungBertingkat,
 		//urlMappingJasaPerbaikanStrukturBangunanTua,
 		//urlMappingJasaPerbaikanStrukturBangunanMiring,
@@ -2129,6 +2115,9 @@ const cleanUrlJasaKonsPerbaikanPost = window.location.href.split(/[?#]/)[0]; // 
 		//urlMappingJasaPerbaikanBetonKeropos,
 		//urlMappingJasaPerbaikanBetonRetak,
 		urlMappingJasaChippingBetonBobokFromMoneyPage2MoneyPage3,
+		urlMappingJasaBobokBetonChippingFromMoneyPage2MoneyPage3,
+		urlMappingHargaJasaBobokBetonFromMoneyPage3MoneyPage4,
+		urlMappingHargaJasaBobokLantaiBetonFromMoneyPage4MoneyPage5,
 		//urlMappingJasaBetonKarbonasi,
 		//urlMappingJasaPerkuatanStrukturdenganCFRP,
 		urlMappingHargaJasaRenovasiRumahFromMoneyPage1MoneyPage2,
@@ -3034,7 +3023,58 @@ if (urlMappingJasaChippingBetonBobokFromMoneyPage2MoneyPage3[cleanUrlJasaKonsPer
         'JASA_KONSTRUKSI'
     );  
 }
-		
+if (urlMappingJasaBobokBetonChippingFromMoneyPage2MoneyPage3[cleanUrlJasaKonsPerbaikanPost]) {
+    generateBreadcrumbJasaKonstruksiPerbaikanPost(
+        urlMappingJasaBobokBetonChippingFromMoneyPage2MoneyPage3,
+        cleanUrlJasaKonsPerbaikanPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
+            { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
+            { name: 'Jasa Rehabilitasi Beton Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton-struktur.html'},
+            { name: 'Jasa Bobok Beton Chipping', url: 'https://www.betonjayareadymix.com/p/jasa-bobok-beton-chipping.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+}
+if (urlMappingHargaJasaBobokBetonFromMoneyPage3MoneyPage4[cleanUrlJasaKonsPerbaikanPost]) {
+    generateBreadcrumbJasaKonstruksiPerbaikanPost(
+        urlMappingHargaJasaBobokBetonFromMoneyPage3MoneyPage4,
+        cleanUrlJasaKonsPerbaikanPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
+            { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
+            { name: 'Jasa Rehabilitasi Beton Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton-struktur.html'},
+            { name: 'Jasa Bobok Beton Chipping', url: 'https://www.betonjayareadymix.com/p/jasa-bobok-beton-chipping.html'},
+            { name: 'Harga Jasa Bobok Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bobok-beton.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+}	
+if (urlMappingHargaJasaBobokLantaiBetonFromMoneyPage4MoneyPage5[cleanUrlJasaKonsPerbaikanPost]) {
+    generateBreadcrumbJasaKonstruksiPerbaikanPost(
+        urlMappingHargaJasaBobokLantaiBetonFromMoneyPage4MoneyPage5,
+        cleanUrlJasaKonsPerbaikanPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
+            { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
+            { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html'},
+            { name: 'Jasa Rehabilitasi Beton Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton-struktur.html'},
+            { name: 'Jasa Bobok Beton Chipping', url: 'https://www.betonjayareadymix.com/p/jasa-bobok-beton-chipping.html'},
+            { name: 'Harga Jasa Bobok Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bobok-beton.html'},
+            { name: 'Harga Jasa Bobok Lantai Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bobok-lantai-beton.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+}
+
 //SUB JasaRenovasiPerbaikanStrukturUmum
 	if (urlMappingJasaPerbaikanStrukturBetonFromMoneyPage1MoneyPage2[cleanUrlJasaKonsPerbaikanPost]) {
         generateBreadcrumbJasaKonstruksiPerbaikanPost(
