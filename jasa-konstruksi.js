@@ -649,7 +649,7 @@ const urlMappingPengeboranFromSub1MoneyMaster = {
 const urlMappingPengeboranFromMoneyMasterMoneyMaster1 = {
   // [MONEY_PAGE] - JENIS PENGEBORAN SPESIFIK (JASA)
   //"https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html": "Jasa Bor Air Sumur",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-tukang-bor.html": "Jasa Tukang Bor",  //MONEY_MASTER1
+ // "https://www.betonjayareadymix.com/p/jasa-tukang-bor.html": "Jasa Tukang Bor",  //MONEY_MASTER1
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur.html": "Jasa Bor Sumur",  //MONEY_MASTER1
   "https://www.betonjayareadymix.com/p/jasa-bore-pile.html": "Jasa Bore Pile",  // TYPE: MONEY_MASTER1
   "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",  // TYPE: MONEY_MASTER1
