@@ -17,7 +17,7 @@
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Pengeboran > Tukang Bor
 // ============================================================
 
-const urlMappingTukangBorFromMoneyMaster1MoneyPage = {
+const urlMappingTukangBorFromMoneyMaster1MoneyChild = {
   // ============================================================
   // [MONEY_MASTER] - TUKANG BOR (UMUM)
   // 🧠 TYPE: MONEY_MASTER (WAJIB tampil, parent: SUB2)
@@ -34,10 +34,10 @@ const urlMappingTukangBorFromMoneyMaster1MoneyPage = {
 // ============================================================
 // [SUB2] - JASA BOR AIR SUMUR (KATEGORI)
 // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Pengeboran > Jasa Bor Air Sumur
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Pengeboran > Jasa Bor Sumur
 // ============================================================
 
-const urlMappingJasaBorAirSumur = {
+const urlMappingJasaBorSumurFromMoneyMaster1MoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - LOKASI SURABAYA
   // ============================================================
@@ -78,10 +78,7 @@ const urlMappingJasaBorAirSumur = {
   // ============================================================
   "https://www.betonjayareadymix.com/2019/08/tukang-bor-air-terdekat.html": "Tukang Bor Air Terdekat",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-terdekat.html": "Jasa Bor Air Terdekat",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah.html": "Jasa Bor Air Tanah",  // TYPE: MONEY_MASTER
-  
-  // ============================================================
+ // ============================================================
   // [MONEY_MASTER] - BOR SUMUR (UMUM)
   // ============================================================
   "https://www.betonjayareadymix.com/2019/08/bor-sumur-terdekat.html": "Bor Sumur Terdekat",  // TYPE: MONEY_MASTER
@@ -99,11 +96,6 @@ const urlMappingJasaBorAirSumur = {
   "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-bogor.html": "Jasa Sumur Bor Bogor",  // TYPE: MONEY_CHILD
   
   // ============================================================
-  // [MONEY_MASTER] - JASA BOR SUMUR (UMUM)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur.html": "Jasa Bor Sumur",  // TYPE: MONEY_MASTER
-  
-  // ============================================================
   // [MONEY_CHILD] - TUKANG SUMUR BOR LOKASI
   // ============================================================
   "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-tangerang.html": "Tukang Sumur Bor Tangerang",  // TYPE: MONEY_CHILD
@@ -113,13 +105,15 @@ const urlMappingJasaBorAirSumur = {
   "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-bogor.html": "Tukang Sumur Bor Bogor",  // TYPE: MONEY_CHILD
   
   // ============================================================
-  // [MONEY_MASTER] - TUKANG SUMUR BOR (UMUM)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor.html": "Tukang Sumur Bor",  // TYPE: MONEY_MASTER
-  
-  // ============================================================
-  // [MONEY_MASTER] - BIAYA SUMUR BOR PER METER (SPESIFIKASI)
-  // 🧠 TYPE: MONEY_MASTER (karena mengandung angka spesifikasi)
+};
+const urlMappingJasaBorSumurFromMoneyMaster1MoneyPage = {
+"https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",  
+  "https://www.betonjayareadymix.com/2019/08/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",  
+   // ============================================================
+  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor.html": "Tukang Sumur Bor"
+};
+const urlMappingHargaJasaBorSumurFromMoneyPageMoneyPage1 = {
+	
   // ============================================================
   "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-150-meter.html": "Biaya Sumur Bor 150 Meter",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-100-meter.html": "Biaya Sumur Bor 100 Meter",  // TYPE: MONEY_MASTER
@@ -133,7 +127,6 @@ const urlMappingJasaBorAirSumur = {
   "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-per-meter.html": "Biaya Sumur Bor Per Meter",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/08/bor-sumur-murah.html": "Bor Sumur Murah"  // TYPE: MONEY_MASTER
 };
-
 // ============================================================
 // [SUB2] - JASA BORE PILE (KATEGORI)
 // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
@@ -1611,18 +1604,19 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 */
-
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingJasaBorAirSumur,
+		urlMappingJasaBorSumurFromMoneyMaster1MoneyChild,
+		urlMappingJasaBorSumurFromMoneyMaster1MoneyPage,
+	    urlMappingHargaJasaBorSumurFromMoneyPageMoneyPage1,
 		urlMappingJasaBorePile,
 		urlMappingJasaBorTembok,
 		urlMappingJasaCoringBeton,
 		urlMappingJasaBorBeton,
 		urlMappingJasaBorTanah,
 		urlMappingJasaBorHorizontal,
-		urlMappingTukangBorFromMoneyMaster1MoneyPage
+		urlMappingTukangBorFromMoneyMaster1MoneyChild
 		
     );
 
@@ -2187,104 +2181,49 @@ document.addEventListener("DOMContentLoaded", function() {
      pageNameJasaKonsPengeboranPost.textContent = "";
 	
     //SUB urlMappingBangunan
-if (urlMappingJasaBorAirSumur[cleanUrlJasaPengeboranPost]) {
-        restoreCondition('JasaKonsPengeboranPost');
-        restoreCondition('JasaPengeboranPost');
-        //restoreCondition('JasaBorAirPost');
-        restoreCondition('JasaBorAirSumurPost');
-     
-        //hapus elemen div id lain KECUALI JasaPengeboranPost
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-	   removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-        removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-       // removeCondition('JasaPengeboranPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	
-	 //hapus elemen JasaPengeboranPost SEMUA KECUALI JasaBorAirPost
-	    //removeCondition('JasaBorTeknikPost');
-        removeCondition('JasaBorTembokPost');
-        removeCondition('JasaBorePilePost');
-        removeCondition('JasaCoringBetonPost');
-        removeCondition('JasaBorBetonPost');
-        removeCondition('JasaBorTanahPost');
-        removeCondition('JasaBorHorizontalPost');
-
-	//hapus elemen sub jasa bor air post kecuali jasa bor air lokasi
-		//removeCondition('JasaBorAirLokasiPost');
-		//removeCondition('JasaBorAirBiayaPost');
-		//removeCondition('JasaBorAirLokasiPost');
-		//removeCondition('JasaBorAirKebutuhanPost');
-		//removeCondition('JasaBorAirPeralatanPost');
-       
-        JasaKonstruksiPengeboranPostLink.style.visibility = 'visible';
-       //TAMPILKAN PONDASI BANGUNAN
-        JasaPengeboranPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaBorAirPost
-       // JasaBorAirPostLink.style.visibility = 'visible';
-	    
-        JasaBorAirSumurPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPengeboranPost.textContent = urlMappingJasaBorAirSumur[cleanUrlJasaPengeboranPost];
+	if (urlMappingJasaBorSumurFromMoneyMaster1MoneyChild[cleanUrlJasaPengeboranPost]) {
+       generateBreadcrumbJasaPengeboranPost(
+        urlMappingJasaBorSumurFromMoneyMaster1MoneyChild,
+        cleanUrlJasaPengeboranPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
+            { name: 'Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/jasa-bor-sumur.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
     }
-   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaBorAirSumur[cleanUrlJasaPengeboranPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-		{
-           "@type": "ListItem",
-	        "position": 2,
-	        "name": "Jasa Konstruksi",
-	        "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-        },
-		{
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Jasa Pengeboran",
-            "item": "https://www.betonjayareadymix.com/p/jasa-pengeboran.html"
-        },
-		{
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Jasa Bor Air Sumur",
-            "item": "https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html"
-        },
-        {
-            "@type": "ListItem",
-            "position": 5,
-            "name": urlMappingJasaBorAirSumur[cleanUrlJasaPengeboranPost],
-            "item": cleanUrlJasaPengeboranPost
-        }
-        ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-	   
+	if (urlMappingJasaBorSumurFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
+       generateBreadcrumbJasaPengeboranPost(
+        urlMappingJasaBorSumurFromMoneyMaster1MoneyPage,
+        cleanUrlJasaPengeboranPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
+            { name: 'Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/jasa-bor-sumur.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	if (urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
+       generateBreadcrumbJasaPengeboranPost(
+        urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyPage,
+        cleanUrlJasaPengeboranPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
+            { name: 'Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/jasa-bor-sumur.html'},
+            { name: 'Harga Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
 /*	
 if (urlMappingJasaBorTeknik[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaKonsPengeboranPost');
@@ -2845,16 +2784,16 @@ if (urlMappingJasaBorTanah[cleanUrlJasaPengeboranPost]) {
        document.head.appendChild(script);
    }
 
-   if (urlMappingTukangBorFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
+   if (urlMappingTukangBorFromMoneyMaster1MoneyChild[cleanUrlJasaPengeboranPost]) {
         generateBreadcrumbJasaPengeboranPost(
-        urlMappingTukangBorFromMoneyMaster1MoneyPage,
+        urlMappingTukangBorFromMoneyMaster1MoneyChild,
         cleanUrlJasaPengeboranPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
             { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
-			 { name: 'Tukang Bor', url: 'https://www.betonjayareadymix.com/p/tukang-bor.html'}
+			 { name: 'Jasa Tukang Bor', url: 'https://www.betonjayareadymix.com/p/jasa-tukang-bor.html'}
         ],
         'JASA_KONSTRUKSI'
     );
