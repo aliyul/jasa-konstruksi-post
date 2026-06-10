@@ -91,11 +91,8 @@ const urlMappingHargaJasaBongkarBetonFromMoneyPageMoneyPage1 = {
 // ============================================================
 
 const urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage = {
-  // ============================================================
-  // [MONEY_PAGE] - HARGA BONGKAR ATAP PER METER
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-atap-per-meter.html": "Harga Jasa Bongkar Atap Per Meter"  // TYPE: MONEY_PAGE
-  
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-atap.html": "Harga Jasa Bongkar Atap"  // TYPE: MONEY_PAGE
+ 
   // ============================================================
   // [MONEY_CHILD] - BONGKAR ATAP PER LOKASI (JIKA ADA)
   // ============================================================
@@ -104,6 +101,12 @@ const urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage = {
   // "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-bogor.html": "Jasa Bongkar Atap Bogor",  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-depok.html": "Jasa Bongkar Atap Depok",  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-tangerang.html": "Jasa Bongkar Atap Tangerang",  // TYPE: MONEY_CHILD
+};
+const urlMappingHargaJasaBongkarAtapFromMoneyPageMoneyPage1 = {
+	// ============================================================
+  // [MONEY_PAGE] - HARGA BONGKAR ATAP PER METER
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-atap-per-meter.html": "Harga Jasa Bongkar Atap Per Meter"  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
@@ -1763,6 +1766,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBongkarBetonFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBongkarBetonFromMoneyPageMoneyPage1,
 		urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage,
+		urlMappingHargaJasaBongkarAtapFromMoneyPageMoneyPage1,
 		urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyPage,
 		urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyChild,
 		
@@ -2452,6 +2456,22 @@ if (urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBa
             { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
              { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Atap', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-atap.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingHargaJasaBongkarAtapFromMoneyPageMoneyPage1[cleanUrlJasaKonsBongkarBangunanPost]) {
+	   generateBreadcrumbJasaBongkarBangunanPost(
+        urlMappingHargaJasaBongkarAtapFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsBongkarBangunanPost,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
+             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
+            { name: 'Jasa Bongkar Atap', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-atap.html' },
+            { name: 'Harga Jasa Bongkar Atap', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bongkar-atap.html' }
         ],
         'JASA_KONSTRUKSI'
     );
