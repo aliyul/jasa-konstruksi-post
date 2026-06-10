@@ -94,7 +94,7 @@ const urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage = {
   // ============================================================
   // [MONEY_PAGE] - HARGA BONGKAR ATAP PER METER
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-atap-per-meter.html": "Harga Bongkar Atap Per Meter"  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-atap-per-meter.html": "Harga Jasa Bongkar Atap Per Meter"  // TYPE: MONEY_PAGE
   
   // ============================================================
   // [MONEY_CHILD] - BONGKAR ATAP PER LOKASI (JIKA ADA)
