@@ -360,19 +360,6 @@ const urlMappingJasaBuangPuingFromMoneyMasterMoneyChild = {
 };
 
 // ============================================================
-// 📁 SUB MAPPING JASA PERAWATAN & PERBAIKAN BANGUNAN
-// ============================================================
-
-// ============================================================
-// 📁 LEVEL 2 - SUB2 (Turunan dari PILLAR Jasa Konstruksi)
-// ============================================================
-
-const urlMappingJasaPerawatanPerbaikanBangunanFromPillarSub2 = {
-  // [SUB2] - Jasa Perawatan Perbaikan Bangunan
-  "https://www.betonjayareadymix.com/p/jasa-perawatan-perbaikan-bangunan.html": "Jasa Perawatan Perbaikan Bangunan",  // TYPE: SUB2
-};
-
-// ============================================================
 // 📁 JASA PERBAIKAN ATAP BOCOR - SARAN ITEM (BELUM AKTIF)
 // ============================================================
 
