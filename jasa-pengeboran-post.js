@@ -28,7 +28,7 @@ const urlMappingTukangBorFromMoneyMaster1MoneyChild = {
   // [MONEY_CHILD] - TUKANG BOR TERDEKAT (LOKASI)
   // 🧠 TYPE: MONEY_CHILD (WAJIB tampil, parent: SUB2)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/tukang-bor-terdekat.html": "Tukang Bor Terdekat"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-tukang-bor-terdekat.html": "Jasa Tukang Bor Terdekat"  // TYPE: MONEY_CHILD
 };
 
 // ============================================================
