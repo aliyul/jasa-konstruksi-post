@@ -440,9 +440,9 @@ const urlMappingHargaJasaBobokBetonFromMoneyPage3MoneyPage4 = {
 
 };
 const urlMappingHargaJasaBobokLantaiBetonFromMoneyPage4MoneyPage5 = {
-  "https://www.betonjayareadymix.com/2019/06/harga-bobok-lantai-beton-per-m2.html": "Harga Bobok Lantai Beton per M2",  
-  "https://www.betonjayareadymix.com/2019/06/harga-borongan-bobok-lantai-beton.html": "Harga Borongan Bobok Lantai Beton",  
-  "https://www.betonjayareadymix.com/2018/06/harga-upah-bobok-lantai-beton.html": "Harga Upah Bobok Lantai Beton" 
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bobok-lantai-beton-per-m2.html": "Harga Jasa Bobok Lantai Beton per M2",  
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-borongan-bobok-lantai-beton.html": "Harga Jasa Borongan Bobok Lantai Beton",  
+  "https://www.betonjayareadymix.com/2018/06/harga-upah-jasa-bobok-lantai-beton.html": "Harga Upah Jasa Bobok Lantai Beton" 
 
 };
 
