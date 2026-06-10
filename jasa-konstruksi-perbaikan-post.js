@@ -424,7 +424,6 @@ const urlMappingJasaRenovasiLantaiRusakFromMoneyPage1MoneyChild = {
 // [MONEY_PAGE] - JASA BOBOK BETON
 // ============================================================
 const urlMappingJasaBobokBetonChippingFromMoneyPage2MoneyPage3 = {
-	
 "https://www.betonjayareadymix.com/2018/06/harga-jasa-bobok-beton.html": "Harga Jasa Bobok Beton",  // TYPE: MONEY_PAGE
   // ============================================================
   "https://www.betonjayareadymix.com/2019/06/jasa-bobok-lantai-beton.html": "Jasa Bobok Lantai Beton",  // TYPE: MONEY_PAGE
@@ -434,6 +433,7 @@ const urlMappingJasaBobokBetonChippingFromMoneyPage2MoneyPage3 = {
 
 };
 const urlMappingHargaJasaBobokBetonFromMoneyPage3MoneyPage4 = {
+    "https://www.betonjayareadymix.com/2019/06/harga-bobok-beton-per-m2.html": "Harga Bobok Beton per m2",
   // ============================================================
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bobok-lantai-beton.html": "Harga Jasa Bobok Lantai Beton"  // TYPE: MONEY_PAGE
 
