@@ -2056,7 +2056,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage ,
+		urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage,
+		urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyPage1,
+		urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyChild,
 		urlMappingJasaSondir,
 		urlMappingJasaCpt,
 		urlMappingJasaBoringTanah,
@@ -2666,7 +2668,34 @@ if (urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage[cleanUrlJasaCuttingBetonP
         'JASA_KONSTRUKSI'
     );
 }
-
+if (urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
+    generateBreadcrumbJasaCuttingBetonPost(
+        urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyPage1,
+        cleanUrlJasaCuttingBetonPost,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
+            { name: 'Daftar Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-cutting-beton.html'},
+            { name: 'Perbandingan Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-cutting-beton.html'},
+            { name: 'Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/p/jasa-cutting-beton.html'},
+            { name: 'Harga Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyChild[cleanUrlJasaCuttingBetonPost]) {
+    generateBreadcrumbJasaCuttingBetonPost(
+        urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyChild,
+        cleanUrlJasaCuttingBetonPost,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
+            { name: 'Daftar Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-cutting-beton.html'},
+            { name: 'Perbandingan Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-cutting-beton.html'},
+            { name: 'Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/p/jasa-cutting-beton.html'},
+            { name: 'Harga Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
 //SUB JasaPematanganLahanPost
  if (urlMappingJasaTebangPohon[cleanUrlJasaCuttingBetonPost]) {
         restoreCondition('JasaKonsCuttingBetonPost');
