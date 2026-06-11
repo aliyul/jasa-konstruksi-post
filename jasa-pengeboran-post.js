@@ -1617,7 +1617,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBorTanah,
 		urlMappingJasaBorHorizontal,
 		urlMappingTukangBorFromMoneyMaster1MoneyChild
-		
+	
     );
 
     // --- validasi URL terdaftar ---
