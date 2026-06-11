@@ -724,7 +724,7 @@ const urlMappingUjiTanahFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/jasa-uji-tanah.html": "Jasa Uji Tanah",  // TYPE: SUB2
 };*/
 
-const urlMappingUjiTanahFromSub1MoneyMaster = {
+const urlMappingUjiTanahFromMoneyMasterMoneyMaster1 = {
   "https://www.betonjayareadymix.com/p/jasa-sondir-tanah.html": "Jasa Sondir Tanah",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-cpt-tanah.html": "Jasa CPT Tanah",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-lab-tanah.html": "Jasa Lab Tanah",  // TYPE: MONEY_PAGE
@@ -2023,7 +2023,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingSaluranFromMoneyMasterMoneyPage,
 		
-		urlMappingUjiTanahFromSub1MoneyMaster,
+		urlMappingUjiTanahFromMoneyMasterMoneyMaster1,
 		urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1,
 		urlMappingPengeboranFromSub1MoneyMaster,
 		urlMappingPengeboranFromMoneyMasterMoneyMaster1,
@@ -3598,7 +3598,7 @@ if (urlMappingSaluranFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
     );
     }
 	
-   if (urlMappingUjiTanahFromSub1MoneyMaster[cleanUrlJasaKons]) {
+   if (urlMappingUjiTanahFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
        generateBreadcrumbJasaKonstruksi(
         urlMappingUjiTanahFromSub1MoneyMaster,
         cleanUrlJasaKons,
@@ -3612,45 +3612,6 @@ if (urlMappingSaluranFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
     );
     }
    
-  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingUjiTanahFromSub1MoneyPage[cleanUrlJasaKons]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Daftar Jasa Uji Tanah",
-                   "item": "https://www.betonjayareadymix.com/p/daftar-jasa-uji-tanah.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingUjiTanahFromSub1MoneyPage[cleanUrlJasaKons],
-                   "item": cleanUrlJasaKons
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-
 if (urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 	 generateBreadcrumbJasaKonstruksi(
         urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1,
