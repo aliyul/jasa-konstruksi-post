@@ -725,8 +725,8 @@ const urlMappingUjiTanahFromPillarSub2 = {
 };*/
 
 const urlMappingUjiTanahFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/jasa-sondir.html": "Jasa Sondir",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-cpt.html": "Jasa CPT",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-sondir-tanah.html": "Jasa Sondir Tanah",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-cpt-tanah.html": "Jasa CPT Tanah",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-lab-tanah.html": "Jasa Lab Tanah",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-boring-tanah.html": "Jasa Boring Tanah",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-uji-penetrasi.html": "Jasa Uji Penetrasi"  // TYPE: MONEY_PAGE
