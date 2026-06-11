@@ -699,7 +699,7 @@ const urlMappingJasaPematanganLahanFromMoneyMasterMoneyPage = {
 // ============================================================
 "https://www.betonjayareadymix.com/p/jasa-pekerjaan-galian-tanah.html": "Jasa Pekerjaan Galian Tanah",
 "https://www.betonjayareadymix.com/p/jasa-pengupasan-lahan-tanah.html": "Jasa Pengupasan Lahan Tanah",  // tetap
-"https://www.betonjayareadymix.com/p/jasa-pembersihan-area-konstruksi.html": "Jasa Pembersihan Area Konstruksi",
+"https://www.betonjayareadymix.com/p/jasa-pembersihan-lahan-pematangan.html": "Jasa Pembersihan Lahan Pematangan",
 "https://www.betonjayareadymix.com/p/jasa-perataan-dan-grading-lahan.html": "Jasa Perataan dan Grading Lahan",  // tetap
 "https://www.betonjayareadymix.com/p/jasa-pekerjaan-elevasi-lahan.html": "Jasa Pekerjaan Elevasi Lahan",
 "https://www.betonjayareadymix.com/p/jasa-pembentukan-badan-lahan.html": "Jasa Pembentukan Badan Lahan",
