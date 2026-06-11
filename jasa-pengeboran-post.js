@@ -303,7 +303,7 @@ const urlMappingJasaBorTanahFromMoneyMaster1MoneyChild = {
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Pengeboran > Jasa Bor Horizontal
 // ============================================================
 
-const urlMappingJasaBorHorizontal = {
+const urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild  = {
   // ============================================================
   // [MONEY_CHILD] - JASA BOR HORIZONTAL LOKASI
   // ============================================================
@@ -1631,7 +1631,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBorBetonFromMoneyMaster1MoneyChild,
 		urlMappingJasaBorTanahFromMoneyMaster1MoneyPage,
 		urlMappingJasaBorTanahFromMoneyMaster1MoneyChild,
-		urlMappingJasaBorHorizontal,
+		urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild,
 		urlMappingTukangBorFromMoneyMaster1MoneyChild
 	
     );
@@ -2503,6 +2503,22 @@ if (urlMappingHargaJasaBorePileFromMoneyPageMoneyChild[cleanUrlJasaPengeboranPos
     );  
 }
 
+if (urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild[cleanUrlJasaPengeboranPost]) {
+       generateBreadcrumbJasaPengeboranPost(
+        urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild,
+        cleanUrlJasaPengeboranPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
+			 { name: 'Jasa Bor Horizontal', url: 'https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+}
+
+	
    if (urlMappingTukangBorFromMoneyMaster1MoneyChild[cleanUrlJasaPengeboranPost]) {
         generateBreadcrumbJasaPengeboranPost(
         urlMappingTukangBorFromMoneyMaster1MoneyChild,
