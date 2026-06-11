@@ -2209,9 +2209,10 @@ document.addEventListener("DOMContentLoaded", function() {
         'JASA_KONSTRUKSI'
     );
     }
-	if (urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
+	if (urlMappingHargaJasaBorSumurFromMoneyPageMoneyPage1[cleanUrlJasaPengeboranPost]) {
+	
        generateBreadcrumbJasaPengeboranPost(
-        urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyPage,
+        urlMappingHargaJasaBorSumurFromMoneyPageMoneyPage1,
         cleanUrlJasaPengeboranPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
