@@ -161,11 +161,18 @@ const urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1 = {
 	
 };
 const urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage = {
+	
+	"https://www.betonjayareadymix.com/p/jasa-pasang-wpc-lantai.html": "Jasa Pasang WPC Lantai",
      "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding"
 };
 const urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1  = {
 	"https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding-per-meter.html": "Jasa Pasang WPC Dinding Per Meter",
+	
 	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-dinding.html": "Harga Jasa Pasang WPC Dinding"
+};
+const urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1 = {
+ "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-lantai.html": "Harga Jasa Pasang WPC Lantai"
+	
 };
 
 const urlMappingJasaReliefDindingFromMoneyMaster2MoneyPage = {
@@ -197,11 +204,7 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
     // ============================================================
     // TAMBAHAN MP UNTUK JASA FINISHING LANTAI
     // ============================================================
-	"https://www.betonjayareadymix.com/p/jasa-pasang-wpc-lantai.html": "Jasa Pasang WPC Lantai",
 	
-    "https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-lantai.html": "Jasa Pasang Vinyl Lantai",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-pvc-lantai.html": "Jasa Pasang PVC Lantai",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-spc-lantai.html": "Jasa Pasang SPC Lantai",
 
 	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai-gudang.html": "Harga Jasa Finishing Lantai Gudang"
 };
@@ -262,10 +265,7 @@ const urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1 = {
  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-gudang.html": "Jasa Pasang Keramik Lantai Gudang",  // TYPE: MONEY_PAGE
 
 };
-const urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1 = {
- "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-lantai.html": "Harga Jasa Pasang WPC Lantai"
-	
-};
+
 
 const urlMappingJasaLantaiSuperFlatFromMoneyPage1MoneyPage2 = {
 	"https://www.betonjayareadymix.com/p/harga-jasa-lapangan-super-flat.html": "Harga Jasa Lapangan Super Flat",
@@ -1977,6 +1977,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1,
+		urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1,
 		urlMappingJasaReliefDindingFromMoneyMaster2MoneyPage,
 		
 		urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
@@ -1985,7 +1986,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaFinishingLantaiKayuFromMoneyPageMoneyPage1,
 		urlMappingJasaFinishingLantaiMarmerFromMoneyPageMoneyPage1,
 		urlMappingJasaPolesLantaiGranitFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1,
 		
 		urlMappingJasaLantaiSuperFlatFromMoneyPage1MoneyPage2,
