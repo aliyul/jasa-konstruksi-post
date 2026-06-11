@@ -724,7 +724,7 @@ const urlMappingUjiTanahFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/jasa-uji-tanah.html": "Jasa Uji Tanah",  // TYPE: SUB2
 };*/
 
-const urlMappingUjiTanahFromSub1MoneyPage = {
+const urlMappingUjiTanahFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-sondir.html": "Jasa Sondir",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-cpt.html": "Jasa CPT",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-lab-tanah.html": "Jasa Lab Tanah",  // TYPE: MONEY_PAGE
@@ -2023,7 +2023,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingSaluranFromMoneyMasterMoneyPage,
 		
-		urlMappingUjiTanahFromSub1MoneyPage,
+		urlMappingUjiTanahFromSub1MoneyMaster,
 		urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1,
 		urlMappingPengeboranFromSub1MoneyMaster,
 		urlMappingPengeboranFromMoneyMasterMoneyMaster1,
@@ -3598,59 +3598,18 @@ if (urlMappingSaluranFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
     );
     }
 	
-
-	
-   if (urlMappingUjiTanahFromSub1MoneyPage[cleanUrlJasaKons]) {
-        restoreCondition('JasaKonsSub');
-	restoreCondition('JasaUjiTanah');
-           // hapus elemen id DIV Lain
-	removeCondition('ProdukInFur');
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-        //removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-	removeCondition('JasaKons');
-	removeCondition('MenuKons');
-	   
-       // hapus elemen id DIV Lain
-	removeCondition('JasaAlatKonstruksi');
-	removeCondition('SewaAlatKonstruksi');
-	removeCondition('SewaAlatBerat');
-	removeCondition('SewaAlatKonstruksiRingan');
-
-	   	removeCondition('JasaInstalasiListrik');
-	removeCondition('JasaRenovasiPerbaikan');
-        removeCondition('JasaStrukturKonstruksi');
-        removeCondition('JasaFinishing');
-        removeCondition('JasaPondasiPerkuatan');
-        removeCondition('JasaSaluranDrainase');
-        removeCondition('JasaJalanPerkerasan');
-	removeCondition('JasaPembatasPengaman');
-	removeCondition('JasaPematanganLahan');
-	removeCondition('JasaPerkuatanTanahLongsor');
-	removeCondition('JasaBongkarBangunan');
-	removeCondition('JasaPerawatanPerbaikanBangunan');
-	removeCondition('JasaPerbaikanInfrastruktur');
-	removeCondition('JasaPengeboran');
-		removeCondition('JasaBorAirSumur');
-		removeCondition('JasaBorPile');
-		removeCondition('JasaCoringBeton');
-		removeCondition('JasaBorBeton');
-		removeCondition('JasaBorTanah');
-		removeCondition('JasaBorHorizontal');
-		removeCondition('JasaBorTembok');
-
-       // removeCondition('JasaKonstruksiCustom');
-
-        JasaKonstruksiSubLink.style.visibility = 'visible';
-        JasaUjiTanahLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingUjiTanahFromSub1MoneyPage[cleanUrlJasaKons];
+   if (urlMappingUjiTanahFromSub1MoneyMaster[cleanUrlJasaKons]) {
+       generateBreadcrumbJasaKonstruksi(
+        urlMappingUjiTanahFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Uji Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-uji-tanah.html' },
+            { name: 'Perbandingan Jasa Uji Tanah', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-uji-tanah.html' },
+            { name: 'Jasa Uji Tanah', url: 'https://www.betonjayareadymix.com/p/jasa-uji-tanah.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
     }
    
   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
