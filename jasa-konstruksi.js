@@ -515,7 +515,7 @@ const urlMappingJasaPasangFromSub1MoneyMaster = {
 
 const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
 "https://www.betonjayareadymix.com/p/jasa-pasang-furniture.html": "Jasa Pasang Furniture",
-	
+"https://www.betonjayareadymix.com/p/jasa-pasang-spc.html": "Jasa Pasang SPC",	
 "https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html": "Jasa Pasang WPC",
 "https://www.betonjayareadymix.com/p/jasa-pasang-vinyl.html": "Jasa Pasang Vinyl",
 "https://www.betonjayareadymix.com/p/jasa-pasang-pvc.html": "Jasa Pasang PVC", 
