@@ -712,7 +712,7 @@ const urlMappingJasaPematanganLahanFromMoneyMasterMoneyPage = {
 "https://www.betonjayareadymix.com/p/jasa-pemasangan-drainase-lahan.html": "Jasa Pemasangan Drainase Lahan",
 "https://www.betonjayareadymix.com/p/jasa-pemasangan-geotekstil-lahan.html": "Jasa Pemasangan Geotekstil Lahan",
 "https://www.betonjayareadymix.com/p/jasa-persiapan-pondasi-lahan.html": "Jasa Persiapan Pondasi Lahan",  // tetap
-"https://www.betonjayareadymix.com/p/jasa-penebangan-pohon-besar.html": "Jasa Penebangan Pohon Besar"
+"https://www.betonjayareadymix.com/p/jasa-tebang-pohon-pematangan-lahan.html": "Jasa Tebang Pohon Pematangan Lahan"
 };
 
 // ============================================================
