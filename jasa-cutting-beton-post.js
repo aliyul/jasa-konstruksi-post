@@ -116,7 +116,7 @@ const urlMappingJasaSondirTanahFromMoneyMaster1MoneyPage = {
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Uji Tanah > Jasa CPT [Nama Layanan] (4 level)
 // ============================================================
 
-const urlMappingJasaCpt = {
+const urlMappingJasaCptTanahFromMoneyMaster1MoneyPage = {
   // ============================================================
   // [MONEY_MASTER] - HALAMAN UTAMA CPT
   // 🔴 PRIORITAS HIGH - HARUS DIBUAT
@@ -2060,7 +2060,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyPage1,
 		urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyChild,
 		urlMappingJasaSondirTanahFromMoneyMaster1MoneyPage,
-		urlMappingJasaCpt,
+		urlMappingJasaCptTanahFromMoneyMaster1MoneyPage,
 		urlMappingJasaBoringTanah,
 		urlMappingJasaLabTanah,
 		urlMappingJasaUjiPenetrasi,
@@ -4375,5 +4375,19 @@ if (urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyChild[cleanUrlJasaCuttingBe
         'JASA_KONSTRUKSI'
     );
    }
-
+if (urlMappingJasaCptTanahFromMoneyMaster1MoneyPage[cleanUrlJasaCuttingBetonPost]) {
+         generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaCptTanahFromMoneyMaster1MoneyPage,
+        cleanUrlJasaCuttingBetonPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Uji Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-uji-tanah.html' },
+            { name: 'Perbandingan Jasa Uji Tanah', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-uji-tanah.html' },
+            { name: 'Jasa Uji Tanah', url: 'https://www.betonjayareadymix.com/p/jasa-uji-tanah.html' },
+            { name: 'Jasa Cpt Tanah', url: 'https://www.betonjayareadymix.com/p/jasa-cpt-tanah.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+	
    });
