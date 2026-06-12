@@ -506,10 +506,43 @@ const urlMappingJasaPembuatanFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-pembuatan.html": "Jasa Pembuatan"
 };
 
-const urlMappingJasPembuatanFromMoneyMasterMoneyMaster1 = {
-	"https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html": "Jasa Pembuatan Furniture",
-	 "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar.html": "Jasa Pembuatan Pagar"  // ✅ MM (2 kata) - URL BARU
+const urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1 = {
+    // ================================================================
+    // 📌 MONEY-MASTER (LEVEL 4) - JASA PEMBUATAN (HANYA KATEGORI UTAMA)
+    // ================================================================
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html": "Jasa Pembuatan Furniture",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar.html": "Jasa Pembuatan Pagar",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kanopi.html": "Jasa Pembuatan Kanopi",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-tangga.html": "Jasa Pembuatan Tangga",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-gazebo.html": "Jasa Pembuatan Gazebo",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-teras.html": "Jasa Pembuatan Teras",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-balkon.html": "Jasa Pembuatan Balkon",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-decking.html": "Jasa Pembuatan Decking",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",
+    // Kusen/Pintu/Jendela bisa menjadi MM sendiri atau di bawah Furniture
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kusen.html": "Jasa Pembuatan Kusen",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-pintu.html": "Jasa Pembuatan Pintu",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-jendela.html": "Jasa Pembuatan Jendela",
 };
+
+// ================================================================
+// 📌 MONEY-PAGE (LEVEL 5) - HANYA UNTUK JENIS FURNITURE SPESIFIK
+// ================================================================
+const urlMappingJasPembuatanFurnitureChild = {
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-meja.html": "Jasa Pembuatan Meja",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kursi.html": "Jasa Pembuatan Kursi",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-tempat-tidur.html": "Jasa Pembuatan Tempat Tidur",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-sofa.html": "Jasa Pembuatan Sofa",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-lemari.html": "Jasa Pembuatan Lemari",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-rak.html": "Jasa Pembuatan Rak",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-partisi.html": "Jasa Pembuatan Partisi",
+    // Kitchen Set juga bisa sebagai MP
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set"
+};
+
+// ================================================================
+// 📋 TOTAL: 20 MONEY-MASTER (LEVEL 4)
+// ================================================================
 const urlMappingJasaPasangFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-pasang.html": "Jasa Pasang"
 };
@@ -2069,7 +2102,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaKitchenSetFromMoneyMasterMoneyMaster1,
 		urlMappingJasaPasangFromSub1MoneyMaster,
 		urlMappingJasaPembuatanFromSub1MoneyMaster,
-		urlMappingJasPembuatanFromMoneyMasterMoneyMaster1,
+		urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1,
 		urlMappingJasaPasangFromMoneyMasterMoneyMaster1,
 		
         urlMappingInfrastrukturFromSub1MoneyMaster,
@@ -3754,10 +3787,10 @@ if (urlMappingJasaPasangFromSub1MoneyMaster[cleanUrlJasaKons]) {
     );
 }
 	
-if (urlMappingJasPembuatanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
+if (urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbJasaKonstruksi(
-        urlMappingJasPembuatanFromMoneyMasterMoneyMaster1,
+        urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
