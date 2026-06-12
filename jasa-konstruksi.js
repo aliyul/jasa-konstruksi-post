@@ -498,7 +498,7 @@ const urlMappingJasaKitchenSetFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-kitchen-set.html": "Jasa Kitchen Set"
 };
 
-const urlMappingJasaKitchenSetFromMoneyMasterMoneyMaster1 = {
+const urlMappingJasaKitchenSetFromMoneyMasterMoneyPage = {
 	"https://www.betonjayareadymix.com/p/jasa-custom-kitchen-set.html": "Jasa Custom Kitchen Set",
     "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set",
 	    // Kitchen Set juga bisa sebagai MP
@@ -2099,7 +2099,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaAlatPendukungFromMoneyMasterMoneyMaster1,
 
 		urlMappingJasaKitchenSetFromSub1MoneyMaster,
-		urlMappingJasaKitchenSetFromMoneyMasterMoneyMaster1,
+		urlMappingJasaKitchenSetFromMoneyMasterMoneyPage,
 		urlMappingJasaPasangFromSub1MoneyMaster,
 		urlMappingJasaPembuatanFromSub1MoneyMaster,
 		urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1,
@@ -3742,10 +3742,10 @@ if (urlMappingJasaKitchenSetFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
-if (urlMappingJasaKitchenSetFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
+if (urlMappingJasaKitchenSetFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbJasaKonstruksi(
-        urlMappingJasaKitchenSetFromMoneyMasterMoneyMaster1,
+        urlMappingJasaKitchenSetFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
