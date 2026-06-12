@@ -549,70 +549,69 @@ const urlMappingJasaPasangFromSub1MoneyMaster = {
 
 const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
     // ================================================================
-    // 📌 MONEY-MASTER (LEVEL 4) - JASA PASANG
-    // ✅ LENGKAP & SESUAI SEO
+    // 📌 MONEY-MASTER (LEVEL 4) - HANYA KATEGORI UTAMA
     // ================================================================
-
-    // =============================
-    // 🔹 1. Lantai & Dinding (Material Modern & Konvensional)
-    // =============================
+    
+    // 1. Lantai & Dinding (sebagai induk)
     "https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html": "Jasa Pasang Lantai",
     "https://www.betonjayareadymix.com/p/jasa-pasang-dinding.html": "Jasa Pasang Dinding",
+    
+    // 2. Plafon & Atap
+    "https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html": "Jasa Pasang Plafon",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-rangka-atap.html": "Jasa Pasang Rangka Atap",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-atap.html": "Jasa Pasang Atap",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-kanopi.html": "Jasa Pasang Kanopi",
+    
+    // 3. Furniture & Elemen Interior
+    "https://www.betonjayareadymix.com/p/jasa-pasang-furniture.html": "Jasa Pasang Furniture",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-partisi.html": "Jasa Pasang Partisi Ruangan",
+    
+    // 4. Kusen, Pintu, Jendela
+    "https://www.betonjayareadymix.com/p/jasa-pasang-kusen.html": "Jasa Pasang Kusen",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-pintu.html": "Jasa Pasang Pintu",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-jendela.html": "Jasa Pasang Jendela",
+    
+    // 5. Area Outdoor & Lanskap
+    "https://www.betonjayareadymix.com/p/jasa-pasang-decking.html": "Jasa Pasang Decking",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html": "Jasa Pasang Pagar",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-paving-block.html": "Jasa Pasang Paving Block",
+    
+    // 6. Utilitas & Teknologi
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html": "Jasa Pasang Lampu",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-cctv.html": "Jasa Pasang CCTV",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-ac.html": "Jasa Pasang AC"
+};
+// MP di bawah Jasa Pasang Lantai
+const urlMappingJasaPasangLantaiChild = {
     "https://www.betonjayareadymix.com/p/jasa-pasang-keramik.html": "Jasa Pasang Keramik",
     "https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html": "Jasa Pasang WPC",
     "https://www.betonjayareadymix.com/p/jasa-pasang-spc.html": "Jasa Pasang SPC",
     "https://www.betonjayareadymix.com/p/jasa-pasang-vinyl.html": "Jasa Pasang Vinyl",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-pvc.html": "Jasa Pasang PVC",
     "https://www.betonjayareadymix.com/p/jasa-pasang-laminate.html": "Jasa Pasang Laminate",
     "https://www.betonjayareadymix.com/p/jasa-pasang-hardwood.html": "Jasa Pasang Hardwood",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-parket.html": "Jasa Pasang Parket",
-
-    // =============================
-    // 🔹 2. Plafon & Atap (Sistem Rangka & Penutup)
-    // =============================
-    "https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html": "Jasa Pasang Plafon",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-gypsum.html": "Jasa Pasang Gypsum",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-rangka-atap.html": "Jasa Pasang Rangka Atap",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-atap.html": "Jasa Pasang Atap",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-kanopi.html": "Jasa Pasang Kanopi",
-
-    // =============================
-    // 🔹 3. Furniture & Elemen Interior
-    // =============================
-    "https://www.betonjayareadymix.com/p/jasa-pasang-furniture.html": "Jasa Pasang Furniture",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lemari.html": "Jasa Pasang Lemari",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-partisi.html": "Jasa Pasang Partisi Ruangan",
-
-    // =============================
-    // 🔹 4. Kusen, Pintu, & Jendela (Carpentry & Frame)
-    // =============================
-    "https://www.betonjayareadymix.com/p/jasa-pasang-kusen.html": "Jasa Pasang Kusen",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-pintu.html": "Jasa Pasang Pintu",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-jendela.html": "Jasa Pasang Jendela",
-
-    // =============================
-    // 🔹 5. Area Outdoor & Lanskap (Eksterior & Hardscape)
-    // =============================
-    "https://www.betonjayareadymix.com/p/jasa-pasang-decking.html": "Jasa Pasang Decking",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html": "Jasa Pasang Pagar",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-paving-block.html": "Jasa Pasang Paving Block",
-
-    // =============================
-    // 🔹 6. Utilitas & Teknologi Bangunan (ME)
-    // =============================
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html": "Jasa Pasang Lampu",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-cctv.html": "Jasa Pasang CCTV",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-ac.html": "Jasa Pasang AC",
-
-    // =============================
-    // 🔹 7. Dekorasi Dinding (Wallcovering & Wallpaper)
-    // =============================
-    "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper.html": "Jasa Pasang Wallpaper",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-wallpanel.html": "Jasa Pasang Wall Panel"
-
+    "https://www.betonjayareadymix.com/p/jasa-pasang-parket.html": "Jasa Pasang Parket"
 };
 
+// MP di bawah Jasa Pasang Dinding
+const urlMappingJasaPasangDindingChild = {
+    "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper.html": "Jasa Pasang Wallpaper",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-wallpanel.html": "Jasa Pasang Wall Panel",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding"
+};
+
+// MP di bawah Jasa Pasang Plafon
+const urlMappingJasaPasangPlafonChild = {
+    "https://www.betonjayareadymix.com/p/jasa-pasang-gypsum.html": "Jasa Pasang Gypsum",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-pvc-plafon.html": "Jasa Pasang PVC Plafon"
+};
+
+// MP di bawah Jasa Pasang Furniture
+const urlMappingJasaPasangFurnitureChild = {
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lemari.html": "Jasa Pasang Lemari",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-meja.html": "Jasa Pasang Meja",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-kursi.html": "Jasa Pasang Kursi"
+};
 // ============================================================
 // 📁 JASA PONDASI & PERKUATAN TANAH - SUB2 (LEVEL 2)
 // ============================================================
