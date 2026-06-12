@@ -507,13 +507,15 @@ const urlMappingJasaPembuatanFromSub1MoneyMaster = {
 };
 
 const urlMappingJasPembuatanFromMoneyMasterMoneyMaster1 = {
-	"https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html": "Jasa Pembuatan Furniture"
+	"https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html": "Jasa Pembuatan Furniture",
+	 "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar.html": "Jasa Pembuatan Pagar"  // ✅ MM (2 kata) - URL BARU
 };
 const urlMappingJasaPasangFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-pasang.html": "Jasa Pasang"
 };
 
 const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
+    "https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html": "Jasa Pasang Pagar",  // ✅ MM (2 kata) - URL BARU
 "https://www.betonjayareadymix.com/p/jasa-pasang-furniture.html": "Jasa Pasang Furniture",
 "https://www.betonjayareadymix.com/p/jasa-pasang-spc.html": "Jasa Pasang SPC",	
 "https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html": "Jasa Pasang WPC",
@@ -745,9 +747,9 @@ const urlMappingPembatasFromPillarSub2 = {
 const urlMappingJasaPembatasPengamanFromMoneyMasterMoneyPage  = {
   "https://www.betonjayareadymix.com/p/jasa-pengamanan-area-proyek.html": "Jasa Pengamanan Area Proyek",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-rambu-dan-sistem-keamanan-visual.html": "Jasa Rambu dan Sistem Keamanan Visual",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-pengaman-sisi-jalan-infrastruktur.html": "Jasa Pengaman Sisi Jalan Infrastruktur",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html": "Jasa Pembuatan Pagar Dinding Pembatas",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-dinding-pembatas.html": "Jasa Pasang Pagar Dinding Pembatas"  // TYPE: MONEY_PAGE  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-pengaman-sisi-jalan-infrastruktur.html": "Jasa Pengaman Sisi Jalan Infrastruktur"  // TYPE: MONEY_PAGE
+  //"https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html": "Jasa Pembuatan Pagar Dinding Pembatas",  // TYPE: MONEY_PAGE
+  //"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-dinding-pembatas.html": "Jasa Pasang Pagar Dinding Pembatas"  // TYPE: MONEY_PAGE  // TYPE: MONEY_PAGE
 
 };
 
