@@ -1682,7 +1682,7 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'}
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' }
         ],
         'JASA_KONSTRUKSI'
