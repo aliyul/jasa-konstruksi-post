@@ -73,12 +73,13 @@ const urlMappingPembuatanPagarFromMoneyMaster1MoneyPage = {
 const urlMappingPasangPagarFromMoneyMaster1MoneyPage = {
    // "https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html": "Jasa Pasang Pagar",  // ✅ MM (2 kata) - URL BARU
     
-    // MP - TURUNAN (LEVEL 5)
-    "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-beton-precast.html": "Jasa Pasang Pagar Beton Precast",
+// MP (Level 5) - Turunan
+    "https://www.betonjayareadymix.com/p/jasa-pasang-dinding-pembatas-bata.html": "Jasa Pasang Dinding Pembatas Bata",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-panel-beton.html": "Jasa Pasang Pagar Panel Beton",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-besi-hollow.html": "Jasa Pasang Pagar Besi Hollow",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc.html": "Jasa Pasang Pagar BRC",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-besi-hollow.html": "Jasa Pasang Pagar Besi Hollow",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-kawat-harmonika.html": "Jasa Pasang Pagar Kawat Harmonika",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-beton-precast.html": "Jasa Pasang Pagar Beton Precast",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-plat-laser.html": "Jasa Pasang Pagar Plat Laser",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-rumah.html": "Jasa Pasang Pagar Rumah",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-bangunan.html": "Jasa Pasang Pagar Bangunan"
