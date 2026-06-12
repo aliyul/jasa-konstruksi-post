@@ -555,6 +555,7 @@ const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
     // ================================================================
     "https://www.betonjayareadymix.com/p/jasa-pasang-keramik.html": "Jasa Pasang Keramik",
     "https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html": "Jasa Pasang WPC",
+	 "https://www.betonjayareadymix.com/p/jasa-pasang-pvc.html": "Jasa Pasang PVC",
     // 1. Lantai & Dinding (sebagai induk)
     "https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html": "Jasa Pasang Lantai",
     "https://www.betonjayareadymix.com/p/jasa-pasang-dinding.html": "Jasa Pasang Dinding",
@@ -606,8 +607,8 @@ const urlMappingJasaPasangDindingFromMoneyMaster1MoneyMaster2  = {
 
 // MP di bawah Jasa Pasang Plafon
 const urlMappingJasaPasangPlafonFromMoneyMaster1MoneyMaster2 = {
-    "https://www.betonjayareadymix.com/p/jasa-pasang-gypsum.html": "Jasa Pasang Gypsum",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-pvc_plafon.html": "Jasa Pasang PVC_Plafon"
+    "https://www.betonjayareadymix.com/p/jasa-pasang-gypsum.html": "Jasa Pasang Gypsum"
+   // "https://www.betonjayareadymix.com/p/jasa-pasang-pvc_plafon.html": "Jasa Pasang PVC_Plafon"
 };
 
 // MP di bawah Jasa Pasang Furniture
