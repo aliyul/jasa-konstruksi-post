@@ -45,31 +45,9 @@ const urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage = {
 	// "https://www.betonjayareadymix.com/p/jasa-pasang-furniture.html": "Jasa Pasang Furniture",
    // "https://www.betonjayareadymix.com/p/jasa-custom-furniture.html": "Jasa Custom Furniture",
 	//  "https://www.betonjayareadymix.com/p/jasa-furniture-interior.html": "Jasa Furniture & Interior"
-	"https://www.betonjayareadymix.com/p/harga-custom-furniture-per-meter.html": "Harga Custom Furniture Per Meter",
-    "https://www.betonjayareadymix.com/p/jasa-furniture-interior-exterior.html": "Jasa Furniture Interior Exterior",
-	"https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture-custom.html": "Jasa Pembuatan Furniture Custom",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set", 
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-lemari-built-in.html": "Jasa Pembuatan Lemari Built In", 
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-partisi-ruangan.html": "Jasa Pembuatan Partisi Ruangan",
-  
-   
-	// TAMBAHAN MP UNTUK JASA FINISHING FURNITURE
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-meja-kursi.html": "Jasa Pembuatan Meja Kursi",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-sofa-custom.html": "Jasa Pembuatan Sofa Custom",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-tempat-tidur.html": "Jasa Pembuatan Tempat Tidur",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-rak-buku.html": "Jasa Pembuatan Rak Buku",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-pintu-sliding.html": "Jasa Pembuatan Pintu Sliding",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-wadrobe.html": "Jasa Pembuatan Wadrobe",
 
-	"https://www.betonjayareadymix.com/p/jasa-pasang-lemari-built-in.html": "Jasa Pasang Lemari Built In", 
-	"https://www.betonjayareadymix.com/p/jasa-pasang-partisi-ruangan.html": "Jasa Pasang Partisi Ruangan",
-	
-   "https://www.betonjayareadymix.com/p/jasa-kitchen-set-minimalis.html": "Jasa Kitchen Set Minimalis",
-   "https://www.betonjayareadymix.com/p/jasa-rak-dinding-custom.html": "Jasa Rak Dinding Custom",
-
-	"https://www.betonjayareadymix.com/p/jasa-pembuatan-kamar-set.html": "Jasa Pembuatan Kamar Set"
-
+"https://www.betonjayareadymix.com/p/harga-custom-furniture-per-meter.html": "Harga Custom Furniture Per Meter",
+"https://www.betonjayareadymix.com/p/jasa-furniture-interior-exterior.html": "Jasa Furniture Interior Exterior"
 };
 
 // ============================================================
@@ -2575,6 +2553,7 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
             { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
+            { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html' },
            // { name: 'Jasa Finishing Interior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior.html' },
            // { name: 'Jasa Finishing Interior Modern', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html' },
             { name: 'Jasa Pasang Vinyl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-vinyl.html' }
@@ -2610,7 +2589,8 @@ if (urlMappingJasaPasangSPCFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing])
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },,
+            { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html' },
            // { name: 'Jasa Finishing Interior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior.html' },
            // { name: 'Jasa Finishing Interior Modern', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html' },
             { name: 'Jasa Pasang SPC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-spc.html' }
