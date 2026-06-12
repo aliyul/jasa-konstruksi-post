@@ -499,8 +499,9 @@ const urlMappingJasaKitchenSetFromSub1MoneyMaster = {
 };
 
 const urlMappingJasaKitchenSetFromMoneyMasterMoneyMaster1 = {
-	"https://www.betonjayareadymix.com/p/jasa-custom-kitchen-set.html": "Jasa Custom Kitchen Set", 
-    "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set"
+    "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set",
+	    // Kitchen Set juga bisa sebagai MP
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set"
 };
 const urlMappingJasaPembuatanFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-pembuatan.html": "Jasa Pembuatan"
@@ -522,22 +523,21 @@ const urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1 = {
     // Kusen/Pintu/Jendela bisa menjadi MM sendiri atau di bawah Furniture
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-kusen.html": "Jasa Pembuatan Kusen",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-pintu.html": "Jasa Pembuatan Pintu",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-jendela.html": "Jasa Pembuatan Jendela",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-jendela.html": "Jasa Pembuatan Jendela"
 };
 
 // ================================================================
 // 📌 MONEY-PAGE (LEVEL 5) - HANYA UNTUK JENIS FURNITURE SPESIFIK
 // ================================================================
-const urlMappingJasPembuatanFurnitureChild = {
+const urlMappingJasaPembuatanFurnitureChild = {
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-meja.html": "Jasa Pembuatan Meja",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-kursi.html": "Jasa Pembuatan Kursi",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-tempat-tidur.html": "Jasa Pembuatan Tempat Tidur",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-sofa.html": "Jasa Pembuatan Sofa",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-lemari.html": "Jasa Pembuatan Lemari",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-rak.html": "Jasa Pembuatan Rak",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-partisi.html": "Jasa Pembuatan Partisi",
-    // Kitchen Set juga bisa sebagai MP
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set"
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-partisi.html": "Jasa Pembuatan Partisi"
+
 };
 
 // ================================================================
