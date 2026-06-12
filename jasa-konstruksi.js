@@ -530,9 +530,9 @@ const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
     "https://www.betonjayareadymix.com/p/jasa-pasang-spc.html": "Jasa Pasang SPC",
     "https://www.betonjayareadymix.com/p/jasa-pasang-vinyl.html": "Jasa Pasang Vinyl",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pvc.html": "Jasa Pasang PVC",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-laminate.html": "Jasa Pasang Lantai Laminate",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-hardwood.html": "Jasa Pasang Lantai Hardwood",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-parket.html": "Jasa Pasang Lantai Parket",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-laminate.html": "Jasa Pasang Laminate",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-hardwood.html": "Jasa Pasang Hardwood",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-parket.html": "Jasa Pasang Parket",
 
     // =============================
     // 🔹 2. Plafon & Atap (Sistem Rangka & Penutup)
