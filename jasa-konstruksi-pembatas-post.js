@@ -126,7 +126,7 @@ const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-polosan.html": "Jasa Pasang Pagar Panel Beton Polosan",  // TYPE: VARIANT
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-custom.html": "Jasa Pasang Pagar Panel Beton Custom",  // TYPE: VARIANT
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tinggi.html": "Jasa Pasang Pagar Panel Beton Tinggi",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-rendah.html": "Jasa Pasang Pagar Panel Beton Rendah",  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-rendah.html": "Jasa Pasang Pagar Panel Beton Rendah"  // TYPE: VARIANT
 };
 
 // ============================================================
@@ -222,7 +222,7 @@ const urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1 = {
   // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Keunggulan Jasa Pasang Pagar Rumah
   // ============================================================
   "https://www.betonjayareadymix.com/2018/11/keunggulan-jasa-pasang-pagar-rumah.html": "Keunggulan Jasa Pasang Pagar Rumah",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/2018/11/tukang-pasang-pagar-rumah.html": "Tukang Pasang Pagar Rumah",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2018/11/tukang-pasang-pagar-rumah.html": "Tukang Pasang Pagar Rumah"  // TYPE: SUB1
 };
 
 // ============================================================
@@ -244,7 +244,7 @@ const urlMappingJasaPasangPagarBangunanFromMoneyPageMoneyPage1 = {
 // Parent: Jasa Pengaman Sisi Jalan (/p/jasa-pengaman-sisi-jalan.html)
 // ============================================================
 
-const urlMappingJasaKanstinJalan = {
+const urlMappingJasaPemasanganKanstinJalanFromMoneyPage1MoneyPage2 = {
   // ============================================================
   // [MONEY_MASTER] - HARGA PEMASANGAN KANSTIN
   // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
@@ -1573,7 +1573,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1,
         urlMappingJasaPasangPagarBangunanFromMoneyPageMoneyPage1,
 
-		urlMappingJasaKanstinJalan
+		urlMappingJasaPemasanganKanstinJalanFromMoneyPage1MoneyPage2
     );
 
     // --- validasi URL terdaftar ---
@@ -2086,113 +2086,21 @@ document.addEventListener("DOMContentLoaded", function() {
    }
 
   //SUB urlMappingPengamananSisiJalan
-	if (urlMappingJasaKanstinJalan[cleanUrlJasaPembatasKonsPost]) {
-        restoreCondition('JasaKonsPembatasPost');
-        restoreCondition('JasaPengamanSisiJalanInfrastrukturPost');
-        restoreCondition('JasaPemasanganKanstinJalanPost');
-	       
-     
-        //hapus elemen div id lain
-	    removeCondition('JasaDesInPost');
-        removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPerbaikanPost');
-        removeCondition('JasaKonsCuttingBetonPost');
-        removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	
-
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaPembuatanPagarDindingPembatasPost');
-        removeCondition('JasaRambudanSistemKeamananVisualPost');
-        removeCondition('JasaPengamananAreaProyekPost');
-
-		//hapus elemen sub JasaPengamanSisiJalanInfrastruktur SELAIN JasaPemasanganKanstinJalanPost
-	  	//removeCondition('');
-	  	removeCondition('JasaPemasanganGuardrailBesiPost');
-	  	removeCondition('JasaPemasanganRailingJalanPost');
-	  	removeCondition('JasaBollardTiangPengamanJalanPost');
-	  	removeCondition('JasaPagarPembatasFlyoverJembatanPost');
-	
-	 //hapus elemen sub JasaPembuatanPagarDindingPembatas
-        removeCondition('JasaPagarBetonPrecastPost');
-        removeCondition('JasaPagarPanelBetonPost');
-        removeCondition('JasaPagarBesiPost'); 
-	removeCondition('JasaDindingPembatasBataBatakoPost');
-	removeCondition('JasaPagarKawatHarmonikaPost');
-	removeCondition('JasaPagarBrcPost');
-	removeCondition('JasaPagarBangunanPost');
-	removeCondition('JasaPagarRumahPost');
-       
-        JasaKonstruksiPembatasPostLink.style.visibility = 'visible';
-        JasaPembatasPostLink.style.visibility = 'visible';
-        JasaPengamanSisiJalanInfrastrukturPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaPagarPanelBeton
-        JasaPemasanganKanstinJalanPostLink.style.visibility = 'visible';
-        pageNameJasaPembatasPost.textContent = urlMappingJasaKanstinJalan[cleanUrlJasaPembatasKonsPost];
-   }
-  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaKanstinJalan[cleanUrlJasaPembatasKonsPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-			   {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Pembatas & Pengaman",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html"
-               },
-			    {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Pengaman Sisi Jalan Infrastruktur",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pengaman-sisi-jalan-infrastruktur.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Pemasangan Kanstin Jalan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-pemasangan-kanstin-jalan.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": urlMappingJasaKanstinJalan[cleanUrlJasaPembatasKonsPost],
-                   "item": cleanUrlJasaPembatasKonsPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+if (urlMappingJasaPemasanganKanstinJalanFromMoneyPage1MoneyPage2[cleanUrlJasaPembatasKonsPost]) {
+    generateBreadcrumbJasaKonstruksiPembatasPost(
+        urlMappingJasaPemasanganKanstinJalanFromMoneyPage1MoneyPage2,
+        cleanUrlJasaPembatasKonsPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembatas-pengaman.html' },
+            { name: 'Perbandingan Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembatas-pengaman.html' },
+            { name: 'Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html' },
+            { name: 'Jasa Pengaman Sisi Jalan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-pengaman-sisi-jalan-infrastruktur.html' },
+            { name: 'Jasa Pemasangan Kanstin Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-pemasangan-kanstin-jalan.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
 	
    });
 
