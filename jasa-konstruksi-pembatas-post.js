@@ -59,7 +59,7 @@ const urlMappingJasaPagarBetonPrecastFromMoneyPage1MoneyPage2 = {
 // [VARIANT] - JASA PAGAR PANEL BETON
 // ============================================================
 
-const urlMappingJasaPagarPanelBetonFromMoneyPage1MoneyPage2  = {
+const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
   // ============================================================
   // [MONEY_MASTER] - HARGA PASANG PAGAR PANEL BETON
   // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
@@ -1569,7 +1569,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlMappingGabungan = Object.assign(
       {},
 		urlMappingJasaPagarBetonPrecastFromMoneyPage1MoneyPage2,
-		urlMappingJasaPagarPanelBetonFromMoneyPage1MoneyPage2,
+		urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
 		urlMappingJasaPagarBesiHollowWiremeshFromMoneyPage1MoneyPage2,
 		urlMappingJasaDindingPembatasBataBatakoFromMoneyPage1MoneyPage2,
 		urlMappingJasaPagarKawatHarmonikaFromMoneyPage1MoneyPage2,
@@ -1964,16 +1964,16 @@ document.addEventListener("DOMContentLoaded", function() {
     //SUB urlMappingPembuatanPagarDinding
 
 
-	if (urlMappingJasaPagarPanelBetonFromMoneyPage1MoneyPage2[cleanUrlJasaPembatasKonsPost]) {
+	if (urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKonsPost]) {
     generateBreadcrumbJasaKonstruksiPembatasPost(
-        urlMappingJasaPagarPanelBetonFromMoneyPage1MoneyPage2,
+        urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
         cleanUrlJasaPembatasKonsPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembatas-pengaman.html' },
-            { name: 'Perbandingan Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembatas-pengaman.html' },
-            { name: 'Jasa Pembatas Pengaman', url: 'https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html' },
-            { name: 'Jasa Pembuatan Pagar Diding Pembatas', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-dinding-pembatas.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
             { name: 'Jasa Pagar Panel Beton', url: 'https://www.betonjayareadymix.com/p/jasa-pagar-panel-beton.html' }
         ],
         'JASA_KONSTRUKSI'
