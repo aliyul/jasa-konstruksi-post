@@ -564,7 +564,7 @@ const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
     
     // 3. Furniture & Elemen Interior
     "https://www.betonjayareadymix.com/p/jasa-pasang-furniture.html": "Jasa Pasang Furniture",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set",
+   // "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set",
     "https://www.betonjayareadymix.com/p/jasa-pasang-partisi.html": "Jasa Pasang Partisi Ruangan",
     
     // 4. Kusen, Pintu, Jendela
@@ -597,7 +597,7 @@ const urlMappingJasaPasangLantaiChild = {
 const urlMappingJasaPasangDindingChild = {
     "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper.html": "Jasa Pasang Wallpaper",
     "https://www.betonjayareadymix.com/p/jasa-pasang-wallpanel.html": "Jasa Pasang Wall Panel",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding"
+   // "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding"
 };
 
 // MP di bawah Jasa Pasang Plafon
