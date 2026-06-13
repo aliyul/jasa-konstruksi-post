@@ -589,6 +589,9 @@ const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
 };
 // MP di bawah Jasa Pasang Lantai
 const urlMappingJasaPasangLantaiFromMoneyMaster1MoneyPage = {
+"https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html": "Jasa Pasang Keramik Lantai",  // TYPE: MONEY_PAGE
+    "https://www.betonjayareadymix.com/p/jasa-ganti-keramik-lantai.html": "Jasa Ganti Keramik Lantai",  // TYPE: MONEY_PAGE
+
 // Material khusus lantai
 	 "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-spc.html": "Jasa Pasang Lantai SPC",
    // "https://www.betonjayareadymix.com/p/jasa-pasang-spc.html": "Jasa Pasang SPC",
