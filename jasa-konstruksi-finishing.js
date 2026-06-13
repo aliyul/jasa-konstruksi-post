@@ -153,7 +153,7 @@ const urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1 = {
 	
 };
 
-const urlMappingJasaReliefDindingFromMoneyMaster2MoneyPage = {
+const urlMappingJasaReliefDinding3dFromMoneyPageMoneyPage1 = {
 	"https://www.betonjayareadymix.com/p/jasa-relief-dinding-interior.html": "Jasa Relief Dinding Interior",
     "https://www.betonjayareadymix.com/p/jasa-relief-batu-alam-interior.html": "Jasa Relief Batu Alam Interior",
    "https://www.betonjayareadymix.com/p/jasa-pembuatan-relief-dinding.html": "Jasa Pembuatan Relief Dinding"
@@ -1956,7 +1956,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1,
-		urlMappingJasaReliefDindingFromMoneyMaster2MoneyPage,
+		urlMappingJasaReliefDinding3dFromMoneyPageMoneyPage1,
 		
 		urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
 		
@@ -2854,9 +2854,9 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
     );
     }
 	
-	if (urlMappingJasaReliefDindingFromMoneyMaster2MoneyPage[cleanUrlJasaKonsFinishing]) {
+	if (urlMappingJasaReliefDinding3dFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingJasaReliefDindingFromMoneyMaster2MoneyPage,
+        urlMappingJasaReliefDinding3dFromMoneyPageMoneyPage1,
         cleanUrlJasaKonsFinishing,
         [
            // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -2865,7 +2865,7 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
 			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
             { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html'},
-            { name: 'Jasa Relief Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-relief-dinding.html'}
+            { name: 'Jasa Relief Dinding 3D', url: 'https://www.betonjayareadymix.com/p/jasa-relief-dinding-3d.html'}
         ],
         'JASA_KONSTRUKSI'
     );
