@@ -224,8 +224,7 @@ const urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1 = {
 
 };
 const urlMappingJasaFinishingLantaiKayuFromMoneyPageMoneyPage1 = {
-"https://www.betonjayareadymix.com/p/jasa-pasang-lantai-parket.html": "Jasa Pasang Lantai Parket"
-       
+     
 };
 const urlMappingJasaFinishingLantaiMarmerFromMoneyPageMoneyPage1 = {
  "https://www.betonjayareadymix.com/p/jasa-poles-lantai-marmer.html": "Jasa Poles Lantai Marmer"
@@ -236,11 +235,15 @@ const urlMappingJasaPolesLantaiGranitFromMoneyPageMoneyPage1 = {
        
 };
 const urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1 = {
- "https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-per-meter.html": "Harga Jasa Pasang Keramik per Meter",  // TYPE: MONEY_PAGE
-    "https://www.betonjayareadymix.com/p/harga-borongan-pasang-keramik-per-meter.html": "Harga Borongan Pasang Keramik per Meter",  // TYPE: MONEY_PAGE
+"https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-lantai.html": "Harga Jasa Pasang Keramik Lantai",  // TYPE: MONEY_PAGE
  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-rumah.html": "Jasa Pasang Keramik Lantai Rumah",  // TYPE: MONEY_PAGE
  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-kantor.html": "Jasa Pasang Keramik Lantai Kantor",  // TYPE: MONEY_PAGE
- "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-gudang.html": "Jasa Pasang Keramik Lantai Gudang",  // TYPE: MONEY_PAGE
+ "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-gudang.html": "Jasa Pasang Keramik Lantai Gudang"  // TYPE: MONEY_PAGE
+
+};
+const urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2 = {
+ "https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-per-meter.html": "Harga Jasa Pasang Keramik per Meter",  // TYPE: MONEY_PAGE
+    "https://www.betonjayareadymix.com/p/harga-borongan-pasang-keramik-per-meter.html": "Harga Borongan Pasang Keramik per Meter"  // TYPE: MONEY_PAGE
 
 };
 
@@ -1965,6 +1968,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaFinishingLantaiMarmerFromMoneyPageMoneyPage1,
 		urlMappingJasaPolesLantaiGranitFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1,
+		urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2,
 		
 		urlMappingJasaLantaiSuperFlatFromMoneyPage1MoneyPage2,
 		urlMappingJasaTrowelLantaiBetonFromMoneyPage1MoneyPage2,
@@ -2981,6 +2985,7 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
         'JASA_KONSTRUKSI'
     );
    }
+	
 	if (urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1,
@@ -2993,6 +2998,23 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
 			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
             { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'},
             { name: 'Jasa Pasang Keramik Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }	
+	if (urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2,
+        cleanUrlJasaKonsFinishing,
+        [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'},
+            { name: 'Jasa Pasang Keramik Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html'},
+            { name: 'Harga Jasa Pasang Keramik Lantai', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-lantai.html'}
         ],
         'JASA_KONSTRUKSI'
     );
