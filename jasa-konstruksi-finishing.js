@@ -1,6 +1,6 @@
 
 
-const urlMappingJasaPasangVinylLantaiFromMoneyPageMoneyPage1 = {
+const urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-vinyl-per-meter.html": "Harga Jasa Pasang Vinyl Per Meter",
 	"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-tangga.html": "Jasa Pasang Vinyl Tangga"
 };
@@ -8,10 +8,6 @@ const urlMappingJasaPasangVinylLantaiFromMoneyPageMoneyPage1 = {
 const urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage = {
  "https://www.betonjayareadymix.com/p/jasa-pasang-pvc-dinding.html": "Jasa Pasang PVC Dinding",
 	"https://www.betonjayareadymix.com/p/jasa-pasang-pvc-lantai.html": "Jasa Pasang PVC Lantai"
-};
-
-const urlMappingJasaPasangSPCFromMoneyMaster2MoneyPage = {
-    "https://www.betonjayareadymix.com/p/jasa-pasang-spc-lantai.html": "Jasa Pasang SPC Lantai"
 };
 
 const urlMappingFinishingBangunanFromMoneyMaster1MoneyPage = {
@@ -1938,9 +1934,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	// --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingJasaPasangVinylLantaiFromMoneyPageMoneyPage1,
+		urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage,
-		urlMappingJasaPasangSPCFromMoneyMaster2MoneyPage,
 		urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
 		urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
 		urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage,
@@ -2534,10 +2529,10 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaFinishingInfrastrukturLink.style.visibility = 'hidden';
      pageNameJasaKonsFinishing.textContent = "";
 	
-     if (urlMappingJasaPasangVinylLantaiFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+     if (urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
 		// ✅ Generate Breadcrumb untuk Jasa Finishing Interior Modern Vinyl
 		generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingJasaPasangVinylLantaiFromMoneyPageMoneyPage1,
+        urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
         cleanUrlJasaKonsFinishing,
         [
             { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -2548,7 +2543,7 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html' },
            // { name: 'Jasa Finishing Interior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior.html' },
            // { name: 'Jasa Finishing Interior Modern', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html' },
-            { name: 'Jasa Pasang Vinyl Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-lantai.html' }
+            { name: 'Jasa Pasang Lantai Vinyl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai-vinyl.html' }
         ],
         'JASA_KONSTRUKSI'
     );
@@ -2570,27 +2565,7 @@ if (urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing])
         ],
         'JASA_KONSTRUKSI'
     );
-}
-if (urlMappingJasaPasangSPCFromMoneyMaster2MoneyPage[cleanUrlJasaKonsFinishing]) {
-		// ✅ Generate Breadcrumb untuk Jasa Finishing Interior Modern Vinyl
-		generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingJasaPasangSPCFromMoneyMaster2MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },,
-            { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html' },
-           // { name: 'Jasa Finishing Interior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior.html' },
-           // { name: 'Jasa Finishing Interior Modern', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html' },
-            { name: 'Jasa Pasang SPC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-spc.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-	
+}	
 	 if (urlMappingFinishingBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
