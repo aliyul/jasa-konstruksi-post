@@ -87,7 +87,7 @@ const urlMappingFinishingDindingFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-finishing-beton-ekspos-dinding.html": "Jasa Finishing Beton Ekspos Dinding",
     
     // Material Panel & Lembaran
-	 "https://www.betonjayareadymix.com/p/jasa-relief-dinding.html": "Jasa Relief Dinding",
+	 "https://www.betonjayareadymix.com/p/jasa-relief-dinding-3d.html": "Jasa Relief Dinding 3D",
 
     
 
