@@ -580,7 +580,7 @@ const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
     // 5. Area Outdoor & Lanskap
     "https://www.betonjayareadymix.com/p/jasa-pasang-decking.html": "Jasa Pasang Decking",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html": "Jasa Pasang Pagar",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-paving-block.html": "Jasa Pasang Paving Block",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-paving-block.html": "Jasa Pasang Paving",
     
     // 6. Utilitas & Teknologi
     "https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html": "Jasa Pasang Lampu",
@@ -590,10 +590,10 @@ const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
 // MP di bawah Jasa Pasang Lantai
 const urlMappingJasaPasangLantaiFromMoneyMaster1MoneyPage = {
 // Material khusus lantai
-	 "https://www.betonjayareadymix.com/p/jasa-pasang-spc-lantai.html": "Jasa Pasang SPC Lantai",
+	 "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-spc.html": "Jasa Pasang Lantai SPC",
    // "https://www.betonjayareadymix.com/p/jasa-pasang-spc.html": "Jasa Pasang SPC",
     //"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl.html": "Jasa Pasang Vinyl",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-lantai.html": "Jasa Pasang Vinyl Lantai",
+	"https://www.betonjayareadymix.com/p/jasa-pasang-lantai-vinyl.html": "Jasa Pasang Lantai Vinyl",
     "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-laminate.html": "Jasa Pasang Lantai Laminate",  // Perbaiki URL 404
     "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-hardwood.html": "Jasa Pasang Lantai Hardwood",  // Perbaiki URL 404
     "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-parket.html": "Jasa Pasang Lantai Parket"  // Perbaiki URL 404
