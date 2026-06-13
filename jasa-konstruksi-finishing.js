@@ -1,8 +1,7 @@
 
 
-const urlMappingJasaPasangVinylFromMoneyMaster2MoneyPage = {
+const urlMappingJasaPasangVinylLantaiFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-vinyl-per-meter.html": "Harga Jasa Pasang Vinyl Per Meter",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-lantai.html": "Jasa Pasang Vinyl Lantai",
 	"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-tangga.html": "Jasa Pasang Vinyl Tangga"
 };
 
@@ -61,9 +60,7 @@ const urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage = {
 // ✅ SEMUA URL SUDAH MP (MINIMAL 3 KATA)
 // ============================================================
 
-const urlMappingJasaPasangWalpaperFromMoneyMaster1MoneyPage = {
- "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding"
-};
+
 const urlMappingFinishingDindingFromMoneyMaster1MoneyPage = {
     // ============================================================
     // PARENT MM (DIKOMENTARKAN, TETAP DIPERTAHANKAN)
@@ -96,10 +93,7 @@ const urlMappingFinishingDindingFromMoneyMaster1MoneyPage = {
     // Material Panel & Lembaran
 	 "https://www.betonjayareadymix.com/p/jasa-relief-dinding.html": "Jasa Relief Dinding",
 
-    "https://www.betonjayareadymix.com/p/jasa-pasang-panel-dinding-3d.html": "Jasa Pasang Panel Dinding 3D",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-grc-dinding.html": "Jasa Pasang GRC Dinding",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-dinding.html": "Jasa Pasang HPL Dinding",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-dinding.html": "Jasa Pasang Batu Alam Dinding",
+    
 
     // ============================================================
     // TAMBAHAN MP MATERIAL FINISHING DINDING
@@ -115,10 +109,9 @@ const urlMappingFinishingDindingFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-finishing-pvc-dinding.html": "Jasa Finishing PVC Dinding",
 
     // Conwood (Kayu Komposit)
-    "https://www.betonjayareadymix.com/p/jasa-pasang-conwood-dinding.html": "Jasa Pasang Conwood Dinding",
 
     // Wall Moulding
-    "https://www.betonjayareadymix.com/p/jasa-pasang-wall-moulding.html": "Jasa Pasang Wall Moulding",
+
     "https://www.betonjayareadymix.com/p/jasa-finishing-wall-moulding.html": "Jasa Finishing Wall Moulding",
 
     // Finishing Dinding Berdasarkan Jenis Properti
@@ -1945,7 +1938,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingJasaPasangVinylFromMoneyMaster2MoneyPage,
+		urlMappingJasaPasangVinylLantaiFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangSPCFromMoneyMaster2MoneyPage,
 		urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
@@ -1962,7 +1955,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingFinishingCatInteriorFromMoneyPageMoneyPage1,
 		urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage,
 		urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
-		urlMappingJasaPasangWalpaperFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1,
@@ -2542,10 +2534,10 @@ document.addEventListener("DOMContentLoaded", function() {
      JasaFinishingInfrastrukturLink.style.visibility = 'hidden';
      pageNameJasaKonsFinishing.textContent = "";
 	
-     if (urlMappingJasaPasangVinylFromMoneyMaster2MoneyPage[cleanUrlJasaKonsFinishing]) {
+     if (urlMappingJasaPasangVinylLantaiFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
 		// ✅ Generate Breadcrumb untuk Jasa Finishing Interior Modern Vinyl
 		generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingJasaPasangVinylFromMoneyMaster2MoneyPage,
+        urlMappingJasaPasangVinylLantaiFromMoneyPageMoneyPage1,
         cleanUrlJasaKonsFinishing,
         [
             { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -2556,7 +2548,7 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html' },
            // { name: 'Jasa Finishing Interior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior.html' },
            // { name: 'Jasa Finishing Interior Modern', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html' },
-            { name: 'Jasa Pasang Vinyl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-vinyl.html' }
+            { name: 'Jasa Pasang Vinyl Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-lantai.html' }
         ],
         'JASA_KONSTRUKSI'
     );
@@ -2807,21 +2799,6 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
     );
     }
 	
-	if (urlMappingJasaPasangWalpaperFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingJasaPasangWalpaperFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-			{ name: 'Jasa Pasang Wallpaper', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper.html'}
-           // { name: 'Jasa Pasang Wallpaper Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
 	if (urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
@@ -2831,7 +2808,7 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-			{ name: 'Jasa Pasang Wallpaper', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper.html'},
+			{ name: 'Jasa Pasang Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-dinding.html'},
             { name: 'Jasa Pasang Wallpaper Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html'}
         ],
         'JASA_KONSTRUKSI'
