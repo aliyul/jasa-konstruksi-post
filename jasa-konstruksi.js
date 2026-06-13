@@ -620,11 +620,7 @@ const urlMappingJasaPasangDindingFromMoneyMaster1MoneyPage  = {
    // "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding"
 };
 
-// MP di bawah Jasa Pasang Plafon
-const urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage = {
-    "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-gypsum.html": "Jasa Pasang Plafon Gypsum"
-   // "https://www.betonjayareadymix.com/p/jasa-pasang-pvc_plafon.html": "Jasa Pasang PVC_Plafon"
-};
+
 
 // MP di bawah Jasa Pasang Furniture (Sudah 4 kata → MP)
 const urlMappingJasaPasangFurnitureFromMoneyMaster1MoneyPage  = {
@@ -2127,7 +2123,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangFromMoneyMasterMoneyMaster1,
 		urlMappingJasaPasangLantaiFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangDindingFromMoneyMaster1MoneyPage,
-		urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangFurnitureFromMoneyMaster1MoneyPage,
 		
         urlMappingInfrastrukturFromSub1MoneyMaster,
@@ -3889,22 +3884,7 @@ if (urlMappingJasaPasangDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
-if (urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
-        urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKons,
-        [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
-            { name: 'Jasa Pasang Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-dinding.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
 if (urlMappingJasaPasangFurnitureFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbJasaKonstruksi(
