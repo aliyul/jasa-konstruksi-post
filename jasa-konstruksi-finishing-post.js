@@ -647,7 +647,7 @@ const urlMappingJasaPasangWpcFromMoneyMaster1MoneyChild = {
 // ============================================================
 // 📁 JASA FINISHING INTERIOR MODERN - VINYL (MONEY CHILD)
 // ============================================================
-const urlMappingJasaPasangVinylFromMoneyMaster1MoneyChild = {
+const urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyChild = {
 	  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-terdekat.html": "Jasa Pasang Vinyl Terdekat",
    "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-lantai-karawang.html": "Jasa Pasang Vinyl Lantai Karawang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-vinyl-lantai-tangerang.html": "Jasa Pasang Vinyl Lantai Tangerang",  // TYPE: MONEY_CHILD
@@ -2100,7 +2100,7 @@ document.addEventListener("DOMContentLoaded", function() {
     urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage,
 	urlMappingJasaPasangPlafonFromMoneyPageMoneyChild,
     urlMappingJasaPasangWpcFromMoneyMaster1MoneyChild,
-    urlMappingJasaPasangVinylFromMoneyMaster1MoneyChild,
+    urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyChild,
 	urlMappingHargaJasaPasangVinylPerMeterFromMoneyPage1MoneyPage2,
 	urlMappingJasaPasangVinylLantaiFromMoneyPage1MoneyChild,
 	   urlMappingJasaPasangPVCDindingFromMoneyPageMoneyPage1,
@@ -3092,10 +3092,10 @@ if (urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishing
     );
 }
 	
-    if (urlMappingJasaPasangVinylFromMoneyMaster1MoneyChild[cleanUrlJasaKonsFinishingPost]) {
+    if (urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
 		// ✅ Generate Breadcrumb untuk Jasa Finishing Interior Modern Vinyl
 		generateBreadcrumbjasaKonstruksiFinishingPost(
-        urlMappingJasaPasangVinylFromMoneyMaster1MoneyChild,
+        urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyChild,
         cleanUrlJasaKonsFinishingPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -3103,7 +3103,7 @@ if (urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishing
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
             { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
             { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html' },
-            { name: 'Jasa Pasang Vinyl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-vinyl.html' }
+            { name: 'Jasa Pasang Lantai Vinyl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai-vinyl.html' }
         ],
         'JASA'
     );
@@ -3119,7 +3119,8 @@ if (urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishing
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
             { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
-            { name: 'Jasa Pasang Vinyl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-vinyl.html' },
+            { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html' },
+            { name: 'Jasa Pasang Lantai Vinyl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai-vinyl.html' },
             { name: 'Harga Jasa Pasang Vinyl Per Meter', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-vinyl-per-meter.html' }
         ],
         'JASA'
