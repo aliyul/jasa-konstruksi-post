@@ -537,8 +537,8 @@ const urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyMaster2 = {
 "https://www.betonjayareadymix.com/p/jasa-pembuatan-sekolah.html": "Jasa Pembuatan Sekolah",
 "https://www.betonjayareadymix.com/p/jasa-pembuatan-rs.html": "Jasa Pembuatan Rumah Sakit",
 "https://www.betonjayareadymix.com/p/jasa-pembuatan-masjid.html": "Jasa Pembuatan Masjid",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-ruko.html": "Jasa Pembuatan Ruko 2 Lantai",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang.html": "Jasa Pembuatan Gudang Logistik"
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-ruko.html": "Jasa Pembuatan Ruko",
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang.html": "Jasa Pembuatan Gudang"
 
 };
 const urlMappingJasaPembuatanRumahFromMoneyMaster2MoneyMaster3 = {
