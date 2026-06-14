@@ -515,13 +515,12 @@ const urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1 = {
     // 📌 MONEY-MASTER (LEVEL 4) - JASA PEMBUATAN (HANYA KATEGORI UTAMA)
     // ================================================================
 	
-	 "https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html": "Jasa Pembuatan Rumah",
+	// "https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html": "Jasa Pembuatan Rumah",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html": "Jasa Pembuatan Furniture",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar.html": "Jasa Pembuatan Pagar",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-kanopi.html": "Jasa Pembuatan Kanopi",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-tangga.html": "Jasa Pembuatan Tangga",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-gazebo.html": "Jasa Pembuatan Gazebo",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-teras.html": "Jasa Pembuatan Teras",
+
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-balkon.html": "Jasa Pembuatan Balkon",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-decking.html": "Jasa Pembuatan Decking",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",
@@ -531,6 +530,10 @@ const urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1 = {
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-jendela.html": "Jasa Pembuatan Jendela"
 };
 
+const urlMappingJasaPembuatanRumahFromMoneyMaster1MoneyPage = {
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-gazebo-rumah.html": "Jasa Pembuatan Gazebo Rumah",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-teras-rumah.html": "Jasa Pembuatan Teras Rumah",
+};
 // ================================================================
 // 📌 MONEY-PAGE (LEVEL 5) - HANYA UNTUK JENIS FURNITURE SPESIFIK
 // ================================================================
