@@ -35,7 +35,7 @@ const urlMappingFinishingBangunanFromMoneyMaster1MoneyPage = {
 // 🧠 Parent: Jasa Finishing Furniture (L4)
 // ============================================================
 
-const urlMappingHargaJasaPembuatanFurnitureFromMoneyMaster1MoneyPage = {
+const urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1 = {
 	 //   "https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html": "Jasa Pembuatan Furniture",
 	// "https://www.betonjayareadymix.com/p/jasa-pasang-furniture.html": "Jasa Pasang Furniture",
    // "https://www.betonjayareadymix.com/p/jasa-custom-furniture.html": "Jasa Custom Furniture",
@@ -1949,7 +1949,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingFinishingCatFromMoneyMaster1MoneyPage,
 		urlMappingFinishingCatInteriorFromMoneyPageMoneyPage1,
-		urlMappingHargaJasaPembuatanFurnitureFromMoneyMaster1MoneyPage,
+		urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1,
 		urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1,
@@ -2744,9 +2744,9 @@ if (urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing])
     );
     }
 	
-  if (urlMappingHargaJasaPembuatanFurnitureFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+  if (urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingHargaJasaPembuatanFurnitureFromMoneyMaster1MoneyPage,
+        urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1,
         cleanUrlJasaKonsFinishing,
         [
  { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
