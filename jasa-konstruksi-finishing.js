@@ -35,14 +35,14 @@ const urlMappingFinishingBangunanFromMoneyMaster1MoneyPage = {
 // 🧠 Parent: Jasa Finishing Furniture (L4)
 // ============================================================
 
-const urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage = {
+const urlMappingHargaJasaPembuatanFurnitureFromMoneyMaster1MoneyPage = {
 	 //   "https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html": "Jasa Pembuatan Furniture",
 	// "https://www.betonjayareadymix.com/p/jasa-pasang-furniture.html": "Jasa Pasang Furniture",
    // "https://www.betonjayareadymix.com/p/jasa-custom-furniture.html": "Jasa Custom Furniture",
 	//  "https://www.betonjayareadymix.com/p/jasa-furniture-interior.html": "Jasa Furniture & Interior"
 
-"https://www.betonjayareadymix.com/p/harga-custom-furniture-per-meter.html": "Harga Custom Furniture Per Meter",
-"https://www.betonjayareadymix.com/p/jasa-furniture-interior-exterior.html": "Jasa Furniture Interior Exterior"
+"https://www.betonjayareadymix.com/p/harga-custom-furniture-per-meter.html": "Harga Custom Furniture Per Meter"
+//"https://www.betonjayareadymix.com/p/jasa-furniture-interior-exterior.html": "Jasa Furniture Interior Exterior"
 };
 
 // ============================================================
@@ -1949,7 +1949,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingFinishingCatFromMoneyMaster1MoneyPage,
 		urlMappingFinishingCatInteriorFromMoneyPageMoneyPage1,
-		urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage,
+		urlMappingHargaJasaPembuatanFurnitureFromMoneyMaster1MoneyPage,
 		urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1,
@@ -2744,17 +2744,17 @@ if (urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing])
     );
     }
 	
-  if (urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+  if (urlMappingHargaJasaPembuatanFurnitureFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingFinishingFurnitureFromMoneyMaster1MoneyPage,
+        urlMappingHargaJasaPembuatanFurnitureFromMoneyMaster1MoneyPage,
         cleanUrlJasaKonsFinishing,
         [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			  { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-            { name: 'Jasa Finishing Furniture', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-furniture.html'}
+ { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan Furniture', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html'},
+            { name: 'Harga Jasa Pembuatan Furniture', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-furniture.html'}
         ],
         'JASA_KONSTRUKSI'
     );
