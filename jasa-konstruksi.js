@@ -764,9 +764,6 @@ const urlMappingPerbaikanBangunanFromMoneyMasterMoneyPage = {
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE (bukan MONEY_MASTER)
 // ============================================================
 
-const urlMappingPengeboranFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/jasa-pengeboran.html": "Jasa Pengeboran" // TYPE: MONEY MASTER
-};
 
 const urlMappingPengeboranFromMoneyMasterMoneyMaster1 = {
   // [MONEY_PAGE] - JENIS PENGEBORAN SPESIFIK (JASA)
@@ -2155,7 +2152,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingUjiTanahFromMoneyMasterMoneyMaster1,
 		urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1,
-		urlMappingPengeboranFromSub1MoneyMaster,
+	
 		urlMappingPengeboranFromMoneyMasterMoneyMaster1,
 		
 		urlMappingJasaPembatasPengamanFromMoneyMasterMoneyPage,
@@ -3419,7 +3416,6 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         urlMappingJasaPengeboranFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' }
@@ -3968,22 +3964,6 @@ if (urlMappingInfrastrukturFromSub1MoneyMaster[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html'},
             { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-	
-if (urlMappingPengeboranFromSub1MoneyMaster[cleanUrlJasaKons]) {
-	
-	generateBreadcrumbJasaKonstruksi(
-        urlMappingPengeboranFromSub1MoneyMaster,
-        cleanUrlJasaKons,
-        [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
-            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'}
-            //{ name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'}
         ],
         'JASA_KONSTRUKSI'
     );
