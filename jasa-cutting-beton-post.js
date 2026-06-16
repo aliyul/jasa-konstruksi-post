@@ -12,7 +12,7 @@ const urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage = {
   // 🧠 INTENT: Informational + Commercial Investigation
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Cutting Beton > Jasa Pemotongan Jalan Beton (4 level)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/jasa-pemotongan-jalan-beton.html": "Jasa Pemotongan Jalan Beton",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2019/06/jasa-pemotongan-jalan-beton.html": "Jasa Pemotongan Jalan Beton", 
   
   // ============================================================
   // [MONEY_MASTER] - MASTER HARGA (TRANSACTIONAL)
@@ -20,7 +20,11 @@ const urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage = {
   // 🧠 INTENT: Transactional (user mencari harga nasional/general)
   // Breadcrumb: Home > Jasa Konstruksi > Harga Jasa Cutting Beton (3 level - skip "Jasa Cutting Beton")
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton.html": "Harga Jasa Cutting Beton"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton.html": "Harga Jasa Cutting Beton", 
+  "https://www.betonjayareadymix.com/2019/06/jasa-cutting-beton-lantai.html": "Jasa Cutting Beton Lantai",
+"https://www.betonjayareadymix.com/2019/06/jasa-cutting-beton-dinding.html": "Jasa Cutting Beton Dinding",
+"https://www.betonjayareadymix.com/2019/06/jasa-cutting-beton-jalan.html": "Jasa Cutting Beton Jalan",
+"https://www.betonjayareadymix.com/2019/06/jasa-cutting-beton-bertulang.html": "Jasa Cutting Beton Bertulang"
 
 };
 const urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyPage1 = {
@@ -30,7 +34,8 @@ const urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyPage1 = {
   // 🧠 INTENT: Transactional (spesifik layanan expansion joint)
   // Breadcrumb: Home > Jasa Konstruksi > Harga Jasa Cutting Expansion Joint Beton (3 level)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-expansion-joint.html": "Harga Jasa Cutting Expansion Joint Beton"  
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-expansion-joint.html": "Harga Jasa Cutting Expansion Joint Beton",
+	"https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton-per-meter.html": "Harga Jasa Cutting Beton Per Meter"
 };
 const urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyChild = {
   
