@@ -284,39 +284,26 @@ const urlMappingJasaPemasanganKanstinJalanFromMoneyPage1MoneyPage2 = {
 */
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v9.0 FINAL
- * UNIVERSAL ENTITY HIERARCHY ENGINE - ALL PARENTS AT HIGHEST LEVEL
+ * generateBreadcrumbJasaKonstruksi v9.1
+ * UNIVERSAL ENTITY HIERARCHY ENGINE - FIXED URL CLEANING
  * ============================================================
+ *
+ * ✅ UPDATE v9.1
+ * ------------------------------------------------------------
+ * - FIX: getCleanPageNameFromUrl() sekarang menangani /2021/04/ dan /p/ dengan benar
+ * - FIX: Menghapus semua pola tanggal (YYYY/MM/DD, YYYY/MM, YYYY)
+ * - FIX: Menghapus semua /p/ prefix dengan benar
+ * - FIX: Fallback ke 2 bagian terakhir path jika hasil terlalu pendek
+ * - ENHANCED: Logging detail untuk debugging URL cleaning
  *
  * ✅ UPDATE v9.0
  * ------------------------------------------------------------
  * - FIX: Sekarang mengambil SEMUA parent dengan level tertinggi
  * - FIX: Tidak skip parent MP terdekat jika ada multiple parent
  * - FIX: Fallback parent jika tidak ada parent terdeteksi
- * - ENHANCED: Parent injection untuk semua parent di level tertinggi
- * - ENHANCED: Logging lebih detail untuk debugging parent selection
- *
- * ✅ UPDATE v8.9
- * ------------------------------------------------------------
- * - UPDATED: Daftar lokasi money child diperluas (40+ kota/kabupaten)
- * - UPDATED: Variant detection per entity type
- * - PRODUK/MATERIAL: spesifikasi, mutu, ukuran, dimensi, grade, type, tipe
- * - JASA: standar pelayanan, metode kerja, SOP, prosedur, durasi, garansi
- * - SEWA: spesifikasi alat, kapasitas alat, spek alat
- * - FIX: K225/K250/K300 tetap MP (bukan variant)
- * - FIX: "terdekat" tetap sebagai money child
- *
- * ✅ UPDATE v8.8
- * ------------------------------------------------------------
- * - FIX: Parent dengan type YANG SAMA (MM→MM, MP→MP) TIDAK SKIP
- * - FIX: findNearestParentsByHierarchy() sekarang mengambil SEMUA parent
- * - FIX: Tidak ada filter level yang membatasi parent dengan level sama
- * - FIX: Current page tetap tidak ikut terpilih sebagai parent
- * - ENHANCED: Prioritas parent berdasarkan level tertinggi
- * - ENHANCED: Logging lebih detail untuk debugging
  *
  * ============================================================
- * @version 9.0.0
+ * @version 9.1.0
  * @date 2026-06-16
  * ============================================================
  */
@@ -344,8 +331,8 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
 
     function log(message, type = 'INFO') {
         if (!CONFIG.DEBUG && type === 'INFO') return;
-        const icons = { INFO: '📘', SUCCESS: '✅', WARN: '⚠️', ERROR: '❌', DEBUG: '🔍', VARIANT: '🔬', PARENT: '👪' };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v9.0] ${message}`);
+        const icons = { INFO: '📘', SUCCESS: '✅', WARN: '⚠️', ERROR: '❌', DEBUG: '🔍', VARIANT: '🔬', PARENT: '👪', URL: '🔗' };
+        console.log(`${icons[type] || '📘'} [Breadcrumb v9.1] ${message}`);
     }
 
     // ============================================================
@@ -445,27 +432,84 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
     }
 
     // ============================================================
-    // 9. CLEAN PAGE NAME FROM URL
+    // 9. CLEAN PAGE NAME FROM URL (FIXED v9.1)
     // ============================================================
 
     function getCleanPageNameFromUrl(url) {
         if (!url) return '';
 
         let path = url;
+        
+        // Hapus protokol dan domain
         path = path.replace(/^https?:\/\/[^\/]+/i, '');
+        
+        // Hapus query string
         path = path.split('?')[0];
+        
+        // Hapus ekstensi file
         path = path.replace(/\.(html|php|asp|jsp)$/i, '');
-        path = path.replace(/^\/p\//, '');
+        
+        // ============================================================
+        // ✅ FIX v9.1: Hapus pola tanggal dengan lebih baik
+        // ============================================================
+        
+        // Hapus pola: /2021/04/05/ atau /2021/04/
         path = path.replace(/\/\d{4}\/\d{2}\/\d{2}\//g, '/');
         path = path.replace(/\/\d{4}\/\d{2}\//g, '/');
         path = path.replace(/\/\d{4}\//g, '/');
-
+        
+        // ============================================================
+        // ✅ FIX v9.1: Hapus /p/ prefix dengan benar
+        // ============================================================
+        
+        // Hapus /p/ dari awal path
+        path = path.replace(/^\/p\//, '/');
+        
+        // Hapus /p/ di tengah path (jika ada)
+        path = path.replace(/\/p\//g, '/');
+        
+        // ============================================================
+        // ✅ FIX v9.1: Ambil bagian terakhir dari path
+        // ============================================================
+        
+        // Split path menjadi bagian-bagian
         const parts = path.split('/').filter(Boolean);
+        
+        // Ambil bagian terakhir (halaman saat ini)
         let last = parts.pop() || '';
+        
+        // Jika bagian terakhir kosong, ambil bagian sebelumnya
+        if (!last && parts.length > 0) {
+            last = parts.pop() || '';
+        }
+        
+        // Convert dash ke spasi
         last = last.replace(/-/g, ' ');
+        
+        // Hapus karakter non-alfanumerik (kecuali spasi)
         last = last.replace(/[^a-z0-9\s]/gi, '');
-
-        return cleanText(last.toLowerCase());
+        
+        // ============================================================
+        // ✅ FIX v9.1: Tambahkan parent context jika diperlukan
+        // ============================================================
+        
+        // Jika hasilnya terlalu pendek atau generik, coba ambil dari path
+        if (last.length < 3 && parts.length > 0) {
+            // Ambil 2 bagian terakhir dari path
+            const lastTwo = parts.slice(-2).join(' ');
+            if (lastTwo.length > last.length) {
+                last = lastTwo;
+            }
+        }
+        
+        // ============================================================
+        // ✅ FIX v9.1: Logging untuk debugging
+        // ============================================================
+        
+        const cleanResult = cleanText(last.toLowerCase());
+        log(`Cleaned URL: "${url}" → "${cleanResult}"`, 'URL');
+        
+        return cleanResult;
     }
 
     // ============================================================
@@ -587,7 +631,7 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
     }
 
     // ============================================================
-    // 12. LOCATION DETECTION (UPDATED - DAFTAR LENGKAP)
+    // 12. LOCATION DETECTION
     // ============================================================
 
     const LOCATION_WHITELIST = new Set([
@@ -1107,7 +1151,7 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
     log('Unique hierarchy items (' + uniqueHierarchy.length + '): ' + uniqueHierarchy.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
 
     // ========================================================
-    // FIND NEAREST PARENTS (FIXED v8.8 - SEMUA PARENT)
+    // FIND NEAREST PARENTS
     // ========================================================
     
     function findNearestParentsByHierarchy() {
@@ -1116,8 +1160,6 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
         
         log(`Current level: ${currentLevel}`, 'DEBUG');
         
-        // ✅ FIX: Ambil SEMUA candidate dengan level <= currentLevel
-        // (termasuk level yang sama)
         const candidates = uniqueHierarchy.filter(item => item.level <= currentLevel);
         
         log('Candidates (level <= current): ' + candidates.map(i => i.level + ':' + i.name).join(', '), 'DEBUG');
@@ -1137,10 +1179,8 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
             }
         }
         
-        // Urutkan ascending untuk hierarki yang benar
         const sortedLineage = prioritized.sort((a, b) => a.level - b.level);
         
-        // ✅ FIX: Langsung tambahkan SEMUA, tanpa filter level
         for (const item of sortedLineage) {
             if (!lineage.some(l => l.name === item.name)) {
                 lineage.push(item);
@@ -1205,8 +1245,7 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
         // Cari level tertinggi dari parent (bukan current page)
         const highestLevel = Math.max(...parentOnly.map(i => i.level));
         
-        // ✅ FIX v9.0: Ambil SEMUA parent dengan level tertinggi
-        // (termasuk MP terdekat, tidak skip)
+        // Ambil SEMUA parent dengan level tertinggi
         finalParents = parentOnly.filter(item => item.level === highestLevel);
         
         // Urutkan berdasarkan posisi
@@ -1217,9 +1256,8 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
         log('⚠️ No parent found (only current page)', 'WARN');
     }
 
-    // ✅ FIX v9.0: FALLBACK - Jika masih tidak ada parent, ambil dari lineage terdekat
+    // FALLBACK - Jika masih tidak ada parent
     if (finalParents.length === 0 && validatedLineage.length > 1) {
-        // Ambil parent terdekat (level tertinggi setelah current)
         const filtered = validatedLineage.filter(item => 
             item.name.toLowerCase() !== currentPageTitle.toLowerCase()
         );
@@ -1230,9 +1268,8 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
         }
     }
 
-    // ✅ FIX v9.0: Inject ALL parents (bukan hanya 1)
+    // Inject ALL parents
     for (const item of finalParents) {
-        // Cek apakah parent sudah ada di selectedLevels
         const exists = selectedLevels.some(l => l.name.toLowerCase() === item.name.toLowerCase());
         if (!exists) {
             selectedLevels.push(item);
@@ -1359,8 +1396,9 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
     // 34. LOG SUMMARY
     // ============================================================
 
-    console.log('📊 BREADCRUMB GENERATION SUMMARY (v9.0):');
+    console.log('📊 BREADCRUMB GENERATION SUMMARY (v9.1):');
     console.log(`   Page: "${currentPageTitle}"`);
+    console.log(`   URL: "${currentFullUrl}"`);
     console.log(`   Type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`);
     console.log(`   Entity: ${entityType}`);
     if (currentPageType === 'variant') {
@@ -1382,15 +1420,13 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '9.0.0',
+        version: '9.1.0',
         parentCount: finalParents.length,
         parents: finalParents,
         isVariant: currentPageType === 'variant',
         isMoneyChild: currentPageType === 'money-child'
     };
 }
-
-
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPembatasKonsPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
