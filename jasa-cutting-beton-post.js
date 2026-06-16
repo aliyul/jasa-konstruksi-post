@@ -132,12 +132,13 @@ const urlMappingJasaCptTanahFromMoneyMaster1MoneyPage = {
   // [MONEY_CHILD] - CPT PER JENIS PROYEK
   // 🟡 PRIORITAS MEDIUM - DISARANKAN DIBUAT
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-gedung-bertingkat.html": "Jasa CPT Gedung Bertingkat",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-perumahan.html": "Jasa CPT Perumahan",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-jalan-tol.html": "Jasa CPT Jalan Tol",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-infrastruktur.html": "Jasa CPT Infrastruktur",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-jembatan.html": "Jasa CPT Jembatan",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-bandara.html": "Jasa CPT Bandara",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-gedung-bertingkat.html": "Jasa CPT Gedung Bertingkat",  
+ // Nama diubah menjadi 3 kata setelah "Jasa" (total 4 kata) agar menjadi MP
+    "https://www.betonjayareadymix.com/2019/09/jasa-cpt-perumahan-baru.html": "Jasa CPT Perumahan Baru",  // + Baru
+    "https://www.betonjayareadymix.com/2019/09/jasa-cpt-jalan-tol-baru.html": "Jasa CPT Jalan Tol Baru",  // + Baru
+    "https://www.betonjayareadymix.com/2019/09/jasa-cpt-infrastruktur-kritis.html": "Jasa CPT Infrastruktur Kritis",  // + Kritis
+    "https://www.betonjayareadymix.com/2019/09/jasa-cpt-jembatan-beton.html": "Jasa CPT Jembatan Beton",  // + Beton
+    "https://www.betonjayareadymix.com/2019/09/jasa-cpt-bandara-internasional.html": "Jasa CPT Bandara Internasional"  // + 
   
   // ============================================================
   // [MONEY_CHILD] - CPT PER LOKASI
@@ -169,11 +170,11 @@ const urlMappingJasaBoringTanahFromMoneyMaster1MoneyPage = {
   // [MONEY_CHILD] - BORING TANAH PER JENIS PROYEK
   // 🟡 PRIORITAS MEDIUM - DISARANKAN DIBUAT
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-rumah-tinggal.html": "Jasa Boring Tanah Rumah Tinggal",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-gedung.html": "Jasa Boring Tanah Gedung",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-jembatan.html": "Jasa Boring Tanah Jembatan",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-jalan-tol.html": "Jasa Boring Tanah Jalan Tol",  // TYPE: MONEY_CHILD
-  // "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-perumahan.html": "Jasa Boring Tanah Perumahan",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-rumah-tinggal.html": "Jasa Boring Tanah Rumah Tinggal", 
+  "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-gedung.html": "Jasa Boring Tanah Gedung", 
+  "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-jembatan.html": "Jasa Boring Tanah Jembatan",  
+  "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-jalan-tol.html": "Jasa Boring Tanah Jalan Tol",  
+   "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-perumahan.html": "Jasa Boring Tanah Perumahan" 
   
   // ============================================================
   // [SUB1] - PANDUAN BORING TANAH
