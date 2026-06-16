@@ -58,10 +58,10 @@ const urlMappingJasaBongkarTowerFromMoneyMaster1MoneyPage = {
 const urlMappingJasaBongkarRumahFromMoneyMaster1MoneyPage = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/p/jasa-bongkar-rumah.html": "Jasa Bongkar Rumah",  // TYPE: SUB2
-  // "https://www.betonjayareadymix.com/2019/08/harga-bongkar-rumah-tinggal.html": "Harga Bongkar Rumah Tinggal",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2019/08/jasa-bongkar-rumah-2-lantai.html": "Jasa Bongkar Rumah 2 Lantai",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2019/08/jasa-bongkar-rumah-permanen.html": "Jasa Bongkar Rumah Permanen",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2019/08/jasa-bongkar-rumah-semi-permanen.html": "Jasa Bongkar Rumah Semi Permanen",  // TYPE: MONEY_PAGE
+   "https://www.betonjayareadymix.com/2018/09/harga-jasa-bongkar-rumah.html": "Harga Jasa Bongkar Rumah",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2019/08/jasa-bongkar-rumah-2-lantai.html": "Jasa Bongkar Rumah 2 Lantai",  // TYPE: MONEY_PAGE
+   "https://www.betonjayareadymix.com/2019/08/jasa-bongkar-rumah-permanen.html": "Jasa Bongkar Rumah Permanen",  // TYPE: MONEY_PAGE
+   "https://www.betonjayareadymix.com/2019/08/jasa-bongkar-rumah-semi-permanen.html": "Jasa Bongkar Rumah Semi Permanen",  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
