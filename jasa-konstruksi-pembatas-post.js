@@ -255,7 +255,7 @@ const urlMappingJasaPemasanganKanstinJalanFromMoneyPage1MoneyPage2 = {
   // ============================================================
   // [MONEY_MASTER] - PEMASANGAN KANSTIN JALAN
   // ============================================================
-  "https://www.betonjayareadymix.com/2021/08/pemasangan-kanstin-jalan.html": "Pemasangan Kanstin Jalan",  // TYPE: MONEY_MASTER
+ // "https://www.betonjayareadymix.com/2021/08/pemasangan-kanstin-jalan.html": "Pemasangan Kanstin Jalan",  // TYPE: MONEY_MASTER
 
   // ============================================================
   // [SUB1] - PANDUAN / BRIDGE (CARA PASANG, METODE, ANALISA)
@@ -266,7 +266,7 @@ const urlMappingJasaPemasanganKanstinJalanFromMoneyPage1MoneyPage2 = {
   "https://www.betonjayareadymix.com/2021/08/cara-pasang-kanstin-trotoar.html": "Cara Pasang Kanstin Trotoar",  // TYPE: SUB1
   "https://www.betonjayareadymix.com/2021/04/metode-pemasangan-kanstin.html": "Metode Pemasangan Kanstin",  // TYPE: SUB1
   "https://www.betonjayareadymix.com/2021/04/analisa-pemasangan-kanstin.html": "Analisa Pemasangan Kanstin",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/2021/04/analisa-pekerjaan-kanstin-beton.html": "Analisa Pekerjaan Kanstin Beton",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2021/04/analisa-pekerjaan-kanstin-beton.html": "Analisa Pekerjaan Kanstin Beton"  // TYPE: SUB1
 };
 
 // ============================================================
