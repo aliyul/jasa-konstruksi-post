@@ -284,13 +284,21 @@ const urlMappingJasaPemasanganKanstinJalanFromMoneyPage1MoneyPage2 = {
 */
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v8.9 FINAL
- * UNIVERSAL ENTITY HIERARCHY ENGINE - FIXED SAME LEVEL PARENT
+ * generateBreadcrumbJasaKonstruksi v9.0 FINAL
+ * UNIVERSAL ENTITY HIERARCHY ENGINE - ALL PARENTS AT HIGHEST LEVEL
  * ============================================================
+ *
+ * ✅ UPDATE v9.0
+ * ------------------------------------------------------------
+ * - FIX: Sekarang mengambil SEMUA parent dengan level tertinggi
+ * - FIX: Tidak skip parent MP terdekat jika ada multiple parent
+ * - FIX: Fallback parent jika tidak ada parent terdeteksi
+ * - ENHANCED: Parent injection untuk semua parent di level tertinggi
+ * - ENHANCED: Logging lebih detail untuk debugging parent selection
  *
  * ✅ UPDATE v8.9
  * ------------------------------------------------------------
- * - UPDATED: Daftar lokasi money child diperluas (15+ kota/kabupaten)
+ * - UPDATED: Daftar lokasi money child diperluas (40+ kota/kabupaten)
  * - UPDATED: Variant detection per entity type
  * - PRODUK/MATERIAL: spesifikasi, mutu, ukuran, dimensi, grade, type, tipe
  * - JASA: standar pelayanan, metode kerja, SOP, prosedur, durasi, garansi
@@ -305,11 +313,11 @@ const urlMappingJasaPemasanganKanstinJalanFromMoneyPage1MoneyPage2 = {
  * - FIX: Tidak ada filter level yang membatasi parent dengan level sama
  * - FIX: Current page tetap tidak ikut terpilih sebagai parent
  * - ENHANCED: Prioritas parent berdasarkan level tertinggi
- * - ENHHCED: Logging lebih detail untuk debugging
+ * - ENHANCED: Logging lebih detail untuk debugging
  *
  * ============================================================
- * @version 8.9.0
- * @date 2026-05-31
+ * @version 9.0.0
+ * @date 2026-06-16
  * ============================================================
  */
 
@@ -336,8 +344,8 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
 
     function log(message, type = 'INFO') {
         if (!CONFIG.DEBUG && type === 'INFO') return;
-        const icons = { INFO: '📘', SUCCESS: '✅', WARN: '⚠️', ERROR: '❌', DEBUG: '🔍', VARIANT: '🔬' };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v8.9] ${message}`);
+        const icons = { INFO: '📘', SUCCESS: '✅', WARN: '⚠️', ERROR: '❌', DEBUG: '🔍', VARIANT: '🔬', PARENT: '👪' };
+        console.log(`${icons[type] || '📘'} [Breadcrumb v9.0] ${message}`);
     }
 
     // ============================================================
@@ -489,7 +497,7 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
     ];
 
     // ============================================================
-    // 11a. VARIANT KEYWORDS PER ENTITY (UPDATED v8.9)
+    // 11a. VARIANT KEYWORDS PER ENTITY
     // ============================================================
     
     // Variant keywords untuk PRODUK & MATERIAL
@@ -526,7 +534,7 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
     ];
 
     // ============================================================
-    // 11b. VARIANT DETECTION PER ENTITY (UPDATED v8.9)
+    // 11b. VARIANT DETECTION PER ENTITY
     // ============================================================
     
     function isVariantPage(pageName, currentEntityType) {
@@ -579,7 +587,7 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
     }
 
     // ============================================================
-    // 12. LOCATION DETECTION (UPDATED v8.9 - DAFTAR LENGKAP)
+    // 12. LOCATION DETECTION (UPDATED - DAFTAR LENGKAP)
     // ============================================================
 
     const LOCATION_WHITELIST = new Set([
@@ -685,7 +693,7 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
         /\b(jasa|kontraktor|tukang|borongan|renovasi|pasang|bangun|perbaikan|instalasi|proyek|cor|gali|urug|angkut)\b/i;
 
     // ============================================================
-    // 17. PAGE TYPE DETECTION (UPDATED v8.9)
+    // 17. PAGE TYPE DETECTION
     // ============================================================
 
     function detectPageType(pageName, isHome = false) {
@@ -695,7 +703,7 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
         if (isEntityPillarExactMatch(lowerName)) return 'pillar';
         if (isSubVariant(lowerName)) return 'sub-variant';
 
-        // ✅ UPDATED v8.9: Variant detection per entity
+        // Variant detection per entity
         if (isVariantPage(lowerName, entityType)) {
             return 'variant';
         }
@@ -908,13 +916,13 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
             !modifiedLineage.some(l => l.name === item.name)
         );
         
-        // Tambahkan semua parent yang relevan (biarkan MAX_LEVEL nanti yang memfilter)
+        // Tambahkan semua parent yang relevan
         for (const parent of allPotentialParents) {
             log(`FORCE PARENT: "${parent.name}" (level ${parent.level}) → "${currentPageTitle}"`, 'SUCCESS');
             modifiedLineage.push(parent);
         }
 
-        // STRATEGI 3: Semantic similarity (opsional - bisa dihapus)
+        // STRATEGI 3: Semantic similarity
         if (modifiedLineage.length === lineageLevels.length) {
             const semanticKeywords = {
                 'finishing': ['finishing', 'cat', 'epoxy', 'lampu', 'wallpaper'],
@@ -1108,7 +1116,7 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
         
         log(`Current level: ${currentLevel}`, 'DEBUG');
         
-        // ✅ FIX v8.8: Ambil SEMUA candidate dengan level <= currentLevel
+        // ✅ FIX: Ambil SEMUA candidate dengan level <= currentLevel
         // (termasuk level yang sama)
         const candidates = uniqueHierarchy.filter(item => item.level <= currentLevel);
         
@@ -1132,7 +1140,7 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
         // Urutkan ascending untuk hierarki yang benar
         const sortedLineage = prioritized.sort((a, b) => a.level - b.level);
         
-        // ✅ FIX v8.8: Langsung tambahkan SEMUA, tanpa filter level
+        // ✅ FIX: Langsung tambahkan SEMUA, tanpa filter level
         for (const item of sortedLineage) {
             if (!lineage.some(l => l.name === item.name)) {
                 lineage.push(item);
@@ -1181,7 +1189,7 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
     });
 
     // ========================================================
-    // SOLUSI v8.8: HANYA PARENT (BUKAN CURRENT PAGE)
+    // SOLUSI v9.0: AMBIL SEMUA PARENT DENGAN LEVEL TERTINGGI
     // ========================================================
     
     let finalParents = [];
@@ -1191,24 +1199,45 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
         item.name.toLowerCase() !== currentPageTitle.toLowerCase()
     );
 
+    log(`Parent candidates (${parentOnly.length}): ` + parentOnly.map(i => i.name + '(' + i.level + ')').join(', '), 'DEBUG');
+
     if (parentOnly.length > 0) {
         // Cari level tertinggi dari parent (bukan current page)
         const highestLevel = Math.max(...parentOnly.map(i => i.level));
         
-        // Ambil hanya parent dengan level tertinggi
+        // ✅ FIX v9.0: Ambil SEMUA parent dengan level tertinggi
+        // (termasuk MP terdekat, tidak skip)
         finalParents = parentOnly.filter(item => item.level === highestLevel);
         
         // Urutkan berdasarkan posisi
         finalParents.sort((a, b) => a.position - b.position);
         
-        log('Nearest parent(s) level ' + highestLevel + ': ' + finalParents.map(i => i.name).join(', '), 'SUCCESS');
+        log(`✅ PARENT FOUND: ${finalParents.length} parent(s) at level ${highestLevel}: ` + finalParents.map(i => i.name).join(', '), 'SUCCESS');
     } else {
-        log('No parent found (only current page)', 'WARN');
+        log('⚠️ No parent found (only current page)', 'WARN');
     }
 
-    // INSERT PARENTS (hanya parent terdekat)
+    // ✅ FIX v9.0: FALLBACK - Jika masih tidak ada parent, ambil dari lineage terdekat
+    if (finalParents.length === 0 && validatedLineage.length > 1) {
+        // Ambil parent terdekat (level tertinggi setelah current)
+        const filtered = validatedLineage.filter(item => 
+            item.name.toLowerCase() !== currentPageTitle.toLowerCase()
+        );
+        if (filtered.length > 0) {
+            const highestLevel = Math.max(...filtered.map(i => i.level));
+            finalParents = filtered.filter(item => item.level === highestLevel);
+            log(`⚠️ FALLBACK PARENT: Using ${finalParents.length} nearest parent(s) at level ${highestLevel}`, 'WARN');
+        }
+    }
+
+    // ✅ FIX v9.0: Inject ALL parents (bukan hanya 1)
     for (const item of finalParents) {
-        selectedLevels.push(item);
+        // Cek apakah parent sudah ada di selectedLevels
+        const exists = selectedLevels.some(l => l.name.toLowerCase() === item.name.toLowerCase());
+        if (!exists) {
+            selectedLevels.push(item);
+            log(`👪 Adding parent: "${item.name}" (level ${item.level})`, 'PARENT');
+        }
     }
 
     // ADD CURRENT PAGE
@@ -1244,7 +1273,7 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
         item.position = index + 1;
     });
 
-    log('Final breadcrumb (' + uniqueLevels.length + ' levels): ' + uniqueLevels.map(i => i.name).join(' › '), 'SUCCESS');
+    log('Final breadcrumb (' + uniqueLevels.length + ' levels): ' + uniqueLevels.map(i => i.name + '(' + i.level + ')').join(' › '), 'SUCCESS');
 
     // ============================================================
     // 28. GENERATE HTML
@@ -1330,7 +1359,7 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
     // 34. LOG SUMMARY
     // ============================================================
 
-    console.log('📊 PAGE TYPE DETECTION SUMMARY (v8.9):');
+    console.log('📊 BREADCRUMB GENERATION SUMMARY (v9.0):');
     console.log(`   Page: "${currentPageTitle}"`);
     console.log(`   Type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`);
     console.log(`   Entity: ${entityType}`);
@@ -1340,6 +1369,8 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
     if (currentPageType === 'money-child') {
         console.log(`   📍 Money Child with location detected`);
     }
+    console.log(`   👪 Parents found: ${finalParents.length} at level ${finalParents.length > 0 ? finalParents[0].level : 'N/A'}`);
+    console.log(`   📊 Total breadcrumb levels: ${uniqueLevels.length}`);
 
     // ============================================================
     // 35. RETURN
@@ -1351,9 +1382,11 @@ function generateBreadcrumbJasaKonstruksiPembatasPost(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '8.9.0',
-        maxLevel: 'NONE (nearest parent only)',
-        isVariant: currentPageType === 'variant'
+        version: '9.0.0',
+        parentCount: finalParents.length,
+        parents: finalParents,
+        isVariant: currentPageType === 'variant',
+        isMoneyChild: currentPageType === 'money-child'
     };
 }
 
