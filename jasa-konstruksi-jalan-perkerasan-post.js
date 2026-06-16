@@ -2148,7 +2148,7 @@ document.addEventListener("DOMContentLoaded", function() {
       detectionStrategies: strategies,
       detectionStrategyCount: strategyCount
     };
-
+	  
     console.log(`✅ [HybridDateModified] ${uniquePageIdentifier}`);
     console.log(`   → Final Date Modified: ${isoDate}`);
     console.log(`   → Offset: ${offsetSeconds} detik (${Math.floor(offsetSeconds / 3600)} jam ${Math.floor((offsetSeconds % 3600) / 60)} menit)`);
