@@ -127,8 +127,8 @@ const urlMappingJasaPemadatanPersiapanTanahJalanFromMoneyPageMoneyPage1 = {
   // ============================================================
   // ⚠️ PERLU PERHATIAN - KONTEN KOSONG (HANYA TEMPLATE)
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pemadatan-tanah-jalan.html": "Jasa Pemadatan Tanah Jalan",  // TYPE: SUB2 (⚠️ konten kosong)
-  "https://www.betonjayareadymix.com/p/jasa-perkerasan-tanah-subgrade.html": "Jasa Perkerasan Tanah Subgrade"  // TYPE: SUB2 (⚠️ konten kosong)
+  "https://www.betonjayareadymix.com/p/jasa-pemadatan-tanah-jalan.html": "Jasa Pemadatan Tanah Jalan",  
+  "https://www.betonjayareadymix.com/p/jasa-perkerasan-tanah-subgrade.html": "Jasa Perkerasan Tanah Subgrade" 
 };
 
 // ============================================================
@@ -187,7 +187,7 @@ const urlMappingJasaPerkerasanJalanLayananFromMoneyPageMoneyPage1 = {
 // Child di bawah MP Parent Layanan
 "https://www.betonjayareadymix.com/p/jasa-pengecoran-jalan-beton.html": "Jasa Pengecoran Jalan Beton",
 "https://www.betonjayareadymix.com/p/jasa-pengaspalan-jalan.html": "Jasa Pengaspalan Jalan",
-"https://www.betonjayareadymix.com/p/jasa-paving-block-jalan.html": "Jasa Paving Block Jalan",
+"https://www.betonjayareadymix.com/p/jasa-paving-block-jalan.html": "Jasa Paving Block Jalan"
 };
 /*
 const urlMappingJasaPerkerasanJalan = {
