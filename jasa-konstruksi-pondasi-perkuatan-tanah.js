@@ -72,9 +72,9 @@ const urlMappingJasaPondasiFromMoneyMasterMoneyMaster1 = {
 // ============================================================
  "https://www.betonjayareadymix.com/p/jasa-persiapan-pondasi.html": "Jasa Persiapan Pondasi",
  "https://www.betonjayareadymix.com/p/jasa-pemadatan-pondasi.html": "Jasa Pemadatan Pondasi",
-"https://www.betonjayareadymix.com/p/jasa-pondasi-tanah.html": "Jasa Pondasi Tanah",  // MP (L5)
-"https://www.betonjayareadymix.com/p/jasa-pondasi-bangunan.html": "Jasa Pondasi Bangunan",  // MP (L5)
-"https://www.betonjayareadymix.com/p/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi"  // MP (L5)
+"https://www.betonjayareadymix.com/p/jasa-pondasi-tanah.html": "Jasa Pondasi Tanah",  
+"https://www.betonjayareadymix.com/p/jasa-pondasi-bangunan.html": "Jasa Pondasi Bangunan", 
+"https://www.betonjayareadymix.com/p/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi"  
 //"https://www.betonjayareadymix.com/p/borongan-pondasi.html": "Borongan Pondasi"
 };
 const urlMappingJasaBoronganPondasiFromMoneyMaster1MoneyPage = {
@@ -83,7 +83,7 @@ const urlMappingJasaBoronganPondasiFromMoneyMaster1MoneyPage = {
 };
 const urlMappingJasaPondasiTanahFromMoneyMaster1MoneyPage = {
 
-"https://www.betonjayareadymix.com/p/jasa-borongan-pondasi-tanah.html": "Jasa Borongan Pondasi",  // MP (L5)
+"https://www.betonjayareadymix.com/p/jasa-borongan-pondasi-tanah.html": "Jasa Borongan Pondasi Tanah",  // MP (L5)
 "https://www.betonjayareadymix.com/p/harga-borongan-pondasi-tanah.html": "Harga Borongan Pondasi Tanah"
 };
 const urlMappingJasaPondasiBangunanFromMoneyMaster1MoneyPage = {
