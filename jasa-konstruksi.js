@@ -804,7 +804,7 @@ const urlMappingSaluranFromMoneyMasterMoneyPage = {
    "https://www.betonjayareadymix.com/p/jasa-pembersihan-saluran-air-mampet.html": "Jasa Pembersihan Saluran Air Mampet	",
    "https://www.betonjayareadymix.com/p/jasa-pembersihan-saluran-drainase.html": "Jasa Pembersihan Saluran Drainase",
    "https://www.betonjayareadymix.com/p/jasa-pemasangan-pipa-drainase.html": "Jasa Pemasangan Pipa Drainase",
-   "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-drainase.htmll": "Jasa Perbaikan Saluran Drainase",
+   "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-drainase.html": "Jasa Perbaikan Saluran Drainase",
    "https://www.betonjayareadymix.com/p/jasa-pembuatan-gorong-gorong.html": "Jasa Pembuatan Gorong-Gorong",
    "https://www.betonjayareadymix.com/p/jasa-perawatan-saluran-drainase.html": "Jasa Perawatan Saluran Drainase",
    "https://www.betonjayareadymix.com/p/jasa-sewa-alat-berat-drainase.html": "Jasa Sewa Alat Berat Drainase",
