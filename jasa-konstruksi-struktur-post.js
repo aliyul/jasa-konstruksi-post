@@ -544,7 +544,8 @@ const urlMappingJasaKonstruksiWorkshopFromSub2MoneyPage = {
 // ============================================================
 
 const urlMappingJasaPembuatanLapanganOlahRagaFromMoneyPageMoneyChild = {
-
+ "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-olahraga-bekasi.html": "Jasa Pembuatan Lapangan OlahRaga Bekasi",  // TYPE: MONEY_CHILD
+  
 	
 };
 
@@ -2185,7 +2186,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaKonstruksiColdStorageFromSub2MoneyPage,
 		urlMappingJasaKonstruksiBengkelFromSub2MoneyPage,
 		urlMappingJasaKonstruksiWorkshopFromSub2MoneyPage,
-		urlMappingJasaPembuatanLapanganOlahRagaFromSub2MoneyPage,
+		
+		urlMappingJasaPembuatanLapanganOlahRagaFromMoneyPageMoneyChild,
 
 		urlMappingJasaPembuatanLapanganFutsalFromMoneyPage1MoneyPage2,
 		urlMappingJasaPembuatanLapanganFutsalFromMoneyPage1MoneyChild,
@@ -4167,10 +4169,21 @@ JasaStrukturBetondanPengecoranPost
 //AKHIR SUB JasaKonstruksiPabrikPost
 
 //SUB JasaKonstruksiLapanganOlahragaPost
-if (urlMappingJasaPembuatanLapanganOlahRagaFromSub2MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
-
+if (urlMappingJasaPembuatanLapanganOlahRagaFromMoneyPageMoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
+  generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingJasaPembuatanLapanganOlahRagaFromMoneyPageMoneyChild,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
+             { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html'},
+             { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
+            { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html'},
+            { name: 'Jasa Pembuatan Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    ); 
 	
-   }
+}
 	
 if (urlMappingJasaPembuatanLapanganFutsalFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
           generateBreadcrumbJasaKonstruksiStrukturPost(
