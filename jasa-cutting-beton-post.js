@@ -144,12 +144,19 @@ const urlMappingJasaCptTanahFromMoneyMaster1MoneyPage = {
   // [MONEY_CHILD] - CPT PER LOKASI
   // 🟢 PRIORITAS LOW - OPSIONAL
   // ============================================================
-  // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-jakarta.html": "Jasa CPT Jakarta",  // TYPE: MONEY_CHILD
+
   // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-surabaya.html": "Jasa CPT Surabaya",  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-bandung.html": "Jasa CPT Bandung",  // TYPE: MONEY_CHILD
   // "https://www.betonjayareadymix.com/2019/09/jasa-cpt-semarang.html": "Jasa CPT Semarang",  // TYPE: MONEY_CHILD
 };
-
+const urlMappingJasaCptTanahFromMoneyMaster1MoneyChild = {
+   "https://www.betonjayareadymix.com/2019/09/jasa-cpt-jakarta.html": "Jasa CPT Jakarta", 
+   "https://www.betonjayareadymix.com/2019/09/jasa-cpt-bogor.html": "Jasa CPT Bogor", 
+   "https://www.betonjayareadymix.com/2019/09/jasa-cpt-depok.html": "Jasa CPT Depok", 
+   "https://www.betonjayareadymix.com/2019/09/jasa-cpt-tangerang.html": "Jasa CPT Tangerang", 
+   "https://www.betonjayareadymix.com/2019/09/jasa-cpt-bekasi.html": "Jasa CPT Bekasi", 
+   "https://www.betonjayareadymix.com/2019/09/jasa-cpt-karawang.html": "Jasa CPT Karawang" 
+};
 // ============================================================
 // JASA BORING TANAH - SUB2 (MONEY PAGE)
 // ============================================================
@@ -2150,6 +2157,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyChild,
 		urlMappingJasaSondirTanahFromMoneyMaster1MoneyPage,
 		urlMappingJasaCptTanahFromMoneyMaster1MoneyPage,
+		urlMappingJasaCptTanahFromMoneyMaster1MoneyChild,
+		
 		urlMappingJasaBoringTanahFromMoneyMaster1MoneyPage,
 		urlMappingJasaLabTanahFromMoneyMaster1MoneyPage,
 		urlMappingJasaUjiPenetrasiFromMoneyMaster1MoneyPage,
@@ -3054,6 +3063,21 @@ if (urlMappingJasaCptTanahFromMoneyMaster1MoneyPage[cleanUrlJasaCuttingBetonPost
         'JASA_KONSTRUKSI'
     );
    }
+	if (urlMappingJasaCptTanahFromMoneyMaster1MoneyChild[cleanUrlJasaCuttingBetonPost]) {
+         generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaCptTanahFromMoneyMaster1MoneyChild,
+        cleanUrlJasaCuttingBetonPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Uji Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-uji-tanah.html' },
+            { name: 'Perbandingan Jasa Uji Tanah', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-uji-tanah.html' },
+            { name: 'Jasa Uji Tanah', url: 'https://www.betonjayareadymix.com/p/jasa-uji-tanah.html' },
+            { name: 'Jasa Cpt Tanah', url: 'https://www.betonjayareadymix.com/p/jasa-cpt-tanah.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+	
   if (urlMappingJasaBoringTanahFromMoneyMaster1MoneyPage[cleanUrlJasaCuttingBetonPost]) {
          generateBreadcrumbJasaKonstruksi(
         urlMappingJasaBoringTanahFromMoneyMaster1MoneyPage,
