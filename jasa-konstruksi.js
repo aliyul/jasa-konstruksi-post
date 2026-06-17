@@ -3776,7 +3776,7 @@ if (urlMappingSaluranFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 	
    if (urlMappingUjiTanahFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
        generateBreadcrumbJasaKonstruksi(
-        urlMappingUjiTanahFromSub1MoneyMaster,
+        urlMappingUjiTanahFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
