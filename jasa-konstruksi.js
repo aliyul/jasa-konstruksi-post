@@ -126,7 +126,9 @@ const urlMappingJasaLapanganOlahragaFromSub1MoneyMaster = {
 };
 const urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage = {
  "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html": "Jasa Pembuatan Lapangan Olahraga",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-lapangan-olahraga.html": "Jasa Perbaikan Lapangan Olahraga"
+ "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-lapangan-olahraga.html": "Harga Jasa Pembuatan Lapangan Olahraga",
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-lapangan-olahraga.html": "Jasa Perbaikan Lapangan Olahraga",
+ "https://www.betonjayareadymix.com/p/harga-jasa-perbaikan-lapangan-olahraga.html": "Harga Jasa Perbaikan Lapangan Olahraga"
 };
 
 const urlMappingKonstruksiBangunanBridgeFromSub2Sub1 = {
