@@ -544,7 +544,13 @@ const urlMappingJasaKonstruksiWorkshopFromSub2MoneyPage = {
 // ============================================================
 
 const urlMappingJasaPembuatanLapanganOlahRagaFromMoneyPageMoneyChild = {
- "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-olahraga-bekasi.html": "Jasa Pembuatan Lapangan OlahRaga Bekasi",  // TYPE: MONEY_CHILD
+ "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-jakarta.html": "Jasa Pembuatan Lapangan OlahRaga Jakarta",
+ "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-bogor.html": "Jasa Pembuatan Lapangan OlahRaga Bogor",
+ "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-depok.html": "Jasa Pembuatan Lapangan OlahRaga Depok",
+ "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-tangerang.html": "Jasa Pembuatan Lapangan OlahRaga Tangerang",
+ "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-bekasi.html": "Jasa Pembuatan Lapangan OlahRaga Bekasi",
+ "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-karawang.html": "Jasa Pembuatan Lapangan OlahRaga Karawang",
+ "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-terdekat.html": "Jasa Pembuatan Lapangan OlahRaga Terdekat"
   
 	
 };
