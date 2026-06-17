@@ -122,10 +122,11 @@ const urlMappingJasaLapanganOlahragaBridgeFromSub2Sub1 = {
  "https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html": "Perbandingan Jasa Lapangan Olahraga"  // TYPE: SUB2
 };
 const urlMappingJasaLapanganOlahragaFromSub1MoneyMaster = {
- "https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html": "Jasa Lapangan Olahraga"  // TYPE: SUB2
+ "https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html": "Jasa Lapangan Olahraga" 
 };
 const urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage = {
- "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html": "Jasa Pembuatan Lapangan Olahraga"  // TYPE: SUB2
+ "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html": "Jasa Pembuatan Lapangan Olahraga",
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-lapangan-olahraga.html": "Jasa Perbaikan Lapangan Olahraga"
 };
 
 const urlMappingKonstruksiBangunanBridgeFromSub2Sub1 = {
