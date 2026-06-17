@@ -91,7 +91,7 @@ const urlMappingJasaStrukturKhususFromMoneyMasterMoneyPage = {
 // [SUB2] - Jasa Konstruksi Lapangan Olahraga (Turunan dari Jasa Struktur Konstruksi)
 // ============================================================
 
-const urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage = {
+const urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1 = {
 // ============================================================
 // 📌 MONEY-PAGE (MP) DI BAWAH JASA KONSTRUKSI LAPANGAN OLAHRAGA
 // ============================================================
@@ -1497,7 +1497,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage,
 		urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage,
 		urlMappingJasaStrukturKhususFromMoneyMasterMoneyPage,
-		urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage,
+		urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1,
 		urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1,
 		urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1
     );
@@ -2121,16 +2121,17 @@ if (urlMappingJasaStrukturKhususFromMoneyMasterMoneyPage[cleanUrlJasaJasaKonsStr
     );	
 }
 	
-if (urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+if (urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
 	        generateBreadcrumbJasaKonstruksiStruktur(
-        urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage,
+        urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1,
         cleanUrlJasaJasaKonsStruktur,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
              { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
              { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' }
+            { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' },
+            { name: 'Jasa Pembuatan Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html' }
         ],
         'JASA_KONSTRUKSI'
     );
