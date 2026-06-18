@@ -651,7 +651,7 @@ const urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyChild = {
 const urlMappingJasaPembuatanLapanganSerbagunaFromMoneyPage1MoneyPage2 = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-lapangan-serbaguna.html": "Harga Jasa Pembuatan Lapangan  Serbaguna"
-
+};
 // ============================================================
 // 📁 JASA PEMBUATAN KOLAM RENANG - MONEY PAGE & CHILD
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE & MONEY_CHILD
