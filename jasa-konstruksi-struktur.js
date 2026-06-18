@@ -84,7 +84,11 @@ const urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1 = {
 };
 const urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage = {
 
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html": "Jasa Pembuatan Kolam Renang"
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html": "Jasa Pembuatan Kolam Renang",
+	"https://www.betonjayareadymix.com/p/jasa-renovasi-kolam-renang.html": "Jasa Renovasi Kolam Renang",
+	"https://www.betonjayareadymix.com/p/jasa-perawatan-kolam-renang.html": "Jasa Perawatan Kolam Renang",
+	"https://www.betonjayareadymix.com/p/kontraktor-kolam-renang.html": "Kontraktor Kolam Renang"
+	
 };
 const urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage = {
 
