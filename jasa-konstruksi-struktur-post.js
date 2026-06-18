@@ -442,7 +442,7 @@ const urlMappingJasaKonstruksiHotelFromSub2MoneyPage = {
 // 📁 JASA KONSTRUKSI PERKANTORAN - KOSONG (SARAN ITEM)
 // ============================================================
 
-const urlMappingJasaKonstruksiPerkantoranFromSub2MoneyPage = {
+const urlMappingJasaPembuatanPerkantoranFromMoneyMaster2MoneyPage = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-perkantoran.html": "Jasa Konstruksi Perkantoran",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2018/09/harga-borongan-kantor-per-m2.html": "Harga Borongan Kantor Per M2",  // TYPE: MONEY_PAGE
@@ -452,18 +452,15 @@ const urlMappingJasaKonstruksiPerkantoranFromSub2MoneyPage = {
 // 📁 JASA KONSTRUKSI GEDUNG SEKOLAH - MONEY PAGE
 // ============================================================
 
-const urlMappingJasaKonstruksiGedungSekolahFromSub2MoneyPage = {
-  // ============================================================
-  // [MONEY_PAGE] - KONSTRUKSI BAJA GEDUNG
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-gedung.html": "Jasa Konstruksi Baja Gedung",  // TYPE: MONEY_PAGE
+const urlMappingJasaPembuatanSekolahFromMoneyMaster2MoneyPage = {
+ 
 };
 
 // ============================================================
 // 📁 JASA KONSTRUKSI GEDUNG RUMAH SAKIT - KOSONG (SARAN ITEM)
 // ============================================================
 
-const urlMappingJasaKonstruksiGedungRumahSakitFromSub2MoneyPage = {
+const urlMappingJasaPembuatanRSFromFromMoneyMaster2MoneyPage = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-rumah-sakit.html": "Jasa Konstruksi Rumah Sakit",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2018/09/harga-borongan-rumah-sakit-per-m2.html": "Harga Borongan Rumah Sakit Per M2",  // TYPE: MONEY_PAGE
@@ -2190,9 +2187,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaKonstruksiVillaFromSub2MoneyPage,
 		urlMappingJasaKonstruksiApartemenFromSub2MoneyPage,
 		urlMappingJasaKonstruksiHotelFromSub2MoneyPage,
-		urlMappingJasaKonstruksiPerkantoranFromSub2MoneyPage,
-		urlMappingJasaKonstruksiGedungSekolahFromSub2MoneyPage,
-		urlMappingJasaKonstruksiGedungRumahSakitFromSub2MoneyPage,
+		urlMappingJasaPembuatanPerkantoranFromMoneyMaster2MoneyPage,
+		urlMappingJasaPembuatanSekolahFromMoneyMaster2MoneyPage,
+		urlMappingJasaPembuatanRSFromFromMoneyMaster2MoneyPage,
 		urlMappingJasaPembuatanGudangFromFromMoneyMaster2MoneyPage,
 		urlMappingHargaJasaPembuatanGudangFromFromMoneyPageMoneyPage1,
 		
