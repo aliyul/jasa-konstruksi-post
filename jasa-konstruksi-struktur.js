@@ -74,16 +74,33 @@ const urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1 = {
 // ============================================================
 // [SUB2] - Jasa Struktur Khusus (Turunan dari Jasa Konstruksi Struktur )
 // ============================================================
+const urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1 = {
+"https://www.betonjayareadymix.com/p/jasa-kolam-renang.html": "Jasa Kolam Renang",
+"https://www.betonjayareadymix.com/p/jasa-kolam-ikan-koi.html": "Jasa Kolam Ikan",
+"https://www.betonjayareadymix.com/p/jasa-septic-tank.html": "Jasa Septic Tank",
+"https://www.betonjayareadymix.com/p/jasa-tangki-air.html": "Jasa Tangki Air",
+"https://www.betonjayareadymix.com/p/jasa-bak-penampungan.html": "Jasa Bak Penampungan",
+"https://www.betonjayareadymix.com/p/jasa-menara-air.html": "Jasa Menara Air"
+};
+const urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage = {
 
-const urlMappingJasaStrukturKhususFromMoneyMasterMoneyPage = {
-// ============================================================
-// 📌 MONEY-PAGE (MP) DI BAWAH JASA STRUKTUR KHUSUS
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html": "Jasa Pembuatan Kolam Renang",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-ikan-koi.html": "Jasa Pembuatan Kolam Ikan Koi",
-"https://www.betonjayareadymix.com/p/jasa-septic-tank-beton.html": "Jasa Septic Tank Beton",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-tangki-air.html": "Jasa Pembuatan Tangki Air",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-bak-penampungan.html": "Jasa Pembuatan Bak Penampungan",
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html": "Jasa Pembuatan Kolam Renang"
+};
+const urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage = {
+
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-ikan-koi.html": "Jasa Pembuatan Kolam Ikan Koi"
+};
+const urlMappingJasaSepticTankFromMoneyMaster1MoneyPage = {
+"https://www.betonjayareadymix.com/p/jasa-septic-tank-beton.html": "Jasa Septic Tank Beton"
+};
+const urlMappingJasaTangkiAirFromMoneyMaster1MoneyPage = {
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-tangki-air.html": "Jasa Pembuatan Tangki Air"
+};
+const urlMappingJasaBakPenampunganFromMoneyMaster1MoneyPage = {
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-bak-penampungan.html": "Jasa Pembuatan Bak Penampungan"
+	
+};
+const urlMappingJasaMenaraAirFromMoneyMaster1MoneyPage = {
 "https://www.betonjayareadymix.com/p/jasa-konstruksi-menara-air.html": "Jasa Konstruksi Menara Air"
 };
 
@@ -1496,7 +1513,14 @@ document.addEventListener("DOMContentLoaded", function() {
       {},
 		urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage,
 		urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage,
-		urlMappingJasaStrukturKhususFromMoneyMasterMoneyPage,
+		urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1,
+		urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage,
+		urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage,
+		urlMappingJasaSepticTankFromMoneyMaster1MoneyPage,
+		urlMappingJasaTangkiAirFromMoneyMaster1MoneyPage,
+		urlMappingJasaBakPenampunganFromMoneyMaster1MoneyPage,
+       urlMappingJasaMenaraAirFromMoneyMaster1MoneyPage,
+		
 		urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1,
 		urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1,
 		urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1
@@ -2106,16 +2130,99 @@ if (urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1[cleanUrlJasa
     );
 }
 	
-if (urlMappingJasaStrukturKhususFromMoneyMasterMoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+if (urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1[cleanUrlJasaJasaKonsStruktur]) {
 		    generateBreadcrumbJasaKonstruksiStruktur(
-        urlMappingJasaStrukturKhususFromMoneyMasterMoneyPage,
+        urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1,
         cleanUrlJasaJasaKonsStruktur,
         [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
              { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
              { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
             { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );	
+}
+if (urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+		    generateBreadcrumbJasaKonstruksiStruktur(
+        urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage,
+        cleanUrlJasaJasaKonsStruktur,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+            { name: 'Jasa Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-renang.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );	
+}
+if (urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+		    generateBreadcrumbJasaKonstruksiStruktur(
+        urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage,
+        cleanUrlJasaJasaKonsStruktur,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+            { name: 'Jasa Kolam Ikan', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-ikan.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );	
+}
+if (urlMappingJasaSepticTankFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+		    generateBreadcrumbJasaKonstruksiStruktur(
+        urlMappingJasaSepticTankFromMoneyMaster1MoneyPage,
+        cleanUrlJasaJasaKonsStruktur,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+            { name: 'Jasa Septic Tank', url: 'https://www.betonjayareadymix.com/p/jasa-septic-tank.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );	
+}
+if (urlMappingJasaTangkiAirFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+		    generateBreadcrumbJasaKonstruksiStruktur(
+        urlMappingJasaTangkiAirFromMoneyMaster1MoneyPage,
+        cleanUrlJasaJasaKonsStruktur,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+            { name: 'Jasa Tangki Air', url: 'https://www.betonjayareadymix.com/p/jasa-tangki-air.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );	
+}
+if (urlMappingJasaBakPenampunganFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+		    generateBreadcrumbJasaKonstruksiStruktur(
+        urlMappingJasaBakPenampunganFromMoneyMaster1MoneyPage,
+        cleanUrlJasaJasaKonsStruktur,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+            { name: 'Jasa Bak Penampungan', url: 'https://www.betonjayareadymix.com/p/jasa-bak-penampungan.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );	
+}
+if (urlMappingJasaMenaraAirFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+		    generateBreadcrumbJasaKonstruksiStruktur(
+        urlMappingJasaMenaraAirFromMoneyMaster1MoneyPage,
+        cleanUrlJasaJasaKonsStruktur,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+            { name: 'Jasa Menara Air', url: 'https://www.betonjayareadymix.com/p/jasa-menara-air.html' }
         ],
         'JASA_KONSTRUKSI'
     );	
