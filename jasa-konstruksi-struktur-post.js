@@ -307,51 +307,62 @@ const urlMappingJasaKonstruksiGedungHunianFromSub2MoneyPage = {
 // 📁 JASA KONSTRUKSI RUMAH TINGGAL - MONEY PAGE & CHILD
 // Parent: Jasa Konstruksi Gedung dan Hunian (SUB2)
 // ============================================================
-
-const urlMappingJasaKonstruksiRumahTinggalFromSub2MoneyPage = {
-  // ============================================================
-  // [MONEY_PAGE] - HARGA BORONGAN KONSTRUKSI PER METER (NASIONAL)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-per-meter.html": "Harga Borongan Konstruksi Per Meter",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-tukang-bangunan-per-meter.html": "Harga Borongan Tukang Bangunan Per Meter",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-bangunan.html": "Jasa Pembuatan Bangunan",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-upah-tenaga-borongan-bangunan-per-m2.html": "Harga Upah Tenaga Borongan Bangunan Per M2",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-borong-bangunan-plus-material.html": "Harga Borong Bangunan Plus Material",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/borongan-bangunan.html": "Borongan Bangunan",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-bangunan.html": "Harga Bangunan",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/borongan-konstruksi.html": "Borongan Konstruksi",  // TYPE: MONEY_PAGE
+const urlMappingJasaKonsultanKonstruksiFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/2018/09/konsultan-bangunan.html": "Konsultan Bangunan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/09/konsultan-kontruksi.html": "Konsultan Konstruksi",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/09/perencanaan-pembangunan.html": "Perencanaan Pembangunan",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/perencanaan-konstruksi.html": "Perencanaan Konstruksi",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/borongan-dinding.html": "Borongan Dinding",  // TYPE: MONEY_PAGE
-  
+  "https://www.betonjayareadymix.com/2018/09/perencanaan-konstruksi.html": "Perencanaan Konstruksi" // TYPE: MONEY_PAGE
+};
+const urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage = {
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-bangunan.html": "Harga Jasa Pembuatan Bangunan"  // TYPE: MONEY_PAGE
+};
+const urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1 = {
+   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-bangunan.html": "Harga Jasa Borongan Bangunan" 
+};
+const urlMappingHargaJasaBoronganBangunanFromMoneyPage1MoneyPage2 = {
+ // [MONEY_PAGE] - HARGA BORONGAN KONSTRUKSI PER METER (NASIONAL)
   // ============================================================
-  // [MONEY_PAGE] - HARGA BORONGAN RUMAH PER METER
+   "https://www.betonjayareadymix.com/2018/09/harga-upah-tenaga-borongan-bangunan-per-m2.html": "Harga Upah Tenaga Borongan Bangunan Per M2",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-per-meter.html": "Harga Borongan Konstruksi Per Meter",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-borongan-tukang-bangunan-per-meter.html": "Harga Borongan Tukang Bangunan Per Meter",  // TYPE: MONEY_PAGE
+"https://www.betonjayareadymix.com/2018/09/harga-borong-bangunan-plus-material.html": "Harga Borong Bangunan Plus Material"  // TYPE: MONEY_PAGE
+};
+const urlMappingHargaJasaBoronganBangunanFromMoneyPage1MoneyChild = {
+ // ============================================================
+  // [MONEY_CHILD] - HARGA BORONGAN BANGUNAN PER LOKASI
   // ============================================================
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-dki-jakarta.html": "Harga Jasa Borongan Bangunan DKI Jakarta",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-tangerang.html": "Harga Jasa Borongan Bangunan Tangerang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-bekasi.html": "Harga Jasa Borongan Bangunan Bekasi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-depok.html": "Harga Jasa Borongan Bangunan Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-bogor.html": "Harga Jasa Borongan Bangunan Bogor"
+
+
+};
+const urlMappingJasaPembuatanRumahFromMoneyMaster2MoneyPage = {
+	"https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-rumah.html": "Harga Jasa Pembuatan Rumah"
+};
+const urlMappingHargaJasaPembuatanRumahFromMoneyPageMoneyPage1 = {
+	  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-rumah.html": "Harga Jasa Borongan Rumah",
+	 "https://www.betonjayareadymix.com/2018/09/harga-konstruksi-rumah-per-m2.html": "Harga Konstruksi Rumah Per M2", 
+	  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-rumah.html": "Jasa Konstruksi Baja Rumah", 
+  "https://www.betonjayareadymix.com/2018/09/harga-rumah-konstruksi-baja.html": "Harga Rumah Konstruksi Baja",  
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-rumah-rangka-baja.html": "Jasa Pembuatan Rumah Rangka Baja"
+
+};		  
+const urlMappingHargaJasaBoronganRumahFromMoneyPage1MoneyPage2 = {
+ "https://www.betonjayareadymix.com/2018/09/harga-borongan-bangunan-rumah.html": "Harga Borongan Bangunan Rumah",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-borongan-rumah-2-lantai-per-m2.html": "Harga Borongan Rumah 2 Lantai Per M2",  // TYPE: MONEY_PAGE
+
   "https://www.betonjayareadymix.com/2018/09/harga-borongan-rumah-per-meter-plus-material.html": "Harga Borongan Rumah Per Meter Plus Material",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/09/harga-borongan-rumah-per-meter-terima-kunci.html": "Harga Borongan Rumah Per Meter Terima Kunci",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/09/harga-borongan-rumah-1-lantai-per-meter.html": "Harga Borongan Rumah 1 Lantai Per Meter",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/09/harga-borongan-tenaga-bangunan-rumah.html": "Harga Borongan Tenaga Bangunan Rumah",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-konstruksi-rumah-per-m2.html": "Harga Konstruksi Rumah Per M2",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-rumah-2-lantai-per-m2.html": "Harga Jasa Borongan Rumah 2 Lantai Per M2",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/jasa-borongan-rumah.html": "Jasa Borongan Rumah",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-bangunan-rumah.html": "Harga Borongan Bangunan Rumah",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-rumah-2-lantai-per-m2.html": "Harga Borongan Rumah 2 Lantai Per M2",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/jasa-bangun-rumah-borongan.html": "Jasa Bangun Rumah Borongan",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-rumah.html": "Jasa Pembuatan Rumah",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-rumah.html": "Jasa Konstruksi Baja Rumah",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-rumah-konstruksi-baja.html": "Harga Rumah Konstruksi Baja",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-rumah-rangka-baja.html": "Jasa Pembuatan Rumah Rangka Baja",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_CHILD] - JASA BANGUN RUMAH PER LOKASI
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-depok.html": "Jasa Bangun Rumah Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-tangerang.html": "Jasa Bangun Rumah Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-jakarta.html": "Jasa Bangun Rumah Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-bogor.html": "Jasa Bangun Rumah Bogor",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-bekasi.html": "Jasa Bangun Rumah Bekasi",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-rumah-2-lantai-per-m2.html": "Harga Jasa Borongan Rumah 2 Lantai Per M2"
+
+ };
+
+const urlMappingHargaJasaBoronganRumahFromMoneyPage1MoneyChild = {
 
   // ============================================================
   // [MONEY_CHILD] - HARGA BORONGAN RUMAH TERIMA KUNCI PER LOKASI
@@ -375,32 +386,28 @@ const urlMappingJasaKonstruksiRumahTinggalFromSub2MoneyPage = {
   "https://www.betonjayareadymix.com/2018/11/harga-borongan-rumah-per-meter-terima-kunci-parung-panjang.html": "Harga Borongan Rumah Per Meter Terima Kunci Parung Panjang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/harga-borongan-rumah-per-meter-terima-tajur-halang.html": "Harga Borongan Rumah Per Meter Terima Tajur Halang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/harga-borongan-rumah-per-meter-terima-kunci-cileungsi.html": "Harga Borongan Rumah Per Meter Terima Kunci Cileungsi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-borongan-rumah-per-meter-terima-kunci-gunung-sindur.html": "Harga Borongan Rumah Per Meter Terima Kunci Gunung Sindur",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/harga-borongan-rumah-per-meter-terima-kunci-gunung-sindur.html": "Harga Borongan Rumah Per Meter Terima Kunci Gunung Sindur"  // TYPE: MONEY_CHILD
 
-  // ============================================================
-  // [MONEY_CHILD] - HARGA BORONGAN BANGUNAN PER LOKASI
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-dki-jakarta.html": "Harga Jasa Borongan Bangunan DKI Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-tangerang.html": "Harga Jasa Borongan Bangunan Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-bekasi.html": "Harga Jasa Borongan Bangunan Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-depok.html": "Harga Jasa Borongan Bangunan Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-bogor.html": "Harga Jasa Borongan Bangunan Bogor",  // TYPE: MONEY_CHILD
-
-  // ============================================================
-  // [MONEY_CHILD] - BORONGAN BANGUNAN PER LOKASI
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/borongan-bangunan-dki-jakarta.html": "Borongan Bangunan DKI Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/borongan-bangunan-tangerang.html": "Borongan Bangunan Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/borongan-bangunan-bekasi.html": "Borongan Bangunan Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/borongan-bangunan-depok.html": "Borongan Bangunan Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/borongan-bangunan-bogor.html": "Borongan Bangunan Bogor",  // TYPE: MONEY_CHILD
 };
+const urlMappingJasaBangunRumahFromMoneyMaster3MoneyPage = {
+  "https://www.betonjayareadymix.com/2018/09/jasa-bangun-rumah-borongan.html": "Jasa Bangun Rumah Borongan"
+};
+const urlMappingJasaBangunRumahFromMoneyMaster3MoneyChild = {
+    // ============================================================
+  // [MONEY_CHILD] - JASA BANGUN RUMAH PER LOKASI
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-depok.html": "Jasa Bangun Rumah Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-tangerang.html": "Jasa Bangun Rumah Tangerang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-jakarta.html": "Jasa Bangun Rumah Jakarta",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-bogor.html": "Jasa Bangun Rumah Bogor",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-bekasi.html": "Jasa Bangun Rumah Bekasi"  // TYPE: MONEY_CHILD
 
+};
 // ============================================================
 // 📁 JASA KONSTRUKSI RUKO DAN KIOS - MONEY PAGE
 // ============================================================
 
-const urlMappingJasaKonstruksiRukodanKiosFromSub2MoneyPage = {
+const urlMappingJasaPembuatanRukoFromMoneyMaster2MoneyPage= {
   // ============================================================
   // [MONEY_PAGE] - JASA KONSTRUKSI BAJA RUKO
   // ============================================================
@@ -412,7 +419,7 @@ const urlMappingJasaKonstruksiRukodanKiosFromSub2MoneyPage = {
 // 📁 JASA KONSTRUKSI VILLA - KOSONG (SARAN ITEM)
 // ============================================================
 
-const urlMappingJasaKonstruksiVillaFromSub2MoneyPage = {
+const urlMappingJasaPembuatanVillaFromMoneyMaster2MoneyPage = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-villa.html": "Jasa Konstruksi Villa",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2018/09/harga-borongan-villa-per-m2.html": "Harga Borongan Villa Per M2",  // TYPE: MONEY_PAGE
@@ -422,7 +429,7 @@ const urlMappingJasaKonstruksiVillaFromSub2MoneyPage = {
 // 📁 JASA KONSTRUKSI APARTEMEN - KOSONG (SARAN ITEM)
 // ============================================================
 
-const urlMappingJasaKonstruksiApartemenFromSub2MoneyPage = {
+const urlMappingJasaPembuatanApartemenFromMoneyMaster2MoneyPage = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-apartemen.html": "Jasa Konstruksi Apartemen",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2018/09/harga-borongan-apartemen-per-m2.html": "Harga Borongan Apartemen Per M2",  // TYPE: MONEY_PAGE
@@ -432,7 +439,7 @@ const urlMappingJasaKonstruksiApartemenFromSub2MoneyPage = {
 // 📁 JASA KONSTRUKSI HOTEL - KOSONG (SARAN ITEM)
 // ============================================================
 
-const urlMappingJasaKonstruksiHotelFromSub2MoneyPage = {
+const urlMappingJasaPembuatanHotelFromMoneyMaster2MoneyPage = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-hotel.html": "Jasa Konstruksi Hotel",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2018/09/harga-borongan-hotel-per-m2.html": "Harga Borongan Hotel Per M2",  // TYPE: MONEY_PAGE
@@ -2182,11 +2189,24 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBekistingdanPembesianFromSub2MoneyPage,
 		urlMappingJasaPengecoranKolomBetonFromSub2MoneyPage,
 		urlMappingJasaKonstruksiGedungHunianFromSub2MoneyPage,
-		urlMappingJasaKonstruksiRumahTinggalFromSub2MoneyPage,
-		urlMappingJasaKonstruksiRukodanKiosFromSub2MoneyPage,
-		urlMappingJasaKonstruksiVillaFromSub2MoneyPage,
-		urlMappingJasaKonstruksiApartemenFromSub2MoneyPage,
-		urlMappingJasaKonstruksiHotelFromSub2MoneyPage,
+
+		urlMappingJasaKonsultanKonstruksiFromMoneyMasterMoneyPage, //konsultan dari jasa konstruksi pillar
+		urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage,
+		urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1,
+		urlMappingHargaJasaBoronganBangunanFromMoneyPage1MoneyPage2,
+		urlMappingHargaJasaBoronganBangunanFromMoneyPage1MoneyChild,
+		urlMappingJasaPembuatanRumahFromMoneyMaster2MoneyPage,
+		urlMappingHargaJasaPembuatanRumahFromMoneyPageMoneyPage1,
+       urlMappingHargaJasaBoronganRumahFromMoneyPage1MoneyPage2,
+		urlMappingHargaJasaBoronganRumahFromMoneyPage1MoneyChild,
+        urlMappingJasaBangunRumahFromMoneyMaster3MoneyPage,
+		urlMappingJasaBangunRumahFromMoneyMaster3MoneyChild,
+		
+		
+		urlMappingJasaPembuatanRukoFromMoneyMaster2MoneyPage,
+		urlMappingJasaPembuatanVillaFromMoneyMaster2MoneyPage,
+		urlMappingJasaPembuatanApartemenFromMoneyMaster2MoneyPage,
+		urlMappingJasaPembuatanHotelFromMoneyMaster2MoneyPage,
 		urlMappingJasaPembuatanPerkantoranFromMoneyMaster2MoneyPage,
 		urlMappingJasaPembuatanSekolahFromMoneyMaster2MoneyPage,
 		urlMappingJasaPembuatanRSFromFromMoneyMaster2MoneyPage,
@@ -3566,305 +3586,197 @@ JasaStrukturBetondanPengecoranPost
        document.head.appendChild(script);
    }
 //SUB JasaKonstruksiGedungdanHunianPost
-if (urlMappingJasaKonstruksiRumahTinggalFromSub2MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
-        restoreCondition('JasaKonsStrukturPost');
-        restoreCondition('JasaKonstruksiGedungdanHunianPost');
-        restoreCondition('JasaKonstruksiRumahTinggalPost');
+if (urlMappingJasaKonsultanKonstruksiFromMoneyMasterMoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
+  generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingJasaKonsultanKonstruksiFromMoneyMasterMoneyPage,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+           { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Konsultan Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konsultan-konstruksi.html'},
+            { name: 'Perbandingan Jasa Konsultan Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konsultan-konstruksi.html'},
+            { name: 'Jasa Konsultan Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konsultan-konstruksi.html'}
 
-       //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-        removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost'); 
-	removeCondition('JasaKonsFinishingPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
+        ],
+        'JASA_KONSTRUKSI'
+    );      
+}	
+if (urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
+  generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+           { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html'}
 
-	 //hapus elemen id JasaStrukturBajadanRangkaRinganPost SEMUA
-        removeCondition('JasaKonstruksiBajaKonvensionalPost');
-        removeCondition('JasaKanopiBajadanBesiPost');
-        removeCondition('JasaStrukturBajaGudangPost');
-        removeCondition('JasaRangkaAtapBajaRinganPost');
-	// hapus elemen id JasaKonstruksiLapanganOlahragaPost SEMUA
-	removeCondition('JasaPembuatanLapanganBadmintonPost');
-	removeCondition('JasaPembuatanLapanganTenisPost');
-        removeCondition('JasaPembuatanLapanganFutsalPost');
-        removeCondition('JasaPembuatanLapanganBasketPost');
-        removeCondition('JasaPembuatanLapanganSepakbolaPost');
-        removeCondition('JasaPembuatanLapanganVoliPost');
-        removeCondition('JasaPembuatanLapanganSerbagunaPost');
+        ],
+        'JASA_KONSTRUKSI'
+    );      
+}
+if (urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStrukturPost]) {
+  generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+           { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html'},
+            { name: 'Harga Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-bangunan.html'}
+
+        ],
+        'JASA_KONSTRUKSI'
+    );      
+}
+if (urlMappingHargaJasaBoronganBangunanFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
+  generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingHargaJasaBoronganBangunanFromMoneyPage1MoneyPage2,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+           { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html'},
+            { name: 'Harga Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-bangunan.html'},
+            { name: 'Harga Jasa Borongan Bangunan', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-bangunan.html'}
+
+        ],
+        'JASA_KONSTRUKSI'
+    );      
+}
+if (urlMappingHargaJasaBoronganBangunanFromMoneyPage1MoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
+  generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingHargaJasaBoronganBangunanFromMoneyPage1MoneyChild,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html'},
+            { name: 'Harga Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-bangunan.html'},
+            { name: 'Harga Jasa Borongan Bangunan', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-bangunan.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );      
+}
+if (urlMappingJasaPembuatanRumahFromMoneyMaster2MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
+  generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingJasaPembuatanRumahFromMoneyMaster2MoneyPage,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html'},
+            { name: 'Jasa Pembuatan Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );      
+}
+if (urlMappingHargaJasaPembuatanRumahFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStrukturPost]) {
+  generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingHargaJasaPembuatanRumahFromMoneyPageMoneyPage1,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html'},
+            { name: 'Jasa Pembuatan Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html'},
+            { name: 'Harga Jasa Pembuatan Rumah', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-rumah.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );      
+}
+if (urlMappingHargaJasaBoronganRumahFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
+  generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingHargaJasaBoronganRumahFromMoneyPage1MoneyPage2,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html'},
+            { name: 'Jasa Pembuatan Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html'},
+            { name: 'Harga Jasa Pembuatan Rumah', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-rumah.html'},
+            { name: 'Harga Jasa Borongan Rumah', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-rumah.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );      
+}
+if (urlMappingHargaJasaBoronganRumahFromMoneyPage1MoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
+  generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingHargaJasaBoronganRumahFromMoneyPage1MoneyChild,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html'},
+            { name: 'Jasa Pembuatan Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html'},
+            { name: 'Harga Jasa Pembuatan Rumah', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-rumah.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );      
+}
+if (urlMappingJasaBangunRumahFromMoneyMaster3MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
+  generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingJasaBangunRumahFromMoneyMaster3MoneyPage,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html'},
+            { name: 'Jasa Pembuatan Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html'},
+            { name: 'Jasa Bangun Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-bangun-rumah.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );      
+}
+if (urlMappingJasaBangunRumahFromMoneyMaster3MoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
+  generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingJasaBangunRumahFromMoneyMaster3MoneyChild,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html'},
+            { name: 'Jasa Pembuatan Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html'},
+             { name: 'Jasa Bangun Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-bangun-rumah.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );      
+}
 	
-	 //hapus elemen id JasaKonstruksiGedungdanHunianPost SEMUA selain JasaKonstruksiRumahTinggalPost
-       // removeCondition('');
-        removeCondition('JasaKonstruksiRukodanKiosPost');
-        removeCondition('JasaKonstruksiVillaPost');
-        removeCondition('JasaKonstruksiApartemenPost');
-        removeCondition('JasaKonstruksiHotelPost');
-        removeCondition('JasaKonstruksiPerkantoranPost');
-        removeCondition('JasaKonstruksiGedungSekolahPost');
-        removeCondition('JasaKonstruksiGedungRumahSakitPost');
-	//hapus elemen id JasaKonstruksiIndustridanGudangPost SEMUA
-        removeCondition('JasaKonstruksiGudangLogistikPost');
-        removeCondition('JasaKonstruksiPabrikPost');
-        removeCondition('JasaKonstruksiColdStoragePost');
-        removeCondition('JasaKonstruksiBengkelPost');
-        removeCondition('JasaKonstruksiWorkshopPost');
-        removeCondition('JasaKonstruksiPabrikPost');
-	
-      //hapus elemen id JasaStrukturBetondanPengecoranPost SEMUA 
-        removeCondition('JasaPengecoranLantaiGudangPost');
-        removeCondition('JasaBekistingdanPembesianPost');
-        removeCondition('JasaPengecoranLantaiDakPost');
-        removeCondition('JasaPengecoranKolomBetonPost');
-        removeCondition('JasaCorBetonPost');
-	
-	//hapus elemen id JasaStrukturKhususPost SEMUA 
-        removeCondition('JasaPembuatanKolamRenangPost');
-        removeCondition('JasaPembuatanKolamIkanPost');
-        removeCondition('JasaSepticTankBetonPost');
-        removeCondition('JasaPembuatanTangkiAirPost');
-        removeCondition('JasaPembuatanBakPenampunganPost');
-        removeCondition('JasaKonstruksiMenaraAirPost');
-
-	
-      
-	/*
-JasaKonstruksiGedungdanHunianPost
-JasaKonstruksiIndustridanGudangPost
-JasaStrukturBajadanRangkaRinganPost
-JasaStrukturKhusus
-JasaKonstruksiLapanganOlahragaPost
-JasaKonstruksiModulardanPrecastPost
-JasaStrukturBetondanPengecoranPost
-*/
-       //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunianPost
-        removeCondition('JasaKonstruksiIndustridanGudangPost');
-        removeCondition('JasaStrukturBetondanPengecoranPost');
-        removeCondition('JasaStrukturKhususPost');
-	removeCondition('JasaKonstruksiLapanganOlahragaPost');
-	removeCondition('JasaKonstruksiModulardanPrecastPost');
-	removeCondition('JasaStrukturBajadanRangkaRinganPost');
-       
-        JasaKonstruksiStrukturPostLink.style.visibility = 'visible';
-        JasaStrukturKonstruksiPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaKonstruksiGedungdanHunianPost
-        JasaKonstruksiGedungdanHunianPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaKonstruksiRumahTinggalPost
-        JasaKonstruksiRumahTinggalPostLink.style.visibility = 'visible';
-        pageNameJasaKonsStrukturPost.textContent = urlMappingJasaKonstruksiRumahTinggalFromSub2MoneyPage[cleanUrlJasaJasaKonsStrukturPost];
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaKonstruksiRumahTinggalFromSub2MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Struktur Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Konstruksi Gedung dan Hunian",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html"
-               },
-		{
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Konstruksi Rumah Tinggal",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah-tinggal.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": urlMappingJasaKonstruksiRumahTinggalFromSub2MoneyPage[cleanUrlJasaJasaKonsStrukturPost],
-                   "item": cleanUrlJasaJasaKonsStrukturPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-if (urlMappingJasaKonstruksiRukodanKiosFromSub2MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
-        restoreCondition('JasaKonsStrukturPost');
-        restoreCondition('JasaKonstruksiGedungdanHunianPost');
-        restoreCondition('JasaKonstruksiRukodanKiosPost');
-
-       //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-        removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPerkuatanTanahLongsorPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost'); 
-	removeCondition('JasaKonsFinishingPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-
-	 //hapus elemen id JasaStrukturBajadanRangkaRinganPost SEMUA
-        removeCondition('JasaKonstruksiBajaKonvensionalPost');
-        removeCondition('JasaKanopiBajadanBesiPost');
-        removeCondition('JasaStrukturBajaGudangPost');
-        removeCondition('JasaRangkaAtapBajaRinganPost');
-	// hapus elemen id JasaKonstruksiLapanganOlahragaPost SEMUA
-	removeCondition('JasaPembuatanLapanganBadmintonPost');
-	removeCondition('JasaPembuatanLapanganTenisPost');
-        removeCondition('JasaPembuatanLapanganFutsalPost');
-        removeCondition('JasaPembuatanLapanganBasketPost');
-        removeCondition('JasaPembuatanLapanganSepakbolaPost');
-        removeCondition('JasaPembuatanLapanganVoliPost');
-        removeCondition('JasaPembuatanLapanganSerbagunaPost');
-	
-	 //hapus elemen id JasaKonstruksiGedungdanHunianPost SEMUA selain JasaKonstruksiRumahTinggalPost
-       // removeCondition('');
-        removeCondition('JasaKonstruksiRumahTinggalPost');
-        removeCondition('JasaKonstruksiVillaPost');
-        removeCondition('JasaKonstruksiApartemenPost');
-        removeCondition('JasaKonstruksiHotelPost');
-        removeCondition('JasaKonstruksiPerkantoranPost');
-        removeCondition('JasaKonstruksiGedungSekolahPost');
-        removeCondition('JasaKonstruksiGedungRumahSakitPost');
-	//hapus elemen id JasaKonstruksiIndustridanGudangPost SEMUA
-        removeCondition('JasaKonstruksiGudangLogistikPost');
-        removeCondition('JasaKonstruksiPabrikPost');
-        removeCondition('JasaKonstruksiColdStoragePost');
-        removeCondition('JasaKonstruksiBengkelPost');
-        removeCondition('JasaKonstruksiWorkshopPost');
-        removeCondition('JasaKonstruksiPabrikPost');
-	
-      //hapus elemen id JasaStrukturBetondanPengecoranPost SEMUA 
-        removeCondition('JasaPengecoranLantaiGudangPost');
-        removeCondition('JasaBekistingdanPembesianPost');
-        removeCondition('JasaPengecoranLantaiDakPost');
-        removeCondition('JasaPengecoranKolomBetonPost');
-        removeCondition('JasaCorBetonPost');
-	
-	//hapus elemen id JasaStrukturKhususPost SEMUA 
-        removeCondition('JasaPembuatanKolamRenangPost');
-        removeCondition('JasaPembuatanKolamIkanPost');
-        removeCondition('JasaSepticTankBetonPost');
-        removeCondition('JasaPembuatanTangkiAirPost');
-        removeCondition('JasaPembuatanBakPenampunganPost');
-        removeCondition('JasaKonstruksiMenaraAirPost');
-
-	
-      
-	/*
-JasaKonstruksiGedungdanHunianPost
-JasaKonstruksiIndustridanGudangPost
-JasaStrukturBajadanRangkaRinganPost
-JasaStrukturKhusus
-JasaKonstruksiLapanganOlahragaPost
-JasaKonstruksiModulardanPrecastPost
-JasaStrukturBetondanPengecoranPost
-*/
-       //HAPUS ELEMEN LAIN DI JasaKonsStruktur SELAIN JasaKonstruksiGedungdanHunianPost
-        removeCondition('JasaKonstruksiIndustridanGudangPost');
-        removeCondition('JasaStrukturBetondanPengecoranPost');
-        removeCondition('JasaStrukturKhususPost');
-	removeCondition('JasaKonstruksiLapanganOlahragaPost');
-	removeCondition('JasaKonstruksiModulardanPrecastPost');
-	removeCondition('JasaStrukturBajadanRangkaRinganPost');
-       
-        JasaKonstruksiStrukturPostLink.style.visibility = 'visible';
-        JasaStrukturKonstruksiPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaKonstruksiGedungdanHunianPost
-        JasaKonstruksiGedungdanHunianPostLink.style.visibility = 'visible';
-	//TAMPILKAN JasaKonstruksiRukodanKiosPost
-        JasaKonstruksiRukodanKiosPostLink.style.visibility = 'visible';
-        pageNameJasaKonsStrukturPost.textContent = urlMappingJasaKonstruksiRukodanKiosFromSub2MoneyPage[cleanUrlJasaJasaKonsStrukturPost];
-    }
-
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaKonstruksiRukodanKiosFromSub2MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Struktur Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-struktur-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Konstruksi Gedung dan Hunian",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html"
-               },
-		{
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": "Jasa Konstruksi Ruko dan Kios",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi-ruko-dan-kios.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 6,
-                   "name": urlMappingJasaKonstruksiRukodanKiosFromSub2MoneyPage[cleanUrlJasaJasaKonsStrukturPost],
-                   "item": cleanUrlJasaJasaKonsStrukturPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+if (urlMappingJasaPembuatanRukoFromMoneyMaster2MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
+   generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingJasaPembuatanRukoFromMoneyMaster2MoneyPage,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html'},
+            { name: 'Jasa Pembuatan Ruko', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-ruko.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   
+}
 //AKHIR SUB JasaKonstruksiGedungdanHunianPost
 
 //SUB JasaKonstruksiGudangLogistikPost
