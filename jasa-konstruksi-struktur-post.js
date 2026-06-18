@@ -630,8 +630,8 @@ const urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyPage2 = {
   // ============================================================
   // [MONEY_PAGE] - JASA & HARGA LAPANGAN VOLI
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-lapangan-voli.html": "Harga Jasa Pembuatan Lapangan Voli",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-voli.html": "Jasa Pembuatan Lapangan Voli"
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-lapangan-voli.html": "Harga Jasa Pembuatan Lapangan Voli"  // TYPE: MONEY_PAGE
+  //"https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-voli.html": "Jasa Pembuatan Lapangan Voli"
 };
 
 const urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyChild = {
@@ -657,26 +657,32 @@ const urlMappingJasaPembuatanLapanganSerbagunaFromMoneyPage1MoneyPage2 = {
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE & MONEY_CHILD
 // Parent: Jasa Struktur Khusus (SUB2)
 // ============================================================
-
-const urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyPage1 = {
+const urlMappingKontraktorKolamRenangFromMoneyPageMoneyPage1 = {
   // ============================================================
   // [MONEY_PAGE] - JASA & KONTRAKTOR KOLAM RENANG
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/kontraktor-kolam-renang.html": "Kontraktor Kolam Renang",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/jasa-kolam-renang.html": "Jasa Kolam Renang",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/kontraktor-waterpark-indonesia.html": "Kontraktor Waterpark Indonesia",  // TYPE: MONEY_PAGE
-
+  //"https://www.betonjayareadymix.com/2018/09/kontraktor-kolam-renang.html": "Kontraktor Kolam Renang",  // TYPE: MONEY_PAGE
+  //"https://www.betonjayareadymix.com/2018/09/jasa-kolam-renang.html": "Jasa Kolam Renang",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/kontraktor-waterpark-indonesia.html": "Kontraktor Waterpark Indonesia"
+ 
+};
+const urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyPage1 = {
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kolam-renang.html": "Harga Jasa Pembuatan Kolam Renang"
+ 
+};
+const urlMappingHargaJasaPembuatanKolamRenangFromMoneyPage1MoneyPage2 = {
+ 
   // ============================================================
   // [MONEY_PAGE] - HARGA PEMBUATAN KOLAM RENANG
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/biaya-bangun-kolam-renang-per-meter.html": "Biaya Bangun Kolam Renang Per Meter",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/biaya-jasa-bangun-kolam-renang-per-meter.html": "Biaya Jasa Bangun Kolam Renang Per Meter",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-waterpark-kolam-renang.html": "Harga Jasa Pembuatan Waterpark Kolam Renang",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-wahana-kolam-renang.html": "Harga Jasa Pembuatan Wahana Kolam Renang",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-pembuatan-kolam-renang-per-m2.html": "Harga Pembuatan Kolam Renang Per M2",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-tenaga-bikin-kolam-renang.html": "Harga Jasa Borongan Tenaga Bikin Kolam Renang",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kolam-renang.html": "Harga Jasa Pembuatan Kolam Renang",  // TYPE: MONEY_PAGE
-
-  // ============================================================
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kolam-renang-per-m2..html": "Harga Jasa Pembuatan Kolam Renang Per M2",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-tenaga-bikin-kolam-renang.html": "Harga Jasa Borongan Tenaga Bikin Kolam Renang"
+};
+const urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyChild = {
+	// ============================================================
   // [MONEY_CHILD] - JASA KOLAM RENANG PER LOKASI
   // ============================================================
   "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-ciamis.html": "Jasa Kolam Renang Ciamis",  // TYPE: MONEY_CHILD
@@ -691,9 +697,9 @@ const urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-tangerang.html": "Jasa Kolam Renang Tangerang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-jakarta.html": "Jasa Kolam Renang Jakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-bekasi.html": "Jasa Kolam Renang Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-bogor.html": "Jasa Kolam Renang Bogor",  // TYPE: MONEY_CHILD
-};
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-bogor.html": "Jasa Kolam Renang Bogor"
 
+};
 // ============================================================
 // 📁 JASA PEMBUATAN KOLAM IKAN - KOSONG (SARAN ITEM)
 // ============================================================
@@ -2202,8 +2208,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyPage2,
 		urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyChild,
 		urlMappingJasaPembuatanLapanganSerbagunaFromMoneyPage1MoneyPage2,
-		
+
+		urlMappingKontraktorKolamRenangFromMoneyPageMoneyPage1,
 		urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyPage1,
+        urlMappingHargaJasaPembuatanKolamRenangFromMoneyPage1MoneyPage2,
+		urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyChild,
+		 
 		urlMappingJasaPembuatanKolamIkanFromSub2MoneyPage,
 		urlMappingJasaSepticTankBetonFromSub2MoneyPage,
 		urlMappingJasaPembuatanTangkiAirFromSub2MoneyPage,
@@ -4331,8 +4341,23 @@ if (urlMappingJasaPembuatanLapanganSerbagunaFromMoneyPage1MoneyPage2[cleanUrlJas
 //AKHIR SUB JasaKonstruksiLapanganOlahragaPost
 
 //SUB Jasa Struktur Khusus
+if (urlMappingKontraktorKolamRenangFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStrukturPost]) {
+   generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingKontraktorKolamRenangFromMoneyPageMoneyPage1,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+            { name: 'Jasa Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-renang.html' },
+            { name: 'Kontraktor Kolam Renang', url: 'https://www.betonjayareadymix.com/p/kontraktor-kolam-renang.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );	   
+}
 if (urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStrukturPost]) {
-   generateBreadcrumbJasaKonstruksiStruktur(
+   generateBreadcrumbJasaKonstruksiStrukturPost(
         urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyPage1,
         cleanUrlJasaJasaKonsStrukturPost,
         [
@@ -4340,11 +4365,45 @@ if (urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyPage1[cleanUrlJasaJasaKo
              { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
              { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
             { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+            { name: 'Jasa Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-renang.html' },
             { name: 'Jasa Pembuatan Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html' }
         ],
         'JASA_KONSTRUKSI'
     );	   
 }	
+if (urlMappingHargaJasaPembuatanKolamRenangFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
+   generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingHargaJasaPembuatanKolamRenangFromMoneyPage1MoneyPage2,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+            { name: 'Jasa Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-renang.html' },
+            { name: 'Jasa Pembuatan Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html' },
+            { name: 'Harga Jasa Pembuatan Kolam Renang', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-kolam-renang.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );	   
+}	
+if (urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
+   generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyChild,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+            { name: 'Jasa Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-renang.html' },
+            { name: 'Jasa Pembuatan Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );	   
+}	
+
+	
 //AKHIR SUB Jasa Struktur Khusus
 }
    });
