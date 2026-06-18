@@ -632,7 +632,7 @@ const urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyPage2 = {
   // ============================================================
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-lapangan-voli.html": "Harga Jasa Pembuatan Lapangan Voli",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-voli.html": "Jasa Pembuatan Lapangan Voli"
-
+};
 
 const urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyChild = {
   // ============================================================
