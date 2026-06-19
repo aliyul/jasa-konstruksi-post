@@ -40,8 +40,8 @@ const urlMappingJasaStrukturBajaRangkaRinganFromPillarSub2 = {
 // Parent: Jasa Rangka Atap Baja Ringan (SUB2)
 // ============================================================
 
-const urlMappingStrukturPostFromSub1MoneyPage = {
-  // ============================================================
+const urlMappingJasaRangkaAtapBajaRinganFromSub2MoneyPageMoneyChild = {
+    // ============================================================
   // [MONEY_PAGE] - JASA PASANG ATAP & KANOPI BAJA RINGAN
   // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
   // ============================================================
@@ -64,12 +64,8 @@ const urlMappingStrukturPostFromSub1MoneyPage = {
   "https://www.betonjayareadymix.com/2019/04/harga-borongan-baja-ringan.html": "Harga Borongan Baja Ringan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/04/borongan-baja-ringan.html": "Borongan Baja Ringan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2019/04/harga-borongan-baja-ringan-plus-material.html": "Harga Borongan Baja Ringan Plus Material",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/tukang-baja-ringan-murah.html": "Tukang Baja Ringan Murah"  // TYPE: MONEY_PAGE
-};
-const urlMappingJasaRangkaAtapBajaRinganFromSub2MoneyPageMoneyChild = {
-  // ============================================================
-  // [MONEY_PAGE] - JASA PASANG ATAP & KANOPI BAJA RINGAN
-  
+  "https://www.betonjayareadymix.com/2018/09/tukang-baja-ringan-murah.html": "Tukang Baja Ringan Murah",  // TYPE: MONEY_PAGE
+
   // ============================================================
   // [MONEY_CHILD] - JASA PASANG KANOPI BAJA RINGAN PER LOKASI
   // ============================================================
@@ -2176,7 +2172,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	// --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingStrukturPostFromSub1MoneyPage,
 		urlMappingJasaKonstruksiBajaKonvensionalFromMoneyPage1MoneyPage2,
 		urlMappingJasaKanopiBajadanBesiFromMoneyPage1MoneyPage2,
 		urlMappingJasaStrukturBajaGudangFromMoneyPage1MoneyPage2,
