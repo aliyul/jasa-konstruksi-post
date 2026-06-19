@@ -43,12 +43,20 @@ const urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1 = {
   // ============================================================
 // 📌 MONEY-PAGE (MP) DI BAWAH JASA KONSTRUKSI STRUKTUR (BAJA)
 // ============================================================
-
+"https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html": "Jasa Konstruksi Baja Ringan",
 "https://www.betonjayareadymix.com/p/jasa-rangka-atap-baja-ringan.html": "Jasa Rangka Atap Baja Ringan",
 "https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-konvensional.html": "Jasa Konstruksi Baja Konvensional",
 "https://www.betonjayareadymix.com/p/jasa-kanopi-baja-dan-besi.html": "Jasa Kanopi Baja dan Besi",
 "https://www.betonjayareadymix.com/p/jasa-struktur-baja-gudang.html": "Jasa Struktur Baja Gudang"
 };
+const urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2 = {
+  // ============================================================
+// 📌 MONEY-PAGE (MP) DI BAWAH JASA KONSTRUKSI STRUKTUR (BAJA)
+// ============================================================
+"https://www.betonjayareadymix.com/p/jasa-atap-baja-ringan.html": "Jasa Atap Baja Ringan",
+"https://www.betonjayareadymix.com/p/jasa-borongan-baja-ringan.html": "Jasa Borongan Baja Ringan"
+};
+
 const urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1 = {
   // ============================================================
 // 📌 MONEY-PAGE (MP) DI BAWAH JASA KONSTRUKSI STRUKTUR (BETON)
@@ -1518,6 +1526,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage,
 		urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage,
 		urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1,
+		urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2,
+		
 		urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1,
 		urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1,
 		
@@ -2107,6 +2117,7 @@ if (urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage[cleanUrlJasaJasaKon
         'JASA_KONSTRUKSI'
     );	
 }
+	
 if (urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
 		    generateBreadcrumbJasaKonstruksiStruktur(
         urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1,
@@ -2121,6 +2132,22 @@ if (urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1[cleanUrlJasaJa
         'JASA_KONSTRUKSI'
     );	
 }
+if (urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStruktur]) {
+		    generateBreadcrumbJasaKonstruksiStruktur(
+        urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2,
+        cleanUrlJasaJasaKonsStruktur,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' },
+            { name: 'Jasa Konstruksi Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );	
+}
+	
 if (urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
 		    generateBreadcrumbJasaKonstruksiStruktur(
         urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1,
