@@ -102,13 +102,15 @@ const urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage = {
 "https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-ikan-koi.html": "Jasa Pembuatan Kolam Ikan Koi"
 };
 const urlMappingJasaSepticTankFromMoneyMaster1MoneyPage = {
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank-beton.html": "Jasa Pembuatan Septic Tank Beton",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank-biofilter.html": "Jasa Pembuatan Septic Tank Biofilter",
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank.html": "Jasa Pembuatan Septic Tank",
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-septic-tank.html": "Jasa Perbaikan Septic Tank",
-"https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-septic-tank.html": "Harga Jasa Pembuatan Septic Tank",
 "https://www.betonjayareadymix.com/p/jasa-sedot-septic-tank.html": "Jasa Sedot Septic Tank"
 };
-
+const urlMappingJasaPembuatanSepticTankFromMoneyPageMoneyPage1 = {
+"https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-septic-tank.html": "Harga Jasa Pembuatan Septic Tank",
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank-beton.html": "Jasa Pembuatan Septic Tank Beton",
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank-biofilter.html": "Jasa Pembuatan Septic Tank Biofilter"
+};
 const urlMappingJasaTangkiAirFromMoneyMaster1MoneyPage = {
 "https://www.betonjayareadymix.com/p/jasa-pembuatan-tangki-air.html": "Jasa Pembuatan Tangki Air"
 };
@@ -1538,7 +1540,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1,
 		urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage,
 		urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage,
+		
 		urlMappingJasaSepticTankFromMoneyMaster1MoneyPage,
+		urlMappingJasaPembuatanSepticTankFromMoneyPageMoneyPage1,
+		
 		urlMappingJasaTangkiAirFromMoneyMaster1MoneyPage,
 		urlMappingJasaBakPenampunganFromMoneyMaster1MoneyPage,
        urlMappingJasaMenaraAirFromMoneyMaster1MoneyPage,
@@ -2267,6 +2272,23 @@ if (urlMappingJasaSepticTankFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStrukt
         'JASA_KONSTRUKSI'
     );	
 }
+if (urlMappingJasaPembuatanSepticTankFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
+		    generateBreadcrumbJasaKonstruksiStruktur(
+        urlMappingJasaPembuatanSepticTankFromMoneyPageMoneyPage1,
+        cleanUrlJasaJasaKonsStruktur,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+            { name: 'Jasa Septic Tank', url: 'https://www.betonjayareadymix.com/p/jasa-septic-tank.html' },
+            { name: 'Jasa Pembuatan Septic Tank', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );	
+}
+	
+	
 if (urlMappingJasaTangkiAirFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
 		    generateBreadcrumbJasaKonstruksiStruktur(
         urlMappingJasaTangkiAirFromMoneyMaster1MoneyPage,
