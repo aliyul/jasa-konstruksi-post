@@ -2205,6 +2205,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		urlMappingHargaJasaPasangBajaRinganFromMoneyPage3MoneyPage4,
 		urlMappingHargaJasaBoronganBajaRinganFromMoneyPage4MoneyPage5,
+		urlMappingHargaJasaBoronganBajaRinganMaterialFromMoneyPage5MoneyChild,
+		
 		urlMappingJasaTukangBajaRinganFromMoneyPage3MoneyPage4,
         
 		
@@ -2799,6 +2801,27 @@ if (urlMappingJasaPasangBajaRinganFromMoneyPage2MoneyPage3[cleanUrlJasaJasaKonsS
         'JASA_KONSTRUKSI'
     );
     }
+	if (urlMappingHargaJasaBoronganBajaRinganMaterialFromMoneyPage5MoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
+	generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingHargaJasaBoronganBajaRinganMaterialFromMoneyPage5MoneyChild,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
+            { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html'},
+            { name: 'Perbandingan Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-konstruksi.html'},
+			 { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' },
+            { name: 'Jasa Konstruksi Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html' },
+            { name: 'Jasa Pasang Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-baja-ringan.html'},
+            { name: 'Harga Jasa Pasang Baja Ringan', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-baja-ringan.html'},
+            { name: 'Harga Jasa Borongan Baja Ringan', url: 'https://www.betonjayareadymix.com/2019/04/harga-jasa-borongan-baja-ringan.html'},
+            { name: 'Harga Jasa Borongan Baja Ringan + Material', url: 'https://www.betonjayareadymix.com/2019/04/harga-jasa-borongan-baja-ringan-material.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	
+	
 	if (urlMappingJasaTukangBajaRinganFromMoneyPage3MoneyPage4[cleanUrlJasaJasaKonsStrukturPost]) {
 	generateBreadcrumbJasaKonstruksiStrukturPost(
         urlMappingJasaTukangBajaRinganFromMoneyPage3MoneyPage4,
