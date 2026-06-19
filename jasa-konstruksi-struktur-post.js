@@ -40,7 +40,7 @@ const urlMappingJasaStrukturBajaRangkaRinganFromPillarSub2 = {
 // Parent: Jasa Rangka Atap Baja Ringan (SUB2)
 // ============================================================
 
-const urlMappingJasaRangkaAtapBajaRinganFromSub2MoneyPageMoneyChild = {
+const urlMappingJasaRangkaAtapBajaRinganFromMoneyPage1MoneyPage2 = {
     // ============================================================
   // [MONEY_PAGE] - JASA PASANG ATAP & KANOPI BAJA RINGAN
   // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
@@ -2172,6 +2172,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
+		urlMappingJasaRangkaAtapBajaRinganFromMoneyPage1MoneyPage2
 		urlMappingJasaKonstruksiBajaKonvensionalFromMoneyPage1MoneyPage2,
 		urlMappingJasaKanopiBajadanBesiFromMoneyPage1MoneyPage2,
 		urlMappingJasaStrukturBajaGudangFromMoneyPage1MoneyPage2,
@@ -2678,14 +2679,17 @@ if (!JasaKonsStrukturPost) {
 
 
 //SUB JasaStrukturBajadanRangkaRinganPost
-if (urlMappingStrukturPostFromSub1MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
+if (urlMappingJasaRangkaAtapBajaRinganFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
 	generateBreadcrumbJasaKonstruksiStrukturPost(
-        urlMappingStrukturPostFromSub1MoneyPage,
+        urlMappingJasaRangkaAtapBajaRinganFromMoneyPage1MoneyPage2,
         cleanUrlJasaJasaKonsStrukturPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
             { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html'},
-            { name: 'Perbandingan Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-konstruksi.html'}
+            { name: 'Perbandingan Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-konstruksi.html'},
+			 { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' },
+            { name: 'Jasa Rangka Atap Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-rangka-atap-baja-ringan.html' }
         ],
         'JASA_KONSTRUKSI'
     );
