@@ -44,16 +44,14 @@ const urlMappingJasaAtapBajaRinganFromMoneyPage2MoneyPage3 = {
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-baja-ringan.html": "Jasa Pasang Baja Ringan",  
 
 };
-const urlMappingJasaPasangBajaRinganFromMoneyPage2MoneyPage3 = { 
+const urlMappingJasaPasangBajaRinganFromMoneyPage3MoneyPage4 = { 
 	  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-atap-baja-ringan.html": "Jasa Pasang Atap Baja Ringan",  
       "https://www.betonjayareadymix.com/2018/09/jasa-pasang-kanopi-baja-ringan.html": "Jasa Pasang Kanopi Baja Ringan",
 	    "https://www.betonjayareadymix.com/2019/04/jasa-borongan-baja-ringan.html": "Jasa Borongan Baja Ringan", 
 	"https://www.betonjayareadymix.com/2018/09/jasa-tukang-baja-ringan.html": "Jasa Tukang Baja Ringan"
 	
 };
-const urlMappingJasaPasangAtapBajaRinganFromMoneyPage3MoneyPage4 = { 
-// Halaman utama (L4 - MM)
-    "https://www.betonjayareadymix.com/2018/09/jasa-pasang-atap-baja-ringan.html": "Jasa Pasang Atap Baja Ringan",
+const urlMappingJasaPasangAtapBajaRinganFromMoneyPage4MoneyPage5 = { 
     
     // Harga & layanan turunan (L5 - MP)
     "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-atap-baja-ringan.html": "Harga Jasa Pasang Atap Baja Ringan",
@@ -61,17 +59,17 @@ const urlMappingJasaPasangAtapBajaRinganFromMoneyPage3MoneyPage4 = {
     // Halaman dengan lokasi (L6 - MC)
     "https://www.betonjayareadymix.com/2018/09/jasa-pasang-baja-ringan-terdekat.html": "Jasa Pasang Baja Ringan Terdekat"
 };
-const urlMappingJasaPasangKanopiBajaRinganFromMoneyPage2MoneyPage3 = { 
+const urlMappingJasaPasangKanopiBajaRinganFromMoneyPage4MoneyPage5 = { 
 	  // Halaman utama (L4 - MM)
     "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-kanopi-baja-ringan.html": "Harga Jasa Pasang Kanopi Baja Ringan",
     
     // Halaman turunan dengan lokasi (L5 - MP)
-    "https://www.betonjayareadymix.com/2018/09/jasa-pasang-kanopi-baja-ringan-terdekat.html": "Jasa Pasang Kanopi Baja Ringan Terdekat",
+    "https://www.betonjayareadymix.com/2018/09/jasa-pasang-kanopi-baja-ringan-terdekat.html": "Jasa Pasang Kanopi Baja Ringan Terdekat"
     
     // Halaman terkait atap kanopi (⚠️ perlu redirect atau re-klasifikasi)
-    "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-atap-kanopi.html": "Harga Jasa Pasang Atap Kanopi",
+   // "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-atap-kanopi.html": "Harga Jasa Pasang Atap Kanopi",
 };
-const urlMappingJasaBoronganBajaRinganFromMoneyPage2MoneyPage3 = {
+const urlMappingJasaBoronganBajaRinganFromMoneyPage4MoneyPage5 = {
 	// Halaman utama (L4 - MM)
     "https://www.betonjayareadymix.com/2019/04/harga-borongan-baja-ringan.html": "Harga Borongan Baja Ringan",
     
@@ -82,20 +80,20 @@ const urlMappingJasaBoronganBajaRinganFromMoneyPage2MoneyPage3 = {
     "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-bandung.html": "Harga Borongan Baja Ringan Plus Material Bandung",
     "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-jakarta.html": "Harga Borongan Baja Ringan Plus Material Jakarta",
     "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-depok.html": "Harga Borongan Baja Ringan Plus Material Depok",
-    "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-kota-bekasi.html": "Harga Borongan Baja Ringan Plus Material Kota Bekasi",
+    "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-kota-bekasi.html": "Harga Borongan Baja Ringan Plus Material Kota Bekasi"
     
     // ⚠️ Perlu redirect atau re-klasifikasi
-    "https://www.betonjayareadymix.com/2019/04/borongan-baja-ringan.html": "Borongan Baja Ringan",
-    "https://www.betonjayareadymix.com/2018/09/harga-borongan-jasa-konstruksi-baja-ringan.html": "Harga Borongan Jasa Konstruksi Baja Ringan"
+    //"https://www.betonjayareadymix.com/2019/04/borongan-baja-ringan.html": "Borongan Baja Ringan",
+    //"https://www.betonjayareadymix.com/2018/09/harga-borongan-jasa-konstruksi-baja-ringan.html": "Harga Borongan Jasa Konstruksi Baja Ringan"
 		
 };
-const urlMappingJasaTukangBajaRinganFromMoneyPage2MoneyPage3 = {
+const urlMappingJasaTukangBajaRinganFromMoneyPage4MoneyPage5 = {
     
     // Varian harga (L6 - MC)
-    "https://www.betonjayareadymix.com/2018/09/tukang-baja-ringan-murah.html": "Tukang Baja Ringan Murah",
+    "https://www.betonjayareadymix.com/2018/09/jasa-tukang-baja-ringan-murah.html": "Jasa Tukang Baja Ringan Murah",
     
     // Varian lokasi (L6 - MC)
-    "https://www.betonjayareadymix.com/2018/09/tukang-baja-ringan-terdekat.html": "Tukang Baja Ringan Terdekat",
+    "https://www.betonjayareadymix.com/2018/09/jasa-tukang-baja-ringan-terdekat.html": "Jasa Tukang Baja Ringan Terdekat"
 };
 
 // ============================================================
@@ -2197,7 +2195,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	// --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2
+		urlMappingJasaAtapBajaRinganFromMoneyPage2MoneyPage3,
+		urlMappingJasaPasangBajaRinganFromMoneyPage3MoneyPage4,
+		urlMappingJasaPasangAtapBajaRinganFromMoneyPage4MoneyPage5,
+        urlMappingJasaPasangKanopiBajaRinganFromMoneyPage4MoneyPage5,
+		urlMappingJasaBoronganBajaRinganFromMoneyPage4MoneyPage5,
+		urlMappingJasaTukangBajaRinganFromMoneyPage4MoneyPage5,
+        
+		
 		urlMappingJasaKonstruksiBajaKonvensionalFromMoneyPage1MoneyPage2,
 		urlMappingJasaKanopiBajadanBesiFromMoneyPage1MoneyPage2,
 		urlMappingJasaStrukturBajaGudangFromMoneyPage1MoneyPage2,
@@ -2704,9 +2709,9 @@ if (!JasaKonsStrukturPost) {
 
 
 //SUB JasaStrukturBajadanRangkaRinganPost
-if (urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
+if (urlMappingJasaAtapBajaRinganFromMoneyPage2MoneyPage3[cleanUrlJasaJasaKonsStrukturPost]) {
 	generateBreadcrumbJasaKonstruksiStrukturPost(
-        urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2,
+        urlMappingJasaAtapBajaRinganFromMoneyPage2MoneyPage3,
         cleanUrlJasaJasaKonsStrukturPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
@@ -2714,7 +2719,97 @@ if (urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2[cleanUrlJasaJasaK
             { name: 'Perbandingan Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-konstruksi.html'},
 			 { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
             { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' },
-            { name: 'Jasa Konstruksi Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html' }
+            { name: 'Jasa Konstruksi Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html' },
+            { name: 'Jasa Atap Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-atap-baja-ringan.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+if (urlMappingJasaPasangBajaRinganFromMoneyPage3MoneyPage4[cleanUrlJasaJasaKonsStrukturPost]) {
+	generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingJasaPasangBajaRinganFromMoneyPage3MoneyPage4,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
+            { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html'},
+            { name: 'Perbandingan Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-konstruksi.html'},
+			 { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' },
+            { name: 'Jasa Konstruksi Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html' },
+            { name: 'Jasa Atap Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-atap-baja-ringan.html'},
+            { name: 'Jasa Pasang Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-baja-ringan.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	if (urlMappingJasaPasangAtapBajaRinganFromMoneyPage4MoneyPage5[cleanUrlJasaJasaKonsStrukturPost]) {
+	generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingJasaPasangAtapBajaRinganFromMoneyPage4MoneyPage5,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
+            { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html'},
+            { name: 'Perbandingan Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-konstruksi.html'},
+			 { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' },
+            { name: 'Jasa Konstruksi Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html' },
+            { name: 'Jasa Atap Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-atap-baja-ringan.html'},
+            { name: 'Jasa Pasang Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-baja-ringan.html'},
+            { name: 'Jasa Pasang Atap Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-atap-baja-ringan.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	if (urlMappingJasaPasangKanopiBajaRinganFromMoneyPage4MoneyPage5[cleanUrlJasaJasaKonsStrukturPost]) {
+	generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingJasaPasangKanopiBajaRinganFromMoneyPage4MoneyPage5,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
+            { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html'},
+            { name: 'Perbandingan Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-konstruksi.html'},
+			 { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' },
+            { name: 'Jasa Konstruksi Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html' },
+            { name: 'Jasa Atap Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-atap-baja-ringan.html'},
+            { name: 'Jasa Pasang Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-baja-ringan.html'},
+            { name: 'Jasa Pasang Kanopi Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-kanopi-baja-ringan.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	if (urlMappingJasaBoronganBajaRinganFromMoneyPage4MoneyPage5[cleanUrlJasaJasaKonsStrukturPost]) {
+	generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingJasaBoronganBajaRinganFromMoneyPage4MoneyPage5,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
+            { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html'},
+            { name: 'Perbandingan Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-konstruksi.html'},
+			 { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' },
+            { name: 'Jasa Konstruksi Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html' },
+            { name: 'Jasa Atap Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-atap-baja-ringan.html'},
+            { name: 'Jasa Pasang Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-baja-ringan.html'},
+            { name: 'Jasa Borongan Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-borongan-baja-ringan.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	if (urlMappingJasaTukangBajaRinganFromMoneyPage4MoneyPage5[cleanUrlJasaJasaKonsStrukturPost]) {
+	generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingJasaTukangBajaRinganFromMoneyPage4MoneyPage5,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
+            { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html'},
+            { name: 'Perbandingan Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-konstruksi.html'},
+			 { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' },
+            { name: 'Jasa Konstruksi Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html' },
+            { name: 'Jasa Atap Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-atap-baja-ringan.html'},
+            { name: 'Jasa Pasang Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-baja-ringan.html'},
+            { name: 'Jasa Tukang Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-tukang-baja-ringan.html'}
         ],
         'JASA_KONSTRUKSI'
     );
