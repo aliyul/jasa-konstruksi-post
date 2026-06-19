@@ -1517,6 +1517,10 @@ document.addEventListener("DOMContentLoaded", function() {
       {},
 		urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage,
 		urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage,
+		urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1,
+		urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1,
+		urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1,
+		
 		urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1,
 		urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage,
 		urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage,
@@ -1525,9 +1529,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBakPenampunganFromMoneyMaster1MoneyPage,
        urlMappingJasaMenaraAirFromMoneyMaster1MoneyPage,
 		
-		urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1,
-		urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1,
-		urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1
+		urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1
+
     );
 
     // --- validasi URL terdaftar ---
@@ -2104,6 +2107,50 @@ if (urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage[cleanUrlJasaJasaKon
         'JASA_KONSTRUKSI'
     );	
 }
+if (urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
+		    generateBreadcrumbJasaKonstruksiStruktur(
+        urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1,
+        cleanUrlJasaJasaKonsStruktur,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );	
+}
+if (urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
+		    generateBreadcrumbJasaKonstruksiStruktur(
+        urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1,
+        cleanUrlJasaJasaKonsStruktur,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Beton Dan Pengecoran', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );	
+}	
+if (urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
+		    generateBreadcrumbJasaKonstruksiStruktur(
+        urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1,
+        cleanUrlJasaJasaKonsStruktur,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Konstruksi Modular Dan Precast', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );	
+}	
+
+	
 if (urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
 	      generateBreadcrumbJasaKonstruksiStruktur(
         urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1,
