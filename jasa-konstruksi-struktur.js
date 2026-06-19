@@ -53,7 +53,7 @@ const urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2 = {
   // ============================================================
 // 📌 MONEY-PAGE (MP) DI BAWAH JASA KONSTRUKSI STRUKTUR (BAJA)
 // ============================================================
-"https://www.betonjayareadymix.com/p/jasa-atap-baja-ringan.html": "Jasa Atap Baja Ringan"
+"https://www.betonjayareadymix.com/p/jasa-pasang-baja-ringan.html": "Jasa Pasang Baja Ringan"
 };
 
 const urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1 = {
