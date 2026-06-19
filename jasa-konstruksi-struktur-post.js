@@ -70,15 +70,21 @@ const urlMappingHargaJasaPasangBajaRinganFromMoneyPage3MoneyPage4 = {
     "https://www.betonjayareadymix.com/2019/04/harga-jasa-borongan-baja-ringan.html": "Harga Jasa Borongan Baja Ringan"
 };
 const urlMappingHargaJasaBoronganBajaRinganFromMoneyPage4MoneyPage5 = {
-    
+    "https://www.betonjayareadymix.com/2019/05/harga-jasa-borongan-rangka-atap-baja-ringan.html": "Harga Jasa Borongan Rangka Atap Baja Ringan",
+    "https://www.betonjayareadymix.com/2019/05/harga-jasa-borongan-tenaga-pasang-baja-ringan.html": "Harga Jasa Borongan Tenaga Pasang Baja Ringan",
     // Halaman borongan plus material (L5 - MP)
-    "https://www.betonjayareadymix.com/2019/04/harga-borongan-baja-ringan-plus-material.html": "Harga Borongan Baja Ringan Plus Material",
-    
+    "https://www.betonjayareadymix.com/2019/04/harga-jasa-borongan-baja-ringan-material.html": "Harga Jasa Borongan Baja Ringan + Material"
+   
+}; 
+const urlMappingHargaJasaBoronganBajaRinganMaterialFromMoneyPage5MoneyChild = {
     // Halaman borongan plus material per lokasi (L6 - MC)
-    "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-bandung.html": "Harga Borongan Baja Ringan Plus Material Bandung",
-    "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-jakarta.html": "Harga Borongan Baja Ringan Plus Material Jakarta",
-    "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-depok.html": "Harga Borongan Baja Ringan Plus Material Depok",
-    "https://www.betonjayareadymix.com/2019/05/harga-borongan-baja-ringan-plus-material-kota-bekasi.html": "Harga Borongan Baja Ringan Plus Material Kota Bekasi"
+    "https://www.betonjayareadymix.com/2019/05/harga-jasa-borongan-baja-ringan-material-bandung.html": "Harga Jasa Borongan Baja Ringan + Material Bandung",
+    "https://www.betonjayareadymix.com/2019/05/harga-jasa-borongan-baja-ringan-material-karawang.html": "Harga Jasa Borongan Baja Ringan + Material Karawang",
+    "https://www.betonjayareadymix.com/2019/05/harga-jasa-borongan-baja-ringan-material-tangerang.html": "Harga Jasa Borongan Baja Ringan + Material Tangerang",
+    "https://www.betonjayareadymix.com/2019/05/harga-jasa-borongan-baja-ringan-material-bogor.html": "Harga Jasa Borongan Baja Ringan + Material Bogor",
+    "https://www.betonjayareadymix.com/2019/05/harga-jasa-borongan-baja-ringan-material-jakarta.html": "Harga Jasa Borongan Baja Ringan + Material Jakarta",
+    "https://www.betonjayareadymix.com/2019/05/harga-jasa-borongan-baja-ringan-material-depok.html": "Harga Jasa Borongan Baja Ringan + Material Depok",
+    "https://www.betonjayareadymix.com/2019/05/harga-jasa-borongan-baja-ringan-material-bekasi.html": "Harga Jasa Borongan Baja Ringan + Material Bekasi"
     
     // ⚠️ Perlu redirect atau re-klasifikasi
     //"https://www.betonjayareadymix.com/2019/04/borongan-baja-ringan.html": "Borongan Baja Ringan",
