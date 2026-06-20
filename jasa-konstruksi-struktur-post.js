@@ -812,24 +812,26 @@ KOSONG (saran)   ~15          Perlu dibuat kontennya
 */
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v9.4
- * NO UNIQUEHIERARCHY - DIRECT PARENT DETECTION
+ * generateBreadcrumbJasaKonstruksi v9.5
+ * FIXED: JASA MONEY-MASTER DETECTION + DYNAMIC CLEAN
  * ============================================================
+ *
+ * ✅ UPDATE v9.5
+ * ------------------------------------------------------------
+ * - FIX: "Jasa Tukang Baja Ringan" terdeteksi sebagai money-page (level 5)
+ * - FIX: Kata "murah", "profesional", "berkualitas" mencegah MM
+ * - FIX: Parent terdekat "Jasa Tukang Baja Ringan" sekarang terpilih
+ * - FIX: Dynamic word removal untuk JASA (tidak perlu daftar lengkap)
+ * - ENHANCED: Deteksi MM lebih presisi untuk JASA
+ * - ENHANCED: Stopwords handling untuk hasil cleaning yang lebih baik
  *
  * ✅ UPDATE v9.4
  * ------------------------------------------------------------
  * - FIX: Hapus uniqueHierarchy, gunakan filter berdasarkan URL
  * - FIX: Duplikat nama tidak lagi menyebabkan parent hilang
- * - FIX: Jasa Tukang Baja Ringan tetap terdeteksi meskipun ada duplikat nama
- * - ENHANCED: allLevels langsung diproses dengan filter URL
- * - ENHANCED: Parent terdekat selalu terdeteksi
- *
- * ✅ UPDATE v9.3
- * ------------------------------------------------------------
- * - FIX: Parent terdekat dipilih berdasarkan RELEVANSI konten
  *
  * ============================================================
- * @version 9.4.0
+ * @version 9.5.0
  * @date 2026-06-20
  * ============================================================
  */
@@ -866,9 +868,10 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
             VARIANT: '🔬', 
             PARENT: '👪', 
             URL: '🔗',
-            SCORE: '🎯'
+            SCORE: '🎯',
+            CLEAN: '🧹'
         };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v9.4] ${message}`);
+        console.log(`${icons[type] || '📘'} [Breadcrumb v9.5] ${message}`);
     }
 
     // ============================================================
@@ -1024,7 +1027,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
     }
 
     // ============================================================
-    // 11. KEYWORDS (FIXED v9.2)
+    // 11. KEYWORDS (UPDATED v9.5)
     // ============================================================
 
     const SP1_KEYWORDS = [
@@ -1066,6 +1069,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
     ];
 
     const TECHNICAL_SPECS = ['k225', 'k250', 'k300', 'k350', 'k400', 'k500', 'k600', 'fc', 'm6', 'm8', 'm10', 'm12'];
+    
     const SPECIFIC_MODIFIERS = [
         'k225', 'k250', 'k300', 'm6', 'm8', 'm10',
         'diesel', 'hidrolik', 'mini pile', 'sheet pile', 'drop hammer',
@@ -1074,7 +1078,95 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
     ];
 
     // ============================================================
-    // 11b. VARIANT DETECTION PER ENTITY
+    // 11b. JASA CLEAN FUNCTION (FIXED v9.5 - DYNAMIC)
+    // ============================================================
+
+    // Daftar kata yang HARUS dihapus (kata inti JASA)
+    const JASA_CORE_WORDS = new Set([
+        'jasa', 'kontraktor', 'tukang', 'borongan', 'renovasi',
+        'pasang', 'bangun', 'perbaikan', 'instalasi', 'proyek',
+        'cor', 'gali', 'urug', 'angkut', 'service', 'servis'
+    ]);
+
+    // Daftar kata yang TIDAK dihapus (kata penting)
+    const JASA_KEEP_WORDS = new Set([
+        'baja', 'ringan', 'struktur', 'kanstin', 'pembatas', 'pengaman',
+        'beton', 'readymix', 'dinding', 'pondasi', 'atap', 'genteng',
+        'keramik', 'marmer', 'granit', 'plafon', 'gypsum', 'partisi',
+        'dak', 'cor', 'pile', 'sheet', 'bored', 'tiang', 'balok',
+        'kolom', 'sloof', 'ring', 'balk', 'kuda', 'kuda-kuda'
+    ]);
+
+    // Daftar stopwords (kata umum yang tidak berarti)
+    const STOPWORDS = new Set([
+        'dan', 'atau', 'serta', 'yang', 'dari', 'ke', 'di', 'untuk', 
+        'dengan', 'ini', 'itu', 'akan', 'telah', 'sudah', 'masih',
+        'pada', 'oleh', 'karena', 'sehingga', 'setelah', 'sebelum'
+    ]);
+
+    // Daftar modifier (kata yang menunjukkan spesifikasi/harga)
+    const MODIFIER_WORDS = new Set([
+        'murah', 'profesional', 'berkualitas', 'terbaik', 'spesialis',
+        'ahli', 'berpengalaman', 'resmi', 'terpercaya', 'ekonomis',
+        'cepat', 'tepat', 'garansi', 'kualitas', 'harga', 'biaya',
+        'tarif', 'ongkos', 'estimasi', 'perhitungan', 'analisa'
+    ]);
+
+    function cleanJasaText(text) {
+        if (!text) return '';
+        
+        let cleaned = text.toLowerCase();
+        
+        // 1. Hapus kata-kata inti JASA
+        for (const kw of JASA_CORE_WORDS) {
+            cleaned = cleaned.replace(new RegExp(`\\b${kw}\\b`, 'g'), ' ');
+        }
+        
+        // 2. Hapus stopwords
+        for (const sw of STOPWORDS) {
+            cleaned = cleaned.replace(new RegExp(`\\b${sw}\\b`, 'g'), ' ');
+        }
+        
+        // 3. Normalisasi spasi
+        cleaned = cleaned.replace(/\s+/g, ' ').trim();
+        
+        log(`Clean JASA: "${text}" → "${cleaned}"`, 'CLEAN');
+        
+        return cleaned;
+    }
+
+    function countCoreWords(text) {
+        if (!text) return 0;
+        const words = text.toLowerCase().split(/\s+/).filter(w => w.length > 2);
+        return words.length;
+    }
+
+    function hasModifier(text) {
+        if (!text) return false;
+        const lower = text.toLowerCase();
+        for (const mod of MODIFIER_WORDS) {
+            if (lower.includes(mod)) return true;
+        }
+        return false;
+    }
+
+    function isSpecificJasa(text) {
+        if (!text) return false;
+        const lower = text.toLowerCase();
+        // Cek spesifikasi teknis (angka)
+        if (/\d/.test(lower)) return true;
+        // Cek spesifikasi teknis (kode)
+        if (/(k225|k250|k300|k350|k400|k500|k600|m6|m8|m10|m12|sn|sni)/i.test(lower)) return true;
+        // Cek kata yang menunjukkan spesifikasi
+        const specWords = ['spesifikasi', 'mutu', 'dimensi', 'ukuran', 'standar', 'grade', 'tipe', 'type'];
+        for (const sw of specWords) {
+            if (lower.includes(sw)) return true;
+        }
+        return false;
+    }
+
+    // ============================================================
+    // 11c. VARIANT DETECTION PER ENTITY
     // ============================================================
     
     function isVariantPage(pageName, currentEntityType) {
@@ -1210,7 +1302,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
         /\b(jasa|kontraktor|tukang|borongan|renovasi|pasang|bangun|perbaikan|instalasi|proyek|cor|gali|urug|angkut)\b/i;
 
     // ============================================================
-    // 17. PAGE TYPE DETECTION (FIXED v9.2)
+    // 17. PAGE TYPE DETECTION (FIXED v9.5)
     // ============================================================
 
     function detectPageType(pageName, isHome = false) {
@@ -1220,6 +1312,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
         if (isEntityPillarExactMatch(lowerName)) return 'pillar';
         if (isSubVariant(lowerName)) return 'sub-variant';
 
+        // Method keywords detection
         for (const kw of METHOD_KEYWORDS) {
             if (lowerName.includes(kw)) {
                 const HAS_JASA_WORD = JASA_KEYWORDS_PATTERN.test(lowerName);
@@ -1233,6 +1326,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
             }
         }
 
+        // Variant detection per entity
         if (isVariantPage(lowerName, entityType)) {
             return 'variant';
         }
@@ -1254,6 +1348,35 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
 
         if (HAS_LOCATION) return 'money-child';
 
+        // ============================================================
+        // ✅ FIX v9.5: JASA ENTITY dengan dynamic clean
+        // ============================================================
+        
+        if (isJasaEntity() && HAS_JASA_WORD && !HAS_PRICE_WORD) {
+            // Clean text menggunakan fungsi baru
+            const cleaned = cleanJasaText(lowerName);
+            const coreWordCount = countCoreWords(cleaned);
+            const hasModifierWord = hasModifier(cleaned);
+            const isSpecific = isSpecificJasa(cleaned);
+            const hasLocation = isLocation(cleaned);
+            
+            log(`JASA detection: "${pageName}" → cleaned: "${cleaned}", words: ${coreWordCount}, modifier: ${hasModifierWord}, specific: ${isSpecific}`, 'DEBUG');
+            
+            // MM jika:
+            // 1. Core words <= 2
+            // 2. TIDAK ada modifier (murah, profesional, dll)
+            // 3. TIDAK spesifik (angka, spesifikasi, dll)
+            // 4. TIDAK ada lokasi
+            if (coreWordCount <= 2 && !hasModifierWord && !isSpecific && !hasLocation) {
+                log(`MM detected (JASA): "${pageName}" → core words: ${coreWordCount}`, 'SUCCESS');
+                return 'money-master';
+            }
+            
+            log(`MP detected (JASA): "${pageName}" → core words: ${coreWordCount}, modifier: ${hasModifierWord}`, 'INFO');
+            return 'money-page';
+        }
+
+        // SEWA ENTITY
         if (isSewaEntity() && HAS_SEWA_WORD && !HAS_PRICE_WORD) {
             const cleaned = lowerName.replace(/\b(sewa|rental)\b/gi, '').trim();
             const words = cleaned.split(/\s+/).filter(Boolean);
@@ -1264,21 +1387,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
             return 'money-page';
         }
 
-        if (isJasaEntity() && HAS_JASA_WORD && !HAS_PRICE_WORD) {
-            let cleaned = lowerName;
-            const jasaCleanList = ['jasa', 'kontraktor', 'tukang', 'borongan', 'renovasi', 'pasang', 'bangun', 'perbaikan', 'instalasi', 'proyek', 'cor', 'gali', 'urug', 'angkut'];
-            for (const kw of jasaCleanList) {
-                cleaned = cleaned.replace(new RegExp(`\\b${kw}\\b`, 'gi'), '');
-            }
-            cleaned = cleaned.trim();
-            const words = cleaned.split(/\s+/).filter(Boolean);
-            const specific = isSpecificProduct(cleaned);
-            if (words.length <= 2 && !specific && !isLocation(cleaned)) {
-                return 'money-master';
-            }
-            return 'money-page';
-        }
-
+        // PRICE PAGE
         if (HAS_PRICE_WORD) {
             const cleaned = lowerName.replace(/\b(harga|biaya|tarif)\b/gi, '').trim();
             const words = cleaned.split(/\s+/).filter(Boolean);
@@ -1289,6 +1398,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
             return 'money-page';
         }
 
+        // PRODUK / MATERIAL
         if ((isProdukEntity() || isMaterialEntity()) && !HAS_PRICE_WORD) {
             const words = lowerName.split(/\s+/).filter(Boolean);
             if (words.length <= 2) return 'pillar';
@@ -1665,7 +1775,8 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
             // 2. Keyword spesifik
             const specificKeywords = [
                 'kanstin', 'pembatas', 'pengaman', 'tukang', 'baja', 'ringan',
-                'struktur', 'konstruksi', 'pasang', 'dinding', 'pondasi'
+                'struktur', 'konstruksi', 'pasang', 'dinding', 'pondasi',
+                'beton', 'readymix', 'cor', 'pile', 'sheet', 'tiang'
             ];
             for (const kw of specificKeywords) {
                 if (currentPageTitleLower.includes(kw) && item.name.toLowerCase().includes(kw)) {
@@ -1905,7 +2016,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
     // 33. LOG SUMMARY
     // ============================================================
 
-    console.log('📊 BREADCRUMB GENERATION SUMMARY (v9.4):');
+    console.log('📊 BREADCRUMB GENERATION SUMMARY (v9.5):');
     console.log(`   Page: "${currentPageTitle}"`);
     console.log(`   URL: "${currentFullUrl}"`);
     console.log(`   Type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`);
@@ -1929,7 +2040,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '9.4.0',
+        version: '9.5.0',
         parentCount: finalParents.length,
         parents: finalParents,
         isVariant: currentPageType === 'variant',
