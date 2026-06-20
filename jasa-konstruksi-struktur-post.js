@@ -3311,11 +3311,13 @@ if (urlMappingHargaJasaBoronganRumahFromMoneyPage1MoneyChild[cleanUrlJasaJasaKon
             { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
             { name: 'Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html'},
             { name: 'Jasa Pembuatan Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html'},
-            { name: 'Harga Jasa Pembuatan Rumah', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-rumah.html'}
+            { name: 'Harga Jasa Pembuatan Rumah', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-rumah.html'},
+            { name: 'harga-jasa-borongan-rumah', url: '"https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-rumah.html'}
         ],
         'JASA_KONSTRUKSI'
     );      
 }
+
 if (urlMappingJasaBangunRumahFromMoneyMaster3MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
   generateBreadcrumbJasaKonstruksiStrukturPost(
         urlMappingJasaBangunRumahFromMoneyMaster3MoneyPage,
