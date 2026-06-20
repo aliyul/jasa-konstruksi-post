@@ -388,26 +388,14 @@ const urlMappingHargaJasaBoronganRumahFromMoneyPage1MoneyChild = {
   // [MONEY_CHILD] - HARGA BORONGAN RUMAH TERIMA KUNCI PER LOKASI
   // ============================================================
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-cirebon.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Cirebon",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-dramaga.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Dramaga",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-cianjur.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Cianjur",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-cibinong.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Cibinong",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-depok.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-jakarta.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Jakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-bogor.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Bogor",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-telukjambe.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Telukjambe",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-bojonggede.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Bojonggede",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-depok.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-tangerang.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Tangerang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-bekasi.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-cikampek.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Cikampek",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-ngamprah.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Ngamprah",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-cimahi.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Cimahi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-kota-bekasi.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Kota Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-citereup.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Citereup",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-batujajar.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Batujajar",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-kemang.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Kemang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-parung-panjang.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Parung Panjang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-tajur-halang.html": "Harga Jasa Borongan Rumah Per Meter Terima Tajur Halang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-cileungsi.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Cileungsi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-gunung-sindur.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Gunung Sindur"  // TYPE: MONEY_CHILD
-
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-karawang.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Karawang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-terdekat.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Terdekat"
 };
 const urlMappingJasaBangunRumahFromMoneyMaster3MoneyPage = {
   "https://www.betonjayareadymix.com/2018/09/jasa-bangun-rumah-borongan.html": "Jasa Bangun Rumah Borongan"
