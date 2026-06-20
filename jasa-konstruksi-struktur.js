@@ -174,29 +174,30 @@ TYPE: MONEY_MASTER                    | TYPE: MONEY_PAGE
 
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v9.6
- * FIXED: JASA MATERIAL SPEC DETECTION + DYNAMIC CLEAN
+ * generateBreadcrumbJasaKonstruksi v9.7
+ * FIXED: PROPER SKIP PARENT NOT RELEVANT + MATERIAL SPEC DETECTION
  * ============================================================
+ *
+ * ✅ UPDATE v9.7
+ * ------------------------------------------------------------
+ * - FIX: Hanya 1 parent per level yang dipilih (score tertinggi)
+ * - FIX: Parent tidak relevan di level yang sama di-skip
+ * - FIX: seenLevels menggunakan level sebagai key (bukan nama)
+ * - FIX: Breadcrumb tidak lagi terlalu panjang (9 level → 4 level)
+ * - ENHANCED: Specific keywords ditambah "borongan", "material", "upah", "tenaga"
+ * - ENHANCED: Logging skip parent untuk debugging
  *
  * ✅ UPDATE v9.6
  * ------------------------------------------------------------
- * - FIX: "Jasa Tukang Baja Ringan" terdeteksi sebagai money-page (level 5)
  * - FIX: MATERIAL_SPEC_WORDS untuk mencegah MM pada material spesifik
  * - FIX: "baja ringan", "beton", "kanstin", dll sekarang menjadi MP
- * - ENHANCED: detectJasaLevel() dengan material spec detection
- * - ENHANCED: Logging lebih detail untuk debugging
- *
- * ✅ UPDATE v9.5
- * ------------------------------------------------------------
- * - FIX: Dynamic word removal untuk JASA
- * - FIX: Modifier words (murah, profesional) mencegah MM
  *
  * ✅ UPDATE v9.4
  * ------------------------------------------------------------
  * - FIX: Hapus uniqueHierarchy, gunakan filter berdasarkan URL
  *
  * ============================================================
- * @version 9.6.0
+ * @version 9.7.0
  * @date 2026-06-20
  * ============================================================
  */
@@ -234,9 +235,10 @@ function generateBreadcrumbJasaKonstruksiStruktur(
             PARENT: '👪', 
             URL: '🔗',
             SCORE: '🎯',
-            CLEAN: '🧹'
+            CLEAN: '🧹',
+            SKIP: '⏭️'
         };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v9.6] ${message}`);
+        console.log(`${icons[type] || '📘'} [Breadcrumb v9.7] ${message}`);
     }
 
     // ============================================================
@@ -392,7 +394,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     }
 
     // ============================================================
-    // 11. KEYWORDS (UPDATED v9.6)
+    // 11. KEYWORDS (UPDATED v9.7)
     // ============================================================
 
     const SP1_KEYWORDS = [
@@ -461,7 +463,8 @@ function generateBreadcrumbJasaKonstruksiStruktur(
         'plafon', 'gypsum', 'partisi', 'dak', 'cor', 'pile', 'sheet',
         'tiang', 'balok', 'kolom', 'sloof', 'ring', 'balk', 'kuda-kuda',
         'drainase', 'irigasi', 'box culvert', 'u ditch', 'paving',
-        'konstruksi', 'rangka', 'baja ringan', 'baja', 'ringan'
+        'konstruksi', 'rangka', 'baja ringan', 'baja', 'ringan',
+        'material', 'upah', 'tenaga'
     ]);
 
     // Daftar stopwords (kata umum yang tidak berarti)
@@ -549,7 +552,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
         
         log(`JASA detection: "${pageName}" → cleaned: "${cleaned}", words: ${coreWordCount}, materialSpec: ${hasMaterialSpecWord}, modifier: ${hasModifierWord}`, 'DEBUG');
         
-        // ✅ FIX v9.6: MM hanya jika TIDAK ada material spec
+        // MM hanya jika TIDAK ada material spec
         if (coreWordCount <= 2 && !hasModifierWord && !isSpecific && !hasLocation && !hasMaterialSpecWord) {
             log(`MM detected (JASA): "${pageName}" → core words: ${coreWordCount}`, 'SUCCESS');
             return 'money-master';
@@ -742,10 +745,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
 
         if (HAS_LOCATION) return 'money-child';
 
-        // ============================================================
-        // ✅ FIX v9.6: JASA ENTITY dengan material spec detection
-        // ============================================================
-        
+        // JASA ENTITY dengan material spec detection
         if (isJasaEntity() && HAS_JASA_WORD && !HAS_PRICE_WORD) {
             return detectJasaLevel(lowerName);
         }
@@ -1075,7 +1075,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     log(`Current page: "${currentPageTitle}" → type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`, 'INFO');
 
     // ============================================================
-    // 26. SELECT BREADCRUMB LEVELS
+    // 26. SELECT BREADCRUMB LEVELS (FIXED v9.7 - PROPER SKIP)
     // ============================================================
 
     const selectedLevels = [];
@@ -1088,10 +1088,6 @@ function generateBreadcrumbJasaKonstruksiStruktur(
         level: 0,
         position: 1
     });
-
-    // ============================================================
-    // ✅ FIX v9.4: Langsung gunakan allLevels, filter duplikat berdasarkan URL
-    // ============================================================
 
     // Buat unique items berdasarkan URL (bukan nama)
     const uniqueByUrl = new Map();
@@ -1111,7 +1107,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     log('Unique items (' + uniqueItems.length + '): ' + uniqueItems.map(i => i.name + '(' + i.level + ')').join(' → '), 'INFO');
 
     // ============================================================
-    // FIND NEAREST PARENTS
+    // FIND NEAREST PARENTS (FIXED v9.7 - PROPER SKIP)
     // ============================================================
 
     function findNearestParentsByHierarchy() {
@@ -1146,11 +1142,12 @@ function generateBreadcrumbJasaKonstruksiStruktur(
                 }
             }
             
-            // 2. Keyword spesifik
+            // 2. Keyword spesifik (diperluas untuk kasus borongan + material)
             const specificKeywords = [
                 'kanstin', 'pembatas', 'pengaman', 'tukang', 'baja', 'ringan',
                 'struktur', 'konstruksi', 'pasang', 'dinding', 'pondasi',
-                'beton', 'readymix', 'cor', 'pile', 'sheet', 'tiang'
+                'beton', 'readymix', 'cor', 'pile', 'sheet', 'tiang',
+                'harga', 'biaya', 'borongan', 'material', 'upah', 'tenaga'
             ];
             for (const kw of specificKeywords) {
                 if (currentPageTitleLower.includes(kw) && item.name.toLowerCase().includes(kw)) {
@@ -1182,13 +1179,16 @@ function generateBreadcrumbJasaKonstruksiStruktur(
         
         log('Scored candidates (sorted): ' + scoredCandidates.map(i => i.level + ':' + i.name + '(' + i.relevanceScore + ')').join(' → '), 'DEBUG');
         
-        // Ambil 1 parent per level (prioritaskan yang relevance-nya tinggi)
+        // ✅ FIX v9.7: Ambil 1 parent per level (yang score tertinggi)
         const seenLevels = new Set();
         for (const item of scoredCandidates) {
-            if (!seenLevels.has(item.level)) {
-                seenLevels.add(item.level);
+            const levelKey = item.level;
+            if (!seenLevels.has(levelKey)) {
+                seenLevels.add(levelKey);
                 lineage.push(item);
                 log(`🎯 Selected: "${item.name}" (level ${item.level}) with score ${item.relevanceScore}`, 'SUCCESS');
+            } else {
+                log(`⏭️ Skipped: "${item.name}" (level ${item.level}) - already have parent at this level`, 'SKIP');
             }
         }
         
@@ -1390,7 +1390,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     // 33. LOG SUMMARY
     // ============================================================
 
-    console.log('📊 BREADCRUMB GENERATION SUMMARY (v9.6):');
+    console.log('📊 BREADCRUMB GENERATION SUMMARY (v9.7):');
     console.log(`   Page: "${currentPageTitle}"`);
     console.log(`   URL: "${currentFullUrl}"`);
     console.log(`   Type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`);
@@ -1414,7 +1414,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '9.6.0',
+        version: '9.7.0',
         parentCount: finalParents.length,
         parents: finalParents,
         isVariant: currentPageType === 'variant',
