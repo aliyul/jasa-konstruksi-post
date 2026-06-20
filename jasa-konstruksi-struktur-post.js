@@ -810,6 +810,7 @@ KOSONG (saran)   ~15          Perlu dibuat kontennya
 ✅ ENTITY TYPE: JASA - semua MONEY_PAGE dan MONEY_CHILD VALID
 ❌ Tidak ada MONEY_MASTER (JASA tidak boleh pakai MONEY_MASTER)
 */
+
 /**
  * ============================================================
  * generateBreadcrumbJasaKonstruksi v10.0
@@ -2128,6 +2129,8 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
         isMoneyChild: currentPageType === 'money-child'
     };
 }
+
+
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasakonstruksistrukturPost = {};
 function removeCondition(conditionId) {
