@@ -171,33 +171,28 @@ TYPE: MONEY_MASTER                    | TYPE: MONEY_PAGE
 */
 /*
 
-
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v9.7
- * FIXED: PROPER SKIP PARENT NOT RELEVANT + MATERIAL SPEC DETECTION
+ * generateBreadcrumbJasaKonstruksi v10.0
+ * FIXED: BRANCH AWARE FORCE INJECTION
  * ============================================================
  *
- * ✅ UPDATE v9.7
+ * ✅ UPDATE v10.0
  * ------------------------------------------------------------
- * - FIX: Hanya 1 parent per level yang dipilih (score tertinggi)
- * - FIX: Parent tidak relevan di level yang sama di-skip
- * - FIX: seenLevels menggunakan level sebagai key (bukan nama)
- * - FIX: Breadcrumb tidak lagi terlalu panjang (9 level → 4 level)
- * - ENHANCED: Specific keywords ditambah "borongan", "material", "upah", "tenaga"
- * - ENHANCED: Logging skip parent untuk debugging
+ * - FIX: forceInjectDirectParent() sekarang branch-aware
+ * - FIX: Hanya tambahkan parent jika cabang berbeda AND score > 50
+ * - FIX: Parent yang sudah di-skip tetap di-skip (tidak ditambahkan kembali)
+ * - ENHANCED: Filter score threshold (50) untuk force injection
+ * - ENHANCED: Logging detail untuk setiap force skip/keep
  *
- * ✅ UPDATE v9.6
+ * ✅ UPDATE v9.9
  * ------------------------------------------------------------
- * - FIX: MATERIAL_SPEC_WORDS untuk mencegah MM pada material spesifik
- * - FIX: "baja ringan", "beton", "kanstin", dll sekarang menjadi MP
- *
- * ✅ UPDATE v9.4
- * ------------------------------------------------------------
- * - FIX: Hapus uniqueHierarchy, gunakan filter berdasarkan URL
+ * - FIX: Parent dengan level sama dan berbeda cabang TIDAK DI-SKIP
+ * - FIX: Similarity score untuk mendeteksi cabang yang berbeda
+ * - ENHANCED: Branch detection dengan Jaccard similarity
  *
  * ============================================================
- * @version 9.7.0
+ * @version 10.0.0
  * @date 2026-06-20
  * ============================================================
  */
@@ -236,9 +231,10 @@ function generateBreadcrumbJasaKonstruksiStruktur(
             URL: '🔗',
             SCORE: '🎯',
             CLEAN: '🧹',
-            SKIP: '⏭️'
+            SKIP: '⏭️',
+            BRANCH: '🌿'
         };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v9.7] ${message}`);
+        console.log(`${icons[type] || '📘'} [Breadcrumb v10.0] ${message}`);
     }
 
     // ============================================================
@@ -394,7 +390,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     }
 
     // ============================================================
-    // 11. KEYWORDS (UPDATED v9.7)
+    // 11. KEYWORDS
     // ============================================================
 
     const SP1_KEYWORDS = [
@@ -445,17 +441,15 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     ];
 
     // ============================================================
-    // 11b. JASA CLEAN FUNCTION (FIXED v9.6 - MATERIAL SPEC DETECTION)
+    // 11b. JASA CLEAN FUNCTION
     // ============================================================
 
-    // Daftar kata yang HARUS dihapus (kata inti JASA)
     const JASA_CORE_WORDS = new Set([
         'jasa', 'kontraktor', 'tukang', 'borongan', 'renovasi',
         'pasang', 'bangun', 'perbaikan', 'instalasi', 'proyek',
         'cor', 'gali', 'urug', 'angkut', 'service', 'servis'
     ]);
 
-    // Daftar kata yang menunjukkan spesifikasi material (harus MP, bukan MM)
     const MATERIAL_SPEC_WORDS = new Set([
         'baja ringan', 'baja', 'ringan', 'beton', 'readymix', 
         'kanstin', 'pembatas', 'pengaman', 'struktur', 'dinding',
@@ -467,14 +461,12 @@ function generateBreadcrumbJasaKonstruksiStruktur(
         'material', 'upah', 'tenaga'
     ]);
 
-    // Daftar stopwords (kata umum yang tidak berarti)
     const STOPWORDS = new Set([
         'dan', 'atau', 'serta', 'yang', 'dari', 'ke', 'di', 'untuk', 
         'dengan', 'ini', 'itu', 'akan', 'telah', 'sudah', 'masih',
         'pada', 'oleh', 'karena', 'sehingga', 'setelah', 'sebelum'
     ]);
 
-    // Daftar modifier (kata yang menunjukkan spesifikasi/harga)
     const MODIFIER_WORDS = new Set([
         'murah', 'profesional', 'berkualitas', 'terbaik', 'spesialis',
         'ahli', 'berpengalaman', 'resmi', 'terpercaya', 'ekonomis',
@@ -487,17 +479,14 @@ function generateBreadcrumbJasaKonstruksiStruktur(
         
         let cleaned = text.toLowerCase();
         
-        // 1. Hapus kata-kata inti JASA
         for (const kw of JASA_CORE_WORDS) {
             cleaned = cleaned.replace(new RegExp(`\\b${kw}\\b`, 'g'), ' ');
         }
         
-        // 2. Hapus stopwords
         for (const sw of STOPWORDS) {
             cleaned = cleaned.replace(new RegExp(`\\b${sw}\\b`, 'g'), ' ');
         }
         
-        // 3. Normalisasi spasi
         cleaned = cleaned.replace(/\s+/g, ' ').trim();
         
         log(`Clean JASA: "${text}" → "${cleaned}"`, 'CLEAN');
@@ -550,15 +539,14 @@ function generateBreadcrumbJasaKonstruksiStruktur(
         const hasLocation = isLocation(cleaned);
         const hasMaterialSpecWord = hasMaterialSpec(cleaned);
         
-        log(`JASA detection: "${pageName}" → cleaned: "${cleaned}", words: ${coreWordCount}, materialSpec: ${hasMaterialSpecWord}, modifier: ${hasModifierWord}`, 'DEBUG');
+        log(`JASA detection: "${pageName}" → cleaned: "${cleaned}", words: ${coreWordCount}, materialSpec: ${hasMaterialSpecWord}`, 'DEBUG');
         
-        // MM hanya jika TIDAK ada material spec
         if (coreWordCount <= 2 && !hasModifierWord && !isSpecific && !hasLocation && !hasMaterialSpecWord) {
             log(`MM detected (JASA): "${pageName}" → core words: ${coreWordCount}`, 'SUCCESS');
             return 'money-master';
         }
         
-        log(`MP detected (JASA): "${pageName}" → core words: ${coreWordCount}, materialSpec: ${hasMaterialSpecWord}`, 'INFO');
+        log(`MP detected (JASA): "${pageName}" → core words: ${coreWordCount}`, 'INFO');
         return 'money-page';
     }
 
@@ -699,7 +687,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
         /\b(jasa|kontraktor|tukang|borongan|renovasi|pasang|bangun|perbaikan|instalasi|proyek|cor|gali|urug|angkut)\b/i;
 
     // ============================================================
-    // 17. PAGE TYPE DETECTION (FIXED v9.6)
+    // 17. PAGE TYPE DETECTION
     // ============================================================
 
     function detectPageType(pageName, isHome = false) {
@@ -709,7 +697,6 @@ function generateBreadcrumbJasaKonstruksiStruktur(
         if (isEntityPillarExactMatch(lowerName)) return 'pillar';
         if (isSubVariant(lowerName)) return 'sub-variant';
 
-        // Method keywords detection
         for (const kw of METHOD_KEYWORDS) {
             if (lowerName.includes(kw)) {
                 const HAS_JASA_WORD = JASA_KEYWORDS_PATTERN.test(lowerName);
@@ -723,7 +710,6 @@ function generateBreadcrumbJasaKonstruksiStruktur(
             }
         }
 
-        // Variant detection per entity
         if (isVariantPage(lowerName, entityType)) {
             return 'variant';
         }
@@ -745,12 +731,10 @@ function generateBreadcrumbJasaKonstruksiStruktur(
 
         if (HAS_LOCATION) return 'money-child';
 
-        // JASA ENTITY dengan material spec detection
         if (isJasaEntity() && HAS_JASA_WORD && !HAS_PRICE_WORD) {
             return detectJasaLevel(lowerName);
         }
 
-        // SEWA ENTITY
         if (isSewaEntity() && HAS_SEWA_WORD && !HAS_PRICE_WORD) {
             const cleaned = lowerName.replace(/\b(sewa|rental)\b/gi, '').trim();
             const words = cleaned.split(/\s+/).filter(Boolean);
@@ -761,7 +745,6 @@ function generateBreadcrumbJasaKonstruksiStruktur(
             return 'money-page';
         }
 
-        // PRICE PAGE
         if (HAS_PRICE_WORD) {
             const cleaned = lowerName.replace(/\b(harga|biaya|tarif)\b/gi, '').trim();
             const words = cleaned.split(/\s+/).filter(Boolean);
@@ -772,7 +755,6 @@ function generateBreadcrumbJasaKonstruksiStruktur(
             return 'money-page';
         }
 
-        // PRODUK / MATERIAL
         if ((isProdukEntity() || isMaterialEntity()) && !HAS_PRICE_WORD) {
             const words = lowerName.split(/\s+/).filter(Boolean);
             if (words.length <= 2) return 'pillar';
@@ -884,7 +866,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     }
 
     // ============================================================
-    // 19. FORCE PARENT INJECTION
+    // 19. FORCE PARENT INJECTION (FIXED v10.0 - BRANCH AWARE)
     // ============================================================
 
     function forceInjectDirectParent(lineageLevels, allLevels, currentPageTitle, entityType, breadcrumbItems) {
@@ -892,6 +874,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
         let modifiedLineage = [...lineageLevels];
         const words = currentLower.split(/\s+/);
 
+        // STRATEGI 1: Auto parent dari breadcrumbItems
         const autoParent = findNearestParentFromItems(breadcrumbItems, currentPageTitle);
         if (autoParent && !modifiedLineage.some(l => l.name === autoParent.name)) {
             const parentFromAll = allLevels.find(item => 
@@ -903,6 +886,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
             }
         }
 
+        // STRATEGI 2: Pattern-based (prefix match)
         if (modifiedLineage.length === lineageLevels.length && words.length >= 2) {
             for (let i = words.length - 1; i >= 1; i--) {
                 const potentialParent = words.slice(0, i).join(' ');
@@ -917,6 +901,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
             }
         }
 
+        // ✅ FIX v10.0: Hanya tambahkan parent jika cabang berbeda AND score > 50
         const currentLevel = TYPE_LEVEL_MAP[detectPageType(currentPageTitle)] || 99;
         
         const allPotentialParents = allLevels.filter(item => 
@@ -925,11 +910,28 @@ function generateBreadcrumbJasaKonstruksiStruktur(
             !modifiedLineage.some(l => l.name === item.name)
         );
         
+        // ✅ FIX v10.0: Filter berdasarkan branch + score
         for (const parent of allPotentialParents) {
-            log(`FORCE PARENT: "${parent.name}" (level ${parent.level}) → "${currentPageTitle}"`, 'SUCCESS');
-            modifiedLineage.push(parent);
+            // Cek apakah parent ini adalah cabang yang berbeda dari lineage yang ada
+            const isDifferentBranch = modifiedLineage.every(existing => {
+                const similarity = calculateSimilarity(parent.name, existing.name);
+                return similarity < 0.5;
+            });
+            
+            // Cek apakah parent ini memiliki score yang signifikan (> 50)
+            const hasSignificantScore = (parent.relevanceScore || 0) > 50;
+            
+            if (isDifferentBranch && hasSignificantScore) {
+                log(`FORCE PARENT (branch): "${parent.name}" (level ${parent.level}) → "${currentPageTitle}"`, 'SUCCESS');
+                modifiedLineage.push(parent);
+            } else if (!isDifferentBranch) {
+                log(`⏭️ FORCE SKIP: "${parent.name}" (level ${parent.level}) - same branch as existing parent`, 'SKIP');
+            } else {
+                log(`⏭️ FORCE SKIP: "${parent.name}" (level ${parent.level}) - low score (${parent.relevanceScore || 0})`, 'SKIP');
+            }
         }
 
+        // STRATEGI 3: Semantic similarity (hanya jika cabang berbeda)
         if (modifiedLineage.length === lineageLevels.length) {
             const semanticKeywords = {
                 'finishing': ['finishing', 'cat', 'epoxy', 'lampu', 'wallpaper'],
@@ -947,14 +949,22 @@ function generateBreadcrumbJasaKonstruksiStruktur(
                         item.name.toLowerCase().includes(parentKeyword)
                     );
                     if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
-                        log(`SEMANTIC PARENT: "${parentItem.name}"`, 'SUCCESS');
-                        modifiedLineage.push(parentItem);
-                        break;
+                        // Cek apakah ini cabang berbeda
+                        const isDifferentBranch = modifiedLineage.every(existing => {
+                            const similarity = calculateSimilarity(parentItem.name, existing.name);
+                            return similarity < 0.5;
+                        });
+                        
+                        if (isDifferentBranch) {
+                            log(`SEMANTIC PARENT: "${parentItem.name}"`, 'SUCCESS');
+                            modifiedLineage.push(parentItem);
+                        }
                     }
                 }
             }
         }
 
+        // STRATEGI 4: Last resort (hanya jika lineage masih kosong)
         if (modifiedLineage.length === lineageLevels.length && allLevels.length > 0) {
             const lowerLevelItems = allLevels.filter(item => 
                 item.level <= currentLevel && 
@@ -992,7 +1002,24 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     }
 
     // ============================================================
-    // 21. GET CURRENT PAGE INFO
+    // 21. SIMILARITY CALCULATION (BRANCH DETECTION)
+    // ============================================================
+
+    function calculateSimilarity(text1, text2) {
+        const words1 = text1.toLowerCase().split(/\s+/);
+        const words2 = text2.toLowerCase().split(/\s+/);
+        
+        if (words1.length === 0 || words2.length === 0) return 0;
+        
+        const commonWords = words1.filter(w => words2.includes(w));
+        const union = new Set([...words1, ...words2]);
+        const similarity = commonWords.length / union.size;
+        
+        return similarity;
+    }
+
+    // ============================================================
+    // 22. GET CURRENT PAGE INFO
     // ============================================================
 
     const currentFullUrl = currentUrl.startsWith('http')
@@ -1006,7 +1033,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     }
 
     // ============================================================
-    // 22. INJECT CURRENT PAGE & AUTO PARENT
+    // 23. INJECT CURRENT PAGE & AUTO PARENT
     // ============================================================
 
     const enhancedBreadcrumbItems = injectCurrentPageAndParent(
@@ -1016,7 +1043,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     );
 
     // ============================================================
-    // 23. BUILD ALL LEVELS
+    // 24. BUILD ALL LEVELS
     // ============================================================
 
     const allLevels = [];
@@ -1044,7 +1071,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     }
 
     // ============================================================
-    // 24. URL FALLBACK
+    // 25. URL FALLBACK
     // ============================================================
 
     for (const level of allLevels) {
@@ -1068,14 +1095,14 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     }
 
     // ============================================================
-    // 25. CURRENT PAGE TYPE
+    // 26. CURRENT PAGE TYPE
     // ============================================================
 
     const currentPageType = detectPageType(currentPageTitle);
     log(`Current page: "${currentPageTitle}" → type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`, 'INFO');
 
     // ============================================================
-    // 26. SELECT BREADCRUMB LEVELS (FIXED v9.7 - PROPER SKIP)
+    // 27. SELECT BREADCRUMB LEVELS
     // ============================================================
 
     const selectedLevels = [];
@@ -1107,7 +1134,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     log('Unique items (' + uniqueItems.length + '): ' + uniqueItems.map(i => i.name + '(' + i.level + ')').join(' → '), 'INFO');
 
     // ============================================================
-    // FIND NEAREST PARENTS (FIXED v9.7 - PROPER SKIP)
+    // FIND NEAREST PARENTS (BRANCH DETECTION)
     // ============================================================
 
     function findNearestParentsByHierarchy() {
@@ -1122,27 +1149,33 @@ function generateBreadcrumbJasaKonstruksiStruktur(
         
         if (candidates.length === 0) return lineage;
         
-        // Pisahkan berdasarkan level
-        const lowerOrEqual = candidates.filter(item => item.level <= currentLevel);
-        const higher = candidates.filter(item => item.level > currentLevel);
-        const allCandidates = [...lowerOrEqual, ...higher];
+        // Hanya ambil candidate dengan level <= currentLevel
+        const validCandidates = candidates.filter(item => item.level <= currentLevel);
         
-        log('Candidates (all): ' + allCandidates.map(i => i.level + ':' + i.name).join(', '), 'DEBUG');
+        if (validCandidates.length === 0) {
+            const sortedByLevel = [...candidates].sort((a, b) => b.level - a.level);
+            const nearest = sortedByLevel[0];
+            lineage.push(nearest);
+            log(`⚠️ No valid candidates, using "${nearest.name}"`, 'WARN');
+            return lineage;
+        }
+        
+        log('Valid candidates: ' + validCandidates.map(i => i.level + ':' + i.name).join(', '), 'DEBUG');
         
         // Hitung relevansi score
         const currentWords = currentPageTitleLower.split(/\s+/);
-        const scoredCandidates = allCandidates.map(item => {
+        const scoredCandidates = validCandidates.map(item => {
             const itemWords = item.name.toLowerCase().split(/\s+/);
             let relevanceScore = 0;
             
-            // 1. Kata yang sama dengan current page
+            // 1. Kata yang sama dengan current page (bobot 10)
             for (const word of currentWords) {
                 if (word.length > 2 && itemWords.includes(word)) {
                     relevanceScore += 10;
                 }
             }
             
-            // 2. Keyword spesifik (diperluas untuk kasus borongan + material)
+            // 2. Keyword spesifik (bobot 30)
             const specificKeywords = [
                 'kanstin', 'pembatas', 'pengaman', 'tukang', 'baja', 'ringan',
                 'struktur', 'konstruksi', 'pasang', 'dinding', 'pondasi',
@@ -1155,12 +1188,12 @@ function generateBreadcrumbJasaKonstruksiStruktur(
                 }
             }
             
-            // 3. Bonus jika parent adalah bagian dari current page
+            // 3. Bonus jika parent adalah bagian dari current page (bobot 50)
             if (currentPageTitleLower.includes(item.name.toLowerCase()) && item.name.length > 3) {
                 relevanceScore += 50;
             }
             
-            // 4. Bonus panjang kata (lebih spesifik)
+            // 4. Bonus panjang kata (lebih spesifik) (bobot 5)
             const maxWordLength = Math.max(...itemWords.map(w => w.length));
             if (maxWordLength > 6) {
                 relevanceScore += 5;
@@ -1179,17 +1212,52 @@ function generateBreadcrumbJasaKonstruksiStruktur(
         
         log('Scored candidates (sorted): ' + scoredCandidates.map(i => i.level + ':' + i.name + '(' + i.relevanceScore + ')').join(' → '), 'DEBUG');
         
-        // ✅ FIX v9.7: Ambil 1 parent per level (yang score tertinggi)
-        const seenLevels = new Set();
+        // Ambil parent berdasarkan BRANCH + SIMILARITY
+        const selectedParents = [];
+        
         for (const item of scoredCandidates) {
             const levelKey = item.level;
-            if (!seenLevels.has(levelKey)) {
-                seenLevels.add(levelKey);
-                lineage.push(item);
+            
+            // Cek apakah sudah ada parent dengan level yang sama
+            const existingParents = selectedParents.filter(p => p.level === levelKey);
+            
+            if (existingParents.length === 0) {
+                // Belum ada parent di level ini → ambil
+                selectedParents.push(item);
                 log(`🎯 Selected: "${item.name}" (level ${item.level}) with score ${item.relevanceScore}`, 'SUCCESS');
             } else {
-                log(`⏭️ Skipped: "${item.name}" (level ${item.level}) - already have parent at this level`, 'SKIP');
+                // Cek apakah ini cabang yang berbeda (similarity < 50%)
+                const isDifferentBranch = existingParents.every(existing => {
+                    const similarity = calculateSimilarity(item.name, existing.name);
+                    const isSameBranch = similarity >= 0.5;
+                    log(`🌿 Similarity "${item.name}" vs "${existing.name}": ${Math.round(similarity * 100)}%`, 'BRANCH');
+                    return !isSameBranch;
+                });
+                
+                if (isDifferentBranch) {
+                    // Cabang berbeda → tambahkan sebagai parent tambahan
+                    selectedParents.push(item);
+                    log(`🌿 Branch parent: "${item.name}" (level ${item.level}) with score ${item.relevanceScore}`, 'BRANCH');
+                } else {
+                    // Cabang sama → skip
+                    log(`⏭️ Skipped: "${item.name}" (level ${item.level}) - same branch as existing parent`, 'SKIP');
+                }
             }
+        }
+        
+        // Tambahkan ke lineage
+        for (const item of selectedParents) {
+            lineage.push(item);
+        }
+        
+        // Jika lineage kosong, fallback
+        if (lineage.length === 0 && validCandidates.length > 0) {
+            const sortedByLevel = [...validCandidates].sort((a, b) => b.level - a.level);
+            const highestLevel = sortedByLevel[0].level;
+            const topCandidates = sortedByLevel.filter(item => item.level === highestLevel);
+            const bestParent = topCandidates.sort((a, b) => b.relevanceScore - a.relevanceScore)[0];
+            lineage.push(bestParent);
+            log(`⚠️ FALLBACK: Using "${bestParent.name}" as nearest parent`, 'WARN');
         }
         
         log('Lineage (prioritized): ' + lineage.map(i => i.level + ':' + i.name).join(' → '), 'SUCCESS');
@@ -1291,7 +1359,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     }
 
     // ============================================================
-    // 27. FINAL UNIQUE LEVELS
+    // 28. FINAL UNIQUE LEVELS
     // ============================================================
 
     const uniqueLevels = [];
@@ -1311,7 +1379,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     log('Final breadcrumb (' + uniqueLevels.length + ' levels): ' + uniqueLevels.map(i => i.name + '(' + i.level + ')').join(' › '), 'SUCCESS');
 
     // ============================================================
-    // 28. GENERATE HTML
+    // 29. GENERATE HTML
     // ============================================================
 
     let breadcrumbHtml = `<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">\n`;
@@ -1341,7 +1409,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     breadcrumbHtml += `</div>\n`;
 
     // ============================================================
-    // 29. JSON LD
+    // 30. JSON LD
     // ============================================================
 
     const jsonLd = {
@@ -1356,7 +1424,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     };
 
     // ============================================================
-    // 30. REMOVE OLD
+    // 31. REMOVE OLD
     // ============================================================
 
     document.querySelectorAll('.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"]')
@@ -1365,7 +1433,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
         .forEach(el => el.remove());
 
     // ============================================================
-    // 31. TARGET ELEMENT
+    // 32. TARGET ELEMENT
     // ============================================================
 
     const targetElement = document.querySelector('main, article, .content, #main-content, .post-content');
@@ -1377,7 +1445,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     }
 
     // ============================================================
-    // 32. INJECT JSON LD
+    // 33. INJECT JSON LD
     // ============================================================
 
     const script = document.createElement('script');
@@ -1387,10 +1455,10 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     document.head.appendChild(script);
 
     // ============================================================
-    // 33. LOG SUMMARY
+    // 34. LOG SUMMARY
     // ============================================================
 
-    console.log('📊 BREADCRUMB GENERATION SUMMARY (v9.7):');
+    console.log('📊 BREADCRUMB GENERATION SUMMARY (v10.0):');
     console.log(`   Page: "${currentPageTitle}"`);
     console.log(`   URL: "${currentFullUrl}"`);
     console.log(`   Type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`);
@@ -1405,7 +1473,7 @@ function generateBreadcrumbJasaKonstruksiStruktur(
     console.log(`   📊 Total breadcrumb levels: ${uniqueLevels.length}`);
 
     // ============================================================
-    // 34. RETURN
+    // 35. RETURN
     // ============================================================
 
     return {
@@ -1414,14 +1482,13 @@ function generateBreadcrumbJasaKonstruksiStruktur(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '9.7.0',
+        version: '10.0.0',
         parentCount: finalParents.length,
         parents: finalParents,
         isVariant: currentPageType === 'variant',
         isMoneyChild: currentPageType === 'money-child'
     };
 }
-
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasakonstruksistruktur = {};
 function removeCondition(conditionId) {
