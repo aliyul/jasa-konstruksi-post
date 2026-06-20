@@ -812,26 +812,29 @@ KOSONG (saran)   ~15          Perlu dibuat kontennya
 */
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v9.5
- * FIXED: JASA MONEY-MASTER DETECTION + DYNAMIC CLEAN
+ * generateBreadcrumbJasaKonstruksi v9.6
+ * FIXED: JASA MATERIAL SPEC DETECTION + DYNAMIC CLEAN
  * ============================================================
+ *
+ * ✅ UPDATE v9.6
+ * ------------------------------------------------------------
+ * - FIX: "Jasa Tukang Baja Ringan" terdeteksi sebagai money-page (level 5)
+ * - FIX: MATERIAL_SPEC_WORDS untuk mencegah MM pada material spesifik
+ * - FIX: "baja ringan", "beton", "kanstin", dll sekarang menjadi MP
+ * - ENHANCED: detectJasaLevel() dengan material spec detection
+ * - ENHANCED: Logging lebih detail untuk debugging
  *
  * ✅ UPDATE v9.5
  * ------------------------------------------------------------
- * - FIX: "Jasa Tukang Baja Ringan" terdeteksi sebagai money-page (level 5)
- * - FIX: Kata "murah", "profesional", "berkualitas" mencegah MM
- * - FIX: Parent terdekat "Jasa Tukang Baja Ringan" sekarang terpilih
- * - FIX: Dynamic word removal untuk JASA (tidak perlu daftar lengkap)
- * - ENHANCED: Deteksi MM lebih presisi untuk JASA
- * - ENHANCED: Stopwords handling untuk hasil cleaning yang lebih baik
+ * - FIX: Dynamic word removal untuk JASA
+ * - FIX: Modifier words (murah, profesional) mencegah MM
  *
  * ✅ UPDATE v9.4
  * ------------------------------------------------------------
  * - FIX: Hapus uniqueHierarchy, gunakan filter berdasarkan URL
- * - FIX: Duplikat nama tidak lagi menyebabkan parent hilang
  *
  * ============================================================
- * @version 9.5.0
+ * @version 9.6.0
  * @date 2026-06-20
  * ============================================================
  */
@@ -871,7 +874,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
             SCORE: '🎯',
             CLEAN: '🧹'
         };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v9.5] ${message}`);
+        console.log(`${icons[type] || '📘'} [Breadcrumb v9.6] ${message}`);
     }
 
     // ============================================================
@@ -971,7 +974,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
     }
 
     // ============================================================
-    // 9. CLEAN PAGE NAME FROM URL (FIXED v9.1)
+    // 9. CLEAN PAGE NAME FROM URL
     // ============================================================
 
     function getCleanPageNameFromUrl(url) {
@@ -1027,7 +1030,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
     }
 
     // ============================================================
-    // 11. KEYWORDS (UPDATED v9.5)
+    // 11. KEYWORDS (UPDATED v9.6)
     // ============================================================
 
     const SP1_KEYWORDS = [
@@ -1078,7 +1081,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
     ];
 
     // ============================================================
-    // 11b. JASA CLEAN FUNCTION (FIXED v9.5 - DYNAMIC)
+    // 11b. JASA CLEAN FUNCTION (FIXED v9.6 - MATERIAL SPEC DETECTION)
     // ============================================================
 
     // Daftar kata yang HARUS dihapus (kata inti JASA)
@@ -1088,13 +1091,15 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
         'cor', 'gali', 'urug', 'angkut', 'service', 'servis'
     ]);
 
-    // Daftar kata yang TIDAK dihapus (kata penting)
-    const JASA_KEEP_WORDS = new Set([
-        'baja', 'ringan', 'struktur', 'kanstin', 'pembatas', 'pengaman',
-        'beton', 'readymix', 'dinding', 'pondasi', 'atap', 'genteng',
-        'keramik', 'marmer', 'granit', 'plafon', 'gypsum', 'partisi',
-        'dak', 'cor', 'pile', 'sheet', 'bored', 'tiang', 'balok',
-        'kolom', 'sloof', 'ring', 'balk', 'kuda', 'kuda-kuda'
+    // Daftar kata yang menunjukkan spesifikasi material (harus MP, bukan MM)
+    const MATERIAL_SPEC_WORDS = new Set([
+        'baja ringan', 'baja', 'ringan', 'beton', 'readymix', 
+        'kanstin', 'pembatas', 'pengaman', 'struktur', 'dinding',
+        'pondasi', 'atap', 'genteng', 'keramik', 'marmer', 'granit',
+        'plafon', 'gypsum', 'partisi', 'dak', 'cor', 'pile', 'sheet',
+        'tiang', 'balok', 'kolom', 'sloof', 'ring', 'balk', 'kuda-kuda',
+        'drainase', 'irigasi', 'box culvert', 'u ditch', 'paving',
+        'konstruksi', 'rangka', 'baja ringan', 'baja', 'ringan'
     ]);
 
     // Daftar stopwords (kata umum yang tidak berarti)
@@ -1153,16 +1158,43 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
     function isSpecificJasa(text) {
         if (!text) return false;
         const lower = text.toLowerCase();
-        // Cek spesifikasi teknis (angka)
         if (/\d/.test(lower)) return true;
-        // Cek spesifikasi teknis (kode)
         if (/(k225|k250|k300|k350|k400|k500|k600|m6|m8|m10|m12|sn|sni)/i.test(lower)) return true;
-        // Cek kata yang menunjukkan spesifikasi
         const specWords = ['spesifikasi', 'mutu', 'dimensi', 'ukuran', 'standar', 'grade', 'tipe', 'type'];
         for (const sw of specWords) {
             if (lower.includes(sw)) return true;
         }
         return false;
+    }
+
+    function hasMaterialSpec(text) {
+        if (!text) return false;
+        const lower = text.toLowerCase();
+        for (const kw of MATERIAL_SPEC_WORDS) {
+            if (lower.includes(kw)) return true;
+        }
+        return false;
+    }
+
+    function detectJasaLevel(pageName) {
+        const lowerName = pageName.toLowerCase();
+        const cleaned = cleanJasaText(lowerName);
+        const coreWordCount = countCoreWords(cleaned);
+        const hasModifierWord = hasModifier(cleaned);
+        const isSpecific = isSpecificJasa(cleaned);
+        const hasLocation = isLocation(cleaned);
+        const hasMaterialSpecWord = hasMaterialSpec(cleaned);
+        
+        log(`JASA detection: "${pageName}" → cleaned: "${cleaned}", words: ${coreWordCount}, materialSpec: ${hasMaterialSpecWord}, modifier: ${hasModifierWord}`, 'DEBUG');
+        
+        // ✅ FIX v9.6: MM hanya jika TIDAK ada material spec
+        if (coreWordCount <= 2 && !hasModifierWord && !isSpecific && !hasLocation && !hasMaterialSpecWord) {
+            log(`MM detected (JASA): "${pageName}" → core words: ${coreWordCount}`, 'SUCCESS');
+            return 'money-master';
+        }
+        
+        log(`MP detected (JASA): "${pageName}" → core words: ${coreWordCount}, materialSpec: ${hasMaterialSpecWord}`, 'INFO');
+        return 'money-page';
     }
 
     // ============================================================
@@ -1302,7 +1334,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
         /\b(jasa|kontraktor|tukang|borongan|renovasi|pasang|bangun|perbaikan|instalasi|proyek|cor|gali|urug|angkut)\b/i;
 
     // ============================================================
-    // 17. PAGE TYPE DETECTION (FIXED v9.5)
+    // 17. PAGE TYPE DETECTION (FIXED v9.6)
     // ============================================================
 
     function detectPageType(pageName, isHome = false) {
@@ -1349,31 +1381,11 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
         if (HAS_LOCATION) return 'money-child';
 
         // ============================================================
-        // ✅ FIX v9.5: JASA ENTITY dengan dynamic clean
+        // ✅ FIX v9.6: JASA ENTITY dengan material spec detection
         // ============================================================
         
         if (isJasaEntity() && HAS_JASA_WORD && !HAS_PRICE_WORD) {
-            // Clean text menggunakan fungsi baru
-            const cleaned = cleanJasaText(lowerName);
-            const coreWordCount = countCoreWords(cleaned);
-            const hasModifierWord = hasModifier(cleaned);
-            const isSpecific = isSpecificJasa(cleaned);
-            const hasLocation = isLocation(cleaned);
-            
-            log(`JASA detection: "${pageName}" → cleaned: "${cleaned}", words: ${coreWordCount}, modifier: ${hasModifierWord}, specific: ${isSpecific}`, 'DEBUG');
-            
-            // MM jika:
-            // 1. Core words <= 2
-            // 2. TIDAK ada modifier (murah, profesional, dll)
-            // 3. TIDAK spesifik (angka, spesifikasi, dll)
-            // 4. TIDAK ada lokasi
-            if (coreWordCount <= 2 && !hasModifierWord && !isSpecific && !hasLocation) {
-                log(`MM detected (JASA): "${pageName}" → core words: ${coreWordCount}`, 'SUCCESS');
-                return 'money-master';
-            }
-            
-            log(`MP detected (JASA): "${pageName}" → core words: ${coreWordCount}, modifier: ${hasModifierWord}`, 'INFO');
-            return 'money-page';
+            return detectJasaLevel(lowerName);
         }
 
         // SEWA ENTITY
@@ -1701,7 +1713,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
     log(`Current page: "${currentPageTitle}" → type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`, 'INFO');
 
     // ============================================================
-    // 26. SELECT BREADCRUMB LEVELS (FIXED v9.4 - NO UNIQUEHIERARCHY)
+    // 26. SELECT BREADCRUMB LEVELS
     // ============================================================
 
     const selectedLevels = [];
@@ -1737,7 +1749,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
     log('Unique items (' + uniqueItems.length + '): ' + uniqueItems.map(i => i.name + '(' + i.level + ')').join(' → '), 'INFO');
 
     // ============================================================
-    // FIND NEAREST PARENTS (LANGSUNG DARI UNIQUE ITEMS)
+    // FIND NEAREST PARENTS
     // ============================================================
 
     function findNearestParentsByHierarchy() {
@@ -2016,7 +2028,7 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
     // 33. LOG SUMMARY
     // ============================================================
 
-    console.log('📊 BREADCRUMB GENERATION SUMMARY (v9.5):');
+    console.log('📊 BREADCRUMB GENERATION SUMMARY (v9.6):');
     console.log(`   Page: "${currentPageTitle}"`);
     console.log(`   URL: "${currentFullUrl}"`);
     console.log(`   Type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`);
@@ -2040,14 +2052,13 @@ function generateBreadcrumbJasaKonstruksiStrukturPost(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '9.5.0',
+        version: '9.6.0',
         parentCount: finalParents.length,
         parents: finalParents,
         isVariant: currentPageType === 'variant',
         isMoneyChild: currentPageType === 'money-child'
     };
 }
-
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasakonstruksistrukturPost = {};
