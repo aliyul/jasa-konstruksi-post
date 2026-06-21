@@ -32,7 +32,7 @@ const urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage = {
 "https://www.betonjayareadymix.com/p/jasa-konstruksi-bengkel-modern.html": "Jasa Konstruksi Bengkel Modern",
 "https://www.betonjayareadymix.com/p/jasa-konstruksi-workshop-modern.html": "Jasa Konstruksi Workshop Modern"
 };
-
+//KonstruksiStruktur
 const urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html": "Jasa Struktur Baja dan Rangka Ringan",
   "https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html": "Jasa Struktur Beton dan Pengecoran",
