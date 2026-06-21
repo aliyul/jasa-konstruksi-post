@@ -350,10 +350,10 @@ const urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1 = {
 const urlMappingHargaJasaBoronganBangunanFromMoneyPage1MoneyPage2 = {
  // [MONEY_PAGE] - HARGA BORONGAN KONSTRUKSI PER METER (NASIONAL)
   // ============================================================
-   "https://www.betonjayareadymix.com/2018/09/harga-upah-tenaga-borongan-bangunan-per-m2.html": "Harga Upah Tenaga Borongan Bangunan Per M2",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-per-meter.html": "Harga Borongan Konstruksi Per Meter",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-tukang-bangunan-per-meter.html": "Harga Borongan Tukang Bangunan Per Meter",  // TYPE: MONEY_PAGE
-"https://www.betonjayareadymix.com/2018/09/harga-borong-bangunan-plus-material.html": "Harga Borong Bangunan Plus Material"  // TYPE: MONEY_PAGE
+   "https://www.betonjayareadymix.com/2018/09/harga-jasa-upah-tenaga-borongan-bangunan-per-m2.html": "Harga Jasa Upah Tenaga Borongan Bangunan Per M2",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-konstruksi-per-meter.html": "Harga Jasa Borongan Konstruksi Per Meter",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-tukang-bangunan-per-meter.html": "Harga Jasa Borongan Tukang Bangunan Per Meter",  // TYPE: MONEY_PAGE
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-bangunan-plus-material.html": "Harga Jasa Borongan Bangunan Plus Material"  // TYPE: MONEY_PAGE
 };
 const urlMappingHargaJasaBoronganBangunanFromMoneyPage1MoneyChild = {
  // ============================================================
