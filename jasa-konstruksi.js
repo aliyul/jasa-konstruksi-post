@@ -628,17 +628,18 @@ const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
 };
 // MP di bawah Jasa Pasang Lantai
 const urlMappingJasaPasangLantaiFromMoneyMaster1MoneyPage = {
-"https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html": "Jasa Pasang Keramik Lantai",  // TYPE: MONEY_PAGE
-    "https://www.betonjayareadymix.com/p/jasa-ganti-keramik-lantai.html": "Jasa Ganti Keramik Lantai",  // TYPE: MONEY_PAGE
+"https://www.betonjayareadymix.com/p/jasa-borongan-lantai.html": "Jasa Borongan Lantai", 
+"https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html": "Jasa Pasang Keramik Lantai", 
+    "https://www.betonjayareadymix.com/p/jasa-ganti-keramik-lantai.html": "Jasa Ganti Keramik Lantai", 
 
 // Material khusus lantai
 	 "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-spc.html": "Jasa Pasang Lantai SPC",
    // "https://www.betonjayareadymix.com/p/jasa-pasang-spc.html": "Jasa Pasang SPC",
     //"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl.html": "Jasa Pasang Vinyl",
 	"https://www.betonjayareadymix.com/p/jasa-pasang-lantai-vinyl.html": "Jasa Pasang Lantai Vinyl",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-laminate.html": "Jasa Pasang Lantai Laminate",  // Perbaiki URL 404
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-hardwood.html": "Jasa Pasang Lantai Hardwood",  // Perbaiki URL 404
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-parket.html": "Jasa Pasang Lantai Parket"  // Perbaiki URL 404
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-laminate.html": "Jasa Pasang Lantai Laminate",  
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-hardwood.html": "Jasa Pasang Lantai Hardwood", 
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lantai-parket.html": "Jasa Pasang Lantai Parket"
 
 };
 
