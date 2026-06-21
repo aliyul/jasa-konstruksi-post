@@ -40,6 +40,8 @@ const urlMappingJasaStrukturBajaRangkaRinganFromPillarSub2 = {
 // Parent: JasaKonstruksiBajaRingan
 // ============================================================
 const urlMappingJasaPasangBajaRinganFromMoneyPage2MoneyPage3 = { 
+	"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-ringan-ruko.html": "Jasa Konstruksi Baja Ringan Ruko",
+	
 	"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-baja-ringan.html": "Harga Jasa Pasang Baja Ringan", 
 	  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-atap-baja-ringan.html": "Jasa Pasang Atap Baja Ringan",  
       "https://www.betonjayareadymix.com/2018/09/jasa-pasang-kanopi-baja-ringan.html": "Jasa Pasang Kanopi Baja Ringan",
@@ -118,6 +120,8 @@ const urlMappingJasaKonstruksiBajaKonvensionalFromMoneyPage1MoneyPage2 = {
   // ============================================================
   // [MONEY_PAGE] - JASA KONSTRUKSI BAJA & BESI
   // ============================================================
+	"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-ruko.html": "Jasa Konstruksi Baja Ruko", 
+	
 	  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-rumah.html": "Jasa Konstruksi Baja Rumah", 
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-rumah-baja": "Harga Jasa Konstruksi Rumah Baja",  
   "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-rumah-rangka-baja.html": "Jasa Pembuatan Rumah Rangka Baja",
@@ -419,8 +423,8 @@ const urlMappingJasaPembuatanRukoFromMoneyMaster2MoneyPage= {
   // ============================================================
   // [MONEY_PAGE] - JASA KONSTRUKSI BAJA RUKO
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-ruko.html": "Jasa Konstruksi Baja Ruko",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-ringan-ruko.html": "Jasa Konstruksi Baja Ringan Ruko",  // TYPE: MONEY_PAGE
+  //"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-ruko.html": "Jasa Konstruksi Baja Ruko",  // TYPE: MONEY_PAGE
+  //"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-ringan-ruko.html": "Jasa Konstruksi Baja Ringan Ruko",  // TYPE: MONEY_PAGE
 };
 
 // ============================================================
