@@ -88,7 +88,7 @@ const urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1 = {
 
 const urlMappingJasaRenovasiLantaiBangunanFromMoneyPageMoneyPage1 = {
    "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-rusak.html": "Jasa Renovasi Lantai Rusak",  // TYPE: MONEY_PAGE
-   "https://www.betonjayareadymix.com/p/harga-renovasi-lantai-bangunan.html": "Harga Renovasi Lantai Bangunan"  // TYPE: MONEY_PAGE
+   "https://www.betonjayareadymix.com/p/harga-jasa-renovasi-lantai-bangunan.html": "Harga Jasa Renovasi Lantai Bangunan"  // TYPE: MONEY_PAGE
 };
 const urlMappingPerbaikanLantaiBangunanFromMoneyPageMoneyPage1 = {
 
