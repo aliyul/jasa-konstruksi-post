@@ -83,7 +83,7 @@ const urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1 = {
 // ============================================================
 const urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1 = {
 "https://www.betonjayareadymix.com/p/jasa-kolam-renang.html": "Jasa Kolam Renang",
-"https://www.betonjayareadymix.com/p/jasa-kolam-ikan-koi.html": "Jasa Kolam Ikan",
+"https://www.betonjayareadymix.com/p/jasa-kolam-ikan.html": "Jasa Kolam Ikan",
 "https://www.betonjayareadymix.com/p/jasa-septic-tank.html": "Jasa Septic Tank",
 "https://www.betonjayareadymix.com/p/jasa-tangki-air.html": "Jasa Tangki Air",
 "https://www.betonjayareadymix.com/p/jasa-bak-penampungan.html": "Jasa Bak Penampungan",
