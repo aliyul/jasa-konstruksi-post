@@ -3402,7 +3402,7 @@ if (urlMappingHargaJasaPembuatanGudangFromFromMoneyPageMoneyPage1[cleanUrlJasaJa
             { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
             { name: 'Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html'},
             { name: 'Jasa Pembuatan Gudang', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang.html'},
-            { name: 'Harga Jasa Pembuatan Gudang', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-gudang.html'}
+            { name: 'Harga Jasa Pembuatan Gudang', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-gudang.html'}
         
         
         ],
