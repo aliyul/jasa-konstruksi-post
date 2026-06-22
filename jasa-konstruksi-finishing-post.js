@@ -741,37 +741,40 @@ const urlMappingJasaPembuatanKitchenSetFromMoneyPageMoneyPage1 = {
     // ============================================================
     // 📌 HARGA & BIAYA
     // ============================================================
-    "https://www.betonjayareadymix.com/2018/09/harga-kitchen-set-interior.html": "Harga Kitchen Set Interior",
-    "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set.html": "Harga Jasa Pembuatan Kitchen Set",
-    "https://www.betonjayareadymix.com/2018/09/harga-borongan-tenaga-bikin-kitchen-set.html": "Harga Borongan Tenaga Bikin Kitchen Set",
-    "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-kitchen-set.html": "Harga Jasa Desain Kitchen Set",
-    "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set-per-meter.html": "Harga Jasa Pembuatan Kitchen Set Per Meter",
-
-    // ============================================================
+	   "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set.html": "Harga Jasa Pembuatan Kitchen Set",
+      // ============================================================
     // 📌 JENIS & MATERIAL STANDAR
     // ============================================================
-    "https://www.betonjayareadymix.com/2018/09/jasa-kitchen-set-murah.html": "Jasa Kitchen Set Murah",
-    "https://www.betonjayareadymix.com/2018/09/jasa-kitchen-set-multiplek-plywood.html": "Jasa Kitchen Set Multiplek / Plywood",
-    "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-hpl.html": "Jasa Kitchen Set HPL",
+    "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-kitchen-set-murah.html": "Jasa Pembuatan Kitchen Set Murah",
+    "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-kitchen-set-multiplek.html": "Jasa Pembuatan Kitchen Set Multiplek",
+    "https://www.betonjayareadymix.com/2020/02/jasa-pembuatan-kitchen-set-hpl.html": "Jasa Pembuatan Kitchen Set HPL",
 
     // ============================================================
     // 📌 SISTEM & LOKASI
     // ============================================================
-    "https://www.betonjayareadymix.com/2018/09/jasa-kitchen-set-terdekat.html": "Jasa Kitchen Set Terdekat",
-    "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-per-meter.html": "Jasa Kitchen Set Per Meter",
+    "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-kitchen-set-terdekat.html": "Jasa Pembuatan Kitchen Set Terdekat",
+    "https://www.betonjayareadymix.com/2020/02/jasa-pembuatan-kitchen-set-per-meter.html": "Jasa Pembuatan Kitchen Set Per Meter",
 
     // ============================================================
     // 📌 JENIS PROPERTI
     // ============================================================
-    "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-kafe-restoran.html": "Jasa Kitchen Set Kafe & Restoran",
-    "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-rumah-tinggal.html": "Jasa Kitchen Set Rumah Tinggal",
-    "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-apartemen.html": "Jasa Kitchen Set Apartemen",
+    "https://www.betonjayareadymix.com/2020/02/jasa-pembuatan-kitchen-set-kafe-restoran.html": "Jasa Pembuatan Kitchen Set Kafe & Restoran",
+    "https://www.betonjayareadymix.com/2020/02/jasa-pembuatan-kitchen-set-rumah-tinggal.html": "Jasa Pembuatan Kitchen Set Rumah Tinggal",
+    "https://www.betonjayareadymix.com/2020/02/jasa-pembuatan-kitchen-set-apartemen.html": "Jasa Pembuatan Kitchen Set Apartemen",
 
     // ============================================================
     // 📌 SOLUSI RUANG
     // ============================================================
-    "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-dapur-kecil-sempit.html": "Jasa Kitchen Set Dapur Kecil & Sempit",
-    "https://www.betonjayareadymix.com/2018/09/kabinet-dapur.html": "Kabinet Dapur"
+    "https://www.betonjayareadymix.com/2020/02/jasa-pembuatan-kitchen-set-dapur-kecil.html": "Jasa Pembuatan Kitchen Set Dapur Kecil",
+    "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-kabinet-dapur.html": "Jasa Pembuatan Kabinet Dapur"
+};
+
+const urlMappingHargaJasaPembuatanKitchenSetFromMoneyPageMoneyPage1 = {
+ "https://www.betonjayareadymix.com/2018/09/harga-kitchen-set-interior.html": "Harga Kitchen Set Interior",
+    "https://www.betonjayareadymix.com/2018/09/harga-borongan-tenaga-bikin-kitchen-set.html": "Harga Borongan Tenaga Bikin Kitchen Set",
+    "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-kitchen-set.html": "Harga Jasa Desain Kitchen Set",
+    "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set-per-meter.html": "Harga Jasa Pembuatan Kitchen Set Per Meter"
+ 
 };
 const urlMappingJasaCustomKitchenSetFromMoneyPageMoneyPage1 = {
     // ============================================================
