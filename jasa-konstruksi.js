@@ -571,7 +571,7 @@ const urlMappingJasaPembuatanRumahFromMoneyMaster2MoneyMaster3 = {
 const urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyPage = {
 	"https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-furniture.html": "Harga Jasa Pembuatan Furniture",
 	"https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture-custom.html": "Jasa Pembuatan Furniture Custom", // (Perbaiki URL yang 404)
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set",
+//"https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set",
 "https://www.betonjayareadymix.com/p/jasa-pembuatan-lemari-built-in.html": "Jasa Pembuatan Lemari Built In",
 "https://www.betonjayareadymix.com/p/jasa-pembuatan-partisi-ruangan.html": "Jasa Pembuatan Partisi Ruangan",
 "https://www.betonjayareadymix.com/p/jasa-pembuatan-meja-kursi.html": "Jasa Pembuatan Meja Kursi",
