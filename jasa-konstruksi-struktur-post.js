@@ -120,41 +120,52 @@ const urlMappingJasaKonstruksiBajaKonvensionalFromMoneyPage1MoneyPage2 = {
   // ============================================================
   // [MONEY_PAGE] - JASA KONSTRUKSI BAJA & BESI
   // ============================================================
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-baja-konvensional.html": "Harga Jasa Konstruksi Baja Konvensional",
+
   "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-gudang.html": "Jasa Konstruksi Baja Gudang", 
 	  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-pabrik.html": "Jasa Konstruksi Baja Pabrik",
 	"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-ruko.html": "Jasa Konstruksi Baja Ruko", 
 	
 	  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-rumah.html": "Jasa Konstruksi Baja Rumah", 
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-rumah-baja": "Harga Jasa Konstruksi Rumah Baja",  
+
   // karna ada jasa-konstruksi-baja-rumah hapus "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-rumah-rangka-baja.html": "Jasa Pembuatan Rumah Rangka Baja",
   
   "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-gedung.html": "Jasa Konstruksi Baja Gedung",  // TYPE: MONEY_PAGE
   //"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja.html": "Jasa Konstruksi Baja",  // redirect ke JasaStrukturBajadanRangkaRingan
   
   // ============================================================
+  // [MONEY_PAGE] - JASA PEMBANGUNAN TOWER
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembangunan-tower-baja.html": "Jasa Pembangunan Tower Baja",  
+ };
+const urlMappingHargaJasaKonstruksiBajaKonvensionalFromMoneyPage2MoneyPage3 = {
+    // ============================================================
+  // [MONEY_PAGE] - HARGA KONSTRUKSI BAJA WF
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-besi-wf.html": "Harga Jasa Konstruksi Besi WF",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-baja-wf.html": "Harga Jasa Konstruksi Baja WF", 
+  "https://www.betonjayareadymix.com/2018/09/harga-konstruksi-baja-wf-per-m2.html": "Harga Konstruksi Baja WF Per M2", 
+
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-rumah-baja": "Harga Jasa Konstruksi Rumah Baja",  
+   
+	 // ============================================================
   // [MONEY_PAGE] - HARGA BORONGAN KONSTRUKSI BESI & BAJA
   // ============================================================
   "https://www.betonjayareadymix.com/2018/09/harga-borongan-jasa-konstruksi-besi.html": "Harga Borongan Jasa Konstruksi Besi",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-besi.html": "Harga Borongan Konstruksi Besi",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-baja-wf.html": "Harga Borongan Konstruksi Baja WF",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-baja-per-meter.html": "Harga Borongan Konstruksi Baja Per Meter",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-baja-per-meter.html": "Harga Borongan Konstruksi Baja Per Meter"  // TYPE: MONEY_PAGE
   
-  // ============================================================
-  // [MONEY_PAGE] - HARGA KONSTRUKSI BAJA WF
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-besi-wf.html": "Harga Jasa Konstruksi Besi WF",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-baja-wf.html": "Harga Jasa Konstruksi Baja WF",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-konstruksi-baja-wf-per-m2.html": "Harga Konstruksi Baja WF Per M2",  // TYPE: MONEY_PAGE
-
-  // ============================================================
-  // [MONEY_PAGE] - JASA PEMBANGUNAN TOWER
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembangunan-tower.html": "Jasa Pembangunan Tower",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-pasang-tower.html": "Harga Borongan Pasang Tower",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/jasa-pemasangan-tower-bts.html": "Jasa Pemasangan Tower BTS",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/jasa-pemasangan-tower-triangle.html": "Jasa Pemasangan Tower Triangle",  // TYPE: MONEY_PAGE
 };
-
+const urlMappingJasaPembangunanTowerBajaFromMoneyPage2MoneyPage3 = {
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-tower.html": "Harga Jasa Pasang Tower",
+ "https://www.betonjayareadymix.com/2018/09/harga-borongan-pasang-tower.html": "Harga Jasa Borongan Pasang Tower",  
+  "https://www.betonjayareadymix.com/2018/09/jasa-pemasangan-tower-bts.html": "Jasa Pemasangan Tower BTS",  
+  "https://www.betonjayareadymix.com/2018/09/jasa-pemasangan-tower-triangle.html": "Jasa Pemasangan Tower Triangle" 
+};
+const urlMappingHargaJasaPembangunanTowerBajaFromMoneyPage4MoneyPage5 = {
+ "https://www.betonjayareadymix.com/2018/09/harga-borongan-pasang-tower.html": "Harga Jasa Borongan Pasang Tower"
+};
 // ============================================================
 // 📁 JASA KANOPI BAJA DAN BESI - KOSONG (SARAN ITEM)
 // ============================================================
