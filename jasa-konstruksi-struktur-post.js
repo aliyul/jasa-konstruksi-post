@@ -3421,7 +3421,7 @@ if (urlMappingJasaKonstruksiPabrikIndustriFromMoneyPageMoneyPage1[cleanUrlJasaJa
             { name: 'Daftar Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-Konstruksi-bangunan.html' },
             { name: 'Perbandingan Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-Konstruksi-bangunan.html' },
             { name: 'Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-Konstruksi-bangunan.html' },
-            { name: 'Jasa Konstruksi Pabrik Industri', url: 'https://www.betonjayareadymix.com/p/jasa-Konstruksi-pabrik-industri.html' }
+            { name: 'Jasa Konstruksi Pabrik Industri', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-pabrik-industri.html' }
         
         ],
         'JASA_KONSTRUKSI'
