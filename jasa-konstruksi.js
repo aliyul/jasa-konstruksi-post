@@ -525,7 +525,11 @@ const urlMappingJasaKitchenSetFromMoneyMasterMoneyPage = {
 	"https://www.betonjayareadymix.com/p/jasa-custom-kitchen-set.html": "Jasa Custom Kitchen Set",
     "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set",
 	    // Kitchen Set juga bisa sebagai MP
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set"
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set",
+  "https://www.betonjayareadymix.com/p/jasa-kitchen-set-minimalis.html": "Jasa Kitchen Set Minimalis", 
+ "https://www.betonjayareadymix.com/p/jasa-kitchen-set-modern.html": "Jasa Kitchen Set Modern",
+ "https://www.betonjayareadymix.com/p/jasa-kitchen-set-klasik.html": "Jasa Kitchen Set Klasik", 
+  "https://www.betonjayareadymix.com/p/harga-kitchen-set-per-meter.html": "Harga Kitchen Set Per Meter"
 };
 const urlMappingJasaPembuatanFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-pembuatan.html": "Jasa Pembuatan"
