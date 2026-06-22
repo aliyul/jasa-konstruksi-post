@@ -120,6 +120,8 @@ const urlMappingJasaKonstruksiBajaKonvensionalFromMoneyPage1MoneyPage2 = {
   // ============================================================
   // [MONEY_PAGE] - JASA KONSTRUKSI BAJA & BESI
   // ============================================================
+  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-gudang.html": "Jasa Konstruksi Baja Gudang", 
+	  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-pabrik.html": "Jasa Konstruksi Baja Pabrik",
 	"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-ruko.html": "Jasa Konstruksi Baja Ruko", 
 	
 	  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-rumah.html": "Jasa Konstruksi Baja Rumah", 
@@ -492,10 +494,7 @@ const urlMappingJasaPembuatanRSFromFromMoneyMaster2MoneyPage = {
 // ============================================================
 
 const urlMappingJasaPembuatanGudangFromFromMoneyMaster2MoneyPage = {
-  // ============================================================
-  // [MONEY_PAGE] - KONSTRUKSI BAJA GUDANG
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-gudang.html": "Jasa Konstruksi Baja Gudang",  
+ 
   "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-konstruksi-gudang.html": "Jasa Pembuatan Konstruksi Gudang",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-gudang.html": "Harga Jasa Pembuatan Gudang"
 
@@ -522,7 +521,7 @@ const urlMappingJasaKonstruksiPabrikIndustriFromMoneyPageMoneyPage1 = {
   // ============================================================
   // [MONEY_PAGE] - KONSTRUKSI BAJA PABRIK
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-pabrik.html": "Jasa Konstruksi Baja Pabrik"  // TYPE: MONEY_PAGE
+// TYPE: MONEY_PAGE
 };
 
 // ============================================================
