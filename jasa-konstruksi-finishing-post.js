@@ -770,8 +770,8 @@ const urlMappingJasaPembuatanKitchenSetFromMoneyPageMoneyPage1 = {
 };
 
 const urlMappingHargaJasaPembuatanKitchenSetFromMoneyPageMoneyPage1 = {
- "https://www.betonjayareadymix.com/2018/09/harga-kitchen-set-interior.html": "Harga Kitchen Set Interior",
-    "https://www.betonjayareadymix.com/2018/09/harga-borongan-tenaga-bikin-kitchen-set.html": "Harga Borongan Tenaga Bikin Kitchen Set",
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set- interior.html": "Harga Jasa Pembuatan Kitchen Set Interior",
+    "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-tenaga-pembuatan-kitchen-set.html": "Harga Borongan Tenaga Bikin Kitchen Set",
     "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-kitchen-set.html": "Harga Jasa Desain Kitchen Set",
     "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set-per-meter.html": "Harga Jasa Pembuatan Kitchen Set Per Meter"
  
