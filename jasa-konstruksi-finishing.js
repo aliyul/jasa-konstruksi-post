@@ -283,9 +283,24 @@ const urlMappingFinishingInteriorFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-finishing-interior-rumah.html": "Jasa Finishing Interior Rumah", 
     "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis", 
     "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html": "Jasa Finishing Interior Klasik",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern"
 
-	 // ============================================================
+	 
+};
+const urlMappingJasaInteriorFromMoneyMasterMoneyPage = {
+  // ============================================================
+    // LEVEL 5 (MP) - HALAMAN HARGA INTERIOR
+    // ============================================================
+	"https://www.betonjayareadymix.com/p/harga-jasa-interior.html": "Harga Jasa Interior",
+    "https://www.betonjayareadymix.com/p/harga-jasa-interior-per-meter.html": "Harga Jasa Interior Per Meter",
+    "https://www.betonjayareadymix.com/p/harga-jasa-borongan-interior.html": "Harga Jasa Borongan Interior",
+    //"https://www.betonjayareadymix.com/p/harga-interior-kamar.html": "Harga Jasa Interior Kamar",
+    "https://www.betonjayareadymix.com/p/harga-jasa-interior-kamar-tidur.html": "Harga Jasa Interior Kamar Tidur",
+    "https://www.betonjayareadymix.com/p/harga-jasa-interior-ruang-tamu.html": "Harga Jasa Interior Ruang Tamu"
+
+};
+const urlMappingHargaJasaInteriorFromMoneyPageMoneyPage = {
+  // ============================================================
     // LEVEL 5 (MP) - HALAMAN HARGA INTERIOR
     // ============================================================
     "https://www.betonjayareadymix.com/p/harga-jasa-interior-per-meter.html": "Harga Jasa Interior Per Meter",
@@ -293,8 +308,8 @@ const urlMappingFinishingInteriorFromMoneyMasterMoneyPage = {
     //"https://www.betonjayareadymix.com/p/harga-interior-kamar.html": "Harga Jasa Interior Kamar",
     "https://www.betonjayareadymix.com/p/harga-jasa-interior-kamar-tidur.html": "Harga Jasa Interior Kamar Tidur",
     "https://www.betonjayareadymix.com/p/harga-jasa-interior-ruang-tamu.html": "Harga Jasa Interior Ruang Tamu"
-};
 
+};
 // ============================================================
 // 📁 JASA FINISHING LAMPU - MP dari MM Jasa Finishing Lampu
 // 🧠 Parent: Jasa Finishing Lampu (L4)
@@ -2185,6 +2200,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage,
 		urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
 		urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
+
+		urlMappingJasaInteriorFromMoneyMasterMoneyPage,
+		urlMappingHargaJasaInteriorFromMoneyPageMoneyPage,
+		
 		urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1,
@@ -2844,7 +2863,35 @@ if (urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing])
         'JASA_KONSTRUKSI'
     );
     }
-  
+
+    if (urlMappingJasaInteriorFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
+         generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaInteriorFromMoneyMasterMoneyPage,
+        cleanUrlJasaKonsFinishing,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Interior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-interior.html' },
+            { name: 'Perbandingan Jasa Interior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html' },
+           { name: 'Jasa Interior', url: 'https://www.betonjayareadymix.com/p/jasa-interior.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	if (urlMappingHargaJasaInteriorFromMoneyPageMoneyPage[cleanUrlJasaKonsFinishing]) {
+         generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingHargaJasaInteriorFromMoneyPageMoneyPage,
+        cleanUrlJasaKonsFinishing,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Interior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-interior.html' },
+            { name: 'Perbandingan Jasa Interior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html' },
+           { name: 'Jasa Interior', url: 'https://www.betonjayareadymix.com/p/jasa-interior.html'},
+           { name: 'Harga Jasa Interior', url: 'https://www.betonjayareadymix.com/p/harga-jasa-interior.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+
 	if (urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage,
