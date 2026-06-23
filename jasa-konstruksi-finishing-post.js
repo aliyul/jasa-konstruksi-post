@@ -2356,7 +2356,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	   urlMappingJasaPasangPVCFromMoneyPageMoneyPage1,
 
 	urlMappingJasaPembuatanKitchenSetFromMoneyPageMoneyPage1,
-	urlMappingHargaJasaPembuatanKitchenSetFromMoneyPage1MoneyPage2
+	urlMappingHargaJasaPembuatanKitchenSetFromMoneyPage1MoneyPage2,
     urlMappingJasaCustomKitchenSetFromMoneyPageMoneyPage1,
 	   
     urlMappingJasaCatEksteriorRumahFromSub2MoneyPage,
