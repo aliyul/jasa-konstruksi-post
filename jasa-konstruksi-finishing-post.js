@@ -748,6 +748,8 @@ const urlMappingJasaPembuatanKitchenSetFromMoneyPageMoneyPage1 = {
     "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-kitchen-set-murah.html": "Jasa Pembuatan Kitchen Set Murah",
     "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-kitchen-set-multiplek.html": "Jasa Pembuatan Kitchen Set Multiplek",
     "https://www.betonjayareadymix.com/2020/02/jasa-pembuatan-kitchen-set-hpl.html": "Jasa Pembuatan Kitchen Set HPL",
+	    "https://www.betonjayareadymix.com/2020/02/jasa-pembuatan-kitchen-set-aluminium.html": "Jasa Pembuatan Kitchen Set Aluminium",
+    "https://www.betonjayareadymix.com/2020/02/jasa-pembuatan-kitchen-set-kayu-solid.html": "Jasa Pembuatan Kitchen Set Kayu Solid",
 
     // ============================================================
     // 📌 SISTEM & LOKASI
@@ -773,29 +775,20 @@ const urlMappingHargaJasaPembuatanKitchenSetFromMoneyPage1MoneyPage2 = {
  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set- interior.html": "Harga Jasa Pembuatan Kitchen Set Interior",
     "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-tenaga-pembuatan-kitchen-set.html": "Harga Jasa Borongan Tenaga Pembuatan Kitchen Set",
     "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-kitchen-set.html": "Harga Jasa Desain Kitchen Set",
-    "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set-per-meter.html": "Harga Jasa Pembuatan Kitchen Set Per Meter"
+    "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set-per-meter.html": "Harga Jasa Pembuatan Kitchen Set Per Meter",
+	   // 📌 MATERIAL PREMIUM
+    // ============================================================
+    "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set-per-meter-kayu-jati.html": "Harga Jasa Pembuatan Kitchen Set Per Meter Kayu Jati"
+	
  
 };
 const urlMappingJasaCustomKitchenSetFromMoneyPageMoneyPage1 = {
     // ============================================================
-    // 📌 MATERIAL PREMIUM
-    // ============================================================
-    "https://www.betonjayareadymix.com/2018/09/harga-kitchen-set-per-meter-kayu-jati.html": "Harga Kitchen Set Per Meter Kayu Jati",
-    "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-aluminium.html": "Jasa Kitchen Set Aluminium",
-    "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-kayu-solid.html": "Jasa Kitchen Set Kayu Solid",
+    "https://www.betonjayareadymix.com/2020/02/harga-jasa-custom-kitchen-set.html": "Harga Jasa Custom Kitchen Set",
+    "https://www.betonjayareadymix.com/2020/02/jasa-desain-kitchen-set-custom..html": "Jasa Desain Kitchen Set Custom",
+    "https://www.betonjayareadymix.com/2020/02/jasa-pembuatan-kitchen-set-custom.html": "Jasa Pembuatan Kitchen Set Custom"
 
-    // ============================================================
-    // 📌 GAYA DESAIN
-    // ============================================================
-    "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-industrial.html": "Jasa Kitchen Set Industrial",
-    "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-klasik-elegan.html": "Jasa Kitchen Set Klasik Elegan",
-    "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-modern.html": "Jasa Kitchen Set Modern",
-    "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-minimalis.html": "Jasa Kitchen Set Minimalis",
 
-    // ============================================================
-    // 📌 TATA LETAK & BENTUK
-    // ============================================================
-    "https://www.betonjayareadymix.com/2020/02/jasa-kitchen-set-letter-l-u-island.html": "Jasa Kitchen Set Letter L, U & Island"
 };
 // ============================================================
 // 📁 JASA FINISHING FASAD EKSTERIOR - MONEY PAGE & MONEY CHILD
