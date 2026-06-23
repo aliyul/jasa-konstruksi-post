@@ -769,7 +769,7 @@ const urlMappingJasaPembuatanKitchenSetFromMoneyPageMoneyPage1 = {
     "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-kabinet-dapur.html": "Jasa Pembuatan Kabinet Dapur"
 };
 
-const urlMappingHargaJasaPembuatanKitchenSetFromMoneyPageMoneyPage1 = {
+const urlMappingHargaJasaPembuatanKitchenSetFromMoneyPage1MoneyPage2 = {
  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set- interior.html": "Harga Jasa Pembuatan Kitchen Set Interior",
     "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-tenaga-pembuatan-kitchen-set.html": "Harga Jasa Borongan Tenaga Pembuatan Kitchen Set",
     "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-kitchen-set.html": "Harga Jasa Desain Kitchen Set",
@@ -2354,7 +2354,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	   urlMappingJasaPasangPVCDindingFromMoneyPageMoneyPage1,
     urlMappingJasaPasangPVCDindingFromMoneyPageMoneyChild,
 	   urlMappingJasaPasangPVCFromMoneyPageMoneyPage1,
+
+	urlMappingJasaPembuatanKitchenSetFromMoneyPageMoneyPage1,
+	urlMappingHargaJasaPembuatanKitchenSetFromMoneyPage1MoneyPage2
     urlMappingJasaCustomKitchenSetFromMoneyPageMoneyPage1,
+	   
     urlMappingJasaCatEksteriorRumahFromSub2MoneyPage,
     urlMappingJasaPasangACPFasadFromMoneyPageMoneyChild,
 	urlMappingHargaJasaPasangACPPerMeterFromMoneyPage1MoneyChild,
@@ -3339,6 +3343,22 @@ if (urlMappingJasaPembuatanKitchenSetFromMoneyPageMoneyPage1[cleanUrlJasaKonsFin
         'JASA'
     );
 }	
+if (urlMappingHargaJasaPembuatanKitchenSetFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishingPost]) {
+	// ✅ Generate Breadcrumb untuk Jasa Kitchen Set
+    generateBreadcrumbjasaKonstruksiFinishingPost(
+        urlMappingHargaJasaPembuatanKitchenSetFromMoneyPage1MoneyPage2,
+        cleanUrlJasaKonsFinishingPost,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-kitchen-set.html'},
+            { name: 'Perbandingan Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-kitchen-set.html'},
+            { name: 'Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/jasa-kitchen-set.html'},
+            { name: 'Jasa Pembuatan Kitchen Set', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html' },
+            { name: 'Harga Jasa Pembuatan Kitchen Set', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-kitchen-set.html' }
+        ],
+        'JASA'
+    );
+}
 if (urlMappingJasaCustomKitchenSetFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishingPost]) {
 	// ✅ Generate Breadcrumb untuk Jasa Kitchen Set
     generateBreadcrumbjasaKonstruksiFinishingPost(
