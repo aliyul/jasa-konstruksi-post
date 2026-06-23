@@ -2101,7 +2101,9 @@ document.addEventListener("DOMContentLoaded", function() {
       {},
 		urlMappingJasaKonsFromPillarSub2,
 		urlMappingJasaEksteriorBridgeFromSub2Sub1,
+		urlMappingJasaEksteriorFromSub1MoneyMaster,
 		urlMappingJasaInteriorBridgeFromSub2Sub1,
+		urlMappingJasaInteriorFromSub1MoneyMaster,
 		urlMappingJasaKonsultanKonstruksiBridgeFromSub2Sub1,
 		urlMappingJasaKonsultanKonstruksiFromSub1MoneyMaster,
 		urlMappingJasaKitchenSetBridgeFromSub2Sub1,
@@ -2924,6 +2926,20 @@ if (urlMappingJasaEksteriorBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
    }
+if (urlMappingJasaEksteriorFromSub1MoneyMaster[cleanUrlJasaKons]) {
+     generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaEksteriorFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
+            { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+	
 if (urlMappingJasaInteriorBridgeFromSub2Sub1[cleanUrlJasaKons]) {
      generateBreadcrumbJasaKonstruksi(
         urlMappingJasaInteriorBridgeFromSub2Sub1,
@@ -2936,6 +2952,20 @@ if (urlMappingJasaInteriorBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
    }
+if (urlMappingJasaInteriorFromSub1MoneyMaster[cleanUrlJasaKons]) {
+     generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaInteriorFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Interior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-interior.html' },
+            { name: 'Perbandingan Jasa Interior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+	
 if (urlMappingJasaKonsultanKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
      generateBreadcrumbJasaKonstruksi(
         urlMappingJasaKonsultanKonstruksiBridgeFromSub2Sub1,
