@@ -526,10 +526,20 @@ const urlMappingJasaKitchenSetFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set",
 	    // Kitchen Set juga bisa sebagai MP
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set",
+
+// ============================================================
+    // 📌 GAYA DESAIN
+    // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-kitchen-set-minimalis.html": "Jasa Kitchen Set Minimalis", 
  "https://www.betonjayareadymix.com/p/jasa-kitchen-set-modern.html": "Jasa Kitchen Set Modern",
  "https://www.betonjayareadymix.com/p/jasa-kitchen-set-klasik.html": "Jasa Kitchen Set Klasik", 
-  "https://www.betonjayareadymix.com/p/harga-kitchen-set-per-meter.html": "Harga Kitchen Set Per Meter"
+  "https://www.betonjayareadymix.com/p/jasa-kitchen-set-industrial.html": "Jasa Kitchen Set Industrial",
+
+    // ============================================================
+    // 📌 TATA LETAK & BENTUK
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/jasa-kitchen-set-letter-l-u-island.html": "Jasa Kitchen Set Letter L, U & Island"
+
 };
 const urlMappingJasaPembuatanFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-pembuatan.html": "Jasa Pembuatan"
