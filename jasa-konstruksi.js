@@ -4302,96 +4302,17 @@ if (urlMappingJasaBorAirSumur[cleanUrlJasaKons]) {
 	
 //JASA INSTALASI LISTRIK
 if (urlMappingJasaInstalasiListrikFromSub1MoneyPage[cleanUrlJasaKons]) {
-        restoreCondition('JasaKonsSub');
-	restoreCondition('JasaInstalasiListrik');
-           // hapus elemen id DIV Lain
-	removeCondition('ProdukInFur');
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-        //removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-	removeCondition('JasaKons');
-	removeCondition('MenuKons');
-	    
-       // hapus elemen id DIV Lain
-	removeCondition('JasaAlatKonstruksi');
-	removeCondition('SewaAlatKonstruksi');
-	removeCondition('SewaAlatBerat');
-	removeCondition('SewaAlatKonstruksiRingan');
-
-	removeCondition('JasaPematanganLahan');
-	removeCondition('JasaRenovasiPerbaikan');
-        removeCondition('JasaStrukturKonstruksi');
-        removeCondition('JasaFinishing');
-        removeCondition('JasaPondasiPerkuatan');
-        removeCondition('JasaSaluranDrainase');
-        removeCondition('JasaJalanPerkerasan');
-	removeCondition('JasaPembatasPengaman');
-	removeCondition('JasaUjiTanah');
-	removeCondition('JasaPerkuatanTanahLongsor');
-	removeCondition('JasaBongkarBangunan');
-	removeCondition('JasaPerawatanPerbaikanBangunan');
-    removeCondition('JasaPerbaikanInfrastruktur'); 
-	removeCondition('JasaPengeboran');
-		removeCondition('JasaBorAirSumur');
-		removeCondition('JasaBorPile');
-		removeCondition('JasaCoringBeton');
-		removeCondition('JasaBorBeton');
-		removeCondition('JasaBorTanah');
-		removeCondition('JasaBorHorizontal');
-		removeCondition('JasaBorTembok');
-
-       // removeCondition('JasaKonstruksiCustom');
-
-        JasaKonstruksiSubLink.style.visibility = 'visible';
-        JasaInstalasiListrikLink.style.visibility = 'visible';
-        pageNameKonstruksiSub.textContent = urlMappingJasaInstalasiListrikFromSub1MoneyPage[cleanUrlJasaKons];
-    }
-
-  // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaInstalasiListrikFromSub1MoneyPage[cleanUrlJasaKons]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Daftar Jasa Instalasi Listrik",
-                   "item": "https://www.betonjayareadymix.com/p/daftar-jasa-instalasi-listrik.html"
-               },
-	       {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": urlMappingJasaInstalasiListrikFromSub1MoneyPage[cleanUrlJasaKons],
-                   "item": cleanUrlJasaKons
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+       	generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaInstalasiListrikFromSub1MoneyPage,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Instalasi Listrik', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-instalasi-listrik.html' },
+            { name: 'Perbandingan Jasa Instalasi Listrik', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-instalasi-listrik.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
 /*
     if (urlMappingCustom[cleanUrlJasaKons]) {
         restoreCondition('JasaKonsSub');
