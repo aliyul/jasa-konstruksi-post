@@ -447,21 +447,7 @@ const urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-pelapisan-dinding-luar.html": "Jasa Pelapisan Dinding Luar",
     "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html": "Jasa Pelapisan Batu Alam Eksterior",
 
-    // 2. PASANG MATERIAL EKSTERIOR
-	 // LEVEL 5 (MP) - LAYANAN UTAMA
-    // ============================================================
-    "https://www.betonjayareadymix.com/p/jasa-pasang-acp-fasad.html": "Jasa Pasang ACP Fasad",
-	  "https://www.betonjayareadymix.com/p/jasa-laser-cutting-acp.html": "Jasa Laser Cutting ACP",
-	// LEVEL 5 (MP) - PARENT (PAYUNG LAYANAN)
-    // ============================================================
-    "https://www.betonjayareadymix.com/p/jasa-profil-beton-eksterior.html": "Jasa Profil Beton Eksterior",
-	
-    //"https://www.betonjayareadymix.com/p/jasa-pasang-acp-eksterior.html": "Jasa Pasang ACP Eksterior",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-grc-eksterior.html": "Jasa Pasang GRC Eksterior",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-kaca-fasad.html": "Jasa Pasang Kaca Fasad",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-fasad.html": "Jasa Pasang Batu Alam Fasad",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-eksterior.html": "Jasa Pasang Wood Plank Eksterior",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-eksterior.html": "Jasa Pasang HPL Eksterior",
+
 
     // 3. BERDASARKAN JENIS PROPERTI
     "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-rumah.html": "Jasa Finishing Eksterior Rumah",
@@ -483,12 +469,10 @@ const urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-industrial.html": "Jasa Finishing Eksterior Industrial",
     "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-skandinavian.html": "Jasa Finishing Eksterior Skandinavian",
     "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kontemporer.html": "Jasa Finishing Eksterior Kontemporer",
-     // BERDASARKAN MATERIAL NYA
-	"https://www.betonjayareadymix.com/p/jasa-relief-batu-alam.html": "Jasa Relief Batu Alam",
-	
+
     // 5. BERDASARKAN ELEMEN BANGUNAN
 	    //"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-taman.html": "Jasa Finishing Eksterior Taman",
-	"https://www.betonjayareadymix.com/p/jasa-taman.html": "Jasa Taman",
+	
     "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-dinding.html": "Jasa Finishing Eksterior Dinding",
     "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-pagar.html": "Jasa Finishing Eksterior Pagar",
     "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-balkon.html": "Jasa Finishing Eksterior Balkon",
@@ -505,6 +489,38 @@ const urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gudang.html": "Jasa Finishing Eksterior Gudang",
     "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-mushola.html": "Jasa Finishing Eksterior Mushola",
     "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-masjid.html": "Jasa Finishing Eksterior Masjid"
+};
+const urlMappingJasaEksteriorFromMoneyMasterMoneyMaster1 = {
+   "https://www.betonjayareadymix.com/p/harga-jasa-eksterior.html": "Harga Jasa Eksterior",
+   "https://www.betonjayareadymix.com/p/jasa-fasad-rumah.html": "Jasa Fasad Rumah",
+   "https://www.betonjayareadymix.com/p/jasa-taman.html": "Jasa Taman"
+};
+const urlMappingHargaJasaEksteriorFromMoneyMaster1MoneyPage = {
+   "https://www.betonjayareadymix.com/p/harga-jasa-eksterior.html": "Harga Jasa Eksterior",
+   "https://www.betonjayareadymix.com/p/jasa-fasad-rumah.html": "Jasa Fasad Rumah",
+
+};
+const urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage = {
+	"https://www.betonjayareadymix.com/p/harga-jasa-fasad-rumah.html": "Harga Jasa Fasad Rumah",
+	
+    // 2. PASANG MATERIAL EKSTERIOR
+	 // LEVEL 5 (MP) - LAYANAN UTAMA
+    // ============================================================
+	     // BERDASARKAN MATERIAL NYA
+	"https://www.betonjayareadymix.com/p/jasa-relief-batu-alam.html": "Jasa Relief Batu Alam",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-acp-fasad.html": "Jasa Pasang ACP Fasad",
+	  "https://www.betonjayareadymix.com/p/jasa-laser-cutting-acp.html": "Jasa Laser Cutting ACP",
+	// LEVEL 5 (MP) - PARENT (PAYUNG LAYANAN)
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/jasa-profil-beton-eksterior.html": "Jasa Profil Beton Eksterior",
+	
+    //"https://www.betonjayareadymix.com/p/jasa-pasang-acp-eksterior.html": "Jasa Pasang ACP Eksterior",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-grc-eksterior.html": "Jasa Pasang GRC Eksterior",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-kaca-fasad.html": "Jasa Pasang Kaca Fasad",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-fasad.html": "Jasa Pasang Batu Alam Fasad",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-eksterior.html": "Jasa Pasang Wood Plank Eksterior",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-eksterior.html": "Jasa Pasang HPL Eksterior"
+
 };
 const urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1 = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
@@ -2241,6 +2257,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		
 		urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage,
+
+		urlMappingJasaEksteriorFromMoneyMasterMoneyMaster1,
+		
 		urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1,
 		urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1,
@@ -3396,8 +3415,6 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
         'JASA_KONSTRUKSI'
     );
    }
-
-
 	
    if (urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbJasaKonstruksiFinishing(
@@ -3410,6 +3427,19 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
 			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
             { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+    if (urlMappingJasaEksteriorFromMoneyMasterMoneyMaster1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaEksteriorFromMoneyMasterMoneyMaster1,
+        cleanUrlJasaKonsFinishing,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
+            { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
+            { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html'}
         ],
         'JASA_KONSTRUKSI'
     );
