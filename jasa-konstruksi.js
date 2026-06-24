@@ -31,6 +31,7 @@ const urlMappingJasaKonsFromPillarSub2 = {
   // 🧠 TYPE: SUB2 (Intent Informasional 60%)
   // Breadcrumb: Home > Jasa Konstruksi > [Nama Layanan] (3 level)
   // ============================================================
+  "https://www.betonjayareadymix.com/p/daftar-jasa-taman.html": "Daftar Jasa Taman"
 "https://www.betonjayareadymix.com/p/daftar-jasa-interior.html": "Daftar Jasa Interior",
 "https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html": "Daftar Jasa Eksterior",
 "https://www.betonjayareadymix.com/p/daftar-jasa-konsultan-konstruksi.html": "Daftar Jasa Konsultan Konstruksi",
@@ -84,11 +85,18 @@ const urlMappingJasaKonsFromPillarSub2 = {
 // 🧠 TYPE: SUB1 (Intent Komersial 70%)
 // Breadcrumb: Home > Jasa Konstruksi > [SUB2] > [Panduan] (4 level)
 // ============================================================
+ 
+const urlMappingJasaTamanBridgeFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-jasa-taman.html": "Perbandingan Jasa Taman" // (Tipe: Sub-Pillar Tipe 1)
+};
+const urlMappingJasaTamanBridgeFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/jasa-taman.html": "Jasa Taman"
+};
 const urlMappingJasaEksteriorBridgeFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html": "Perbandingan Jasa Eksterior" // (Tipe: Sub-Pillar Tipe 1)
 };
 const urlMappingJasaEksteriorFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/jasa-eksterior.html": "Jasa Eksterior"  // TYPE: MoneyPage
+  "https://www.betonjayareadymix.com/p/jasa-eksterior.html": "Jasa Eksterior"  
 };
 const urlMappingJasaInteriorBridgeFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html": "Perbandingan Jasa Interior" // (Tipe: Sub-Pillar Tipe 1)
@@ -616,6 +624,12 @@ const urlMappingJasaPasangFromSub1MoneyMaster = {
 };
 
 const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
+	"https://www.betonjayareadymix.com/p/jasa-pasang-acp.html": "Jasa Pasang Acp",
+   "https://www.betonjayareadymix.com/p/jasa-pasang-batu.html": "Jasa Pasang Batu",
+   "https://www.betonjayareadymix.com/p/jasa-pasang-grc.html": "Jasa Pasang Grc",
+   "https://www.betonjayareadymix.com/p/jasa-pasang-kaca.html": "Jasa Pasang Kaca",
+    "https://www.betonjayareadymix.com/p/jasa-wood-plank.html": "Jasa Wood Plank",
+   "https://www.betonjayareadymix.com/p/jasa-pasang-hpl.html": "Jasa Pasang Hpl",
     // ================================================================
     // 📌 MONEY-MASTER (LEVEL 4) - HANYA KATEGORI UTAMA
     // ================================================================
