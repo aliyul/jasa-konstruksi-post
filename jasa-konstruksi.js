@@ -248,12 +248,10 @@ const urlMappingFinishingFromSub1MoneyMaster = {
 };
 
 const urlMappingFinishingFromMoneyMasterMoneyMaster1 = {
-
-//"https://www.betonjayareadymix.com/p/jasa-profil-beton.html": "Jasa Profil Beton",
-	
+     	"https://www.betonjayareadymix.com/p/jasa-cat.html": "Jasa Cat",
 	"https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html": "Jasa Finishing Dinding", 
 	"https://www.betonjayareadymix.com/p/jasa-finishing-furniture.html": "Jasa Finishing Furniture", 
-		"https://www.betonjayareadymix.com/p/jasa-finishing-cat.html": "Jasa Finishing Cat",
+	//	"https://www.betonjayareadymix.com/p/jasa-finishing-cat.html": "Jasa Finishing Cat",
 	"https://www.betonjayareadymix.com/p/jasa-finishing-lampu.html": "Jasa Finishing Lampu",
  	// 
 	"https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html": "Jasa Finishing Lantai", 
