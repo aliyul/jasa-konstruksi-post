@@ -93,11 +93,15 @@ const urlMappingJasaReliefBridgeFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-relief.html": "Jasa Relief" 
 };
 const urlMappingJasaReliefFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-relief-dinding-eksterior.html": "Jasa Relief Dinding Eksterior",
+  	 "https://www.betonjayareadymix.com/p/jasa-relief-dinding.html": "Jasa Relief Dinding",
   "https://www.betonjayareadymix.com/p/jasa-relief-kayu-custom.html": "Jasa Relief Kayu Custom",
   "https://www.betonjayareadymix.com/p/jasa-relief-beton-ekspos.html": "Jasa Relief Beton Ekspos",
    	"https://www.betonjayareadymix.com/p/jasa-relief-batu-alam.html": "Jasa Relief Batu Alam",
   "https://www.betonjayareadymix.com/p/harga-jasa-relief.html": "Harga Jasa Relief"
+};
+const urlMappingJasaReliefDindingFromMoneyPageMoneyPage1 = {
+"https://www.betonjayareadymix.com/p/jasa-relief-dinding-3d.html": "Jasa Relief Dinding 3D",
+  "https://www.betonjayareadymix.com/p/jasa-relief-dinding-eksterior.html": "Jasa Relief Dinding Eksterior"
 };
 const urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1 = {
     "https://www.betonjayareadymix.com/p/jasa-relief-taman-batu-alam.html": "Jasa Relief Taman Batu Alam",
@@ -2202,6 +2206,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaReliefBridgeFromSub2Sub1,
        urlMappingJasaReliefBridgeFromSub1MoneyMaster,
 		urlMappingJasaReliefFromMoneyMasterMoneyPage,
+		urlMappingJasaReliefDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1,
 
 		
@@ -3068,6 +3073,20 @@ if (urlMappingJasaReliefFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
             { name: 'Daftar Jasa Relief', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-relief.html' },
             { name: 'Perbandingan Jasa Relief', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-relief.html' },
             { name: 'Jasa Relief', url: 'https://www.betonjayareadymix.com/p/jasa-relief.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaReliefDindingFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
+     generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaReliefDindingFromMoneyPageMoneyPage1,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Relief', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-relief.html' },
+            { name: 'Perbandingan Jasa Relief', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-relief.html' },
+            { name: 'Jasa Relief', url: 'https://www.betonjayareadymix.com/p/jasa-relief.html' },
+            { name: 'Jasa Relief Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-relief-dinding.html' }
 	   ],
         'JASA_KONSTRUKSI'
     );
