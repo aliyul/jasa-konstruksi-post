@@ -534,10 +534,6 @@ const urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1 = {
    "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak-murah.html": "Jasa Pelapisan Genteng Dak Murah"  // TYPE: MONEY_CHILD
 };
 
-
-const urlMappingJasaLaserCuttingACPFromMoneyPageMoneyPage1 = {
-"https://www.betonjayareadymix.com/p/harga-jasa-laser-cutting-acp.html": "Harga Jasa Laser Cutting ACP"
-};
 const urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1 = {
  // ============================================================
     // LEVEL 5 (MP) - LAYANAN SPESIFIK (CHILD)
