@@ -159,6 +159,7 @@ const urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1 = {
 // ============================================================
 
 const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
+	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai.html": "Harga Jasa Finishing Lantai",
 	 "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html": "Jasa Finishing Lantai Beton",
     // ============================================================
     // MP UNTUK MATERIAL LANTAI LAINNYA (tetap dipertahankan)
@@ -174,7 +175,10 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
     // TAMBAHAN MP UNTUK JASA FINISHING LANTAI
     // ============================================================
 	
+};	
 
+
+const urlMappingHargaJasaFinishingLantaiFromMoneyPageMoneyPage1 = {
 	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai-gudang.html": "Harga Jasa Finishing Lantai Gudang"
 };
 const urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1 = {
@@ -2278,6 +2282,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1,
 		urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
+		urlMappingHargaJasaFinishingLantaiFromMoneyPageMoneyPage1,
+		
 		
 		urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1,
 		urlMappingJasaFinishingLantaiKayuFromMoneyPageMoneyPage1,
@@ -3336,6 +3342,21 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
 			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
             { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+   if (urlMappingHargaJasaFinishingLantaiFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+       generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingHargaJasaFinishingLantaiFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsFinishing,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'},
+            { name: 'Harga Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai.html'}
         ],
         'JASA_KONSTRUKSI'
     );
