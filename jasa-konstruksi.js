@@ -2982,7 +2982,7 @@ if (urlMappingJasaProfilBetonBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         cleanUrlJasaKons,
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' }
+            { name: 'Daftar Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-profil-beton.html' }
 	   ],
         'JASA_KONSTRUKSI'
     );
@@ -2993,8 +2993,8 @@ if (urlMappingJasaProfilBetonFromSub1MoneyMaster[cleanUrlJasaKons]) {
         cleanUrlJasaKons,
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
-            { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' }
+            { name: 'Daftar Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-profil-beton.html' },
+            { name: 'Perbandingan Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-profil-beton.html' }
 	   ],
         'JASA_KONSTRUKSI'
     );
