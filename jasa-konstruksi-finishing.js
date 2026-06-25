@@ -385,7 +385,7 @@ const urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage1 = {
 // 🧠 Parent: Jasa Finishing Cat (L4)
 // ============================================================
 
-const urlMappingFinishingCatFromMoneyMaster1MoneyPage = {
+const urlMappingJassCatFromMoneyMaster1MoneyPage = {
     // MP TURUNAN: Jasa Finishing Cat
     "https://www.betonjayareadymix.com/p/jasa-finishing-cat-interior.html": "Jasa Finishing Cat Interior",
 	  // ============================================================
@@ -2193,7 +2193,7 @@ document.addEventListener("DOMContentLoaded", function() {
         urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage1,
 		urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage1,
 		
-		urlMappingFinishingCatFromMoneyMaster1MoneyPage,
+		urlMappingJassCatFromMoneyMaster1MoneyPage,
 		urlMappingFinishingCatInteriorFromMoneyPageMoneyPage1,
 		urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1,
 		urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
@@ -2985,9 +2985,9 @@ if (urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing])
     );
     }
    	
-	if (urlMappingFinishingCatFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+	if (urlMappingJassCatFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingFinishingCatFromMoneyMaster1MoneyPage,
+        urlMappingJassCatFromMoneyMaster1MoneyPage,
         cleanUrlJasaKonsFinishing,
         [
            // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -2995,7 +2995,7 @@ if (urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing])
             { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
 			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Cat', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-cat.html'}
+            { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html'}
         ],
         'JASA_KONSTRUKSI'
     );
