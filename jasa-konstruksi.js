@@ -31,6 +31,7 @@ const urlMappingJasaKonsFromPillarSub2 = {
   // 🧠 TYPE: SUB2 (Intent Informasional 60%)
   // Breadcrumb: Home > Jasa Konstruksi > [Nama Layanan] (3 level)
   // ============================================================
+"https://www.betonjayareadymix.com/p/daftar-jasa-profil-beton.html": "Daftar Jasa Profil Beton",
 "https://www.betonjayareadymix.com/p/daftar-jasa-interior.html": "Daftar Jasa Interior",
 "https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html": "Daftar Jasa Eksterior",
 "https://www.betonjayareadymix.com/p/daftar-jasa-konsultan-konstruksi.html": "Daftar Jasa Konsultan Konstruksi",
@@ -84,6 +85,12 @@ const urlMappingJasaKonsFromPillarSub2 = {
 // 🧠 TYPE: SUB1 (Intent Komersial 70%)
 // Breadcrumb: Home > Jasa Konstruksi > [SUB2] > [Panduan] (4 level)
 // ============================================================
+const urlMappingJasaProfilBetonBridgeFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-jasa-profil-beton.html": "Perbandingan Jasa Profil Beton" // (Tipe: Sub-Pillar Tipe 1)
+};
+const urlMappingJasaProfilBetonFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/jasa-profil-beton.html": "Jasa Profil Beton"  
+};
 
 const urlMappingJasaEksteriorBridgeFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html": "Perbandingan Jasa Eksterior" // (Tipe: Sub-Pillar Tipe 1)
@@ -2145,6 +2152,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlMappingGabungan = Object.assign(
       {},
 		urlMappingJasaKonsFromPillarSub2,
+		urlMappingJasaProfilBetonBridgeFromSub2Sub1,
+		urlMappingJasaProfilBetonFromSub1MoneyMaster,
+		
 		urlMappingJasaEksteriorBridgeFromSub2Sub1,
 		urlMappingJasaEksteriorFromSub1MoneyMaster,
 		urlMappingJasaInteriorBridgeFromSub2Sub1,
@@ -2966,6 +2976,29 @@ if (urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons]) {
    }
 	*/
 	
+if (urlMappingJasaProfilBetonBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+     generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaProfilBetonBridgeFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+if (urlMappingJasaProfilBetonFromSub1MoneyMaster[cleanUrlJasaKons]) {
+     generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaProfilBetonFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
+            { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+    );
+   }
 if (urlMappingJasaEksteriorBridgeFromSub2Sub1[cleanUrlJasaKons]) {
      generateBreadcrumbJasaKonstruksi(
         urlMappingJasaEksteriorBridgeFromSub2Sub1,
