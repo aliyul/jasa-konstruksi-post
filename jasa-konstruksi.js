@@ -123,6 +123,10 @@ const urlMappingJasaProfilBetonBangunanFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/p/jasa-profil-beton-kantor.html": "Jasa Profil Beton Kantor"
 	
 };
+const urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2 = {
+ "https://www.betonjayareadymix.com/p/harga-jasa-profil-beton-rumah.html": "Harga Jasa Profil Beton Rumah"
+};
+
 const urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1 = {
  "https://www.betonjayareadymix.com/p/jasa-profil-beton-fasad.html": "Jasa Profil Beton Fasad",
     "https://www.betonjayareadymix.com/p/jasa-profil-beton-lisplank.html": "Jasa Profil Beton Lisplank",
@@ -2205,6 +2209,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaProfilBetonFromSub1MoneyMaster,
 		urlMappingJasaProfilBetonFromMoneyMasterMoneyPage,
 		urlMappingJasaProfilBetonBangunanFromMoneyPageMoneyPage1,
+		urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2,
+		
 		urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1,
 		urlMappingJasaProfilBetonInteriorFromMoneyPageMoneyPage1,
         urlMappingHargaJasaProfilBetonFromMoneyPageMoneyPage1,
@@ -3131,6 +3137,22 @@ if (urlMappingJasaProfilBetonBangunanFromMoneyPageMoneyPage1[cleanUrlJasaKons]) 
         'JASA_KONSTRUKSI'
     );
    }
+if (urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
+     generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-profil-beton.html' },
+            { name: 'Perbandingan Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-profil-beton.html' },
+            { name: 'Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton.html' },
+            { name: 'Jasa Profil Beton Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton-bangunan.html' },
+            { name: 'Jasa Profil Beton Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton-rumah.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+	
 if (urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
      generateBreadcrumbJasaKonstruksi(
         urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1,
