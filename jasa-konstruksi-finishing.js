@@ -87,7 +87,7 @@ const urlMappingFinishingDindingFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-finishing-beton-ekspos-dinding.html": "Jasa Finishing Beton Ekspos Dinding",
     
     // Material Panel & Lembaran
-	 "https://www.betonjayareadymix.com/p/jasa-relief-dinding-3d.html": "Jasa Relief Dinding 3D",
+
 
     
 
@@ -151,12 +151,6 @@ const urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1  = {
 const urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1 = {
  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-lantai.html": "Harga Jasa Pasang WPC Lantai"
 	
-};
-
-const urlMappingJasaReliefDinding3dFromMoneyPageMoneyPage1 = {
-	"https://www.betonjayareadymix.com/p/jasa-relief-dinding-interior.html": "Jasa Relief Dinding Interior",
-    "https://www.betonjayareadymix.com/p/jasa-relief-batu-alam-interior.html": "Jasa Relief Batu Alam Interior",
-   "https://www.betonjayareadymix.com/p/jasa-pembuatan-relief-dinding.html": "Jasa Pembuatan Relief Dinding"
 };
 
 
@@ -2209,8 +2203,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1,
-		urlMappingJasaReliefDinding3dFromMoneyPageMoneyPage1,
-		
 		urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
 		
 		urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1,
@@ -3138,22 +3130,6 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
     );
     }
 	
-	if (urlMappingJasaReliefDinding3dFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingJasaReliefDinding3dFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html'},
-            { name: 'Jasa Relief Dinding 3D', url: 'https://www.betonjayareadymix.com/p/jasa-relief-dinding-3d.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
     if (urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
 		generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage,
