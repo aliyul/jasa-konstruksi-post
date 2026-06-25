@@ -3347,7 +3347,7 @@ if (urlMappingHargaJasaPembuatanKitchenSetFromMoneyPage1MoneyPage2[cleanUrlJasaK
             { name: 'Perbandingan Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-kitchen-set.html'},
             { name: 'Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/jasa-kitchen-set.html'},
             { name: 'Jasa Pembuatan Kitchen Set', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html' },
-            { name: 'Harga Jasa Pembuatan Kitchen Set', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-kitchen-set.html' }
+            { name: 'Harga Jasa Pembuatan Kitchen Set', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set.html' }
         ],
         'JASA'
     );
