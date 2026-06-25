@@ -533,15 +533,7 @@ const urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1 = {
    "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak-murah.html": "Jasa Pelapisan Genteng Dak Murah"  // TYPE: MONEY_CHILD
 };
 
-const urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2 = {
- "https://www.betonjayareadymix.com/p/harga-jasa-profil-beton-rumah.html": "Harga Jasa Profil Beton Rumah"
-};
-const urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1 = {
-	"https://www.betonjayareadymix.com/p/jasa-relief-dinding-eksterior.html": "Jasa Relief Dinding Eksterior",
-    "https://www.betonjayareadymix.com/p/jasa-relief-taman-batu-alam.html": "Jasa Relief Taman Batu Alam",
-    "https://www.betonjayareadymix.com/p/jasa-relief-batu-alam-dinding.html": "Jasa Relief Batu Alam Dinding",
-    "https://www.betonjayareadymix.com/p/jasa-relief-batu-alam-pilar.html": "Jasa Relief Batu Alam Pilar"
-};
+
 const urlMappingJasaTamanFromMoneyMaster2MoneyMaster3 = {
   // ============================================================
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",
@@ -2243,8 +2235,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1,
 		urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1,
 	
-		urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2,
-		urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1,
 		urlMappingJasaTamanFromMoneyMaster2MoneyMaster3,
 		urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage,
 		
@@ -3500,39 +3490,6 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
     );
    }
 	
-	if (urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html'},
-            { name: 'Jasa Profil Beton Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton-eksterior.html'},
-            { name: 'Jasa Profil Beton Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton-rumah.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-		if (urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html'},
-            { name: 'Jasa Relief Batu Alam', url: 'https://www.betonjayareadymix.com/p/jasa-relief-batu-alam.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
 	if (urlMappingJasaTamanFromMoneyMaster2MoneyMaster3[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbJasaKonstruksiFinishing(
         urlMappingJasaTamanFromMoneyMaster2MoneyMaster3,
