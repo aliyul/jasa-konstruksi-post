@@ -516,6 +516,24 @@ const urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-fasad.html": "Jasa Pasang HPL Fasad"
 
 };
+
+const urlMappingJasaTamanFromMoneyMaster2MoneyMaster3 = {
+  // ============================================================
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",
+    "https://www.betonjayareadymix.com/p/jasa-tukang-taman.html": "Jasa Tukang Taman",
+    "https://www.betonjayareadymix.com/p/jasa-relief-taman.html": "Jasa Relief Taman",
+    "https://www.betonjayareadymix.com/p/jasa-perawatan-taman.html": "Jasa Perawatan Taman",
+    
+    // ============================================================
+    // LEVEL 6 (MC) - VARIASI DENGAN MODIFIER
+    // ============================================================
+    "https://www.betonjayareadymix.com/p/jasa-taman-murah.html": "Jasa Taman Murah"
+};
+const urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage = {
+   "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman-rumah.html": "Jasa Pembuatan Taman Rumah",
+	"https://www.betonjayareadymix.com/p/jasa-pembuatan-taman-relief.html": "Jasa Pembuatan Taman Relief"
+};
+
 const urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1 = {
    //"https://www.betonjayareadymix.com/p/harga-jasa-pasang-acp.html": "Harga Jasa Pasang ACP",  // TYPE: MONEY_PAGE
  // "https://www.betonjayareadymix.com/p/harga-jasa-pasang-acp-per-meter.html": "Harga Jasa Pasang ACP Per Meter",  // TYPE: MONEY_PAGE
@@ -534,22 +552,6 @@ const urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1 = {
 };
 
 
-const urlMappingJasaTamanFromMoneyMaster2MoneyMaster3 = {
-  // ============================================================
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",
-    "https://www.betonjayareadymix.com/p/jasa-tukang-taman.html": "Jasa Tukang Taman",
-    "https://www.betonjayareadymix.com/p/jasa-relief-taman.html": "Jasa Relief Taman",
-    "https://www.betonjayareadymix.com/p/jasa-perawatan-taman.html": "Jasa Perawatan Taman",
-    
-    // ============================================================
-    // LEVEL 6 (MC) - VARIASI DENGAN MODIFIER
-    // ============================================================
-    "https://www.betonjayareadymix.com/p/jasa-taman-murah.html": "Jasa Taman Murah"
-};
-const urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage = {
-   "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman-rumah.html": "Jasa Pembuatan Taman Rumah",
-	"https://www.betonjayareadymix.com/p/jasa-pembuatan-taman-relief.html": "Jasa Pembuatan Taman Relief"
-};
 // ============================================================
 // 📁 JASA FINISHING STRUKTUR - MP dari MM Jasa Finishing Struktur
 // 🧠 Parent: Jasa Finishing Struktur (L4)
@@ -3495,12 +3497,10 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
         urlMappingJasaTamanFromMoneyMaster2MoneyMaster3,
         cleanUrlJasaKonsFinishing,
         [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html'},
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
+            { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
+            { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html'},
             { name: 'Jasa Taman', url: 'https://www.betonjayareadymix.com/p/jasa-taman.html'}
         ],
         'JASA_KONSTRUKSI'
@@ -3511,12 +3511,10 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
         urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage,
         cleanUrlJasaKonsFinishing,
         [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html'},
+            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
+            { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
+            { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html'},
             { name: 'Jasa Taman', url: 'https://www.betonjayareadymix.com/p/jasa-taman.html'},
             { name: 'Jasa Pembuatan Taman', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html'}
         ],
