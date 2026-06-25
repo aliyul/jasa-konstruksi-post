@@ -643,7 +643,7 @@ const urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1 = {
 
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-balkon.html": "Jasa Pembuatan Balkon",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-decking.html": "Jasa Pembuatan Decking",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",
+   // "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",
     // Kusen/Pintu/Jendela bisa menjadi MM sendiri atau di bawah Furniture
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-kusen.html": "Jasa Pembuatan Kusen",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-pintu.html": "Jasa Pembuatan Pintu",
