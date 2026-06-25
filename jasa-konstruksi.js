@@ -100,7 +100,10 @@ const urlMappingJasaReliefFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/p/harga-jasa-relief.html": "Harga Jasa Relief"
 };
 const urlMappingJasaReliefDindingFromMoneyPageMoneyPage1 = {
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-relief-dinding.html": "Jasa Pembuatan Relief Dinding",
 "https://www.betonjayareadymix.com/p/jasa-relief-dinding-3d.html": "Jasa Relief Dinding 3D",
+	"https://www.betonjayareadymix.com/p/jasa-relief-dinding-interior.html": "Jasa Relief Dinding Interior",
+    "https://www.betonjayareadymix.com/p/jasa-relief-batu-alam-interior.html": "Jasa Relief Batu Alam Interior",
   "https://www.betonjayareadymix.com/p/jasa-relief-dinding-eksterior.html": "Jasa Relief Dinding Eksterior"
 };
 const urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1 = {
