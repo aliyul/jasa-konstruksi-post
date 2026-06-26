@@ -348,12 +348,6 @@ const urlMappingJasaKonstruksiGedungHunianFromMoneyPageMoneyPage1 = {
 // 📁 JASA KONSTRUKSI RUMAH TINGGAL - MONEY PAGE & CHILD
 // Parent: Jasa Konstruksi Gedung dan Hunian (SUB2)
 // ============================================================
-const urlMappingJasaKonsultanKonstruksiFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/2018/09/konsultan-bangunan.html": "Konsultan Bangunan",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/konsultan-kontruksi.html": "Konsultan Konstruksi",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/perencanaan-pembangunan.html": "Perencanaan Pembangunan",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/perencanaan-konstruksi.html": "Perencanaan Konstruksi" // TYPE: MONEY_PAGE
-};
 const urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage = {
  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-bangunan.html": "Harga Jasa Pembuatan Bangunan"  // TYPE: MONEY_PAGE
 };
@@ -2443,7 +2437,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPengecoranKolomBetonFromMoneyPage1MoneyPage2,
 		urlMappingJasaKonstruksiGedungHunianFromMoneyPageMoneyPage1,
 
-		urlMappingJasaKonsultanKonstruksiFromMoneyMasterMoneyPage, //konsultan dari jasa konstruksi pillar
 		urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1,
 		urlMappingHargaJasaBoronganBangunanFromMoneyPage1MoneyPage2,
@@ -3299,20 +3292,6 @@ if (urlMappingJasaKonstruksiGedungHunianFromMoneyPageMoneyPage1[cleanUrlJasaJasa
     );      
 }
 //SUB JasaKonstruksiGedungdanHunianPost
-if (urlMappingJasaKonsultanKonstruksiFromMoneyMasterMoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
-  generateBreadcrumbJasaKonstruksiStrukturPost(
-        urlMappingJasaKonsultanKonstruksiFromMoneyMasterMoneyPage,
-        cleanUrlJasaJasaKonsStrukturPost,
-        [
-           { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Konsultan Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konsultan-konstruksi.html'},
-            { name: 'Perbandingan Jasa Konsultan Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konsultan-konstruksi.html'},
-            { name: 'Jasa Konsultan Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konsultan-konstruksi.html'}
-
-        ],
-        'JASA_KONSTRUKSI'
-    );      
-}	
 if (urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStrukturPost]) {
   generateBreadcrumbJasaKonstruksiStrukturPost(
         urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage,
