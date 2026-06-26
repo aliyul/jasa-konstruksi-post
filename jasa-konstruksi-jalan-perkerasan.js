@@ -355,29 +355,29 @@ const urlMappingJasaPengerasanJalan = {
 */
 
 
-/**
+
+ */**/**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v10.0
- * FIXED: BRANCH AWARE FORCE INJECTION
+ * generateBreadcrumbJasaKonstruksi v10.2
+ * FIXED: AUTO DETECTION JASA LEVEL + MC LOCATION
  * ============================================================
+ *
+ * ✅ UPDATE v10.2
+ * ------------------------------------------------------------
+ * - FIX: Deteksi MM/MP otomatis tanpa daftar kata spesifik
+ * - FIX: MM jika kata tersisa <= 1, MP jika >= 2
+ * - FIX: MC hanya untuk halaman dengan lokasi
+ * - FIX: "terdekat" dianggap sebagai lokasi
+ * - ENHANCED: Tidak perlu tambah keyword manual untuk kasus baru
+ * - ENHANCED: Deteksi angka otomatis (3d, k250, dll)
  *
  * ✅ UPDATE v10.0
  * ------------------------------------------------------------
- * - FIX: forceInjectDirectParent() sekarang branch-aware
- * - FIX: Hanya tambahkan parent jika cabang berbeda AND score > 50
- * - FIX: Parent yang sudah di-skip tetap di-skip (tidak ditambahkan kembali)
- * - ENHANCED: Filter score threshold (50) untuk force injection
- * - ENHANCED: Logging detail untuk setiap force skip/keep
- *
- * ✅ UPDATE v9.9
- * ------------------------------------------------------------
- * - FIX: Parent dengan level sama dan berbeda cabang TIDAK DI-SKIP
- * - FIX: Similarity score untuk mendeteksi cabang yang berbeda
- * - ENHANCED: Branch detection dengan Jaccard similarity
+ * - FIX: forceInjectDirectParent() branch-aware
  *
  * ============================================================
- * @version 10.0.0
- * @date 2026-06-20
+ * @version 10.2.0
+ * @date 2026-06-26
  * ============================================================
  */
 
@@ -418,7 +418,7 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
             SKIP: '⏭️',
             BRANCH: '🌿'
         };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v10.0] ${message}`);
+        console.log(`${icons[type] || '📘'} [Breadcrumb v10.2] ${message}`);
     }
 
     // ============================================================
@@ -625,15 +625,25 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
     ];
 
     // ============================================================
-    // 11b. JASA CLEAN FUNCTION
+    // 11b. JASA CLEAN FUNCTION (FIXED v10.2 - OTOMATIS)
     // ============================================================
 
-    const JASA_CORE_WORDS = new Set([
+    // Hanya daftar kata yang SANGAT UMUM dan HARUS dihapus
+    const JASA_ULTRA_COMMON_WORDS = new Set([
         'jasa', 'kontraktor', 'tukang', 'borongan', 'renovasi',
         'pasang', 'bangun', 'perbaikan', 'instalasi', 'proyek',
         'cor', 'gali', 'urug', 'angkut', 'service', 'servis'
     ]);
 
+    // Stopwords (kata penghubung)
+    const STOPWORDS = new Set([
+        'dan', 'atau', 'serta', 'yang', 'dari', 'ke', 'di', 'untuk', 
+        'dengan', 'ini', 'itu', 'akan', 'telah', 'sudah', 'masih',
+        'pada', 'oleh', 'karena', 'sehingga', 'setelah', 'sebelum',
+        'plus', 'minus', 'tanpa', 'sampai', 'hingga', 'sambil'
+    ]);
+
+    // Daftar kata yang menunjukkan spesifikasi material (untuk variant)
     const MATERIAL_SPEC_WORDS = new Set([
         'baja ringan', 'baja', 'ringan', 'beton', 'readymix', 
         'kanstin', 'pembatas', 'pengaman', 'struktur', 'dinding',
@@ -641,16 +651,10 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
         'plafon', 'gypsum', 'partisi', 'dak', 'cor', 'pile', 'sheet',
         'tiang', 'balok', 'kolom', 'sloof', 'ring', 'balk', 'kuda-kuda',
         'drainase', 'irigasi', 'box culvert', 'u ditch', 'paving',
-        'konstruksi', 'rangka', 'baja ringan', 'baja', 'ringan',
-        'material', 'upah', 'tenaga'
+        'konstruksi', 'rangka', 'material', 'upah', 'tenaga'
     ]);
 
-    const STOPWORDS = new Set([
-        'dan', 'atau', 'serta', 'yang', 'dari', 'ke', 'di', 'untuk', 
-        'dengan', 'ini', 'itu', 'akan', 'telah', 'sudah', 'masih',
-        'pada', 'oleh', 'karena', 'sehingga', 'setelah', 'sebelum'
-    ]);
-
+    // Daftar modifier (kata yang menunjukkan spesifikasi/harga)
     const MODIFIER_WORDS = new Set([
         'murah', 'profesional', 'berkualitas', 'terbaik', 'spesialis',
         'ahli', 'berpengalaman', 'resmi', 'terpercaya', 'ekonomis',
@@ -663,14 +667,17 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
         
         let cleaned = text.toLowerCase();
         
-        for (const kw of JASA_CORE_WORDS) {
+        // 1. Hapus kata ultra-common
+        for (const kw of JASA_ULTRA_COMMON_WORDS) {
             cleaned = cleaned.replace(new RegExp(`\\b${kw}\\b`, 'g'), ' ');
         }
         
+        // 2. Hapus stopwords
         for (const sw of STOPWORDS) {
             cleaned = cleaned.replace(new RegExp(`\\b${sw}\\b`, 'g'), ' ');
         }
         
+        // 3. Normalisasi spasi
         cleaned = cleaned.replace(/\s+/g, ' ').trim();
         
         log(`Clean JASA: "${text}" → "${cleaned}"`, 'CLEAN');
@@ -680,7 +687,7 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
 
     function countCoreWords(text) {
         if (!text) return 0;
-        const words = text.toLowerCase().split(/\s+/).filter(w => w.length > 2);
+        const words = text.toLowerCase().split(/\s+/).filter(w => w.length >= 2);
         return words.length;
     }
 
@@ -714,28 +721,48 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
         return false;
     }
 
-    function detectJasaLevel(pageName) {
+    // ============================================================
+    // 11c. DETEKSI JASA LEVEL OTOMATIS (FIXED v10.2)
+    // ============================================================
+
+    function detectJasaLevelAuto(pageName) {
         const lowerName = pageName.toLowerCase();
+        
+        // 1. Bersihkan teks
         const cleaned = cleanJasaText(lowerName);
-        const coreWordCount = countCoreWords(cleaned);
-        const hasModifierWord = hasModifier(cleaned);
-        const isSpecific = isSpecificJasa(cleaned);
+        
+        // 2. Hitung kata yang tersisa (minimal 2 karakter)
+        const remainingWords = cleaned.split(/\s+/).filter(w => w.length >= 2);
+        const wordCount = remainingWords.length;
+        
+        // 3. Cek apakah ada angka (indikasi spesifikasi)
+        const hasNumber = /\d/.test(cleaned);
+        
+        // 4. Cek apakah ada kata yang menunjukkan lokasi
         const hasLocation = isLocation(cleaned);
+        
+        // 5. Cek apakah ada modifier
+        const hasModifierWord = hasModifier(cleaned);
+        
+        // 6. Cek apakah ada material spec
         const hasMaterialSpecWord = hasMaterialSpec(cleaned);
         
-        log(`JASA detection: "${pageName}" → cleaned: "${cleaned}", words: ${coreWordCount}, materialSpec: ${hasMaterialSpecWord}`, 'DEBUG');
+        log(`Auto detect JASA: "${pageName}" → remaining: "${cleaned}", words: ${wordCount}, hasNumber: ${hasNumber}, hasLocation: ${hasLocation}`, 'DEBUG');
         
-        if (coreWordCount <= 2 && !hasModifierWord && !isSpecific && !hasLocation && !hasMaterialSpecWord) {
-            log(`MM detected (JASA): "${pageName}" → core words: ${coreWordCount}`, 'SUCCESS');
+        // ✅ LOGIKA OTOMATIS v10.2:
+        // - Jika remaining words <= 1 DAN tidak ada angka DAN tidak ada lokasi → MM
+        // - Selain itu → MP
+        if (wordCount <= 1 && !hasNumber && !hasLocation && !hasModifierWord && !hasMaterialSpecWord) {
+            log(`MM detected (auto): "${pageName}" → remaining words: ${wordCount}`, 'SUCCESS');
             return 'money-master';
         }
         
-        log(`MP detected (JASA): "${pageName}" → core words: ${coreWordCount}`, 'INFO');
+        log(`MP detected (auto): "${pageName}" → remaining words: ${wordCount}`, 'INFO');
         return 'money-page';
     }
 
     // ============================================================
-    // 11c. VARIANT DETECTION PER ENTITY
+    // 11d. VARIANT DETECTION PER ENTITY
     // ============================================================
     
     function isVariantPage(pageName, currentEntityType) {
@@ -784,45 +811,64 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
     }
 
     // ============================================================
-    // 12. LOCATION DETECTION
+    // 12. LOCATION DETECTION (UPDATED v10.2 - OTOMATIS MC)
     // ============================================================
 
     const LOCATION_WHITELIST = new Set([
+        // Jabodetabek
         'jakarta', 'jakarta pusat', 'jakarta barat', 'jakarta selatan', 'jakarta timur', 'jakarta utara',
         'bogor', 'kota bogor', 'kabupaten bogor',
         'depok', 'kota depok',
         'tangerang', 'kota tangerang', 'kota tangerang selatan', 'kabupaten tangerang',
         'bekasi', 'kota bekasi', 'kabupaten bekasi',
+        
+        // Jawa Barat
         'bandung', 'kota bandung', 'kabupaten bandung',
         'karawang', 'kabupaten karawang',
         'purwakarta', 'kabupaten purwakarta',
         'cikarang', 'cikarang barat', 'cikarang pusat', 'cikarang selatan', 'cikarang timur', 'cikarang utara',
         'subang', 'kabupaten subang',
         'cirebon', 'kota cirebon', 'kabupaten cirebon',
+        
+        // Jawa Tengah & DIY
         'semarang', 'kota semarang', 'kabupaten semarang',
         'solo', 'surakarta', 'kota surakarta',
         'pekalongan', 'tegal', 'magelang', 'sukoharjo', 'boyolali', 'klaten',
         'jogja', 'yogyakarta', 'kota yogyakarta', 'kabupaten sleman', 'bantul', 'gunungkidul', 'kulon progo',
+        
+        // Jawa Timur
         'surabaya', 'kota surabaya',
         'malang', 'kota malang', 'kabupaten malang',
         'kediri', 'kota kediri', 'kabupaten kediri',
         'gresik', 'sidoarjo', 'mojokerto', 'pasuruan', 'probolinggo', 'jember', 'banyuwangi', 'madiun',
+        
+        // Sumatera
         'medan', 'kota medan',
         'palembang', 'pekanbaru', 'padang', 'lampung', 'bandar lampung', 'batam', 'tanjungpinang',
         'aceh', 'banda aceh', 'jambi', 'bengkulu', 'pangkal pinang',
+        
+        // Kalimantan
         'pontianak', 'balikpapan', 'samarinda', 'banjarmasin', 'palangkaraya',
+        
+        // Sulawesi
         'makassar', 'kota makassar',
         'manado', 'palu', 'kendari', 'gorontalo',
-        'bali', 'kabupaten badung', 'kota denpasar', 'gianyar', 'tabanan', 'bangli', 'karangasem', 'klungkung', 'buleleng', 'jembrana',
+        
+        // Bali & Nusa Tenggara
+        'bali', 'kabupaten badung', 'kota denpasar', 'denpasar', 'gianyar', 'tabanan', 'bangli', 'karangasem', 'klungkung', 'buleleng', 'jembrana',
         'mataram', 'kupang',
-        'terdekat'
+        
+        // Lainnya
+        'terdekat' // ← "terdekat" dianggap lokasi
     ]);
 
     function isLocation(text) {
         if (!text) return false;
         const lower = text.toLowerCase();
         for (const city of LOCATION_WHITELIST) {
-            if (new RegExp(`\\b${city.replace(/\s+/g, '\\s+')}\\b`, 'i').test(lower)) return true;
+            if (new RegExp(`\\b${city.replace(/\s+/g, '\\s+')}\\b`, 'i').test(lower)) {
+                return true;
+            }
         }
         return false;
     }
@@ -871,7 +917,7 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
         /\b(jasa|kontraktor|tukang|borongan|renovasi|pasang|bangun|perbaikan|instalasi|proyek|cor|gali|urug|angkut)\b/i;
 
     // ============================================================
-    // 17. PAGE TYPE DETECTION
+    // 17. PAGE TYPE DETECTION (FIXED v10.2)
     // ============================================================
 
     function detectPageType(pageName, isHome = false) {
@@ -881,6 +927,7 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
         if (isEntityPillarExactMatch(lowerName)) return 'pillar';
         if (isSubVariant(lowerName)) return 'sub-variant';
 
+        // Method keywords detection
         for (const kw of METHOD_KEYWORDS) {
             if (lowerName.includes(kw)) {
                 const HAS_JASA_WORD = JASA_KEYWORDS_PATTERN.test(lowerName);
@@ -894,6 +941,7 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
             }
         }
 
+        // Variant detection per entity
         if (isVariantPage(lowerName, entityType)) {
             return 'variant';
         }
@@ -913,12 +961,18 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
         const HAS_JASA_WORD = JASA_KEYWORDS_PATTERN.test(lowerName);
         const HAS_LOCATION = isLocation(lowerName);
 
-        if (HAS_LOCATION) return 'money-child';
-
-        if (isJasaEntity() && HAS_JASA_WORD && !HAS_PRICE_WORD) {
-            return detectJasaLevel(lowerName);
+        // ✅ MC DETECTION: Hanya jika ada lokasi
+        if (HAS_LOCATION) {
+            log(`MC detected: "${pageName}" contains location`, 'SUCCESS');
+            return 'money-child';
         }
 
+        // ✅ FIX v10.2: JASA ENTITY dengan deteksi otomatis
+        if (isJasaEntity() && HAS_JASA_WORD && !HAS_PRICE_WORD) {
+            return detectJasaLevelAuto(lowerName);
+        }
+
+        // SEWA ENTITY
         if (isSewaEntity() && HAS_SEWA_WORD && !HAS_PRICE_WORD) {
             const cleaned = lowerName.replace(/\b(sewa|rental)\b/gi, '').trim();
             const words = cleaned.split(/\s+/).filter(Boolean);
@@ -929,6 +983,7 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
             return 'money-page';
         }
 
+        // PRICE PAGE
         if (HAS_PRICE_WORD) {
             const cleaned = lowerName.replace(/\b(harga|biaya|tarif)\b/gi, '').trim();
             const words = cleaned.split(/\s+/).filter(Boolean);
@@ -939,6 +994,7 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
             return 'money-page';
         }
 
+        // PRODUK / MATERIAL
         if ((isProdukEntity() || isMaterialEntity()) && !HAS_PRICE_WORD) {
             const words = lowerName.split(/\s+/).filter(Boolean);
             if (words.length <= 2) return 'pillar';
@@ -1050,7 +1106,7 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
     }
 
     // ============================================================
-    // 19. FORCE PARENT INJECTION (FIXED v10.0 - BRANCH AWARE)
+    // 19. FORCE PARENT INJECTION (BRANCH AWARE)
     // ============================================================
 
     function forceInjectDirectParent(lineageLevels, allLevels, currentPageTitle, entityType, breadcrumbItems) {
@@ -1085,7 +1141,6 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
             }
         }
 
-        // ✅ FIX v10.0: Hanya tambahkan parent jika cabang berbeda AND score > 50
         const currentLevel = TYPE_LEVEL_MAP[detectPageType(currentPageTitle)] || 99;
         
         const allPotentialParents = allLevels.filter(item => 
@@ -1094,28 +1149,26 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
             !modifiedLineage.some(l => l.name === item.name)
         );
         
-        // ✅ FIX v10.0: Filter berdasarkan branch + score
+        // ✅ Filter berdasarkan branch + score
         for (const parent of allPotentialParents) {
-            // Cek apakah parent ini adalah cabang yang berbeda dari lineage yang ada
             const isDifferentBranch = modifiedLineage.every(existing => {
                 const similarity = calculateSimilarity(parent.name, existing.name);
                 return similarity < 0.5;
             });
             
-            // Cek apakah parent ini memiliki score yang signifikan (> 50)
             const hasSignificantScore = (parent.relevanceScore || 0) > 50;
             
             if (isDifferentBranch && hasSignificantScore) {
                 log(`FORCE PARENT (branch): "${parent.name}" (level ${parent.level}) → "${currentPageTitle}"`, 'SUCCESS');
                 modifiedLineage.push(parent);
             } else if (!isDifferentBranch) {
-                log(`⏭️ FORCE SKIP: "${parent.name}" (level ${parent.level}) - same branch as existing parent`, 'SKIP');
+                log(`⏭️ FORCE SKIP: "${parent.name}" (level ${parent.level}) - same branch`, 'SKIP');
             } else {
                 log(`⏭️ FORCE SKIP: "${parent.name}" (level ${parent.level}) - low score (${parent.relevanceScore || 0})`, 'SKIP');
             }
         }
 
-        // STRATEGI 3: Semantic similarity (hanya jika cabang berbeda)
+        // STRATEGI 3: Semantic similarity
         if (modifiedLineage.length === lineageLevels.length) {
             const semanticKeywords = {
                 'finishing': ['finishing', 'cat', 'epoxy', 'lampu', 'wallpaper'],
@@ -1133,7 +1186,6 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
                         item.name.toLowerCase().includes(parentKeyword)
                     );
                     if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
-                        // Cek apakah ini cabang berbeda
                         const isDifferentBranch = modifiedLineage.every(existing => {
                             const similarity = calculateSimilarity(parentItem.name, existing.name);
                             return similarity < 0.5;
@@ -1148,7 +1200,7 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
             }
         }
 
-        // STRATEGI 4: Last resort (hanya jika lineage masih kosong)
+        // STRATEGI 4: Last resort
         if (modifiedLineage.length === lineageLevels.length && allLevels.length > 0) {
             const lowerLevelItems = allLevels.filter(item => 
                 item.level <= currentLevel && 
@@ -1186,7 +1238,7 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
     }
 
     // ============================================================
-    // 21. SIMILARITY CALCULATION (BRANCH DETECTION)
+    // 21. SIMILARITY CALCULATION
     // ============================================================
 
     function calculateSimilarity(text1, text2) {
@@ -1364,7 +1416,8 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
                 'kanstin', 'pembatas', 'pengaman', 'tukang', 'baja', 'ringan',
                 'struktur', 'konstruksi', 'pasang', 'dinding', 'pondasi',
                 'beton', 'readymix', 'cor', 'pile', 'sheet', 'tiang',
-                'harga', 'biaya', 'borongan', 'material', 'upah', 'tenaga'
+                'harga', 'biaya', 'borongan', 'material', 'upah', 'tenaga',
+                'wallpaper', 'custom', '3d', 'interior', 'dekorasi'
             ];
             for (const kw of specificKeywords) {
                 if (currentPageTitleLower.includes(kw) && item.name.toLowerCase().includes(kw)) {
@@ -1642,7 +1695,7 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
     // 34. LOG SUMMARY
     // ============================================================
 
-    console.log('📊 BREADCRUMB GENERATION SUMMARY (v10.0):');
+    console.log('📊 BREADCRUMB GENERATION SUMMARY (v10.2):');
     console.log(`   Page: "${currentPageTitle}"`);
     console.log(`   URL: "${currentFullUrl}"`);
     console.log(`   Type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`);
@@ -1666,13 +1719,15 @@ function generateBreadcrumbJasaKonstruksiJalanPerkerasan(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '10.0.0',
+        version: '10.2.0',
         parentCount: finalParents.length,
         parents: finalParents,
         isVariant: currentPageType === 'variant',
         isMoneyChild: currentPageType === 'money-child'
     };
 }
+
+
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaJalanPerkerasanKons = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
