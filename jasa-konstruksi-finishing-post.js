@@ -84,8 +84,10 @@ const urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyChild = {
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE & MONEY_CHILD
 // Parent: Jasa Finishing Bangunan (/p/jasa-finishing-bangunan.html)
 // ============================================================
-
-const urlMappingHargaJasaPlesteranAcianDindingPerMeterFromMoneyPageMoneyChild = {
+const urlMappingHargaJasaBoronganPlesteranAcianFromMoneyPage2MoneyPage3 = {
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-plesteran-acian-per-meter.html": "Harga Jasa Borongan Plesteran & Acian per Meter"
+};
+const urlMappingHargaJasaBoronganPlesteranAcianPerMeterFromMoneyPage3MoneyChild = {
   // ============================================================
   // [MONEY_PAGE] - HARGA BORONGAN PLESTERAN ACIAN PER METER (NASIONAL)
   // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
@@ -96,21 +98,12 @@ const urlMappingHargaJasaPlesteranAcianDindingPerMeterFromMoneyPageMoneyChild = 
   // [MONEY_CHILD] - HARGA BORONGAN PLESTERAN ACIAN PER LOKASI
   // 🧠 TYPE: MONEY_CHILD (spesifik lokasi)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-jakarta.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-bandung.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Bandung",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-cianjur.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Cianjur",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-bogor.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Bogor",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-gunung-putri.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Gunung Putri",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-bojong-gede.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Bojong Gede",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-bekasi.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-depok.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-cimahi.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Cimahi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-kemang.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Kemang",  // TYPE: MONEY_CHILD
-   "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-kota-bekasi.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Kota Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-cileungsi.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Cileungsi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-sukaraja.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Sukaraja",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-tajur-halang.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Tajur Halang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-gunung-sindur.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Gunung Sindur",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-plesteran-acian-per-meter-bogor.html": "Harga Jasa Borongan Plesteran & Acian Per Meter Bogor", 
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-plesteran-acian-per-meter-jakarta.html": "Harga Jasa Borongan Plesteran & Acian Per Meter Jakarta", 
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-plesteran-acian-per-meter-depok.html": "Harga Jasa Borongan Plesteran & Acian Per Meter Depok", 
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-plesteran-acian-per-meter-tangerang.html": "Harga Jasa Borongan Plesteran & Acian Per Meter Tangerang",  
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-plesteran-acian-per-meter-bekasi.html": "Harga Jasa Borongan Plesteran & Acian Per Meter Bekasi", 
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-plesteran-acian-per-meter-karawang.html": "Harga Jasa Borongan Plesteran & Acian Per Meter Karawang"
   
   // ============================================================
   // 🟡 SARAN ITEM TAMBAHAN (BELUM AKTIF - PERLU DIBUAT KONTEN)
@@ -2362,10 +2355,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const currentUrl = cleanUrlJasaKonsFinishingPost;
    const urlMappingGabungan = Object.assign(
     {},
-	
+
     urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild,
     urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyChild,
-    urlMappingHargaJasaPlesteranAcianDindingPerMeterFromMoneyPageMoneyChild,
+    urlMappingHargaJasaBoronganPlesteranAcianFromMoneyPage2MoneyPage3,
+	urlMappingHargaJasaBoronganPlesteranAcianPerMeterFromMoneyPage3MoneyChild,
+	   
     urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyChild,
 	urlMappingJasaCoatingLantaiBetonFromMoneyPageMoneyChild,
     urlMappingJasaFinishingKolomBalokFromMoneyPageMoneyChild,
@@ -3108,9 +3103,9 @@ if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinis
 	  
 }
 	
-   if (urlMappingHargaJasaPlesteranAcianDindingPerMeterFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+   if (urlMappingHargaJasaBoronganPlesteranAcianFromMoneyPage2MoneyPage3[cleanUrlJasaKonsFinishingPost]) {
 	generateBreadcrumbjasaKonstruksiFinishingPost(
-    urlMappingHargaJasaPlesteranAcianDindingPerMeterFromMoneyPageMoneyChild,
+    urlMappingHargaJasaBoronganPlesteranAcianFromMoneyPage2MoneyPage3,
     currentUrl,
     [
          { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -3118,11 +3113,30 @@ if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinis
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
             { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
         { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html' },
-        { name: 'Harga Jasa Plesteran & Acian Per Meter', url: 'https://www.betonjayareadymix.com/p/harga-jasa-plesteran-acian-per-meter.html' }
+        { name: 'Harga Jasa Plesteran & Acian', url: 'https://www.betonjayareadymix.com/p/harga-jasa-plesteran-acian.html' },
+        { name: 'Harga Jasa Borongan Plesteran & Acian', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-plesteran-acian.html' }
     ],
     'JASA_KONSTRUKSI'
 );
 }
+ if (urlMappingHargaJasaBoronganPlesteranAcianPerMeterFromMoneyPage3MoneyChild[cleanUrlJasaKonsFinishingPost]) {
+	generateBreadcrumbjasaKonstruksiFinishingPost(
+    urlMappingHargaJasaBoronganPlesteranAcianPerMeterFromMoneyPage3MoneyChild,
+    currentUrl,
+    [
+         { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+           { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+        { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html' },
+        { name: 'Harga Jasa Plesteran & Acian', url: 'https://www.betonjayareadymix.com/p/harga-jasa-plesteran-acian.html' },
+        { name: 'Harga Jasa Borongan Plesteran & Acian', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-plesteran-acian.html' },
+        { name: 'Harga Jasa Borongan Plesteran & Acian Per Meter', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-plesteran-acian-per-meter.html' }
+    ],
+    'JASA_KONSTRUKSI'
+);
+}
+
   
    if (urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishingPost]) {
 	generateBreadcrumbjasaKonstruksiFinishingPost(
