@@ -109,7 +109,7 @@ const urlMappingHargaJasaPlesteranAcianDindingPerMeterFromMoneyPageMoneyChild = 
    "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-kota-bekasi.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Kota Bekasi",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-cileungsi.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Cileungsi",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-sukaraja.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Sukaraja",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-tjasa-borongan-tenaga-plesteran-dan-acian-per-meter-tajur-halang.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Tajur Halang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-tajur-halang.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Tajur Halang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-tenaga-plesteran-dan-acian-per-meter-gunung-sindur.html": "Harga Borongan Tenaga Plesteran dan Acian per Meter Gunung Sindur",  // TYPE: MONEY_CHILD
   
   // ============================================================
