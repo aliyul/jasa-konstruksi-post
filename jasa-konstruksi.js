@@ -165,7 +165,11 @@ const urlMappingJasaKonsultanKonstruksiFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-konsultan-konstruksi.html": "Jasa Konsultan Konstruksi" // (Tipe: Sub-Pillar Tipe 1)
 };
 const urlMappingJasaKonsultanKonstruksiFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-konsultan.html": "Harga Jasa Konsultan"
+  "https://www.betonjayareadymix.com/p/harga-jasa-konsultan.html": "Harga Jasa Konsultan",
+	  "https://www.betonjayareadymix.com/p/jasa-konsultan-bangunan.html": "Jasa Konsultan Bangunan", 
+  "https://www.betonjayareadymix.com/p/jasa-konsultan-kontruksi.html": "Jasa Konsultan Konstruksi", 
+  "https://www.betonjayareadymix.com/p/jasa-perencanaan-pembangunan.html": "Jasa Perencanaan Pembangunan",  
+  "https://www.betonjayareadymix.com/p/jasa-perencanaan-konstruksi.html": "Jasa Perencanaan Konstruksi" 
 };
 const urlMappingHargaJasaKonsultanFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/p/harga-jasa-konsultan-struktur.html": "Harga Jasa Konsultan Struktur",
