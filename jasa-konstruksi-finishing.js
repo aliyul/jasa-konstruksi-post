@@ -12,22 +12,22 @@ const urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage = {
 
 const urlMappingFinishingBangunanFromMoneyMaster1MoneyPage = {
     // MP DARI MM "JASA FINISHING BANGUNAN"
-    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-rumah.html": "Jasa Finishing Bangunan Rumah",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-gedung.html": "Jasa Finishing Bangunan Gedung",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-ruko.html": "Jasa Finishing Bangunan Ruko",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-pabrik.html": "Jasa Finishing Bangunan Pabrik",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-interior.html": "Jasa Finishing Bangunan Interior",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-eksterior.html": "Jasa Finishing Bangunan Eksterior",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-rumah.html": "Jasa Finishing Rumah",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-gedung.html": "Jasa Finishing Gedung",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-ruko.html": "Jasa Finishing Ruko",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-pabrik.html": "Jasa Finishing Pabrik",
+   // "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-interior.html": "Jasa Finishing Bangunan Interior",
+   // "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-eksterior.html": "Jasa Finishing Bangunan Eksterior",
     "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-modern.html": "Jasa Finishing Bangunan Modern",
     "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-minimalis.html": "Jasa Finishing Bangunan Minimalis",
 
 	// TAMBAHAN MP UNTUK JASA FINISHING BANGUNAN
 // ============================================================
-"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-kantor.html": "Jasa Finishing Bangunan Kantor",
-"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-toko.html": "Jasa Finishing Bangunan Toko",
-"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-hotel.html": "Jasa Finishing Bangunan Hotel",
-"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-apartemen.html": "Jasa Finishing Bangunan Apartemen",
-"https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-mewah.html": "Jasa Finishing Bangunan Mewah"
+"https://www.betonjayareadymix.com/p/jasa-finishing-kantor.html": "Jasa Finishing Kantor",
+"https://www.betonjayareadymix.com/p/jasa-finishing-toko.html": "Jasa Finishing Toko",
+"https://www.betonjayareadymix.com/p/jasa-finishing-hotel.html": "Jasa Finishing Hotel",
+"https://www.betonjayareadymix.com/p/jasa-finishing-apartemen.html": "Jasa Finishing Apartemen",
+"https://www.betonjayareadymix.com/p/jasa-finishing-mewah.html": "Jasa Finishing Mewah"
 };
 
 // ============================================================
