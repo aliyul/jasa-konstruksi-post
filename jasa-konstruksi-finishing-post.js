@@ -3131,7 +3131,7 @@ if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinis
         { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html' },
         { name: 'Harga Jasa Plesteran & Acian', url: 'https://www.betonjayareadymix.com/p/harga-jasa-plesteran-acian.html' },
         { name: 'Harga Jasa Borongan Plesteran & Acian', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-plesteran-acian.html' },
-        { name: 'Harga Jasa Borongan Plesteran & Acian Per Meter', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-plesteran-acian-per-meter.html' }
+        { name: 'Harga Jasa Borongan Plesteran & Acian Per Meter', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-plesteran-acian-per-meter.html' }
     ],
     'JASA_KONSTRUKSI'
 );
