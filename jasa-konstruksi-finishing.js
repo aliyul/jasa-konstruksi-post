@@ -620,25 +620,40 @@ const urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1 = {
 // ============================================================
 
 // ✅ DIPERBAIKI - menghilangkan deklarasi ganda
-const urlMappingFinishingStrukturFromMoneyMaster1MoneyPage = {
+const urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage = {
     // MP (Money-Page) dari MM Jasa Finishing Struktur
+	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-struktur.html": "Harga Jasa Finishing Struktur",
 	"https://www.betonjayareadymix.com/p/jasa-waterproofing-dak-beton-baru.html": "Jasa Waterproofing Dak Beton Baru",
     "https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html": "Jasa Finishing Dak Beton",
-	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-dak-beton.html": "Harga Jasa Finishing Dak Beton",
+
     "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-beton-ekspos.html": "Jasa Finishing Struktur Beton Ekspos",
-	"https://www.betonjayareadymix.com/p/harga-jasa-struktur-beton-ekspos.html": "Harga Jasa Struktur Beton Ekspos",
+	
    //masuk perbaikan "https://www.betonjayareadymix.com/p/jasa-finishing-grouting-struktur-beton.html": "Jasa Finishing Grouting Struktur Beton",
     "https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html": "Jasa Pelapisan Coating Struktur",
-	"https://www.betonjayareadymix.com/p/harga-jasa-coating-struktur-beton.html": "Harga Jasa Coating Struktur Beton",
-	"https://www.betonjayareadymix.com/p/jasa-coating-anti-karat-beton.html": "Jasa Coating Anti Karat Beton", 
-    "https://www.betonjayareadymix.com/p/jasa-finishing-kolom-dan-balok.html": "Jasa Finishing Kolom dan Balok",
-	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-kolom-balok.html": "Harga Jasa Finishing Kolom Balok",
-    "https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html": "Jasa Pelapisan Waterproofing Struktur",
-	"https://www.betonjayareadymix.com/p/harga-jasa-waterproofing-struktur.html": "Harga Jasa Waterproofing Struktur"
+	
+    "https://www.betonjayareadymix.com/p/jasa-finishing-kolom-dan-balok.html": "Jasa Finishing Kolom dan Balok"
+
+
    // masuk perbaikan "https://www.betonjayareadymix.com/p/jasa-pelindung-retak-struktur.html": "Jasa Pelindung Retak Struktur"
     
 };
-
+const urlMappingJasaFinishingDakBetonFromMoneyPageMoneyPage1 = {
+	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-dak-beton.html": "Harga Jasa Finishing Dak Beton"
+};
+const urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyPage1 = {
+	"https://www.betonjayareadymix.com/p/harga-jasa-struktur-beton-ekspos.html": "Harga Jasa Struktur Beton Ekspos"
+};
+const urlMappingJasaFinishingKolomdanBalokFromMoneyPageMoneyPage1 = {
+		"https://www.betonjayareadymix.com/p/harga-jasa-finishing-kolom-balok.html": "Harga Jasa Finishing Kolom Balok"
+};
+const urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1 = {
+	"https://www.betonjayareadymix.com/p/harga-jasa-coating-struktur-beton.html": "Harga Jasa Coating Struktur Beton",
+	"https://www.betonjayareadymix.com/p/jasa-coating-anti-karat-beton.html": "Jasa Coating Anti Karat Beton", 
+	"https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html": "Jasa Pelapisan Waterproofing Struktur"
+};
+const urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPage1MoneyPage2 = {
+	"https://www.betonjayareadymix.com/p/harga-jasa-waterproofing-struktur.html": "Harga Jasa Waterproofing Struktur"
+};
 // ============================================================
 // 📁 JASA FINISHING INFRASTRUKTUR - MP dari MM Jasa Finishing Infrastruktur
 // 🧠 Parent: Jasa Finishing Infrastruktur (L4)
@@ -2365,7 +2380,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaTamanFromMoneyMaster2MoneyMaster3,
 		urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage,
 		
-		urlMappingFinishingStrukturFromMoneyMaster1MoneyPage,
+		urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage,
+		urlMappingJasaFinishingDakBetonFromMoneyPageMoneyPage1,
+		urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyPage1,
+		urlMappingJasaFinishingKolomdanBalokFromMoneyPageMoneyPage1,
+		urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1,
+		urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPage1MoneyPage2,
+
+		
 		urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage
 		
     );
@@ -3767,9 +3789,9 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
     );
    }
 	
-   if (urlMappingFinishingStrukturFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+   if (urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
 	 generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingFinishingStrukturFromMoneyMaster1MoneyPage,
+        urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage,
         cleanUrlJasaKonsFinishing,
         [
         { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -3780,9 +3802,83 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
         ],
         'JASA_KONSTRUKSI'
     );
-  
    }
-
+   if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+	 generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaFinishingDakBetonFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsFinishing,
+        [
+        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+        { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+		{ name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+		{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+        { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+        { name: 'Jasa Finishing Dak Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+   if (urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+	 generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsFinishing,
+        [
+        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+        { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+		{ name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+		{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+        { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+        { name: 'Jasa Finishing Struktur Beton Ekspos', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur-beton-ekspos.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+if (urlMappingJasaFinishingKolomdanBalokFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+	 generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaFinishingKolomdanBalokFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsFinishing,
+        [
+        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+        { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+		{ name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+		{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+        { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+        { name: 'Jasa Finishing Kolom dan Balok', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-kolom-dan-balok.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+if (urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+	 generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsFinishing,
+        [
+        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+        { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+		{ name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+		{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+        { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+        { name: 'Jasa Pelapisan Coating Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+if (urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+	 generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPage1MoneyPage2,
+        cleanUrlJasaKonsFinishing,
+        [
+        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+        { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+		{ name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+		{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+        { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+        { name: 'Jasa Pelapisan Coating Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html' },
+        { name: 'Jasa Pelapisan Waterproofing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
  //Sub Finishing Infrastruktur
 /* if (urlMappingFinishingInfrastrukturJalanFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbJasaKonstruksiFinishing(
