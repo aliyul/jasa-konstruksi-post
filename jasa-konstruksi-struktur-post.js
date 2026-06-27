@@ -287,12 +287,12 @@ const urlMappingJasaPengecoranLantaiDakFromMoneyPage1MoneyPage2 = {
   // ============================================================
   // [MONEY_PAGE] - COR DAK & LANTAI
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-cor-dak-beton.html.html": "Harga Jasa Cor Dak Beton"
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-cor-dak-beton.html": "Harga Jasa Cor Dak Beton"
   
  };
 const urlMappingHargaJasaCorDakBetonFromMoneyPage2MoneyPage3 = {
 
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-dak-beton": "Harga Jasa Borongan Cor Dak Beton"
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-dak-beton.html": "Harga Jasa Borongan Cor Dak Beton"
  };
 // ============================================================
 // 📁 JASA PENGECORAN LANTAI GUDANG - KOSONG (SARAN ITEM)
