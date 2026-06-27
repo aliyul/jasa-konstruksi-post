@@ -287,20 +287,13 @@ const urlMappingJasaPengecoranLantaiDakFromMoneyPage1MoneyPage2 = {
   // ============================================================
   // [MONEY_PAGE] - COR DAK & LANTAI
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/10/dak-beton.html": "Dak Beton",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/jasa-cor-dak.html": "Jasa Cor Dak",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2021/12/harga-cor-beton-lantai.html": "Harga Cor Beton Lantai",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2021/12/harga-beton-cor-dak.html": "Harga Beton Cor Dak",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/10/harga-jasa-dak-beton.html": "Harga Jasa Dak Beton",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/10/harga-jasa-cor-dak-beton.html.html": "Harga Jasa Cor Dak Beton"
   
-  // ============================================================
-  // [MONEY_PAGE] - BORONGAN DAK BETON
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-dak-beton.html": "Harga Borongan Dak Beton",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/borongan-dak-beton.html": "Borongan Dak Beton",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/borongan-ring-balok.html": "Borongan Ring Balok",  // TYPE: MONEY_PAGE
-};
+ };
+const urlMappingHargaJasaCorDakBetonFromMoneyPage2MoneyPage3 = {
 
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-dak-beton": "Harga Jasa Borongan Cor Dak Beton"
+ };
 // ============================================================
 // 📁 JASA PENGECORAN LANTAI GUDANG - KOSONG (SARAN ITEM)
 // ============================================================
@@ -2432,6 +2425,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2,
 		urlMappingJasaPengecoranLantaiDakFromMoneyPage1MoneyPage2,
+		urlMappingHargaJasaCorDakBetonFromMoneyPage2MoneyPage3,
+		
 		urlMappingJasaPengecoranLantaiGudangFromMoneyPage1MoneyPage2,
 		urlMappingJasaBekistingdanPembesianFromMoneyPage1MoneyPage2,
 		urlMappingJasaPengecoranKolomBetonFromMoneyPage1MoneyPage2,
@@ -3192,6 +3187,7 @@ if (urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsS
         'JASA_KONSTRUKSI'
     );  
 } 
+	
 if (urlMappingJasaPengecoranLantaiDakFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
     generateBreadcrumbJasaKonstruksiStrukturPost(
         urlMappingJasaPengecoranLantaiDakFromMoneyPage1MoneyPage2,
@@ -3208,6 +3204,25 @@ if (urlMappingJasaPengecoranLantaiDakFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKo
         'JASA_KONSTRUKSI'
     );  	
 }
+if (urlMappingHargaJasaCorDakBetonFromMoneyPage2MoneyPage3[cleanUrlJasaJasaKonsStrukturPost]) {
+    generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingHargaJasaCorDakBetonFromMoneyPage2MoneyPage3,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Beton Dan Pengecoran', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html' },
+            { name: 'Jasa Pengecoran Lantai Dak', url: 'https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-dak.html' },
+            { name: 'Harga Jasa Cor Dak Beton', url: 'https://www.betonjayareadymix.com/2018/10/harga-jasa-cor-dak-beton.html' }
+
+        ],
+        'JASA_KONSTRUKSI'
+    );  	
+}
+	
+	
 if (urlMappingJasaPengecoranLantaiGudangFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
     generateBreadcrumbJasaKonstruksiStrukturPost(
         urlMappingJasaPengecoranLantaiGudangFromMoneyPage1MoneyPage2,
