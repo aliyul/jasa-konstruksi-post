@@ -624,7 +624,7 @@ const urlMappingFinishingStrukturFromMoneyMaster1MoneyPage = {
     // MP (Money-Page) dari MM Jasa Finishing Struktur
 	"https://www.betonjayareadymix.com/p/jasa-waterproofing-dak-beton-baru.html": "Jasa Waterproofing Dak Beton Baru",
     "https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html": "Jasa Finishing Dak Beton",
-	"https://www.betonjayareadymix.com/p/harga-jasa-dak-beton.html": "Harga Jasa Dak Beton",
+	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-dak-beton.html": "Harga Jasa Finishing Dak Beton",
     "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-beton-ekspos.html": "Jasa Finishing Struktur Beton Ekspos",
 	"https://www.betonjayareadymix.com/p/harga-jasa-struktur-beton-ekspos.html": "Harga Jasa Struktur Beton Ekspos",
    //masuk perbaikan "https://www.betonjayareadymix.com/p/jasa-finishing-grouting-struktur-beton.html": "Jasa Finishing Grouting Struktur Beton",
