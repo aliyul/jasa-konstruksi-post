@@ -60,6 +60,7 @@ const urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1 = {
   // ============================================================
 // 📌 MONEY-PAGE (MP) DI BAWAH JASA KONSTRUKSI STRUKTUR (BETON)
 // ============================================================
+"https://www.betonjayareadymix.com/p/jasa-sloof-beton.html": "Jasa Sloof Beton",
 "https://www.betonjayareadymix.com/p/jasa-cor-beton-ready-mix.html": "Jasa Cor Beton Ready Mix",
 "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-dak.html": "Jasa Pengecoran Lantai Dak",
 "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-gudang.html": "Jasa Pengecoran Lantai Gudang",
