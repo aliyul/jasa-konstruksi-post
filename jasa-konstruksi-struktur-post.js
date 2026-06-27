@@ -203,15 +203,6 @@ const urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2  = {
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton.html": "Harga Jasa Borongan Cor Beton",  // TYPE: MONEY_PAGE
  // "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton.html": "Borongan Cor Beton",  // TYPE: MONEY_PAGE
   
-  // ============================================================
-  // [MONEY_CHILD] - BORONGAN COR BETON PER LOKASI
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-tangerang.html": "Borongan Cor Beton Tangerang",  
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jakarta.html": "Borongan Cor Beton Jakarta",  
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-depok.html": "Borongan Cor Beton Depok",  
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-bogor.html": "Borongan Cor Beton Bogor",  
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-bekasi.html": "Borongan Cor Beton Bekasi",  
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-terdekat.html": "Borongan Cor Beton Terdekat",  
 
   // ============================================================
   // [MONEY_PAGE] - JASA & HARGA SLOOF
@@ -256,6 +247,17 @@ const urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2  = {
 };
 const urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyPage3  = {
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-bangunan.html": "Harga Jasa Borongan Cor Beton Bangunan"
+};
+const urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyChild  = {
+  // ============================================================
+  // [MONEY_CHILD] - BORONGAN COR BETON PER LOKASI
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-tangerang.html": "Harga Jasa Borongan Cor Beton Tangerang",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-jakarta.html": "Harga Jasa Borongan Cor Beton Jakarta",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-depok.html": "Harga Jasa Borongan Cor Beton Depok",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-bogor.html": "Harga Jasa Borongan Cor Beton Bogor",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-bekasi.html": "Harga Jasa Borongan Cor Beton Bekasi",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-terdekat.html": "Harga Jasa Borongan Cor Beton Terdekat"
 };
 const urlMappingHargaJasaBoronganCorBetonBangunanFromMoneyPage3MoneyPage4  = {
  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-townhouse.html": "Harga Jasa Borongan Cor Beton Townhouse",  
@@ -2425,6 +2427,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2,
 		urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyPage3,
+		urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyChild,
         urlMappingHargaJasaBoronganCorBetonBangunanFromMoneyPage3MoneyPage4,
 		
 		urlMappingJasaPengecoranLantaiDakFromMoneyPage1MoneyPage2,
@@ -3207,6 +3210,24 @@ if (urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyPage3[cleanUrlJasaJasa
         'JASA_KONSTRUKSI'
     );  
 }
+if (urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
+              generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyChild,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Beton Dan Pengecoran', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html' },
+            { name: 'Jasa Cor Beton Ready Mix', url: 'https://www.betonjayareadymix.com/p/jasa-cor-beton-ready-mix.html' },
+            { name: 'Harga Jasa Borongan Cor Beton', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton.html' }
+
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+}
+
 if (urlMappingHargaJasaBoronganCorBetonBangunanFromMoneyPage3MoneyPage4[cleanUrlJasaJasaKonsStrukturPost]) {
               generateBreadcrumbJasaKonstruksiStrukturPost(
         urlMappingHargaJasaBoronganCorBetonBangunanFromMoneyPage3MoneyPage4,
