@@ -175,7 +175,7 @@ const urlMappingJasaKanopiBajadanBesiFromMoneyPage1MoneyPage2 = {
   // "https://www.betonjayareadymix.com/2018/09/jasa-kanopi-baja-ringan.html": "Jasa Kanopi Baja Ringan",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2018/09/jasa-kanopi-besi-tempa.html": "Jasa Kanopi Besi Tempa",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2018/09/harga-jasa-kanopi-baja-per-meter.html": "Harga Jasa Kanopi Baja Per Meter",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2018/09/jasa-kanopi-baja-jakarta.html": "Jasa Kanopi Baja Jakarta",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2018/09/jasa-kanopi-baja-jakarta.html": "Jasa Kanopi Baja Jakarta",  
 };
 
 // ============================================================
@@ -186,7 +186,7 @@ const urlMappingJasaStrukturBajaGudangFromMoneyPage1MoneyPage2 = {
   // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // "https://www.betonjayareadymix.com/2018/09/jasa-struktur-baja-gudang.html": "Jasa Struktur Baja Gudang",  // TYPE: MONEY_PAGE
   // "https://www.betonjayareadymix.com/2018/09/harga-struktur-baja-gudang-per-m2.html": "Harga Struktur Baja Gudang Per M2",  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/2018/09/jasa-struktur-baja-gudang-jakarta.html": "Jasa Struktur Baja Gudang Jakarta",  // TYPE: MONEY_CHILD
+  // "https://www.betonjayareadymix.com/2018/09/jasa-struktur-baja-gudang-jakarta.html": "Jasa Struktur Baja Gudang Jakarta",  
 };
 
 // ============================================================
@@ -199,43 +199,19 @@ const urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2  = {
   // ============================================================
   // [MONEY_PAGE] - HARGA BORONGAN COR BETON (NASIONAL)
   // ============================================================
-  "https://www.betonjayareadymix.com/2021/03/harga-borongan-cor-beton.html": "Harga Borongan Cor Beton",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2021/03/harga-borongan-cor-beton-per-m3.html": "Harga Borongan Cor Beton per m3",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton.html": "Borongan Cor Beton",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-bangunan.html": "Borongan Cor Beton Bangunan",  // TYPE: MONEY_PAGE
-  
-  // ============================================================
-  // [MONEY_CHILD] - BORONGAN COR BETON PER JENIS BANGUNAN
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-townhouse.html": "Borongan Cor Beton Townhouse",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-villa.html": "Borongan Cor Beton Villa",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-pabrik.html": "Borongan Cor Beton Pabrik",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-gedung.html": "Borongan Cor Beton Gedung",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-gudang.html": "Borongan Cor Beton Gudang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-masjid.html": "Borongan Cor Beton Masjid",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-yayasan.html": "Borongan Cor Beton Yayasan",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-mall.html": "Borongan Cor Beton Mall",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-stadion.html": "Borongan Cor Beton Stadion",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-stasiun.html": "Borongan Cor Beton Stasiun",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-sekolah.html": "Borongan Cor Beton Sekolah",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-pelabuhan.html": "Borongan Cor Beton Pelabuhan",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-bandara.html": "Borongan Cor Beton Bandara",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-apartemen.html": "Borongan Cor Beton Apartemen",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-hotel.html": "Borongan Cor Beton Hotel",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-kontrakan.html": "Borongan Cor Beton Kontrakan",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-ruko-toko.html": "Borongan Cor Beton Ruko Toko",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-rukan-kantor.html": "Borongan Cor Beton Rukan Kantor",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-rumah.html": "Borongan Cor Beton Rumah",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-cor-beton-ready-mix.html": "Harga Jasa Cor Beton Ready Mix",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton.html": "Harga Jasa Borongan Cor Beton",  // TYPE: MONEY_PAGE
+ // "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton.html": "Borongan Cor Beton",  // TYPE: MONEY_PAGE
   
   // ============================================================
   // [MONEY_CHILD] - BORONGAN COR BETON PER LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-tangerang.html": "Borongan Cor Beton Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jakarta.html": "Borongan Cor Beton Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-depok.html": "Borongan Cor Beton Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-bogor.html": "Borongan Cor Beton Bogor",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-bekasi.html": "Borongan Cor Beton Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-terdekat.html": "Borongan Cor Beton Terdekat",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-tangerang.html": "Borongan Cor Beton Tangerang",  
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-jakarta.html": "Borongan Cor Beton Jakarta",  
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-depok.html": "Borongan Cor Beton Depok",  
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-bogor.html": "Borongan Cor Beton Bogor",  
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-bekasi.html": "Borongan Cor Beton Bekasi",  
+  "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton-terdekat.html": "Borongan Cor Beton Terdekat",  
 
   // ============================================================
   // [MONEY_PAGE] - JASA & HARGA SLOOF
@@ -249,25 +225,25 @@ const urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2  = {
   // ============================================================
   // [MONEY_CHILD] - HARGA SLOOF PER M3 PER LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-kuningan.html": "Harga Sloof Per m3 Kuningan",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-ciamis.html": "Harga Sloof Per m3 Ciamis",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-cianjur.html": "Harga Sloof Per m3 Cianjur",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-cirebon.html": "Harga Sloof Per m3 Cirebon",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-indramayu.html": "Harga Sloof Per m3 Indramayu",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-bandung.html": "Harga Sloof Per m3 Bandung",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-sukabumi.html": "Harga Sloof Per m3 Sukabumi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-sumedang.html": "Harga Sloof Per m3 Sumedang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-tasikmalaya.html": "Harga Sloof Per m3 Tasikmalaya",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-garut.html": "Harga Sloof Per m3 Garut",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-karawang.html": "Harga Sloof Per m3 Karawang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-majalengka.html": "Harga Sloof Per m3 Majalengka",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-purwakarta.html": "Harga Sloof Per m3 Purwakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-subang.html": "Harga Sloof Per m3 Subang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-depok.html": "Harga Sloof Per m3 Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-tangerang.html": "Harga Sloof Per m3 Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-jakarta.html": "Harga Sloof Per m3 Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-bekasi.html": "Harga Sloof Per m3 Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-bogor.html": "Harga Sloof Per m3 Bogor",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-kuningan.html": "Harga Sloof Per m3 Kuningan",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-ciamis.html": "Harga Sloof Per m3 Ciamis",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-cianjur.html": "Harga Sloof Per m3 Cianjur",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-cirebon.html": "Harga Sloof Per m3 Cirebon",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-indramayu.html": "Harga Sloof Per m3 Indramayu",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-bandung.html": "Harga Sloof Per m3 Bandung",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-sukabumi.html": "Harga Sloof Per m3 Sukabumi",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-sumedang.html": "Harga Sloof Per m3 Sumedang",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-tasikmalaya.html": "Harga Sloof Per m3 Tasikmalaya",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-garut.html": "Harga Sloof Per m3 Garut",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-karawang.html": "Harga Sloof Per m3 Karawang",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-majalengka.html": "Harga Sloof Per m3 Majalengka",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-purwakarta.html": "Harga Sloof Per m3 Purwakarta",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-subang.html": "Harga Sloof Per m3 Subang",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-depok.html": "Harga Sloof Per m3 Depok",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-tangerang.html": "Harga Sloof Per m3 Tangerang",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-jakarta.html": "Harga Sloof Per m3 Jakarta",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-bekasi.html": "Harga Sloof Per m3 Bekasi",  
+  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-bogor.html": "Harga Sloof Per m3 Bogor",  
 
   // ============================================================
   // [MONEY_PAGE] - JASA STRUKTUR BETON LAINNYA
@@ -278,7 +254,31 @@ const urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2  = {
   "https://www.betonjayareadymix.com/2018/09/jasa-gelar-beton.html": "Jasa Gelar Beton",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/09/jasa-rabat-beton-per-meter.html": "Jasa Rabat Beton per Meter",  // TYPE: MONEY_PAGE
 };
-
+const urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyPage3  = {
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-bangunan": "Harga Jasa Borongan Cor Beton Bangunan"
+};
+const urlMappingHargaJasaBoronganCorBetonBangunanFromMoneyPage3MoneyPage4  = {
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-townhouse.html": "Harga Jasa Borongan Cor Beton Townhouse",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-villa.html": "Harga Jasa Borongan Cor Beton Villa",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-pabrik.html": "Harga Jasa Borongan Cor Beton Pabrik",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-gedung.html": "Harga Jasa Borongan Cor Beton Gedung",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-gudang.html": "Harga Jasa Borongan Cor Beton Gudang",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-masjid.html": "Harga Jasa Borongan Cor Beton Masjid",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-yayasan.html": "Harga Jasa Borongan Cor Beton Yayasan",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-mall.html": "Harga Jasa Borongan Cor Beton Mall",  
+  "https://www.betonjayareadymix.com/2018/09/2018/09/harga-jasa-borongan-cor-beton-stadion.html": "Harga Jasa Borongan Cor Beton Stadion",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-stasiun.html": "Harga Jasa Borongan Cor Beton Stasiun",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-sekolah.html": "Harga Jasa Borongan Cor Beton Sekolah",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-pelabuhan.html": "Harga Jasa Borongan Cor Beton Pelabuhan",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-bandara.html": "Harga Jasa Borongan Cor Beton Bandara",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-apartemen.html": "Harga Jasa Borongan Cor Beton Apartemen",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-hotel.html": "Harga Jasa Borongan Cor Beton Hotel",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-kontrakan.html": "Harga Jasa Borongan Cor Beton Kontrakan",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-ruko-toko.html": "Harga Jasa Borongan Cor Beton Ruko Toko",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-rukan-kantor.html": "Harga Jasa Borongan Cor Beton Rukan Kantor",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-rumah.html": "Harga Jasa Borongan Cor Beton Rumah"  
+  
+};
 // ============================================================
 // 📁 JASA PENGECORAN LANTAI DAK - MONEY PAGE
 // ============================================================
@@ -359,10 +359,10 @@ const urlMappingHargaJasaBoronganBangunanFromMoneyPage1MoneyChild = {
  // ============================================================
   // [MONEY_CHILD] - HARGA BORONGAN BANGUNAN PER LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-dki-jakarta.html": "Harga Jasa Borongan Bangunan DKI Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-tangerang.html": "Harga Jasa Borongan Bangunan Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-bekasi.html": "Harga Jasa Borongan Bangunan Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-depok.html": "Harga Jasa Borongan Bangunan Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-dki-jakarta.html": "Harga Jasa Borongan Bangunan DKI Jakarta",  
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-tangerang.html": "Harga Jasa Borongan Bangunan Tangerang",  
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-bekasi.html": "Harga Jasa Borongan Bangunan Bekasi",  
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-depok.html": "Harga Jasa Borongan Bangunan Depok",  
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-bangunan-bogor.html": "Harga Jasa Borongan Bangunan Bogor"
 
 
@@ -391,14 +391,14 @@ const urlMappingHargaJasaBoronganRumahFromMoneyPage1MoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - HARGA BORONGAN RUMAH TERIMA KUNCI PER LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-cirebon.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Cirebon",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-cianjur.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Cianjur",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-jakarta.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-bogor.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Bogor",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-depok.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-tangerang.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-bekasi.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-karawang.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Karawang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-cirebon.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Cirebon",  
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-cianjur.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Cianjur",  
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-jakarta.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Jakarta",  
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-bogor.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Bogor",  
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-depok.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Depok",  
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-tangerang.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Tangerang",  
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-bekasi.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Bekasi",  
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-karawang.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Karawang",  
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-borongan-rumah-per-meter-terima-kunci-terdekat.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci Terdekat"
 };
 const urlMappingJasaBangunRumahFromMoneyMaster3MoneyPage = {
@@ -408,11 +408,11 @@ const urlMappingJasaBangunRumahFromMoneyMaster3MoneyChild = {
     // ============================================================
   // [MONEY_CHILD] - JASA BANGUN RUMAH PER LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-depok.html": "Jasa Bangun Rumah Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-tangerang.html": "Jasa Bangun Rumah Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-jakarta.html": "Jasa Bangun Rumah Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-bogor.html": "Jasa Bangun Rumah Bogor",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-bekasi.html": "Jasa Bangun Rumah Bekasi"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-depok.html": "Jasa Bangun Rumah Depok",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-tangerang.html": "Jasa Bangun Rumah Tangerang",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-jakarta.html": "Jasa Bangun Rumah Jakarta",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-bogor.html": "Jasa Bangun Rumah Bogor",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-bangun-rumah-bekasi.html": "Jasa Bangun Rumah Bekasi"  
 
 };
 // ============================================================
@@ -585,11 +585,11 @@ const urlMappingJasaPembuatanLapanganFutsalFromMoneyPage1MoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - JASA PEMBUATAN LAPANGAN FUTSAL PER LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-bekasi.html": "Jasa Pembuatan Lapangan Futsal Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-depok.html": "Jasa Pembuatan Lapangan Futsal Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-jakarta.html": "Jasa Pembuatan Lapangan Futsal Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-tangerang.html": "Jasa Pembuatan Lapangan Futsal Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-bogor.html": "Jasa Pembuatan Lapangan Futsal Bogor"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-bekasi.html": "Jasa Pembuatan Lapangan Futsal Bekasi",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-depok.html": "Jasa Pembuatan Lapangan Futsal Depok",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-jakarta.html": "Jasa Pembuatan Lapangan Futsal Jakarta",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-tangerang.html": "Jasa Pembuatan Lapangan Futsal Tangerang",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-bogor.html": "Jasa Pembuatan Lapangan Futsal Bogor"  
 };
 
 // ============================================================
@@ -653,10 +653,10 @@ const urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - JASA PEMBUATAN LAPANGAN VOLI PER LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-depok.html": "Jasa Pembuatan Lapangan Voli Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-tangerang.html": "Jasa Pembuatan Lapangan Voli Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-jakarta.html": "Jasa Pembuatan Lapangan Voli Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-bekasi.html": "Jasa Pembuatan Lapangan Voli Bekasi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-depok.html": "Jasa Pembuatan Lapangan Voli Depok",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-tangerang.html": "Jasa Pembuatan Lapangan Voli Tangerang",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-jakarta.html": "Jasa Pembuatan Lapangan Voli Jakarta",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-bekasi.html": "Jasa Pembuatan Lapangan Voli Bekasi",  
   "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-bogor.html": "Jasa Pembuatan Lapangan Voli Bogor"
 };
 // ============================================================
@@ -700,18 +700,18 @@ const urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyChild = {
 	// ============================================================
   // [MONEY_CHILD] - JASA KOLAM RENANG PER LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-ciamis.html": "Jasa Kolam Renang Ciamis",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-kuningan.html": "Jasa Kolam Renang Kuningan",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-cirebon.html": "Jasa Kolam Renang Cirebon",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-garut.html": "Jasa Kolam Renang Garut",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-purwakarta.html": "Jasa Kolam Renang Purwakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-sukabumi.html": "Jasa Kolam Renang Sukabumi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-cianjur.html": "Jasa Kolam Renang Cianjur",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-bandung.html": "Jasa Kolam Renang Bandung",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-depok.html": "Jasa Kolam Renang Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-tangerang.html": "Jasa Kolam Renang Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-jakarta.html": "Jasa Kolam Renang Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-bekasi.html": "Jasa Kolam Renang Bekasi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-ciamis.html": "Jasa Kolam Renang Ciamis",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-kuningan.html": "Jasa Kolam Renang Kuningan",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-cirebon.html": "Jasa Kolam Renang Cirebon",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-garut.html": "Jasa Kolam Renang Garut",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-purwakarta.html": "Jasa Kolam Renang Purwakarta",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-sukabumi.html": "Jasa Kolam Renang Sukabumi",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-cianjur.html": "Jasa Kolam Renang Cianjur",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-bandung.html": "Jasa Kolam Renang Bandung",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-depok.html": "Jasa Kolam Renang Depok",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-tangerang.html": "Jasa Kolam Renang Tangerang",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-jakarta.html": "Jasa Kolam Renang Jakarta",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-bekasi.html": "Jasa Kolam Renang Bekasi",  
   "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-bogor.html": "Jasa Kolam Renang Bogor"
 
 };
@@ -2424,6 +2424,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaStrukturBajaGudangFromMoneyPage1MoneyPage2,
 		
 		urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2,
+		urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyPage3,
+        urlMappingHargaJasaBoronganCorBetonBangunanFromMoneyPage3MoneyPage4,
+		
 		urlMappingJasaPengecoranLantaiDakFromMoneyPage1MoneyPage2,
 		urlMappingHargaJasaCorDakBetonFromMoneyPage2MoneyPage3,
 		
@@ -3187,7 +3190,41 @@ if (urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsS
         'JASA_KONSTRUKSI'
     );  
 } 
-	
+if (urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyPage3[cleanUrlJasaJasaKonsStrukturPost]) {
+              generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyPage3,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Beton Dan Pengecoran', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html' },
+            { name: 'Jasa Cor Beton Ready Mix', url: 'https://www.betonjayareadymix.com/p/jasa-cor-beton-ready-mix.html' },
+            { name: 'Harga Jasa Borongan Cor Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-cor-beton.html' }
+
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+}
+if (urlMappingHargaJasaBoronganCorBetonBangunanFromMoneyPage3MoneyPage4[cleanUrlJasaJasaKonsStrukturPost]) {
+              generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingHargaJasaBoronganCorBetonBangunanFromMoneyPage3MoneyPage4,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Beton Dan Pengecoran', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html' },
+            { name: 'Jasa Cor Beton Ready Mix', url: 'https://www.betonjayareadymix.com/p/jasa-cor-beton-ready-mix.html' },
+            { name: 'Harga Jasa Borongan Cor Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-cor-beton.html' },
+            { name: 'Harga Jasa Borongan Cor Beton Bangunan', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-cor-beton-bangunan.html' }
+
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+}	
 if (urlMappingJasaPengecoranLantaiDakFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
     generateBreadcrumbJasaKonstruksiStrukturPost(
         urlMappingJasaPengecoranLantaiDakFromMoneyPage1MoneyPage2,
