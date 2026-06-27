@@ -255,7 +255,7 @@ const urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2  = {
   "https://www.betonjayareadymix.com/2018/09/jasa-rabat-beton-per-meter.html": "Jasa Rabat Beton per Meter",  // TYPE: MONEY_PAGE
 };
 const urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyPage3  = {
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-bangunan": "Harga Jasa Borongan Cor Beton Bangunan"
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-bangunan.html": "Harga Jasa Borongan Cor Beton Bangunan"
 };
 const urlMappingHargaJasaBoronganCorBetonBangunanFromMoneyPage3MoneyPage4  = {
  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-townhouse.html": "Harga Jasa Borongan Cor Beton Townhouse",  
