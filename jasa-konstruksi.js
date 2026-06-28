@@ -774,8 +774,24 @@ const urlMappingJasaPasangPlafonGRCFromMoneyPage1MoneyPage2 = {
 };
 
 const urlMappingJasaPasangKacaFromMoneyMaster1MoneyPage = {
-// "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-eksterior.html": "Jasa Pasang HPL Eksterior"
+ "https://www.betonjayareadymix.com/p/jasa-pasang-kaca-interior.html": "Jasa Pasang Kaca Interior",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-kaca-eksterior.html": "Jasa Pasang Kaca Eksterior"
+
 };
+const urlMappingJasaPasangKacaInteriorFromMoneyPageMoneyPage1 = {
+ "https://www.betonjayareadymix.com/p/jasa-pasang-partisi-kaca.html": "Jasa Pasang Partisi Kaca",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-railing-tangga-kaca.html": "Jasa Pasang Railing Tangga Kaca",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-pintu-kaca-interior.html": "Jasa Pasang Pintu Kaca Interior",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-cermin-hias.html": "Jasa Pasang Cermin Hias",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-skylight-kaca.html": "Jasa Pasang Skylight Kaca"
+};
+const urlMappingJasaPasangKacaEksteriorFromMoneyPageMoneyPage1 = {
+"https://www.betonjayareadymix.com/p/jasa-pasang-kaca-fasad.html": "Jasa Pasang Kaca Fasad",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-kanopi-kaca.html": "Jasa Pasang Kanopi Kaca",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-curtain-wall-kaca.html": "Jasa Pasang Curtain Wall Kaca"
+	
+};
+
 const urlMappingJasaPasangBatuFromMoneyMaster1MoneyPage = {
  "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam.html": "Jasa Pasang Batu Alam"
 };
@@ -2683,6 +2699,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangPlafonGRCFromMoneyPage1MoneyPage2,
 
 		urlMappingJasaPasangKacaFromMoneyMaster1MoneyPage,
+		urlMappingJasaPasangKacaInteriorFromMoneyPageMoneyPage1,
+		urlMappingJasaPasangKacaEksteriorFromMoneyPageMoneyPage1,
 
 		urlMappingJasaPasangBatuFromMoneyMaster1MoneyPage,
 		
@@ -4913,6 +4931,38 @@ if (urlMappingJasaPasangKacaFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }	
+if (urlMappingJasaPasangKacaInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaPasangKacaInteriorFromMoneyPageMoneyPage1,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Kaca', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-kaca.html'},
+            { name: 'Jasa Pasang Kaca Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-kaca-interior.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaPasangKacaEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaPasangKacaEksteriorFromMoneyPageMoneyPage1,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Kaca', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-kaca.html'},
+            { name: 'Jasa Pasang Kaca Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-kaca-eksterior.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
 	
 if (urlMappingJasaPasangBatuFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
