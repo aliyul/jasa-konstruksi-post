@@ -198,10 +198,14 @@ const urlMappingJasaSloofBetonFromMoneyPage1MoneyPage2  = {
  // ============================================================
   // [MONEY_PAGE] - JASA & HARGA SLOOF
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-cor-beton-sloof.html": "Harga JasaCor Beton Sloof",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-sloof-beton.html": "Harga Jasa Borongan Sloof Beton",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-sloof-beton-per-meter.html": "Harga Jasa Borongan Sloof Beton Per Meter",  // TYPE: MONEY_PAGE
-  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-cor-beton-sloof.html": "Harga JasaCor Beton Sloof",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-sloof-beton.html": "Harga Jasa Borongan Sloof Beton"
+
+};
+const urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyPage3  = {
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-sloof-beton-per-meter.html": "Harga Jasa Borongan Sloof Beton Per Meter"
+};
+const urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyChild  = {
   // ============================================================
   // [MONEY_CHILD] - HARGA SLOOF PER M3 PER LOKASI
   // ============================================================
@@ -224,9 +228,8 @@ const urlMappingJasaSloofBetonFromMoneyPage1MoneyPage2  = {
   "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-jakarta.html": "Harga Sloof Per m3 Jakarta",  
   "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-bekasi.html": "Harga Sloof Per m3 Bekasi",  
   "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-bogor.html": "Harga Sloof Per m3 Bogor"  
-
+	
 };
-
 const urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2  = {
   // ============================================================
   // [MONEY_PAGE] - HARGA BORONGAN COR BETON (NASIONAL)
@@ -2426,6 +2429,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaStrukturBajaGudangFromMoneyPage1MoneyPage2,
 
 		urlMappingJasaSloofBetonFromMoneyPage1MoneyPage2,
+		urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyPage3,
+		urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyChild,
+		
 		urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2,
 		urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyPage3,
 		urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyChild,
@@ -3195,6 +3201,42 @@ if (urlMappingJasaSloofBetonFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStruktu
         'JASA_KONSTRUKSI'
     );  
 } 
+if (urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyPage3[cleanUrlJasaJasaKonsStrukturPost]) {
+              generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyPage3,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Beton Dan Pengecoran', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html' },
+            { name: 'Jasa Sloof Beton', url: 'https://www.betonjayareadymix.com/p/jasa-sloof-beton.html' },
+            { name: 'Harga Jasa Borongan Sloof Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-sloof-beton.html' }
+
+
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+} 
+if (urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
+              generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyChild,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Beton Dan Pengecoran', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html' },
+            { name: 'Jasa Sloof Beton', url: 'https://www.betonjayareadymix.com/p/jasa-sloof-beton.html' },
+            { name: 'Harga Jasa Borongan Sloof Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-sloof-beton.html' }
+
+
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+} 	
 	
 if (urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
               generateBreadcrumbJasaKonstruksiStrukturPost(
