@@ -194,11 +194,18 @@ const urlMappingJasaStrukturBajaGudangFromMoneyPage1MoneyPage2 = {
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE & MONEY_CHILD
 // Parent: Jasa Struktur Beton dan Pengecoran (SUB2)
 // ============================================================
+const urlMappingJasaCorRingBalokFromMoneyPage1MoneyPage2  = {
+ // ============================================================
+  // [MONEY_PAGE] - JASA & HARGA SLOOF
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-ring-balok.html": "Harga Jasa Borongan Cor Ring Balok"
+
+};
 const urlMappingJasaSloofBetonFromMoneyPage1MoneyPage2  = {
  // ============================================================
   // [MONEY_PAGE] - JASA & HARGA SLOOF
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-cor-beton-sloof.html": "Harga JasaCor Beton Sloof",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-cor-beton-sloof.html": "Harga Jasa Cor Beton Sloof",  
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-sloof-beton.html": "Harga Jasa Borongan Sloof Beton"
 
 };
@@ -2418,6 +2425,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaKanopiBajadanBesiFromMoneyPage1MoneyPage2,
 		urlMappingJasaStrukturBajaGudangFromMoneyPage1MoneyPage2,
 
+		urlMappingJasaCorRingBalokFromMoneyPage1MoneyPage2,
 		urlMappingJasaSloofBetonFromMoneyPage1MoneyPage2,
 		urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyPage3,
 		urlMappingHargaJasaBoronganSloofBetonPerMeterFromMoneyPage3MoneyChild,
@@ -3175,6 +3183,22 @@ if (urlMappingJasaStrukturBajaGudangFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKon
 	
 //SUB JasaStrukturBetondanPengecoranPost
 
+if (urlMappingJasaCorRingBalokFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
+              generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingJasaCorRingBalokFromMoneyPage1MoneyPage2,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+            { name: 'Jasa Struktur Beton Dan Pengecoran', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html' },
+            { name: 'Jasa Cor Ring Balok', url: 'https://www.betonjayareadymix.com/p/jasa-cor-ring-balok.html' }
+
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+} 
 if (urlMappingJasaSloofBetonFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
               generateBreadcrumbJasaKonstruksiStrukturPost(
         urlMappingJasaSloofBetonFromMoneyPage1MoneyPage2,
