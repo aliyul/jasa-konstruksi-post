@@ -234,19 +234,9 @@ const urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2  = {
   // ============================================================
   // [MONEY_PAGE] - HARGA BORONGAN COR BETON (NASIONAL)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-cor-beton-ready-mix.html": "Harga Jasa Cor Beton Ready Mix",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton.html": "Harga Jasa Borongan Cor Beton",  // TYPE: MONEY_PAGE
- // "https://www.betonjayareadymix.com/2018/09/borongan-cor-beton.html": "Borongan Cor Beton",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-cor-beton-ready-mix.html": "Harga Jasa Cor Beton Ready Mix",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton.html": "Harga Jasa Borongan Cor Beton"
   
-
- 
-  // ============================================================
-  // [MONEY_PAGE] - JASA STRUKTUR BETON LAINNYA
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/jasa-ring-balok.html": "Jasa Ring Balok",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/jasa-cor-tiang.html": "Jasa Cor Tiang",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/jasa-gelar-beton.html": "Jasa Gelar Beton",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/2018/09/jasa-rabat-beton-per-meter.html": "Jasa Rabat Beton per Meter",  // TYPE: MONEY_PAGE
 };
 const urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyPage3  = {
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-bangunan.html": "Harga Jasa Borongan Cor Beton Bangunan"
@@ -271,7 +261,7 @@ const urlMappingHargaJasaBoronganCorBetonBangunanFromMoneyPage3MoneyPage4  = {
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-masjid.html": "Harga Jasa Borongan Cor Beton Masjid",  
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-yayasan.html": "Harga Jasa Borongan Cor Beton Yayasan",  
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-mall.html": "Harga Jasa Borongan Cor Beton Mall",  
-  "https://www.betonjayareadymix.com/2018/09/2018/09/harga-jasa-borongan-cor-beton-stadion.html": "Harga Jasa Borongan Cor Beton Stadion",  
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-stadion.html": "Harga Jasa Borongan Cor Beton Stadion",  
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-stasiun.html": "Harga Jasa Borongan Cor Beton Stasiun",  
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-sekolah.html": "Harga Jasa Borongan Cor Beton Sekolah",  
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-beton-pelabuhan.html": "Harga Jasa Borongan Cor Beton Pelabuhan",  
