@@ -198,7 +198,7 @@ const urlMappingJasaSloofBetonFromMoneyPage1MoneyPage2  = {
  // ============================================================
   // [MONEY_PAGE] - JASA & HARGA SLOOF
   // ============================================================
-  "https://www.betonjayareadymix.com/2021/12/harga-jasa-cor-beton-sloof.html": "Harga Cor Beton Sloof",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-cor-beton-sloof.html": "Harga JasaCor Beton Sloof",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-sloof-beton.html": "Harga Jasa Borongan Sloof Beton",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-sloof-beton-per-meter.html": "Harga Jasa Borongan Sloof Beton Per Meter",  // TYPE: MONEY_PAGE
   
