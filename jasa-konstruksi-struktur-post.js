@@ -205,29 +205,29 @@ const urlMappingJasaSloofBetonFromMoneyPage1MoneyPage2  = {
 const urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyPage3  = {
  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-sloof-beton-per-meter.html": "Harga Jasa Borongan Sloof Beton Per Meter"
 };
-const urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyChild  = {
+const urlMappingHargaJasaBoronganSloofBetonPerMeterFromMoneyPage3MoneyChild  = {
   // ============================================================
   // [MONEY_CHILD] - HARGA SLOOF PER M3 PER LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-kuningan.html": "Harga Sloof Per m3 Kuningan",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-ciamis.html": "Harga Sloof Per m3 Ciamis",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-cianjur.html": "Harga Sloof Per m3 Cianjur",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-cirebon.html": "Harga Sloof Per m3 Cirebon",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-indramayu.html": "Harga Sloof Per m3 Indramayu",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-bandung.html": "Harga Sloof Per m3 Bandung",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-sukabumi.html": "Harga Sloof Per m3 Sukabumi",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-sumedang.html": "Harga Sloof Per m3 Sumedang",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-tasikmalaya.html": "Harga Sloof Per m3 Tasikmalaya",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-garut.html": "Harga Sloof Per m3 Garut",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-karawang.html": "Harga Sloof Per m3 Karawang",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-majalengka.html": "Harga Sloof Per m3 Majalengka",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-purwakarta.html": "Harga Sloof Per m3 Purwakarta",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-subang.html": "Harga Sloof Per m3 Subang",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-depok.html": "Harga Sloof Per m3 Depok",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-tangerang.html": "Harga Sloof Per m3 Tangerang",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-jakarta.html": "Harga Sloof Per m3 Jakarta",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-bekasi.html": "Harga Sloof Per m3 Bekasi",  
-  "https://www.betonjayareadymix.com/2019/01/harga-sloof-per-m3-bogor.html": "Harga Sloof Per m3 Bogor"  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-kuningan.html": "Harga Jasa Sloof Beton Per Meter Kuningan",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-ciamis.html": "Harga Jasa Sloof Beton Per Meter Ciamis",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-cianjur.html": "Harga Jasa Sloof Beton Per Meter Cianjur",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-cirebon.html": "Harga Jasa Sloof Beton Per Meter Cirebon",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-indramayu.html": "Harga Jasa Sloof Beton Per Meter Indramayu",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-bandung.html": "Harga Jasa Sloof Beton Per Meter Bandung",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-sukabumi.html": "Harga Jasa Sloof Beton Per Meter Sukabumi",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-sumedang.html": "Harga Jasa Sloof Beton Per Meter Sumedang",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-tasikmalaya.html": "Harga Jasa Sloof Beton Per Meter Tasikmalaya",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-garut.html": "Harga Jasa Sloof Beton Per Meter Garut",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-karawang.html": "Harga Jasa Sloof Beton Per Meter Karawang",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-majalengka.html": "Harga Jasa Sloof Beton Per Meter Majalengka",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-purwakarta.html": "Harga Jasa Sloof Beton Per Meter Purwakarta",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-subang.html": "Harga Jasa Sloof Beton Per Meter Subang",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-depok.html": "Harga Jasa Sloof Beton Per Meter Depok",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-tangerang.html": "Harga Jasa Sloof Beton Per Meter Tangerang",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-jakarta.html": "Harga Jasa Sloof Beton Per Meter Jakarta",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-bekasi.html": "Harga Jasa Sloof Beton Per Meter Bekasi",  
+  "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-bogor.html": "Harga Jasa Sloof Beton Per Meter Bogor"  
 	
 };
 const urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2  = {
@@ -2430,7 +2430,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		urlMappingJasaSloofBetonFromMoneyPage1MoneyPage2,
 		urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyPage3,
-		urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyChild,
+		urlMappingHargaJasaBoronganSloofBetonPerMeterFromMoneyPage3MoneyChild,
 		
 		urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2,
 		urlMappingHargaJasaBoronganCorBetonFromMoneyPage2MoneyPage3,
@@ -3219,9 +3219,9 @@ if (urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyPage3[cleanUrlJasaJa
         'JASA_KONSTRUKSI'
     );  
 } 
-if (urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
+if (urlMappingHargaJasaBoronganSloofBetonPerMeterFromMoneyPage3MoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
               generateBreadcrumbJasaKonstruksiStrukturPost(
-        urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyChild,
+        urlMappingHargaJasaBoronganSloofBetonPerMeterFromMoneyPage3MoneyChild,
         cleanUrlJasaJasaKonsStrukturPost,
         [
              { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -3230,7 +3230,8 @@ if (urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyChild[cleanUrlJasaJa
             { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
             { name: 'Jasa Struktur Beton Dan Pengecoran', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html' },
             { name: 'Jasa Sloof Beton', url: 'https://www.betonjayareadymix.com/p/jasa-sloof-beton.html' },
-            { name: 'Harga Jasa Borongan Sloof Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-sloof-beton.html' }
+            { name: 'Harga Jasa Borongan Sloof Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-sloof-beton.html' },
+            { name: 'Harga Jasa Borongan Sloof Beton Per Meter', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-sloof-beton-per-meter.html' }
 
 
         ],
