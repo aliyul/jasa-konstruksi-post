@@ -272,7 +272,7 @@ const urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoney1Page2 = {
 // ============================================================
 
 const urlMappingFinishingInteriorFromMoneyMasterMoneyPage = {
-    "https://www.betonjayareadymix.com/p/jasa-pasang-acp-interior.html": "Jasa Pasang ACP Interior",
+   // "https://www.betonjayareadymix.com/p/jasa-pasang-acp-interior.html": "Jasa Pasang ACP Interior",
     "https://www.betonjayareadymix.com/p/jasa-finishing-interior-kantor.html": "Jasa Finishing Interior Kantor", 
     "https://www.betonjayareadymix.com/p/jasa-finishing-interior-apartemen.html": "Jasa Finishing Interior Apartemen", 
     "https://www.betonjayareadymix.com/p/jasa-finishing-interior-rumah.html": "Jasa Finishing Interior Rumah", 
@@ -286,13 +286,8 @@ const urlMappingJasaInteriorFromMoneyMasterMoneyPage = {
   // ============================================================
     // LEVEL 5 (MP) - HALAMAN HARGA INTERIOR
     // ============================================================
-	"https://www.betonjayareadymix.com/p/harga-jasa-interior.html": "Harga Jasa Interior",
-    "https://www.betonjayareadymix.com/p/harga-jasa-interior-per-meter.html": "Harga Jasa Interior Per Meter",
-    "https://www.betonjayareadymix.com/p/harga-jasa-borongan-interior.html": "Harga Jasa Borongan Interior",
-    //"https://www.betonjayareadymix.com/p/harga-interior-kamar.html": "Harga Jasa Interior Kamar",
-    "https://www.betonjayareadymix.com/p/harga-jasa-interior-kamar-tidur.html": "Harga Jasa Interior Kamar Tidur",
-    "https://www.betonjayareadymix.com/p/harga-jasa-interior-ruang-tamu.html": "Harga Jasa Interior Ruang Tamu"
-
+	"https://www.betonjayareadymix.com/p/harga-jasa-interior.html": "Harga Jasa Interior"
+   
 };
 const urlMappingHargaJasaInteriorFromMoneyPageMoneyPage = {
   // ============================================================
