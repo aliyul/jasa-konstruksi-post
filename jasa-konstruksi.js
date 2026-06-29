@@ -2855,9 +2855,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // ============================================================
     // 📌 KONSTANTA PAGE LEVELS (KATEGORISASI YANG BENAR)
     // ============================================================
-    const EVERGREEN_LEVELS = ['pillar', 'sub-pillar-tipe-2', 'variant', 'sub-variant'];
-    const FLEXIBLE_LEVELS = ['sub-pillar-tipe-1'];
-    const MONEY_LEVELS = ['money-master', 'money-page', 'money-child', 'money-leadgen'];
+// 1. EVERGREEN: Halaman yang jarang berubah (authority tinggi)
+const EVERGREEN_LEVELS = ['home', 'pillar', 'sub-pillar-tipe-2', 'variant', 'sub-variant'];
+
+// 2. FLEXIBLE: Halaman yang sesekali perlu di-update
+const FLEXIBLE_LEVELS = ['sub-pillar-tipe-1'];
+
+// 3. MONEY: Halaman yang harus selalu fresh (harga, biaya, lokasi)
+const MONEY_LEVELS = ['money-master', 'money-page', 'money-child', 'money-leadgen'];
+
 
     // ============================================================
     // 📌 FUNGSI LOAD EXTERNAL JS
@@ -3080,13 +3086,14 @@ document.addEventListener("DOMContentLoaded", function() {
     function getCustomDateByPageLevel(pageLevel, entityType) {
       if (EVERGREEN_LEVELS.includes(pageLevel)) {
         if (pageLevel === 'pillar') {
-          return "2026-04-01T10:30:00+07:00";
+          return "2026-06-29T10:30:00+07:00";
         }
-        return "2026-04-02T00:00:00+07:00";
+		//SUB2
+        return "2026-06-29T00:00:00+07:00";
       }
-      
+      //SUB1
       if (FLEXIBLE_LEVELS.includes(pageLevel)) {
-        return "2026-04-15T00:00:00+07:00";
+        return "2026-06-29T00:00:00+07:00";
       }
       
       if (MONEY_LEVELS.includes(pageLevel)) {
