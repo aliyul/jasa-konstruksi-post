@@ -801,8 +801,26 @@ const urlMappingJasaPasangKacaEksteriorFromMoneyPageMoneyPage1 = {
 };
 
 const urlMappingJasaPasangBatuFromMoneyMaster1MoneyPage = {
- "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam.html": "Jasa Pasang Batu Alam"
+ "https://www.betonjayareadymix.com/p/jasa-pasang-batu-interior.html": "Jasa Pasang Batu Interior",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-batu-eksterior.html": "Jasa Pasang Batu Eksterior"
+
 };
+const urlMappingJasaPasangBatuInteriorFromMoneyPageMoneyPage1 = {
+ "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-dinding-interior.html": "Jasa Pasang Batu Alam Dinding Interior",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-kamar-mandi.html": "Jasa Pasang Batu Alam Kamar Mandi",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-tangga.html": "Jasa Pasang Batu Alam Tangga",
+ "https://www.betonjayareadymix.com/p/harga-jasa-pasang-batu-alam-interior.html": "Harga Jasa Pasang Batu Alam Interior"
+};
+const urlMappingJasaPasangBatuAlamDindingInteriorFromMoneyPage1MoneyPage2 = {
+ "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-ruang-tamu.html": "Jasa Pasang Batu Alam Ruang Tamu",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-kamar-tidur.html": "Jasa Pasang Batu Alam Kamar Tidur"
+};
+const urlMappingJasaPasangBatuEksteriorFromMoneyPageMoneyPage1 = {
+ "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-fasad.html": "Jasa Pasang Batu Alam Fasad",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-pagar.html": "Jasa Pasang Batu Alam Pagar",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-taman.html": "Jasa Pasang Batu Alam Taman"
+};
+
 const urlMappingJasaPasangAcpFromMoneyMaster1MoneyPage = {
 "https://www.betonjayareadymix.com/p/harga-jasa-pasang-acp.html": "Harga Jasa Pasang ACP",
   "https://www.betonjayareadymix.com/p/jasa-pasang-acp-interior.html": "Jasa Pasang ACP Interior",
@@ -2714,6 +2732,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangKacaEksteriorFromMoneyPageMoneyPage1,
 
 		urlMappingJasaPasangBatuFromMoneyMaster1MoneyPage,
+		urlMappingJasaPasangBatuInteriorFromMoneyPageMoneyPage1,
+		urlMappingJasaPasangBatuAlamDindingInteriorFromMoneyPage1MoneyPage2,
+		urlMappingJasaPasangBatuEksteriorFromMoneyPageMoneyPage1,
+		
 		
 		urlMappingJasaPasangAcpFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangACPInteriorFromMoneyPageMoneyPage1,
@@ -5019,7 +5041,56 @@ if (urlMappingJasaPasangBatuFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
             { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
-            { name: 'Jasa Pasang Batu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-Batu.html'}
+            { name: 'Jasa Pasang Batu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}	
+if (urlMappingJasaPasangBatuInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaPasangBatuInteriorFromMoneyPageMoneyPage1,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Batu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu.html'},
+            { name: 'Jasa Pasang Batu Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu-interior.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}		
+if (urlMappingJasaPasangBatuAlamDindingInteriorFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaPasangBatuAlamDindingInteriorFromMoneyPage1MoneyPage2,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Batu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu.html'},
+            { name: 'Jasa Pasang Batu Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu-interior.html'},
+            { name: 'Jasa Pasang Batu Alam Dinding Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu--alam-dinding-interior.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaPasangBatuEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaPasangBatuEksteriorFromMoneyPageMoneyPage1,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Batu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu.html'},
+            { name: 'Jasa Pasang Batu Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu-eksterior.html'}
         ],
         'JASA_KONSTRUKSI'
     );
