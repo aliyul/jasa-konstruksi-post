@@ -733,12 +733,6 @@ const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
     "https://www.betonjayareadymix.com/p/jasa-pasang-cctv.html": "Jasa Pasang CCTV",
     "https://www.betonjayareadymix.com/p/jasa-pasang-ac.html": "Jasa Pasang AC"
 };
-const urlMappingJasaPasangHplFromMoneyMaster1MoneyPage = {
- "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-eksterior.html": "Jasa Pasang HPL Eksterior"
-};
-const urlMappingJasaPasangWoodPlankFromMoneyMaster1MoneyPage = {
- "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-eksterior.html": "Jasa Pasang Wood Plank Eksterior",
-};
 
 const urlMappingJasaPasangGrcFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-pasang-grc-eksterior.html": "Jasa Pasang GRC Eksterior",
@@ -844,6 +838,38 @@ const urlMappingJasaPasangWoodPlankDindingInteriorFromMoneyPage1MoneyPage2 = {
  "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-ruang-tamu.html": "Jasa Pasang Wood Plank Ruang Tamu",
  "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-kamar-tidur.html": "Jasa Pasang Wood Plank Kamar Tidur"
 };
+
+const urlMappingJasaPasangHplFromMoneyMaster1MoneyPage = {
+ "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-interior.html": "Jasa Pasang HPL Interior",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-eksterior.html": "Jasa Pasang HPL Eksterior",
+ "https://www.betonjayareadymix.com/p/harga-jasa-pasang-hpl.html": "Harga Jasa Pasang HPL"
+
+};
+const urlMappingJasaPasangHplEksteriorFromMoneyPageMoneyPage1 = {
+ "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-fasad.html": "Jasa Pasang HPL Fasad",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-dinding-eksterior.html": "Jasa Pasang HPL Dinding Eksterior",
+ "https://www.betonjayareadymix.com/p/harga-jasa-pasang-hpl-eksterior.html": "Harga Jasa Pasang HPL Eksterior"
+
+};
+
+const urlMappingJasaPasangHplInteriorFromMoneyPageMoneyPage1 = {
+ "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-dinding-interior.html": "Jasa Pasang HPL Dinding Interior",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-furniture.html": "Jasa Pasang HPL Furniture",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-plafon.html": "Jasa Pasang HPL Plafon",
+ "https://www.betonjayareadymix.com/p/harga-jasa-pasang-hpl-eksterior.html": "Harga Jasa Pasang HPL Interior"
+
+};
+const urlMappingJasaPasangHPLDindingInteriorFromMoneyPage1MoneyPage2 = {
+ "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-backdrop-tv.html": "Jasa Pasang HPL Backdrop TV",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-partisi-ruangan.html": "Jasa Pasang HPL Partisi Ruangan",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-wall-panel.html": "Jasa Pasang HPL Wall Panel"
+};
+const urlMappingJasaPasangHPLFurnitureFromMoneyPage1MoneyPage2 = {
+ "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-kitchen-set.html": "Jasa Pasang HPL Kitchen Set",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-lemari.html": "Jasa Pasang HPL Lemari",
+ "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-rak.html": "Jasa Pasang HPL Rak"
+};
+
 
 const urlMappingJasaPasangAcpFromMoneyMaster1MoneyPage = {
 "https://www.betonjayareadymix.com/p/harga-jasa-pasang-acp.html": "Harga Jasa Pasang ACP",
@@ -2764,6 +2790,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangWoodPlankEksteriorFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangWoodPlankInteriorFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangWoodPlankDindingInteriorFromMoneyPage1MoneyPage2,
+
+		urlMappingJasaPasangHplFromMoneyMaster1MoneyPage,
+		urlMappingJasaPasangHplEksteriorFromMoneyPageMoneyPage1,
+       urlMappingJasaPasangHplInteriorFromMoneyPageMoneyPage1,
+		urlMappingJasaPasangHPLDindingInteriorFromMoneyPage1MoneyPage2,
+		urlMappingJasaPasangHPLFurnitureFromMoneyPage1MoneyPage2,
 		
 		urlMappingJasaPasangAcpFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangACPInteriorFromMoneyPageMoneyPage1,
@@ -5184,6 +5216,88 @@ if (urlMappingJasaPasangWoodPlankDindingInteriorFromMoneyPage1MoneyPage2[cleanUr
             { name: 'Jasa Pasang Wood Plank', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank.html'},
             { name: 'Jasa Pasang Wood Plank Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-interior.html'},
             { name: 'Jasa Pasang Wood Plank Dinding Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-dinding-interior.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}	
+	
+if (urlMappingJasaPasangHplFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaPasangHplFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Hpl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaPasangHplEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaPasangHplEksteriorFromMoneyPageMoneyPage1,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Hpl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl.html'},
+            { name: 'Jasa Pasang Hpl Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl-eksterior.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}	
+if (urlMappingJasaPasangHplInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaPasangHplInteriorFromMoneyPageMoneyPage1,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Hpl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl.html'},
+            { name: 'Jasa Pasang Hpl Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl-interior.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}	
+if (urlMappingJasaPasangHPLDindingInteriorFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaPasangHPLDindingInteriorFromMoneyPage1MoneyPage2,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Hpl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl.html'},
+            { name: 'Jasa Pasang Hpl Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl-interior.html'},
+            { name: 'Jasa Pasang Hpl Dinding Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl-dinding-interior.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}	
+if (urlMappingJasaPasangHPLFurnitureFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaPasangHPLFurnitureFromMoneyPage1MoneyPage2,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Hpl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl.html'},
+            { name: 'Jasa Pasang Hpl Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl-interior.html'},
+            { name: 'Jasa Pasang Hpl Furniture', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl-furniture.html'}
         ],
         'JASA_KONSTRUKSI'
     );
