@@ -14,6 +14,28 @@
 };
 */
 
+const urlMappingJasaProfilBetonFromMoneyMasterMoneyChild = {
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-terdekat.html": "Jasa Profil Beton Terdekat",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-jakarta.html": "Jasa Profil Beton Jakarta",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-bogor.html": "Jasa Profil Beton Bogor",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-depok.html": "Jasa Profil Beton Depok",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-tangerang.html": "Jasa Profil Beton Tangerang",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-bekasi.html": "Jasa Profil Beton Bekasi",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-karawang.html": "Jasa Profil Beton Karawang",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-sukabumi.html": "Jasa Profil Beton Sukabumi",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-purwakarta.html": "Jasa Profil Beton Purwakarta"
+};
+const urlMappingHargaJasaProfilBetonFromMoneyPageMoneyChild = {
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-terdekat.html": "Harga Jasa Profil Beton Terdekat",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-jakarta.html": "Harga Jasa Profil Beton Jakarta",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-bogor.html": "Harga Jasa Profil Beton Bogor",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-depok.html": "Harga Jasa Profil Beton Depok",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-tangerang.html": "Harga Jasa Profil Beton Tangerang",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-bekasi.html": "Harga Jasa Profil Beton Bekasi",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-karawang.html": "Harga Jasa Profil Beton Karawang",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-sukabumi.html": "Harga Jasa Profil Beton Sukabumi",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-purwakarta.html": "Harga Jasa Profil Beton Purwakarta"
+};
 // ============================================================
 // 📁 JASA FINISHING DAK BETON - MONEY PAGE & TURUNAN
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE (bukan MONEY_MASTER)
@@ -2355,7 +2377,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const currentUrl = cleanUrlJasaKonsFinishingPost;
    const urlMappingGabungan = Object.assign(
     {},
-
+	urlMappingJasaProfilBetonFromMoneyMasterMoneyChild,
+    urlMappingHargaJasaProfilBetonFromMoneyPageMoneyChild,
+	   
     urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild,
     urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyChild,
     urlMappingHargaJasaBoronganPlesteranAcianFromMoneyPage2MoneyPage3,
@@ -3021,12 +3045,33 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
      JasaFinishingInfrastrukturPostLink.style.visibility = 'hidden';
      pageNameJasaKonsFinishingPostLink.textContent = "";
      */
-	
-    //SUB FINISHING BANGUNAN
-	//FINISHING STRUKTUR
-// ============================================================
-// MONEY PAGE: Harga Finishing Dak Beton
-// ============================================================
+if (urlMappingJasaProfilBetonFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+        generateBreadcrumbjasaKonstruksiFinishingPost(
+	        urlMappingJasaProfilBetonFromMoneyMasterMoneyChild,
+	        cleanUrlJasaKonsFinishingPost,
+	        [
+	        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-profil-beton.html' },
+            { name: 'Perbandingan Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-profil-beton.html' },
+            { name: 'Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton.html' }
+	        ],
+	        'JASA_KONSTRUKSI'
+	    );
+	}	
+if (urlMappingHargaJasaProfilBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+        generateBreadcrumbjasaKonstruksiFinishingPost(
+	        urlMappingHargaJasaProfilBetonFromMoneyPageMoneyChild,
+	        cleanUrlJasaKonsFinishingPost,
+	        [
+	        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-profil-beton.html' },
+            { name: 'Perbandingan Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-profil-beton.html' },
+            { name: 'Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton.html' },
+            { name: 'Harga Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-profil-beton.html' }
+	        ],
+	        'JASA_KONSTRUKSI'
+	    );
+	}
 
 	
 if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
