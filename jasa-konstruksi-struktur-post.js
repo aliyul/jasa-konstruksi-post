@@ -158,13 +158,13 @@ const urlMappingHargaJasaKonstruksiBajaKonvensionalFromMoneyPage2MoneyPage3 = {
   
 };
 const urlMappingJasaPembangunanTowerBajaFromMoneyPage2MoneyPage3 = {
- "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-tower.html": "Harga Jasa Pasang Tower",
- "https://www.betonjayareadymix.com/2018/09/harga-borongan-pasang-tower.html": "Harga Jasa Borongan Pasang Tower",  
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pembangunan-tower-baja.html": "Harga Jasa Pembangunan Tower Baja",
   "https://www.betonjayareadymix.com/2018/09/jasa-pemasangan-tower-bts.html": "Jasa Pemasangan Tower BTS",  
   "https://www.betonjayareadymix.com/2018/09/jasa-pemasangan-tower-triangle.html": "Jasa Pemasangan Tower Triangle" 
 };
 const urlMappingHargaJasaPembangunanTowerBajaFromMoneyPage3MoneyPage4 = {
- "https://www.betonjayareadymix.com/2018/09/harga-borongan-pasang-tower.html": "Harga Jasa Borongan Pasang Tower"
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-tower.html": "Harga Jasa Pasang Tower",
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-pasang-tower.html": "Harga Jasa Borongan Pasang Tower"
 };
 // ============================================================
 // 📁 JASA KANOPI BAJA DAN BESI - KOSONG (SARAN ITEM)
@@ -3105,7 +3105,7 @@ if (urlMappingJasaKonstruksiBajaKonvensionalFromMoneyPage1MoneyPage2[cleanUrlJas
 			 { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
             { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' },
             { name: 'Jasa Konstruksi Baja Konvensional', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-konvensional.html' },
-            { name: 'Jasa Pembangunan Tower Baja', url: 'https://www.betonjayareadymix.com/p/jasa-pembangunan-tower-baja.html' }
+            { name: 'Jasa Pembangunan Tower Baja', url: 'https://www.betonjayareadymix.com/2018/09/jasa-pembangunan-tower-baja.html' }
 
         ],
         'JASA_KONSTRUKSI'
@@ -3122,8 +3122,8 @@ if (urlMappingJasaKonstruksiBajaKonvensionalFromMoneyPage1MoneyPage2[cleanUrlJas
 			 { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
             { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' },
             { name: 'Jasa Konstruksi Baja Konvensional', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-konvensional.html' },
-            { name: 'Jasa Pembangunan Tower Baja', url: 'https://www.betonjayareadymix.com/p/jasa-pembangunan-tower-baja.html' },
-            { name: 'Harga Jasa Pembangunan Tower Baja', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pembangunan-tower-baja.html' }
+            { name: 'Jasa Pembangunan Tower Baja', url: 'https://www.betonjayareadymix.com/2018/09/jasa-pembangunan-tower-baja.html' },
+            { name: 'Harga Jasa Pembangunan Tower Baja', url: 'https://www.betonjayareadymix.com/2018/09/harga-jasa-pembangunan-tower-baja.html' }
 
         ],
         'JASA_KONSTRUKSI'
