@@ -562,7 +562,7 @@ const urlMappingHargaJasaEksteriorFromMoneyMaster1MoneyPage = {
 
 };
 const urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-fasad-rumah.html": "Harga Jasa Fasad Rumah",
+	"https://www.betonjayareadymix.com/p/harga-jasa-fasad-rumah.html": "Harga Jasa Fasad Rumah"
 	
     // 2. PASANG MATERIAL EKSTERIOR
 	 // LEVEL 5 (MP) - LAYANAN UTAMA
@@ -575,7 +575,7 @@ const urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage = {
    // "https://www.betonjayareadymix.com/p/jasa-pasang-kaca-fasad.html": "Jasa Pasang Kaca Fasad",
    // "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-fasad.html": "Jasa Pasang Batu Alam Fasad",
    // "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-fasad.html": "Jasa Pasang Wood Plank Fasad",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-fasad.html": "Jasa Pasang HPL Fasad"
+  //  "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-fasad.html": "Jasa Pasang HPL Fasad"
 
 };
 
