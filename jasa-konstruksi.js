@@ -5074,7 +5074,7 @@ if (urlMappingJasaPasangBatuAlamDindingInteriorFromMoneyPage1MoneyPage2[cleanUrl
             { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Batu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu.html'},
             { name: 'Jasa Pasang Batu Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu-interior.html'},
-            { name: 'Jasa Pasang Batu Alam Dinding Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu--alam-dinding-interior.html'}
+            { name: 'Jasa Pasang Batu Alam Dinding Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-dinding-interior.html'}
         ],
         'JASA_KONSTRUKSI'
     );
