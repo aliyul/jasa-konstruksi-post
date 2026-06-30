@@ -824,7 +824,7 @@ const urlMappingHargaJasaPasangACPFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2020/01/harga-jasa-pasang-acp-tangerang.html": "Harga Jasa Pasang ACP Tangerang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2020/01/harga-jasa-pasang-acp-bekasi.html": "Harga Jasa Pasang ACP Bekasi"  // TYPE: MONEY_CHILD
 };
-const urlMappingJasaPasangACPPerMeterFromMoneyPage1MoneyChild = {
+const urlMappingJasaPasangACPPerMeterFromMoneyPageMoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - JASA ACP PER METER PER LOKASI
   // ============================================================
@@ -2419,7 +2419,7 @@ document.addEventListener("DOMContentLoaded", function() {
     urlMappingJasaCatEksteriorRumahFromSub2MoneyPage,
     urlMappingJasaPasangACPFromMoneyMaster1MoneyChild,
 	urlMappingHargaJasaPasangACPFromMoneyPageMoneyChild,
-	urlMappingJasaPasangACPPerMeterFromMoneyPage1MoneyChild,
+	urlMappingJasaPasangACPPerMeterFromMoneyPageMoneyChild,
     urlMappingJasaPelapisanAntiCuacaFromSub2MoneyPage,
     urlMappingJasaPelapisanDindingLuarFromSub2MoneyPage,
     urlMappingJasaTamanFromMoneyMaster3MoneyChild,
@@ -3850,18 +3850,16 @@ if (urlMappingJasaPasangACPFromMoneyMaster1MoneyChild[cleanUrlJasaKonsFinishingP
     );
 }
 	
-if (urlMappingJasaPasangACPPerMeterFromMoneyPage1MoneyChild[cleanUrlJasaKonsFinishingPost]) {
+if (urlMappingJasaPasangACPPerMeterFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
      generateBreadcrumbjasaKonstruksiFinishingPost(
-        urlMappingJasaPasangACPPerMeterFromMoneyPage1MoneyChild,
+        urlMappingJasaPasangACPPerMeterFromMoneyPageMoneyChild,
         cleanUrlJasaKonsFinishingPost,
         [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-            { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-            { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html' },
-            { name: 'Jasa Pasang ACP Fasad', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp-fasad.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Acp', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp.html'},
             { name: 'Jasa Pasang ACP Per Meter', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp-per-meter.html' }
         ],
         'JASA'
