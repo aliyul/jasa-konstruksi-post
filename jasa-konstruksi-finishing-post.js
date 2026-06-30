@@ -13,29 +13,42 @@
   "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur",  // TYPE: SUB2
 };
 */
+const urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-terdekat.html": "Jasa Furniture Terdekat",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-jakarta.html": "Jasa Furniture Jakarta",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-bogor.html": "Jasa Furniture Bogor",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-depok.html": "Jasa Furniture Depok",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-tangerang.html": "Jasa Furniture Tangerang",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-bekasi.html": "Jasa Furniture Bekasi",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-karawang.html": "Jasa Furniture Karawang",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-surabaya.html": "Jasa Furniture Surabaya",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-sukabumi.html": "Jasa Furniture Sukabumi",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-purwakarta.html": "Jasa Furniture Purwakarta"
+};	
+
 const urlMappingJasaInteriorFromMoneyMasterMoneyChild = {
-"https://www.betonjayareadymix.com/2018/09/jasa-interior-terdekat.html": "Jasa Furniture Terdekat",
-"https://www.betonjayareadymix.com/2018/09/jasa-interior-jakarta.html": "Jasa Furniture Jakarta",
-"https://www.betonjayareadymix.com/2018/09/jasa-interior-bogor.html": "Jasa Furniture Bogor",
-"https://www.betonjayareadymix.com/2018/09/jasa-interior-depok.html": "Jasa Furniture Depok",
-"https://www.betonjayareadymix.com/2018/09/jasa-interior-tangerang.html": "Jasa Furniture Tangerang",
-"https://www.betonjayareadymix.com/2018/09/jasa-interior-bekasi.html": "Jasa Furniture Bekasi",
-"https://www.betonjayareadymix.com/2018/09/jasa-interior-karawang.html": "Jasa Furniture Karawang",
-"https://www.betonjayareadymix.com/2018/09/jasa-interior-surabaya.html": "Jasa Furniture Surabaya",
-"https://www.betonjayareadymix.com/2018/09/jasa-interior-sukabumi.html": "Jasa Furniture Sukabumi",
-"https://www.betonjayareadymix.com/2018/09/jasa-interior-purwakarta.html": "Jasa Furniture Purwakarta"
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-terdekat.html": "Jasa Interior Terdekat",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-jakarta.html": "Jasa Interior Jakarta",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-bogor.html": "Jasa Interior Bogor",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-depok.html": "Jasa Interior Depok",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-tangerang.html": "Jasa Interior Tangerang",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-bekasi.html": "Jasa Interior Bekasi",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-karawang.html": "Jasa Interior Karawang",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-surabaya.html": "Jasa Interior Surabaya",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-sukabumi.html": "Jasa Interior Sukabumi",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-purwakarta.html": "Jasa Interior Purwakarta"
 };	
 const urlMappingHargaJasaInteriorFromMoneyPageMoneyChild = {
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-terdekat.html": "Harga Jasa Furniture Terdekat",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-terdekat.html": "Harga Jasa Interior Terdekat",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-jakarta.html": "JHarga asa Furniture Jakarta",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-bogor.html": "Harga Jasa Furniture Bogor",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-depok.html": "Harga Jasa Furniture Depok",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-tangerang.html": "Harga Jasa Furniture Tangerang",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-bekasi.html": "Harga Jasa Furniture Bekasi",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-karawang.html": "Harga Jasa Furniture Karawang",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-surabaya.html": "Harga Jasa Furniture Surabaya",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-sukabumi.html": "Harga Jasa Furniture Sukabumi",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-purwakarta.html": "Harga Jasa Furniture Purwakarta"
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-bogor.html": "Harga Jasa Interior Bogor",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-depok.html": "Harga Jasa Interior Depok",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-tangerang.html": "Harga Jasa Interior Tangerang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-bekasi.html": "Harga Jasa Interior Bekasi",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-karawang.html": "Harga Jasa Interior Karawang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-surabaya.html": "Harga Jasa Interior Surabaya",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-sukabumi.html": "Harga Jasa Interior Sukabumi",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-purwakarta.html": "Harga Jasa Interior Purwakarta"
 };	
 
 const urlMappingJasaProfilBetonFromMoneyMasterMoneyChild = {
