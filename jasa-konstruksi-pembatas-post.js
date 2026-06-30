@@ -2266,7 +2266,7 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
             { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
-            { name: 'Jasa Pagar Panel Beton', url: 'https://www.betonjayareadymix.com/p/jasa-pagar-panel-beton.html' }
+            { name: 'Jasa Pasang Pagar Panel Beton', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-panel-beton.html' }
         ],
         'JASA_KONSTRUKSI'
     );
@@ -2282,7 +2282,7 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
             { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
-            { name: 'Jasa Pagar Beton Precast', url: 'https://www.betonjayareadymix.com/p/jasa-pagar-beton-precast.html' }
+            { name: 'Jasa Pasang Pagar Beton Precast', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-beton-precast.html' }
         ],
         'JASA_KONSTRUKSI'
     );
