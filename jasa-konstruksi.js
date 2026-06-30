@@ -24,7 +24,10 @@ const urlMappingJasaKonsPillar = {
 // ============================================================
 // 📁 LEVEL 2 - SUB2 (Turunan dari PILLAR Jasa Konstruksi)
 // ============================================================
+const urlMappingJasaDesainFromPillarSub2 = {
 
+};
+https://www.betonjayareadymix.com/p/daftar-jasa-desain-interior.html
 const urlMappingJasaKonsFromPillarSub2 = {
   // ============================================================
   // [SUB2] - SUB-PILLAR TIPE 2 (KATEGORI LAYANAN UTAMA)
@@ -3086,14 +3089,14 @@ const MONEY_LEVELS = ['money-master', 'money-page', 'money-child', 'money-leadge
     function getCustomDateByPageLevel(pageLevel, entityType) {
       if (EVERGREEN_LEVELS.includes(pageLevel)) {
         if (pageLevel === 'pillar') {
-          return "2026-06-29T10:30:00+07:00";
+          return "2026-06-30T10:30:00+07:00";
         }
 		//SUB2
-        return "2026-06-29T00:00:00+07:00";
+        return "2026-06-30T00:00:00+07:00";
       }
       //SUB1
       if (FLEXIBLE_LEVELS.includes(pageLevel)) {
-        return "2026-06-29T00:00:00+07:00";
+        return "2026-06-30T00:00:00+07:00";
       }
       
       if (MONEY_LEVELS.includes(pageLevel)) {
