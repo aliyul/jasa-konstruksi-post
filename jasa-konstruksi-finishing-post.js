@@ -464,24 +464,24 @@ const urlMappingJasaPembuatanCustomFurnitureFromMoneyPageMoneyChild = {
 // 📁 JASA KERAMIK LANTAI - MONEY PAGE & MONEY CHILD
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE & MONEY_CHILD (bukan MONEY_MASTER)
 // Parent: Jasa Finishing Bangunan (/p/jasa-finishing-bangunan.html)
-// Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Bangunan > Jasa Keramik Lantai (4 level)
+// Breadcrumb: Home > Jasa Konstruksi > Jasa Finishing Bangunan > Jasa Pasang Keramik Lantai (4 level)
 // ============================================================
 
-const urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild = {
-   "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-murah.html": "Jasa Pasang Keramik Lantai Murah",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-24-jam.html": "Jasa Pasang Keramik Lantai 24 Jam",  // TYPE: MONEY_CHILD
-   "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-terdekat.html": "Jasa Pasang Keramik Lantai Terdekat",  // TYPE: MONEY_CHILD
+const urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyChild = {
+   "https://www.betonjayareadymix.com/2018/10/jasa-pasang-keramik-lantai-murah.html": "Jasa Pasang Keramik Lantai Murah",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/10/jasa-pasang-keramik-lantai-24-jam.html": "Jasa Pasang Keramik Lantai 24 Jam",  // TYPE: MONEY_CHILD
+   "https://www.betonjayareadymix.com/2018/10/jasa-pasang-keramik-lantai-terdekat.html": "Jasa Pasang Keramik Lantai Terdekat",  // TYPE: MONEY_CHILD
 
   // ============================================================
   // [MONEY_CHILD] - JASA PASANG KERAMIK PER LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-jakarta.html": "Jasa Pasang Keramik Lantai Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-bogor.html": "Jasa Pasang Keramik Lantai Bogor",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-depok.html": "Jasa Pasang Keramik Lantai Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-tangerang.html": "Jasa Pasang Keramik Lantai Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-bekasi.html": "Jasa Pasang Keramik Lantai Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-bandung.html": "Jasa Pasang Keramik Lantai Bandung",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-surabaya.html": "Jasa Pasang Keramik Lantai Surabaya"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/10/jasa-pasang-keramik-lantai-jakarta.html": "Jasa Pasang Keramik Lantai Jakarta",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/10/jasa-pasang-keramik-lantai-bogor.html": "Jasa Pasang Keramik Lantai Bogor",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/10/jasa-pasang-keramik-lantai-depok.html": "Jasa Pasang Keramik Lantai Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/10/jasa-pasang-keramik-lantai-tangerang.html": "Jasa Pasang Keramik Lantai Tangerang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/10/jasa-pasang-keramik-lantai-bekasi.html": "Jasa Pasang Keramik Lantai Bekasi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/10/jasa-pasang-keramik-lantai-bandung.html": "Jasa Pasang Keramik Lantai Bandung",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/10/jasa-pasang-keramik-lantai-surabaya.html": "Jasa Pasang Keramik Lantai Surabaya"  // TYPE: MONEY_CHILD
   
   // ============================================================
   // [SUB2] - PANDUAN / INFORMASIONAL (boleh skip di breadcrumb)
@@ -2393,7 +2393,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	urlMappingHargaJasaFloorHardenerFromMoneyPageMoneyChild,
     urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyChild,
     urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoneyChild,
-    urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild,
+    urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyChild,
     urlMappingJasaCatInteriorRumahFromMoneyPageMoneyChild,
     urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyChild,
 	
@@ -3613,9 +3613,9 @@ if (urlMappingJasaCatInteriorRumahFromMoneyPageMoneyChild[cleanUrlJasaKonsFinish
     );
 }
   
-if (urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+if (urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
        generateBreadcrumbjasaKonstruksiFinishingPost(
-        urlMappingJasaKeramikLantaiFromMoneyPageMoneyChild,
+        urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyChild,
         cleanUrlJasaKonsFinishingPost,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
