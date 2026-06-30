@@ -2642,6 +2642,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	// --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
+		urlMappingJasaDesainFromPillarSub2,
+		urlMappingJasaDesainFromSub2Sub1,
+		
+		
 		urlMappingJasaKonsFromPillarSub2,
 		urlMappingJasaReliefBridgeFromSub2Sub1,
        urlMappingJasaReliefBridgeFromSub1MoneyMaster,
@@ -3450,76 +3454,43 @@ if (!JasaKons || !JasaKonsSub) {
     pageNameKonstruksi.textContent = "";
     pageNameKonstruksiSub.textContent = "";
 
-if (urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons]) {
-        restoreCondition('JasaKons');
-	restoreCondition('JasaKonstruksi');
-           // hapus elemen id DIV Lain
-	removeCondition('ProdukInFur');
-        removeCondition('MaterialKons');
-	removeCondition('ProdukKons');
-        //removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatasPost');
-        removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsPerbaikan');
-        removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-	removeCondition('JasaKonsSub');
-	removeCondition('MenuKons');
+if (urlMappingJasaDesainFromPillarSub2[cleanUrlJasaKons]) {
 	
-	    
-       // hapus elemen id DIV Lain
-
-        JasaKonstruksiLink.style.visibility = 'visible';
-        pageNameKonstruksi.textContent = urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons];
+	   generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaDesainFromPillarSub2,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Desain', url: 'https://www.betonjayareadymix.com/p/jasa-desain.html' }
+           // { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaDesainFromSub2Sub1[cleanUrlJasaKons]) {
+	
+	   generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaDesainFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Desain', url: 'https://www.betonjayareadymix.com/p/jasa-desain.html' },
+           { name: 'Daftar Jasa Desain', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-desain.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+		
+if (urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons]) {
 	
 	   generateBreadcrumbJasaKonstruksi(
         urlMappingJasaKonsFromPillarSub2,
         cleanUrlJasaKons,
        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' }
            // { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html' }
         ],
         'JASA_KONSTRUKSI'
     );
-	
-    }
-	/*
-   // ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons],
-                   "item": cleanUrlJasaKons
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-	*/
+}
 	
 if (urlMappingJasaReliefBridgeFromSub2Sub1[cleanUrlJasaKons]) {
      generateBreadcrumbJasaKonstruksi(
