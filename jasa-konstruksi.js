@@ -25,9 +25,11 @@ const urlMappingJasaKonsPillar = {
 // 📁 LEVEL 2 - SUB2 (Turunan dari PILLAR Jasa Konstruksi)
 // ============================================================
 const urlMappingJasaDesainFromPillarSub2 = {
-
+"https://www.betonjayareadymix.com/p/daftar-jasa-desain.html": "Daftar Jasa Desain"
 };
-https://www.betonjayareadymix.com/p/daftar-jasa-desain-interior.html
+const urlMappingJasaDesainFromSub2Sub1 = {
+"https://www.betonjayareadymix.com/p/perbandingan-jasa-desain.html": "Perbandingan Jasa Desain"
+};
 const urlMappingJasaKonsFromPillarSub2 = {
   // ============================================================
   // [SUB2] - SUB-PILLAR TIPE 2 (KATEGORI LAYANAN UTAMA)
