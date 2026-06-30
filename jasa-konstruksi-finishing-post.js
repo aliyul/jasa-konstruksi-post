@@ -13,6 +13,30 @@
   "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur",  // TYPE: SUB2
 };
 */
+const urlMappingJasaInteriorFromMoneyMasterMoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-terdekat.html": "Jasa Furniture Terdekat",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-jakarta.html": "Jasa Furniture Jakarta",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-bogor.html": "Jasa Furniture Bogor",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-depok.html": "Jasa Furniture Depok",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-tangerang.html": "Jasa Furniture Tangerang",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-bekasi.html": "Jasa Furniture Bekasi",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-karawang.html": "Jasa Furniture Karawang",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-surabaya.html": "Jasa Furniture Surabaya",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-sukabumi.html": "Jasa Furniture Sukabumi",
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-purwakarta.html": "Jasa Furniture Purwakarta"
+};	
+const urlMappingHargaJasaInteriorFromMoneyPageMoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-terdekat.html": "Harga Jasa Furniture Terdekat",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-jakarta.html": "JHarga asa Furniture Jakarta",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-bogor.html": "Harga Jasa Furniture Bogor",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-depok.html": "Harga Jasa Furniture Depok",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-tangerang.html": "Harga Jasa Furniture Tangerang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-bekasi.html": "Harga Jasa Furniture Bekasi",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-karawang.html": "Harga Jasa Furniture Karawang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-surabaya.html": "Harga Jasa Furniture Surabaya",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-sukabumi.html": "Harga Jasa Furniture Sukabumi",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-purwakarta.html": "Harga Jasa Furniture Purwakarta"
+};	
 
 const urlMappingJasaProfilBetonFromMoneyMasterMoneyChild = {
   "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-terdekat.html": "Jasa Profil Beton Terdekat",
@@ -2377,6 +2401,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const currentUrl = cleanUrlJasaKonsFinishingPost;
    const urlMappingGabungan = Object.assign(
     {},
+	urlMappingJasaInteriorFromMoneyMasterMoneyChild,
+	urlMappingHargaJasaInteriorFromMoneyPageMoneyChild,
+	   
 	urlMappingJasaProfilBetonFromMoneyMasterMoneyChild,
     urlMappingHargaJasaProfilBetonFromMoneyPageMoneyChild,
 	   
@@ -2396,7 +2423,7 @@ document.addEventListener("DOMContentLoaded", function() {
     urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyChild,
     urlMappingJasaCatInteriorRumahFromMoneyPageMoneyChild,
     urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyChild,
-	
+
     urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyChild,
     urlMappingJasaFinishingInteriorKlasikFromMoneyPageMoneyPage1,
     urlMappingJasaFinishingInteriorMinimalisFromMoneyPageMoneyPage1,
@@ -3045,6 +3072,35 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
      JasaFinishingInfrastrukturPostLink.style.visibility = 'hidden';
      pageNameJasaKonsFinishingPostLink.textContent = "";
      */
+
+if (urlMappingJasaInteriorFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+        generateBreadcrumbjasaKonstruksiFinishingPost(
+	        urlMappingJasaInteriorFromMoneyMasterMoneyChild,
+	        cleanUrlJasaKonsFinishingPost,
+	        [
+	        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Interior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-interior.html' },
+            { name: 'Perbandingan Jasa Interior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html' },
+           { name: 'Jasa Interior', url: 'https://www.betonjayareadymix.com/p/jasa-interior.html'}
+	        ],
+	        'JASA_KONSTRUKSI'
+	    );
+}
+if (urlMappingHargaJasaInteriorFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+        generateBreadcrumbjasaKonstruksiFinishingPost(
+	        urlMappingHargaJasaInteriorFromMoneyPageMoneyChild,
+	        cleanUrlJasaKonsFinishingPost,
+	        [
+	        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Interior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-interior.html' },
+            { name: 'Perbandingan Jasa Interior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html' },
+           { name: 'Jasa Interior', url: 'https://www.betonjayareadymix.com/p/jasa-interior.html'},
+           { name: 'Harga Jasa Interior', url: 'https://www.betonjayareadymix.com/p/harga-jasa-interior.html'}
+	        ],
+	        'JASA_KONSTRUKSI'
+	    );
+}
+	
 if (urlMappingJasaProfilBetonFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPost]) {
         generateBreadcrumbjasaKonstruksiFinishingPost(
 	        urlMappingJasaProfilBetonFromMoneyMasterMoneyChild,
