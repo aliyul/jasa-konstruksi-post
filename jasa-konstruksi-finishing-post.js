@@ -468,8 +468,8 @@ const urlMappingJasaPembuatanCustomFurnitureFromMoneyPageMoneyChild = {
 // ============================================================
 
 const urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyChild = {
-   "https://www.betonjayareadymix.com/2018/10/jasa-pasang-keramik-lantai-murah.html": "Jasa Pasang Keramik Lantai Murah",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/10/jasa-pasang-keramik-lantai-24-jam.html": "Jasa Pasang Keramik Lantai 24 Jam",  // TYPE: MONEY_CHILD
+ //  "https://www.betonjayareadymix.com/2018/10/jasa-pasang-keramik-lantai-murah.html": "Jasa Pasang Keramik Lantai Murah",  // TYPE: MONEY_CHILD
+ // "https://www.betonjayareadymix.com/2018/10/jasa-pasang-keramik-lantai-24-jam.html": "Jasa Pasang Keramik Lantai 24 Jam",  // TYPE: MONEY_CHILD
    "https://www.betonjayareadymix.com/2018/10/jasa-pasang-keramik-lantai-terdekat.html": "Jasa Pasang Keramik Lantai Terdekat",  // TYPE: MONEY_CHILD
 
   // ============================================================
