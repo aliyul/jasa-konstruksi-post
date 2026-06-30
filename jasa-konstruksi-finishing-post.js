@@ -14,16 +14,16 @@
 };
 */
 const urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild = {
-"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-terdekat.html": "Jasa Furniture Terdekat",
-"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-jakarta.html": "Jasa Furniture Jakarta",
-"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-bogor.html": "Jasa Furniture Bogor",
-"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-depok.html": "Jasa Furniture Depok",
-"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-tangerang.html": "Jasa Furniture Tangerang",
-"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-bekasi.html": "Jasa Furniture Bekasi",
-"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-karawang.html": "Jasa Furniture Karawang",
-"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-surabaya.html": "Jasa Furniture Surabaya",
-"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-sukabumi.html": "Jasa Furniture Sukabumi",
-"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-purwakarta.html": "Jasa Furniture Purwakarta"
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-terdekat.html": "Jasa Desain Interior Terdekat",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-jakarta.html": "Jasa Desain Interior Jakarta",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-bogor.html": "Jasa Desain Interior Bogor",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-depok.html": "Jasa Desain Interior Depok",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-tangerang.html": "Jasa Desain Interior Tangerang",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-bekasi.html": "Jasa Desain Interior Bekasi",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-karawang.html": "Jasa Desain Interior Karawang",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-surabaya.html": "Jasa Desain Interior Surabaya",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-sukabumi.html": "Jasa Desain Interior Sukabumi",
+"https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-purwakarta.html": "Jasa Desain Interior Purwakarta"
 };	
 
 const urlMappingJasaInteriorFromMoneyMasterMoneyChild = {
