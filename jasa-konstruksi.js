@@ -30,6 +30,27 @@ const urlMappingJasaDesainFromPillarSub2 = {
 const urlMappingJasaDesainFromSub2Sub1 = {
 "https://www.betonjayareadymix.com/p/perbandingan-jasa-desain.html": "Perbandingan Jasa Desain"
 };
+const urlMappingJasaDesainFromSub1MoneyMaster = {
+"https://www.betonjayareadymix.com/p/jasa-desain-interior.html": "Jasa Desain Interior",
+"https://www.betonjayareadymix.com/p/jasa-desain-eksterior.html": "Jasa Desain Eksterior"
+
+};
+const urlMappingJasaDesainFromSub1MoneyPage = {
+"https://www.betonjayareadymix.com/p/harga-jasa-desain.html": "Harga Jasa Desain"
+};
+const urlMappingJasaDesainInteriorFromMoneyMasterMoneyPage = {
+"https://www.betonjayareadymix.com/p/jasa-desain-interior-rumah.html": "Jasa Desain Interior Rumah",
+"https://www.betonjayareadymix.com/p/jasa-desain-interior-kantor.html": "Jasa Desain Interior Kantor",
+"https://www.betonjayareadymix.com/p/jasa-desain-interior-apartemen.html": "Jasa Desain Interior Apartemen",
+"https://www.betonjayareadymix.com/p/harga-jasa-desain-interior.html": "Harga Jasa Desain Interior"
+};
+const urlMappingJasaDesainEksteriorFromMoneyMasterMoneyPage = {
+"https://www.betonjayareadymix.com/p/jasa-desain-fasad.html": "Jasa Desain Fasad",
+"https://www.betonjayareadymix.com/p/jasa-desain-taman.html": "Jasa Desain Taman",
+"https://www.betonjayareadymix.com/p/jasa-desain-lansekap.html": "Jasa Desain Lansekap",
+"https://www.betonjayareadymix.com/p/harga-jasa-desain-eksterior.html": "Harga Jasa Desain Eksterior"
+};
+
 const urlMappingJasaKonsFromPillarSub2 = {
   // ============================================================
   // [SUB2] - SUB-PILLAR TIPE 2 (KATEGORI LAYANAN UTAMA)
@@ -2594,6 +2615,10 @@ document.addEventListener("DOMContentLoaded", function() {
       {},
 		urlMappingJasaDesainFromPillarSub2,
 		urlMappingJasaDesainFromSub2Sub1,
+		urlMappingJasaDesainFromSub1MoneyMaster,
+		urlMappingJasaDesainFromSub1MoneyPage,
+		urlMappingJasaDesainInteriorFromMoneyMasterMoneyPage,
+		urlMappingJasaDesainEksteriorFromMoneyMasterMoneyPage,
 		
 		
 		urlMappingJasaKonsFromPillarSub2,
@@ -3424,6 +3449,60 @@ if (urlMappingJasaDesainFromSub2Sub1[cleanUrlJasaKons]) {
        [
             { name: 'Jasa Desain', url: 'https://www.betonjayareadymix.com/p/jasa-desain.html' },
            { name: 'Daftar Jasa Desain', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-desain.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaDesainFromSub1MoneyMaster[cleanUrlJasaKons]) {
+	
+	   generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaDesainFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Desain', url: 'https://www.betonjayareadymix.com/p/jasa-desain.html' },
+           { name: 'Daftar Jasa Desain', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-desain.html' },
+           { name: 'Perbandingan Jasa Desain', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-desain.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaDesainFromSub1MoneyPage[cleanUrlJasaKons]) {
+	
+	   generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaDesainFromSub1MoneyPage,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Desain', url: 'https://www.betonjayareadymix.com/p/jasa-desain.html' },
+           { name: 'Daftar Jasa Desain', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-desain.html' },
+           { name: 'Perbandingan Jasa Desain', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-desain.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaDesainInteriorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	
+	   generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaDesainInteriorFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Desain', url: 'https://www.betonjayareadymix.com/p/jasa-desain.html' },
+           { name: 'Daftar Jasa Desain', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-desain.html' },
+           { name: 'Perbandingan Jasa Desain', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-desain.html' },
+           { name: 'Jasa Desain Interior', url: 'https://www.betonjayareadymix.com/p/jasa-desain-interior.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaDesainEksteriorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	
+	   generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaDesainEksteriorFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Desain', url: 'https://www.betonjayareadymix.com/p/jasa-desain.html' },
+           { name: 'Daftar Jasa Desain', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-desain.html' },
+           { name: 'Perbandingan Jasa Desain', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-desain.html' },
+           { name: 'Jasa Desain Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-desain-eksterior.html' }
         ],
         'JASA_KONSTRUKSI'
     );
