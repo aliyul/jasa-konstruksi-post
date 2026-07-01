@@ -2365,6 +2365,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const currentUrl = cleanUrlJasaKonsFinishingPost;
    const urlMappingGabungan = Object.assign(
     {},
+	urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild,
 	urlMappingJasaInteriorFromMoneyMasterMoneyChild,
 	urlMappingHargaJasaInteriorFromMoneyPageMoneyChild,
 	   
@@ -3037,6 +3038,19 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
      pageNameJasaKonsFinishingPostLink.textContent = "";
      */
 
+if (urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+        generateBreadcrumbjasaKonstruksiFinishingPost(
+	        urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild,
+	        cleanUrlJasaKonsFinishingPost,
+	        [
+	          { name: 'Jasa Desain', url: 'https://www.betonjayareadymix.com/p/jasa-desain.html' },
+           { name: 'Daftar Jasa Desain', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-desain.html' },
+           { name: 'Perbandingan Jasa Desain', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-desain.html' },
+           { name: 'Jasa Desain Interior', url: 'https://www.betonjayareadymix.com/p/jasa-desain-interior.html' }
+	        ],
+	        'JASA_DESAIN'
+	    );
+}
 if (urlMappingJasaInteriorFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPost]) {
         generateBreadcrumbjasaKonstruksiFinishingPost(
 	        urlMappingJasaInteriorFromMoneyMasterMoneyChild,
