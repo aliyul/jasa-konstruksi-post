@@ -882,7 +882,7 @@ const urlMappingJasaPembuatanKitchenSetFromMoneyPageMoneyPage1 = {
 };
 
 const urlMappingHargaJasaPembuatanKitchenSetFromMoneyPage1MoneyPage2 = {
- "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set- interior.html": "Harga Jasa Pembuatan Kitchen Set Interior",
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set-interior.html": "Harga Jasa Pembuatan Kitchen Set Interior",
     "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-tenaga-pembuatan-kitchen-set.html": "Harga Jasa Borongan Tenaga Pembuatan Kitchen Set",
     "https://www.betonjayareadymix.com/2018/09/harga-jasa-desain-kitchen-set.html": "Harga Jasa Desain Kitchen Set",
     "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kitchen-set-per-meter.html": "Harga Jasa Pembuatan Kitchen Set Per Meter",
@@ -895,8 +895,8 @@ const urlMappingHargaJasaPembuatanKitchenSetFromMoneyPage1MoneyPage2 = {
 const urlMappingJasaCustomKitchenSetFromMoneyPageMoneyPage1 = {
     // ============================================================
     "https://www.betonjayareadymix.com/2020/02/harga-jasa-custom-kitchen-set.html": "Harga Jasa Custom Kitchen Set",
-    "https://www.betonjayareadymix.com/2020/02/jasa-desain-kitchen-set-custom..html": "Jasa Desain Kitchen Set Custom",
-    "https://www.betonjayareadymix.com/2020/02/jasa-pembuatan-kitchen-set-custom.html": "Jasa Pembuatan Kitchen Set Custom"
+    "https://www.betonjayareadymix.com/2020/02/jasa-desain-kitchen-set-custom..html": "Jasa Desain Kitchen Set Custom"
+    //"https://www.betonjayareadymix.com/2020/02/jasa-pembuatan-kitchen-set-custom.html": "Jasa Pembuatan Kitchen Set Custom"
 
 
 };
