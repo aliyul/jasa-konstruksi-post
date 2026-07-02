@@ -3755,7 +3755,7 @@ if (urlMappingJasaKonsultanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
        [
            // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Konsultan Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konsultan.html' }
+            { name: 'Daftar Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konsultan.html' }
 	   ],
         'JASA_KONSTRUKSI'
     );
@@ -3766,8 +3766,8 @@ if (urlMappingJasaKonsultanFromSub1MoneyMaster[cleanUrlJasaKons]) {
         cleanUrlJasaKons,
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Konsultan Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konsultan.html' },
-            { name: 'Perbandingan Jasa Konsultan Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konsultan.html' }
+            { name: 'Daftar Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konsultan.html' },
+            { name: 'Perbandingan Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konsultan.html' }
 	   ],
         'JASA_KONSTRUKSI'
     );
@@ -3778,9 +3778,9 @@ if (urlMappingJasaKonsultanFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
         cleanUrlJasaKons,
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Konsultan Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konsultan.html' },
-            { name: 'Perbandingan Jasa Konsultan Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konsultan.html' },
-            { name: 'Jasa Konsultan Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konsultan.html' }
+            { name: 'Daftar Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konsultan.html' },
+            { name: 'Perbandingan Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konsultan.html' },
+            { name: 'Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/jasa-konsultan.html' }
 
 	   ],
         'JASA_KONSTRUKSI'
@@ -3792,9 +3792,9 @@ if (urlMappingHargaJasaKonsultanFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
         cleanUrlJasaKons,
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Konsultan Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konsultan.html' },
-            { name: 'Perbandingan Jasa Konsultan Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konsultan.html' },
-            { name: 'Jasa Konsultan Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konsultan.html' },
+            { name: 'Daftar Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konsultan.html' },
+            { name: 'Perbandingan Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konsultan.html' },
+            { name: 'Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/jasa-konsultan.html' },
             { name: 'Harga Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/harga-jasa-konsultan.html' }
 
 	   ],
