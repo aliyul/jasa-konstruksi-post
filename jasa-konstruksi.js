@@ -635,6 +635,7 @@ const urlMappingJasaKitchenSetFromSub1MoneyMaster = {
 };
 
 const urlMappingJasaKitchenSetFromMoneyMasterMoneyPage = {
+	"https://www.betonjayareadymix.com/p/harga-jasa-kitchen-set.html": "Harga Jasa Kitchen Set",
 	"https://www.betonjayareadymix.com/p/jasa-custom-kitchen-set.html": "Jasa Custom Kitchen Set",
     "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set",
 	    // Kitchen Set juga bisa sebagai MP
