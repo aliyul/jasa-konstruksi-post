@@ -13,6 +13,30 @@
   "https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html": "Jasa Finishing Struktur",  // TYPE: SUB2
 };
 */
+const urlMappingJasaReliefFromMoneyMasterMoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/jasa-relief-terdekat.html": "Jasa Relief Terdekat",
+"https://www.betonjayareadymix.com/2018/09/jasa-relief-jakarta.html": "Jasa Relief Jakarta",
+"https://www.betonjayareadymix.com/2018/09/jasa-relief-bogor.html": "Jasa Relief Bogor",
+"https://www.betonjayareadymix.com/2018/09/jasa-relief-depok.html": "Jasa Relief Depok",
+"https://www.betonjayareadymix.com/2018/09/jasa-relief-tangerang.html": "Jasa Relief Tangerang",
+"https://www.betonjayareadymix.com/2018/09/jasa-relief-bekasi.html": "Jasa Relief Bekasi",
+"https://www.betonjayareadymix.com/2018/09/jasa-relief-karawang.html": "Jasa Relief Karawang",
+"https://www.betonjayareadymix.com/2018/09/jasa-relief-sukabumi.html": "Jasa Relief Sukabumi",
+"https://www.betonjayareadymix.com/2018/09/jasa-relief-purwakarta.html": "Jasa Relief Purwakarta",
+"https://www.betonjayareadymix.com/2018/09/jasa-relief-surabaya.html": "Jasa Relief Surabaya"
+};	
+const urlMappingHargaJasaReliefFromMoneyPageMoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-relief-terdekat.html": "Harga Jasa Relief Terdekat",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-relief-jakarta.html": "Harga Jasa Relief Jakarta",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-relief-bogor.html": "Harga Jasa Relief Bogor",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-relief-depok.html": "Harga Jasa Relief Depok",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-relief-tangerang.html": "Harga Jasa Relief Tangerang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-relief-bekasi.html": "Harga Jasa Relief Bekasi",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-relief-karawang.html": "Harga Jasa Relief Karawang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-relief-sukabumi.html": "Harga Jasa Relief Sukabumi",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-relief-purwakarta.html": "Harga Jasa Relief Purwakarta",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-relief-surabaya.html": "Harga Jasa Relief Surabaya"
+};	
 const urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild = {
 "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-terdekat.html": "Jasa Desain Interior Terdekat",
 "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-jakarta.html": "Jasa Desain Interior Jakarta",
@@ -2389,6 +2413,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const currentUrl = cleanUrlJasaKonsFinishingPost;
    const urlMappingGabungan = Object.assign(
     {},
+    urlMappingJasaReliefFromMoneyMasterMoneyChild,
+	urlMappingHargaJasaReliefFromMoneyPageMoneyChild,
+	   
 	urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild,
 
 	urlMappingJasaEksteriorFromMoneyMasterMoneyChild,
@@ -3065,6 +3092,34 @@ if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
      JasaFinishingInfrastrukturPostLink.style.visibility = 'hidden';
      pageNameJasaKonsFinishingPostLink.textContent = "";
      */
+
+if (urlMappingJasaReliefFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+        generateBreadcrumbjasaKonstruksiFinishingPost(
+	        urlMappingJasaReliefFromMoneyMasterMoneyChild,
+	        cleanUrlJasaKonsFinishingPost,
+	        [
+	        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Relief', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-relief.html' },
+            { name: 'Perbandingan Jasa Relief', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-relief.html' },
+            { name: 'Jasa Relief', url: 'https://www.betonjayareadymix.com/p/jasa-relief.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+	    );
+}
+if (urlMappingHargaJasaReliefFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+        generateBreadcrumbjasaKonstruksiFinishingPost(
+	        urlMappingHargaJasaReliefFromMoneyPageMoneyChild,
+	        cleanUrlJasaKonsFinishingPost,
+	        [
+	        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Relief', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-relief.html' },
+            { name: 'Perbandingan Jasa Relief', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-relief.html' },
+            { name: 'Jasa Relief', url: 'https://www.betonjayareadymix.com/p/jasa-relief.html' },
+            { name: 'Harga Jasa Relief', url: 'https://www.betonjayareadymix.com/p/harga-jasa-relief.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+	    );
+}
 
 if (urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPost]) {
         generateBreadcrumbjasaKonstruksiFinishingPost(
