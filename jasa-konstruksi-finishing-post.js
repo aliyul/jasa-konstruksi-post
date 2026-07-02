@@ -829,7 +829,24 @@ const urlMappingJasaPasangPlafonFromMoneyPageMoneyChild= {
 // 🧠 ENTITY: JASA → TYPE: MONEY_CHILD
 // Parent: Jasa Finishing Interior (/p/jasa-finishing-interior.html)
 // ============================================================
-
+const urlMappingJasaKitchenSetFromMoneyMasterMoneyChild = {
+ "https://www.betonjayareadymix.com/2018/09/jasa-kitchen-set-terdekat.html": "Jasa Kitchen Set Terdekat",
+ "https://www.betonjayareadymix.com/2018/09/jasa-kitchen-set-jakarta.html": "Jasa Kitchen Set Jakarta",
+ "https://www.betonjayareadymix.com/2018/09/jasa-kitchen-set-bogor.html": "Jasa Kitchen Set Bogor",
+ "https://www.betonjayareadymix.com/2018/09/jasa-kitchen-set-depok.html": "Jasa Kitchen Set Depok",
+ "https://www.betonjayareadymix.com/2018/09/jasa-kitchen-set-tangerang.html": "Jasa Kitchen Set Tangerang",
+ "https://www.betonjayareadymix.com/2018/09/jasa-kitchen-set-bekasi.html": "Jasa Kitchen Set Bekasi",
+ "https://www.betonjayareadymix.com/2018/09/jasa-kitchen-set-karawang.html": "Jasa Kitchen Set Karawang"
+};
+const urlMappingHargaJasaKitchenSetFromMoneyPageMoneyChild = {
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-kitchen-set-terdekat.html": "Harga Jasa Kitchen Set Terdekat",
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-kitchen-set-jakarta.html": "Harga Jasa Kitchen Set Jakarta",
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-kitchen-set-bogor.html": "Harga Jasa Kitchen Set Bogor",
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-kitchen-set-depok.html": "Harga Jasa Kitchen Set Depok",
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-kitchen-set-tangerang.html": "Harga Jasa Kitchen Set Tangerang",
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-kitchen-set-bekasi.html": "JHarga asa Kitchen Set Bekasi",
+ "https://www.betonjayareadymix.com/2018/09/harga-jasa-kitchen-set-karawang.html": "Harga Jasa Kitchen Set Karawang"
+};
 const urlMappingJasaPembuatanKitchenSetFromMoneyPageMoneyPage1 = {
     // ============================================================
     // 📌 HARGA & BIAYA
@@ -2459,6 +2476,8 @@ document.addEventListener("DOMContentLoaded", function() {
     urlMappingJasaPasangPVCDindingFromMoneyPageMoneyChild,
 	   urlMappingJasaPasangPVCFromMoneyPageMoneyPage1,
 
+	urlMappingJasaKitchenSetFromMoneyMasterMoneyChild,
+	urlMappingHargaJasaKitchenSetFromMoneyPageMoneyChild,
 	urlMappingJasaPembuatanKitchenSetFromMoneyPageMoneyPage1,
 	urlMappingHargaJasaPembuatanKitchenSetFromMoneyPage1MoneyPage2,
     urlMappingJasaCustomKitchenSetFromMoneyPageMoneyPage1,
@@ -3571,6 +3590,36 @@ if (urlMappingJasaFinishingKolomBalokFromMoneyPageMoneyChild[cleanUrlJasaKonsFin
        document.head.appendChild(script);
    }
 	*/
+
+if (urlMappingJasaKitchenSetFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+	// ✅ Generate Breadcrumb untuk Jasa Kitchen Set
+    generateBreadcrumbjasaKonstruksiFinishingPost(
+        urlMappingJasaKitchenSetFromMoneyMasterMoneyChild,
+        cleanUrlJasaKonsFinishingPost,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-kitchen-set.html'},
+            { name: 'Perbandingan Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-kitchen-set.html'},
+            { name: 'Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/jasa-kitchen-set.html'}
+        ],
+        'JASA'
+    );
+}
+if (urlMappingHargaJasaKitchenSetFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+	// ✅ Generate Breadcrumb untuk Jasa Kitchen Set
+    generateBreadcrumbjasaKonstruksiFinishingPost(
+        urlMappingHargaJasaKitchenSetFromMoneyPageMoneyChild,
+        cleanUrlJasaKonsFinishingPost,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-kitchen-set.html'},
+            { name: 'Perbandingan Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-kitchen-set.html'},
+            { name: 'Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/jasa-kitchen-set.html'},
+            { name: 'Harga Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/harga-jasa-kitchen-set.html' }
+        ],
+        'JASA'
+    );
+}	
 if (urlMappingJasaPembuatanKitchenSetFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishingPost]) {
 	// ✅ Generate Breadcrumb untuk Jasa Kitchen Set
     generateBreadcrumbjasaKonstruksiFinishingPost(
