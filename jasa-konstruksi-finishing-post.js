@@ -26,6 +26,30 @@ const urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild = {
 "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-purwakarta.html": "Jasa Desain Interior Purwakarta"
 };	
 
+const urlMappingJasaEksteriorFromMoneyMasterMoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/jasa-eksterior-terdekat.html": "Jasa Eksterior Terdekat",
+"https://www.betonjayareadymix.com/2018/09/jasa-eksterior-jakarta.html": "Jasa Eksterior Jakarta",
+"https://www.betonjayareadymix.com/2018/09/jasa-eksterior-bogor.html": "Jasa Eksterior Bogor",
+"https://www.betonjayareadymix.com/2018/09/jasa-eksterior-depok.html": "Jasa Eksterior Depok",
+"https://www.betonjayareadymix.com/2018/09/jasa-eksterior-tangerang.html": "Jasa Eksterior Tangerang",
+"https://www.betonjayareadymix.com/2018/09/jasa-eksterior-bekasi.html": "Jasa Eksterior Bekasi",
+"https://www.betonjayareadymix.com/2018/09/jasa-eksterior-karawang.html": "Jasa Eksterior Karawang",
+"https://www.betonjayareadymix.com/2018/09/jasa-eksterior-surabaya.html": "Jasa Eksterior Surabaya",
+"https://www.betonjayareadymix.com/2018/09/jasa-eksterior-sukabumi.html": "Jasa Eksterior Sukabumi",
+"https://www.betonjayareadymix.com/2018/09/jasa-eksterior-purwakarta.html": "Jasa Eksterior Purwakarta"
+};	
+const urlMappingHargaJasaEksteriorFromMoneyPageMoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-eksterior-terdekat.html": "Harga Jasa Eksterior Terdekat",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-eksterior-jakarta.html": "Harga Jasa Eksterior Jakarta",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-eksterior-bogor.html": "Harga Jasa Eksterior Bogor",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-eksterior-depok.html": "Harga Jasa Eksterior Depok",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-eksterior-tangerang.html": "Harga Jasa Eksterior Tangerang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-eksterior-bekasi.html": "Harga Jasa Eksterior Bekasi",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-eksterior-karawang.html": "Harga Jasa Eksterior Karawang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-eksterior-surabaya.html": "Harga Jasa Eksterior Surabaya",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-eksterior-sukabumi.html": "Harga Jasa Eksterior Sukabumi",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-eksterior-purwakarta.html": "Harga Jasa Eksterior Purwakarta"
+};	
 const urlMappingJasaInteriorFromMoneyMasterMoneyChild = {
 "https://www.betonjayareadymix.com/2018/09/jasa-interior-terdekat.html": "Jasa Interior Terdekat",
 "https://www.betonjayareadymix.com/2018/09/jasa-interior-jakarta.html": "Jasa Interior Jakarta",
@@ -2366,6 +2390,10 @@ document.addEventListener("DOMContentLoaded", function() {
    const urlMappingGabungan = Object.assign(
     {},
 	urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild,
+
+	urlMappingJasaEksteriorFromMoneyMasterMoneyChild,
+	urlMappingHargaJasaEksteriorFromMoneyPageMoneyChild,
+	   
 	urlMappingJasaInteriorFromMoneyMasterMoneyChild,
 	urlMappingHargaJasaInteriorFromMoneyPageMoneyChild,
 	   
@@ -3051,6 +3079,35 @@ if (urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinish
 	        'JASA_DESAIN'
 	    );
 }
+	
+if (urlMappingJasaEksteriorFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+        generateBreadcrumbjasaKonstruksiFinishingPost(
+	        urlMappingJasaEksteriorFromMoneyMasterMoneyChild,
+	        cleanUrlJasaKonsFinishingPost,
+	        [
+	        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
+            { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
+           { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html'}
+	        ],
+	        'JASA_KONSTRUKSI'
+	    );
+}
+if (urlMappingHargaJasaEksteriorFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+        generateBreadcrumbjasaKonstruksiFinishingPost(
+	        urlMappingHargaJasaEksteriorFromMoneyPageMoneyChild,
+	        cleanUrlJasaKonsFinishingPost,
+	        [
+	        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
+            { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
+           { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html'},
+           { name: 'Harga Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/harga-jasa-eksterior.html'}
+	        ],
+	        'JASA_KONSTRUKSI'
+	    );
+}
+	
 if (urlMappingJasaInteriorFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPost]) {
         generateBreadcrumbjasaKonstruksiFinishingPost(
 	        urlMappingJasaInteriorFromMoneyMasterMoneyChild,
