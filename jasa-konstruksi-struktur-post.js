@@ -34,6 +34,16 @@ const urlMappingJasaStrukturBajaRangkaRinganFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/jasa-struktur-baja-gudang.html": "Jasa Struktur Baja Gudang",  // TYPE: SUB2
 };
 */
+const urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-bangunan-terdekat.html": "Jasa Konstruksi Bangunan Terdekat",
+"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-bangunan-jakarta.html": "Jasa Konstruksi Bangunan Jakarta",
+"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-bangunan-bogor.html": "Jasa Konstruksi Bangunan Bogor",
+"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-bangunan-depok.html": "Jasa Konstruksi Bangunan Depok",
+"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-bangunan-tangerang.html": "Jasa Konstruksi Bangunan Tangerang",
+"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-bangunan-bekasi.html": "Jasa Konstruksi Bangunan Bekasi",
+"https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-bangunan-karawang.html": "Jasa Konstruksi Bangunan Karawang"
+
+};
 // ============================================================
 // 📁 JasaKonstruksiBajaRingan
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE & MONEY_CHILD
@@ -2407,6 +2417,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	// --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
+		urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyChild,
+		
 		urlMappingJasaPasangBajaRinganFromMoneyPage2MoneyPage3,
 		urlMappingJasaPasangAtapBajaRinganFromMoneyPage3MoneyPage4,
         urlMappingJasaPasangKanopiBajaRinganFromMoneyPage3MoneyPage4,
@@ -2936,6 +2948,19 @@ if (!JasaKonsStrukturPost) {
      pageNameJasaKonsStrukturPost.textContent = "";
 
 
+if (urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
+	generateBreadcrumbJasaKonstruksiStrukturPost(
+        urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyChild,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-bangunan.html' },
+            { name: 'Perbandingan Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-bangunan.html' },
+            { name: 'Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
 //SUB JasaStrukturBajadanRangkaRinganPos
 if (urlMappingJasaPasangBajaRinganFromMoneyPage2MoneyPage3[cleanUrlJasaJasaKonsStrukturPost]) {
 	generateBreadcrumbJasaKonstruksiStrukturPost(
