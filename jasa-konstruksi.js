@@ -682,6 +682,13 @@ const urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1 = {
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-pintu.html": "Jasa Pembuatan Pintu",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-jendela.html": "Jasa Pembuatan Jendela"
 };
+const urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage = {
+ "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-bangunan.html": "Harga Jasa Pembuatan Bangunan"  // TYPE: MONEY_PAGE
+};
+const urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1 = {
+   "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bangunan.html": "Harga Jasa Borongan Bangunan" 
+};
+
 const urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyMaster2 = {
   "https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html": "Jasa Pembuatan Rumah",
  // MP Tambahan (bisa ditambah sesuai kebutuhan)
@@ -2751,6 +2758,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangFromSub1MoneyMaster,
 		urlMappingJasaPembuatanFromSub1MoneyMaster,
 		urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1,
+		urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage,
+		urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1,
+		
 		urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyMaster2,
 		urlMappingJasaPembuatanRumahFromMoneyMaster2MoneyMaster3,
 
@@ -4860,6 +4870,38 @@ if (urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
+if (urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbJasaKonstruksi(
+        urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html'},
+            { name: 'Harga Jasa Pembuatan Bangunan', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-bangunan.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}	
+	
 if (urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyMaster2[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbJasaKonstruksi(
