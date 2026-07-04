@@ -1,3 +1,12 @@
+const urlMappingJasaSaluraDrainaseFromMoneyMasterMoneyChild = {
+  "https://www.betonjayareadymix.com/2019/09/jasa-saluran-drainase-terdekat.html": "Jasa Saluran & Drainase Terdekat",
+  "https://www.betonjayareadymix.com/2019/09/jasa-saluran-drainase-jakarta.html": "Jasa Saluran & Drainase Jakarta", 
+  "https://www.betonjayareadymix.com/2019/09/jasa-saluran-drainase-bogor.html": "Jasa Saluran & Drainase Bogor", 
+  "https://www.betonjayareadymix.com/2019/09/jasa-saluran-drainase-depok.html": "Jasa Saluran & Drainase Depok", 
+  "https://www.betonjayareadymix.com/2019/09/jasa-saluran-drainase-tangerang.html": "Jasa Saluran & Drainase Tangerang", 
+  "https://www.betonjayareadymix.com/2019/09/jasa-saluran-drainase-bekasi.html": "Jasa Saluran & Drainase Bekasi", 
+  "https://www.betonjayareadymix.com/2019/09/jasa-saluran-drainase-karawang.html": "Jasa Saluran & Drainase Karawang" 
+};
 // ============================================================
 // JASA CUTTING BETON - BLOG POST
 // ============================================================
@@ -2365,6 +2374,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
+		urlMappingJasaSaluraDrainaseFromMoneyMasterMoneyChild,
+		
 		urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage,
 		urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyPage1,
 		urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyChild,
@@ -2966,6 +2977,20 @@ document.addEventListener("DOMContentLoaded", function() {
      pageNameJasaKonsCuttingBetonPost.textContent = "";
 	
     //SUB urlMappingBangunan
+
+if (urlMappingJasaSaluraDrainaseFromMoneyMasterMoneyChild[cleanUrlJasaCuttingBetonPost]) {
+    generateBreadcrumbJasaCuttingBetonPost(
+        urlMappingJasaSaluraDrainaseFromMoneyMasterMoneyChild,
+        cleanUrlJasaCuttingBetonPost,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Saluran & Drainase', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-saluran-drainase.html' },
+            { name: 'Perbandingan Jasa Saluran & Drainase', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-saluran-drainase.html' },
+            { name: 'Jasa Saluran & Drainase', url: 'https://www.betonjayareadymix.com/p/jasa-saluran-drainase.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
 if (urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbJasaCuttingBetonPost(
         urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage,
