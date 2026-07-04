@@ -79,7 +79,7 @@ const urlMappingJasaPondasiFromMoneyMasterMoneyMaster1 = {
 };
 const urlMappingJasaBoronganPondasiFromMoneyMaster1MoneyPage = {
 // MP (L5)
-"https://www.betonjayareadymix.com/p/harga-jasa-borongan-pondasi.html": "Harga Jasa Borongan Pondasi" // MP (L5)
+"https://www.betonjayareadymix.com/p/harga-jasa-borongan-pondasi.html": "Harga Jasa Borongan Pondasi"
 };
 const urlMappingJasaPondasiTanahFromMoneyMaster1MoneyPage = {
 
