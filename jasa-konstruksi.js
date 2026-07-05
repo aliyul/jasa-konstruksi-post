@@ -1136,7 +1136,7 @@ const urlMappingJasaSaluranDrainaseFromMoneyMasterMoneyPage = {
    "https://www.betonjayareadymix.com/p/jasa-pembuatan-sumur-resapan.html": "Jasa Pembuatan Sumur Resapan"  // TYPE: MONEY_PAGE
 };
 
-const urlMappingJalanPerkerasanFromMoneyMasterMoneyMaster1 = {
+const urlMappingJasaJalanPerkerasanFromMoneyMasterMoneyMaster1 = {
   "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html": "Jasa Perkerasan Jalan",  // TYPE: MONEY_PAGE
   "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan.html": "Jasa Pengerasan Jalan" // TYPE: MONEY_PAGE
 };
@@ -2697,7 +2697,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingJalanPerkerasanBridgeFromSub2Sub1,
 		urlMappingJalanPerkerasanFromSub1MoneyMaster,
-		urlMappingJalanPerkerasanFromMoneyMasterMoneyMaster1,
+		urlMappingJasaJalanPerkerasanFromMoneyMasterMoneyMaster1,
 		
         urlMappingJasaPondasiBridgeFromSub2Sub1,
 		urlMappingJasaPondasiFromSub1MoneyMaster,
@@ -4154,9 +4154,9 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
     }
-	if (urlMappingJalanPerkerasanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
+	if (urlMappingJasaJalanPerkerasanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
      	generateBreadcrumbJasaKonstruksi(
-        urlMappingJalanPerkerasanFromMoneyMasterMoneyMaster1,
+        urlMappingJasaJalanPerkerasanFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
