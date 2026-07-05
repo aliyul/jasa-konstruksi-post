@@ -22,12 +22,6 @@ const urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage = {
   // Breadcrumb: Home > Jasa Konstruksi > Jasa Cutting Beton > Jasa Pemotongan Jalan Beton (4 level)
   // ============================================================
   "https://www.betonjayareadymix.com/2019/06/jasa-pemotongan-jalan-beton.html": "Jasa Pemotongan Jalan Beton", 
-  
-  // ============================================================
-  // [MONEY_MASTER] - MASTER HARGA (TRANSACTIONAL)
-  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
-  // 🧠 INTENT: Transactional (user mencari harga nasional/general)
-  // Breadcrumb: Home > Jasa Konstruksi > Harga Jasa Cutting Beton (3 level - skip "Jasa Cutting Beton")
   // ============================================================
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton.html": "Harga Jasa Cutting Beton", 
   "https://www.betonjayareadymix.com/2019/06/jasa-cutting-beton-lantai.html": "Jasa Cutting Beton Lantai",
