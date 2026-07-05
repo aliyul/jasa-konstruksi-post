@@ -1181,7 +1181,7 @@ const urlMappingUjiTanahFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/jasa-uji-tanah.html": "Jasa Uji Tanah",  // TYPE: SUB2
 };*/
 
-const urlMappingUjiTanahFromMoneyMasterMoneyMaster1 = {
+const urlMappingJasaUjiTanahFromMoneyMasterMoneyMaster1 = {
   "https://www.betonjayareadymix.com/p/jasa-sondir-tanah.html": "Jasa Sondir Tanah",  
   "https://www.betonjayareadymix.com/p/jasa-cpt-tanah.html": "Jasa CPT Tanah",  
   "https://www.betonjayareadymix.com/p/jasa-lab-tanah.html": "Jasa Lab Tanah",  
@@ -2815,7 +2815,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingJasaSaluranDrainaseFromMoneyMasterMoneyPage,
 		
-		urlMappingUjiTanahFromMoneyMasterMoneyMaster1,
+		urlMappingJasaUjiTanahFromMoneyMasterMoneyMaster1,
 		urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1,
 	
 		urlMappingPengeboranFromMoneyMasterMoneyMaster1,
@@ -4740,9 +4740,9 @@ if (urlMappingJasaSaluranDrainaseFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
     );
     }
 	
-   if (urlMappingUjiTanahFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
+   if (urlMappingJasaUjiTanahFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
        generateBreadcrumbJasaKonstruksi(
-        urlMappingUjiTanahFromMoneyMasterMoneyMaster1,
+        urlMappingJasaUjiTanahFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
