@@ -1429,12 +1429,12 @@ const urlMappingRenovasiBangunanPabrikFromMoneyPageMoneyPage1 = {
 // ============================================================
 
 const urlMappingJasaRenovasiBangunanRumahFromMoneyPageMoneyPage1 = {
-	  "https://www.betonjayareadymix.com/p/harga-jasa-renovasi-rumah.html": "Harga Jasa Renovasi Rumah",
+   "https://www.betonjayareadymix.com/p/harga-jasa-renovasi-rumah.html": "Harga Jasa Renovasi Rumah",
    "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-minimalis.html": "Jasa Renovasi Rumah Minimalis",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-type-36.html": "Jasa Renovasi Rumah Type 36",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-type-45.html": "Jasa Renovasi Rumah Type 45",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-2-lantai.html": "Jasa Renovasi Rumah 2 Lantai",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-rumah.html": "Jasa Renovasi Perbaikan Atap Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-atap-rumah": "Jasa Renovasi Atap Rumah",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-rumah.html": "Jasa Renovasi Dinding Rumah",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-kosmetik-rumah.html": "Jasa Renovasi Kosmetik Rumah",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-tumbuh.html": "Jasa Renovasi Rumah Tumbuh"
