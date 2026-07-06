@@ -1053,7 +1053,7 @@ const urlMappingJasaRenovasiBangunanFromMoneyMaster1MoneyPage = {
 // 📁 JASA PERAWATAN & PERBAIKAN BANGUNAN - SUB2 (LEVEL 2)
 // ============================================================
 
-const urlMappingPerbaikanBangunanFromMoneyMasterMoneyPage = {
+const urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage = {
   // MP - TURUNAN (LEVEL 5) - URL BARU
 // ============================================================
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-bangunan.html": "Jasa Perbaikan Lantai Bangunan",
@@ -2777,7 +2777,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangFurnitureFromMoneyMaster1MoneyPage,
 		
         urlMappingInfrastrukturFromSub1MoneyMaster,
-		urlMappingPerbaikanBangunanFromMoneyMasterMoneyPage,
+		urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage,
 		urlMappingJasaRenovasiFromMoneyMasterMoneyMaster1,
 		urlMappingJasaRenovasiBangunanFromMoneyMaster1MoneyPage,
 		
@@ -4735,9 +4735,9 @@ if (urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
  }
-  if (urlMappingPerbaikanBangunanFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+  if (urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
         generateBreadcrumbJasaKonstruksi(
-        urlMappingPerbaikanBangunanFromMoneyMasterMoneyPage,
+        urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
