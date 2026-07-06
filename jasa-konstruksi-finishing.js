@@ -167,7 +167,7 @@ const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-marmer.html": "Jasa Finishing Lantai Marmer",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html": "Jasa Finishing Lantai Granit",
     "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-kayu.html": "Jasa Finishing Lantai Kayu",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-epoxy.html": "Jasa Finishing Lantai Epoxy",
+    "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-epoxy.html": "Jasa Finishing Lantai Epoxy"
 	
     // ============================================================
     // TAMBAHAN MP UNTUK JASA FINISHING LANTAI
@@ -328,16 +328,8 @@ const urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage = {
     // 🟡 PRIORITAS SEDANG
     "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-eksterior.html": "Jasa Pasang Lampu Eksterior",
 
-	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-taman.html": "Jasa Pasang Lampu Taman",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-taman.html": "Jasa Finishing Lampu Taman",
-	
-    // 🟢 PRIORITAS RENDAH
-    "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-cafe.html": "Jasa Finishing Lampu Cafe",
-	
-    "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-hotel.html": "Jasa Finishing Lampu Hotel",
-	
-    "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-kantor.html": "Jasa Finishing Lampu Kantor"
-	
+	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-taman.html": "Jasa Pasang Lampu Taman"
+   
 };
 
 // ============================================================
@@ -368,13 +360,24 @@ const urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1 = {
 const urlMappingJasaPasangLampuTamanFromMoneyPageMoneyPage1 = {
  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-taman.html": "Harga Jasa Pasang Lampu Taman"
 };
-const urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage1 = {
+const urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage = {
+ "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-taman.html": "Jasa Finishing Lampu Taman",
+	
+    // 🟢 PRIORITAS RENDAH
+    "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-cafe.html": "Jasa Finishing Lampu Cafe",
+	
+    "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-hotel.html": "Jasa Finishing Lampu Hotel",
+	
+    "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-kantor.html": "Jasa Finishing Lampu Kantor"
+	
+};
+const urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage = {
  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-lampu-cafe.html": "Harga Jasa Finishing Lampu Cafe"
 };
-const urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage1 = {
+const urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage = {
 "https://www.betonjayareadymix.com/p/harga-jasa-finishing-lampu-hotel.html": "Harga Jasa Finishing Lampu Hotel"
 };
-const urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage1 = {
+const urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage = {
  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-lampu-kantor.html": "Harga Jasa Finishing Lampu Kantor"
 };
 // ============================================================
@@ -2268,9 +2271,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1,
         urlMappingJasaPasangLampuTamanFromMoneyPageMoneyPage1,
-		urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage1,
-        urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage1,
-		urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage1,
+
+		urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage,
+		urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage,
+        urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage,
+		urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage,
 		
 		urlMappingJasaCatFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaCatFromMoneyPageMoneyPage1,
@@ -2987,12 +2992,27 @@ if (urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing])
         'JASA_KONSTRUKSI'
     );
     }
-     if (urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+
+	
+	 if (urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage1,
+        urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage,
         cleanUrlJasaKonsFinishing,
         [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
+            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
+			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
+           { name: 'Jasa Finishing Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lampu.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+     if (urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage[cleanUrlJasaKonsFinishing]) {
+         generateBreadcrumbJasaKonstruksiFinishing(
+        urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage,
+        cleanUrlJasaKonsFinishing,
+        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
@@ -3003,12 +3023,11 @@ if (urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing])
         'JASA_KONSTRUKSI'
     );
     }	
-    if (urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage1,
+        urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage,
         cleanUrlJasaKonsFinishing,
         [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
@@ -3019,12 +3038,11 @@ if (urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing])
         'JASA_KONSTRUKSI'
     );
     }	
-	if (urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+	if (urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage[cleanUrlJasaKonsFinishing]) {
          generateBreadcrumbJasaKonstruksiFinishing(
-        urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage1,
+        urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage,
         cleanUrlJasaKonsFinishing,
         [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
