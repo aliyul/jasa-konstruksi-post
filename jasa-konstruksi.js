@@ -428,6 +428,15 @@ const urlMappingJasaInstalasiListrikBridgeFromSub2Sub1 = {
 const urlMappingJasaInstalasiListrikFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik.html": "Jasa Instalasi Listrik"  
 };
+const urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage = {
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-solar-panel.html": "Jasa Instalasi Solar Panel",  
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik-rumah.html": "Jasa Instalasi Listrik Rumah",  
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik-komersial.html": "Jasa Instalasi Listrik Komersial",  
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-panel-listrik.html": "Jasa Pemasangan Panel Listrik",  
+  "https://www.betonjayareadymix.com/p/jasa-keamanan-proteksi-listrik.html": "Jasa Keamanan & Proteksi Listrik",  
+  "https://www.betonjayareadymix.com/p/jasa-maintenance-perbaikan-listrik.html": "Jasa Maintenance & Perbaikan Listrik",  
+  "https://www.betonjayareadymix.com/p/jasa-konsultasi-listrik.html": "Jasa Konsultasi Listrik"  
+};
 // ============================================================
 // 📁 JASA ALAT KONSTRUKSI (ENTITY: SEWA/RENTAL - BUKAN JASA)
 // ⚠️ PERHATIAN: Ini adalah ENTITY SEWA/RENTAL, BUKAN JASA
@@ -1181,15 +1190,7 @@ const urlMappingJasaInstalasiListrikFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik.html": "Jasa Instalasi Listrik",  
 };*/
 
-const urlMappingJasaInstalasiListrikFromSub1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-instalasi-solar-panel.html": "Jasa Instalasi Solar Panel",  
-  "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik-rumah.html": "Jasa Instalasi Listrik Rumah",  
-  "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik-komersial.html": "Jasa Instalasi Listrik Komersial",  
-  "https://www.betonjayareadymix.com/p/jasa-pemasangan-panel-listrik.html": "Jasa Pemasangan Panel Listrik",  
-  "https://www.betonjayareadymix.com/p/jasa-keamanan-proteksi-listrik.html": "Jasa Keamanan & Proteksi Listrik",  
-  "https://www.betonjayareadymix.com/p/jasa-maintenance-perbaikan-listrik.html": "Jasa Maintenance & Perbaikan Listrik",  
-  "https://www.betonjayareadymix.com/p/jasa-konsultasi-listrik.html": "Jasa Konsultasi Listrik"  
-};
+
 
 // ============================================================
 // 🔴 BREADCRUMB SKIP LEVEL NOTES
@@ -2786,7 +2787,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingPengeboranFromMoneyMasterMoneyMaster1,
 		
 		urlMappingJasaPembatasPengamanFromMoneyMasterMoneyPage,
-		urlMappingJasaInstalasiListrikFromSub1MoneyPage
+		
+		urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage
     );
 
     // --- validasi URL terdaftar ---
@@ -5661,14 +5663,15 @@ if (urlMappingJasaBorAirSumur[cleanUrlJasaKons]) {
    */
 	
 //JASA INSTALASI LISTRIK
-if (urlMappingJasaInstalasiListrikFromSub1MoneyPage[cleanUrlJasaKons]) {
+if (urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
        	generateBreadcrumbJasaKonstruksi(
-        urlMappingJasaInstalasiListrikFromSub1MoneyPage,
+        urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Instalasi Listrik', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-instalasi-listrik.html' },
-            { name: 'Perbandingan Jasa Instalasi Listrik', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-instalasi-listrik.html' }
+            { name: 'Perbandingan Jasa Instalasi Listrik', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-instalasi-listrik.html' },
+            { name: 'Jasa Instalasi Listrik', url: 'https://www.betonjayareadymix.com/p/jasa-instalasi-listrik.html' }
         ],
         'JASA_KONSTRUKSI'
     );
