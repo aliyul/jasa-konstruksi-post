@@ -1428,54 +1428,15 @@ const urlMappingRenovasiBangunanPabrikFromMoneyPageMoneyPage1 = {
 // Parent: Jasa Renovasi Bangunan
 // ============================================================
 
-const urlMappingRenovasiBangunanRumahFromMoneyPageMoneyPage1 = {
+const urlMappingJasaRenovasiBangunanRumahFromMoneyPageMoneyPage1 = {
 	  "https://www.betonjayareadymix.com/p/harga-jasa-renovasi-rumah.html": "Harga Jasa Renovasi Rumah",
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI RUMAH MINIMALIS
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Minimalis
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-minimalis.html": "Jasa Renovasi Rumah Minimalis",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI RUMAH TYPE 36
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Type 36
-  // ============================================================
+   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-minimalis.html": "Jasa Renovasi Rumah Minimalis",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-type-36.html": "Jasa Renovasi Rumah Type 36",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI RUMAH TYPE 45
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Type 45
-  // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-type-45.html": "Jasa Renovasi Rumah Type 45",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI RUMAH 2 LANTAI
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah 2 Lantai
-  // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-2-lantai.html": "Jasa Renovasi Rumah 2 Lantai",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI PERBAIKAN ATAP RUMAH
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Perbaikan Atap Rumah
-  // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-renovasi-perbaikan-atap-rumah.html": "Jasa Renovasi Perbaikan Atap Rumah",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI DINDING RUMAH
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Dinding Rumah
-  // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-rumah.html": "Jasa Renovasi Dinding Rumah",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI KOSMETIK RUMAH
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Kosmetik Rumah
-  // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-renovasi-kosmetik-rumah.html": "Jasa Renovasi Kosmetik Rumah",
-
-  // ============================================================
-  // [SUB-VARIANT] - JASA RENOVASI RUMAH TUMBUH
-  // Breadcrumb: Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Rumah > Jasa Renovasi Rumah Tumbuh
-  // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-tumbuh.html": "Jasa Renovasi Rumah Tumbuh"
 
   // ============================================================
@@ -3634,7 +3595,7 @@ urlMappingPerbaikanAtapDrainaseBangunanFromMoneyPageMoneyPage1,
                 
 		        urlMappingRenovasiBangunanMasjidFromMoneyPage1MoneyPage2,
                 urlMappingRenovasiBangunanPabrikFromMoneyPageMoneyPage1,
-                urlMappingRenovasiBangunanRumahFromMoneyPageMoneyPage1,
+                urlMappingJasaRenovasiBangunanRumahFromMoneyPageMoneyPage1,
                 urlMappingRenovasiBangunanKantorFromMoneyPageMoneyPage1,
                 urlMappingRenovasiBangunanGedungFromMoneyPageMoneyPage1,
 		        urlMappingRenovasiBangunanGudangFromMoneyPageMoneyPage1,
@@ -4683,9 +4644,9 @@ if (urlMappingRenovasiBangunanPabrikFromMoneyPageMoneyPage1[cleanUrlJasaPerbaika
         'JASA_KONSTRUKSI'
     );  
  }
- if (urlMappingRenovasiBangunanRumahFromMoneyPageMoneyPage1[cleanUrlJasaPerbaikanKonsSub]) {
+ if (urlMappingJasaRenovasiBangunanRumahFromMoneyPageMoneyPage1[cleanUrlJasaPerbaikanKonsSub]) {
        generateBreadcrumbJasaKonstruksiPerbaikan(
-        urlMappingRenovasiBangunanRumahFromMoneyPageMoneyPage1,
+        urlMappingJasaRenovasiBangunanRumahFromMoneyPageMoneyPage1,
         cleanUrlJasaPerbaikanKonsSub,
         [
              { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -4693,7 +4654,6 @@ if (urlMappingRenovasiBangunanPabrikFromMoneyPageMoneyPage1[cleanUrlJasaPerbaika
            	{ name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
            	{ name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
            	{ name: 'Jasa Renovasi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan.html' },
-           //	{ name: 'Jasa Renovasi Tempat Ibadah', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-tempat-ibadah.html' },
            	{ name: 'Jasa Renovasi Bangunan Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-rumah.html' }
         ],
         'JASA_KONSTRUKSI'
