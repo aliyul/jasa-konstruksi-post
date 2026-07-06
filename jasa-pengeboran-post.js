@@ -22,13 +22,13 @@ const urlMappingTukangBorFromMoneyMaster1MoneyChild = {
   // [MONEY_MASTER] - TUKANG BOR (UMUM)
   // 🧠 TYPE: MONEY_MASTER (WAJIB tampil, parent: SUB2)
   // ============================================================
-  //"https://www.betonjayareadymix.com/2019/08/tukang-bor.html": "Tukang Bor",  // TYPE: MONEY_MASTER
+  //"https://www.betonjayareadymix.com/2019/08/tukang-bor.html": "Tukang Bor",  
   
   // ============================================================
   // [MONEY_CHILD] - TUKANG BOR TERDEKAT (LOKASI)
   // 🧠 TYPE: MONEY_CHILD (WAJIB tampil, parent: SUB2)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-tukang-bor-terdekat.html": "Jasa Tukang Bor Terdekat"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-tukang-bor-terdekat.html": "Jasa Tukang Bor Terdekat"  
 };
 
 // ============================================================
@@ -41,68 +41,68 @@ const urlMappingJasaBorSumurFromMoneyMaster1MoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - LOKASI SURABAYA
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-surabaya.html": "Jasa Bor Air Tanah Surabaya",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-surabaya.html": "Jasa Bor Air Tanah Surabaya",  
   
   // ============================================================
   // [MONEY_CHILD] - LOKASI KARAWANG
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-karawang.html": "Jasa Bor Air Tanah Karawang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-karawang.html": "Jasa Bor Air Tanah Karawang",  
   
   // ============================================================
   // [MONEY_CHILD] - LOKASI DEPOK
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-depok.html": "Jasa Bor Air Tanah Depok",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-depok.html": "Jasa Bor Air Tanah Depok",  
   
   // ============================================================
   // [MONEY_CHILD] - LOKASI TANGERANG
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-tangerang.html": "Jasa Bor Air Tanah Tangerang",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-tangerang.html": "Jasa Bor Air Tanah Tangerang",  
   
   // ============================================================
   // [MONEY_CHILD] - LOKASI JAKARTA
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-jakarta.html": "Jasa Bor Air Tanah Jakarta",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-jakarta.html": "Jasa Bor Air Tanah Jakarta",  
   
   // ============================================================
   // [MONEY_CHILD] - LOKASI BEKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-bekasi.html": "Jasa Bor Air Tanah Bekasi",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-bekasi.html": "Jasa Bor Air Tanah Bekasi",  
   
   // ============================================================
   // [MONEY_CHILD] - LOKASI BOGOR
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-bogor.html": "Jasa Bor Air Tanah Bogor",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-bogor.html": "Jasa Bor Air Tanah Bogor",  
   
   // ============================================================
   // [MONEY_MASTER] - TUKANG BOR AIR (UMUM)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/tukang-bor-air-terdekat.html": "Tukang Bor Air Terdekat",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-terdekat.html": "Jasa Bor Air Terdekat",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/08/tukang-bor-air-terdekat.html": "Tukang Bor Air Terdekat",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-terdekat.html": "Jasa Bor Air Terdekat",  
  // ============================================================
   // [MONEY_MASTER] - BOR SUMUR (UMUM)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/bor-sumur-terdekat.html": "Bor Sumur Terdekat",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-terdekat.html": "Tukang Sumur Bor Terdekat",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-terdekat.html": "Jasa Bor Sumur Terdekat",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/08/bor-sumur-terdekat.html": "Bor Sumur Terdekat",  
+  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-terdekat.html": "Tukang Sumur Bor Terdekat",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-terdekat.html": "Jasa Bor Sumur Terdekat",  
   
   // ============================================================
   // [MONEY_CHILD] - JASA SUMUR BOR LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-surabaya.html": "Jasa Sumur Bor Surabaya",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-karawang.html": "Jasa Sumur Bor Karawang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-tangerang.html": "Jasa Sumur Bor Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-jakarta.html": "Jasa Sumur Bor Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-bekasi.html": "Jasa Sumur Bor Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-bogor.html": "Jasa Sumur Bor Bogor",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-surabaya.html": "Jasa Sumur Bor Surabaya",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-karawang.html": "Jasa Sumur Bor Karawang",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-tangerang.html": "Jasa Sumur Bor Tangerang",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-jakarta.html": "Jasa Sumur Bor Jakarta",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-bekasi.html": "Jasa Sumur Bor Bekasi",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-bogor.html": "Jasa Sumur Bor Bogor",  
   
   // ============================================================
   // [MONEY_CHILD] - TUKANG SUMUR BOR LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-tangerang.html": "Tukang Sumur Bor Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-depok.html": "Tukang Sumur Bor Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-jakarta.html": "Tukang Sumur Bor Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-bekasi.html": "Tukang Sumur Bor Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-bogor.html": "Tukang Sumur Bor Bogor"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-tangerang.html": "Tukang Sumur Bor Tangerang",  
+  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-depok.html": "Tukang Sumur Bor Depok",  
+  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-jakarta.html": "Tukang Sumur Bor Jakarta",  
+  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-bekasi.html": "Tukang Sumur Bor Bekasi",  
+  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-bogor.html": "Tukang Sumur Bor Bogor"  
   
   // ============================================================
 };
@@ -115,17 +115,17 @@ const urlMappingJasaBorSumurFromMoneyMaster1MoneyPage = {
 const urlMappingHargaJasaBorSumurFromMoneyPageMoneyPage1 = {
 	
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-150-meter.html": "Biaya Sumur Bor 150 Meter",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-100-meter.html": "Biaya Sumur Bor 100 Meter",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-60-meter.html": "Biaya Sumur Bor 60 Meter",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-50-meter.html": "Biaya Sumur Bor 50 Meter",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-40-meter.html": "Biaya Sumur Bor 40 Meter",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-15-meter.html": "Biaya Sumur Bor 15 Meter",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-10-meter.html": "Biaya Sumur Bor 10 Meter",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-20-meter.html": "Biaya Sumur Bor 20 Meter",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-30-meter.html": "Biaya Sumur Bor 30 Meter",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-per-meter.html": "Biaya Sumur Bor Per Meter",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/bor-sumur-murah.html": "Bor Sumur Murah"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-150-meter.html": "Biaya Sumur Bor 150 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-100-meter.html": "Biaya Sumur Bor 100 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-60-meter.html": "Biaya Sumur Bor 60 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-50-meter.html": "Biaya Sumur Bor 50 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-40-meter.html": "Biaya Sumur Bor 40 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-15-meter.html": "Biaya Sumur Bor 15 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-10-meter.html": "Biaya Sumur Bor 10 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-20-meter.html": "Biaya Sumur Bor 20 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-30-meter.html": "Biaya Sumur Bor 30 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-per-meter.html": "Biaya Sumur Bor Per Meter",  
+  "https://www.betonjayareadymix.com/2019/08/bor-sumur-murah.html": "Bor Sumur Murah"  
 };
 // ============================================================
 // [SUB2] - JASA BORE PILE (KATEGORI)
@@ -136,13 +136,13 @@ const urlMappingJasaBorePileFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile" 
 };
 const urlMappingHargaJasaBorePileFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile.html": "Harga Jasa Strauss Pile",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-murah.html": "Harga Jasa Bore Pile Murah",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-auger-bore-pile.html": "Harga Jasa Auger Bore Pile",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/harga-borongan-strauss-pile.html": "Harga Borongan Strauss Pile",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/harga-borongan-bore-pile.html": "Harga Borongan Bore Pile",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/harga-pengeboran-bore-pile.html": "Harga Pengeboran Bore Pile",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/harga-pengeboran-strauss-pile.html": "Harga Pengeboran Strauss Pile" // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile.html": "Harga Jasa Strauss Pile",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-murah.html": "Harga Jasa Bore Pile Murah",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-auger-bore-pile.html": "Harga Jasa Auger Bore Pile",  
+  "https://www.betonjayareadymix.com/2019/08/harga-borongan-strauss-pile.html": "Harga Borongan Strauss Pile",  
+  "https://www.betonjayareadymix.com/2019/08/harga-borongan-bore-pile.html": "Harga Borongan Bore Pile",  
+  "https://www.betonjayareadymix.com/2019/08/harga-pengeboran-bore-pile.html": "Harga Pengeboran Bore Pile",  
+  "https://www.betonjayareadymix.com/2019/08/harga-pengeboran-strauss-pile.html": "Harga Pengeboran Strauss Pile" 
 };
 const urlMappingHargaJasaBorePileFromMoneyPageMoneyChild = {
   // ============================================================
@@ -152,13 +152,13 @@ const urlMappingHargaJasaBorePileFromMoneyPageMoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - HARGA BORE PILE PER LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-jakarta.html": "Harga Jasa Bore Pile Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-bogor.html": "Harga Jasa Bore Pile Bogor",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-depok.html": "Harga Jasa Bore Pile Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-tangerang.html": "Harga Jasa Bore Pile Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-bekasi.html": "Harga Jasa Bore Pile Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-karawang.html": "Harga Jasa Bore Pile Karawang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-surabaya.html": "Harga Jasa Bore Pile Surabaya"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-jakarta.html": "Harga Jasa Bore Pile Jakarta",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-bogor.html": "Harga Jasa Bore Pile Bogor",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-depok.html": "Harga Jasa Bore Pile Depok",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-tangerang.html": "Harga Jasa Bore Pile Tangerang",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-bekasi.html": "Harga Jasa Bore Pile Bekasi",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-karawang.html": "Harga Jasa Bore Pile Karawang",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-surabaya.html": "Harga Jasa Bore Pile Surabaya"  
 };
 
 // ============================================================
@@ -171,40 +171,40 @@ const urlMappingJasaBorTembokFromMoneyMaster1MoneyPage = {
   // ============================================================
   // [MONEY_MASTER] - JASA BOR TEMBOK (KUALITAS LAYANAN)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-murah.html": "Jasa Bor Tembok Murah",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-profesional.html": "Jasa Bor Tembok Profesional",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-terpercaya.html": "Jasa Bor Tembok Terpercaya",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-cepat.html": "Jasa Bor Tembok Cepat",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-rapi.html": "Jasa Bor Tembok Rapi",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-presisi.html": "Jasa Bor Tembok Presisi",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-murah.html": "Jasa Bor Tembok Murah",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-profesional.html": "Jasa Bor Tembok Profesional",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-terpercaya.html": "Jasa Bor Tembok Terpercaya",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-cepat.html": "Jasa Bor Tembok Cepat",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-rapi.html": "Jasa Bor Tembok Rapi",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-presisi.html": "Jasa Bor Tembok Presisi",  
 
   // ============================================================
   // [MONEY_MASTER] - JASA BOR TEMBOK (KEGUNAAN SPESIFIK)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-ac.html": "Jasa Bor Tembok untuk AC",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-exhaust.html": "Jasa Bor Tembok untuk Exhaust",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-cctv.html": "Jasa Bor Tembok untuk CCTV",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-ducting.html": "Jasa Bor Tembok untuk Ducting",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-instalasi-listrik.html": "Jasa Bor Tembok untuk Instalasi Listrik",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-plafon.html": "Jasa Bor Tembok untuk Plafon",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-lantai.html": "Jasa Bor Tembok untuk Lantai",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-kolom.html": "Jasa Bor Tembok untuk Kolom"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-ac.html": "Jasa Bor Tembok untuk AC",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-exhaust.html": "Jasa Bor Tembok untuk Exhaust",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-cctv.html": "Jasa Bor Tembok untuk CCTV",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-ducting.html": "Jasa Bor Tembok untuk Ducting",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-instalasi-listrik.html": "Jasa Bor Tembok untuk Instalasi Listrik",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-plafon.html": "Jasa Bor Tembok untuk Plafon",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-lantai.html": "Jasa Bor Tembok untuk Lantai",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-untuk-kolom.html": "Jasa Bor Tembok untuk Kolom"  
 };
 const urlMappingJasaBorTembokFromMoneyMaster1MoneyChild = {
   // ============================================================
   // [MONEY_MASTER] - JASA BOR TEMBOK (UMUM)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/jasa-bor-tembok-terdekat.html": "Jasa Bor Tembok Terdekat",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/09/jasa-bor-tembok-terdekat.html": "Jasa Bor Tembok Terdekat",  
 
   // ============================================================
   // [MONEY_CHILD] - JASA BOR TEMBOK LOKASI JABODETABEK
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-jakarta.html": "Jasa Bor Tembok Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-bogor.html": "Jasa Bor Tembok Bogor",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-depok.html": "Jasa Bor Tembok Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-tangerang.html": "Jasa Bor Tembok Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-bekasi.html": "Jasa Bor Tembok Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-karawang.html": "Jasa Bor Tembok Karawang" // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-jakarta.html": "Jasa Bor Tembok Jakarta",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-bogor.html": "Jasa Bor Tembok Bogor",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-depok.html": "Jasa Bor Tembok Depok",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-tangerang.html": "Jasa Bor Tembok Tangerang",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-bekasi.html": "Jasa Bor Tembok Bekasi",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-karawang.html": "Jasa Bor Tembok Karawang" 
 };
 // ============================================================
 // [SUB2] - JASA CORING BETON (KATEGORI)
@@ -216,27 +216,27 @@ const urlMappingJasaCoringBetonFromMoneyMaster1MoneyPage = {
   // ============================================================
   // [MONEY_MASTER] - LAYANAN CORE DRILL (UMUM)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/layanan-core-drill-terpercaya.html": "Layanan Core Drill Terpercaya",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/11/core-drill-proyek-konstruksi.html": "Core Drill Proyek Konstruksi",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/11/pengeboran-beton-instalasi-pipa.html": "Pengeboran Beton Instalasi Pipa",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/11/jasa-bor-beton-saluran-kabel.html": "Jasa Bor Beton Saluran Kabel",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/11/pengeboran-beton-sistem-hvac.html": "Pengeboran Beton Sistem HVAC",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/11/jasa-core-drill-beton.html": "Jasa Core Drill Beton"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/11/layanan-core-drill-terpercaya.html": "Layanan Core Drill Terpercaya",  
+  "https://www.betonjayareadymix.com/2018/11/core-drill-proyek-konstruksi.html": "Core Drill Proyek Konstruksi",  
+  "https://www.betonjayareadymix.com/2018/11/pengeboran-beton-instalasi-pipa.html": "Pengeboran Beton Instalasi Pipa",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-bor-beton-saluran-kabel.html": "Jasa Bor Beton Saluran Kabel",  
+  "https://www.betonjayareadymix.com/2018/11/pengeboran-beton-sistem-hvac.html": "Pengeboran Beton Sistem HVAC",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-core-drill-beton.html": "Jasa Core Drill Beton"  
 };
 const urlMappingJasaCoringBetonFromMoneyMaster1MoneyChild = {
-  "https://www.betonjayareadymix.com/2018/09/jasa-coring-beton-terdekat.html": "Jasa Coring Beton Terdekat",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/09/jasa-coring-beton-terdekat.html": "Jasa Coring Beton Terdekat",  
 
   // ============================================================
   // [MONEY_CHILD] - JASA CORING BETON LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/core-drill-beton-jakarta.html": "Core Drill Beton Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-surabaya.html": "Jasa Coring Beton Surabaya",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-karawang.html": "Jasa Coring Beton Karawang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-depok.html": "Jasa Coring Beton Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-bogor.html": "Jasa Coring Beton Bogor",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-bekasi.html": "Jasa Coring Beton Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-jakarta.html": "Jasa Coring Beton Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-tangerang.html": "Jasa Coring Beton Tangerang"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2018/11/core-drill-beton-jakarta.html": "Core Drill Beton Jakarta",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-surabaya.html": "Jasa Coring Beton Surabaya",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-karawang.html": "Jasa Coring Beton Karawang",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-depok.html": "Jasa Coring Beton Depok",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-bogor.html": "Jasa Coring Beton Bogor",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-bekasi.html": "Jasa Coring Beton Bekasi",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-jakarta.html": "Jasa Coring Beton Jakarta",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-tangerang.html": "Jasa Coring Beton Tangerang"  
 };
 // ============================================================
 // [SUB2] - JASA BOR BETON (KATEGORI)
@@ -248,23 +248,23 @@ const urlMappingJasaBorBetonFromMoneyMaster1MoneyPage = {
   // ============================================================
   // [MONEY_MASTER] - JASA BOR BETON (UMUM)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-renovasi-bangunan.html": "Jasa Bor Beton Renovasi Bangunan",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-profesional.html": "Jasa Bor Beton Profesional",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-renovasi-bangunan.html": "Jasa Bor Beton Renovasi Bangunan",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-profesional.html": "Jasa Bor Beton Profesional",  
   "https://www.betonjayareadymix.com/2019/08/pengeboran-beton-akurat.html": "Pengeboran Beton Akurat"
 };
 const urlMappingJasaBorBetonFromMoneyMaster1MoneyChild = {
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-terdekat.html": "Jasa Bor Beton Terdekat",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-terdekat.html": "Jasa Bor Beton Terdekat",  
 
   // ============================================================
   // [MONEY_CHILD] - JASA BOR BETON LOKASI JABODETABEK
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-jakarta.html": "Jasa Bor Beton Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-bogor.html": "Jasa Bor Beton Bogor",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-depok.html": "Jasa Bor Beton Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-tangerang.html": "Jasa Bor Beton Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-bekasi.html": "Jasa Bor Beton Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-karawang.html": "Jasa Bor Beton Karawang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-surabaya.html": "Jasa Bor Beton Surabaya"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-jakarta.html": "Jasa Bor Beton Jakarta",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-bogor.html": "Jasa Bor Beton Bogor",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-depok.html": "Jasa Bor Beton Depok",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-tangerang.html": "Jasa Bor Beton Tangerang",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-bekasi.html": "Jasa Bor Beton Bekasi",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-karawang.html": "Jasa Bor Beton Karawang",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-surabaya.html": "Jasa Bor Beton Surabaya"  
 };
 // ============================================================
 // [SUB2] - JASA BOR TANAH (KATEGORI)
@@ -276,9 +276,9 @@ const urlMappingJasaBorTanahFromMoneyMaster1MoneyPage = {
   // ============================================================
   // [MONEY_MASTER] - JASA BOR TANAH (UMUM)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-profesional.html": "Jasa Bor Tanah Profesional",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/harga-bor-tanah-per-meter.html": "Harga Bor Tanah Per Meter",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/08/pengeboran-tanah-untuk-konstruksi.html": "Pengeboran Tanah Untuk Konstruksi"  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-profesional.html": "Jasa Bor Tanah Profesional",  
+  "https://www.betonjayareadymix.com/2019/08/harga-bor-tanah-per-meter.html": "Harga Bor Tanah Per Meter",  
+  "https://www.betonjayareadymix.com/2019/08/pengeboran-tanah-untuk-konstruksi.html": "Pengeboran Tanah Untuk Konstruksi"  
 
 };
 const urlMappingJasaBorTanahFromMoneyMaster1MoneyChild = {
@@ -289,13 +289,13 @@ const urlMappingJasaBorTanahFromMoneyMaster1MoneyChild = {
 	// ============================================================
   // [MONEY_CHILD] - JASA BOR TANAH LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-jakarta.html": "Jasa Bor Tanah Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-bogor.html": "Jasa Bor Tanah Bogor",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-bekasi.html": "Jasa Bor Tanah Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-tangerang.html": "Jasa Bor Tanah Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-depok.html": "Jasa Bor Tanah Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-karawang.html": "Jasa Bor Tanah Karawang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-surabaya.html": "Jasa Bor Tanah Surabaya"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-jakarta.html": "Jasa Bor Tanah Jakarta",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-bogor.html": "Jasa Bor Tanah Bogor",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-bekasi.html": "Jasa Bor Tanah Bekasi",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-tangerang.html": "Jasa Bor Tanah Tangerang",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-depok.html": "Jasa Bor Tanah Depok",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-karawang.html": "Jasa Bor Tanah Karawang",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-surabaya.html": "Jasa Bor Tanah Surabaya"  
 };
 // ============================================================
 // [SUB2] - JASA BOR HORIZONTAL (KATEGORI)
@@ -307,14 +307,14 @@ const urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild  = {
   // ============================================================
   // [MONEY_CHILD] - JASA BOR HORIZONTAL LOKASI
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-surabaya.html": "Jasa Bor Horizontal Surabaya",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-karawang.html": "Jasa Bor Horizontal Karawang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-bekasi.html": "Jasa Bor Horizontal Bekasi",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-tangerang.html": "Jasa Bor Horizontal Tangerang",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-depok.html": "Jasa Bor Horizontal Depok",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-bogor.html": "Jasa Bor Horizontal Bogor",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-jakarta.html": "Jasa Bor Horizontal Jakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-terdekat.html": "Jasa Bor Horizontal Terdekat"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-surabaya.html": "Jasa Bor Horizontal Surabaya",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-karawang.html": "Jasa Bor Horizontal Karawang",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-bekasi.html": "Jasa Bor Horizontal Bekasi",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-tangerang.html": "Jasa Bor Horizontal Tangerang",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-depok.html": "Jasa Bor Horizontal Depok",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-bogor.html": "Jasa Bor Horizontal Bogor",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-jakarta.html": "Jasa Bor Horizontal Jakarta",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-terdekat.html": "Jasa Bor Horizontal Terdekat"  
 };
 /*
  RINGKASAN TYPE YANG DIGUNAKAN
@@ -333,28 +333,30 @@ const urlMappingJasaBorAirTeknik = {
 };*/
 
 
- /**
+/**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v10.2
- * FIXED: AUTO DETECTION JASA LEVEL + MC LOCATION
+ * generateBreadcrumbJasaKonstruksi v10.3
+ * FIXED: JASA DESAIN PILLAR + SEO OPTIMIZATION
  * ============================================================
+ *
+ * ✅ UPDATE v10.3
+ * ------------------------------------------------------------
+ * - FIX: JASA_DESAIN masuk ke VALID_ENTITY_TYPES
+ * - FIX: ROOT_ENTITY_PILLARS untuk JASA_DESAIN diperbaiki
+ * - FIX: pillarPatterns untuk JASA_DESAIN ditambahkan
+ * - FIX: JASA_KEYWORDS_PATTERN mencakup "desain"
+ * - FIX: isDesainEntity() digunakan di detectPageType()
+ * - ENHANCED: Deteksi "desain" sebagai keyword pillar
+ * - ENHANCED: SEO Friendly untuk halaman desain
  *
  * ✅ UPDATE v10.2
  * ------------------------------------------------------------
  * - FIX: Deteksi MM/MP otomatis tanpa daftar kata spesifik
- * - FIX: MM jika kata tersisa <= 1, MP jika >= 2
  * - FIX: MC hanya untuk halaman dengan lokasi
- * - FIX: "terdekat" dianggap sebagai lokasi
- * - ENHANCED: Tidak perlu tambah keyword manual untuk kasus baru
- * - ENHANCED: Deteksi angka otomatis (3d, k250, dll)
- *
- * ✅ UPDATE v10.0
- * ------------------------------------------------------------
- * - FIX: forceInjectDirectParent() branch-aware
  *
  * ============================================================
- * @version 10.2.0
- * @date 2026-06-26
+ * @version 10.3.0
+ * @date 2026-06-30
  * ============================================================
  */
 
@@ -388,47 +390,58 @@ function generateBreadcrumbJasaPengeboranPost(
             ERROR: '❌', 
             DEBUG: '🔍', 
             VARIANT: '🔬', 
-            PARENT: '👪', 
+            : '👪', 
             URL: '🔗',
             SCORE: '🎯',
             CLEAN: '🧹',
             SKIP: '⏭️',
             BRANCH: '🌿'
         };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v10.2] ${message}`);
+        console.log(`${icons[type] || '📘'} [Breadcrumb v10.3] ${message}`);
     }
 
     // ============================================================
-    // 3. ENTITY NORMALIZATION
+    // 3. ENTITY NORMALIZATION (FIXED v10.3)
     // ============================================================
 
     const ENTITY_TYPE_MAP = {
+        // JASA
         'JASA': 'JASA_KONSTRUKSI',
         'JASA_KONSTRUKSI': 'JASA_KONSTRUKSI',
+        'JASA_DESAIN': 'JASA_DESAIN',  // ✅ FIX: JASA_DESAIN ditambahkan
         'JASA_INTERIOR': 'JASA_KONSTRUKSI',
-        'JASA_DESAIN_INTERIOR': 'JASA_KONSTRUKSI',
+        'JASA_DESAIN_INTERIOR': 'JASA_DESAIN',
+        
+        // SEWA
         'SEWA': 'SEWA_ALAT_KONSTRUKSI',
         'RENTAL': 'SEWA_ALAT_KONSTRUKSI',
         'SEWA_ALAT': 'SEWA_ALAT_KONSTRUKSI',
         'RENTAL_ALAT': 'SEWA_ALAT_KONSTRUKSI',
         'SEWA_RENTAL': 'SEWA_ALAT_KONSTRUKSI',
         'SEWA_ALAT_KONSTRUKSI': 'SEWA_ALAT_KONSTRUKSI',
+        
+        // PRODUK
         'PRODUK': 'PRODUK_KONSTRUKSI',
         'PRODUK_KONSTRUKSI': 'PRODUK_KONSTRUKSI',
         'PRODUK_INTERIOR': 'PRODUK_INTERIOR',
+        
+        // MATERIAL
         'MATERIAL': 'MATERIAL_KONSTRUKSI',
         'MATERIAL_KONSTRUKSI': 'MATERIAL_KONSTRUKSI',
+        
+        // ARTIKEL
         'ARTIKEL': 'ARTIKEL'
     };
 
     entityType = ENTITY_TYPE_MAP[entityType] || entityType;
 
     // ============================================================
-    // 4. VALID ENTITY TYPES
+    // 4. VALID ENTITY TYPES (FIXED v10.3)
     // ============================================================
 
     const VALID_ENTITY_TYPES = [
         'JASA_KONSTRUKSI',
+        'JASA_DESAIN',           // ✅ FIX: JASA_DESAIN ditambahkan
         'SEWA_ALAT_KONSTRUKSI',
         'PRODUK_KONSTRUKSI',
         'PRODUK_INTERIOR',
@@ -463,11 +476,12 @@ function generateBreadcrumbJasaPengeboranPost(
     ];
 
     // ============================================================
-    // 6. ROOT ENTITY PILLARS
+    // 6. ROOT ENTITY PILLARS (FIXED v10.3)
     // ============================================================
 
     const ROOT_ENTITY_PILLARS = {
         'JASA_KONSTRUKSI': ['jasa konstruksi'],
+        'JASA_DESAIN': ['jasa desain', 'desain'],  // ✅ FIX: ditambahkan
         'SEWA_ALAT_KONSTRUKSI': ['sewa alat konstruksi'],
         'PRODUK_KONSTRUKSI': ['produk konstruksi'],
         'PRODUK_INTERIOR': ['produk interior'],
@@ -476,10 +490,11 @@ function generateBreadcrumbJasaPengeboranPost(
     };
 
     // ============================================================
-    // 7. HELPERS
+    // 7. HELPERS (FIXED v10.3)
     // ============================================================
 
     function isJasaEntity() { return entityType === 'JASA_KONSTRUKSI'; }
+    function isDesainEntity() { return entityType === 'JASA_DESAIN'; }  // ✅ FIX: digunakan
     function isSewaEntity() { return entityType === 'SEWA_ALAT_KONSTRUKSI'; }
     function isProdukEntity() { return entityType === 'PRODUK_KONSTRUKSI'; }
     function isMaterialEntity() { return entityType === 'MATERIAL_KONSTRUKSI'; }
@@ -602,17 +617,16 @@ function generateBreadcrumbJasaPengeboranPost(
     ];
 
     // ============================================================
-    // 11b. JASA CLEAN FUNCTION (FIXED v10.2 - OTOMATIS)
+    // 11b. JASA CLEAN FUNCTION
     // ============================================================
 
-    // Hanya daftar kata yang SANGAT UMUM dan HARUS dihapus
     const JASA_ULTRA_COMMON_WORDS = new Set([
         'jasa', 'kontraktor', 'tukang', 'borongan', 'renovasi',
         'pasang', 'bangun', 'perbaikan', 'instalasi', 'proyek',
-        'cor', 'gali', 'urug', 'angkut', 'service', 'servis'
+        'cor', 'gali', 'urug', 'angkut', 'service', 'servis',
+        'desain'  // ✅ FIX: "desain" ditambahkan sebagai kata ultra-common untuk JASA
     ]);
 
-    // Stopwords (kata penghubung)
     const STOPWORDS = new Set([
         'dan', 'atau', 'serta', 'yang', 'dari', 'ke', 'di', 'untuk', 
         'dengan', 'ini', 'itu', 'akan', 'telah', 'sudah', 'masih',
@@ -620,7 +634,6 @@ function generateBreadcrumbJasaPengeboranPost(
         'plus', 'minus', 'tanpa', 'sampai', 'hingga', 'sambil'
     ]);
 
-    // Daftar kata yang menunjukkan spesifikasi material (untuk variant)
     const MATERIAL_SPEC_WORDS = new Set([
         'baja ringan', 'baja', 'ringan', 'beton', 'readymix', 
         'kanstin', 'pembatas', 'pengaman', 'struktur', 'dinding',
@@ -631,12 +644,13 @@ function generateBreadcrumbJasaPengeboranPost(
         'konstruksi', 'rangka', 'material', 'upah', 'tenaga'
     ]);
 
-    // Daftar modifier (kata yang menunjukkan spesifikasi/harga)
     const MODIFIER_WORDS = new Set([
         'murah', 'profesional', 'berkualitas', 'terbaik', 'spesialis',
         'ahli', 'berpengalaman', 'resmi', 'terpercaya', 'ekonomis',
         'cepat', 'tepat', 'garansi', 'kualitas', 'harga', 'biaya',
-        'tarif', 'ongkos', 'estimasi', 'perhitungan', 'analisa'
+        'tarif', 'ongkos', 'estimasi', 'perhitungan', 'analisa',
+        'modern', 'minimalis', 'mewah', 'klasik', 'tradisional',
+        'kontemporer', 'sederhana', 'elegan', 'premium', 'luxury'
     ]);
 
     function cleanJasaText(text) {
@@ -644,17 +658,14 @@ function generateBreadcrumbJasaPengeboranPost(
         
         let cleaned = text.toLowerCase();
         
-        // 1. Hapus kata ultra-common
         for (const kw of JASA_ULTRA_COMMON_WORDS) {
             cleaned = cleaned.replace(new RegExp(`\\b${kw}\\b`, 'g'), ' ');
         }
         
-        // 2. Hapus stopwords
         for (const sw of STOPWORDS) {
             cleaned = cleaned.replace(new RegExp(`\\b${sw}\\b`, 'g'), ' ');
         }
         
-        // 3. Normalisasi spasi
         cleaned = cleaned.replace(/\s+/g, ' ').trim();
         
         log(`Clean JASA: "${text}" → "${cleaned}"`, 'CLEAN');
@@ -699,36 +710,24 @@ function generateBreadcrumbJasaPengeboranPost(
     }
 
     // ============================================================
-    // 11c. DETEKSI JASA LEVEL OTOMATIS (FIXED v10.2)
+    // 11c. DETEKSI JASA LEVEL OTOMATIS
     // ============================================================
 
     function detectJasaLevelAuto(pageName) {
         const lowerName = pageName.toLowerCase();
         
-        // 1. Bersihkan teks
         const cleaned = cleanJasaText(lowerName);
         
-        // 2. Hitung kata yang tersisa (minimal 2 karakter)
         const remainingWords = cleaned.split(/\s+/).filter(w => w.length >= 2);
         const wordCount = remainingWords.length;
         
-        // 3. Cek apakah ada angka (indikasi spesifikasi)
         const hasNumber = /\d/.test(cleaned);
-        
-        // 4. Cek apakah ada kata yang menunjukkan lokasi
         const hasLocation = isLocation(cleaned);
-        
-        // 5. Cek apakah ada modifier
         const hasModifierWord = hasModifier(cleaned);
-        
-        // 6. Cek apakah ada material spec
         const hasMaterialSpecWord = hasMaterialSpec(cleaned);
         
-        log(`Auto detect JASA: "${pageName}" → remaining: "${cleaned}", words: ${wordCount}, hasNumber: ${hasNumber}, hasLocation: ${hasLocation}`, 'DEBUG');
+        log(`Auto detect JASA: "${pageName}" → remaining: "${cleaned}", words: ${wordCount}`, 'DEBUG');
         
-        // ✅ LOGIKA OTOMATIS v10.2:
-        // - Jika remaining words <= 1 DAN tidak ada angka DAN tidak ada lokasi → MM
-        // - Selain itu → MP
         if (wordCount <= 1 && !hasNumber && !hasLocation && !hasModifierWord && !hasMaterialSpecWord) {
             log(`MM detected (auto): "${pageName}" → remaining words: ${wordCount}`, 'SUCCESS');
             return 'money-master';
@@ -760,10 +759,10 @@ function generateBreadcrumbJasaPengeboranPost(
             }
         }
         
-        if (currentEntityType === 'JASA_KONSTRUKSI') {
+        if (currentEntityType === 'JASA_KONSTRUKSI' || currentEntityType === 'JASA_DESAIN') {
             for (const kw of VARIANT_KEYWORDS_JASA) {
                 if (lowerName.includes(kw)) {
-                    log(`Variant detected (JASA): "${pageName}" contains "${kw}"`, 'VARIANT');
+                    log(`Variant detected (JASA/DESAIN): "${pageName}" contains "${kw}"`, 'VARIANT');
                     return true;
                 }
             }
@@ -788,55 +787,38 @@ function generateBreadcrumbJasaPengeboranPost(
     }
 
     // ============================================================
-    // 12. LOCATION DETECTION (UPDATED v10.2 - OTOMATIS MC)
+    // 12. LOCATION DETECTION
     // ============================================================
 
     const LOCATION_WHITELIST = new Set([
-        // Jabodetabek
         'jakarta', 'jakarta pusat', 'jakarta barat', 'jakarta selatan', 'jakarta timur', 'jakarta utara',
         'bogor', 'kota bogor', 'kabupaten bogor',
         'depok', 'kota depok',
         'tangerang', 'kota tangerang', 'kota tangerang selatan', 'kabupaten tangerang',
         'bekasi', 'kota bekasi', 'kabupaten bekasi',
-        
-        // Jawa Barat
         'bandung', 'kota bandung', 'kabupaten bandung',
         'karawang', 'kabupaten karawang',
         'purwakarta', 'kabupaten purwakarta',
         'cikarang', 'cikarang barat', 'cikarang pusat', 'cikarang selatan', 'cikarang timur', 'cikarang utara',
         'subang', 'kabupaten subang',
         'cirebon', 'kota cirebon', 'kabupaten cirebon',
-        
-        // Jawa Tengah & DIY
         'semarang', 'kota semarang', 'kabupaten semarang',
         'solo', 'surakarta', 'kota surakarta',
         'pekalongan', 'tegal', 'magelang', 'sukoharjo', 'boyolali', 'klaten',
         'jogja', 'yogyakarta', 'kota yogyakarta', 'kabupaten sleman', 'bantul', 'gunungkidul', 'kulon progo',
-        
-        // Jawa Timur
         'surabaya', 'kota surabaya',
         'malang', 'kota malang', 'kabupaten malang',
         'kediri', 'kota kediri', 'kabupaten kediri',
         'gresik', 'sidoarjo', 'mojokerto', 'pasuruan', 'probolinggo', 'jember', 'banyuwangi', 'madiun',
-        
-        // Sumatera
         'medan', 'kota medan',
         'palembang', 'pekanbaru', 'padang', 'lampung', 'bandar lampung', 'batam', 'tanjungpinang',
         'aceh', 'banda aceh', 'jambi', 'bengkulu', 'pangkal pinang',
-        
-        // Kalimantan
         'pontianak', 'balikpapan', 'samarinda', 'banjarmasin', 'palangkaraya',
-        
-        // Sulawesi
         'makassar', 'kota makassar',
         'manado', 'palu', 'kendari', 'gorontalo',
-        
-        // Bali & Nusa Tenggara
         'bali', 'kabupaten badung', 'kota denpasar', 'denpasar', 'gianyar', 'tabanan', 'bangli', 'karangasem', 'klungkung', 'buleleng', 'jembrana',
         'mataram', 'kupang',
-        
-        // Lainnya
-        'terdekat' // ← "terdekat" dianggap lokasi
+        'terdekat'
     ]);
 
     function isLocation(text) {
@@ -887,14 +869,14 @@ function generateBreadcrumbJasaPengeboranPost(
     }
 
     // ============================================================
-    // 16. JASA KEYWORDS
+    // 16. JASA KEYWORDS (FIXED v10.3)
     // ============================================================
 
     const JASA_KEYWORDS_PATTERN = 
-        /\b(jasa|kontraktor|tukang|borongan|renovasi|pasang|bangun|perbaikan|instalasi|proyek|cor|gali|urug|angkut)\b/i;
+        /\b(jasa|kontraktor|tukang|borongan|renovasi|pasang|bangun|perbaikan|instalasi|proyek|cor|gali|urug|angkut|desain|interior|eksterior|arsitektur|gedung|rumah|ruko|kantor|apartemen)\b/i;
 
     // ============================================================
-    // 17. PAGE TYPE DETECTION (FIXED v10.2)
+    // 17. PAGE TYPE DETECTION (FIXED v10.3)
     // ============================================================
 
     function detectPageType(pageName, isHome = false) {
@@ -904,7 +886,6 @@ function generateBreadcrumbJasaPengeboranPost(
         if (isEntityPillarExactMatch(lowerName)) return 'pillar';
         if (isSubVariant(lowerName)) return 'sub-variant';
 
-        // Method keywords detection
         for (const kw of METHOD_KEYWORDS) {
             if (lowerName.includes(kw)) {
                 const HAS_JASA_WORD = JASA_KEYWORDS_PATTERN.test(lowerName);
@@ -918,7 +899,6 @@ function generateBreadcrumbJasaPengeboranPost(
             }
         }
 
-        // Variant detection per entity
         if (isVariantPage(lowerName, entityType)) {
             return 'variant';
         }
@@ -938,18 +918,16 @@ function generateBreadcrumbJasaPengeboranPost(
         const HAS_JASA_WORD = JASA_KEYWORDS_PATTERN.test(lowerName);
         const HAS_LOCATION = isLocation(lowerName);
 
-        // ✅ MC DETECTION: Hanya jika ada lokasi
         if (HAS_LOCATION) {
             log(`MC detected: "${pageName}" contains location`, 'SUCCESS');
             return 'money-child';
         }
 
-        // ✅ FIX v10.2: JASA ENTITY dengan deteksi otomatis
-        if (isJasaEntity() && HAS_JASA_WORD && !HAS_PRICE_WORD) {
+        // ✅ FIX v10.3: JASA_DESAIN masuk ke deteksi
+        if ((isJasaEntity() || isDesainEntity()) && HAS_JASA_WORD && !HAS_PRICE_WORD) {
             return detectJasaLevelAuto(lowerName);
         }
 
-        // SEWA ENTITY
         if (isSewaEntity() && HAS_SEWA_WORD && !HAS_PRICE_WORD) {
             const cleaned = lowerName.replace(/\b(sewa|rental)\b/gi, '').trim();
             const words = cleaned.split(/\s+/).filter(Boolean);
@@ -960,7 +938,6 @@ function generateBreadcrumbJasaPengeboranPost(
             return 'money-page';
         }
 
-        // PRICE PAGE
         if (HAS_PRICE_WORD) {
             const cleaned = lowerName.replace(/\b(harga|biaya|tarif)\b/gi, '').trim();
             const words = cleaned.split(/\s+/).filter(Boolean);
@@ -971,7 +948,6 @@ function generateBreadcrumbJasaPengeboranPost(
             return 'money-page';
         }
 
-        // PRODUK / MATERIAL
         if ((isProdukEntity() || isMaterialEntity()) && !HAS_PRICE_WORD) {
             const words = lowerName.split(/\s+/).filter(Boolean);
             if (words.length <= 2) return 'pillar';
@@ -982,7 +958,7 @@ function generateBreadcrumbJasaPengeboranPost(
     }
 
     // ============================================================
-    // 18. AUTO DETECT PARENT
+    // 18. AUTO DETECT 
     // ============================================================
 
     function findNearestParentFromItems(items, currentPageName) {
@@ -1083,7 +1059,7 @@ function generateBreadcrumbJasaPengeboranPost(
     }
 
     // ============================================================
-    // 19. FORCE PARENT INJECTION (BRANCH AWARE)
+    // 19. FORCE  INJECTION
     // ============================================================
 
     function forceInjectDirectParent(lineageLevels, allLevels, currentPageTitle, entityType, breadcrumbItems) {
@@ -1091,19 +1067,17 @@ function generateBreadcrumbJasaPengeboranPost(
         let modifiedLineage = [...lineageLevels];
         const words = currentLower.split(/\s+/);
 
-        // STRATEGI 1: Auto parent dari breadcrumbItems
         const autoParent = findNearestParentFromItems(breadcrumbItems, currentPageTitle);
         if (autoParent && !modifiedLineage.some(l => l.name === autoParent.name)) {
             const parentFromAll = allLevels.find(item => 
                 item.name?.toLowerCase() === autoParent.name?.toLowerCase()
             );
             if (parentFromAll) {
-                log(`AUTO PARENT: "${parentFromAll.name}"`, 'SUCCESS');
+                log(`AUTO : "${parentFromAll.name}"`, 'SUCCESS');
                 modifiedLineage.push(parentFromAll);
             }
         }
 
-        // STRATEGI 2: Pattern-based (prefix match)
         if (modifiedLineage.length === lineageLevels.length && words.length >= 2) {
             for (let i = words.length - 1; i >= 1; i--) {
                 const potentialParent = words.slice(0, i).join(' ');
@@ -1111,7 +1085,7 @@ function generateBreadcrumbJasaPengeboranPost(
                     item.name.toLowerCase() === potentialParent
                 );
                 if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
-                    log(`PATTERN PARENT: "${parentItem.name}"`, 'SUCCESS');
+                    log(`PATTERN : "${parentItem.name}"`, 'SUCCESS');
                     modifiedLineage.push(parentItem);
                     break;
                 }
@@ -1126,7 +1100,6 @@ function generateBreadcrumbJasaPengeboranPost(
             !modifiedLineage.some(l => l.name === item.name)
         );
         
-        // ✅ Filter berdasarkan branch + score
         for (const parent of allPotentialParents) {
             const isDifferentBranch = modifiedLineage.every(existing => {
                 const similarity = calculateSimilarity(parent.name, existing.name);
@@ -1136,7 +1109,7 @@ function generateBreadcrumbJasaPengeboranPost(
             const hasSignificantScore = (parent.relevanceScore || 0) > 50;
             
             if (isDifferentBranch && hasSignificantScore) {
-                log(`FORCE PARENT (branch): "${parent.name}" (level ${parent.level}) → "${currentPageTitle}"`, 'SUCCESS');
+                log(`FORCE  (branch): "${parent.name}" (level ${parent.level}) → "${currentPageTitle}"`, 'SUCCESS');
                 modifiedLineage.push(parent);
             } else if (!isDifferentBranch) {
                 log(`⏭️ FORCE SKIP: "${parent.name}" (level ${parent.level}) - same branch`, 'SKIP');
@@ -1145,7 +1118,6 @@ function generateBreadcrumbJasaPengeboranPost(
             }
         }
 
-        // STRATEGI 3: Semantic similarity
         if (modifiedLineage.length === lineageLevels.length) {
             const semanticKeywords = {
                 'finishing': ['finishing', 'cat', 'epoxy', 'lampu', 'wallpaper'],
@@ -1153,7 +1125,8 @@ function generateBreadcrumbJasaPengeboranPost(
                 'interior': ['interior', 'dalam', 'ruangan'],
                 'eksterior': ['eksterior', 'luar', 'halaman'],
                 'lantai': ['lantai', 'keramik', 'epoxy lantai', 'marmer', 'granit'],
-                'dinding': ['dinding', 'tembok', 'wallpaper']
+                'dinding': ['dinding', 'tembok', 'wallpaper'],
+                'desain': ['desain', 'arsitektur', 'konsep', 'rencana', 'gambar']
             };
             
             for (const [parentKeyword, childKeywords] of Object.entries(semanticKeywords)) {
@@ -1169,7 +1142,7 @@ function generateBreadcrumbJasaPengeboranPost(
                         });
                         
                         if (isDifferentBranch) {
-                            log(`SEMANTIC PARENT: "${parentItem.name}"`, 'SUCCESS');
+                            log(`SEMANTIC : "${parentItem.name}"`, 'SUCCESS');
                             modifiedLineage.push(parentItem);
                         }
                     }
@@ -1177,7 +1150,6 @@ function generateBreadcrumbJasaPengeboranPost(
             }
         }
 
-        // STRATEGI 4: Last resort
         if (modifiedLineage.length === lineageLevels.length && allLevels.length > 0) {
             const lowerLevelItems = allLevels.filter(item => 
                 item.level <= currentLevel && 
@@ -1246,7 +1218,7 @@ function generateBreadcrumbJasaPengeboranPost(
     }
 
     // ============================================================
-    // 23. INJECT CURRENT PAGE & AUTO PARENT
+    // 23. INJECT CURRENT PAGE & AUTO 
     // ============================================================
 
     const enhancedBreadcrumbItems = injectCurrentPageAndParent(
@@ -1320,7 +1292,6 @@ function generateBreadcrumbJasaPengeboranPost(
 
     const selectedLevels = [];
 
-    // HOME
     selectedLevels.push({
         name: 'Beranda',
         url: CONFIG.DOMAIN,
@@ -1329,7 +1300,6 @@ function generateBreadcrumbJasaPengeboranPost(
         position: 1
     });
 
-    // Buat unique items berdasarkan URL (bukan nama)
     const uniqueByUrl = new Map();
     for (const item of allLevels) {
         const key = item.url || item.name;
@@ -1347,7 +1317,7 @@ function generateBreadcrumbJasaPengeboranPost(
     log('Unique items (' + uniqueItems.length + '): ' + uniqueItems.map(i => i.name + '(' + i.level + ')').join(' → '), 'INFO');
 
     // ============================================================
-    // FIND NEAREST PARENTS (BRANCH DETECTION)
+    // FIND NEAREST S
     // ============================================================
 
     function findNearestParentsByHierarchy() {
@@ -1355,14 +1325,12 @@ function generateBreadcrumbJasaPengeboranPost(
         const currentLevel = TYPE_LEVEL_MAP[currentPageType] || 99;
         const currentPageTitleLower = currentPageTitle.toLowerCase();
         
-        // Ambil SEMUA candidate (kecuali current page)
         const candidates = uniqueItems.filter(item => 
             item.name.toLowerCase() !== currentPageTitleLower
         );
         
         if (candidates.length === 0) return lineage;
         
-        // Hanya ambil candidate dengan level <= currentLevel
         const validCandidates = candidates.filter(item => item.level <= currentLevel);
         
         if (validCandidates.length === 0) {
@@ -1375,26 +1343,24 @@ function generateBreadcrumbJasaPengeboranPost(
         
         log('Valid candidates: ' + validCandidates.map(i => i.level + ':' + i.name).join(', '), 'DEBUG');
         
-        // Hitung relevansi score
         const currentWords = currentPageTitleLower.split(/\s+/);
         const scoredCandidates = validCandidates.map(item => {
             const itemWords = item.name.toLowerCase().split(/\s+/);
             let relevanceScore = 0;
             
-            // 1. Kata yang sama dengan current page (bobot 10)
             for (const word of currentWords) {
                 if (word.length > 2 && itemWords.includes(word)) {
                     relevanceScore += 10;
                 }
             }
             
-            // 2. Keyword spesifik (bobot 30)
             const specificKeywords = [
                 'kanstin', 'pembatas', 'pengaman', 'tukang', 'baja', 'ringan',
                 'struktur', 'konstruksi', 'pasang', 'dinding', 'pondasi',
                 'beton', 'readymix', 'cor', 'pile', 'sheet', 'tiang',
                 'harga', 'biaya', 'borongan', 'material', 'upah', 'tenaga',
-                'wallpaper', 'custom', '3d', 'interior', 'dekorasi'
+                'wallpaper', 'custom', '3d', 'interior', 'dekorasi',
+                'desain', 'arsitektur', 'rumah', 'gedung', 'ruko'
             ];
             for (const kw of specificKeywords) {
                 if (currentPageTitleLower.includes(kw) && item.name.toLowerCase().includes(kw)) {
@@ -1402,12 +1368,10 @@ function generateBreadcrumbJasaPengeboranPost(
                 }
             }
             
-            // 3. Bonus jika parent adalah bagian dari current page (bobot 50)
             if (currentPageTitleLower.includes(item.name.toLowerCase()) && item.name.length > 3) {
                 relevanceScore += 50;
             }
             
-            // 4. Bonus panjang kata (lebih spesifik) (bobot 5)
             const maxWordLength = Math.max(...itemWords.map(w => w.length));
             if (maxWordLength > 6) {
                 relevanceScore += 5;
@@ -1418,7 +1382,6 @@ function generateBreadcrumbJasaPengeboranPost(
             return { ...item, relevanceScore };
         });
         
-        // Urutkan berdasarkan level (descending) lalu relevanceScore (descending)
         scoredCandidates.sort((a, b) => {
             if (a.level !== b.level) return b.level - a.level;
             return b.relevanceScore - a.relevanceScore;
@@ -1426,21 +1389,16 @@ function generateBreadcrumbJasaPengeboranPost(
         
         log('Scored candidates (sorted): ' + scoredCandidates.map(i => i.level + ':' + i.name + '(' + i.relevanceScore + ')').join(' → '), 'DEBUG');
         
-        // Ambil parent berdasarkan BRANCH + SIMILARITY
         const selectedParents = [];
         
         for (const item of scoredCandidates) {
             const levelKey = item.level;
-            
-            // Cek apakah sudah ada parent dengan level yang sama
             const existingParents = selectedParents.filter(p => p.level === levelKey);
             
             if (existingParents.length === 0) {
-                // Belum ada parent di level ini → ambil
                 selectedParents.push(item);
                 log(`🎯 Selected: "${item.name}" (level ${item.level}) with score ${item.relevanceScore}`, 'SUCCESS');
             } else {
-                // Cek apakah ini cabang yang berbeda (similarity < 50%)
                 const isDifferentBranch = existingParents.every(existing => {
                     const similarity = calculateSimilarity(item.name, existing.name);
                     const isSameBranch = similarity >= 0.5;
@@ -1449,22 +1407,18 @@ function generateBreadcrumbJasaPengeboranPost(
                 });
                 
                 if (isDifferentBranch) {
-                    // Cabang berbeda → tambahkan sebagai parent tambahan
                     selectedParents.push(item);
                     log(`🌿 Branch parent: "${item.name}" (level ${item.level}) with score ${item.relevanceScore}`, 'BRANCH');
                 } else {
-                    // Cabang sama → skip
-                    log(`⏭️ Skipped: "${item.name}" (level ${item.level}) - same branch as existing parent`, 'SKIP');
+                    log(`⏭️ Skipped: "${item.name}" (level ${item.level}) - same branch`, 'SKIP');
                 }
             }
         }
         
-        // Tambahkan ke lineage
         for (const item of selectedParents) {
             lineage.push(item);
         }
         
-        // Jika lineage kosong, fallback
         if (lineage.length === 0 && validCandidates.length > 0) {
             const sortedByLevel = [...validCandidates].sort((a, b) => b.level - a.level);
             const highestLevel = sortedByLevel[0].level;
@@ -1493,7 +1447,6 @@ function generateBreadcrumbJasaPengeboranPost(
 
     log('After force injection (' + lineageLevels.length + '): ' + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
 
-    // REMOVE DUPLICATE
     const cleanLineage = [];
     const usedLineage = new Set();
 
@@ -1504,10 +1457,8 @@ function generateBreadcrumbJasaPengeboranPost(
         cleanLineage.push(item);
     }
 
-    // VALIDATE HIERARCHY
     const validatedLineage = validateAndFixHierarchy(cleanLineage);
 
-    // SORT NATURAL ORDER
     validatedLineage.sort((a, b) => {
         const idxA = HIERARCHY_ORDER.indexOf(a.type);
         const idxB = HIERARCHY_ORDER.indexOf(b.type);
@@ -1516,7 +1467,7 @@ function generateBreadcrumbJasaPengeboranPost(
     });
 
     // ========================================================
-    // SOLUSI v9.0: AMBIL SEMUA PARENT DENGAN LEVEL TERTINGGI
+    // AMBIL SEMUA  DENGAN LEVEL TERTINGGI
     // ========================================================
     
     let finalParents = [];
@@ -1532,7 +1483,7 @@ function generateBreadcrumbJasaPengeboranPost(
         finalParents = parentOnly.filter(item => item.level === highestLevel);
         finalParents.sort((a, b) => a.position - b.position);
         
-        log(`✅ PARENT FOUND: ${finalParents.length} parent(s) at level ${highestLevel}: ` + finalParents.map(i => i.name).join(', '), 'SUCCESS');
+        log(`✅  FOUND: ${finalParents.length} parent(s) at level ${highestLevel}: ` + finalParents.map(i => i.name).join(', '), 'SUCCESS');
     } else {
         log('⚠️ No parent found (only current page)', 'WARN');
     }
@@ -1544,20 +1495,18 @@ function generateBreadcrumbJasaPengeboranPost(
         if (filtered.length > 0) {
             const highestLevel = Math.max(...filtered.map(i => i.level));
             finalParents = filtered.filter(item => item.level === highestLevel);
-            log(`⚠️ FALLBACK PARENT: Using ${finalParents.length} nearest parent(s) at level ${highestLevel}`, 'WARN');
+            log(`⚠️ FALLBACK : Using ${finalParents.length} nearest parent(s) at level ${highestLevel}`, 'WARN');
         }
     }
 
-    // Inject ALL parents
     for (const item of finalParents) {
         const exists = selectedLevels.some(l => l.name.toLowerCase() === item.name.toLowerCase());
         if (!exists) {
             selectedLevels.push(item);
-            log(`👪 Adding parent: "${item.name}" (level ${item.level})`, 'PARENT');
+            log(`👪 Adding parent: "${item.name}" (level ${item.level})`, '');
         }
     }
 
-    // ADD CURRENT PAGE
     const hasCurrentAlready = selectedLevels.some(item =>
         item.name.toLowerCase() === currentPageTitle.toLowerCase()
     );
@@ -1672,7 +1621,7 @@ function generateBreadcrumbJasaPengeboranPost(
     // 34. LOG SUMMARY
     // ============================================================
 
-    console.log('📊 BREADCRUMB GENERATION SUMMARY (v10.2):');
+    console.log('📊 BREADCRUMB GENERATION SUMMARY (v10.3):');
     console.log(`   Page: "${currentPageTitle}"`);
     console.log(`   URL: "${currentFullUrl}"`);
     console.log(`   Type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`);
@@ -1696,7 +1645,7 @@ function generateBreadcrumbJasaPengeboranPost(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '10.2.0',
+        version: '10.3.0',
         parentCount: finalParents.length,
         parents: finalParents,
         isVariant: currentPageType === 'variant',
@@ -2451,50 +2400,6 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
     }
 
-
-     var JasaKonstruksiPengeboranPostLink = document.getElementById("JasaKonstruksiPengeboranPost");
-     var JasaPengeboranPostLink = document.getElementById("JasaPengeboranPost");
-     //SUB JasaPengeboranPosth
-	     	//var JasaBorAirPostLink = document.getElementById("JasaBorAirPost");
-			//var JasaBorAirLokasiPostLink = document.getElementById("JasaBorAirLokasiPost");
-			//var JasaBorAirBiayaPostLink = document.getElementById("JasaBorAirBiayaPost");
-		     var JasaBorAirSumurPostLink = document.getElementById("JasaBorAirSumurPost");
-	        //var JasaBorAirKebutuhanPostLink = document.getElementById("JasaBorAirKebutuhanPost");
-	        //var JasaBorAirPeralatanPostLink = document.getElementById("JasaBorAirPeralatanPost");
-	var JasaBorTeknikPostLink = document.getElementById("JasaBorTeknikPost");
-     var JasaBorePilePostLink = document.getElementById("JasaBorePilePost");
-     var JasaCoringBetonPostLink = document.getElementById("JasaCoringBetonPost");
-     var JasaBorTembokPostLink = document.getElementById("JasaBorTembokPost");
-     var JasaBorBetonPostLink = document.getElementById("JasaBorBetonPost");
-     var JasaBorTanahPostLink = document.getElementById("JasaBorTanahPost");
-     var JasaBorHorizontalPostLink = document.getElementById("JasaBorHorizontalPost");
-	
-    	
-     var pageNameJasaKonsPengeboranPost = document.getElementById("pageNameJasaKonsPengeboranPost");
-    
-
-     // Default untuk menyembunyikan elemen
-     JasaKonstruksiPengeboranPostLink.style.visibility = 'hidden';
-     JasaPengeboranPost.style.visibility = 'hidden';
-	
-     //SUB JasaPengeboranPost
-     //JasaBorAirPostLink.style.visibility = 'hidden';
-	//JasaBorAirLokasiPostLink.style.visibility = 'hidden';
-		//JasaBorAirBiayaPostLink.style.visibility = 'hidden';
-		JasaBorAirSumurPostLink.style.visibility = 'hidden';
-	    //JasaBorAirKebutuhanPostLink.style.visibility = 'hidden';
-	    //JasaBorAirPeralatanPostLink.style.visibility = 'hidden';
-	 	
-	//JasaBorTeknikPostLink.style.visibility = 'hidden';
-     JasaBorePilePostLink.style.visibility = 'hidden';
-     JasaCoringBetonPostLink.style.visibility = 'hidden';
-     JasaBorTembokPostLink.style.visibility = 'hidden';
-     JasaBorBetonPostLink.style.visibility = 'hidden';
-     JasaBorTanahPostLink.style.visibility = 'hidden';
-     JasaBorHorizontalPostLink.style.visibility = 'hidden';
-	
-     pageNameJasaKonsPengeboranPost.textContent = "";
-	
     //SUB urlMappingBangunan
 	if (urlMappingJasaBorSumurFromMoneyMaster1MoneyChild[cleanUrlJasaPengeboranPost]) {
        generateBreadcrumbJasaPengeboranPost(
@@ -2540,6 +2445,7 @@ document.addEventListener("DOMContentLoaded", function() {
         'JASA_KONSTRUKSI'
     );
     }
+		
 /*	
 if (urlMappingJasaBorTeknik[cleanUrlJasaPengeboranPost]) {
         restoreCondition('JasaKonsPengeboranPost');
