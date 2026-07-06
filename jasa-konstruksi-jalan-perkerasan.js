@@ -107,7 +107,6 @@ Jika konten tipis, lebih baik digabung ke halaman induk.
 const urlMappingJasaPemadatanPersiapanTanahJalanFromMoneyPageMoneyPage1 = {
   // ============================================================
   // [SUB2] - MASTER PAGE (HALAMAN INDUK) - sudah ada di urlMappingJalan
-   (HUB PAGE) - boleh skip di breadcrumb
   // ============================================================
   // "https://www.betonjayareadymix.com/p/jasa-pemadatan-dan-persiapan-tanah-jalan.html": "Jasa Pemadatan & Persiapan Tanah Jalan",   (HUB PAGE)
   
@@ -190,7 +189,6 @@ const urlMappingJasaPerkerasanJalanLayananFromMoneyPageMoneyPage1 = {
 const urlMappingJasaPerkerasanJalan = {
   // ============================================================
   // [SUB2] - HUB PAGE (MASTER PERKERASAN JALAN) - sudah ada di urlMappingJalan
-   (HUB PAGE) - boleh skip di breadcrumb
   // ============================================================
   // "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html": "Jasa Perkerasan Jalan",   (HUB PAGE)
 
@@ -302,14 +300,11 @@ const urlMappingJasaTujuanPengerasanJalanFromMoneyPageMoneyPage1 = {
 /*
 const urlMappingJasaPengerasanJalan = {
   // ============================================================
-  // [SUB2] - MASTER PENGERASAN JALAN
-  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
   // ============================================================
   // "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan.html": "Jasa Pengerasan Jalan",   [MASTER]
   
   // ============================================================
   // [SUB2] - PENGERASAN PER LOKASI/FUNGSI
-  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-proyek.html": "Jasa Pengerasan Jalan Proyek",  
   "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-akses.html": "Jasa Pengerasan Jalan Akses",  
@@ -322,7 +317,6 @@ const urlMappingJasaPengerasanJalan = {
   
   // ============================================================
   // [SUB2] - PENGERASAN BERDASARKAN MATERIAL
-  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
   // ⚠️ PERHATIAN: Bedakan dengan perkerasan agregat/base course
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-tanah.html": "Jasa Pengerasan Jalan Tanah",  
@@ -334,7 +328,6 @@ const urlMappingJasaPengerasanJalan = {
   
   // ============================================================
   // [SUB2] - PENGERASAN BERDASARKAN LAPISAN
-  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
   // ⚠️ PERHATIAN: Fokus ke base course sebagai LAPISAN PENGERASAN (bukan perkerasan)
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-base-course.html": "Jasa Pengerasan Jalan Base Course",  
@@ -343,7 +336,6 @@ const urlMappingJasaPengerasanJalan = {
   
   // ============================================================
   // [SUB2] - METODE PENGERASAN LAINNYA
-  // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-urugan-material.html": "Jasa Pengerasan Jalan Urugan Material",  
   "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-urugan-tanah.html": "Jasa Pengerasan Jalan Urugan Tanah",  
