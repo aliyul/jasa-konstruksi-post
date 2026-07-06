@@ -44,7 +44,6 @@ const urlMappingJasaPengerasanJalanFromMoneyMaster1MoneyPage = {
 const urlMappingJasaPembangunanInfrastrukturJalanFromMoneyPageMoneyPage1 = {
   // ============================================================
   // [SUB2] - MASTER / HUB PAGE (WAJIB ADA) sudah ada di urlMappingJalan di jasa konstruksi
-   (HUB PAGE) - boleh skip di breadcrumb
   // ============================================================
  // "https://www.betonjayareadymix.com/p/jasa-pembangunan-infrastruktur-jalan.html": "Jasa Pembangunan Infrastruktur Jalan",   (HUB PAGE)
   
