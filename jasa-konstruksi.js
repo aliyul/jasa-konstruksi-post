@@ -297,14 +297,14 @@ const urlMappingPerbaikanBangunanBridgeFromSub2Sub1 = {
    "https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html": "Perbandingan Jasa Perbaikan Bangunan"  // TYPE: SUB1
 };
 const urlMappingJasaPerbaikanBangunanFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html": "Jasa Perbaikan Bangunan"  //MONEY_MASTER1
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html": "Jasa Perbaikan Bangunan"  
 
 };
 const urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1 = {
     "https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html": "Perbandingan Jasa Perbaikan Infrastruktur"  // TYPE: SUB1
 };
 const urlMappingJasaPerbaikanInfrastrukturFromSub1MoneyMaster = {
-	"https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html": "Jasa Perbaikan Infrastruktur"  //MONEY_MASTER1
+	"https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html": "Jasa Perbaikan Infrastruktur"  
 };
 const urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyMaster1 = {
 // MM TURUNAN - JASA PERBAIKAN JALAN (LEVEL 4) - DIUBAH JADI 2 KATA AGAR MM
@@ -1097,14 +1097,14 @@ const urlMappingPerbaikanBangunanFromMoneyMasterMoneyPage = {
 const urlMappingPengeboranFromMoneyMasterMoneyMaster1 = {
   // [MONEY_PAGE] - JENIS PENGEBORAN SPESIFIK (JASA)
   //"https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html": "Jasa Bor Air Sumur",  
-  "https://www.betonjayareadymix.com/p/jasa-tukang-bor.html": "Jasa Tukang Bor",  //MONEY_MASTER1
-  "https://www.betonjayareadymix.com/p/jasa-bor-sumur.html": "Jasa Bor Sumur",  //MONEY_MASTER1
-  "https://www.betonjayareadymix.com/p/jasa-bore-pile.html": "Jasa Bore Pile",  // TYPE: MONEY_MASTER1
-  "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",  // TYPE: MONEY_MASTER1
-  "https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton",  // TYPE: MONEY_MASTER1
-  "https://www.betonjayareadymix.com/p/jasa-bor-tanah.html": "Jasa Bor Tanah",  // TYPE: MONEY_MASTER1
-  "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal",  // TYPE: MONEY_MASTER1
-  "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html": "Jasa Bor Tembok"  // TYPE: MONEY_MASTER1
+  "https://www.betonjayareadymix.com/p/jasa-tukang-bor.html": "Jasa Tukang Bor",  
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur.html": "Jasa Bor Sumur",  
+  "https://www.betonjayareadymix.com/p/jasa-bore-pile.html": "Jasa Bore Pile",  
+  "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",  
+  "https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton",  
+  "https://www.betonjayareadymix.com/p/jasa-bor-tanah.html": "Jasa Bor Tanah",  
+  "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal",  
+  "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html": "Jasa Bor Tembok"  
 };
 
 
