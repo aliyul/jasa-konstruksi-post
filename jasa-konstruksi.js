@@ -441,13 +441,13 @@ const urlMappingJasaInstalasiListrikFromSub1MoneyMaster = {
 
 // [SUB2] - KATEGORI SEWA SPESIFIK (ENTITY SEWA/RENTAL)
 const urlMappingSewaAlatFromPillarSub2 = {
-  "https://www.betonjayareadymix.com/p/daftar-sewa-alat-proyek.html": "Daftar Sewa Alat Proyek",   PARENT
-  "https://www.betonjayareadymix.com/p/daftar-sewa-alat-berat.html": "Daftar Sewa Alat Berat",   PARENT
-  "https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html": "Daftar Sewa Alat Ringan",   PARENT
-  "https://www.betonjayareadymix.com/p/daftar-sewa-alat-pendukung.html": "Daftar Sewa Alat Pendukung"   PARENT
+  "https://www.betonjayareadymix.com/p/daftar-sewa-alat-proyek.html": "Daftar Sewa Alat Proyek",   
+  "https://www.betonjayareadymix.com/p/daftar-sewa-alat-berat.html": "Daftar Sewa Alat Berat",   
+  "https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html": "Daftar Sewa Alat Ringan",   
+  "https://www.betonjayareadymix.com/p/daftar-sewa-alat-pendukung.html": "Daftar Sewa Alat Pendukung"   
 };
 const urlMappingSewaAlatProyekFromSub2Sub1 = {
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html": "Perbandingan Sewa Alat Proyek"  // TYPE: SUB1 PARENT
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html": "Perbandingan Sewa Alat Proyek"  // TYPE: SUB1 
 };
 
 const urlMappingSewaAlatProyekFromSub1MoneyMaster = {
@@ -456,39 +456,39 @@ const urlMappingSewaAlatProyekFromSub1MoneyMaster = {
 };
 
 const urlMappingSewaAlatBeratFromSub2Sub1 = {
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html": "Perbandingan Sewa Alat Berat",  // TYPE: SUB1 PARENT
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-excavator.html": "Perbandingan Sewa Excavator",  // TYPE: SUB1 PARENT
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-bulldozer.html": "Perbandingan Sewa Bulldozer",  // TYPE: SUB1 PARENT
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-crane.html": "Perbandingan Sewa Crane",  // TYPE: SUB1 PARENT
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-conrete-paver.html": "Perbandingan Concrete Paver",  // TYPE: SUB1 PARENT
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-forklift.html": "Perbandingan Sewa Forklift",  // TYPE: SUB1 PARENT
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-wales-stoom.html": "Perbandingan Sewa Wales Stoom",  // TYPE: SUB1 PARENT
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-wheel-loader.html": "Perbandingan Sewa Wheel Loader",  // TYPE: SUB1 PARENT
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-backhoe-loader.html": "Perbandingan Sewa Backhoe Loader",  // TYPE: SUB1 PARENT
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pancang.html": "Perbandingan Sewa Alat Pancang",  // TYPE: SUB1 PARENT
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-trencher.html": "Perbandingan Sewa Trencher",  // TYPE: SUB1 PARENT
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-vibro-roller.html": "Perbandingan Sewa Vibro Roller",  // TYPE: SUB1 PARENT
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html": "Perbandingan Sewa Alat Berat",  // TYPE: SUB1 
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-excavator.html": "Perbandingan Sewa Excavator",  // TYPE: SUB1 
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-bulldozer.html": "Perbandingan Sewa Bulldozer",  // TYPE: SUB1 
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-crane.html": "Perbandingan Sewa Crane",  // TYPE: SUB1 
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-conrete-paver.html": "Perbandingan Concrete Paver",  // TYPE: SUB1 
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-forklift.html": "Perbandingan Sewa Forklift",  // TYPE: SUB1 
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-wales-stoom.html": "Perbandingan Sewa Wales Stoom",  // TYPE: SUB1 
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-wheel-loader.html": "Perbandingan Sewa Wheel Loader",  // TYPE: SUB1 
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-backhoe-loader.html": "Perbandingan Sewa Backhoe Loader",  // TYPE: SUB1 
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pancang.html": "Perbandingan Sewa Alat Pancang",  // TYPE: SUB1 
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-trencher.html": "Perbandingan Sewa Trencher",  // TYPE: SUB1 
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-vibro-roller.html": "Perbandingan Sewa Vibro Roller",  // TYPE: SUB1 
 	
    "https://www.betonjayareadymix.com/p/durasi-sewa-alat-berat.html": "Durasi Sewa Alat Berat"  // TYPE: SUB1 pendukung
 };
 const urlMappingSewaAlatBeratFromSub1MoneyMaster = {
-   "https://www.betonjayareadymix.com/p/sewa-alat-berat.html": "Sewa Alat Berat",  // TYPE: MoneyMaster PARENT
-  "https://www.betonjayareadymix.com/p/sewa-excavator.html": "Sewa Excavator",  // TYPE: MoneyMaster PARENT
- // "https://www.betonjayareadymix.com/p/sewa-beko.html": "Sewa Beko",  // TYPE: MoneyMaster PARENT
-  "https://www.betonjayareadymix.com/p/sewa-forklift.html": "Sewa Forklift",  // TYPE: MoneyMaster PARENT
-  "https://www.betonjayareadymix.com/p/sewa-bulldozer.html": "Sewa Bulldozer",  // TYPE: MoneyMaster PARENT
-  "https://www.betonjayareadymix.com/p/sewa-vibro-roller.html": "Sewa Vibro Roller",  // TYPE: MoneyMaster PARENT
-  "https://www.betonjayareadymix.com/p/sewa-wales-stoom.html": "Sewa Wales Stoom",  // TYPE: MoneyMaster PARENT
-  "https://www.betonjayareadymix.com/p/sewa-crane.html": "Sewa Crane",  // TYPE: MoneyMaster PARENT
-  "https://www.betonjayareadymix.com/p/sewa-self-loader.html": "Sewa Self Loader",  // TYPE: MoneyMaster PARENT
-  "https://www.betonjayareadymix.com/p/sewa-wheel-loader.html": "Sewa Wheel Loader",  // TYPE: MoneyMaster PARENT
-  "https://www.betonjayareadymix.com/p/sewa-tandem-roller.html": "Sewa Tandem Roller",  // TYPE: MoneyMaster PARENT
-  "https://www.betonjayareadymix.com/p/sewa-backhoe-loader.html": "Sewa Backhoe Loader",  // TYPE: MoneyMaster PARENT
-  "https://www.betonjayareadymix.com/p/sewa-baby-roller.html": "Sewa Baby Roller",  // TYPE: MoneyMaster PARENT
-  "https://www.betonjayareadymix.com/p/sewa-motor-grader.html": "Sewa Motor Grader",  // TYPE: MoneyMaster PARENT
-  "https://www.betonjayareadymix.com/p/sewa-alat-pancang.html": "Sewa Alat Pancang",  // TYPE: MoneyMaster PARENT
-  "https://www.betonjayareadymix.com/p/sewa-trencher.html": "Sewa Trencher",  // TYPE: MoneyMaster PARENT
-  "https://www.betonjayareadymix.com/p/sewa-concrete-paver.html": "Sewa Concrete Paver"  // TYPE: MoneyMaster PARENT
+   "https://www.betonjayareadymix.com/p/sewa-alat-berat.html": "Sewa Alat Berat",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/sewa-excavator.html": "Sewa Excavator",  // TYPE: MoneyMaster 
+ // "https://www.betonjayareadymix.com/p/sewa-beko.html": "Sewa Beko",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/sewa-forklift.html": "Sewa Forklift",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/sewa-bulldozer.html": "Sewa Bulldozer",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/sewa-vibro-roller.html": "Sewa Vibro Roller",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/sewa-wales-stoom.html": "Sewa Wales Stoom",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/sewa-crane.html": "Sewa Crane",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/sewa-self-loader.html": "Sewa Self Loader",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/sewa-wheel-loader.html": "Sewa Wheel Loader",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/sewa-tandem-roller.html": "Sewa Tandem Roller",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/sewa-backhoe-loader.html": "Sewa Backhoe Loader",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/sewa-baby-roller.html": "Sewa Baby Roller",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/sewa-motor-grader.html": "Sewa Motor Grader",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/sewa-alat-pancang.html": "Sewa Alat Pancang",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/sewa-trencher.html": "Sewa Trencher",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/sewa-concrete-paver.html": "Sewa Concrete Paver"  // TYPE: MoneyMaster 
 	// ganti ke page
 	/*
 	"https://www.betonjayareadymix.com/2019/02/sewa-pile-driver.html": "Sewa Pile Driver",  // TYPE: MONEY_MASTER
@@ -536,7 +536,7 @@ const urlMappingSewaAlatRinganFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/sewa-alat-ringan.html": "Sewa Alat Ringan"  // TYPE: SUB1
 };
 const urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1 = {
- // "https://www.betonjayareadymix.com/p/harga-sewa-alat-ringan.html": "Harga Sewa Alat Ringan"  // TYPE: MoneyMaster PARENT
+ // "https://www.betonjayareadymix.com/p/harga-sewa-alat-ringan.html": "Harga Sewa Alat Ringan"  // TYPE: MoneyMaster 
  // ============================================================
 // MONEY MASTER (MM)
 // ROOT COMMERCIAL ENTITY
@@ -582,7 +582,7 @@ const urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1 = {
   "Sewa Stamper"
 };
 const urlMappingSewaAlatPendukungFromSub2Sub1 = {
-  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pendukung.html": "Perbandingan Sewa Alat Pendukung"  // TYPE: SUB1 PARENT
+  "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pendukung.html": "Perbandingan Sewa Alat Pendukung"  // TYPE: SUB1 
 };
 
 
@@ -1327,7 +1327,7 @@ function generateBreadcrumbJasaKonstruksi(
             ERROR: '❌', 
             DEBUG: '🔍', 
             VARIANT: '🔬', 
-            PARENT: '👪', 
+            : '👪', 
             URL: '🔗',
             SCORE: '🎯',
             CLEAN: '🧹',
@@ -1895,7 +1895,7 @@ function generateBreadcrumbJasaKonstruksi(
     }
 
     // ============================================================
-    // 18. AUTO DETECT PARENT
+    // 18. AUTO DETECT 
     // ============================================================
 
     function findNearestParentFromItems(items, currentPageName) {
@@ -1996,7 +1996,7 @@ function generateBreadcrumbJasaKonstruksi(
     }
 
     // ============================================================
-    // 19. FORCE PARENT INJECTION
+    // 19. FORCE  INJECTION
     // ============================================================
 
     function forceInjectDirectParent(lineageLevels, allLevels, currentPageTitle, entityType, breadcrumbItems) {
@@ -2010,7 +2010,7 @@ function generateBreadcrumbJasaKonstruksi(
                 item.name?.toLowerCase() === autoParent.name?.toLowerCase()
             );
             if (parentFromAll) {
-                log(`AUTO PARENT: "${parentFromAll.name}"`, 'SUCCESS');
+                log(`AUTO : "${parentFromAll.name}"`, 'SUCCESS');
                 modifiedLineage.push(parentFromAll);
             }
         }
@@ -2022,7 +2022,7 @@ function generateBreadcrumbJasaKonstruksi(
                     item.name.toLowerCase() === potentialParent
                 );
                 if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
-                    log(`PATTERN PARENT: "${parentItem.name}"`, 'SUCCESS');
+                    log(`PATTERN : "${parentItem.name}"`, 'SUCCESS');
                     modifiedLineage.push(parentItem);
                     break;
                 }
@@ -2046,7 +2046,7 @@ function generateBreadcrumbJasaKonstruksi(
             const hasSignificantScore = (parent.relevanceScore || 0) > 50;
             
             if (isDifferentBranch && hasSignificantScore) {
-                log(`FORCE PARENT (branch): "${parent.name}" (level ${parent.level}) → "${currentPageTitle}"`, 'SUCCESS');
+                log(`FORCE  (branch): "${parent.name}" (level ${parent.level}) → "${currentPageTitle}"`, 'SUCCESS');
                 modifiedLineage.push(parent);
             } else if (!isDifferentBranch) {
                 log(`⏭️ FORCE SKIP: "${parent.name}" (level ${parent.level}) - same branch`, 'SKIP');
@@ -2079,7 +2079,7 @@ function generateBreadcrumbJasaKonstruksi(
                         });
                         
                         if (isDifferentBranch) {
-                            log(`SEMANTIC PARENT: "${parentItem.name}"`, 'SUCCESS');
+                            log(`SEMANTIC : "${parentItem.name}"`, 'SUCCESS');
                             modifiedLineage.push(parentItem);
                         }
                     }
@@ -2155,7 +2155,7 @@ function generateBreadcrumbJasaKonstruksi(
     }
 
     // ============================================================
-    // 23. INJECT CURRENT PAGE & AUTO PARENT
+    // 23. INJECT CURRENT PAGE & AUTO 
     // ============================================================
 
     const enhancedBreadcrumbItems = injectCurrentPageAndParent(
@@ -2254,7 +2254,7 @@ function generateBreadcrumbJasaKonstruksi(
     log('Unique items (' + uniqueItems.length + '): ' + uniqueItems.map(i => i.name + '(' + i.level + ')').join(' → '), 'INFO');
 
     // ============================================================
-    // FIND NEAREST PARENTS
+    // FIND NEAREST S
     // ============================================================
 
     function findNearestParentsByHierarchy() {
@@ -2404,7 +2404,7 @@ function generateBreadcrumbJasaKonstruksi(
     });
 
     // ========================================================
-    // AMBIL SEMUA PARENT DENGAN LEVEL TERTINGGI
+    // AMBIL SEMUA  DENGAN LEVEL TERTINGGI
     // ========================================================
     
     let finalParents = [];
@@ -2420,7 +2420,7 @@ function generateBreadcrumbJasaKonstruksi(
         finalParents = parentOnly.filter(item => item.level === highestLevel);
         finalParents.sort((a, b) => a.position - b.position);
         
-        log(`✅ PARENT FOUND: ${finalParents.length} parent(s) at level ${highestLevel}: ` + finalParents.map(i => i.name).join(', '), 'SUCCESS');
+        log(`✅  FOUND: ${finalParents.length} parent(s) at level ${highestLevel}: ` + finalParents.map(i => i.name).join(', '), 'SUCCESS');
     } else {
         log('⚠️ No parent found (only current page)', 'WARN');
     }
@@ -2432,7 +2432,7 @@ function generateBreadcrumbJasaKonstruksi(
         if (filtered.length > 0) {
             const highestLevel = Math.max(...filtered.map(i => i.level));
             finalParents = filtered.filter(item => item.level === highestLevel);
-            log(`⚠️ FALLBACK PARENT: Using ${finalParents.length} nearest parent(s) at level ${highestLevel}`, 'WARN');
+            log(`⚠️ FALLBACK : Using ${finalParents.length} nearest parent(s) at level ${highestLevel}`, 'WARN');
         }
     }
 
@@ -2440,7 +2440,7 @@ function generateBreadcrumbJasaKonstruksi(
         const exists = selectedLevels.some(l => l.name.toLowerCase() === item.name.toLowerCase());
         if (!exists) {
             selectedLevels.push(item);
-            log(`👪 Adding parent: "${item.name}" (level ${item.level})`, 'PARENT');
+            log(`👪 Adding parent: "${item.name}" (level ${item.level})`, '');
         }
     }
 
