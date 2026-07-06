@@ -6,76 +6,36 @@
 // ============================================================
 
 const urlMappingPerbaikanStrukturBangunanFromMoneyPageMoneyPage1 = {
-  // ============================================================
-  // [VARIANT] - JASA PERBAIKAN STRUKTUR RUMAH
-  // 🧠 SEO NOTE: Fokus ke perbaikan struktur rumah tinggal
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Rumah
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-rumah.html": "Jasa Perbaikan Struktur Rumah",
-
-  // ============================================================
-  // [VARIANT] - JASA PERBAIKAN STRUKTUR BANGUNAN TUA
-  // 🧠 SEO NOTE: Fokus ke perbaikan bangunan cagar budaya/bangunan tua
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Tua
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-tua.html": "Jasa Perbaikan Struktur Bangunan Tua",
-
-  // ============================================================
-  // [VARIANT] - JASA PERBAIKAN GEDUNG BERTINGKAT
-  // 🧠 SEO NOTE: Fokus ke perbaikan gedung tinggi
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Gedung Bertingkat
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-gedung-bertingkat.html": "Jasa Perbaikan Gedung Bertingkat",
-
-  // ============================================================
-  // [VARIANT] - JASA PERBAIKAN STRUKTUR BANGUNAN MIRING
-  // 🧠 SEO NOTE: Fokus ke perbaikan bangunan miring/ambles
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Bangunan Miring
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-miring.html": "Jasa Perbaikan Struktur Bangunan Miring",
-
-  // ============================================================
-  // [VARIANT] - JASA PERBAIKAN STRUKTUR BETON
-  // 🧠 SEO NOTE: Fokus ke perbaikan struktur beton (dak, kolom, balok)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Beton
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-beton.html": "Jasa Perbaikan Struktur Beton",
-
-  // ============================================================
-  // [VARIANT] - JASA PERBAIKAN STRUKTUR KOLOM BALOK
-  // 🧠 SEO NOTE: Fokus ke perbaikan kolom dan balok beton
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Kolom Balok Beton
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-kolom-balok.html": "Jasa Perbaikan Struktur Kolom Balok Beton",
-
-  // ============================================================
-  // [VARIANT] - JASA PERBAIKAN STRUKTUR PONDASI
-  // 🧠 SEO NOTE: Fokus ke perbaikan pondasi bangunan
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Pondasi
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-struktur.html": "Jasa Perbaikan Pondasi Struktur",
 
    // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-struktur.html": "Jasa Perbaikan Lantai Struktur",
-  
-
-  // ============================================================
-  // [VARIANT] - JASA PERBAIKAN STRUKTUR DINDING
-  // 🧠 SEO NOTE: Fokus ke perbaikan dinding struktural (retak, miring)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Dinding
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-dinding.html": "Jasa Perbaikan Struktur Dinding",
-
-  // ============================================================
-  // [VARIANT] - JASA PERBAIKAN STRUKTUR ATAP
-  // 🧠 SEO NOTE: Fokus ke perbaikan struktur atap (rangka, kuda-kuda)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Perbaikan Struktur Atap
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-atap.html": "Jasa Perbaikan Struktur Atap",
-
-  // ============================================================
-  // [VARIANT] - JASA REHABILITASI BETON
-  // 🧠 SEO NOTE: Fokus ke rehabilitasi beton yang rusak (korosi, keropos)
   // Breadcrumb: Home > Jasa Perawatan & Perbaikan Bangunan > Jasa Perbaikan Struktur > Jasa Rehabilitasi Beton
   // ============================================================
   "https://www.betonjayareadymix.com/p/jasa-rehabilitasi-beton-struktur.html": "Jasa Rehabilitasi Beton Struktur"
