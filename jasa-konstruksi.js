@@ -1895,7 +1895,7 @@ function generateBreadcrumbJasaKonstruksi(
     }
 
     // ============================================================
-    // 18. AUTO DETECT 
+    // 18. AUTO DETECT PARENT
     // ============================================================
 
     function findNearestParentFromItems(items, currentPageName) {
@@ -1996,7 +1996,7 @@ function generateBreadcrumbJasaKonstruksi(
     }
 
     // ============================================================
-    // 19. FORCE  INJECTION
+    // 19. FORCE PARENT INJECTION
     // ============================================================
 
     function forceInjectDirectParent(lineageLevels, allLevels, currentPageTitle, entityType, breadcrumbItems) {
@@ -2010,7 +2010,7 @@ function generateBreadcrumbJasaKonstruksi(
                 item.name?.toLowerCase() === autoParent.name?.toLowerCase()
             );
             if (parentFromAll) {
-                log(`AUTO : "${parentFromAll.name}"`, 'SUCCESS');
+                log(`AUTO PARENT: "${parentFromAll.name}"`, 'SUCCESS');
                 modifiedLineage.push(parentFromAll);
             }
         }
@@ -2022,7 +2022,7 @@ function generateBreadcrumbJasaKonstruksi(
                     item.name.toLowerCase() === potentialParent
                 );
                 if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
-                    log(`PATTERN : "${parentItem.name}"`, 'SUCCESS');
+                    log(`PATTERN PARENT: "${parentItem.name}"`, 'SUCCESS');
                     modifiedLineage.push(parentItem);
                     break;
                 }
@@ -2046,7 +2046,7 @@ function generateBreadcrumbJasaKonstruksi(
             const hasSignificantScore = (parent.relevanceScore || 0) > 50;
             
             if (isDifferentBranch && hasSignificantScore) {
-                log(`FORCE  (branch): "${parent.name}" (level ${parent.level}) → "${currentPageTitle}"`, 'SUCCESS');
+                log(`FORCE PARENT (branch): "${parent.name}" (level ${parent.level}) → "${currentPageTitle}"`, 'SUCCESS');
                 modifiedLineage.push(parent);
             } else if (!isDifferentBranch) {
                 log(`⏭️ FORCE SKIP: "${parent.name}" (level ${parent.level}) - same branch`, 'SKIP');
@@ -2079,7 +2079,7 @@ function generateBreadcrumbJasaKonstruksi(
                         });
                         
                         if (isDifferentBranch) {
-                            log(`SEMANTIC : "${parentItem.name}"`, 'SUCCESS');
+                            log(`SEMANTIC PARENT: "${parentItem.name}"`, 'SUCCESS');
                             modifiedLineage.push(parentItem);
                         }
                     }
@@ -2155,7 +2155,7 @@ function generateBreadcrumbJasaKonstruksi(
     }
 
     // ============================================================
-    // 23. INJECT CURRENT PAGE & AUTO 
+    // 23. INJECT CURRENT PAGE & AUTO PARENT
     // ============================================================
 
     const enhancedBreadcrumbItems = injectCurrentPageAndParent(
@@ -2254,7 +2254,7 @@ function generateBreadcrumbJasaKonstruksi(
     log('Unique items (' + uniqueItems.length + '): ' + uniqueItems.map(i => i.name + '(' + i.level + ')').join(' → '), 'INFO');
 
     // ============================================================
-    // FIND NEAREST S
+    // FIND NEAREST PARENTS
     // ============================================================
 
     function findNearestParentsByHierarchy() {
@@ -2404,7 +2404,7 @@ function generateBreadcrumbJasaKonstruksi(
     });
 
     // ========================================================
-    // AMBIL SEMUA  DENGAN LEVEL TERTINGGI
+    // AMBIL SEMUA PARENT DENGAN LEVEL TERTINGGI
     // ========================================================
     
     let finalParents = [];
@@ -2420,7 +2420,7 @@ function generateBreadcrumbJasaKonstruksi(
         finalParents = parentOnly.filter(item => item.level === highestLevel);
         finalParents.sort((a, b) => a.position - b.position);
         
-        log(`✅  FOUND: ${finalParents.length} parent(s) at level ${highestLevel}: ` + finalParents.map(i => i.name).join(', '), 'SUCCESS');
+        log(`✅ PARENT FOUND: ${finalParents.length} parent(s) at level ${highestLevel}: ` + finalParents.map(i => i.name).join(', '), 'SUCCESS');
     } else {
         log('⚠️ No parent found (only current page)', 'WARN');
     }
@@ -2432,7 +2432,7 @@ function generateBreadcrumbJasaKonstruksi(
         if (filtered.length > 0) {
             const highestLevel = Math.max(...filtered.map(i => i.level));
             finalParents = filtered.filter(item => item.level === highestLevel);
-            log(`⚠️ FALLBACK : Using ${finalParents.length} nearest parent(s) at level ${highestLevel}`, 'WARN');
+            log(`⚠️ FALLBACK PARENT: Using ${finalParents.length} nearest parent(s) at level ${highestLevel}`, 'WARN');
         }
     }
 
@@ -2440,7 +2440,7 @@ function generateBreadcrumbJasaKonstruksi(
         const exists = selectedLevels.some(l => l.name.toLowerCase() === item.name.toLowerCase());
         if (!exists) {
             selectedLevels.push(item);
-            log(`👪 Adding parent: "${item.name}" (level ${item.level})`, '');
+            log(`👪 Adding parent: "${item.name}" (level ${item.level})`, 'PARENT');
         }
     }
 
@@ -2589,6 +2589,7 @@ function generateBreadcrumbJasaKonstruksi(
         isMoneyChild: currentPageType === 'money-child'
     };
 }
+
 
 
 // Menyimpan elemen yang dihapus dalam variabel
