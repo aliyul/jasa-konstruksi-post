@@ -2429,6 +2429,7 @@ document.addEventListener("DOMContentLoaded", function() {
         'JASA_KONSTRUKSI'
     );
     }
+	
 	if (urlMappingHargaJasaBorSumurFromMoneyPageMoneyPage1[cleanUrlJasaPengeboranPost]) {
 
        generateBreadcrumbJasaPengeboranPost(
