@@ -1056,6 +1056,7 @@ const urlMappingJasaRenovasiBangunanFromMoneyMaster1MoneyPage = {
 const urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage = {
   // MP - TURUNAN (LEVEL 5) - URL BARU
 // ============================================================
+"https://www.betonjayareadymix.com/p/harga-jasa-perbaikan-bangunan.html": "Harga Jasa Perbaikan Bangunan",
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-bangunan.html": "Jasa Perbaikan Lantai Bangunan",
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html": "Jasa Perbaikan Struktur Bangunan", 
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-waterproofing-bangunan.html": "Jasa Perbaikan Waterproofing Bangunan",
