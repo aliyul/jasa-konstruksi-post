@@ -277,7 +277,7 @@ const urlMappingFinishingFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-finishing.html": "Jasa Finishing"
 };
 
-const urlMappingFinishingFromMoneyMasterMoneyMaster1 = {
+const urlMappingJasaFinishingFromMoneyMasterMoneyMaster1 = {
      	"https://www.betonjayareadymix.com/p/jasa-cat.html": "Jasa Cat",
 	"https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html": "Jasa Finishing Dinding", 
 	"https://www.betonjayareadymix.com/p/jasa-finishing-furniture.html": "Jasa Finishing Furniture", 
@@ -2650,7 +2650,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingFinishingBridgeFromSub2Sub1,
 		urlMappingFinishingFromSub1MoneyMaster,
-		urlMappingFinishingFromMoneyMasterMoneyMaster1,
+		urlMappingJasaFinishingFromMoneyMasterMoneyMaster1,
 		
 		urlMappingPerbaikanBangunanBridgeFromSub2Sub1,
 		urlMappingJasaPerbaikanBangunanFromSub1MoneyMaster,
@@ -4048,12 +4048,11 @@ if (urlMappingFinishingFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
     }
-	if (urlMappingFinishingFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
+	if (urlMappingJasaFinishingFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 	    generateBreadcrumbJasaKonstruksi(
-        urlMappingFinishingFromMoneyMasterMoneyMaster1,
+        urlMappingJasaFinishingFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
         [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
             { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
