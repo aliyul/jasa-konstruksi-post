@@ -8,11 +8,11 @@
 // 🧠 INTENT: Informational + Pre-commercial (edukasi & panduan)
 // Breadcrumb: Home > Jasa Pembatas & Pengaman > Pengamanan Area Proyek > [Nama Halaman]
 // ============================================================
-const urlMappingPengamananAreaProyekFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/jasa-pemasangan-safety-net-proyek.html": "Jasa Pemasangan Safety Net Proyek",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/jasa-pemasangan-scaffolding-guard.html": "Jasa Pemasangan Scaffolding Guard",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/jasa-pagar-sementara-proyek.html": "Jasa Pagar Sementara Proyek",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/jasa-sistem-keamanan-perimeter-proyek.html": "Jasa Sistem Keamanan Perimeter Proyek"  // TYPE: SUB1
+const urlMappingJasaPengamananAreaProyekFromMoneyPageMoneyPage1 = {
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-safety-net-proyek.html": "Jasa Pemasangan Safety Net Proyek",  
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-scaffolding-guard.html": "Jasa Pemasangan Scaffolding Guard",  
+  "https://www.betonjayareadymix.com/p/jasa-pagar-sementara-proyek.html": "Jasa Pagar Sementara Proyek",  
+  "https://www.betonjayareadymix.com/p/jasa-sistem-keamanan-perimeter-proyek.html": "Jasa Sistem Keamanan Perimeter Proyek"  
 };
 
 // ============================================================
@@ -21,11 +21,11 @@ const urlMappingPengamananAreaProyekFromMoneyPageMoneyPage1 = {
 // 🧠 INTENT: Informational + Pre-commercial (edukasi & panduan)
 // Breadcrumb: Home > Jasa Pembatas & Pengaman > Rambu & Sistem Keamanan Visual > [Nama Halaman]
 // ============================================================
-const urlMappingRambudanSistemKeamananVisualFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/jasa-pemasangan-rambu-lalu-lintas.html": "Jasa Pemasangan Rambu Lalu Lintas",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/jasa-pemasangan-cermin-tikungan.html": "Jasa Pemasangan Cermin Tikungan",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/jasa-pemasangan-cat-marka-jalan.html": "Jasa Pemasangan Cat Marka Jalan",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/jasa-pemasangan-warning-light.html": "Jasa Pemasangan Warning Light"  // TYPE: SUB1
+const urlMappingJasaRambudanSistemKeamananVisualFromMoneyPageMoneyPage1 = {
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-rambu-lalu-lintas.html": "Jasa Pemasangan Rambu Lalu Lintas",  
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-cermin-tikungan.html": "Jasa Pemasangan Cermin Tikungan",  
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-cat-marka-jalan.html": "Jasa Pemasangan Cat Marka Jalan",  
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-warning-light.html": "Jasa Pemasangan Warning Light"  
 };
 
 // ============================================================
@@ -34,12 +34,12 @@ const urlMappingRambudanSistemKeamananVisualFromMoneyPageMoneyPage1 = {
 // 🧠 INTENT: Informational + Pre-commercial (edukasi & panduan)
 // Breadcrumb: Home > Jasa Pembatas & Pengaman > Pengamanan Sisi Jalan > [Nama Halaman]
 // ============================================================
-const urlMappingPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/jasa-pemasangan-guardrail-besi.html": "Jasa Pemasangan Guardrail Besi",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/jasa-pemasangan-railing-jalan.html": "Jasa Pemasangan Railing Jalan",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/jasa-bollard-tiang-pengaman-jalan.html": "Jasa Bollard & Tiang Pengaman Jalan",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/jasa-pagar-pembatas-flyover-jembatan.html": "Jasa Pagar Pembatas Flyover & Jembatan",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/p/jasa-pemasangan-kanstin-jalan.html": "Jasa Pemasangan Kanstin Jalan"  // TYPE: SUB1
+const urlMappingJasaPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1 = {
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-guardrail-besi.html": "Jasa Pemasangan Guardrail Besi",  
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-railing-jalan.html": "Jasa Pemasangan Railing Jalan",  
+  "https://www.betonjayareadymix.com/p/jasa-bollard-tiang-pengaman-jalan.html": "Jasa Bollard & Tiang Pengaman Jalan",  
+  "https://www.betonjayareadymix.com/p/jasa-pagar-pembatas-flyover-jembatan.html": "Jasa Pagar Pembatas Flyover & Jembatan",  
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-kanstin-jalan.html": "Jasa Pemasangan Kanstin Jalan"  
 };
 
 // ============================================================
@@ -52,7 +52,7 @@ const urlMappingPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1 = {
 // ============================================================
 // 📌 JASA PEMBUATAN PAGAR (LEVEL 4) - CABANG TERPISAH
 // ============================================================
-const urlMappingPembuatanPagarFromMoneyMaster1MoneyPage = {
+const urlMappingJasaPembuatanPagarFromMoneyMaster1MoneyPage = {
    // "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar.html": "Jasa Pembuatan Pagar",  // ✅ MM (2 kata) - URL BARU
     // MP - TURUNAN (LEVEL 5)
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-brc.html": "Jasa Pembuatan Pagar BRC",
@@ -1730,10 +1730,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
-		urlMappingPengamananAreaProyekFromMoneyPageMoneyPage1,
-		urlMappingRambudanSistemKeamananVisualFromMoneyPageMoneyPage1,
-		urlMappingPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1,
-		urlMappingPembuatanPagarFromMoneyMaster1MoneyPage,
+		urlMappingJasaPengamananAreaProyekFromMoneyPageMoneyPage1,
+		urlMappingJasaRambudanSistemKeamananVisualFromMoneyPageMoneyPage1,
+		urlMappingJasaPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1,
+		urlMappingJasaPembuatanPagarFromMoneyMaster1MoneyPage,
 		urlMappingPasangPagarFromMoneyMaster1MoneyPage
     );
 
@@ -2051,6 +2051,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.error("[HybridDateModified] Fatal:", err);
   }
 })();
+	
      // Menemukan elemen menggunakan Id
     var JasaKonsPembatas = document.getElementById("JasaKonsPembatas");
 
@@ -2059,58 +2060,9 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
     }
 
-
-     var JasaKonstruksiPembatasLink = document.getElementById("JasaKonstruksiPembatas");
-     var JasaPembatasLink = document.getElementById("JasaPembatas");
-
-     //SUB JASA PEMBATAS
-     var JasaPembuatanPagarDindingPembatasLink = document.getElementById("JasaPembuatanPagarDindingPembatas");
-     var JasaPengamanSisiJalanInfrastrukturLink = document.getElementById("JasaPengamanSisiJalanInfrastruktur");
-     var JasaRambudanSistemKeamananVisualLink = document.getElementById("JasaRambudanSistemKeamananVisual");
-     var JasaPengamananAreaProyekLink = document.getElementById("JasaPengamananAreaProyek");
-
-    //SUB JasaPembuatanPagarDindingPembatas
-  /*
-     var JasaPagarBetonPrecastLink = document.getElementById("JasaPagarBetonPrecast");
-     var JasaPagarPanelBetonLink = document.getElementById("JasaPagarPanelBeton");
-     var JasaPagarBesiHollowWiremeshLink = document.getElementById("JasaPagarBesiHollowWiremesh");
-     var JasaDindingPembatasBataBatakoLink = document.getElementById("JasaDindingPembatasBataBatako");
-     var JasaPagarKawatHarmonikaLink = document.getElementById("JasaPagarKawatHarmonika");
-     var JasaPagarBrcLink = document.getElementById("JasaPagarBrc");
-     var JasaPagarRumahLink = document.getElementById("JasaPagarRumah");
-     var JasaPagarBangunanLink = document.getElementById("JasaPagarBangunan");
-*/
-	
-     var pageNameJasaPembatas = document.getElementById("pageNameJasaPembatas");
-    
-
-     // Default untuk menyembunyikan elemen
-     JasaKonstruksiPembatasLink.style.visibility = 'hidden';
-     JasaPembatasLink.style.visibility = 'hidden';
-	
-     //SUB JASA PEMBATAS
-     JasaPembuatanPagarDindingPembatasLink.style.visibility = 'hidden';
-     JasaPengamanSisiJalanInfrastrukturLink.style.visibility = 'hidden';
-     JasaRambudanSistemKeamananVisualLink.style.visibility = 'hidden';
-     JasaPengamananAreaProyekLink.style.visibility = 'hidden';
-
-    //SUB JasaPembuatanPagarDindingPembatas
-    /*
-     JasaPagarBetonPrecastLink.style.visibility = 'hidden';
-     JasaPagarPanelBetonLink.style.visibility = 'hidden';
-     JasaPagarBesiHollowWiremeshLink.style.visibility = 'hidden';
-     JasaDindingPembatasBataBatakoLink.style.visibility = 'hidden';
-     JasaPagarKawatHarmonikaLink.style.visibility = 'hidden';
-     JasaPagarBrcLink.style.visibility = 'hidden';
-     JasaPagarRumahLink.style.visibility = 'hidden';
-     JasaPagarBangunanLink.style.visibility = 'hidden';
-  */
-	
-     pageNameJasaPembatas.textContent = "";
-
-    if (urlMappingPembuatanPagarFromMoneyMaster1MoneyPage[cleanUrlJasaPembatasKons]) {
+    if (urlMappingJasaPembuatanPagarFromMoneyMaster1MoneyPage[cleanUrlJasaPembatasKons]) {
        generateBreadcrumbJasaKonstruksiPembatas(
-        urlMappingPembuatanPagarFromMoneyMaster1MoneyPage,
+        urlMappingJasaPembuatanPagarFromMoneyMaster1MoneyPage,
         cleanUrlJasaPembatasKons,
         [
            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -2137,9 +2089,9 @@ document.addEventListener("DOMContentLoaded", function() {
     );
     }
  
-    if (urlMappingPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
+    if (urlMappingJasaPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
         generateBreadcrumbJasaKonstruksiPembatas(
-        urlMappingPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1,
+        urlMappingJasaPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1,
         cleanUrlJasaPembatasKons,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -2151,9 +2103,9 @@ document.addEventListener("DOMContentLoaded", function() {
         'JASA_KONSTRUKSI'
     );
     }
-    if (urlMappingRambudanSistemKeamananVisualFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
+    if (urlMappingJasaRambudanSistemKeamananVisualFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
       generateBreadcrumbJasaKonstruksiPembatas(
-        urlMappingRambudanSistemKeamananVisualFromMoneyPageMoneyPage1,
+        urlMappingJasaRambudanSistemKeamananVisualFromMoneyPageMoneyPage1,
         cleanUrlJasaPembatasKons,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -2165,9 +2117,9 @@ document.addEventListener("DOMContentLoaded", function() {
         'JASA_KONSTRUKSI'
     );
 }
-	if (urlMappingPengamananAreaProyekFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
+	if (urlMappingJasaPengamananAreaProyekFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
     generateBreadcrumbJasaKonstruksiPembatas(
-        urlMappingPengamananAreaProyekFromMoneyPageMoneyPage1,
+        urlMappingJasaPengamananAreaProyekFromMoneyPageMoneyPage1,
         cleanUrlJasaPembatasKons,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
