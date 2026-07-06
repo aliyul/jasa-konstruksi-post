@@ -429,6 +429,7 @@ const urlMappingJasaInstalasiListrikFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik.html": "Jasa Instalasi Listrik"  
 };
 const urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-instalasi-listrik.html": "Harga Jasa Instalasi Listrik",  
   "https://www.betonjayareadymix.com/p/jasa-instalasi-solar-panel.html": "Jasa Instalasi Solar Panel",  
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik-rumah.html": "Jasa Instalasi Listrik Rumah",  
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik-komersial.html": "Jasa Instalasi Listrik Komersial",  
@@ -437,6 +438,7 @@ const urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-maintenance-perbaikan-listrik.html": "Jasa Maintenance & Perbaikan Listrik",  
   "https://www.betonjayareadymix.com/p/jasa-konsultasi-listrik.html": "Jasa Konsultasi Listrik"  
 };
+
 // ============================================================
 // 📁 JASA ALAT KONSTRUKSI (ENTITY: SEWA/RENTAL - BUKAN JASA)
 // ⚠️ PERHATIAN: Ini adalah ENTITY SEWA/RENTAL, BUKAN JASA
