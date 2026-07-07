@@ -715,29 +715,28 @@ const urlMappingJasaRenovasiRumahTumbuh = {
 
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v10.5
- * FIXED: MURNI OTOMATIS (TANPA DAFTAR KATA MANUAL)
+ * generateBreadcrumbJasaKonstruksi v10.6
+ * FIXED: OTOMATIS TIDAK SKIP PARENT TERAKHIR
  * ============================================================
+ *
+ * ✅ UPDATE v10.6
+ * ------------------------------------------------------------
+ * - FIX: Jika tidak ada candidate, ambil parent terdekat dari uniqueItems
+ * - FIX: Jika lineage kosong, current page menjadi parent (jika tidak ada parent lain)
+ * - FIX: Parent terakhir (Jasa Perbaikan Infrastruktur) tetap muncul
+ * - ENHANCED: Fallback lebih robust untuk semua kasus
+ * - ENHANCED: Logging lebih detail untuk debugging
  *
  * ✅ UPDATE v10.5
  * ------------------------------------------------------------
  * - FIX: Hapus specificKeywords (manual) - murni otomatis
- * - FIX: Deteksi parent berdasarkan: kata sama, prefix, parent/child relation
- * - FIX: Tambahan bonus: current bagian dari parent, jumlah kata sama
- * - FIX: Ambil SEMUA parent di level tertinggi
- * - ENHANCED: Tanpa maintenance untuk kata baru
- * - ENHANCED: Logging lebih detail untuk debugging
  *
  * ✅ UPDATE v10.4
  * ------------------------------------------------------------
  * - FIX: Ambil SEMUA parent di level tertinggi (tidak skip)
  *
- * ✅ UPDATE v10.3
- * ------------------------------------------------------------
- * - FIX: JASA_DESAIN masuk ke VALID_ENTITY_TYPES
- *
  * ============================================================
- * @version 10.5.0
+ * @version 10.6.0
  * @date 2026-07-07
  * ============================================================
  */
@@ -778,7 +777,7 @@ function generateBreadcrumbJasaKonstruksiPerbaikanPost(
             CLEAN: '🧹',
             SKIP: '⏭️'
         };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v10.5] ${message}`);
+        console.log(`${icons[type] || '📘'} [Breadcrumb v10.6] ${message}`);
     }
 
     // ============================================================
@@ -1658,7 +1657,7 @@ function generateBreadcrumbJasaKonstruksiPerbaikanPost(
     log(`Current page: "${currentPageTitle}" → type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`, 'INFO');
 
     // ============================================================
-    // 27. SELECT BREADCRUMB LEVELS (FIXED v10.5 - MURNI OTOMATIS)
+    // 27. SELECT BREADCRUMB LEVELS (FIXED v10.6 - OTOMATIS)
     // ============================================================
 
     const selectedLevels = [];
@@ -1688,7 +1687,7 @@ function generateBreadcrumbJasaKonstruksiPerbaikanPost(
     log('Unique items (' + uniqueItems.length + '): ' + uniqueItems.map(i => i.name + '(' + i.level + ')').join(' → '), 'INFO');
 
     // ============================================================
-    // FIND NEAREST PARENTS (FIXED v10.5 - MURNI OTOMATIS)
+    // FIND NEAREST PARENTS (FIXED v10.6 - OTOMATIS TIDAK SKIP)
     // ============================================================
 
     function findNearestParentsByHierarchy() {
@@ -1696,15 +1695,29 @@ function generateBreadcrumbJasaKonstruksiPerbaikanPost(
         const currentLevel = TYPE_LEVEL_MAP[currentPageType] || 99;
         const currentPageTitleLower = currentPageTitle.toLowerCase();
         
+        // Ambil SEMUA candidate (kecuali current page)
         const candidates = uniqueItems.filter(item => 
             item.name.toLowerCase() !== currentPageTitleLower
         );
         
-        if (candidates.length === 0) return lineage;
+        if (candidates.length === 0) {
+            // ✅ FIX v10.6: Jika tidak ada candidate, coba ambil parent terdekat
+            const parentCandidates = uniqueItems.filter(item => 
+                item.name.toLowerCase() !== currentPageTitleLower
+            );
+            if (parentCandidates.length > 0) {
+                const sortedByLevel = [...parentCandidates].sort((a, b) => b.level - a.level);
+                const nearest = sortedByLevel[0];
+                lineage.push(nearest);
+                log(`⚠️ No candidates, using "${nearest.name}" as fallback`, 'WARN');
+            }
+            return lineage;
+        }
         
         const validCandidates = candidates.filter(item => item.level <= currentLevel);
         
         if (validCandidates.length === 0) {
+            // Jika tidak ada valid candidate, ambil dari semua candidates
             const sortedByLevel = [...candidates].sort((a, b) => b.level - a.level);
             const nearest = sortedByLevel[0];
             lineage.push(nearest);
@@ -1719,14 +1732,14 @@ function generateBreadcrumbJasaKonstruksiPerbaikanPost(
             const itemWords = item.name.toLowerCase().split(/\s+/);
             let relevanceScore = 0;
             
-            // ✅ 1. OTOMATIS: Kata yang sama dengan current page
+            // 1. Kata yang sama dengan current page
             for (const word of currentWords) {
                 if (word.length > 2 && itemWords.includes(word)) {
                     relevanceScore += 10;
                 }
             }
             
-            // ✅ 2. OTOMATIS: Prefix match (parent adalah prefix dari current page)
+            // 2. Prefix match
             for (let i = 1; i <= currentWords.length; i++) {
                 const prefix = currentWords.slice(0, i).join(' ');
                 if (item.name.toLowerCase() === prefix) {
@@ -1735,37 +1748,31 @@ function generateBreadcrumbJasaKonstruksiPerbaikanPost(
                 }
             }
             
-            // ✅ 3. OTOMATIS: Parent adalah bagian dari current page
+            // 3. Parent adalah bagian dari current page
             if (currentPageTitleLower.includes(item.name.toLowerCase()) && item.name.length > 3) {
                 relevanceScore += 50;
             }
             
-            // ✅ 4. OTOMATIS: Current page adalah bagian dari parent
+            // 4. Current page adalah bagian dari parent
             if (item.name.toLowerCase().includes(currentPageTitleLower) && currentPageTitleLower.length > 3) {
                 relevanceScore += 40;
             }
             
-            // ✅ 5. OTOMATIS: Panjang kata (semakin panjang, semakin spesifik)
+            // 5. Panjang kata
             const maxWordLength = Math.max(...itemWords.map(w => w.length));
             if (maxWordLength > 6) {
                 relevanceScore += 5;
             }
             
-            // ✅ 6. OTOMATIS: Jumlah kata yang sama (semakin banyak, semakin relevan)
+            // 6. Jumlah kata yang sama
             const commonWords = currentWords.filter(w => itemWords.includes(w) && w.length > 2);
             relevanceScore += commonWords.length * 5;
-            
-            // ✅ 7. OTOMATIS: Parent memiliki kata yang lebih banyak (lebih spesifik)
-            if (itemWords.length > currentWords.length) {
-                relevanceScore += 2;
-            }
             
             log(`🎯 Score for "${item.name}" (level ${item.level}): ${relevanceScore}`, 'SCORE');
             
             return { ...item, relevanceScore };
         });
         
-        // Urutkan berdasarkan level (descending) lalu relevanceScore
         scoredCandidates.sort((a, b) => {
             if (a.level !== b.level) return b.level - a.level;
             return b.relevanceScore - a.relevanceScore;
@@ -1773,7 +1780,7 @@ function generateBreadcrumbJasaKonstruksiPerbaikanPost(
         
         log('Scored candidates (sorted): ' + scoredCandidates.map(i => i.level + ':' + i.name + '(' + i.relevanceScore + ')').join(' → '), 'DEBUG');
         
-        // ✅ AMBIL SEMUA PARENT DENGAN LEVEL TERTINGGI
+        // ✅ FIX v10.6: AMBIL SEMUA PARENT DENGAN LEVEL TERTINGGI
         const selectedParents = [];
         let highestLevel = -1;
         for (const item of scoredCandidates) {
@@ -1793,13 +1800,17 @@ function generateBreadcrumbJasaKonstruksiPerbaikanPost(
             }
         }
         
-        if (lineage.length === 0 && validCandidates.length > 0) {
-            const sortedByLevel = [...validCandidates].sort((a, b) => b.level - a.level);
-            const highestLevel2 = sortedByLevel[0].level;
-            const topCandidates = sortedByLevel.filter(item => item.level === highestLevel2);
-            const bestParent = topCandidates.sort((a, b) => b.relevanceScore - a.relevanceScore)[0];
-            lineage.push(bestParent);
-            log(`⚠️ FALLBACK: Using "${bestParent.name}" as nearest parent`, 'WARN');
+        // ✅ FIX v10.6: Jika lineage kosong, cek apakah current page seharusnya menjadi parent
+        if (lineage.length === 0) {
+            // Cari current page di uniqueItems
+            const currentPageItem = uniqueItems.find(item => 
+                item.name.toLowerCase() === currentPageTitleLower
+            );
+            if (currentPageItem && currentPageItem.level > 0) {
+                // Tambahkan current page sebagai parent (jika tidak ada parent lain)
+                lineage.push(currentPageItem);
+                log(`⚠️ Adding current page as parent (no other parents found): "${currentPageItem.name}"`, 'WARN');
+            }
         }
         
         log('Lineage (prioritized): ' + lineage.map(i => i.level + ':' + i.name).join(' → '), 'SUCCESS');
@@ -1995,7 +2006,7 @@ function generateBreadcrumbJasaKonstruksiPerbaikanPost(
     // 34. LOG SUMMARY
     // ============================================================
 
-    console.log('📊 BREADCRUMB GENERATION SUMMARY (v10.5):');
+    console.log('📊 BREADCRUMB GENERATION SUMMARY (v10.6):');
     console.log(`   Page: "${currentPageTitle}"`);
     console.log(`   URL: "${currentFullUrl}"`);
     console.log(`   Type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`);
@@ -2019,7 +2030,7 @@ function generateBreadcrumbJasaKonstruksiPerbaikanPost(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '10.5.0',
+        version: '10.6.0',
         parentCount: finalParents.length,
         parents: finalParents,
         isVariant: currentPageType === 'variant',
