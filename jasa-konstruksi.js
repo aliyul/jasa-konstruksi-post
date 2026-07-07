@@ -307,36 +307,26 @@ const urlMappingJasaPerbaikanInfrastrukturFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html": "Jasa Perbaikan Infrastruktur"  
 };
 const urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyMaster1 = {
-// MM TURUNAN - JASA PERBAIKAN JALAN (LEVEL 4) - DIUBAH JADI 2 KATA AGAR MM
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan.html": "Jasa Perbaikan Jalan",  // ✅ MM (2 kata)
-// MM TURUNAN - JASA PERBAIKAN JEMBATAN (LEVEL 4)
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan.html": "Jasa Perbaikan Jembatan",  // ✅ MM (2 kata)
-// MM TURUNAN - JASA PERBAIKAN DRAINASE (LEVEL 4)
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase.html": "Jasa Perbaikan Drainase",  // ✅ MM (2 kata)
-// ============================================================
-// MM TURUNAN - JASA PERBAIKAN SEKOLAH (LEVEL 4)
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-sekolah.html": "Jasa Perbaikan Sekolah",  // ✅ MM (2 kata)
-// MM TURUNAN - JASA PERBAIKAN RUMAH SAKIT (LEVEL 4)
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-rs.html": "Jasa Perbaikan RS",  // ✅ MM (2 kata)
-// MM TURUNAN - JASA PERBAIKAN STADION OLAHRAGA (LEVEL 4)
-// ============================================================
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan.html": "Jasa Perbaikan Jalan",  
+
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan.html": "Jasa Perbaikan Jembatan",  
+
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase.html": "Jasa Perbaikan Drainase",  
+
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-sekolah.html": "Jasa Perbaikan Sekolah",  
+
+"https://www.betonjayareadymix.com/p/jasa-perbaikan-rs.html": "Jasa Perbaikan RS",  
+
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-stadion.html": "Jasa Perbaikan Stadion"
 };
 const urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyPage = {
 // ============================================================
 // MP LANGSUNG DI BAWAH JASA PERBAIKAN INFRASTRUKTUR (LEVEL 5)
 // ============================================================
-// Perbaiki nama agar 3 kata (MP)
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan.html": "Jasa Perbaikan Trotoar Jalan",  
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-halte-bus.html": "Jasa Perbaikan Halte Bus",  
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-terminal-penumpang.html": "Jasa Perbaikan Terminal Penumpang",  
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-taman-kota.html": "Jasa Perbaikan Taman Kota"
 };
+
 
 const urlMappingJalanPerkerasanBridgeFromSub2Sub1 = {
  "https://www.betonjayareadymix.com/p/perbandingan-jasa-jalan-perkerasan.html": "Perbandingan Jasa Jalan & Perkerasan"  // TYPE: SUB1
