@@ -125,7 +125,7 @@ const urlMappingHargaJasaBorSumurFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-20-meter.html": "Biaya Sumur Bor 20 Meter",  
   "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-30-meter.html": "Biaya Sumur Bor 30 Meter",  
   "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-per-meter.html": "Biaya Sumur Bor Per Meter",  
-  "https://www.betonjayareadymix.com/2019/08/bor-sumur-murah.html": "Bor Sumur Murah"  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-murah.html": "Jasa Bor Sumur Murah"  
 };
 // ============================================================
 // [SUB2] - JASA BORE PILE (KATEGORI)
