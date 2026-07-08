@@ -315,7 +315,9 @@ const urlMappingJasaBorTanahFromMoneyMaster1MoneyChild = {
 // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Pengeboran > Jasa Bor Horizontal
 // ============================================================
-
+const urlMappingJasaBorHorizontalFromMoneyMaster1MoneyPage = {
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-horizontal.html": "Harga Jasa Bor Horizontal"
+};
 const urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild  = {
   // ============================================================
   // [MONEY_CHILD] - JASA BOR HORIZONTAL LOKASI
@@ -1932,6 +1934,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBorTanahFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBorTanahFromMoneyPageMoneyPage1,
 		urlMappingJasaBorTanahFromMoneyMaster1MoneyChild,
+
+		urlMappingJasaBorHorizontalFromMoneyMaster1MoneyPage,
 		urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild,
 		urlMappingTukangBorFromMoneyMaster1MoneyChild
 	
@@ -2793,6 +2797,20 @@ if (urlMappingHargaJasaBorePileFromMoneyPageMoneyChild[cleanUrlJasaPengeboranPos
     );  
 }
 
+if (urlMappingJasaBorHorizontalFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
+       generateBreadcrumbJasaPengeboranPost(
+        urlMappingJasaBorHorizontalFromMoneyMaster1MoneyPage,
+        cleanUrlJasaPengeboranPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
+			 { name: 'Jasa Bor Horizontal', url: 'https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+}
 if (urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild[cleanUrlJasaPengeboranPost]) {
        generateBreadcrumbJasaPengeboranPost(
         urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild,
