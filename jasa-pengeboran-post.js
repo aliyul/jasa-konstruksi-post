@@ -135,7 +135,7 @@ const urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-tangerang.html": "Harga Jasa Bor Sumur Tangerang", 
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-bekasi.html": "Harga Jasa Bor Sumur Bekasi", 
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-karawang.html": "Harga Jasa Bor Sumur Karawang", 
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-surabaya.html": "Harga Jasa Bor Sumur Surabaya",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-surabaya.html": "Harga Jasa Bor Sumur Surabaya" 
 };
 
 // ============================================================
