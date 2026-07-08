@@ -115,16 +115,16 @@ const urlMappingJasaBorSumurFromMoneyMaster1MoneyPage = {
 const urlMappingHargaJasaBorSumurFromMoneyPageMoneyPage1 = {
 	
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-150-meter.html": "Biaya Sumur Bor 150 Meter",  
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-100-meter.html": "Biaya Sumur Bor 100 Meter",  
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-60-meter.html": "Biaya Sumur Bor 60 Meter",  
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-50-meter.html": "Biaya Sumur Bor 50 Meter",  
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-40-meter.html": "Biaya Sumur Bor 40 Meter",  
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-15-meter.html": "Biaya Sumur Bor 15 Meter",  
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-10-meter.html": "Biaya Sumur Bor 10 Meter",  
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-20-meter.html": "Biaya Sumur Bor 20 Meter",  
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-30-meter.html": "Biaya Sumur Bor 30 Meter",  
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-per-meter.html": "Biaya Sumur Bor Per Meter",  
+  "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-150-meter.html": "Harga Biaya Jasa Sumur Bor 150 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-100-meter.html": "Harga Biaya Jasa Sumur Bor 100 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-60-meter.html": "Harga Biaya Jasa Sumur Bor 60 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-50-meter.html": "Harga Biaya Jasa Sumur Bor 50 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-40-meter.html": "Harga Biaya Jasa Sumur Bor 40 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-15-meter.html": "Harga Biaya Jasa Sumur Bor 15 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-10-meter.html": "Harga Biaya Jasa Sumur Bor 10 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-20-meter.html": "Harga Biaya Jasa Sumur Bor 20 Meter",  
+  "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-30-meter.html": "Harga Biaya Jasa Sumur Bor Meter",  
+  "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-per-meter.html": "Harga Biaya Jasa Sumur Bor Per Meter",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-murah.html": "Jasa Bor Sumur Murah"  
 };
 // ============================================================
