@@ -216,6 +216,7 @@ const urlMappingJasaCoringBetonFromMoneyMaster1MoneyPage = {
   // ============================================================
   // [MONEY_MASTER] - LAYANAN CORE DRILL (UMUM)
   // ============================================================
+ "https://www.betonjayareadymix.com/2018/11/harga-jasa-coring-beton.html": "Harga Jasa Coring Beton",  
   "https://www.betonjayareadymix.com/2018/11/layanan-core-drill-terpercaya.html": "Layanan Core Drill Terpercaya",  
   "https://www.betonjayareadymix.com/2018/11/core-drill-proyek-konstruksi.html": "Core Drill Proyek Konstruksi",  
   "https://www.betonjayareadymix.com/2018/11/pengeboran-beton-instalasi-pipa.html": "Pengeboran Beton Instalasi Pipa",  
