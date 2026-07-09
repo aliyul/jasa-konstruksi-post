@@ -47,10 +47,6 @@ const urlMappingJasaBorSumurFromMoneyMaster1MoneyChild = {
 
  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-terdekat.html": "Jasa Bor Air Terdekat",  
- // ============================================================
-  // [MONEY_MASTER] - BOR SUMUR (UMUM)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/bor-sumur-terdekat.html": "Bor Sumur Terdekat",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-terdekat.html": "Jasa Bor Sumur Terdekat",  
   
   // ============================================================
