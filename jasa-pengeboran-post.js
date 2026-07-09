@@ -38,44 +38,13 @@ const urlMappingJasaTukangBorFromMoneyMaster1MoneyChild = {
 // ============================================================
 
 const urlMappingJasaBorSumurFromMoneyMaster1MoneyChild = {
-  // ============================================================
-  // [MONEY_CHILD] - LOKASI SURABAYA
-  // ============================================================
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-surabaya.html": "Jasa Bor Air Tanah Surabaya",  
-  
-  // ============================================================
-  // [MONEY_CHILD] - LOKASI KARAWANG
-  // ============================================================
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-karawang.html": "Jasa Bor Air Tanah Karawang",  
-  
-  // ============================================================
-  // [MONEY_CHILD] - LOKASI DEPOK
-  // ============================================================
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-depok.html": "Jasa Bor Air Tanah Depok",  
-  
-  // ============================================================
-  // [MONEY_CHILD] - LOKASI TANGERANG
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-tangerang.html": "Jasa Bor Air Tanah Tangerang",  
-  
-  // ============================================================
-  // [MONEY_CHILD] - LOKASI JAKARTA
-  // ============================================================
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-jakarta.html": "Jasa Bor Air Tanah Jakarta",  
-  
-  // ============================================================
-  // [MONEY_CHILD] - LOKASI BEKASI
-  // ============================================================
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-bekasi.html": "Jasa Bor Air Tanah Bekasi",  
-  
-  // ============================================================
-  // [MONEY_CHILD] - LOKASI BOGOR
-  // ============================================================
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-bogor.html": "Jasa Bor Air Tanah Bogor",  
-  
-  // ============================================================
-  // [MONEY_MASTER] - TUKANG BOR AIR (UMUM)
-  // ============================================================
+
   "https://www.betonjayareadymix.com/2019/08/tukang-bor-air-terdekat.html": "Tukang Bor Air Terdekat",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-terdekat.html": "Jasa Bor Air Terdekat",  
  // ============================================================
@@ -100,6 +69,11 @@ const urlMappingJasaBorSumurFromMoneyMaster1MoneyPage = {
    // ============================================================
   "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor.html": "Tukang Sumur Bor"
 };
+const urlMappingJasaBorSumurFromMoneyMaster1Variant = {
+"https://www.betonjayareadymix.com/2019/08/spesifikasi-sumur-bor.html": "Spesifikasi Sumur Bor",  
+   // ============================================================
+  "https://www.betonjayareadymix.com/2019/08/varian-jenis-sumur-bor.html": "Varian Jenis Sumur Bor"
+};
 const urlMappingTukangSumurBorFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2019/08/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",  
 };
@@ -108,6 +82,7 @@ const urlMappingTukangSumurBorFromMoneyPageMoneyChild = {
     // ============================================================
   // [MONEY_CHILD] - TUKANG SUMUR BOR LOKASI
   // ============================================================
+  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-karawang.html": "Tukang Sumur Bor Karawang",
   "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-tangerang.html": "Tukang Sumur Bor Tangerang",  
   "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-depok.html": "Tukang Sumur Bor Depok",  
   "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-jakarta.html": "Tukang Sumur Bor Jakarta",  
@@ -1719,7 +1694,84 @@ function generateBreadcrumbJasaPengeboranPost(
     };
 }
 
-
+// Fungsi untuk menghapus elemen breadcrumb navigation
+    function removeBreadcrumbNavigation() {
+        // Selector umum untuk breadcrumb navigation
+        const selectors = [
+            '.breadcrumb',
+            '.breadcrumbs',
+            '.breadcrumb-nav',
+            'nav[aria-label="Breadcrumb"]',
+            'nav.breadcrumb',
+            'div.breadcrumb',
+            'ul.breadcrumb',
+            'ol.breadcrumb'
+        ];
+        
+        let removedCount = 0;
+        
+        selectors.forEach(selector => {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(el => {
+                if (el && el.remove) {
+                    el.remove();
+                    removedCount++;
+                    console.log(`✅ Breadcrumb removed: ${selector}`);
+                }
+            });
+        });
+        
+        return removedCount;
+    }
+    
+    // Fungsi untuk menghapus JSON-LD BreadcrumbList (tanpa menghapus schema lain)
+    function removeBreadcrumbJsonLd() {
+        const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+        let removedCount = 0;
+        
+        scripts.forEach(script => {
+            try {
+                const jsonData = JSON.parse(script.textContent);
+                // Hanya hapus jika @type adalah BreadcrumbList
+                if (jsonData && (jsonData['@type'] === 'BreadcrumbList' || 
+                    (jsonData['@type'] && jsonData['@type'].includes('BreadcrumbList')))) {
+                    script.remove();
+                    removedCount++;
+                    console.log(`✅ BreadcrumbList JSON-LD removed`);
+                }
+            } catch(e) {
+                // Jika parsing gagal, skip
+                console.warn('⚠️ Could not parse JSON-LD, skipping:', e.message);
+            }
+        });
+        
+        return removedCount;
+    }
+    
+    // Fungsi untuk menyembunyikan breadcrumb dengan CSS (fallback)
+    function hideBreadcrumbWithCss() {
+        const style = document.createElement('style');
+        style.id = 'variant-breadcrumb-hider';
+        style.textContent = `
+            .breadcrumb, .breadcrumbs, .breadcrumb-nav,
+            nav[aria-label="Breadcrumb"], nav.breadcrumb,
+            div.breadcrumb, ul.breadcrumb, ol.breadcrumb {
+                display: none !important;
+                visibility: hidden !important;
+                height: 0 !important;
+                overflow: hidden !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        `;
+        
+        // Cek apakah style sudah ada
+        if (!document.getElementById('variant-breadcrumb-hider')) {
+            document.head.appendChild(style);
+            console.log(`✅ CSS hider added`);
+        }
+    }
+		
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPengeboranPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
@@ -1931,6 +1983,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 		urlMappingJasaBorSumurFromMoneyMaster1MoneyChild,
 		urlMappingJasaBorSumurFromMoneyMaster1MoneyPage,
+		urlMappingJasaBorSumurFromMoneyMaster1Variant,
 		urlMappingTukangSumurBorFromMoneyPageMoneyPage1,
 		urlMappingTukangSumurBorFromMoneyPageMoneyChild,
 		
@@ -2505,6 +2558,28 @@ document.addEventListener("DOMContentLoaded", function() {
         'JASA_KONSTRUKSI'
     );
     }
+	if (urlMappingJasaBorSumurFromMoneyMaster1Variant[cleanUrlJasaPengeboranPost]) {
+         // Eksekusi semua fungsi
+		    function init() {
+		        console.log('🔧 Variant page detected - removing breadcrumbs...');
+		        
+		        const removedNav = removeBreadcrumbNavigation();
+		        const removedJson = removeBreadcrumbJsonLd();
+		        
+		        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+		        hideBreadcrumbWithCss();
+		        
+		        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+		    }
+		    
+		    // Jalankan saat DOM sudah siap
+		    if (document.readyState === 'loading') {
+		        document.addEventListener('DOMContentLoaded', init);
+		    } else {
+		        init();
+		    }
+    }
+	
 	if (urlMappingTukangSumurBorFromMoneyPageMoneyPage1[cleanUrlJasaPengeboranPost]) {
        generateBreadcrumbJasaPengeboranPost(
         urlMappingTukangSumurBorFromMoneyPageMoneyPage1,
