@@ -45,7 +45,7 @@ const urlMappingJasaBorSumurFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-bekasi.html": "Jasa Bor Air Tanah Bekasi",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-bogor.html": "Jasa Bor Air Tanah Bogor",  
 
-  "https://www.betonjayareadymix.com/2019/08/tukang-bor-air-terdekat.html": "Tukang Bor Air Terdekat",  
+ 
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-terdekat.html": "Jasa Bor Air Terdekat",  
  // ============================================================
   // [MONEY_MASTER] - BOR SUMUR (UMUM)
@@ -78,6 +78,7 @@ const urlMappingTukangSumurBorFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2019/08/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",  
 };
 const urlMappingTukangSumurBorFromMoneyPageMoneyChild = {
+ "https://www.betonjayareadymix.com/2019/08/tukang-bor-air-terdekat.html": "Tukang Bor Air Terdekat",  
    "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-terdekat.html": "Tukang Sumur Bor Terdekat",  
     // ============================================================
   // [MONEY_CHILD] - TUKANG SUMUR BOR LOKASI
