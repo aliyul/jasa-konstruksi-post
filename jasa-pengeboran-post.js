@@ -114,7 +114,11 @@ const urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-karawang.html": "Harga Jasa Bor Sumur Karawang", 
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-surabaya.html": "Harga Jasa Bor Sumur Surabaya" 
 };
-
+const urlMappingHargaJasaBorSumurFromMoneyPageVariant = {
+"https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-berdasarkan-kedalaman.html": "Biaya Sumur Bor Berdasarkan Kedalaman",  
+   // ============================================================
+  "https://www.betonjayareadymix.com/2019/08/faktor-penentu-biaya-jasa-bor-sumur.html": "Faktor Penentu Biaya Jasa Bor Sumur"
+};
 // ============================================================
 // [SUB2] - JASA BORE PILE (KATEGORI)
 // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
@@ -1988,6 +1992,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 	    urlMappingHargaJasaBorSumurFromMoneyPageMoneyPage1,
 		urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild,
+	    urlMappingHargaJasaBorSumurFromMoneyPageVariant,
 		
 		urlMappingJasaBorePileFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBorePileFromMoneyPageMoneyPage1,
@@ -2642,6 +2647,28 @@ document.addEventListener("DOMContentLoaded", function() {
         ],
         'JASA_KONSTRUKSI'
     );
+    }
+	
+    if (urlMappingHargaJasaBorSumurFromMoneyPageVariant[cleanUrlJasaPengeboranPost]) {
+      // Eksekusi semua fungsi
+		    function init() {
+		        console.log('🔧 Variant page detected - removing breadcrumbs...');
+		        
+		        const removedNav = removeBreadcrumbNavigation();
+		        const removedJson = removeBreadcrumbJsonLd();
+		        
+		        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+		        hideBreadcrumbWithCss();
+		        
+		        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+		    }
+		    
+		    // Jalankan saat DOM sudah siap
+		    if (document.readyState === 'loading') {
+		        document.addEventListener('DOMContentLoaded', init);
+		    } else {
+		        init();
+		    }
     }
 		
 /*	
