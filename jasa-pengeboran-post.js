@@ -255,9 +255,6 @@ const urlMappingJasaBorBetonFromMoneyMaster1MoneyPage = {
 const urlMappingJasaBorBetonFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-terdekat.html": "Jasa Bor Beton Terdekat",  
 
-  // ============================================================
-  // [MONEY_CHILD] - JASA BOR BETON LOKASI JABODETABEK
-  // ============================================================
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-jakarta.html": "Jasa Bor Beton Jakarta",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-bogor.html": "Jasa Bor Beton Bogor",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-depok.html": "Jasa Bor Beton Depok",  
