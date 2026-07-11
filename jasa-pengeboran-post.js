@@ -224,7 +224,7 @@ const urlMappingJasaCoringBetonFromMoneyMaster1MoneyPage = {
 const urlMappingJasaCoringBetonFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2018/09/jasa-coring-beton-terdekat.html": "Jasa Coring Beton Terdekat",  
 
-  "https://www.betonjayareadymix.com/2018/11/core-drill-beton-jakarta.html": "Core Drill Beton Jakarta",  
+  "https://www.betonjayareadymix.com/2018/11/jasa-core-drill-beton-jakarta.html": "Jasa Core Drill Beton Jakarta",  
   "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-surabaya.html": "Jasa Coring Beton Surabaya",  
   "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-karawang.html": "Jasa Coring Beton Karawang",  
   "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-depok.html": "Jasa Coring Beton Depok",  
