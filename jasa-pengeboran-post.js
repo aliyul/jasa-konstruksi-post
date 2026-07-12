@@ -2823,7 +2823,7 @@ if (urlMappingHargaJasaCoringBetonFromMoneyPageMoneyChild[cleanUrlJasaPengeboran
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
             { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
             { name: 'Jasa Coring Beton', url: 'https://www.betonjayareadymix.com/p/jasa-coring-beton.html'},
-            { name: 'Harga Jasa Coring Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-coring-beton.html'}
+            { name: 'Harga Jasa Coring Beton', url: 'https://www.betonjayareadymix.com/2018/11/harga-jasa-coring-beton.html'}
         ],
         'JASA_KONSTRUKSI'
     );
