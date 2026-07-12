@@ -233,6 +233,12 @@ const urlMappingJasaCoringBetonFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-jakarta.html": "Jasa Coring Beton Jakarta",  
   "https://www.betonjayareadymix.com/2018/11/jasa-coring-beton-tangerang.html": "Jasa Coring Beton Tangerang"  
 };
+const urlMappingJasaCoringBetonFromMoneyMaster1Variant = {
+  "https://www.betonjayareadymix.com/2018/11/spesifikasi-core-drill-beton.html": "Spesifikasi Core Drill Beton",  
+  "https://www.betonjayareadymix.com/2018/11/ukuran-coring-beton.html": "Ukuran Coring Beton"  
+};
+
+
 // ============================================================
 // [SUB2] - JASA BOR BETON (KATEGORI)
 // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
@@ -1998,6 +2004,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		urlMappingJasaCoringBetonFromMoneyMaster1MoneyPage,
 		urlMappingJasaCoringBetonFromMoneyMaster1MoneyChild,
+		urlMappingJasaCoringBetonFromMoneyMaster1Variant,
+		
 		urlMappingJasaBorBetonFromMoneyMaster1MoneyPage,
 		urlMappingJasaBorBetonFromMoneyMaster1MoneyChild,
 		
@@ -2794,6 +2802,27 @@ if (urlMappingJasaCoringBetonFromMoneyMaster1MoneyChild[cleanUrlJasaPengeboranPo
         ],
         'JASA_KONSTRUKSI'
     );
+}	
+if (urlMappingJasaCoringBetonFromMoneyMaster1Variant[cleanUrlJasaPengeboranPost]) {
+// Eksekusi semua fungsi
+		    function init() {
+		        console.log('🔧 Variant page detected - removing breadcrumbs...');
+		        
+		        const removedNav = removeBreadcrumbNavigation();
+		        const removedJson = removeBreadcrumbJsonLd();
+		        
+		        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+		        hideBreadcrumbWithCss();
+		        
+		        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+		    }
+		    
+		    // Jalankan saat DOM sudah siap
+		    if (document.readyState === 'loading') {
+		        document.addEventListener('DOMContentLoaded', init);
+		    } else {
+		        init();
+		    }
 }	
 	
 if (urlMappingJasaBorTembokFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
