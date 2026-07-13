@@ -163,7 +163,24 @@ const urlMappingHargaJasaBorePileFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-karawang.html": "Harga Jasa Bore Pile Karawang",  
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-surabaya.html": "Harga Jasa Bore Pile Surabaya"  
 };
-
+const urlMappingJasaBorePileBetonFromMoneyPageMoneyChild = {
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-beton-terdekat.html": "Jasa Bore Pile Beton Terdekat",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-beton-jakarta.html": "Jasa Bore Pile Beton Jakarta",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-beton-bogor.html": "Jasa Bore Pile Beton Bogor",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-beton-depok.html": "Jasa Bore Pile Beton Depok",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-beton-tangerang.html": "Jasa Bore Pile Beton Tangerang",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-beton-bekasi.html": "Jasa Bore Pile Beton Bekasi",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-beton-karawang.html": "Jasa Bore Pile Beton Karawang"     
+};
+const urlMappingJasaBorePileMiniFromMoneyPageMoneyChild = {
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-mini-terdekat.html": "Jasa Bore Pile Mini Terdekat",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-mini-jakarta.html": "Jasa Bore Pile Mini Jakarta",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-mini-bogor.html": "Jasa Bore Pile Mini Bogor",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-mini-depok.html": "Jasa Bore Pile Mini Depok",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-mini-tangerang.html": "Jasa Bore Pile Mini Tangerang",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-mini-bekasi.html": "Jasa Bore Pile Mini Bekasi",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-mini-karawang.html": "Jasa Bore Pile Mini Karawang"     
+};
 // ============================================================
 // [SUB2] - JASA BOR TEMBOK (KATEGORI)
 // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
@@ -2018,6 +2035,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBorePileFromMoneyMaster1MoneyChild,
 		urlMappingHargaJasaBorePileFromMoneyPageMoneyPage1,
 		urlMappingHargaJasaBorePileFromMoneyPageMoneyChild,
+        urlMappingJasaBorePileBetonFromMoneyPageMoneyChild,
+		urlMappingJasaBorePileMiniFromMoneyPageMoneyChild,
+		
 		
 		urlMappingJasaBorTembokFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBorTembokFromMoneyPageMoneyPage1,
@@ -3033,6 +3053,36 @@ if (urlMappingHargaJasaBorePileFromMoneyPageMoneyChild[cleanUrlJasaPengeboranPos
             { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
 			 { name: 'Jasa Bore Pile', url: 'https://www.betonjayareadymix.com/p/jasa-bore-pile.html'},
 			 { name: 'Harga Jasa Bore Pile', url: 'https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+}
+if (urlMappingJasaBorePileBetonFromMoneyPageMoneyChild[cleanUrlJasaPengeboranPost]) {
+       generateBreadcrumbJasaPengeboranPost(
+        urlMappingJasaBorePileBetonFromMoneyPageMoneyChild,
+        cleanUrlJasaPengeboranPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
+			 { name: 'Jasa Bore Pile', url: 'https://www.betonjayareadymix.com/p/jasa-bore-pile.html'},
+			 { name: 'Jasa Bore Pile Beton', url: 'https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-beton.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );  
+}
+if (urlMappingJasaBorePileMiniFromMoneyPageMoneyChild[cleanUrlJasaPengeboranPost]) {
+       generateBreadcrumbJasaPengeboranPost(
+        urlMappingJasaBorePileMiniFromMoneyPageMoneyChild,
+        cleanUrlJasaPengeboranPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
+			 { name: 'Jasa Bore Pile', url: 'https://www.betonjayareadymix.com/p/jasa-bore-pile.html'},
+			 { name: 'Jasa Bore Pile Mini', url: 'https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-mini.html'}
         ],
         'JASA_KONSTRUKSI'
     );  
