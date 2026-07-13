@@ -125,7 +125,9 @@ const urlMappingHargaJasaBorSumurFromMoneyPageVariant = {
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Pengeboran > Jasa Bore Pile
 // ============================================================
 const urlMappingJasaBorePileFromMoneyMaster1MoneyPage = {
-    "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile" 
+    "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-beton.html": "Jasa Bore Pile Beton",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-mini.html": "Jasa Bore Pile Mini"  
 };
 const urlMappingHargaJasaBorePileFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile.html": "Harga Jasa Strauss Pile",  
