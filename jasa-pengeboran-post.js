@@ -68,9 +68,9 @@ const urlMappingJasaBorSumurFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor.html": "Tukang Sumur Bor"
 };
 const urlMappingJasaBorSumurFromMoneyMaster1Variant = {
-"https://www.betonjayareadymix.com/2019/08/spesifikasi-sumur-bor.html": "Spesifikasi Sumur Bor",  
+"https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-sumur-bor.html": "Spesifikasi Jasa Sumur Bor",  
    // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/varian-jenis-sumur-bor.html": "Varian Jenis Sumur Bor"
+  "https://www.betonjayareadymix.com/2019/08/mutu-jasa-sumur-bor.html": "Mutu Jasa Sumur Bor"
 };
 const urlMappingTukangSumurBorFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2019/08/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",  
