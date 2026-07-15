@@ -181,6 +181,10 @@ const urlMappingJasaBorePileMiniFromMoneyPageMoneyChild = {
     "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-mini-bekasi.html": "Jasa Bore Pile Mini Bekasi",
     "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-mini-karawang.html": "Jasa Bore Pile Mini Karawang"     
 };
+const urlMappingJasaBorePileFromMoneyMaster1Variant = {
+    "https://www.betonjayareadymix.com/2019/08/mutu-jasa-bore-pile.html": "Mutu Jasa Bore Pile",
+    "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-bore-pile.html": "Spesifikasi Jasa Bore Pile"
+};
 // ============================================================
 // [SUB2] - JASA BOR TEMBOK (KATEGORI)
 // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
@@ -2037,6 +2041,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingHargaJasaBorePileFromMoneyPageMoneyChild,
         urlMappingJasaBorePileBetonFromMoneyPageMoneyChild,
 		urlMappingJasaBorePileMiniFromMoneyPageMoneyChild,
+		urlMappingJasaBorePileFromMoneyMaster1Variant,
+		
 		
 		
 		urlMappingJasaBorTembokFromMoneyMaster1MoneyPage,
@@ -3086,6 +3092,27 @@ if (urlMappingJasaBorePileMiniFromMoneyPageMoneyChild[cleanUrlJasaPengeboranPost
         ],
         'JASA_KONSTRUKSI'
     );  
+}
+if (urlMappingJasaBorePileFromMoneyMaster1Variant[cleanUrlJasaPengeboranPost]) {
+// Eksekusi semua fungsi
+		    function init() {
+		        console.log('🔧 Variant page detected - removing breadcrumbs...');
+		        
+		        const removedNav = removeBreadcrumbNavigation();
+		        const removedJson = removeBreadcrumbJsonLd();
+		        
+		        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+		        hideBreadcrumbWithCss();
+		        
+		        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+		    }
+		    
+		    // Jalankan saat DOM sudah siap
+		    if (document.readyState === 'loading') {
+		        document.addEventListener('DOMContentLoaded', init);
+		    } else {
+		        init();
+		    }
 }
 
 if (urlMappingJasaBorHorizontalFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
