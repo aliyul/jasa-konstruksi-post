@@ -352,7 +352,10 @@ const urlMappingJasaBorTanahDalamFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-bekasi.html": "Jasa Bor Tanah Dalam Bekasi",
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-karawang.html": "Jasa Bor Tanah Dalam Karawang"
 };
-
+const urlMappingJasaBorTanahFromMoneyMaster1Variant = {
+  "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-bor-tanah.html": "Spesifikasi Jasa Bor Tanah",
+  "https://www.betonjayareadymix.com/2019/08/ukuran-jasa-bor-tanah.html": "Ukuran Jasa Bor Tanah"
+};
 // ============================================================
 // [SUB2] - JASA BOR HORIZONTAL (KATEGORI)
 // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
@@ -2072,6 +2075,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingHargaJasaBorTanahFromMoneyPageMoneyChild,
 		urlMappingJasaBorTanahFromMoneyMaster1MoneyChild,
 		urlMappingJasaBorTanahDalamFromMoneyPageMoneyChild,
+        urlMappingJasaBorTanahFromMoneyMaster1Variant,
 
 		urlMappingJasaBorHorizontalFromMoneyMaster1MoneyPage,
 		urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild,
@@ -3045,6 +3049,27 @@ if (urlMappingJasaBorTanahFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost])
         ],
         'JASA_KONSTRUKSI'
     );    
+   }
+   if (urlMappingJasaBorTanahFromMoneyMaster1Variant[cleanUrlJasaPengeboranPost]) {
+     // Eksekusi semua fungsi
+		    function init() {
+		        console.log('🔧 Variant page detected - removing breadcrumbs...');
+		        
+		        const removedNav = removeBreadcrumbNavigation();
+		        const removedJson = removeBreadcrumbJsonLd();
+		        
+		        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+		        hideBreadcrumbWithCss();
+		        
+		        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+		    }
+		    
+		    // Jalankan saat DOM sudah siap
+		    if (document.readyState === 'loading') {
+		        document.addEventListener('DOMContentLoaded', init);
+		    } else {
+		        init();
+		    }
    }
 	
   
