@@ -315,9 +315,6 @@ const urlMappingJasaBorBetonFromMoneyMaster1MoneyChild = {
 // ============================================================
 
 const urlMappingJasaBorTanahFromMoneyMaster1MoneyPage = {
-  // ============================================================
-  // [MONEY_MASTER] - JASA BOR TANAH (UMUM)
-  // ============================================================
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah.html": "Harga Jasa Bor Tanah", 
 
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-profesional.html": "Jasa Bor Tanah Profesional",    
@@ -329,13 +326,7 @@ const urlMappingHargaJasaBorTanahFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-per-meter.html": "Harga Jasa Bor Tanah Per Meter"
 };
 const urlMappingJasaBorTanahFromMoneyMaster1MoneyChild = {
-  // ============================================================
-  // [MONEY_MASTER] - JASA BOR TANAH (UMUM)
-  // ============================================================
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-terdekat.html": "Jasa Bor Tanah Terdekat", 
-	// ============================================================
-  // [MONEY_CHILD] - JASA BOR TANAH LOKASI
-  // ============================================================
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-jakarta.html": "Jasa Bor Tanah Jakarta",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-bogor.html": "Jasa Bor Tanah Bogor",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-bekasi.html": "Jasa Bor Tanah Bekasi",  
