@@ -276,7 +276,7 @@ const urlMappingHargaJasaCoringBetonFromMoneyPageMoneyChild= {
 };
 const urlMappingJasaCoringBetonFromMoneyMaster1Variant = {
   "https://www.betonjayareadymix.com/2018/11/spesifikasi-jasa-coring-beton.html": "Spesifikasi Jasa Coring Beton",  
-    "https://www.betonjayareadymix.com/2018/11/ukuran-jasa-coring-beton.html": "Ukuran Jasa Coring Beton" 
+    "https://www.betonjayareadymix.com/2018/11/ukuran-jasa-coring-beton.html": "Ukuran Jasa Coring Beton",
   "https://www.betonjayareadymix.com/2018/11/ukuran-coring-beton.html": "Ukuran Coring Beton"  // NANTI PINDAHKAN KE VARIANT PRDDUK DAN REVISI KONTEN NYA
 };
 
