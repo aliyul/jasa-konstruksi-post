@@ -321,10 +321,6 @@ const urlMappingJasaBorTanahFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/2019/08/pengeboran-tanah-untuk-konstruksi.html": "Pengeboran Tanah Untuk Konstruksi"  
 
 };
-const urlMappingHargaJasaBorTanahFromMoneyPageMoneyPage1 = {
-
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-per-meter.html": "Harga Jasa Bor Tanah Per Meter"
-};
 const urlMappingJasaBorTanahFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-terdekat.html": "Jasa Bor Tanah Terdekat", 
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-jakarta.html": "Jasa Bor Tanah Jakarta",  
@@ -334,6 +330,18 @@ const urlMappingJasaBorTanahFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-depok.html": "Jasa Bor Tanah Depok",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-karawang.html": "Jasa Bor Tanah Karawang",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-surabaya.html": "Jasa Bor Tanah Surabaya"  
+};  
+const urlMappingHargaJasaBorTanahFromMoneyPageMoneyPage1 = {
+
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-per-meter.html": "Harga Jasa Bor Tanah Per Meter"
+};
+const urlMappingHargaJasaBorTanahFromMoneyPageMoneyChild = {
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-jakarta.html": "Harga Jasa Bor Tanah Jakarta",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-bogor.html": "Harga Jasa Bor Tanah Bogor",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-depok.html": "Harga Jasa Bor Tanah Depok",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-tangerang.html": "Harga Jasa Bor Tanah Tangerang",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-bekasi.html": "Harga Jasa Bor Tanah Bekasi",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-karawang.html": "Harga Jasa Bor Tanah karawang"
 };
 // ============================================================
 // [SUB2] - JASA BOR HORIZONTAL (KATEGORI)
@@ -2051,6 +2059,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingJasaBorTanahFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBorTanahFromMoneyPageMoneyPage1,
+		urlMappingHargaJasaBorTanahFromMoneyPageMoneyChild,
 		urlMappingJasaBorTanahFromMoneyMaster1MoneyChild,
 
 		urlMappingJasaBorHorizontalFromMoneyMaster1MoneyPage,
@@ -2977,7 +2986,22 @@ if (urlMappingJasaBorTanahFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost])
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
             { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
             { name: 'Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/p/jasa-bor-tanah.html'},
-            { name: 'Harga Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor-tanah.html'}
+            { name: 'Harga Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );    
+   }
+  if (urlMappingHargaJasaBorTanahFromMoneyPageMoneyChild[cleanUrlJasaPengeboranPost]) {
+      generateBreadcrumbJasaPengeboranPost(
+        urlMappingHargaJasaBorTanahFromMoneyPageMoneyChild,
+        cleanUrlJasaPengeboranPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
+            { name: 'Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/p/jasa-bor-tanah.html'},
+            { name: 'Harga Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah.html'}
         ],
         'JASA_KONSTRUKSI'
     );    
