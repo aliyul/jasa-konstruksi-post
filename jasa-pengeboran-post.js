@@ -344,13 +344,13 @@ const urlMappingHargaJasaBorTanahFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-karawang.html": "Harga Jasa Bor Tanah karawang"
 };
 const urlMappingJasaBorTanahDalamFromMoneyPageMoneyChild = {
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-terdekat.html": "Jasa Bor Tanah Terdekat",
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-jakarta.html": "Jasa Bor Tanah Jakarta",
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-bogor.html": "Jasa Bor Tanah Bogor",
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-depok.html": "Jasa Bor Tanah Depok",
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-tangerang.html": "Jasa Bor Tanah Tangerang",
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-bekasi.html": "Jasa Bor Tanah Bekasi",
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-karawang.html": "Jasa Bor Tanah Karawang"
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-terdekat.html": "Jasa Bor Tanah Dalam Terdekat",
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-jakarta.html": "Jasa Bor Tanah Dalam Jakarta",
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-bogor.html": "Jasa Bor Tanah Dalam Bogor",
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-depok.html": "Jasa Bor Tanah Dalam Depok",
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-tangerang.html": "Jasa Bor Tanah Dalam Tangerang",
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-bekasi.html": "Jasa Bor Tanah Dalam Bekasi",
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-karawang.html": "Jasa Bor Tanah Dalam Karawang"
 };
 
 // ============================================================
