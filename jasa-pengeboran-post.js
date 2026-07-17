@@ -318,7 +318,7 @@ const urlMappingJasaBorTanahFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah.html": "Harga Jasa Bor Tanah", 
 
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-profesional.html": "Jasa Bor Tanah Profesional",    
-  "https://www.betonjayareadymix.com/2019/08/pengeboran-tanah-untuk-konstruksi.html": "Pengeboran Tanah Untuk Konstruksi"  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam..html": "Jasa Bor Tanah Dalam"  
 
 };
 const urlMappingJasaBorTanahFromMoneyMaster1MoneyChild = {
