@@ -3041,7 +3041,7 @@ if (urlMappingJasaBorTanahFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost])
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
             { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
             { name: 'Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/p/jasa-bor-tanah.html'},
-            { name: 'Jasa Bor Tanah Dalam', url: 'https://www.betonjayareadymix.com/p/jasa-bor-tanah-dalam.html'}
+            { name: 'Jasa Bor Tanah Dalam', url: 'https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam.html'}
         ],
         'JASA_KONSTRUKSI'
     );    
