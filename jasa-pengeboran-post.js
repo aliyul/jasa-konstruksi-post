@@ -288,9 +288,6 @@ const urlMappingJasaCoringBetonFromMoneyMaster1Variant = {
 // ============================================================
 
 const urlMappingJasaBorBetonFromMoneyMaster1MoneyPage = {
-  // ============================================================
-  // [MONEY_MASTER] - JASA BOR BETON (UMUM)
-  // ============================================================
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-beton.html": "Harga Jasa Bor Beton",  
 
  // "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-renovasi-bangunan.html": "Jasa Bor Beton Renovasi Bangunan",  
