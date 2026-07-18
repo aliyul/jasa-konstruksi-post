@@ -294,7 +294,7 @@ const urlMappingJasaBorBetonFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-beton.html": "Harga Jasa Bor Beton",  
 
  // "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-renovasi-bangunan.html": "Jasa Bor Beton Renovasi Bangunan",  
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-per-meter.html": "Jasa Bor Beton Per Meter",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-per-lubang.html": "Jasa Bor Beton Per Lubang",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-bertulang.html": "Jasa Bor Beton Bertulang"
 };
 const urlMappingJasaBorBetonFromMoneyMaster1MoneyChild = {
