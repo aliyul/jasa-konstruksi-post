@@ -308,6 +308,10 @@ const urlMappingJasaBorBetonFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-karawang.html": "Jasa Bor Beton Karawang",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-surabaya.html": "Jasa Bor Beton Surabaya"  
 };
+const urlMappingJasaBorBetonFromMoneyMaster1Variant = {
+  "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-bor-beton.html": "Spesifikasi Jasa Bor Beton",  
+  "https://www.betonjayareadymix.com/2019/08/ukuran-jasa-bor-beton.html": "Ukuran Jasa Bor Beton"
+};
 // ============================================================
 // [SUB2] - JASA BOR TANAH (KATEGORI)
 // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
@@ -2053,7 +2057,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBorePileFromMoneyMaster1Variant,
 		
 		
-		
 		urlMappingJasaBorTembokFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBorTembokFromMoneyPageMoneyPage1,
 		urlMappingJasaBorTembokFromMoneyMaster1MoneyChild,
@@ -2065,6 +2068,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingJasaBorBetonFromMoneyMaster1MoneyPage,
 		urlMappingJasaBorBetonFromMoneyMaster1MoneyChild,
+        urlMappingJasaBorBetonFromMoneyMaster1Variant,
+		
 		
 		urlMappingJasaBorTanahFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBorTanahFromMoneyPageMoneyPage1,
@@ -2972,7 +2977,29 @@ if (urlMappingJasaBorBetonFromMoneyMaster1MoneyChild[cleanUrlJasaPengeboranPost]
         'JASA_KONSTRUKSI'
     );    
 }
+if (urlMappingJasaBorBetonFromMoneyMaster1Variant[cleanUrlJasaPengeboranPost]) {
+     // Eksekusi semua fungsi
+		    function init() {
+		        console.log('🔧 Variant page detected - removing breadcrumbs...');
+		        
+		        const removedNav = removeBreadcrumbNavigation();
+		        const removedJson = removeBreadcrumbJsonLd();
+		        
+		        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+		        hideBreadcrumbWithCss();
+		        
+		        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+		    }
+		    
+		    // Jalankan saat DOM sudah siap
+		    if (document.readyState === 'loading') {
+		        document.addEventListener('DOMContentLoaded', init);
+		    } else {
+		        init();
+		    }
+}
 
+	
 if (urlMappingJasaBorTanahFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
       generateBreadcrumbJasaPengeboranPost(
         urlMappingJasaBorTanahFromMoneyMaster1MoneyPage,
