@@ -304,8 +304,7 @@ const urlMappingHargaJasaBorBetonFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-beton-surabaya.html": "Harga Jasa Bor Beton Surabaya"  
 };
 const urlMappingJasaBorBetonFromMoneyMaster1MoneyChild = {
-  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-terdekat.html": "Jasa Bor Beton Terdekat",  
-
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-terdekat.html": "Jasa Bor Beton Terdekat",
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-jakarta.html": "Jasa Bor Beton Jakarta",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-bogor.html": "Jasa Bor Beton Bogor",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-depok.html": "Jasa Bor Beton Depok",  
