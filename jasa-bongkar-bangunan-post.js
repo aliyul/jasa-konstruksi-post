@@ -209,6 +209,10 @@ const urlMappingHargaJasaBongkarTembokFromMoneyPageMoneyChild  = {
  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok-surabaya.html": "Harga Jasa Bongkar Tembok Surabaya"
 
 };
+const urlMappingJasaBongkarTembokFromMoneyMaster1Variant  = {
+ "https://www.betonjayareadymix.com/2019/06/cara-bongkar-tembok-aman.html": "Cara Bongkar Tembok Aman",  
+  "https://www.betonjayareadymix.com/2019/06/jenis-bongkar-tembok.html": "Jenis Bongkar Tembok"
+};
 // ============================================================
 // 📁 JASA BONGKAR DINDING - MONEY PAGE & CHILD
 // ============================================================
@@ -2166,6 +2170,7 @@ document.addEventListener("DOMContentLoaded", function() {
         urlMappingJasaBongkarTembokFromMoneyMaster1MoneyChild,
 		urlMappingHargaJasaBongkarTembokFromMoneyPageMoneyPage1,
         urlMappingHargaJasaBongkarTembokFromMoneyPageMoneyChild,
+		urlMappingJasaBongkarTembokFromMoneyMaster1Variant,
 		
 		urlMappingJasaBongkarDindingFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBongkarDindingFromMoneyPageMoneyPage1,
@@ -2972,7 +2977,44 @@ if (urlMappingHargaJasaBongkarTembokFromMoneyPageMoneyPage1[cleanUrlJasaKonsBong
         'JASA_KONSTRUKSI'
     );
 }
+if (urlMappingHargaJasaBongkarTembokFromMoneyPageMoneyChild[cleanUrlJasaKonsBongkarBangunanPost]) {
+        generateBreadcrumbJasaBongkarBangunanPost(
+        urlMappingHargaJasaBongkarTembokFromMoneyPageMoneyChild,
+        cleanUrlJasaKonsBongkarBangunanPost,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
+             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
+            { name: 'Jasa Bongkar Tembok', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-tembok.html' },
+            { name: 'Harga Jasa Bongkar Tembok', url: 'https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaBongkarTembokFromMoneyMaster1Variant[cleanUrlJasaKonsBongkarBangunanPost]) {
+ // Eksekusi semua fungsi
+		    function init() {
+		        console.log('🔧 Variant page detected - removing breadcrumbs...');
+		        
+		        const removedNav = removeBreadcrumbNavigation();
+		        const removedJson = removeBreadcrumbJsonLd();
+		        
+		        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+		        hideBreadcrumbWithCss();
+		        
+		        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+		    }
+		    
+		    // Jalankan saat DOM sudah siap
+		    if (document.readyState === 'loading') {
+		        document.addEventListener('DOMContentLoaded', init);
+		    } else {
+		        init();
+		    }      
+}
 
+	
 if (urlMappingJasaBongkarDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
 	  generateBreadcrumbJasaBongkarBangunanPost(
         urlMappingJasaBongkarDindingFromMoneyMaster1MoneyPage,
