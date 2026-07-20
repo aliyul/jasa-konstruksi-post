@@ -73,11 +73,18 @@ const urlMappingJasaBongkarRumahFromMoneyMaster1MoneyPage = {
 // ============================================================
 
 const urlMappingJasaBongkarBetonFromMoneyMaster1MoneyPage = {
-  // ============================================================
-  // [MONEY_PAGE] - HARGA BONGKAR BETON
-  // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
-  // ============================================================
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-beton.html": "Harga Jasa Bongkar Beton" 
+
+};
+const urlMappingJasaBongkarBetonFromMoneyMaster1MoneyChild = {
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-beton-terdekat.html": "Jasa Bongkar Beton Terdekat",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-beton-jakarta.html": "Jasa Bongkar Beton Jakarta",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-beton-bogor.html": "Jasa Bongkar Beton Bogor",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-beton-depok.html": "Jasa Bongkar Beton Depok",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-beton-tangerang.html": "Jasa Bongkar Beton Tangerang",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-beton-bekasi.html": "Jasa Bongkar Beton Bekasi",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-beton-karawang.html": "Jasa Bongkar Beton Karawang",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-beton-surabaya.html": "Jasa Bongkar Beton Surabaya"
 
 };
 const urlMappingHargaJasaBongkarBetonFromMoneyPageMoneyPage1 = {
@@ -2033,6 +2040,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBongkarTowerFromMoneyMaster1MoneyPage,
 		urlMappingJasaBongkarRumahFromMoneyMaster1MoneyPage,
 		urlMappingJasaBongkarBetonFromMoneyMaster1MoneyPage,
+		urlMappingJasaBongkarBetonFromMoneyMaster1MoneyChild,
 		urlMappingHargaJasaBongkarBetonFromMoneyPageMoneyPage1,
 		urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBongkarAtapFromMoneyPageMoneyPage1,
@@ -2660,6 +2668,21 @@ if (urlMappingJasaBongkarBetonFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarB
     );
 
 }
+if (urlMappingJasaBongkarBetonFromMoneyMaster1MoneyChild[cleanUrlJasaKonsBongkarBangunanPost]) {
+	    generateBreadcrumbJasaBongkarBangunanPost(
+        urlMappingJasaBongkarBetonFromMoneyMaster1MoneyChild,
+        cleanUrlJasaKonsBongkarBangunanPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
+            { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
+            { name: 'Jasa Bongkar Beton', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-beton.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+
+}	
 if (urlMappingHargaJasaBongkarBetonFromMoneyPageMoneyPage1[cleanUrlJasaKonsBongkarBangunanPost]) {
 	    generateBreadcrumbJasaBongkarBangunanPost(
         urlMappingHargaJasaBongkarBetonFromMoneyPageMoneyPage1,
