@@ -179,17 +179,36 @@ const urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyChild = {
 // ============================================================
 
 const urlMappingJasaBongkarTembokFromMoneyMaster1MoneyPage  = {
-  // ============================================================
-  // [MONEY_PAGE] - JASA BOBOK TEMBOK PER METER
-  // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
-  // ============================================================
+ "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok.html": "Harga Jasa Bongkar Tembok",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bobok-tembok-per-meter.html": "Jasa Bobok Tembok Per Meter",  
-  
+    
   // ============================================================
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bobok-tembok.html": "Harga Jasa Bobok Tembok",  
   "https://www.betonjayareadymix.com/2019/06/jasa-tukang-bobok-tembok.html": "Jasa Tukang Bobok Tembok" 
 };
+const urlMappingJasaBongkarTembokFromMoneyMaster1MoneyChild  = {
+ "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-tembok-terdekat.html": "Jasa Bongkar Tembok Terdekat",
+ "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-tembok-jakarta.html": "Jasa Bongkar Tembok Jakarta",
+ "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-tembok-bogor.html": "Jasa Bongkar Tembok Bogor",
+ "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-tembok-bekasi.html": "Jasa Bongkar Tembok Bekasi",
+ "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-tembok-depok.html": "Jasa Bongkar Tembok Depok",
+ "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-tembok-tangerang.html": "Jasa Bongkar Tembok Tangerang",
+ "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-tembok-karawang.html": "Jasa Bongkar Tembok Karawang"
+	
+};
+const urlMappingHargaJasaBongkarTembokFromMoneyPageMoneyPage1  = {
+ "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok-per-meter.html": "Harga Jasa Bongkar Tembok Per Meter"
 
+};
+const urlMappingHargaJasaBongkarTembokFromMoneyPageMoneyChild  = {
+ "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok-jakarta.html": "Harga Jasa Bongkar Tembok Jakarta", 
+ "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok-bogor.html": "Harga Jasa Bongkar Tembok Bogor",
+ "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok-bekasi.html": "Harga Jasa Bongkar Tembok Bekasi",
+ "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok-depok.html": "Harga Jasa Bongkar Tembok Depok",
+ "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok-tangerang.html": "Harga Jasa Bongkar Tembok Tangerang",
+ "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok-karawang.html": "Harga Jasa Bongkar Tembok Karawang"
+
+};
 // ============================================================
 // 📁 JASA BONGKAR DINDING - MONEY PAGE & CHILD
 // ============================================================
@@ -2144,6 +2163,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyChild,
 		
 		urlMappingJasaBongkarTembokFromMoneyMaster1MoneyPage,
+        urlMappingJasaBongkarTembokFromMoneyMaster1MoneyChild,
+		urlMappingHargaJasaBongkarTembokFromMoneyPageMoneyPage1,
+        urlMappingHargaJasaBongkarTembokFromMoneyPageMoneyChild,
+		
 		urlMappingJasaBongkarDindingFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBongkarDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaBongkarLantaiFromMoneyMaster1MoneyPage,
@@ -2916,6 +2939,35 @@ if (urlMappingJasaBongkarTembokFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkar
             { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
              { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
             { name: 'Jasa Bongkar Tembok', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-tembok.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaBongkarTembokFromMoneyMaster1MoneyChild[cleanUrlJasaKonsBongkarBangunanPost]) {
+        generateBreadcrumbJasaBongkarBangunanPost(
+        urlMappingJasaBongkarTembokFromMoneyMaster1MoneyChild,
+        cleanUrlJasaKonsBongkarBangunanPost,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
+             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
+            { name: 'Jasa Bongkar Tembok', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-tembok.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingHargaJasaBongkarTembokFromMoneyPageMoneyPage1[cleanUrlJasaKonsBongkarBangunanPost]) {
+        generateBreadcrumbJasaBongkarBangunanPost(
+        urlMappingHargaJasaBongkarTembokFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsBongkarBangunanPost,
+        [
+             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
+             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
+            { name: 'Jasa Bongkar Tembok', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-tembok.html' },
+            { name: 'Harga Jasa Bongkar Tembok', url: 'https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok.html' }
         ],
         'JASA_KONSTRUKSI'
     );
