@@ -101,6 +101,11 @@ const urlMappingHargaJasaBongkarBetonFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-beton-surabaya.html": "Harga Jasa Bongkar Beton Surabaya"
 
 };
+const urlMappingJasaBongkarBetonFromMoneyMaster1Variant = {
+  "https://www.betonjayareadymix.com/2019/06/ukuran-bongkar-beton.html": "Ukuran Bongkar Beton",
+  "https://www.betonjayareadymix.com/2019/06/metode-bongkar-beton.html": "Metode Bongkar Beton"
+
+};
 // ============================================================
 // JASA BONGKAR ATAP - MONEY PAGE
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE (bukan MONEY_MASTER)
@@ -1837,6 +1842,84 @@ function generateBreadcrumbJasaBongkarBangunanPost(
 
 
 
+// Fungsi untuk menghapus elemen breadcrumb navigation
+    function removeBreadcrumbNavigation() {
+        // Selector umum untuk breadcrumb navigation
+        const selectors = [
+            '.breadcrumb',
+            '.breadcrumbs',
+            '.breadcrumb-nav',
+            'nav[aria-label="Breadcrumb"]',
+            'nav.breadcrumb',
+            'div.breadcrumb',
+            'ul.breadcrumb',
+            'ol.breadcrumb'
+        ];
+        
+        let removedCount = 0;
+        
+        selectors.forEach(selector => {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(el => {
+                if (el && el.remove) {
+                    el.remove();
+                    removedCount++;
+                    console.log(`✅ Breadcrumb removed: ${selector}`);
+                }
+            });
+        });
+        
+        return removedCount;
+    }
+    
+    // Fungsi untuk menghapus JSON-LD BreadcrumbList (tanpa menghapus schema lain)
+    function removeBreadcrumbJsonLd() {
+        const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+        let removedCount = 0;
+        
+        scripts.forEach(script => {
+            try {
+                const jsonData = JSON.parse(script.textContent);
+                // Hanya hapus jika @type adalah BreadcrumbList
+                if (jsonData && (jsonData['@type'] === 'BreadcrumbList' || 
+                    (jsonData['@type'] && jsonData['@type'].includes('BreadcrumbList')))) {
+                    script.remove();
+                    removedCount++;
+                    console.log(`✅ BreadcrumbList JSON-LD removed`);
+                }
+            } catch(e) {
+                // Jika parsing gagal, skip
+                console.warn('⚠️ Could not parse JSON-LD, skipping:', e.message);
+            }
+        });
+        
+        return removedCount;
+    }
+    
+    // Fungsi untuk menyembunyikan breadcrumb dengan CSS (fallback)
+    function hideBreadcrumbWithCss() {
+        const style = document.createElement('style');
+        style.id = 'variant-breadcrumb-hider';
+        style.textContent = `
+            .breadcrumb, .breadcrumbs, .breadcrumb-nav,
+            nav[aria-label="Breadcrumb"], nav.breadcrumb,
+            div.breadcrumb, ul.breadcrumb, ol.breadcrumb {
+                display: none !important;
+                visibility: hidden !important;
+                height: 0 !important;
+                overflow: hidden !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        `;
+        
+        // Cek apakah style sudah ada
+        if (!document.getElementById('variant-breadcrumb-hider')) {
+            document.head.appendChild(style);
+            console.log(`✅ CSS hider added`);
+        }
+    }
+
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaKonsBongkarBangunanPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
@@ -2052,6 +2135,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBongkarBetonFromMoneyMaster1MoneyChild,
 		urlMappingHargaJasaBongkarBetonFromMoneyPageMoneyPage1,
         urlMappingHargaJasaBongkarBetonFromMoneyPageMoneyChild,
+        urlMappingJasaBongkarBetonFromMoneyMaster1Variant,
 		
 		urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBongkarAtapFromMoneyPageMoneyPage1,
@@ -2723,6 +2807,27 @@ if (urlMappingHargaJasaBongkarBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsBongk
         ],
         'JASA_KONSTRUKSI'
     );
+}
+if (urlMappingJasaBongkarBetonFromMoneyMaster1Variant[cleanUrlJasaKonsBongkarBangunanPost]) {
+     // Eksekusi semua fungsi
+		    function init() {
+		        console.log('🔧 Variant page detected - removing breadcrumbs...');
+		        
+		        const removedNav = removeBreadcrumbNavigation();
+		        const removedJson = removeBreadcrumbJsonLd();
+		        
+		        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+		        hideBreadcrumbWithCss();
+		        
+		        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+		    }
+		    
+		    // Jalankan saat DOM sudah siap
+		    if (document.readyState === 'loading') {
+		        document.addEventListener('DOMContentLoaded', init);
+		    } else {
+		        init();
+		    }
 }
 
 if (urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
