@@ -181,9 +181,7 @@ const urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyChild = {
 const urlMappingJasaBongkarTembokFromMoneyMaster1MoneyPage  = {
  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok.html": "Harga Jasa Bongkar Tembok",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bobok-tembok-per-meter.html": "Jasa Bobok Tembok Per Meter",  
-    
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bobok-tembok.html": "Harga Jasa Bobok Tembok",  
+ "https://www.betonjayareadymix.com/2019/06/harga-jasa-bobok-tembok.html": "Harga Jasa Bobok Tembok",  
   "https://www.betonjayareadymix.com/2019/06/jasa-tukang-bobok-tembok.html": "Jasa Tukang Bobok Tembok" 
 };
 const urlMappingJasaBongkarTembokFromMoneyMaster1MoneyChild  = {
@@ -193,7 +191,8 @@ const urlMappingJasaBongkarTembokFromMoneyMaster1MoneyChild  = {
  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-tembok-bekasi.html": "Jasa Bongkar Tembok Bekasi",
  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-tembok-depok.html": "Jasa Bongkar Tembok Depok",
  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-tembok-tangerang.html": "Jasa Bongkar Tembok Tangerang",
- "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-tembok-karawang.html": "Jasa Bongkar Tembok Karawang"
+ "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-tembok-karawang.html": "Jasa Bongkar Tembok Karawang",
+ "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-tembok-surabaya.html": "Jasa Bongkar Tembok Surabaya"
 	
 };
 const urlMappingHargaJasaBongkarTembokFromMoneyPageMoneyPage1  = {
@@ -206,7 +205,8 @@ const urlMappingHargaJasaBongkarTembokFromMoneyPageMoneyChild  = {
  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok-bekasi.html": "Harga Jasa Bongkar Tembok Bekasi",
  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok-depok.html": "Harga Jasa Bongkar Tembok Depok",
  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok-tangerang.html": "Harga Jasa Bongkar Tembok Tangerang",
- "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok-karawang.html": "Harga Jasa Bongkar Tembok Karawang"
+ "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok-karawang.html": "Harga Jasa Bongkar Tembok Karawang",
+ "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-tembok-surabaya.html": "Harga Jasa Bongkar Tembok Surabaya"
 
 };
 // ============================================================
