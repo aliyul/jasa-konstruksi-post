@@ -210,8 +210,8 @@ const urlMappingHargaJasaBongkarTembokFromMoneyPageMoneyChild  = {
 
 };
 const urlMappingJasaBongkarTembokFromMoneyMaster1Variant  = {
- "https://www.betonjayareadymix.com/2019/06/cara-bongkar-tembok-aman.html": "Cara Bongkar Tembok Aman",  
-  "https://www.betonjayareadymix.com/2019/06/jenis-bongkar-tembok.html": "Jenis Bongkar Tembok"
+ "https://www.betonjayareadymix.com/2019/06/spesifikasi-jasa-bongkar-tembok.html": "Spesifikasi Jasa Bongkar Tembok",  
+  "https://www.betonjayareadymix.com/2019/06/metode-jasa-bongkar-tembok.html": "Metode Jasa Bongkar Tembok"
 };
 // ============================================================
 // 📁 JASA BONGKAR DINDING - MONEY PAGE & CHILD
