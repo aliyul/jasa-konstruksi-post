@@ -772,25 +772,135 @@ function generateBreadcrumbJasaBongkarBangunanPost(
     // 11a. VARIANT KEYWORDS PER ENTITY
     // ============================================================
     
-    const VARIANT_KEYWORDS_PRODUK = [
-        'spesifikasi', 'spec', 'detail spesifikasi',
-        'mutu', 'kualitas', 'quality',
-        'ukuran', 'dimensi',
-        'grade', 'type', 'tipe', 'model',
-        'standar', 'merk', 'brand', 'seri'
-    ];
+   // ============================================================
+// 11a. VARIANT KEYWORDS PER ENTITY (FIXED v10.11)
+// ============================================================
 
-    const VARIANT_KEYWORDS_JASA = [
-        'standar pelayanan', 'sop', 'metode kerja',
-        'prosedur', 'tahapan', 'cara kerja',
-        'durasi', 'waktu pengerjaan', 'garansi',
-        'standar pengerjaan'
-    ];
+const VARIANT_KEYWORDS_PRODUK = [
+    // Keyword utama variant
+    'spesifikasi', 'spec', 'detail spesifikasi',
+    'mutu', 'kualitas', 'quality',
+    'ukuran', 'dimensi',
+    'grade', 'type', 'tipe', 'model',
+    'standar', 'merk', 'brand', 'seri',
+    
+    // ✅ TAMBAHAN: Metode & Teknik
+    'metode', 'cara', 'teknik', 'prosedur',
+    'tahapan', 'langkah', 'proses',
+    
+    // ✅ TAMBAHAN: Desain & Bentuk
+    'desain', 'bentuk', 'gaya', 'pola',
+    'motif', 'corak', 'variasi',
+    
+    // ✅ TAMBAHAN: Kapasitas & Dimensi
+    'kapasitas', 'beban', 'daya', 'volume',
+    'kedalaman', 'ketebalan', 'lebar', 'panjang', 'tinggi',
+    'diameter', 'radius', 'luas',
+    
+    // ✅ TAMBAHAN: Finishing & Material
+    'warna', 'tekstur', 'finishing',
+    'bahan', 'material', 'komposisi',
+    'campuran', 'kandungan',
+    
+    // ✅ TAMBAHAN: Fungsi & Perawatan
+    'kelebihan', 'kekurangan',
+    'fungsi', 'kegunaan', 'aplikasi',
+    'perawatan', 'pemeliharaan',
+    
+    // ✅ TAMBAHAN: Instalasi & Sertifikasi
+    'instalasi', 'pemasangan',
+    'sertifikat', 'sni', 'iso',
+    'garansi', 'jaminan'
+];
 
-    const VARIANT_KEYWORDS_SEWA = [
-        'spesifikasi alat', 'kapasitas alat',
-        'spek alat', 'detail alat', 'spesifikasi'
-    ];
+const VARIANT_KEYWORDS_JASA = [
+    // Keyword utama variant jasa
+    'standar pelayanan', 'sop', 'metode kerja',
+    'prosedur', 'tahapan', 'cara kerja',
+    'durasi', 'waktu pengerjaan', 'garansi',
+    'standar pengerjaan',
+    
+    // ✅ TAMBAHAN: Spesifikasi & Grade
+    'spesifikasi', 'spec', 'detail spesifikasi',
+    'grade', 'type', 'tipe', 'model',
+    
+    // Metode & Proses
+    'metode', 'teknik', 'cara',
+    'proses', 'langkah', 'sistem',
+    
+    // ✅ TAMBAHAN: Instalasi
+    'instalasi', 'pemasangan',
+    
+    // ✅ TAMBAHAN: Standar (diperkuat)
+    'standar', 'sop', 'prosedur',
+    
+    // Keunggulan & Hasil
+    'keunggulan', 'kelebihan', 'manfaat',
+    'hasil', 'kualitas', 'mutu',
+    
+    // Peralatan & Tenaga
+    'peralatan', 'alat', 'mesin',
+    'tim', 'tenaga', 'ahli', 'profesional',
+    'spesialis', 'berpengalaman',
+    
+    // Sertifikasi & Estimasi
+    'sertifikasi', 'lisensi',
+    'estimasi', 'perhitungan',
+    'rekomendasi', 'testimoni',
+    
+    // Keamanan
+    'keamanan', 'keselamatan',
+    'proteksi', 'perlindungan'
+];
+
+
+const VARIANT_KEYWORDS_SEWA = [
+    // Yang sudah ada
+    'spesifikasi alat', 'kapasitas alat',
+    'spek alat', 'detail alat', 'spesifikasi',
+    
+    // ✅ TAMBAHAN: Ukuran & Dimensi
+    'ukuran alat', 'dimensi alat', 'panjang alat', 'lebar alat', 'tinggi alat',
+    'diameter alat', 'berat alat', 'volume alat',
+    
+    // ✅ TAMBAHAN: Tipe & Model
+    'tipe alat', 'model alat', 'jenis alat', 'varian alat', 'seri alat',
+    'type alat', 'grade alat',
+    
+    // ✅ TAMBAHAN: Merk & Brand
+    'merk alat', 'brand alat', 'merek alat', 'produk alat',
+    
+    // ✅ TAMBAHAN: Kondisi & Kualitas
+    'kondisi alat', 'kualitas alat', 'mutu alat', 'grade alat',
+    
+    // ✅ TAMBAHAN: Harga & Biaya Sewa
+    'harga sewa', 'biaya sewa', 'tarif sewa', 'ongkos sewa',
+    'estimasi sewa', 'perhitungan sewa',
+    
+    // ✅ TAMBAHAN: Durasi & Waktu
+    'durasi sewa', 'waktu sewa', 'jangka waktu sewa', 
+    'per hari', 'per jam', 'per minggu', 'per bulan', 'per tahun',
+    'sewa harian', 'sewa mingguan', 'sewa bulanan',
+    
+    // ✅ TAMBAHAN: Fasilitas & Layanan
+    'fasilitas alat', 'layanan sewa', 'termasuk', 'paket sewa',
+    'lengkap', 'aksesoris',
+    
+    // ✅ TAMBAHAN: Keunggulan
+    'kelebihan alat', 'keunggulan alat', 'manfaat sewa',
+    'kelebihan sewa', 'keunggulan sewa',
+    
+    // ✅ TAMBAHAN: Perawatan
+    'perawatan alat', 'pemeliharaan alat', 'servis alat',
+    
+    // ✅ TAMBAHAN: Keamanan
+    'keamanan alat', 'keselamatan alat', 'proteksi alat',
+    
+    // ✅ TAMBAHAN: Dokumentasi
+    'sertifikat alat', 'garansi alat', 'asuransi alat',
+    'dokumen alat', 'legalitas alat'
+];
+
 
     const TECHNICAL_SPECS = ['k225', 'k250', 'k300', 'k350', 'k400', 'k500', 'k600', 'fc', 'm6', 'm8', 'm10', 'm12'];
     
