@@ -41,10 +41,6 @@ const urlMappingJasaBongkarBangunanFromMoneyMasterMoneyChild = {
 // ============================================================
 
 const urlMappingJasaBongkarTowerFromMoneyMaster1MoneyPage = {
-  // ============================================================
-  // [MONEY_PAGE] - HARGA JASA BONGKAR TOWER
-  // 🧠 TYPE: MONEY_PAGE (JASA, bukan MONEY_MASTER)
-  // ============================================================
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-bongkar-tower.html": "Harga Jasa Bongkar Tower",  
   "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower-triangle.html": "Jasa Bongkar Tower Triangle"  
   
@@ -54,7 +50,16 @@ const urlMappingJasaBongkarTowerFromMoneyMaster1MoneyPage = {
   // "https://www.betonjayareadymix.com/2019/08/harga-bongkar-tower-bts.html": "Harga Bongkar Tower BTS",  
   // "https://www.betonjayareadymix.com/2019/08/jasa-bongkar-tower-jakarta.html": "Jasa Bongkar Tower Jakarta",  
 };
-
+const urlMappingJasaBongkarTowerFromMoneyMaster1MoneyChild = {
+  "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower-terdekat.html": "Jasa Bongkar Tower Terdekat", 
+  "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower-jakarta.html": "Jasa Bongkar Tower Jakarta",  
+  "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower-bogor.html": "Jasa Bongkar Tower Bogor", 
+  "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower-depok.html": "Jasa Bongkar Tower Depok", 
+  "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower-tangerang.html": "Jasa Bongkar Tower Tangerang", 
+  "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower-bekasi.html": "Jasa Bongkar Tower Bekasi", 
+  "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower-karawang.html": "Jasa Bongkar Tower Karawang", 
+  "https://www.betonjayareadymix.com/2018/09/jasa-bongkar-tower-surabaya.html": "Jasa Bongkar Tower Surabaya"
+};
 // ============================================================
 // 📁 JASA BONGKAR RUMAH - SARAN ITEM (BELUM AKTIF)
 // ============================================================
@@ -2281,6 +2286,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBongkarBangunanFromMoneyMasterMoneyPage,
 		urlMappingJasaBongkarBangunanFromMoneyMasterMoneyChild,
 		urlMappingJasaBongkarTowerFromMoneyMaster1MoneyPage,
+		urlMappingJasaBongkarTowerFromMoneyMaster1MoneyChild,
+		
 		urlMappingJasaBongkarRumahFromMoneyMaster1MoneyPage,
         urlMappingJasaBongkarRumahFromMoneyMaster1MoneyChild,
 		urlMappingHargaJasaBongkarRumahFromMoneyPageMoneyChild,
@@ -2877,6 +2884,21 @@ if (urlMappingJasaBongkarBangunanFromMoneyMasterMoneyChild[cleanUrlJasaKonsBongk
 if (urlMappingJasaBongkarTowerFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
 	    generateBreadcrumbJasaBongkarBangunanPost(
         urlMappingJasaBongkarTowerFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsBongkarBangunanPost,
+        [
+           //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
+             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
+            { name: 'Jasa Bongkar Tower', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-tower.html' }
+        ],
+         'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaBongkarTowerFromMoneyMaster1MoneyChild[cleanUrlJasaKonsBongkarBangunanPost]) {
+	    generateBreadcrumbJasaBongkarBangunanPost(
+        urlMappingJasaBongkarTowerFromMoneyMaster1MoneyChild,
         cleanUrlJasaKonsBongkarBangunanPost,
         [
            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
