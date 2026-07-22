@@ -139,16 +139,22 @@ const urlMappingJasaBongkarBetonFromMoneyMaster1Variant = {
 // ============================================================
 
 const urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-atap.html": "Harga Jasa Bongkar Atap"  
- 
-  // ============================================================
-  // [MONEY_CHILD] - BONGKAR ATAP PER LOKASI (JIKA ADA)
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-jakarta.html": "Jasa Bongkar Atap Jakarta",  
-  // "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-bekasi.html": "Jasa Bongkar Atap Bekasi",  
-  // "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-bogor.html": "Jasa Bongkar Atap Bogor",  
-  // "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-depok.html": "Jasa Bongkar Atap Depok",  
-  // "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-tangerang.html": "Jasa Bongkar Atap Tangerang",  
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-per-meter.html": "Jasa Bongkar Atap Per Meter",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-rumah.html": "Jasa Bongkar Atap Rumah",
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-atap.html": "Harga Jasa Bongkar Atap"    
+  
+
+
+ };
+const urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage = {
+	"https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-terdekat.html": "Jasa Bongkar Atap Terdekat", 
+	"https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-jakarta.html": "Jasa Bongkar Atap Jakarta",  
+    "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-bekasi.html": "Jasa Bongkar Atap Bekasi",  
+    "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-bogor.html": "Jasa Bongkar Atap Bogor",  
+     "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-depok.html": "Jasa Bongkar Atap Depok",  
+     "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-tangerang.html": "Jasa Bongkar Atap Tangerang",  
+     "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-karawang.html": "Jasa Bongkar Atap Karawang",  
+     "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-surabaya.html": "Jasa Bongkar Atap Surabaya"
 };
 const urlMappingHargaJasaBongkarAtapFromMoneyPageMoneyPage1 = {
 	// ============================================================
