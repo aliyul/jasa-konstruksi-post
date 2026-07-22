@@ -3068,7 +3068,7 @@ if (urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBa
         'JASA_KONSTRUKSI'
     );
 }
-f (urlMappingJasaBongkarAtapFromMoneyMaster1MoneyChild[cleanUrlJasaKonsBongkarBangunanPost]) {
+if (urlMappingJasaBongkarAtapFromMoneyMaster1MoneyChild[cleanUrlJasaKonsBongkarBangunanPost]) {
 	   generateBreadcrumbJasaBongkarBangunanPost(
         urlMappingJasaBongkarAtapFromMoneyMaster1MoneyChild,
         cleanUrlJasaKonsBongkarBangunanPost,
