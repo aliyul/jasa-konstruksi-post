@@ -143,7 +143,7 @@ const urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-rumah.html": "Jasa Bongkar Atap Rumah",
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-atap.html": "Harga Jasa Bongkar Atap"
  };
-const urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage = {
+const urlMappingJasaBongkarAtapFromMoneyMaster1MoneyChild = {
 	"https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-terdekat.html": "Jasa Bongkar Atap Terdekat", 
 	"https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-jakarta.html": "Jasa Bongkar Atap Jakarta",  
     "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-bekasi.html": "Jasa Bongkar Atap Bekasi",  
@@ -2305,6 +2305,7 @@ document.addEventListener("DOMContentLoaded", function() {
         urlMappingJasaBongkarBetonFromMoneyMaster1Variant,
 		
 		urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage,
+        urlMappingJasaBongkarAtapFromMoneyMaster1MoneyChild,
 		urlMappingHargaJasaBongkarAtapFromMoneyPageMoneyPage1,
 		urlMappingJasaBongkarAtapFromMoneyMaster1Variant,
 		
@@ -3058,6 +3059,20 @@ if (urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBa
         cleanUrlJasaKonsBongkarBangunanPost,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
+             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
+            { name: 'Jasa Bongkar Atap', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-atap.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+f (urlMappingJasaBongkarAtapFromMoneyMaster1MoneyChild[cleanUrlJasaKonsBongkarBangunanPost]) {
+	   generateBreadcrumbJasaBongkarBangunanPost(
+        urlMappingJasaBongkarAtapFromMoneyMaster1MoneyChild,
+        cleanUrlJasaKonsBongkarBangunanPost,
+        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
              { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
             { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
