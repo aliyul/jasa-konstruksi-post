@@ -141,10 +141,7 @@ const urlMappingJasaBongkarBetonFromMoneyMaster1Variant = {
 const urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-per-meter.html": "Jasa Bongkar Atap Per Meter",
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-rumah.html": "Jasa Bongkar Atap Rumah",
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-atap.html": "Harga Jasa Bongkar Atap"    
-  
-
-
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-atap.html": "Harga Jasa Bongkar Atap"
  };
 const urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage = {
 	"https://www.betonjayareadymix.com/2019/06/jasa-bongkar-atap-terdekat.html": "Jasa Bongkar Atap Terdekat", 
@@ -162,7 +159,10 @@ const urlMappingHargaJasaBongkarAtapFromMoneyPageMoneyPage1 = {
   // ============================================================
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-atap-per-meter.html": "Harga Jasa Bongkar Atap Per Meter"  
 };
-
+const urlMappingJasaBongkarAtapFromMoneyMaster1Variant = {
+  "https://www.betonjayareadymix.com/2019/06/spesifikasi-jasa-bongkar-atap.html": "Spesifikasi Jasa Bongkar Atap",
+  "https://www.betonjayareadymix.com/2019/06/metode-jasa-bongkar-atap.html": "Metode Jasa Bongkar Atap"
+ };
 // ============================================================
 // JASA BONGKAR KERAMIK - MONEY PAGE
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE (bukan MONEY_MASTER)
@@ -2306,6 +2306,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingJasaBongkarAtapFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBongkarAtapFromMoneyPageMoneyPage1,
+		urlMappingJasaBongkarAtapFromMoneyMaster1Variant,
+		
 		urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBongkarKeramikFromMoneyPageMoneyPage1,
 		urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyChild,
@@ -3080,6 +3082,27 @@ if (urlMappingHargaJasaBongkarAtapFromMoneyPageMoneyPage1[cleanUrlJasaKonsBongka
         ],
         'JASA_KONSTRUKSI'
     );
+}
+if (urlMappingJasaBongkarAtapFromMoneyMaster1Variant[cleanUrlJasaKonsBongkarBangunanPost]) {
+	    // Eksekusi semua fungsi
+		    function init() {
+		        console.log('🔧 Variant page detected - removing breadcrumbs...');
+		        
+		        const removedNav = removeBreadcrumbNavigation();
+		        const removedJson = removeBreadcrumbJsonLd();
+		        
+		        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+		        hideBreadcrumbWithCss();
+		        
+		        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+		    }
+		    
+		    // Jalankan saat DOM sudah siap
+		    if (document.readyState === 'loading') {
+		        document.addEventListener('DOMContentLoaded', init);
+		    } else {
+		        init();
+		    }
 }
 
 if (urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
