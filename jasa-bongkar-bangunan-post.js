@@ -173,36 +173,31 @@ const urlMappingJasaBongkarAtapFromMoneyMaster1Variant = {
 // ============================================================
 
 const urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyPage = {
-  // ============================================================
-  // [MONEY_PAGE] - HARGA JASA BONGKAR KERAMIK (MASTER)
-  // ============================================================
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-keramik.html": "Harga Jasa Bongkar Keramik"  
   
 };
 const urlMappingHargaJasaBongkarKeramikFromMoneyPageMoneyPage1 = {
- // ============================================================
-  // [MONEY_PAGE] - HARGA BONGKAR KERAMIK PER M2
-  // ============================================================
+
   "https://www.betonjayareadymix.com/2019/06/harga-bongkar-keramik-per-m2.html": "Harga Bongkar Keramik Per M2",  
-  
-  // ============================================================
-  //  BONGKAR KERAMIK LANTAI vs DINDING
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-keramik-lantai.html": "Harga Bongkar Keramik Lantai",  
+   "https://www.betonjayareadymix.com/2019/06/harga-bongkar-keramik-lantai.html": "Harga Bongkar Keramik Lantai",  
   "https://www.betonjayareadymix.com/2019/06/harga-bongkar-keramik-dinding.html": "Harga Bongkar Keramik Dinding" 
 };
 const urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyChild = {
-  // ============================================================
-  // [MONEY_CHILD] - BONGKAR KERAMIK PER LOKASI
-  // ============================================================
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-terdekat.html": "Jasa Bongkar Keramik Terdekat",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-jakarta.html": "Jasa Bongkar Keramik Jakarta",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-bekasi.html": "Jasa Bongkar Keramik Bekasi",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-tangerang.html": "Jasa Bongkar Keramik Tangerang",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-depok.html": "Jasa Bongkar Keramik Depok",  
-  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-bogor.html": "Jasa Bongkar Keramik Bogor" 
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-bogor.html": "Jasa Bongkar Keramik Bogor",  
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-karawang.html": "Jasa Bongkar Keramik Karawang",  
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-surabaya.html": "Jasa Bongkar Keramik Surabaya" 
   
 };
-
+const urlMappingJasaBongkarKeramikFromMoneyMaster1Variant = {
+  "https://www.betonjayareadymix.com/2019/06/spesifikasi-jasa-bongkar-keramik.html": "Spesifikasi Jasa Bongkar Keramik", 
+  "https://www.betonjayareadymix.com/2019/06/metode-jasa-bongkar-keramik.html": "Metode Jasa Bongkar Keramik"
+  
+};
 // ============================================================
 // 📁 JASA BONGKAR TEMBOK - MONEY PAGE
 // ============================================================
@@ -2312,6 +2307,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBongkarKeramikFromMoneyPageMoneyPage1,
 		urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyChild,
+		urlMappingJasaBongkarKeramikFromMoneyMaster1Variant,
 		
 		urlMappingJasaBongkarTembokFromMoneyMaster1MoneyPage,
         urlMappingJasaBongkarTembokFromMoneyMaster1MoneyChild,
@@ -3162,6 +3158,27 @@ if (urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyChild[cleanUrlJasaKonsBongk
         ],
         'JASA_KONSTRUKSI'
     );
+}
+if (urlMappingJasaBongkarKeramikFromMoneyMaster1Variant[cleanUrlJasaKonsBongkarBangunanPost]) {
+	   	    // Eksekusi semua fungsi
+		    function init() {
+		        console.log('🔧 Variant page detected - removing breadcrumbs...');
+		        
+		        const removedNav = removeBreadcrumbNavigation();
+		        const removedJson = removeBreadcrumbJsonLd();
+		        
+		        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+		        hideBreadcrumbWithCss();
+		        
+		        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+		    }
+		    
+		    // Jalankan saat DOM sudah siap
+		    if (document.readyState === 'loading') {
+		        document.addEventListener('DOMContentLoaded', init);
+		    } else {
+		        init();
+		    }
 }
 
 if (urlMappingJasaBongkarTembokFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
