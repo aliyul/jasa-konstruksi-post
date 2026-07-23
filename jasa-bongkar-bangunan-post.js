@@ -284,6 +284,10 @@ const urlMappingJasaBongkarLantaiFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-lantai-karawang.html": "Jasa Bongkar Lantai Karawang",
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-lantai-surabaya.html": "Jasa Bongkar Lantai Surabaya"
 };
+const urlMappingJasaBongkarLantaiFromMoneyMaster1Variant = {
+  "https://www.betonjayareadymix.com/2019/06/metode-jasa-bongkar-lantai.html": "Metode Jasa Bongkar Lantai",
+  "https://www.betonjayareadymix.com/2019/06/spesifikasi-jasa-bongkar-lantai.html": "Spesifikasi Jasa Bongkar Lantai"
+};
 // ============================================================
 // JASA BONGKAR PLAFON - MONEY PAGE
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE (bukan MONEY_MASTER)
@@ -2329,6 +2333,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBongkarLantaiFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBongkarLantaiFromMoneyPageMoneyPage1,
 		urlMappingJasaBongkarLantaiFromMoneyMaster1MoneyChild,
+		urlMappingJasaBongkarLantaiFromMoneyMaster1Variant,
 		
 		urlMappingJasaBongkarPlafonFromMoneyMaster1MoneyPage,
 		urlMappingJasaBongkarPartisiFromMoneyMaster1MoneyPage,
@@ -3345,6 +3350,27 @@ if (urlMappingJasaBongkarLantaiFromMoneyMaster1MoneyChild[cleanUrlJasaKonsBongka
         ],
         'JASA_KONSTRUKSI'
     );
+}
+if (urlMappingJasaBongkarLantaiFromMoneyMaster1Variant[cleanUrlJasaKonsBongkarBangunanPost]) {
+// Eksekusi semua fungsi
+		    function init() {
+		        console.log('🔧 Variant page detected - removing breadcrumbs...');
+		        
+		        const removedNav = removeBreadcrumbNavigation();
+		        const removedJson = removeBreadcrumbJsonLd();
+		        
+		        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+		        hideBreadcrumbWithCss();
+		        
+		        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+		    }
+		    
+		    // Jalankan saat DOM sudah siap
+		    if (document.readyState === 'loading') {
+		        document.addEventListener('DOMContentLoaded', init);
+		    } else {
+		        init();
+		    }     	
 }
 
 if (urlMappingJasaBongkarPlafonFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
