@@ -182,7 +182,9 @@ const urlMappingHargaJasaBongkarKeramikFromMoneyPageMoneyPage1 = {
 
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-keramik-per-m2.html": "Harga Jasa Bongkar Keramik Per M2",  
    "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-keramik-lantai.html": "Harga Jasa Bongkar Keramik Lantai",  
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-keramik-dinding.html": "Harga Jasa Bongkar Keramik Dinding" 
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-keramik-dinding.html": "Harga Jasa Bongkar Keramik Dinding",  
+    "https://www.betonjayareadymix.com/2019/06/harga-jasa-borongan-bongkar-keramik-lantai.html": "Harga Jasa Borongan Bongkar Keramik Lantai",
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-borongan-bongkar-pasang-keramik.html": "Harga Jasa Borongan Bongkar Pasang Keramik Kamar Mandi" 
 };
 const urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-terdekat.html": "Jasa Bongkar Keramik Terdekat",  
@@ -261,19 +263,14 @@ const urlMappingHargaJasaBongkarDindingFromMoneyPageMoneyPage1 = {
 // ============================================================
 
 const urlMappingJasaBongkarLantaiFromMoneyMaster1MoneyPage = {
-  // ============================================================
-  // [MONEY_PAGE] - HARGA JASA BONGKAR LANTAI (UMUM)
-  // ============================================================
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-lantai.html": "Harga Jasa Bongkar Lantai",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bobok-lantai-lama.html": "Jasa Bobok Lantai Lama"  
 };
 const urlMappingHargaJasaBongkarLantaiFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-borongan-bongkar-keramik-lantai.html": "Harga Jasa Borongan Bongkar Keramik Lantai",  
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bobok-lantai-keramik.html": "Harga Jasa Bobok Lantai Keramik",  
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bobok-lantai.html": "Harga Jasa Bobok Lantai",  
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-lantai-beton.html": "Harga Jasa Bongkar Lantai Beton", 
 
-  // ============================================================
   "https://www.betonjayareadymix.com/2019/06/biaya-jasa-bongkar-lantai-keramik.html": "Biaya Jasa Bongkar Lantai Keramik",  
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-lantai-keramik.html": "Harga Jasa Bongkar Lantai Keramik"
   
