@@ -173,14 +173,16 @@ const urlMappingJasaBongkarAtapFromMoneyMaster1Variant = {
 // ============================================================
 
 const urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-keramik.html": "Harga Jasa Bongkar Keramik"  
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-keramik.html": "Harga Jasa Bongkar Keramik",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-per-meter.html": "Jasa Bongkar Keramik Per Meter",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-lantai.html": "Jasa Bongkar Keramik Lantai"  
   
 };
 const urlMappingHargaJasaBongkarKeramikFromMoneyPageMoneyPage1 = {
 
-  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-keramik-per-m2.html": "Harga Bongkar Keramik Per M2",  
-   "https://www.betonjayareadymix.com/2019/06/harga-bongkar-keramik-lantai.html": "Harga Bongkar Keramik Lantai",  
-  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-keramik-dinding.html": "Harga Bongkar Keramik Dinding" 
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-keramik-per-m2.html": "Harga Jasa Bongkar Keramik Per M2",  
+   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-keramik-lantai.html": "Harga Jasa Bongkar Keramik Lantai",  
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-keramik-dinding.html": "Harga Jasa Bongkar Keramik Dinding" 
 };
 const urlMappingJasaBongkarKeramikFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-keramik-terdekat.html": "Jasa Bongkar Keramik Terdekat",  
