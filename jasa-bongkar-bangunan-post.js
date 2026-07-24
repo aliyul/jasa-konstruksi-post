@@ -384,29 +384,18 @@ const urlMappingJasaBongkarPartisiFromMoneyMaster1MoneyPage = {
 // ============================================================
 
 const urlMappingJasaBongkarPagarFromMoneyMaster1MoneyPage = {
-  // ============================================================
-  // [MONEY_PAGE] - HARGA JASA BONGKAR PAGAR
-  // ============================================================
   /*"https://www.betonjayareadymix.com/p/jasa-bongkar-pagar.html": "Jasa Bongkar Pagar",  */
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-pagar.html": "Harga Jasa Bongkar Pagar",  
-  
-  // ============================================================
-  // [MONEY_CHILD] - BONGKAR PAGAR PER JENIS MATERIAL
-  // ============================================================
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-pagar.html": "Harga Jasa Bongkar Pagar",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-per-meter.html": "Jasa Bongkar Pagar Per Meter",
+ 
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-besi.html": "Jasa Bongkar Pagar Besi",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-beton.html": "Jasa Bongkar Pagar Beton",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-kayu.html": "Jasa Bongkar Pagar Kayu",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-tembok.html": "Jasa Bongkar Pagar Tembok",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-bambu.html": "Jasa Bongkar Pagar Bambu",  
-  
-  // ============================================================
-  // [MONEY_CHILD] - BONGKAR PAGAR PER LOKASI
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-jakarta.html": "Jasa Bongkar Pagar Jakarta",  
-  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-bekasi.html": "Jasa Bongkar Pagar Bekasi",  
-  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-tangerang.html": "Jasa Bongkar Pagar Tangerang",  
-  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-depok.html": "Jasa Bongkar Pagar Depok",  
-  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-bogor.html": "Jasa Bongkar Pagar Bogor"  
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-rumah.html": "Jasa Bongkar Pagar Rumah",  
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-pabrik.html": "Jasa Bongkar Pagar Pabrik",  
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-pembatas.html": "Jasa Bongkar Pagar Pembatas"
   
   // ============================================================
   // 🟡 SARAN ITEM TAMBAHAN (BELUM AKTIF - PERLU DIBUAT KONTEN)
@@ -414,6 +403,14 @@ const urlMappingJasaBongkarPagarFromMoneyMaster1MoneyPage = {
   // "https://www.betonjayareadymix.com/2019/06/harga-bongkar-pagar-per-meter.html": "Harga Bongkar Pagar Per Meter",  
   // "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-rumah.html": "Jasa Bongkar Pagar Rumah",  
   // "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-pabrik.html": "Jasa Bongkar Pagar Pabrik",  
+};
+const urlMappingJasaBongkarPagarFromMoneyMaster1MoneyChild = {
+    "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-terdekat.html": "Jasa Bongkar Pagar Terdekat",  
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-jakarta.html": "Jasa Bongkar Pagar Jakarta",  
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-bekasi.html": "Jasa Bongkar Pagar Bekasi",  
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-tangerang.html": "Jasa Bongkar Pagar Tangerang",  
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-depok.html": "Jasa Bongkar Pagar Depok",  
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-bogor.html": "Jasa Bongkar Pagar Bogor"
 };
 
 // ============================================================
@@ -2337,7 +2334,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingJasaBongkarPlafonFromMoneyMaster1MoneyPage,
 		urlMappingJasaBongkarPartisiFromMoneyMaster1MoneyPage,
+		
 		urlMappingJasaBongkarPagarFromMoneyMaster1MoneyPage,
+		urlMappingJasaBongkarPagarFromMoneyMaster1MoneyChild,
 		
 		urlMappingJasaBuangPuingFromMoneyMasterMoneyChild,
 		urlMappingJasaPerbaikanAtapBocorFromSub2MoneyPage,
@@ -3406,6 +3405,21 @@ if (urlMappingJasaBongkarPartisiFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongka
 if (urlMappingJasaBongkarPagarFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) { 
 	generateBreadcrumbJasaBongkarBangunanPost(
         urlMappingJasaBongkarPagarFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKonsBongkarBangunanPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
+             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
+            { name: 'Jasa Bongkar Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-pagar.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+
+}
+if (urlMappingJasaBongkarPagarFromMoneyMaster1MoneyChild[cleanUrlJasaKonsBongkarBangunanPost]) { 
+	generateBreadcrumbJasaBongkarBangunanPost(
+        urlMappingJasaBongkarPagarFromMoneyMaster1MoneyChild,
         cleanUrlJasaKonsBongkarBangunanPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
