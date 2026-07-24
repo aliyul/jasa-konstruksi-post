@@ -405,12 +405,14 @@ const urlMappingJasaBongkarPagarFromMoneyMaster1MoneyPage = {
   // "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-pabrik.html": "Jasa Bongkar Pagar Pabrik",  
 };
 const urlMappingJasaBongkarPagarFromMoneyMaster1MoneyChild = {
-    "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-terdekat.html": "Jasa Bongkar Pagar Terdekat",  
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-terdekat.html": "Jasa Bongkar Pagar Terdekat",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-jakarta.html": "Jasa Bongkar Pagar Jakarta",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-bekasi.html": "Jasa Bongkar Pagar Bekasi",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-tangerang.html": "Jasa Bongkar Pagar Tangerang",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-depok.html": "Jasa Bongkar Pagar Depok",  
-  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-bogor.html": "Jasa Bongkar Pagar Bogor"
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-bogor.html": "Jasa Bongkar Pagar Bogor",  
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-karawang.html": "Jasa Bongkar Pagar Karawang",  
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-pagar-surabaya.html": "Jasa Bongkar Pagar Surabaya"
 };
 
 // ============================================================
