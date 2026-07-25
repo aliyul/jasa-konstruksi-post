@@ -264,6 +264,10 @@ const urlMappingJasaBongkarDindingFromMoneyMaster1MoneyChild = {
 const urlMappingHargaJasaBongkarDindingFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-dinding-bata-per-m2.html": "Harga Jasa Bongkar Dinding Bata Per M2"  
 };
+const urlMappingJasaBongkarDindingFromMoneyMaster1Variant = {
+  "https://www.betonjayareadymix.com/2019/06/spesifikasi-jasa-bongkar-dinding.html": "Spesifikasi Jasa Bongkar Dinding",
+  "https://www.betonjayareadymix.com/2019/06/metode-jasa-bongkar-dinding.html": "Metode Jasa Bongkar Dinding"
+ };
 // ============================================================
 // 📁 JASA BONGKAR LANTAI - MONEY PAGE & CHILD
 // ============================================================
@@ -2338,6 +2342,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBongkarDindingFromMoneyMaster1MoneyPage,
 		urlMappingJasaBongkarDindingFromMoneyMaster1MoneyChild,
 		urlMappingHargaJasaBongkarDindingFromMoneyPageMoneyPage1,
+		urlMappingJasaBongkarDindingFromMoneyMaster1Variant,
 		
 		urlMappingJasaBongkarLantaiFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaBongkarLantaiFromMoneyPageMoneyPage1,
@@ -3321,7 +3326,6 @@ if (urlMappingJasaBongkarDindingFromMoneyMaster1MoneyChild[cleanUrlJasaKonsBongk
         'JASA_KONSTRUKSI'
     );
 }
-	
 if (urlMappingHargaJasaBongkarDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsBongkarBangunanPost]) {
 	  generateBreadcrumbJasaBongkarBangunanPost(
         urlMappingHargaJasaBongkarDindingFromMoneyPageMoneyPage1,
@@ -3336,6 +3340,27 @@ if (urlMappingHargaJasaBongkarDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsBon
         ],
         'JASA_KONSTRUKSI'
     );
+}
+if (urlMappingJasaBongkarDindingFromMoneyMaster1Variant[cleanUrlJasaKonsBongkarBangunanPost]) {
+	  // Eksekusi semua fungsi
+		    function init() {
+		        console.log('🔧 Variant page detected - removing breadcrumbs...');
+		        
+		        const removedNav = removeBreadcrumbNavigation();
+		        const removedJson = removeBreadcrumbJsonLd();
+		        
+		        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
+		        hideBreadcrumbWithCss();
+		        
+		        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
+		    }
+		    
+		    // Jalankan saat DOM sudah siap
+		    if (document.readyState === 'loading') {
+		        document.addEventListener('DOMContentLoaded', init);
+		    } else {
+		        init();
+		    }      
 }
 
 if (urlMappingJasaBongkarLantaiFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongkarBangunanPost]) {
