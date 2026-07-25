@@ -298,39 +298,35 @@ const urlMappingJasaBongkarLantaiFromMoneyMaster1Variant = {
 // ============================================================
 
 const urlMappingJasaBongkarPlafonFromMoneyMaster1MoneyPage = {
-  // ============================================================
-  // [MONEY_PAGE] - HARGA BONGKAR PLAFON PER M2
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-plafon-per-m2.html": "Harga Bongkar Plafon Per M2",  
-  
-  // ============================================================
-  // [MONEY_CHILD] - BONGKAR PLAFON PER JENIS MATERIAL
-  // ============================================================
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-plafon.html": "Harga Jasa Bongkar Plafon",   
+  // BONGKAR PLAFON PER JENIS MATERIAL
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-plafon-gypsum.html": "Jasa Bongkar Plafon Gypsum",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-plafon-pvc.html": "Jasa Bongkar Plafon PVC",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-plafon-grc.html": "Jasa Bongkar Plafon GRC",  
-  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-plafon-kayu.html": "Jasa Bongkar Plafon Kayu",  
-  
-  // ============================================================
-  // [MONEY_CHILD] - BONGKAR PLAFON PER LOKASI
-  // ============================================================
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-plafon-kayu.html": "Jasa Bongkar Plafon Kayu"    
+};
+const urlMappingJasaBongkarPlafonFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-plafon-jakarta.html": "Jasa Bongkar Plafon Jakarta",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-plafon-bekasi.html": "Jasa Bongkar Plafon Bekasi",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-plafon-tangerang.html": "Jasa Bongkar Plafon Tangerang",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-plafon-depok.html": "Jasa Bongkar Plafon Depok",  
-  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-plafon-bogor.html": "Jasa Bongkar Plafon Bogor",  
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-plafon-bogor.html": "Jasa Bongkar Plafon Bogor",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-plafon-karawang.html": "Jasa Bongkar Plafon Karawang",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-plafon-surabaya.html": "Jasa Bongkar Plafon Surabaya"  
   
-  // ============================================================
-  // [MONEY_CHILD] - BONGKAR RANGKA PLAFON
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/harga-bongkar-rangka-plafon.html": "Harga Bongkar Rangka Plafon"  
   
   // ============================================================
   // 🟡 SARAN ITEM TAMBAHAN (BELUM AKTIF - PERLU DIBUAT KONTEN)
   // ============================================================
   // "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-plafon-bandung.html": "Jasa Bongkar Plafon Bandung",  
-  // "https://www.betonjayareadymix.com/2019/06/harga-bongkar-plafon-drop-ceiling.html": "Harga Bongkar Plafon Drop Ceiling",  
+  
 };
+const urlMappingHargaJasaBongkarPlafonFromMoneyPageMoneyPage1 = {
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-rangka-plafon.html": "Harga Jasa Bongkar Rangka Plafon" 
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-plafon-per-m2.html": "Harga Jasa Bongkar Plafon Per M2",  
+   "https://www.betonjayareadymix.com/2019/06/harga-bongkar-plafon-drop-ceiling.html": "Harga Bongkar Plafon Drop Ceiling"
+};
+
 
 // ============================================================
 // JASA BONGKAR PARTISI - MONEY PAGE
