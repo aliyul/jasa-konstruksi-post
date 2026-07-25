@@ -324,7 +324,7 @@ const urlMappingJasaBongkarPlafonFromMoneyMaster1MoneyChild = {
 const urlMappingHargaJasaBongkarPlafonFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-rangka-plafon.html": "Harga Jasa Bongkar Rangka Plafon" 
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-plafon-per-m2.html": "Harga Jasa Bongkar Plafon Per M2",  
-   "https://www.betonjayareadymix.com/2019/06/harga-bongkar-plafon-drop-ceiling.html": "Harga Bongkar Plafon Drop Ceiling"
+   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-plafon-drop-ceiling.html": "Harga Jasa Bongkar Plafon Drop Ceiling"
 };
 
 
