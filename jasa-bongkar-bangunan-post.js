@@ -246,11 +246,20 @@ const urlMappingJasaBongkarTembokFromMoneyMaster1Variant  = {
 // ============================================================
 
 const urlMappingJasaBongkarDindingFromMoneyMaster1MoneyPage = {
-  // ============================================================
-  // [MONEY_PAGE] - HARGA JASA BONGKAR DINDING
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-dinding.html": "Harga Jasa Bongkar Dinding"  
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-dinding.html": "Harga Jasa Bongkar Dinding",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-dinding-per-meter.html": "Jasa Bongkar Dinding Per Meter",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-dinding-beton.html": "Jasa Bongkar Dinding Beton"  
   
+ };
+const urlMappingJasaBongkarDindingFromMoneyMaster1MoneyChild = {
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-dinding-terdekat.html": "Harga Jasa Bongkar Terdekat",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-dinding-jakarta.html": "Jasa Bongkar Dinding Jakarta",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-dinding-bogor.html": "Jasa Bongkar Dinding Bogor",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-dinding-depok.html": "Jasa Bongkar Dinding Depok",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-dinding-tangerang.html": "Jasa Bongkar Dinding Tangerang",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-dinding-bekasi.html": "Jasa Bongkar Dinding Bekasi",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-dinding-karawang.html": "Jasa Bongkar Dinding Karawang",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-dinding-surabaya.html": "Jasa Bongkar Dinding Surabaya"
  };
 const urlMappingHargaJasaBongkarDindingFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-dinding-bata-per-m2.html": "Harga Jasa Bongkar Dinding Bata Per M2"  
@@ -2327,6 +2336,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBongkarTembokFromMoneyMaster1Variant,
 		
 		urlMappingJasaBongkarDindingFromMoneyMaster1MoneyPage,
+		urlMappingJasaBongkarDindingFromMoneyMaster1MoneyChild,
 		urlMappingHargaJasaBongkarDindingFromMoneyPageMoneyPage1,
 		
 		urlMappingJasaBongkarLantaiFromMoneyMaster1MoneyPage,
@@ -3297,6 +3307,21 @@ if (urlMappingJasaBongkarDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsBongka
         'JASA_KONSTRUKSI'
     );
 }
+if (urlMappingJasaBongkarDindingFromMoneyMaster1MoneyChild[cleanUrlJasaKonsBongkarBangunanPost]) {
+	  generateBreadcrumbJasaBongkarBangunanPost(
+        urlMappingJasaBongkarDindingFromMoneyMaster1MoneyChild,
+        cleanUrlJasaKonsBongkarBangunanPost,
+        [
+           { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html' },
+            { name: 'Perbandingan Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-bongkar-bangunan.html' },
+             { name: 'Jasa Bongkar Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-bangunan.html' },
+            { name: 'Jasa Bongkar Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-bongkar-dinding.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+	
 if (urlMappingHargaJasaBongkarDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsBongkarBangunanPost]) {
 	  generateBreadcrumbJasaBongkarBangunanPost(
         urlMappingHargaJasaBongkarDindingFromMoneyPageMoneyPage1,
