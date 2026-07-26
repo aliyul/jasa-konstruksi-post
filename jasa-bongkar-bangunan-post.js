@@ -359,10 +359,11 @@ const urlMappingJasaBongkarPartisiFromMoneyMaster1MoneyPage = {
   // [MONEY_PAGE] - HARGA JASA BONGKAR PARTISI
   // ============================================================
   /*"https://www.betonjayareadymix.com/p/jasa-bongkar-partisi.html": "Jasa Bongkar Partisi",  */
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-partisi.html": "Harga Jasa Bongkar Partisi",  
+  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-partisi.html": "Harga Jasa Bongkar Partisi",
+  "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-partisi-per-meter.html": "Jasa Bongkar Partisi Per Meter",  
   
   // ============================================================
-  // [MONEY_CHILD] - BONGKAR PARTISI PER JENIS MATERIAL
+  //BONGKAR PARTISI PER JENIS MATERIAL
   // ============================================================
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-partisi-gypsum.html": "Jasa Bongkar Partisi Gypsum",  
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-partisi-kayu.html": "Jasa Bongkar Partisi Kayu",  
