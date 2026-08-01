@@ -136,7 +136,7 @@ const urlMappingHargaJasaPlesteranAcianFromMoneyPage1MoneyPage2 = {
 	
 };
 const urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage = {
-	
+	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc.html": "Harga Jasa Pasang WPC",
 	"https://www.betonjayareadymix.com/p/jasa-pasang-wpc-lantai.html": "Jasa Pasang WPC Lantai",
      "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding"
 };
