@@ -41,8 +41,16 @@ const urlMappingPembuatanPagarDinding = {
 // Parent: Jasa Pembatas & Pengaman (/p/jasa-pembatas-pengaman.html)
 // ============================================================
 
+const urlMappingHargaJasaPasangPagarFromMoneyPageMoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-karawang.html": "Harga Jasa Pasang Pagar Karawang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-bekasi.html": "Harga Jasa Pasang Pagar Bekasi",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-tangerang.html": "Harga Jasa Pasang Pagar Tangerang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-depok.html": "Harga Jasa Pasang Pagar Depok",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-bogor.html": "Harga Jasa Pasang Pagar Bogor",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-jakarta.html": "Harga Jasa Pasang Pagar Jakarta"
+};
 // ============================================================
-// [VARIANT] - JASA PAGAR BETON PRECAST
+//  JASA PAGAR BETON PRECAST
 // ============================================================
 
 const urlMappingJasaPasangPagarBetonPrecastFromMoneyPageMoneyPage1 = {
@@ -1950,6 +1958,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
+		urlMappingHargaJasaPasangPagarFromMoneyPageMoneyChild,
+		
 		urlMappingJasaPasangPagarBetonPrecastFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangPagarBesiHollowFromMoneyPageMoneyPage1,
@@ -2285,67 +2295,23 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
     }
 
-     var JasaKonstruksiPembatasPostLink = document.getElementById("JasaKonstruksiPembatasPost");
-     var JasaPembatasPostLink = document.getElementById("JasaPembatasPost");
-
-     //SUB JASA PEMBATAS
-     var JasaPembuatanPagarDindingPembatasPostLink = document.getElementById("JasaPembuatanPagarDindingPembatasPost");
-     var JasaPengamanSisiJalanInfrastrukturPostLink = document.getElementById("JasaPengamanSisiJalanInfrastrukturPost");
-     var JasaRambudanSistemKeamananVisualPostLink = document.getElementById("JasaRambudanSistemKeamananVisualPost");
-     var JasaPengamananAreaProyekPostLink = document.getElementById("JasaPengamananAreaProyekPost");
-
-    //SUB JasaPembuatanPagarDindingPembatas
-     var JasaPagarBetonPrecastPostLink = document.getElementById("JasaPagarBetonPrecastPost");
-     var JasaPagarPanelBetonPostLink = document.getElementById("JasaPagarPanelBetonPost");
-     var JasaPagarBesiPostLink = document.getElementById("JasaPagarBesiPost");
-     var JasaDindingPembatasBataBatakoPostLink = document.getElementById("JasaDindingPembatasBataBatakoPost");
-     var JasaPagarKawatHarmonikaPostLink = document.getElementById("JasaPagarKawatHarmonikaPost");
-     var JasaPagarBrcPostLink = document.getElementById("JasaPagarBrcPost");
-     var JasaPagarRumahPostLink = document.getElementById("JasaPagarRumahPost");
-     var JasaPagarBangunanPostLink = document.getElementById("JasaPagarBangunanPost");
-
-       //SUB JasaPengamanSisiJalanInfrastruktur
-     var JasaPemasanganKanstinJalanPostLink = document.getElementById("JasaPemasanganKanstinJalanPost");
-     var JasaPemasanganGuardrailBesiPostLink = document.getElementById("JasaPemasanganGuardrailBesiPost");
-     var JasaPemasanganRailingJalanPostLink = document.getElementById("JasaPemasanganRailingJalanPost");
-     var JasaBollardTiangPengamanJalanPostLink = document.getElementById("JasaBollardTiangPengamanJalanPost");
-     var JasaPagarPembatasFlyoverJembatanPostLink = document.getElementById("JasaPagarPembatasFlyoverJembatanPost");
 	
-     var pageNameJasaPembatasPost = document.getElementById("pageNameJasaPembatasPost");
-    
-
-     // Default untuk menyembunyikan elemen
-     JasaKonstruksiPembatasPostLink.style.visibility = 'hidden';
-     JasaPembatasPostLink.style.visibility = 'hidden';
+	if (urlMappingHargaJasaPasangPagarFromMoneyPageMoneyChild[cleanUrlJasaPembatasKonsPost]) {
+    generateBreadcrumbJasaKonstruksiPembatasPost(
+        urlMappingHargaJasaPasangPagarFromMoneyPageMoneyChild,
+        cleanUrlJasaPembatasKonsPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
+            { name: 'Harga Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
 	
-     //SUB JASA PEMBATAS
-     JasaPembuatanPagarDindingPembatasPostLink.style.visibility = 'hidden';
-     JasaPengamanSisiJalanInfrastrukturPostLink.style.visibility = 'hidden';
-     JasaRambudanSistemKeamananVisualPostLink.style.visibility = 'hidden';
-     JasaPengamananAreaProyekPostLink.style.visibility = 'hidden';
-
-    //SUB JasaPembuatanPagarDindingPembatas
-     JasaPagarBetonPrecastPostLink.style.visibility = 'hidden';
-     JasaPagarPanelBetonPostLink.style.visibility = 'hidden';
-     JasaPagarBesiPostLink.style.visibility = 'hidden';
-     JasaDindingPembatasBataBatakoPostLink.style.visibility = 'hidden';
-     JasaPagarKawatHarmonikaPostLink.style.visibility = 'hidden';
-     JasaPagarBrcPostLink.style.visibility = 'hidden';
-     JasaPagarRumahPostLink.style.visibility = 'hidden';
-     JasaPagarBangunanPostLink.style.visibility = 'hidden';
-
-	 //SUB JasaPengamanSisiJalanInfrastruktur
-	JasaPemasanganKanstinJalanPostLink.style.visibility = 'hidden';
-	JasaPemasanganGuardrailBesiPostLink.style.visibility = 'hidden';
-	JasaPemasanganRailingJalanPostLink.style.visibility = 'hidden';
-	JasaBollardTiangPengamanJalanPostLink.style.visibility = 'hidden';
-	JasaPagarPembatasFlyoverJembatanPostLink.style.visibility = 'hidden';
-		
-     pageNameJasaPembatasPost.textContent = "";
-	
-    //SUB urlMappingPembuatanPagarDinding
-
-
 	if (urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKonsPost]) {
     generateBreadcrumbJasaKonstruksiPembatasPost(
         urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
