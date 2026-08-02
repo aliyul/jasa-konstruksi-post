@@ -795,24 +795,18 @@ const urlMappingHargaJasaPasangPVCFromMoneyPageMoneyPage1 = {
 // 📁 JASA FINISHING INTERIOR MODERN - PLAFON (MONEY CHILD)
 // ============================================================
 
-const urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-wpc-premium.html": "Jasa Pasang Plafon WPC Premium",  
-  "https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-plafon-wpc.html": "Harga Jasa Pasang Plafon WPC",  
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-wpc.html": "Jasa Pasang Plafon WPC",  
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-gypsum.html": "Jasa Pasang Plafon Gypsum",  
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-per-meter.html": "Jasa Pasang Plafon Per Meter",  
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-terdekat.html": "Jasa Pasang Plafon Terdekat",  
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-pvc.html": "Jasa Pasang Plafon PVC",  
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-grc.html": "Jasa Pasang Plafon GRC",  
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-akustik.html": "Jasa Pasang Plafon Akustik",  
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-upvc.html": "Jasa Pasang Plafon UPVC",  
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-gypsum-per-meter.html": "Jasa Pasang Plafon Gypsum Per Meter",  
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-gypsum-terdekat.html": "Jasa Pasang Plafon Gypsum Terdekat",  
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-akustik-per-meter.html": "Jasa Pasang Plafon Akustik Per Meter",  
-  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-pvc-per-meter.html": "Jasa Pasang Plafon PVC Per Meter"  
-
+const urlMappingHargaJasaPasangPlafonFromMoneyPageMoneyPage1 = {
+"https://www.betonjayareadymix.com/2020/02/harga-jasa-pasang-plafon-wpc.html": "Harga Jasa Pasang Plafon WPC",  
+	 "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-per-meter.html": "Jasa Pasang Plafon Per Meter", 
+	 "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-gypsum-per-meter.html": "Jasa Pasang Plafon Gypsum Per Meter",  
+    "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-akustik-per-meter.html": "Jasa Pasang Plafon Akustik Per Meter",  
+  "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-pvc-per-meter.html": "Jasa Pasang Plafon PVC Per Meter"
+	
 };
 const urlMappingJasaPasangPlafonFromMoneyPageMoneyChild= {
+	"https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-terdekat.html": "Jasa Pasang Plafon Terdekat",  
+ "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-gypsum-terdekat.html": "Jasa Pasang Plafon Gypsum Terdekat",
+	
     "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-pvc-terdekat.html": "Jasa Pasang Plafon PVC Terdekat",  
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-bogor.html": "Jasa Pasang Plafon Bogor",  
   "https://www.betonjayareadymix.com/2020/02/jasa-pasang-plafon-bekasi.html": "Jasa Pasang Plafon Bekasi",  
@@ -2604,7 +2598,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	   urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyChild,
 	   urlMappingJasaPembuatanCustomFurnitureFromMoneyPageMoneyChild,
-    urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage,
+    urlMappingHargaJasaPasangPlafonFromMoneyPageMoneyPage1,
 	urlMappingJasaPasangPlafonFromMoneyPageMoneyChild,
     urlMappingJasaPasangWpcFromMoneyMaster1MoneyChild,
     urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyChild,
@@ -4042,17 +4036,18 @@ if (urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyChild[cleanUrlJasaKonsFin
         'JASA'
     );
 }
-   if (urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishingPost]) {
+   if (urlMappingHargaJasaPasangPlafonFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishingPost]) {
    // ✅ Generate Breadcrumb untuk Jasa Finishing Interior Modern Plafon (Sub2 Money Child)
     generateBreadcrumbjasaKonstruksiFinishingPost(
-        urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage,
+        urlMappingHargaJasaPasangPlafonFromMoneyPageMoneyPage1,
         cleanUrlJasaKonsFinishingPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
             { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
-            { name: 'Jasa Pasang Plafon', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html' }
+            { name: 'Jasa Pasang Plafon', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html' },
+            { name: 'Harga Jasa Pasang Plafon', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-plafon.html' }
         ],
         'JASA'
     );
