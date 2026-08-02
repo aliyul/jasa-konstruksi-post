@@ -4110,7 +4110,7 @@ if (urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyChild[cleanUrlJasaKonsFin
  	if (urlMappingHargaJasaPasangPVCFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishingPost]) {
      // ✅ Generate Breadcrumb untuk Jasa Finishing Interior Modern PVC (Sub2 Money Child)
 		generateBreadcrumbjasaKonstruksiFinishingPost(
-        urlMappingJasaPasangPVCFromMoneyPageMoneyPage1,
+        urlMappingHargaJasaPasangPVCFromMoneyPageMoneyPage1,
         cleanUrlJasaKonsFinishingPost,
         [
              { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
