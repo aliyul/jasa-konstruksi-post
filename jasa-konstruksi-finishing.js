@@ -7,6 +7,7 @@ const urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1 = {
 
 const urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage = {
  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pvc.html": "Harga Jasa Pasang PVC", 
+ //"https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-board.html": "Jasa Pasang PVC Board", 
  "https://www.betonjayareadymix.com/p/jasa-pasang-pvc-dinding.html": "Jasa Pasang PVC Dinding",
 	"https://www.betonjayareadymix.com/p/jasa-pasang-pvc-lantai.html": "Jasa Pasang PVC Lantai"
 };
