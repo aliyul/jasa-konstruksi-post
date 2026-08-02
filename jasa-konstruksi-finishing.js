@@ -14,7 +14,7 @@ const urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage = {
 };
 
 const urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage  = {
-   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-plafon.html": "Harga Jasa Pasang Plafon"
+   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-plafon.html": "Harga Jasa Pasang Plafon",
   "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-wpc-premium.html": "Jasa Pasang Plafon WPC Premium",   
   "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-wpc.html": "Jasa Pasang Plafon WPC",  
   "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-gypsum.html": "Jasa Pasang Plafon Gypsum",
