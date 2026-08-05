@@ -87,6 +87,7 @@ urlMappingJasaPerkerasanAgregatJalanPost	0		-	-		-						3+ URL 			(saran)
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Perkerasan Jalan > [Nama Layanan] (4 level)
 // ============================================================
 const urlMappingHargaJasaPasangPavingFromMoneyPage2MoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-paving-terdekat.html": "Harga Jasa Pasang Paving Jakarta",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-paving-jakarta.html": "Harga Jasa Pasang Paving Jakarta",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-paving-bogor.html": "Harga Jasa Pasang Paving Bogor",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-paving-depok.html": "Harga Jasa Pasang Paving Depok",
