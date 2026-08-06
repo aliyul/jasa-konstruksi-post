@@ -86,6 +86,16 @@ urlMappingJasaPerkerasanAgregatJalanPost	0		-	-		-						3+ URL 			(saran)
 // Parent: Jasa Perkerasan Jalan (/p/jasa-perkerasan-jalan.html)
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Perkerasan Jalan > [Nama Layanan] (4 level)
 // ============================================================
+const urlMappingHargaJasaPengecoranJalanBetonFromMoneyPage2MoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengecoran-jalan-beton-terdekat.html": "Harga Jasa Pengecoran Jalan Beton Terdekat",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengecoran-jalan-beton-jakarta.html": "Harga Jasa Pengecoran Jalan Beton Jakarta",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengecoran-jalan-beton-bogor.html": "Harga Jasa Pengecoran Jalan Beton Bogor",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengecoran-jalan-beton-depok.html": "Harga Jasa Pengecoran Jalan Beton Depok",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengecoran-jalan-beton-tangerang.html": "Harga Jasa Pengecoran Jalan Beton Tangerang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengecoran-jalan-beton-bekasi.html": "Harga Jasa Pengecoran Jalan Beton Bekasi",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengecoran-jalan-beton-karawang.html": "Harga Jasa Pengecoran Jalan Beton Karawang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengecoran-jalan-beton-surabaya.html": "Harga Jasa Pengecoran Jalan Beton Surabaya"
+};
 const urlMappingHargaJasaPasangPavingFromMoneyPage2MoneyChild = {
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-paving-terdekat.html": "Harga Jasa Pasang Paving Terdekat",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-paving-jakarta.html": "Harga Jasa Pasang Paving Jakarta",
@@ -2014,6 +2024,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
+		urlMappingHargaJasaPengecoranJalanBetonFromMoneyPage2MoneyChild,
 		urlMappingHargaJasaPasangPavingFromMoneyPage2MoneyChild,
 		urlMappingJasaPavingBlockJalanPost,
 		urlMappingJasaPengecoranJalanBetonPost,
@@ -2546,7 +2557,25 @@ document.addEventListener("DOMContentLoaded", function() {
   "https://www.betonjayareadymix.com/p/jasa-pengecoran-jalan-beton.html": "Jasa Pengecoran Jalan Beton",
   "https://www.betonjayareadymix.com/p/jasa-pengaspalan-jalan.html": "Jasa Pengaspalan Jalan",
   "https://www.betonjayareadymix.com/p/jasa-paving-block-jalan.html": "Jasa Paving Block Jalan" */
-	
+
+if (urlMappingHargaJasaPengecoranJalanBetonFromMoneyPage2MoneyChild[cleanUrlJasaJalanPerkerasanKonsPost]) {
+      generateBreadcrumbJasaKonstruksiJalanPerkerasanPost(
+        urlMappingHargaJasaPengecoranJalanBetonFromMoneyPage2MoneyChild,
+        cleanUrlJasaJalanPerkerasanKonsPost,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-jalan-perkerasan.html' },
+            { name: 'Perbandingan Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-jalan-perkerasan.html' },
+            { name: 'Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html' },
+            { name: 'Jasa Perkerasan Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html' },
+            { name: 'Jasa Perkerasan Jalan Layanan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-layanan.html' },
+            { name: 'Jasa Pengecoran Jalan Beton', url: 'https://www.betonjayareadymix.com/p/jasa-pengecoran-jalan-beton.html' },
+            { name: 'Harga Jasa Pengecoran Jalan Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pengecoran-jalan-beton.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+
 if (urlMappingHargaJasaPasangPavingFromMoneyPage2MoneyChild[cleanUrlJasaJalanPerkerasanKonsPost]) {
       generateBreadcrumbJasaKonstruksiJalanPerkerasanPost(
         urlMappingHargaJasaPasangPavingFromMoneyPage2MoneyChild,
