@@ -88,14 +88,14 @@ urlMappingJasaPerkerasanAgregatJalanPost	0		-	-		-						3+ URL 			(saran)
 // ============================================================
 
 const urlMappingHargaJasaPengaspalanJalanFromMoneyPage2MoneyChild = {
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-terdekat.html": "Harga Jasa Pengaspalan Jalan Terdekat",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-jakarta.html": "Harga Jasa Pengaspalan Jalan Jakarta",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-bogor.html": "Harga Jasa Pengaspalan Jalan Bogor",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-depok.html": "Harga Jasa Pengaspalan Jalan Depok",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-tangerang.html": "Harga Jasa Pengaspalan Jalan Tangerang",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-bekasi.html": "Harga Jasa Pengaspalan Jalan Bekasi",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-karawang.html": "Harga Jasa Pengaspalan Jalan Karawang",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-surabaya.html": "Harga Jasa Pengaspalan Jalan Surabaya"
+"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-terdekat.html": "Harga Jasa Pengaspalan Jalan Terdekat",
+"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-jakarta.html": "Harga Jasa Pengaspalan Jalan Jakarta",
+"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-bogor.html": "Harga Jasa Pengaspalan Jalan Bogor",
+"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-depok.html": "Harga Jasa Pengaspalan Jalan Depok",
+"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-tangerang.html": "Harga Jasa Pengaspalan Jalan Tangerang",
+"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-bekasi.html": "Harga Jasa Pengaspalan Jalan Bekasi",
+"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-karawang.html": "Harga Jasa Pengaspalan Jalan Karawang",
+"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-surabaya.html": "Harga Jasa Pengaspalan Jalan Surabaya"
 };
 const urlMappingHargaJasaPengecoranJalanBetonFromMoneyPage2MoneyChild = {
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-pengecoran-jalan-beton-terdekat.html": "Harga Jasa Pengecoran Jalan Beton Terdekat",
