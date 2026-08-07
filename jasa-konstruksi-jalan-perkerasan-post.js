@@ -86,6 +86,17 @@ urlMappingJasaPerkerasanAgregatJalanPost	0		-	-		-						3+ URL 			(saran)
 // Parent: Jasa Perkerasan Jalan (/p/jasa-perkerasan-jalan.html)
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Perkerasan Jalan > [Nama Layanan] (4 level)
 // ============================================================
+
+const urlMappingHargaJasaPengaspalanJalanFromMoneyPage2MoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-terdekat.html": "Harga Jasa Pengaspalan Jalan Terdekat",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-jakarta.html": "Harga Jasa Pengaspalan Jalan Jakarta",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-bogor.html": "Harga Jasa Pengaspalan Jalan Bogor",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-depok.html": "Harga Jasa Pengaspalan Jalan Depok",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-tangerang.html": "Harga Jasa Pengaspalan Jalan Tangerang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-bekasi.html": "Harga Jasa Pengaspalan Jalan Bekasi",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-karawang.html": "Harga Jasa Pengaspalan Jalan Karawang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pengaspalan-jalan-surabaya.html": "Harga Jasa Pengaspalan Jalan Surabaya"
+};
 const urlMappingHargaJasaPengecoranJalanBetonFromMoneyPage2MoneyChild = {
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-pengecoran-jalan-beton-terdekat.html": "Harga Jasa Pengecoran Jalan Beton Terdekat",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-pengecoran-jalan-beton-jakarta.html": "Harga Jasa Pengecoran Jalan Beton Jakarta",
@@ -2024,6 +2035,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	 // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
+		urlMappingHargaJasaPengaspalanJalanFromMoneyPage2MoneyChild,
 		urlMappingHargaJasaPengecoranJalanBetonFromMoneyPage2MoneyChild,
 		urlMappingHargaJasaPasangPavingFromMoneyPage2MoneyChild,
 		urlMappingJasaPavingBlockJalanPost,
@@ -2557,6 +2569,24 @@ document.addEventListener("DOMContentLoaded", function() {
   "https://www.betonjayareadymix.com/p/jasa-pengecoran-jalan-beton.html": "Jasa Pengecoran Jalan Beton",
   "https://www.betonjayareadymix.com/p/jasa-pengaspalan-jalan.html": "Jasa Pengaspalan Jalan",
   "https://www.betonjayareadymix.com/p/jasa-paving-block-jalan.html": "Jasa Paving Block Jalan" */
+
+if (urlMappingHargaJasaPengaspalanJalanFromMoneyPage2MoneyChild[cleanUrlJasaJalanPerkerasanKonsPost]) {
+      generateBreadcrumbJasaKonstruksiJalanPerkerasanPost(
+        urlMappingHargaJasaPengaspalanJalanFromMoneyPage2MoneyChild,
+        cleanUrlJasaJalanPerkerasanKonsPost,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-jalan-perkerasan.html' },
+            { name: 'Perbandingan Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-jalan-perkerasan.html' },
+            { name: 'Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html' },
+            { name: 'Jasa Perkerasan Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html' },
+            { name: 'Jasa Perkerasan Jalan Layanan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-layanan.html' },
+            { name: 'Jasa Pengaspalan Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-pengaspalan-jalan.html' },
+            { name: 'Harga Jasa Pengaspalan Jalan', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pengaspalan-jalan.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
 
 if (urlMappingHargaJasaPengecoranJalanBetonFromMoneyPage2MoneyChild[cleanUrlJasaJalanPerkerasanKonsPost]) {
       generateBreadcrumbJasaKonstruksiJalanPerkerasanPost(
