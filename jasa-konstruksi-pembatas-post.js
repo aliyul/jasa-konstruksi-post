@@ -82,8 +82,8 @@ const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
   // 🧠 TYPE: SUB1 (WAJIB tampil, bridge ke money page)
   // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton.html": "Jasa Pasang Pagar Panel Beton",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/2018/09/pagar-panel-beton-terpasang.html": "Pagar Panel Beton Terpasang",  // TYPE: SUB1
+  // "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton.html": "Jasa Pasang Pagar Panel Beton",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2018/09/pagar-panel-beton-terpasang.html": "Pagar Panel Beton Terpasang", 
 
   // ============================================================
   // [MONEY_CHILD] - LOKASI (JABODETABEK)
