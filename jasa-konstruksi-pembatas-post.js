@@ -42,6 +42,8 @@ const urlMappingPembuatanPagarDinding = {
 // ============================================================
 
 const urlMappingHargaJasaPasangPagarFromMoneyPageMoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-terdekat.html": "Harga Jasa Pasang Pagar Terdekat",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-surabaya.html": "Harga Jasa Pasang Pagar Surabaya",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-karawang.html": "Harga Jasa Pasang Pagar Karawang",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-bekasi.html": "Harga Jasa Pasang Pagar Bekasi",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-tangerang.html": "Harga Jasa Pasang Pagar Tangerang",
