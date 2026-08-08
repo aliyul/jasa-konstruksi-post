@@ -73,32 +73,18 @@ const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
   // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
   // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pasang Pagar Panel Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-pasang-pagar-panel-beton.html": "Harga Pasang Pagar Panel Beton",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/biaya-pasang-pagar-panel-beton.html": "Biaya Pasang Pagar Panel Beton",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton",  // TYPE: MONEY_MASTER
-
-  // ============================================================
-  // [SUB1] - JASA PASANG PAGAR PANEL BETON (edukasi)
-  // 🧠 TYPE: SUB1 (WAJIB tampil, bridge ke money page)
-  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton.html": "Jasa Pasang Pagar Panel Beton",  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2018/09/harga-pasang-pagar-panel-beton.html": "Harga Pasang Pagar Panel Beton", 
+  "https://www.betonjayareadymix.com/2018/09/biaya-pasang-pagar-panel-beton.html": "Biaya Pasang Pagar Panel Beton",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton",
   "https://www.betonjayareadymix.com/2018/09/pagar-panel-beton-terpasang.html": "Pagar Panel Beton Terpasang", 
 
-  // ============================================================
-  // [MONEY_CHILD] - LOKASI (JABODETABEK)
-  // 🧠 TYPE: MONEY_CHILD (WAJIB tampil, parent: SUB1)
-  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton Jakarta
-  // ============================================================
+  
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-jakarta.html": "Jasa Pasang Pagar Panel Beton Jakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bogor.html": "Jasa Pasang Pagar Panel Beton Bogor",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-depok.html": "Jasa Pasang Pagar Panel Beton Depok",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-tangerang.html": "Jasa Pasang Pagar Panel Beton Tangerang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bekasi.html": "Jasa Pasang Pagar Panel Beton Bekasi",  // TYPE: MONEY_CHILD
 
-  // ============================================================
-  // [MONEY_CHILD] - LOKASI (JAWA BARAT)
-  // ============================================================
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bandung.html": "Jasa Pasang Pagar Panel Beton Bandung",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-karawang.html": "Jasa Pasang Pagar Panel Beton Karawang",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-cianjur.html": "Jasa Pasang Pagar Panel Beton Cianjur",  // TYPE: MONEY_CHILD
@@ -115,28 +101,28 @@ const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
   // 🧠 TYPE: VARIANT (WAJIB tampil, spesifikasi layanan)
   // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton Perumahan
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-perumahan.html": "Jasa Pasang Pagar Panel Beton Perumahan",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pabrik.html": "Jasa Pasang Pagar Panel Beton Pabrik",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-gudang.html": "Jasa Pasang Pagar Panel Beton Gudang",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-lahan-kosong.html": "Jasa Pasang Pagar Panel Beton Lahan Kosong",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-kandang-ternak.html": "Jasa Pasang Pagar Panel Beton Kandang Ternak",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pertambangan.html": "Jasa Pasang Pagar Panel Beton Pertambangan",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-sekolah.html": "Jasa Pasang Pagar Panel Beton Sekolah",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-rumah-sakit.html": "Jasa Pasang Pagar Panel Beton Rumah Sakit",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tempat-ibadah.html": "Jasa Pasang Pagar Panel Beton Tempat Ibadah",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pembatas-lahan.html": "Jasa Pasang Pagar Panel Beton Pembatas Lahan",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-keamanan.html": "Jasa Pasang Pagar Panel Beton Keamanan",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-kedap-suara.html": "Jasa Pasang Pagar Panel Beton Kedap Suara",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tahan-lama.html": "Jasa Pasang Pagar Panel Beton Tahan Lama",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-cepat-dipasang.html": "Jasa Pasang Pagar Panel Beton Cepat Dipasang",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tahan-banjir.html": "Jasa Pasang Pagar Panel Beton Tahan Banjir",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-motif.html": "Jasa Pasang Pagar Panel Beton Motif",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-polosan.html": "Jasa Pasang Pagar Panel Beton Polosan",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-custom.html": "Jasa Pasang Pagar Panel Beton Custom",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tinggi.html": "Jasa Pasang Pagar Panel Beton Tinggi",  // TYPE: VARIANT
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-rendah.html": "Jasa Pasang Pagar Panel Beton Rendah"  // TYPE: VARIANT
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-perumahan.html": "Jasa Pasang Pagar Panel Beton Perumahan", 
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pabrik.html": "Jasa Pasang Pagar Panel Beton Pabrik",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-gudang.html": "Jasa Pasang Pagar Panel Beton Gudang",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-lahan-kosong.html": "Jasa Pasang Pagar Panel Beton Lahan Kosong",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-kandang-ternak.html": "Jasa Pasang Pagar Panel Beton Kandang Ternak", 
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pertambangan.html": "Jasa Pasang Pagar Panel Beton Pertambangan",  
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-sekolah.html": "Jasa Pasang Pagar Panel Beton Sekolah", 
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-rumah-sakit.html": "Jasa Pasang Pagar Panel Beton Rumah Sakit", 
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tempat-ibadah.html": "Jasa Pasang Pagar Panel Beton Tempat Ibadah", 
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pembatas-lahan.html": "Jasa Pasang Pagar Panel Beton Pembatas Lahan",  
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-keamanan.html": "Jasa Pasang Pagar Panel Beton Keamanan",  
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-kedap-suara.html": "Jasa Pasang Pagar Panel Beton Kedap Suara", 
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tahan-lama.html": "Jasa Pasang Pagar Panel Beton Tahan Lama",  
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-cepat-dipasang.html": "Jasa Pasang Pagar Panel Beton Cepat Dipasang", 
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tahan-banjir.html": "Jasa Pasang Pagar Panel Beton Tahan Banjir",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-motif.html": "Jasa Pasang Pagar Panel Beton Motif",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-polosan.html": "Jasa Pasang Pagar Panel Beton Polosan",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-custom.html": "Jasa Pasang Pagar Panel Beton Custom",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tinggi.html": "Jasa Pasang Pagar Panel Beton Tinggi", 
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-rendah.html": "Jasa Pasang Pagar Panel Beton Rendah"
+	
 };
-
 // ============================================================
 // [VARIANT] - JASA PAGAR BESI
 // ============================================================
