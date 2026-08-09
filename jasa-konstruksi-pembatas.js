@@ -90,12 +90,14 @@ const urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1 = {
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc-panel.html": "Jasa Pasang Pagar BRC Panel"
 
 };
+/*
 const urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1 = {
 "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-rumah.html": "Harga Jasa Pasang Pagar Rumah",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-rumah-per-meter.html": "Jasa Pasang Pagar Rumah Per Meter",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-rumah-besi.html": "Jasa Pasang Pagar Rumah Besi"
 
 };
+*/
 //SUB urlMappingPembuatanPagarDinding
 /*
 const urlMappingPagarBetonPrecast = {
@@ -1831,7 +1833,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1,
 		urlMappingJasaPembuatanPagarFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1,
+		//urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1,
 		urlMappingPasangPagarFromMoneyMaster1MoneyPage
     );
 
@@ -2186,7 +2188,7 @@ document.addEventListener("DOMContentLoaded", function() {
         'JASA_KONSTRUKSI'
     );
     }
-	
+	/*
 	if (urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
        generateBreadcrumbJasaKonstruksiPembatas(
         urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1,
@@ -2202,6 +2204,7 @@ document.addEventListener("DOMContentLoaded", function() {
         'JASA_KONSTRUKSI'
     );
     }
+		*/
     if (urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
        generateBreadcrumbJasaKonstruksiPembatas(
         urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1,
