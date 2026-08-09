@@ -2190,7 +2190,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 	
 	/*
-	
 	if (urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
        generateBreadcrumbJasaKonstruksiPembatas(
         urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1,
@@ -2206,7 +2205,8 @@ document.addEventListener("DOMContentLoaded", function() {
         'JASA_KONSTRUKSI'
     );
     }
-		*/
+	*/
+
     if (urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
        generateBreadcrumbJasaKonstruksiPembatas(
         urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1,
