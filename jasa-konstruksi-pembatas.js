@@ -2188,7 +2188,8 @@ document.addEventListener("DOMContentLoaded", function() {
         'JASA_KONSTRUKSI'
     );
     }
-	*/
+	
+	/*
 	
 	if (urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
        generateBreadcrumbJasaKonstruksiPembatas(
