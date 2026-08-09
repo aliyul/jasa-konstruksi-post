@@ -176,14 +176,14 @@ const urlMappingPasangJasaPagarKawatHarmonikaFromMoneyPageMoneyPage1 = {
 // ============================================================
 
 const urlMappingHargaJasaPasangPagarBRCFromMoneyPage1MoneyChild = {
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-terdekat.html": "Harga Jasa Pasang Pagar BRC Terdekat",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-surabaya.html": "Harga Jasa Pasang Pagar BRC Surabaya",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-karawang.html": "Harga Jasa Pasang Pagar BRC Karawang",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-bekasi.html": "Harga Jasa Pasang Pagar BRC Bekasi",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-tangerang.html": "Harga Jasa Pasang Pagar BRC Tangerang",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-depok.html": "Harga Jasa Pasang Pagar BRC Depok",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-bogor.html": "Harga Jasa Pasang Pagar BRC Bogor",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-jakarta.html": "Harga Jasa Pasang Pagar BRC Jakarta"
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-brc-terdekat.html": "Harga Jasa Pasang Pagar BRC Terdekat",
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-brc-surabaya.html": "Harga Jasa Pasang Pagar BRC Surabaya",
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-brc-karawang.html": "Harga Jasa Pasang Pagar BRC Karawang",
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-brc-bekasi.html": "Harga Jasa Pasang Pagar BRC Bekasi",
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-brc-tangerang.html": "Harga Jasa Pasang Pagar BRC Tangerang",
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-brc-depok.html": "Harga Jasa Pasang Pagar BRC Depok",
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-brc-bogor.html": "Harga Jasa Pasang Pagar BRC Bogor",
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-brc-jakarta.html": "Harga Jasa Pasang Pagar BRC Jakarta"
 	
 };
 
