@@ -175,14 +175,16 @@ const urlMappingPasangJasaPagarKawatHarmonikaFromMoneyPageMoneyPage1 = {
 // [VARIANT] - JASA PAGAR BRC
 // ============================================================
 
-const urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1 = {
-  // ============================================================
-  // SARAN ITEM BARU - JASA PAGAR BRC
-  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
-  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pagar BRC
-  // ============================================================
-  // "https://www.betonjayareadymix.com/2019/08/jasa-pagar-brc.html": "Jasa Pagar BRC",  // TYPE: MONEY_MASTER
-  // "https://www.betonjayareadymix.com/2019/08/harga-pagar-brc-per-meter.html": "Harga Pagar BRC per Meter",  // TYPE: MONEY_MASTER
+const urlMappingHargaJasaPasangPagarBRCFromMoneyPage1MoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-terdekat.html": "Harga Jasa Pasang Pagar BRC Terdekat",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-surabaya.html": "Harga Jasa Pasang Pagar BRC Surabaya",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-karawang.html": "Harga Jasa Pasang Pagar BRC Karawang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-bekasi.html": "Harga Jasa Pasang Pagar BRC Bekasi",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-tangerang.html": "Harga Jasa Pasang Pagar BRC Tangerang",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-depok.html": "Harga Jasa Pasang Pagar BRC Depok",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-bogor.html": "Harga Jasa Pasang Pagar BRC Bogor",
+"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-brc-jakarta.html": "Harga Jasa Pasang Pagar BRC Jakarta"
+	
 };
 
 // ============================================================
@@ -1953,7 +1955,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangPagarBesiHollowFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangDindingPembatasBataFromMoneyPageMoneyPage1,
 		urlMappingPasangJasaPagarKawatHarmonikaFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1,
+		urlMappingHargaJasaPasangPagarBRCFromMoneyPage1MoneyChild,
 		urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1,
         urlMappingJasaPasangPagarBangunanFromMoneyPageMoneyPage1,
 
@@ -2393,9 +2395,9 @@ document.addEventListener("DOMContentLoaded", function() {
         'JASA_KONSTRUKSI'
     );
    }
-	if (urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKonsPost]) {
+	if (urlMappingHargaJasaPasangPagarBRCFromMoneyPage1MoneyChild[cleanUrlJasaPembatasKonsPost]) {
         generateBreadcrumbJasaKonstruksiPembatasPost(
-        urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1,
+        urlMappingHargaJasaPasangPagarBRCFromMoneyPage1MoneyChild,
         cleanUrlJasaPembatasKonsPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -2403,7 +2405,8 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
             { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
-            { name: 'Jasa Pasang Pagar BRC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc.html' }
+            { name: 'Jasa Pasang Pagar BRC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc.html' },
+            { name: 'Harga Jasa Pasang Pagar BRC', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-brc.html' }
         ],
         'JASA_KONSTRUKSI'
     );
