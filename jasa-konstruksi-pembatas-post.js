@@ -222,6 +222,17 @@ const urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2018/11/keunggulan-jasa-pasang-pagar-rumah.html": "Keunggulan Jasa Pasang Pagar Rumah",  // TYPE: SUB1
   "https://www.betonjayareadymix.com/2018/11/tukang-pasang-pagar-rumah.html": "Tukang Pasang Pagar Rumah"  // TYPE: SUB1
 };
+const urlMappingHargaJasaPasangPagarRumahFromMoneyPage1MoneyChild = {
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah-terdekat.html": "Harga Jasa Pasang Pagar Rumah Terdekat",
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah-surabaya.html": "Harga Jasa Pasang Pagar Rumah Surabaya",
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah-karawang.html": "Harga Jasa Pasang Pagar Rumah Karawang",
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah-bekasi.html": "Harga Jasa Pasang Pagar Rumah Bekasi",
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah-tangerang.html": "Harga Jasa Pasang Pagar Rumah Tangerang",
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah-depok.html": "Harga Jasa Pasang Pagar Rumah Depok",
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah-bogor.html": "Harga Jasa Pasang Pagar Rumah Bogor",
+"https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah-jakarta.html": "Harga Jasa Pasang Pagar Rumah Jakarta"
+	
+};
 
 // ============================================================
 // [VARIANT] - JASA PAGAR BANGUNAN (GEDUNG/KOMERSIAL)
@@ -1957,6 +1968,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingPasangJasaPagarKawatHarmonikaFromMoneyPageMoneyPage1,
 		urlMappingHargaJasaPasangPagarBRCFromMoneyPage1MoneyChild,
 		urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1,
+		urlMappingHargaJasaPasangPagarRumahFromMoneyPage1MoneyChild,
+		
         urlMappingJasaPasangPagarBangunanFromMoneyPageMoneyPage1,
 
 		urlMappingJasaPemasanganKanstinJalanFromMoneyPage1MoneyPage2
@@ -2395,6 +2408,23 @@ document.addEventListener("DOMContentLoaded", function() {
         'JASA_KONSTRUKSI'
     );
    }
+	if (urlMappingHargaJasaPasangPagarRumahFromMoneyPage1MoneyChild[cleanUrlJasaPembatasKonsPost]) {
+        generateBreadcrumbJasaKonstruksiPembatasPost(
+        urlMappingHargaJasaPasangPagarRumahFromMoneyPage1MoneyChild,
+        cleanUrlJasaPembatasKonsPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
+            { name: 'Jasa Pasang Pagar Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-rumah.html' },
+            { name: 'Harga Jasa Pasang Pagar Rumah', url: 'https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+	
 	if (urlMappingHargaJasaPasangPagarBRCFromMoneyPage1MoneyChild[cleanUrlJasaPembatasKonsPost]) {
         generateBreadcrumbJasaKonstruksiPembatasPost(
         urlMappingHargaJasaPasangPagarBRCFromMoneyPage1MoneyChild,
