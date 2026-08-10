@@ -97,11 +97,6 @@ const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-tasikmalaya.html": "Jasa Pasang Pagar Panel Beton Tasikmalaya",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-purwakarta.html": "Jasa Pasang Pagar Panel Beton Purwakarta",  // TYPE: MONEY_CHILD
 
-  // ============================================================
-  // [VARIANT] - APLIKASI KHUSUS
-  // 🧠 TYPE: VARIANT (WAJIB tampil, spesifikasi layanan)
-  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Panel Beton Perumahan
-  // ============================================================
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-perumahan.html": "Jasa Pasang Pagar Panel Beton Perumahan", 
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pabrik.html": "Jasa Pasang Pagar Panel Beton Pabrik",
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-gudang.html": "Jasa Pasang Pagar Panel Beton Gudang",
