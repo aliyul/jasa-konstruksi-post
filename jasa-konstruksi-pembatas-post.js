@@ -199,28 +199,15 @@ const urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1 = {
   // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
   // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Jasa Pasang Pagar Rumah
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah.html": "Harga Jasa Pasang Pagar Rumah",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2018/11/biaya-jasa-pasang-pagar-rumah.html": "Biaya Jasa Pasang Pagar Rumah",  // TYPE: MONEY_MASTER
+  "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah.html": "Harga Jasa Pasang Pagar Rumah",  
+  "https://www.betonjayareadymix.com/2018/11/biaya-jasa-pasang-pagar-rumah.html": "Biaya Jasa Pasang Pagar Rumah", 
 
-  // ============================================================
-  // [SUB1] - JASA PASANG PAGAR RUMAH (edukasi)
-  // 🧠 TYPE: SUB1 (WAJIB tampil, bridge ke money page)
-  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Jasa Pasang Pagar Rumah
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah.html": "Jasa Pasang Pagar Rumah",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-terdekat.html": "Jasa Pasang Pagar Rumah Terdekat",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-besi-beton-kayu.html": "Jasa Pasang Pagar Rumah Besi Beton Kayu",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-minimalis-mewah.html": "Jasa Pasang Pagar Rumah Minimalis Mewah",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-profesional.html": "Jasa Pasang Pagar Rumah Profesional",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-pondasi-kuat.html": "Jasa Pasang Pagar Rumah Pondasi Kuat",  // TYPE: SUB1
-  
-  // ============================================================
-  // [SUB1] - PANDUAN / BRIDGE (keunggulan, tukang)
-  // 🧠 TYPE: SUB1 (WAJIB tampil)
-  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Keunggulan Jasa Pasang Pagar Rumah
-  // ============================================================
-  "https://www.betonjayareadymix.com/2018/11/keunggulan-jasa-pasang-pagar-rumah.html": "Keunggulan Jasa Pasang Pagar Rumah",  // TYPE: SUB1
-  "https://www.betonjayareadymix.com/2018/11/tukang-pasang-pagar-rumah.html": "Tukang Pasang Pagar Rumah"  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah.html": "Jasa Pasang Pagar Rumah", 
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-per-meter.html": "Jasa Pasang Pagar Rumah Per Meter", 
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-besi-beton-kayu.html": "Jasa Pasang Pagar Rumah Besi Beton Kayu", 
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-minimalis-mewah.html": "Jasa Pasang Pagar Rumah Minimalis Mewah",
+   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-rumah-pondasi-kuat.html": "Jasa Pasang Pagar Rumah Pondasi Kuat",
+  "https://www.betonjayareadymix.com/2018/11/tukang-pasang-pagar-rumah.html": "Tukang Pasang Pagar Rumah" 
 };
 const urlMappingHargaJasaPasangPagarRumahFromMoneyPage1MoneyChild = {
 "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah-terdekat.html": "Harga Jasa Pasang Pagar Rumah Terdekat",
@@ -233,7 +220,10 @@ const urlMappingHargaJasaPasangPagarRumahFromMoneyPage1MoneyChild = {
 "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-rumah-jakarta.html": "Harga Jasa Pasang Pagar Rumah Jakarta"
 	
 };
-
+const urlMappingJasaPasangPagarRumahFromMoneyPageVariant = {
+"https://www.betonjayareadymix.com/2018/11/keunggulan-jasa-pasang-pagar-rumah.html": "Keunggulan Jasa Pasang Pagar Rumah",  // TYPE: SUB1
+	
+};
 // ============================================================
 // [VARIANT] - JASA PAGAR BANGUNAN (GEDUNG/KOMERSIAL)
 // ============================================================
