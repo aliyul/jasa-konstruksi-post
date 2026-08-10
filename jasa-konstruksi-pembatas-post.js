@@ -221,7 +221,9 @@ const urlMappingHargaJasaPasangPagarRumahFromMoneyPage1MoneyChild = {
 	
 };
 const urlMappingJasaPasangPagarRumahFromMoneyPageVariant = {
-"https://www.betonjayareadymix.com/2018/11/keunggulan-jasa-pasang-pagar-rumah.html": "Keunggulan Jasa Pasang Pagar Rumah",  // TYPE: SUB1
+"https://www.betonjayareadymix.com/2018/11/keunggulan-jasa-pasang-pagar-rumah.html": "Keunggulan Jasa Pasang Pagar Rumah",
+"https://www.betonjayareadymix.com/2018/11/spesifikasi-jasa-pasang-pagar-rumah.html": "Spesifikasi Jasa Pasang Pagar Rumah", 
+"https://www.betonjayareadymix.com/2018/11/model-jasa-pasang-pagar-rumah.html": "Model Jasa Pasang Pagar Rumah"
 	
 };
 // ============================================================
