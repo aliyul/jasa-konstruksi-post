@@ -581,6 +581,51 @@ const VARIANT_KEYWORDS_PRODUK = [
     'garansi', 'jaminan'
 ];
 
+const VARIANT_KEYWORDS_MATERIAL = [
+    // 1. Grade & Mutu (KHUSUS MATERIAL)
+    'grade', 'mutu', 'kualitas', 'quality',
+    'k225', 'k250', 'k300', 'k350', 'k400', 'k500',
+    'fc', 'sni', 'standar',
+    'kelas 1', 'kelas 2', 'kelas 3',
+    'mutu 1', 'mutu 2', 'mutu 3',
+    
+    // 2. Ukuran & Dimensi (BISA JUGA UNTUK PRODUK)
+    'ukuran', 'dimensi', 'ukur',
+    'panjang', 'lebar', 'tinggi', 'kedalaman',
+    'ketebalan', 'tebal', 'diameter',
+    'besar', 'kecil', 'sedang',
+    'mm', 'cm', 'm', 'meter',
+    '4mm', '6mm', '8mm', '10mm', '12mm', '16mm', '20mm',
+    
+    // 3. Komposisi & Kandungan (KHUSUS MATERIAL)
+    'komposisi', 'kandungan', 'campuran',
+    'bahan', 'material',
+    'semen', 'pasir', 'kerikil', 'batu split',
+    'besi', 'baja', 'tulangan', 'wiremesh',
+    'zat aditif', 'admixture',
+    
+    // 4. Jenis Material (KHUSUS MATERIAL)
+    'jenis', 'tipe', 'model',
+    'besi beton', 'baja tulangan', 'kawat',
+    'pipa', 'pvc', 'galvanis',
+    'bata ringan', 'bata merah', 'batako',
+    'pasir beton', 'pasir pasang',
+    'split', 'kerikil',
+    
+    // 5. Metode & Proses (BISA JUGA UNTUK PRODUK)
+    'metode', 'cara', 'teknik', 'prosedur',
+    'tahapan', 'langkah', 'proses',
+    'instalasi', 'pemasangan',
+    
+    // 6. Fungsi & Keunggulan
+    'kelebihan', 'kekurangan',
+    'fungsi', 'kegunaan', 'aplikasi',
+    'perawatan', 'pemeliharaan',
+    
+    // 7. Sertifikasi
+    'sertifikat', 'sni', 'iso',
+    'garansi', 'jaminan'
+];
 // ============================================================
 
 const VARIANT_KEYWORDS_JASA = [
