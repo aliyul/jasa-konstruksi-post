@@ -2471,25 +2471,19 @@ document.addEventListener("DOMContentLoaded", function() {
    }
 	
   if (urlMappingJasaPasangPagarPanelBetonFromMoneyPageVariant[cleanUrlJasaPembatasKonsPost]) {
-    // Eksekusi semua fungsi
-		    function init() {
-		        console.log('🔧 Variant page detected - removing breadcrumbs...');
-		        
-		        const removedNav = removeBreadcrumbNavigation();
-		        const removedJson = removeBreadcrumbJsonLd();
-		        
-		        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
-		        hideBreadcrumbWithCss();
-		        
-		        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
-		    }
-		    
-		    // Jalankan saat DOM sudah siap
-		    if (document.readyState === 'loading') {
-		        document.addEventListener('DOMContentLoaded', init);
-		    } else {
-		        init();
-		}
+     generateBreadcrumbJasaKonstruksiPembatasPost(
+        urlMappingJasaPasangPagarPanelBetonFromMoneyPageVariant,
+        cleanUrlJasaPembatasKonsPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
+            { name: 'Jasa Pasang Pagar Panel Beton', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-panel-beton.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
    }
     
     if (urlMappingJasaPasangPagarBetonPrecastFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKonsPost]) {
