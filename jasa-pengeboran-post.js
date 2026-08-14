@@ -2597,9 +2597,6 @@ document.addEventListener("DOMContentLoaded", function() {
     console.error("[HybridDateModified] Fatal error:", err);
   }
 })();
-	<!-- ============================================================
-    
-     ============================================================ -->
 
 // ============================================================
 // 1. FUNGSI LOAD SCHEMA
