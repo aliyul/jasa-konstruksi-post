@@ -142,10 +142,10 @@ const urlMappingHargaJasaBorePileFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile.html": "Harga Jasa Strauss Pile",  
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-murah.html": "Harga Jasa Bore Pile Murah",  
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-auger-bore-pile.html": "Harga Jasa Auger Bore Pile",  
-  "https://www.betonjayareadymix.com/2019/08/harga-borongan-strauss-pile.html": "Harga Borongan Strauss Pile",  
-  "https://www.betonjayareadymix.com/2019/08/harga-borongan-bore-pile.html": "Harga Borongan Bore Pile",  
-  "https://www.betonjayareadymix.com/2019/08/harga-pengeboran-bore-pile.html": "Harga Pengeboran Bore Pile",  
-  "https://www.betonjayareadymix.com/2019/08/harga-pengeboran-strauss-pile.html": "Harga Pengeboran Strauss Pile" 
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-strauss-pile.html": "Harga Jasa Borongan Strauss Pile",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile.html": "Harga Jasa Borongan Bore Pile",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pengeboran-bore-pile.html": "Harga Jasa Pengeboran Bore Pile",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pengeboran-strauss-pile.html": "Harga Jasa Pengeboran Strauss Pile" 
 };
 const urlMappingHargaJasaBorePileFromMoneyPageMoneyChild = {
   // ============================================================
