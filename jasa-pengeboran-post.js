@@ -2598,7 +2598,12 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 
+
 // ============================================================
+// 5. JALANKAN
+// ============================================================
+document.addEventListener('DOMContentLoaded', main);
+   // ============================================================
 // 1. FUNGSI LOAD SCHEMA
 // ============================================================
 function loadSchemaScript() {
@@ -2696,11 +2701,6 @@ async function main() {
   
   console.log('[Main] 🏁 Done');
 }
-
-// ============================================================
-// 5. JALANKAN
-// ============================================================
-document.addEventListener('DOMContentLoaded', main);
 
      // Menemukan elemen menggunakan Id
     var JasaKonsPengeboranPost = document.getElementById("JasaKonsPengeboranPost");
