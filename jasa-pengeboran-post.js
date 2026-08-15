@@ -182,6 +182,7 @@ const urlMappingJasaBorePileMiniFromMoneyPageMoneyChild = {
     "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-mini-karawang.html": "Jasa Bore Pile Mini Karawang"     
 };
 const urlMappingJasaBorePileFromMoneyMaster1Variant = {
+    "https://www.betonjayareadymix.com/2019/08/metode-jasa-bore-pile.html": "Mmtode Jasa Bore Pile",
     "https://www.betonjayareadymix.com/2019/08/mutu-jasa-bore-pile.html": "Mutu Jasa Bore Pile",
     "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-bore-pile.html": "Spesifikasi Jasa Bore Pile"
 };
@@ -3206,25 +3207,18 @@ if (urlMappingJasaBorePileMiniFromMoneyPageMoneyChild[cleanUrlJasaPengeboranPost
     );  
 }
 if (urlMappingJasaBorePileFromMoneyMaster1Variant[cleanUrlJasaPengeboranPost]) {
-// Eksekusi semua fungsi
-		    function init() {
-		        console.log('🔧 Variant page detected - removing breadcrumbs...');
-		        
-		        const removedNav = removeBreadcrumbNavigation();
-		        const removedJson = removeBreadcrumbJsonLd();
-		        
-		        // Fallback: tetap tambahkan CSS untuk memastikan tidak terlihat
-		        hideBreadcrumbWithCss();
-		        
-		        console.log(`📊 Summary: ${removedNav} navigation element(s) removed, ${removedJson} JSON-LD(s) removed`);
-		    }
-		    
-		    // Jalankan saat DOM sudah siap
-		    if (document.readyState === 'loading') {
-		        document.addEventListener('DOMContentLoaded', init);
-		    } else {
-		        init();
-		    }
+generateBreadcrumbJasaPengeboranPost(
+        urlMappingJasaBorePileFromMoneyMaster1Variant,
+        cleanUrlJasaPengeboranPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
+			 { name: 'Jasa Bore Pile', url: 'https://www.betonjayareadymix.com/p/jasa-bore-pile.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );  
 }
 
 if (urlMappingJasaBorHorizontalFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
