@@ -110,6 +110,16 @@ const urlMappingJasaPondasiTapakFromMoneyPageMoneyChild = {
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE & MONEY_CHILD
 // Parent: Jasa Pondasi Bangunan (SUB2)
 // ============================================================
+const urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyPage1 = {
+    "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-murah.html": "Harga Jasa Pondasi Tiang Pancang Murah",
+"https://www.betonjayareadymix.com/2019/08/harga-jasa-pancang-drop-hammer.html": "Harga Jasa Pancang Drop Hammer",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pancang-spun-pile.html": "Harga Jasa Pancang Spun Pile",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pancang-mini-pile.html": "Harga Jasa Pancang Mini Pile",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pemasangan-mini-pile.html": "Harga Jasa Pemasangan Mini Pile",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pancang-hidrolik.html": "Harga Jasa Pancang Hidrolik",  
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pemasangan-tiang-pancang.html": "Harga Jasa Pemasangan Tiang Pancang"
+	
+};
 
 const urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild = {
   // ============================================================
@@ -1786,6 +1796,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBoronganPondasiFromMoneyPageMoneyChild,
 		urlMappingJasaPondasiCakarAyamFromMoneyPageMoneyChild,
 		urlMappingJasaPondasiTapakFromMoneyPageMoneyChild,
+		urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyPage1,
 		urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild,
 		urlMappingJasaPondasiSumuranFromMoneyMaster1MoneyChild		
     );
@@ -2721,6 +2732,23 @@ if (urlMappingJasaPondasiCakarAyamFromMoneyPageMoneyChild[cleanUrlJasaPondasiPer
    }
  */
 	
+if (urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyPage1[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+		generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
+        urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyPage1,
+        cleanUrlJasaPondasiPerkuatanTanahKonsPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+			{ name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
+			{ name: 'Jasa Tiang Pancang', url: 'https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html' },
+			{ name: 'Harga Jasa Pondasi Tiang Pancang', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pondasi-tiang-pancang.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+	
+   }
+
 if (urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
 		generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
         urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild,
