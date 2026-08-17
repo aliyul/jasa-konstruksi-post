@@ -124,6 +124,7 @@ const urlMappingHargaJasaBorSumurFromMoneyPageVariant = {
 // 🧠 TYPE: SUB2 (boleh skip di breadcrumb)
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Pengeboran > Jasa Bore Pile
 // ============================================================
+
 const urlMappingJasaBorePileFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile",
     "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-beton.html": "Jasa Bore Pile Beton",
