@@ -183,7 +183,7 @@ const urlMappingJasaBorePileMiniFromMoneyPageMoneyChild = {
     "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-mini-karawang.html": "Jasa Bore Pile Mini Karawang"     
 };
 const urlMappingJasaBorePileFromMoneyMaster1Variant = {
-    "https://www.betonjayareadymix.com/2019/08/metode-jasa-bore-pile.html": "Mmtode Jasa Bore Pile",
+    "https://www.betonjayareadymix.com/2019/08/metode-jasa-bore-pile.html": "Metode Jasa Bore Pile",
     "https://www.betonjayareadymix.com/2019/08/mutu-jasa-bore-pile.html": "Mutu Jasa Bore Pile",
     "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-bore-pile.html": "Spesifikasi Jasa Bore Pile"
 };
