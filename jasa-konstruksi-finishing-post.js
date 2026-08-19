@@ -99,16 +99,10 @@ const urlMappingHargaJasaInteriorFromMoneyPageMoneyChild = {
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-purwakarta.html": "Harga Jasa Interior Purwakarta"
 };	
 
-const urlMappingJasaProfilBetonFromMoneyMasterMoneyChild = {
-  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-terdekat.html": "Jasa Profil Beton Terdekat",
-  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-jakarta.html": "Jasa Profil Beton Jakarta",
-  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-bogor.html": "Jasa Profil Beton Bogor",
-  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-depok.html": "Jasa Profil Beton Depok",
-  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-tangerang.html": "Jasa Profil Beton Tangerang",
-  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-bekasi.html": "Jasa Profil Beton Bekasi",
-  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-karawang.html": "Jasa Profil Beton Karawang",
-  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-sukabumi.html": "Jasa Profil Beton Sukabumi",
-  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-purwakarta.html": "Jasa Profil Beton Purwakarta"
+const urlMappingJasaProfilBetonFromMoneyMasterVariant = {
+  "https://www.betonjayareadymix.com/2018/09/spesifikasi-jasa-profil-beton.html": "Spesifikasi Jasa Profil Beton",
+  "https://www.betonjayareadymix.com/2018/09/ukuran-jasa-profil-beton.html": "Ukuran Jasa Profil Beton",
+  "https://www.betonjayareadymix.com/2018/09/desain-jasa-profil-beton.html": "Desain Jasa Profil Beton"
 };
 const urlMappingHargaJasaProfilBetonFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-terdekat.html": "Harga Jasa Profil Beton Terdekat",
@@ -2571,7 +2565,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	urlMappingJasaInteriorFromMoneyMasterMoneyChild,
 	urlMappingHargaJasaInteriorFromMoneyPageMoneyChild,
 	   
-	urlMappingJasaProfilBetonFromMoneyMasterMoneyChild,
+	urlMappingJasaProfilBetonFromMoneyMasterVariant,
     urlMappingHargaJasaProfilBetonFromMoneyPageMoneyChild,
 	   
     urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild,
@@ -3342,7 +3336,7 @@ if (urlMappingHargaJasaInteriorFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishing
 	    );
 }
 	
-if (urlMappingJasaProfilBetonFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+if (urlMappingJasaProfilBetonFromMoneyMasterVariant[cleanUrlJasaKonsFinishingPost]) {
         generateBreadcrumbjasaKonstruksiFinishingPost(
 	        urlMappingJasaProfilBetonFromMoneyMasterMoneyChild,
 	        cleanUrlJasaKonsFinishingPost,
