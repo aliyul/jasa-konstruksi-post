@@ -183,7 +183,12 @@ const urlMappingHargaJasaPasangPagarBRCFromMoneyPage1MoneyChild = {
 "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-brc-jakarta.html": "Harga Jasa Pasang Pagar BRC Jakarta"
 	
 };
+const urlMappingJasaPasangPagarBRCFromMoneyMasterVariant = {
+"https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-brc-per-meter.html": "Jasa Pasang Pagar BRC Per Meter",
+"https://www.betonjayareadymix.com/2018/11/spesifikasi-jasa-pasang-pagar-brc.html": "Spesifikasi Jasa Pasang Pagar BRC",
+"https://www.betonjayareadymix.com/2018/11/ukuran-jasa-pasang-pagar-brc.html": "Ukuran Jasa Pasang Pagar BRC"
 
+};
 // ============================================================
 //  JASA PAGAR RUMAH
 // ============================================================
@@ -2034,7 +2039,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangPagarBesiHollowFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangDindingPembatasBataFromMoneyPageMoneyPage1,
 		urlMappingPasangJasaPagarKawatHarmonikaFromMoneyPageMoneyPage1,
+		
 		urlMappingHargaJasaPasangPagarBRCFromMoneyPage1MoneyChild,
+		urlMappingJasaPasangPagarBRCFromMoneyMasterVariant,
+		
 		urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1,
 		urlMappingHargaJasaPasangPagarRumahFromMoneyPage1MoneyChild,
 		
@@ -2521,6 +2529,21 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
             { name: 'Jasa Pasang Pagar BRC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc.html' },
             { name: 'Harga Jasa Pasang Pagar BRC', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-brc.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+  if (urlMappingJasaPasangPagarBRCFromMoneyMasterVariant[cleanUrlJasaPembatasKonsPost]) {
+        generateBreadcrumbJasaKonstruksiPembatasPost(
+        urlMappingJasaPasangPagarBRCFromMoneyMasterVariant,
+        cleanUrlJasaPembatasKonsPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
+            { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
+            { name: 'Jasa Pasang Pagar BRC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc.html' }
         ],
         'JASA_KONSTRUKSI'
     );
