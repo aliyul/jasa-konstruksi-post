@@ -77,9 +77,6 @@ const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
   // ============================================================
   "https://www.betonjayareadymix.com/2018/09/biaya-pasang-pagar-panel-beton.html": "Biaya Pasang Pagar Panel Beton",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pagar-panel-beton-terpasang.html": "Jasa Pagar Panel Beton Terpasang",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-per-meter.html": "Jasa Pasang Pagar Panel Beton Per Meter",
-
   
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-jakarta.html": "Jasa Pasang Pagar Panel Beton Jakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bogor.html": "Jasa Pasang Pagar Panel Beton Bogor",  // TYPE: MONEY_CHILD
@@ -100,6 +97,8 @@ const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
 	
 };
 const urlMappingJasaPasangPagarPanelBetonFromMoneyPageVariant  = {
+  "https://www.betonjayareadymix.com/2018/09/jasa-pagar-panel-beton-terpasang.html": "Jasa Pagar Panel Beton Terpasang",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-per-meter.html": "Jasa Pasang Pagar Panel Beton Per Meter",
  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-motif.html": "Jasa Pasang Pagar Panel Beton Motif",
  "https://www.betonjayareadymix.com/2018/11/spesifikasi-jasa-pasang-pagar-panel.html": "Spesifikasi Jasa Pasang Pagar Panel Beton",
  "https://www.betonjayareadymix.com/2018/11/ukuran-jasa-pasang-pagar-panel-beton.html": "Ukuran Jasa Pasang Pagar Panel Beton",
