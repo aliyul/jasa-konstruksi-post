@@ -335,7 +335,7 @@ const urlMappingJasaPemasanganKanstinJalanFromMoneyPage1MoneyPage2 = {
  * ============================================================
  */
 
-function generateBreadcrumbJasaKonstruksiFinishing(
+function generateBreadcrumbJasaKonstruksiPembatasPost(
     mappingObj,
     currentUrl,
     breadcrumbItems = [],
