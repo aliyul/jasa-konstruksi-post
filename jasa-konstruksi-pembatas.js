@@ -86,7 +86,6 @@ const urlMappingPasangPagarFromMoneyMaster1MoneyPage = {
 };
 const urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1 = {
 "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-brc.html": "Harga Jasa Pasang Pagar BRC",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc-per-meter.html": "Jasa Pasang Pagar BRC Per Meter",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc-panel.html": "Jasa Pasang Pagar BRC Panel"
 
 };
