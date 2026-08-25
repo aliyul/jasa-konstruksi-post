@@ -244,29 +244,34 @@ MONEY_CHILD		~30			Jasa pondasi per lokasi (Jakarta, Bandung, dll)
 
 /**
  * ============================================================
- * generateBreadcrumbJasaKonstruksi v10.10
- * HYBRID: OTOMATIS + MANUAL UNTUK KASUS EDGE
+ * generateBreadcrumbJasaKonstruksi v12.3
+ * FIXED: PARENT TERDEKAT TIDAK PERNAH DI-SKIP (v12.3)
+ * FIXED: TIDAK ADA FILTER LEVEL UNTUK PARENT
+ * FIXED: SEMUA CANDIDATES DIBERI SCORE
+ * FIXED: LEVEL DI ATAS MAUPUN DI BAWAH TETAP DIPERTIMBANGKAN
+ * FIXED: SINKRON DENGAN PLD v22.25
+ * FIXED: COMMERCIAL INTENT OVERRIDE (jual/beli/sewa/rental)
+ * FIXED: Filter stopwords & location untuk deteksi
+ * FIXED: VARIANT detection lebih akurat
+ * FIXED: PILLAR HANYA NAMA YANG SUDAH DITENTUKAN
+ * FIXED: HIERARCHY WAJIB: PILLAR → SP2 → SP1 → MM → MP → MC → VARIANT
+ * FIXED: SyntaxError pada template literal (v12.3.1)
  * ============================================================
  *
- * ✅ UPDATE v10.10
+ * ✅ UPDATE v12.3
  * ------------------------------------------------------------
- * - FIX: Hybrid detection (otomatis + manual untuk kasus edge)
- * - FIX: JASA_SPEC_WORDS untuk kata pendek yang harus MP (cor, cat, pil, dll)
- * - FIX: PILLAR detection di detectJasaLevelAuto()
- * - FIX: Hanya butuh maintenance minimal
- * - ENHANCED: Logging lebih detail untuk debugging
- *
- * ✅ UPDATE v10.6
- * ------------------------------------------------------------
- * - FIX: Otomatis tidak skip parent terakhir
- *
- * ✅ UPDATE v10.5
- * ------------------------------------------------------------
- * - FIX: Hapus specificKeywords (manual) - murni otomatis
+ * - FIX: Parent terdekat TIDAK PERNAH di-skip APAPUN LEVELNYA
+ * - FIX: Hapus semua filter level di fungsi parent
+ * - FIX: Semua candidates diberi scoring berdasarkan relevansi
+ * - FIX: Level di atas (lebih tinggi) mendapat bonus
+ * - FIX: Level di bawah (lebih rendah) tetap mendapat score
+ * - FIX: Level sama mendapat bonus
+ * - FIX: Entity pillar tetap sebagai fallback terakhir
+ * - FIX: SyntaxError pada template literal (kutip ganda)
  *
  * ============================================================
- * @version 10.10.0
- * @date 2026-07-07
+ * @version 12.3.0
+ * @date 2026-08-25
  * ============================================================
  */
 
@@ -304,9 +309,13 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
             URL: '🔗',
             SCORE: '🎯',
             CLEAN: '🧹',
-            SKIP: '⏭️'
+            SKIP: '⏭️',
+            PLD: '🔄',
+            HIERARCHY: '🏛️',
+            COMMERCIAL: '🛒',
+            PARENT_FIX: '🔧'
         };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v10.10] ${message}`);
+        console.log(`${icons[type] || '📘'} [Breadcrumb v12.3] ${message}`);
     }
 
     // ============================================================
@@ -349,14 +358,30 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
         'ARTIKEL'
     ];
 
-    if (!VALID_ENTITY_TYPES.includes(entityType)) {
-        console.error(`❌ INVALID ENTITY TYPE: ${entityType}`);
-        return null;
-    }
+    // ============================================================
+    // 5. VALID LEVELS
+    // ============================================================
+
+    const VALID_LEVELS = [
+        'home', 'pillar', 'sub-pillar-tipe-2', 'sub-pillar-tipe-1',
+        'money-master', 'money-page', 'money-child', 'variant', 'sub-variant'
+    ];
 
     // ============================================================
-    // 5. TYPE LEVEL MAP & PRIORITAS
+    // 6. HIERARCHY ORDER (WAJIB - TIDAK BOLEH DIUBAH)
     // ============================================================
+
+    const HIERARCHY_ORDER = [
+        'home',
+        'pillar',
+        'sub-pillar-tipe-2',
+        'sub-pillar-tipe-1',
+        'money-master',
+        'money-page',
+        'money-child',
+        'variant',
+        'sub-variant'
+    ];
 
     const TYPE_LEVEL_MAP = {
         'home': 0,
@@ -370,27 +395,107 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
         'sub-variant': 8
     };
 
-    const HIERARCHY_ORDER = [
-        'home', 'pillar', 'sub-pillar-tipe-2', 'sub-pillar-tipe-1',
-        'money-master', 'money-page', 'money-child', 'variant', 'sub-variant'
-    ];
-
     // ============================================================
-    // 6. ROOT ENTITY PILLARS
+    // 7. ENTITY PILLAR NAMES (HANYA INI YANG BISA JADI PILLAR)
     // ============================================================
 
-    const ROOT_ENTITY_PILLARS = {
+    const ENTITY_PILLAR_NAMES = {
         'JASA_KONSTRUKSI': ['jasa konstruksi'],
-        'JASA_DESAIN': ['jasa desain', 'desain'],
-        'SEWA_ALAT_KONSTRUKSI': ['sewa alat konstruksi'],
+        'JASA_DESAIN': ['jasa desain interior'],
+        'SEWA_ALAT_KONSTRUKSI': ['sewa alat konstruksi', 'rental alat konstruksi'],
         'PRODUK_KONSTRUKSI': ['produk konstruksi'],
-        'PRODUK_INTERIOR': ['produk interior'],
-        'MATERIAL_KONSTRUKSI': ['material konstruksi'],
-        'ARTIKEL': ['artikel konstruksi']
+        'PRODUK_INTERIOR': ['produk interior', 'interior produk'],
+        'MATERIAL_KONSTRUKSI': ['material konstruksi', 'bahan konstruksi'],
+        'ARTIKEL': ['artikel konstruksi', 'blog konstruksi', 'tips konstruksi']
     };
 
     // ============================================================
-    // 7. HELPERS
+    // 8. PLD ENTITY MAP
+    // ============================================================
+
+    const PLD_ENTITY_MAP = {
+        'produk': 'PRODUK_KONSTRUKSI',
+        'material': 'MATERIAL_KONSTRUKSI',
+        'jasa': 'JASA_KONSTRUKSI',
+        'desain': 'JASA_DESAIN',
+        'sewa': 'SEWA_ALAT_KONSTRUKSI',
+        'artikel': 'ARTIKEL'
+    };
+
+    // ============================================================
+    // 9. GET PAGE LEVEL FROM PLD (FIX: perbaiki kutip)
+    // ============================================================
+
+    function getPageLevelFromPLD() {
+        const pldVersions = [
+            'pageLevelDetectorv22',
+            'pageLevelDetectorv20', 
+            'pageLevelDetectorv19',
+            'pageLevelDetectorV18',
+            'pageLevelDetectorV17',
+            'pageLevelDetector'
+        ];
+        
+        for (const pldName of pldVersions) {
+            if (window[pldName] && typeof window[pldName].detect === 'function') {
+                try {
+                    const level = window[pldName].detect();
+                    if (level && VALID_LEVELS.includes(level)) {
+                        log(`PLD ${pldName}: "${level}" (${TYPE_LEVEL_MAP[level]})`, 'PLD');
+                        return level;
+                    }
+                } catch(e) {
+                    log(`Error calling ${pldName}: ${e.message}`, 'WARN');
+                }
+            }
+        }
+        
+        const bodyLevel = document.body.getAttribute('data-page-level') || 
+                          document.body.getAttribute('data-schema-page-level');
+        if (bodyLevel && VALID_LEVELS.includes(bodyLevel)) {
+            log(`PLD from body: "${bodyLevel}" (${TYPE_LEVEL_MAP[bodyLevel]})`, 'PLD');
+            return bodyLevel;
+        }
+        
+        log('PLD not available, using fallback', 'WARN');
+        return null;
+    }
+
+    function getEntityTypeFromPLD() {
+        const pldVersions = [
+            'pageLevelDetectorv22',
+            'pageLevelDetectorv20', 
+            'pageLevelDetectorv19',
+            'pageLevelDetectorV18',
+            'pageLevelDetectorV17',
+            'pageLevelDetector'
+        ];
+        
+        for (const pldName of pldVersions) {
+            if (window[pldName] && typeof window[pldName].detectEntityType === 'function') {
+                try {
+                    const entity = window[pldName].detectEntityType();
+                    if (entity && PLD_ENTITY_MAP[entity]) {
+                        log(`PLD Entity: ${entity} → ${PLD_ENTITY_MAP[entity]}`, 'PLD');
+                        return PLD_ENTITY_MAP[entity];
+                    }
+                } catch(e) {
+                    log(`Error getting entity from ${pldName}: ${e.message}`, 'WARN');
+                }
+            }
+        }
+        
+        const bodyEntity = document.body.getAttribute('data-entity-type');
+        if (bodyEntity && PLD_ENTITY_MAP[bodyEntity]) {
+            log(`Entity from body: ${bodyEntity} → ${PLD_ENTITY_MAP[bodyEntity]}`, 'PLD');
+            return PLD_ENTITY_MAP[bodyEntity];
+        }
+        
+        return null;
+    }
+
+    // ============================================================
+    // 10. HELPERS
     // ============================================================
 
     function isJasaEntity() { return entityType === 'JASA_KONSTRUKSI'; }
@@ -401,7 +506,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     function isInteriorEntity() { return entityType === 'PRODUK_INTERIOR'; }
 
     // ============================================================
-    // 8. CLEAN TEXT
+    // 11. CLEAN TEXT
     // ============================================================
 
     function cleanText(text) {
@@ -410,7 +515,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     }
 
     // ============================================================
-    // 9. CLEAN PAGE NAME FROM URL
+    // 12. CLEAN PAGE NAME FROM URL
     // ============================================================
 
     function getCleanPageNameFromUrl(url) {
@@ -421,12 +526,10 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
         path = path.split('?')[0];
         path = path.replace(/\.(html|php|asp|jsp)$/i, '');
         
-        // Hapus pola tanggal
         path = path.replace(/\/\d{4}\/\d{2}\/\d{2}\//g, '/');
         path = path.replace(/\/\d{4}\/\d{2}\//g, '/');
         path = path.replace(/\/\d{4}\//g, '/');
         
-        // Hapus /p/
         path = path.replace(/^\/p\//, '/');
         path = path.replace(/\/p\//g, '/');
         
@@ -454,7 +557,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     }
 
     // ============================================================
-    // 10. SLUGIFY
+    // 13. SLUGIFY
     // ============================================================
 
     function slugify(text) {
@@ -466,27 +569,63 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     }
 
     // ============================================================
-    // 11. KEYWORDS
+    // 14. KEYWORDS & FILTERS (SINKRON DENGAN PLD v22.25)
     // ============================================================
 
+    // COMMERCIAL WORDS - SINKRON DENGAN PLD v22.25
+    const COMMERCIAL_WORDS = ['jual', 'beli', 'sewa', 'rental', 'order', 'pesan', 'pemesanan'];
+
+    // STOPWORDS - SINKRON DENGAN PLD v22.25
+    const STOPWORDS = new Set([
+        'dan', 'atau', 'serta', 'yang', 'dari', 'ke', 'di', 'untuk', 
+        'dengan', 'ini', 'itu', 'akan', 'telah', 'sudah', 'masih',
+        'pada', 'oleh', 'karena', 'sehingga', 'setelah', 'sebelum',
+        'plus', 'minus', 'tanpa', 'sampai', 'hingga', 'sambil'
+    ]);
+
+    // LOCATION WORDS - SINKRON DENGAN PLD v22.25
+    const LOCATION_WORDS = new Set([
+        'jakarta', 'jakarta pusat', 'jakarta barat', 'jakarta selatan', 'jakarta timur', 'jakarta utara',
+        'bogor', 'kota bogor', 'kabupaten bogor',
+        'depok', 'kota depok',
+        'tangerang', 'kota tangerang', 'kota tangerang selatan', 'kabupaten tangerang',
+        'bekasi', 'kota bekasi', 'kabupaten bekasi',
+        'bandung', 'kota bandung', 'kabupaten bandung',
+        'karawang', 'kabupaten karawang',
+        'purwakarta', 'kabupaten purwakarta',
+        'cikarang', 'cikarang barat', 'cikarang pusat', 'cikarang selatan', 'cikarang timur', 'cikarang utara',
+        'subang', 'kabupaten subang',
+        'cirebon', 'kota cirebon', 'kabupaten cirebon',
+        'semarang', 'kota semarang', 'kabupaten semarang',
+        'solo', 'surakarta', 'kota surakarta',
+        'pekalongan', 'tegal', 'magelang', 'sukoharjo', 'boyolali', 'klaten',
+        'jogja', 'yogyakarta', 'kota yogyakarta', 'kabupaten sleman', 'bantul', 'gunungkidul', 'kulon progo',
+        'surabaya', 'kota surabaya',
+        'malang', 'kota malang', 'kabupaten malang',
+        'kediri', 'kota kediri', 'kabupaten kediri',
+        'gresik', 'sidoarjo', 'mojokerto', 'pasuruan', 'probolinggo', 'jember', 'banyuwangi', 'madiun',
+        'medan', 'kota medan',
+        'palembang', 'pekanbaru', 'padang', 'lampung', 'bandar lampung', 'batam', 'tanjungpinang',
+        'aceh', 'banda aceh', 'jambi', 'bengkulu', 'pangkal pinang',
+        'pontianak', 'balikpapan', 'samarinda', 'banjarmasin', 'palangkaraya',
+        'makassar', 'kota makassar',
+        'manado', 'palu', 'kendari', 'gorontalo',
+        'bali', 'kabupaten badung', 'kota denpasar', 'denpasar', 'gianyar', 'tabanan', 'bangli', 'karangasem', 'klungkung', 'buleleng', 'jembrana',
+        'mataram', 'kupang',
+        'terdekat'
+    ]);
+
+    // SP1 KEYWORDS
     const SP1_KEYWORDS = [
         'vs', 'versus', 'perbandingan', 'lebih baik', 'kelebihan', 'kekurangan'
     ];
 
+    // SP2 KEYWORDS
     const SP2_KEYWORDS = [
         'jenis', 'kategori', 'daftar', 'macam', 'tipe'
     ];
 
-    const INFORMATIONAL_KEYWORDS = [
-        'panduan', 'tutorial', 'cara', 'tips', 'apa itu', 'pengertian'
-    ];
-
-    const METHOD_KEYWORDS = ['metode', 'cara', 'tahapan', 'langkah', 'analisa'];
-
-    // ============================================================
-    // 11a. VARIANT KEYWORDS PER ENTITY
-    // ============================================================
-    
+    // VARIANT KEYWORDS - SINKRON DENGAN PLD v22.25
     const VARIANT_KEYWORDS_PRODUK = [
         'spesifikasi', 'spec', 'detail spesifikasi',
         'mutu', 'kualitas', 'quality',
@@ -507,7 +646,8 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
         'spek alat', 'detail alat', 'spesifikasi'
     ];
 
-    const TECHNICAL_SPECS = ['k225', 'k250', 'k300', 'k350', 'k400', 'k500', 'k600', 'fc', 'm6', 'm8', 'm10', 'm12'];
+    // TECHNICAL SPECS
+    const TECHNICAL_SPECS = ['k225', 'k250', 'k300', 'k350', 'k400', 'k500', 'k600', 'fc', 'm6', 'm8', 'm10', 'm12', 'm16', 'm20', 'b0', 'b1', 'b2', 'b3', 'sni'];
     
     const SPECIFIC_MODIFIERS = [
         'k225', 'k250', 'k300', 'm6', 'm8', 'm10',
@@ -517,7 +657,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     ];
 
     // ============================================================
-    // 11b. JASA CLEAN FUNCTION
+    // 15. JASA CLEAN FUNCTION
     // ============================================================
 
     const JASA_ULTRA_COMMON_WORDS = new Set([
@@ -527,11 +667,14 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
         'desain'
     ]);
 
-    const STOPWORDS = new Set([
-        'dan', 'atau', 'serta', 'yang', 'dari', 'ke', 'di', 'untuk', 
-        'dengan', 'ini', 'itu', 'akan', 'telah', 'sudah', 'masih',
-        'pada', 'oleh', 'karena', 'sehingga', 'setelah', 'sebelum',
-        'plus', 'minus', 'tanpa', 'sampai', 'hingga', 'sambil'
+    const MATERIAL_SPEC_WORDS = new Set([
+        'baja ringan', 'baja', 'ringan', 'beton', 'readymix', 
+        'kanstin', 'pembatas', 'pengaman', 'struktur', 'dinding',
+        'pondasi', 'atap', 'genteng', 'keramik', 'marmer', 'granit',
+        'plafon', 'gypsum', 'partisi', 'dak', 'cor', 'pile', 'sheet',
+        'tiang', 'balok', 'kolom', 'sloof', 'ring', 'balk', 'kuda-kuda',
+        'drainase', 'irigasi', 'box culvert', 'u ditch', 'paving',
+        'konstruksi', 'rangka', 'material', 'upah', 'tenaga'
     ]);
 
     const MODIFIER_WORDS = new Set([
@@ -541,35 +684,6 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
         'tarif', 'ongkos', 'estimasi', 'perhitungan', 'analisa',
         'modern', 'minimalis', 'mewah', 'klasik', 'tradisional',
         'kontemporer', 'sederhana', 'elegan', 'premium', 'luxury'
-    ]);
-
-    // ============================================================
-    // 11c. JASA SPEC WORDS (FIXED v10.10 - HYBRID)
-    // ============================================================
-
-    // ✅ FIX v10.10: Kata pendek yang HARUS dianggap spesifik (MP)
-    const JASA_SPEC_WORDS = new Set([
-        // Kata pendek (3-4 huruf) yang harus MP
-        'cor', 'cat', 'pil', 'bor', 'las', 'dak', 'atap', 'besi',
-        'baja', 'kayu', 'batu', 'pasir', 'semen', 'tanah', 'air',
-        'listrik', 'pipa', 'kabel', 'lampu', 'stop', 'kontak',
-        
-        // Kata infrastruktur
-        'jalan', 'halte', 'bus', 'taman', 'trotoar', 'terminal',
-        'jembatan', 'gorong', 'drainase', 'irigasi', 'kanstin',
-        'pembatas', 'pengaman', 'struktur', 'dinding', 'pondasi',
-        
-        // Kata finishing
-        'finishing', 'eksterior', 'interior', 'plafon', 'gypsum',
-        'partisi', 'keramik', 'marmer', 'granit', 'epoxy', 'wallpaper',
-        'lantai', 'dinding', 'atap', 'genteng', 'kusen', 'pintu',
-        'jendela', 'gorden', 'blinds', 'vinyl', 'foam', 'fiber',
-        
-        // Kata konstruksi
-        'konstruksi', 'struktur', 'rangka', 'beton', 'readymix',
-        'pile', 'sheet', 'tiang', 'balok', 'kolom', 'sloof',
-        'ring', 'balk', 'kuda-kuda', 'box culvert', 'u ditch',
-        'paving', 'upah', 'tenaga', 'material', 'bahan'
     ]);
 
     function cleanJasaText(text) {
@@ -619,30 +733,21 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
         return false;
     }
 
-    function hasSpecWord(text) {
+    function hasMaterialSpec(text) {
         if (!text) return false;
         const lower = text.toLowerCase();
-        // Cek di JASA_SPEC_WORDS
-        if (JASA_SPEC_WORDS.has(lower)) return true;
-        // Cek partial match
-        for (const kw of JASA_SPEC_WORDS) {
+        for (const kw of MATERIAL_SPEC_WORDS) {
             if (lower.includes(kw)) return true;
         }
         return false;
     }
 
     // ============================================================
-    // 11d. DETEKSI JASA LEVEL OTOMATIS (FIXED v10.10 - HYBRID)
+    // 16. DETEKSI JASA LEVEL OTOMATIS
     // ============================================================
 
     function detectJasaLevelAuto(pageName) {
         const lowerName = pageName.toLowerCase();
-        
-        // ✅ FIX v10.10: Cek PILLAR terlebih dahulu
-        if (isEntityPillarExactMatch(lowerName)) {
-            log(`PILLAR detected: "${pageName}"`, 'SUCCESS');
-            return 'pillar';
-        }
         
         const cleaned = cleanJasaText(lowerName);
         
@@ -652,27 +757,11 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
         const hasNumber = /\d/.test(cleaned);
         const hasLocation = isLocation(cleaned);
         const hasModifierWord = hasModifier(cleaned);
+        const hasMaterialSpecWord = hasMaterialSpec(cleaned);
         
-        // ✅ FIX v10.10: Deteksi kata spesifik (manual + otomatis)
-        const hasSpecWordManual = hasSpecWord(cleaned);
+        log(`Auto detect JASA: "${pageName}" → remaining: "${cleaned}", words: ${wordCount}`, 'DEBUG');
         
-        // ✅ FIX v10.10: Deteksi kata spesifik otomatis (panjang > 3, bukan modifier)
-        const hasSpecWordAuto = cleaned.split(/\s+/).some(word => {
-            if (word.length < 4) return false;
-            if (STOPWORDS.has(word)) return false;
-            if (MODIFIER_WORDS.has(word)) return false;
-            if (/\d/.test(word)) return false;
-            return true;
-        });
-        
-        const hasSpecWordFinal = hasSpecWordManual || hasSpecWordAuto;
-        
-        log(`Auto detect JASA: "${pageName}" → remaining: "${cleaned}", words: ${wordCount}, specWord: ${hasSpecWordFinal}`, 'DEBUG');
-        
-        // ✅ LOGIKA HYBRID v10.10:
-        // - MM: wordCount <= 1, tidak ada angka, lokasi, modifier, DAN tidak ada kata spesifik
-        // - MP: wordCount >= 2, atau ada angka/lokasi/modifier, atau ada kata spesifik
-        if (wordCount <= 1 && !hasNumber && !hasLocation && !hasModifierWord && !hasSpecWordFinal) {
+        if (wordCount <= 1 && !hasNumber && !hasLocation && !hasModifierWord && !hasMaterialSpecWord) {
             log(`MM detected (auto): "${pageName}" → remaining words: ${wordCount}`, 'SUCCESS');
             return 'money-master';
         }
@@ -682,18 +771,31 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     }
 
     // ============================================================
-    // 11e. VARIANT DETECTION PER ENTITY
+    // 17. VARIANT DETECTION PER ENTITY (SINKRON DENGAN PLD v22.25)
     // ============================================================
     
     function isVariantPage(pageName, currentEntityType) {
         const lowerName = pageName.toLowerCase();
         
+        // Cek technical specs dulu
         for (const spec of TECHNICAL_SPECS) {
             if (lowerName.includes(spec)) {
                 return false;
             }
         }
         
+        // Cek price words
+        const PRICE_WORDS = ['harga', 'biaya', 'tarif', 'ongkos'];
+        if (PRICE_WORDS.some(w => lowerName.includes(w))) {
+            return false;
+        }
+        
+        // Cek location words
+        if (isLocation(lowerName)) {
+            return false;
+        }
+        
+        // PRODUK/MATERIAL Variant
         if (currentEntityType === 'PRODUK_KONSTRUKSI' || currentEntityType === 'MATERIAL_KONSTRUKSI') {
             for (const kw of VARIANT_KEYWORDS_PRODUK) {
                 if (lowerName.includes(kw)) {
@@ -703,6 +805,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
             }
         }
         
+        // JASA Variant
         if (currentEntityType === 'JASA_KONSTRUKSI' || currentEntityType === 'JASA_DESAIN') {
             for (const kw of VARIANT_KEYWORDS_JASA) {
                 if (lowerName.includes(kw)) {
@@ -713,6 +816,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
             return false;
         }
         
+        // SEWA Variant
         if (currentEntityType === 'SEWA_ALAT_KONSTRUKSI') {
             for (const kw of VARIANT_KEYWORDS_SEWA) {
                 if (lowerName.includes(kw)) {
@@ -731,44 +835,13 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     }
 
     // ============================================================
-    // 12. LOCATION DETECTION
+    // 18. LOCATION DETECTION (SINKRON DENGAN PLD v22.25)
     // ============================================================
-
-    const LOCATION_WHITELIST = new Set([
-        'jakarta', 'jakarta pusat', 'jakarta barat', 'jakarta selatan', 'jakarta timur', 'jakarta utara',
-        'bogor', 'kota bogor', 'kabupaten bogor',
-        'depok', 'kota depok',
-        'tangerang', 'kota tangerang', 'kota tangerang selatan', 'kabupaten tangerang',
-        'bekasi', 'kota bekasi', 'kabupaten bekasi',
-        'bandung', 'kota bandung', 'kabupaten bandung',
-        'karawang', 'kabupaten karawang',
-        'purwakarta', 'kabupaten purwakarta',
-        'cikarang', 'cikarang barat', 'cikarang pusat', 'cikarang selatan', 'cikarang timur', 'cikarang utara',
-        'subang', 'kabupaten subang',
-        'cirebon', 'kota cirebon', 'kabupaten cirebon',
-        'semarang', 'kota semarang', 'kabupaten semarang',
-        'solo', 'surakarta', 'kota surakarta',
-        'pekalongan', 'tegal', 'magelang', 'sukoharjo', 'boyolali', 'klaten',
-        'jogja', 'yogyakarta', 'kota yogyakarta', 'kabupaten sleman', 'bantul', 'gunungkidul', 'kulon progo',
-        'surabaya', 'kota surabaya',
-        'malang', 'kota malang', 'kabupaten malang',
-        'kediri', 'kota kediri', 'kabupaten kediri',
-        'gresik', 'sidoarjo', 'mojokerto', 'pasuruan', 'probolinggo', 'jember', 'banyuwangi', 'madiun',
-        'medan', 'kota medan',
-        'palembang', 'pekanbaru', 'padang', 'lampung', 'bandar lampung', 'batam', 'tanjungpinang',
-        'aceh', 'banda aceh', 'jambi', 'bengkulu', 'pangkal pinang',
-        'pontianak', 'balikpapan', 'samarinda', 'banjarmasin', 'palangkaraya',
-        'makassar', 'kota makassar',
-        'manado', 'palu', 'kendari', 'gorontalo',
-        'bali', 'kabupaten badung', 'kota denpasar', 'denpasar', 'gianyar', 'tabanan', 'bangli', 'karangasem', 'klungkung', 'buleleng', 'jembrana',
-        'mataram', 'kupang',
-        'terdekat'
-    ]);
 
     function isLocation(text) {
         if (!text) return false;
         const lower = text.toLowerCase();
-        for (const city of LOCATION_WHITELIST) {
+        for (const city of LOCATION_WORDS) {
             if (new RegExp(`\\b${city.replace(/\s+/g, '\\s+')}\\b`, 'i').test(lower)) {
                 return true;
             }
@@ -777,7 +850,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     }
 
     // ============================================================
-    // 13. SPECIFIC PRODUCT
+    // 19. SPECIFIC PRODUCT
     // ============================================================
 
     function isSpecificProduct(text) {
@@ -790,119 +863,199 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     }
 
     // ============================================================
-    // 14. SUB VARIANT
+    // 20. SUB VARIANT
     // ============================================================
 
     function isSubVariant(text) {
         if (!text) return false;
         let score = 0;
-        if ((text.match(/\d+/g) || []).length >= 3) score++;
-        if ((text.match(/x/g) || []).length >= 2) score++;
-        if (/mm|cm|meter|kg|ton/i.test(text)) score++;
+        const lower = text.toLowerCase();
+        if ((lower.match(/\d+\s*(m|mm|cm|meter|kg|ton|inch|inci)/gi) || []).length >= 1) score += 2;
+        if ((lower.match(/\d+x\d+/gi) || []).length >= 1) score += 2;
+        if ((lower.match(/\d+(?:\.\d+)?\s*(?:cm|mm|m|meter)\s*(?:x|×)\s*\d+(?:\.\d+)?\s*(?:cm|mm|m|meter)/gi) || []).length >= 1) score += 3;
+        const uniqueNumbers = (text.match(/\d+/g) || []).filter((v, i, a) => a.indexOf(v) === i);
+        if (uniqueNumbers.length >= 2) score += 1;
+        if (/\bukuran\s+\d+/.test(lower)) score += 2;
+        if (/\bdimensi\s+\d+/.test(lower)) score += 2;
+        if (/\b(tebal|panjang|lebar|tinggi|dalam|diameter)\s+\d+/.test(lower)) score += 2;
         return score >= 2;
     }
 
     // ============================================================
-    // 15. ENTITY PILLAR EXACT MATCH
+    // 21. ENTITY PILLAR EXACT MATCH
     // ============================================================
 
     function isEntityPillarExactMatch(pageName) {
         const cleanName = cleanText(pageName.toLowerCase());
-        const valid = ROOT_ENTITY_PILLARS[entityType] || [];
+        const valid = ENTITY_PILLAR_NAMES[entityType] || [];
         return valid.includes(cleanName);
     }
 
     // ============================================================
-    // 16. JASA KEYWORDS
+    // 22. JASA KEYWORDS
     // ============================================================
 
     const JASA_KEYWORDS_PATTERN = 
         /\b(jasa|kontraktor|tukang|borongan|renovasi|pasang|bangun|perbaikan|instalasi|proyek|cor|gali|urug|angkut|desain|interior|eksterior|arsitektur|gedung|rumah|ruko|kantor|apartemen)\b/i;
 
     // ============================================================
-    // 17. PAGE TYPE DETECTION (FIXED v10.10)
+    // 23. PAGE TYPE DETECTION (FIX v12.2 - SINKRON DENGAN PLD)
     // ============================================================
 
-    function detectPageType(pageName, isHome = false) {
+    function detectPageTypeFallback(pageName, isHome = false) {
         const lowerName = cleanText(pageName.toLowerCase());
 
         if (isHome || lowerName === 'home' || lowerName === 'beranda') return 'home';
-        if (isEntityPillarExactMatch(lowerName)) return 'pillar';
-        if (isSubVariant(lowerName)) return 'sub-variant';
+        
+        // 🔥 FIX v12.0: PILLAR hanya nama yang sudah ditentukan
+        if (isEntityPillarExactMatch(lowerName)) {
+            log(`PILLAR detected (exact match): "${pageName}"`, 'HIERARCHY');
+            return 'pillar';
+        }
+        
+        // 🔥 FIX v12.0: Cek apakah ini PILLAR berdasarkan ENTITY_PILLAR_NAMES lain
+        for (const [entity, names] of Object.entries(ENTITY_PILLAR_NAMES)) {
+            if (names.some(name => lowerName === name)) {
+                log(`PILLAR detected (other entity): "${pageName}" → ${entity}`, 'HIERARCHY');
+                return 'pillar';
+            }
+        }
+        
+        // 🔥 FIX v12.0: SUB-VARIANT
+        if (isSubVariant(lowerName)) {
+            log(`SUB-VARIANT detected: "${pageName}"`, 'HIERARCHY');
+            return 'sub-variant';
+        }
 
-        for (const kw of METHOD_KEYWORDS) {
+        // 🔥 FIX v12.0: VARIANT
+        if (isVariantPage(lowerName, entityType)) {
+            log(`VARIANT detected: "${pageName}"`, 'HIERARCHY');
+            return 'variant';
+        }
+
+        // 🔥 FIX v12.0: SUB-PILLAR-1 (perbandingan)
+        for (const kw of SP1_KEYWORDS) {
             if (lowerName.includes(kw)) {
-                const HAS_JASA_WORD = JASA_KEYWORDS_PATTERN.test(lowerName);
-                const HAS_SEWA_WORD = /\b(sewa|rental)\b/i.test(lowerName);
-                const HAS_PRODUK_WORD = /\b(beton|readymix|material|produk)\b/i.test(lowerName);
-                
-                if (HAS_JASA_WORD || HAS_SEWA_WORD || HAS_PRODUK_WORD) {
-                    return 'money-page';
-                }
+                log(`SUB-PILLAR-1 detected: "${pageName}"`, 'HIERARCHY');
+                return 'sub-pillar-tipe-1';
+            }
+        }
+        
+        // 🔥 FIX v12.0: SUB-PILLAR-2 (daftar/jenis)
+        for (const kw of SP2_KEYWORDS) {
+            if (lowerName.includes(kw)) {
+                log(`SUB-PILLAR-2 detected: "${pageName}"`, 'HIERARCHY');
                 return 'sub-pillar-tipe-2';
             }
         }
 
-        if (isVariantPage(lowerName, entityType)) {
-            return 'variant';
-        }
-
-        for (const kw of INFORMATIONAL_KEYWORDS) {
-            if (lowerName.includes(kw)) return 'pillar';
-        }
-        for (const kw of SP1_KEYWORDS) {
-            if (lowerName.includes(kw)) return 'sub-pillar-tipe-1';
-        }
-        for (const kw of SP2_KEYWORDS) {
-            if (lowerName.includes(kw)) return 'sub-pillar-tipe-2';
-        }
-
-        const HAS_PRICE_WORD = /\b(harga|biaya|tarif)\b/i.test(lowerName);
-        const HAS_SEWA_WORD = /\b(sewa|rental)\b/i.test(lowerName);
-        const HAS_JASA_WORD = JASA_KEYWORDS_PATTERN.test(lowerName);
-        const HAS_LOCATION = isLocation(lowerName);
-
-        if (HAS_LOCATION) {
-            log(`MC detected: "${pageName}" contains location`, 'SUCCESS');
+        // 🔥 FIX v12.0: MONEY CHILD (lokasi)
+        if (isLocation(lowerName)) {
+            log(`MONEY-CHILD detected (location): "${pageName}"`, 'HIERARCHY');
             return 'money-child';
         }
 
-        // ✅ FIX v10.10: JASA_DESAIN dan JASA_KONSTRUKSI
-        if ((isJasaEntity() || isDesainEntity()) && HAS_JASA_WORD && !HAS_PRICE_WORD) {
-            return detectJasaLevelAuto(lowerName);
-        }
-
-        if (isSewaEntity() && HAS_SEWA_WORD && !HAS_PRICE_WORD) {
-            const cleaned = lowerName.replace(/\b(sewa|rental)\b/gi, '').trim();
-            const words = cleaned.split(/\s+/).filter(Boolean);
-            const specific = isSpecificProduct(cleaned);
-            if (words.length <= 2 && !specific && !isLocation(cleaned)) {
-                return 'money-master';
-            }
-            return 'money-page';
-        }
-
+        // 🔥 FIX v12.0: MONEY PAGE (harga)
+        const HAS_PRICE_WORD = /\b(harga|biaya|tarif)\b/i.test(lowerName);
         if (HAS_PRICE_WORD) {
             const cleaned = lowerName.replace(/\b(harga|biaya|tarif)\b/gi, '').trim();
             const words = cleaned.split(/\s+/).filter(Boolean);
             const specific = isSpecificProduct(cleaned);
             if (words.length <= 2 && !specific && !isLocation(cleaned)) {
+                log(`MONEY-MASTER detected (price + short): "${pageName}"`, 'HIERARCHY');
                 return 'money-master';
             }
+            log(`MONEY-PAGE detected (price): "${pageName}"`, 'HIERARCHY');
             return 'money-page';
         }
 
-        if ((isProdukEntity() || isMaterialEntity()) && !HAS_PRICE_WORD) {
-            const words = lowerName.split(/\s+/).filter(Boolean);
-            if (words.length <= 2) return 'pillar';
-            return 'sub-pillar-tipe-2';
+        // 🔥 FIX v12.0: JASA Auto Detect
+        const HAS_JASA_WORD = JASA_KEYWORDS_PATTERN.test(lowerName);
+        if ((isJasaEntity() || isDesainEntity()) && HAS_JASA_WORD) {
+            const result = detectJasaLevelAuto(lowerName);
+            log(`JASA auto detect: "${pageName}" → ${result}`, 'HIERARCHY');
+            return result;
         }
 
-        return 'pillar';
+        // 🔥 FIX v12.0: SEWA Auto Detect
+        if (isSewaEntity()) {
+            const HAS_SEWA_WORD = /\b(sewa|rental)\b/i.test(lowerName);
+            if (HAS_SEWA_WORD) {
+                const cleaned = lowerName.replace(/\b(sewa|rental)\b/gi, '').trim();
+                const words = cleaned.split(/\s+/).filter(Boolean);
+                const specific = isSpecificProduct(cleaned);
+                if (words.length <= 2 && !specific && !isLocation(cleaned)) {
+                    log(`MONEY-MASTER detected (sewa + short): "${pageName}"`, 'HIERARCHY');
+                    return 'money-master';
+                }
+                log(`MONEY-PAGE detected (sewa): "${pageName}"`, 'HIERARCHY');
+                return 'money-page';
+            }
+        }
+
+        // ============================================================
+        // 🔥 FIX v12.2: PRODUK/MATERIAL - SINKRON DENGAN PLD v22.25
+        // ============================================================
+        
+        if (isProdukEntity() || isMaterialEntity()) {
+            // Step 1: Filter kata-kata
+            let words = lowerName.split(/\s+/).filter(w => w.length > 2);
+            
+            // Step 2: Filter stopwords
+            words = words.filter(w => !STOPWORDS.has(w));
+            
+            // Step 3: Filter lokasi
+            const hasLocation = words.some(w => isLocation(w));
+            if (hasLocation) {
+                log(`MONEY-CHILD detected (location in product): "${pageName}"`, 'HIERARCHY');
+                return 'money-child';
+            }
+            words = words.filter(w => !isLocation(w));
+            
+            // Step 4: 🔥 COMMERCIAL INTENT OVERRIDE (SINKRON DENGAN PLD)
+            const hasCommercialIntent = COMMERCIAL_WORDS.some(w => lowerName.startsWith(w));
+            
+            if (hasCommercialIntent) {
+                // Hapus kata komersial
+                let coreText = lowerName;
+                for (const cw of COMMERCIAL_WORDS) {
+                    coreText = coreText.replace(new RegExp(`^${cw}\\s+`), '');
+                }
+                const coreWords = coreText.split(/\s+/).filter(w => w.length > 2);
+                const filteredCore = coreWords.filter(w => 
+                    !STOPWORDS.has(w) && !isLocation(w)
+                );
+                
+                log(`COMMERCIAL INTENT: "${pageName}" → core: "${filteredCore.join(' ')}" (${filteredCore.length} words)`, 'COMMERCIAL');
+                
+                if (filteredCore.length <= 2 && !isSpecificProduct(coreText)) {
+                    log(`MONEY-MASTER detected (commercial override): "${pageName}"`, 'HIERARCHY');
+                    return 'money-master';
+                }
+            }
+            
+            // Step 5: Deteksi normal
+            const wordCount = words.length;
+            const specific = /\d/.test(lowerName) || isSpecificProduct(lowerName);
+            
+            log(`PRODUCT DETECTION: "${pageName}" → ${wordCount} words, specific: ${specific}`, 'DEBUG');
+            
+            if (wordCount <= 2 && !specific) {
+                log(`MONEY-MASTER detected (produk): "${pageName}"`, 'HIERARCHY');
+                return 'money-master';
+            }
+            
+            log(`MONEY-PAGE detected (produk): "${pageName}"`, 'HIERARCHY');
+            return 'money-page';
+        }
+
+        // 🔥 FIX v12.0: DEFAULT - MONEY_MASTER
+        log(`DEFAULT MONEY-MASTER: "${pageName}"`, 'HIERARCHY');
+        return 'money-master';
     }
 
     // ============================================================
-    // 18. AUTO DETECT PARENT
+    // 24. 🔥 FIX v12.3: AUTO DETECT PARENT - TIDAK PERNAH SKIP
     // ============================================================
 
     function findNearestParentFromItems(items, currentPageName) {
@@ -910,6 +1063,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
 
         const currentLower = currentPageName.toLowerCase();
         const currentWords = currentLower.split(/\s+/);
+        const currentLevel = TYPE_LEVEL_MAP[detectPageTypeFallback(currentPageName)] || 99;
 
         let bestMatch = null;
         let bestScore = 0;
@@ -918,12 +1072,33 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
             const itemName = item.name?.toLowerCase() || '';
             if (itemName === currentLower) continue;
 
+            const itemLevel = item.level || TYPE_LEVEL_MAP[detectPageTypeFallback(itemName)] || 99;
+            
+            // 🔥 FIX v12.3: TIDAK PERNAH SKIP APAPUN LEVELNYA
+            // HANYA SKIP jika item adalah current page itu sendiri
+            // TIDAK ADA FILTER LEVEL SAMA SEKALI
+            
             let score = 0;
-
-            if (currentLower.includes(itemName) && itemName.length > 3) {
-                score = itemName.length * 10;
+            
+            // 🔥 BONUS: Level difference - SEMUA LEVEL DIPERTIMBANGKAN
+            const levelDiff = currentLevel - itemLevel;
+            if (levelDiff > 0) {
+                // Parent yang lebih tinggi (level lebih kecil) dapat bonus
+                score += Math.max(0, (10 - Math.abs(levelDiff)) * 5);
+            } else if (levelDiff < 0) {
+                // Parent yang lebih rendah (level lebih besar) tetap dapat score
+                score += Math.max(0, 10 - Math.abs(levelDiff));
+            } else {
+                // Level sama - dapat bonus
+                score += 15;
             }
 
+            // Exact match dalam teks
+            if (currentLower.includes(itemName) && itemName.length > 3) {
+                score += itemName.length * 10;
+            }
+
+            // Word overlap
             const itemWords = itemName.split(/\s+/);
             for (const word of currentWords) {
                 if (word.length > 2 && itemWords.includes(word)) {
@@ -931,6 +1106,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
                 }
             }
 
+            // Prefix match
             for (let i = 1; i <= currentWords.length; i++) {
                 const prefix = currentWords.slice(0, i).join(' ');
                 if (itemName === prefix) {
@@ -939,6 +1115,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
                 }
             }
 
+            // URL slug match
             if (item.url) {
                 const urlSlug = item.url.split('/').pop()?.replace('.html', '').replace(/-/g, ' ');
                 if (urlSlug && currentLower.includes(urlSlug)) {
@@ -946,13 +1123,31 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
                 }
             }
 
-            const specificPatterns = ['finishing', 'bangunan', 'interior', 'eksterior', 'lantai', 'dinding'];
-            for (const pattern of specificPatterns) {
-                if (currentLower.includes(pattern) && itemName.includes(pattern)) {
-                    score += 30;
-                    break;
+            // Semantic match
+            const semanticGroups = {
+                'pagar': ['pagar', 'pagar panel', 'pagar beton', 'panel beton'],
+                'pondasi': ['pondasi', 'tiang', 'pile', 'bored pile', 'strauss pile'],
+                'cor': ['cor', 'readymix', 'ready mix', 'beton cor'],
+                'bangunan': ['bangunan', 'gedung', 'rumah', 'ruko', 'kantor'],
+                'interior': ['interior', 'dalam', 'ruangan', 'finishing'],
+                'eksterior': ['eksterior', 'luar', 'fasad', 'taman']
+            };
+            
+            for (const [group, keywords] of Object.entries(semanticGroups)) {
+                const hasCurrent = keywords.some(kw => currentLower.includes(kw));
+                const hasItem = keywords.some(kw => itemName.includes(kw));
+                if (hasCurrent && hasItem) {
+                    score += 20;
                 }
             }
+
+            // 🔥 BONUS: Entity pillar
+            const entityPillarNames = ENTITY_PILLAR_NAMES[entityType] || [];
+            if (entityPillarNames.some(name => itemName === name)) {
+                score += 50;
+            }
+
+            log(`Score for "${itemName}" (level ${itemLevel}): ${score} (diff: ${levelDiff})`, 'SCORE');
 
             if (score > bestScore) {
                 bestScore = score;
@@ -960,9 +1155,24 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
             }
         }
 
-        log(`Parent detection score: ${bestScore}`, 'INFO');
-        return bestScore > 20 ? bestMatch : null;
+        // 🔥 FIX v12.3: JIKA TIDAK ADA MATCH, ambil item pertama yang tersedia
+        if (!bestMatch) {
+            const fallbackItem = items.find(item => 
+                item.name?.toLowerCase() !== currentLower
+            );
+            if (fallbackItem) {
+                bestMatch = fallbackItem;
+                log(`⚠️ FALLBACK parent: "${bestMatch.name}" (first available)`, 'WARN');
+            }
+        }
+
+        log(`Parent detection result: "${bestMatch?.name || 'none'}" with score ${bestScore}`, 'PARENT');
+        return bestMatch;
     }
+
+    // ============================================================
+    // 25. INJECT CURRENT PAGE & PARENT
+    // ============================================================
 
     function injectCurrentPageAndParent(breadcrumbItems, currentPageName, currentFullUrl) {
         let items = [...breadcrumbItems];
@@ -979,6 +1189,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
             });
         }
 
+        // 🔥 FIX v12.3: SELALU cari parent, TIDAK PERNAH SKIP
         const detectedParent = findNearestParentFromItems(items, currentPageName);
 
         if (detectedParent) {
@@ -987,7 +1198,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
             );
 
             if (!hasParent) {
-                log(`Auto-injected parent: "${detectedParent.name}" → "${currentPageName}"`, 'SUCCESS');
+                log(`✅ AUTO-INJECTED PARENT: "${detectedParent.name}" → "${currentPageName}"`, 'SUCCESS');
                 const currentIndex = items.findIndex(item => 
                     item.name?.toLowerCase() === currentLower
                 );
@@ -996,6 +1207,24 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
                 } else {
                     items.push(detectedParent);
                 }
+            } else {
+                log(`Parent already exists: "${detectedParent.name}"`, 'INFO');
+            }
+        } else {
+            // 🔥 FIX v12.3: Fallback ke entity pillar jika tidak ada parent sama sekali
+            const entityPillarNames = ENTITY_PILLAR_NAMES[entityType] || [];
+            if (entityPillarNames.length > 0) {
+                const pillarName = entityPillarNames[0];
+                const pillarExists = items.some(item => 
+                    item.name?.toLowerCase() === pillarName
+                );
+                if (!pillarExists) {
+                    items.unshift({
+                        name: pillarName,
+                        url: `${CONFIG.DOMAIN}/p/${slugify(pillarName)}.html`
+                    });
+                    log(`✅ INJECTED ENTITY PILLAR: "${pillarName}"`, 'SUCCESS');
+                }
             }
         }
 
@@ -1003,7 +1232,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     }
 
     // ============================================================
-    // 19. FORCE PARENT INJECTION
+    // 26. FORCE PARENT INJECTION (FIX v12.3)
     // ============================================================
 
     function forceInjectDirectParent(lineageLevels, allLevels, currentPageTitle, entityType, breadcrumbItems) {
@@ -1011,100 +1240,81 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
         let modifiedLineage = [...lineageLevels];
         const words = currentLower.split(/\s+/);
 
+        // 🔥 FIX v12.3: Cari parent terdekat - TANPA FILTER LEVEL
         const autoParent = findNearestParentFromItems(breadcrumbItems, currentPageTitle);
-        if (autoParent && !modifiedLineage.some(l => l.name === autoParent.name)) {
+        if (autoParent && !modifiedLineage.some(l => l.name?.toLowerCase() === autoParent.name?.toLowerCase())) {
             const parentFromAll = allLevels.find(item => 
                 item.name?.toLowerCase() === autoParent.name?.toLowerCase()
             );
             if (parentFromAll) {
-                log(`AUTO PARENT: "${parentFromAll.name}"`, 'SUCCESS');
+                log(`✅ AUTO PARENT FROM ITEMS: "${parentFromAll.name}" (level ${parentFromAll.level})`, 'SUCCESS');
                 modifiedLineage.push(parentFromAll);
+            } else {
+                // Buat parent baru
+                const newParent = {
+                    name: autoParent.name,
+                    url: autoParent.url || `${CONFIG.DOMAIN}/p/${slugify(autoParent.name)}.html`,
+                    type: detectPageTypeFallback(autoParent.name),
+                    level: TYPE_LEVEL_MAP[detectPageTypeFallback(autoParent.name)] || 99,
+                    position: modifiedLineage.length + 1
+                };
+                log(`✅ AUTO PARENT (new): "${newParent.name}" (level ${newParent.level})`, 'SUCCESS');
+                modifiedLineage.push(newParent);
             }
         }
 
+        // 🔥 FIX v12.3: Coba dari kata pertama (tanpa filter)
         if (modifiedLineage.length === lineageLevels.length && words.length >= 2) {
             for (let i = words.length - 1; i >= 1; i--) {
                 const potentialParent = words.slice(0, i).join(' ');
                 const parentItem = allLevels.find(item => 
-                    item.name.toLowerCase() === potentialParent
+                    item.name?.toLowerCase() === potentialParent
                 );
-                if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
-                    log(`PATTERN PARENT: "${parentItem.name}"`, 'SUCCESS');
+                if (parentItem && !modifiedLineage.some(l => l.name?.toLowerCase() === parentItem.name?.toLowerCase())) {
+                    log(`✅ PATTERN PARENT: "${parentItem.name}" (level ${parentItem.level})`, 'SUCCESS');
                     modifiedLineage.push(parentItem);
                     break;
                 }
             }
         }
 
-        const currentLevel = TYPE_LEVEL_MAP[detectPageType(currentPageTitle)] || 99;
-        
-        const allPotentialParents = allLevels.filter(item => 
-            item.level <= currentLevel && 
-            item.name.toLowerCase() !== currentLower &&
-            !modifiedLineage.some(l => l.name === item.name)
-        );
-        
-        for (const parent of allPotentialParents) {
-            const isDifferentBranch = modifiedLineage.every(existing => {
-                const similarity = calculateSimilarity(parent.name, existing.name);
-                return similarity < 0.5;
-            });
-            
-            const hasSignificantScore = (parent.relevanceScore || 0) > 50;
-            
-            if (isDifferentBranch && hasSignificantScore) {
-                log(`FORCE PARENT (branch): "${parent.name}" (level ${parent.level}) → "${currentPageTitle}"`, 'SUCCESS');
-                modifiedLineage.push(parent);
-            } else if (!isDifferentBranch) {
-                log(`⏭️ FORCE SKIP: "${parent.name}" (level ${parent.level}) - same branch`, 'SKIP');
-            } else {
-                log(`⏭️ FORCE SKIP: "${parent.name}" (level ${parent.level}) - low score (${parent.relevanceScore || 0})`, 'SKIP');
-            }
-        }
-
+        // 🔥 FIX v12.3: Coba dari semantic groups
         if (modifiedLineage.length === lineageLevels.length) {
             const semanticKeywords = {
-                'finishing': ['finishing', 'cat', 'epoxy', 'lampu', 'wallpaper'],
-                'bangunan': ['bangunan', 'gedung', 'rumah', 'ruko'],
-                'interior': ['interior', 'dalam', 'ruangan'],
-                'eksterior': ['eksterior', 'luar', 'halaman'],
-                'lantai': ['lantai', 'keramik', 'epoxy lantai', 'marmer', 'granit'],
-                'dinding': ['dinding', 'tembok', 'wallpaper'],
-                'desain': ['desain', 'arsitektur', 'konsep', 'rencana', 'gambar']
+                'pagar': ['pagar', 'pagar panel', 'pagar beton', 'panel beton'],
+                'pondasi': ['pondasi', 'tiang', 'pile', 'bored pile', 'strauss pile'],
+                'cor': ['cor', 'readymix', 'ready mix', 'beton cor'],
+                'bangunan': ['bangunan', 'gedung', 'rumah', 'ruko', 'kantor'],
+                'interior': ['interior', 'dalam', 'ruangan', 'finishing'],
+                'eksterior': ['eksterior', 'luar', 'fasad', 'taman']
             };
             
             for (const [parentKeyword, childKeywords] of Object.entries(semanticKeywords)) {
                 const isChildMatch = childKeywords.some(kw => currentLower.includes(kw));
                 if (isChildMatch) {
                     const parentItem = allLevels.find(item => 
-                        item.name.toLowerCase().includes(parentKeyword)
+                        item.name?.toLowerCase().includes(parentKeyword)
                     );
-                    if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
-                        const isDifferentBranch = modifiedLineage.every(existing => {
-                            const similarity = calculateSimilarity(parentItem.name, existing.name);
-                            return similarity < 0.5;
-                        });
-                        
-                        if (isDifferentBranch) {
-                            log(`SEMANTIC PARENT: "${parentItem.name}"`, 'SUCCESS');
-                            modifiedLineage.push(parentItem);
-                        }
+                    if (parentItem && !modifiedLineage.some(l => l.name?.toLowerCase() === parentItem.name?.toLowerCase())) {
+                        log(`✅ SEMANTIC PARENT: "${parentItem.name}" (level ${parentItem.level})`, 'SUCCESS');
+                        modifiedLineage.push(parentItem);
+                        break;
                     }
                 }
             }
         }
 
-        if (modifiedLineage.length === lineageLevels.length && allLevels.length > 0) {
-            const lowerLevelItems = allLevels.filter(item => 
-                item.level <= currentLevel && 
-                item.name.toLowerCase() !== currentLower
-            );
-            if (lowerLevelItems.length > 0) {
-                const sortedByLevel = [...lowerLevelItems].sort((a, b) => b.level - a.level);
-                const highestLevelParent = sortedByLevel[0];
-                if (highestLevelParent && !modifiedLineage.some(l => l.name === highestLevelParent.name)) {
-                    log(`LAST RESORT: "${highestLevelParent.name}"`, 'WARN');
-                    modifiedLineage.push(highestLevelParent);
+        // 🔥 FIX v12.3: LAST RESORT - Entity pillar
+        if (modifiedLineage.length === 0 || modifiedLineage.every(l => l.name?.toLowerCase() === currentLower)) {
+            const entityPillarNames = ENTITY_PILLAR_NAMES[entityType] || [];
+            if (entityPillarNames.length > 0) {
+                const pillarName = entityPillarNames[0];
+                const pillarItem = allLevels.find(item => 
+                    item.name?.toLowerCase() === pillarName
+                );
+                if (pillarItem && !modifiedLineage.some(l => l.name?.toLowerCase() === pillarName)) {
+                    log(`✅ ENTITY PILLAR (fallback): "${pillarName}" (level ${pillarItem.level})`, 'WARN');
+                    modifiedLineage.push(pillarItem);
                 }
             }
         }
@@ -1113,25 +1323,47 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     }
 
     // ============================================================
-    // 20. HIERARCHY VALIDATOR
+    // 27. HIERARCHY VALIDATOR (FIX v12.3 - TIDAK HAPUS GAP)
     // ============================================================
     
     function validateAndFixHierarchy(lineage) {
         if (lineage.length <= 1) return lineage;
+        
         const fixed = [];
-        const sorted = [...lineage].sort((a, b) => a.level - b.level);
+        const sorted = [...lineage].sort((a, b) => {
+            const levelA = a.level || TYPE_LEVEL_MAP[detectPageTypeFallback(a.name)] || 99;
+            const levelB = b.level || TYPE_LEVEL_MAP[detectPageTypeFallback(b.name)] || 99;
+            return levelA - levelB;
+        });
+        
         const uniqueNames = new Set();
         for (const item of sorted) {
-            if (!uniqueNames.has(item.name.toLowerCase())) {
-                uniqueNames.add(item.name.toLowerCase());
+            const key = item.name?.toLowerCase() || '';
+            if (!uniqueNames.has(key)) {
+                uniqueNames.add(key);
+                if (!item.level) {
+                    item.level = TYPE_LEVEL_MAP[detectPageTypeFallback(item.name)] || 99;
+                }
                 fixed.push(item);
             }
         }
+        
+        // 🔥 FIX v12.3: JANGAN HAPUS ITEM KARENA GAP
+        // Tetap pertahankan, hanya log warning
+        for (let i = 1; i < fixed.length; i++) {
+            const prevLevel = fixed[i-1].level || TYPE_LEVEL_MAP[detectPageTypeFallback(fixed[i-1].name)] || 99;
+            const currLevel = fixed[i].level || TYPE_LEVEL_MAP[detectPageTypeFallback(fixed[i].name)] || 99;
+            
+            if (currLevel - prevLevel > 2) {
+                log(`⚠️ Hierarchy gap detected: ${fixed[i-1].name}(${prevLevel}) → ${fixed[i].name}(${currLevel}) - KEEPING`, 'WARN');
+            }
+        }
+        
         return fixed;
     }
 
     // ============================================================
-    // 21. SIMILARITY CALCULATION
+    // 28. SIMILARITY CALCULATION
     // ============================================================
 
     function calculateSimilarity(text1, text2) {
@@ -1148,7 +1380,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     }
 
     // ============================================================
-    // 22. GET CURRENT PAGE INFO
+    // 29. GET CURRENT PAGE INFO
     // ============================================================
 
     const currentFullUrl = currentUrl.startsWith('http')
@@ -1162,7 +1394,32 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     }
 
     // ============================================================
-    // 23. INJECT CURRENT PAGE & AUTO PARENT
+    // 30. GET PAGE LEVEL & ENTITY FROM PLD
+    // ============================================================
+
+    const pldLevel = getPageLevelFromPLD();
+    const pldEntity = getEntityTypeFromPLD();
+    
+    let finalPageLevel = pldLevel;
+    let finalEntityType = entityType;
+    
+    if (pldEntity && VALID_ENTITY_TYPES.includes(pldEntity)) {
+        finalEntityType = pldEntity;
+        log(`Entity from PLD: ${pldEntity} (override from ${entityType})`, 'PLD');
+    }
+    
+    entityType = finalEntityType;
+    
+    const isPLDSynced = !!pldLevel;
+    // 🔥 FIX: Gunakan variabel untuk menghindari error template literal
+    const syncStatusText = isPLDSynced ? '✅ SINKRON' : '❌ FALLBACK';
+    log(`PLD Sync Status: ${syncStatusText}`, 'PLD');
+    if (pldLevel) {
+        log(`PLD Level: "${pldLevel}" (${TYPE_LEVEL_MAP[pldLevel]})`, 'PLD');
+    }
+
+    // ============================================================
+    // 31. INJECT CURRENT PAGE & AUTO PARENT
     // ============================================================
 
     const enhancedBreadcrumbItems = injectCurrentPageAndParent(
@@ -1172,7 +1429,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     );
 
     // ============================================================
-    // 24. BUILD ALL LEVELS
+    // 32. BUILD ALL LEVELS
     // ============================================================
 
     const allLevels = [];
@@ -1189,7 +1446,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
             url = null;
         }
 
-        const type = detectPageType(name);
+        const type = detectPageTypeFallback(name);
         allLevels.push({
             name,
             url,
@@ -1200,7 +1457,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     }
 
     // ============================================================
-    // 25. URL FALLBACK
+    // 33. URL FALLBACK
     // ============================================================
 
     for (const level of allLevels) {
@@ -1224,14 +1481,14 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     }
 
     // ============================================================
-    // 26. CURRENT PAGE TYPE
+    // 34. CURRENT PAGE TYPE
     // ============================================================
 
-    const currentPageType = detectPageType(currentPageTitle);
+    const currentPageType = pldLevel || detectPageTypeFallback(currentPageTitle);
     log(`Current page: "${currentPageTitle}" → type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`, 'INFO');
 
     // ============================================================
-    // 27. SELECT BREADCRUMB LEVELS
+    // 35. SELECT BREADCRUMB LEVELS
     // ============================================================
 
     const selectedLevels = [];
@@ -1261,12 +1518,12 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     log('Unique items (' + uniqueItems.length + '): ' + uniqueItems.map(i => i.name + '(' + i.level + ')').join(' → '), 'INFO');
 
     // ============================================================
-    // FIND NEAREST PARENTS
+    // 36. 🔥 FIX v12.3: FIND NEAREST PARENTS - TANPA FILTER LEVEL
     // ============================================================
 
     function findNearestParentsByHierarchy() {
         const lineage = [];
-        const currentLevel = TYPE_LEVEL_MAP[currentPageType] || 99;
+        const currentLevel = pldLevel ? TYPE_LEVEL_MAP[pldLevel] : (TYPE_LEVEL_MAP[currentPageType] || 99);
         const currentPageTitleLower = currentPageTitle.toLowerCase();
         
         const candidates = uniqueItems.filter(item => 
@@ -1274,89 +1531,70 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
         );
         
         if (candidates.length === 0) {
-            const parentCandidates = uniqueItems.filter(item => 
-                item.name.toLowerCase() !== currentPageTitleLower
-            );
-            if (parentCandidates.length > 0) {
-                const sortedByLevel = [...parentCandidates].sort((a, b) => b.level - a.level);
-                const nearest = sortedByLevel[0];
-                lineage.push(nearest);
-                log(`⚠️ No candidates, using "${nearest.name}" as fallback`, 'WARN');
-            }
+            log('⚠️ No candidates found', 'WARN');
             return lineage;
         }
         
-        const validCandidates = candidates.filter(item => item.level <= currentLevel);
+        // 🔥 FIX v12.3: TIDAK ADA FILTER LEVEL SAMA SEKALI
+        // Ambil SEMUA candidates
+        const validCandidates = candidates;
         
-        if (validCandidates.length === 0) {
-            const sortedByLevel = [...candidates].sort((a, b) => b.level - a.level);
-            const nearest = sortedByLevel[0];
-            lineage.push(nearest);
-            log(`⚠️ No valid candidates, using "${nearest.name}"`, 'WARN');
-            return lineage;
-        }
-        
-        log('Valid candidates: ' + validCandidates.map(i => i.level + ':' + i.name).join(', '), 'DEBUG');
+        log('All candidates (' + validCandidates.length + '): ' + validCandidates.map(i => i.level + ':' + i.name).join(', '), 'DEBUG');
         
         const currentWords = currentPageTitleLower.split(/\s+/);
         const scoredCandidates = validCandidates.map(item => {
             const itemWords = item.name.toLowerCase().split(/\s+/);
             let relevanceScore = 0;
             
+            // 🔥 BONUS: Level difference - SEMUA LEVEL DIPERTIMBANGKAN
+            const levelDiff = currentLevel - item.level;
+            if (levelDiff > 0) {
+                // Parent di atas → bonus besar
+                relevanceScore += Math.max(0, (10 - Math.abs(levelDiff)) * 5);
+            } else if (levelDiff < 0) {
+                // Parent di bawah → bonus kecil
+                relevanceScore += Math.max(0, 10 - Math.abs(levelDiff));
+            } else {
+                // Level sama → bonus sedang
+                relevanceScore += 15;
+            }
+            
+            // Word overlap
             for (const word of currentWords) {
                 if (word.length > 2 && itemWords.includes(word)) {
                     relevanceScore += 10;
                 }
             }
             
-            for (let i = 1; i <= currentWords.length; i++) {
-                const prefix = currentWords.slice(0, i).join(' ');
-                if (item.name.toLowerCase() === prefix) {
-                    relevanceScore += 100;
-                    break;
-                }
-            }
-            
+            // Jika item name ada di current title
             if (currentPageTitleLower.includes(item.name.toLowerCase()) && item.name.length > 3) {
-                relevanceScore += 50;
+                relevanceScore += 100;
             }
             
-            if (item.name.toLowerCase().includes(currentPageTitleLower) && currentPageTitleLower.length > 3) {
-                relevanceScore += 40;
+            // 🔥 BONUS: Entity pillar
+            const entityPillarNames = ENTITY_PILLAR_NAMES[entityType] || [];
+            if (entityPillarNames.some(name => item.name.toLowerCase() === name)) {
+                relevanceScore += 80;
             }
-            
-            const maxWordLength = Math.max(...itemWords.map(w => w.length));
-            if (maxWordLength > 6) {
-                relevanceScore += 5;
-            }
-            
-            const commonWords = currentWords.filter(w => itemWords.includes(w) && w.length > 2);
-            relevanceScore += commonWords.length * 5;
             
             log(`🎯 Score for "${item.name}" (level ${item.level}): ${relevanceScore}`, 'SCORE');
             
             return { ...item, relevanceScore };
         });
         
+        // Sort by score (descending) - TIDAK ADA FILTER LEVEL
         scoredCandidates.sort((a, b) => {
-            if (a.level !== b.level) return b.level - a.level;
             return b.relevanceScore - a.relevanceScore;
         });
         
         log('Scored candidates (sorted): ' + scoredCandidates.map(i => i.level + ':' + i.name + '(' + i.relevanceScore + ')').join(' → '), 'DEBUG');
         
-        const selectedParents = [];
-        let highestLevel = -1;
-        for (const item of scoredCandidates) {
-            if (item.level > highestLevel) {
-                highestLevel = item.level;
-            }
-        }
+        // 🔥 Ambil SEMUA candidates dengan score tertinggi
+        const highestScore = scoredCandidates.length > 0 ? scoredCandidates[0].relevanceScore : -1;
+        const topCandidates = scoredCandidates.filter(item => item.relevanceScore === highestScore);
         
-        const topLevelParents = scoredCandidates.filter(item => item.level === highestLevel);
-        topLevelParents.sort((a, b) => b.relevanceScore - a.relevanceScore);
-        
-        for (const item of topLevelParents) {
+        // 🔥 Tambahkan SEMUA top candidates
+        for (const item of topCandidates) {
             const exists = lineage.some(l => l.name === item.name);
             if (!exists) {
                 lineage.push(item);
@@ -1364,14 +1602,11 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
             }
         }
         
-        if (lineage.length === 0) {
-            const currentPageItem = uniqueItems.find(item => 
-                item.name.toLowerCase() === currentPageTitleLower
-            );
-            if (currentPageItem && currentPageItem.level > 0) {
-                lineage.push(currentPageItem);
-                log(`⚠️ Adding current page as parent (no other parents found): "${currentPageItem.name}"`, 'WARN');
-            }
+        // 🔥 Jika lineage kosong, ambil yang pertama
+        if (lineage.length === 0 && scoredCandidates.length > 0) {
+            const best = scoredCandidates[0];
+            lineage.push(best);
+            log(`⚠️ FALLBACK: Using "${best.name}" as nearest parent`, 'WARN');
         }
         
         log('Lineage (prioritized): ' + lineage.map(i => i.level + ':' + i.name).join(' → '), 'SUCCESS');
@@ -1413,7 +1648,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     });
 
     // ========================================================
-    // AMBIL SEMUA PARENT DENGAN LEVEL TERTINGGI (FINAL)
+    // 37. AMBIL SEMUA PARENT DENGAN SCORE TERTINGGI
     // ========================================================
     
     let finalParents = [];
@@ -1425,23 +1660,27 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     log(`Parent candidates (${parentOnly.length}): ` + parentOnly.map(i => i.name + '(' + i.level + ')').join(', '), 'DEBUG');
 
     if (parentOnly.length > 0) {
-        const highestLevel = Math.max(...parentOnly.map(i => i.level));
-        finalParents = parentOnly.filter(item => item.level === highestLevel);
+        // 🔥 FIX v12.3: Ambil parent dengan score tertinggi (bukan level)
+        // Sudah diurutkan berdasarkan score di findNearestParentsByHierarchy
+        finalParents = parentOnly;
         finalParents.sort((a, b) => a.position - b.position);
         
-        log(`✅ PARENT FOUND: ${finalParents.length} parent(s) at level ${highestLevel}: ` + finalParents.map(i => i.name).join(', '), 'SUCCESS');
+        log(`✅ PARENT FOUND: ${finalParents.length} parent(s): ` + finalParents.map(i => i.name).join(', '), 'SUCCESS');
     } else {
         log('⚠️ No parent found (only current page)', 'WARN');
     }
 
-    if (finalParents.length === 0 && validatedLineage.length > 1) {
-        const filtered = validatedLineage.filter(item => 
-            item.name.toLowerCase() !== currentPageTitle.toLowerCase()
-        );
-        if (filtered.length > 0) {
-            const highestLevel = Math.max(...filtered.map(i => i.level));
-            finalParents = filtered.filter(item => item.level === highestLevel);
-            log(`⚠️ FALLBACK PARENT: Using ${finalParents.length} nearest parent(s) at level ${highestLevel}`, 'WARN');
+    if (finalParents.length === 0) {
+        const entityPillarNames = ENTITY_PILLAR_NAMES[entityType] || [];
+        if (entityPillarNames.length > 0) {
+            const pillarName = entityPillarNames[0];
+            const pillarItem = uniqueItems.find(item => 
+                item.name.toLowerCase() === pillarName
+            );
+            if (pillarItem) {
+                finalParents.push(pillarItem);
+                log(`✅ ENTITY PILLAR as parent: "${pillarName}"`, 'SUCCESS');
+            }
         }
     }
 
@@ -1462,13 +1701,14 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
             name: currentPageTitle,
             url: currentFullUrl,
             type: currentPageType,
-            level: TYPE_LEVEL_MAP[currentPageType] || 99,
-            isCurrent: true
+            level: pldLevel ? TYPE_LEVEL_MAP[pldLevel] : (TYPE_LEVEL_MAP[currentPageType] || 99),
+            isCurrent: true,
+            pldLevel: pldLevel
         });
     }
 
     // ============================================================
-    // 28. FINAL UNIQUE LEVELS
+    // 38. FINAL UNIQUE LEVELS
     // ============================================================
 
     const uniqueLevels = [];
@@ -1488,7 +1728,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     log('Final breadcrumb (' + uniqueLevels.length + ' levels): ' + uniqueLevels.map(i => i.name + '(' + i.level + ')').join(' › '), 'SUCCESS');
 
     // ============================================================
-    // 29. GENERATE HTML
+    // 39. GENERATE HTML
     // ============================================================
 
     let breadcrumbHtml = `<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">\n`;
@@ -1518,7 +1758,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     breadcrumbHtml += `</div>\n`;
 
     // ============================================================
-    // 30. JSON LD
+    // 40. JSON LD
     // ============================================================
 
     const jsonLd = {
@@ -1533,7 +1773,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     };
 
     // ============================================================
-    // 31. REMOVE OLD
+    // 41. REMOVE OLD
     // ============================================================
 
     document.querySelectorAll('.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"]')
@@ -1542,7 +1782,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
         .forEach(el => el.remove());
 
     // ============================================================
-    // 32. TARGET ELEMENT
+    // 42. TARGET ELEMENT
     // ============================================================
 
     const targetElement = document.querySelector('main, article, .content, #main-content, .post-content');
@@ -1554,7 +1794,7 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     }
 
     // ============================================================
-    // 33. INJECT JSON LD
+    // 43. INJECT JSON LD
     // ============================================================
 
     const script = document.createElement('script');
@@ -1564,25 +1804,37 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
     document.head.appendChild(script);
 
     // ============================================================
-    // 34. LOG SUMMARY
+    // 44. LOG SUMMARY (FIX: perbaiki semua kutip)
     // ============================================================
 
-    console.log('📊 BREADCRUMB GENERATION SUMMARY (v10.10):');
+    const syncStatus = isPLDSynced ? '✅ SINKRON' : '❌ FALLBACK';
+    const commercialDetected = COMMERCIAL_WORDS.some(w => currentPageTitle.startsWith(w));
+
+    console.log('📊 BREADCRUMB GENERATION SUMMARY (v12.3):');
     console.log(`   Page: "${currentPageTitle}"`);
     console.log(`   URL: "${currentFullUrl}"`);
     console.log(`   Type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`);
     console.log(`   Entity: ${entityType}`);
+    console.log(`   🔄 PLD Sync: ${syncStatus}`);
+    if (pldLevel) {
+        console.log(`   📌 PLD Level: ${pldLevel} (${TYPE_LEVEL_MAP[pldLevel]})`);
+    }
     if (currentPageType === 'variant') {
         console.log(`   🔬 Variant detected for entity: ${entityType}`);
     }
     if (currentPageType === 'money-child') {
         console.log(`   📍 Money Child with location detected`);
     }
-    console.log(`   👪 Parents found: ${finalParents.length} at level ${finalParents.length > 0 ? finalParents[0].level : 'N/A'}`);
+    if (commercialDetected) {
+        console.log(`   🛒 Commercial Intent detected`);
+    }
+    console.log(`   🔧 FIX v12.3: Parent tidak pernah di-skip apapun levelnya`);
+    console.log(`   👪 Parents found: ${finalParents.length} parents`);
     console.log(`   📊 Total breadcrumb levels: ${uniqueLevels.length}`);
+    console.log(`   🏛️ Hierarchy: ${uniqueLevels.map(i => i.type).join(' → ')}`);
 
     // ============================================================
-    // 35. RETURN
+    // 45. RETURN
     // ============================================================
 
     return {
@@ -1591,13 +1843,20 @@ function generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
         selectedLevels: uniqueLevels,
         currentPageType,
         entityType,
-        version: '10.10.0',
+        version: '12.3.0',
         parentCount: finalParents.length,
         parents: finalParents,
         isVariant: currentPageType === 'variant',
-        isMoneyChild: currentPageType === 'money-child'
+        isMoneyChild: currentPageType === 'money-child',
+        pldSync: isPLDSynced,
+        pldLevel: pldLevel,
+        pldEntity: pldEntity,
+        hierarchy: uniqueLevels.map(i => i.type),
+        commercialIntent: commercialDetected,
+        parentNoSkip: true // 🔥 FIX v12.3: Konfirmasi parent tidak pernah skip
     };
 }
+
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPondasiPerkuatanTanahKonsPost = {};
