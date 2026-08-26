@@ -125,8 +125,8 @@ const urlMappingHargaJasaBongkarBetonFromMoneyPageMoneyChild = {
 
 };
 const urlMappingJasaBongkarBetonFromMoneyMaster1Variant = {
-  "https://www.betonjayareadymix.com/2019/06/ukuran-bongkar-beton.html": "Ukuran Bongkar Beton",
-  "https://www.betonjayareadymix.com/2019/06/metode-bongkar-beton.html": "Metode Bongkar Beton"
+  "https://www.betonjayareadymix.com/2019/06/ukuran-jasa-bongkar-beton.html": "Ukuran Jasa Bongkar Beton",
+  "https://www.betonjayareadymix.com/2019/06/metode-jasa-bongkar-beton.html": "Metode Jasa Bongkar Beton"
 
 };
 // ============================================================
