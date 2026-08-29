@@ -110,6 +110,20 @@ const urlMappingJasaPondasiTapakFromMoneyPageMoneyChild = {
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE & MONEY_CHILD
 // Parent: Jasa Pondasi Bangunan (SUB2)
 // ============================================================
+const urlMappingJasaTiangPancangFromMoneyMaster1MoneyChild = {
+  // ============================================================
+  // [MONEY_CHILD] - JASA PONDASI TIANG PANCANG PER LOKASI
+  // 🧠 TYPE: MONEY_CHILD (spesifik lokasi)
+  // ============================================================
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tiang-pancang-terdekat.html": "Harga Jasa Pondasi Tiang Pancang Terdekat",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tiang-pancang-karawang.html": "Harga Jasa Pondasi Tiang Pancang Karawang",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tiang-pancang-bekasi.html": "Harga Jasa Pondasi Tiang Pancang Bekasi",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tiang-pancang-tangerang.html": "Harga Jasa Pondasi Tiang Pancang Tangerang",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tiang-pancang-depok.html": "Harga Jasa Pondasi Tiang Pancang Depok",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tiang-pancang-bogor.html": "Harga Jasa Pondasi Tiang Pancang Bogor",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tiang-pancang-jakarta.html": "Harga Jasa Pondasi Tiang Pancang Jakarta",  
+  "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tiang-pancang-surabaya.html": "Harga Jasa Pondasi Tiang Pancang Surabaya"  
+};
 const urlMappingJasaTiangPancangFromMoneyMaster1Variant = {
     "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-tiang-pancang.html": "Spesifikasi Jasa Tiang Pancang",
 "https://www.betonjayareadymix.com/2019/08/mutu-jasa-tiang-pancang.html": "Mutu Jasa Tiang Pancang",  
@@ -157,6 +171,8 @@ const urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-jakarta.html": "Harga Jasa Pondasi Tiang Pancang Jakarta",  
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-pondasi-tiang-pancang-surabaya.html": "Harga Jasa Pondasi Tiang Pancang Surabaya"  
 };
+
+
 
 // ============================================================
 // 📁 JASA PONDASI SUMURAN - KOSONG (SARAN ITEM)
@@ -1946,6 +1962,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaTiangPancangFromMoneyMaster1Variant,
 		urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyPage1,
 		urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild,
+		urlMappingJasaTiangPancangFromMoneyMaster1MoneyChild,
+
 		urlMappingJasaPondasiSumuranFromMoneyMaster1MoneyChild		
     );
    
@@ -2912,7 +2930,6 @@ if (urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyPage1[cleanUrlJasaPo
     );
 	
    }
-
 if (urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
 		generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
         urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild,
@@ -2924,6 +2941,22 @@ if (urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild[cleanUrlJasaPo
 			{ name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
 			{ name: 'Jasa Tiang Pancang', url: 'https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html' },
 			{ name: 'Harga Jasa Pondasi Tiang Pancang', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pondasi-tiang-pancang.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+	
+   }
+
+if (urlMappingJasaTiangPancangFromMoneyMaster1MoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+		generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
+        urlMappingJasaTiangPancangFromMoneyMaster1MoneyChild,
+        cleanUrlJasaPondasiPerkuatanTanahKonsPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+             { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+			{ name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
+			{ name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
+			{ name: 'Jasa Tiang Pancang', url: 'https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html' }
         ],
         'JASA_KONSTRUKSI'
     );
