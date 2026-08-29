@@ -110,7 +110,7 @@ const urlMappingJasaPondasiTapakFromMoneyPageMoneyChild = {
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE & MONEY_CHILD
 // Parent: Jasa Pondasi Bangunan (SUB2)
 // ============================================================
-const urlMappingJasaTiangPancangFromMoneyMaster1MoneyChild = {
+const urlMappingJasaPondasiTiangPancangFromMoneyPageMoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - JASA PONDASI TIANG PANCANG PER LOKASI
   // 🧠 TYPE: MONEY_CHILD (spesifik lokasi)
@@ -1962,7 +1962,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaTiangPancangFromMoneyMaster1Variant,
 		urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyPage1,
 		urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild,
-		urlMappingJasaTiangPancangFromMoneyMaster1MoneyChild,
+		urlMappingJasaPondasiTiangPancangFromMoneyPageMoneyChild,
 
 		urlMappingJasaPondasiSumuranFromMoneyMaster1MoneyChild		
     );
@@ -2947,16 +2947,18 @@ if (urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild[cleanUrlJasaPo
 	
    }
 
-if (urlMappingJasaTiangPancangFromMoneyMaster1MoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+if (urlMappingJasaPondasiTiangPancangFromMoneyPageMoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
 		generateBreadcrumbjasaKonstruksiPondasiPerkuatanTanahPost(
-        urlMappingJasaTiangPancangFromMoneyMaster1MoneyChild,
+        urlMappingJasaPondasiTiangPancangFromMoneyPageMoneyChild,
         cleanUrlJasaPondasiPerkuatanTanahKonsPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
              { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
 			{ name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
 			{ name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
-			{ name: 'Jasa Tiang Pancang', url: 'https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html' }
+			{ name: 'Jasa Tiang Pancang', url: 'https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html' },
+			{ name: 'Jasa Pondasi Tiang Pancang', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi-tiang-pancang.html' }
+        
         ],
         'JASA_KONSTRUKSI'
     );
