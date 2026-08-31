@@ -77,7 +77,8 @@ const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
   // ============================================================
   "https://www.betonjayareadymix.com/2018/09/biaya-pasang-pagar-panel-beton.html": "Biaya Pasang Pagar Panel Beton",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton",
-  
+
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-terdekat.html": "Jasa Pasang Pagar Panel Beton Ierdekat", 
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-jakarta.html": "Jasa Pasang Pagar Panel Beton Jakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bogor.html": "Jasa Pasang Pagar Panel Beton Bogor",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-depok.html": "Jasa Pasang Pagar Panel Beton Depok",  // TYPE: MONEY_CHILD
