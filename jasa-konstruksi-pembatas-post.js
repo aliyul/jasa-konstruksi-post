@@ -42,14 +42,14 @@ const urlMappingPembuatanPagarDinding = {
 // ============================================================
 
 const urlMappingJasaPasangPagarFromMoneyMasterMoneyChild = {
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-terdekat.html": "Harga Jasa Pasang Pagar Terdekat",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-surabaya.html": "Harga Jasa Pasang Pagar Surabaya",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-karawang.html": "Harga Jasa Pasang Pagar Karawang",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-bekasi.html": "Harga Jasa Pasang Pagar Bekasi",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-tangerang.html": "Harga Jasa Pasang Pagar Tangerang",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-depok.html": "Harga Jasa Pasang Pagar Depok",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-bogor.html": "Harga Jasa Pasang Pagar Bogor",
-"https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-jakarta.html": "Harga Jasa Pasang Pagar Jakarta"
+"https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-terdekat.html": "Jasa Pasang Pagar Terdekat",
+"https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-surabaya.html": "Jasa Pasang Pagar Surabaya",
+"https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-karawang.html": "Jasa Pasang Pagar Karawang",
+"https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-bekasi.html": "Jasa Pasang Pagar Bekasi",
+"https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-tangerang.html": "Jasa Pasang Pagar Tangerang",
+"https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-depok.html": "Jasa Pasang Pagar Depok",
+"https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-bogor.html": "Jasa Pasang Pagar Bogor",
+"https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-jakarta.html": "Jasa Pasang Pagar Jakarta"
 };
 
 const urlMappingHargaJasaPasangPagarFromMoneyMasterMoneyChild = {
