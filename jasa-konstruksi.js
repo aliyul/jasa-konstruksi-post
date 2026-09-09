@@ -733,7 +733,7 @@ const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
    "https://www.betonjayareadymix.com/p/jasa-pasang-batu.html": "Jasa Pasang Batu",
    "https://www.betonjayareadymix.com/p/jasa-pasang-grc.html": "Jasa Pasang Grc",
    "https://www.betonjayareadymix.com/p/jasa-pasang-kaca.html": "Jasa Pasang Kaca",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank.html": "Jasa Pasang Wood Plank",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-woodplank.html": "Jasa Pasang WoodPlank",
    "https://www.betonjayareadymix.com/p/jasa-pasang-hpl.html": "Jasa Pasang Hpl",
     // ================================================================
     // 📌 MONEY-MASTER (LEVEL 4) - HANYA KATEGORI UTAMA
