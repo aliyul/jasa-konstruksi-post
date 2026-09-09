@@ -763,7 +763,7 @@ const urlMappingJasaPasangFromSub1MoneyMaster = {
     // 5. Area Outdoor & Lanskap
     "https://www.betonjayareadymix.com/p/jasa-pasang-decking.html": "Jasa Pasang Decking",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html": "Jasa Pasang Pagar",
-   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar.html": "Harga Jasa Pasang Pagar"
+   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar.html": "Harga Jasa Pasang Pagar",
     // "https://www.betonjayareadymix.com/p/jasa-pasang-paving.html": "Jasa Pasang Paving",
     
     // 6. Utilitas & Teknologi
