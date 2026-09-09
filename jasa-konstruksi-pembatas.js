@@ -70,10 +70,9 @@ const urlMappingJasaPembuatanPagarFromMoneyMaster1MoneyPage = {
 // ============================================================
 // 📌 JASA PASANG PAGAR (LEVEL 4) - CABANG TERPISAH
 // ============================================================
+//FOKUS INFORMASI
 const urlMappingPasangPagarFromMoneyMaster1MoneyPage = {
    // "https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html": "Jasa Pasang Pagar",  // ✅ MM (2 kata) - URL BARU
-    
-"https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar.html": "Harga Jasa Pasang Pagar",
     "https://www.betonjayareadymix.com/p/jasa-pasang-dinding-pembatas-bata.html": "Jasa Pasang Dinding Pembatas Bata",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-panel-beton.html": "Jasa Pasang Pagar Panel Beton",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc.html": "Jasa Pasang Pagar BRC",
@@ -2224,7 +2223,6 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' }
         ],
         'JASA_KONSTRUKSI'
@@ -2257,7 +2255,6 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
             { name: 'Jasa Pasang Pagar BRC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc.html' }
         ],
