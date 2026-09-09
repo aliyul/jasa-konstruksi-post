@@ -4535,7 +4535,6 @@ if (urlMappingJasaPasangGrcFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Grc', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc.html'}
         ],
         'JASA_KONSTRUKSI'
@@ -4550,7 +4549,6 @@ if (urlMappingJasaPasangGrcEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Grc', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc.html'},
             { name: 'Jasa Pasang Grc Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc-eksterior.html'}
         ],
@@ -4566,7 +4564,6 @@ if (urlMappingJasaPasangDindingGRCEksteriorFromMoneyPage1MoneyPage2[cleanUrlJasa
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Grc', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc.html'},
             { name: 'Jasa Pasang Grc Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc-eksterior.html'},
             { name: 'Jasa Pasang Dinding Grc Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-dinding-grc-eksterior.html'}
@@ -4583,7 +4580,6 @@ if (urlMappingJasaPasangGRCFasadFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Grc', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc.html'},
             { name: 'Jasa Pasang Grc Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc-eksterior.html'},
             { name: 'Jasa Pasang GRC Fasad', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc-fasad.html'}
@@ -4600,7 +4596,6 @@ if (urlMappingJasaPasangPanelGRCDekoratifFromMoneyPage1MoneyPage2[cleanUrlJasaKo
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Grc', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc.html'},
             { name: 'Jasa Pasang Grc Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc-eksterior.html'},
             { name: 'Jasa Pasang Panel GRC Dekoratif', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-panel-grc-dekoratif.html'}
@@ -4617,7 +4612,6 @@ if (urlMappingJasaPasangGrcInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Grc', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc.html'},
             { name: 'Jasa Pasang Grc Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc-interior.html'}
         ],
@@ -4633,7 +4627,6 @@ if (urlMappingJasaPasangPlafonGRCFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Grc', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc.html'},
             { name: 'Jasa Pasang Grc Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc-interior.html'},
             { name: 'Jasa Pasang Plafon GRC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-plafon-grc.html'}
@@ -4651,7 +4644,6 @@ if (urlMappingJasaPasangKacaFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Kaca', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-kaca.html'}
         ],
         'JASA_KONSTRUKSI'
@@ -4666,7 +4658,6 @@ if (urlMappingJasaPasangKacaInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Kaca', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-kaca.html'},
             { name: 'Jasa Pasang Kaca Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-kaca-interior.html'}
         ],
@@ -4682,7 +4673,6 @@ if (urlMappingJasaPasangPartisiKacaFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Kaca', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-kaca.html'},
             { name: 'Jasa Pasang Kaca Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-kaca-interior.html'},
             { name: 'Jasa Pasang Partisi Kaca', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-partisi-kaca.html'}
@@ -4699,7 +4689,6 @@ if (urlMappingJasaPasangRailingTanggaKacaFromMoneyPage1MoneyPage2[cleanUrlJasaKo
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Kaca', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-kaca.html'},
             { name: 'Jasa Pasang Kaca Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-kaca-interior.html'},
             { name: 'Jasa Pasang Railing Tangga Kaca', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-railing-tangga-kaca.html'}
@@ -4716,7 +4705,6 @@ if (urlMappingJasaPasangKacaEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) 
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Kaca', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-kaca.html'},
             { name: 'Jasa Pasang Kaca Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-kaca-eksterior.html'}
         ],
@@ -4733,7 +4721,6 @@ if (urlMappingJasaPasangBatuFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Batu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu.html'}
         ],
         'JASA_KONSTRUKSI'
@@ -4748,7 +4735,6 @@ if (urlMappingJasaPasangBatuInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Batu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu.html'},
             { name: 'Jasa Pasang Batu Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu-interior.html'}
         ],
@@ -4764,7 +4750,6 @@ if (urlMappingJasaPasangBatuAlamDindingInteriorFromMoneyPage1MoneyPage2[cleanUrl
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Batu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu.html'},
             { name: 'Jasa Pasang Batu Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu-interior.html'},
             { name: 'Jasa Pasang Batu Alam Dinding Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-dinding-interior.html'}
@@ -4781,7 +4766,6 @@ if (urlMappingJasaPasangBatuEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) 
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Batu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu.html'},
             { name: 'Jasa Pasang Batu Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-batu-eksterior.html'}
         ],
@@ -4798,8 +4782,7 @@ if (urlMappingJasaPasangWoodPlankFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
-            { name: 'Jasa Pasang Wood Plank', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank.html'}
+            { name: 'Jasa Pasang WoodPlank', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-woodplank.html'}
         ],
         'JASA_KONSTRUKSI'
     );
@@ -4813,8 +4796,7 @@ if (urlMappingJasaPasangWoodPlankEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKo
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
-            { name: 'Jasa Pasang Wood Plank', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank.html'},
+            { name: 'Jasa Pasang WoodPlank', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-woodplank.html'},
             { name: 'Jasa Pasang Wood Plank Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-eksterior.html'}
         ],
         'JASA_KONSTRUKSI'
@@ -4829,8 +4811,7 @@ if (urlMappingJasaPasangWoodPlankInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKon
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
-            { name: 'Jasa Pasang Wood Plank', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank.html'},
+            { name: 'Jasa Pasang WoodPlank', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-woodplank.html'},
             { name: 'Jasa Pasang Wood Plank Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-interior.html'}
         ],
         'JASA_KONSTRUKSI'
@@ -4845,8 +4826,7 @@ if (urlMappingJasaPasangWoodPlankDindingInteriorFromMoneyPage1MoneyPage2[cleanUr
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
-            { name: 'Jasa Pasang Wood Plank', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank.html'},
+            { name: 'Jasa Pasang WoodPlank', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-woodplank.html'},
             { name: 'Jasa Pasang Wood Plank Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-interior.html'},
             { name: 'Jasa Pasang Wood Plank Dinding Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-dinding-interior.html'}
         ],
@@ -4863,7 +4843,6 @@ if (urlMappingJasaPasangHplFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Hpl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl.html'}
         ],
         'JASA_KONSTRUKSI'
@@ -4878,7 +4857,6 @@ if (urlMappingJasaPasangHplEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Hpl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl.html'},
             { name: 'Jasa Pasang Hpl Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl-eksterior.html'}
         ],
@@ -4894,7 +4872,6 @@ if (urlMappingJasaPasangHplInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Hpl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl.html'},
             { name: 'Jasa Pasang Hpl Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl-interior.html'}
         ],
@@ -4910,7 +4887,6 @@ if (urlMappingJasaPasangHPLDindingInteriorFromMoneyPage1MoneyPage2[cleanUrlJasaK
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Hpl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl.html'},
             { name: 'Jasa Pasang Hpl Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl-interior.html'},
             { name: 'Jasa Pasang Hpl Dinding Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl-dinding-interior.html'}
@@ -4927,7 +4903,6 @@ if (urlMappingJasaPasangHPLFurnitureFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) 
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Hpl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl.html'},
             { name: 'Jasa Pasang Hpl Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl-interior.html'},
             { name: 'Jasa Pasang Hpl Furniture', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-hpl-furniture.html'}
@@ -4945,7 +4920,6 @@ if (urlMappingJasaPasangAcpFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Acp', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp.html'}
         ],
         'JASA_KONSTRUKSI'
@@ -4961,7 +4935,6 @@ if (urlMappingJasaPasangACPInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Acp', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp.html'},
             { name: 'Jasa Pasang ACP Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp-interior.html'}
         ],
@@ -4977,7 +4950,6 @@ if (urlMappingJasaPasangACPEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Acp', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp.html'},
             { name: 'Jasa Pasang ACP Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp-eksterior.html'}
         ],
@@ -4993,7 +4965,6 @@ if (urlMappingJasaLaserCuttingACPFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Acp', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp.html'},
             { name: 'Jasa Laser Cutting Acp', url: 'https://www.betonjayareadymix.com/p/jasa-laser-cutting-acp.html'}
         ],
@@ -5009,7 +4980,6 @@ if (urlMappingHargaJasaPasangACPFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Acp', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp.html'},
             { name: 'Harga Jasa Pasang Acp', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-acp.html'}
         ],
@@ -5026,7 +4996,6 @@ if (urlMappingJasaPasangLantaiFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html'}
         ],
         'JASA_KONSTRUKSI'
@@ -5042,7 +5011,6 @@ if (urlMappingJasaPasangDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-dinding.html'}
         ],
         'JASA_KONSTRUKSI'
@@ -5059,7 +5027,6 @@ if (urlMappingJasaPasangFurnitureFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Furniture', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-furniture.html'}
         ],
         'JASA_KONSTRUKSI'
