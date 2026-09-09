@@ -726,6 +726,7 @@ const urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyPage = {
 // ================================================================
 const urlMappingJasaPasangFromSub1MoneyMaster = {
 	//"https://www.betonjayareadymix.com/p/jasa-pasang.html": "Jasa Pasang"
+	//MM INFORMASI DAN HARGA TERPISAH
 	"https://www.betonjayareadymix.com/p/jasa-pasang-acp.html": "Jasa Pasang Acp",
    "https://www.betonjayareadymix.com/p/jasa-pasang-batu.html": "Jasa Pasang Batu",
    "https://www.betonjayareadymix.com/p/jasa-pasang-grc.html": "Jasa Pasang Grc",
@@ -762,6 +763,7 @@ const urlMappingJasaPasangFromSub1MoneyMaster = {
     // 5. Area Outdoor & Lanskap
     "https://www.betonjayareadymix.com/p/jasa-pasang-decking.html": "Jasa Pasang Decking",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html": "Jasa Pasang Pagar",
+   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar.html": "Harga Jasa Pasang Pagar"
     // "https://www.betonjayareadymix.com/p/jasa-pasang-paving.html": "Jasa Pasang Paving",
     
     // 6. Utilitas & Teknologi
