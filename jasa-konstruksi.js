@@ -725,10 +725,7 @@ const urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyPage = {
 // 📋 TOTAL: 20 MONEY-MASTER (LEVEL 4)
 // ================================================================
 const urlMappingJasaPasangFromSub1MoneyMaster = {
-	"https://www.betonjayareadymix.com/p/jasa-pasang.html": "Jasa Pasang"
-};
-
-const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
+	//"https://www.betonjayareadymix.com/p/jasa-pasang.html": "Jasa Pasang"
 	"https://www.betonjayareadymix.com/p/jasa-pasang-acp.html": "Jasa Pasang Acp",
    "https://www.betonjayareadymix.com/p/jasa-pasang-batu.html": "Jasa Pasang Batu",
    "https://www.betonjayareadymix.com/p/jasa-pasang-grc.html": "Jasa Pasang Grc",
@@ -771,6 +768,11 @@ const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
     "https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html": "Jasa Pasang Lampu",
     "https://www.betonjayareadymix.com/p/jasa-pasang-cctv.html": "Jasa Pasang CCTV",
     "https://www.betonjayareadymix.com/p/jasa-pasang-ac.html": "Jasa Pasang AC"
+
+};
+
+const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
+
 };
 
 const urlMappingJasaPasangGrcFromMoneyMaster1MoneyPage = {
