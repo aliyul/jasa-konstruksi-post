@@ -2086,6 +2086,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
+		urlMappingJasaPasangPagarFromMoneyMasterMoneyChild,
 		urlMappingHargaJasaPasangPagarFromMoneyMasterMoneyChild,
 		
 		urlMappingJasaPasangPagarBetonPrecastFromMoneyPageMoneyPage1,
@@ -2429,8 +2430,20 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("elemen Id JasaKonsPembatasPost kondisi terhapus");
         return;
     }
-
 	
+	if (urlMappingJasaPasangPagarFromMoneyMasterMoneyChild[cleanUrlJasaPembatasKonsPost]) {
+    generateBreadcrumbJasaKonstruksiPembatasPost(
+        urlMappingJasaPasangPagarFromMoneyMasterMoneyChild,
+        cleanUrlJasaPembatasKonsPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
 	if (urlMappingHargaJasaPasangPagarFromMoneyMasterMoneyChild[cleanUrlJasaPembatasKonsPost]) {
     generateBreadcrumbJasaKonstruksiPembatasPost(
         urlMappingHargaJasaPasangPagarFromMoneyMasterMoneyChild,
