@@ -86,8 +86,6 @@ const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
   // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
   // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pasang Pagar Panel Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/biaya-pasang-pagar-panel-beton.html": "Biaya Pasang Pagar Panel Beton",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton",
 
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-terdekat.html": "Jasa Pasang Pagar Panel Beton Ierdekat", 
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-jakarta.html": "Jasa Pasang Pagar Panel Beton Jakarta",  // TYPE: MONEY_CHILD
@@ -108,6 +106,16 @@ const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-purwakarta.html": "Jasa Pasang Pagar Panel Beton Purwakarta"
 	
 };
+const urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
+  // ============================================================
+  // [MONEY_MASTER] - HARGA PASANG PAGAR PANEL BETON
+  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
+  // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pasang Pagar Panel Beton
+  // ============================================================
+  "https://www.betonjayareadymix.com/2018/09/biaya-pasang-pagar-panel-beton.html": "Biaya Pasang Pagar Panel Beton"
+ // "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton"
+};
+
 const urlMappingJasaPasangPagarPanelBetonFromMoneyPageVariant  = {
   "https://www.betonjayareadymix.com/2018/09/jasa-pagar-panel-beton-terpasang.html": "Jasa Pagar Panel Beton Terpasang",
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-per-meter.html": "Jasa Pasang Pagar Panel Beton Per Meter",
@@ -591,6 +599,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingJasaPasangPagarBetonPrecastFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
+		urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangPagarPanelBetonFromMoneyPageVariant,
 		
 		urlMappingJasaPasangPagarBesiHollowFromMoneyPageMoneyPage1,
@@ -661,6 +670,20 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
             { name: 'Jasa Pasang Pagar Panel Beton', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-panel-beton.html' }
         ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+ if (urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKonsPost]) {
+    generateBreadcrumbShared(
+        urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
+        cleanUrlJasaPembatasKonsPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Harga Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar.html' },
+            { name: 'Harga Jasa Pasang Pagar Panel Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-panel-beton.html' }
+	   ],
         'JASA_KONSTRUKSI'
     );
    }
