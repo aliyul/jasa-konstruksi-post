@@ -1230,1508 +1230,6 @@ const urlMappingCustom = {
 
 };
 */
-
-
-/**
- * ============================================================
- * generateBreadcrumbJasaKonstruksi v12.3.2
- * FIXED: PARENT TERDEKAT WAJIB AMBIL POSISI TERAKHIR (v12.3.2)
- * FIXED: TANPA SKIP APAPUN LEVEL DAN SCORE
- * FIXED: TIDAK ADA FILTER LEVEL UNTUK PARENT
- * FIXED: SINKRON DENGAN PLD v22.25
- * FIXED: COMMERCIAL INTENT OVERRIDE (jual/beli/sewa/rental)
- * FIXED: Filter stopwords & location untuk deteksi
- * FIXED: VARIANT detection lebih akurat
- * FIXED: PILLAR HANYA NAMA YANG SUDAH DITENTUKAN
- * FIXED: HIERARCHY WAJIB: PILLAR → SP2 → SP1 → MM → MP → MC → VARIANT
- * FIXED: SyntaxError pada template literal (v12.3.1)
- * ============================================================
- *
- * ✅ UPDATE v12.3.2
- * ------------------------------------------------------------
- * - FIX: Parent terdekat WAJIB ambil dari posisi terakhir
- * - FIX: TANPA SKIP apapun level dan score
- * - FIX: Hapus semua filter level dan scoring
- * - FIX: Urutkan items berdasarkan posisi descending
- * - FIX: Ambil item pertama yang bukan current page
- * - FIX: Entity pillar sebagai fallback terakhir
- *
- * ============================================================
- * @version 12.3.2
- * @date 2026-08-26
- * ============================================================
- */
-
-function generateBreadcrumbJasaKonstruksi(
-    mappingObj,
-    currentUrl,
-    breadcrumbItems = [],
-    entityType = 'PRODUK_KONSTRUKSI'
-) {
-
-    // ============================================================
-    // 1. GLOBAL CONFIG
-    // ============================================================
-
-    const CONFIG = {
-        DOMAIN: 'https://www.betonjayareadymix.com',
-        DEBUG: true,
-        CURRENT_YEAR: new Date().getFullYear()
-    };
-
-    // ============================================================
-    // 2. LOGGER
-    // ============================================================
-
-    function log(message, type = 'INFO') {
-        if (!CONFIG.DEBUG && type === 'INFO') return;
-        const icons = { 
-            INFO: '📘', 
-            SUCCESS: '✅', 
-            WARN: '⚠️', 
-            ERROR: '❌', 
-            DEBUG: '🔍', 
-            VARIANT: '🔬', 
-            PARENT: '👪', 
-            URL: '🔗',
-            SCORE: '🎯',
-            CLEAN: '🧹',
-            SKIP: '⏭️',
-            PLD: '🔄',
-            HIERARCHY: '🏛️',
-            COMMERCIAL: '🛒',
-            PARENT_FIX: '🔧'
-        };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v12.3.2] ${message}`);
-    }
-
-    // ============================================================
-    // 3. ENTITY NORMALIZATION
-    // ============================================================
-
-    const ENTITY_TYPE_MAP = {
-        'JASA': 'JASA_KONSTRUKSI',
-        'JASA_KONSTRUKSI': 'JASA_KONSTRUKSI',
-        'JASA_DESAIN': 'JASA_DESAIN',
-        'JASA_INTERIOR': 'JASA_KONSTRUKSI',
-        'JASA_DESAIN_INTERIOR': 'JASA_DESAIN',
-        'SEWA': 'SEWA_ALAT_KONSTRUKSI',
-        'RENTAL': 'SEWA_ALAT_KONSTRUKSI',
-        'SEWA_ALAT': 'SEWA_ALAT_KONSTRUKSI',
-        'RENTAL_ALAT': 'SEWA_ALAT_KONSTRUKSI',
-        'SEWA_RENTAL': 'SEWA_ALAT_KONSTRUKSI',
-        'SEWA_ALAT_KONSTRUKSI': 'SEWA_ALAT_KONSTRUKSI',
-        'PRODUK': 'PRODUK_KONSTRUKSI',
-        'PRODUK_KONSTRUKSI': 'PRODUK_KONSTRUKSI',
-        'PRODUK_INTERIOR': 'PRODUK_INTERIOR',
-        'MATERIAL': 'MATERIAL_KONSTRUKSI',
-        'MATERIAL_KONSTRUKSI': 'MATERIAL_KONSTRUKSI',
-        'ARTIKEL': 'ARTIKEL'
-    };
-
-    entityType = ENTITY_TYPE_MAP[entityType] || entityType;
-
-    // ============================================================
-    // 4. VALID ENTITY TYPES
-    // ============================================================
-
-    const VALID_ENTITY_TYPES = [
-        'JASA_KONSTRUKSI',
-        'JASA_DESAIN',
-        'SEWA_ALAT_KONSTRUKSI',
-        'PRODUK_KONSTRUKSI',
-        'PRODUK_INTERIOR',
-        'MATERIAL_KONSTRUKSI',
-        'ARTIKEL'
-    ];
-
-    // ============================================================
-    // 5. VALID LEVELS
-    // ============================================================
-
-    const VALID_LEVELS = [
-        'home', 'pillar', 'sub-pillar-tipe-2', 'sub-pillar-tipe-1',
-        'money-master', 'money-page', 'money-child', 'variant', 'sub-variant'
-    ];
-
-    // ============================================================
-    // 6. HIERARCHY ORDER (WAJIB - TIDAK BOLEH DIUBAH)
-    // ============================================================
-
-    const HIERARCHY_ORDER = [
-        'home',
-        'pillar',
-        'sub-pillar-tipe-2',
-        'sub-pillar-tipe-1',
-        'money-master',
-        'money-page',
-        'money-child',
-        'variant',
-        'sub-variant'
-    ];
-
-    const TYPE_LEVEL_MAP = {
-        'home': 0,
-        'pillar': 1,
-        'sub-pillar-tipe-2': 2,
-        'sub-pillar-tipe-1': 3,
-        'money-master': 4,
-        'money-page': 5,
-        'money-child': 6,
-        'variant': 7,
-        'sub-variant': 8
-    };
-
-    // ============================================================
-    // 7. ENTITY PILLAR NAMES (HANYA INI YANG BISA JADI PILLAR)
-    // ============================================================
-
-    const ENTITY_PILLAR_NAMES = {
-        'JASA_KONSTRUKSI': ['jasa konstruksi'],
-        'JASA_DESAIN': ['jasa desain interior'],
-        'SEWA_ALAT_KONSTRUKSI': ['sewa alat konstruksi', 'rental alat konstruksi'],
-        'PRODUK_KONSTRUKSI': ['produk konstruksi'],
-        'PRODUK_INTERIOR': ['produk interior', 'interior produk'],
-        'MATERIAL_KONSTRUKSI': ['material konstruksi', 'bahan konstruksi'],
-        'ARTIKEL': ['artikel konstruksi', 'blog konstruksi', 'tips konstruksi']
-    };
-
-    // ============================================================
-    // 8. PLD ENTITY MAP
-    // ============================================================
-
-    const PLD_ENTITY_MAP = {
-        'produk': 'PRODUK_KONSTRUKSI',
-        'material': 'MATERIAL_KONSTRUKSI',
-        'jasa': 'JASA_KONSTRUKSI',
-        'desain': 'JASA_DESAIN',
-        'sewa': 'SEWA_ALAT_KONSTRUKSI',
-        'artikel': 'ARTIKEL'
-    };
-
-    // ============================================================
-    // 9. GET PAGE LEVEL FROM PLD (FIX: perbaiki kutip)
-    // ============================================================
-
-    function getPageLevelFromPLD() {
-        const pldVersions = [
-            'pageLevelDetectorv22',
-            'pageLevelDetectorv20', 
-            'pageLevelDetectorv19',
-            'pageLevelDetectorV18',
-            'pageLevelDetectorV17',
-            'pageLevelDetector'
-        ];
-        
-        for (const pldName of pldVersions) {
-            if (window[pldName] && typeof window[pldName].detect === 'function') {
-                try {
-                    const level = window[pldName].detect();
-                    if (level && VALID_LEVELS.includes(level)) {
-                        log(`PLD ${pldName}: "${level}" (${TYPE_LEVEL_MAP[level]})`, 'PLD');
-                        return level;
-                    }
-                } catch(e) {
-                    log(`Error calling ${pldName}: ${e.message}`, 'WARN');
-                }
-            }
-        }
-        
-        const bodyLevel = document.body.getAttribute('data-page-level') || 
-                          document.body.getAttribute('data-schema-page-level');
-        if (bodyLevel && VALID_LEVELS.includes(bodyLevel)) {
-            log(`PLD from body: "${bodyLevel}" (${TYPE_LEVEL_MAP[bodyLevel]})`, 'PLD');
-            return bodyLevel;
-        }
-        
-        log('PLD not available, using fallback', 'WARN');
-        return null;
-    }
-
-    function getEntityTypeFromPLD() {
-        const pldVersions = [
-            'pageLevelDetectorv22',
-            'pageLevelDetectorv20', 
-            'pageLevelDetectorv19',
-            'pageLevelDetectorV18',
-            'pageLevelDetectorV17',
-            'pageLevelDetector'
-        ];
-        
-        for (const pldName of pldVersions) {
-            if (window[pldName] && typeof window[pldName].detectEntityType === 'function') {
-                try {
-                    const entity = window[pldName].detectEntityType();
-                    if (entity && PLD_ENTITY_MAP[entity]) {
-                        log(`PLD Entity: ${entity} → ${PLD_ENTITY_MAP[entity]}`, 'PLD');
-                        return PLD_ENTITY_MAP[entity];
-                    }
-                } catch(e) {
-                    log(`Error getting entity from ${pldName}: ${e.message}`, 'WARN');
-                }
-            }
-        }
-        
-        const bodyEntity = document.body.getAttribute('data-entity-type');
-        if (bodyEntity && PLD_ENTITY_MAP[bodyEntity]) {
-            log(`Entity from body: ${bodyEntity} → ${PLD_ENTITY_MAP[bodyEntity]}`, 'PLD');
-            return PLD_ENTITY_MAP[bodyEntity];
-        }
-        
-        return null;
-    }
-
-    // ============================================================
-    // 10. HELPERS
-    // ============================================================
-
-    function isJasaEntity() { return entityType === 'JASA_KONSTRUKSI'; }
-    function isDesainEntity() { return entityType === 'JASA_DESAIN'; }
-    function isSewaEntity() { return entityType === 'SEWA_ALAT_KONSTRUKSI'; }
-    function isProdukEntity() { return entityType === 'PRODUK_KONSTRUKSI'; }
-    function isMaterialEntity() { return entityType === 'MATERIAL_KONSTRUKSI'; }
-    function isInteriorEntity() { return entityType === 'PRODUK_INTERIOR'; }
-
-    // ============================================================
-    // 11. CLEAN TEXT
-    // ============================================================
-
-    function cleanText(text) {
-        if (!text) return '';
-        return text.replace(/\s+/g, ' ').trim();
-    }
-
-    // ============================================================
-    // 12. CLEAN PAGE NAME FROM URL
-    // ============================================================
-
-    function getCleanPageNameFromUrl(url) {
-        if (!url) return '';
-
-        let path = url;
-        path = path.replace(/^https?:\/\/[^\/]+/i, '');
-        path = path.split('?')[0];
-        path = path.replace(/\.(html|php|asp|jsp)$/i, '');
-        
-        path = path.replace(/\/\d{4}\/\d{2}\/\d{2}\//g, '/');
-        path = path.replace(/\/\d{4}\/\d{2}\//g, '/');
-        path = path.replace(/\/\d{4}\//g, '/');
-        
-        path = path.replace(/^\/p\//, '/');
-        path = path.replace(/\/p\//g, '/');
-        
-        const parts = path.split('/').filter(Boolean);
-        let last = parts.pop() || '';
-        
-        if (!last && parts.length > 0) {
-            last = parts.pop() || '';
-        }
-        
-        last = last.replace(/-/g, ' ');
-        last = last.replace(/[^a-z0-9\s]/gi, '');
-        
-        if (last.length < 3 && parts.length > 0) {
-            const lastTwo = parts.slice(-2).join(' ');
-            if (lastTwo.length > last.length) {
-                last = lastTwo;
-            }
-        }
-        
-        const cleanResult = cleanText(last.toLowerCase());
-        log(`Cleaned URL: "${url}" → "${cleanResult}"`, 'URL');
-        
-        return cleanResult;
-    }
-
-    // ============================================================
-    // 13. SLUGIFY
-    // ============================================================
-
-    function slugify(text) {
-        return cleanText(text)
-            .toLowerCase()
-            .replace(/[^\w\s-]/g, '')
-            .replace(/\s+/g, '-')
-            .replace(/--+/g, '-');
-    }
-
-    // ============================================================
-    // 14. KEYWORDS & FILTERS (SINKRON DENGAN PLD v22.25)
-    // ============================================================
-
-    // COMMERCIAL WORDS - SINKRON DENGAN PLD v22.25
-    const COMMERCIAL_WORDS = ['jual', 'beli', 'sewa', 'rental', 'order', 'pesan', 'pemesanan'];
-
-    // STOPWORDS - SINKRON DENGAN PLD v22.25
-    const STOPWORDS = new Set([
-        'dan', 'atau', 'serta', 'yang', 'dari', 'ke', 'di', 'untuk', 
-        'dengan', 'ini', 'itu', 'akan', 'telah', 'sudah', 'masih',
-        'pada', 'oleh', 'karena', 'sehingga', 'setelah', 'sebelum',
-        'plus', 'minus', 'tanpa', 'sampai', 'hingga', 'sambil'
-    ]);
-
-    // LOCATION WORDS - SINKRON DENGAN PLD v22.25
-    const LOCATION_WORDS = new Set([
-        'jakarta', 'jakarta pusat', 'jakarta barat', 'jakarta selatan', 'jakarta timur', 'jakarta utara',
-        'bogor', 'kota bogor', 'kabupaten bogor',
-        'depok', 'kota depok',
-        'tangerang', 'kota tangerang', 'kota tangerang selatan', 'kabupaten tangerang',
-        'bekasi', 'kota bekasi', 'kabupaten bekasi',
-        'bandung', 'kota bandung', 'kabupaten bandung',
-        'karawang', 'kabupaten karawang',
-        'purwakarta', 'kabupaten purwakarta',
-        'cikarang', 'cikarang barat', 'cikarang pusat', 'cikarang selatan', 'cikarang timur', 'cikarang utara',
-        'subang', 'kabupaten subang',
-        'cirebon', 'kota cirebon', 'kabupaten cirebon',
-        'semarang', 'kota semarang', 'kabupaten semarang',
-        'solo', 'surakarta', 'kota surakarta',
-        'pekalongan', 'tegal', 'magelang', 'sukoharjo', 'boyolali', 'klaten',
-        'jogja', 'yogyakarta', 'kota yogyakarta', 'kabupaten sleman', 'bantul', 'gunungkidul', 'kulon progo',
-        'surabaya', 'kota surabaya',
-        'malang', 'kota malang', 'kabupaten malang',
-        'kediri', 'kota kediri', 'kabupaten kediri',
-        'gresik', 'sidoarjo', 'mojokerto', 'pasuruan', 'probolinggo', 'jember', 'banyuwangi', 'madiun',
-        'medan', 'kota medan',
-        'palembang', 'pekanbaru', 'padang', 'lampung', 'bandar lampung', 'batam', 'tanjungpinang',
-        'aceh', 'banda aceh', 'jambi', 'bengkulu', 'pangkal pinang',
-        'pontianak', 'balikpapan', 'samarinda', 'banjarmasin', 'palangkaraya',
-        'makassar', 'kota makassar',
-        'manado', 'palu', 'kendari', 'gorontalo',
-        'bali', 'kabupaten badung', 'kota denpasar', 'denpasar', 'gianyar', 'tabanan', 'bangli', 'karangasem', 'klungkung', 'buleleng', 'jembrana',
-        'mataram', 'kupang',
-        'terdekat'
-    ]);
-
-    // SP1 KEYWORDS
-    const SP1_KEYWORDS = [
-        'vs', 'versus', 'perbandingan', 'lebih baik', 'kelebihan', 'kekurangan'
-    ];
-
-    // SP2 KEYWORDS
-    const SP2_KEYWORDS = [
-        'jenis', 'kategori', 'daftar', 'macam', 'tipe'
-    ];
-
-    // VARIANT KEYWORDS - SINKRON DENGAN PLD v22.25
-    const VARIANT_KEYWORDS_PRODUK = [
-        'spesifikasi', 'spec', 'detail spesifikasi',
-        'mutu', 'kualitas', 'quality',
-        'ukuran', 'dimensi',
-        'grade', 'type', 'tipe', 'model',
-        'standar', 'merk', 'brand', 'seri'
-    ];
-
-    const VARIANT_KEYWORDS_JASA = [
-        'standar pelayanan', 'sop', 'metode kerja',
-        'prosedur', 'tahapan', 'cara kerja',
-        'durasi', 'waktu pengerjaan', 'garansi',
-        'standar pengerjaan'
-    ];
-
-    const VARIANT_KEYWORDS_SEWA = [
-        'spesifikasi alat', 'kapasitas alat',
-        'spek alat', 'detail alat', 'spesifikasi'
-    ];
-
-    // TECHNICAL SPECS
-    const TECHNICAL_SPECS = ['k225', 'k250', 'k300', 'k350', 'k400', 'k500', 'k600', 'fc', 'm6', 'm8', 'm10', 'm12', 'm16', 'm20', 'b0', 'b1', 'b2', 'b3', 'sni'];
-    
-    const SPECIFIC_MODIFIERS = [
-        'k225', 'k250', 'k300', 'm6', 'm8', 'm10',
-        'diesel', 'hidrolik', 'mini pile', 'sheet pile', 'drop hammer',
-        'breaker', 'long arm', 'vibrator', 'per jam', 'per hari',
-        'per meter', 'per m2', 'terdekat', 'murah', 'kapasitas besar'
-    ];
-
-    // ============================================================
-    // 15. JASA CLEAN FUNCTION
-    // ============================================================
-
-    const JASA_ULTRA_COMMON_WORDS = new Set([
-        'jasa', 'kontraktor', 'tukang', 'borongan', 'renovasi',
-        'pasang', 'bangun', 'perbaikan', 'instalasi', 'proyek',
-        'cor', 'gali', 'urug', 'angkut', 'service', 'servis',
-        'desain'
-    ]);
-
-    const MATERIAL_SPEC_WORDS = new Set([
-        'baja ringan', 'baja', 'ringan', 'beton', 'readymix', 
-        'kanstin', 'pembatas', 'pengaman', 'struktur', 'dinding',
-        'pondasi', 'atap', 'genteng', 'keramik', 'marmer', 'granit',
-        'plafon', 'gypsum', 'partisi', 'dak', 'cor', 'pile', 'sheet',
-        'tiang', 'balok', 'kolom', 'sloof', 'ring', 'balk', 'kuda-kuda',
-        'drainase', 'irigasi', 'box culvert', 'u ditch', 'paving',
-        'konstruksi', 'rangka', 'material', 'upah', 'tenaga'
-    ]);
-
-    const MODIFIER_WORDS = new Set([
-        'murah', 'profesional', 'berkualitas', 'terbaik', 'spesialis',
-        'ahli', 'berpengalaman', 'resmi', 'terpercaya', 'ekonomis',
-        'cepat', 'tepat', 'garansi', 'kualitas', 'harga', 'biaya',
-        'tarif', 'ongkos', 'estimasi', 'perhitungan', 'analisa',
-        'modern', 'minimalis', 'mewah', 'klasik', 'tradisional',
-        'kontemporer', 'sederhana', 'elegan', 'premium', 'luxury'
-    ]);
-
-    function cleanJasaText(text) {
-        if (!text) return '';
-        
-        let cleaned = text.toLowerCase();
-        
-        for (const kw of JASA_ULTRA_COMMON_WORDS) {
-            cleaned = cleaned.replace(new RegExp(`\\b${kw}\\b`, 'g'), ' ');
-        }
-        
-        for (const sw of STOPWORDS) {
-            cleaned = cleaned.replace(new RegExp(`\\b${sw}\\b`, 'g'), ' ');
-        }
-        
-        cleaned = cleaned.replace(/\s+/g, ' ').trim();
-        
-        log(`Clean JASA: "${text}" → "${cleaned}"`, 'CLEAN');
-        
-        return cleaned;
-    }
-
-    function countCoreWords(text) {
-        if (!text) return 0;
-        const words = text.toLowerCase().split(/\s+/).filter(w => w.length >= 2);
-        return words.length;
-    }
-
-    function hasModifier(text) {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        for (const mod of MODIFIER_WORDS) {
-            if (lower.includes(mod)) return true;
-        }
-        return false;
-    }
-
-    function isSpecificJasa(text) {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        if (/\d/.test(lower)) return true;
-        if (/(k225|k250|k300|k350|k400|k500|k600|m6|m8|m10|m12|sn|sni)/i.test(lower)) return true;
-        const specWords = ['spesifikasi', 'mutu', 'dimensi', 'ukuran', 'standar', 'grade', 'tipe', 'type'];
-        for (const sw of specWords) {
-            if (lower.includes(sw)) return true;
-        }
-        return false;
-    }
-
-    function hasMaterialSpec(text) {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        for (const kw of MATERIAL_SPEC_WORDS) {
-            if (lower.includes(kw)) return true;
-        }
-        return false;
-    }
-
-    // ============================================================
-    // 16. DETEKSI JASA LEVEL OTOMATIS
-    // ============================================================
-
-    function detectJasaLevelAuto(pageName) {
-        const lowerName = pageName.toLowerCase();
-        
-        const cleaned = cleanJasaText(lowerName);
-        
-        const remainingWords = cleaned.split(/\s+/).filter(w => w.length >= 2);
-        const wordCount = remainingWords.length;
-        
-        const hasNumber = /\d/.test(cleaned);
-        const hasLocation = isLocation(cleaned);
-        const hasModifierWord = hasModifier(cleaned);
-        const hasMaterialSpecWord = hasMaterialSpec(cleaned);
-        
-        log(`Auto detect JASA: "${pageName}" → remaining: "${cleaned}", words: ${wordCount}`, 'DEBUG');
-        
-        if (wordCount <= 1 && !hasNumber && !hasLocation && !hasModifierWord && !hasMaterialSpecWord) {
-            log(`MM detected (auto): "${pageName}" → remaining words: ${wordCount}`, 'SUCCESS');
-            return 'money-master';
-        }
-        
-        log(`MP detected (auto): "${pageName}" → remaining words: ${wordCount}`, 'INFO');
-        return 'money-page';
-    }
-
-    // ============================================================
-    // 17. VARIANT DETECTION PER ENTITY (SINKRON DENGAN PLD v22.25)
-    // ============================================================
-    
-    function isVariantPage(pageName, currentEntityType) {
-        const lowerName = pageName.toLowerCase();
-        
-        // Cek technical specs dulu
-        for (const spec of TECHNICAL_SPECS) {
-            if (lowerName.includes(spec)) {
-                return false;
-            }
-        }
-        
-        // Cek price words
-        const PRICE_WORDS = ['harga', 'biaya', 'tarif', 'ongkos'];
-        if (PRICE_WORDS.some(w => lowerName.includes(w))) {
-            return false;
-        }
-        
-        // Cek location words
-        if (isLocation(lowerName)) {
-            return false;
-        }
-        
-        // PRODUK/MATERIAL Variant
-        if (currentEntityType === 'PRODUK_KONSTRUKSI' || currentEntityType === 'MATERIAL_KONSTRUKSI') {
-            for (const kw of VARIANT_KEYWORDS_PRODUK) {
-                if (lowerName.includes(kw)) {
-                    log(`Variant detected (PRODUK/MATERIAL): "${pageName}" contains "${kw}"`, 'VARIANT');
-                    return true;
-                }
-            }
-        }
-        
-        // JASA Variant
-        if (currentEntityType === 'JASA_KONSTRUKSI' || currentEntityType === 'JASA_DESAIN') {
-            for (const kw of VARIANT_KEYWORDS_JASA) {
-                if (lowerName.includes(kw)) {
-                    log(`Variant detected (JASA/DESAIN): "${pageName}" contains "${kw}"`, 'VARIANT');
-                    return true;
-                }
-            }
-            return false;
-        }
-        
-        // SEWA Variant
-        if (currentEntityType === 'SEWA_ALAT_KONSTRUKSI') {
-            for (const kw of VARIANT_KEYWORDS_SEWA) {
-                if (lowerName.includes(kw)) {
-                    log(`Variant detected (SEWA): "${pageName}" contains "${kw}"`, 'VARIANT');
-                    return true;
-                }
-            }
-            if (lowerName.includes('spesifikasi') && (lowerName.includes('alat') || lowerName.includes('excavator') || lowerName.includes('dump') || lowerName.includes('alat berat'))) {
-                log(`Variant detected (SEWA): "${pageName}" contains spesifikasi + alat`, 'VARIANT');
-                return true;
-            }
-            return false;
-        }
-        
-        return false;
-    }
-
-    // ============================================================
-    // 18. LOCATION DETECTION (SINKRON DENGAN PLD v22.25)
-    // ============================================================
-
-    function isLocation(text) {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        for (const city of LOCATION_WORDS) {
-            if (new RegExp(`\\b${city.replace(/\s+/g, '\\s+')}\\b`, 'i').test(lower)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    // ============================================================
-    // 19. SPECIFIC PRODUCT
-    // ============================================================
-
-    function isSpecificProduct(text) {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        for (const mod of SPECIFIC_MODIFIERS) {
-            if (lower.includes(mod)) return true;
-        }
-        return /\d/.test(lower);
-    }
-
-    // ============================================================
-    // 20. SUB VARIANT
-    // ============================================================
-
-    function isSubVariant(text) {
-        if (!text) return false;
-        let score = 0;
-        const lower = text.toLowerCase();
-        if ((lower.match(/\d+\s*(m|mm|cm|meter|kg|ton|inch|inci)/gi) || []).length >= 1) score += 2;
-        if ((lower.match(/\d+x\d+/gi) || []).length >= 1) score += 2;
-        if ((lower.match(/\d+(?:\.\d+)?\s*(?:cm|mm|m|meter)\s*(?:x|×)\s*\d+(?:\.\d+)?\s*(?:cm|mm|m|meter)/gi) || []).length >= 1) score += 3;
-        const uniqueNumbers = (text.match(/\d+/g) || []).filter((v, i, a) => a.indexOf(v) === i);
-        if (uniqueNumbers.length >= 2) score += 1;
-        if (/\bukuran\s+\d+/.test(lower)) score += 2;
-        if (/\bdimensi\s+\d+/.test(lower)) score += 2;
-        if (/\b(tebal|panjang|lebar|tinggi|dalam|diameter)\s+\d+/.test(lower)) score += 2;
-        return score >= 2;
-    }
-
-    // ============================================================
-    // 21. ENTITY PILLAR EXACT MATCH
-    // ============================================================
-
-    function isEntityPillarExactMatch(pageName) {
-        const cleanName = cleanText(pageName.toLowerCase());
-        const valid = ENTITY_PILLAR_NAMES[entityType] || [];
-        return valid.includes(cleanName);
-    }
-
-    // ============================================================
-    // 22. JASA KEYWORDS
-    // ============================================================
-
-    const JASA_KEYWORDS_PATTERN = 
-        /\b(jasa|kontraktor|tukang|borongan|renovasi|pasang|bangun|perbaikan|instalasi|proyek|cor|gali|urug|angkut|desain|interior|eksterior|arsitektur|gedung|rumah|ruko|kantor|apartemen)\b/i;
-
-    // ============================================================
-    // 23. PAGE TYPE DETECTION (FIX v12.2 - SINKRON DENGAN PLD)
-    // ============================================================
-
-    function detectPageTypeFallback(pageName, isHome = false) {
-        const lowerName = cleanText(pageName.toLowerCase());
-
-        if (isHome || lowerName === 'home' || lowerName === 'beranda') return 'home';
-        
-        // 🔥 FIX v12.0: PILLAR hanya nama yang sudah ditentukan
-        if (isEntityPillarExactMatch(lowerName)) {
-            log(`PILLAR detected (exact match): "${pageName}"`, 'HIERARCHY');
-            return 'pillar';
-        }
-        
-        // 🔥 FIX v12.0: Cek apakah ini PILLAR berdasarkan ENTITY_PILLAR_NAMES lain
-        for (const [entity, names] of Object.entries(ENTITY_PILLAR_NAMES)) {
-            if (names.some(name => lowerName === name)) {
-                log(`PILLAR detected (other entity): "${pageName}" → ${entity}`, 'HIERARCHY');
-                return 'pillar';
-            }
-        }
-        
-        // 🔥 FIX v12.0: SUB-VARIANT
-        if (isSubVariant(lowerName)) {
-            log(`SUB-VARIANT detected: "${pageName}"`, 'HIERARCHY');
-            return 'sub-variant';
-        }
-
-        // 🔥 FIX v12.0: VARIANT
-        if (isVariantPage(lowerName, entityType)) {
-            log(`VARIANT detected: "${pageName}"`, 'HIERARCHY');
-            return 'variant';
-        }
-
-        // 🔥 FIX v12.0: SUB-PILLAR-1 (perbandingan)
-        for (const kw of SP1_KEYWORDS) {
-            if (lowerName.includes(kw)) {
-                log(`SUB-PILLAR-1 detected: "${pageName}"`, 'HIERARCHY');
-                return 'sub-pillar-tipe-1';
-            }
-        }
-        
-        // 🔥 FIX v12.0: SUB-PILLAR-2 (daftar/jenis)
-        for (const kw of SP2_KEYWORDS) {
-            if (lowerName.includes(kw)) {
-                log(`SUB-PILLAR-2 detected: "${pageName}"`, 'HIERARCHY');
-                return 'sub-pillar-tipe-2';
-            }
-        }
-
-        // 🔥 FIX v12.0: MONEY CHILD (lokasi)
-        if (isLocation(lowerName)) {
-            log(`MONEY-CHILD detected (location): "${pageName}"`, 'HIERARCHY');
-            return 'money-child';
-        }
-
-        // 🔥 FIX v12.0: MONEY PAGE (harga)
-        const HAS_PRICE_WORD = /\b(harga|biaya|tarif)\b/i.test(lowerName);
-        if (HAS_PRICE_WORD) {
-            const cleaned = lowerName.replace(/\b(harga|biaya|tarif)\b/gi, '').trim();
-            const words = cleaned.split(/\s+/).filter(Boolean);
-            const specific = isSpecificProduct(cleaned);
-            if (words.length <= 2 && !specific && !isLocation(cleaned)) {
-                log(`MONEY-MASTER detected (price + short): "${pageName}"`, 'HIERARCHY');
-                return 'money-master';
-            }
-            log(`MONEY-PAGE detected (price): "${pageName}"`, 'HIERARCHY');
-            return 'money-page';
-        }
-
-        // 🔥 FIX v12.0: JASA Auto Detect
-        const HAS_JASA_WORD = JASA_KEYWORDS_PATTERN.test(lowerName);
-        if ((isJasaEntity() || isDesainEntity()) && HAS_JASA_WORD) {
-            const result = detectJasaLevelAuto(lowerName);
-            log(`JASA auto detect: "${pageName}" → ${result}`, 'HIERARCHY');
-            return result;
-        }
-
-        // 🔥 FIX v12.0: SEWA Auto Detect
-        if (isSewaEntity()) {
-            const HAS_SEWA_WORD = /\b(sewa|rental)\b/i.test(lowerName);
-            if (HAS_SEWA_WORD) {
-                const cleaned = lowerName.replace(/\b(sewa|rental)\b/gi, '').trim();
-                const words = cleaned.split(/\s+/).filter(Boolean);
-                const specific = isSpecificProduct(cleaned);
-                if (words.length <= 2 && !specific && !isLocation(cleaned)) {
-                    log(`MONEY-MASTER detected (sewa + short): "${pageName}"`, 'HIERARCHY');
-                    return 'money-master';
-                }
-                log(`MONEY-PAGE detected (sewa): "${pageName}"`, 'HIERARCHY');
-                return 'money-page';
-            }
-        }
-
-        // ============================================================
-        // 🔥 FIX v12.2: PRODUK/MATERIAL - SINKRON DENGAN PLD v22.25
-        // ============================================================
-        
-        if (isProdukEntity() || isMaterialEntity()) {
-            // Step 1: Filter kata-kata
-            let words = lowerName.split(/\s+/).filter(w => w.length > 2);
-            
-            // Step 2: Filter stopwords
-            words = words.filter(w => !STOPWORDS.has(w));
-            
-            // Step 3: Filter lokasi
-            const hasLocation = words.some(w => isLocation(w));
-            if (hasLocation) {
-                log(`MONEY-CHILD detected (location in product): "${pageName}"`, 'HIERARCHY');
-                return 'money-child';
-            }
-            words = words.filter(w => !isLocation(w));
-            
-            // Step 4: 🔥 COMMERCIAL INTENT OVERRIDE (SINKRON DENGAN PLD)
-            const hasCommercialIntent = COMMERCIAL_WORDS.some(w => lowerName.startsWith(w));
-            
-            if (hasCommercialIntent) {
-                // Hapus kata komersial
-                let coreText = lowerName;
-                for (const cw of COMMERCIAL_WORDS) {
-                    coreText = coreText.replace(new RegExp(`^${cw}\\s+`), '');
-                }
-                const coreWords = coreText.split(/\s+/).filter(w => w.length > 2);
-                const filteredCore = coreWords.filter(w => 
-                    !STOPWORDS.has(w) && !isLocation(w)
-                );
-                
-                log(`COMMERCIAL INTENT: "${pageName}" → core: "${filteredCore.join(' ')}" (${filteredCore.length} words)`, 'COMMERCIAL');
-                
-                if (filteredCore.length <= 2 && !isSpecificProduct(coreText)) {
-                    log(`MONEY-MASTER detected (commercial override): "${pageName}"`, 'HIERARCHY');
-                    return 'money-master';
-                }
-            }
-            
-            // Step 5: Deteksi normal
-            const wordCount = words.length;
-            const specific = /\d/.test(lowerName) || isSpecificProduct(lowerName);
-            
-            log(`PRODUCT DETECTION: "${pageName}" → ${wordCount} words, specific: ${specific}`, 'DEBUG');
-            
-            if (wordCount <= 2 && !specific) {
-                log(`MONEY-MASTER detected (produk): "${pageName}"`, 'HIERARCHY');
-                return 'money-master';
-            }
-            
-            log(`MONEY-PAGE detected (produk): "${pageName}"`, 'HIERARCHY');
-            return 'money-page';
-        }
-
-        // 🔥 FIX v12.0: DEFAULT - MONEY_MASTER
-        log(`DEFAULT MONEY-MASTER: "${pageName}"`, 'HIERARCHY');
-        return 'money-master';
-    }
-
-    // ============================================================
-    // 24. 🔥 FIX v12.3.2: AUTO DETECT PARENT - AMBIL POSISI TERAKHIR
-    // ============================================================
-
-    function findNearestParentFromItems(items, currentPageName) {
-        if (!items || items.length === 0) return null;
-
-        const currentLower = currentPageName.toLowerCase();
-
-        // 🔥 FIX v12.3.2: Ambil parent terakhir/terdekat
-        // Urutkan items berdasarkan posisi terakhir (descending)
-        // Ambil item pertama yang bukan current page
-        // TANPA FILTER LEVEL DAN SCORE
-        
-        // Copy items dan reverse agar item terakhir jadi pertama
-        const reversedItems = [...items].reverse();
-        
-        for (const item of reversedItems) {
-            const itemName = item.name?.toLowerCase() || '';
-            if (itemName !== currentLower) {
-                log(`✅ PARENT TERDEKAT: "${item.name}" (level ${item.level || 'unknown'}) - diambil dari posisi terakhir`, 'PARENT_FIX');
-                return item;
-            }
-        }
-
-        // Jika tidak ada (hanya current page), coba cari entity pillar
-        const entityPillarNames = ENTITY_PILLAR_NAMES[entityType] || [];
-        if (entityPillarNames.length > 0) {
-            const pillarName = entityPillarNames[0];
-            const pillarItem = items.find(item => 
-                item.name?.toLowerCase() === pillarName
-            );
-            if (pillarItem) {
-                log(`⚠️ FALLBACK: Entity pillar "${pillarName}" sebagai parent`, 'WARN');
-                return pillarItem;
-            }
-        }
-
-        log('⚠️ No parent found', 'WARN');
-        return null;
-    }
-
-    // ============================================================
-    // 25. INJECT CURRENT PAGE & PARENT
-    // ============================================================
-
-    function injectCurrentPageAndParent(breadcrumbItems, currentPageName, currentFullUrl) {
-        let items = [...breadcrumbItems];
-        const currentLower = currentPageName.toLowerCase();
-
-        const hasCurrent = items.some(item => 
-            item.name?.toLowerCase() === currentLower
-        );
-
-        if (!hasCurrent) {
-            items.push({
-                name: currentPageName,
-                url: currentFullUrl
-            });
-        }
-
-        // 🔥 FIX v12.3.2: SELALU cari parent, TANPA SKIP
-        const detectedParent = findNearestParentFromItems(items, currentPageName);
-
-        if (detectedParent) {
-            const hasParent = items.some(item => 
-                item.name?.toLowerCase() === detectedParent.name?.toLowerCase()
-            );
-
-            if (!hasParent) {
-                log(`✅ AUTO-INJECTED PARENT: "${detectedParent.name}" → "${currentPageName}"`, 'SUCCESS');
-                const currentIndex = items.findIndex(item => 
-                    item.name?.toLowerCase() === currentLower
-                );
-                if (currentIndex > -1) {
-                    items.splice(currentIndex, 0, detectedParent);
-                } else {
-                    items.push(detectedParent);
-                }
-            } else {
-                log(`Parent already exists: "${detectedParent.name}"`, 'INFO');
-            }
-        } else {
-            // 🔥 FIX v12.3.2: Fallback ke entity pillar jika tidak ada parent sama sekali
-            const entityPillarNames = ENTITY_PILLAR_NAMES[entityType] || [];
-            if (entityPillarNames.length > 0) {
-                const pillarName = entityPillarNames[0];
-                const pillarExists = items.some(item => 
-                    item.name?.toLowerCase() === pillarName
-                );
-                if (!pillarExists) {
-                    items.unshift({
-                        name: pillarName,
-                        url: `${CONFIG.DOMAIN}/p/${slugify(pillarName)}.html`
-                    });
-                    log(`✅ INJECTED ENTITY PILLAR: "${pillarName}"`, 'SUCCESS');
-                }
-            }
-        }
-
-        return items;
-    }
-
-    // ============================================================
-    // 26. FORCE PARENT INJECTION (FIX v12.3.2)
-    // ============================================================
-
-    function forceInjectDirectParent(lineageLevels, allLevels, currentPageTitle, entityType, breadcrumbItems) {
-        const currentLower = currentPageTitle.toLowerCase();
-        let modifiedLineage = [...lineageLevels];
-        const words = currentLower.split(/\s+/);
-
-        // 🔥 FIX v12.3.2: Cari parent terdekat - AMBIL POSISI TERAKHIR
-        const autoParent = findNearestParentFromItems(breadcrumbItems, currentPageTitle);
-        if (autoParent && !modifiedLineage.some(l => l.name?.toLowerCase() === autoParent.name?.toLowerCase())) {
-            const parentFromAll = allLevels.find(item => 
-                item.name?.toLowerCase() === autoParent.name?.toLowerCase()
-            );
-            if (parentFromAll) {
-                log(`✅ AUTO PARENT FROM ITEMS: "${parentFromAll.name}" (level ${parentFromAll.level})`, 'SUCCESS');
-                modifiedLineage.push(parentFromAll);
-            } else {
-                // Buat parent baru
-                const newParent = {
-                    name: autoParent.name,
-                    url: autoParent.url || `${CONFIG.DOMAIN}/p/${slugify(autoParent.name)}.html`,
-                    type: detectPageTypeFallback(autoParent.name),
-                    level: TYPE_LEVEL_MAP[detectPageTypeFallback(autoParent.name)] || 99,
-                    position: modifiedLineage.length + 1
-                };
-                log(`✅ AUTO PARENT (new): "${newParent.name}" (level ${newParent.level})`, 'SUCCESS');
-                modifiedLineage.push(newParent);
-            }
-        }
-
-        // 🔥 FIX v12.3.2: Coba dari kata pertama (tanpa filter)
-        if (modifiedLineage.length === lineageLevels.length && words.length >= 2) {
-            for (let i = words.length - 1; i >= 1; i--) {
-                const potentialParent = words.slice(0, i).join(' ');
-                const parentItem = allLevels.find(item => 
-                    item.name?.toLowerCase() === potentialParent
-                );
-                if (parentItem && !modifiedLineage.some(l => l.name?.toLowerCase() === parentItem.name?.toLowerCase())) {
-                    log(`✅ PATTERN PARENT: "${parentItem.name}" (level ${parentItem.level})`, 'SUCCESS');
-                    modifiedLineage.push(parentItem);
-                    break;
-                }
-            }
-        }
-
-        // 🔥 FIX v12.3.2: Coba dari semantic groups
-        if (modifiedLineage.length === lineageLevels.length) {
-            const semanticKeywords = {
-                'pagar': ['pagar', 'pagar panel', 'pagar beton', 'panel beton'],
-                'pondasi': ['pondasi', 'tiang', 'pile', 'bored pile', 'strauss pile'],
-                'cor': ['cor', 'readymix', 'ready mix', 'beton cor'],
-                'bangunan': ['bangunan', 'gedung', 'rumah', 'ruko', 'kantor'],
-                'interior': ['interior', 'dalam', 'ruangan', 'finishing'],
-                'eksterior': ['eksterior', 'luar', 'fasad', 'taman']
-            };
-            
-            for (const [parentKeyword, childKeywords] of Object.entries(semanticKeywords)) {
-                const isChildMatch = childKeywords.some(kw => currentLower.includes(kw));
-                if (isChildMatch) {
-                    const parentItem = allLevels.find(item => 
-                        item.name?.toLowerCase().includes(parentKeyword)
-                    );
-                    if (parentItem && !modifiedLineage.some(l => l.name?.toLowerCase() === parentItem.name?.toLowerCase())) {
-                        log(`✅ SEMANTIC PARENT: "${parentItem.name}" (level ${parentItem.level})`, 'SUCCESS');
-                        modifiedLineage.push(parentItem);
-                        break;
-                    }
-                }
-            }
-        }
-
-        // 🔥 FIX v12.3.2: LAST RESORT - Entity pillar
-        if (modifiedLineage.length === 0 || modifiedLineage.every(l => l.name?.toLowerCase() === currentLower)) {
-            const entityPillarNames = ENTITY_PILLAR_NAMES[entityType] || [];
-            if (entityPillarNames.length > 0) {
-                const pillarName = entityPillarNames[0];
-                const pillarItem = allLevels.find(item => 
-                    item.name?.toLowerCase() === pillarName
-                );
-                if (pillarItem && !modifiedLineage.some(l => l.name?.toLowerCase() === pillarName)) {
-                    log(`✅ ENTITY PILLAR (fallback): "${pillarName}" (level ${pillarItem.level})`, 'WARN');
-                    modifiedLineage.push(pillarItem);
-                }
-            }
-        }
-        
-        return modifiedLineage;
-    }
-
-    // ============================================================
-    // 27. HIERARCHY VALIDATOR (FIX v12.3.2 - TIDAK HAPUS GAP)
-    // ============================================================
-    
-    function validateAndFixHierarchy(lineage) {
-        if (lineage.length <= 1) return lineage;
-        
-        const fixed = [];
-        const sorted = [...lineage].sort((a, b) => {
-            const levelA = a.level || TYPE_LEVEL_MAP[detectPageTypeFallback(a.name)] || 99;
-            const levelB = b.level || TYPE_LEVEL_MAP[detectPageTypeFallback(b.name)] || 99;
-            return levelA - levelB;
-        });
-        
-        const uniqueNames = new Set();
-        for (const item of sorted) {
-            const key = item.name?.toLowerCase() || '';
-            if (!uniqueNames.has(key)) {
-                uniqueNames.add(key);
-                if (!item.level) {
-                    item.level = TYPE_LEVEL_MAP[detectPageTypeFallback(item.name)] || 99;
-                }
-                fixed.push(item);
-            }
-        }
-        
-        // 🔥 FIX v12.3.2: JANGAN HAPUS ITEM KARENA GAP
-        // Tetap pertahankan, hanya log warning
-        for (let i = 1; i < fixed.length; i++) {
-            const prevLevel = fixed[i-1].level || TYPE_LEVEL_MAP[detectPageTypeFallback(fixed[i-1].name)] || 99;
-            const currLevel = fixed[i].level || TYPE_LEVEL_MAP[detectPageTypeFallback(fixed[i].name)] || 99;
-            
-            if (currLevel - prevLevel > 2) {
-                log(`⚠️ Hierarchy gap detected: ${fixed[i-1].name}(${prevLevel}) → ${fixed[i].name}(${currLevel}) - KEEPING`, 'WARN');
-            }
-        }
-        
-        return fixed;
-    }
-
-    // ============================================================
-    // 28. SIMILARITY CALCULATION
-    // ============================================================
-
-    function calculateSimilarity(text1, text2) {
-        const words1 = text1.toLowerCase().split(/\s+/);
-        const words2 = text2.toLowerCase().split(/\s+/);
-        
-        if (words1.length === 0 || words2.length === 0) return 0;
-        
-        const commonWords = words1.filter(w => words2.includes(w));
-        const union = new Set([...words1, ...words2]);
-        const similarity = commonWords.length / union.size;
-        
-        return similarity;
-    }
-
-    // ============================================================
-    // 29. GET CURRENT PAGE INFO
-    // ============================================================
-
-    const currentFullUrl = currentUrl.startsWith('http')
-        ? currentUrl
-        : CONFIG.DOMAIN + currentUrl;
-
-    let currentPageTitle = getCleanPageNameFromUrl(currentFullUrl);
-
-    if (!currentPageTitle) {
-        currentPageTitle = 'Halaman';
-    }
-
-    // ============================================================
-    // 30. GET PAGE LEVEL & ENTITY FROM PLD
-    // ============================================================
-
-    const pldLevel = getPageLevelFromPLD();
-    const pldEntity = getEntityTypeFromPLD();
-    
-    let finalPageLevel = pldLevel;
-    let finalEntityType = entityType;
-    
-    if (pldEntity && VALID_ENTITY_TYPES.includes(pldEntity)) {
-        finalEntityType = pldEntity;
-        log(`Entity from PLD: ${pldEntity} (override from ${entityType})`, 'PLD');
-    }
-    
-    entityType = finalEntityType;
-    
-    const isPLDSynced = !!pldLevel;
-    const syncStatusText = isPLDSynced ? '✅ SINKRON' : '❌ FALLBACK';
-    log(`PLD Sync Status: ${syncStatusText}`, 'PLD');
-    if (pldLevel) {
-        log(`PLD Level: "${pldLevel}" (${TYPE_LEVEL_MAP[pldLevel]})`, 'PLD');
-    }
-
-    // ============================================================
-    // 31. INJECT CURRENT PAGE & AUTO PARENT
-    // ============================================================
-
-    const enhancedBreadcrumbItems = injectCurrentPageAndParent(
-        breadcrumbItems,
-        currentPageTitle,
-        currentFullUrl
-    );
-
-    // ============================================================
-    // 32. BUILD ALL LEVELS
-    // ============================================================
-
-    const allLevels = [];
-
-    for (let i = 0; i < enhancedBreadcrumbItems.length; i++) {
-        const item = enhancedBreadcrumbItems[i];
-        let name, url;
-
-        if (typeof item === 'object') {
-            name = item.name;
-            url = item.url || null;
-        } else {
-            name = item;
-            url = null;
-        }
-
-        const type = detectPageTypeFallback(name);
-        allLevels.push({
-            name,
-            url,
-            type,
-            level: TYPE_LEVEL_MAP[type] || 99,
-            position: i + 1
-        });
-    }
-
-    // ============================================================
-    // 33. URL FALLBACK
-    // ============================================================
-
-    for (const level of allLevels) {
-        if (!level.url) {
-            let foundUrl = null;
-            if (mappingObj) {
-                for (const [url, title] of Object.entries(mappingObj)) {
-                    if (title === level.name) {
-                        foundUrl = url.startsWith('http') ? url : CONFIG.DOMAIN + url;
-                        break;
-                    }
-                }
-            }
-            if (!foundUrl) {
-                foundUrl = `${CONFIG.DOMAIN}/p/${slugify(level.name)}.html`;
-            }
-            level.url = foundUrl;
-        } else if (!level.url.startsWith('http')) {
-            level.url = CONFIG.DOMAIN + level.url;
-        }
-    }
-
-    // ============================================================
-    // 34. CURRENT PAGE TYPE
-    // ============================================================
-
-    const currentPageType = pldLevel || detectPageTypeFallback(currentPageTitle);
-    log(`Current page: "${currentPageTitle}" → type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`, 'INFO');
-
-    // ============================================================
-    // 35. SELECT BREADCRUMB LEVELS
-    // ============================================================
-
-    const selectedLevels = [];
-
-    selectedLevels.push({
-        name: 'Beranda',
-        url: CONFIG.DOMAIN,
-        type: 'home',
-        level: 0,
-        position: 1
-    });
-
-    const uniqueByUrl = new Map();
-    for (const item of allLevels) {
-        const key = item.url || item.name;
-        if (!uniqueByUrl.has(key)) {
-            uniqueByUrl.set(key, item);
-        }
-    }
-    const uniqueItems = Array.from(uniqueByUrl.values());
-
-    log('=== ALL LEVELS DEBUG ===', 'DEBUG');
-    for (const level of allLevels) {
-        log(`  ${level.name} → type: ${level.type}, level: ${level.level}`, 'DEBUG');
-    }
-
-    log('Unique items (' + uniqueItems.length + '): ' + uniqueItems.map(i => i.name + '(' + i.level + ')').join(' → '), 'INFO');
-
-    // ============================================================
-    // 36. 🔥 FIX v12.3.2: FIND NEAREST PARENTS - AMBIL POSISI TERAKHIR
-    // ============================================================
-
-    function findNearestParentsByHierarchy() {
-        const lineage = [];
-        const currentPageTitleLower = currentPageTitle.toLowerCase();
-        
-        // 🔥 FIX v12.3.2: Ambil parent terakhir/terdekat dari uniqueItems
-        // Urutkan berdasarkan posisi terakhir (descending)
-        // Ambil semua item yang bukan current page, mulai dari yang terakhir
-        // TANPA FILTER LEVEL DAN SCORE
-        
-        const candidates = uniqueItems.filter(item => 
-            item.name.toLowerCase() !== currentPageTitleLower
-        );
-        
-        if (candidates.length === 0) {
-            log('⚠️ No candidates found', 'WARN');
-            return lineage;
-        }
-        
-        // 🔥 Urutkan berdasarkan posisi descending (terakhir dulu)
-        const sortedCandidates = [...candidates].sort((a, b) => {
-            const posA = a.position || 0;
-            const posB = b.position || 0;
-            return posB - posA; // descending: posisi terbesar dulu
-        });
-        
-        log(`📋 Candidates (sorted by position descending): ` + sortedCandidates.map(i => i.position + ':' + i.name).join(' → '), 'DEBUG');
-        
-        // 🔥 Ambil SEMUA item dengan posisi tertinggi (terakhir)
-        const highestPosition = sortedCandidates.length > 0 ? sortedCandidates[0].position : -1;
-        const topCandidates = sortedCandidates.filter(item => item.position === highestPosition);
-        
-        log(`🎯 Top candidates (position ${highestPosition}): ` + topCandidates.map(i => i.name).join(', '), 'SUCCESS');
-        
-        // 🔥 Tambahkan SEMUA top candidates ke lineage
-        for (const item of topCandidates) {
-            const exists = lineage.some(l => l.name === item.name);
-            if (!exists) {
-                lineage.push(item);
-                log(`🎯 Selected parent: "${item.name}" (position ${item.position}, level ${item.level})`, 'SUCCESS');
-            }
-        }
-        
-        // 🔥 Jika lineage kosong (misal tidak ada item dengan position), ambil yang pertama
-        if (lineage.length === 0 && sortedCandidates.length > 0) {
-            const best = sortedCandidates[0];
-            lineage.push(best);
-            log(`⚠️ FALLBACK: Using "${best.name}" as nearest parent`, 'WARN');
-        }
-        
-        log('Lineage (prioritized): ' + lineage.map(i => i.position + ':' + i.name).join(' → '), 'SUCCESS');
-        
-        return lineage;
-    }
-
-    let lineageLevels = findNearestParentsByHierarchy();
-
-    log('Initial lineage (' + lineageLevels.length + '): ' + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
-
-    lineageLevels = forceInjectDirectParent(
-        lineageLevels, 
-        uniqueItems,
-        currentPageTitle, 
-        entityType,
-        enhancedBreadcrumbItems
-    );
-
-    log('After force injection (' + lineageLevels.length + '): ' + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
-
-    const cleanLineage = [];
-    const usedLineage = new Set();
-
-    for (const item of lineageLevels) {
-        const key = item.name.toLowerCase();
-        if (usedLineage.has(key)) continue;
-        usedLineage.add(key);
-        cleanLineage.push(item);
-    }
-
-    const validatedLineage = validateAndFixHierarchy(cleanLineage);
-
-    validatedLineage.sort((a, b) => {
-        const idxA = HIERARCHY_ORDER.indexOf(a.type);
-        const idxB = HIERARCHY_ORDER.indexOf(b.type);
-        if (idxA !== idxB) return idxA - idxB;
-        return a.position - b.position;
-    });
-
-    // ========================================================
-    // 37. AMBIL SEMUA PARENT DENGAN POSISI TERTINGGI
-    // ========================================================
-    
-    let finalParents = [];
-
-    const parentOnly = validatedLineage.filter(item => 
-        item.name.toLowerCase() !== currentPageTitle.toLowerCase()
-    );
-
-    log(`Parent candidates (${parentOnly.length}): ` + parentOnly.map(i => i.name + '(' + i.level + ')').join(', '), 'DEBUG');
-
-    if (parentOnly.length > 0) {
-        // 🔥 FIX v12.3.2: Ambil parent dengan posisi tertinggi (terakhir)
-        const highestPosition = Math.max(...parentOnly.map(i => i.position || 0));
-        finalParents = parentOnly.filter(item => item.position === highestPosition);
-        finalParents.sort((a, b) => a.position - b.position);
-        
-        log(`✅ PARENT FOUND: ${finalParents.length} parent(s) at position ${highestPosition}: ` + finalParents.map(i => i.name).join(', '), 'SUCCESS');
-    } else {
-        log('⚠️ No parent found (only current page)', 'WARN');
-    }
-
-    if (finalParents.length === 0) {
-        const entityPillarNames = ENTITY_PILLAR_NAMES[entityType] || [];
-        if (entityPillarNames.length > 0) {
-            const pillarName = entityPillarNames[0];
-            const pillarItem = uniqueItems.find(item => 
-                item.name.toLowerCase() === pillarName
-            );
-            if (pillarItem) {
-                finalParents.push(pillarItem);
-                log(`✅ ENTITY PILLAR as parent: "${pillarName}"`, 'SUCCESS');
-            }
-        }
-    }
-
-    for (const item of finalParents) {
-        const exists = selectedLevels.some(l => l.name.toLowerCase() === item.name.toLowerCase());
-        if (!exists) {
-            selectedLevels.push(item);
-            log(`👪 Adding parent: "${item.name}" (level ${item.level}, position ${item.position})`, 'PARENT');
-        }
-    }
-
-    const hasCurrentAlready = selectedLevels.some(item =>
-        item.name.toLowerCase() === currentPageTitle.toLowerCase()
-    );
-
-    if (!hasCurrentAlready) {
-        selectedLevels.push({
-            name: currentPageTitle,
-            url: currentFullUrl,
-            type: currentPageType,
-            level: pldLevel ? TYPE_LEVEL_MAP[pldLevel] : (TYPE_LEVEL_MAP[currentPageType] || 99),
-            isCurrent: true,
-            pldLevel: pldLevel
-        });
-    }
-
-    // ============================================================
-    // 38. FINAL UNIQUE LEVELS
-    // ============================================================
-
-    const uniqueLevels = [];
-    const usedNames = new Set();
-
-    for (const item of selectedLevels) {
-        const key = item.name.toLowerCase();
-        if (usedNames.has(key)) continue;
-        usedNames.add(key);
-        uniqueLevels.push(item);
-    }
-
-    uniqueLevels.forEach((item, index) => {
-        item.position = index + 1;
-    });
-
-    log('Final breadcrumb (' + uniqueLevels.length + ' levels): ' + uniqueLevels.map(i => i.name + '(' + i.level + ')').join(' › '), 'SUCCESS');
-
-    // ============================================================
-    // 39. GENERATE HTML
-    // ============================================================
-
-    let breadcrumbHtml = `<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">\n`;
-
-    for (let i = 0; i < uniqueLevels.length; i++) {
-        const item = uniqueLevels[i];
-        const isLast = i === uniqueLevels.length - 1;
-
-        if (!isLast) {
-            breadcrumbHtml +=
-                `<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-<a href="${item.url}" itemprop="item" title="${item.name}">
-<span itemprop="name">${item.name}</span>
-</a>
-<meta itemprop="position" content="${item.position}" />
-</span>
-<span class="separator"> › </span>\n`;
-        } else {
-            breadcrumbHtml +=
-                `<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-<span itemprop="name">${item.name}</span>
-<meta itemprop="position" content="${item.position}" />
-</span>\n`;
-        }
-    }
-
-    breadcrumbHtml += `</div>\n`;
-
-    // ============================================================
-    // 40. JSON LD
-    // ============================================================
-
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": uniqueLevels.map((item, index) => ({
-            "@type": "ListItem",
-            "position": index + 1,
-            "name": item.name,
-            "item": item.url
-        }))
-    };
-
-    // ============================================================
-    // 41. REMOVE OLD
-    // ============================================================
-
-    document.querySelectorAll('.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"]')
-        .forEach(el => el.remove());
-    document.querySelectorAll('script[data-breadcrumb="true"]')
-        .forEach(el => el.remove());
-
-    // ============================================================
-    // 42. TARGET ELEMENT
-    // ============================================================
-
-    const targetElement = document.querySelector('main, article, .content, #main-content, .post-content');
-
-    if (targetElement) {
-        targetElement.insertAdjacentHTML('afterbegin', breadcrumbHtml);
-    } else {
-        document.body.insertAdjacentHTML('afterbegin', breadcrumbHtml);
-    }
-
-    // ============================================================
-    // 43. INJECT JSON LD
-    // ============================================================
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.setAttribute('data-breadcrumb', 'true');
-    script.textContent = JSON.stringify(jsonLd, null, 2);
-    document.head.appendChild(script);
-
-    // ============================================================
-    // 44. LOG SUMMARY (FIX: perbaiki semua kutip)
-    // ============================================================
-
-    const syncStatus = isPLDSynced ? '✅ SINKRON' : '❌ FALLBACK';
-    const commercialDetected = COMMERCIAL_WORDS.some(w => currentPageTitle.startsWith(w));
-
-    console.log('📊 BREADCRUMB GENERATION SUMMARY (v12.3.2):');
-    console.log(`   Page: "${currentPageTitle}"`);
-    console.log(`   URL: "${currentFullUrl}"`);
-    console.log(`   Type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`);
-    console.log(`   Entity: ${entityType}`);
-    console.log(`   🔄 PLD Sync: ${syncStatus}`);
-    if (pldLevel) {
-        console.log(`   📌 PLD Level: ${pldLevel} (${TYPE_LEVEL_MAP[pldLevel]})`);
-    }
-    if (currentPageType === 'variant') {
-        console.log(`   🔬 Variant detected for entity: ${entityType}`);
-    }
-    if (currentPageType === 'money-child') {
-        console.log(`   📍 Money Child with location detected`);
-    }
-    if (commercialDetected) {
-        console.log(`   🛒 Commercial Intent detected`);
-    }
-    console.log(`   🔧 FIX v12.3.2: Parent WAJIB ambil posisi terakhir`);
-    console.log(`   👪 Parents found: ${finalParents.length} parents`);
-    console.log(`   📊 Total breadcrumb levels: ${uniqueLevels.length}`);
-    console.log(`   🏛️ Hierarchy: ${uniqueLevels.map(i => i.type).join(' → ')}`);
-
-    // ============================================================
-    // 45. RETURN
-    // ============================================================
-
-    return {
-        html: breadcrumbHtml,
-        jsonLd,
-        selectedLevels: uniqueLevels,
-        currentPageType,
-        entityType,
-        version: '12.3.2',
-        parentCount: finalParents.length,
-        parents: finalParents,
-        isVariant: currentPageType === 'variant',
-        isMoneyChild: currentPageType === 'money-child',
-        pldSync: isPLDSynced,
-        pldLevel: pldLevel,
-        pldEntity: pldEntity,
-        hierarchy: uniqueLevels.map(i => i.type),
-        commercialIntent: commercialDetected,
-        parentNoSkip: true,
-        parentByPosition: true // 🔥 FIX v12.3.2: Parent diambil berdasarkan posisi terakhir
-    };
-}
-
-
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasaPerbaikanKons = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
@@ -3008,7 +1506,7 @@ if (!JasaKons || !JasaKonsSub) {
 
 if (urlMappingJasaDesainFromPillarSub2[cleanUrlJasaKons]) {
 	
-	   generateBreadcrumbJasaKonstruksi(
+	   generateBreadcrumbShared(
         urlMappingJasaDesainFromPillarSub2,
         cleanUrlJasaKons,
        [
@@ -3020,7 +1518,7 @@ if (urlMappingJasaDesainFromPillarSub2[cleanUrlJasaKons]) {
 }
 if (urlMappingJasaDesainFromSub2Sub1[cleanUrlJasaKons]) {
 	
-	   generateBreadcrumbJasaKonstruksi(
+	   generateBreadcrumbShared(
         urlMappingJasaDesainFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3032,7 +1530,7 @@ if (urlMappingJasaDesainFromSub2Sub1[cleanUrlJasaKons]) {
 }
 if (urlMappingJasaDesainFromSub1MoneyMaster[cleanUrlJasaKons]) {
 	
-	   generateBreadcrumbJasaKonstruksi(
+	   generateBreadcrumbShared(
         urlMappingJasaDesainFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3045,7 +1543,7 @@ if (urlMappingJasaDesainFromSub1MoneyMaster[cleanUrlJasaKons]) {
 }
 if (urlMappingJasaDesainFromSub1MoneyPage[cleanUrlJasaKons]) {
 	
-	   generateBreadcrumbJasaKonstruksi(
+	   generateBreadcrumbShared(
         urlMappingJasaDesainFromSub1MoneyPage,
         cleanUrlJasaKons,
        [
@@ -3058,7 +1556,7 @@ if (urlMappingJasaDesainFromSub1MoneyPage[cleanUrlJasaKons]) {
 }
 if (urlMappingJasaDesainInteriorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 	
-	   generateBreadcrumbJasaKonstruksi(
+	   generateBreadcrumbShared(
         urlMappingJasaDesainInteriorFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
        [
@@ -3072,7 +1570,7 @@ if (urlMappingJasaDesainInteriorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 }
 if (urlMappingJasaDesainEksteriorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 	
-	   generateBreadcrumbJasaKonstruksi(
+	   generateBreadcrumbShared(
         urlMappingJasaDesainEksteriorFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
        [
@@ -3087,7 +1585,7 @@ if (urlMappingJasaDesainEksteriorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 		
 if (urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons]) {
 	
-	   generateBreadcrumbJasaKonstruksi(
+	   generateBreadcrumbShared(
         urlMappingJasaKonsFromPillarSub2,
         cleanUrlJasaKons,
        [
@@ -3099,7 +1597,7 @@ if (urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons]) {
 }
 	
 if (urlMappingJasaReliefBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaReliefBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3110,7 +1608,7 @@ if (urlMappingJasaReliefBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
 }
 if (urlMappingJasaReliefBridgeFromSub1MoneyMaster[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaReliefBridgeFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3122,7 +1620,7 @@ if (urlMappingJasaReliefBridgeFromSub1MoneyMaster[cleanUrlJasaKons]) {
     );
 }
 if (urlMappingJasaReliefFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaReliefFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
        [
@@ -3135,7 +1633,7 @@ if (urlMappingJasaReliefFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
     );
 }
 if (urlMappingJasaReliefDindingFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaReliefDindingFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
        [
@@ -3149,7 +1647,7 @@ if (urlMappingJasaReliefDindingFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
     );
 }
 if (urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
        [
@@ -3164,7 +1662,7 @@ if (urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 }	
 
 if (urlMappingJasaProfilBetonBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaProfilBetonBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3175,7 +1673,7 @@ if (urlMappingJasaProfilBetonBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
    }
 if (urlMappingJasaProfilBetonFromSub1MoneyMaster[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaProfilBetonFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3187,7 +1685,7 @@ if (urlMappingJasaProfilBetonFromSub1MoneyMaster[cleanUrlJasaKons]) {
     );
    }
 if (urlMappingJasaProfilBetonFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaProfilBetonFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
        [
@@ -3200,7 +1698,7 @@ if (urlMappingJasaProfilBetonFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
     );
    }
 if (urlMappingJasaProfilBetonBangunanFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaProfilBetonBangunanFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
        [
@@ -3214,7 +1712,7 @@ if (urlMappingJasaProfilBetonBangunanFromMoneyPageMoneyPage1[cleanUrlJasaKons]) 
     );
    }
 if (urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2,
         cleanUrlJasaKons,
        [
@@ -3230,7 +1728,7 @@ if (urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
    }
 	
 if (urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
        [
@@ -3244,7 +1742,7 @@ if (urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons])
     );
    }
 if (urlMappingJasaProfilBetonInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaProfilBetonInteriorFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
        [
@@ -3258,7 +1756,7 @@ if (urlMappingJasaProfilBetonInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) 
     );
    }
 if (urlMappingHargaJasaProfilBetonFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingHargaJasaProfilBetonFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
        [
@@ -3274,7 +1772,7 @@ if (urlMappingHargaJasaProfilBetonFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
 
 if (urlMappingJasaEksteriorBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaEksteriorBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3286,7 +1784,7 @@ if (urlMappingJasaEksteriorBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
    }
 if (urlMappingJasaEksteriorFromSub1MoneyMaster[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaEksteriorFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3300,7 +1798,7 @@ if (urlMappingJasaEksteriorFromSub1MoneyMaster[cleanUrlJasaKons]) {
    }
 	
 if (urlMappingJasaInteriorBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaInteriorBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3312,7 +1810,7 @@ if (urlMappingJasaInteriorBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
    }
 if (urlMappingJasaInteriorFromSub1MoneyMaster[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaInteriorFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3326,7 +1824,7 @@ if (urlMappingJasaInteriorFromSub1MoneyMaster[cleanUrlJasaKons]) {
    }
 	
 if (urlMappingJasaKonsultanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaKonsultanBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3338,7 +1836,7 @@ if (urlMappingJasaKonsultanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
    }
 if (urlMappingJasaKonsultanFromSub1MoneyMaster[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaKonsultanFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3350,7 +1848,7 @@ if (urlMappingJasaKonsultanFromSub1MoneyMaster[cleanUrlJasaKons]) {
     );
    }
 if (urlMappingJasaKonsultanFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaKonsultanFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
        [
@@ -3364,7 +1862,7 @@ if (urlMappingJasaKonsultanFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
     );
    }
 if (urlMappingHargaJasaKonsultanFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingHargaJasaKonsultanFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
        [
@@ -3379,7 +1877,7 @@ if (urlMappingHargaJasaKonsultanFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
     );
    }
 if (urlMappingJasaKitchenSetBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaKitchenSetBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3392,7 +1890,7 @@ if (urlMappingJasaKitchenSetBridgeFromSub2Sub1[cleanUrlJasaKons]) {
    }
 
 if (urlMappingJasaPembuatanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaPembuatanBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3404,7 +1902,7 @@ if (urlMappingJasaPembuatanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
    }
 if (urlMappingJasaPasangBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaPasangBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3418,7 +1916,7 @@ if (urlMappingJasaPasangBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 //AWAL JASA KONTRUKSI ALAT
 	
 if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3430,7 +1928,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
    }
 	if (urlMappingJasaAlatKonstruksiFromSub1MoneyMaster[cleanUrlJasaKons]) {
-    generateBreadcrumbJasaKonstruksi(
+    generateBreadcrumbShared(
         urlMappingJasaAlatKonstruksiFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3444,7 +1942,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
    }
    if (urlMappingJasaAlatKonstruksiFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
-    generateBreadcrumbJasaKonstruksi(
+    generateBreadcrumbShared(
         urlMappingJasaAlatKonstruksiFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
        [
@@ -3459,7 +1957,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
    }
 
 	if (urlMappingJasaKonstruksiStrukturBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaKonstruksiStrukturBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3472,7 +1970,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
     }
 	if (urlMappingJasaKonstruksiStrukturFromSub1MoneyMaster[cleanUrlJasaKons]) {
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaKonstruksiStrukturFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3487,7 +1985,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     }
 
 	if (urlMappingJasaStrukturKhususBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaStrukturKhususBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3500,7 +1998,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
     }
 	if (urlMappingJasaStrukturKhususFromSub1MoneyMaster[cleanUrlJasaKons]) {
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaStrukturKhususFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3515,7 +2013,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     }
 
 	if (urlMappingJasaLapanganOlahragaBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaLapanganOlahragaBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3528,7 +2026,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
     }	
 	if (urlMappingJasaLapanganOlahragaFromSub1MoneyMaster[cleanUrlJasaKons]) {
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaLapanganOlahragaFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3541,7 +2039,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
     }
 	if (urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
        [
@@ -3557,7 +2055,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
 	if (urlMappingKonstruksiBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingStrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingKonstruksiBangunanBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3571,7 +2069,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     }
 	if (urlMappingKonstruksiBangunanFromSub1MoneyMaster[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingStrukturBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingKonstruksiBangunanFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3588,7 +2086,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	if (urlMappingRenovasiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingRenovasiBridgeFromSub2Sub1[cleanUrlJasaKons];
 	
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingRenovasiBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3602,7 +2100,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     }
 	if (urlMappingRenovasiFromSub1MoneyMaster[cleanUrlJasaKons]) {
        
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingRenovasiFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3619,7 +2117,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
  	if (urlMappingFinishingBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingFinishingBridgeFromSub2Sub1[cleanUrlJasaKons];
 	
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingFinishingBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3631,7 +2129,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );	
     }
 if (urlMappingFinishingFromSub1MoneyMaster[cleanUrlJasaKons]) {
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingFinishingFromSub1MoneyMaster,
         cleanUrlJasaKons,
         [
@@ -3644,7 +2142,7 @@ if (urlMappingFinishingFromSub1MoneyMaster[cleanUrlJasaKons]) {
     );
     }
 	if (urlMappingJasaFinishingFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaFinishingFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
         [
@@ -3659,7 +2157,7 @@ if (urlMappingFinishingFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
 if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingPerbaikanBangunanBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3673,7 +2171,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     }
 	if (urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingPerawatanPerbaikanBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3688,7 +2186,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
 	if (urlMappingJalanPerkerasanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingJalanPerkerasanBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJalanPerkerasanBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3701,7 +2199,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
     }
 	if (urlMappingJalanPerkerasanFromSub1MoneyMaster[cleanUrlJasaKons]) {
-     	generateBreadcrumbJasaKonstruksi(
+     	generateBreadcrumbShared(
         urlMappingJalanPerkerasanFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3714,7 +2212,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
     }
 	if (urlMappingJasaJalanPerkerasanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
-     	generateBreadcrumbJasaKonstruksi(
+     	generateBreadcrumbShared(
         urlMappingJasaJalanPerkerasanFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
        [
@@ -3730,7 +2228,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
  
 	if (urlMappingJasaPondasiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingJasaPondasiBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaPondasiBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3744,7 +2242,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     }
 	if (urlMappingJasaPondasiFromSub1MoneyMaster[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingJasaPondasiBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaPondasiFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3760,7 +2258,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 
 	if (urlMappingJasaSaluranDrainaseBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingJasaSaluranDrainaseBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaSaluranDrainaseBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3774,7 +2272,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     }
 	if (urlMappingJasaSaluranDrainaseFromSub1MoneyMaster[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingJasaSaluranDrainaseBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaSaluranDrainaseFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3790,7 +2288,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
 	if (urlMappingJasaPematanganLahanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingJasaPematanganLahanBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaPematanganLahanBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3803,7 +2301,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
     }
 	if (urlMappingJasaPematanganLahanFromSub1MoneyMaster[cleanUrlJasaKons]) {
-       	generateBreadcrumbJasaKonstruksi(
+       	generateBreadcrumbShared(
         urlMappingJasaPematanganLahanFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3816,7 +2314,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
     }
     if (urlMappingJasaPematanganLahanFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
-    	generateBreadcrumbJasaKonstruksi(
+    	generateBreadcrumbShared(
         urlMappingJasaPematanganLahanFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
        [
@@ -3832,7 +2330,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 		
 	if (urlMappingJasaUjiTanahBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingJasaJasaUjiTanahBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaUjiTanahBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3846,7 +2344,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     }		
 	if (urlMappingJasaUjiTanahFromSub1MoneyMaster[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingJasaJasaUjiTanahBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaUjiTanahFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3862,7 +2360,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
 	if (urlMappingJasaCuttingBetonBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingJasaCuttingBetonBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaCuttingBetonBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3874,7 +2372,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
 	}	
 	if (urlMappingJasaCuttingBetonFromSub1MoneyMaster[cleanUrlJasaKons]) {
-     	generateBreadcrumbJasaKonstruksi(
+     	generateBreadcrumbShared(
         urlMappingJasaCuttingBetonFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3888,7 +2386,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	}
 	
 	if (urlMappingJasaBongkarBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-      	generateBreadcrumbJasaKonstruksi(
+      	generateBreadcrumbShared(
         urlMappingJasaBongkarBangunanBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3901,7 +2399,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
     }
 	if (urlMappingJasaBongkarBangunanFromSub1MoneyMaster[cleanUrlJasaKons]) {
-      	generateBreadcrumbJasaKonstruksi(
+      	generateBreadcrumbShared(
         urlMappingJasaBongkarBangunanFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3916,7 +2414,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     }
 
 	if (urlMappingJasaBuangPuingBridgeFromSub2Sub1[cleanUrlJasaKons]) {
-      	generateBreadcrumbJasaKonstruksi(
+      	generateBreadcrumbShared(
         urlMappingJasaBuangPuingBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3929,7 +2427,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
     }
 	if (urlMappingJasaBuangPuingFromSub1MoneyMaster[cleanUrlJasaKons]) {
-      	generateBreadcrumbJasaKonstruksi(
+      	generateBreadcrumbShared(
         urlMappingJasaBuangPuingFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -3942,7 +2440,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
     }
 	if (urlMappingJasaBuangPuingFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
-      	generateBreadcrumbJasaKonstruksi(
+      	generateBreadcrumbShared(
         urlMappingJasaBuangPuingFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
        [
@@ -3956,7 +2454,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
     }	
 	if (urlMappingHargaJasaBuangPuingFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
-      	generateBreadcrumbJasaKonstruksi(
+      	generateBreadcrumbShared(
         urlMappingHargaJasaBuangPuingFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
        [
@@ -3974,7 +2472,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
 	if (urlMappingJasaPengeboranBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingJasaPengeboranBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaPengeboranBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -3987,7 +2485,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
     }
 	if (urlMappingJasaPengeboranFromSub1MoneyMaster[cleanUrlJasaKons]) {
-  	generateBreadcrumbJasaKonstruksi(
+  	generateBreadcrumbShared(
         urlMappingJasaPengeboranFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -4002,7 +2500,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
 	if (urlMappingJasaPerkuatanTanahBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingJasaPerkuatanTanahBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaPerkuatanTanahBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -4015,7 +2513,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
     }
 	if (urlMappingJasaPerkuatanTanahFromSub1MoneyMaster[cleanUrlJasaKons]) {
-  	generateBreadcrumbJasaKonstruksi(
+  	generateBreadcrumbShared(
         urlMappingJasaPerkuatanTanahFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -4031,7 +2529,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
 	if (urlMappingJasaPembatasPengamanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingJasaPembatasPengamanBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaPembatasPengamanBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -4043,7 +2541,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
     }
 	if (urlMappingJasaPembatasPengamanFromSub1MoneyMaster[cleanUrlJasaKons]) {
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaPembatasPengamanFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -4056,7 +2554,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
     }
 	if (urlMappingJasaPembatasPengamanFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
-     generateBreadcrumbJasaKonstruksi(
+     generateBreadcrumbShared(
         urlMappingJasaPembatasPengamanFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
         [
@@ -4071,7 +2569,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
 if (urlMappingJasaInstalasiListrikBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaInstalasiListrikBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -4085,7 +2583,7 @@ if (urlMappingJasaInstalasiListrikBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     }
 	if (urlMappingJasaInstalasiListrikFromSub1MoneyMaster[cleanUrlJasaKons]) {
 	
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaInstalasiListrikFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -4101,7 +2599,7 @@ if (urlMappingJasaInstalasiListrikBridgeFromSub2Sub1[cleanUrlJasaKons]) {
   //AWAL JASA KONTRUKSI ALAT
 	//SUB DARI PILLAR SEWA ALAT KONSTRUKSI
 if (urlMappingSewaAlatFromPillarSub2[cleanUrlJasaKons]) {
-	 generateBreadcrumbJasaKonstruksi(
+	 generateBreadcrumbShared(
         urlMappingSewaAlatFromPillarSub2,
         cleanUrlJasaKons,
        [
@@ -4115,7 +2613,7 @@ if (urlMappingSewaAlatFromPillarSub2[cleanUrlJasaKons]) {
 
 if (urlMappingSewaAlatProyekFromSub2Sub1[cleanUrlJasaKons]) {
 
-	   generateBreadcrumbJasaKonstruksi(
+	   generateBreadcrumbShared(
         urlMappingSewaAlatProyekFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -4127,7 +2625,7 @@ if (urlMappingSewaAlatProyekFromSub2Sub1[cleanUrlJasaKons]) {
     );
  }
 if (urlMappingSewaAlatRinganFromSub2Sub1[cleanUrlJasaKons]) {
-   	   generateBreadcrumbJasaKonstruksi(
+   	   generateBreadcrumbShared(
         urlMappingSewaAlatRinganFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -4139,7 +2637,7 @@ if (urlMappingSewaAlatRinganFromSub2Sub1[cleanUrlJasaKons]) {
     );
  }
 	if (urlMappingSewaAlatPendukungFromSub2Sub1[cleanUrlJasaKons]) {
-   	   generateBreadcrumbJasaKonstruksi(
+   	   generateBreadcrumbShared(
         urlMappingSewaAlatPendukungFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -4152,7 +2650,7 @@ if (urlMappingSewaAlatRinganFromSub2Sub1[cleanUrlJasaKons]) {
  }
 if (urlMappingSewaAlatProyekFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
-	   generateBreadcrumbJasaKonstruksi(
+	   generateBreadcrumbShared(
         urlMappingSewaAlatProyekFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -4165,7 +2663,7 @@ if (urlMappingSewaAlatProyekFromSub1MoneyMaster[cleanUrlJasaKons]) {
     );
  }
 if (urlMappingSewaAlatRinganFromSub1MoneyMaster[cleanUrlJasaKons]) {
-    generateBreadcrumbJasaKonstruksi(
+    generateBreadcrumbShared(
         urlMappingSewaAlatRinganFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -4179,7 +2677,7 @@ if (urlMappingSewaAlatRinganFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
 }
 	if (urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
-    generateBreadcrumbJasaKonstruksi(
+    generateBreadcrumbShared(
         urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
        [
@@ -4195,7 +2693,7 @@ if (urlMappingSewaAlatRinganFromSub1MoneyMaster[cleanUrlJasaKons]) {
 }
 	
 if (urlMappingSewaAlatPendukungFromSub1MoneyMaster[cleanUrlJasaKons]) {
-    generateBreadcrumbJasaKonstruksi(
+    generateBreadcrumbShared(
         urlMappingSewaAlatPendukungFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -4210,7 +2708,7 @@ if (urlMappingSewaAlatPendukungFromSub1MoneyMaster[cleanUrlJasaKons]) {
 }
 
 if (urlMappingSewaAlatPendukungFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
-    generateBreadcrumbJasaKonstruksi(
+    generateBreadcrumbShared(
         urlMappingSewaAlatPendukungFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
        [
@@ -4227,7 +2725,7 @@ if (urlMappingSewaAlatPendukungFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 if (urlMappingSewaAlatBeratFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingSewaAlatBeratFromSub2Sub1[cleanUrlJasaKons];
 
-	   generateBreadcrumbJasaKonstruksi(
+	   generateBreadcrumbShared(
         urlMappingSewaAlatBeratFromSub2Sub1,
         cleanUrlJasaKons,
        [
@@ -4242,7 +2740,7 @@ if (urlMappingSewaAlatBeratFromSub2Sub1[cleanUrlJasaKons]) {
 
 if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
   
-	   generateBreadcrumbJasaKonstruksi(
+	   generateBreadcrumbShared(
         urlMappingSewaAlatBeratFromSub1MoneyMaster,
         cleanUrlJasaKons,
        [
@@ -4258,7 +2756,7 @@ if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
 	
   //AKHIR JASA KONTRUKSI ALAT
  if (urlMappingJasaRenovasiFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
-	   generateBreadcrumbJasaKonstruksi(
+	   generateBreadcrumbShared(
         urlMappingJasaRenovasiFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
        [
@@ -4271,7 +2769,7 @@ if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
     );   
 }
  if (urlMappingJasaRenovasiBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
-	   generateBreadcrumbJasaKonstruksi(
+	   generateBreadcrumbShared(
         urlMappingJasaRenovasiBangunanFromMoneyMaster1MoneyPage,
         cleanUrlJasaKons,
        [
@@ -4286,7 +2784,7 @@ if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
 }
 	
 if (urlMappingJasaSaluranDrainaseFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
-	   generateBreadcrumbJasaKonstruksi(
+	   generateBreadcrumbShared(
         urlMappingJasaSaluranDrainaseFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
         [
@@ -4300,7 +2798,7 @@ if (urlMappingJasaSaluranDrainaseFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
     }
 	
    if (urlMappingJasaUjiTanahFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
-       generateBreadcrumbJasaKonstruksi(
+       generateBreadcrumbShared(
         urlMappingJasaUjiTanahFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
         [
@@ -4314,7 +2812,7 @@ if (urlMappingJasaSaluranDrainaseFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
     }
    
 if (urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
-	 generateBreadcrumbJasaKonstruksi(
+	 generateBreadcrumbShared(
         urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
         [
@@ -4327,7 +2825,7 @@ if (urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
     );
  }
   if (urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
-        generateBreadcrumbJasaKonstruksi(
+        generateBreadcrumbShared(
         urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
         [
@@ -4342,7 +2840,7 @@ if (urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 
 if (urlMappingJasaKitchenSetFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaKitchenSetFromSub1MoneyMaster,
         cleanUrlJasaKons,
         [
@@ -4356,7 +2854,7 @@ if (urlMappingJasaKitchenSetFromSub1MoneyMaster[cleanUrlJasaKons]) {
 }
 if (urlMappingJasaKitchenSetFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaKitchenSetFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
         [
@@ -4371,7 +2869,7 @@ if (urlMappingJasaKitchenSetFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 }
 if (urlMappingHargaJasaKitchenSetFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingHargaJasaKitchenSetFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4387,7 +2885,7 @@ if (urlMappingHargaJasaKitchenSetFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
 if (urlMappingJasaPembuatanFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPembuatanFromSub1MoneyMaster,
         cleanUrlJasaKons,
         [
@@ -4401,7 +2899,7 @@ if (urlMappingJasaPembuatanFromSub1MoneyMaster[cleanUrlJasaKons]) {
 }
 if (urlMappingJasaPasangFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangFromSub1MoneyMaster,
         cleanUrlJasaKons,
         [
@@ -4416,7 +2914,7 @@ if (urlMappingJasaPasangFromSub1MoneyMaster[cleanUrlJasaKons]) {
 	
 if (urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
         [
@@ -4431,7 +2929,7 @@ if (urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 }
 if (urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -4446,7 +2944,7 @@ if (urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) 
 }
 if (urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4463,7 +2961,7 @@ if (urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1[cleanUrlJasaKons
 	
 if (urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyMaster2[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyMaster2,
         cleanUrlJasaKons,
         [
@@ -4479,7 +2977,7 @@ if (urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyMaster2[cleanUrlJasaKons
 }
 if (urlMappingJasaPembuatanRumahFromMoneyMaster2MoneyMaster3[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPembuatanRumahFromMoneyMaster2MoneyMaster3,
         cleanUrlJasaKons,
         [
@@ -4497,7 +2995,7 @@ if (urlMappingJasaPembuatanRumahFromMoneyMaster2MoneyMaster3[cleanUrlJasaKons]) 
 	
 	
 if (urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -4513,7 +3011,7 @@ if (urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyPage[cleanUrlJasaKons])
 
 if (urlMappingJasaPasangFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
         [
@@ -4529,7 +3027,7 @@ if (urlMappingJasaPasangFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 
 if (urlMappingJasaPasangGrcFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangGrcFromMoneyMaster1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -4544,7 +3042,7 @@ if (urlMappingJasaPasangGrcFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 }
 if (urlMappingJasaPasangGrcEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangGrcEksteriorFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4559,7 +3057,7 @@ if (urlMappingJasaPasangGrcEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 }
 if (urlMappingJasaPasangDindingGRCEksteriorFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangDindingGRCEksteriorFromMoneyPage1MoneyPage2,
         cleanUrlJasaKons,
         [
@@ -4575,7 +3073,7 @@ if (urlMappingJasaPasangDindingGRCEksteriorFromMoneyPage1MoneyPage2[cleanUrlJasa
 }	
 if (urlMappingJasaPasangGRCFasadFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangGRCFasadFromMoneyPage1MoneyPage2,
         cleanUrlJasaKons,
         [
@@ -4591,7 +3089,7 @@ if (urlMappingJasaPasangGRCFasadFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
 }	
 if (urlMappingJasaPasangPanelGRCDekoratifFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangPanelGRCDekoratifFromMoneyPage1MoneyPage2,
         cleanUrlJasaKons,
         [
@@ -4607,7 +3105,7 @@ if (urlMappingJasaPasangPanelGRCDekoratifFromMoneyPage1MoneyPage2[cleanUrlJasaKo
 }	
 if (urlMappingJasaPasangGrcInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangGrcInteriorFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4622,7 +3120,7 @@ if (urlMappingJasaPasangGrcInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 }	
 if (urlMappingJasaPasangPlafonGRCFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangPlafonGRCFromMoneyPage1MoneyPage2,
         cleanUrlJasaKons,
         [
@@ -4639,7 +3137,7 @@ if (urlMappingJasaPasangPlafonGRCFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
 	
 if (urlMappingJasaPasangKacaFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangKacaFromMoneyMaster1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -4653,7 +3151,7 @@ if (urlMappingJasaPasangKacaFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 }	
 if (urlMappingJasaPasangKacaInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangKacaInteriorFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4668,7 +3166,7 @@ if (urlMappingJasaPasangKacaInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 }
 if (urlMappingJasaPasangPartisiKacaFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangPartisiKacaFromMoneyPage1MoneyPage2,
         cleanUrlJasaKons,
         [
@@ -4684,7 +3182,7 @@ if (urlMappingJasaPasangPartisiKacaFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
 }
 if (urlMappingJasaPasangRailingTanggaKacaFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangRailingTanggaKacaFromMoneyPage1MoneyPage2,
         cleanUrlJasaKons,
         [
@@ -4700,7 +3198,7 @@ if (urlMappingJasaPasangRailingTanggaKacaFromMoneyPage1MoneyPage2[cleanUrlJasaKo
 }	
 if (urlMappingJasaPasangKacaEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangKacaEksteriorFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4716,7 +3214,7 @@ if (urlMappingJasaPasangKacaEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) 
 	
 if (urlMappingJasaPasangBatuFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangBatuFromMoneyMaster1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -4730,7 +3228,7 @@ if (urlMappingJasaPasangBatuFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 }	
 if (urlMappingJasaPasangBatuInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangBatuInteriorFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4745,7 +3243,7 @@ if (urlMappingJasaPasangBatuInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 }		
 if (urlMappingJasaPasangBatuAlamDindingInteriorFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangBatuAlamDindingInteriorFromMoneyPage1MoneyPage2,
         cleanUrlJasaKons,
         [
@@ -4761,7 +3259,7 @@ if (urlMappingJasaPasangBatuAlamDindingInteriorFromMoneyPage1MoneyPage2[cleanUrl
 }
 if (urlMappingJasaPasangBatuEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangBatuEksteriorFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4777,7 +3275,7 @@ if (urlMappingJasaPasangBatuEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) 
 
 if (urlMappingJasaPasangWoodPlankFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangWoodPlankFromMoneyMaster1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -4791,7 +3289,7 @@ if (urlMappingJasaPasangWoodPlankFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 }	
 if (urlMappingJasaPasangWoodPlankEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangWoodPlankEksteriorFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4806,7 +3304,7 @@ if (urlMappingJasaPasangWoodPlankEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKo
 }	
 if (urlMappingJasaPasangWoodPlankInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangWoodPlankInteriorFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4821,7 +3319,7 @@ if (urlMappingJasaPasangWoodPlankInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKon
 }	
 if (urlMappingJasaPasangWoodPlankDindingInteriorFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangWoodPlankDindingInteriorFromMoneyPage1MoneyPage2,
         cleanUrlJasaKons,
         [
@@ -4838,7 +3336,7 @@ if (urlMappingJasaPasangWoodPlankDindingInteriorFromMoneyPage1MoneyPage2[cleanUr
 	
 if (urlMappingJasaPasangHplFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangHplFromMoneyMaster1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -4852,7 +3350,7 @@ if (urlMappingJasaPasangHplFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 }
 if (urlMappingJasaPasangHplEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangHplEksteriorFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4867,7 +3365,7 @@ if (urlMappingJasaPasangHplEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 }	
 if (urlMappingJasaPasangHplInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangHplInteriorFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4882,7 +3380,7 @@ if (urlMappingJasaPasangHplInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 }	
 if (urlMappingJasaPasangHPLDindingInteriorFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangHPLDindingInteriorFromMoneyPage1MoneyPage2,
         cleanUrlJasaKons,
         [
@@ -4898,7 +3396,7 @@ if (urlMappingJasaPasangHPLDindingInteriorFromMoneyPage1MoneyPage2[cleanUrlJasaK
 }	
 if (urlMappingJasaPasangHPLFurnitureFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangHPLFurnitureFromMoneyPage1MoneyPage2,
         cleanUrlJasaKons,
         [
@@ -4915,7 +3413,7 @@ if (urlMappingJasaPasangHPLFurnitureFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) 
 	
 if (urlMappingJasaPasangAcpFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangAcpFromMoneyMaster1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -4930,7 +3428,7 @@ if (urlMappingJasaPasangAcpFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 	
 if (urlMappingJasaPasangACPInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangACPInteriorFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4945,7 +3443,7 @@ if (urlMappingJasaPasangACPInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 }	
 if (urlMappingJasaPasangACPEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangACPEksteriorFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4960,7 +3458,7 @@ if (urlMappingJasaPasangACPEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 }
 if (urlMappingJasaLaserCuttingACPFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaLaserCuttingACPFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4975,7 +3473,7 @@ if (urlMappingJasaLaserCuttingACPFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 }
 if (urlMappingHargaJasaPasangACPFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingHargaJasaPasangACPFromMoneyPageMoneyPage1,
         cleanUrlJasaKons,
         [
@@ -4991,7 +3489,7 @@ if (urlMappingHargaJasaPasangACPFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
 if (urlMappingJasaPasangLantaiFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangLantaiFromMoneyMaster1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -5005,7 +3503,7 @@ if (urlMappingJasaPasangLantaiFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 }
 if (urlMappingJasaPasangDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangDindingFromMoneyMaster1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -5021,7 +3519,7 @@ if (urlMappingJasaPasangDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
 if (urlMappingJasaPasangFurnitureFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingJasaPasangFurnitureFromMoneyMaster1MoneyPage,
         cleanUrlJasaKons,
         [
@@ -5037,7 +3535,7 @@ if (urlMappingJasaPasangFurnitureFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 	
 if (urlMappingInfrastrukturFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbJasaKonstruksi(
+	    generateBreadcrumbShared(
         urlMappingInfrastrukturFromSub1MoneyMaster,
         cleanUrlJasaKons,
         [
@@ -5052,7 +3550,7 @@ if (urlMappingInfrastrukturFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
 if (urlMappingPengeboranFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 	
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingPengeboranFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
         [
@@ -5068,7 +3566,7 @@ if (urlMappingPengeboranFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 	
 	if (urlMappingJasaPerbaikanBangunanFromSub1MoneyMaster[cleanUrlJasaKons]) {
 	
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaPerbaikanBangunanFromSub1MoneyMaster,
         cleanUrlJasaKons,
         [
@@ -5084,7 +3582,7 @@ if (urlMappingPengeboranFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 	
 	if (urlMappingJasaPerbaikanInfrastrukturFromSub1MoneyMaster[cleanUrlJasaKons]) {
 		
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingJasaPerbaikanInfrastrukturFromSub1MoneyMaster,
         cleanUrlJasaKons,
         [
@@ -5098,7 +3596,7 @@ if (urlMappingPengeboranFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
     );
     }
 	if (urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
-	generateBreadcrumbJasaKonstruksi(
+	generateBreadcrumbShared(
         urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
         [
@@ -5111,7 +3609,7 @@ if (urlMappingPengeboranFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
     );
     }
 	if (urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
-		generateBreadcrumbJasaKonstruksi(
+		generateBreadcrumbShared(
         urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
         [
@@ -5224,7 +3722,7 @@ if (urlMappingJasaBorAirSumur[cleanUrlJasaKons]) {
 	
 //JASA INSTALASI LISTRIK
 if (urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
-       	generateBreadcrumbJasaKonstruksi(
+       	generateBreadcrumbShared(
         urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
        [
