@@ -83,6 +83,18 @@ const urlMappingPasangPagarFromMoneyMaster1MoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-rumah.html": "Jasa Pasang Pagar Rumah",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-bangunan.html": "Jasa Pasang Pagar Bangunan"
 };
+//FOKUS HARGA
+const urlMappingHargaPasangPagarFromMoneyMaster1MoneyPage = {
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-dinding-pembatas-bata.html": "Harga Jasa Pasang Dinding Pembatas Bata",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-brc.html": "Harga Jasa Pasang Pagar BRC",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-besi-hollow.html": "Harga Jasa Pasang Pagar Besi Hollow",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-kawat-harmonika.html": "Harga Jasa Pasang Pagar Kawat Harmonika",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-beton-precast.html": "Harga Jasa Pasang Pagar Beton Precast",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-plat-laser.html": "Harga Jasa Pasang Pagar Plat Laser",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-rumah.html": "Harga Jasa Pasang Pagar Rumah",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-bangunan.html": "Harga Jasa Pasang Pagar Bangunan"
+};
 const urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1 = {
 "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-brc.html": "Harga Jasa Pasang Pagar BRC",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc-panel.html": "Jasa Pasang Pagar BRC Panel"
@@ -374,7 +386,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPembuatanPagarFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1,
 		//urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1,
-		urlMappingPasangPagarFromMoneyMaster1MoneyPage
+		urlMappingPasangPagarFromMoneyMaster1MoneyPage,
+		urlMappingHargaPasangPagarFromMoneyMaster1MoneyPage
     );
 
     // --- validasi URL terdaftar ---
@@ -414,6 +427,19 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
             { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }	
+    if (urlMappingHargaPasangPagarFromMoneyMaster1MoneyPage[cleanUrlJasaPembatasKons]) {
+       generateBreadcrumbShared(
+        urlMappingHargaPasangPagarFromMoneyMaster1MoneyPage,
+        cleanUrlJasaPembatasKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Harga Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar.html' }
         ],
         'JASA_KONSTRUKSI'
     );
