@@ -663,7 +663,7 @@ const urlMappingJasaKitchenSetFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-kitchen-set.html": "Jasa Kitchen Set"
 };
 const urlMappingHargaJasaKitchenSetFromSub1MoneyMaster = {
-		"https://www.betonjayareadymix.com/p/harga-jasa-kitchen-set.html": "Harga Jasa Kitchen Set",
+		"https://www.betonjayareadymix.com/p/harga-jasa-kitchen-set.html": "Harga Jasa Kitchen Set"
 };
 
 const urlMappingJasaKitchenSetFromMoneyMasterMoneyPage = {
