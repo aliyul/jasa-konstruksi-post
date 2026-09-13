@@ -410,7 +410,9 @@ const urlMappingJasaPengeboranBridgeFromSub2Sub1 = {
 const urlMappingJasaPengeboranFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-pengeboran.html": "Jasa Pengeboran"  
 };
-
+const urlMappingHargaJasaPengeboranFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-pengeboran.html": "Harga Jasa Pengeboran"  
+};
 const urlMappingJasaPerkuatanTanahBridgeFromSub2Sub1 = {
    "https://www.betonjayareadymix.com/p/perbandingan-jasa-perkuatan-tanah.html": "Perbandingan Jasa Perkuatan Tanah"  // TYPE: SUB1
 };
@@ -1450,6 +1452,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingJasaPengeboranBridgeFromSub2Sub1,
 		urlMappingJasaPengeboranFromSub1MoneyMaster,
+		urlMappingHargaJasaPengeboranFromSub1MoneyMaster,
 		
 		urlMappingJasaPerkuatanTanahBridgeFromSub2Sub1,
 		urlMappingJasaPerkuatanTanahFromSub1MoneyMaster,
@@ -2661,7 +2664,6 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         ],
         'JASA_KONSTRUKSI'
     );
-	
     }
 	if (urlMappingJasaPengeboranFromSub1MoneyMaster[cleanUrlJasaKons]) {
   	generateBreadcrumbShared(
@@ -2674,7 +2676,18 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         ],
         'JASA_KONSTRUKSI'
     );
-	
+    }	
+	if (urlMappingHargaJasaPengeboranFromSub1MoneyMaster[cleanUrlJasaKons]) {
+  	generateBreadcrumbShared(
+        urlMappingHargaJasaPengeboranFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
     }
 	
 	if (urlMappingJasaPerkuatanTanahBridgeFromSub2Sub1[cleanUrlJasaKons]) {
