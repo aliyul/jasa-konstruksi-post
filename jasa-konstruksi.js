@@ -829,6 +829,13 @@ const urlMappingJasaPasangGrcFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-pasang-grc-interior.html": "Jasa Pasang GRC Interior"
 	
 };
+const urlMappingHargaJasaPasangGrcFromMoneyMasterMoneyPage = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-dinding-grc.html": "Harga Jasa Pasang Dinding GRC",
+"https://www.betonjayareadymix.com/p/harga-jasa-pasang-grc-fasad.html": "Harga Jasa Pasang GRC Fasad",
+	
+"https://www.betonjayareadymix.com/p/harga-jasa-pasang-panel-grc-dekoratif.html": "Harga Jasa Pasang Panel GRC Dekoratif"	
+};
+
 const urlMappingJasaPasangGrcEksteriorFromMoneyPageMoneyPage1 = {
  "https://www.betonjayareadymix.com/p/jasa-pasang-grc-fasad.html": "Jasa Pasang GRC Fasad",
   "https://www.betonjayareadymix.com/p/jasa-pasang-dinding-grc-eksterior.html": "Jasa Pasang Dinding GRC Eksterior",
@@ -837,25 +844,21 @@ const urlMappingJasaPasangGrcEksteriorFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/p/jasa-pasang-list-profil-kolom-grc.html": "Jasa Pasang List Profil Kolom GRC",
   "https://www.betonjayareadymix.com/p/jasa-pasang-grc-relief.html": "Jasa Pasang GRC Relief"
 	
-};
-const urlMappingJasaPasangDindingGRCEksteriorFromMoneyPage1MoneyPage2 = {
-"https://www.betonjayareadymix.com/p/harga-jasa-pasang-dinding-grc.html": "Harga Jasa Pasang Dinding GRC"
-};
-const urlMappingJasaPasangGRCFasadFromMoneyPage1MoneyPage2 = {
-"https://www.betonjayareadymix.com/p/harga-jasa-pasang-grc-fasad.html": "Harga Jasa Pasang GRC Fasad"
-};
-const urlMappingJasaPasangPanelGRCDekoratifFromMoneyPage1MoneyPage2 = {
-"https://www.betonjayareadymix.com/p/harga-jasa-pasang-panel-grc-dekoratif.html": "Harga Jasa Pasang Panel GRC Dekoratif"
+	
 };
 
 const urlMappingJasaPasangGrcInteriorFromMoneyPageMoneyPage1 = {
- "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-grc.html": "Jasa Pasang Plafon GRC",
   "https://www.betonjayareadymix.com/p/jasa-pasang-dinding-grc-interior.html": "Jasa Pasang Dinding GRC Interior",
   "https://www.betonjayareadymix.com/p/jasa-pasang-panel-grc-3d.html": "Jasa Pasang Panel GRC 3D"
 };
-const urlMappingJasaPasangPlafonGRCFromMoneyPage1MoneyPage2 = {
+
+const urlMappingJasaPasangPlafonFromMoneyMasterMoneyPage = {
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-grc.html": "Jasa Pasang Plafon GRC"
+};
+const urlMappingHargaJasaPasangPlafonFromMoneyMasterMoneyPage = {
 "https://www.betonjayareadymix.com/p/harga-jasa-pasang-plafon-grc.html": "Harga Jasa Pasang Plafon GRC"
 };
+
 
 const urlMappingJasaPasangKacaFromMoneyMaster1MoneyPage = {
  "https://www.betonjayareadymix.com/p/jasa-pasang-kaca-interior.html": "Jasa Pasang Kaca Interior",
@@ -1459,12 +1462,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangFromMoneyMasterMoneyMaster1,
 		urlMappingJasaPasangGrcFromMoneyMaster1MoneyPage,
+		urlMappingHargaJasaPasangGrcFromMoneyMasterMoneyPage,
 		urlMappingJasaPasangGrcEksteriorFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangDindingGRCEksteriorFromMoneyPage1MoneyPage2,
-		urlMappingJasaPasangGRCFasadFromMoneyPage1MoneyPage2,
-		urlMappingJasaPasangPanelGRCDekoratifFromMoneyPage1MoneyPage2,
 		urlMappingJasaPasangGrcInteriorFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangPlafonGRCFromMoneyPage1MoneyPage2,
+		
+		urlMappingJasaPasangPlafonFromMoneyMasterMoneyPage,
+		urlMappingHargaJasaPasangPlafonFromMoneyMasterMoneyPage,
 
 		urlMappingJasaPasangKacaFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangKacaInteriorFromMoneyPageMoneyPage1,
@@ -3111,6 +3114,22 @@ if (urlMappingJasaPasangGrcFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
+if (urlMappingHargaJasaPasangGrcFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbShared(
+        urlMappingHargaJasaPasangGrcFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Harga Jasa Pasang Grc', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-grc.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+	
 if (urlMappingJasaPasangGrcEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbShared(
@@ -3126,54 +3145,6 @@ if (urlMappingJasaPasangGrcEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
-if (urlMappingJasaPasangDindingGRCEksteriorFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
-
-	    generateBreadcrumbShared(
-        urlMappingJasaPasangDindingGRCEksteriorFromMoneyPage1MoneyPage2,
-        cleanUrlJasaKons,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang Grc', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc.html'},
-            { name: 'Jasa Pasang Grc Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc-eksterior.html'},
-            { name: 'Jasa Pasang Dinding Grc Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-dinding-grc-eksterior.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}	
-if (urlMappingJasaPasangGRCFasadFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
-
-	    generateBreadcrumbShared(
-        urlMappingJasaPasangGRCFasadFromMoneyPage1MoneyPage2,
-        cleanUrlJasaKons,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang Grc', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc.html'},
-            { name: 'Jasa Pasang Grc Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc-eksterior.html'},
-            { name: 'Jasa Pasang GRC Fasad', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc-fasad.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}	
-if (urlMappingJasaPasangPanelGRCDekoratifFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
-
-	    generateBreadcrumbShared(
-        urlMappingJasaPasangPanelGRCDekoratifFromMoneyPage1MoneyPage2,
-        cleanUrlJasaKons,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang Grc', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc.html'},
-            { name: 'Jasa Pasang Grc Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc-eksterior.html'},
-            { name: 'Jasa Pasang Panel GRC Dekoratif', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-panel-grc-dekoratif.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}	
 if (urlMappingJasaPasangGrcInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbShared(
@@ -3189,22 +3160,37 @@ if (urlMappingJasaPasangGrcInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }	
-if (urlMappingJasaPasangPlafonGRCFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
+	
+if (urlMappingJasaPasangPlafonFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbShared(
-        urlMappingJasaPasangPlafonGRCFromMoneyPage1MoneyPage2,
+        urlMappingJasaPasangPlafonFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang Grc', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc.html'},
-            { name: 'Jasa Pasang Grc Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-grc-interior.html'},
-            { name: 'Jasa Pasang Plafon GRC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-plafon-grc.html'}
+            { name: 'Jasa Pasang Plafon', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html'}
+			
         ],
         'JASA_KONSTRUKSI'
     );
-}	
+}
+if (urlMappingHargaJasaPasangPlafonFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbShared(
+        urlMappingHargaJasaPasangPlafonFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Harga Jasa Pasang Plafon', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-plafon.html'}
+			
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
 	
 if (urlMappingJasaPasangKacaFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
