@@ -472,6 +472,9 @@ const urlMappingSewaAlatProyekFromSub1MoneyMaster = {
   //"https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html": "Harga Sewa Alat Proyek"  // TYPE: MoneyMaster
    "https://www.betonjayareadymix.com/p/sewa-alat-proyek.html": "Sewa Alat Proyek"  // TYPE: MoneyMaster
 };
+const urlMappingHargaSewaAlatProyekFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html": "Harga Sewa Alat Proyek"  // TYPE: MoneyMaster
+};
 
 const urlMappingSewaAlatBeratFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html": "Perbandingan Sewa Alat Berat",  // TYPE: SUB1 
@@ -1469,6 +1472,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaAlatFromPillarSub2,
 		urlMappingSewaAlatProyekFromSub2Sub1,
 		urlMappingSewaAlatProyekFromSub1MoneyMaster,
+		urlMappingHargaSewaAlatProyekFromSub1MoneyMaster,
 		//urlMappingSewaAlatBeratFromSub1MoneyPage,
 		urlMappingSewaAlatBeratFromSub2Sub1,
 		urlMappingSewaAlatBeratFromSub1MoneyMaster,
@@ -2870,6 +2874,21 @@ if (urlMappingSewaAlatProyekFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'SEWA_ALAT_KONSTRUKSI'
     );
  }
+if (urlMappingHargaSewaAlatProyekFromSub1MoneyMaster[cleanUrlJasaKons]) {
+
+	   generateBreadcrumbShared(
+        urlMappingHargaSewaAlatProyekFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-proyek.html' },
+            { name: 'Perbandingan Sewa Alat Proyek', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-proyek.html' }
+        ],
+        'SEWA_ALAT_KONSTRUKSI'
+    );
+ }
+	
 if (urlMappingSewaAlatRinganFromSub1MoneyMaster[cleanUrlJasaKons]) {
     generateBreadcrumbShared(
         urlMappingSewaAlatRinganFromSub1MoneyMaster,
