@@ -433,8 +433,10 @@ const urlMappingJasaInstalasiListrikBridgeFromSub2Sub1 = {
 const urlMappingJasaInstalasiListrikFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik.html": "Jasa Instalasi Listrik"  
 };
+const urlMappingHargaJasaInstalasiListrikFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-instalasi-listrik.html": "Harga Jasa Instalasi Listrik"
+};
 const urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-instalasi-listrik.html": "Harga Jasa Instalasi Listrik",  
   "https://www.betonjayareadymix.com/p/jasa-instalasi-solar-panel.html": "Jasa Instalasi Solar Panel",  
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik-rumah.html": "Jasa Instalasi Listrik Rumah",  
   "https://www.betonjayareadymix.com/p/jasa-instalasi-listrik-komersial.html": "Jasa Instalasi Listrik Komersial",  
@@ -1462,6 +1464,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingJasaInstalasiListrikBridgeFromSub2Sub1,
 		urlMappingJasaInstalasiListrikFromSub1MoneyMaster,
+		urlMappingHargaJasaInstalasiListrikFromSub1MoneyMaster,
 		
 		urlMappingSewaAlatFromPillarSub2,
 		urlMappingSewaAlatProyekFromSub2Sub1,
@@ -2771,7 +2774,6 @@ if (urlMappingJasaInstalasiListrikBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         ],
         'JASA_KONSTRUKSI'
     );
-	
     }
 	if (urlMappingJasaInstalasiListrikFromSub1MoneyMaster[cleanUrlJasaKons]) {
 	
@@ -2788,6 +2790,20 @@ if (urlMappingJasaInstalasiListrikBridgeFromSub2Sub1[cleanUrlJasaKons]) {
     );
     }
 	
+	if (urlMappingHargaJasaInstalasiListrikFromSub1MoneyMaster[cleanUrlJasaKons]) {
+	generateBreadcrumbShared(
+        urlMappingHargaJasaInstalasiListrikFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Instalasi Listrik', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-instalasi-listrik.html' },
+            { name: 'Perbandingan Jasa Instalasi Listrik', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-instalasi-listrik.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+    	
   //AWAL JASA KONTRUKSI ALAT
 	//SUB DARI PILLAR SEWA ALAT KONSTRUKSI
 if (urlMappingSewaAlatFromPillarSub2[cleanUrlJasaKons]) {
