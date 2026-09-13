@@ -1130,7 +1130,7 @@ const urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage = {
 // ============================================================
 
 
-const urlMappingPengeboranFromMoneyMasterMoneyMaster1 = {
+const urlMappingJasaPengeboranFromMoneyMasterMoneyMaster1 = {
   // [MONEY_PAGE] - JENIS PENGEBORAN SPESIFIK (JASA)
   //"https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html": "Jasa Bor Air Sumur",  
   "https://www.betonjayareadymix.com/p/jasa-tukang-bor.html": "Jasa Tukang Bor",  
@@ -1141,6 +1141,18 @@ const urlMappingPengeboranFromMoneyMasterMoneyMaster1 = {
   "https://www.betonjayareadymix.com/p/jasa-bor-tanah.html": "Jasa Bor Tanah",  
   "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal",  
   "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html": "Jasa Bor Tembok"  
+};
+const urlMappingHargaJasaPengeboranFromMoneyMasterMoneyMaster1 = {
+  // [MONEY_PAGE] - JENIS PENGEBORAN SPESIFIK (JASA)
+  //"https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html": "Jasa Bor Air Sumur",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-tukang-bor.html": "Harga Jasa Tukang Bor",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-coring-beton.html": "Harga Jasa Coring Beton",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-beton.html": "Harga Jasa Bor Beton",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-tanah.html": "Harga Jasa Bor Tanah",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-horizontal.html": "Harga Jasa Bor Horizontal",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-tembok.html": "Harga Jasa Bor Tembok"  
 };
 
 
@@ -1536,7 +1548,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaUjiTanahFromMoneyMasterMoneyMaster1,
 		urlMappingBongkarBangunanFromMoneyMasterMoneyMaster1,
 	
-		urlMappingPengeboranFromMoneyMasterMoneyMaster1,
+		urlMappingJasaPengeboranFromMoneyMasterMoneyMaster1,
+		urlMappingHargaJasaPengeboranFromMoneyMasterMoneyMaster1,
 		
 		urlMappingJasaPembatasPengamanFromMoneyMasterMoneyPage,
 		
@@ -3741,10 +3754,10 @@ if (urlMappingInfrastrukturFromSub1MoneyMaster[cleanUrlJasaKons]) {
     );
     }
 
-if (urlMappingPengeboranFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
+if (urlMappingJasaPengeboranFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 	
 	generateBreadcrumbShared(
-        urlMappingPengeboranFromMoneyMasterMoneyMaster1,
+        urlMappingJasaPengeboranFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -3752,6 +3765,21 @@ if (urlMappingPengeboranFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
             { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
             { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+   if (urlMappingHargaJasaPengeboranFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
+	
+	generateBreadcrumbShared(
+        urlMappingHargaJasaPengeboranFromMoneyMasterMoneyMaster1,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Harga Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pengeboran.html'}
         ],
         'JASA_KONSTRUKSI'
     );
