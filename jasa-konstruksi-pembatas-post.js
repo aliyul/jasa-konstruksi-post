@@ -80,7 +80,7 @@ const urlMappingJasaPasangPagarBetonPrecastFromMoneyPageMoneyPage1 = {
 // [VARIANT] - JASA PAGAR PANEL BETON
 // ============================================================
 
-const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
+const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyChild  = {
   // ============================================================
   // [MONEY_MASTER] - HARGA PASANG PAGAR PANEL BETON
   // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
@@ -115,13 +115,11 @@ const urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
   "https://www.betonjayareadymix.com/2018/09/biaya-pasang-pagar-panel-beton.html": "Biaya Pasang Pagar Panel Beton"
  // "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton"
 };
-
-const urlMappingJasaPasangPagarPanelBetonFromMoneyPageVariant  = {
+const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
+	"https://www.betonjayareadymix.com/2018/11/spesifikasi-jasa-pasang-pagar-panel.html": "Spesifikasi Jasa Pasang Pagar Panel Beton",
+ "https://www.betonjayareadymix.com/2018/11/ukuran-jasa-pasang-pagar-panel-beton.html": "Ukuran Jasa Pasang Pagar Panel Beton",
   "https://www.betonjayareadymix.com/2018/09/jasa-pagar-panel-beton-terpasang.html": "Jasa Pagar Panel Beton Terpasang",
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-per-meter.html": "Jasa Pasang Pagar Panel Beton Per Meter",
- "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-motif.html": "Jasa Pasang Pagar Panel Beton Motif",
- "https://www.betonjayareadymix.com/2018/11/spesifikasi-jasa-pasang-pagar-panel.html": "Spesifikasi Jasa Pasang Pagar Panel Beton",
- "https://www.betonjayareadymix.com/2018/11/ukuran-jasa-pasang-pagar-panel-beton.html": "Ukuran Jasa Pasang Pagar Panel Beton",
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-perumahan.html": "Jasa Pasang Pagar Panel Beton Perumahan", 
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-pabrik.html": "Jasa Pasang Pagar Panel Beton Pabrik",
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-gudang.html": "Jasa Pasang Pagar Panel Beton Gudang",
@@ -137,10 +135,17 @@ const urlMappingJasaPasangPagarPanelBetonFromMoneyPageVariant  = {
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tahan-lama.html": "Jasa Pasang Pagar Panel Beton Tahan Lama",  
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-cepat-dipasang.html": "Jasa Pasang Pagar Panel Beton Cepat Dipasang", 
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tahan-banjir.html": "Jasa Pasang Pagar Panel Beton Tahan Banjir",
-   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-polosan.html": "Jasa Pasang Pagar Panel Beton Polosan",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-custom.html": "Jasa Pasang Pagar Panel Beton Custom",
+ 
+  
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tinggi.html": "Jasa Pasang Pagar Panel Beton Tinggi", 
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-rendah.html": "Jasa Pasang Pagar Panel Beton Rendah"
+};
+
+const urlMappingJasaPasangPagarPanelBetonFromMoneyPageVariant  = {
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-motif.html": "Jasa Pasang Pagar Panel Beton Motif",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-custom.html": "Jasa Pasang Pagar Panel Beton Custom",
+    "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-polosan.html": "Jasa Pasang Pagar Panel Beton Polosan"
+		
 };
 // ============================================================
 // [VARIANT] - JASA PAGAR BESI
@@ -598,8 +603,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingHargaJasaPasangPagarFromMoneyMasterMoneyChild,
 		
 		urlMappingJasaPasangPagarBetonPrecastFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
+		urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyChild,
 		urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
+		urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1
 		urlMappingJasaPasangPagarPanelBetonFromMoneyPageVariant,
 		
 		urlMappingJasaPasangPagarBesiHollowFromMoneyPageMoneyPage1,
@@ -658,7 +664,22 @@ document.addEventListener("DOMContentLoaded", function() {
     );
    }
 	
-	if (urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKonsPost]) {
+	if (urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyChild[cleanUrlJasaPembatasKonsPost]) {
+    generateBreadcrumbShared(
+        urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyChild,
+        cleanUrlJasaPembatasKonsPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            
+            { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
+            { name: 'Jasa Pasang Pagar Panel Beton', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-panel-beton.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+  if (urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKonsPost]) {
     generateBreadcrumbShared(
         urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
         cleanUrlJasaPembatasKonsPost,
@@ -673,6 +694,7 @@ document.addEventListener("DOMContentLoaded", function() {
         'JASA_KONSTRUKSI'
     );
    }
+
  if (urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKonsPost]) {
     generateBreadcrumbShared(
         urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
