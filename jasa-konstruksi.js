@@ -907,22 +907,22 @@ const urlMappingJasaPasangBatuEksteriorFromMoneyPageMoneyPage1 = {
 
 const urlMappingJasaPasangWoodPlankFromMoneyMaster1MoneyPage = {
  "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-interior.html": "Jasa Pasang Wood Plank Interior",
- "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-eksterior.html": "Jasa Pasang Wood Plank Eksterior",
- "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wood-plank.html": "Harga Jasa Pasang Wood Plank"
+ "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-eksterior.html": "Jasa Pasang Wood Plank Eksterior"
+// "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wood-plank.html": "Harga Jasa Pasang Wood Plank"
 
+};
+const urlMappingHargaJasaPasangWoodPlankFromMoneyMaster1MoneyPage = {
+ "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wood-plank-eksterior.html": "Harga Jasa Pasang Wood Plank Eksterior",
+ "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wood-plank-interior.html": "Harga Jasa Pasang Wood Plank Interior"	
 };
 const urlMappingJasaPasangWoodPlankEksteriorFromMoneyPageMoneyPage1 = {
  "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-dinding-eksterior.html": "Jasa Pasang Wood Plank Dinding Eksterior",
  "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-pagar.html": "Jasa Pasang Wood Plank Pagar",
- "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-fasad.html": "Jasa Pasang Wood Plank Fasad",
- "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wood-plank-eksterior.html": "Harga Jasa Pasang Wood Plank Eksterior"
-
+ "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-fasad.html": "Jasa Pasang Wood Plank Fasad"
 };
 const urlMappingJasaPasangWoodPlankInteriorFromMoneyPageMoneyPage1 = {
  "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-dinding-interior.html": "Jasa Pasang Wood Plank Dinding Interior",
- "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-plafon.html": "Jasa Pasang Wood Plank Plafon",
- "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wood-plank-interior.html": "Harga Jasa Pasang Wood Plank Interior"
-
+ "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-plafon.html": "Jasa Pasang Wood Plank Plafon"
 };
 const urlMappingJasaPasangWoodPlankDindingInteriorFromMoneyPage1MoneyPage2 = {
  "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-ruang-tamu.html": "Jasa Pasang Wood Plank Ruang Tamu",
@@ -962,7 +962,7 @@ const urlMappingJasaPasangHPLFurnitureFromMoneyPage1MoneyPage2 = {
 
 
 const urlMappingJasaPasangAcpFromMoneyMaster1MoneyPage = {
-"https://www.betonjayareadymix.com/p/harga-jasa-pasang-acp.html": "Harga Jasa Pasang ACP",
+//"https://www.betonjayareadymix.com/p/harga-jasa-pasang-acp.html": "Harga Jasa Pasang ACP",
   "https://www.betonjayareadymix.com/p/jasa-pasang-acp-interior.html": "Jasa Pasang ACP Interior",
 "https://www.betonjayareadymix.com/p/jasa-pasang-acp-eksterior.html": "Jasa Pasang ACP Eksterior",  
   "https://www.betonjayareadymix.com/p/jasa-pasang-acp-per-meter.html": "Jasa Pasang ACP Per Meter",
@@ -1476,6 +1476,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangBatuEksteriorFromMoneyPageMoneyPage1,
 		
 		urlMappingJasaPasangWoodPlankFromMoneyMaster1MoneyPage,
+		urlMappingHargaJasaPasangWoodPlankFromMoneyMaster1MoneyPage,
+		
 		urlMappingJasaPasangWoodPlankEksteriorFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangWoodPlankInteriorFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangWoodPlankDindingInteriorFromMoneyPage1MoneyPage2,
@@ -3351,6 +3353,21 @@ if (urlMappingJasaPasangWoodPlankFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }	
+if (urlMappingHargaJasaPasangWoodPlankFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbShared(
+        urlMappingHargaJasaPasangWoodPlankFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Harga Jasa Pasang WoodPlank', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-woodplank.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}	
+	
 if (urlMappingJasaPasangWoodPlankEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbShared(
