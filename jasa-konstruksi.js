@@ -1719,8 +1719,7 @@ if (urlMappingHargaJasaReliefFromSub1MoneyMaster[cleanUrlJasaKons]) {
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Relief', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-relief.html' },
-            { name: 'Perbandingan Jasa Relief', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-relief.html' },
-            { name: 'Harga Jasa Relief', url: 'https://www.betonjayareadymix.com/p/harga-jasa-relief.html' }
+            { name: 'Perbandingan Jasa Relief', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-relief.html' }
 	   ],
         'JASA_KONSTRUKSI'
     );
