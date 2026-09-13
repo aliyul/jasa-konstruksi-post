@@ -607,7 +607,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangPagarBetonPrecastFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyChild,
 		urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1
+		urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
 		urlMappingJasaPasangPagarPanelBetonFromMoneyPageVariant,
 		
 		urlMappingJasaPasangPagarBesiHollowFromMoneyPageMoneyPage1,
