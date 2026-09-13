@@ -122,12 +122,14 @@ const urlMappingJasaReliefBridgeFromSub2Sub1 = {
 const urlMappingJasaReliefBridgeFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-relief.html": "Jasa Relief" 
 };
+const urlMappingHargaJasaReliefFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-relief.html": "Harga Jasa Relief" 
+};
 const urlMappingJasaReliefFromMoneyMasterMoneyPage = {
   	 "https://www.betonjayareadymix.com/p/jasa-relief-dinding.html": "Jasa Relief Dinding",
   "https://www.betonjayareadymix.com/p/jasa-relief-kayu-custom.html": "Jasa Relief Kayu Custom",
   "https://www.betonjayareadymix.com/p/jasa-relief-beton-ekspos.html": "Jasa Relief Beton Ekspos",
-   	"https://www.betonjayareadymix.com/p/jasa-relief-batu-alam.html": "Jasa Relief Batu Alam",
-  "https://www.betonjayareadymix.com/p/harga-jasa-relief.html": "Harga Jasa Relief"
+   	"https://www.betonjayareadymix.com/p/jasa-relief-batu-alam.html": "Jasa Relief Batu Alam"
 };
 const urlMappingJasaReliefDindingFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/p/jasa-pembuatan-relief-dinding.html": "Jasa Pembuatan Relief Dinding",
@@ -148,20 +150,23 @@ const urlMappingJasaProfilBetonBridgeFromSub2Sub1 = {
 const urlMappingJasaProfilBetonFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-profil-beton.html": "Jasa Profil Beton"  
 };
+const urlMappingHargaJasaProfilBetonFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-profil-beton.html": "Harga Jasa Profil Beton"   
+};
+const urlMappingHargaJasaProfilBetonFromMoneyMasterMoneyPage = {
+ "https://www.betonjayareadymix.com/p/harga-jasa-profil-beton-rumah.html": "Harga Jasa Profil Beton Rumah",
+  "https://www.betonjayareadymix.com/p/harga-jasa-profil-beton-bangunan.html": "Harga Jasa Profil Beton Bangunan"
+};
+
 const urlMappingJasaProfilBetonFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-profil-beton-bangunan.html": "Jasa Profil Beton Bangunan",
   "https://www.betonjayareadymix.com/p/jasa-profil-beton-eksterior.html": "Jasa Profil Beton Eksterior",
-  "https://www.betonjayareadymix.com/p/jasa-profil-beton-interior.html": "Jasa Profil Beton Interior",
-  "https://www.betonjayareadymix.com/p/harga-jasa-profil-beton.html": "Harga Jasa Profil Beton" 
+  "https://www.betonjayareadymix.com/p/jasa-profil-beton-interior.html": "Jasa Profil Beton Interior"
 };
 const urlMappingJasaProfilBetonBangunanFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-profil-beton-bangunan.html": "Harga Jasa Profil Beton Bangunan",
   "https://www.betonjayareadymix.com/p/jasa-profil-beton-rumah.html": "Jasa Profil Beton Rumah",
   "https://www.betonjayareadymix.com/p/jasa-profil-beton-kantor.html": "Jasa Profil Beton Kantor"
 	
-};
-const urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2 = {
- "https://www.betonjayareadymix.com/p/harga-jasa-profil-beton-rumah.html": "Harga Jasa Profil Beton Rumah"
 };
 
 const urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1 = {
@@ -194,14 +199,16 @@ const urlMappingJasaKonsultanBridgeFromSub2Sub1 = {
 const urlMappingJasaKonsultanFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-konsultan.html": "Jasa Konsultan" 
 };
+const urlMappingHargaJasaKonsultanFromSub1MoneyMaster = {
+   "https://www.betonjayareadymix.com/p/harga-jasa-konsultan.html": "Harga Jasa Konsultan"
+};
 const urlMappingJasaKonsultanFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-konsultan.html": "Harga Jasa Konsultan",
 	  "https://www.betonjayareadymix.com/p/jasa-konsultan-bangunan.html": "Jasa Konsultan Bangunan", 
   "https://www.betonjayareadymix.com/p/jasa-konsultan-konstruksi.html": "Jasa Konsultan Konstruksi", 
   "https://www.betonjayareadymix.com/p/jasa-perencanaan-pembangunan.html": "Jasa Perencanaan Pembangunan",  
   "https://www.betonjayareadymix.com/p/jasa-perencanaan-konstruksi.html": "Jasa Perencanaan Konstruksi" 
 };
-const urlMappingHargaJasaKonsultanFromMoneyPageMoneyPage1 = {
+const urlMappingHargaJasaKonsultanFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/p/harga-jasa-konsultan-struktur.html": "Harga Jasa Konsultan Struktur",
   "https://www.betonjayareadymix.com/p/harga-jasa-konsultan-arsitektur.html": "Biaya Jasa Konsultan Arsitektur",
   "https://www.betonjayareadymix.com/p/harga-jasa-konsultan-manajemen.html": "Harga Jasa Konsultan Manajemen Konstruksi",
@@ -251,11 +258,16 @@ const urlMappingJasaLapanganOlahragaBridgeFromSub2Sub1 = {
 const urlMappingJasaLapanganOlahragaFromSub1MoneyMaster = {
  "https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html": "Jasa Lapangan Olahraga" 
 };
+const urlMappingHargaJasaLapanganOlahragaFromSub1MoneyMaster = {
+ "https://www.betonjayareadymix.com/p/harg-jasa-lapangan-olahraga.html": "Harga Jasa Lapangan Olahraga" 
+};
 const urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage = {
  "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html": "Jasa Pembuatan Lapangan Olahraga",
- "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-lapangan-olahraga.html": "Harga Jasa Pembuatan Lapangan Olahraga",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-lapangan-olahraga.html": "Jasa Perbaikan Lapangan Olahraga",
- "https://www.betonjayareadymix.com/p/harga-jasa-perbaikan-lapangan-olahraga.html": "Harga Jasa Perbaikan Lapangan Olahraga"
+ "https://www.betonjayareadymix.com/p/jasa-perbaikan-lapangan-olahraga.html": "Jasa Perbaikan Lapangan Olahraga"
+};
+const urlMappingHargaJasaLapanganOlahragaFromMoneyMasterMoneyPage = {
+ "https://www.betonjayareadymix.com/p/harga-jasa-perbaikan-lapangan-olahraga.html": "Harga Jasa Perbaikan Lapangan Olahraga",
+ "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-lapangan-olahraga.html": "Harga Jasa Pembuatan Lapangan Olahraga"
 };
 
 const urlMappingKonstruksiBangunanBridgeFromSub2Sub1 = {
@@ -312,15 +324,10 @@ const urlMappingJasaPerbaikanInfrastrukturFromSub1MoneyMaster = {
 };
 const urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyMaster1 = {
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan.html": "Jasa Perbaikan Jalan",  
-
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan.html": "Jasa Perbaikan Jembatan",  
-
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase.html": "Jasa Perbaikan Drainase",  
-
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-sekolah.html": "Jasa Perbaikan Sekolah",  
-
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-rs.html": "Jasa Perbaikan RS",  
-
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-stadion.html": "Jasa Perbaikan Stadion"
 };
 const urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyPage = {
@@ -386,13 +393,15 @@ const urlMappingJasaBuangPuingBridgeFromSub2Sub1 = {
 const urlMappingJasaBuangPuingFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-buang-puing.html": "Jasa Buang Puing"  
 };
+const urlMappingHargaJasaBuangPuingFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-buang-puing.html": "Harga Jasa Buang Puing"
+};
 const urlMappingJasaBuangPuingFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-buang-puing.html": "Harga Jasa Buang Puing",
 	"https://www.betonjayareadymix.com/p/jasa-buang-puing-pengurugan-tanah.": "Jasa Buang Puing Pengurugan Tanah",
 	"https://www.betonjayareadymix.com/p/jasa-buang-puing-proyek-konstruksi.html": "Jasa Buang Puing Proyek Konstruksi",
 	"https://www.betonjayareadymix.com/p/jasa-buang-puing-rumah-bangunan.html": "Jasa Buang Puing Rumah & Bangunan"
 };
-const urlMappingHargaJasaBuangPuingFromMoneyPageMoneyPage1 = {
+const urlMappingHargaJasaBuangPuingFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/harga-jasa-buang-puing-per-rit.html": "Harga Jasa Buang Puing Per Rit"
 };
 const urlMappingJasaPengeboranBridgeFromSub2Sub1 = {
@@ -1333,6 +1342,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaKonsFromPillarSub2,
 		urlMappingJasaReliefBridgeFromSub2Sub1,
        urlMappingJasaReliefBridgeFromSub1MoneyMaster,
+	   urlMappingHargaJasaReliefFromSub1MoneyMaster,
 		urlMappingJasaReliefFromMoneyMasterMoneyPage,
 		urlMappingJasaReliefDindingFromMoneyPageMoneyPage1,
 		urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1,
@@ -1340,9 +1350,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingJasaProfilBetonBridgeFromSub2Sub1,
 		urlMappingJasaProfilBetonFromSub1MoneyMaster,
+		urlMappingHargaJasaProfilBetonFromSub1MoneyMaster,
+		urlMappingHargaJasaProfilBetonFromMoneyMasterMoneyPage,
 		urlMappingJasaProfilBetonFromMoneyMasterMoneyPage,
 		urlMappingJasaProfilBetonBangunanFromMoneyPageMoneyPage1,
-		urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2,
 		
 		urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1,
 		urlMappingJasaProfilBetonInteriorFromMoneyPageMoneyPage1,
@@ -1354,8 +1365,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaInteriorFromSub1MoneyMaster,
 		urlMappingJasaKonsultanBridgeFromSub2Sub1,
 		urlMappingJasaKonsultanFromSub1MoneyMaster,
+		urlMappingHargaJasaKonsultanFromSub1MoneyMaster,
 		urlMappingJasaKonsultanFromMoneyMasterMoneyPage,
-       urlMappingHargaJasaKonsultanFromMoneyPageMoneyPage1,
+       urlMappingHargaJasaKonsultanFromMoneyMasterMoneyPage,
 		
 		urlMappingJasaKitchenSetBridgeFromSub2Sub1,
 		urlMappingJasaPasangBridgeFromSub2Sub1,
@@ -1372,7 +1384,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingJasaLapanganOlahragaBridgeFromSub2Sub1,
 		urlMappingJasaLapanganOlahragaFromSub1MoneyMaster,
+		urlMappingHargaJasaLapanganOlahragaFromSub1MoneyMaster,
 		urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage,
+		urlMappingHargaJasaLapanganOlahragaFromMoneyMasterMoneyPage,
 		
 		urlMappingKonstruksiBangunanBridgeFromSub2Sub1,
 		urlMappingKonstruksiBangunanFromSub1MoneyMaster,
@@ -1417,8 +1431,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		
         urlMappingJasaBuangPuingBridgeFromSub2Sub1,
 		urlMappingJasaBuangPuingFromSub1MoneyMaster,
+		urlMappingHargaJasaBuangPuingFromSub1MoneyMaster,
 		urlMappingJasaBuangPuingFromMoneyMasterMoneyPage,
-		urlMappingHargaJasaBuangPuingFromMoneyPageMoneyPage1,
+		urlMappingHargaJasaBuangPuingFromMoneyMasterMoneyPage,
 
 		
 		urlMappingJasaPengeboranBridgeFromSub2Sub1,
@@ -1697,6 +1712,19 @@ if (urlMappingJasaReliefBridgeFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
+if (urlMappingHargaJasaReliefFromSub1MoneyMaster[cleanUrlJasaKons]) {
+     generateBreadcrumbShared(
+        urlMappingHargaJasaReliefFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Relief', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-relief.html' },
+            { name: 'Perbandingan Jasa Relief', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-relief.html' },
+            { name: 'Harga Jasa Relief', url: 'https://www.betonjayareadymix.com/p/harga-jasa-relief.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+    );
+}
 if (urlMappingJasaReliefFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
      generateBreadcrumbShared(
         urlMappingJasaReliefFromMoneyMasterMoneyPage,
@@ -1762,6 +1790,32 @@ if (urlMappingJasaProfilBetonFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
    }
+  if (urlMappingHargaJasaProfilBetonFromSub1MoneyMaster[cleanUrlJasaKons]) {
+     generateBreadcrumbShared(
+        urlMappingHargaJasaProfilBetonFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-profil-beton.html' },
+            { name: 'Perbandingan Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-profil-beton.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+if (urlMappingHargaJasaProfilBetonFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+     generateBreadcrumbShared(
+        urlMappingHargaJasaProfilBetonFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-profil-beton.html' },
+            { name: 'Perbandingan Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-profil-beton.html' },
+            { name: 'Harga Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-profil-beton.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+
 if (urlMappingJasaProfilBetonFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
      generateBreadcrumbShared(
         urlMappingJasaProfilBetonFromMoneyMasterMoneyPage,
@@ -1785,21 +1839,6 @@ if (urlMappingJasaProfilBetonBangunanFromMoneyPageMoneyPage1[cleanUrlJasaKons]) 
             { name: 'Perbandingan Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-profil-beton.html' },
             { name: 'Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton.html' },
             { name: 'Jasa Profil Beton Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton-bangunan.html' }
-	   ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-if (urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2[cleanUrlJasaKons]) {
-     generateBreadcrumbShared(
-        urlMappingJasaProfilBetonRumahFromMoneyPage1MoneyPage2,
-        cleanUrlJasaKons,
-       [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-profil-beton.html' },
-            { name: 'Perbandingan Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-profil-beton.html' },
-            { name: 'Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton.html' },
-            { name: 'Jasa Profil Beton Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton-bangunan.html' },
-            { name: 'Jasa Profil Beton Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton-rumah.html' }
 	   ],
         'JASA_KONSTRUKSI'
     );
@@ -1925,6 +1964,19 @@ if (urlMappingJasaKonsultanFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
    }
+if (urlMappingHargaJasaKonsultanFromSub1MoneyMaster[cleanUrlJasaKons]) {
+     generateBreadcrumbShared(
+        urlMappingHargaJasaKonsultanFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konsultan.html' },
+            { name: 'Perbandingan Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konsultan.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+    );
+   }
+
 if (urlMappingJasaKonsultanFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
      generateBreadcrumbShared(
         urlMappingJasaKonsultanFromMoneyMasterMoneyPage,
@@ -1939,9 +1991,9 @@ if (urlMappingJasaKonsultanFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
    }
-if (urlMappingHargaJasaKonsultanFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
+if (urlMappingHargaJasaKonsultanFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
      generateBreadcrumbShared(
-        urlMappingHargaJasaKonsultanFromMoneyPageMoneyPage1,
+        urlMappingHargaJasaKonsultanFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -2116,6 +2168,19 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
     }
+    if (urlMappingHargaJasaLapanganOlahragaFromSub1MoneyMaster[cleanUrlJasaKons]) {
+	generateBreadcrumbShared(
+        urlMappingHargaJasaLapanganOlahragaFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
+            { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
 	if (urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 	generateBreadcrumbShared(
         urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage,
@@ -2126,6 +2191,19 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
             { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
             { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
             { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	if (urlMappingHargaJasaLapanganOlahragaFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	generateBreadcrumbShared(
+        urlMappingHargaJasaLapanganOlahragaFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
+            { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
+            { name: 'Harga Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/harga-jasa-lapangan-olahraga.html' }
         ],
         'JASA_KONSTRUKSI'
     );
@@ -2517,6 +2595,19 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
     }
+	if (urlMappingHargaJasaBuangPuingFromSub1MoneyMaster[cleanUrlJasaKons]) {
+      	generateBreadcrumbShared(
+        urlMappingHargaJasaBuangPuingFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Buang Puing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-buang-puing.html' },
+           { name: 'Perbandingan Jasa Buang Puing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-buang-puing.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	
 	if (urlMappingJasaBuangPuingFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
       	generateBreadcrumbShared(
         urlMappingJasaBuangPuingFromMoneyMasterMoneyPage,
@@ -2531,16 +2622,14 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
     }	
-	if (urlMappingHargaJasaBuangPuingFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
+	if (urlMappingHargaJasaBuangPuingFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
       	generateBreadcrumbShared(
-        urlMappingHargaJasaBuangPuingFromMoneyPageMoneyPage1,
+        urlMappingHargaJasaBuangPuingFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Buang Puing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-buang-puing.html' },
+		   { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+           { name: 'Daftar Jasa Buang Puing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-buang-puing.html' },
            { name: 'Perbandingan Jasa Buang Puing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-buang-puing.html' },
-           { name: 'Jasa Buang Puing', url: 'https://www.betonjayareadymix.com/p/jasa-buang-puing.html' },
            { name: 'Harga Jasa Buang Puing', url: 'https://www.betonjayareadymix.com/p/harga-jasa-buang-puing.html' }
         ],
         'JASA_KONSTRUKSI'
@@ -2550,7 +2639,7 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	
 	if (urlMappingJasaPengeboranBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingJasaPengeboranBridgeFromSub2Sub1[cleanUrlJasaKons];
-	generateBreadcrumbShared(
+	    generateBreadcrumbShared(
         urlMappingJasaPengeboranBridgeFromSub2Sub1,
         cleanUrlJasaKons,
        [
