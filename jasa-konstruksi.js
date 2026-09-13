@@ -606,15 +606,7 @@ const urlMappingSewaAlatPendukungFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pendukung.html": "Perbandingan Sewa Alat Pendukung"  // TYPE: SUB1 
 };
 
-
 const urlMappingSewaAlatPendukungFromSub1MoneyMaster = {
-  //"https://www.betonjayareadymix.com/p/harga-sewa-alat-proyek.html": "Harga Sewa Alat Proyek"  // TYPE: MoneyMaster
-   "https://www.betonjayareadymix.com/p/sewa-alat-pendukung.html": "Sewa Alat Pendukung"  // TYPE: MoneyMaster
-};
-const urlMappingHargaSewaAlatPendukungFromSub1MoneyMaster = {
-   "https://www.betonjayareadymix.com/p/harga-sewa-alat-pendukung.html": "Harga Sewa Alat Pendukung"  // TYPE: MoneyMaster
-};
-const urlMappingSewaAlatPendukungFromMoneyMasterMoneyMaster1 = {
   //"https://www.betonjayareadymix.com/p/harga-sewa-alat-pendukung.html": "Harga Sewa Alat Pendukung"  // TYPE: MoneyMaster
 "https://www.betonjayareadymix.com/p/sewa-akses-keamanan.html": "Sewa Akses Keamanan",
   "https://www.betonjayareadymix.com/p/sewa-alat-survey.html": "Sewa Alat Survey",
@@ -632,7 +624,7 @@ const urlMappingSewaAlatPendukungFromMoneyMasterMoneyMaster1 = {
     "https://www.betonjayareadymix.com/p/sewa-selang-proyek.html": "Sewa Selang Proyek",
     "https://www.betonjayareadymix.com/p/sewa-pipa-proyek.html": "Sewa Pipa Proyek"
 };
-const urlMappingHargaSewaAlatPendukungFromMoneyMasterMoneyMaster1 = {
+const urlMappingHargaSewaAlatPendukungFromSub1MoneyMaster = {
    "https://www.betonjayareadymix.com/p/harga-sewa-akses-keamanan.html": "Harga Sewa Akses Keamanan",
   "https://www.betonjayareadymix.com/p/harga-sewa-alat-survey.html": "Harga Sewa Alat Survey",
     "https://www.betonjayareadymix.com/p/harga-sewa-pencahayaan-proyek.html": "Harga Sewa Pencahayaan Proyek",
@@ -1501,8 +1493,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaAlatPendukungFromSub1MoneyMaster,
 	    urlMappingHargaSewaAlatPendukungFromSub1MoneyMaster,
 		
-		urlMappingSewaAlatPendukungFromMoneyMasterMoneyMaster1,
-
 		urlMappingJasaKitchenSetFromSub1MoneyMaster,
 		urlMappingJasaKitchenSetFromMoneyMasterMoneyPage,
 		urlMappingHargaJasaKitchenSetFromMoneyPageMoneyPage1,
@@ -2964,21 +2954,7 @@ if (urlMappingHargaSewaAlatPendukungFromSub1MoneyMaster[cleanUrlJasaKons]) {
     );
 }
 
-if (urlMappingSewaAlatPendukungFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
-    generateBreadcrumbShared(
-        urlMappingSewaAlatPendukungFromMoneyMasterMoneyMaster1,
-        cleanUrlJasaKons,
-       [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
-            { name: 'Daftar Sewa Alat Pendukung', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-pendukung.html' },
-            { name: 'Perbandingan Sewa Alat Pendukung', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pendukung.html' },
-		    { name: 'Sewa Alat Pendukung', url: 'https://www.betonjayareadymix.com/p/sewa-alat-pendukung.html' }
-        ],
-        'SEWA_ALAT_KONSTRUKSI'
-    );
 
-}
 if (urlMappingSewaAlatBeratFromSub2Sub1[cleanUrlJasaKons]) {
         //pageNameKonstruksiSub.textContent = urlMappingSewaAlatBeratFromSub2Sub1[cleanUrlJasaKons];
 
