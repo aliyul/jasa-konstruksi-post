@@ -686,7 +686,7 @@ const urlMappingJasaKitchenSetFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-kitchen-set-letter-l-u-island.html": "Jasa Kitchen Set Letter L, U & Island"
 
 };
-const urlMappingHargaJasaKitchenSetFromMoneyPageMoneyPage1 = {
+const urlMappingHargaJasaKitchenSetFromMoneyMasterMoneyPage = {
 "https://www.betonjayareadymix.com/p/harga-jasa-kitchen-set-per-meter.html": "Harga Jasa Kitchen Set Per Meter"
 
 };
@@ -1498,7 +1498,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaKitchenSetFromSub1MoneyMaster,
 		urlMappingHargaJasaKitchenSetFromSub1MoneyMaster,
 		urlMappingJasaKitchenSetFromMoneyMasterMoneyPage,
-		urlMappingHargaJasaKitchenSetFromMoneyPageMoneyPage1,
+		urlMappingHargaJasaKitchenSetFromMoneyMasterMoneyPage,
 		
 		urlMappingJasaPasangFromSub1MoneyMaster,
 		urlMappinghargaJasaPasangFromSub1MoneyMaster,
@@ -3118,16 +3118,15 @@ if (urlMappingJasaKitchenSetFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
-if (urlMappingHargaJasaKitchenSetFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
+if (urlMappingHargaJasaKitchenSetFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbShared(
-        urlMappingHargaJasaKitchenSetFromMoneyPageMoneyPage1,
+        urlMappingHargaJasaKitchenSetFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-kitchen-set.html'},
             { name: 'Perbandingan Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-kitchen-set.html'},
-            { name: 'Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/jasa-kitchen-set.html'},
             { name: 'Harga Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/harga-jasa-kitchen-set.html'}
         ],
         'JASA_KONSTRUKSI'
