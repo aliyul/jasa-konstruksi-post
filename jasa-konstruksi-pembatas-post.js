@@ -112,8 +112,10 @@ const urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
   // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
   // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pasang Pagar Panel Beton
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/biaya-pasang-pagar-panel-beton.html": "Biaya Pasang Pagar Panel Beton"
- // "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton"
+  "https://www.betonjayareadymix.com/2018/09/biaya-pasang-pagar-panel-beton.html": "Biaya Pasang Pagar Panel Beton",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pagar-panel-beton-terpasang.html": "Harga Jasa Pagar Panel Beton Terpasang",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton-per-meter.html": "Harga Jasa Pasang Pagar Panel Beton Per Meter"
+// "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton"
 };
 const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1  = {
 	"https://www.betonjayareadymix.com/2018/11/spesifikasi-jasa-pasang-pagar-panel.html": "Spesifikasi Jasa Pasang Pagar Panel Beton",
