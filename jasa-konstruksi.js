@@ -662,9 +662,11 @@ const urlMappingInfrastrukturFromSub1MoneyMaster = {
 const urlMappingJasaKitchenSetFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/jasa-kitchen-set.html": "Jasa Kitchen Set"
 };
+const urlMappingHargaJasaKitchenSetFromSub1MoneyMaster = {
+		"https://www.betonjayareadymix.com/p/harga-jasa-kitchen-set.html": "Harga Jasa Kitchen Set",
+};
 
 const urlMappingJasaKitchenSetFromMoneyMasterMoneyPage = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-kitchen-set.html": "Harga Jasa Kitchen Set",
 	"https://www.betonjayareadymix.com/p/jasa-custom-kitchen-set.html": "Jasa Custom Kitchen Set",
     "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set",
 	    // Kitchen Set juga bisa sebagai MP
@@ -1494,6 +1496,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	    urlMappingHargaSewaAlatPendukungFromSub1MoneyMaster,
 		
 		urlMappingJasaKitchenSetFromSub1MoneyMaster,
+		urlMappingHargaJasaKitchenSetFromSub1MoneyMaster,
 		urlMappingJasaKitchenSetFromMoneyMasterMoneyPage,
 		urlMappingHargaJasaKitchenSetFromMoneyPageMoneyPage1,
 		
@@ -3085,6 +3088,21 @@ if (urlMappingJasaKitchenSetFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
+if (urlMappingHargaJasaKitchenSetFromSub1MoneyMaster[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbShared(
+        urlMappingHargaJasaKitchenSetFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-kitchen-set.html'},
+            { name: 'Perbandingan Jasa Kitchen Set', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-kitchen-set.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+	
 if (urlMappingJasaKitchenSetFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbShared(
