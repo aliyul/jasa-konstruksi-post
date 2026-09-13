@@ -772,6 +772,54 @@ const urlMappingJasaPasangFromSub1MoneyMaster = {
     "https://www.betonjayareadymix.com/p/jasa-pasang-ac.html": "Jasa Pasang AC"
 
 };
+//FOKUS HARGA
+const urlMappinghargaJasaPasangFromSub1MoneyMaster = {
+	//"https://www.betonjayareadymix.com/p/jasa-pasang.html": "Jasa Pasang"
+	//MM INFORMASI DAN HARGA TERPISAH
+	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-acp.html": "Harga Jasa Pasang Acp",
+   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-batu.html": "Harga Jasa Pasang Batu",
+   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-grc.html": "Harga Jasa Pasang Grc",
+   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-kaca.html": "Harga Jasa Pasang Kaca",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-woodplank.html": "Harga Jasa Pasang WoodPlank",
+   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-hpl.html": "Harga Jasa Pasang Hpl",
+    // ================================================================
+    // 📌 MONEY-MASTER (LEVEL 4) - HANYA KATEGORI UTAMA
+    // ================================================================
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik.html": "Harga Jasa Pasang Keramik",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc.html": "Harga Jasa Pasang WPC",
+	 "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pvc.html": "Harga Jasa Pasang PVC",
+    // 1. Lantai & Dinding (sebagai induk)
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-lantai.html": "Harga Jasa Pasang Lantai",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-dinding.html": "Harga Jasa Pasang Dinding",
+
+
+    // 2. Plafon & Atap
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-plafon.html": "Harga Jasa Pasang Plafon",
+    "https://www.betonjayareadymix.com/p/harga-jasa-rangka-atap.html": "Harga Jasa Rangka Atap",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-atap.html": "Harga Jasa Pasang Atap",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-kanopi.html": "Harga Jasa Pasang Kanopi",
+    
+    // 3. Furniture & Elemen Interior
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-furniture.html": "Harga Jasa Pasang Furniture",
+   // "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-partisi.html": "Harga Jasa Pasang Partisi",
+    
+    // 4. Kusen, Pintu, Jendela
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-kusen.html": "Harga Jasa Pasang Kusen",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pintu.html": "Harga Jasa Pasang Pintu",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-jendela.html": "Harga Jasa Pasang Jendela",
+    
+    // 5. Area Outdoor & Lanskap
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-decking.html": "Harga Jasa Pasang Decking",
+   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar.html": "Harga Jasa Pasang Pagar",
+    // "https://www.betonjayareadymix.com/p/jasa-pasang-paving.html": "Jasa Pasang Paving",
+    
+    // 6. Utilitas & Teknologi
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu.html": "Harga Jasa Pasang Lampu",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-cctv.html": "Harga Jasa Pasang CCTV",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-ac.html": "Harga Jasa Pasang AC"
+
+};
 
 const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
 
@@ -1395,6 +1443,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingHargaJasaKitchenSetFromMoneyPageMoneyPage1,
 		
 		urlMappingJasaPasangFromSub1MoneyMaster,
+		urlMappinghargaJasaPasangFromSub1MoneyMaster,
+		
 		urlMappingJasaPembuatanFromSub1MoneyMaster,
 		urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1,
 		urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage,
@@ -2901,6 +2951,21 @@ if (urlMappingJasaPasangFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbShared(
         urlMappingJasaPasangFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+
+if (urlMappinghargaJasaPasangFromSub1MoneyMaster[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbShared(
+        urlMappinghargaJasaPasangFromSub1MoneyMaster,
         cleanUrlJasaKons,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
