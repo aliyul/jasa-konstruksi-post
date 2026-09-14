@@ -1170,7 +1170,7 @@ const urlMappingJasaPengeboranFromMoneyMasterMoneyMaster1 = {
   "https://www.betonjayareadymix.com/p/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",
    "https://www.betonjayareadymix.com/p/tukang-sumur-bor.html": "Tukang Sumur Bor",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur.html": "Jasa Bor Sumur",
-  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah.html": "Jasa Bor Sumur Murah"  
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah.html": "Jasa Bor Sumur Murah",
   "https://www.betonjayareadymix.com/p/jasa-bore-pile.html": "Jasa Bore Pile",  
   "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",  
   "https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton",  
