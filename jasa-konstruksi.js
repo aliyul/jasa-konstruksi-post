@@ -690,11 +690,8 @@ const urlMappingHargaJasaKitchenSetFromMoneyMasterMoneyPage = {
 "https://www.betonjayareadymix.com/p/harga-jasa-kitchen-set-per-meter.html": "Harga Jasa Kitchen Set Per Meter"
 
 };
-const urlMappingJasaPembuatanFromSub1MoneyMaster = {
-	"https://www.betonjayareadymix.com/p/jasa-pembuatan.html": "Jasa Pembuatan"
-};
 
-const urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1 = {
+const urlMappingJasaPembuatanFromSub1MoneyMaster = {
     // ================================================================
     // 📌 MONEY-MASTER (LEVEL 4) - JASA PEMBUATAN (HANYA KATEGORI UTAMA)
     // ================================================================
@@ -713,6 +710,26 @@ const urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1 = {
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-pintu.html": "Jasa Pembuatan Pintu",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-jendela.html": "Jasa Pembuatan Jendela"
 };
+const urlMappingHargaJasaPembuatanFromSub1MoneyMaster = {
+    // ================================================================
+    // 📌 MONEY-MASTER (LEVEL 4) - JASA PEMBUATAN (HANYA KATEGORI UTAMA)
+    // ================================================================
+	
+	 "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-bangunan.html": "Harga Jasa Pembuatan Bangunan",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-furniture.html": "Harga Jasa Pembuatan Furniture",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-pagar.html": "Harga Jasa Pembuatan Pagar",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-kanopi.html": "Harga Jasa Pembuatan Kanopi",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-tangga.html": "Harga Jasa Pembuatan Tangga",
+
+    "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-balkon.html": "Harga Jasa Pembuatan Balkon",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-decking.html": "Harga Jasa Pembuatan Decking",
+   // "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",
+    // Kusen/Pintu/Jendela bisa menjadi MM sendiri atau di bawah Furniture
+    "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-kusen.html": "Harga Jasa Pembuatan Kusen",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-pintu.html": "Harga Jasa Pembuatan Pintu",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-jendela.html": "Harga Jasa Pembuatan Jendela"
+};
+
 const urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage = {
  "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-bangunan.html": "Harga Jasa Pembuatan Bangunan"  
 };
@@ -1504,7 +1521,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappinghargaJasaPasangFromSub1MoneyMaster,
 		
 		urlMappingJasaPembuatanFromSub1MoneyMaster,
-		urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1,
+		urlMappingHargaJasaPembuatanFromSub1MoneyMaster,
 		urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage,
 		urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1,
 		
@@ -3147,6 +3164,21 @@ if (urlMappingJasaPembuatanFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
+if (urlMappingHargaJasaPembuatanFromSub1MoneyMaster[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbShared(
+        urlMappingHargaJasaPembuatanFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+	
 if (urlMappingJasaPasangFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbShared(
@@ -3177,21 +3209,6 @@ if (urlMappinghargaJasaPasangFromSub1MoneyMaster[cleanUrlJasaKons]) {
     );
 }
 	
-if (urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
-
-	    generateBreadcrumbShared(
-        urlMappingJasaPembuatanFromMoneyMasterMoneyMaster1,
-        cleanUrlJasaKons,
-        [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
-            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
-            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
 if (urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbShared(
