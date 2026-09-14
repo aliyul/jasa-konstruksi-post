@@ -1188,6 +1188,9 @@ const urlMappingHargaJasaPengeboranFromMoneyMasterMoneyMaster1 = {
   "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile", 
    "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile.html": "Harga Jasa Strauss Pile",  
   "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah.html": "Harga Jasa Bore Pile Murah",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile.html": "Harga Jasa Borongan Strauss Pile",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile.html": "Harga Jasa Borongan Bore Pile",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-pengeboran-bore-pile.html": "Harga Jasa Pengeboran Bore Pile", 
 	
   "https://www.betonjayareadymix.com/p/harga-jasa-coring-beton.html": "Harga Jasa Coring Beton",  
   "https://www.betonjayareadymix.com/p/harga-jasa-bor-beton.html": "Harga Jasa Bor Beton",  
