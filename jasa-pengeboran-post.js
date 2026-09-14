@@ -28,7 +28,7 @@ const urlMappingJasaTukangBorFromMoneyMaster1MoneyChild = {
   // [MONEY_CHILD] - TUKANG BOR TERDEKAT (LOKASI)
   // 🧠 TYPE: MONEY_CHILD (WAJIB tampil, parent: SUB2)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/jasa-tukang-bor-terdekat.html": "Jasa Tukang Bor Terdekat"  
+
 };
 
 // ============================================================
@@ -46,7 +46,7 @@ const urlMappingJasaBorSumurFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-bogor.html": "Jasa Bor Air Tanah Bogor", 
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-tangerang.html": "Jasa Bor Air Tanah Tangerang",
 
- 
+  "https://www.betonjayareadymix.com/2019/08/jasa-tukang-bor-terdekat.html": "Jasa Tukang Bor Terdekat",
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-terdekat.html": "Jasa Bor Air Terdekat",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-terdekat.html": "Jasa Bor Sumur Terdekat",  
   
