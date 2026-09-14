@@ -1180,7 +1180,7 @@ const urlMappingJasaPengeboranFromMoneyMasterMoneyMaster1 = {
 const urlMappingHargaJasaPengeboranFromMoneyMasterMoneyMaster1 = {
   // [MONEY_PAGE] - JENIS PENGEBORAN SPESIFIK (JASA)
   //"https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html": "Jasa Bor Air Sumur",  
-  "https://www.betonjayareadymix.com/p/harga-jasa-tukang-bor.html": "Harga Jasa Tukang Bor",  
+ // "https://www.betonjayareadymix.com/p/harga-jasa-tukang-bor.html": "Harga Jasa Tukang Bor",  
   "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",  
   "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile",  
   "https://www.betonjayareadymix.com/p/harga-jasa-coring-beton.html": "Harga Jasa Coring Beton",  
