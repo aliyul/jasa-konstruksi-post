@@ -90,8 +90,7 @@ const urlMappingTukangSumurBorFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-bogor.html": "Tukang Sumur Bor Bogor"  
 };
 
-const urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-murah.html": "Harga Jasa Bor Sumur Murah",  
+const urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyPage = { 
   "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-berdasarkan-kedalaman.html": "Biaya Sumur Bor Berdasarkan Kedalaman",  
   "https://www.betonjayareadymix.com/2019/08/faktor-penentu-biaya-jasa-bor-sumur.html": "Faktor Penentu Biaya Jasa Bor Sumur",
   // ============================================================
