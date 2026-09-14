@@ -145,7 +145,7 @@ modifier detail/specifik
   //ga usah "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-balok.html": "Sewa Bekisting Balok",  //belum dibuat
   "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-plat-lantai.html": "Sewa Bekisting Plat Lantai",  //belum dibuat
   // redirect "https://www.betonjayareadymix.com/2019/03/harga-jasa-sewa-bekisting.html": "Harga Jasa Sewa Bekisting",  
-  "https://www.betonjayareadymix.com/2019/03/harga-sewa-bekisting.html": "Harga Sewa Bekisting", 
+ // "https://www.betonjayareadymix.com/2019/03/harga-sewa-bekisting.html": "Harga Sewa Bekisting", 
 "https://www.betonjayareadymix.com/2019/03/sewa-bekisting-per-meter.html": "Sewa Bekisting Per Meter"  
   
 };
@@ -303,14 +303,6 @@ const urlMappingSewaAlatPendukungFromMoneyMasterMoneyPage = {
 	*/
 const urlMappingSewaAlatProyekFromMoneyMasterMoneyPage = {
  
- // hapus saja "https://www.betonjayareadymix.com/2019/02/sewa-sistem-pendukung-proyek.html": "Sewa Sistem Pendukung Proyek",  // TYPE: MONEY_PAGE
-
- // ============================================================
-  // [MONEY_CHILD] - SEWA ALAT PROYEK PER LOKASI
-  // 🧠 TYPE: MONEY_CHILD (spesifik lokasi, intent transaksional 90%)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-proyek.html": "Harga Sewa Alat Proyek"  // TYPE: MONEY_PAGE PARENT
-
  
 };
 const urlMappingSewaAlatProyekFromMoneyMasterMoneyChild = {
