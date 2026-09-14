@@ -76,7 +76,7 @@ const urlMappingJasaBorSumurFromMoneyMaster1Variant = {
 const urlMappingTukangSumurBorFromMoneyPageMoneyPage1 = {
     
 };
-const urlMappingTukangSumurBorFromMoneyPageMoneyChild = {
+const urlMappingTukangSumurBorFromMoneyMaster1MoneyChild = {
  "https://www.betonjayareadymix.com/2019/08/tukang-bor-air-terdekat.html": "Tukang Bor Air Terdekat",  
    "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-terdekat.html": "Tukang Sumur Bor Terdekat",  
     // ============================================================
@@ -694,7 +694,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBorSumurFromMoneyMaster1MoneyPage,
 		urlMappingJasaBorSumurFromMoneyMaster1Variant,
 		urlMappingTukangSumurBorFromMoneyPageMoneyPage1,
-		urlMappingTukangSumurBorFromMoneyPageMoneyChild,
+		urlMappingTukangSumurBorFromMoneyMaster1MoneyChild,
 		
 	    urlMappingHargaJasaBorSumurFromMoneyPageMoneyPage1,
 		urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild,
@@ -833,9 +833,9 @@ document.addEventListener("DOMContentLoaded", function() {
         'JASA_KONSTRUKSI'
     );
     }
-	if (urlMappingTukangSumurBorFromMoneyPageMoneyChild[cleanUrlJasaPengeboranPost]) {
+	if (urlMappingTukangSumurBorFromMoneyMaster1MoneyChild[cleanUrlJasaPengeboranPost]) {
        generateBreadcrumbShared(
-        urlMappingTukangSumurBorFromMoneyPageMoneyChild,
+        urlMappingTukangSumurBorFromMoneyMaster1MoneyChild,
         cleanUrlJasaPengeboranPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -843,7 +843,7 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
             { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
             { name: 'Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/jasa-bor-sumur.html'},
-            { name: 'Tukang Sumur Bor', url: 'https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor.html'}
+            { name: 'Tukang Sumur Bor', url: 'https://www.betonjayareadymix.com/p/tukang-sumur-bor.html'}
         ],
         'JASA_KONSTRUKSI'
     );
