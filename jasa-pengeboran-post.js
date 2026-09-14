@@ -63,17 +63,18 @@ const urlMappingJasaBorSumurFromMoneyMaster1MoneyChild = {
 
 };
 const urlMappingJasaBorSumurFromMoneyMaster1MoneyPage = {
-"https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",  
+//"https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",
+// "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor.html": "Tukang Sumur Bor",
    // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor.html": "Tukang Sumur Bor"
-};
-const urlMappingJasaBorSumurFromMoneyMaster1Variant = {
-"https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-sumur-bor.html": "Spesifikasi Jasa Sumur Bor",  
+  "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-sumur-bor.html": "Spesifikasi Jasa Sumur Bor",  
    // ============================================================
   "https://www.betonjayareadymix.com/2019/08/mutu-jasa-sumur-bor.html": "Mutu Jasa Sumur Bor"
 };
+const urlMappingJasaBorSumurFromMoneyMaster1Variant = {
+ 
+};
 const urlMappingTukangSumurBorFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/2019/08/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",  
+    
 };
 const urlMappingTukangSumurBorFromMoneyPageMoneyChild = {
  "https://www.betonjayareadymix.com/2019/08/tukang-bor-air-terdekat.html": "Tukang Bor Air Terdekat",  
