@@ -325,8 +325,7 @@ const urlMappingJasaBorBetonFromMoneyMaster1Variant = {
 // ============================================================
 
 const urlMappingJasaBorTanahFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah.html": "Harga Jasa Bor Tanah", 
-
+//  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah.html": "Harga Jasa Bor Tanah", 
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-profesional.html": "Jasa Bor Tanah Profesional",    
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam.html": "Jasa Bor Tanah Dalam"  
 
@@ -341,11 +340,11 @@ const urlMappingJasaBorTanahFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-karawang.html": "Jasa Bor Tanah Karawang",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-surabaya.html": "Jasa Bor Tanah Surabaya"  
 };  
-const urlMappingHargaJasaBorTanahFromMoneyPageMoneyPage1 = {
+const urlMappingHargaJasaBorTanahFromMoneyMaster1MoneyPage = {
 
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-per-meter.html": "Harga Jasa Bor Tanah Per Meter"
 };
-const urlMappingHargaJasaBorTanahFromMoneyPageMoneyChild = {
+const urlMappingHargaJasaBorTanahFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-jakarta.html": "Harga Jasa Bor Tanah Jakarta",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-bogor.html": "Harga Jasa Bor Tanah Bogor",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-depok.html": "Harga Jasa Bor Tanah Depok",
@@ -725,8 +724,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		
 		urlMappingJasaBorTanahFromMoneyMaster1MoneyPage,
-		urlMappingHargaJasaBorTanahFromMoneyPageMoneyPage1,
-		urlMappingHargaJasaBorTanahFromMoneyPageMoneyChild,
+		urlMappingHargaJasaBorTanahFromMoneyMaster1MoneyPage,
+		urlMappingHargaJasaBorTanahFromMoneyMaster1MoneyChild,
 		urlMappingJasaBorTanahFromMoneyMaster1MoneyChild,
 		urlMappingJasaBorTanahDalamFromMoneyPageMoneyChild,
         urlMappingJasaBorTanahFromMoneyMaster1Variant,
@@ -1211,32 +1210,30 @@ if (urlMappingJasaBorTanahFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost])
         'JASA_KONSTRUKSI'
     );    
    }
-  if (urlMappingHargaJasaBorTanahFromMoneyPageMoneyPage1[cleanUrlJasaPengeboranPost]) {
+  if (urlMappingHargaJasaBorTanahFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
       generateBreadcrumbShared(
-        urlMappingHargaJasaBorTanahFromMoneyPageMoneyPage1,
+        urlMappingHargaJasaBorTanahFromMoneyMaster1MoneyPage,
         cleanUrlJasaPengeboranPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
-            { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
-            { name: 'Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/p/jasa-bor-tanah.html'},
-            { name: 'Harga Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah.html'}
+            { name: 'Harga Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pengeboran.html'},
+            { name: 'Harga Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor-tanah.html'}
         ],
         'JASA_KONSTRUKSI'
     );    
    }
-  if (urlMappingHargaJasaBorTanahFromMoneyPageMoneyChild[cleanUrlJasaPengeboranPost]) {
+  if (urlMappingHargaJasaBorTanahFromMoneyMaster1MoneyChild[cleanUrlJasaPengeboranPost]) {
       generateBreadcrumbShared(
-        urlMappingHargaJasaBorTanahFromMoneyPageMoneyChild,
+        urlMappingHargaJasaBorTanahFromMoneyMaster1MoneyChild,
         cleanUrlJasaPengeboranPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
-            { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
-            { name: 'Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/p/jasa-bor-tanah.html'},
-            { name: 'Harga Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah.html'}
+            { name: 'Harga Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pengeboran.html'},
+            { name: 'Harga Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor-tanah.html'}
         ],
         'JASA_KONSTRUKSI'
     );    
