@@ -90,7 +90,7 @@ const urlMappingTukangSumurBorFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-bogor.html": "Tukang Sumur Bor Bogor"  
 };
 
-const urlMappingHargaJasaBorSumurFromMoneyPageMoneyPage1 = {
+const urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-berdasarkan-kedalaman.html": "Biaya Sumur Bor Berdasarkan Kedalaman",  
   "https://www.betonjayareadymix.com/2019/08/faktor-penentu-biaya-jasa-bor-sumur.html": "Faktor Penentu Biaya Jasa Bor Sumur",
   // ============================================================
@@ -106,7 +106,7 @@ const urlMappingHargaJasaBorSumurFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-per-meter.html": "Harga Biaya Jasa Sumur Bor Per Meter",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-murah.html": "Jasa Bor Sumur Murah"
 };
-const urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild = {
+const urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-terdekat.html": "Harga Jasa Bor Sumur Terdekat", 
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-jakarta.html": "Harga Jasa Bor Sumur Jakarta", 
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-bogor.html": "Harga Jasa Bor Sumur Bogor", 
@@ -696,8 +696,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingTukangSumurBorFromMoneyPageMoneyPage1,
 		urlMappingTukangSumurBorFromMoneyMaster1MoneyChild,
 		
-	    urlMappingHargaJasaBorSumurFromMoneyPageMoneyPage1,
-		urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild,
+	    urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyPage,
+		urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyChild,
 	    urlMappingHargaJasaBorSumurFromMoneyPageVariant,
 		
 		urlMappingJasaBorePileFromMoneyMaster1MoneyPage,
@@ -849,10 +849,10 @@ document.addEventListener("DOMContentLoaded", function() {
     );
     }
 	
-	if (urlMappingHargaJasaBorSumurFromMoneyPageMoneyPage1[cleanUrlJasaPengeboranPost]) {
+	if (urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
 
        generateBreadcrumbShared(
-        urlMappingHargaJasaBorSumurFromMoneyPageMoneyPage1,
+        urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyPage,
         cleanUrlJasaPengeboranPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -860,16 +860,16 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
             { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
             { name: 'Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/jasa-bor-sumur.html'},
-            { name: 'Harga Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur.html'}
+            { name: 'Harga Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html'}
         ],
         'JASA_KONSTRUKSI'
     );
     }
 	
-	if (urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild[cleanUrlJasaPengeboranPost]) {
+	if (urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyChild[cleanUrlJasaPengeboranPost]) {
 
        generateBreadcrumbShared(
-        urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild,
+        urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyChild,
         cleanUrlJasaPengeboranPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -877,7 +877,7 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
             { name: 'Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/jasa-pengeboran.html'},
             { name: 'Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/jasa-bor-sumur.html'},
-            { name: 'Harga Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur.html'}
+            { name: 'Harga Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/08/harga-jasa-bor-sumur.html'}
         ],
         'JASA_KONSTRUKSI'
     );
