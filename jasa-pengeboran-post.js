@@ -328,7 +328,7 @@ const urlMappingJasaBorTanahFromMoneyMaster1MoneyChild = {
 };  
 const urlMappingHargaJasaBorTanahFromMoneyMaster1MoneyPage = {
 
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-per-meter.html": "Harga Jasa Bor Tanah Per Meter"
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-per-meter.html": "Harga Jasa Bor Tanah Per Meter",
 	 "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-bor-tanah.html": "Spesifikasi Jasa Bor Tanah",
   "https://www.betonjayareadymix.com/2019/08/ukuran-jasa-bor-tanah.html": "Ukuran Jasa Bor Tanah"
 };
