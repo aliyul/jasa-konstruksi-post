@@ -231,14 +231,16 @@ const urlMappingJasaBorTembokFromMoneyMaster1MoneyChild = {
 const urlMappingJasaCoringBetonFromMoneyMaster1MoneyPage = {
   // ============================================================
   // [MONEY_MASTER] - LAYANAN CORE DRILL (UMUM)
-  // ============================================================
- "https://www.betonjayareadymix.com/2018/11/harga-jasa-coring-beton.html": "Harga Jasa Coring Beton",  
+  // ============================================================  
   "https://www.betonjayareadymix.com/2018/11/layanan-core-drill-terpercaya.html": "Layanan Core Drill Terpercaya",  
-  "https://www.betonjayareadymix.com/2018/11/core-drill-proyek-konstruksi.html": "Core Drill Proyek Konstruksi",  
   "https://www.betonjayareadymix.com/2018/11/pengeboran-beton-instalasi-pipa.html": "Pengeboran Beton Instalasi Pipa",  
   "https://www.betonjayareadymix.com/2018/11/jasa-bor-beton-saluran-kabel.html": "Jasa Bor Beton Saluran Kabel",  
   "https://www.betonjayareadymix.com/2018/11/pengeboran-beton-sistem-hvac.html": "Pengeboran Beton Sistem HVAC",  
-  "https://www.betonjayareadymix.com/2018/11/jasa-core-drill-beton.html": "Jasa Core Drill Beton"  
+  "https://www.betonjayareadymix.com/2018/11/jasa-core-drill-beton.html": "Jasa Core Drill Beton",
+
+   "https://www.betonjayareadymix.com/2018/11/spesifikasi-jasa-coring-beton.html": "Spesifikasi Jasa Coring Beton",  
+    "https://www.betonjayareadymix.com/2018/11/ukuran-jasa-coring-beton.html": "Ukuran Jasa Coring Beton" 
+
 };
 const urlMappingJasaCoringBetonFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2018/09/jasa-coring-beton-terdekat.html": "Jasa Coring Beton Terdekat",  
@@ -262,9 +264,7 @@ const urlMappingHargaJasaCoringBetonFromMoneyPageMoneyChild= {
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-coring-beton-karawang.html": "Harga Jasa Coring Beton Karawang"
 };
 const urlMappingJasaCoringBetonFromMoneyMaster1Variant = {
-  "https://www.betonjayareadymix.com/2018/11/spesifikasi-jasa-coring-beton.html": "Spesifikasi Jasa Coring Beton",  
-    "https://www.betonjayareadymix.com/2018/11/ukuran-jasa-coring-beton.html": "Ukuran Jasa Coring Beton" // Ukuran Jasa Coring Beton VARIANT JASA 
- // "https://www.betonjayareadymix.com/2018/11/ukuran-coring-beton.html": "Ukuran Coring Beton"  // Ukuran Coring Beton VARIANT PRDDUK NANTI PINDAHKAN KE VARIANT PRDDUK DAN REVISI KONTEN NYA
+  // "https://www.betonjayareadymix.com/2018/11/ukuran-coring-beton.html": "Ukuran Coring Beton"  // Ukuran Coring Beton VARIANT PRDDUK NANTI PINDAHKAN KE VARIANT PRDDUK DAN REVISI KONTEN NYA
 };
 
 
