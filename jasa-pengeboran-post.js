@@ -311,7 +311,8 @@ const urlMappingJasaBorBetonFromMoneyMaster1Variant = {
 // ============================================================
 
 const urlMappingJasaBorTanahFromMoneyMaster1MoneyPage = {
-//  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah.html": "Harga Jasa Bor Tanah", 
+   "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-bor-tanah.html": "Spesifikasi Jasa Bor Tanah",
+  "https://www.betonjayareadymix.com/2019/08/ukuran-jasa-bor-tanah.html": "Ukuran Jasa Bor Tanah",
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-profesional.html": "Jasa Bor Tanah Profesional",    
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam.html": "Jasa Bor Tanah Dalam"  
 
@@ -327,10 +328,7 @@ const urlMappingJasaBorTanahFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-surabaya.html": "Jasa Bor Tanah Surabaya"  
 };  
 const urlMappingHargaJasaBorTanahFromMoneyMaster1MoneyPage = {
-
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-per-meter.html": "Harga Jasa Bor Tanah Per Meter",
-	 "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-bor-tanah.html": "Spesifikasi Jasa Bor Tanah",
-  "https://www.betonjayareadymix.com/2019/08/ukuran-jasa-bor-tanah.html": "Ukuran Jasa Bor Tanah"
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-per-meter.html": "Harga Jasa Bor Tanah Per Meter"
 };
 const urlMappingHargaJasaBorTanahFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-jakarta.html": "Harga Jasa Bor Tanah Jakarta",
@@ -358,7 +356,7 @@ const urlMappingJasaBorTanahFromMoneyMaster1Variant = {
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Pengeboran > Jasa Bor Horizontal
 // ============================================================
 const urlMappingJasaBorHorizontalFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-horizontal.html": "Harga Jasa Bor Horizontal"
+//  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-horizontal.html": "Harga Jasa Bor Horizontal"
 };
 const urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild  = {
   // ============================================================
