@@ -1185,7 +1185,7 @@ const urlMappingJasaPengeboranFromMoneyMasterMoneyMaster1 = {
 		
   //MM INFORMASI JASA CORING BETON
   "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",  
-  
+   "https://www.betonjayareadymix.com/p/core-drill-proyek-konstruksi.html": "Core Drill Proyek Konstruksi", 
   //MM INFORMASI JASA BOR BETON
   "https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton",  
 
@@ -1201,10 +1201,11 @@ const urlMappingJasaPengeboranFromMoneyMasterMoneyMaster1 = {
 const urlMappingHargaJasaPengeboranFromMoneyMasterMoneyMaster1 = {
   //"https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html": "Jasa Bor Air Sumur",  
  // "https://www.betonjayareadymix.com/p/harga-jasa-tukang-bor.html": "Harga Jasa Tukang Bor",  
-	
+ //MM HARGA JASA BOR SUMUR
   "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah.html": "Harga Jasa Bor Sumur Murah", 
   "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",  
-	
+
+ //MM HARGA JASA BORE PILE
   "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile", 
    "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-beton.html": "Harga Jasa Bore Pile Beton", 
     "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-mini.html": "Harga Jasa Bore Pile Mini", 
@@ -1213,11 +1214,19 @@ const urlMappingHargaJasaPengeboranFromMoneyMasterMoneyMaster1 = {
   "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile.html": "Harga Jasa Borongan Strauss Pile",  
   "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile.html": "Harga Jasa Borongan Bore Pile",  
   "https://www.betonjayareadymix.com/p/harga-jasa-pengeboran-bore-pile.html": "Harga Jasa Pengeboran Bore Pile", 
-	
-  "https://www.betonjayareadymix.com/p/harga-jasa-coring-beton.html": "Harga Jasa Coring Beton",  
+  //MM HARGA JASA CORING BETON
+  "https://www.betonjayareadymix.com/p/harga-jasa-coring-beton.html": "Harga Jasa Coring Beton",
+
+  //MM HARGA JASA BOR BETON
   "https://www.betonjayareadymix.com/p/harga-jasa-bor-beton.html": "Harga Jasa Bor Beton",  
+
+  //MMM HARGA JASA BOR TANAH
   "https://www.betonjayareadymix.com/p/harga-jasa-bor-tanah.html": "Harga Jasa Bor Tanah",  
+
+  //MM HARGA JASA BOR HORIZONTAL
   "https://www.betonjayareadymix.com/p/harga-jasa-bor-horizontal.html": "Harga Jasa Bor Horizontal",  
+
+  //MM HARGA JASA BOR TEMBOK
   "https://www.betonjayareadymix.com/p/harga-jasa-bor-tembok.html": "Harga Jasa Bor Tembok"  
 };
 
