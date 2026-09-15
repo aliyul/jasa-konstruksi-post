@@ -1203,9 +1203,8 @@ const urlMappingHargaJasaPengeboranFromMoneyMasterMoneyMaster1 = {
  // "https://www.betonjayareadymix.com/p/harga-jasa-tukang-bor.html": "Harga Jasa Tukang Bor",  
  //MM HARGA JASA BOR SUMUR
   "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah.html": "Harga Jasa Bor Sumur Murah", 
-  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",  
-   "https://www.betonjayareadymix.com/p/harga-biaya-jasa-sumur-bor-per-meter.html": "Harga Biaya Jasa Sumur Bor Per Meter",
-
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",
+	
  //MM HARGA JASA BORE PILE
   "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile", 
    "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-beton.html": "Harga Jasa Bore Pile Beton", 
