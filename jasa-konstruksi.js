@@ -1120,7 +1120,8 @@ const urlMappingHargaJasaBongkarBangunanFromMoneyMasterMoneyMaster1 = {
   "https://www.betonjayareadymix.com/p/harga-jasa-bongkar-plafon.html": "Harga Jasa Bongkar Plafon",  
   "https://www.betonjayareadymix.com/p/harga-jasa-bongkar-partisi.html": "Harga Jasa Bongkar Partisi",  
   "https://www.betonjayareadymix.com/p/harga-jasa-bongkar-pagar.html": "Harga Jasa Bongkar Pagar",  
-  "https://www.betonjayareadymix.com/p/harga-jasa-bongkar-lantai.html": "Harga Jasa Bongkar Lantai"  
+  "https://www.betonjayareadymix.com/p/harga-jasa-bongkar-lantai.html": "Harga Jasa Bongkar Lantai",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bobok-lantai.html": "Harga Jasa Bobok Lantai"
 };
 
 // ============================================================
