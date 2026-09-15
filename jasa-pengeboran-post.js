@@ -272,9 +272,10 @@ const urlMappingJasaCoringBetonFromMoneyMaster1Variant = {
 // Breadcrumb: Home > Jasa Konstruksi > Jasa Pengeboran > Jasa Bor Beton
 // ============================================================
 
-const urlMappingJasaBorBetonFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-beton.html": "Harga Jasa Bor Beton",  
-
+const urlMappingJasaBorBetonFromMoneyMaster1MoneyPage = { 
+  "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-bor-beton.html": "Spesifikasi Jasa Bor Beton",  
+  "https://www.betonjayareadymix.com/2019/08/ukuran-jasa-bor-beton.html": "Ukuran Jasa Bor Beton",
+	
  // "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-renovasi-bangunan.html": "Jasa Bor Beton Renovasi Bangunan",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-per-lubang.html": "Jasa Bor Beton Per Lubang",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-bertulang.html": "Jasa Bor Beton Bertulang"
@@ -299,8 +300,7 @@ const urlMappingJasaBorBetonFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-beton-surabaya.html": "Jasa Bor Beton Surabaya"  
 };
 const urlMappingJasaBorBetonFromMoneyMaster1Variant = {
-  "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-bor-beton.html": "Spesifikasi Jasa Bor Beton",  
-  "https://www.betonjayareadymix.com/2019/08/ukuran-jasa-bor-beton.html": "Ukuran Jasa Bor Beton"
+  
 };
 // ============================================================
 // [SUB2] - JASA BOR TANAH (KATEGORI)
