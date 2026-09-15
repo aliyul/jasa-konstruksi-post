@@ -1176,7 +1176,10 @@ const urlMappingJasaPengeboranFromMoneyMasterMoneyMaster1 = {
   "https://www.betonjayareadymix.com/p/jasa-bore-pile.html": "Jasa Bore Pile",  
    "https://www.betonjayareadymix.com/p/jasa-bore-pile-beton.html": "Jasa Bore Pile Beton",
    "https://www.betonjayareadymix.com/p/jasa-bore-pile-mini.html": "Jasa Bore Pile Mini",
-	
+	"https://www.betonjayareadymix.com/p/metode-jasa-bore-pile.html": "Metode Jasa Bore Pile",
+    "https://www.betonjayareadymix.com/p/mutu-jasa-bore-pile.html": "Mutu Jasa Bore Pile",
+    "https://www.betonjayareadymix.com/p/spesifikasi-jasa-bore-pile.html": "Spesifikasi Jasa Bore Pile",
+		
   //MM INFORMASI JASA CORING BETON
   "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",  
   
