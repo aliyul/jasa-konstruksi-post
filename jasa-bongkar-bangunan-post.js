@@ -95,7 +95,8 @@ const urlMappingHargaJasaBongkarRumahFromMoneyPageMoneyChild = {
 
 const urlMappingJasaBongkarBetonFromMoneyMaster1MoneyPage = {
 //  "https://www.betonjayareadymix.com/2019/06/harga-jasa-bongkar-beton.html": "Harga Jasa Bongkar Beton" 
-
+   "https://www.betonjayareadymix.com/2019/06/ukuran-jasa-bongkar-beton.html": "Ukuran Jasa Bongkar Beton",
+  "https://www.betonjayareadymix.com/2019/06/metode-jasa-bongkar-beton.html": "Metode Jasa Bongkar Beton"
 };
 const urlMappingJasaBongkarBetonFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/06/jasa-bongkar-beton-terdekat.html": "Jasa Bongkar Beton Terdekat",
@@ -123,8 +124,7 @@ const urlMappingHargaJasaBongkarBetonFromMoneyPageMoneyChild = {
 
 };
 const urlMappingJasaBongkarBetonFromMoneyMaster1Variant = {
-  "https://www.betonjayareadymix.com/2019/06/ukuran-jasa-bongkar-beton.html": "Ukuran Jasa Bongkar Beton",
-  "https://www.betonjayareadymix.com/2019/06/metode-jasa-bongkar-beton.html": "Metode Jasa Bongkar Beton"
+ 
 
 };
 // ============================================================
