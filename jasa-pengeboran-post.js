@@ -95,8 +95,8 @@ const urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-15-meter.html": "Harga Biaya Jasa Sumur Bor 15 Meter",  
   "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-10-meter.html": "Harga Biaya Jasa Sumur Bor 10 Meter",  
   "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-20-meter.html": "Harga Biaya Jasa Sumur Bor 20 Meter",  
-  "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-30-meter.html": "Harga Biaya Jasa Sumur Bor 30 Meter"  
-;
+  "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-30-meter.html": "Harga Biaya Jasa Sumur Bor 30 Meter"
+};
 const urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-terdekat.html": "Harga Jasa Bor Sumur Terdekat", 
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-jakarta.html": "Harga Jasa Bor Sumur Jakarta", 
@@ -327,6 +327,8 @@ const urlMappingJasaBorTanahFromMoneyMaster1MoneyChild = {
 const urlMappingHargaJasaBorTanahFromMoneyMaster1MoneyPage = {
 
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-per-meter.html": "Harga Jasa Bor Tanah Per Meter"
+	 "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-bor-tanah.html": "Spesifikasi Jasa Bor Tanah",
+  "https://www.betonjayareadymix.com/2019/08/ukuran-jasa-bor-tanah.html": "Ukuran Jasa Bor Tanah"
 };
 const urlMappingHargaJasaBorTanahFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tanah-jakarta.html": "Harga Jasa Bor Tanah Jakarta",
@@ -346,8 +348,7 @@ const urlMappingJasaBorTanahDalamFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam-karawang.html": "Jasa Bor Tanah Dalam Karawang"
 };
 const urlMappingJasaBorTanahFromMoneyMaster1Variant = {
-  "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-bor-tanah.html": "Spesifikasi Jasa Bor Tanah",
-  "https://www.betonjayareadymix.com/2019/08/ukuran-jasa-bor-tanah.html": "Ukuran Jasa Bor Tanah"
+ 
 };
 // ============================================================
 // [SUB2] - JASA BOR HORIZONTAL (KATEGORI)
