@@ -97,7 +97,8 @@ const urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-20-meter.html": "Harga Biaya Jasa Sumur Bor 20 Meter",  
   "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-30-meter.html": "Harga Biaya Jasa Sumur Bor 30 Meter", 
    "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-per-meter.html": "Harga Biaya Jasa Sumur Bor Per Meter"
-
+    "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-berdasarkan-kedalaman.html": "Biaya Sumur Bor Berdasarkan Kedalaman", 
+	 "https://www.betonjayareadymix.com/2019/08/faktor-penentu-biaya-jasa-bor-sumur.html": "Faktor Penentu Biaya Jasa Bor Sumur"
 };
 const urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-terdekat.html": "Harga Jasa Bor Sumur Terdekat", 
