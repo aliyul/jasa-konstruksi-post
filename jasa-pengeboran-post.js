@@ -63,12 +63,7 @@ const urlMappingJasaBorSumurFromMoneyMaster1MoneyChild = {
 
 };
 const urlMappingJasaBorSumurFromMoneyMaster1MoneyPage = {
-//"https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",
-// "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor.html": "Tukang Sumur Bor",
-   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-sumur-bor.html": "Spesifikasi Jasa Sumur Bor",  
-   // ============================================================
-  "https://www.betonjayareadymix.com/2019/08/mutu-jasa-sumur-bor.html": "Mutu Jasa Sumur Bor"
+
 };
 const urlMappingJasaBorSumurFromMoneyMaster1Variant = {
  
@@ -91,8 +86,6 @@ const urlMappingTukangSumurBorFromMoneyMaster1MoneyChild = {
 };
 
 const urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyPage = { 
-  "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-berdasarkan-kedalaman.html": "Biaya Sumur Bor Berdasarkan Kedalaman",  
-  "https://www.betonjayareadymix.com/2019/08/faktor-penentu-biaya-jasa-bor-sumur.html": "Faktor Penentu Biaya Jasa Bor Sumur",
   // ============================================================
   "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-150-meter.html": "Harga Biaya Jasa Sumur Bor 150 Meter",  
   "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-100-meter.html": "Harga Biaya Jasa Sumur Bor 100 Meter",  
@@ -177,9 +170,7 @@ const urlMappingJasaBorePileMiniFromMoneyPageMoneyChild = {
     "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-mini-karawang.html": "Jasa Bore Pile Mini Karawang"     
 };
 const urlMappingJasaBorePileFromMoneyMaster1Variant = {
-    "https://www.betonjayareadymix.com/2019/08/metode-jasa-bore-pile.html": "Metode Jasa Bore Pile",
-    "https://www.betonjayareadymix.com/2019/08/mutu-jasa-bore-pile.html": "Mutu Jasa Bore Pile",
-    "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-bore-pile.html": "Spesifikasi Jasa Bore Pile"
+
 };
 // ============================================================
 // [SUB2] - JASA BOR TEMBOK (KATEGORI)
