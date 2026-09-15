@@ -63,7 +63,9 @@ const urlMappingJasaBorSumurFromMoneyMaster1MoneyChild = {
 
 };
 const urlMappingJasaBorSumurFromMoneyMaster1MoneyPage = {
-
+//MP INFORMASI
+"https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-berdasarkan-kedalaman.html": "Biaya Sumur Bor Berdasarkan Kedalaman", 
+"https://www.betonjayareadymix.com/2019/08/faktor-penentu-biaya-jasa-bor-sumur.html": "Faktor Penentu Biaya Jasa Bor Sumur"
 };
 const urlMappingJasaBorSumurFromMoneyMaster1Variant = {
  
@@ -96,9 +98,7 @@ const urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-10-meter.html": "Harga Biaya Jasa Sumur Bor 10 Meter",  
   "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-20-meter.html": "Harga Biaya Jasa Sumur Bor 20 Meter",  
   "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-30-meter.html": "Harga Biaya Jasa Sumur Bor 30 Meter", 
-   "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-per-meter.html": "Harga Biaya Jasa Sumur Bor Per Meter",
-    "https://www.betonjayareadymix.com/2019/08/biaya-sumur-bor-berdasarkan-kedalaman.html": "Biaya Sumur Bor Berdasarkan Kedalaman", 
-	 "https://www.betonjayareadymix.com/2019/08/faktor-penentu-biaya-jasa-bor-sumur.html": "Faktor Penentu Biaya Jasa Bor Sumur"
+   "https://www.betonjayareadymix.com/2019/08/harga-biaya-jasa-sumur-bor-per-meter.html": "Harga Biaya Jasa Sumur Bor Per Meter"
 };
 const urlMappingHargaJasaBorSumurFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-terdekat.html": "Harga Jasa Bor Sumur Terdekat", 
@@ -183,8 +183,7 @@ const urlMappingJasaBorTembokFromMoneyMaster1MoneyPage = {
   // ============================================================
   // [MONEY_MASTER] - JASA BOR TEMBOK (KUALITAS LAYANAN)
   // ============================================================
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-bor-tembok.html": "Harga Jasa Bor Tembok",  
-
+//  "https://www.betonjayareadymix.com/2018/09/harga-jasa-bor-tembok.html": "Harga Jasa Bor Tembok",  
 
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-profesional.html": "Jasa Bor Tembok Profesional",  
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-tembok-terpercaya.html": "Jasa Bor Tembok Terpercaya",  
