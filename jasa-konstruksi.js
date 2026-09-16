@@ -373,14 +373,25 @@ const urlMappingJasaPekerjaanGalianTanahBridgeFromSub2Sub1 = {
 const urlMappingJasaPematanganLahanFromSub1MoneyMaster = {
 "https://www.betonjayareadymix.com/p/jasa-pematangan-lahan.html": "Jasa Pematangan Lahan"
 };
+const urlMappingHargaJasaPematanganLahanFromSub1MoneyMaster = {
+"https://www.betonjayareadymix.com/p/harga-jasa-pematangan-lahan.html": "Harga Jasa Pematangan Lahan"
+};
+
 const urlMappingJasaPekerjaanGalianTanahFromSub1MoneyMaster = {
 "https://www.betonjayareadymix.com/p/jasa-pekerjaan-galian-tanah.html": "Jasa Pekerjaan Galian Tanah"
 };
+const urlMappingHargaJasaPekerjaanGalianTanahFromSub1MoneyMaster = {
+"https://www.betonjayareadymix.com/p/harga-jasa-pekerjaan-galian-tanah.html": "Harga Jasa Pekerjaan Galian Tanah"
+};
+
 const urlMappingJasaUjiTanahBridgeFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-uji-tanah.html": "Perbandingan Jasa Jasa Uji Tanah"  // TYPE: SUB1
 };
 const urlMappingJasaUjiTanahFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-uji-tanah.html": "Jasa Uji Tanah"  
+};
+const urlMappinghargaJasaUjiTanahFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-uji-tanah.html": "Harga Jasa Uji Tanah"  
 };
 const urlMappingJasaCuttingBetonBridgeFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-cutting-beton.html": "Perbandingan Jasa Cutting Beton"  // TYPE: SUB1
@@ -434,6 +445,9 @@ const urlMappingJasaPerkuatanTanahBridgeFromSub2Sub1 = {
 const urlMappingJasaPerkuatanTanahFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah.html": "Jasa Perkuatan Tanah"  
 };
+const urlMappingHargaJasaPerkuatanTanahFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-perkuatan-tanah.html": "Harga Jasa Perkuatan Tanah"  
+};
 
 const urlMappingJasaPembatasPengamanBridgeFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-pembatas-pengaman.html": "Perbandingan Jasa Pembatas Pengaman"  // TYPE: SUB1
@@ -441,7 +455,9 @@ const urlMappingJasaPembatasPengamanBridgeFromSub2Sub1 = {
 const urlMappingJasaPembatasPengamanFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html": "Jasa Pembatas Pengaman"  
 };
-
+const urlMappingHargaJasaPembatasPengamanFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-pembatas-pengaman.html": "Harga Jasa Pembatas Pengaman"  
+};
 const urlMappingJasaInstalasiListrikBridgeFromSub2Sub1 = {
    "https://www.betonjayareadymix.com/p/perbandingan-jasa-instalasi-listrik.html": "Perbandingan Jasa Instalasi Listrik"  // TYPE: SUB1
 };
@@ -460,7 +476,15 @@ const urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-maintenance-perbaikan-listrik.html": "Jasa Maintenance & Perbaikan Listrik",  
   "https://www.betonjayareadymix.com/p/jasa-konsultasi-listrik.html": "Jasa Konsultasi Listrik"  
 };
-
+const urlMappingHargaJasaInstalasiListrikFromMoneyMasterMoneyPage = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-instalasi-solar-panel.html": "Harga Jasa Instalasi Solar Panel",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-instalasi-listrik-rumah.html": "Harga Jasa Instalasi Listrik Rumah",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-instalasi-listrik-komersial.html": "Harga Jasa Instalasi Listrik Komersial",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-pemasangan-panel-listrik.html": "Harga Jasa Pemasangan Panel Listrik",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-keamanan-proteksi-listrik.html": "Harga Jasa Keamanan & Proteksi Listrik",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-maintenance-perbaikan-listrik.html": "Harga Jasa Maintenance & Perbaikan Listrik",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-konsultasi-listrik.html": "Harga Jasa Konsultasi Listrik"  
+};
 // ============================================================
 // 📁 JASA ALAT KONSTRUKSI (ENTITY: SEWA/RENTAL - BUKAN JASA)
 // ⚠️ PERHATIAN: Ini adalah ENTITY SEWA/RENTAL, BUKAN JASA
@@ -536,7 +560,26 @@ const urlMappingSewaAlatBeratFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-pancang-diesel-hammer.html": "Sewa Alat Pancang Diesel Hammer",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/02/sewa-alat-pancang-drop-hammer.html": "Sewa Alat Pancang Drop Hammer",  // TYPE: MONEY_MASTER
   */
-	
+};
+const urlMappingHargaSewaAlatBeratFromSub1MoneyMaster = {
+   "https://www.betonjayareadymix.com/p/harga-sewa-alat-berat.html": "HargaSewa Alat Berat",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/harga-sewa-excavator.html": "Harga Sewa Excavator",  // TYPE: MoneyMaster 
+ // "https://www.betonjayareadymix.com/p/sewa-beko.html": "Sewa Beko",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/harga-sewa-forklift.html": "Harga Sewa Forklift",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/harga-sewa-bulldozer.html": "Harga Sewa Bulldozer",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/harga-sewa-vibro-roller.html": "Harga Sewa Vibro Roller",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/harga-sewa-wales-stoom.html": "Harga Sewa Wales Stoom",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/harga-sewa-crane.html": "Harga Sewa Crane",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/harga-sewa-self-loader.html": "Harga Sewa Self Loader",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/harga-sewa-wheel-loader.html": "Harga Sewa Wheel Loader",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/harga-sewa-tandem-roller.html": "Harga Sewa Tandem Roller",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/harga-sewa-backhoe-loader.html": "Harga Sewa Backhoe Loader",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/harga-sewa-baby-roller.html": "Harga Sewa Baby Roller",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/harga-sewa-motor-grader.html": "Harga Sewa Motor Grader",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/harga-sewa-alat-pancang.html": "Harga Sewa Alat Pancang",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/harga-sewa-trencher.html": "Harga Sewa Trencher",  // TYPE: MoneyMaster 
+  "https://www.betonjayareadymix.com/p/harga-sewa-concrete-paver.html": "Harga Sewa Concrete Paver"  // TYPE: MoneyMaster 
+
 };
 /*
 const urlMappingSewaExcavatorFromSub2Sub1 = {
@@ -1585,6 +1628,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		//urlMappingSewaAlatBeratFromSub1MoneyPage,
 		urlMappingSewaAlatBeratFromSub2Sub1,
 		urlMappingSewaAlatBeratFromSub1MoneyMaster,
+		urlMappingHargaSewaAlatBeratFromSub1MoneyMaster,
 		
 		urlMappingSewaAlatRinganFromSub2Sub1,
 		urlMappingSewaAlatRinganFromSub1MoneyMaster,
@@ -3154,8 +3198,21 @@ if (urlMappingSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
            	{ name: 'Perbandingan Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html' }
         ],
         'SEWA_ALAT_KONSTRUKSI'
-    );
-   
+    ); 
+}
+if (urlMappingHargaSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
+  
+	   generateBreadcrumbShared(
+        urlMappingHargaSewaAlatBeratFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-berat.html' },
+           	{ name: 'Perbandingan Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-berat.html' }
+        ],
+        'SEWA_ALAT_KONSTRUKSI'
+    ); 
 }
 	
   //AKHIR JASA KONTRUKSI ALAT
