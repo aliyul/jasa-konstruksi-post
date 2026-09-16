@@ -1406,14 +1406,14 @@ const urlMappingHargaJasaPematanganLahanFromMoneyMasterMoneyPage = {
 // ============================================================
 // PARENT: Jasa Pematangan Lahan (MM-1)
 // ============================================================
-"https://www.betonjayareadymix.com/p/harga-jasa-pengupasan-lahan-tanah.html": "Jasa Pengupasan Lahan Tanah",
-"https://www.betonjayareadymix.com/p/harga-jasa-pembersihan-lahan-pematangan.html": "Jasa Pembersihan Lahan Pematangan",
-"https://www.betonjayareadymix.com/p/harga-jasa-perataan-dan-grading-lahan.html": "Jasa Perataan dan Grading Lahan",
-"https://www.betonjayareadymix.com/p/harga-jasa-pekerjaan-elevasi-lahan.html": "Jasa Pekerjaan Elevasi Lahan",
-"https://www.betonjayareadymix.com/p/harga-jasa-pembentukan-badan-lahan.html": "Jasa Pembentukan Badan Lahan",
-"https://www.betonjayareadymix.com/p/harga-jasa-cut-and-fill-lahan.html": "Jasa Cut and Fill Lahan",
+"https://www.betonjayareadymix.com/p/harga-jasa-pengupasan-lahan-tanah.html": "Harga Jasa Pengupasan Lahan Tanah",
+"https://www.betonjayareadymix.com/p/harga-jasa-pembersihan-lahan-pematangan.html": "Harga Jasa Pembersihan Lahan Pematangan",
+"https://www.betonjayareadymix.com/p/harga-jasa-perataan-dan-grading-lahan.html": "Harga Jasa Perataan dan Grading Lahan",
+"https://www.betonjayareadymix.com/p/harga-jasa-pekerjaan-elevasi-lahan.html": "Harga Jasa Pekerjaan Elevasi Lahan",
+"https://www.betonjayareadymix.com/p/harga-jasa-pembentukan-badan-lahan.html": "Harga Jasa Pembentukan Badan Lahan",
+"https://www.betonjayareadymix.com/p/harga-jasa-cut-and-fill-lahan.html": "Harga Jasa Cut and Fill Lahan",
 "https://www.betonjayareadymix.com/p/harga-jasa-pemotongan-bukit-lahan.html": "Harga Jasa Pemotongan Bukit Lahan",
-"https://www.betonjayareadymix.com/p/harga-jasa-tebang-pohon-pematangan-lahan.html": "Jasa Tebang Pohon Pematangan Lahan"
+"https://www.betonjayareadymix.com/p/harga-jasa-tebang-pohon-pematangan-lahan.html": "Harga Jasa Tebang Pohon Pematangan Lahan"
 
 };
 
@@ -1427,10 +1427,21 @@ const urlMappingJasaPekerjaanGalianTanahFromMoneyMasterMoneyPage = {
 "https://www.betonjayareadymix.com/p/jasa-stabilisasi-tanah-lahan.html": "Jasa Stabilisasi Tanah Lahan",
 "https://www.betonjayareadymix.com/p/jasa-pemasangan-drainase-lahan.html": "Jasa Pemasangan Drainase Lahan",
 "https://www.betonjayareadymix.com/p/jasa-pemasangan-geotekstil-lahan.html": "Jasa Pemasangan Geotekstil Lahan",
+"https://www.betonjayareadymix.com/p/jasa-geotekstil-borongan.html": "Jasa Geotekstil Borongan",  
 "https://www.betonjayareadymix.com/p/jasa-persiapan-pondasi-lahan.html": "Jasa Persiapan Pondasi Lahan"
-	
 };
-
+const urlMappingHargaJasaPekerjaanGalianTanahFromMoneyMasterMoneyPage = {
+// ============================================================
+// PARENT: Jasa Pekerjaan Galian Tanah (MM-2)
+// ============================================================
+"https://www.betonjayareadymix.com/p/harga-jasa-urugan-tanah-lahan.html": "Harga Jasa Urugan Tanah Lahan",
+"https://www.betonjayareadymix.com/p/harga-jasa-pemadatan-tanah-lahan.html": "Harga Jasa Pemadatan Tanah Lahan",
+"https://www.betonjayareadymix.com/p/harga-jasa-base-course-lahan.html": "Harga Jasa Base Course Lahan",
+"https://www.betonjayareadymix.com/p/harga-jasa-stabilisasi-tanah-lahan.html": "Harga Jasa Stabilisasi Tanah Lahan",
+"https://www.betonjayareadymix.com/p/harga-jasa-pemasangan-drainase-lahan.html": "Harga Jasa Pemasangan Drainase Lahan",
+"https://www.betonjayareadymix.com/p/harga-jasa-pemasangan-geotekstil-lahan.html": "Harga Jasa Pemasangan Geotekstil Lahan",
+"https://www.betonjayareadymix.com/p/harga-jasa-persiapan-pondasi-lahan.html": "Harga Jasa Persiapan Pondasi Lahan"
+};
 // ============================================================
 // 📁 JASA UJI TANAH - SUB2 (LEVEL 2) & MONEY_PAGE
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE
