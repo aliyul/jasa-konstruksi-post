@@ -765,8 +765,7 @@ JASA PERBAIKAN INFRASTRUKTUR (SUB2 - /p/jasa-perbaikan-infrastruktur.html)
 // Parent: Jasa Perbaikan Infrastruktur
 // ============================================================
 
-const urlMappingPerbaikanJalanFromMoneyMaster1MoneyPage = {
- "https://www.betonjayareadymix.com/p/harga-jasa-perbaikan-jalan.html": "Harga Jasa Perbaikan Jalan",
+const urlMappingJasaPerbaikanJalanFromMoneyMaster1MoneyPage = {
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan.html": "Jasa Perbaikan Trotoar Jalan",  
 "https://www.betonjayareadymix.com/p/jasa-perbaikan-halte-bus.html": "Jasa Perbaikan Halte Bus",
  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-berlubang.html": "Jasa Perbaikan Jalan Berlubang",
@@ -1838,7 +1837,7 @@ urlMappingPerbaikanAtapDrainaseBangunanFromMoneyPageMoneyPage1,
 		urlMappingRehabilitasiBetonStrukturFromMoneyPage1MoneyPage2,
                 urlMappingPerbaikanStrukturAtapFromMoneyPage1MoneyPage2,
                // urlMappingPerbaikanInfrastruktur,
-                urlMappingPerbaikanJalanFromMoneyMaster1MoneyPage,
+                urlMappingJasaPerbaikanJalanFromMoneyMaster1MoneyPage,
                 urlMappingPerbaikanTrotoarJalanFromMoneyPageMoneyPage1,
                 urlMappingPerbaikanJembatanFromMoneyMaster1MoneyPage,
                 urlMappingPerbaikanDrainaseFromMoneyMaster1MoneyPage,
@@ -2822,9 +2821,9 @@ if (urlMappingPerbaikanElemenArsitekturalFromMoneyPageMoneyPage1[cleanUrlJasaPer
     }
 
 // SUB JasaRenovasiPerbaikanInfrastruktur
-    if (urlMappingPerbaikanJalanFromMoneyMaster1MoneyPage[cleanUrlJasaPerbaikanKonsSub]) {
+    if (urlMappingJasaPerbaikanJalanFromMoneyMaster1MoneyPage[cleanUrlJasaPerbaikanKonsSub]) {
         generateBreadcrumbShared(
-        urlMappingPerbaikanJalanFromMoneyMaster1MoneyPage,
+        urlMappingJasaPerbaikanJalanFromMoneyMaster1MoneyPage,
         cleanUrlJasaPerbaikanKonsSub,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
