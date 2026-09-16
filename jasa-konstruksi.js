@@ -614,6 +614,9 @@ const urlMappingSewaAlatRinganFromSub2Sub1 = {
 const urlMappingSewaAlatRinganFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/sewa-alat-ringan.html": "Sewa Alat Ringan"  // TYPE: SUB1
 };
+const urlMappingHargaSewaAlatRinganFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/harga-sewa-alat-ringan.html": "Harga Sewa Alat Ringan"  // TYPE: SUB1
+};
 const urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1 = {
  // "https://www.betonjayareadymix.com/p/harga-sewa-alat-ringan.html": "Harga Sewa Alat Ringan"  // TYPE: MoneyMaster 
  // ============================================================
@@ -1632,6 +1635,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingSewaAlatRinganFromSub2Sub1,
 		urlMappingSewaAlatRinganFromSub1MoneyMaster,
+		urlMappingHargaSewaAlatRinganFromSub1MoneyMaster,
 		urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1,
 
 		urlMappingSewaAlatPendukungFromSub2Sub1,
@@ -3124,9 +3128,23 @@ if (urlMappingSewaAlatRinganFromSub1MoneyMaster[cleanUrlJasaKons]) {
         ],
         'SEWA_ALAT_KONSTRUKSI'
     );
-
 }
-	if (urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
+
+if (urlMappingHargaSewaAlatRinganFromSub1MoneyMaster[cleanUrlJasaKons]) {
+    generateBreadcrumbShared(
+        urlMappingHargaSewaAlatRinganFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' }
+        ],
+        'SEWA_ALAT_KONSTRUKSI'
+    );
+}
+	
+if (urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
     generateBreadcrumbShared(
         urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1,
         cleanUrlJasaKons,
