@@ -79,7 +79,7 @@ const urlMappingJasaKonsFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/daftar-jasa-saluran-drainase.html": "Daftar Jasa Saluran & Drainase",  
   "https://www.betonjayareadymix.com/p/daftar-jasa-jalan-perkerasan.html": "Daftar Jasa Jalan & Perkerasan",  
   "https://www.betonjayareadymix.com/p/daftar-jasa-pematangan-lahan.html": "Daftar Jasa Pematangan Lahan",    
-  "https://www.betonjayareadymix.com/p/daftar-jasa-pekerjaan-galian-tanah.html": "Daftar Jasa Pekerjaan Galian Tanah"
+  "https://www.betonjayareadymix.com/p/daftar-jasa-pekerjaan-galian-tanah.html": "Daftar Jasa Pekerjaan Galian Tanah",
   "https://www.betonjayareadymix.com/p/daftar-jasa-uji-tanah.html": "Daftar Jasa Uji Tanah",  
   "https://www.betonjayareadymix.com/p/daftar-jasa-cutting-beton.html": "Daftar Jasa Cutting Beton",  
   "https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html": "Daftar Jasa Bongkar Bangunan",  
