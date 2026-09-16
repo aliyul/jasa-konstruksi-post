@@ -29,7 +29,7 @@ const urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage = {
 "https://www.betonjayareadymix.com/2019/06/jasa-cutting-beton-bertulang.html": "Jasa Cutting Beton Bertulang"
 
 };
-const urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyPage1 = {
+const urlMappingHargaJasaCuttingBetonFromMoneyMasterMoneyPage = {
  // ============================================================
   // [MONEY_MASTER] - HARGA CUTTING EXPANSION JOINT (TRANSACTIONAL)
   // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
@@ -39,7 +39,7 @@ const urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-expansion-joint.html": "Harga Jasa Cutting Expansion Joint Beton",
 	"https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton-per-meter.html": "Harga Jasa Cutting Beton Per Meter"
 };
-const urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyChild = {
+const urlMappingHargaJasaCuttingBetonFromMoneyMasterMoneyChild = {
   
   // ============================================================
   //  - HARGA PER LOKASI (TRANSACTIONAL)
@@ -331,10 +331,6 @@ const urlMappingJasaPematanganLahanFromMoneyMasterMoneyChild = {
 // ============================================================
 
 const urlMappingJasaPemotonganBukitLahanFromMoneyPageMoneyPage1 = {
-  // ============================================================
-  // [MONEY_MASTER] - HARGA & JASA PEMOTONGAN BUKIT (NASIONAL)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/09/harga-jasa-pemotongan-bukit-lahan.html": "Harga Jasa Pemotongan Bukit Lahan",
   
   // ============================================================
   //  - SPESIFIK PER METODE & LOKASI
@@ -418,12 +414,7 @@ const urlMappingJasaPerataandanGradingLahanFromMoneyPageMoneyPage1  = {
 // ============================================================
 
 const urlMappingJasaPekerjaanElevasiLahanFromMoneyPageMoneyPage1 = {
-  // ============================================================
-  // [MONEY_MASTER] - HARGA JASA ELEVASI LAHAN (NASIONAL)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/09/harga-jasa-elevasi-lahan-terbaru.html": "Harga Jasa Elevasi Lahan Terbaru",  // TYPE: MONEY_MASTER
-  
-  // ============================================================
+ ============================================================
   //  - SPESIFIK PER METODE & LOKASI
   // ============================================================
   "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-borongan.html": "Jasa Elevasi Lahan Borongan",  
@@ -559,11 +550,6 @@ const urlMappingJasaPembersihanLahanPematanganFromMoneyPageMoneyPage1 = {
 // ============================================================
 
 const urlMappingJasaBaseCourseLahanFromMoneyPageMoneyPage1  = {
-  // ============================================================
-  // [MONEY_MASTER] - HARGA JASA BASE COURSE (NASIONAL)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/09/harga-jasa-base-course-lahan-terbaru.html": "Harga Jasa Base Course Lahan Terbaru",  // TYPE: MONEY_MASTER
-  
   // ============================================================
   //  - SPESIFIK PER METODE & MATERIAL
   // ============================================================
@@ -702,14 +688,6 @@ const urlMappingJasaPemasanganDrainaseLahanFromMoneyPageMoneyPage1 = {
 // ============================================================
 
 const urlMappingJasaPemasanganGeotekstilLahanFromMoneyPageMoneyPage1 = {
-  // ============================================================
-  // [MONEY_MASTER] - GEOTEKSTIL (MASTER)
-  // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
-  // ============================================================
-  "https://www.betonjayareadymix.com/2019/09/harga-jasa-geotekstil-lahan-terbaru.html": "Harga Jasa Geotekstil Lahan Terbaru",  // TYPE: MONEY_MASTER
-  "https://www.betonjayareadymix.com/2019/09/jasa-geotekstil-borongan.html": "Jasa Geotekstil Borongan",  // TYPE: MONEY_MASTER
-  
-  // ============================================================
   //  - GEOTEKSTIL PER APLIKASI
   // 🧠 TYPE: MONEY_CHILD (WAJIB tampil, spesifik aplikasi)
   // ============================================================
@@ -756,7 +734,6 @@ const urlMappingJasaPersiapanPondasiLahanFromMoneyPageMoneyPage1 = {
   // [MONEY_MASTER] - PERSIAPAN PONDASI (MASTER)
   // 🧠 TYPE: MONEY_MASTER (WAJIB tampil)
   // ============================================================
-  "https://www.betonjayareadymix.com/2019/09/harga-jasa-persiapan-pondasi-lahan.html": "Harga Jasa Persiapan Pondasi Lahan",  // TYPE: MONEY_MASTER
   "https://www.betonjayareadymix.com/2019/09/jasa-persiapan-pondasi-borongan.html": "Jasa Persiapan Pondasi Borongan",  // TYPE: MONEY_MASTER
   
   // ============================================================
@@ -1011,8 +988,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaSaluraDrainaseFromMoneyMasterMoneyChild,
 		
 		urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage,
-		urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyPage1,
-		urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyChild,
+		urlMappingHargaJasaCuttingBetonFromMoneyMasterMoneyPage,
+		urlMappingHargaJasaCuttingBetonFromMoneyMasterMoneyChild,
 		urlMappingJasaSondirTanahFromMoneyMaster1MoneyPage,
 		urlMappingJasaCptTanahFromMoneyMaster1MoneyPage,
 		urlMappingJasaCptTanahFromMoneyMaster1MoneyChild,
@@ -1138,28 +1115,28 @@ if (urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage[cleanUrlJasaCuttingBetonP
         'JASA_KONSTRUKSI'
     );
 }
-if (urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
+if (urlMappingHargaJasaCuttingBetonFromMoneyMasterMoneyPage[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
-        urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyPage1,
+        urlMappingHargaJasaCuttingBetonFromMoneyMasterMoneyPage,
         cleanUrlJasaCuttingBetonPost,
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
             { name: 'Daftar Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-cutting-beton.html'},
             { name: 'Perbandingan Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-cutting-beton.html'},
-            { name: 'Harga Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton.html'}
+            { name: 'Harga Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-cutting-beton.html'}
         ],
         'JASA_KONSTRUKSI'
     );
 }
-if (urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyChild[cleanUrlJasaCuttingBetonPost]) {
+if (urlMappingHargaJasaCuttingBetonFromMoneyMasterMoneyChild[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
-        urlMappingHargaJasaCuttingBetonFromMoneyPageMoneyChild,
+        urlMappingHargaJasaCuttingBetonFromMoneyMasterMoneyChild,
         cleanUrlJasaCuttingBetonPost,
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html'},
             { name: 'Daftar Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-cutting-beton.html'},
             { name: 'Perbandingan Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-cutting-beton.html'},
-            { name: 'Harga Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/2019/06/harga-jasa-cutting-beton.html'}
+            { name: 'Harga Jasa Cutting Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-cutting-beton.html'}
         ],
         'JASA_KONSTRUKSI'
     );
