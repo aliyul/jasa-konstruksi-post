@@ -78,7 +78,8 @@ const urlMappingJasaKonsFromPillarSub2 = {
   "https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html": "Daftar Jasa Pondasi",  
   "https://www.betonjayareadymix.com/p/daftar-jasa-saluran-drainase.html": "Daftar Jasa Saluran & Drainase",  
   "https://www.betonjayareadymix.com/p/daftar-jasa-jalan-perkerasan.html": "Daftar Jasa Jalan & Perkerasan",  
-  "https://www.betonjayareadymix.com/p/daftar-jasa-pematangan-lahan.html": "Daftar Jasa Pematangan Lahan",  
+  "https://www.betonjayareadymix.com/p/daftar-jasa-pematangan-lahan.html": "Daftar Jasa Pematangan Lahan",    
+  "https://www.betonjayareadymix.com/p/daftar-jasa-pekerjaan-galian-tanah.html": "Daftar Jasa Pekerjaan Galian Tanah"
   "https://www.betonjayareadymix.com/p/daftar-jasa-uji-tanah.html": "Daftar Jasa Uji Tanah",  
   "https://www.betonjayareadymix.com/p/daftar-jasa-cutting-beton.html": "Daftar Jasa Cutting Beton",  
   "https://www.betonjayareadymix.com/p/daftar-jasa-bongkar-bangunan.html": "Daftar Jasa Bongkar Bangunan",  
@@ -364,8 +365,16 @@ const urlMappingJasaPematanganLahanBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-pematangan-lahan.html": "Perbandingan Jasa Pematangan Lahan"  // TYPE: SUB1
 };
+
+const urlMappingJasaPekerjaanGalianTanahBridgeFromSub2Sub1 = {
+  //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
+  "https://www.betonjayareadymix.com/p/perbandingan-jasa-pekerjaan-galian-tanah.html": "Perbandingan Jasa Pekerjaan Galian Tanah"  // TYPE: SUB1
+};
 const urlMappingJasaPematanganLahanFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/jasa-pematangan-lahan.html": "Jasa Pematangan Lahan"  
+"https://www.betonjayareadymix.com/p/jasa-pematangan-lahan.html": "Jasa Pematangan Lahan"
+};
+const urlMappingJasaPekerjaanGalianTanahFromSub1MoneyMaster = {
+"https://www.betonjayareadymix.com/p/jasa-pekerjaan-galian-tanah.html": "Jasa Pekerjaan Galian Tanah"
 };
 const urlMappingJasaUjiTanahBridgeFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-uji-tanah.html": "Perbandingan Jasa Jasa Uji Tanah"  // TYPE: SUB1
@@ -1296,24 +1305,29 @@ const urlMappingPematanganLahanFromPillarSub2 = {
 
 const urlMappingJasaPematanganLahanFromMoneyMasterMoneyPage = {
 // ============================================================
-// MP - TURUNAN (LEVEL 5) - URL BARU
+// PARENT: Jasa Pematangan Lahan (MM-1)
 // ============================================================
-"https://www.betonjayareadymix.com/p/jasa-pekerjaan-galian-tanah.html": "Jasa Pekerjaan Galian Tanah",
-"https://www.betonjayareadymix.com/p/jasa-pengupasan-lahan-tanah.html": "Jasa Pengupasan Lahan Tanah", 
+"https://www.betonjayareadymix.com/p/jasa-pengupasan-lahan-tanah.html": "Jasa Pengupasan Lahan Tanah",
 "https://www.betonjayareadymix.com/p/jasa-pembersihan-lahan-pematangan.html": "Jasa Pembersihan Lahan Pematangan",
-"https://www.betonjayareadymix.com/p/jasa-perataan-dan-grading-lahan.html": "Jasa Perataan dan Grading Lahan", 
+"https://www.betonjayareadymix.com/p/jasa-perataan-dan-grading-lahan.html": "Jasa Perataan dan Grading Lahan",
 "https://www.betonjayareadymix.com/p/jasa-pekerjaan-elevasi-lahan.html": "Jasa Pekerjaan Elevasi Lahan",
 "https://www.betonjayareadymix.com/p/jasa-pembentukan-badan-lahan.html": "Jasa Pembentukan Badan Lahan",
-"https://www.betonjayareadymix.com/p/jasa-cut-and-fill-lahan.html": "Jasa Cut and Fill Lahan", 
-"https://www.betonjayareadymix.com/p/jasa-pemotongan-bukit-lahan.html": "Jasa Pemotongan Bukit Lahan", 
-"https://www.betonjayareadymix.com/p/jasa-urugan-tanah-lahan.html": "Jasa Urugan Tanah Lahan", 
-"https://www.betonjayareadymix.com/p/jasa-pemadatan-tanah-lahan.html": "Jasa Pemadatan Tanah Lahan", 
-"https://www.betonjayareadymix.com/p/jasa-base-course-lahan.html": "Jasa Base Course Lahan", 
-"https://www.betonjayareadymix.com/p/jasa-stabilisasi-tanah-lahan.html": "Jasa Stabilisasi Tanah Lahan", 
+"https://www.betonjayareadymix.com/p/jasa-cut-and-fill-lahan.html": "Jasa Cut and Fill Lahan",
+"https://www.betonjayareadymix.com/p/jasa-pemotongan-bukit-lahan.html": "Jasa Pemotongan Bukit Lahan",
+"https://www.betonjayareadymix.com/p/jasa-tebang-pohon-pematangan-lahan.html": "Jasa Tebang Pohon Pematangan Lahan"
+
+};
+const urlMappingJasaPekerjaanGalianTanahFromMoneyMasterMoneyPage = {
+// ============================================================
+// PARENT: Jasa Pekerjaan Galian Tanah (MM-2)
+// ============================================================
+"https://www.betonjayareadymix.com/p/jasa-urugan-tanah-lahan.html": "Jasa Urugan Tanah Lahan",
+"https://www.betonjayareadymix.com/p/jasa-pemadatan-tanah-lahan.html": "Jasa Pemadatan Tanah Lahan",
+"https://www.betonjayareadymix.com/p/jasa-base-course-lahan.html": "Jasa Base Course Lahan",
+"https://www.betonjayareadymix.com/p/jasa-stabilisasi-tanah-lahan.html": "Jasa Stabilisasi Tanah Lahan",
 "https://www.betonjayareadymix.com/p/jasa-pemasangan-drainase-lahan.html": "Jasa Pemasangan Drainase Lahan",
 "https://www.betonjayareadymix.com/p/jasa-pemasangan-geotekstil-lahan.html": "Jasa Pemasangan Geotekstil Lahan",
-"https://www.betonjayareadymix.com/p/jasa-persiapan-pondasi-lahan.html": "Jasa Persiapan Pondasi Lahan", 
-"https://www.betonjayareadymix.com/p/jasa-tebang-pohon-pematangan-lahan.html": "Jasa Tebang Pohon Pematangan Lahan"
+"https://www.betonjayareadymix.com/p/jasa-persiapan-pondasi-lahan.html": "Jasa Persiapan Pondasi Lahan",
 };
 
 // ============================================================
@@ -1525,7 +1539,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaSaluranDrainaseFromSub1MoneyMaster,
 		
         urlMappingJasaPematanganLahanBridgeFromSub2Sub1,
+		urlMappingJasaPekerjaanGalianTanahBridgeFromSub2Sub1,
 		urlMappingJasaPematanganLahanFromSub1MoneyMaster,
+		urlMappingJasaPekerjaanGalianTanahFromSub1MoneyMaster,
 		urlMappingJasaPematanganLahanFromMoneyMasterMoneyPage,
 		
 		urlMappingJasaUjiTanahBridgeFromSub2Sub1,
@@ -2554,7 +2570,6 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         ],
         'JASA_KONSTRUKSI'
     );
-	
     }
 	
 	if (urlMappingJasaPematanganLahanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
@@ -2569,8 +2584,22 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         ],
         'JASA_KONSTRUKSI'
     );
-	
     }
+	
+	if (urlMappingJasaPekerjaanGalianTanahBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+        //pageNameKonstruksiSub.textContent = urlMappingJasaPematanganLahanBridgeFromSub2Sub1[cleanUrlJasaKons];
+	generateBreadcrumbShared(
+        urlMappingJasaPekerjaanGalianTanahBridgeFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pekerjaan Galian Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pekerjaan-galian-tanah.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	
 	if (urlMappingJasaPematanganLahanFromSub1MoneyMaster[cleanUrlJasaKons]) {
        	generateBreadcrumbShared(
         urlMappingJasaPematanganLahanFromSub1MoneyMaster,
@@ -2584,6 +2613,21 @@ if (urlMappingPerbaikanBangunanBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
     }
+	
+	if (urlMappingJasaPekerjaanGalianTanahFromSub1MoneyMaster[cleanUrlJasaKons]) {
+       	generateBreadcrumbShared(
+        urlMappingJasaPekerjaanGalianTanahFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pekerjaan Galian Tanah', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pekerjaan-galian-tanah.html' },
+            { name: 'Perbandingan Jasa Pekerjaan GalianTanah', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pekerjaan-galian-tanah.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	
     if (urlMappingJasaPematanganLahanFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
     	generateBreadcrumbShared(
         urlMappingJasaPematanganLahanFromMoneyMasterMoneyPage,
