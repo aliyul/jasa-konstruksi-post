@@ -1,20 +1,20 @@
 
 
 const urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-vinyl-per-meter.html": "Harga Jasa Pasang Vinyl Per Meter",
 	"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-tangga.html": "Jasa Pasang Vinyl Tangga"
+};
+const urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1 = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-vinyl-per-meter.html": "Harga Jasa Pasang Vinyl Per Meter"
 };
 
 const urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage = {
- "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pvc.html": "Harga Jasa Pasang PVC", 
- //"https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-board.html": "Jasa Pasang PVC Board", 
+  //"https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-board.html": "Jasa Pasang PVC Board", 
  "https://www.betonjayareadymix.com/p/jasa-pasang-pvc-dinding.html": "Jasa Pasang PVC Dinding",
 	"https://www.betonjayareadymix.com/p/jasa-pasang-pvc-lantai.html": "Jasa Pasang PVC Lantai"
 	
 };
 
 const urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage  = {
-   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-plafon.html": "Harga Jasa Pasang Plafon",
   "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-wpc-premium.html": "Jasa Pasang Plafon WPC Premium",   
   "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-wpc.html": "Jasa Pasang Plafon WPC",  
   "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-gypsum.html": "Jasa Pasang Plafon Gypsum",
@@ -954,6 +954,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlMappingGabungan = Object.assign(
       {},
 		urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
+		urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
+		
 		urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage,
 		
@@ -1587,15 +1589,29 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
             { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html' },
-           // { name: 'Jasa Finishing Interior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior.html' },
-           // { name: 'Jasa Finishing Interior Modern', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html' },
             { name: 'Jasa Pasang Lantai Vinyl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai-vinyl.html' }
         ],
         'JASA_KONSTRUKSI'
     );
 }
+    if (urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+		// ✅ Generate Breadcrumb untuk Jasa Finishing Interior Modern Vinyl
+		generateBreadcrumbShared(
+        urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
+        cleanUrlJasaKonsFinishing,
+        [
+            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Harga Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-lantai.html' },
+            { name: 'Harga Jasa Pasang Lantai Vinyl', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-lantai-vinyl.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+	
 if (urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
 		// ✅ Generate Breadcrumb untuk Jasa Finishing Interior Modern Vinyl
 		generateBreadcrumbShared(
@@ -1606,9 +1622,6 @@ if (urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing])
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
-           // { name: 'Jasa Finishing Interior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior.html' },
-           // { name: 'Jasa Finishing Interior Modern', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html' },
             { name: 'Jasa Pasang PVC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pvc.html' }
         ],
         'JASA_KONSTRUKSI'
@@ -1623,7 +1636,6 @@ if (urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
              { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
             { name: 'Jasa Pasang Plafon', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html' }
         ],
         'JASA_KONSTRUKSI'
@@ -2200,7 +2212,6 @@ if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishin
            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
             { name: 'Jasa Pasang WPC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html' },
             { name: 'Jasa Pasang WPC Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wpc-lantai.html'}
         ],
