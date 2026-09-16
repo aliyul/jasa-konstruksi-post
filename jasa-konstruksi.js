@@ -618,7 +618,6 @@ const urlMappingHargaSewaAlatRinganFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/harga-sewa-alat-ringan.html": "Harga Sewa Alat Ringan"  // TYPE: SUB1
 };
 const urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1 = {
- // "https://www.betonjayareadymix.com/p/harga-sewa-alat-ringan.html": "Harga Sewa Alat Ringan"  // TYPE: MoneyMaster 
  // ============================================================
 // MONEY MASTER (MM)
 // ROOT COMMERCIAL ENTITY
@@ -662,6 +661,50 @@ const urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1 = {
 
 "https://www.betonjayareadymix.com/p/sewa-stamper.html":
   "Sewa Stamper"
+};
+const urlMappingHargaSewaAlatRinganFromMoneyMasterMoneyMaster1 = {
+// MONEY MASTER (MM)
+// ROOT COMMERCIAL ENTITY
+// ============================================================
+
+"https://www.betonjayareadymix.com/p/harga-sewa-alat-cleaning.html":
+  "Harga Sewa Alat Cleaning",
+
+"https://www.betonjayareadymix.com/p/harga-sewa-mesin-polisher.html":
+  "Harga Sewa Mesin Polisher",
+
+"https://www.betonjayareadymix.com/p/sewa-concrete-cutter.html":
+  "Harga Sewa Concrete Cutter",
+
+"https://www.betonjayareadymix.com/p/sewa-jack-hammer.html":
+  "Harga Sewa Jack Hammer",
+
+"https://www.betonjayareadymix.com/p/sewa-vibrator-beton.html":
+  "Harga Sewa Vibrator Beton",
+
+"https://www.betonjayareadymix.com/p/sewa-mesin-molen.html":
+  "Harga Sewa Mesin Molen",
+
+"https://www.betonjayareadymix.com/p/sewa-genset.html":
+  "Harga Sewa Genset",
+
+"https://www.betonjayareadymix.com/p/sewa-mesin-compressor.html":
+  "Harga Sewa Mesin Compressor",
+
+"https://www.betonjayareadymix.com/p/sewa-cutting-beton.html":
+  "Harga Sewa Cutting Beton",
+
+"https://www.betonjayareadymix.com/p/sewa-mesin-rumput.html":
+  "Harga Sewa Mesin Rumput",
+
+"https://www.betonjayareadymix.com/p/sewa-screed.html":
+  "Harga Sewa Screed",
+
+"https://www.betonjayareadymix.com/p/sewa-trowel.html":
+  "Harga Sewa Trowel",
+
+"https://www.betonjayareadymix.com/p/sewa-stamper.html":
+  "Harga Sewa Stamper"
 };
 const urlMappingSewaAlatPendukungFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pendukung.html": "Perbandingan Sewa Alat Pendukung"  // TYPE: SUB1 
@@ -713,11 +756,17 @@ const urlMappingSewaAlatKonstruksiRinganFromSub1MoneyPage = {
 // 🧠 TYPE: MONEY_PAGE (bukan MONEY_MASTER)
 // ============================================================
 
-const urlMappingInfrastrukturFromSub1MoneyMaster = {
+const urlMappingJasaPerbaikanInfrastrukturFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan.html": "Jasa Perbaikan Jalan",  
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan.html": "Jasa Perbaikan Jembatan",  
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase.html": "Jasa Perbaikan Drainase",  
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar.html": "Jasa Perbaikan Trotoar"  
+};
+const urlMappingHargaJasaPerbaikanInfrastrukturFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-perbaikan-jalan.html": "Harga Jasa Perbaikan Jalan",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-perbaikan-jembatan.html": "Harga Jasa Perbaikan Jembatan",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-perbaikan-drainase.html": "Harga Jasa Perbaikan Drainase",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-perbaikan-trotoar.html": "Harga Jasa Perbaikan Trotoar"  
 };
 
 const urlMappingJasaKitchenSetFromSub1MoneyMaster = {
@@ -1572,6 +1621,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1,
 		urlMappingJasaPerbaikanInfrastrukturFromSub1MoneyMaster,
+		urlMappingHargaJasaPerbaikanInfrastrukturFromSub1MoneyMaster,
 		urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyMaster1,
 		urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyPage,
 		
@@ -1637,6 +1687,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingSewaAlatRinganFromSub1MoneyMaster,
 		urlMappingHargaSewaAlatRinganFromSub1MoneyMaster,
 		urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1,
+		urlMappingHargaSewaAlatRinganFromMoneyMasterMoneyMaster1,
 
 		urlMappingSewaAlatPendukungFromSub2Sub1,
 		urlMappingSewaAlatPendukungFromSub1MoneyMaster,
@@ -1706,8 +1757,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaPasangDindingFromMoneyMaster1MoneyPage,
 		urlMappingJasaPasangFurnitureFromMoneyMaster1MoneyPage,
 		
-        urlMappingInfrastrukturFromSub1MoneyMaster,
-		urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage,
+    	urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage,
 		urlMappingJasaRenovasiFromMoneyMasterMoneyMaster1,
 		urlMappingJasaRenovasiBangunanFromMoneyMaster1MoneyPage,
 		
@@ -3157,7 +3207,20 @@ if (urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
         ],
         'SEWA_ALAT_KONSTRUKSI'
     );
-
+}	
+if (urlMappingHargaSewaAlatRinganFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
+    generateBreadcrumbShared(
+        urlMappingHargaSewaAlatRinganFromMoneyMasterMoneyMaster1,
+        cleanUrlJasaKons,
+       [
+           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+            { name: 'Daftar Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-ringan.html' },
+            { name: 'Perbandingan Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-ringan.html' },
+		    { name: 'Harga Sewa Alat Ringan', url: 'https://www.betonjayareadymix.com/p/harga-sewa-alat-ringan.html' }
+        ],
+        'SEWA_ALAT_KONSTRUKSI'
+    );
 }
 	
 if (urlMappingSewaAlatPendukungFromSub1MoneyMaster[cleanUrlJasaKons]) {
@@ -4067,21 +4130,6 @@ if (urlMappingJasaPasangFurnitureFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
     );
 }
 	
-if (urlMappingInfrastrukturFromSub1MoneyMaster[cleanUrlJasaKons]) {
-
-	    generateBreadcrumbShared(
-        urlMappingInfrastrukturFromSub1MoneyMaster,
-        cleanUrlJasaKons,
-        [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html'},
-            { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-
 if (urlMappingJasaPengeboranFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 	
 	generateBreadcrumbShared(
@@ -4144,6 +4192,22 @@ if (urlMappingJasaPengeboranFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
     }
+	if (urlMappingHargaJasaPerbaikanInfrastrukturFromSub1MoneyMaster[cleanUrlJasaKons]) {
+		
+	generateBreadcrumbShared(
+        urlMappingHargaJasaPerbaikanInfrastrukturFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html'},
+            { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html'}
+           // { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	
 	if (urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
 	generateBreadcrumbShared(
         urlMappingPerbaikanInfrastrukturFromMoneyMasterMoneyMaster1,
