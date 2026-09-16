@@ -414,7 +414,6 @@ const urlMappingJasaPerataandanGradingLahanFromMoneyPageMoneyPage1  = {
 // ============================================================
 
 const urlMappingJasaPekerjaanElevasiLahanFromMoneyPageMoneyPage1 = {
- ============================================================
   //  - SPESIFIK PER METODE & LOKASI
   // ============================================================
   "https://www.betonjayareadymix.com/2019/09/jasa-elevasi-lahan-borongan.html": "Jasa Elevasi Lahan Borongan",  
