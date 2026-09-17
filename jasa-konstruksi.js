@@ -938,9 +938,6 @@ const urlMappinghargaJasaPasangFromSub1MoneyMaster = {
     "https://www.betonjayareadymix.com/p/harga-jasa-pasang-lantai.html": "Harga Jasa Pasang Lantai",
     "https://www.betonjayareadymix.com/p/harga-jasa-pasang-dinding.html": "Harga Jasa Pasang Dinding",
 
-    	   // Wall Moulding
-    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wall-moulding.html": "Harga Jasa Pasang Wall Moulding",
-	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-wall-panel.html": "Harga Jasa Pasang Wall Panel",
 	
     // 2. Plafon & Atap
     "https://www.betonjayareadymix.com/p/harga-jasa-pasang-plafon.html": "Harga Jasa Pasang Plafon",
@@ -1186,9 +1183,25 @@ const urlMappingJasaPasangDindingFromMoneyMaster1MoneyPage  = {
 	
    // "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding"
 };
+// MP di bawah Harga Jasa Pasang Dinding
+const urlMappingHargaJasaPasangDindingFromMoneyMaster1MoneyPage  = {
+"https://www.betonjayareadymix.com/p/harga-jasa-pasang-panel-dinding-3d.html": "Harga Jasa Pasang Panel Dinding 3D",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-grc-dinding.html": "Harga Jasa Pasang GRC Dinding",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-hpl-dinding.html": "Harga Jasa Pasang HPL Dinding",
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-batu-alam-dinding.html": "Harga Jasa Pasang Batu Alam Dinding",
+    // Conwood (Kayu Komposit)
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-conwood-dinding.html": "Harga Jasa Pasang Conwood Dinding",
+	   // Wall Moulding
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wall-moulding.html": "Harga Jasa Pasang Wall Moulding",
+	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-wall-panel.html": "Harga Jasa Pasang Wall Panel",
+	
+    "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wallpaper-dinding.html": "Harga Jasa Pasang Wallpaper Dinding"
+	
+   // "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding"
+};
 
 
-
+  
 // MP di bawah Jasa Pasang Furniture (Sudah 4 kata → MP)
 const urlMappingJasaPasangFurnitureFromMoneyMaster1MoneyPage  = {
     // Nama diubah menjadi 3 kata setelah "Jasa" (total 4 kata) agar menjadi MP
@@ -1793,6 +1806,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingHargaJasaPasangLantaiFromMoneyMaster1MoneyPage,
 		
 		urlMappingJasaPasangDindingFromMoneyMaster1MoneyPage,
+		urlMappingHargaJasaPasangDindingFromMoneyMaster1MoneyPage,
+		
 		urlMappingJasaPasangFurnitureFromMoneyMaster1MoneyPage,
 		
     	urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage,
@@ -4192,6 +4207,21 @@ if (urlMappingJasaPasangDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
             { name: 'Jasa Pasang Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-dinding.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingHargaJasaPasangDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbShared(
+        urlMappingHargaJasaPasangDindingFromMoneyMaster1MoneyPage,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
+            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
+            { name: 'Harga Jasa Pasang Dinding', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-dinding.html'}
         ],
         'JASA_KONSTRUKSI'
     );
