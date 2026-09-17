@@ -890,10 +890,7 @@ const urlMappingJasaPasangFromSub1MoneyMaster = {
     "https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html": "Jasa Pasang Lantai",
 	"https://www.betonjayareadymix.com/p/jasa-borongan-lantai.html": "Jasa Borongan Lantai",
     "https://www.betonjayareadymix.com/p/jasa-pasang-dinding.html": "Jasa Pasang Dinding",
-	   // Wall Moulding
-    "https://www.betonjayareadymix.com/p/jasa-pasang-wall-moulding.html": "Jasa Pasang Wall Moulding",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-wall-panel.html": "Jasa Pasang Wall Panel",
-
+	 
     // 2. Plafon & Atap
     "https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html": "Jasa Pasang Plafon",
     "https://www.betonjayareadymix.com/p/jasa-rangka-atap.html": "Jasa Rangka Atap",
@@ -1175,14 +1172,16 @@ const urlMappingHargaJasaPasangLantaiFromMoneyMaster1MoneyPage = {
 
 // MP di bawah Jasa Pasang Dinding
 const urlMappingJasaPasangDindingFromMoneyMaster1MoneyPage  = {
-
 "https://www.betonjayareadymix.com/p/jasa-pasang-panel-dinding-3d.html": "Jasa Pasang Panel Dinding 3D",
     "https://www.betonjayareadymix.com/p/jasa-pasang-grc-dinding.html": "Jasa Pasang GRC Dinding",
     "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-dinding.html": "Jasa Pasang HPL Dinding",
     "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-dinding.html": "Jasa Pasang Batu Alam Dinding",
     // Conwood (Kayu Komposit)
     "https://www.betonjayareadymix.com/p/jasa-pasang-conwood-dinding.html": "Jasa Pasang Conwood Dinding",
-		
+	  // Wall Moulding
+    "https://www.betonjayareadymix.com/p/jasa-pasang-wall-moulding.html": "Jasa Pasang Wall Moulding",
+	"https://www.betonjayareadymix.com/p/jasa-pasang-wall-panel.html": "Jasa Pasang Wall Panel",
+	
     "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding"
 	
    // "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding"
