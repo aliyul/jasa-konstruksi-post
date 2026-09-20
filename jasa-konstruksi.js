@@ -461,19 +461,19 @@ const urlMappingJasaPengeboranFromSub1MoneyMaster = {
     "https://www.betonjayareadymix.com/p/spesifikasi-jasa-bore-pile.html": "Spesifikasi Jasa Bore Pile",
 		
   //MM INFORMASI JASA CORING BETON
-  "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",  
-   "https://www.betonjayareadymix.com/p/core-drill-proyek-konstruksi.html": "Core Drill Proyek Konstruksi", 
+  "https://www.betonjayareadymix.com/p/jasa-coring.html": "Jasa Coring",  
+  // VARIANT JASA CORING "https://www.betonjayareadymix.com/p/core-drill-proyek-konstruksi.html": "Core Drill Proyek Konstruksi", 
   //MM INFORMASI JASA BOR BETON
-  "https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton",  
+   "https://www.betonjayareadymix.com/p/jasa-bor.html": "Jasa Bor",  
+  //MP JASA BOR "https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton",  
 
   //MM INFORMASI JASA BOR TANAH
-  "https://www.betonjayareadymix.com/p/jasa-bor-tanah.html": "Jasa Bor Tanah",  
+ // MP JASA BOR "https://www.betonjayareadymix.com/p/jasa-bor-tanah.html": "Jasa Bor Tanah",  
 
    //MM INFORMASI JASA BOR HORIZONTAL
   "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal", 
 	
-//MM INFORMASI JASA BOR TEMBOK
-  "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html": "Jasa Bor Tembok"  
+//MP JASA BOR "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html": "Jasa Bor Tembok"  
 };
 const urlMappingHargaJasaPengeboranFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/harga-jasa-pengeboran.html": "Harga Jasa Pengeboran",
