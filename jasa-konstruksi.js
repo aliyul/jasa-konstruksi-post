@@ -443,10 +443,69 @@ const urlMappingJasaPengeboranBridgeFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html": "Perbandingan Jasa Pengeboran"  // TYPE: SUB1
 };
 const urlMappingJasaPengeboranFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/jasa-pengeboran.html": "Jasa Pengeboran"  
+  "https://www.betonjayareadymix.com/p/jasa-pengeboran.html": "Jasa Pengeboran",
+  //MM INFORMASI JASA BOR SUMUR DAN SIBLING NYA
+  "https://www.betonjayareadymix.com/p/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",
+   "https://www.betonjayareadymix.com/p/tukang-sumur-bor.html": "Tukang Sumur Bor",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur.html": "Jasa Bor Sumur",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah.html": "Jasa Bor Sumur Murah", 
+  "https://www.betonjayareadymix.com/p/spesifikasi-jasa-sumur-bor.html": "Spesifikasi Jasa Sumur Bor",
+  "https://www.betonjayareadymix.com/p/mutu-jasa-sumur-bor.html": "Mutu Jasa Sumur Bor",
+	
+  //MM INFORMASI JASA BORE PILE DAN SIBLING NYA
+  "https://www.betonjayareadymix.com/p/jasa-bore-pile.html": "Jasa Bore Pile",  
+   "https://www.betonjayareadymix.com/p/jasa-bore-pile-beton.html": "Jasa Bore Pile Beton",
+   "https://www.betonjayareadymix.com/p/jasa-bore-pile-mini.html": "Jasa Bore Pile Mini",
+	"https://www.betonjayareadymix.com/p/metode-jasa-bore-pile.html": "Metode Jasa Bore Pile",
+    "https://www.betonjayareadymix.com/p/mutu-jasa-bore-pile.html": "Mutu Jasa Bore Pile",
+    "https://www.betonjayareadymix.com/p/spesifikasi-jasa-bore-pile.html": "Spesifikasi Jasa Bore Pile",
+		
+  //MM INFORMASI JASA CORING BETON
+  "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",  
+   "https://www.betonjayareadymix.com/p/core-drill-proyek-konstruksi.html": "Core Drill Proyek Konstruksi", 
+  //MM INFORMASI JASA BOR BETON
+  "https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton",  
+
+  //MM INFORMASI JASA BOR TANAH
+  "https://www.betonjayareadymix.com/p/jasa-bor-tanah.html": "Jasa Bor Tanah",  
+
+   //MM INFORMASI JASA BOR HORIZONTAL
+  "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal", 
+	
+//MM INFORMASI JASA BOR TEMBOK
+  "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html": "Jasa Bor Tembok"  
 };
 const urlMappingHargaJasaPengeboranFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-pengeboran.html": "Harga Jasa Pengeboran"  
+  "https://www.betonjayareadymix.com/p/harga-jasa-pengeboran.html": "Harga Jasa Pengeboran",
+    //MM HARGA JASA BOR SUMUR
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah.html": "Harga Jasa Bor Sumur Murah", 
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",
+	
+ //MM HARGA JASA BORE PILE
+  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile", 
+   "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-beton.html": "Harga Jasa Bore Pile Beton", 
+    "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-mini.html": "Harga Jasa Bore Pile Mini", 
+   "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile.html": "Harga Jasa Strauss Pile",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah.html": "Harga Jasa Bore Pile Murah",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile.html": "Harga Jasa Borongan Strauss Pile",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile.html": "Harga Jasa Borongan Bore Pile",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-pengeboran-bore-pile.html": "Harga Jasa Pengeboran Bore Pile", 
+  
+  //MM HARGA JASA CORING BETON
+  "https://www.betonjayareadymix.com/p/harga-jasa-coring-beton.html": "Harga Jasa Coring Beton",
+
+  //MM HARGA JASA BOR BETON
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-beton.html": "Harga Jasa Bor Beton",  
+
+  //MMM HARGA JASA BOR TANAH
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-tanah.html": "Harga Jasa Bor Tanah",  
+
+  //MM HARGA JASA BOR HORIZONTAL
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-horizontal.html": "Harga Jasa Bor Horizontal",  
+
+  //MM HARGA JASA BOR TEMBOK
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-tembok.html": "Harga Jasa Bor Tembok"  
+
 };
 const urlMappingJasaPerkuatanTanahBridgeFromSub2Sub1 = {
    "https://www.betonjayareadymix.com/p/perbandingan-jasa-perkuatan-tanah.html": "Perbandingan Jasa Perkuatan Tanah"  // TYPE: SUB1
@@ -1310,68 +1369,12 @@ const urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage = {
 
 
 const urlMappingJasaPengeboranFromMoneyMasterMoneyMaster1 = { 
-  //MM INFORMASI JASA BOR SUMUR DAN SIBLING NYA
-  "https://www.betonjayareadymix.com/p/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",
-   "https://www.betonjayareadymix.com/p/tukang-sumur-bor.html": "Tukang Sumur Bor",
-  "https://www.betonjayareadymix.com/p/jasa-bor-sumur.html": "Jasa Bor Sumur",
-  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah.html": "Jasa Bor Sumur Murah", 
-  "https://www.betonjayareadymix.com/p/spesifikasi-jasa-sumur-bor.html": "Spesifikasi Jasa Sumur Bor",
-  "https://www.betonjayareadymix.com/p/mutu-jasa-sumur-bor.html": "Mutu Jasa Sumur Bor",
 	
-  //MM INFORMASI JASA BORE PILE DAN SIBLING NYA
-  "https://www.betonjayareadymix.com/p/jasa-bore-pile.html": "Jasa Bore Pile",  
-   "https://www.betonjayareadymix.com/p/jasa-bore-pile-beton.html": "Jasa Bore Pile Beton",
-   "https://www.betonjayareadymix.com/p/jasa-bore-pile-mini.html": "Jasa Bore Pile Mini",
-	"https://www.betonjayareadymix.com/p/metode-jasa-bore-pile.html": "Metode Jasa Bore Pile",
-    "https://www.betonjayareadymix.com/p/mutu-jasa-bore-pile.html": "Mutu Jasa Bore Pile",
-    "https://www.betonjayareadymix.com/p/spesifikasi-jasa-bore-pile.html": "Spesifikasi Jasa Bore Pile",
-		
-  //MM INFORMASI JASA CORING BETON
-  "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",  
-   "https://www.betonjayareadymix.com/p/core-drill-proyek-konstruksi.html": "Core Drill Proyek Konstruksi", 
-  //MM INFORMASI JASA BOR BETON
-  "https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton",  
-
-  //MM INFORMASI JASA BOR TANAH
-  "https://www.betonjayareadymix.com/p/jasa-bor-tanah.html": "Jasa Bor Tanah",  
-
-   //MM INFORMASI JASA BOR HORIZONTAL
-  "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal", 
-	
-//MM INFORMASI JASA BOR TEMBOK
-  "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html": "Jasa Bor Tembok"  
 };
 const urlMappingHargaJasaPengeboranFromMoneyMasterMoneyMaster1 = {
   //"https://www.betonjayareadymix.com/p/jasa-bor-air-sumur.html": "Jasa Bor Air Sumur",  
  // "https://www.betonjayareadymix.com/p/harga-jasa-tukang-bor.html": "Harga Jasa Tukang Bor",  
- //MM HARGA JASA BOR SUMUR
-  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah.html": "Harga Jasa Bor Sumur Murah", 
-  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",
-	
- //MM HARGA JASA BORE PILE
-  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile", 
-   "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-beton.html": "Harga Jasa Bore Pile Beton", 
-    "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-mini.html": "Harga Jasa Bore Pile Mini", 
-   "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile.html": "Harga Jasa Strauss Pile",  
-  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah.html": "Harga Jasa Bore Pile Murah",  
-  "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile.html": "Harga Jasa Borongan Strauss Pile",  
-  "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile.html": "Harga Jasa Borongan Bore Pile",  
-  "https://www.betonjayareadymix.com/p/harga-jasa-pengeboran-bore-pile.html": "Harga Jasa Pengeboran Bore Pile", 
-  
-  //MM HARGA JASA CORING BETON
-  "https://www.betonjayareadymix.com/p/harga-jasa-coring-beton.html": "Harga Jasa Coring Beton",
 
-  //MM HARGA JASA BOR BETON
-  "https://www.betonjayareadymix.com/p/harga-jasa-bor-beton.html": "Harga Jasa Bor Beton",  
-
-  //MMM HARGA JASA BOR TANAH
-  "https://www.betonjayareadymix.com/p/harga-jasa-bor-tanah.html": "Harga Jasa Bor Tanah",  
-
-  //MM HARGA JASA BOR HORIZONTAL
-  "https://www.betonjayareadymix.com/p/harga-jasa-bor-horizontal.html": "Harga Jasa Bor Horizontal",  
-
-  //MM HARGA JASA BOR TEMBOK
-  "https://www.betonjayareadymix.com/p/harga-jasa-bor-tembok.html": "Harga Jasa Bor Tembok"  
 };
 
 
