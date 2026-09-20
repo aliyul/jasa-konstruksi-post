@@ -1856,6 +1856,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 		urlMappingJasaBorFromMoneyMasterMoneyPage,
 		urlMappingHargaJasaBorFromMoneyMasterMoneyPage,
+		urlMappingJasaCoringFromMoneyMasterMoneyPage,
+		urlMappingHargaJasaCoringFromMoneyMasterMoneyPage,
 		
 		urlMappingJasaPembatasPengamanFromMoneyMasterMoneyPage,
 		
@@ -4307,6 +4309,36 @@ if (urlMappingJasaBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
     }
+    if (urlMappingJasaCoringFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	
+	generateBreadcrumbShared(
+        urlMappingJasaCoringFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+    if (urlMappingHargaJasaCoringFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	
+	generateBreadcrumbShared(
+        urlMappingHargaJasaCoringFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Harga Jasa Bor', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }	
 	
 	if (urlMappingJasaPerbaikanBangunanFromSub1MoneyMaster[cleanUrlJasaKons]) {
 	
