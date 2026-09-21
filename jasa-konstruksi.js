@@ -513,13 +513,17 @@ const urlMappingJasaBorFromMoneyMasterMoneyPage= {
 	"https://www.betonjayareadymix.com/p/jasa-bor-plat.html": "Jasa Bor Plat",
 	"https://www.betonjayareadymix.com/p/jasa-bor-lantai.html": "Jasa Bor Lantai",
 	"https://www.betonjayareadymix.com/p/jasa-bor-besi.html": "Jasa Bor Besi",
-	"https://www.betonjayareadymix.com/p/jasa-bor-pondasi.html": "Jasa Bor Pomdasi",
+	"https://www.betonjayareadymix.com/p/jasa-bor-pondasi.html": "Jasa Bor Pondasi",
 	"https://www.betonjayareadymix.com/p/jasa-bor-baja.html": "Jasa Bor Baja",
 	"https://www.betonjayareadymix.com/p/jasa-bor-kaca.html": "Jasa Bor Kaca",
 	"https://www.betonjayareadymix.com/p/jasa-bor-batu.html": "Jasa Bor Batu",
 	"https://www.betonjayareadymix.com/p/jasa-bor-atap.html": "Jasa Bor Atap",
-	"https://www.betonjayareadymix.com/p/jasa-bor-keramik-granit-marmer.html": "Jasa Bor Keramik Granit Marmer",
-	"https://www.betonjayareadymix.com/p/jasa-bor-basah-dan-kering.html": "Jasa Bor Basah Dan Kering"
+	"https://www.betonjayareadymix.com/p/jasa-bor-keramik.html": "Jasa Bor Keramik",
+	"https://www.betonjayareadymix.com/p/jasa-bor-granit.html": "Jasa Bor Granit",
+	"https://www.betonjayareadymix.com/p/jasa-bor-marmer.html": "Jasa Bor Marmer",
+	"https://www.betonjayareadymix.com/p/jasa-bor-basah.html": "Jasa Bor Basah",
+	"https://www.betonjayareadymix.com/p/jasa-bor-kering.html": "Jasa Bor Kering"
+
 	
 };
 const urlMappingHargaJasaBorFromMoneyMasterMoneyPage = {
@@ -539,8 +543,11 @@ const urlMappingHargaJasaBorFromMoneyMasterMoneyPage = {
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-kaca.html": "Harga Jasa Bor Kaca",
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-batu.html": "Harga Jasa Bor Batu",
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-atap.html": "Harga Jasa Bor Atap",
-	"https://www.betonjayareadymix.com/p/harga-jasa-bor-keramik-granit-marmer.html": "Harga Jasa Bor Keramik Granit Marmer",
-	"https://www.betonjayareadymix.com/p/harga-jasa-bor-basah-dan-kering.html": "Harga Jasa Bor Basah Dan Kering"
+	"https://www.betonjayareadymix.com/p/harga-jasa-bor-keramik.html": "Harga Jasa Bor Keramik",
+	"https://www.betonjayareadymix.com/p/harga-jasa-bor-granit.html": "Harga Jasa Bor Granit",
+	"https://www.betonjayareadymix.com/p/harga-jasa-bor-marmer.html": "Harga Jasa Bor Marmer",
+	"https://www.betonjayareadymix.com/p/harga-jasa-bor-basah.html": "Harga Jasa Bor Basah",
+	"https://www.betonjayareadymix.com/p/harga-jasa-bor-kering.html": "Harga Jasa Bor Kering"
 	
 };
 
