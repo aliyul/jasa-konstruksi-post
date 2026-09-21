@@ -446,7 +446,7 @@ const urlMappingJasaPengeboranFromSub1MoneyMaster = {
  // "https://www.betonjayareadymix.com/p/jasa-pengeboran.html": "Jasa Pengeboran",
   "https://www.betonjayareadymix.com/p/jasa-bor.html": "Jasa Bor",
 
-  "https://www.betonjayareadymix.com/p/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah",
+ // REDIRECT "https://www.betonjayareadymix.com/p/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah", KE TUKANG SUMUR BOR
    "https://www.betonjayareadymix.com/p/tukang-sumur-bor.html": "Tukang Sumur Bor",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur.html": "Jasa Bor Sumur",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah.html": "Jasa Bor Sumur Murah", 
@@ -550,6 +550,28 @@ const urlMappingHargaJasaBorFromMoneyMasterMoneyPage = {
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-kering.html": "Harga Jasa Bor Kering"
 	
 };
+
+const urlMappingTukangSumurBorFromMoneyMasterMoneyPage = {
+  "https://www.betonjayareadymix.com/p/tukang-sumur-bor-dalam.html": "Tukang Sumur Bor Dalam",
+  "https://www.betonjayareadymix.com/p/tukang-sumur-bor-dangkal.html": "Tukang Sumur Bor Dangkal",
+  "https://www.betonjayareadymix.com/p/tukang-sumur-bor-borongan.html": "Tukang Sumur Bor Borongan",
+  "https://www.betonjayareadymix.com/p/tukang-sumur-bor-jet-pump.html": "Tukang Sumur Bor Jet Pump",
+  "https://www.betonjayareadymix.com/p/tukang-sumur-bor-artesis.html": "Tukang Sumur Bor Artesis",
+	
+  "https://www.betonjayareadymix.com/p/tukang-sumur-bor-manual.html": "Tukang Sumur Bor Manual",
+  "https://www.betonjayareadymix.com/p/tukang-sumur-bor-mesin.html": "Tukang Sumur Bor Mesin",
+  "https://www.betonjayareadymix.com/p/tukang-sumur-bor-hidrolik.html": "Tukang Sumur Bor Hidrolik",
+  "https://www.betonjayareadymix.com/p/tukang-sumur-bor-auger.html": "Tukang Sumur Bor Auger",
+  "https://www.betonjayareadymix.com/p/tukang-sumur-bor-rotary.html": "Tukang Sumur Bor Rotary",
+	
+  "https://www.betonjayareadymix.com/p/tukang-sumur-bor-rumahan.html": "Tukang Sumur Bor Rumahan",
+  "https://www.betonjayareadymix.com/p/tukang-sumur-bor-komersial.html": "Tukang Sumur Bor Komersial",
+  "https://www.betonjayareadymix.com/p/tukang-sumur-bor-industri.html": "Tukang Sumur Bor Industri",
+  "https://www.betonjayareadymix.com/p/tukang-sumur-bor-proyek.html": "Tukang Sumur Bor Proyek",
+  "https://www.betonjayareadymix.com/p/tukang-sumur-bor-perumahan.html": "Tukang Sumur Bor Perumahan"
+	
+};
+
 
 const urlMappingJasaCoringFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton"
@@ -1863,6 +1885,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 		urlMappingJasaBorFromMoneyMasterMoneyPage,
 		urlMappingHargaJasaBorFromMoneyMasterMoneyPage,
+		urlMappingTukangSumurBorFromMoneyMasterMoneyPage,
 		urlMappingJasaCoringFromMoneyMasterMoneyPage,
 		urlMappingHargaJasaCoringFromMoneyMasterMoneyPage,
 		
@@ -4316,6 +4339,23 @@ if (urlMappingJasaBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
     }
+	
+   if (urlMappingTukangSumurBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	
+	generateBreadcrumbShared(
+        urlMappingTukangSumurBorFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Tukang Sumur Bor', url: 'https://www.betonjayareadymix.com/p/tukang-sumur-bor.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	
     if (urlMappingJasaCoringFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 	
 	generateBreadcrumbShared(
