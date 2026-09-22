@@ -445,26 +445,17 @@ const urlMappingJasaPengeboranBridgeFromSub2Sub1 = {
 const urlMappingJasaPengeboranFromSub1MoneyMaster = {
  // "https://www.betonjayareadymix.com/p/jasa-pengeboran.html": "Jasa Pengeboran",
   "https://www.betonjayareadymix.com/p/jasa-bor.html": "Jasa Bor",
-
- // REDIRECT "https://www.betonjayareadymix.com/p/tukang-bor-air-tanah.html": "Tukang Bor Air Tanah", KE TUKANG SUMUR BOR
    "https://www.betonjayareadymix.com/p/tukang-sumur-bor.html": "Tukang Sumur Bor",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur.html": "Jasa Bor Sumur",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah.html": "Jasa Bor Sumur Murah", 
-  "https://www.betonjayareadymix.com/p/spesifikasi-jasa-sumur-bor.html": "Spesifikasi Jasa Sumur Bor",
-  "https://www.betonjayareadymix.com/p/mutu-jasa-sumur-bor.html": "Mutu Jasa Sumur Bor",
-
-  "https://www.betonjayareadymix.com/p/jasa-bore-pile.html": "Jasa Bore Pile",  
-   "https://www.betonjayareadymix.com/p/jasa-bore-pile-beton.html": "Jasa Bore Pile Beton",
-   "https://www.betonjayareadymix.com/p/jasa-bore-pile-mini.html": "Jasa Bore Pile Mini",
-	"https://www.betonjayareadymix.com/p/metode-jasa-bore-pile.html": "Metode Jasa Bore Pile",
-    "https://www.betonjayareadymix.com/p/mutu-jasa-bore-pile.html": "Mutu Jasa Bore Pile",
-    "https://www.betonjayareadymix.com/p/spesifikasi-jasa-bore-pile.html": "Spesifikasi Jasa Bore Pile",
-		
+  "https://www.betonjayareadymix.com/p/jasa-bore-pile.html": "Jasa Bore Pile",
   //MM INFORMASI JASA CORING BETON
   "https://www.betonjayareadymix.com/p/jasa-coring.html": "Jasa Coring",  
- 
-   //MM INFORMASI JASA BOR HORIZONTAL
-  "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal", 
+
+  "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal",
+	  "https://www.betonjayareadymix.com/p/spesifikasi-jasa-sumur-bor.html": "Spesifikasi Jasa Sumur Bor",
+  "https://www.betonjayareadymix.com/p/mutu-jasa-sumur-bor.html": "Mutu Jasa Sumur Bor",
+
 	
 //MP JASA BOR "https://www.betonjayareadymix.com/p/jasa-bor-tembok.html": "Jasa Bor Tembok"  
  // VARIANT JASA CORING "https://www.betonjayareadymix.com/p/core-drill-proyek-konstruksi.html": "Core Drill Proyek Konstruksi", 
@@ -548,6 +539,15 @@ const urlMappingHargaJasaBorFromMoneyMasterMoneyPage = {
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-marmer.html": "Harga Jasa Bor Marmer",
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-basah.html": "Harga Jasa Bor Basah",
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-kering.html": "Harga Jasa Bor Kering"
+	
+};
+
+const urlMappingJasaBorePileFromMoneyMasterMoneyPage= { 
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-beton.html": "Jasa Bore Pile Beton",
+   "https://www.betonjayareadymix.com/p/jasa-bore-pile-mini.html": "Jasa Bore Pile Mini",
+	"https://www.betonjayareadymix.com/p/metode-jasa-bore-pile.html": "Metode Jasa Bore Pile",
+    "https://www.betonjayareadymix.com/p/mutu-jasa-bore-pile.html": "Mutu Jasa Bore Pile",
+    "https://www.betonjayareadymix.com/p/spesifikasi-jasa-bore-pile.html": "Spesifikasi Jasa Bore Pile"
 	
 };
 
@@ -1885,6 +1885,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 		urlMappingJasaBorFromMoneyMasterMoneyPage,
 		urlMappingHargaJasaBorFromMoneyMasterMoneyPage,
+		urlMappingJasaBorePileFromMoneyMasterMoneyPage,
 		urlMappingTukangSumurBorFromMoneyMasterMoneyPage,
 		urlMappingJasaCoringFromMoneyMasterMoneyPage,
 		urlMappingHargaJasaCoringFromMoneyMasterMoneyPage,
@@ -4335,6 +4336,22 @@ if (urlMappingJasaBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
             { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
             { name: 'Harga Jasa Bor', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	
+   if (urlMappingJasaBorePileFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	
+	generateBreadcrumbShared(
+        urlMappingJasaBorePileFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Bore Pile', url: 'https://www.betonjayareadymix.com/p/jasa-bore-pile.html'}
         ],
         'JASA_KONSTRUKSI'
     );
