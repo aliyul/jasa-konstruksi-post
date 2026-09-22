@@ -559,7 +559,22 @@ const urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage= {
 	 
 const urlMappingJasaBorSumurFromMoneyMasterMoneyPage= { 
   "https://www.betonjayareadymix.com/p/spesifikasi-jasa-sumur-bor.html": "Spesifikasi Jasa Sumur Bor",
-  "https://www.betonjayareadymix.com/p/mutu-jasa-sumur-bor.html": "Mutu Jasa Sumur Bor"
+  "https://www.betonjayareadymix.com/p/mutu-jasa-sumur-bor.html": "Mutu Jasa Sumur Bor",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-dalam.html": "Jasa Sumur Bor Dalam",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-dangkal.html": "Jasa Sumur Bor Dangkal",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-manual.html": "Jasa Sumur Bor Manual",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-hidrolik.html": "Jasa Sumur Bor Hidrolik",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-rotary.html": "Jasa Sumur Bor Rotary",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-auger.html": "Jasa Sumur Bor Auger",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-jet-pump.html": "Jasa Sumur Bor Jet Pump",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-artesis.html": "Jasa Sumur Bor Artesis",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-30m.html": "Jasa Sumur Bor 30m",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-50m.html": "Jasa Sumur Bor 50m",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-borongan.html": "Jasa Sumur Bor Borongan",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-proyek.html": "Jasa Sumur Bor Proyek",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-rumahan.html": "Jasa Sumur Bor Rumahan",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-komersial.html": "Jasa Sumur Bor Komersial",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-industri.html": "Jasa Sumur Bor Industri"
 
 	
 };
