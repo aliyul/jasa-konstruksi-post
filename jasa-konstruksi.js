@@ -1900,6 +1900,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBorFromMoneyMasterMoneyPage,
 		urlMappingHargaJasaBorFromMoneyMasterMoneyPage,
 		urlMappingJasaBorePileFromMoneyMasterMoneyPage,
+		urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage,
+		urlMappingJasaBorSumurFromMoneyMasterMoneyPage,
 		urlMappingTukangSumurBorFromMoneyMasterMoneyPage,
 		urlMappingJasaCoringFromMoneyMasterMoneyPage,
 		urlMappingHargaJasaCoringFromMoneyMasterMoneyPage,
@@ -4370,7 +4372,37 @@ if (urlMappingJasaBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
     }
+    if (urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 	
+	generateBreadcrumbShared(
+        urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Harga Jasa Bore Pile', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bore-pile.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+
+    if (urlMappingJasaBorSumurFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	generateBreadcrumbShared(
+        urlMappingJasaBorSumurFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/jasa-bor-sumur.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+
    if (urlMappingTukangSumurBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 	
 	generateBreadcrumbShared(
