@@ -574,7 +574,34 @@ const urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage= {
     "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-mini.html": "Harga Jasa Bore Pile Mini"
 
 };
-	 
+const urlMappingJasaStraussPileFromMoneyMasterMoneyPage= { 	
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-hidrolik.html": "Jasa Bore Pile Hidrolik",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-manual.html": "Jasa Strauss Pile Manual",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-rotary.html": "Jasa Strauss Pile Rotary",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-auger.html": "Jasa Strauss Pile Auger",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-basah.html": "Jasa Strauss Pile Basah",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-kering.html": "Jasa Strauss Pile Kering",
+	
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-rumahan.html": "Jasa Strauss Pile Rumahan",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-komersial.html": "Jasa Strauss Pile Komersial",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-industri.html": "Jasa Strauss Pile Industri",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-kecil.html": "Jasa Strauss Pile Kecil",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-besar.html": "Jasa Strauss Pile Besar",
+	
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-20cm.html": "Jasa Strauss Pile 20cm",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-30cm.html": "Jasa Strauss Pile 30cm",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-40cm.html": "Jasa Strauss Pile 40cm",
+	
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-beton.html": "Jasa Strauss Pile Beton",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-besi.html": "Jasa Strauss Pile Besi",
+	
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-promo.html": "Jasa Strauss Pile Promo",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-diskon.html": "Jasa Strauss Pile Diskon",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-termurah.html": "Jasa Strauss Pile Termurah",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-termahal.html": "Jasa Strauss Pile Termahal"
+	
+};
+
 const urlMappingJasaBorSumurFromMoneyMasterMoneyPage= { 
   "https://www.betonjayareadymix.com/p/spesifikasi-jasa-sumur-bor.html": "Spesifikasi Jasa Sumur Bor",
   "https://www.betonjayareadymix.com/p/mutu-jasa-sumur-bor.html": "Mutu Jasa Sumur Bor",
@@ -1934,6 +1961,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingHargaJasaBorFromMoneyMasterMoneyPage,
 		urlMappingJasaBorePileFromMoneyMasterMoneyPage,
 		urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage,
+		urlMappingJasaStraussPileFromMoneyMasterMoneyPage,
 		urlMappingJasaBorSumurFromMoneyMasterMoneyPage,
 		urlMappingTukangSumurBorFromMoneyMasterMoneyPage,
 		urlMappingJasaCoringFromMoneyMasterMoneyPage,
@@ -4416,6 +4444,22 @@ if (urlMappingJasaBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
             { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
             { name: 'Harga Jasa Bore Pile', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bore-pile.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	
+	if (urlMappingJasaStraussPileFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	
+	generateBreadcrumbShared(
+        urlMappingJasaStraussPileFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Strauss Pile', url: 'https://www.betonjayareadymix.com/p/jasa-strauss-pile.html'}
         ],
         'JASA_KONSTRUKSI'
     );
