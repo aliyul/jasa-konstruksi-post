@@ -4444,7 +4444,7 @@ if (urlMappingJasaBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
-            { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html'}
+            { name: 'Jasa Coring', url: 'https://www.betonjayareadymix.com/p/jasa-coring.html'}
         ],
         'JASA_KONSTRUKSI'
     );
@@ -4459,7 +4459,7 @@ if (urlMappingJasaBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
-            { name: 'Harga Jasa Bor', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor.html'}
+            { name: 'Harga Jasa Coring', url: 'https://www.betonjayareadymix.com/p/harga-jasa-coring.html'}
         ],
         'JASA_KONSTRUKSI'
     );
