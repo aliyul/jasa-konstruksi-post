@@ -545,10 +545,28 @@ const urlMappingHargaJasaBorFromMoneyMasterMoneyPage = {
 
 const urlMappingJasaBorePileFromMoneyMasterMoneyPage= { 
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-beton.html": "Jasa Bore Pile Beton",
-   "https://www.betonjayareadymix.com/p/jasa-bore-pile-mini.html": "Jasa Bore Pile Mini",
-	"https://www.betonjayareadymix.com/p/metode-jasa-bore-pile.html": "Metode Jasa Bore Pile",
-    "https://www.betonjayareadymix.com/p/mutu-jasa-bore-pile.html": "Mutu Jasa Bore Pile",
-    "https://www.betonjayareadymix.com/p/spesifikasi-jasa-bore-pile.html": "Spesifikasi Jasa Bore Pile"
+"https://www.betonjayareadymix.com/p/jasa-bore-pile-mini.html": "Jasa Bore Pile Mini",
+"https://www.betonjayareadymix.com/p/metode-jasa-bore-pile.html": "Metode Jasa Bore Pile",
+"https://www.betonjayareadymix.com/p/mutu-jasa-bore-pile.html": "Mutu Jasa Bore Pile",
+"https://www.betonjayareadymix.com/p/spesifikasi-jasa-bore-pile.html": "Spesifikasi Jasa Bore Pile",
+	
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-promo.html": "Jasa Bore Pile Promp",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-diskon.html": "Jasa Bore Pile Diskon",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-termurah.html": "Jasa Bore Pile Termurah",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-termahal.html": "Jasa Bore Pile Termahal",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-30cm.html": "Jasa Bore Pile 30cm",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-50cm.html": "Jasa Bore Pile 50cm",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-2-inch.html": "Jasa Bore Pile 2 Inch",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-rumahan.html": "Jasa Bore Pile Rumahan",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-komersial.html": "Jasa Bore Pile Komersial",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-industri.html": "Jasa Bore Pile Industri",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-besar.html": "Jasa Bore Pile Besar",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-hidrolik.html": "Jasa Bore Pile Hidrolik",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-manual.html": "Jasa Bore Pile Manual",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-rotary.html": "Jasa Bore Pile Rotary",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-auger.html": "Jasa Bore Pile Auger",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-basah.html": "Jasa Bore Pile Basah",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-kering.html": "Jasa Bore Pile Kering"
 	
 };
 const urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage= { 
