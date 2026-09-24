@@ -582,7 +582,9 @@ const urlMappingJasaBorePileFromMoneyMasterMoneyPage= {
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-9-meter.html": "Jasa Bore Pile 9 Meter",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-12-meter.html": "Jasa Bore Pile 12 Meter",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-per-titik.html": "Jasa Bore Pile Per Titik",
- "https://www.betonjayareadymix.com/p/jasa-bore-pile-gedung.html": "Jasa Bore Pile Gedung"
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-gedung.html": "Jasa Bore Pile Gedung",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-rumah.html": "Jasa Bore Pile Rumah",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-jalan.html": "Jasa Bore Pile Jalan"
 };
 const urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage= { 
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-beton.html": "Harga Jasa Bore Pile Beton", 
