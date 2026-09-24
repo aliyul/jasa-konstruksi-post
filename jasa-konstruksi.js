@@ -602,6 +602,28 @@ const urlMappingJasaStraussPileFromMoneyMasterMoneyPage= {
 	
 };
 
+const urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyPage= { 	
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-30cm.html": "Jasa Borongan Strauss Pile 30c",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-40cm.html": "Jasa Borongan Strauss Pile 40c",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-50cm.html": "Jasa Borongan Strauss Pile 50c",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-beton.html": "Jasa Borongan Strauss Pile Beton",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-manual.html": "Jasa Borongan Strauss Pile Manual",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-hidrolik.html": "Jasa Borongan Strauss Pile Hidrolik",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-rotary.html": "Jasa Borongan Strauss Pile Rotary",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-auger.html": "Jasa Borongan Strauss Pile Auger",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-kering.html": "Jasa Borongan Strauss Pile Kering",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-basah.html": "Jasa Borongan Strauss Pile Basah",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-industri.html": "Jasa Borongan Strauss Pile Industri",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-perumahan.html": "Jasa Borongan Strauss Pile Perumahan",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-per-titik.html": "Jasa Borongan Strauss Pile Per Titik",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-per-meter.html": "Jasa Borongan Strauss Pile Per Meter",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-12-meter.html": "Jasa Borongan Strauss Pile 12 Meter",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-9-meter.html": "Jasa Borongan Strauss Pile 9 Meter",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-6-meter.html": "Jasa Borongan Strauss Pile 6 Meter",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-mesin.html": "Jasa Borongan Strauss Pile Mesin"
+	
+};
+
 const urlMappingJasaBorSumurFromMoneyMasterMoneyPage= { 
   "https://www.betonjayareadymix.com/p/spesifikasi-jasa-sumur-bor.html": "Spesifikasi Jasa Sumur Bor",
   "https://www.betonjayareadymix.com/p/mutu-jasa-sumur-bor.html": "Mutu Jasa Sumur Bor",
@@ -1962,6 +1984,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingJasaBorePileFromMoneyMasterMoneyPage,
 		urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage,
 		urlMappingJasaStraussPileFromMoneyMasterMoneyPage,
+		urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyPage,
 		urlMappingJasaBorSumurFromMoneyMasterMoneyPage,
 		urlMappingTukangSumurBorFromMoneyMasterMoneyPage,
 		urlMappingJasaCoringFromMoneyMasterMoneyPage,
@@ -4460,6 +4483,23 @@ if (urlMappingJasaBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
             { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
             { name: 'Jasa Strauss Pile', url: 'https://www.betonjayareadymix.com/p/jasa-strauss-pile.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+
+	
+	if (urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	
+	generateBreadcrumbShared(
+        urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Borongan Strauss Pile', url: 'https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile.html'}
         ],
         'JASA_KONSTRUKSI'
     );
