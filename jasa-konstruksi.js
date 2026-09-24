@@ -557,7 +557,7 @@ const urlMappingJasaBorePileFromMoneyMasterMoneyPage= {
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-30cm.html": "Jasa Bore Pile 30cm",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-50cm.html": "Jasa Bore Pile 50cm",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-2-inch.html": "Jasa Bore Pile 2 Inch",
- "https://www.betonjayareadymix.com/p/jasa-bore-pile-rumahan.html": "Jasa Bore Pile Rumahan",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-perumahan.html": "Jasa Bore Pile Perumahan",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-komersial.html": "Jasa Bore Pile Komersial",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-industri.html": "Jasa Bore Pile Industri",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-besar.html": "Jasa Bore Pile Besar",
@@ -566,8 +566,23 @@ const urlMappingJasaBorePileFromMoneyMasterMoneyPage= {
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-rotary.html": "Jasa Bore Pile Rotary",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-auger.html": "Jasa Bore Pile Auger",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-basah.html": "Jasa Bore Pile Basah",
- "https://www.betonjayareadymix.com/p/jasa-bore-pile-kering.html": "Jasa Bore Pile Kering"
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-kering.html": "Jasa Bore Pile Kering",
 	
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-40cm.html": "Jasa Bore Pile 40 cm",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-4-inch.html": "Jasa Bore Pile 4 inch",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-6-inch.html": "Jasa Bore Pile 6 inch",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-per-meter.html": "Jasa Bore Pile Per Meter",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-pondasi.html": "Jasa Bore Pile Pondasi",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-sedang.html": "Jasa Bore Pile Sedang",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-kecil.html": "Jasa Bore Pile Kecil",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-proyek.html": "Jasa Bore Pile Proyek",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-60-cm.html": "Jasa Bore Pile 60 cm",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-80-cm.html": "Jasa Bore Pile 80 cm",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-6-meter.html": "Jasa Bore Pile 6 Meter",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-9-meter.html": "Jasa Bore Pile 9 Meter",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-12-meter.html": "Jasa Bore Pile 12 Meter",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-per-titik.html": "Jasa Bore Pile Per Titik",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-gedung.html": "Jasa Bore Pile Gedung"
 };
 const urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage= { 
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-beton.html": "Harga Jasa Bore Pile Beton", 
