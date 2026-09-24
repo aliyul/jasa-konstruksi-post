@@ -453,8 +453,7 @@ const urlMappingJasaPengeboranFromSub1MoneyMaster = {
    "https://www.betonjayareadymix.com/p/jasa-strauss-pile.html": "Jasa Strauss Pile",
    
   "https://www.betonjayareadymix.com/p/jasa-bore-pile-murah.html": "Jasa Bore Pile Murah",  
-  "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile.html": "Jasa Borongan Strauss Pile",  
-  "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile.html": "Jasa Borongan Bore Pile",  
+
   "https://www.betonjayareadymix.com/p/jasa-pengeboran-bore-pile.html": "Jasa Pengeboran Bore Pile",
   //MM INFORMASI JASA CORING BETON
   "https://www.betonjayareadymix.com/p/jasa-coring.html": "Jasa Coring"
