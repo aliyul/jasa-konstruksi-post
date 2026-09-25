@@ -623,8 +623,22 @@ const urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage= {
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-gedung.html": "Harga Jasa Bore Pile Gedung",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-rumah.html": "Harga Jasa Bore Pile Rumah",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-jalan.html": "Harga Jasa Bore Pile Jalan"
-
-
+};
+const urlMappingJasaBoronganBorePileFromMoneyMasterMoneyPage= { 
+ "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile-promo.html": "Jasa Borongan Bore Pile Promo",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile-ruko.html": "Jasa Borongan Bore Pile Ruko",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile-rumah.html": "Jasa Borongan Bore Pile Rumah",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile-industri.html": "Jasa Borongan Bore Pile Industri",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile-komersial.html": "Jasa Borongan Bore Pile Komersial",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile-perumahan.html": "Jasa Borongan Bore Pile Perumahan",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile-gedung.html": "Jasa Borongan Bore Pile Gedung",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile-pondasi.html": "Jasa Borongan Bore Pile Pondasi",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile-per-meter.html": "Jasa Borongan Bore Pile Per Meter",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile-40cm.html": "Jasa Borongan Bore Pile 40cm",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile-30cm.html": "Jasa Borongan Bore Pile 30cm",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile-hidrolik.html": "Jasa Borongan Bore Pile Hidrolik",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile-manual.html": "Jasa Borongan Bore Pile Manual"
+	
 };
 const urlMappingJasaStraussPileFromMoneyMasterMoneyPage= { 	
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-hidrolik.html": "Jasa Bore Pile Hidrolik",
@@ -2040,6 +2054,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		urlMappingHargaJasaBorFromMoneyMasterMoneyPage,
 		urlMappingJasaBorePileFromMoneyMasterMoneyPage,
 		urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage,
+		urlMappingJasaBoronganBorePileFromMoneyMasterMoneyPage,
 		urlMappingJasaStraussPileFromMoneyMasterMoneyPage,
 		urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyPage,
 		urlMappingJasaBorSumurFromMoneyMasterMoneyPage,
@@ -4524,6 +4539,22 @@ if (urlMappingJasaBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
             { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
             { name: 'Harga Jasa Bore Pile', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bore-pile.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	
+    if (urlMappingJasaBoronganBorePileFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	
+	generateBreadcrumbShared(
+        urlMappingJasaBoronganBorePileFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Borongan Bore Pile', url: 'https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile.html'}
         ],
         'JASA_KONSTRUKSI'
     );
