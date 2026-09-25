@@ -492,6 +492,8 @@ const urlMappingJasaBorFromMoneyMasterMoneyPage= {
   "https://www.betonjayareadymix.com/p/jasa-bor-manual.html": "Jasa Bor Manual", 
 	"https://www.betonjayareadymix.com/p/jasa-bor-rotary.html": "Jasa Bor Rotary", 
 	"https://www.betonjayareadymix.com/p/jasa-bor-auger.html": "Jasa Bor Auger", 
+	"https://www.betonjayareadymix.com/p/jasa-bor-per-meter.html": "Jasa Bor Per Meter",
+	"https://www.betonjayareadymix.com/p/jasa-bor-per-titik.html": "Jasa Bor Per Titik",
 
 	"https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton",  
   "https://www.betonjayareadymix.com/p/jasa-bor-tanah.html": "Jasa Bor Tanah",  
@@ -503,7 +505,7 @@ const urlMappingJasaBorFromMoneyMasterMoneyPage= {
 	"https://www.betonjayareadymix.com/p/jasa-bor-plat.html": "Jasa Bor Plat",
 	"https://www.betonjayareadymix.com/p/jasa-bor-lantai.html": "Jasa Bor Lantai",
 	"https://www.betonjayareadymix.com/p/jasa-bor-besi.html": "Jasa Bor Besi",
-	"https://www.betonjayareadymix.com/p/jasa-bor-pondasi.html": "Jasa Bor Pondasi",
+//	"https://www.betonjayareadymix.com/p/jasa-bor-pondasi.html": "Jasa Bor Pondasi",
 	"https://www.betonjayareadymix.com/p/jasa-bor-baja.html": "Jasa Bor Baja",
 	"https://www.betonjayareadymix.com/p/jasa-bor-kaca.html": "Jasa Bor Kaca",
 	"https://www.betonjayareadymix.com/p/jasa-bor-batu.html": "Jasa Bor Batu",
@@ -530,7 +532,6 @@ const urlMappingHargaJasaBorFromMoneyMasterMoneyPage = {
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-plat.html": "Harga Jasa Bor Plat",
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-lantai.html": "Harga Jasa Bor Lantai",
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-besi.html": "Harga Jasa Bor Besi",
-	"https://www.betonjayareadymix.com/p/harga-jasa-bor-pondasi.html": "Harga Jasa Bor Pondasi",
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-baja.html": "Harga Jasa Bor Baja",
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-kaca.html": "Harga Jasa Bor Kaca",
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-batu.html": "Harga Jasa Bor Batu",
@@ -539,7 +540,12 @@ const urlMappingHargaJasaBorFromMoneyMasterMoneyPage = {
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-granit.html": "Harga Jasa Bor Granit",
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-marmer.html": "Harga Jasa Bor Marmer",
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-basah.html": "Harga Jasa Bor Basah",
-	"https://www.betonjayareadymix.com/p/harga-jasa-bor-kering.html": "Harga Jasa Bor Kering"
+	"https://www.betonjayareadymix.com/p/harga-jasa-bor-manual.html": "Harga Jasa Bor Manual",
+	"https://www.betonjayareadymix.com/p/harga-jasa-bor-hidrolik.html": "Harga Jasa Bor Hidrolik",
+	"https://www.betonjayareadymix.com/p/harga-jasa-bor-per-meter.html": "Harga Jasa Bor Per Meter",
+	"https://www.betonjayareadymix.com/p/harga-jasa-bor-per-titik.html": "Harga Jasa Bor Per Titik",
+	"https://www.betonjayareadymix.com/p/harga-jasa-bor-rotary.html": "Harga Jasa Bor Rotary",
+	"https://www.betonjayareadymix.com/p/harga-jasa-bor-auger.html": "Harga Jasa Bor Auger"
 	
 };
 
