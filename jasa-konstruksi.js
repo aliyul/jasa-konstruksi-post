@@ -606,7 +606,7 @@ const urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage= {
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-industri.html": "Harga Jasa Bore Pile Industri",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-besar.html": "Harga Jasa Bore Pile Besar",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-hidrolik.html": "Harga Jasa Bore Pile Hidrolik",
- "https://www.betonjayareadymix.com/p/jasa-bore-pile-manual.html": "Harga Jasa Bore Pile Manual",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-manual.html": "Harga Jasa Bore Pile Manual",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-rotary.html": "Harga Jasa Bore Pile Rotary",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-auger.html": "Harga Jasa Bore Pile Auger",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-basah.html": "Harga Jasa Bore Pile Basah",
