@@ -759,7 +759,24 @@ const urlMappingTukangSumurBorFromMoneyMasterMoneyPage = {
 
 
 const urlMappingJasaCoringFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton"
+  "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",
+  "https://www.betonjayareadymix.com/p/jasa-coring-dinding.html": "Jasa Coring Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-coring-lantai.html": "Jasa Coring Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-coring-manual.html": "Jasa Coring Manual",
+  "https://www.betonjayareadymix.com/p/jasa-coring-hidrolik.html": "Jasa Coring Hidrolik",
+  "https://www.betonjayareadymix.com/p/jasa-coring-per-titik.html": "Jasa Coring Per Titik",
+  "https://www.betonjayareadymix.com/p/jasa-coring-per-meter.html": "Jasa Coring Per Meter",
+  "https://www.betonjayareadymix.com/p/jasa-coring-plat.html": "Jasa Coring Plat",
+  "https://www.betonjayareadymix.com/p/jasa-coring-kolom.html": "Jasa Coring Kolom",
+  "https://www.betonjayareadymix.com/p/jasa-coring-pondasi.html": "Jasa Coring Pondasi",
+  "https://www.betonjayareadymix.com/p/jasa-coring-balok.html": "Jasa Coring Balok",
+  "https://www.betonjayareadymix.com/p/jasa-coring-sloof.html": "Jasa Coring Sloof",
+  "https://www.betonjayareadymix.com/p/jasa-coring-tembok.html": "Jasa Coring Tembok",
+  "https://www.betonjayareadymix.com/p/jasa-coring-atap.html": "Jasa Coring Atap",
+  "https://www.betonjayareadymix.com/p/jasa-coring-plafon.html": "Jasa Coring Plafon",
+  "https://www.betonjayareadymix.com/p/jasa-coring-jalan.html": "Jasa Coring Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-coring-aspal.html": "Jasa Coring Aspal",
+  "https://www.betonjayareadymix.com/p/jasa-coring-tangga.html": "Jasa Coring Tangga"
 	
 	
 };
