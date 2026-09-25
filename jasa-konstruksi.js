@@ -765,7 +765,8 @@ const urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyPage= {
 	
 };
 
-const urlMappingJasaBorSumurFromMoneyMasterMoneyPage= { 
+const urlMappingJasaBorSumurFromMoneyMasterMoneyPage= {
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-per-meter.html": "Harga Jasa Sumur Bor Per Meter",
   "https://www.betonjayareadymix.com/p/spesifikasi-jasa-sumur-bor.html": "Spesifikasi Jasa Sumur Bor",
   "https://www.betonjayareadymix.com/p/mutu-jasa-sumur-bor.html": "Mutu Jasa Sumur Bor",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-dalam.html": "Jasa Sumur Bor Dalam",
@@ -778,15 +779,70 @@ const urlMappingJasaBorSumurFromMoneyMasterMoneyPage= {
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-artesis.html": "Jasa Sumur Bor Artesis",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-30m.html": "Jasa Sumur Bor 30m",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-50m.html": "Jasa Sumur Bor 50m",
-  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-borongan.html": "Jasa Sumur Bor Borongan",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-proyek.html": "Jasa Sumur Bor Proyek",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-rumahan.html": "Jasa Sumur Bor Rumahan",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-komersial.html": "Jasa Sumur Bor Komersial",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-industri.html": "Jasa Sumur Bor Industri"
+  
+ // "https://www.betonjayareadymix.com/p/jasa-bor-sumur-borongan.html": "Jasa Sumur Bor Borongan"
+};
+const urlMappingHargaJasaBorSumurFromMoneyMasterMoneyPage= { 
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-per-meter.html": "Harga Jasa Sumur Bor Per Meter",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-dangkal.html": "Harga Jasa Sumur Bor Dangkal",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-manual.html": "Harga Jasa Sumur Bor Manual",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-hidrolik.html": "Harga Jasa Sumur Bor Hidrolik",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-rotary.html": "Harga Jasa Sumur Bor Rotary",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-auger.html": "Harga Jasa Sumur Bor Auger",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-jet-pump.html": "Harga Jasa Sumur Bor Jet Pump",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-artesis.html": "Harga Jasa Sumur Bor Artesis",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-30m.html": "Harga Jasa Sumur Bor 30m",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-50m.html": "Harga Jasa Sumur Bor 50m",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-proyek.html": "Harga asa Sumur Bor Proyek",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-rumahan.html": "Harga Jasa Sumur Bor Rumahan",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-komersial.html": "Harga Jasa Sumur Bor Komersial",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-industri.html": "Harga Jasa Sumur Bor Industri"
+  
+ // "https://www.betonjayareadymix.com/p/jasa-bor-sumur-borongan.html": "Jasa Sumur Bor Borongan"
+};
+
+const urlMappingJasaBorSumurMurahFromMoneyMasterMoneyPage= { 
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah-per-meter.html": "Jasa Sumur Bor Murah Per Meter",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah-dalam.html": "Jasa Sumur Bor Murah Dalam",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah-dangkal.html": "Jasa Sumur Bor Murah Dangkal",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah-manual.html": "Jasa Sumur Bor Murah Manual",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah-hidrolik.html": "Jasa Sumur Bor Murah Hidrolik",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah-rotary.html": "Jasa Sumur Bor Murah Rotary",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah-auger.html": "Jasa Sumur Bor Murah Auger",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah-jet-pump.html": "Jasa Sumur Bor Murah Jet Pump",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah-artesis.html": "Jasa Sumur Bor Murah Artesis",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah-30m.html": "Jasa Sumur Bor Murah 30m",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah-50m.html": "Jasa Sumur Bor Murah 50m",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah-proyek.html": "Jasa Sumur Bor Murah Proyek",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah-rumahan.html": "Jasa Sumur Bor Murah Rumahan",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah-komersial.html": "Jasa Sumur Bor Murah Komersial",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah-industri.html": "Jasa Sumur Bor Murah Industri"
 
 	
 };
+const urlMappingHargaJasaBorSumurMurahFromMoneyMasterMoneyPage= { 
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah-per-meter.html": "Harga Jasa Sumur Bor Murah Per Meter",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah-dalam.html": "Harga Jasa Sumur Bor Murah Dalam",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah-dangkal.html": "Harga Jasa Sumur Bor Murah Dangkal",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah-manual.html": "Harga Jasa Sumur Bor Murah Manual",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah-hidrolik.html": "Harga Jasa Sumur Bor Murah Hidrolik",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah-rotary.html": "Harga Jasa Sumur Bor Murah Rotary",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah-auger.html": "Harga Jasa Sumur Bor Murah Auger",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah-jet-pump.html": "Harga Jasa Sumur Bor Murah Jet Pump",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah-artesis.html": "Harga Jasa Sumur Bor Murah Artesis",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah-30m.html": "Harga Jasa Sumur Bor Murah 30m",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah-50m.html": "Harga Jasa Sumur Bor Murah 50m",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah-proyek.html": "Harga Jasa Sumur Bor Murah Proyek",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah-rumahan.html": "Harga Jasa Sumur Bor Murah Rumahan",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah-komersial.html": "Harga Jasa Sumur Bor Murah Komersial",
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah-industri.html": "Harga Jasa Sumur Bor Murah Industri"
 
+	
+};
 	 
 const urlMappingTukangSumurBorFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/p/tukang-sumur-bor-dalam.html": "Tukang Sumur Bor Dalam",
@@ -2150,7 +2206,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 		urlMappingJasaStraussPileFromMoneyMasterMoneyPage,
 		urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyPage,
+	
 		urlMappingJasaBorSumurFromMoneyMasterMoneyPage,
+	    urlMappingHargaJasaBorSumurFromMoneyMasterMoneyPage,
+	    urlMappingJasaBorSumurMurahFromMoneyMasterMoneyPage,
+	    urlMappingHargaJasaBorSumurMurahFromMoneyMasterMoneyPage,
 		urlMappingTukangSumurBorFromMoneyMasterMoneyPage,
 		urlMappingJasaCoringFromMoneyMasterMoneyPage,
 		urlMappingHargaJasaCoringFromMoneyMasterMoneyPage,
@@ -4747,7 +4807,46 @@ if (urlMappingJasaBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
     }
-
+    if (urlMappingHargaJasaBorSumurFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	generateBreadcrumbShared(
+        urlMappingHargaJasaBorSumurFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Harga Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+   if (urlMappingJasaBorSumurMurahFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	generateBreadcrumbShared(
+        urlMappingJasaBorSumurMurahFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Jasa Bor Sumur Murah', url: 'https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+   if (urlMappingHargaJasaBorSumurMurahFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	generateBreadcrumbShared(
+        urlMappingHargaJasaBorSumurMurahFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Harga Jasa Bor Sumur Murah', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+    
    if (urlMappingTukangSumurBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 	
 	generateBreadcrumbShared(
