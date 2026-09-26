@@ -2189,16 +2189,26 @@ function restoreCondition(conditionId) {
   console.log('[jasa-kons] ✅ EXECUTE flag set');
 })();
   
-document.addEventListener("DOMContentLoaded", function() {
+// ═══════════════════════════════════════════════════════════════
+// 🔥 FIX v2.1.0: Handle DOMContentLoaded race condition
+// ═══════════════════════════════════════════════════════════════
+// MASALAH: kalau script di-load SETELAH DOMContentLoaded fire
+// (misal pakai async, atau di-load setelah event), maka
+// addEventListener("DOMContentLoaded", fn) TIDAK PERNAH DIPANGGIL.
+// SOLUSI: cek document.readyState — kalau sudah siap, langsung
+// panggil handler tanpa tunggu event.
+// ═══════════════════════════════════════════════════════════════
+function __jasaKonsExecute() {
     // ⚡ EARLY EXIT — Skip kalau flag tidak aktif
     if (!window.__jasaKonsActive) {
-      console.log('[jasa-kons] ⏭️ DOMContentLoaded SKIP — URL tidak cocok');
+      console.log('[jasa-kons] ⏭️ Execute SKIP — URL tidak cocok');
       return;
     }
     
     const cleanUrlJasaKons = window.location.href.split(/[?#]/)[0];
-    console.log('[jasa-kons] 🚀 DOMContentLoaded EXECUTE');
+    console.log('[jasa-kons] 🚀 Execute — URL cocok');
     
+    // ⚠️ Blok Object.assign lama sudah dihapus (validasi via Early Exit)    
     // ⚠️ HAPUS blok Object.assign — sudah tidak perlu
     // (Validasi URL sudah dilakukan di Early Exit di atas)
    /*
@@ -5347,4 +5357,18 @@ if (urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
         pageNameKonstruksiSub.textContent = urlMappingCustom[cleanUrlJasaKons];
     }
     */
-   });
+   }  // ← penutup __jasaKonsExecute (bukan lagi `});`)
+
+// ═══════════════════════════════════════════════════════════════
+// 🔥 FIX v2.1.0: Panggil handler dengan cek readyState
+// ═══════════════════════════════════════════════════════════════
+if (document.readyState === 'loading') {
+    // DOM belum siap → tunggu event (kasus normal)
+    console.log('[jasa-kons] ⏳ DOM masih loading, tunggu DOMContentLoaded');
+    document.addEventListener("DOMContentLoaded", __jasaKonsExecute);
+} else {
+    // DOM sudah siap → langsung jalankan (anti-race)
+    console.log('[jasa-kons] ⚡ DOM sudah siap, langsung execute');
+    __jasaKonsExecute();
+}
+//Perubahan kunci: }); → } (karena sekarang penutup fungsi biasa, bukan callback ad
