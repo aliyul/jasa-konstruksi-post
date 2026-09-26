@@ -1968,7 +1968,7 @@ function restoreCondition(conditionId) {
   console.log('[jasa-kons] 🔍 Check URL: ' + cleanUrl);
   
   // Kumpulkan semua mapping ke array (TANPA Object.assign)
-  var ALL_MAPPINGS = [
+  var ALL_MAPPINGS_MERGED = [
     urlMappingJasaDesainFromPillarSub2,
     urlMappingJasaDesainFromSub2Sub1,
     urlMappingJasaDesainFromSub1MoneyMaster,
@@ -2161,29 +2161,31 @@ function restoreCondition(conditionId) {
     urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage
   ];
   
-  // Loop — cek URL, break kalau cocok
-  var found = false;
-  for (var i = 0; i < ALL_MAPPINGS.length; i++) {
-    var m = ALL_MAPPINGS[i];
-    if (m && typeof m === 'object' && m[cleanUrl]) {
-      found = true;
-      console.log('[jasa-kons] ✅ Match di mapping #' + (i + 1));
-      break;
+    // Merge manual — lebih cepat dari Object.assign untuk 200+ objek
+  for (var i = 0; i < mappingList.length; i++) {
+    var m = mappingList[i];
+    if (m && typeof m === 'object') {
+      for (var key in m) {
+        if (m.hasOwnProperty(key)) {
+          ALL_MAPPINGS_MERGED[key] = m[key];
+        }
+      }
     }
   }
   
-  // ❌ Skip kalau tidak cocok
-  if (!found) {
-    console.log('[jasa-kons] ⏭️ SKIP — URL tidak cocok di semua cluster');
+  // Cek SEKALI — O(1) bukan O(n)
+  if (!ALL_MAPPINGS_MERGED.hasOwnProperty(cleanUrl)) {
+    console.log('[jasa-kons] ⏭️ SKIP — URL tidak cocok');
     window.__jasaKonsActive = false;
     return;
   }
   
-  // ✅ Cocok — set flag
+  // Simpan hasil merge untuk dipakai nanti
+  window.__jasaKonsMerged = ALL_MAPPINGS_MERGED;
   window.__jasaKonsActive = true;
   console.log('[jasa-kons] ✅ EXECUTE flag set');
 })();
-
+  
 document.addEventListener("DOMContentLoaded", function() {
     // ⚡ EARLY EXIT — Skip kalau flag tidak aktif
     if (!window.__jasaKonsActive) {
