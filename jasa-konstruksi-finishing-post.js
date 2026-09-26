@@ -1088,84 +1088,105 @@ function restoreCondition(conditionId) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    // var currentUrl = window.location.href;
-     //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
+    // ⚡ EARLY EXIT — Cek URL SEBELUM eksekusi
+    (function() {
+      var cleanUrl = window.location.href.split(/[?#]/)[0];
+      console.log('[jasa-konstruksi-finishing-post] 🔍 Check: ' + cleanUrl);
+      
+      var ALL_MAPPINGS = [
+		 urlMappingJasaReliefFromMoneyMasterMoneyChild,
+			urlMappingHargaJasaReliefFromMoneyPageMoneyChild,
+			   
+			urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild,
+		
+			urlMappingJasaEksteriorFromMoneyMasterMoneyChild,
+			urlMappingHargaJasaEksteriorFromMoneyPageMoneyChild,
+			   
+			urlMappingJasaInteriorFromMoneyMasterMoneyChild,
+			urlMappingHargaJasaInteriorFromMoneyPageMoneyChild,
+			   
+			urlMappingJasaProfilBetonFromMoneyMasterVariant,
+		    urlMappingHargaJasaProfilBetonFromMoneyPageMoneyChild,
+			   
+		    urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild,
+		    urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyChild,
+		    urlMappingHargaJasaBoronganPlesteranAcianFromMoneyPage2MoneyPage3,
+			urlMappingHargaJasaBoronganPlesteranAcianPerMeterFromMoneyPage3MoneyChild,
+			   
+		    urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyChild,
+			urlMappingJasaCoatingLantaiBetonFromMoneyPageMoneyChild,
+		    urlMappingJasaFinishingKolomBalokFromMoneyPageMoneyChild,
+		    urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPageMoneyPage1,
+		    urlMappingHargaJasaTrowelLantaiFromMoneyPageMoneyChild,
+			urlMappingHargaJasaFloorHardenerFromMoneyPageMoneyChild,
+		    urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyChild,
+		    urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoneyChild,
+		    urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyChild,
+		    urlMappingJasaCatInteriorRumahFromMoneyPageMoneyChild,
+		    urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyChild,
+		
+		    urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyChild,
+		    urlMappingJasaFinishingInteriorKlasikFromMoneyPageMoneyPage1,
+		    urlMappingJasaFinishingInteriorMinimalisFromMoneyPageMoneyPage1,
+		    urlMappingJasaFinishingFurnitureFromMoneyMaster1MoneyChild,
+		
+			   urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyChild,
+			   urlMappingJasaPembuatanCustomFurnitureFromMoneyPageMoneyChild,
+		    urlMappingHargaJasaPasangPlafonFromMoneyPageMoneyPage1,
+			urlMappingJasaPasangPlafonFromMoneyPageMoneyChild,
+		    urlMappingJasaPasangWpcFromMoneyMaster1MoneyChild,
+		    urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyChild,
+			urlMappingHargaJasaPasangVinylPerMeterFromMoneyPage1MoneyPage2,
+			urlMappingJasaPasangVinylLantaiFromMoneyPage1MoneyChild,
+			   urlMappingJasaPasangPVCDindingFromMoneyPageMoneyPage1,
+		    urlMappingJasaPasangPVCDindingFromMoneyPageMoneyChild,
+			   urlMappingHargaJasaPasangPVCFromMoneyPageMoneyPage1,
+		
+			urlMappingJasaKitchenSetFromMoneyMasterMoneyChild,
+			urlMappingHargaJasaKitchenSetFromMoneyPageMoneyChild,
+			urlMappingJasaPembuatanKitchenSetFromMoneyPageMoneyPage1,
+			urlMappingHargaJasaPembuatanKitchenSetFromMoneyPage1MoneyPage2,
+		    urlMappingJasaCustomKitchenSetFromMoneyPageMoneyPage1,
+			   
+		    urlMappingJasaCatEksteriorRumahFromSub2MoneyPage,
+		    urlMappingJasaPasangACPFromMoneyMaster1MoneyChild,
+			urlMappingHargaJasaPasangACPFromMoneyPageMoneyChild,
+			urlMappingJasaPasangACPPerMeterFromMoneyPageMoneyChild,
+		    urlMappingJasaPelapisanAntiCuacaFromSub2MoneyPage,
+		    urlMappingJasaPelapisanDindingLuarFromSub2MoneyPage,
+		    urlMappingJasaTamanFromMoneyMaster3MoneyChild,
+			urlMappingJasaPembuatanTamanFromMoneyPageMoneyChild,
+		    urlMappingJasaFinishingKanopiTerasFromSub2MoneyPage,
+		    urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyChild,
+			urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyChild
+
+      ];
+      
+      var found = false;
+      for (var i = 0; i < ALL_MAPPINGS.length; i++) {
+        if (ALL_MAPPINGS[i] && ALL_MAPPINGS[i][cleanUrl]) {
+          found = true;
+          console.log('[jasa-konstruksi-finishing-post] ✅ Match di mapping #' + (i + 1));
+          break;
+        }
+      }
+      
+      if (!found) {
+        console.log('[jasa-konstruksi-finishing-post] ⏭️ SKIP — URL tidak cocok');
+        window.__jasaKonstruksiFinishingPostActive = false;
+        return;
+      }
+      
+      window.__jasaKonstruksiFinishingPostActive = true;
+      console.log('[jasa-jalan-perkerasan-post] ✅ EXECUTE flag set');
+    })();
+    
+    // ⚡ Cek flag — skip kalau tidak aktif
+    if (!window.__jasaKonstruksiFinishingPostActive) return;
+   
     const cleanUrlJasaKonsFinishingPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
     const currentUrl = cleanUrlJasaKonsFinishingPost;
-   const urlMappingGabungan = Object.assign(
-    {},
-    urlMappingJasaReliefFromMoneyMasterMoneyChild,
-	urlMappingHargaJasaReliefFromMoneyPageMoneyChild,
-	   
-	urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild,
-
-	urlMappingJasaEksteriorFromMoneyMasterMoneyChild,
-	urlMappingHargaJasaEksteriorFromMoneyPageMoneyChild,
-	   
-	urlMappingJasaInteriorFromMoneyMasterMoneyChild,
-	urlMappingHargaJasaInteriorFromMoneyPageMoneyChild,
-	   
-	urlMappingJasaProfilBetonFromMoneyMasterVariant,
-    urlMappingHargaJasaProfilBetonFromMoneyPageMoneyChild,
-	   
-    urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild,
-    urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyChild,
-    urlMappingHargaJasaBoronganPlesteranAcianFromMoneyPage2MoneyPage3,
-	urlMappingHargaJasaBoronganPlesteranAcianPerMeterFromMoneyPage3MoneyChild,
-	   
-    urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyChild,
-	urlMappingJasaCoatingLantaiBetonFromMoneyPageMoneyChild,
-    urlMappingJasaFinishingKolomBalokFromMoneyPageMoneyChild,
-    urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPageMoneyPage1,
-    urlMappingHargaJasaTrowelLantaiFromMoneyPageMoneyChild,
-	urlMappingHargaJasaFloorHardenerFromMoneyPageMoneyChild,
-    urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyChild,
-    urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoneyChild,
-    urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyChild,
-    urlMappingJasaCatInteriorRumahFromMoneyPageMoneyChild,
-    urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyChild,
-
-    urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyChild,
-    urlMappingJasaFinishingInteriorKlasikFromMoneyPageMoneyPage1,
-    urlMappingJasaFinishingInteriorMinimalisFromMoneyPageMoneyPage1,
-    urlMappingJasaFinishingFurnitureFromMoneyMaster1MoneyChild,
-
-	   urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyChild,
-	   urlMappingJasaPembuatanCustomFurnitureFromMoneyPageMoneyChild,
-    urlMappingHargaJasaPasangPlafonFromMoneyPageMoneyPage1,
-	urlMappingJasaPasangPlafonFromMoneyPageMoneyChild,
-    urlMappingJasaPasangWpcFromMoneyMaster1MoneyChild,
-    urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyChild,
-	urlMappingHargaJasaPasangVinylPerMeterFromMoneyPage1MoneyPage2,
-	urlMappingJasaPasangVinylLantaiFromMoneyPage1MoneyChild,
-	   urlMappingJasaPasangPVCDindingFromMoneyPageMoneyPage1,
-    urlMappingJasaPasangPVCDindingFromMoneyPageMoneyChild,
-	   urlMappingHargaJasaPasangPVCFromMoneyPageMoneyPage1,
-
-	urlMappingJasaKitchenSetFromMoneyMasterMoneyChild,
-	urlMappingHargaJasaKitchenSetFromMoneyPageMoneyChild,
-	urlMappingJasaPembuatanKitchenSetFromMoneyPageMoneyPage1,
-	urlMappingHargaJasaPembuatanKitchenSetFromMoneyPage1MoneyPage2,
-    urlMappingJasaCustomKitchenSetFromMoneyPageMoneyPage1,
-	   
-    urlMappingJasaCatEksteriorRumahFromSub2MoneyPage,
-    urlMappingJasaPasangACPFromMoneyMaster1MoneyChild,
-	urlMappingHargaJasaPasangACPFromMoneyPageMoneyChild,
-	urlMappingJasaPasangACPPerMeterFromMoneyPageMoneyChild,
-    urlMappingJasaPelapisanAntiCuacaFromSub2MoneyPage,
-    urlMappingJasaPelapisanDindingLuarFromSub2MoneyPage,
-    urlMappingJasaTamanFromMoneyMaster3MoneyChild,
-	urlMappingJasaPembuatanTamanFromMoneyPageMoneyChild,
-    urlMappingJasaFinishingKanopiTerasFromSub2MoneyPage,
-    urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyChild,
-	urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyChild
-);
-
-// --- validasi URL terdaftar ---
-if (!urlMappingGabungan[cleanUrlJasaKonsFinishingPost]) {
-    console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaKonsFinishingPost}`);
-    return;
-}
+  
      // Menemukan elemen menggunakan Id
     var JasaKonsFinishingPostLink = document.getElementById("JasaKonsFinishingPost");
     if (!JasaKonsFinishingPostLink) {
