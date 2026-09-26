@@ -1958,11 +1958,245 @@ function restoreCondition(conditionId) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // var currentUrl = window.location.href;
-     //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
-    const cleanUrlJasaKons = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
+// ═══════════════════════════════════════════════════════════════
+// ⚡ EARLY EXIT — CEK URL SEBELUM EKSEKUSI (v2.0.0)
+// ═══════════════════════════════════════════════════════════════
+(function() {
+  'use strict';
+  
+  var cleanUrl = window.location.href.split(/[?#]/)[0];
+  console.log('[jasa-kons] 🔍 Check URL: ' + cleanUrl);
+  
+  // Kumpulkan semua mapping ke array (TANPA Object.assign)
+  var ALL_MAPPINGS = [
+    urlMappingJasaDesainFromPillarSub2,
+    urlMappingJasaDesainFromSub2Sub1,
+    urlMappingJasaDesainFromSub1MoneyMaster,
+    urlMappinghargaJasaDesainFromSub1MoneyMaster,
+    urlMappinghargaJasaDesainFromMoneyMasterMoneyPage,
+    urlMappingJasaDesainInteriorFromMoneyMasterMoneyPage,
+    urlMappingJasaDesainEksteriorFromMoneyMasterMoneyPage,
+    urlMappingJasaKonsFromPillarSub2,
+    urlMappingJasaReliefBridgeFromSub2Sub1,
+    urlMappingJasaReliefBridgeFromSub1MoneyMaster,
+    urlMappingHargaJasaReliefFromSub1MoneyMaster,
+    urlMappingJasaReliefFromMoneyMasterMoneyPage,
+    urlMappingJasaReliefDindingFromMoneyPageMoneyPage1,
+    urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1,
+    urlMappingJasaProfilBetonBridgeFromSub2Sub1,
+    urlMappingJasaProfilBetonFromSub1MoneyMaster,
+    urlMappingHargaJasaProfilBetonFromSub1MoneyMaster,
+    urlMappingHargaJasaProfilBetonFromMoneyMasterMoneyPage,
+    urlMappingJasaProfilBetonFromMoneyMasterMoneyPage,
+    urlMappingJasaProfilBetonBangunanFromMoneyPageMoneyPage1,
+    urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaProfilBetonInteriorFromMoneyPageMoneyPage1,
+    urlMappingHargaJasaProfilBetonFromMoneyPageMoneyPage1,
+    urlMappingJasaEksteriorBridgeFromSub2Sub1,
+    urlMappingJasaEksteriorFromSub1MoneyMaster,
+    urlMappingJasaInteriorBridgeFromSub2Sub1,
+    urlMappingJasaInteriorFromSub1MoneyMaster,
+    urlMappingJasaKonsultanBridgeFromSub2Sub1,
+    urlMappingJasaKonsultanFromSub1MoneyMaster,
+    urlMappingHargaJasaKonsultanFromSub1MoneyMaster,
+    urlMappingJasaKonsultanFromMoneyMasterMoneyPage,
+    urlMappingHargaJasaKonsultanFromMoneyMasterMoneyPage,
+    urlMappingJasaKitchenSetBridgeFromSub2Sub1,
+    urlMappingJasaPasangBridgeFromSub2Sub1,
+    urlMappingJasaPembuatanBridgeFromSub2Sub1,
+    urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1,
+    urlMappingJasaAlatKonstruksiFromSub1MoneyMaster,
+    urlMappingJasaAlatKonstruksiFromMoneyMasterMoneyPage,
+    urlMappingJasaKonstruksiStrukturBridgeFromSub2Sub1,
+    urlMappingJasaKonstruksiStrukturFromSub1MoneyMaster,
+    urlMappingJasaStrukturKhususBridgeFromSub2Sub1,
+    urlMappingJasaStrukturKhususFromSub1MoneyMaster,
+    urlMappingJasaLapanganOlahragaBridgeFromSub2Sub1,
+    urlMappingJasaLapanganOlahragaFromSub1MoneyMaster,
+    urlMappingHargaJasaLapanganOlahragaFromSub1MoneyMaster,
+    urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage,
+    urlMappingHargaJasaLapanganOlahragaFromMoneyMasterMoneyPage,
+    urlMappingKonstruksiBangunanBridgeFromSub2Sub1,
+    urlMappingKonstruksiBangunanFromSub1MoneyMaster,
+    urlMappingRenovasiBridgeFromSub2Sub1,
+    urlMappingRenovasiFromSub1MoneyMaster,
+    urlMappingFinishingBridgeFromSub2Sub1,
+    urlMappingFinishingFromSub1MoneyMaster,
+    urlMappingJasaFinishingFromMoneyMasterMoneyMaster1,
+    urlMappingPerbaikanBangunanBridgeFromSub2Sub1,
+    urlMappingJasaPerbaikanBangunanFromSub1MoneyMaster,
+    urlMappingPerbaikanInfrastrukturBridgeFromSub2Sub1,
+    urlMappingJasaPerbaikanInfrastrukturFromSub1MoneyMaster,
+    urlMappingHargaJasaPerbaikanInfrastrukturFromSub1MoneyMaster,
+    urlMappingJasaPerbaikanInfrastrukturFromMoneyMasterMaster1,
+    urlMappingHargaJasaPerbaikanInfrastrukturFromMoneyMasterMaster1,
+    urlMappingJalanPerkerasanBridgeFromSub2Sub1,
+    urlMappingJalanPerkerasanFromSub1MoneyMaster,
+    urlMappingJasaJalanPerkerasanFromMoneyMasterMoneyMaster1,
+    urlMappingJasaPondasiBridgeFromSub2Sub1,
+    urlMappingJasaPondasiFromSub1MoneyMaster,
+    urlMappingJasaSaluranDrainaseBridgeFromSub2Sub1,
+    urlMappingJasaSaluranDrainaseFromSub1MoneyMaster,
+    urlMappingJasaPematanganLahanBridgeFromSub2Sub1,
+    urlMappingJasaPekerjaanGalianTanahBridgeFromSub2Sub1,
+    urlMappingJasaPematanganLahanFromSub1MoneyMaster,
+    urlMappingHargaJasaPematanganLahanFromSub1MoneyMaster,
+    urlMappingJasaPekerjaanGalianTanahFromSub1MoneyMaster,
+    urlMappingJasaPematanganLahanFromMoneyMasterMoneyPage,
+    urlMappingHargaJasaPematanganLahanFromMoneyMasterMoneyPage,
+    urlMappingJasaPekerjaanGalianTanahFromMoneyMasterMoneyPage,
+    urlMappingJasaUjiTanahBridgeFromSub2Sub1,
+    urlMappingJasaUjiTanahFromSub1MoneyMaster,
+    urlMappingJasaCuttingBetonBridgeFromSub2Sub1,
+    urlMappingJasaCuttingBetonFromSub1MoneyMaster,
+    urlMappingHargaJasaCuttingBetonFromSub1MoneyMaster,
+    urlMappingJasaBongkarBangunanBridgeFromSub2Sub1,
+    urlMappingJasaBongkarBangunanFromSub1MoneyMaster,
+    urlMappingHargaJasaBongkarBangunanFromSub1MoneyMaster,
+    urlMappingJasaBuangPuingBridgeFromSub2Sub1,
+    urlMappingJasaBuangPuingFromSub1MoneyMaster,
+    urlMappingHargaJasaBuangPuingFromSub1MoneyMaster,
+    urlMappingJasaBuangPuingFromMoneyMasterMoneyPage,
+    urlMappingHargaJasaBuangPuingFromMoneyMasterMoneyPage,
+    urlMappingJasaPengeboranBridgeFromSub2Sub1,
+    urlMappingJasaPengeboranFromSub1MoneyMaster,
+    urlMappingHargaJasaPengeboranFromSub1MoneyMaster,
+    urlMappingJasaPerkuatanTanahBridgeFromSub2Sub1,
+    urlMappingJasaPerkuatanTanahFromSub1MoneyMaster,
+    urlMappingJasaPembatasPengamanBridgeFromSub2Sub1,
+    urlMappingJasaPembatasPengamanFromSub1MoneyMaster,
+    urlMappingJasaInstalasiListrikBridgeFromSub2Sub1,
+    urlMappingJasaInstalasiListrikFromSub1MoneyMaster,
+    urlMappingHargaJasaInstalasiListrikFromSub1MoneyMaster,
+    urlMappingSewaAlatFromPillarSub2,
+    urlMappingSewaAlatProyekFromSub2Sub1,
+    urlMappingSewaAlatProyekFromSub1MoneyMaster,
+    urlMappingHargaSewaAlatProyekFromSub1MoneyMaster,
+    urlMappingSewaAlatBeratFromSub2Sub1,
+    urlMappingSewaAlatBeratFromSub1MoneyMaster,
+    urlMappingHargaSewaAlatBeratFromSub1MoneyMaster,
+    urlMappingSewaAlatRinganFromSub2Sub1,
+    urlMappingSewaAlatRinganFromSub1MoneyMaster,
+    urlMappingHargaSewaAlatRinganFromSub1MoneyMaster,
+    urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1,
+    urlMappingHargaSewaAlatRinganFromMoneyMasterMoneyMaster1,
+    urlMappingSewaAlatPendukungFromSub2Sub1,
+    urlMappingSewaAlatPendukungFromSub1MoneyMaster,
+    urlMappingHargaSewaAlatPendukungFromSub1MoneyMaster,
+    urlMappingJasaKitchenSetFromSub1MoneyMaster,
+    urlMappingHargaJasaKitchenSetFromSub1MoneyMaster,
+    urlMappingJasaKitchenSetFromMoneyMasterMoneyPage,
+    urlMappingHargaJasaKitchenSetFromMoneyMasterMoneyPage,
+    urlMappingJasaPasangFromSub1MoneyMaster,
+    urlMappinghargaJasaPasangFromSub1MoneyMaster,
+    urlMappingJasaPembuatanFromSub1MoneyMaster,
+    urlMappingHargaJasaPembuatanFromSub1MoneyMaster,
+    urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage,
+    urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1,
+    urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyMaster2,
+    urlMappingJasaPembuatanRumahFromMoneyMaster2MoneyMaster3,
+    urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyPage,
+    urlMappingJasaPasangFromMoneyMasterMoneyMaster1,
+    urlMappingJasaPasangGrcFromMoneyMaster1MoneyPage,
+    urlMappingHargaJasaPasangGrcFromMoneyMasterMoneyPage,
+    urlMappingJasaPasangGrcEksteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangGrcInteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangPlafonFromMoneyMasterMoneyPage,
+    urlMappingHargaJasaPasangPlafonFromMoneyMasterMoneyPage,
+    urlMappingJasaPasangKacaFromMoneyMaster1MoneyPage,
+    urlMappingJasaPasangKacaInteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangPartisiKacaFromMoneyPage1MoneyPage2,
+    urlMappingJasaPasangRailingTanggaKacaFromMoneyPage1MoneyPage2,
+    urlMappingJasaPasangKacaEksteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangBatuFromMoneyMaster1MoneyPage,
+    urlMappingJasaPasangBatuInteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangBatuAlamDindingInteriorFromMoneyPage1MoneyPage2,
+    urlMappingJasaPasangBatuEksteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangWoodPlankFromMoneyMaster1MoneyPage,
+    urlMappingHargaJasaPasangWoodPlankFromMoneyMaster1MoneyPage,
+    urlMappingJasaPasangWoodPlankEksteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangWoodPlankInteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangWoodPlankDindingInteriorFromMoneyPage1MoneyPage2,
+    urlMappingJasaPasangHplFromMoneyMaster1MoneyPage,
+    urlMappingHargaJasaPasangHplFromMoneyMaster1MoneyPage,
+    urlMappingJasaPasangHplEksteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangHplInteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangHPLDindingInteriorFromMoneyPage1MoneyPage2,
+    urlMappingJasaPasangHPLFurnitureFromMoneyPage1MoneyPage2,
+    urlMappingJasaPasangAcpFromMoneyMaster1MoneyPage,
+    urlMappingJasaPasangACPInteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangACPEksteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaLaserCuttingACPFromMoneyPageMoneyPage1,
+    urlMappingHargaJasaPasangACPFromMoneyMaster1MoneyPage,
+    urlMappingJasaPasangLantaiFromMoneyMaster1MoneyPage,
+    urlMappingHargaJasaPasangLantaiFromMoneyMaster1MoneyPage,
+    urlMappingJasaPasangDindingFromMoneyMaster1MoneyPage,
+    urlMappingHargaJasaPasangDindingFromMoneyMaster1MoneyPage,
+    urlMappingJasaPasangFurnitureFromMoneyMaster1MoneyPage,
+    urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage,
+    urlMappingJasaRenovasiFromMoneyMasterMoneyMaster1,
+    urlMappingJasaRenovasiBangunanFromMoneyMaster1MoneyPage,
+    urlMappingJasaSaluranDrainaseFromMoneyMasterMoneyPage,
+    urlMappingJasaUjiTanahFromMoneyMasterMoneyMaster1,
+    urlMappingJasaBongkarBangunanFromMoneyMasterMoneyMaster1,
+    urlMappingHargaJasaBongkarBangunanFromMoneyMasterMoneyMaster1,
+    urlMappingJasaBorFromMoneyMasterMoneyPage,
+    urlMappingHargaJasaBorFromMoneyMasterMoneyPage,
+    urlMappingJasaBorePileFromMoneyMasterMoneyPage,
+    urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage,
+    urlMappingJasaBorePileMurahFromMoneyMasterMoneyPage,
+    urlMappingHargaJasaBorePileMurahFromMoneyMasterMoneyPage,
+    urlMappingJasaBoronganBorePileFromMoneyMasterMoneyPage,
+    urlMappingJasaPengeboranBorePileFromMoneyMasterMoneyPage,
+    urlMappingJasaStraussPileFromMoneyMasterMoneyPage,
+    urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyPage,
+    urlMappingJasaBorSumurFromMoneyMasterMoneyPage,
+    urlMappingHargaJasaBorSumurFromMoneyMasterMoneyPage,
+    urlMappingJasaBorSumurMurahFromMoneyMasterMoneyPage,
+    urlMappingHargaJasaBorSumurMurahFromMoneyMasterMoneyPage,
+    urlMappingTukangSumurBorFromMoneyMasterMoneyPage,
+    urlMappingJasaCoringFromMoneyMasterMoneyPage,
+    urlMappingHargaJasaCoringFromMoneyMasterMoneyPage,
+    urlMappingJasaPembatasPengamanFromMoneyMasterMoneyPage,
+    urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage
+  ];
+  
+  // Loop — cek URL, break kalau cocok
+  var found = false;
+  for (var i = 0; i < ALL_MAPPINGS.length; i++) {
+    var m = ALL_MAPPINGS[i];
+    if (m && typeof m === 'object' && m[cleanUrl]) {
+      found = true;
+      console.log('[jasa-kons] ✅ Match di mapping #' + (i + 1));
+      break;
+    }
+  }
+  
+  // ❌ Skip kalau tidak cocok
+  if (!found) {
+    console.log('[jasa-kons] ⏭️ SKIP — URL tidak cocok di semua cluster');
+    window.__jasaKonsActive = false;
+    return;
+  }
+  
+  // ✅ Cocok — set flag
+  window.__jasaKonsActive = true;
+  console.log('[jasa-kons] ✅ EXECUTE flag set');
+})();
 
+document.addEventListener("DOMContentLoaded", function() {
+    // ⚡ EARLY EXIT — Skip kalau flag tidak aktif
+    if (!window.__jasaKonsActive) {
+      console.log('[jasa-kons] ⏭️ DOMContentLoaded SKIP — URL tidak cocok');
+      return;
+    }
+    
+    const cleanUrlJasaKons = window.location.href.split(/[?#]/)[0];
+    console.log('[jasa-kons] 🚀 DOMContentLoaded EXECUTE');
+    
+    // ⚠️ HAPUS blok Object.assign — sudah tidak perlu
+    // (Validasi URL sudah dilakukan di Early Exit di atas)
+   /*
 	// --- gabungkan semua mapping ---
     const urlMappingGabungan = Object.assign(
       {},
@@ -2225,7 +2459,7 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaKons}`);
       return;
     }
-	
+	*/
      // Menemukan elemen menggunakan Id
     var JasaKons = document.getElementById("JasaKons");
     var JasaKonsSub = document.getElementById("JasaKonsSub");
