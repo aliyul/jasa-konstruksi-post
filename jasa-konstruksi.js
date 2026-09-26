@@ -2161,17 +2161,20 @@ function restoreCondition(conditionId) {
     urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage
   ];
   
-    // Merge manual — lebih cepat dari Object.assign untuk 200+ objek
-  for (var i = 0; i < mappingList.length; i++) {
-    var m = mappingList[i];
+     // ✅ FIX: Merge array of objects ke satu object flat
+  // Perhatikan: ALL_MAPPINGS_MERGED harus jadi OBJECT, bukan array!
+  var MERGED_MAP = {};  // ← object baru
+  for (var i = 0; i < ALL_MAPPINGS_MERGED.length; i++) {
+    var m = ALL_MAPPINGS_MERGED[i];
     if (m && typeof m === 'object') {
       for (var key in m) {
         if (m.hasOwnProperty(key)) {
-          ALL_MAPPINGS_MERGED[key] = m[key];
+          MERGED_MAP[key] = m[key];
         }
       }
     }
   }
+  ALL_MAPPINGS_MERGED = MERGED_MAP;  // ← ganti array jadi object
   
   // Cek SEKALI — O(1) bukan O(n)
   if (!ALL_MAPPINGS_MERGED.hasOwnProperty(cleanUrl)) {
