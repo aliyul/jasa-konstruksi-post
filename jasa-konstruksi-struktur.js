@@ -205,7 +205,7 @@ TYPE: MONEY_MASTER                    | TYPE: MONEY_PAGE
  * @date 2026-08-26
  * ============================================================
  */
-
+/*
 function generateBreadcrumbShared(
     mappingObj,
     currentUrl,
@@ -1674,6 +1674,7 @@ function generateBreadcrumbShared(
         parentByPosition: true // 🔥 FIX v12.3.2: Parent diambil berdasarkan posisi terakhir
     };
 }
+*/
 
 // Menyimpan elemen yang dihapus dalam variabel
 let removedElementsJasakonstruksistruktur = {};
