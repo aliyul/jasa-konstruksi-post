@@ -625,7 +625,7 @@ function removeBreadcrumbNavigation() {
             if (el && el.remove) {
                 el.remove();
                 removedCount++;
-                console.log('[jasa-alat-konstruksi] ✅ Breadcrumb removed: ' + selector);
+                console.log('[jasa-alat-konstruksi-post] ✅ Breadcrumb removed: ' + selector);
             }
         });
     });
@@ -646,11 +646,11 @@ function removeBreadcrumbJsonLd() {
                 (jsonData['@type'] && jsonData['@type'].indexOf('BreadcrumbList') !== -1))) {
                 script.remove();
                 removedCount++;
-                console.log('[jasa-alat-konstruksi] ✅ BreadcrumbList JSON-LD removed');
+                console.log('[jasa-alat-konstruksi-post] ✅ BreadcrumbList JSON-LD removed');
             }
         } catch(e) {
             // Jika parsing gagal, skip
-            console.warn('[jasa-alat-konstruksi] ⚠️ Could not parse JSON-LD, skipping:', e.message);
+            console.warn('[jasa-alat-konstruksi-post] ⚠️ Could not parse JSON-LD, skipping:', e.message);
         }
     });
 
@@ -666,7 +666,7 @@ function hideBreadcrumbWithCss() {
     // Cek apakah style sudah ada
     if (!document.getElementById('variant-breadcrumb-hider')) {
         document.head.appendChild(style);
-        console.log('[jasa-alat-konstruksi] ✅ CSS hider added');
+        console.log('[jasa-alat-konstruksi-post] ✅ CSS hider added');
     }
 }
 
@@ -693,7 +693,7 @@ function restoreCondition(conditionId) {
         breadcrumb.appendChild(elementToRestore);
         delete removedElementsJasaKonsAlatKonstruksiPost[conditionId];
     } else {
-        console.log('[jasa-alat-konstruksi] Elemen dengan ID ' + conditionId + ' tidak ditemukan di removedElementsJasaKonsAlatKonstruksiPost.');
+        console.log('[jasa-alat-konstruksi-post] Elemen dengan ID ' + conditionId + ' tidak ditemukan di removedElementsJasaKonsAlatKonstruksiPost.');
     }
 }
 
@@ -704,7 +704,7 @@ function restoreCondition(conditionId) {
     'use strict';
 
     var cleanUrl = window.location.href.split(/[?#]/)[0];
-    console.log('[jasa-alat-konstruksi] 🔍 Check URL: ' + cleanUrl);
+    console.log('[jasa-alat-konstruksi-post] 🔍 Check URL: ' + cleanUrl);
 
     // Kumpulkan semua mapping ke array (TANPA Object.assign)
     var ALL_MAPPINGS_ARRAY = [
@@ -851,15 +851,15 @@ function restoreCondition(conditionId) {
 
     // Cek SEKALI — O(1) bukan O(n)
     if (!MERGED_MAP.hasOwnProperty(cleanUrl)) {
-        console.log('[jasa-alat-konstruksi] ⏭️ SKIP — URL tidak cocok');
-        window.__jasaAlatKonstruksiActive = false;
+        console.log('[jasa-alat-konstruksi-post] ⏭️ SKIP — URL tidak cocok');
+        window.__jasaAlatKonstruksiPostActive = false;
         return;
     }
 
     // Simpan hasil merge untuk dipakai nanti
-    window.__jasaAlatKonstruksiMerged = MERGED_MAP;
-    window.__jasaAlatKonstruksiActive = true;
-    console.log('[jasa-alat-konstruksi] ✅ EXECUTE flag set');
+    window.__jasaAlatKonstruksiPostMerged = MERGED_MAP;
+    window.__jasaAlatKonstruksiPostActive = true;
+    console.log('[jasa-alat-konstruksi-post] ✅ EXECUTE flag set');
 })();
 
 // ────────────────────────────────────────────────────────────
@@ -867,13 +867,13 @@ function restoreCondition(conditionId) {
 // ────────────────────────────────────────────────────────────
 function initJasaKonsAlatKonstruksiPost() {
     // ⚡ Guard: skip kalau flag tidak aktif
-    if (!window.__jasaAlatKonstruksiActive) {
-        console.log('[jasa-alat-konstruksi] ⏭️ Execute SKIP — URL tidak cocok');
+    if (!window.__jasaAlatKonstruksiPostActive) {
+        console.log('[jasa-alat-konstruksi-post] ⏭️ Execute SKIP — URL tidak cocok');
         return;
     }
 
     var cleanUrlJasaKonsAlatKonstruksiPost = window.location.href.split(/[?#]/)[0];
-    console.log('[jasa-alat-konstruksi] 🚀 Execute — URL cocok: ' + cleanUrlJasaKonsAlatKonstruksiPost);
+    console.log('[jasa-alat-konstruksi-post] 🚀 Execute — URL cocok: ' + cleanUrlJasaKonsAlatKonstruksiPost);
 
     // Ambil nama dari URL (panggil fungsi yang sama)
     var currentPageTitle = cleanUrlJasaKonsAlatKonstruksiPost
@@ -886,7 +886,7 @@ function initJasaKonsAlatKonstruksiPost() {
     var JasaKonsAlatKonstruksiPost = document.getElementById("JasaKonsAlatKonstruksiPost");
 
     if (!JasaKonsAlatKonstruksiPost) {
-        console.error('[jasa-alat-konstruksi] ❌ elemen Id JasaKonsAlatKonstruksiPost kondisi terhapus');
+        console.error('[jasa-alat-konstruksi-post] ❌ elemen Id JasaKonsAlatKonstruksiPost kondisi terhapus');
         return;
     }
 
@@ -912,7 +912,7 @@ function initJasaKonsAlatKonstruksiPost() {
 
     // [SEMUA IF BREADCRUMB DARI TAHAP 3B, 3C, 3D DITARUH DI SINI]
 
-    console.log('[jasa-alat-konstruksi] ✅ Semua breadcrumb selesai diproses');
+    console.log('[jasa-alat-konstruksi-post] ✅ Semua breadcrumb selesai diproses');
 }
 
     // ────────────────────────────────────────────────────────────
@@ -1067,7 +1067,7 @@ function initJasaKonsAlatKonstruksiPost() {
         );
     }
     if (urlMappingSewaPompaDewateringFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
-        console.log('[jasa-alat-konstruksi] 🔧 Variant page detected — removing breadcrumbs...');
+        console.log('[jasa-alat-konstruksi-post] 🔧 Variant page detected — removing breadcrumbs...');
         removeBreadcrumbNavigation();
         removeBreadcrumbJsonLd();
         hideBreadcrumbWithCss();
@@ -1135,13 +1135,13 @@ function initJasaKonsAlatKonstruksiPost() {
         );
     }
     if (urlMappingSewaPompaAirDieselFromMoneyMaster1Variant[cleanUrlJasaKonsAlatKonstruksiPost]) {
-        console.log('[jasa-alat-konstruksi] 🔧 Variant page detected — removing breadcrumbs...');
+        console.log('[jasa-alat-konstruksi-post] 🔧 Variant page detected — removing breadcrumbs...');
         removeBreadcrumbNavigation();
         removeBreadcrumbJsonLd();
         hideBreadcrumbWithCss();
     }
     if (urlMappingSewaMesinPompaAirFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
-        console.log('[jasa-alat-konstruksi] 🔧 Variant page detected — removing breadcrumbs...');
+        console.log('[jasa-alat-konstruksi-post] 🔧 Variant page detected — removing breadcrumbs...');
         removeBreadcrumbNavigation();
         removeBreadcrumbJsonLd();
         hideBreadcrumbWithCss();
@@ -1179,7 +1179,7 @@ function initJasaKonsAlatKonstruksiPost() {
         );
     }
     if (urlMappingSewaPompaLumpurFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
-        console.log('[jasa-alat-konstruksi] 🔧 Variant page detected — removing breadcrumbs...');
+        console.log('[jasa-alat-konstruksi-post] 🔧 Variant page detected — removing breadcrumbs...');
         removeBreadcrumbNavigation();
         removeBreadcrumbJsonLd();
         hideBreadcrumbWithCss();
@@ -1200,7 +1200,7 @@ function initJasaKonsAlatKonstruksiPost() {
         );
     }
     if (urlMappingSewaPompaSedotLumpurFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
-        console.log('[jasa-alat-konstruksi] 🔧 Variant page detected — removing breadcrumbs...');
+        console.log('[jasa-alat-konstruksi-post] 🔧 Variant page detected — removing breadcrumbs...');
         removeBreadcrumbNavigation();
         removeBreadcrumbJsonLd();
         hideBreadcrumbWithCss();
@@ -1221,7 +1221,7 @@ function initJasaKonsAlatKonstruksiPost() {
         );
     }
     if (urlMappingSewaPompaBanjirFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
-        console.log('[jasa-alat-konstruksi] 🔧 Variant page detected — removing breadcrumbs...');
+        console.log('[jasa-alat-konstruksi-post] 🔧 Variant page detected — removing breadcrumbs...');
         removeBreadcrumbNavigation();
         removeBreadcrumbJsonLd();
         hideBreadcrumbWithCss();
@@ -1242,7 +1242,7 @@ function initJasaKonsAlatKonstruksiPost() {
         );
     }
     if (urlMappingSewaPompaKapasitasBesarFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
-        console.log('[jasa-alat-konstruksi] 🔧 Variant page detected — removing breadcrumbs...');
+        console.log('[jasa-alat-konstruksi-post] 🔧 Variant page detected — removing breadcrumbs...');
         removeBreadcrumbNavigation();
         removeBreadcrumbJsonLd();
         hideBreadcrumbWithCss();
@@ -1267,7 +1267,7 @@ function initJasaKonsAlatKonstruksiPost() {
         );
     }
     if (urlMappingSewaBakAirProyekFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
-        console.log('[jasa-alat-konstruksi] 🔧 Variant page detected — removing breadcrumbs...');
+        console.log('[jasa-alat-konstruksi-post] 🔧 Variant page detected — removing breadcrumbs...');
         removeBreadcrumbNavigation();
         removeBreadcrumbJsonLd();
         hideBreadcrumbWithCss();
@@ -1630,7 +1630,7 @@ function initJasaKonsAlatKonstruksiPost() {
         );
     }
     if (urlMappingSewaSelangProyekFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
-        console.log('[jasa-alat-konstruksi] 🔧 Variant page detected — removing breadcrumbs...');
+        console.log('[jasa-alat-konstruksi-post] 🔧 Variant page detected — removing breadcrumbs...');
         removeBreadcrumbNavigation();
         removeBreadcrumbJsonLd();
         hideBreadcrumbWithCss();
@@ -1668,7 +1668,7 @@ function initJasaKonsAlatKonstruksiPost() {
         );
     }
     if (urlMappingSewaPipaProyekFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
-        console.log('[jasa-alat-konstruksi] 🔧 Variant page detected — removing breadcrumbs...');
+        console.log('[jasa-alat-konstruksi-post] 🔧 Variant page detected — removing breadcrumbs...');
         removeBreadcrumbNavigation();
         removeBreadcrumbJsonLd();
         hideBreadcrumbWithCss();
@@ -1706,7 +1706,7 @@ function initJasaKonsAlatKonstruksiPost() {
         );
     }
     if (urlMappingSewaTangkiAirFromMoneyChildVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
-        console.log('[jasa-alat-konstruksi] 🔧 Variant page detected — removing breadcrumbs...');
+        console.log('[jasa-alat-konstruksi-post] 🔧 Variant page detected — removing breadcrumbs...');
         removeBreadcrumbNavigation();
         removeBreadcrumbJsonLd();
         hideBreadcrumbWithCss();
@@ -2134,7 +2134,7 @@ function initJasaKonsAlatKonstruksiPost() {
     // ═══════════════════════════════════════════════════════════
     // ✅ SEMUA BREADCRUMB SELESAI DIPROSES
     // ═══════════════════════════════════════════════════════════
-    console.log('[jasa-alat-konstruksi] ✅ Semua breadcrumb selesai diproses');
+    console.log('[jasa-alat-konstruksi-post] ✅ Semua breadcrumb selesai diproses');
 
 }  // ← TUTUP FUNGSI initJasaKonsAlatKonstruksiPost()
 
@@ -2158,10 +2158,10 @@ function initJasaKonsAlatKonstruksiPost() {
 // ═══════════════════════════════════════════════════════════
 if (document.readyState === 'loading') {
     // DOM belum siap → tunggu event (kasus normal)
-    console.log('[jasa-alat-konstruksi] ⏳ DOM masih loading, tunggu DOMContentLoaded');
+    console.log('[jasa-alat-konstruksi-post] ⏳ DOM masih loading, tunggu DOMContentLoaded');
     document.addEventListener("DOMContentLoaded", initJasaKonsAlatKonstruksiPost);
 } else {
     // DOM sudah siap → langsung jalankan (anti-race)
-    console.log('[jasa-alat-konstruksi] ⚡ DOM sudah siap, langsung execute');
+    console.log('[jasa-alat-konstruksi-post] ⚡ DOM sudah siap, langsung execute');
     initJasaKonsAlatKonstruksiPost();
 }
