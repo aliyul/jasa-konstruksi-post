@@ -491,12 +491,14 @@ function restoreCondition(conditionId) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // var currentUrl = window.location.href;
-     //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
-    const cleanUrlJasaPengeboranPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
-
-
+(function() {
+    'use strict';
+    
+    function initJasaPengeboranPost() {
+        // var currentUrl = window.location.href;
+         //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
+        const cleanUrlJasaPengeboranPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
+		
 		/* ==========================================================
    🧩 HybridDateModified v2.5 — StableHash + Safe Load Order
    Fitur:
@@ -1418,5 +1420,12 @@ if (urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild[cleanUrlJasaPengeboran
     );
    }
 
-
-   });
+   }  // ← tutup initJasaPengeboranPost
+    
+    // ✅ Cek readyState DULU
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initJasaPengeboranPost);
+    } else {
+        initJasaPengeboranPost();
+    }
+})();
