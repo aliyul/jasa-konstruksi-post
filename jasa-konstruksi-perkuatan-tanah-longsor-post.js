@@ -82,7 +82,7 @@ const urlMappingJasaStabilisasiLongsor = {
 // ============================================================
 
 const urlMappingJasaPerkuatanRumahLongsor = {
-  // "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-rumah.html": "Jasa Perkuatan Tanah Longsor Rumah [VARIANT]",
+  // "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post-rumah.html": "Jasa Perkuatan Tanah Longsor Rumah [VARIANT]",
   // "https://www.betonjayareadymix.com/2019/08/harga-perkuatan-tanah-rumah-longsor.html": "Harga Perkuatan Tanah Rumah Longsor [MONEY PAGE]",
   // "https://www.betonjayareadymix.com/2019/08/jasa-perkuatan-tebing-rumah.html": "Jasa Perkuatan Tebing Rumah [MONEY PAGE]"
 };
@@ -124,2841 +124,313 @@ const urlMappingJasaDrainaseAntiLongsor = {
 };
 
 
-/**
- * ============================================================
- * generateBreadcrumbJasaKonstruksi v10.10
- * HYBRID: OTOMATIS + MANUAL UNTUK KASUS EDGE
- * ============================================================
- *
- * ✅ UPDATE v10.10
- * ------------------------------------------------------------
- * - FIX: Hybrid detection (otomatis + manual untuk kasus edge)
- * - FIX: JASA_SPEC_WORDS untuk kata pendek yang harus MP (cor, cat, pil, dll)
- * - FIX: PILLAR detection di detectJasaLevelAuto()
- * - FIX: Hanya butuh maintenance minimal
- * - ENHANCED: Logging lebih detail untuk debugging
- *
- * ✅ UPDATE v10.6
- * ------------------------------------------------------------
- * - FIX: Otomatis tidak skip parent terakhir
- *
- * ✅ UPDATE v10.5
- * ------------------------------------------------------------
- * - FIX: Hapus specificKeywords (manual) - murni otomatis
- *
- * ============================================================
- * @version 10.10.0
- * @date 2026-07-07
- * ============================================================
- */
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN 1] FUNGSI HELPER (OPSIONAL)
+// ═══════════════════════════════════════════════════════════
+// CATATAN: Fungsi ini hanya dipakai kalau ada blok variant
+// yang butuh hide/restore breadcrumb. Kalau tidak dipakai,
+// bisa dihapus.
 
-function generateBreadcrumbJasaKonstruksiPerkuatanTanahLongsorPost(
-    mappingObj,
-    currentUrl,
-    breadcrumbItems = [],
-    entityType = 'PRODUK_KONSTRUKSI'
-) {
 
-    // ============================================================
-    // 1. GLOBAL CONFIG
-    // ============================================================
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN 2] EARLY EXIT v2.0.0 — PENDEKATAN C
+// ═══════════════════════════════════════════════════════════
 
-    const CONFIG = {
-        DOMAIN: 'https://www.betonjayareadymix.com',
-        DEBUG: true,
-        CURRENT_YEAR: new Date().getFullYear()
-    };
-
-    // ============================================================
-    // 2. LOGGER
-    // ============================================================
-
-    function log(message, type = 'INFO') {
-        if (!CONFIG.DEBUG && type === 'INFO') return;
-        const icons = { 
-            INFO: '📘', 
-            SUCCESS: '✅', 
-            WARN: '⚠️', 
-            ERROR: '❌', 
-            DEBUG: '🔍', 
-            VARIANT: '🔬', 
-            PARENT: '👪', 
-            URL: '🔗',
-            SCORE: '🎯',
-            CLEAN: '🧹',
-            SKIP: '⏭️'
-        };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v10.10] ${message}`);
-    }
-
-    // ============================================================
-    // 3. ENTITY NORMALIZATION
-    // ============================================================
-
-    const ENTITY_TYPE_MAP = {
-        'JASA': 'JASA_KONSTRUKSI',
-        'JASA_KONSTRUKSI': 'JASA_KONSTRUKSI',
-        'JASA_DESAIN': 'JASA_DESAIN',
-        'JASA_INTERIOR': 'JASA_KONSTRUKSI',
-        'JASA_DESAIN_INTERIOR': 'JASA_DESAIN',
-        'SEWA': 'SEWA_ALAT_KONSTRUKSI',
-        'RENTAL': 'SEWA_ALAT_KONSTRUKSI',
-        'SEWA_ALAT': 'SEWA_ALAT_KONSTRUKSI',
-        'RENTAL_ALAT': 'SEWA_ALAT_KONSTRUKSI',
-        'SEWA_RENTAL': 'SEWA_ALAT_KONSTRUKSI',
-        'SEWA_ALAT_KONSTRUKSI': 'SEWA_ALAT_KONSTRUKSI',
-        'PRODUK': 'PRODUK_KONSTRUKSI',
-        'PRODUK_KONSTRUKSI': 'PRODUK_KONSTRUKSI',
-        'PRODUK_INTERIOR': 'PRODUK_INTERIOR',
-        'MATERIAL': 'MATERIAL_KONSTRUKSI',
-        'MATERIAL_KONSTRUKSI': 'MATERIAL_KONSTRUKSI',
-        'ARTIKEL': 'ARTIKEL'
-    };
-
-    entityType = ENTITY_TYPE_MAP[entityType] || entityType;
-
-    // ============================================================
-    // 4. VALID ENTITY TYPES
-    // ============================================================
-
-    const VALID_ENTITY_TYPES = [
-        'JASA_KONSTRUKSI',
-        'JASA_DESAIN',
-        'SEWA_ALAT_KONSTRUKSI',
-        'PRODUK_KONSTRUKSI',
-        'PRODUK_INTERIOR',
-        'MATERIAL_KONSTRUKSI',
-        'ARTIKEL'
-    ];
-
-    if (!VALID_ENTITY_TYPES.includes(entityType)) {
-        console.error(`❌ INVALID ENTITY TYPE: ${entityType}`);
-        return null;
-    }
-
-    // ============================================================
-    // 5. TYPE LEVEL MAP & PRIORITAS
-    // ============================================================
-
-    const TYPE_LEVEL_MAP = {
-        'home': 0,
-        'pillar': 1,
-        'sub-pillar-tipe-2': 2,
-        'sub-pillar-tipe-1': 3,
-        'money-master': 4,
-        'money-page': 5,
-        'money-child': 6,
-        'variant': 7,
-        'sub-variant': 8
-    };
-
-    const HIERARCHY_ORDER = [
-        'home', 'pillar', 'sub-pillar-tipe-2', 'sub-pillar-tipe-1',
-        'money-master', 'money-page', 'money-child', 'variant', 'sub-variant'
-    ];
-
-    // ============================================================
-    // 6. ROOT ENTITY PILLARS
-    // ============================================================
-
-    const ROOT_ENTITY_PILLARS = {
-        'JASA_KONSTRUKSI': ['jasa konstruksi'],
-        'JASA_DESAIN': ['jasa desain', 'desain'],
-        'SEWA_ALAT_KONSTRUKSI': ['sewa alat konstruksi'],
-        'PRODUK_KONSTRUKSI': ['produk konstruksi'],
-        'PRODUK_INTERIOR': ['produk interior'],
-        'MATERIAL_KONSTRUKSI': ['material konstruksi'],
-        'ARTIKEL': ['artikel konstruksi']
-    };
-
-    // ============================================================
-    // 7. HELPERS
-    // ============================================================
-
-    function isJasaEntity() { return entityType === 'JASA_KONSTRUKSI'; }
-    function isDesainEntity() { return entityType === 'JASA_DESAIN'; }
-    function isSewaEntity() { return entityType === 'SEWA_ALAT_KONSTRUKSI'; }
-    function isProdukEntity() { return entityType === 'PRODUK_KONSTRUKSI'; }
-    function isMaterialEntity() { return entityType === 'MATERIAL_KONSTRUKSI'; }
-    function isInteriorEntity() { return entityType === 'PRODUK_INTERIOR'; }
-
-    // ============================================================
-    // 8. CLEAN TEXT
-    // ============================================================
-
-    function cleanText(text) {
-        if (!text) return '';
-        return text.replace(/\s+/g, ' ').trim();
-    }
-
-    // ============================================================
-    // 9. CLEAN PAGE NAME FROM URL
-    // ============================================================
-
-    function getCleanPageNameFromUrl(url) {
-        if (!url) return '';
-
-        let path = url;
-        path = path.replace(/^https?:\/\/[^\/]+/i, '');
-        path = path.split('?')[0];
-        path = path.replace(/\.(html|php|asp|jsp)$/i, '');
-        
-        // Hapus pola tanggal
-        path = path.replace(/\/\d{4}\/\d{2}\/\d{2}\//g, '/');
-        path = path.replace(/\/\d{4}\/\d{2}\//g, '/');
-        path = path.replace(/\/\d{4}\//g, '/');
-        
-        // Hapus /p/
-        path = path.replace(/^\/p\//, '/');
-        path = path.replace(/\/p\//g, '/');
-        
-        const parts = path.split('/').filter(Boolean);
-        let last = parts.pop() || '';
-        
-        if (!last && parts.length > 0) {
-            last = parts.pop() || '';
-        }
-        
-        last = last.replace(/-/g, ' ');
-        last = last.replace(/[^a-z0-9\s]/gi, '');
-        
-        if (last.length < 3 && parts.length > 0) {
-            const lastTwo = parts.slice(-2).join(' ');
-            if (lastTwo.length > last.length) {
-                last = lastTwo;
-            }
-        }
-        
-        const cleanResult = cleanText(last.toLowerCase());
-        log(`Cleaned URL: "${url}" → "${cleanResult}"`, 'URL');
-        
-        return cleanResult;
-    }
-
-    // ============================================================
-    // 10. SLUGIFY
-    // ============================================================
-
-    function slugify(text) {
-        return cleanText(text)
-            .toLowerCase()
-            .replace(/[^\w\s-]/g, '')
-            .replace(/\s+/g, '-')
-            .replace(/--+/g, '-');
-    }
-
-    // ============================================================
-    // 11. KEYWORDS
-    // ============================================================
-
-    const SP1_KEYWORDS = [
-        'vs', 'versus', 'perbandingan', 'lebih baik', 'kelebihan', 'kekurangan'
-    ];
-
-    const SP2_KEYWORDS = [
-        'jenis', 'kategori', 'daftar', 'macam', 'tipe'
-    ];
-
-    const INFORMATIONAL_KEYWORDS = [
-        'panduan', 'tutorial', 'cara', 'tips', 'apa itu', 'pengertian'
-    ];
-
-    const METHOD_KEYWORDS = ['metode', 'cara', 'tahapan', 'langkah', 'analisa'];
-
-    // ============================================================
-    // 11a. VARIANT KEYWORDS PER ENTITY
-    // ============================================================
+(function() {
+    'use strict';
     
-    const VARIANT_KEYWORDS_PRODUK = [
-        'spesifikasi', 'spec', 'detail spesifikasi',
-        'mutu', 'kualitas', 'quality',
-        'ukuran', 'dimensi',
-        'grade', 'type', 'tipe', 'model',
-        'standar', 'merk', 'brand', 'seri'
-    ];
-
-    const VARIANT_KEYWORDS_JASA = [
-        'standar pelayanan', 'sop', 'metode kerja',
-        'prosedur', 'tahapan', 'cara kerja',
-        'durasi', 'waktu pengerjaan', 'garansi',
-        'standar pengerjaan'
-    ];
-
-    const VARIANT_KEYWORDS_SEWA = [
-        'spesifikasi alat', 'kapasitas alat',
-        'spek alat', 'detail alat', 'spesifikasi'
-    ];
-
-    const TECHNICAL_SPECS = ['k225', 'k250', 'k300', 'k350', 'k400', 'k500', 'k600', 'fc', 'm6', 'm8', 'm10', 'm12'];
+    var cleanUrl = window.location.href.split(/[?#]/)[0];
+    console.log('[jasa-perkuatan-tanah-longsor-post] 🔍 Check URL: ' + cleanUrl);
     
-    const SPECIFIC_MODIFIERS = [
-        'k225', 'k250', 'k300', 'm6', 'm8', 'm10',
-        'diesel', 'hidrolik', 'mini pile', 'sheet pile', 'drop hammer',
-        'breaker', 'long arm', 'vibrator', 'per jam', 'per hari',
-        'per meter', 'per m2', 'terdekat', 'murah', 'kapasitas besar'
+    // Kumpulkan SEMUA mapping ke array
+    var ALL_MAPPINGS = [
+        urlMappingJasaBronjong,
+        urlMappingJasaSoilNailingLongsor,
+        urlMappingJasaDindingPenahanLongsor,
+        urlMappingJasaGeotextileLongsor,
+        urlMappingJasaSheetPileLongsor,
+        urlMappingJasaStabilisasiLongsor,
+        urlMappingJasaPerkuatanRumahLongsor,
+        urlMappingJasaPerkuatanTebingLongsor,
+        urlMappingJasaPerkuatanPerkebunanLongsor,
+        urlMappingJasaDrainaseAntiLongsor
     ];
-
-    // ============================================================
-    // 11b. JASA CLEAN FUNCTION
-    // ============================================================
-
-    const JASA_ULTRA_COMMON_WORDS = new Set([
-        'jasa', 'kontraktor', 'tukang', 'borongan', 'renovasi',
-        'pasang', 'bangun', 'perbaikan', 'instalasi', 'proyek',
-        'cor', 'gali', 'urug', 'angkut', 'service', 'servis',
-        'desain'
-    ]);
-
-    const STOPWORDS = new Set([
-        'dan', 'atau', 'serta', 'yang', 'dari', 'ke', 'di', 'untuk', 
-        'dengan', 'ini', 'itu', 'akan', 'telah', 'sudah', 'masih',
-        'pada', 'oleh', 'karena', 'sehingga', 'setelah', 'sebelum',
-        'plus', 'minus', 'tanpa', 'sampai', 'hingga', 'sambil'
-    ]);
-
-    const MODIFIER_WORDS = new Set([
-        'murah', 'profesional', 'berkualitas', 'terbaik', 'spesialis',
-        'ahli', 'berpengalaman', 'resmi', 'terpercaya', 'ekonomis',
-        'cepat', 'tepat', 'garansi', 'kualitas', 'harga', 'biaya',
-        'tarif', 'ongkos', 'estimasi', 'perhitungan', 'analisa',
-        'modern', 'minimalis', 'mewah', 'klasik', 'tradisional',
-        'kontemporer', 'sederhana', 'elegan', 'premium', 'luxury'
-    ]);
-
-    // ============================================================
-    // 11c. JASA SPEC WORDS (FIXED v10.10 - HYBRID)
-    // ============================================================
-
-    // ✅ FIX v10.10: Kata pendek yang HARUS dianggap spesifik (MP)
-    const JASA_SPEC_WORDS = new Set([
-        // Kata pendek (3-4 huruf) yang harus MP
-        'cor', 'cat', 'pil', 'bor', 'las', 'dak', 'atap', 'besi',
-        'baja', 'kayu', 'batu', 'pasir', 'semen', 'tanah', 'air',
-        'listrik', 'pipa', 'kabel', 'lampu', 'stop', 'kontak',
-        
-        // Kata infrastruktur
-        'jalan', 'halte', 'bus', 'taman', 'trotoar', 'terminal',
-        'jembatan', 'gorong', 'drainase', 'irigasi', 'kanstin',
-        'pembatas', 'pengaman', 'struktur', 'dinding', 'pondasi',
-        
-        // Kata finishing
-        'finishing', 'eksterior', 'interior', 'plafon', 'gypsum',
-        'partisi', 'keramik', 'marmer', 'granit', 'epoxy', 'wallpaper',
-        'lantai', 'dinding', 'atap', 'genteng', 'kusen', 'pintu',
-        'jendela', 'gorden', 'blinds', 'vinyl', 'foam', 'fiber',
-        
-        // Kata konstruksi
-        'konstruksi', 'struktur', 'rangka', 'beton', 'readymix',
-        'pile', 'sheet', 'tiang', 'balok', 'kolom', 'sloof',
-        'ring', 'balk', 'kuda-kuda', 'box culvert', 'u ditch',
-        'paving', 'upah', 'tenaga', 'material', 'bahan'
-    ]);
-
-    function cleanJasaText(text) {
-        if (!text) return '';
-        
-        let cleaned = text.toLowerCase();
-        
-        for (const kw of JASA_ULTRA_COMMON_WORDS) {
-            cleaned = cleaned.replace(new RegExp(`\\b${kw}\\b`, 'g'), ' ');
-        }
-        
-        for (const sw of STOPWORDS) {
-            cleaned = cleaned.replace(new RegExp(`\\b${sw}\\b`, 'g'), ' ');
-        }
-        
-        cleaned = cleaned.replace(/\s+/g, ' ').trim();
-        
-        log(`Clean JASA: "${text}" → "${cleaned}"`, 'CLEAN');
-        
-        return cleaned;
-    }
-
-    function countCoreWords(text) {
-        if (!text) return 0;
-        const words = text.toLowerCase().split(/\s+/).filter(w => w.length >= 2);
-        return words.length;
-    }
-
-    function hasModifier(text) {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        for (const mod of MODIFIER_WORDS) {
-            if (lower.includes(mod)) return true;
-        }
-        return false;
-    }
-
-    function isSpecificJasa(text) {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        if (/\d/.test(lower)) return true;
-        if (/(k225|k250|k300|k350|k400|k500|k600|m6|m8|m10|m12|sn|sni)/i.test(lower)) return true;
-        const specWords = ['spesifikasi', 'mutu', 'dimensi', 'ukuran', 'standar', 'grade', 'tipe', 'type'];
-        for (const sw of specWords) {
-            if (lower.includes(sw)) return true;
-        }
-        return false;
-    }
-
-    function hasSpecWord(text) {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        // Cek di JASA_SPEC_WORDS
-        if (JASA_SPEC_WORDS.has(lower)) return true;
-        // Cek partial match
-        for (const kw of JASA_SPEC_WORDS) {
-            if (lower.includes(kw)) return true;
-        }
-        return false;
-    }
-
-    // ============================================================
-    // 11d. DETEKSI JASA LEVEL OTOMATIS (FIXED v10.10 - HYBRID)
-    // ============================================================
-
-    function detectJasaLevelAuto(pageName) {
-        const lowerName = pageName.toLowerCase();
-        
-        // ✅ FIX v10.10: Cek PILLAR terlebih dahulu
-        if (isEntityPillarExactMatch(lowerName)) {
-            log(`PILLAR detected: "${pageName}"`, 'SUCCESS');
-            return 'pillar';
-        }
-        
-        const cleaned = cleanJasaText(lowerName);
-        
-        const remainingWords = cleaned.split(/\s+/).filter(w => w.length >= 2);
-        const wordCount = remainingWords.length;
-        
-        const hasNumber = /\d/.test(cleaned);
-        const hasLocation = isLocation(cleaned);
-        const hasModifierWord = hasModifier(cleaned);
-        
-        // ✅ FIX v10.10: Deteksi kata spesifik (manual + otomatis)
-        const hasSpecWordManual = hasSpecWord(cleaned);
-        
-        // ✅ FIX v10.10: Deteksi kata spesifik otomatis (panjang > 3, bukan modifier)
-        const hasSpecWordAuto = cleaned.split(/\s+/).some(word => {
-            if (word.length < 4) return false;
-            if (STOPWORDS.has(word)) return false;
-            if (MODIFIER_WORDS.has(word)) return false;
-            if (/\d/.test(word)) return false;
-            return true;
-        });
-        
-        const hasSpecWordFinal = hasSpecWordManual || hasSpecWordAuto;
-        
-        log(`Auto detect JASA: "${pageName}" → remaining: "${cleaned}", words: ${wordCount}, specWord: ${hasSpecWordFinal}`, 'DEBUG');
-        
-        // ✅ LOGIKA HYBRID v10.10:
-        // - MM: wordCount <= 1, tidak ada angka, lokasi, modifier, DAN tidak ada kata spesifik
-        // - MP: wordCount >= 2, atau ada angka/lokasi/modifier, atau ada kata spesifik
-        if (wordCount <= 1 && !hasNumber && !hasLocation && !hasModifierWord && !hasSpecWordFinal) {
-            log(`MM detected (auto): "${pageName}" → remaining words: ${wordCount}`, 'SUCCESS');
-            return 'money-master';
-        }
-        
-        log(`MP detected (auto): "${pageName}" → remaining words: ${wordCount}`, 'INFO');
-        return 'money-page';
-    }
-
-    // ============================================================
-    // 11e. VARIANT DETECTION PER ENTITY
-    // ============================================================
     
-    function isVariantPage(pageName, currentEntityType) {
-        const lowerName = pageName.toLowerCase();
-        
-        for (const spec of TECHNICAL_SPECS) {
-            if (lowerName.includes(spec)) {
-                return false;
-            }
-        }
-        
-        if (currentEntityType === 'PRODUK_KONSTRUKSI' || currentEntityType === 'MATERIAL_KONSTRUKSI') {
-            for (const kw of VARIANT_KEYWORDS_PRODUK) {
-                if (lowerName.includes(kw)) {
-                    log(`Variant detected (PRODUK/MATERIAL): "${pageName}" contains "${kw}"`, 'VARIANT');
-                    return true;
-                }
-            }
-        }
-        
-        if (currentEntityType === 'JASA_KONSTRUKSI' || currentEntityType === 'JASA_DESAIN') {
-            for (const kw of VARIANT_KEYWORDS_JASA) {
-                if (lowerName.includes(kw)) {
-                    log(`Variant detected (JASA/DESAIN): "${pageName}" contains "${kw}"`, 'VARIANT');
-                    return true;
-                }
-            }
-            return false;
-        }
-        
-        if (currentEntityType === 'SEWA_ALAT_KONSTRUKSI') {
-            for (const kw of VARIANT_KEYWORDS_SEWA) {
-                if (lowerName.includes(kw)) {
-                    log(`Variant detected (SEWA): "${pageName}" contains "${kw}"`, 'VARIANT');
-                    return true;
-                }
-            }
-            if (lowerName.includes('spesifikasi') && (lowerName.includes('alat') || lowerName.includes('excavator') || lowerName.includes('dump') || lowerName.includes('alat berat'))) {
-                log(`Variant detected (SEWA): "${pageName}" contains spesifikasi + alat`, 'VARIANT');
-                return true;
-            }
-            return false;
-        }
-        
-        return false;
-    }
-
-    // ============================================================
-    // 12. LOCATION DETECTION
-    // ============================================================
-
-    const LOCATION_WHITELIST = new Set([
-        'jakarta', 'jakarta pusat', 'jakarta barat', 'jakarta selatan', 'jakarta timur', 'jakarta utara',
-        'bogor', 'kota bogor', 'kabupaten bogor',
-        'depok', 'kota depok',
-        'tangerang', 'kota tangerang', 'kota tangerang selatan', 'kabupaten tangerang',
-        'bekasi', 'kota bekasi', 'kabupaten bekasi',
-        'bandung', 'kota bandung', 'kabupaten bandung',
-        'karawang', 'kabupaten karawang',
-        'purwakarta', 'kabupaten purwakarta',
-        'cikarang', 'cikarang barat', 'cikarang pusat', 'cikarang selatan', 'cikarang timur', 'cikarang utara',
-        'subang', 'kabupaten subang',
-        'cirebon', 'kota cirebon', 'kabupaten cirebon',
-        'semarang', 'kota semarang', 'kabupaten semarang',
-        'solo', 'surakarta', 'kota surakarta',
-        'pekalongan', 'tegal', 'magelang', 'sukoharjo', 'boyolali', 'klaten',
-        'jogja', 'yogyakarta', 'kota yogyakarta', 'kabupaten sleman', 'bantul', 'gunungkidul', 'kulon progo',
-        'surabaya', 'kota surabaya',
-        'malang', 'kota malang', 'kabupaten malang',
-        'kediri', 'kota kediri', 'kabupaten kediri',
-        'gresik', 'sidoarjo', 'mojokerto', 'pasuruan', 'probolinggo', 'jember', 'banyuwangi', 'madiun',
-        'medan', 'kota medan',
-        'palembang', 'pekanbaru', 'padang', 'lampung', 'bandar lampung', 'batam', 'tanjungpinang',
-        'aceh', 'banda aceh', 'jambi', 'bengkulu', 'pangkal pinang',
-        'pontianak', 'balikpapan', 'samarinda', 'banjarmasin', 'palangkaraya',
-        'makassar', 'kota makassar',
-        'manado', 'palu', 'kendari', 'gorontalo',
-        'bali', 'kabupaten badung', 'kota denpasar', 'denpasar', 'gianyar', 'tabanan', 'bangli', 'karangasem', 'klungkung', 'buleleng', 'jembrana',
-        'mataram', 'kupang',
-        'terdekat'
-    ]);
-
-    function isLocation(text) {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        for (const city of LOCATION_WHITELIST) {
-            if (new RegExp(`\\b${city.replace(/\s+/g, '\\s+')}\\b`, 'i').test(lower)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    // ============================================================
-    // 13. SPECIFIC PRODUCT
-    // ============================================================
-
-    function isSpecificProduct(text) {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        for (const mod of SPECIFIC_MODIFIERS) {
-            if (lower.includes(mod)) return true;
-        }
-        return /\d/.test(lower);
-    }
-
-    // ============================================================
-    // 14. SUB VARIANT
-    // ============================================================
-
-    function isSubVariant(text) {
-        if (!text) return false;
-        let score = 0;
-        if ((text.match(/\d+/g) || []).length >= 3) score++;
-        if ((text.match(/x/g) || []).length >= 2) score++;
-        if (/mm|cm|meter|kg|ton/i.test(text)) score++;
-        return score >= 2;
-    }
-
-    // ============================================================
-    // 15. ENTITY PILLAR EXACT MATCH
-    // ============================================================
-
-    function isEntityPillarExactMatch(pageName) {
-        const cleanName = cleanText(pageName.toLowerCase());
-        const valid = ROOT_ENTITY_PILLARS[entityType] || [];
-        return valid.includes(cleanName);
-    }
-
-    // ============================================================
-    // 16. JASA KEYWORDS
-    // ============================================================
-
-    const JASA_KEYWORDS_PATTERN = 
-        /\b(jasa|kontraktor|tukang|borongan|renovasi|pasang|bangun|perbaikan|instalasi|proyek|cor|gali|urug|angkut|desain|interior|eksterior|arsitektur|gedung|rumah|ruko|kantor|apartemen)\b/i;
-
-    // ============================================================
-    // 17. PAGE TYPE DETECTION (FIXED v10.10)
-    // ============================================================
-
-    function detectPageType(pageName, isHome = false) {
-        const lowerName = cleanText(pageName.toLowerCase());
-
-        if (isHome || lowerName === 'home' || lowerName === 'beranda') return 'home';
-        if (isEntityPillarExactMatch(lowerName)) return 'pillar';
-        if (isSubVariant(lowerName)) return 'sub-variant';
-
-        for (const kw of METHOD_KEYWORDS) {
-            if (lowerName.includes(kw)) {
-                const HAS_JASA_WORD = JASA_KEYWORDS_PATTERN.test(lowerName);
-                const HAS_SEWA_WORD = /\b(sewa|rental)\b/i.test(lowerName);
-                const HAS_PRODUK_WORD = /\b(beton|readymix|material|produk)\b/i.test(lowerName);
-                
-                if (HAS_JASA_WORD || HAS_SEWA_WORD || HAS_PRODUK_WORD) {
-                    return 'money-page';
-                }
-                return 'sub-pillar-tipe-2';
-            }
-        }
-
-        if (isVariantPage(lowerName, entityType)) {
-            return 'variant';
-        }
-
-        for (const kw of INFORMATIONAL_KEYWORDS) {
-            if (lowerName.includes(kw)) return 'pillar';
-        }
-        for (const kw of SP1_KEYWORDS) {
-            if (lowerName.includes(kw)) return 'sub-pillar-tipe-1';
-        }
-        for (const kw of SP2_KEYWORDS) {
-            if (lowerName.includes(kw)) return 'sub-pillar-tipe-2';
-        }
-
-        const HAS_PRICE_WORD = /\b(harga|biaya|tarif)\b/i.test(lowerName);
-        const HAS_SEWA_WORD = /\b(sewa|rental)\b/i.test(lowerName);
-        const HAS_JASA_WORD = JASA_KEYWORDS_PATTERN.test(lowerName);
-        const HAS_LOCATION = isLocation(lowerName);
-
-        if (HAS_LOCATION) {
-            log(`MC detected: "${pageName}" contains location`, 'SUCCESS');
-            return 'money-child';
-        }
-
-        // ✅ FIX v10.10: JASA_DESAIN dan JASA_KONSTRUKSI
-        if ((isJasaEntity() || isDesainEntity()) && HAS_JASA_WORD && !HAS_PRICE_WORD) {
-            return detectJasaLevelAuto(lowerName);
-        }
-
-        if (isSewaEntity() && HAS_SEWA_WORD && !HAS_PRICE_WORD) {
-            const cleaned = lowerName.replace(/\b(sewa|rental)\b/gi, '').trim();
-            const words = cleaned.split(/\s+/).filter(Boolean);
-            const specific = isSpecificProduct(cleaned);
-            if (words.length <= 2 && !specific && !isLocation(cleaned)) {
-                return 'money-master';
-            }
-            return 'money-page';
-        }
-
-        if (HAS_PRICE_WORD) {
-            const cleaned = lowerName.replace(/\b(harga|biaya|tarif)\b/gi, '').trim();
-            const words = cleaned.split(/\s+/).filter(Boolean);
-            const specific = isSpecificProduct(cleaned);
-            if (words.length <= 2 && !specific && !isLocation(cleaned)) {
-                return 'money-master';
-            }
-            return 'money-page';
-        }
-
-        if ((isProdukEntity() || isMaterialEntity()) && !HAS_PRICE_WORD) {
-            const words = lowerName.split(/\s+/).filter(Boolean);
-            if (words.length <= 2) return 'pillar';
-            return 'sub-pillar-tipe-2';
-        }
-
-        return 'pillar';
-    }
-
-    // ============================================================
-    // 18. AUTO DETECT PARENT
-    // ============================================================
-
-    function findNearestParentFromItems(items, currentPageName) {
-        if (!items || items.length === 0) return null;
-
-        const currentLower = currentPageName.toLowerCase();
-        const currentWords = currentLower.split(/\s+/);
-
-        let bestMatch = null;
-        let bestScore = 0;
-
-        for (const item of items) {
-            const itemName = item.name?.toLowerCase() || '';
-            if (itemName === currentLower) continue;
-
-            let score = 0;
-
-            if (currentLower.includes(itemName) && itemName.length > 3) {
-                score = itemName.length * 10;
-            }
-
-            const itemWords = itemName.split(/\s+/);
-            for (const word of currentWords) {
-                if (word.length > 2 && itemWords.includes(word)) {
-                    score += 5;
-                }
-            }
-
-            for (let i = 1; i <= currentWords.length; i++) {
-                const prefix = currentWords.slice(0, i).join(' ');
-                if (itemName === prefix) {
-                    score += 100;
-                    break;
-                }
-            }
-
-            if (item.url) {
-                const urlSlug = item.url.split('/').pop()?.replace('.html', '').replace(/-/g, ' ');
-                if (urlSlug && currentLower.includes(urlSlug)) {
-                    score += 50;
-                }
-            }
-
-            const specificPatterns = ['finishing', 'bangunan', 'interior', 'eksterior', 'lantai', 'dinding'];
-            for (const pattern of specificPatterns) {
-                if (currentLower.includes(pattern) && itemName.includes(pattern)) {
-                    score += 30;
-                    break;
-                }
-            }
-
-            if (score > bestScore) {
-                bestScore = score;
-                bestMatch = item;
-            }
-        }
-
-        log(`Parent detection score: ${bestScore}`, 'INFO');
-        return bestScore > 20 ? bestMatch : null;
-    }
-
-    function injectCurrentPageAndParent(breadcrumbItems, currentPageName, currentFullUrl) {
-        let items = [...breadcrumbItems];
-        const currentLower = currentPageName.toLowerCase();
-
-        const hasCurrent = items.some(item => 
-            item.name?.toLowerCase() === currentLower
-        );
-
-        if (!hasCurrent) {
-            items.push({
-                name: currentPageName,
-                url: currentFullUrl
-            });
-        }
-
-        const detectedParent = findNearestParentFromItems(items, currentPageName);
-
-        if (detectedParent) {
-            const hasParent = items.some(item => 
-                item.name?.toLowerCase() === detectedParent.name?.toLowerCase()
-            );
-
-            if (!hasParent) {
-                log(`Auto-injected parent: "${detectedParent.name}" → "${currentPageName}"`, 'SUCCESS');
-                const currentIndex = items.findIndex(item => 
-                    item.name?.toLowerCase() === currentLower
-                );
-                if (currentIndex > -1) {
-                    items.splice(currentIndex, 0, detectedParent);
-                } else {
-                    items.push(detectedParent);
-                }
-            }
-        }
-
-        return items;
-    }
-
-    // ============================================================
-    // 19. FORCE PARENT INJECTION
-    // ============================================================
-
-    function forceInjectDirectParent(lineageLevels, allLevels, currentPageTitle, entityType, breadcrumbItems) {
-        const currentLower = currentPageTitle.toLowerCase();
-        let modifiedLineage = [...lineageLevels];
-        const words = currentLower.split(/\s+/);
-
-        const autoParent = findNearestParentFromItems(breadcrumbItems, currentPageTitle);
-        if (autoParent && !modifiedLineage.some(l => l.name === autoParent.name)) {
-            const parentFromAll = allLevels.find(item => 
-                item.name?.toLowerCase() === autoParent.name?.toLowerCase()
-            );
-            if (parentFromAll) {
-                log(`AUTO PARENT: "${parentFromAll.name}"`, 'SUCCESS');
-                modifiedLineage.push(parentFromAll);
-            }
-        }
-
-        if (modifiedLineage.length === lineageLevels.length && words.length >= 2) {
-            for (let i = words.length - 1; i >= 1; i--) {
-                const potentialParent = words.slice(0, i).join(' ');
-                const parentItem = allLevels.find(item => 
-                    item.name.toLowerCase() === potentialParent
-                );
-                if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
-                    log(`PATTERN PARENT: "${parentItem.name}"`, 'SUCCESS');
-                    modifiedLineage.push(parentItem);
-                    break;
-                }
-            }
-        }
-
-        const currentLevel = TYPE_LEVEL_MAP[detectPageType(currentPageTitle)] || 99;
-        
-        const allPotentialParents = allLevels.filter(item => 
-            item.level <= currentLevel && 
-            item.name.toLowerCase() !== currentLower &&
-            !modifiedLineage.some(l => l.name === item.name)
-        );
-        
-        for (const parent of allPotentialParents) {
-            const isDifferentBranch = modifiedLineage.every(existing => {
-                const similarity = calculateSimilarity(parent.name, existing.name);
-                return similarity < 0.5;
-            });
-            
-            const hasSignificantScore = (parent.relevanceScore || 0) > 50;
-            
-            if (isDifferentBranch && hasSignificantScore) {
-                log(`FORCE PARENT (branch): "${parent.name}" (level ${parent.level}) → "${currentPageTitle}"`, 'SUCCESS');
-                modifiedLineage.push(parent);
-            } else if (!isDifferentBranch) {
-                log(`⏭️ FORCE SKIP: "${parent.name}" (level ${parent.level}) - same branch`, 'SKIP');
-            } else {
-                log(`⏭️ FORCE SKIP: "${parent.name}" (level ${parent.level}) - low score (${parent.relevanceScore || 0})`, 'SKIP');
-            }
-        }
-
-        if (modifiedLineage.length === lineageLevels.length) {
-            const semanticKeywords = {
-                'finishing': ['finishing', 'cat', 'epoxy', 'lampu', 'wallpaper'],
-                'bangunan': ['bangunan', 'gedung', 'rumah', 'ruko'],
-                'interior': ['interior', 'dalam', 'ruangan'],
-                'eksterior': ['eksterior', 'luar', 'halaman'],
-                'lantai': ['lantai', 'keramik', 'epoxy lantai', 'marmer', 'granit'],
-                'dinding': ['dinding', 'tembok', 'wallpaper'],
-                'desain': ['desain', 'arsitektur', 'konsep', 'rencana', 'gambar']
-            };
-            
-            for (const [parentKeyword, childKeywords] of Object.entries(semanticKeywords)) {
-                const isChildMatch = childKeywords.some(kw => currentLower.includes(kw));
-                if (isChildMatch) {
-                    const parentItem = allLevels.find(item => 
-                        item.name.toLowerCase().includes(parentKeyword)
-                    );
-                    if (parentItem && !modifiedLineage.some(l => l.name === parentItem.name)) {
-                        const isDifferentBranch = modifiedLineage.every(existing => {
-                            const similarity = calculateSimilarity(parentItem.name, existing.name);
-                            return similarity < 0.5;
-                        });
-                        
-                        if (isDifferentBranch) {
-                            log(`SEMANTIC PARENT: "${parentItem.name}"`, 'SUCCESS');
-                            modifiedLineage.push(parentItem);
-                        }
-                    }
-                }
-            }
-        }
-
-        if (modifiedLineage.length === lineageLevels.length && allLevels.length > 0) {
-            const lowerLevelItems = allLevels.filter(item => 
-                item.level <= currentLevel && 
-                item.name.toLowerCase() !== currentLower
-            );
-            if (lowerLevelItems.length > 0) {
-                const sortedByLevel = [...lowerLevelItems].sort((a, b) => b.level - a.level);
-                const highestLevelParent = sortedByLevel[0];
-                if (highestLevelParent && !modifiedLineage.some(l => l.name === highestLevelParent.name)) {
-                    log(`LAST RESORT: "${highestLevelParent.name}"`, 'WARN');
-                    modifiedLineage.push(highestLevelParent);
-                }
-            }
-        }
-        
-        return modifiedLineage;
-    }
-
-    // ============================================================
-    // 20. HIERARCHY VALIDATOR
-    // ============================================================
+    // ✅ PENDEKATAN C: Loop + foundIndex + foundMappingName + break
+    var foundIndex = -1;
+    var foundMappingName = '';
     
-    function validateAndFixHierarchy(lineage) {
-        if (lineage.length <= 1) return lineage;
-        const fixed = [];
-        const sorted = [...lineage].sort((a, b) => a.level - b.level);
-        const uniqueNames = new Set();
-        for (const item of sorted) {
-            if (!uniqueNames.has(item.name.toLowerCase())) {
-                uniqueNames.add(item.name.toLowerCase());
-                fixed.push(item);
-            }
+    for (var i = 0; i < ALL_MAPPINGS.length; i++) {
+        if (!ALL_MAPPINGS[i] || typeof ALL_MAPPINGS[i] !== 'object') {
+            console.warn('[jasa-perkuatan-tanah-longsor-post] ⚠️ Mapping #' + (i + 1) + ' bukan object — skip');
+            continue;
         }
-        return fixed;
-    }
-
-    // ============================================================
-    // 21. SIMILARITY CALCULATION
-    // ============================================================
-
-    function calculateSimilarity(text1, text2) {
-        const words1 = text1.toLowerCase().split(/\s+/);
-        const words2 = text2.toLowerCase().split(/\s+/);
-        
-        if (words1.length === 0 || words2.length === 0) return 0;
-        
-        const commonWords = words1.filter(w => words2.includes(w));
-        const union = new Set([...words1, ...words2]);
-        const similarity = commonWords.length / union.size;
-        
-        return similarity;
-    }
-
-    // ============================================================
-    // 22. GET CURRENT PAGE INFO
-    // ============================================================
-
-    const currentFullUrl = currentUrl.startsWith('http')
-        ? currentUrl
-        : CONFIG.DOMAIN + currentUrl;
-
-    let currentPageTitle = getCleanPageNameFromUrl(currentFullUrl);
-
-    if (!currentPageTitle) {
-        currentPageTitle = 'Halaman';
-    }
-
-    // ============================================================
-    // 23. INJECT CURRENT PAGE & AUTO PARENT
-    // ============================================================
-
-    const enhancedBreadcrumbItems = injectCurrentPageAndParent(
-        breadcrumbItems,
-        currentPageTitle,
-        currentFullUrl
-    );
-
-    // ============================================================
-    // 24. BUILD ALL LEVELS
-    // ============================================================
-
-    const allLevels = [];
-
-    for (let i = 0; i < enhancedBreadcrumbItems.length; i++) {
-        const item = enhancedBreadcrumbItems[i];
-        let name, url;
-
-        if (typeof item === 'object') {
-            name = item.name;
-            url = item.url || null;
-        } else {
-            name = item;
-            url = null;
-        }
-
-        const type = detectPageType(name);
-        allLevels.push({
-            name,
-            url,
-            type,
-            level: TYPE_LEVEL_MAP[type] || 99,
-            position: i + 1
-        });
-    }
-
-    // ============================================================
-    // 25. URL FALLBACK
-    // ============================================================
-
-    for (const level of allLevels) {
-        if (!level.url) {
-            let foundUrl = null;
-            if (mappingObj) {
-                for (const [url, title] of Object.entries(mappingObj)) {
-                    if (title === level.name) {
-                        foundUrl = url.startsWith('http') ? url : CONFIG.DOMAIN + url;
-                        break;
-                    }
-                }
-            }
-            if (!foundUrl) {
-                foundUrl = `${CONFIG.DOMAIN}/p/${slugify(level.name)}.html`;
-            }
-            level.url = foundUrl;
-        } else if (!level.url.startsWith('http')) {
-            level.url = CONFIG.DOMAIN + level.url;
+        if (ALL_MAPPINGS[i][cleanUrl]) {
+            foundIndex = i;
+            foundMappingName = ALL_MAPPINGS[i][cleanUrl];
+            break;
         }
     }
-
-    // ============================================================
-    // 26. CURRENT PAGE TYPE
-    // ============================================================
-
-    const currentPageType = detectPageType(currentPageTitle);
-    log(`Current page: "${currentPageTitle}" → type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`, 'INFO');
-
-    // ============================================================
-    // 27. SELECT BREADCRUMB LEVELS
-    // ============================================================
-
-    const selectedLevels = [];
-
-    selectedLevels.push({
-        name: 'Beranda',
-        url: CONFIG.DOMAIN,
-        type: 'home',
-        level: 0,
-        position: 1
-    });
-
-    const uniqueByUrl = new Map();
-    for (const item of allLevels) {
-        const key = item.url || item.name;
-        if (!uniqueByUrl.has(key)) {
-            uniqueByUrl.set(key, item);
-        }
-    }
-    const uniqueItems = Array.from(uniqueByUrl.values());
-
-    log('=== ALL LEVELS DEBUG ===', 'DEBUG');
-    for (const level of allLevels) {
-        log(`  ${level.name} → type: ${level.type}, level: ${level.level}`, 'DEBUG');
-    }
-
-    log('Unique items (' + uniqueItems.length + '): ' + uniqueItems.map(i => i.name + '(' + i.level + ')').join(' → '), 'INFO');
-
-    // ============================================================
-    // FIND NEAREST PARENTS
-    // ============================================================
-
-    function findNearestParentsByHierarchy() {
-        const lineage = [];
-        const currentLevel = TYPE_LEVEL_MAP[currentPageType] || 99;
-        const currentPageTitleLower = currentPageTitle.toLowerCase();
-        
-        const candidates = uniqueItems.filter(item => 
-            item.name.toLowerCase() !== currentPageTitleLower
-        );
-        
-        if (candidates.length === 0) {
-            const parentCandidates = uniqueItems.filter(item => 
-                item.name.toLowerCase() !== currentPageTitleLower
-            );
-            if (parentCandidates.length > 0) {
-                const sortedByLevel = [...parentCandidates].sort((a, b) => b.level - a.level);
-                const nearest = sortedByLevel[0];
-                lineage.push(nearest);
-                log(`⚠️ No candidates, using "${nearest.name}" as fallback`, 'WARN');
-            }
-            return lineage;
-        }
-        
-        const validCandidates = candidates.filter(item => item.level <= currentLevel);
-        
-        if (validCandidates.length === 0) {
-            const sortedByLevel = [...candidates].sort((a, b) => b.level - a.level);
-            const nearest = sortedByLevel[0];
-            lineage.push(nearest);
-            log(`⚠️ No valid candidates, using "${nearest.name}"`, 'WARN');
-            return lineage;
-        }
-        
-        log('Valid candidates: ' + validCandidates.map(i => i.level + ':' + i.name).join(', '), 'DEBUG');
-        
-        const currentWords = currentPageTitleLower.split(/\s+/);
-        const scoredCandidates = validCandidates.map(item => {
-            const itemWords = item.name.toLowerCase().split(/\s+/);
-            let relevanceScore = 0;
-            
-            for (const word of currentWords) {
-                if (word.length > 2 && itemWords.includes(word)) {
-                    relevanceScore += 10;
-                }
-            }
-            
-            for (let i = 1; i <= currentWords.length; i++) {
-                const prefix = currentWords.slice(0, i).join(' ');
-                if (item.name.toLowerCase() === prefix) {
-                    relevanceScore += 100;
-                    break;
-                }
-            }
-            
-            if (currentPageTitleLower.includes(item.name.toLowerCase()) && item.name.length > 3) {
-                relevanceScore += 50;
-            }
-            
-            if (item.name.toLowerCase().includes(currentPageTitleLower) && currentPageTitleLower.length > 3) {
-                relevanceScore += 40;
-            }
-            
-            const maxWordLength = Math.max(...itemWords.map(w => w.length));
-            if (maxWordLength > 6) {
-                relevanceScore += 5;
-            }
-            
-            const commonWords = currentWords.filter(w => itemWords.includes(w) && w.length > 2);
-            relevanceScore += commonWords.length * 5;
-            
-            log(`🎯 Score for "${item.name}" (level ${item.level}): ${relevanceScore}`, 'SCORE');
-            
-            return { ...item, relevanceScore };
-        });
-        
-        scoredCandidates.sort((a, b) => {
-            if (a.level !== b.level) return b.level - a.level;
-            return b.relevanceScore - a.relevanceScore;
-        });
-        
-        log('Scored candidates (sorted): ' + scoredCandidates.map(i => i.level + ':' + i.name + '(' + i.relevanceScore + ')').join(' → '), 'DEBUG');
-        
-        const selectedParents = [];
-        let highestLevel = -1;
-        for (const item of scoredCandidates) {
-            if (item.level > highestLevel) {
-                highestLevel = item.level;
-            }
-        }
-        
-        const topLevelParents = scoredCandidates.filter(item => item.level === highestLevel);
-        topLevelParents.sort((a, b) => b.relevanceScore - a.relevanceScore);
-        
-        for (const item of topLevelParents) {
-            const exists = lineage.some(l => l.name === item.name);
-            if (!exists) {
-                lineage.push(item);
-                log(`🎯 Selected: "${item.name}" (level ${item.level}) with score ${item.relevanceScore}`, 'SUCCESS');
-            }
-        }
-        
-        if (lineage.length === 0) {
-            const currentPageItem = uniqueItems.find(item => 
-                item.name.toLowerCase() === currentPageTitleLower
-            );
-            if (currentPageItem && currentPageItem.level > 0) {
-                lineage.push(currentPageItem);
-                log(`⚠️ Adding current page as parent (no other parents found): "${currentPageItem.name}"`, 'WARN');
-            }
-        }
-        
-        log('Lineage (prioritized): ' + lineage.map(i => i.level + ':' + i.name).join(' → '), 'SUCCESS');
-        
-        return lineage;
-    }
-
-    let lineageLevels = findNearestParentsByHierarchy();
-
-    log('Initial lineage (' + lineageLevels.length + '): ' + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
-
-    lineageLevels = forceInjectDirectParent(
-        lineageLevels, 
-        uniqueItems,
-        currentPageTitle, 
-        entityType,
-        enhancedBreadcrumbItems
-    );
-
-    log('After force injection (' + lineageLevels.length + '): ' + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
-
-    const cleanLineage = [];
-    const usedLineage = new Set();
-
-    for (const item of lineageLevels) {
-        const key = item.name.toLowerCase();
-        if (usedLineage.has(key)) continue;
-        usedLineage.add(key);
-        cleanLineage.push(item);
-    }
-
-    const validatedLineage = validateAndFixHierarchy(cleanLineage);
-
-    validatedLineage.sort((a, b) => {
-        const idxA = HIERARCHY_ORDER.indexOf(a.type);
-        const idxB = HIERARCHY_ORDER.indexOf(b.type);
-        if (idxA !== idxB) return idxA - idxB;
-        return a.position - b.position;
-    });
-
-    // ========================================================
-    // AMBIL SEMUA PARENT DENGAN LEVEL TERTINGGI (FINAL)
-    // ========================================================
     
-    let finalParents = [];
-
-    const parentOnly = validatedLineage.filter(item => 
-        item.name.toLowerCase() !== currentPageTitle.toLowerCase()
+    if (foundIndex === -1) {
+        console.log('[jasa-perkuatan-tanah-longsor-post] ⏭️ SKIP — URL tidak cocok di semua cluster');
+        window.__jasaPerkuatanTanahLongsorPostActive = false;
+        return;
+    }
+    
+    // ✅ Cocok — set flag + simpan info untuk debug
+    window.__jasaPerkuatanTanahLongsorPostActive = true;
+    window.__jasaPerkuatanTanahLongsorPostMatchIndex = foundIndex;
+    window.__jasaPerkuatanTanahLongsorPostMatchMappingName = foundMappingName;
+    window.__jasaPerkuatanTanahLongsorPostMappings = ALL_MAPPINGS;
+    
+    console.log(
+        '[jasa-perkuatan-tanah-longsor-post] ✅ Match di mapping #' + (foundIndex + 1) +
+        ' — Label: "' + foundMappingName + '"' +
+        ' — EXECUTE flag set'
     );
-
-    log(`Parent candidates (${parentOnly.length}): ` + parentOnly.map(i => i.name + '(' + i.level + ')').join(', '), 'DEBUG');
-
-    if (parentOnly.length > 0) {
-        const highestLevel = Math.max(...parentOnly.map(i => i.level));
-        finalParents = parentOnly.filter(item => item.level === highestLevel);
-        finalParents.sort((a, b) => a.position - b.position);
-        
-        log(`✅ PARENT FOUND: ${finalParents.length} parent(s) at level ${highestLevel}: ` + finalParents.map(i => i.name).join(', '), 'SUCCESS');
-    } else {
-        log('⚠️ No parent found (only current page)', 'WARN');
-    }
-
-    if (finalParents.length === 0 && validatedLineage.length > 1) {
-        const filtered = validatedLineage.filter(item => 
-            item.name.toLowerCase() !== currentPageTitle.toLowerCase()
-        );
-        if (filtered.length > 0) {
-            const highestLevel = Math.max(...filtered.map(i => i.level));
-            finalParents = filtered.filter(item => item.level === highestLevel);
-            log(`⚠️ FALLBACK PARENT: Using ${finalParents.length} nearest parent(s) at level ${highestLevel}`, 'WARN');
-        }
-    }
-
-    for (const item of finalParents) {
-        const exists = selectedLevels.some(l => l.name.toLowerCase() === item.name.toLowerCase());
-        if (!exists) {
-            selectedLevels.push(item);
-            log(`👪 Adding parent: "${item.name}" (level ${item.level})`, 'PARENT');
-        }
-    }
-
-    const hasCurrentAlready = selectedLevels.some(item =>
-        item.name.toLowerCase() === currentPageTitle.toLowerCase()
-    );
-
-    if (!hasCurrentAlready) {
-        selectedLevels.push({
-            name: currentPageTitle,
-            url: currentFullUrl,
-            type: currentPageType,
-            level: TYPE_LEVEL_MAP[currentPageType] || 99,
-            isCurrent: true
-        });
-    }
-
-    // ============================================================
-    // 28. FINAL UNIQUE LEVELS
-    // ============================================================
-
-    const uniqueLevels = [];
-    const usedNames = new Set();
-
-    for (const item of selectedLevels) {
-        const key = item.name.toLowerCase();
-        if (usedNames.has(key)) continue;
-        usedNames.add(key);
-        uniqueLevels.push(item);
-    }
-
-    uniqueLevels.forEach((item, index) => {
-        item.position = index + 1;
-    });
-
-    log('Final breadcrumb (' + uniqueLevels.length + ' levels): ' + uniqueLevels.map(i => i.name + '(' + i.level + ')').join(' › '), 'SUCCESS');
-
-    // ============================================================
-    // 29. GENERATE HTML
-    // ============================================================
-
-    let breadcrumbHtml = `<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">\n`;
-
-    for (let i = 0; i < uniqueLevels.length; i++) {
-        const item = uniqueLevels[i];
-        const isLast = i === uniqueLevels.length - 1;
-
-        if (!isLast) {
-            breadcrumbHtml +=
-                `<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-<a href="${item.url}" itemprop="item" title="${item.name}">
-<span itemprop="name">${item.name}</span>
-</a>
-<meta itemprop="position" content="${item.position}" />
-</span>
-<span class="separator"> › </span>\n`;
-        } else {
-            breadcrumbHtml +=
-                `<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-<span itemprop="name">${item.name}</span>
-<meta itemprop="position" content="${item.position}" />
-</span>\n`;
-        }
-    }
-
-    breadcrumbHtml += `</div>\n`;
-
-    // ============================================================
-    // 30. JSON LD
-    // ============================================================
-
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": uniqueLevels.map((item, index) => ({
-            "@type": "ListItem",
-            "position": index + 1,
-            "name": item.name,
-            "item": item.url
-        }))
-    };
-
-    // ============================================================
-    // 31. REMOVE OLD
-    // ============================================================
-
-    document.querySelectorAll('.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"]')
-        .forEach(el => el.remove());
-    document.querySelectorAll('script[data-breadcrumb="true"]')
-        .forEach(el => el.remove());
-
-    // ============================================================
-    // 32. TARGET ELEMENT
-    // ============================================================
-
-    const targetElement = document.querySelector('main, article, .content, #main-content, .post-content');
-
-    if (targetElement) {
-        targetElement.insertAdjacentHTML('afterbegin', breadcrumbHtml);
-    } else {
-        document.body.insertAdjacentHTML('afterbegin', breadcrumbHtml);
-    }
-
-    // ============================================================
-    // 33. INJECT JSON LD
-    // ============================================================
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.setAttribute('data-breadcrumb', 'true');
-    script.textContent = JSON.stringify(jsonLd, null, 2);
-    document.head.appendChild(script);
-
-    // ============================================================
-    // 34. LOG SUMMARY
-    // ============================================================
-
-    console.log('📊 BREADCRUMB GENERATION SUMMARY (v10.10):');
-    console.log(`   Page: "${currentPageTitle}"`);
-    console.log(`   URL: "${currentFullUrl}"`);
-    console.log(`   Type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`);
-    console.log(`   Entity: ${entityType}`);
-    if (currentPageType === 'variant') {
-        console.log(`   🔬 Variant detected for entity: ${entityType}`);
-    }
-    if (currentPageType === 'money-child') {
-        console.log(`   📍 Money Child with location detected`);
-    }
-    console.log(`   👪 Parents found: ${finalParents.length} at level ${finalParents.length > 0 ? finalParents[0].level : 'N/A'}`);
-    console.log(`   📊 Total breadcrumb levels: ${uniqueLevels.length}`);
-
-    // ============================================================
-    // 35. RETURN
-    // ============================================================
-
-    return {
-        html: breadcrumbHtml,
-        jsonLd,
-        selectedLevels: uniqueLevels,
-        currentPageType,
-        entityType,
-        version: '10.10.0',
-        parentCount: finalParents.length,
-        parents: finalParents,
-        isVariant: currentPageType === 'variant',
-        isMoneyChild: currentPageType === 'money-child'
-    };
-}
-
-
-// Menyimpan elemen yang dihapus dalam variabel
-let removedElementsPerkuatanTanahLongsorKonsPost = {};
-// Fungsi untuk menghapus elemen berdasarkan ID
-function removeCondition(conditionId) {
-    const conditionElement = document.getElementById(conditionId);
-
-    if (conditionElement) {
-        // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
-        removedElementsPerkuatanTanahLongsorKonsPost[conditionId] = conditionElement;
-        conditionElement.remove(); // Menghapus elemen tersebut
-    }
-}
-
-// Fungsi untuk mengembalikan elemen yang telah dihapus
-function restoreCondition(conditionId) {
-    const breadcrumb = document.querySelector('.breadcrumb');
-    const elementToRestore = removedElementsPerkuatanTanahLongsorKonsPost[conditionId]; // Mendapatkan elemen yang disimpan
-
-    if (elementToRestore) {
-        breadcrumb.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
-        delete removedElementsPerkuatanTanahLongsorKonsPost[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
-    } else {
-        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsPerkuatanTanahLongsorKonsPost.`);
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    // var currentUrl = window.location.href;
-     //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
-    const cleanUrlJasaPerkuatanTanahLongsorKonsPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
-
-		/* ==========================================================
-   🧩 HybridDateModified v2.5 — StableHash + Safe Load Order
-   Fitur:
-   - Menjamin detect-evergreen.js dimuat lebih dulu
-   - Update <meta dateModified> hanya jika URL terdaftar
-   - Stable hash → hasil dateModified konsisten
-   ========================================================== */
-/*
-(async function runHybridDateModified() {
-  try {
-    // --- helper untuk load eksternal JS secara promise ---
-    function loadExternalJSAsync(src) {
-      return new Promise((resolve, reject) => {
-        const s = document.createElement("script");
-        s.src = src;
-        s.async = true;
-        s.onload = () => resolve(src);
-        s.onerror = () => reject(new Error("Gagal load " + src));
-        document.head.appendChild(s);
-      });
-    }
-
-	
-     // --- loader evergreen JS dengan sessionStorage (anti 429) ---
-    async function loadEvergreenScript() {
-      const KEY = "evergreenScriptLoaded";
-
-      const needReload =
-        !sessionStorage.getItem(KEY) ||
-        !window.AEDMetaDates ||
-        !window.detectEvergreenReady;
-
-      if (!needReload) {
-        console.log("⚡ detect-evergreen.js sudah aktif & variable ready — SKIP load");
-      } else {
-        console.log("⏳ load detect-evergreen.js dari GitHack…");
-        try {
-          await loadExternalJSAsync(
-            "https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js"
-          );
-          window.detectEvergreenReady = true;
-          sessionStorage.setItem(KEY, "true");
-          console.log("✅ detect-evergreen.js LOADED & READY");
-        } catch (err) {
-          console.error("❌ Gagal load detect-evergreen.js", err);
-          sessionStorage.removeItem(KEY);
-        }
-      }
-
-      // --- ALWAYS run evergreen check tiap halaman ---
-      if (typeof window.runEvergreenCheck === "function") {
-        console.log("🔁 Running evergreen check for this page...");
-        window.runEvergreenCheck();
-      } else {
-        console.warn("⚠️ runEvergreenCheck tidak ditemukan!");
-      }
-    }
-	  
-    // --- gabungkan semua mapping ---
-    const urlMappingGabungan = Object.assign(
-      {},
-		urlMappingJasaBronjong,
-		urlMappingJasaSoilNailingLongsor,
-		urlMappingJasaDindingPenahanLongsor,
-		urlMappingJasaGeotextileLongsor,
-		urlMappingJasaSheetPileLongsor,
-		urlMappingJasaStabilisasiLongsor,
-		urlMappingJasaPerkuatanRumahLongsor,
-		urlMappingJasaPerkuatanTebingLongsor,
-		urlMappingJasaPerkuatanPerkebunanLongsor,
-		urlMappingJasaDrainaseAntiLongsor		
-    );
-
-    // --- validasi URL terdaftar ---
-    if (!urlMappingGabungan[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaPerkuatanTanahLongsorKonsPost}`);
-      return;
-    }
-
-  // === Tanggal nextUpdate1 global ===
-		const globalNextUpdate1 = "2026-02-09T00:00:00.000Z";
-	console.log(`🌐 [AutoMeta] Detected jasa-konstruksi: ${cleanUrlJasaPerkuatanTanahLongsorKonsPost}`);
-
-    // --- pastikan meta nextUpdate1 ada ---
-    let metaNextUpdate1 = document.querySelector('meta[name="nextUpdate1"]');
-    if (!metaNextUpdate1) {
-      metaNextUpdate1 = document.createElement("meta");
-      metaNextUpdate1.setAttribute("name", "nextUpdate1");
-      metaNextUpdate1.setAttribute("content", globalNextUpdate1);
-      document.head.appendChild(metaNextUpdate1);
-      console.log(`🆕 [AutoMeta] Meta nextUpdate1 ditambahkan → ${globalNextUpdate1}`);
-    } else {
-      console.log("✅ [AutoMeta] Meta nextUpdate1 sudah ada, tidak dibuat ulang.");
-    }
-
-    // --- pastikan detect-evergreen.js selesai dimuat ---
-    await loadEvergreenScript();
-    console.log("✅ detect-evergreen.js selesai dimuat.");
-
-    // --- pastikan AEDMetaDates sudah tersedia ---
-    if (!window.AEDMetaDates || !window.AEDMetaDates.dateModified) {
-      console.warn("[HybridDateModified] AEDMetaDates tidak ditemukan, skip update.");
-      return;
-    }
-
-    const { dateModified, nextUpdate, type } = window.AEDMetaDates;
-
-    // 🔒 Stable hash untuk variasi waktu stabil
-    function stableHash(str) {
-      let hash = 0;
-      for (let i = 0; i < str.length; i++) {
-        hash = (hash << 5) - hash + str.charCodeAt(i);
-        hash |= 0;
-      }
-      return Math.abs(hash);
-    }
-
-    const hash = stableHash(cleanUrlJasaPerkuatanTanahLongsorKonsPost);
-    const offsetSeconds = hash % 86400;
-    const finalDate = new Date(new Date(dateModified).getTime() + offsetSeconds * 1000);
-    const isoDate = finalDate.toISOString();
-
-    // 🧱 Update meta dateModified
-    [
-      ['meta[itemprop="dateModified"]', 'itemprop', 'dateModified'],
-      ['meta[name="dateModified"]', 'name', 'dateModified'],
-      ['meta[property="article:modified_time"]', 'property', 'article:modified_time']
-    ].forEach(([selector, attr, val]) => {
-      let meta = document.querySelector(selector);
-      if (!meta) {
-        meta = document.createElement("meta");
-        meta.setAttribute(attr, val);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute("content", isoDate);
-    });
-
-	
-		// Pastikan AEDMetaDates sudah ada minimal sebagai objek kosong
-	window.AEDMetaDates = window.AEDMetaDates || {};
-	
-	// Update hanya properti dateModified tanpa menghapus lainnya
-	window.AEDMetaDates = {
-	  ...window.AEDMetaDates,
-	  dateModified: isoDate
-	};
-	
-	console.log("✅ AEDMetaDates updated jasa-konstruksi-perkuatan-tanah-longsor-post:", window.AEDMetaDates);
-    console.log(`✅ [HybridDateModified v2.5] ${cleanUrlJasaPerkuatanTanahLongsorKonsPost} → ${isoDate} | type=${type || "-"}`);
-
-    // 🧩 Perbarui schema jika ada
-    const schemaEl = document.querySelector('script[data-schema="evergreen-maintenance"]');
-    if (schemaEl) {
-      try {
-        const data = JSON.parse(schemaEl.textContent.trim());
-        data.dateModified = isoDate;
-        if (data.maintenanceSchedule) data.maintenanceSchedule.scheduledTime = nextUpdate;
-        schemaEl.textContent = JSON.stringify(data, null, 2);
-        console.log(`🔄 Schema maintenance diperbarui → dateModified: ${isoDate}`);
-      } catch (err) {
-        console.error("❌ Gagal update schema:", err);
-      }
-    }
-
-  } catch (err) {
-    console.error("[HybridDateModified] Fatal error:", err);
-  }
 })();
-*/
 
-		  
-    // --- gabungkan semua mapping ---
-    const urlMappingGabungan = Object.assign(
-      {},
-		urlMappingJasaBronjong,
-		urlMappingJasaSoilNailingLongsor,
-		urlMappingJasaDindingPenahanLongsor,
-		urlMappingJasaGeotextileLongsor,
-		urlMappingJasaSheetPileLongsor,
-		urlMappingJasaStabilisasiLongsor,
-		urlMappingJasaPerkuatanRumahLongsor,
-		urlMappingJasaPerkuatanTebingLongsor,
-		urlMappingJasaPerkuatanPerkebunanLongsor,
-		urlMappingJasaDrainaseAntiLongsor		
-    );
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN 3] FUNGSI UTAMA
+// ═══════════════════════════════════════════════════════════
 
-    // --- validasi URL terdaftar ---
-    if (!urlMappingGabungan[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaPerkuatanTanahLongsorKonsPost}`);
-      return;
-    }
-
-	 /* ============================================================
- 🔥 Hybrid Date Modified v7.1 — UNTUK betonjayareadymix.com
-    Custom date berdasarkan hasil deteksi page level
-    ✅ Support MONEY_LEADGEN
-============================================================ */
-
-(async function runHybridDateModified() {
-  try {
-    const CURRENT_DOMAIN = window.location.hostname;
-    
-    // Khusus untuk betonjayareadymix.com
-    if (CURRENT_DOMAIN !== 'www.betonjayareadymix.com' && !CURRENT_DOMAIN.includes('localhost')) {
-      console.log(`⏸️ Domain ${CURRENT_DOMAIN} not targeted. Script skipped.`);
-      return;
-    }
-
-    // ============================================================
-    // 📌 FUNGSI LOAD EXTERNAL JS
-    // ============================================================
-    function loadExternalJS(src) {
-      return new Promise((resolve) => {
-        if (document.querySelector(`script[src="${src}"]`)) {
-          resolve();
-          return;
-        }
-        const s = document.createElement("script");
-        s.src = src;
-        s.defer = true;
-        s.onload = resolve;
-        s.onerror = () => {
-          console.warn("[Evergreen] Gagal load:", src);
-          resolve();
-        };
-        document.head.appendChild(s);
-      });
-    }
-
-    // ============================================================
-    // 📌 TUNGGU PAGE LEVEL DETECTOR READY
-    // ============================================================
-    function waitForPageLevelDetector() {
-      return new Promise((resolve) => {
-        if (window.__pageLevelDetectorReady && window.pageLevelDetector) {
-          resolve(true);
-        } else {
-          window.addEventListener("pageLevelDetectorReady", () => resolve(true), { once: true });
-        }
-      });
-    }
-
-    // ============================================================
-    // 📌 TUNGGU DETECT EVERGREEN READY
-    // ============================================================
-    function waitForDetectEvergreen() {
-      return new Promise((resolve) => {
-        if (window.__detectEvergreenReady && typeof window.detectEvergreen === "function") {
-          resolve(true);
-        } else {
-          window.addEventListener("detectEvergreenReady", () => resolve(true), { once: true });
-        }
-      });
-    }
-
-    // ============================================================
-    // 📌 LOAD ALL SCRIPTS
-    // ============================================================
-    async function loadAllScripts() {
-      const PAGE_LEVEL_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/PageLevelDetector.js";
-      const EVERGREEN_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/SmartEvergreenDetector.js";
-      
-      if (typeof window.pageLevelDetector === "undefined") {
-        console.log("⏳ Loading Page Level Detector v15.0...");
-        await loadExternalJS(PAGE_LEVEL_DETECTOR_URL);
-        await waitForPageLevelDetector();
-        console.log("✅ Page Level Detector v15.0 READY");
-      }
-      
-      if (typeof window.detectEvergreen !== "function") {
-        console.log("⏳ Loading Smart Evergreen Detector v13.0...");
-        await loadExternalJS(EVERGREEN_DETECTOR_URL);
-        await waitForDetectEvergreen();
-        console.log("✅ Smart Evergreen Detector v13.0 READY");
-      }
-    }
-
-    // ============================================================
-    // 📌 TO ISO WITH TIMEZONE LOCAL
-    // ============================================================
-    function toISOWithTimezoneLocal(date, offset = "+07:00") {
-      if (!date) return null;
-      const d = new Date(date);
-      if (isNaN(d.getTime())) return null;
-      const pad = (n) => n.toString().padStart(2, "0");
-      const yyyy = d.getFullYear();
-      const mm = pad(d.getMonth() + 1);
-      const dd = pad(d.getDate());
-      const hh = pad(d.getHours());
-      const min = pad(d.getMinutes());
-      const ss = pad(d.getSeconds());
-      return `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${offset}`;
-    }
-
-    // ============================================================
-    // 📌 STABLE HASH
-    // ============================================================
-    function stableHash(str) {
-      let hash = 0;
-      for (let i = 0; i < str.length; i++) {
-        hash = (hash << 5) - hash + str.charCodeAt(i);
-        hash |= 0;
-      }
-      return Math.abs(hash);
-    }
-
-    // ============================================================
-    // 📌 UPDATE META DATE MODIFIED
-    // ============================================================
-    function updateMetaDateModified(isoDate) {
-      const selectors = [
-        ['meta[itemprop="dateModified"]', 'itemprop', 'dateModified'],
-        ['meta[name="dateModified"]', 'name', 'dateModified'],
-        ['meta[property="article:modified_time"]', 'property', 'article:modified_time']
-      ];
-      
-      selectors.forEach(([selector, attr, val]) => {
-        let meta = document.querySelector(selector);
-        if (!meta) {
-          meta = document.createElement("meta");
-          meta.setAttribute(attr, val);
-          document.head.appendChild(meta);
-        }
-        meta.setAttribute("content", isoDate);
-      });
-    }
-
-    // ============================================================
-    // 📌 DAFTAR EVERGREEN LEVELS & MONEY LEVELS (LENGKAP)
-    // ============================================================
-    const EVERGREEN_LEVELS = ['pillar', 'sub-pillar-tipe-2', 'sub-pillar-tipe-1', 'variant', 'sub-variant'];
-    const MONEY_LEVELS = ['money-master', 'money-page', 'money-child', 'money-leadgen'];
-
-    // ============================================================
-    // 📌 FUNGSI MENENTUKAN CUSTOM DATE BERDASARKAN PAGE LEVEL
-    // ============================================================
-    function getCustomDateByPageLevel(pageLevel, entityType) {
-      // ============================================================
-      // LEVEL 1: EVERGREEN (tidak perlu update sering)
-      // ============================================================
-      if (EVERGREEN_LEVELS.includes(pageLevel)) {
-        // Pillar (level tertinggi) - paling stabil
-        if (pageLevel === 'pillar') {
-          return "2026-04-01T10:30:00+07:00";
-        }
-        // Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant
-        //return "2026-04-02T00:00:00+07:00";
-		  		  // jasa-konstruksi-perkuatan-tanah-longsor-post: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-18T00:00:00+07:00";
-        /*
-		        // JASA ALAT KONSTRUKSI POST : Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-03T00:00:00+07:00";
-		          // JASA KONSTRUKSI STRUKTUR: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-04T00:00:00+07:00";
-		          // JASA KONSTRUKSI PERBAIKAN: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-05T00:00:00+07:00";
-		          // JASA KONSTRUKSI PEMBATAS: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-06T00:00:00+07:00";
-		          // JASA KONSTRUKSI FINISHING: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-07T00:00:00+07:00";
-		          // JASA KONSTRUKSI PONDASI PERKUATAN TANAH: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-08T00:00:00+07:00";
-		  // JASA KONSTRUKSI JALAN PERKERASAN: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-09T00:00:00+07:00";
-		  // JASA KONSTRUKSI STRUKTUR POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-10T00:00:00+07:00";
-		  // JASA KONSTRUKSI PONDASI PERKUATAN TANAH POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-11T00:00:00+07:00";
-		  // JASA KONSTRUKSI PERBAIKAN POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-12T00:00:00+07:00";
-		  // JASA KONSTRUKSI PEMBATAS POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-13T00:00:00+07:00";
-		  // JASA KONSTRUKSI JALAN PERKERASAN POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-14T00:00:00+07:00";
-		  // JASA KONSTRUKSI FINISHING POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-15T00:00:00+07:00";
-		  // JASA KONSTRUKSI CUTTING BETON POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-16T00:00:00+07:00";
-		  // JASA KONSTRUKSI BONGKAR BANGUNAN POST: Sub-Pillar Tipe 2, Sub-Pillar Tipe 1, Variant, Sub-Variant 
-        return "2026-04-17T00:00:00+07:00";
-		  */
-      }
-      
-      // ============================================================
-      // LEVEL 2: MONEY PAGES (perlu update berkala)
-      // Kembalikan null agar SmartEvergreenDetector menghitung otomatis
-      // money-master, money-page, money-child, money-leadgen
-      // ============================================================
-      if (MONEY_LEVELS.includes(pageLevel)) {
-        return null; // AUTO mode
-      }
-      
-      // ============================================================
-      // DEFAULT: AUTO mode
-      // ============================================================
-      return null;
-    }
-
-    // ============================================================
-    // 📌 EKSEKUSI UTAMA
-    // ============================================================
-    
-    await loadAllScripts();
-    
-    // Tunggu sebentar agar pageLevelDetector selesai deteksi
-    await new Promise(resolve => setTimeout(resolve, 100));
-    
-    // Dapatkan page level dan entity type dari detector yang sudah ready
-    let pageLevel = 'pillar'; // default
-    let entityType = 'produk'; // default
-    
-    if (window.pageLevelDetector) {
-      pageLevel = window.pageLevelDetector.detect();
-      entityType = window.pageLevelDetector.detectEntityType();
-      console.log(`📌 Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
-    } else {
-      console.warn("⚠️ PageLevelDetector not ready, using defaults");
+function initJasaPerkuatanTanahLongsor() {
+    // ⚡ Guard flag
+    if (!window.__jasaPerkuatanTanahLongsorPostActive) {
+        console.log('[jasa-perkuatan-tanah-longsor-post] ⏭️ Execute SKIP — URL tidak cocok');
+        return;
     }
     
-    // ============================================================
-    // 🔥 STEP 2: TENTUKAN CUSTOM DATE BERDASARKAN HASIL DETEKSI
-    // ============================================================
-    let customDate = getCustomDateByPageLevel(pageLevel, entityType);
-    let manualMode = customDate !== null;
+    console.log('[jasa-perkuatan-tanah-longsor-post] 🚀 Execute — URL cocok');
     
-    if (manualMode) {
-      console.log(`📌 [CUSTOM DATE] PageLevel=${pageLevel}, EntityType=${entityType} → Using custom date: ${customDate}`);
-    } else {
-      console.log(`📌 [AUTO MODE] PageLevel=${pageLevel}, EntityType=${entityType} → No custom date, using auto calculation`);
-    }
+    var cleanUrlJasaPerkuatanTanahLongsorKonsPost = window.location.href.split(/[?#]/)[0];
     
-    // ============================================================
-    // 🔥 STEP 3: JALANKAN DETEKTOR DENGAN ATAU TANPA CUSTOM DATE
-    // ============================================================
-    if (manualMode && customDate) {
-      await window.detectEvergreen({ customDateModified: customDate });
-      console.log(`✅ MANUAL mode executed with custom date: ${customDate}`);
-    } else {
-      await window.detectEvergreen();
-      console.log(`✅ AUTO mode executed`);
-    }
-    
-    // ============================================================
-    // 📌 PASTIKAN AEDMetaDates TERSEDIA
-    // ============================================================
-    if (!window.AEDMetaDates || !window.AEDMetaDates.dateModified) {
-      console.warn("[HybridDateModified] AEDMetaDates tidak ditemukan, skip update.");
-      return;
-    }
-
-    const { dateModified, nextUpdate, type, entityType: detectedEntityType, pageLevel: detectedPageLevel } = window.AEDMetaDates;
-
-    console.log(`📊 betonjayareadymix.com Page Info:`);
-    console.log(`   - type: ${type}`);
-    console.log(`   - entityType: ${detectedEntityType}`);
-    console.log(`   - pageLevel: ${detectedPageLevel}`);
-    console.log(`   - dateModified: ${dateModified}`);
-    console.log(`   - nextUpdate: ${nextUpdate}`);
-
-    // ============================================================
-    // 📌 HITUNG VARIASI TANGGAL
-    // ============================================================
-    const uniquePageIdentifier = window.location.pathname;
-    let hashSource = uniquePageIdentifier;
-    
-    if (EVERGREEN_LEVELS.includes(detectedPageLevel)) {
-      hashSource = 'evergreen-' + hashSource;
-      console.log(`📌 Evergreen content (${detectedPageLevel}) → using evergreen hash prefix`);
-    } else if (detectedEntityType === 'jasa') {
-      hashSource = 'jasa-' + hashSource;
-      console.log(`📌 Jasa content (${detectedPageLevel}) → using jasa hash prefix`);
-    } else if (MONEY_LEVELS.includes(detectedPageLevel)) {
-      hashSource = 'money-' + hashSource;
-      console.log(`📌 Money page (${detectedPageLevel}) → using money hash prefix`);
-    }
-    
-    const hash = stableHash(hashSource);
-    const offsetSeconds = hash % 86400;
-    const finalDate = new Date(new Date(dateModified).getTime() + offsetSeconds * 1000);
-    const isoDate = toISOWithTimezoneLocal(finalDate);
-
-    // ============================================================
-    // 📌 UPDATE META DATEMODIFIED
-    // ============================================================
-    updateMetaDateModified(isoDate);
-
-    window.AEDMetaDates = {
-      ...window.AEDMetaDates,
-      dateModified: isoDate,
-      hashOffset: offsetSeconds
-    };
-
-    console.log(`✅ [HybridDateModified] ${uniquePageIdentifier} → ${isoDate}`);
-    console.log(`   - offsetSeconds: ${offsetSeconds} detik`);
-    console.log(`   - Mode: ${manualMode ? 'MANUAL (custom date based on page level)' : 'AUTO'}`);
-    console.log(`📋 Custom config for betonjayareadymix.com applied successfully`);
-
-  } catch (err) {
-    console.error("[HybridDateModified] Fatal:", err);
-  }
-})();
-	
-     // Menemukan elemen menggunakan Id
+    // ✅ Guard elemen DOM
     var JasaKonsPerkuatanTanahLongsorPost = document.getElementById("JasaKonsPerkuatanTanahLongsorPost");
-
     if (!JasaKonsPerkuatanTanahLongsorPost) {
-        console.error("elemen Id JasaKonsPerkuatanTanahLongsorPost kondisi terhapus");
+        console.error("[jasa-perkuatan-tanah-longsor-post] ❌ elemen Id JasaKonsPerkuatanTanahLongsorPost kondisi terhapus");
         return;
     }
 
-
-     var JasaKonstruksiPerkuatanTanahLongsorSubPostLink = document.getElementById("JasaKonstruksiPerkuatanTanahLongsorSubPost");
-     var JasaPerkuatanTanahLongsorPostLink = document.getElementById("JasaPerkuatanTanahLongsorPost");
-
-     //SUB JasaPerkuatanTanahLongsor
-     var JasaBronjongPenahanLongsorPostLink = document.getElementById("JasaBronjongPenahanLongsorPost");
-     var JasaSoilNailingTebingPostLink = document.getElementById("JasaSoilNailingTebingPost");
-     var JasaDindingPenahanTanahLongsorPostLink = document.getElementById("JasaDindingPenahanTanahLongsorPost");
-     var JasaGeotextilePerkuatanLerengPostLink = document.getElementById("JasaGeotextilePerkuatanLerengPost");
-     var JasaSheetPilePenahanLongsorPostLink = document.getElementById("JasaSheetPilePenahanLongsorPost");
-     var JasaStabilisasiTanahLabilPostLink = document.getElementById("JasaStabilisasiTanahLabilPost");
-     var JasaPerkuatanTanahLongsorRumahPostLink = document.getElementById("JasaPerkuatanTanahLongsorRumahPost");
-     var JasaPerkuatanTebingJalanPostLink = document.getElementById("JasaPerkuatanTebingJalanPost");
-     var JasaPerkuatanLongsorPerkebunanPostLink = document.getElementById("JasaPerkuatanLongsorPerkebunanPost");
-     var JasaDrainaseAntiLongsorPostLink = document.getElementById("JasaDrainaseAntiLongsorPost");
-
-	
-     var pageNameJasaKonsPerkuatanTanahLongsorPost = document.getElementById("pageNameJasaKonsPerkuatanTanahLongsorPost");
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 1] JASA BRONJONG PENAHAN LONGSOR
+    // ═══════════════════════════════════════════════════════
+    // 📌 TODO: Isi mapping urlMappingJasaBronjong, lalu aktifkan
+    //          generateBreadcrumbShared di bawah ini.
+    // ═══════════════════════════════════════════════════════
     
-
-     // Default untuk menyembunyikan elemen
-     JasaKonstruksiPerkuatanTanahLongsorSubPostLink.style.visibility = 'hidden';
-     JasaPerkuatanTanahLongsorPostLink.style.visibility = 'hidden';
-	
-     //SUB JASA PERKUATAN TANAH LONGSOR
-     JasaBronjongPenahanLongsorPostLink.style.visibility = 'hidden';
-     JasaSoilNailingTebingPostLink.style.visibility = 'hidden';
-     JasaDindingPenahanTanahLongsorPostLink.style.visibility = 'hidden';
-     JasaGeotextilePerkuatanLerengPostLink.style.visibility = 'hidden';
-     JasaSheetPilePenahanLongsorPostLink.style.visibility = 'hidden';
-     JasaStabilisasiTanahLabilPostLink.style.visibility = 'hidden';
-     JasaPerkuatanTanahLongsorRumahPostLink.style.visibility = 'hidden';
-     JasaPerkuatanTebingJalanPostLink.style.visibility = 'hidden';
-     JasaPerkuatanLongsorPerkebunanPostLink.style.visibility = 'hidden';
-     JasaDrainaseAntiLongsorPostLink.style.visibility = 'hidden';
-
-     pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = "";
-
-if (urlMappingJasaBronjong[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
-        restoreCondition('JasaBronjongPenahanLongsorPost');
-/*
-	    JasaKonsPerkuatanTanahLongsor
-JasaKonstruksiPerkuatanTanahLongsorSubPost
-JasaPerkuatanTanahLongsorPost
-
-*/
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-	removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-
-	/*
-        removeCondition('materialKonsReadymix');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikan');
-       	removeCondition('JasaKons');
-       	removeCondition('JasaKonsSub');
-       	removeCondition('MenuKons');
-       	removeCondition('JasaKonsFinishing');
-        removeCondition('JasaKonsStruktur');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-*/
-
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaSoilNailingTebingPost');
-        removeCondition('JasaDindingPenahanTanahLongsorPost');
-        removeCondition('JasaGeotextilePerkuatanLerengPost');
-        removeCondition('JasaSheetPilePenahanLongsorPost');
-        removeCondition('JasaStabilisasiTanahLabilPost');
-        removeCondition('JasaPerkuatanTanahLongsorRumahPost');
-        removeCondition('JasaPerkuatanTebingJalanPost');
-        removeCondition('JasaPerkuatanLongsorPerkebunanPost');
-        removeCondition('JasaDrainaseAntiLongsorPost');
-/*
-JasaBronjongPenahanLongsorPost
-JasaSoilNailingTebingPost
-JasaDindingPenahanTanahLongsorPost
-JasaGeotextilePerkuatanLerengPost
-JasaSheetPilePenahanLongsorPost
-JasaStabilisasiTanahLabilPost
-JasaPerkuatanTanahLongsorRumahPost
-JasaPerkuatanTebingJalanPost
-JasaPerkuatanLongsorPerkebunanPost
-JasaDrainaseAntiLongsorPost
-*/
-        JasaKonstruksiPerkuatanTanahLongsorSubPostLink.style.visibility = 'visible';
-        JasaPerkuatanTanahLongsorPostLink.style.visibility = 'visible';
-	
-        JasaBronjongPenahanLongsorPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaBronjong[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaBronjong[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perkuatan Tanah Longsor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Bronjong Penahan Longsor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-bronjong-penahan-longsor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": urlMappingJasaBronjong[cleanUrlJasaPerkuatanTanahLongsorKonsPost],
-                   "item": cleanUrlJasaPerkuatanTanahLongsorKonsPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
-        restoreCondition('JasaSoilNailingTebingPost');
-
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaBronjongPenahanLongsorPost');
-        removeCondition('JasaDindingPenahanTanahLongsorPost');
-        removeCondition('JasaGeotextilePerkuatanLerengPost');
-        removeCondition('JasaSheetPilePenahanLongsorPost');
-        removeCondition('JasaStabilisasiTanahLabilPost');
-        removeCondition('JasaPerkuatanTanahLongsorRumahPost');
-        removeCondition('JasaPerkuatanTebingJalanPost');
-        removeCondition('JasaPerkuatanLongsorPerkebunanPost');
-        removeCondition('JasaDrainaseAntiLongsorPost');
-
-        JasaKonstruksiPerkuatanTanahLongsorSubPostLink.style.visibility = 'visible';
-        JasaPerkuatanTanahLongsorPostLink.style.visibility = 'visible';
-	
-        JasaSoilNailingTebingPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perkuatan Tanah Longsor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Soil Nailing Tebing",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-soil-nailing-tebing.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost],
-                   "item": cleanUrlJasaPerkuatanTanahLongsorKonsPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-
-   if (urlMappingJasaDindingPenahanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
-        restoreCondition('JasaDindingPenahanTanahLongsorPost');
-
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	
-
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaSoilNailingTebingPost');
-        removeCondition('JasaBronjongPenahanLongsorPost');
-        removeCondition('JasaGeotextilePerkuatanLerengPost');
-        removeCondition('JasaSheetPilePenahanLongsorPost');
-        removeCondition('JasaStabilisasiTanahLabilPost');
-        removeCondition('JasaPerkuatanTanahLongsorRumahPost');
-        removeCondition('JasaPerkuatanTebingJalanPost');
-        removeCondition('JasaPerkuatanLongsorPerkebunanPost');
-        removeCondition('JasaDrainaseAntiLongsorPost');
-
-        JasaKonstruksiPerkuatanTanahLongsorSubPostLink.style.visibility = 'visible';
-        JasaPerkuatanTanahLongsorPostLink.style.visibility = 'visible';
-	
-        JasaDindingPenahanTanahLongsorPostLink.style.visibility = 'visible';
-	pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaDindingPenahanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
+    if (urlMappingJasaBronjong[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+        // 📌 AKTIFKAN kalau mapping sudah diisi:
+        /*
+        generateBreadcrumbShared(
+            urlMappingJasaBronjong,
+            cleanUrlJasaPerkuatanTanahLongsorKonsPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Bronjong Penahan Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-bronjong-penahan-longsor.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+        */
     }
 
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaDindingPenahanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perkuatan Tanah Longsor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Dinding Penahan Longsor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-dinding-penahan-tanah-longsor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": urlMappingJasaDindingPenahanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost],
-                   "item": cleanUrlJasaPerkuatanTanahLongsorKonsPost
-               }
-           ]
-       };
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 2] JASA SOIL NAILING TEBING
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingJasaSoilNailingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+        // 📌 AKTIFKAN kalau mapping sudah diisi:
+        /*
+        generateBreadcrumbShared(
+            urlMappingJasaSoilNailingLongsor,
+            cleanUrlJasaPerkuatanTanahLongsorKonsPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Soil Nailing Tebing', url: 'https://www.betonjayareadymix.com/p/jasa-soil-nailing-tebing.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+        */
+    }
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 3] JASA DINDING PENAHAN TANAH LONGSOR
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingJasaDindingPenahanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+        // 📌 AKTIFKAN kalau mapping sudah diisi:
+        /*
+        generateBreadcrumbShared(
+            urlMappingJasaDindingPenahanLongsor,
+            cleanUrlJasaPerkuatanTanahLongsorKonsPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Dinding Penahan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-dinding-penahan-tanah-longsor.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+        */
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 4] JASA GEOTEXTILE PERKUATAN LERENG
+    // ═══════════════════════════════════════════════════════
+    
     if (urlMappingJasaGeotextileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
-        restoreCondition('JasaGeotextilePerkuatanLerengPost');
-
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaSoilNailingTebingPost');
-        removeCondition('JasaDindingPenahanTanahLongsorPost');
-        removeCondition('JasaBronjongPenahanLongsorPost');
-        removeCondition('JasaSheetPilePenahanLongsorPost');
-        removeCondition('JasaStabilisasiTanahLabilPost');
-        removeCondition('JasaPerkuatanTanahLongsorRumahPost');
-        removeCondition('JasaPerkuatanTebingJalanPost');
-        removeCondition('JasaPerkuatanLongsorPerkebunanPost');
-        removeCondition('JasaDrainaseAntiLongsorPost');
-
-        JasaKonstruksiPerkuatanTanahLongsorSubPostLink.style.visibility = 'visible';
-        JasaPerkuatanTanahLongsorPostLink.style.visibility = 'visible';
-	
-        JasaGeotextilePerkuatanLerengPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaGeotextileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaGeotextileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perkuatan Tanah Longsor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Geotextile Perkuatan Lereng",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-geotextile-perkuatan-lereng.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": urlMappingJasaGeotextileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost],
-                   "item": cleanUrlJasaPerkuatanTanahLongsorKonsPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-if (urlMappingJasaSheetPileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
-        restoreCondition('JasaSheetPilePenahanLongsorPost');
-
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaSoilNailingTebingPost');
-        removeCondition('JasaDindingPenahanTanahLongsorPost');
-        removeCondition('JasaGeotextilePerkuatanLerengPost');
-        removeCondition('JasaBronjongPenahanLongsorPost');
-        removeCondition('JasaStabilisasiTanahLabilPost');
-        removeCondition('JasaPerkuatanTanahLongsorRumahPost');
-        removeCondition('JasaPerkuatanTebingJalanPost');
-        removeCondition('JasaPerkuatanLongsorPerkebunanPost');
-        removeCondition('JasaDrainaseAntiLongsorPost');
-
-        JasaKonstruksiPerkuatanTanahLongsorSubPostLink.style.visibility = 'visible';
-        JasaPerkuatanTanahLongsorPostLink.style.visibility = 'visible';
-	
-        JasaSheetPilePenahanLongsorPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaSheetPileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
+        // 📌 AKTIFKAN kalau mapping sudah diisi:
+        /*
+        generateBreadcrumbShared(
+            urlMappingJasaGeotextileLongsor,
+            cleanUrlJasaPerkuatanTanahLongsorKonsPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Geotextile Perkuatan Lereng', url: 'https://www.betonjayareadymix.com/p/jasa-geotextile-perkuatan-lereng.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+        */
     }
 
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaSheetPileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perkuatan Tanah Longsor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Sheet Pile Penahan Longsor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-sheet-pile-penahan-longsor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": urlMappingJasaSheetPileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost],
-                   "item": cleanUrlJasaPerkuatanTanahLongsorKonsPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-if (urlMappingJasaStabilisasiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
-        restoreCondition('JasaStabilisasiTanahLabilPost');
-
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaSoilNailingTebingPost');
-        removeCondition('JasaDindingPenahanTanahLongsorPost');
-        removeCondition('JasaGeotextilePerkuatanLerengPost');
-        removeCondition('JasaSheetPilePenahanLongsorPost');
-        removeCondition('JasaBronjongPenahanLongsorPost');
-        removeCondition('JasaPerkuatanTanahLongsorRumahPost');
-        removeCondition('JasaPerkuatanTebingJalanPost');
-        removeCondition('JasaPerkuatanLongsorPerkebunanPost');
-        removeCondition('JasaDrainaseAntiLongsorPost');
-
-        JasaKonstruksiPerkuatanTanahLongsorSubPostLink.style.visibility = 'visible';
-        JasaPerkuatanTanahLongsorPostLink.style.visibility = 'visible';
-	
-        JasaStabilisasiTanahLabilPostPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaStabilisasiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaStabilisasiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perkuatan Tanah Longsor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Stabilisasi Tanah Labil",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-stabilisasi-tanah-labil.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": urlMappingJasaStabilisasiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost],
-                   "item": cleanUrlJasaPerkuatanTanahLongsorKonsPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-if (urlMappingJasaPerkuatanRumahLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
-        restoreCondition('JasaPerkuatanTanahLongsorRumahPost');
-
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaSoilNailingTebingPost');
-        removeCondition('JasaDindingPenahanTanahLongsorPost');
-        removeCondition('JasaGeotextilePerkuatanLerengPost');
-        removeCondition('JasaSheetPilePenahanLongsorPost');
-        removeCondition('JasaStabilisasiTanahLabilPost');
-        removeCondition('JasaBronjongPenahanLongsorPost');
-        removeCondition('JasaPerkuatanTebingJalanPost');
-        removeCondition('JasaPerkuatanLongsorPerkebunanPost');
-        removeCondition('JasaDrainaseAntiLongsorPost');
-
-        JasaKonstruksiPerkuatanTanahLongsorSubPostLink.style.visibility = 'visible';
-        JasaPerkuatanTanahLongsorPostLink.style.visibility = 'visible';
-	
-        JasaPerkuatanTanahLongsorRumahPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaPerkuatanRumahLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 5] JASA SHEET PILE PENAHAN LONGSOR
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingJasaSheetPileLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+        // 📌 AKTIFKAN kalau mapping sudah diisi:
+        /*
+        generateBreadcrumbShared(
+            urlMappingJasaSheetPileLongsor,
+            cleanUrlJasaPerkuatanTanahLongsorKonsPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Sheet Pile Penahan Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-sheet-pile-penahan-longsor.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+        */
     }
 
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPerkuatanRumahLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perkuatan Tanah Longsor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Perkuatan Tanah Longsor Rumah",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-rumah.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": urlMappingJasaPerkuatanRumahLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost],
-                   "item": cleanUrlJasaPerkuatanTanahLongsorKonsPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-if (urlMappingJasaPerkuatanTebingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
-        restoreCondition('JasaPerkuatanTebingJalanPost');
-
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaSoilNailingTebingPost');
-        removeCondition('JasaDindingPenahanTanahLongsorPost');
-        removeCondition('JasaGeotextilePerkuatanLerengPost');
-        removeCondition('JasaSheetPilePenahanLongsorPost');
-        removeCondition('JasaStabilisasiTanahLabilPost');
-        removeCondition('JasaPerkuatanTanahLongsorRumahPost');
-        removeCondition('JasaBronjongPenahanLongsorPost');
-        removeCondition('JasaPerkuatanLongsorPerkebunanPost');
-        removeCondition('JasaDrainaseAntiLongsorPost');
-
-        JasaKonstruksiPerkuatanTanahLongsorSubPostLink.style.visibility = 'visible';
-        JasaPerkuatanTanahLongsorPostLink.style.visibility = 'visible';
-	
-        JasaPerkuatanTebingJalanPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaPerkuatanTebingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
-    }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPerkuatanTebingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perkuatan Tanah Longsor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Perkuatan Tebing Jalan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-tebing-jalan.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": urlMappingJasaPerkuatanTebingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost],
-                   "item": cleanUrlJasaPerkuatanTanahLongsorKonsPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-if (urlMappingJasaPerkuatanPerkebunanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
-        restoreCondition('JasaPerkuatanLongsorPerkebunanPost');
-
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	
-
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaSoilNailingTebingPost');
-        removeCondition('JasaDindingPenahanTanahLongsorPost');
-        removeCondition('JasaGeotextilePerkuatanLerengPost');
-        removeCondition('JasaSheetPilePenahanLongsorPost');
-        removeCondition('JasaStabilisasiTanahLabilPost');
-        removeCondition('JasaPerkuatanTanahLongsorRumahPost');
-        removeCondition('JasaPerkuatanTebingJalanPost');
-        removeCondition('JasaBronjongPenahanLongsorPost');
-        removeCondition('JasaDrainaseAntiLongsorPost');
-
-        JasaKonstruksiPerkuatanTanahLongsorSubPostLink.style.visibility = 'visible';
-        JasaPerkuatanTanahLongsorPostLink.style.visibility = 'visible';
-	
-        JasaPerkuatanLongsorPerkebunanPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaPerkuatanPerkebunanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 6] JASA STABILISASI TANAH LABIL
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingJasaStabilisasiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+        // 📌 AKTIFKAN kalau mapping sudah diisi:
+        /*
+        generateBreadcrumbShared(
+            urlMappingJasaStabilisasiLongsor,
+            cleanUrlJasaPerkuatanTanahLongsorKonsPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Stabilisasi Tanah Labil', url: 'https://www.betonjayareadymix.com/p/jasa-stabilisasi-tanah-labil.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+        */
     }
 
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaPerkuatanPerkebunanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perkuatan Tanah Longsor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Perkuatan Longsor Perkebunan",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-longsor-perkebunan.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": urlMappingJasaPerkuatanPerkebunanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost],
-                   "item": cleanUrlJasaPerkuatanTanahLongsorKonsPost
-               }
-           ]
-       };
-
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-if (urlMappingJasaDrainaseAntiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-        restoreCondition('JasaKonsPerkuatanTanahLongsorPost');
-        restoreCondition('JasaDrainaseAntiLongsorPost');
-
-        //hapus elemen div id lain
-	removeCondition('JasaDesInPost');
-	removeCondition('ProdukInFurPost');
-        removeCondition('ProdukKonsSaluranPost');
-        removeCondition('ProdukKonsPembatasPost');
-	    removeCondition('ProdukKonsDindingModularPost');
-        removeCondition('ProdukKonsPost');
-        removeCondition('MaterialKonsStukturPost');
-        removeCondition('MaterialKonsFasadPelapisEksteriorPost');
-	removeCondition('MaterialKonsAtapPenutupPost');
-        removeCondition('JasaKonsPondasiTanahPost');
-        removeCondition('JasaKonsPembatasPost');
-        removeCondition('JasaKonsPerbaikanPost');
-	removeCondition('JasaKonsCuttingBetonPost');
-	removeCondition('JasaKonsBongkarBangunanPost');
-        removeCondition('JasaKonsPengeboranPost');
-        removeCondition('JasaKonsFinishingPost');
-        removeCondition('JasaKonsStrukturPost');
-        removeCondition('JasaKonsAlatKonstruksiPost');
-        removeCondition('JasaKonsJalanPerkerasanPost');
-	
-
-        //hapus elemen SUB jasa pembatas lain
-        removeCondition('JasaSoilNailingTebingPost');
-        removeCondition('JasaDindingPenahanTanahLongsorPost');
-        removeCondition('JasaGeotextilePerkuatanLerengPost');
-        removeCondition('JasaSheetPilePenahanLongsorPost');
-        removeCondition('JasaStabilisasiTanahLabilPost');
-        removeCondition('JasaPerkuatanTanahLongsorRumahPost');
-        removeCondition('JasaPerkuatanTebingJalanPost');
-        removeCondition('JasaPerkuatanLongsorPerkebunanPost');
-        removeCondition('JasaBronjongPenahanLongsorPost');
-
-        JasaKonstruksiPerkuatanTanahLongsorSubPostLink.style.visibility = 'visible';
-        JasaPerkuatanTanahLongsorPostLink.style.visibility = 'visible';
-	
-        JasaDrainaseAntiLongsorPostLink.style.visibility = 'visible';
-        pageNameJasaKonsPerkuatanTanahLongsorPost.textContent = urlMappingJasaDrainaseAntiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost];
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 7] JASA PERKUATAN TANAH LONGSOR RUMAH
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingJasaPerkuatanRumahLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+        // 📌 AKTIFKAN kalau mapping sudah diisi:
+        /*
+        generateBreadcrumbShared(
+            urlMappingJasaPerkuatanRumahLongsor,
+            cleanUrlJasaPerkuatanTanahLongsorKonsPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post-rumah.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+        */
     }
-// ✅ Tambahkan JSON-LD Breadcrumb otomatis
-   if (urlMappingJasaDrainaseAntiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
-       const jsonLDBreadcrumb = {
-           "@context": "https://schema.org",
-           "@type": "BreadcrumbList",
-           "itemListElement": [
-	    {
-	      "@type": "ListItem",
-	      "position": 1,
-	      "name": "Beton Jaya Readymix",
-	      "item": "https://www.betonjayareadymix.com/"
-	    },
-               {
-                   "@type": "ListItem",
-                   "position": 2,
-                   "name": "Jasa Konstruksi",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-konstruksi.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 3,
-                   "name": "Jasa Perkuatan Tanah Longsor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 4,
-                   "name": "Jasa Drainase Anti Longsor",
-                   "item": "https://www.betonjayareadymix.com/p/jasa-drainase-anti-longsor.html"
-               },
-               {
-                   "@type": "ListItem",
-                   "position": 5,
-                   "name": urlMappingJasaDrainaseAntiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost],
-                   "item": cleanUrlJasaPerkuatanTanahLongsorKonsPost
-               }
-           ]
-       };
 
-       const script = document.createElement('script');
-       script.type = 'application/ld+json';
-       script.text = JSON.stringify(jsonLDBreadcrumb);
-       document.head.appendChild(script);
-   }
-    //SUB urlMappingPembuatanPagarDinding
-   
-   });
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 8] JASA PERKUATAN TEBING JALAN
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingJasaPerkuatanTebingLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+        // 📌 AKTIFKAN kalau mapping sudah diisi:
+        /*
+        generateBreadcrumbShared(
+            urlMappingJasaPerkuatanTebingLongsor,
+            cleanUrlJasaPerkuatanTanahLongsorKonsPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Perkuatan Tebing Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tebing-jalan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+        */
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 9] JASA PERKUATAN LONGSOR PERKEBUNAN
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingJasaPerkuatanPerkebunanLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+        // 📌 AKTIFKAN kalau mapping sudah diisi:
+        /*
+        generateBreadcrumbShared(
+            urlMappingJasaPerkuatanPerkebunanLongsor,
+            cleanUrlJasaPerkuatanTanahLongsorKonsPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Perkuatan Longsor Perkebunan', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-longsor-perkebunan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+        */
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 10] JASA DRAINASE ANTI LONGSOR
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingJasaDrainaseAntiLongsor[cleanUrlJasaPerkuatanTanahLongsorKonsPost]) {
+        // 📌 AKTIFKAN kalau mapping sudah diisi:
+        /*
+        generateBreadcrumbShared(
+            urlMappingJasaDrainaseAntiLongsor,
+            cleanUrlJasaPerkuatanTanahLongsorKonsPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Drainase Anti Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-drainase-anti-longsor.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+        */
+    }
+
+    console.log('[jasa-perkuatan-tanah-longsor-post] ✅ Semua breadcrumb selesai diproses');
+}
+
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN 4] FIX v2.1.0 — Handle DOMContentLoaded race condition
+// ═══════════════════════════════════════════════════════════
+
+if (document.readyState === 'loading') {
+    console.log('[jasa-perkuatan-tanah-longsor-post] ⏳ DOM loading, tunggu event');
+    document.addEventListener('DOMContentLoaded', initJasaPerkuatanTanahLongsor);
+} else {
+    console.log('[jasa-perkuatan-tanah-longsor-post] ⚡ DOM ready, langsung execute');
+    initJasaPerkuatanTanahLongsor();
+}
+
+// ============================================================
+// AKHIR FILE — TIDAK ADA KARAKTER TAMBAHAN
+// ============================================================
