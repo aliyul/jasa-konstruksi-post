@@ -1,3 +1,5 @@
+console.log('[jasa-pembatas-post] 📄 File loaded, waiting for DOM...');
+
 /*
 const urlMappingPengamananAreaProyek = {
 "https://www.betonjayareadymix.com/p/jasa-pemasangan-safety-net-proyek.html": "Jasa Pemasangan Safety Net Proyek",
@@ -87,7 +89,7 @@ const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyChild  = {
   // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pasang Pagar Panel Beton
   // ============================================================
 
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-terdekat.html": "Jasa Pasang Pagar Panel Beton Ierdekat", 
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-terdekat.html": "Jasa Pasang Pagar Panel Beton Terdekat", 
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-jakarta.html": "Jasa Pasang Pagar Panel Beton Jakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bogor.html": "Jasa Pasang Pagar Panel Beton Bogor",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-depok.html": "Jasa Pasang Pagar Panel Beton Depok",  // TYPE: MONEY_CHILD
@@ -427,15 +429,20 @@ const urlMappingJasaPemasanganKanstinJalanFromMoneyPage1MoneyPage2 = {
 let removedElementsJasaPembatasKonsPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
 function removeCondition(conditionId) {
+    // ✅ GUARD: Jangan hapus container utama
+    if (conditionId === 'JasaKonsPembatasPost') {
+        console.warn('[jasa-pembatas-post] ⚠️ Tidak boleh menghapus container utama: ' + conditionId);
+        return;
+    }
+
     const conditionElement = document.getElementById(conditionId);
 
     if (conditionElement) {
-        // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
         removedElementsJasaPembatasKonsPost[conditionId] = conditionElement;
-        conditionElement.remove(); // Menghapus elemen tersebut
+        conditionElement.remove();
+        console.log('[jasa-pembatas-post] 🔧 Removed: ' + conditionId);
     }
 }
-
 // Fungsi untuk mengembalikan elemen yang telah dihapus
 function restoreCondition(conditionId) {
     const breadcrumb = document.querySelector('.breadcrumb');
@@ -445,227 +452,91 @@ function restoreCondition(conditionId) {
         breadcrumb.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
         delete removedElementsJasaPembatasKonsPost[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
     } else {
-        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaPembatasKonsPost.`);
+        console.warn(`[jasa-pembatas-post] ⚠️ Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaPembatasKonsPost.`);
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // var currentUrl = window.location.href;
-     //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
-    const cleanUrlJasaPembatasKonsPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
-
-		/* ==========================================================
-   🧩 HybridDateModified v2.5 — StableHash + Safe Load Order
-   Fitur:
-   - Menjamin detect-evergreen.js dimuat lebih dulu
-   - Update <meta dateModified> hanya jika URL terdaftar
-   - Stable hash → hasil dateModified konsisten
-   ========================================================== */
-/*	
-(async function runHybridDateModified() {
-  try {
-    // --- helper untuk load eksternal JS secara promise ---
-    function loadExternalJSAsync(src) {
-      return new Promise((resolve, reject) => {
-        const s = document.createElement("script");
-        s.src = src;
-        s.async = true;
-        s.onload = () => resolve(src);
-        s.onerror = () => reject(new Error("Gagal load " + src));
-        document.head.appendChild(s);
-      });
-    }
-
-	    // ✅ Anti Spam GitHack (session based)
-        // --- loader evergreen JS dengan sessionStorage (anti 429) ---
-    async function loadEvergreenScript() {
-      const KEY = "evergreenScriptLoaded";
-
-      const needReload =
-        !sessionStorage.getItem(KEY) ||
-        !window.AEDMetaDates ||
-        !window.detectEvergreenReady;
-
-      if (!needReload) {
-        console.log("⚡ detect-evergreen.js sudah aktif & variable ready — SKIP load");
-      } else {
-        console.log("⏳ load detect-evergreen.js dari GitHack…");
-        try {
-          await loadExternalJSAsync(
-            "https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js"
-          );
-          window.detectEvergreenReady = true;
-          sessionStorage.setItem(KEY, "true");
-          console.log("✅ detect-evergreen.js LOADED & READY");
-        } catch (err) {
-          console.error("❌ Gagal load detect-evergreen.js", err);
-          sessionStorage.removeItem(KEY);
-        }
-      }
-
-      // --- ALWAYS run evergreen check tiap halaman ---
-      if (typeof window.runEvergreenCheck === "function") {
-        console.log("🔁 Running evergreen check for this page...");
-        window.runEvergreenCheck();
-      } else {
-        console.warn("⚠️ runEvergreenCheck tidak ditemukan!");
-      }
-    }
-
-	  
-    // --- gabungkan semua mapping ---
-    const urlMappingGabungan = Object.assign(
-      {},
-		urlMappingJasaPagarBetonPrecast,
-		urlMappingJasaPagarPanelBeton,
-		urlMappingJasaPagarBesi,
-		urlMappingJasaDindingBata,
-		urlMappingJasaPagarKawat,
-		urlMappingJasaPagarBRC,
-		urlMappingJasaPagarRumah,
-        urlMappingJasaPagarBangunan,
-
-		urlMappingJasaKanstinJalan
-    );
-
-    // --- validasi URL terdaftar ---
-    if (!urlMappingGabungan[cleanUrlJasaPembatasKonsPost]) {
-      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaPembatasKonsPost}`);
-      return;
-    }
-  
-  // === Tanggal nextUpdate1 global ===
-	const globalNextUpdate1 = "2026-02-11T00:00:00.000Z";
-	console.log(`🌐 [AutoMeta] Detected jasa-konstruksi-pembatas-post: ${cleanUrlJasaPembatasKonsPost}`);
-
-    // --- pastikan meta nextUpdate1 ada ---
-    let metaNextUpdate1 = document.querySelector('meta[name="nextUpdate1"]');
-    if (!metaNextUpdate1) {
-      metaNextUpdate1 = document.createElement("meta");
-      metaNextUpdate1.setAttribute("name", "nextUpdate1");
-      metaNextUpdate1.setAttribute("content", globalNextUpdate1);
-      document.head.appendChild(metaNextUpdate1);
-      console.log(`🆕 [AutoMeta] Meta nextUpdate1 ditambahkan → ${globalNextUpdate1}`);
-    } else {
-      console.log("✅ [AutoMeta] Meta nextUpdate1 sudah ada, tidak dibuat ulang.");
-    }
-
-    // --- pastikan detect-evergreen.js selesai dimuat ---
-    await loadEvergreenScript();
-    console.log("✅ detect-evergreen.js selesai dimuat.");
-
-    // --- pastikan AEDMetaDates sudah tersedia ---
-    if (!window.AEDMetaDates || !window.AEDMetaDates.dateModified) {
-      console.warn("[HybridDateModified] AEDMetaDates tidak ditemukan, skip update.");
-      return;
-    }
-
-    const { dateModified, nextUpdate, type } = window.AEDMetaDates;
-
-    // 🔒 Stable hash untuk variasi waktu stabil
-    function stableHash(str) {
-      let hash = 0;
-      for (let i = 0; i < str.length; i++) {
-        hash = (hash << 5) - hash + str.charCodeAt(i);
-        hash |= 0;
-      }
-      return Math.abs(hash);
-    }
-
-    const hash = stableHash(cleanUrlJasaPembatasKonsPost);
-    const offsetSeconds = hash % 86400;
-    const finalDate = new Date(new Date(dateModified).getTime() + offsetSeconds * 1000);
-    const isoDate = finalDate.toISOString();
-
-    // 🧱 Update meta dateModified
-    [
-      ['meta[itemprop="dateModified"]', 'itemprop', 'dateModified'],
-      ['meta[name="dateModified"]', 'name', 'dateModified'],
-      ['meta[property="article:modified_time"]', 'property', 'article:modified_time']
-    ].forEach(([selector, attr, val]) => {
-      let meta = document.querySelector(selector);
-      if (!meta) {
-        meta = document.createElement("meta");
-        meta.setAttribute(attr, val);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute("content", isoDate);
-    });
-
-	
-		// Pastikan AEDMetaDates sudah ada minimal sebagai objek kosong
-	window.AEDMetaDates = window.AEDMetaDates || {};
-	
-	// Update hanya properti dateModified tanpa menghapus lainnya
-	window.AEDMetaDates = {
-	  ...window.AEDMetaDates,
-	  dateModified: isoDate
-	};
-	
-	console.log("✅ AEDMetaDates updated jasa-konstruksi-pembatas-post:", window.AEDMetaDates);
-    console.log(`✅ [HybridDateModified v2.5] ${cleanUrlJasaPembatasKonsPost} → ${isoDate} | type=${type || "-"}`);
-
-    // 🧩 Perbarui schema jika ada
-    const schemaEl = document.querySelector('script[data-schema="evergreen-maintenance"]');
-    if (schemaEl) {
-      try {
-        const data = JSON.parse(schemaEl.textContent.trim());
-        data.dateModified = isoDate;
-        if (data.maintenanceSchedule) data.maintenanceSchedule.scheduledTime = nextUpdate;
-        schemaEl.textContent = JSON.stringify(data, null, 2);
-        console.log(`🔄 Schema maintenance diperbarui → dateModified: ${isoDate}`);
-      } catch (err) {
-        console.error("❌ Gagal update schema:", err);
-      }
-    }
-
-  } catch (err) {
-    console.error("[HybridDateModified] Fatal error:", err);
-  }
-})();
-*/	
-
-	  
-    // --- gabungkan semua mapping ---
-    const urlMappingGabungan = Object.assign(
-      {},
-		urlMappingJasaPasangPagarFromMoneyMasterMoneyChild,
-		urlMappingHargaJasaPasangPagarFromMoneyMasterMoneyChild,
-		
-		urlMappingJasaPasangPagarBetonPrecastFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyChild,
-		urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
-		urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyChild,
-		
-		urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangPagarPanelBetonFromMoneyPageVariant,
-		
-		urlMappingJasaPasangPagarBesiHollowFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangDindingPembatasBataFromMoneyPageMoneyPage1,
-		urlMappingPasangJasaPagarKawatHarmonikaFromMoneyPageMoneyPage1,
-		
-		urlMappingHargaJasaPasangPagarBRCFromMoneyPage1MoneyChild,
-		urlMappingJasaPasangPagarBRCFromMoneyMasterVariant,
-		
-		urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1,
-		urlMappingHargaJasaPasangPagarRumahFromMoneyPage1MoneyChild,
-		
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN A] EARLY EXIT v2.0.0 — Pendekatan C
+// ═══════════════════════════════════════════════════════════
+(function() {
+    'use strict';
+    
+    var cleanUrl = window.location.href.split(/[?#]/)[0];
+    console.log('[jasa-pembatas-post] 🔍 Check: ' + cleanUrl);
+    
+    var ALL_MAPPINGS = [
+        urlMappingJasaPasangPagarFromMoneyMasterMoneyChild,
+        urlMappingHargaJasaPasangPagarFromMoneyMasterMoneyChild,
+        urlMappingJasaPasangPagarBetonPrecastFromMoneyPageMoneyPage1,
+        urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyChild,
+        urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
+        urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyChild,
+        urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyPage1,
+        urlMappingJasaPasangPagarPanelBetonFromMoneyPageVariant,
+        urlMappingJasaPasangPagarBesiHollowFromMoneyPageMoneyPage1,
+        urlMappingJasaPasangDindingPembatasBataFromMoneyPageMoneyPage1,
+        urlMappingPasangJasaPagarKawatHarmonikaFromMoneyPageMoneyPage1,
+        urlMappingHargaJasaPasangPagarBRCFromMoneyPage1MoneyChild,
+        urlMappingJasaPasangPagarBRCFromMoneyMasterVariant,
+        urlMappingJasaPasangPagarRumahFromMoneyPageMoneyPage1,
+        urlMappingHargaJasaPasangPagarRumahFromMoneyPage1MoneyChild,
         urlMappingJasaPasangPagarBangunanFromMoneyPageMoneyPage1,
-
-		urlMappingJasaPemasanganKanstinJalanFromMoneyPage1MoneyPage2
-    );
-
-    // --- validasi URL terdaftar ---
-    if (!urlMappingGabungan[cleanUrlJasaPembatasKonsPost]) {
-      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaPembatasKonsPost}`);
-      return;
+        urlMappingJasaPemasanganKanstinJalanFromMoneyPage1MoneyPage2
+    ];
+    
+    // ✅ Pendekatan C: Loop + foundIndex + break
+    var foundIndex = -1;
+    var foundMappingName = '';
+    
+    for (var i = 0; i < ALL_MAPPINGS.length; i++) {
+        if (!ALL_MAPPINGS[i] || typeof ALL_MAPPINGS[i] !== 'object') {
+            console.warn('[jasa-pembatas-post] ⚠️ Mapping #' + (i + 1) + ' bukan object — skip');
+            continue;
+        }
+        if (ALL_MAPPINGS[i][cleanUrl]) {
+            foundIndex = i;
+            foundMappingName = ALL_MAPPINGS[i][cleanUrl];
+            break;
+        }
     }
-	
-     // Menemukan elemen menggunakan Id
-    var JasaKonsPembatasPost = document.getElementById("JasaKonsPembatasPost");
+    
+    if (foundIndex === -1) {
+        console.log('[jasa-pembatas-post] ⏭️ SKIP — URL tidak cocok');
+        window.__jasaPembatasPostActive = false;
+        return;
+    }
+    
+    window.__jasaPembatasPostActive = true;
+    window.__jasaPembatasPostMatchIndex = foundIndex;
+    window.__jasaPembatasPostMatchMappingName = foundMappingName;
+    window.__jasaPembatasPostMappings = ALL_MAPPINGS;
+    
+    console.log(
+        '[jasa-pembatas-post] ✅ Match di mapping #' + (foundIndex + 1) +
+        ' — Label: "' + foundMappingName + '"' +
+        ' — EXECUTE flag set'
+    );
+})();
 
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN B] FUNGSI UTAMA
+// ═══════════════════════════════════════════════════════════
+function initJasaPembatasPost() {
+    // ⚡ Guard flag
+    if (!window.__jasaPembatasPostActive) {
+        console.log('[jasa-pembatas-post] ⏭️ Execute SKIP — URL tidak cocok');
+        return;
+    }
+    
+    console.log('[jasa-pembatas-post] 🚀 Execute — URL cocok');
+    
+    var cleanUrlJasaPembatasKonsPost = window.location.href.split(/[?#]/)[0];
+    
+    // Cek elemen DOM
+    var JasaKonsPembatasPost = document.getElementById("JasaKonsPembatasPost");
     if (!JasaKonsPembatasPost) {
-        console.error("elemen Id JasaKonsPembatasPost kondisi terhapus");
+        console.error("[jasa-pembatas-post] ❌ elemen Id JasaKonsPembatasPost kondisi terhapus");
         return;
     }
 	
@@ -926,6 +797,18 @@ if (urlMappingJasaPemasanganKanstinJalanFromMoneyPage1MoneyPage2[cleanUrlJasaPem
         'JASA_KONSTRUKSI'
     );
 }
-	
-   });
+	    
+    console.log('[jasa-pembatas-post] ✅ Semua breadcrumb selesai diproses');
+}
+
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN C] FIX v2.1.0 — Handle DOMContentLoaded race condition
+// ═══════════════════════════════════════════════════════════
+if (document.readyState === 'loading') {
+    console.log('[jasa-pembatas-post] ⏳ DOM loading, tunggu event');
+    document.addEventListener('DOMContentLoaded', initJasaPembatasPost);
+} else {
+    console.log('[jasa-pembatas-post] ⚡ DOM ready, langsung execute');
+    initJasaPembatasPost();
+}
 
