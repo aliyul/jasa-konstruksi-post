@@ -1,4 +1,4 @@
-console.log('[jasa-jalan-perkerasan-post] 📄 File loaded, waiting for DOM...');
+console.log('[jasa-jalan-perkerasan] 📄 File loaded, waiting for DOM...');
 
 const urlMappingJasaPerkerasanJalanFromMoneyMaster1MoneyPage = {
  // ============================================================
@@ -363,39 +363,6 @@ const urlMappingJasaPengerasanJalan = {
 */
 
 
-// Menyimpan elemen yang dihapus dalam variabel
-let removedElementsJasaJalanPerkerasanKons = {};
-// Fungsi untuk menghapus elemen berdasarkan ID
-function removeCondition(conditionId) {
-    // ✅ GUARD: Jangan hapus container utama
-    if (conditionId === 'JasaKonsJalanPerkerasan') {
-        console.warn('[jasa-jalan-perkerasan-post] ⚠️ Tidak boleh menghapus container utama: ' + conditionId);
-        return;
-    }
-
-    const conditionElement = document.getElementById(conditionId);
-
-    if (conditionElement) {
-        removedElementsJasaJalanPerkerasanKons[conditionId] = conditionElement;
-        conditionElement.remove();
-        console.log('[jasa-jalan-perkerasan-post] 🔧 Removed: ' + conditionId);
-    }
-}
-
-// Fungsi untuk mengembalikan elemen yang telah dihapus
-function restoreCondition(conditionId) {
-    const breadcrumb = document.querySelector('.breadcrumb');
-    const elementToRestore = removedElementsJasaJalanPerkerasanKons[conditionId]; // Mendapatkan elemen yang disimpan
-
-    if (elementToRestore) {
-        breadcrumb.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
-        delete removedElementsJasaJalanPerkerasanKons[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
-    } else {
-       console.warn(`[jasa-jalan-perkerasan-post] ⚠️ Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaJalanPerkerasanKons.`);
-
-    }
-}
-
 // ═══════════════════════════════════════════════════════════
 // [BAGIAN A] EARLY EXIT v2.0.0 — Pendekatan C
 // ═══════════════════════════════════════════════════════════
@@ -403,7 +370,7 @@ function restoreCondition(conditionId) {
     'use strict';
     
     var cleanUrl = window.location.href.split(/[?#]/)[0];
-    console.log('[jasa-jalan-perkerasan-post] 🔍 Check: ' + cleanUrl);
+    console.log('[jasa-jalan-perkerasan] 🔍 Check: ' + cleanUrl);
     
     var ALL_MAPPINGS = [
         urlMappingJasaPembangunanInfrastrukturJalanFromMoneyPageMoneyPage1,
@@ -426,7 +393,7 @@ function restoreCondition(conditionId) {
     
     for (var i = 0; i < ALL_MAPPINGS.length; i++) {
         if (!ALL_MAPPINGS[i] || typeof ALL_MAPPINGS[i] !== 'object') {
-            console.warn('[jasa-jalan-perkerasan-post] ⚠️ Mapping #' + (i + 1) + ' bukan object — skip');
+            console.warn('[jasa-jalan-perkerasan] ⚠️ Mapping #' + (i + 1) + ' bukan object — skip');
             continue;
         }
         if (ALL_MAPPINGS[i][cleanUrl]) {
@@ -437,18 +404,18 @@ function restoreCondition(conditionId) {
     }
     
     if (foundIndex === -1) {
-        console.log('[jasa-jalan-perkerasan-post] ⏭️ SKIP — URL tidak cocok');
-        window.__jasaJalanPerkerasanPostActive = false;
+        console.log('[jasa-jalan-perkerasan] ⏭️ SKIP — URL tidak cocok');
+        window.__jasaJalanPerkerasanActive = false;
         return;
     }
     
-    window.__jasaJalanPerkerasanPostActive = true;
-    window.__jasaJalanPerkerasanPostMatchIndex = foundIndex;
-    window.__jasaJalanPerkerasanPostMatchMappingName = foundMappingName;
-    window.__jasaJalanPerkerasanPostMappings = ALL_MAPPINGS;
+    window.__jasaJalanPerkerasanActive = true;
+    window.__jasaJalanPerkerasanMatchIndex = foundIndex;
+    window.__jasaJalanPerkerasanMatchMappingName = foundMappingName;
+    window.__jasaJalanPerkerasanMappings = ALL_MAPPINGS;
     
     console.log(
-        '[jasa-jalan-perkerasan-post] ✅ Match di mapping #' + (foundIndex + 1) +
+        '[jasa-jalan-perkerasan] ✅ Match di mapping #' + (foundIndex + 1) +
         ' — Label: "' + foundMappingName + '"' +
         ' — EXECUTE flag set'
     );
@@ -459,12 +426,12 @@ function restoreCondition(conditionId) {
 // ═══════════════════════════════════════════════════════════
 function initJasaJalanPerkerasanPost() {
     // ⚡ Guard flag
-    if (!window.__jasaJalanPerkerasanPostActive) {
-        console.log('[jasa-jalan-perkerasan-post] ⏭️ Execute SKIP — URL tidak cocok');
+    if (!window.__jasaJalanPerkerasanActive) {
+        console.log('[jasa-jalan-perkerasan] ⏭️ Execute SKIP — URL tidak cocok');
         return;
     }
     
-    console.log('[jasa-jalan-perkerasan-post] 🚀 Execute — URL cocok');
+    console.log('[jasa-jalan-perkerasan] 🚀 Execute — URL cocok');
     
     var cleanUrlJasaJalanPerkerasanKons = window.location.href.split(/[?#]/)[0];
     var currentUrl = cleanUrlJasaJalanPerkerasanKons;
@@ -472,7 +439,7 @@ function initJasaJalanPerkerasanPost() {
     // Cek elemen DOM
     var JasaKonsJalanPerkerasan = document.getElementById("JasaKonsJalanPerkerasan");
     if (!JasaKonsJalanPerkerasan) {
-        console.error("[jasa-jalan-perkerasan-post] ❌ elemen Id JasaKonsJalanPerkerasan kondisi terhapus");
+        console.error("[jasa-jalan-perkerasan] ❌ elemen Id JasaKonsJalanPerkerasan kondisi terhapus");
         return;
     }
 
@@ -670,16 +637,16 @@ if (urlMappingJasaTujuanPengerasanJalanFromMoneyPageMoneyPage1[cleanUrlJasaJalan
     );
 } 
 
-    console.log('[jasa-jalan-perkerasan-post] ✅ Semua breadcrumb selesai diproses');
+    console.log('[jasa-jalan-perkerasan] ✅ Semua breadcrumb selesai diproses');
 }
 
 // ═══════════════════════════════════════════════════════════
 // [BAGIAN C] FIX v2.1.0 — Handle DOMContentLoaded race condition
 // ═══════════════════════════════════════════════════════════
 if (document.readyState === 'loading') {
-    console.log('[jasa-jalan-perkerasan-post] ⏳ DOM loading, tunggu event');
+    console.log('[jasa-jalan-perkerasan] ⏳ DOM loading, tunggu event');
     document.addEventListener('DOMContentLoaded', initJasaJalanPerkerasanPost);
 } else {
-    console.log('[jasa-jalan-perkerasan-post] ⚡ DOM ready, langsung execute');
+    console.log('[jasa-jalan-perkerasan] ⚡ DOM ready, langsung execute');
     initJasaJalanPerkerasanPost();
 }
