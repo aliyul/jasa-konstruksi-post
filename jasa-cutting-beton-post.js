@@ -1,13 +1,13 @@
 /* ============================================================
    FILE: jasa-cutting-beton-post.js
    FUNGSI: Breadcrumb + Date Modified untuk cluster Jasa Konstruksi
-   VERSI: v2.0.0 — Early Exit Pattern
+   VERSI: v2.2.0 — Early Exit + Fix v2.1.0
    ============================================================
    ALUR:
    1. Deklarasi semua mapping (26 mapping)
    2. EARLY EXIT: Cek URL browser vs mapping
    3. Kalau TIDAK cocok → return (skip cepat)
-   4. Kalau cocok → eksekusi breadcrumb
+   4. Kalau cocok → eksekusi breadcrumb saat DOM siap
    ============================================================ */
 
 // ═══════════════════════════════════════════════════════════════
@@ -89,13 +89,8 @@ const urlMappingJasaBoringTanahFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/2019/09/jasa-boring-tanah-perumahan.html": "Jasa Boring Tanah Perumahan"
 };
 
-const urlMappingJasaLabTanahFromMoneyMaster1MoneyPage = {
-  // Kosong untuk saat ini — saran di comment
-};
-
-const urlMappingJasaUjiPenetrasiFromMoneyMaster1MoneyPage = {
-  // Kosong untuk saat ini — saran di comment
-};
+const urlMappingJasaLabTanahFromMoneyMaster1MoneyPage = {};
+const urlMappingJasaUjiPenetrasiFromMoneyMaster1MoneyPage = {};
 
 const urlMappingJasaPematanganLahanFromMoneyMasterMoneyChild = {
   "https://www.betonjayareadymix.com/2019/09/jasa-pematangan-lahan-terdekat.html": "Jasa Pematangan Lahan Terdekat",
@@ -360,20 +355,20 @@ function restoreCondition(conditionId) {
         breadcrumb.appendChild(elementToRestore);
         delete removedElementsJasaCuttingBetonPost[conditionId];
     } else {
-        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan.`);
+        console.log('[jasa-cutting-beton-post] Elemen dengan ID ' + conditionId + ' tidak ditemukan.');
     }
 }
+
 
 // ═══════════════════════════════════════════════════════════════
 // ⚡ EARLY EXIT — CEK URL SEBELUM EKSEKUSI (v2.0.0)
 // ═══════════════════════════════════════════════════════════════
 (function() {
   'use strict';
-  
+
   var cleanUrl = window.location.href.split(/[?#]/)[0];
   console.log('[jasa-cutting-beton-post] 🔍 Check: ' + cleanUrl);
-  
-  // Gabungkan semua mapping ke dalam array (tanpa Object.assign)
+
   var ALL_MAPPINGS = [
     urlMappingJasaSaluraDrainaseFromMoneyMasterMoneyChild,
     urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage,
@@ -402,8 +397,7 @@ function restoreCondition(conditionId) {
     urlMappingJasaPemasanganGeotekstilLahanFromMoneyPageMoneyPage1,
     urlMappingJasaPersiapanPondasiLahanFromMoneyPageMoneyPage1
   ];
-  
-  // Loop mapping — cek URL, break kalau cocok
+
   var found = false;
   for (var i = 0; i < ALL_MAPPINGS.length; i++) {
     var mapping = ALL_MAPPINGS[i];
@@ -413,117 +407,43 @@ function restoreCondition(conditionId) {
       break;
     }
   }
-  
-  // ❌ Kalau tidak cocok — skip super cepat
+
   if (!found) {
     console.log('[jasa-cutting-beton-post] ⏭️ SKIP — URL tidak cocok');
     window.__jasaCuttingBetonPostActive = false;
     return;
   }
-  
-  // ✅ Cocok — set flag untuk eksekusi di DOMContentLoaded
+
   window.__jasaCuttingBetonPostActive = true;
   console.log('[jasa-cutting-beton-post] ✅ EXECUTE flag set');
-  
 })();
 
 // ═══════════════════════════════════════════════════════════════
-// DOMContentLoaded — EKSEKUSI (HANYA KALAU FLAG AKTIF)
+// FUNGSI UTAMA — dipanggil saat DOM sudah siap (Fix v2.1.0)
 // ═══════════════════════════════════════════════════════════════
-document.addEventListener("DOMContentLoaded", function() {
-  
+function initJasaCuttingBetonPost() {
+
   // ⚡ Early exit — skip kalau flag tidak aktif
   if (!window.__jasaCuttingBetonPostActive) {
-    console.log('[jasa-cutting-beton-post] ⏭️ DOMContentLoaded SKIP');
+    console.log('[jasa-cutting-beton-post] ⏭️ Execute SKIP — URL tidak cocok');
     return;
   }
-  
+
   const cleanUrlJasaCuttingBetonPost = window.location.href.split(/[?#]/)[0];
-  
-  console.log('[jasa-cutting-beton-post] 🚀 DOMContentLoaded EXECUTE');
-  
-  // Merge mapping (untuk breadcrumb)
-  const urlMappingGabungan = Object.assign(
-    {},
-    urlMappingJasaSaluraDrainaseFromMoneyMasterMoneyChild,
-    urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage,
-    urlMappingHargaJasaCuttingBetonFromMoneyMasterMoneyPage,
-    urlMappingHargaJasaCuttingBetonFromMoneyMasterMoneyChild,
-    urlMappingJasaSondirTanahFromMoneyMaster1MoneyPage,
-    urlMappingJasaCptTanahFromMoneyMaster1MoneyPage,
-    urlMappingJasaCptTanahFromMoneyMaster1MoneyChild,
-    urlMappingJasaBoringTanahFromMoneyMaster1MoneyPage,
-    urlMappingJasaLabTanahFromMoneyMaster1MoneyPage,
-    urlMappingJasaUjiPenetrasiFromMoneyMaster1MoneyPage,
-    urlMappingJasaPematanganLahanFromMoneyMasterMoneyChild,
-    urlMappingJasaPemotonganBukitLahanFromMoneyPageMoneyPage1,
-    urlMappingJasaPengupasanLahanTanahFromMoneyPageMoneyPage1,
-    urlMappingJasaTebangPohonPematanganLahanFromMoneyPageMoneyPage1,
-    urlMappingJasaPerataandanGradingLahanFromMoneyPageMoneyPage1,
-    urlMappingJasaPekerjaanElevasiLahanFromMoneyPageMoneyPage1,
-    urlMappingJasaPembentukanBadanLahanFromMoneyPageMoneyPage1,
-    urlMappingJasaCutandFillLahanFromMoneyPageMoneyPage1,
-    urlMappingJasaUruganTanahLahanFromMoneyPageMoneyPage1,
-    urlMappingJasaPemadatanTanahLahanFromMoneyPageMoneyPage1,
-    urlMappingJasaPembersihanLahanPematanganFromMoneyPageMoneyPage1,
-    urlMappingJasaBaseCourseLahanFromMoneyPageMoneyPage1,
-    urlMappingJasaStabilisasiTanahLahanFromMoneyPageMoneyPage1,
-    urlMappingJasaPemasanganDrainaseLahanFromMoneyPageMoneyPage1,
-    urlMappingJasaPemasanganGeotekstilLahanFromMoneyPageMoneyPage1,
-    urlMappingJasaPersiapanPondasiLahanFromMoneyPageMoneyPage1
-  );
-  
-  // Validasi (double check)
-  if (!urlMappingGabungan[cleanUrlJasaCuttingBetonPost]) {
-    console.log(`[jasa-cutting-beton-post] ⏭️ URL tidak terdaftar: ${cleanUrlJasaCuttingBetonPost}`);
-    return;
-  }
-  
-  // Menemukan elemen
+  console.log('[jasa-cutting-beton-post] 🚀 Execute — URL cocok: ' + cleanUrlJasaCuttingBetonPost);
+   
+  // Cek elemen DOM
   var JasaKonsCuttingBetonPost = document.getElementById("JasaKonsCuttingBetonPost");
   if (!JasaKonsCuttingBetonPost) {
-    console.error("elemen Id JasaKonsCuttingBetonPost kondisi terhapus");
+    console.error('[jasa-cutting-beton-post] ❌ elemen Id JasaKonsCuttingBetonPost kondisi terhapus');
     return;
   }
-  
-  var JasaKonstruksiCuttingBetonPostLink = document.getElementById("JasaKonstruksiCuttingBetonPost");
-  var JasaCuttingBetonPostLink = document.getElementById("JasaCuttingBetonPost");
-  var JasaPematanganLahanPostLink = document.getElementById("JasaPematanganLahanPost");
-  var JasaUjiTanahPostLink = document.getElementById("JasaUjiTanahPost");
-  
-  var JasaPemotonganBukitLahanPostLink = document.getElementById("JasaPemotonganBukitLahanPost");
-  var JasaPengupasanLahanTanahPostLink = document.getElementById("JasaPengupasanLahanTanahPost");
-  var JasaTebangPohonPostLink = document.getElementById("JasaTebangPohonPost");
-  var JasaPerataandanGradingLahanPostLink = document.getElementById("JasaPerataandanGradingLahanPost");
-  var JasaElevasiLahanPostLink = document.getElementById("JasaElevasiLahanPost");
-  var JasaBadanLahanPostLink = document.getElementById("JasaBadanLahanPost");
-  var JasaCutandFillLahanPostLink = document.getElementById("JasaCutandFillLahanPost");
-  var JasaUruganTanahLahanPostLink = document.getElementById("JasaUruganTanahLahanPost");
-  var JasaPemadatanTanahLahanPostLink = document.getElementById("JasaPemadatanTanahLahanPost");
-  var JasaBaseCourseLahanPostLink = document.getElementById("JasaBaseCourseLahanPost");
-  var JasaStabilisasiTanahLahanPostLink = document.getElementById("JasaStabilisasiTanahLahanPost");
-  var JasaDrainaseLahanPostLink = document.getElementById("JasaDrainaseLahanPost");
-  var JasaGeotekstilLahanPostLink = document.getElementById("JasaGeotekstilLahanPost");
-  var JasaPersiapanPondasiLahanPostLink = document.getElementById("JasaPersiapanPondasiLahanPost");
-  
-  var JasaCptPostLink = document.getElementById("JasaCptPost");
-  var JasaBoringTanahPostLink = document.getElementById("JasaBoringTanahPost");
-  var JasaLabTanahPostLink = document.getElementById("JasaLabTanahPost");
-  var JasaUjiPenetrasiPostLink = document.getElementById("JasaUjiPenetrasiPost");
-  var JasaSondirPostLink = document.getElementById("JasaSondirPost");
-  
-  var pageNameJasaKonsCuttingBetonPost = document.getElementById("pageNameJasaKonsCuttingBetonPost");
-  
-  // Default sembunyikan
-  if (JasaKonstruksiCuttingBetonPostLink) JasaKonstruksiCuttingBetonPostLink.style.visibility = 'hidden';
-  if (JasaCuttingBetonPostLink) JasaCuttingBetonPostLink.style.visibility = 'hidden';
-  if (pageNameJasaKonsCuttingBetonPost) pageNameJasaKonsCuttingBetonPost.textContent = "";
-  
+
   // ═══════════════════════════════════════════════════════════════
-  // EKSEKUSI BREADCRUMB (26 cluster — masing-masing dengan breadcrumb berbeda)
+  // EKSEKUSI BREADCRUMB (26 cluster)
   // ═══════════════════════════════════════════════════════════════
-  
-  // ─── Cluster 1: Jasa Saluran Drainase ───
+
+  // Cluster 1: Jasa Saluran Drainase
   if (urlMappingJasaSaluraDrainaseFromMoneyMasterMoneyChild[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaSaluraDrainaseFromMoneyMasterMoneyChild,
@@ -537,8 +457,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 2: Jasa Cutting Beton (Panduan) ───
+
+  // Cluster 2: Jasa Cutting Beton (Panduan)
   if (urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaCuttingBetonFromMoneyMasterMoneyPage,
@@ -552,8 +472,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 3: Harga Jasa Cutting Beton (Money Page) ───
+
+  // Cluster 3: Harga Jasa Cutting Beton (Money Page)
   if (urlMappingHargaJasaCuttingBetonFromMoneyMasterMoneyPage[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingHargaJasaCuttingBetonFromMoneyMasterMoneyPage,
@@ -567,8 +487,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 4: Harga Jasa Cutting Beton (Money Child) ───
+
+  // Cluster 4: Harga Jasa Cutting Beton (Money Child)
   if (urlMappingHargaJasaCuttingBetonFromMoneyMasterMoneyChild[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingHargaJasaCuttingBetonFromMoneyMasterMoneyChild,
@@ -582,10 +502,10 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 5: Jasa Sondir Tanah ───
+
+  // Cluster 5: Jasa Sondir Tanah
   if (urlMappingJasaSondirTanahFromMoneyMaster1MoneyPage[cleanUrlJasaCuttingBetonPost]) {
-    generateBreadcrumbJasaKonstruksi(
+    generateBreadcrumbShared(
       urlMappingJasaSondirTanahFromMoneyMaster1MoneyPage,
       cleanUrlJasaCuttingBetonPost,
       [
@@ -598,10 +518,10 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 6: Jasa CPT Tanah (Money Page) ───
+
+  // Cluster 6: Jasa CPT Tanah (Money Page)
   if (urlMappingJasaCptTanahFromMoneyMaster1MoneyPage[cleanUrlJasaCuttingBetonPost]) {
-    generateBreadcrumbJasaKonstruksi(
+    generateBreadcrumbShared(
       urlMappingJasaCptTanahFromMoneyMaster1MoneyPage,
       cleanUrlJasaCuttingBetonPost,
       [
@@ -614,10 +534,10 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 7: Jasa CPT Tanah (Money Child) ───
+
+  // Cluster 7: Jasa CPT Tanah (Money Child)
   if (urlMappingJasaCptTanahFromMoneyMaster1MoneyChild[cleanUrlJasaCuttingBetonPost]) {
-    generateBreadcrumbJasaKonstruksi(
+    generateBreadcrumbShared(
       urlMappingJasaCptTanahFromMoneyMaster1MoneyChild,
       cleanUrlJasaCuttingBetonPost,
       [
@@ -630,10 +550,10 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 8: Jasa Boring Tanah ───
+
+  // Cluster 8: Jasa Boring Tanah
   if (urlMappingJasaBoringTanahFromMoneyMaster1MoneyPage[cleanUrlJasaCuttingBetonPost]) {
-    generateBreadcrumbJasaKonstruksi(
+    generateBreadcrumbShared(
       urlMappingJasaBoringTanahFromMoneyMaster1MoneyPage,
       cleanUrlJasaCuttingBetonPost,
       [
@@ -646,10 +566,10 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 9: Jasa Lab Tanah ───
+
+  // Cluster 9: Jasa Lab Tanah
   if (urlMappingJasaLabTanahFromMoneyMaster1MoneyPage[cleanUrlJasaCuttingBetonPost]) {
-    generateBreadcrumbJasaKonstruksi(
+    generateBreadcrumbShared(
       urlMappingJasaLabTanahFromMoneyMaster1MoneyPage,
       cleanUrlJasaCuttingBetonPost,
       [
@@ -662,10 +582,10 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 10: Jasa Uji Penetrasi (SPT) ───
+
+  // Cluster 10: Jasa Uji Penetrasi (SPT)
   if (urlMappingJasaUjiPenetrasiFromMoneyMaster1MoneyPage[cleanUrlJasaCuttingBetonPost]) {
-    generateBreadcrumbJasaKonstruksi(
+    generateBreadcrumbShared(
       urlMappingJasaUjiPenetrasiFromMoneyMaster1MoneyPage,
       cleanUrlJasaCuttingBetonPost,
       [
@@ -678,8 +598,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 11: Jasa Pematangan Lahan ───
+
+  // Cluster 11: Jasa Pematangan Lahan
   if (urlMappingJasaPematanganLahanFromMoneyMasterMoneyChild[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaPematanganLahanFromMoneyMasterMoneyChild,
@@ -693,8 +613,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 12: Jasa Pemotongan Bukit Lahan ───
+
+  // Cluster 12: Jasa Pemotongan Bukit Lahan
   if (urlMappingJasaPemotonganBukitLahanFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaPemotonganBukitLahanFromMoneyPageMoneyPage1,
@@ -709,8 +629,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 13: Jasa Pengupasan Lahan Tanah ───
+
+  // Cluster 13: Jasa Pengupasan Lahan Tanah
   if (urlMappingJasaPengupasanLahanTanahFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaPengupasanLahanTanahFromMoneyPageMoneyPage1,
@@ -725,8 +645,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 14: Jasa Tebang Pohon ───
+
+  // Cluster 14: Jasa Tebang Pohon
   if (urlMappingJasaTebangPohonPematanganLahanFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaTebangPohonPematanganLahanFromMoneyPageMoneyPage1,
@@ -741,8 +661,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 15: Jasa Perataan dan Grading Lahan ───
+
+  // Cluster 15: Jasa Perataan dan Grading Lahan
   if (urlMappingJasaPerataandanGradingLahanFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaPerataandanGradingLahanFromMoneyPageMoneyPage1,
@@ -757,8 +677,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 16: Jasa Elevasi Lahan ───
+
+  // Cluster 16: Jasa Elevasi Lahan
   if (urlMappingJasaPekerjaanElevasiLahanFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaPekerjaanElevasiLahanFromMoneyPageMoneyPage1,
@@ -773,8 +693,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 17: Jasa Pembentukan Badan Lahan ───
+
+  // Cluster 17: Jasa Pembentukan Badan Lahan
   if (urlMappingJasaPembentukanBadanLahanFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaPembentukanBadanLahanFromMoneyPageMoneyPage1,
@@ -789,8 +709,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 18: Jasa Cut and Fill Lahan ───
+
+  // Cluster 18: Jasa Cut and Fill Lahan
   if (urlMappingJasaCutandFillLahanFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaCutandFillLahanFromMoneyPageMoneyPage1,
@@ -805,8 +725,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 19: Jasa Urugan Tanah Lahan ───
+
+  // Cluster 19: Jasa Urugan Tanah Lahan
   if (urlMappingJasaUruganTanahLahanFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaUruganTanahLahanFromMoneyPageMoneyPage1,
@@ -821,8 +741,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 20: Jasa Pemadatan Tanah Lahan ───
+
+  // Cluster 20: Jasa Pemadatan Tanah Lahan
   if (urlMappingJasaPemadatanTanahLahanFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaPemadatanTanahLahanFromMoneyPageMoneyPage1,
@@ -837,8 +757,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 21: Jasa Pembersihan Lahan ───
+
+  // Cluster 21: Jasa Pembersihan Lahan
   if (urlMappingJasaPembersihanLahanPematanganFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaPembersihanLahanPematanganFromMoneyPageMoneyPage1,
@@ -853,8 +773,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 22: Jasa Base Course Lahan ───
+
+  // Cluster 22: Jasa Base Course Lahan
   if (urlMappingJasaBaseCourseLahanFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaBaseCourseLahanFromMoneyPageMoneyPage1,
@@ -869,8 +789,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 23: Jasa Stabilisasi Tanah Lahan ───
+
+  // Cluster 23: Jasa Stabilisasi Tanah Lahan
   if (urlMappingJasaStabilisasiTanahLahanFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaStabilisasiTanahLahanFromMoneyPageMoneyPage1,
@@ -885,8 +805,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 24: Jasa Drainase Lahan ───
+
+  // Cluster 24: Jasa Drainase Lahan
   if (urlMappingJasaPemasanganDrainaseLahanFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaPemasanganDrainaseLahanFromMoneyPageMoneyPage1,
@@ -901,8 +821,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 25: Jasa Geotekstil Lahan ───
+
+  // Cluster 25: Jasa Geotekstil Lahan
   if (urlMappingJasaPemasanganGeotekstilLahanFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaPemasanganGeotekstilLahanFromMoneyPageMoneyPage1,
@@ -917,8 +837,8 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
-  // ─── Cluster 26: Jasa Persiapan Pondasi Lahan ───
+
+  // Cluster 26: Jasa Persiapan Pondasi Lahan
   if (urlMappingJasaPersiapanPondasiLahanFromMoneyPageMoneyPage1[cleanUrlJasaCuttingBetonPost]) {
     generateBreadcrumbShared(
       urlMappingJasaPersiapanPondasiLahanFromMoneyPageMoneyPage1,
@@ -933,7 +853,17 @@ document.addEventListener("DOMContentLoaded", function() {
       'JASA_KONSTRUKSI'
     );
   }
-  
+
   console.log('[jasa-cutting-beton-post] ✅ SEMUA CLUSTER DIPROSES');
-  
-});
+}
+
+// ═══════════════════════════════════════════════════════════════
+// 🔥 FIX v2.1.0 — Handle DOMContentLoaded race condition
+// ═══════════════════════════════════════════════════════════════
+if (document.readyState === 'loading') {
+  console.log('[jasa-cutting-beton-post] ⏳ DOM masih loading, tunggu DOMContentLoaded');
+  document.addEventListener("DOMContentLoaded", initJasaCuttingBetonPost);
+} else {
+  console.log('[jasa-cutting-beton-post] ⚡ DOM sudah siap, langsung execute');
+  initJasaCuttingBetonPost();
+}
