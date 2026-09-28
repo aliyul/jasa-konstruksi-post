@@ -379,7 +379,7 @@ const urlMappingJasaPerkerasanJalanKerikilPost = {
 };
 
 // Menyimpan elemen yang dihapus dalam variabel
-var removedElementsJasaJalanPerkerasanKonsPost = {};
+let removedElementsJasaJalanPerkerasanKonsPost = {};
 // Fungsi untuk menghapus elemen berdasarkan ID
 function removeCondition(conditionId) {
     const conditionElement = document.getElementById(conditionId);
