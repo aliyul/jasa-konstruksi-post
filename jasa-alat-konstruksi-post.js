@@ -919,17 +919,6 @@ function initJasaKonsAlatKonstruksiPost() {
     // ────────────────────────────────────────────────────────────
     // [BAGIAN 4.1] SEMUA IF BREADCRUMB
     // ────────────────────────────────────────────────────────────
-    // ⚠️ CATATAN: Karena bagian ini ~600 baris, saya bagi jadi
-    // 3 sub-bagian: 3B (JASA), 3C (SEWA PROYEK), 3D (SEWA ALAT BERAT & RINGAN)
-    // Semua if breadcrumb WAJIB ada di dalam function initJasaKonsAlatKonstruksiPost()
-    // ────────────────────────────────────────────────────────────
-
-    // [SEMUA IF BREADCRUMB DARI TAHAP 3B, 3C, 3D DITARUH DI SINI]
-
-    console.log('[jasa-alat-konstruksi-post] ✅ Semua breadcrumb selesai diproses');
-}
-
-    // ────────────────────────────────────────────────────────────
     // [BAGIAN 4.1] JASA INSTALASI LISTRIK
     // ────────────────────────────────────────────────────────────
     if (urlMappingJasaInstalasiListrikFromMoneyMasterMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
