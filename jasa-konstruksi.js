@@ -1969,7 +1969,7 @@ console.log('[jasa-kons] 📄 File loaded, waiting for DOM...');
   console.log('[jasa-kons] 🔍 Check URL: ' + cleanUrl);
   
   // Kumpulkan semua mapping ke array (TANPA Object.assign)
-  var ALL_MAPPINGS_MERGED = [
+  var ALL_MAPPINGS = [
     urlMappingJasaDesainFromPillarSub2,
     urlMappingJasaDesainFromSub2Sub1,
     urlMappingJasaDesainFromSub1MoneyMaster,
