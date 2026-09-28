@@ -1,2198 +1,532 @@
-
 // ============================================================
-// 🔍 ENTITY TYPE: JASA (Struktur Konstruksi)
-// ATURAN: JASA TIDAK BOLEH MENGGUNAKAN MONEY_MASTER
-// ✅ Gunakan: MONEY_PAGE (Komersial 60% + Transaksional 40%)
-// ❌ Dilarang: MONEY_MASTER untuk JASA
+// 🔍 ENTITY TYPE: JASA (Struktur Konstruksi) — PILLAR PAGE
+// v2.0.0 — Fix Duplikasi + Early Exit Guard + Slug Fix
 // ============================================================
 
-// ============================================================
-// JASA STRUKTUR (SUB2 - LEVEL 2)
-// Parent: Jasa Struktur Konstruksi (/p/jasa-struktur-konstruksi.html)
-// ============================================================
+console.log('[jasa-konstruksi-struktur] 📄 File loaded, waiting for DOM...');
+
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN 1] DEFINISI SEMUA MAPPING
+// ═══════════════════════════════════════════════════════════
 
 // ============================================================
-// [SUB2] - Jasa Konstruksi Gedung & Hunian (Turunan dari Jasa Struktur Konstruksi)
+// 📁 JASA KONSTRUKSI BANGUNAN (MONEY_MASTER)
 // ============================================================
-
 const urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage = {
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html": "Jasa Konstruksi Gedung dan Hunian",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah-tinggal.html": "Jasa Konstruksi Rumah Tinggal",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-ruko-dan-kios.html": "Jasa Konstruksi Ruko dan Kios",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-villa-modern.html": "Jasa Konstruksi Villa Modern",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-apartemen-mewah.html": "Jasa Konstruksi Apartemen Mewah",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-hotel-bintang.html": "Jasa Konstruksi Hotel Bintang",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-perkantoran.html": "Jasa Konstruksi Gedung Perkantoran",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-sekolah.html": "Jasa Konstruksi Gedung Sekolah",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-rs.html": "Jasa Konstruksi Gedung Rumah Sakit",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-industri-dan-gudang.html": "Jasa Konstruksi Industri dan Gudang",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-gudang-logistik.html": "Jasa Konstruksi Gudang Logistik",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-pabrik-industri.html": "Jasa Konstruksi Pabrik Industri",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-cold-storage-modern.html": "Jasa Konstruksi Cold Storage Modern",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-bengkel-modern.html": "Jasa Konstruksi Bengkel Modern",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-workshop-modern.html": "Jasa Konstruksi Workshop Modern"
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-dan-hunian.html": "Jasa Konstruksi Gedung dan Hunian",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah-tinggal.html": "Jasa Konstruksi Rumah Tinggal",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-ruko-dan-kios.html": "Jasa Konstruksi Ruko dan Kios",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-villa-modern.html": "Jasa Konstruksi Villa Modern",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-apartemen-mewah.html": "Jasa Konstruksi Apartemen Mewah",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-hotel-bintang.html": "Jasa Konstruksi Hotel Bintang",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-perkantoran.html": "Jasa Konstruksi Gedung Perkantoran",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-sekolah.html": "Jasa Konstruksi Gedung Sekolah",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-rs.html": "Jasa Konstruksi Gedung Rumah Sakit",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-industri-dan-gudang.html": "Jasa Konstruksi Industri dan Gudang",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-gudang-logistik.html": "Jasa Konstruksi Gudang Logistik",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-pabrik-industri.html": "Jasa Konstruksi Pabrik Industri",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-cold-storage-modern.html": "Jasa Konstruksi Cold Storage Modern",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-bengkel-modern.html": "Jasa Konstruksi Bengkel Modern",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-workshop-modern.html": "Jasa Konstruksi Workshop Modern"
 };
-//KonstruksiStruktur
+
+// ============================================================
+// 📁 JASA KONSTRUKSI STRUKTUR (MONEY_MASTER)
+// ============================================================
 const urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html": "Jasa Struktur Baja dan Rangka Ringan",
-  "https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html": "Jasa Struktur Beton dan Pengecoran",
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html": "Jasa Konstruksi Modular dan Precast"
+    "https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html": "Jasa Struktur Baja dan Rangka Ringan",
+    "https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html": "Jasa Struktur Beton dan Pengecoran",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html": "Jasa Konstruksi Modular dan Precast"
 };
 
+// ============================================================
+// 📁 JASA STRUKTUR BAJA DAN RANGKA RINGAN (MONEY_PAGE)
+// ============================================================
 const urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1 = {
-  // ============================================================
-// 📌 MONEY-PAGE (MP) DI BAWAH JASA KONSTRUKSI STRUKTUR (BAJA)
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html": "Jasa Konstruksi Baja Ringan",
-"https://www.betonjayareadymix.com/p/jasa-rangka-atap-baja-ringan.html": "Jasa Rangka Atap Baja Ringan",
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-konvensional.html": "Jasa Konstruksi Baja Konvensional",
-"https://www.betonjayareadymix.com/p/jasa-kanopi-baja-dan-besi.html": "Jasa Kanopi Baja dan Besi",
-"https://www.betonjayareadymix.com/p/jasa-struktur-baja-gudang.html": "Jasa Struktur Baja Gudang"
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html": "Jasa Konstruksi Baja Ringan",
+    "https://www.betonjayareadymix.com/p/jasa-rangka-atap-baja-ringan.html": "Jasa Rangka Atap Baja Ringan",
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-konvensional.html": "Jasa Konstruksi Baja Konvensional",
+    "https://www.betonjayareadymix.com/p/jasa-kanopi-baja-dan-besi.html": "Jasa Kanopi Baja dan Besi",
+    "https://www.betonjayareadymix.com/p/jasa-struktur-baja-gudang.html": "Jasa Struktur Baja Gudang"
 };
+
+// ============================================================
+// 📁 JASA KONSTRUKSI BAJA RINGAN (MONEY_PAGE)
+// ============================================================
 const urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2 = {
-  // ============================================================
-// 📌 MONEY-PAGE (MP) DI BAWAH JASA KONSTRUKSI STRUKTUR (BAJA)
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-pasang-baja-ringan.html": "Jasa Pasang Baja Ringan"
+    "https://www.betonjayareadymix.com/p/jasa-pasang-baja-ringan.html": "Jasa Pasang Baja Ringan"
 };
 
+// ============================================================
+// 📁 JASA STRUKTUR BETON DAN PENGECORAN (MONEY_PAGE)
+// ============================================================
 const urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1 = {
-  // ============================================================
-// 📌 MONEY-PAGE (MP) DI BAWAH JASA KONSTRUKSI STRUKTUR (BETON)
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-rabat-beton.html": "Jasa Rabat Beton",
-"https://www.betonjayareadymix.com/p/jasa-gelar-beton.html": "Jasa Gelar Beton",
-"https://www.betonjayareadymix.com/p/jasa-cor-tiang-beton.html": "Jasa Cor Tiang Beton",
-"https://www.betonjayareadymix.com/p/jasa-cor-ring-balok.html": "Jasa Cor Ring Balok",
-"https://www.betonjayareadymix.com/p/jasa-sloof-beton.html": "Jasa Sloof Beton",
-"https://www.betonjayareadymix.com/p/jasa-cor-beton-ready-mix.html": "Jasa Cor Beton Ready Mix",
-"https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-dak.html": "Jasa Pengecoran Lantai Dak",
-"https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-gudang.html": "Jasa Pengecoran Lantai Gudang",
-"https://www.betonjayareadymix.com/p/jasa-bekisting-dan-pembesian.html": "Jasa Bekisting dan Pembesian",
-"https://www.betonjayareadymix.com/p/jasa-pengecoran-kolom-beton.html": "Jasa Pengecoran Kolom Beton"
+    "https://www.betonjayareadymix.com/p/jasa-rabat-beton.html": "Jasa Rabat Beton",
+    "https://www.betonjayareadymix.com/p/jasa-gelar-beton.html": "Jasa Gelar Beton",
+    "https://www.betonjayareadymix.com/p/jasa-cor-tiang-beton.html": "Jasa Cor Tiang Beton",
+    "https://www.betonjayareadymix.com/p/jasa-cor-ring-balok.html": "Jasa Cor Ring Balok",
+    "https://www.betonjayareadymix.com/p/jasa-sloof-beton.html": "Jasa Sloof Beton",
+    "https://www.betonjayareadymix.com/p/jasa-cor-beton-ready-mix.html": "Jasa Cor Beton Ready Mix",
+    "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-dak.html": "Jasa Pengecoran Lantai Dak",
+    "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-gudang.html": "Jasa Pengecoran Lantai Gudang",
+    "https://www.betonjayareadymix.com/p/jasa-bekisting-dan-pembesian.html": "Jasa Bekisting dan Pembesian",
+    "https://www.betonjayareadymix.com/p/jasa-pengecoran-kolom-beton.html": "Jasa Pengecoran Kolom Beton"
 };
-const urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1 = {
-// ============================================================
-// 📌 MONEY-PAGE (MP) DI BAWAH JASA KONSTRUKSI STRUKTUR (MODULAR & PRECAST)
-// ============================================================
 
-"https://www.betonjayareadymix.com/p/jasa-panel-beton-precast.html": "Jasa Panel Beton Precast",
-"https://www.betonjayareadymix.com/p/jasa-dinding-precast-bangunan.html": "Jasa Dinding Precast Bangunan",
-"https://www.betonjayareadymix.com/p/jasa-tangga-beton-precast.html": "Jasa Tangga Beton Precast",
-"https://www.betonjayareadymix.com/p/jasa-balok-dan-sloof-precast.html": "Jasa Balok dan Sloof Precast",
-"https://www.betonjayareadymix.com/p/jasa-toilet-modular-prefab.html": "Jasa Toilet Modular Prefab",
-"https://www.betonjayareadymix.com/p/jasa-rumah-modular-prefab.html": "Jasa Rumah Modular Prefab"
-};
 // ============================================================
-// [SUB2] - Jasa Struktur Khusus (Turunan dari Jasa Konstruksi Struktur )
+// 📁 JASA KONSTRUKSI MODULAR DAN PRECAST (MONEY_PAGE)
+// ============================================================
+const urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1 = {
+    "https://www.betonjayareadymix.com/p/jasa-panel-beton-precast.html": "Jasa Panel Beton Precast",
+    "https://www.betonjayareadymix.com/p/jasa-dinding-precast-bangunan.html": "Jasa Dinding Precast Bangunan",
+    "https://www.betonjayareadymix.com/p/jasa-tangga-beton-precast.html": "Jasa Tangga Beton Precast",
+    "https://www.betonjayareadymix.com/p/jasa-balok-dan-sloof-precast.html": "Jasa Balok dan Sloof Precast",
+    "https://www.betonjayareadymix.com/p/jasa-toilet-modular-prefab.html": "Jasa Toilet Modular Prefab",
+    "https://www.betonjayareadymix.com/p/jasa-rumah-modular-prefab.html": "Jasa Rumah Modular Prefab"
+};
+
+// ============================================================
+// 📁 JASA STRUKTUR KHUSUS (MONEY_MASTER)
 // ============================================================
 const urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1 = {
-"https://www.betonjayareadymix.com/p/jasa-kolam-renang.html": "Jasa Kolam Renang",
-"https://www.betonjayareadymix.com/p/jasa-kolam-ikan.html": "Jasa Kolam Ikan",
-"https://www.betonjayareadymix.com/p/jasa-septic-tank.html": "Jasa Septic Tank",
-"https://www.betonjayareadymix.com/p/jasa-tangki-air.html": "Jasa Tangki Air",
-"https://www.betonjayareadymix.com/p/jasa-bak-penampungan.html": "Jasa Bak Penampungan",
-"https://www.betonjayareadymix.com/p/jasa-menara-air.html": "Jasa Menara Air"
+    "https://www.betonjayareadymix.com/p/jasa-kolam-renang.html": "Jasa Kolam Renang",
+    "https://www.betonjayareadymix.com/p/jasa-kolam-ikan.html": "Jasa Kolam Ikan",
+    "https://www.betonjayareadymix.com/p/jasa-septic-tank.html": "Jasa Septic Tank",
+    "https://www.betonjayareadymix.com/p/jasa-tangki-air.html": "Jasa Tangki Air",
+    "https://www.betonjayareadymix.com/p/jasa-bak-penampungan.html": "Jasa Bak Penampungan",
+    "https://www.betonjayareadymix.com/p/jasa-menara-air.html": "Jasa Menara Air"
 };
+
+// ============================================================
+// 📁 JASA KOLAM RENANG (MONEY_PAGE)
+// ============================================================
 const urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage = {
-
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html": "Jasa Pembuatan Kolam Renang",
-	"https://www.betonjayareadymix.com/p/jasa-renovasi-kolam-renang.html": "Jasa Renovasi Kolam Renang",
-	"https://www.betonjayareadymix.com/p/jasa-perawatan-kolam-renang.html": "Jasa Perawatan Kolam Renang",
-	"https://www.betonjayareadymix.com/p/kontraktor-kolam-renang.html": "Kontraktor Kolam Renang"
-	
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html": "Jasa Pembuatan Kolam Renang",
+    "https://www.betonjayareadymix.com/p/jasa-renovasi-kolam-renang.html": "Jasa Renovasi Kolam Renang",
+    "https://www.betonjayareadymix.com/p/jasa-perawatan-kolam-renang.html": "Jasa Perawatan Kolam Renang",
+    "https://www.betonjayareadymix.com/p/kontraktor-kolam-renang.html": "Kontraktor Kolam Renang"
 };
+
+// ============================================================
+// 📁 JASA KOLAM IKAN (MONEY_PAGE)
+// ============================================================
 const urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage = {
-
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-ikan-koi.html": "Jasa Pembuatan Kolam Ikan Koi"
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-ikan-koi.html": "Jasa Pembuatan Kolam Ikan Koi"
 };
+
+// ============================================================
+// 📁 JASA SEPTIC TANK (MONEY_PAGE)
+// ============================================================
 const urlMappingJasaSepticTankFromMoneyMaster1MoneyPage = {
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank.html": "Jasa Pembuatan Septic Tank",
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-septic-tank.html": "Jasa Perbaikan Septic Tank",
-"https://www.betonjayareadymix.com/p/jasa-sedot-septic-tank.html": "Jasa Sedot Septic Tank"
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank.html": "Jasa Pembuatan Septic Tank",
+    "https://www.betonjayareadymix.com/p/jasa-perbaikan-septic-tank.html": "Jasa Perbaikan Septic Tank",
+    "https://www.betonjayareadymix.com/p/jasa-sedot-septic-tank.html": "Jasa Sedot Septic Tank"
 };
+
+// ============================================================
+// 📁 JASA PEMBUATAN SEPTIC TANK (MONEY_PAGE)
+// ============================================================
 const urlMappingJasaPembuatanSepticTankFromMoneyPageMoneyPage1 = {
-"https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-septic-tank.html": "Harga Jasa Pembuatan Septic Tank",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank-beton.html": "Jasa Pembuatan Septic Tank Beton",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank-biofilter.html": "Jasa Pembuatan Septic Tank Biofilter"
+    "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-septic-tank.html": "Harga Jasa Pembuatan Septic Tank",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank-beton.html": "Jasa Pembuatan Septic Tank Beton",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank-biofilter.html": "Jasa Pembuatan Septic Tank Biofilter"
 };
+
+// ============================================================
+// 📁 JASA TANGKI AIR (MONEY_PAGE)
+// ============================================================
 const urlMappingJasaTangkiAirFromMoneyMaster1MoneyPage = {
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-tangki-air.html": "Jasa Pembuatan Tangki Air"
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-tangki-air.html": "Jasa Pembuatan Tangki Air"
 };
+
+// ============================================================
+// 📁 JASA BAK PENAMPUNGAN (MONEY_PAGE)
+// ============================================================
 const urlMappingJasaBakPenampunganFromMoneyMaster1MoneyPage = {
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-bak-penampungan.html": "Jasa Pembuatan Bak Penampungan"
-	
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-bak-penampungan.html": "Jasa Pembuatan Bak Penampungan"
 };
+
+// ============================================================
+// 📁 JASA MENARA AIR (MONEY_PAGE)
+// ============================================================
 const urlMappingJasaMenaraAirFromMoneyMaster1MoneyPage = {
-"https://www.betonjayareadymix.com/p/jasa-konstruksi-menara-air.html": "Jasa Konstruksi Menara Air"
+    "https://www.betonjayareadymix.com/p/jasa-konstruksi-menara-air.html": "Jasa Konstruksi Menara Air"
 };
 
 // ============================================================
-// [SUB2] - Jasa Konstruksi Lapangan Olahraga (Turunan dari Jasa Struktur Konstruksi)
+// 📁 JASA PEMBUATAN LAPANGAN OLAHRAGA (MONEY_PAGE)
 // ============================================================
-
 const urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1 = {
-// ============================================================
-// 📌 MONEY-PAGE (MP) DI BAWAH JASA KONSTRUKSI LAPANGAN OLAHRAGA
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-futsal.html": "Jasa Pembuatan Lapangan Futsal",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-basket.html": "Jasa Pembuatan Lapangan Basket",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-sepakbola.html": "Jasa Pembuatan Lapangan Sepakbola",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-voli.html": "Jasa Pembuatan Lapangan Voli",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-tenis.html": "Jasa Pembuatan Lapangan Tenis",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-badminton.html": "Jasa Pembuatan Lapangan Badminton",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-serbaguna.html": "Jasa Pembuatan Lapangan Serbaguna"
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-futsal.html": "Jasa Pembuatan Lapangan Futsal",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-basket.html": "Jasa Pembuatan Lapangan Basket",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-sepakbola.html": "Jasa Pembuatan Lapangan Sepakbola",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-voli.html": "Jasa Pembuatan Lapangan Voli",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-tenis.html": "Jasa Pembuatan Lapangan Tenis",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-badminton.html": "Jasa Pembuatan Lapangan Badminton",
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-serbaguna.html": "Jasa Pembuatan Lapangan Serbaguna"
 };
 
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN 2] EARLY EXIT — PENDEKATAN C (Guard Flag)
+// ═══════════════════════════════════════════════════════════
 
-// ============================================================
-// 🔴 REDIRECT NOTES - JASA STRUKTUR
-// ============================================================
-/*
-🧠 SEO CANNIBAL FIX:
+(function() {
+    'use strict';
 
-| No | From URL | To URL | Type | Alasan SEO |
-|----|----------|--------|------|------------|
-| 1 | /p/jasa-konstruksi-baja-rumah.html | /p/jasa-struktur-baja-dan-rangka-ringan.html | 301 | Duplikasi intent, gabung ke SUB2 master |
-| 2 | /p/jasa-bangunan-rumah-tinggal.html | /p/jasa-konstruksi-rumah-tinggal.html | 301 | Redirect ke URL yang sudah ada |
+    var cleanUrl = window.location.href.split(/[?#]/)[0];
+    console.log('[jasa-konstruksi-struktur] 🔍 Check URL: ' + cleanUrl);
 
-✅ SEMUA URL di atas sudah diperbaiki: MONEY_MASTER → MONEY_PAGE
-✅ MONEY_MASTER TIDAK BOLEH digunakan untuk ENTITY JASA
-✅ Aman untuk SEO - tidak melanggar aturan EEAT
-*/
-
-// ============================================================
-// 📋 RINGKASAN PERUBAHAN (SEBELUM vs SESUDAH)
-// ============================================================
-/*
-SEBELUM (SALAH)                      | SESUDAH (BENAR)
---------------------------------------|-------------------------------------
-MONEY_MASTER untuk semua Jasa Struktur| MONEY_PAGE untuk semua Jasa Struktur
-TYPE: MONEY_MASTER                    | TYPE: MONEY_PAGE
-
-✅ ENTITY TYPE: JASA - semua halaman di atas menggunakan MONEY_PAGE
-❌ MONEY_MASTER tidak diperbolehkan untuk JASA
-✅ MONEY_PAGE adalah type yang benar untuk JASA (Komersial 60% + Transaksional 40%)
-*/
-/*
-
-/**
- * ============================================================
- * generateBreadcrumbJasaKonstruksi v12.3.2
- * FIXED: PARENT TERDEKAT WAJIB AMBIL POSISI TERAKHIR (v12.3.2)
- * FIXED: TANPA SKIP APAPUN LEVEL DAN SCORE
- * FIXED: TIDAK ADA FILTER LEVEL UNTUK PARENT
- * FIXED: SINKRON DENGAN PLD v22.25
- * FIXED: COMMERCIAL INTENT OVERRIDE (jual/beli/sewa/rental)
- * FIXED: Filter stopwords & location untuk deteksi
- * FIXED: VARIANT detection lebih akurat
- * FIXED: PILLAR HANYA NAMA YANG SUDAH DITENTUKAN
- * FIXED: HIERARCHY WAJIB: PILLAR → SP2 → SP1 → MM → MP → MC → VARIANT
- * FIXED: SyntaxError pada template literal (v12.3.1)
- * ============================================================
- *
- * ✅ UPDATE v12.3.2
- * ------------------------------------------------------------
- * - FIX: Parent terdekat WAJIB ambil dari posisi terakhir
- * - FIX: TANPA SKIP apapun level dan score
- * - FIX: Hapus semua filter level dan scoring
- * - FIX: Urutkan items berdasarkan posisi descending
- * - FIX: Ambil item pertama yang bukan current page
- * - FIX: Entity pillar sebagai fallback terakhir
- *
- * ============================================================
- * @version 12.3.2
- * @date 2026-08-26
- * ============================================================
- */
-/*
-function generateBreadcrumbShared(
-    mappingObj,
-    currentUrl,
-    breadcrumbItems = [],
-    entityType = 'PRODUK_KONSTRUKSI'
-) {
-
-    // ============================================================
-    // 1. GLOBAL CONFIG
-    // ============================================================
-
-    const CONFIG = {
-        DOMAIN: 'https://www.betonjayareadymix.com',
-        DEBUG: true,
-        CURRENT_YEAR: new Date().getFullYear()
-    };
-
-    // ============================================================
-    // 2. LOGGER
-    // ============================================================
-
-    function log(message, type = 'INFO') {
-        if (!CONFIG.DEBUG && type === 'INFO') return;
-        const icons = { 
-            INFO: '📘', 
-            SUCCESS: '✅', 
-            WARN: '⚠️', 
-            ERROR: '❌', 
-            DEBUG: '🔍', 
-            VARIANT: '🔬', 
-            PARENT: '👪', 
-            URL: '🔗',
-            SCORE: '🎯',
-            CLEAN: '🧹',
-            SKIP: '⏭️',
-            PLD: '🔄',
-            HIERARCHY: '🏛️',
-            COMMERCIAL: '🛒',
-            PARENT_FIX: '🔧'
-        };
-        console.log(`${icons[type] || '📘'} [Breadcrumb v12.3.2] ${message}`);
-    }
-
-    // ============================================================
-    // 3. ENTITY NORMALIZATION
-    // ============================================================
-
-    const ENTITY_TYPE_MAP = {
-        'JASA': 'JASA_KONSTRUKSI',
-        'JASA_KONSTRUKSI': 'JASA_KONSTRUKSI',
-        'JASA_DESAIN': 'JASA_DESAIN',
-        'JASA_INTERIOR': 'JASA_KONSTRUKSI',
-        'JASA_DESAIN_INTERIOR': 'JASA_DESAIN',
-        'SEWA': 'SEWA_ALAT_KONSTRUKSI',
-        'RENTAL': 'SEWA_ALAT_KONSTRUKSI',
-        'SEWA_ALAT': 'SEWA_ALAT_KONSTRUKSI',
-        'RENTAL_ALAT': 'SEWA_ALAT_KONSTRUKSI',
-        'SEWA_RENTAL': 'SEWA_ALAT_KONSTRUKSI',
-        'SEWA_ALAT_KONSTRUKSI': 'SEWA_ALAT_KONSTRUKSI',
-        'PRODUK': 'PRODUK_KONSTRUKSI',
-        'PRODUK_KONSTRUKSI': 'PRODUK_KONSTRUKSI',
-        'PRODUK_INTERIOR': 'PRODUK_INTERIOR',
-        'MATERIAL': 'MATERIAL_KONSTRUKSI',
-        'MATERIAL_KONSTRUKSI': 'MATERIAL_KONSTRUKSI',
-        'ARTIKEL': 'ARTIKEL'
-    };
-
-    entityType = ENTITY_TYPE_MAP[entityType] || entityType;
-
-    // ============================================================
-    // 4. VALID ENTITY TYPES
-    // ============================================================
-
-    const VALID_ENTITY_TYPES = [
-        'JASA_KONSTRUKSI',
-        'JASA_DESAIN',
-        'SEWA_ALAT_KONSTRUKSI',
-        'PRODUK_KONSTRUKSI',
-        'PRODUK_INTERIOR',
-        'MATERIAL_KONSTRUKSI',
-        'ARTIKEL'
-    ];
-
-    // ============================================================
-    // 5. VALID LEVELS
-    // ============================================================
-
-    const VALID_LEVELS = [
-        'home', 'pillar', 'sub-pillar-tipe-2', 'sub-pillar-tipe-1',
-        'money-master', 'money-page', 'money-child', 'variant', 'sub-variant'
-    ];
-
-    // ============================================================
-    // 6. HIERARCHY ORDER (WAJIB - TIDAK BOLEH DIUBAH)
-    // ============================================================
-
-    const HIERARCHY_ORDER = [
-        'home',
-        'pillar',
-        'sub-pillar-tipe-2',
-        'sub-pillar-tipe-1',
-        'money-master',
-        'money-page',
-        'money-child',
-        'variant',
-        'sub-variant'
-    ];
-
-    const TYPE_LEVEL_MAP = {
-        'home': 0,
-        'pillar': 1,
-        'sub-pillar-tipe-2': 2,
-        'sub-pillar-tipe-1': 3,
-        'money-master': 4,
-        'money-page': 5,
-        'money-child': 6,
-        'variant': 7,
-        'sub-variant': 8
-    };
-
-    // ============================================================
-    // 7. ENTITY PILLAR NAMES (HANYA INI YANG BISA JADI PILLAR)
-    // ============================================================
-
-    const ENTITY_PILLAR_NAMES = {
-        'JASA_KONSTRUKSI': ['jasa konstruksi'],
-        'JASA_DESAIN': ['jasa desain interior'],
-        'SEWA_ALAT_KONSTRUKSI': ['sewa alat konstruksi', 'rental alat konstruksi'],
-        'PRODUK_KONSTRUKSI': ['produk konstruksi'],
-        'PRODUK_INTERIOR': ['produk interior', 'interior produk'],
-        'MATERIAL_KONSTRUKSI': ['material konstruksi', 'bahan konstruksi'],
-        'ARTIKEL': ['artikel konstruksi', 'blog konstruksi', 'tips konstruksi']
-    };
-
-    // ============================================================
-    // 8. PLD ENTITY MAP
-    // ============================================================
-
-    const PLD_ENTITY_MAP = {
-        'produk': 'PRODUK_KONSTRUKSI',
-        'material': 'MATERIAL_KONSTRUKSI',
-        'jasa': 'JASA_KONSTRUKSI',
-        'desain': 'JASA_DESAIN',
-        'sewa': 'SEWA_ALAT_KONSTRUKSI',
-        'artikel': 'ARTIKEL'
-    };
-
-    // ============================================================
-    // 9. GET PAGE LEVEL FROM PLD (FIX: perbaiki kutip)
-    // ============================================================
-
-    function getPageLevelFromPLD() {
-        const pldVersions = [
-            'pageLevelDetectorv22',
-            'pageLevelDetectorv20', 
-            'pageLevelDetectorv19',
-            'pageLevelDetectorV18',
-            'pageLevelDetectorV17',
-            'pageLevelDetector'
-        ];
-        
-        for (const pldName of pldVersions) {
-            if (window[pldName] && typeof window[pldName].detect === 'function') {
-                try {
-                    const level = window[pldName].detect();
-                    if (level && VALID_LEVELS.includes(level)) {
-                        log(`PLD ${pldName}: "${level}" (${TYPE_LEVEL_MAP[level]})`, 'PLD');
-                        return level;
-                    }
-                } catch(e) {
-                    log(`Error calling ${pldName}: ${e.message}`, 'WARN');
-                }
-            }
-        }
-        
-        const bodyLevel = document.body.getAttribute('data-page-level') || 
-                          document.body.getAttribute('data-schema-page-level');
-        if (bodyLevel && VALID_LEVELS.includes(bodyLevel)) {
-            log(`PLD from body: "${bodyLevel}" (${TYPE_LEVEL_MAP[bodyLevel]})`, 'PLD');
-            return bodyLevel;
-        }
-        
-        log('PLD not available, using fallback', 'WARN');
-        return null;
-    }
-
-    function getEntityTypeFromPLD() {
-        const pldVersions = [
-            'pageLevelDetectorv22',
-            'pageLevelDetectorv20', 
-            'pageLevelDetectorv19',
-            'pageLevelDetectorV18',
-            'pageLevelDetectorV17',
-            'pageLevelDetector'
-        ];
-        
-        for (const pldName of pldVersions) {
-            if (window[pldName] && typeof window[pldName].detectEntityType === 'function') {
-                try {
-                    const entity = window[pldName].detectEntityType();
-                    if (entity && PLD_ENTITY_MAP[entity]) {
-                        log(`PLD Entity: ${entity} → ${PLD_ENTITY_MAP[entity]}`, 'PLD');
-                        return PLD_ENTITY_MAP[entity];
-                    }
-                } catch(e) {
-                    log(`Error getting entity from ${pldName}: ${e.message}`, 'WARN');
-                }
-            }
-        }
-        
-        const bodyEntity = document.body.getAttribute('data-entity-type');
-        if (bodyEntity && PLD_ENTITY_MAP[bodyEntity]) {
-            log(`Entity from body: ${bodyEntity} → ${PLD_ENTITY_MAP[bodyEntity]}`, 'PLD');
-            return PLD_ENTITY_MAP[bodyEntity];
-        }
-        
-        return null;
-    }
-
-    // ============================================================
-    // 10. HELPERS
-    // ============================================================
-
-    function isJasaEntity() { return entityType === 'JASA_KONSTRUKSI'; }
-    function isDesainEntity() { return entityType === 'JASA_DESAIN'; }
-    function isSewaEntity() { return entityType === 'SEWA_ALAT_KONSTRUKSI'; }
-    function isProdukEntity() { return entityType === 'PRODUK_KONSTRUKSI'; }
-    function isMaterialEntity() { return entityType === 'MATERIAL_KONSTRUKSI'; }
-    function isInteriorEntity() { return entityType === 'PRODUK_INTERIOR'; }
-
-    // ============================================================
-    // 11. CLEAN TEXT
-    // ============================================================
-
-    function cleanText(text) {
-        if (!text) return '';
-        return text.replace(/\s+/g, ' ').trim();
-    }
-
-    // ============================================================
-    // 12. CLEAN PAGE NAME FROM URL
-    // ============================================================
-
-    function getCleanPageNameFromUrl(url) {
-        if (!url) return '';
-
-        let path = url;
-        path = path.replace(/^https?:\/\/[^\/]+/i, '');
-        path = path.split('?')[0];
-        path = path.replace(/\.(html|php|asp|jsp)$/i, '');
-        
-        path = path.replace(/\/\d{4}\/\d{2}\/\d{2}\//g, '/');
-        path = path.replace(/\/\d{4}\/\d{2}\//g, '/');
-        path = path.replace(/\/\d{4}\//g, '/');
-        
-        path = path.replace(/^\/p\//, '/');
-        path = path.replace(/\/p\//g, '/');
-        
-        const parts = path.split('/').filter(Boolean);
-        let last = parts.pop() || '';
-        
-        if (!last && parts.length > 0) {
-            last = parts.pop() || '';
-        }
-        
-        last = last.replace(/-/g, ' ');
-        last = last.replace(/[^a-z0-9\s]/gi, '');
-        
-        if (last.length < 3 && parts.length > 0) {
-            const lastTwo = parts.slice(-2).join(' ');
-            if (lastTwo.length > last.length) {
-                last = lastTwo;
-            }
-        }
-        
-        const cleanResult = cleanText(last.toLowerCase());
-        log(`Cleaned URL: "${url}" → "${cleanResult}"`, 'URL');
-        
-        return cleanResult;
-    }
-
-    // ============================================================
-    // 13. SLUGIFY
-    // ============================================================
-
-    function slugify(text) {
-        return cleanText(text)
-            .toLowerCase()
-            .replace(/[^\w\s-]/g, '')
-            .replace(/\s+/g, '-')
-            .replace(/--+/g, '-');
-    }
-
-    // ============================================================
-    // 14. KEYWORDS & FILTERS (SINKRON DENGAN PLD v22.25)
-    // ============================================================
-
-    // COMMERCIAL WORDS - SINKRON DENGAN PLD v22.25
-    const COMMERCIAL_WORDS = ['jual', 'beli', 'sewa', 'rental', 'order', 'pesan', 'pemesanan'];
-
-    // STOPWORDS - SINKRON DENGAN PLD v22.25
-    const STOPWORDS = new Set([
-        'dan', 'atau', 'serta', 'yang', 'dari', 'ke', 'di', 'untuk', 
-        'dengan', 'ini', 'itu', 'akan', 'telah', 'sudah', 'masih',
-        'pada', 'oleh', 'karena', 'sehingga', 'setelah', 'sebelum',
-        'plus', 'minus', 'tanpa', 'sampai', 'hingga', 'sambil'
-    ]);
-
-    // LOCATION WORDS - SINKRON DENGAN PLD v22.25
-    const LOCATION_WORDS = new Set([
-        'jakarta', 'jakarta pusat', 'jakarta barat', 'jakarta selatan', 'jakarta timur', 'jakarta utara',
-        'bogor', 'kota bogor', 'kabupaten bogor',
-        'depok', 'kota depok',
-        'tangerang', 'kota tangerang', 'kota tangerang selatan', 'kabupaten tangerang',
-        'bekasi', 'kota bekasi', 'kabupaten bekasi',
-        'bandung', 'kota bandung', 'kabupaten bandung',
-        'karawang', 'kabupaten karawang',
-        'purwakarta', 'kabupaten purwakarta',
-        'cikarang', 'cikarang barat', 'cikarang pusat', 'cikarang selatan', 'cikarang timur', 'cikarang utara',
-        'subang', 'kabupaten subang',
-        'cirebon', 'kota cirebon', 'kabupaten cirebon',
-        'semarang', 'kota semarang', 'kabupaten semarang',
-        'solo', 'surakarta', 'kota surakarta',
-        'pekalongan', 'tegal', 'magelang', 'sukoharjo', 'boyolali', 'klaten',
-        'jogja', 'yogyakarta', 'kota yogyakarta', 'kabupaten sleman', 'bantul', 'gunungkidul', 'kulon progo',
-        'surabaya', 'kota surabaya',
-        'malang', 'kota malang', 'kabupaten malang',
-        'kediri', 'kota kediri', 'kabupaten kediri',
-        'gresik', 'sidoarjo', 'mojokerto', 'pasuruan', 'probolinggo', 'jember', 'banyuwangi', 'madiun',
-        'medan', 'kota medan',
-        'palembang', 'pekanbaru', 'padang', 'lampung', 'bandar lampung', 'batam', 'tanjungpinang',
-        'aceh', 'banda aceh', 'jambi', 'bengkulu', 'pangkal pinang',
-        'pontianak', 'balikpapan', 'samarinda', 'banjarmasin', 'palangkaraya',
-        'makassar', 'kota makassar',
-        'manado', 'palu', 'kendari', 'gorontalo',
-        'bali', 'kabupaten badung', 'kota denpasar', 'denpasar', 'gianyar', 'tabanan', 'bangli', 'karangasem', 'klungkung', 'buleleng', 'jembrana',
-        'mataram', 'kupang',
-        'terdekat'
-    ]);
-
-    // SP1 KEYWORDS
-    const SP1_KEYWORDS = [
-        'vs', 'versus', 'perbandingan', 'lebih baik', 'kelebihan', 'kekurangan'
-    ];
-
-    // SP2 KEYWORDS
-    const SP2_KEYWORDS = [
-        'jenis', 'kategori', 'daftar', 'macam', 'tipe'
-    ];
-
-    // VARIANT KEYWORDS - SINKRON DENGAN PLD v22.25
-    const VARIANT_KEYWORDS_PRODUK = [
-        'spesifikasi', 'spec', 'detail spesifikasi',
-        'mutu', 'kualitas', 'quality',
-        'ukuran', 'dimensi',
-        'grade', 'type', 'tipe', 'model',
-        'standar', 'merk', 'brand', 'seri'
-    ];
-
-    const VARIANT_KEYWORDS_JASA = [
-        'standar pelayanan', 'sop', 'metode kerja',
-        'prosedur', 'tahapan', 'cara kerja',
-        'durasi', 'waktu pengerjaan', 'garansi',
-        'standar pengerjaan'
-    ];
-
-    const VARIANT_KEYWORDS_SEWA = [
-        'spesifikasi alat', 'kapasitas alat',
-        'spek alat', 'detail alat', 'spesifikasi'
-    ];
-
-    // TECHNICAL SPECS
-    const TECHNICAL_SPECS = ['k225', 'k250', 'k300', 'k350', 'k400', 'k500', 'k600', 'fc', 'm6', 'm8', 'm10', 'm12', 'm16', 'm20', 'b0', 'b1', 'b2', 'b3', 'sni'];
-    
-    const SPECIFIC_MODIFIERS = [
-        'k225', 'k250', 'k300', 'm6', 'm8', 'm10',
-        'diesel', 'hidrolik', 'mini pile', 'sheet pile', 'drop hammer',
-        'breaker', 'long arm', 'vibrator', 'per jam', 'per hari',
-        'per meter', 'per m2', 'terdekat', 'murah', 'kapasitas besar'
-    ];
-
-    // ============================================================
-    // 15. JASA CLEAN FUNCTION
-    // ============================================================
-
-    const JASA_ULTRA_COMMON_WORDS = new Set([
-        'jasa', 'kontraktor', 'tukang', 'borongan', 'renovasi',
-        'pasang', 'bangun', 'perbaikan', 'instalasi', 'proyek',
-        'cor', 'gali', 'urug', 'angkut', 'service', 'servis',
-        'desain'
-    ]);
-
-    const MATERIAL_SPEC_WORDS = new Set([
-        'baja ringan', 'baja', 'ringan', 'beton', 'readymix', 
-        'kanstin', 'pembatas', 'pengaman', 'struktur', 'dinding',
-        'pondasi', 'atap', 'genteng', 'keramik', 'marmer', 'granit',
-        'plafon', 'gypsum', 'partisi', 'dak', 'cor', 'pile', 'sheet',
-        'tiang', 'balok', 'kolom', 'sloof', 'ring', 'balk', 'kuda-kuda',
-        'drainase', 'irigasi', 'box culvert', 'u ditch', 'paving',
-        'konstruksi', 'rangka', 'material', 'upah', 'tenaga'
-    ]);
-
-    const MODIFIER_WORDS = new Set([
-        'murah', 'profesional', 'berkualitas', 'terbaik', 'spesialis',
-        'ahli', 'berpengalaman', 'resmi', 'terpercaya', 'ekonomis',
-        'cepat', 'tepat', 'garansi', 'kualitas', 'harga', 'biaya',
-        'tarif', 'ongkos', 'estimasi', 'perhitungan', 'analisa',
-        'modern', 'minimalis', 'mewah', 'klasik', 'tradisional',
-        'kontemporer', 'sederhana', 'elegan', 'premium', 'luxury'
-    ]);
-
-    function cleanJasaText(text) {
-        if (!text) return '';
-        
-        let cleaned = text.toLowerCase();
-        
-        for (const kw of JASA_ULTRA_COMMON_WORDS) {
-            cleaned = cleaned.replace(new RegExp(`\\b${kw}\\b`, 'g'), ' ');
-        }
-        
-        for (const sw of STOPWORDS) {
-            cleaned = cleaned.replace(new RegExp(`\\b${sw}\\b`, 'g'), ' ');
-        }
-        
-        cleaned = cleaned.replace(/\s+/g, ' ').trim();
-        
-        log(`Clean JASA: "${text}" → "${cleaned}"`, 'CLEAN');
-        
-        return cleaned;
-    }
-
-    function countCoreWords(text) {
-        if (!text) return 0;
-        const words = text.toLowerCase().split(/\s+/).filter(w => w.length >= 2);
-        return words.length;
-    }
-
-    function hasModifier(text) {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        for (const mod of MODIFIER_WORDS) {
-            if (lower.includes(mod)) return true;
-        }
-        return false;
-    }
-
-    function isSpecificJasa(text) {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        if (/\d/.test(lower)) return true;
-        if (/(k225|k250|k300|k350|k400|k500|k600|m6|m8|m10|m12|sn|sni)/i.test(lower)) return true;
-        const specWords = ['spesifikasi', 'mutu', 'dimensi', 'ukuran', 'standar', 'grade', 'tipe', 'type'];
-        for (const sw of specWords) {
-            if (lower.includes(sw)) return true;
-        }
-        return false;
-    }
-
-    function hasMaterialSpec(text) {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        for (const kw of MATERIAL_SPEC_WORDS) {
-            if (lower.includes(kw)) return true;
-        }
-        return false;
-    }
-
-    // ============================================================
-    // 16. DETEKSI JASA LEVEL OTOMATIS
-    // ============================================================
-
-    function detectJasaLevelAuto(pageName) {
-        const lowerName = pageName.toLowerCase();
-        
-        const cleaned = cleanJasaText(lowerName);
-        
-        const remainingWords = cleaned.split(/\s+/).filter(w => w.length >= 2);
-        const wordCount = remainingWords.length;
-        
-        const hasNumber = /\d/.test(cleaned);
-        const hasLocation = isLocation(cleaned);
-        const hasModifierWord = hasModifier(cleaned);
-        const hasMaterialSpecWord = hasMaterialSpec(cleaned);
-        
-        log(`Auto detect JASA: "${pageName}" → remaining: "${cleaned}", words: ${wordCount}`, 'DEBUG');
-        
-        if (wordCount <= 1 && !hasNumber && !hasLocation && !hasModifierWord && !hasMaterialSpecWord) {
-            log(`MM detected (auto): "${pageName}" → remaining words: ${wordCount}`, 'SUCCESS');
-            return 'money-master';
-        }
-        
-        log(`MP detected (auto): "${pageName}" → remaining words: ${wordCount}`, 'INFO');
-        return 'money-page';
-    }
-
-    // ============================================================
-    // 17. VARIANT DETECTION PER ENTITY (SINKRON DENGAN PLD v22.25)
-    // ============================================================
-    
-    function isVariantPage(pageName, currentEntityType) {
-        const lowerName = pageName.toLowerCase();
-        
-        // Cek technical specs dulu
-        for (const spec of TECHNICAL_SPECS) {
-            if (lowerName.includes(spec)) {
-                return false;
-            }
-        }
-        
-        // Cek price words
-        const PRICE_WORDS = ['harga', 'biaya', 'tarif', 'ongkos'];
-        if (PRICE_WORDS.some(w => lowerName.includes(w))) {
-            return false;
-        }
-        
-        // Cek location words
-        if (isLocation(lowerName)) {
-            return false;
-        }
-        
-        // PRODUK/MATERIAL Variant
-        if (currentEntityType === 'PRODUK_KONSTRUKSI' || currentEntityType === 'MATERIAL_KONSTRUKSI') {
-            for (const kw of VARIANT_KEYWORDS_PRODUK) {
-                if (lowerName.includes(kw)) {
-                    log(`Variant detected (PRODUK/MATERIAL): "${pageName}" contains "${kw}"`, 'VARIANT');
-                    return true;
-                }
-            }
-        }
-        
-        // JASA Variant
-        if (currentEntityType === 'JASA_KONSTRUKSI' || currentEntityType === 'JASA_DESAIN') {
-            for (const kw of VARIANT_KEYWORDS_JASA) {
-                if (lowerName.includes(kw)) {
-                    log(`Variant detected (JASA/DESAIN): "${pageName}" contains "${kw}"`, 'VARIANT');
-                    return true;
-                }
-            }
-            return false;
-        }
-        
-        // SEWA Variant
-        if (currentEntityType === 'SEWA_ALAT_KONSTRUKSI') {
-            for (const kw of VARIANT_KEYWORDS_SEWA) {
-                if (lowerName.includes(kw)) {
-                    log(`Variant detected (SEWA): "${pageName}" contains "${kw}"`, 'VARIANT');
-                    return true;
-                }
-            }
-            if (lowerName.includes('spesifikasi') && (lowerName.includes('alat') || lowerName.includes('excavator') || lowerName.includes('dump') || lowerName.includes('alat berat'))) {
-                log(`Variant detected (SEWA): "${pageName}" contains spesifikasi + alat`, 'VARIANT');
-                return true;
-            }
-            return false;
-        }
-        
-        return false;
-    }
-
-    // ============================================================
-    // 18. LOCATION DETECTION (SINKRON DENGAN PLD v22.25)
-    // ============================================================
-
-    function isLocation(text) {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        for (const city of LOCATION_WORDS) {
-            if (new RegExp(`\\b${city.replace(/\s+/g, '\\s+')}\\b`, 'i').test(lower)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    // ============================================================
-    // 19. SPECIFIC PRODUCT
-    // ============================================================
-
-    function isSpecificProduct(text) {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        for (const mod of SPECIFIC_MODIFIERS) {
-            if (lower.includes(mod)) return true;
-        }
-        return /\d/.test(lower);
-    }
-
-    // ============================================================
-    // 20. SUB VARIANT
-    // ============================================================
-
-    function isSubVariant(text) {
-        if (!text) return false;
-        let score = 0;
-        const lower = text.toLowerCase();
-        if ((lower.match(/\d+\s*(m|mm|cm|meter|kg|ton|inch|inci)/gi) || []).length >= 1) score += 2;
-        if ((lower.match(/\d+x\d+/gi) || []).length >= 1) score += 2;
-        if ((lower.match(/\d+(?:\.\d+)?\s*(?:cm|mm|m|meter)\s*(?:x|×)\s*\d+(?:\.\d+)?\s*(?:cm|mm|m|meter)/gi) || []).length >= 1) score += 3;
-        const uniqueNumbers = (text.match(/\d+/g) || []).filter((v, i, a) => a.indexOf(v) === i);
-        if (uniqueNumbers.length >= 2) score += 1;
-        if (/\bukuran\s+\d+/.test(lower)) score += 2;
-        if (/\bdimensi\s+\d+/.test(lower)) score += 2;
-        if (/\b(tebal|panjang|lebar|tinggi|dalam|diameter)\s+\d+/.test(lower)) score += 2;
-        return score >= 2;
-    }
-
-    // ============================================================
-    // 21. ENTITY PILLAR EXACT MATCH
-    // ============================================================
-
-    function isEntityPillarExactMatch(pageName) {
-        const cleanName = cleanText(pageName.toLowerCase());
-        const valid = ENTITY_PILLAR_NAMES[entityType] || [];
-        return valid.includes(cleanName);
-    }
-
-    // ============================================================
-    // 22. JASA KEYWORDS
-    // ============================================================
-
-    const JASA_KEYWORDS_PATTERN = 
-        /\b(jasa|kontraktor|tukang|borongan|renovasi|pasang|bangun|perbaikan|instalasi|proyek|cor|gali|urug|angkut|desain|interior|eksterior|arsitektur|gedung|rumah|ruko|kantor|apartemen)\b/i;
-
-    // ============================================================
-    // 23. PAGE TYPE DETECTION (FIX v12.2 - SINKRON DENGAN PLD)
-    // ============================================================
-
-    function detectPageTypeFallback(pageName, isHome = false) {
-        const lowerName = cleanText(pageName.toLowerCase());
-
-        if (isHome || lowerName === 'home' || lowerName === 'beranda') return 'home';
-        
-        // 🔥 FIX v12.0: PILLAR hanya nama yang sudah ditentukan
-        if (isEntityPillarExactMatch(lowerName)) {
-            log(`PILLAR detected (exact match): "${pageName}"`, 'HIERARCHY');
-            return 'pillar';
-        }
-        
-        // 🔥 FIX v12.0: Cek apakah ini PILLAR berdasarkan ENTITY_PILLAR_NAMES lain
-        for (const [entity, names] of Object.entries(ENTITY_PILLAR_NAMES)) {
-            if (names.some(name => lowerName === name)) {
-                log(`PILLAR detected (other entity): "${pageName}" → ${entity}`, 'HIERARCHY');
-                return 'pillar';
-            }
-        }
-        
-        // 🔥 FIX v12.0: SUB-VARIANT
-        if (isSubVariant(lowerName)) {
-            log(`SUB-VARIANT detected: "${pageName}"`, 'HIERARCHY');
-            return 'sub-variant';
-        }
-
-        // 🔥 FIX v12.0: VARIANT
-        if (isVariantPage(lowerName, entityType)) {
-            log(`VARIANT detected: "${pageName}"`, 'HIERARCHY');
-            return 'variant';
-        }
-
-        // 🔥 FIX v12.0: SUB-PILLAR-1 (perbandingan)
-        for (const kw of SP1_KEYWORDS) {
-            if (lowerName.includes(kw)) {
-                log(`SUB-PILLAR-1 detected: "${pageName}"`, 'HIERARCHY');
-                return 'sub-pillar-tipe-1';
-            }
-        }
-        
-        // 🔥 FIX v12.0: SUB-PILLAR-2 (daftar/jenis)
-        for (const kw of SP2_KEYWORDS) {
-            if (lowerName.includes(kw)) {
-                log(`SUB-PILLAR-2 detected: "${pageName}"`, 'HIERARCHY');
-                return 'sub-pillar-tipe-2';
-            }
-        }
-
-        // 🔥 FIX v12.0: MONEY CHILD (lokasi)
-        if (isLocation(lowerName)) {
-            log(`MONEY-CHILD detected (location): "${pageName}"`, 'HIERARCHY');
-            return 'money-child';
-        }
-
-        // 🔥 FIX v12.0: MONEY PAGE (harga)
-        const HAS_PRICE_WORD = /\b(harga|biaya|tarif)\b/i.test(lowerName);
-        if (HAS_PRICE_WORD) {
-            const cleaned = lowerName.replace(/\b(harga|biaya|tarif)\b/gi, '').trim();
-            const words = cleaned.split(/\s+/).filter(Boolean);
-            const specific = isSpecificProduct(cleaned);
-            if (words.length <= 2 && !specific && !isLocation(cleaned)) {
-                log(`MONEY-MASTER detected (price + short): "${pageName}"`, 'HIERARCHY');
-                return 'money-master';
-            }
-            log(`MONEY-PAGE detected (price): "${pageName}"`, 'HIERARCHY');
-            return 'money-page';
-        }
-
-        // 🔥 FIX v12.0: JASA Auto Detect
-        const HAS_JASA_WORD = JASA_KEYWORDS_PATTERN.test(lowerName);
-        if ((isJasaEntity() || isDesainEntity()) && HAS_JASA_WORD) {
-            const result = detectJasaLevelAuto(lowerName);
-            log(`JASA auto detect: "${pageName}" → ${result}`, 'HIERARCHY');
-            return result;
-        }
-
-        // 🔥 FIX v12.0: SEWA Auto Detect
-        if (isSewaEntity()) {
-            const HAS_SEWA_WORD = /\b(sewa|rental)\b/i.test(lowerName);
-            if (HAS_SEWA_WORD) {
-                const cleaned = lowerName.replace(/\b(sewa|rental)\b/gi, '').trim();
-                const words = cleaned.split(/\s+/).filter(Boolean);
-                const specific = isSpecificProduct(cleaned);
-                if (words.length <= 2 && !specific && !isLocation(cleaned)) {
-                    log(`MONEY-MASTER detected (sewa + short): "${pageName}"`, 'HIERARCHY');
-                    return 'money-master';
-                }
-                log(`MONEY-PAGE detected (sewa): "${pageName}"`, 'HIERARCHY');
-                return 'money-page';
-            }
-        }
-
-        // ============================================================
-        // 🔥 FIX v12.2: PRODUK/MATERIAL - SINKRON DENGAN PLD v22.25
-        // ============================================================
-        
-        if (isProdukEntity() || isMaterialEntity()) {
-            // Step 1: Filter kata-kata
-            let words = lowerName.split(/\s+/).filter(w => w.length > 2);
-            
-            // Step 2: Filter stopwords
-            words = words.filter(w => !STOPWORDS.has(w));
-            
-            // Step 3: Filter lokasi
-            const hasLocation = words.some(w => isLocation(w));
-            if (hasLocation) {
-                log(`MONEY-CHILD detected (location in product): "${pageName}"`, 'HIERARCHY');
-                return 'money-child';
-            }
-            words = words.filter(w => !isLocation(w));
-            
-            // Step 4: 🔥 COMMERCIAL INTENT OVERRIDE (SINKRON DENGAN PLD)
-            const hasCommercialIntent = COMMERCIAL_WORDS.some(w => lowerName.startsWith(w));
-            
-            if (hasCommercialIntent) {
-                // Hapus kata komersial
-                let coreText = lowerName;
-                for (const cw of COMMERCIAL_WORDS) {
-                    coreText = coreText.replace(new RegExp(`^${cw}\\s+`), '');
-                }
-                const coreWords = coreText.split(/\s+/).filter(w => w.length > 2);
-                const filteredCore = coreWords.filter(w => 
-                    !STOPWORDS.has(w) && !isLocation(w)
-                );
-                
-                log(`COMMERCIAL INTENT: "${pageName}" → core: "${filteredCore.join(' ')}" (${filteredCore.length} words)`, 'COMMERCIAL');
-                
-                if (filteredCore.length <= 2 && !isSpecificProduct(coreText)) {
-                    log(`MONEY-MASTER detected (commercial override): "${pageName}"`, 'HIERARCHY');
-                    return 'money-master';
-                }
-            }
-            
-            // Step 5: Deteksi normal
-            const wordCount = words.length;
-            const specific = /\d/.test(lowerName) || isSpecificProduct(lowerName);
-            
-            log(`PRODUCT DETECTION: "${pageName}" → ${wordCount} words, specific: ${specific}`, 'DEBUG');
-            
-            if (wordCount <= 2 && !specific) {
-                log(`MONEY-MASTER detected (produk): "${pageName}"`, 'HIERARCHY');
-                return 'money-master';
-            }
-            
-            log(`MONEY-PAGE detected (produk): "${pageName}"`, 'HIERARCHY');
-            return 'money-page';
-        }
-
-        // 🔥 FIX v12.0: DEFAULT - MONEY_MASTER
-        log(`DEFAULT MONEY-MASTER: "${pageName}"`, 'HIERARCHY');
-        return 'money-master';
-    }
-
-    // ============================================================
-    // 24. 🔥 FIX v12.3.2: AUTO DETECT PARENT - AMBIL POSISI TERAKHIR
-    // ============================================================
-
-    function findNearestParentFromItems(items, currentPageName) {
-        if (!items || items.length === 0) return null;
-
-        const currentLower = currentPageName.toLowerCase();
-
-        // 🔥 FIX v12.3.2: Ambil parent terakhir/terdekat
-        // Urutkan items berdasarkan posisi terakhir (descending)
-        // Ambil item pertama yang bukan current page
-        // TANPA FILTER LEVEL DAN SCORE
-        
-        // Copy items dan reverse agar item terakhir jadi pertama
-        const reversedItems = [...items].reverse();
-        
-        for (const item of reversedItems) {
-            const itemName = item.name?.toLowerCase() || '';
-            if (itemName !== currentLower) {
-                log(`✅ PARENT TERDEKAT: "${item.name}" (level ${item.level || 'unknown'}) - diambil dari posisi terakhir`, 'PARENT_FIX');
-                return item;
-            }
-        }
-
-        // Jika tidak ada (hanya current page), coba cari entity pillar
-        const entityPillarNames = ENTITY_PILLAR_NAMES[entityType] || [];
-        if (entityPillarNames.length > 0) {
-            const pillarName = entityPillarNames[0];
-            const pillarItem = items.find(item => 
-                item.name?.toLowerCase() === pillarName
-            );
-            if (pillarItem) {
-                log(`⚠️ FALLBACK: Entity pillar "${pillarName}" sebagai parent`, 'WARN');
-                return pillarItem;
-            }
-        }
-
-        log('⚠️ No parent found', 'WARN');
-        return null;
-    }
-
-    // ============================================================
-    // 25. INJECT CURRENT PAGE & PARENT
-    // ============================================================
-
-    function injectCurrentPageAndParent(breadcrumbItems, currentPageName, currentFullUrl) {
-        let items = [...breadcrumbItems];
-        const currentLower = currentPageName.toLowerCase();
-
-        const hasCurrent = items.some(item => 
-            item.name?.toLowerCase() === currentLower
-        );
-
-        if (!hasCurrent) {
-            items.push({
-                name: currentPageName,
-                url: currentFullUrl
-            });
-        }
-
-        // 🔥 FIX v12.3.2: SELALU cari parent, TANPA SKIP
-        const detectedParent = findNearestParentFromItems(items, currentPageName);
-
-        if (detectedParent) {
-            const hasParent = items.some(item => 
-                item.name?.toLowerCase() === detectedParent.name?.toLowerCase()
-            );
-
-            if (!hasParent) {
-                log(`✅ AUTO-INJECTED PARENT: "${detectedParent.name}" → "${currentPageName}"`, 'SUCCESS');
-                const currentIndex = items.findIndex(item => 
-                    item.name?.toLowerCase() === currentLower
-                );
-                if (currentIndex > -1) {
-                    items.splice(currentIndex, 0, detectedParent);
-                } else {
-                    items.push(detectedParent);
-                }
-            } else {
-                log(`Parent already exists: "${detectedParent.name}"`, 'INFO');
-            }
-        } else {
-            // 🔥 FIX v12.3.2: Fallback ke entity pillar jika tidak ada parent sama sekali
-            const entityPillarNames = ENTITY_PILLAR_NAMES[entityType] || [];
-            if (entityPillarNames.length > 0) {
-                const pillarName = entityPillarNames[0];
-                const pillarExists = items.some(item => 
-                    item.name?.toLowerCase() === pillarName
-                );
-                if (!pillarExists) {
-                    items.unshift({
-                        name: pillarName,
-                        url: `${CONFIG.DOMAIN}/p/${slugify(pillarName)}.html`
-                    });
-                    log(`✅ INJECTED ENTITY PILLAR: "${pillarName}"`, 'SUCCESS');
-                }
-            }
-        }
-
-        return items;
-    }
-
-    // ============================================================
-    // 26. FORCE PARENT INJECTION (FIX v12.3.2)
-    // ============================================================
-
-    function forceInjectDirectParent(lineageLevels, allLevels, currentPageTitle, entityType, breadcrumbItems) {
-        const currentLower = currentPageTitle.toLowerCase();
-        let modifiedLineage = [...lineageLevels];
-        const words = currentLower.split(/\s+/);
-
-        // 🔥 FIX v12.3.2: Cari parent terdekat - AMBIL POSISI TERAKHIR
-        const autoParent = findNearestParentFromItems(breadcrumbItems, currentPageTitle);
-        if (autoParent && !modifiedLineage.some(l => l.name?.toLowerCase() === autoParent.name?.toLowerCase())) {
-            const parentFromAll = allLevels.find(item => 
-                item.name?.toLowerCase() === autoParent.name?.toLowerCase()
-            );
-            if (parentFromAll) {
-                log(`✅ AUTO PARENT FROM ITEMS: "${parentFromAll.name}" (level ${parentFromAll.level})`, 'SUCCESS');
-                modifiedLineage.push(parentFromAll);
-            } else {
-                // Buat parent baru
-                const newParent = {
-                    name: autoParent.name,
-                    url: autoParent.url || `${CONFIG.DOMAIN}/p/${slugify(autoParent.name)}.html`,
-                    type: detectPageTypeFallback(autoParent.name),
-                    level: TYPE_LEVEL_MAP[detectPageTypeFallback(autoParent.name)] || 99,
-                    position: modifiedLineage.length + 1
-                };
-                log(`✅ AUTO PARENT (new): "${newParent.name}" (level ${newParent.level})`, 'SUCCESS');
-                modifiedLineage.push(newParent);
-            }
-        }
-
-        // 🔥 FIX v12.3.2: Coba dari kata pertama (tanpa filter)
-        if (modifiedLineage.length === lineageLevels.length && words.length >= 2) {
-            for (let i = words.length - 1; i >= 1; i--) {
-                const potentialParent = words.slice(0, i).join(' ');
-                const parentItem = allLevels.find(item => 
-                    item.name?.toLowerCase() === potentialParent
-                );
-                if (parentItem && !modifiedLineage.some(l => l.name?.toLowerCase() === parentItem.name?.toLowerCase())) {
-                    log(`✅ PATTERN PARENT: "${parentItem.name}" (level ${parentItem.level})`, 'SUCCESS');
-                    modifiedLineage.push(parentItem);
-                    break;
-                }
-            }
-        }
-
-        // 🔥 FIX v12.3.2: Coba dari semantic groups
-        if (modifiedLineage.length === lineageLevels.length) {
-            const semanticKeywords = {
-                'pagar': ['pagar', 'pagar panel', 'pagar beton', 'panel beton'],
-                'pondasi': ['pondasi', 'tiang', 'pile', 'bored pile', 'strauss pile'],
-                'cor': ['cor', 'readymix', 'ready mix', 'beton cor'],
-                'bangunan': ['bangunan', 'gedung', 'rumah', 'ruko', 'kantor'],
-                'interior': ['interior', 'dalam', 'ruangan', 'finishing'],
-                'eksterior': ['eksterior', 'luar', 'fasad', 'taman']
-            };
-            
-            for (const [parentKeyword, childKeywords] of Object.entries(semanticKeywords)) {
-                const isChildMatch = childKeywords.some(kw => currentLower.includes(kw));
-                if (isChildMatch) {
-                    const parentItem = allLevels.find(item => 
-                        item.name?.toLowerCase().includes(parentKeyword)
-                    );
-                    if (parentItem && !modifiedLineage.some(l => l.name?.toLowerCase() === parentItem.name?.toLowerCase())) {
-                        log(`✅ SEMANTIC PARENT: "${parentItem.name}" (level ${parentItem.level})`, 'SUCCESS');
-                        modifiedLineage.push(parentItem);
-                        break;
-                    }
-                }
-            }
-        }
-
-        // 🔥 FIX v12.3.2: LAST RESORT - Entity pillar
-        if (modifiedLineage.length === 0 || modifiedLineage.every(l => l.name?.toLowerCase() === currentLower)) {
-            const entityPillarNames = ENTITY_PILLAR_NAMES[entityType] || [];
-            if (entityPillarNames.length > 0) {
-                const pillarName = entityPillarNames[0];
-                const pillarItem = allLevels.find(item => 
-                    item.name?.toLowerCase() === pillarName
-                );
-                if (pillarItem && !modifiedLineage.some(l => l.name?.toLowerCase() === pillarName)) {
-                    log(`✅ ENTITY PILLAR (fallback): "${pillarName}" (level ${pillarItem.level})`, 'WARN');
-                    modifiedLineage.push(pillarItem);
-                }
-            }
-        }
-        
-        return modifiedLineage;
-    }
-
-    // ============================================================
-    // 27. HIERARCHY VALIDATOR (FIX v12.3.2 - TIDAK HAPUS GAP)
-    // ============================================================
-    
-    function validateAndFixHierarchy(lineage) {
-        if (lineage.length <= 1) return lineage;
-        
-        const fixed = [];
-        const sorted = [...lineage].sort((a, b) => {
-            const levelA = a.level || TYPE_LEVEL_MAP[detectPageTypeFallback(a.name)] || 99;
-            const levelB = b.level || TYPE_LEVEL_MAP[detectPageTypeFallback(b.name)] || 99;
-            return levelA - levelB;
-        });
-        
-        const uniqueNames = new Set();
-        for (const item of sorted) {
-            const key = item.name?.toLowerCase() || '';
-            if (!uniqueNames.has(key)) {
-                uniqueNames.add(key);
-                if (!item.level) {
-                    item.level = TYPE_LEVEL_MAP[detectPageTypeFallback(item.name)] || 99;
-                }
-                fixed.push(item);
-            }
-        }
-        
-        // 🔥 FIX v12.3.2: JANGAN HAPUS ITEM KARENA GAP
-        // Tetap pertahankan, hanya log warning
-        for (let i = 1; i < fixed.length; i++) {
-            const prevLevel = fixed[i-1].level || TYPE_LEVEL_MAP[detectPageTypeFallback(fixed[i-1].name)] || 99;
-            const currLevel = fixed[i].level || TYPE_LEVEL_MAP[detectPageTypeFallback(fixed[i].name)] || 99;
-            
-            if (currLevel - prevLevel > 2) {
-                log(`⚠️ Hierarchy gap detected: ${fixed[i-1].name}(${prevLevel}) → ${fixed[i].name}(${currLevel}) - KEEPING`, 'WARN');
-            }
-        }
-        
-        return fixed;
-    }
-
-    // ============================================================
-    // 28. SIMILARITY CALCULATION
-    // ============================================================
-
-    function calculateSimilarity(text1, text2) {
-        const words1 = text1.toLowerCase().split(/\s+/);
-        const words2 = text2.toLowerCase().split(/\s+/);
-        
-        if (words1.length === 0 || words2.length === 0) return 0;
-        
-        const commonWords = words1.filter(w => words2.includes(w));
-        const union = new Set([...words1, ...words2]);
-        const similarity = commonWords.length / union.size;
-        
-        return similarity;
-    }
-
-    // ============================================================
-    // 29. GET CURRENT PAGE INFO
-    // ============================================================
-
-    const currentFullUrl = currentUrl.startsWith('http')
-        ? currentUrl
-        : CONFIG.DOMAIN + currentUrl;
-
-    let currentPageTitle = getCleanPageNameFromUrl(currentFullUrl);
-
-    if (!currentPageTitle) {
-        currentPageTitle = 'Halaman';
-    }
-
-    // ============================================================
-    // 30. GET PAGE LEVEL & ENTITY FROM PLD
-    // ============================================================
-
-    const pldLevel = getPageLevelFromPLD();
-    const pldEntity = getEntityTypeFromPLD();
-    
-    let finalPageLevel = pldLevel;
-    let finalEntityType = entityType;
-    
-    if (pldEntity && VALID_ENTITY_TYPES.includes(pldEntity)) {
-        finalEntityType = pldEntity;
-        log(`Entity from PLD: ${pldEntity} (override from ${entityType})`, 'PLD');
-    }
-    
-    entityType = finalEntityType;
-    
-    const isPLDSynced = !!pldLevel;
-    const syncStatusText = isPLDSynced ? '✅ SINKRON' : '❌ FALLBACK';
-    log(`PLD Sync Status: ${syncStatusText}`, 'PLD');
-    if (pldLevel) {
-        log(`PLD Level: "${pldLevel}" (${TYPE_LEVEL_MAP[pldLevel]})`, 'PLD');
-    }
-
-    // ============================================================
-    // 31. INJECT CURRENT PAGE & AUTO PARENT
-    // ============================================================
-
-    const enhancedBreadcrumbItems = injectCurrentPageAndParent(
-        breadcrumbItems,
-        currentPageTitle,
-        currentFullUrl
-    );
-
-    // ============================================================
-    // 32. BUILD ALL LEVELS
-    // ============================================================
-
-    const allLevels = [];
-
-    for (let i = 0; i < enhancedBreadcrumbItems.length; i++) {
-        const item = enhancedBreadcrumbItems[i];
-        let name, url;
-
-        if (typeof item === 'object') {
-            name = item.name;
-            url = item.url || null;
-        } else {
-            name = item;
-            url = null;
-        }
-
-        const type = detectPageTypeFallback(name);
-        allLevels.push({
-            name,
-            url,
-            type,
-            level: TYPE_LEVEL_MAP[type] || 99,
-            position: i + 1
-        });
-    }
-
-    // ============================================================
-    // 33. URL FALLBACK
-    // ============================================================
-
-    for (const level of allLevels) {
-        if (!level.url) {
-            let foundUrl = null;
-            if (mappingObj) {
-                for (const [url, title] of Object.entries(mappingObj)) {
-                    if (title === level.name) {
-                        foundUrl = url.startsWith('http') ? url : CONFIG.DOMAIN + url;
-                        break;
-                    }
-                }
-            }
-            if (!foundUrl) {
-                foundUrl = `${CONFIG.DOMAIN}/p/${slugify(level.name)}.html`;
-            }
-            level.url = foundUrl;
-        } else if (!level.url.startsWith('http')) {
-            level.url = CONFIG.DOMAIN + level.url;
-        }
-    }
-
-    // ============================================================
-    // 34. CURRENT PAGE TYPE
-    // ============================================================
-
-    const currentPageType = pldLevel || detectPageTypeFallback(currentPageTitle);
-    log(`Current page: "${currentPageTitle}" → type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`, 'INFO');
-
-    // ============================================================
-    // 35. SELECT BREADCRUMB LEVELS
-    // ============================================================
-
-    const selectedLevels = [];
-
-    selectedLevels.push({
-        name: 'Beranda',
-        url: CONFIG.DOMAIN,
-        type: 'home',
-        level: 0,
-        position: 1
-    });
-
-    const uniqueByUrl = new Map();
-    for (const item of allLevels) {
-        const key = item.url || item.name;
-        if (!uniqueByUrl.has(key)) {
-            uniqueByUrl.set(key, item);
-        }
-    }
-    const uniqueItems = Array.from(uniqueByUrl.values());
-
-    log('=== ALL LEVELS DEBUG ===', 'DEBUG');
-    for (const level of allLevels) {
-        log(`  ${level.name} → type: ${level.type}, level: ${level.level}`, 'DEBUG');
-    }
-
-    log('Unique items (' + uniqueItems.length + '): ' + uniqueItems.map(i => i.name + '(' + i.level + ')').join(' → '), 'INFO');
-
-    // ============================================================
-    // 36. 🔥 FIX v12.3.2: FIND NEAREST PARENTS - AMBIL POSISI TERAKHIR
-    // ============================================================
-
-    function findNearestParentsByHierarchy() {
-        const lineage = [];
-        const currentPageTitleLower = currentPageTitle.toLowerCase();
-        
-        // 🔥 FIX v12.3.2: Ambil parent terakhir/terdekat dari uniqueItems
-        // Urutkan berdasarkan posisi terakhir (descending)
-        // Ambil semua item yang bukan current page, mulai dari yang terakhir
-        // TANPA FILTER LEVEL DAN SCORE
-        
-        const candidates = uniqueItems.filter(item => 
-            item.name.toLowerCase() !== currentPageTitleLower
-        );
-        
-        if (candidates.length === 0) {
-            log('⚠️ No candidates found', 'WARN');
-            return lineage;
-        }
-        
-        // 🔥 Urutkan berdasarkan posisi descending (terakhir dulu)
-        const sortedCandidates = [...candidates].sort((a, b) => {
-            const posA = a.position || 0;
-            const posB = b.position || 0;
-            return posB - posA; // descending: posisi terbesar dulu
-        });
-        
-        log(`📋 Candidates (sorted by position descending): ` + sortedCandidates.map(i => i.position + ':' + i.name).join(' → '), 'DEBUG');
-        
-        // 🔥 Ambil SEMUA item dengan posisi tertinggi (terakhir)
-        const highestPosition = sortedCandidates.length > 0 ? sortedCandidates[0].position : -1;
-        const topCandidates = sortedCandidates.filter(item => item.position === highestPosition);
-        
-        log(`🎯 Top candidates (position ${highestPosition}): ` + topCandidates.map(i => i.name).join(', '), 'SUCCESS');
-        
-        // 🔥 Tambahkan SEMUA top candidates ke lineage
-        for (const item of topCandidates) {
-            const exists = lineage.some(l => l.name === item.name);
-            if (!exists) {
-                lineage.push(item);
-                log(`🎯 Selected parent: "${item.name}" (position ${item.position}, level ${item.level})`, 'SUCCESS');
-            }
-        }
-        
-        // 🔥 Jika lineage kosong (misal tidak ada item dengan position), ambil yang pertama
-        if (lineage.length === 0 && sortedCandidates.length > 0) {
-            const best = sortedCandidates[0];
-            lineage.push(best);
-            log(`⚠️ FALLBACK: Using "${best.name}" as nearest parent`, 'WARN');
-        }
-        
-        log('Lineage (prioritized): ' + lineage.map(i => i.position + ':' + i.name).join(' → '), 'SUCCESS');
-        
-        return lineage;
-    }
-
-    let lineageLevels = findNearestParentsByHierarchy();
-
-    log('Initial lineage (' + lineageLevels.length + '): ' + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
-
-    lineageLevels = forceInjectDirectParent(
-        lineageLevels, 
-        uniqueItems,
-        currentPageTitle, 
-        entityType,
-        enhancedBreadcrumbItems
-    );
-
-    log('After force injection (' + lineageLevels.length + '): ' + lineageLevels.map(i => i.name + '(' + i.type + ')').join(' → '), 'INFO');
-
-    const cleanLineage = [];
-    const usedLineage = new Set();
-
-    for (const item of lineageLevels) {
-        const key = item.name.toLowerCase();
-        if (usedLineage.has(key)) continue;
-        usedLineage.add(key);
-        cleanLineage.push(item);
-    }
-
-    const validatedLineage = validateAndFixHierarchy(cleanLineage);
-
-    validatedLineage.sort((a, b) => {
-        const idxA = HIERARCHY_ORDER.indexOf(a.type);
-        const idxB = HIERARCHY_ORDER.indexOf(b.type);
-        if (idxA !== idxB) return idxA - idxB;
-        return a.position - b.position;
-    });
-
-    // ========================================================
-    // 37. AMBIL SEMUA PARENT DENGAN POSISI TERTINGGI
-    // ========================================================
-    
-    let finalParents = [];
-
-    const parentOnly = validatedLineage.filter(item => 
-        item.name.toLowerCase() !== currentPageTitle.toLowerCase()
-    );
-
-    log(`Parent candidates (${parentOnly.length}): ` + parentOnly.map(i => i.name + '(' + i.level + ')').join(', '), 'DEBUG');
-
-    if (parentOnly.length > 0) {
-        // 🔥 FIX v12.3.2: Ambil parent dengan posisi tertinggi (terakhir)
-        const highestPosition = Math.max(...parentOnly.map(i => i.position || 0));
-        finalParents = parentOnly.filter(item => item.position === highestPosition);
-        finalParents.sort((a, b) => a.position - b.position);
-        
-        log(`✅ PARENT FOUND: ${finalParents.length} parent(s) at position ${highestPosition}: ` + finalParents.map(i => i.name).join(', '), 'SUCCESS');
-    } else {
-        log('⚠️ No parent found (only current page)', 'WARN');
-    }
-
-    if (finalParents.length === 0) {
-        const entityPillarNames = ENTITY_PILLAR_NAMES[entityType] || [];
-        if (entityPillarNames.length > 0) {
-            const pillarName = entityPillarNames[0];
-            const pillarItem = uniqueItems.find(item => 
-                item.name.toLowerCase() === pillarName
-            );
-            if (pillarItem) {
-                finalParents.push(pillarItem);
-                log(`✅ ENTITY PILLAR as parent: "${pillarName}"`, 'SUCCESS');
-            }
-        }
-    }
-
-    for (const item of finalParents) {
-        const exists = selectedLevels.some(l => l.name.toLowerCase() === item.name.toLowerCase());
-        if (!exists) {
-            selectedLevels.push(item);
-            log(`👪 Adding parent: "${item.name}" (level ${item.level}, position ${item.position})`, 'PARENT');
-        }
-    }
-
-    const hasCurrentAlready = selectedLevels.some(item =>
-        item.name.toLowerCase() === currentPageTitle.toLowerCase()
-    );
-
-    if (!hasCurrentAlready) {
-        selectedLevels.push({
-            name: currentPageTitle,
-            url: currentFullUrl,
-            type: currentPageType,
-            level: pldLevel ? TYPE_LEVEL_MAP[pldLevel] : (TYPE_LEVEL_MAP[currentPageType] || 99),
-            isCurrent: true,
-            pldLevel: pldLevel
-        });
-    }
-
-    // ============================================================
-    // 38. FINAL UNIQUE LEVELS
-    // ============================================================
-
-    const uniqueLevels = [];
-    const usedNames = new Set();
-
-    for (const item of selectedLevels) {
-        const key = item.name.toLowerCase();
-        if (usedNames.has(key)) continue;
-        usedNames.add(key);
-        uniqueLevels.push(item);
-    }
-
-    uniqueLevels.forEach((item, index) => {
-        item.position = index + 1;
-    });
-
-    log('Final breadcrumb (' + uniqueLevels.length + ' levels): ' + uniqueLevels.map(i => i.name + '(' + i.level + ')').join(' › '), 'SUCCESS');
-
-    // ============================================================
-    // 39. GENERATE HTML
-    // ============================================================
-
-    let breadcrumbHtml = `<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">\n`;
-
-    for (let i = 0; i < uniqueLevels.length; i++) {
-        const item = uniqueLevels[i];
-        const isLast = i === uniqueLevels.length - 1;
-
-        if (!isLast) {
-            breadcrumbHtml +=
-                `<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-<a href="${item.url}" itemprop="item" title="${item.name}">
-<span itemprop="name">${item.name}</span>
-</a>
-<meta itemprop="position" content="${item.position}" />
-</span>
-<span class="separator"> › </span>\n`;
-        } else {
-            breadcrumbHtml +=
-                `<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-<span itemprop="name">${item.name}</span>
-<meta itemprop="position" content="${item.position}" />
-</span>\n`;
-        }
-    }
-
-    breadcrumbHtml += `</div>\n`;
-
-    // ============================================================
-    // 40. JSON LD
-    // ============================================================
-
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": uniqueLevels.map((item, index) => ({
-            "@type": "ListItem",
-            "position": index + 1,
-            "name": item.name,
-            "item": item.url
-        }))
-    };
-
-    // ============================================================
-    // 41. REMOVE OLD
-    // ============================================================
-
-    document.querySelectorAll('.breadcrumbs, .breadcrumb-nav, [aria-label="Breadcrumb"]')
-        .forEach(el => el.remove());
-    document.querySelectorAll('script[data-breadcrumb="true"]')
-        .forEach(el => el.remove());
-
-    // ============================================================
-    // 42. TARGET ELEMENT
-    // ============================================================
-
-    const targetElement = document.querySelector('main, article, .content, #main-content, .post-content');
-
-    if (targetElement) {
-        targetElement.insertAdjacentHTML('afterbegin', breadcrumbHtml);
-    } else {
-        document.body.insertAdjacentHTML('afterbegin', breadcrumbHtml);
-    }
-
-    // ============================================================
-    // 43. INJECT JSON LD
-    // ============================================================
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.setAttribute('data-breadcrumb', 'true');
-    script.textContent = JSON.stringify(jsonLd, null, 2);
-    document.head.appendChild(script);
-
-    // ============================================================
-    // 44. LOG SUMMARY (FIX: perbaiki semua kutip)
-    // ============================================================
-
-    const syncStatus = isPLDSynced ? '✅ SINKRON' : '❌ FALLBACK';
-    const commercialDetected = COMMERCIAL_WORDS.some(w => currentPageTitle.startsWith(w));
-
-    console.log('📊 BREADCRUMB GENERATION SUMMARY (v12.3.2):');
-    console.log(`   Page: "${currentPageTitle}"`);
-    console.log(`   URL: "${currentFullUrl}"`);
-    console.log(`   Type: ${currentPageType} (level ${TYPE_LEVEL_MAP[currentPageType]})`);
-    console.log(`   Entity: ${entityType}`);
-    console.log(`   🔄 PLD Sync: ${syncStatus}`);
-    if (pldLevel) {
-        console.log(`   📌 PLD Level: ${pldLevel} (${TYPE_LEVEL_MAP[pldLevel]})`);
-    }
-    if (currentPageType === 'variant') {
-        console.log(`   🔬 Variant detected for entity: ${entityType}`);
-    }
-    if (currentPageType === 'money-child') {
-        console.log(`   📍 Money Child with location detected`);
-    }
-    if (commercialDetected) {
-        console.log(`   🛒 Commercial Intent detected`);
-    }
-    console.log(`   🔧 FIX v12.3.2: Parent WAJIB ambil posisi terakhir`);
-    console.log(`   👪 Parents found: ${finalParents.length} parents`);
-    console.log(`   📊 Total breadcrumb levels: ${uniqueLevels.length}`);
-    console.log(`   🏛️ Hierarchy: ${uniqueLevels.map(i => i.type).join(' → ')}`);
-
-    // ============================================================
-    // 45. RETURN
-    // ============================================================
-
-    return {
-        html: breadcrumbHtml,
-        jsonLd,
-        selectedLevels: uniqueLevels,
-        currentPageType,
-        entityType,
-        version: '12.3.2',
-        parentCount: finalParents.length,
-        parents: finalParents,
-        isVariant: currentPageType === 'variant',
-        isMoneyChild: currentPageType === 'money-child',
-        pldSync: isPLDSynced,
-        pldLevel: pldLevel,
-        pldEntity: pldEntity,
-        hierarchy: uniqueLevels.map(i => i.type),
-        commercialIntent: commercialDetected,
-        parentNoSkip: true,
-        parentByPosition: true // 🔥 FIX v12.3.2: Parent diambil berdasarkan posisi terakhir
-    };
-}
-*/
-
-// Menyimpan elemen yang dihapus dalam variabel
-let removedElementsJasakonstruksistruktur = {};
-function removeCondition(conditionId) {
-    const conditionElement = document.getElementById(conditionId);
-
-    if (conditionElement) {
-        // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
-        removedElementsJasakonstruksistruktur[conditionId] = conditionElement;
-        conditionElement.remove(); // Menghapus elemen tersebut
-    }
-}
-
-// Fungsi untuk mengembalikan elemen yang telah dihapus
-function restoreCondition(conditionId) {
-    const breadcrumb = document.querySelector('.breadcrumb');
-    const elementToRestore = removedElementsJasakonstruksistruktur[conditionId]; // Mendapatkan elemen yang disimpan
-
-    if (elementToRestore) {
-        breadcrumb.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
-        delete removedElementsJasakonstruksistruktur[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
-    } else {
-        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasakonstruksistruktur.`);
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    // var currentUrl = window.location.href;
-     //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
-    const cleanUrlJasaJasaKonsStruktur = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
-
-		/* ==========================================================
-   🧩 HybridDateModified v2.5 — StableHash + Safe Load Order
-   Fitur:
-   - Menjamin detect-evergreen.js dimuat lebih dulu
-   - Update <meta dateModified> hanya jika URL terdaftar
-   - Stable hash → hasil dateModified konsisten
-   ========================================================== */
-/*
-(async function runHybridDateModified() {
-  try {
-    // --- helper untuk load eksternal JS secara promise ---
-    function loadExternalJSAsync(src) {
-      return new Promise((resolve, reject) => {
-        const s = document.createElement("script");
-        s.src = src;
-        s.async = true;
-        s.onload = () => resolve(src);
-        s.onerror = () => reject(new Error("Gagal load " + src));
-        document.head.appendChild(s);
-      });
-    }
-
-	
-     // --- loader evergreen JS dengan sessionStorage (anti 429) ---
-    async function loadEvergreenScript() {
-      const KEY = "evergreenScriptLoaded";
-
-      const needReload =
-        !sessionStorage.getItem(KEY) ||
-        !window.AEDMetaDates ||
-        !window.detectEvergreenReady;
-
-      if (!needReload) {
-        console.log("⚡ detect-evergreen.js sudah aktif & variable ready — SKIP load");
-      } else {
-        console.log("⏳ load detect-evergreen.js dari GitHack…");
-        try {
-          await loadExternalJSAsync(
-            "https://raw.githack.com/aliyul/solution-blogger/main/detect-evergreen.js"
-          );
-          window.detectEvergreenReady = true;
-          sessionStorage.setItem(KEY, "true");
-          console.log("✅ detect-evergreen.js LOADED & READY");
-        } catch (err) {
-          console.error("❌ Gagal load detect-evergreen.js", err);
-          sessionStorage.removeItem(KEY);
-        }
-      }
-
-      // --- ALWAYS run evergreen check tiap halaman ---
-      if (typeof window.runEvergreenCheck === "function") {
-        console.log("🔁 Running evergreen check for this page...");
-        window.runEvergreenCheck();
-      } else {
-        console.warn("⚠️ runEvergreenCheck tidak ditemukan!");
-      }
-    }
-    // --- gabungkan semua mapping ---
-    const urlMappingGabungan = Object.assign(
-      {},
-		urlMappingStrukturGedungHunian,
-		urlMappingStrukturIndustriGudang,
-		urlMappingStrukturBajaRangka,
-		urlMappingStrukturKhusus,
-		urlMappingStrukturLapangan,
-		urlMappingStrukturModularPrecast,
-		urlMappingStrukturBetonPengecoran
-    );
-
-    // --- validasi URL terdaftar ---
-    if (!urlMappingGabungan[cleanUrlJasaJasaKonsStruktur]) {
-      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaJasaKonsStruktur}`);
-      return;
-    }
-
-  // === Tanggal nextUpdate1 global ===
-	const globalNextUpdate1 = "2026-01-30T00:00:00.000Z";
-	console.log(`🌐 [AutoMeta] Detected jasa-konstruksi-struktur: ${cleanUrlJasaJasaKonsStruktur}`);
-
-    // --- pastikan meta nextUpdate1 ada ---
-    let metaNextUpdate1 = document.querySelector('meta[name="nextUpdate1"]');
-    if (!metaNextUpdate1) {
-      metaNextUpdate1 = document.createElement("meta");
-      metaNextUpdate1.setAttribute("name", "nextUpdate1");
-      metaNextUpdate1.setAttribute("content", globalNextUpdate1);
-      document.head.appendChild(metaNextUpdate1);
-      console.log(`🆕 [AutoMeta] Meta nextUpdate1 ditambahkan → ${globalNextUpdate1}`);
-    } else {
-      console.log("✅ [AutoMeta] Meta nextUpdate1 sudah ada, tidak dibuat ulang.");
-    }
-
-    // --- pastikan detect-evergreen.js selesai dimuat ---
-    await loadEvergreenScript();
-    console.log("✅ detect-evergreen.js selesai dimuat.");
-
-    // --- pastikan AEDMetaDates sudah tersedia ---
-    if (!window.AEDMetaDates || !window.AEDMetaDates.dateModified) {
-      console.warn("[HybridDateModified] AEDMetaDates tidak ditemukan, skip update.");
-      return;
-    }
-
-    const { dateModified, nextUpdate, type } = window.AEDMetaDates;
-
-    // 🔒 Stable hash untuk variasi waktu stabil
-    function stableHash(str) {
-      let hash = 0;
-      for (let i = 0; i < str.length; i++) {
-        hash = (hash << 5) - hash + str.charCodeAt(i);
-        hash |= 0;
-      }
-      return Math.abs(hash);
-    }
-
-    const hash = stableHash(cleanUrlJasaJasaKonsStruktur);
-    const offsetSeconds = hash % 86400;
-    const finalDate = new Date(new Date(dateModified).getTime() + offsetSeconds * 1000);
-    const isoDate = finalDate.toISOString();
-
-    // 🧱 Update meta dateModified
-    [
-      ['meta[itemprop="dateModified"]', 'itemprop', 'dateModified'],
-      ['meta[name="dateModified"]', 'name', 'dateModified'],
-      ['meta[property="article:modified_time"]', 'property', 'article:modified_time']
-    ].forEach(([selector, attr, val]) => {
-      let meta = document.querySelector(selector);
-      if (!meta) {
-        meta = document.createElement("meta");
-        meta.setAttribute(attr, val);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute("content", isoDate);
-    });
-
-	
-				// Pastikan AEDMetaDates sudah ada minimal sebagai objek kosong
-	window.AEDMetaDates = window.AEDMetaDates || {};
-	
-	// Update hanya properti dateModified tanpa menghapus lainnya
-	window.AEDMetaDates = {
-	  ...window.AEDMetaDates,
-	  dateModified: isoDate
-	};
-	
-	console.log("✅ AEDMetaDates updated jasa-konstruksi-struktur:", window.AEDMetaDates);
-    console.log(`✅ [HybridDateModified v2.5] ${cleanUrlJasaJasaKonsStruktur} → ${isoDate} | type=${type || "-"}`);
-
-    // 🧩 Perbarui schema jika ada
-    const schemaEl = document.querySelector('script[data-schema="evergreen-maintenance"]');
-    if (schemaEl) {
-      try {
-        const data = JSON.parse(schemaEl.textContent.trim());
-        data.dateModified = isoDate;
-        if (data.maintenanceSchedule) data.maintenanceSchedule.scheduledTime = nextUpdate;
-        schemaEl.textContent = JSON.stringify(data, null, 2);
-        console.log(`🔄 Schema maintenance diperbarui → dateModified: ${isoDate}`);
-      } catch (err) {
-        console.error("❌ Gagal update schema:", err);
-      }
-    }
-
-  } catch (err) {
-    console.error("[HybridDateModified] Fatal error:", err);
-  }
-})();
-*/
-
-	 // --- gabungkan semua mapping ---
-    const urlMappingGabungan = Object.assign(
-      {},
-		urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage,
-		urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage,
-		urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1,
-		urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2,
-		
-		urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1,
-		urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1,
-		
-		urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1,
-		urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage,
-		urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage,
-		
-		urlMappingJasaSepticTankFromMoneyMaster1MoneyPage,
-		urlMappingJasaPembuatanSepticTankFromMoneyPageMoneyPage1,
-		
-		urlMappingJasaTangkiAirFromMoneyMaster1MoneyPage,
-		urlMappingJasaBakPenampunganFromMoneyMaster1MoneyPage,
-       urlMappingJasaMenaraAirFromMoneyMaster1MoneyPage,
-		
-		urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1
-
-    );
-
-    // --- validasi URL terdaftar ---
-    if (!urlMappingGabungan[cleanUrlJasaJasaKonsStruktur]) {
-      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaJasaKonsStruktur}`);
-      return;
-    }
-	
-     // Menemukan elemen menggunakan Id
-    //var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
-    var JasaKonsStruktur = document.getElementById("JasaKonsStruktur");
-
-if (!JasaKonsStruktur) {
-     console.error("elemen Id JasaKonsPerbaikanSub kondisi terhapus");	
-}
-
-	
-     var JasaKonstruksiStrukturSubLink = document.getElementById("JasaKonstruksiStrukturSub");
-     var JasaStrukturKonstruksiSubLink = document.getElementById("JasaStrukturKonstruksiSub");
-    //SUB JasaStrukturKonstruksi
-     var JasaKonstruksiGedungdanHunianSubLink = document.getElementById("JasaKonstruksiGedungdanHunianSub");
-     var JasaKonstruksiIndustridanGudangSubLink = document.getElementById("JasaKonstruksiIndustridanGudangSub");
-     var JasaStrukturBajadanRangkaRinganSubLink = document.getElementById("JasaStrukturBajadanRangkaRinganSub");
-     var JasaStrukturKhususLink = document.getElementById("JasaStrukturKhususSub");
-     var JasaKonstruksiLapanganOlahragaSubLink = document.getElementById("JasaKonstruksiLapanganOlahragaSub");
-     var JasaKonstruksiModulardanPrecastSubLink = document.getElementById("JasaKonstruksiModulardanPrecastSub");
-     var JasaStrukturBetondanPengecoranSubLink = document.getElementById("JasaStrukturBetondanPengecoranSub");
-	
-     var pageNameJasaKonsStruktur = document.getElementById("pageNameJasaKonsStruktur");
-    
-     // Default untuk menyembunyikan elemen
-     JasaKonstruksiStrukturSubLink.style.visibility = 'hidden';
-     JasaStrukturKonstruksiSubLink.style.visibility = 'hidden';
-    
-     //Hide SUB JasaStrukturKonstruksi
-     JasaKonstruksiGedungdanHunianSubLink.style.visibility = 'hidden';
-     JasaKonstruksiIndustridanGudangSubLink.style.visibility = 'hidden';
-     JasaStrukturBajadanRangkaRinganSubLink.style.visibility = 'hidden';
-     JasaStrukturKhususLink.style.visibility = 'hidden';
-     JasaKonstruksiLapanganOlahragaSubLink.style.visibility = 'hidden';
-     JasaKonstruksiModulardanPrecastSubLink.style.visibility = 'hidden';
-     JasaStrukturBetondanPengecoranSubLink.style.visibility = 'hidden';
-	
-     pageNameJasaKonsStruktur.textContent = "";
-	
-if (urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage[cleanUrlJasaJasaKonsStruktur]) {
-		    generateBreadcrumbShared(
+    // Kumpulkan SEMUA mapping ke array
+    var ALL_MAPPINGS = [
         urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-Konstruksi-bangunan.html' },
-            { name: 'Perbandingan Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-Konstruksi-bangunan.html' },
-            { name: 'Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-Konstruksi-bangunan.html' }
-        
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-
-if (urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage[cleanUrlJasaJasaKonsStruktur]) {
-		    generateBreadcrumbShared(
         urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
-             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
-            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );	
-}
-	
-if (urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
-		    generateBreadcrumbShared(
         urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
-             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
-            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
-            { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );	
-}
-if (urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStruktur]) {
-		    generateBreadcrumbShared(
         urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
-             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
-            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
-            { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' },
-            { name: 'Jasa Konstruksi Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );	
-}
-	
-if (urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
-		    generateBreadcrumbShared(
         urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
-             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
-            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
-            { name: 'Jasa Struktur Beton Dan Pengecoran', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );	
-}	
-if (urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
-		    generateBreadcrumbShared(
         urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
-             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
-            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
-            { name: 'Jasa Konstruksi Modular Dan Precast', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );	
-}	
-
-	
-if (urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
-	      generateBreadcrumbShared(
-        urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
-             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
-            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
-            { name: 'Jasa Konstruksi Modular dan Precast', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-   
-if (urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
-	       generateBreadcrumbShared(
-        urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-           { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html'},
-             { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html'},
-            { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
-            { name: 'Jasa Struktur Beton dan Pengecoran', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-	
-if (urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1[cleanUrlJasaJasaKonsStruktur]) {
-		    generateBreadcrumbShared(
         urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
-             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
-            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );	
-}
-if (urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
-		    generateBreadcrumbShared(
         urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
-             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
-            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
-            { name: 'Jasa Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-renang.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );	
-}
-if (urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
-		    generateBreadcrumbShared(
         urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
-             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
-            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
-            { name: 'Jasa Kolam Ikan', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-ikan.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );	
-}
-if (urlMappingJasaSepticTankFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
-		    generateBreadcrumbShared(
         urlMappingJasaSepticTankFromMoneyMaster1MoneyPage,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
-             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
-            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
-            { name: 'Jasa Septic Tank', url: 'https://www.betonjayareadymix.com/p/jasa-septic-tank.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );	
-}
-if (urlMappingJasaPembuatanSepticTankFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
-		    generateBreadcrumbShared(
         urlMappingJasaPembuatanSepticTankFromMoneyPageMoneyPage1,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
-             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
-            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
-            { name: 'Jasa Septic Tank', url: 'https://www.betonjayareadymix.com/p/jasa-septic-tank.html' },
-            { name: 'Jasa Pembuatan Septic Tank', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );	
-}
-	
-	
-if (urlMappingJasaTangkiAirFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
-		    generateBreadcrumbShared(
         urlMappingJasaTangkiAirFromMoneyMaster1MoneyPage,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
-             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
-            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
-            { name: 'Jasa Tangki Air', url: 'https://www.betonjayareadymix.com/p/jasa-tangki-air.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );	
-}
-if (urlMappingJasaBakPenampunganFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
-		    generateBreadcrumbShared(
         urlMappingJasaBakPenampunganFromMoneyMaster1MoneyPage,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
-             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
-            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
-            { name: 'Jasa Bak Penampungan', url: 'https://www.betonjayareadymix.com/p/jasa-bak-penampungan.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );	
-}
-if (urlMappingJasaMenaraAirFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
-		    generateBreadcrumbShared(
         urlMappingJasaMenaraAirFromMoneyMaster1MoneyPage,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
-             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
-            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
-            { name: 'Jasa Menara Air', url: 'https://www.betonjayareadymix.com/p/jasa-menara-air.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );	
-}
-	
-if (urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
-	        generateBreadcrumbShared(
-        urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1,
-        cleanUrlJasaJasaKonsStruktur,
-        [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-             { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
-             { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html' }
-        ],
-        'JASA_KONSTRUKSI'
+        urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1
+    ];
+
+    // Loop + foundIndex + break (early exit)
+    var foundIndex = -1;
+    var foundMappingName = '';
+
+    for (var i = 0; i < ALL_MAPPINGS.length; i++) {
+        if (!ALL_MAPPINGS[i] || typeof ALL_MAPPINGS[i] !== 'object') {
+            console.warn('[jasa-konstruksi-struktur] ⚠️ Mapping #' + (i + 1) + ' bukan object — skip');
+            continue;
+        }
+        if (ALL_MAPPINGS[i][cleanUrl]) {
+            foundIndex = i;
+            foundMappingName = ALL_MAPPINGS[i][cleanUrl];
+            break;
+        }
+    }
+
+    if (foundIndex === -1) {
+        console.log('[jasa-konstruksi-struktur] ⏭️ SKIP — URL tidak cocok di semua cluster');
+        window.__jasaKonsStrukturActive = false;
+        return;
+    }
+
+    // ✅ Cocok — set flag + simpan info untuk debug
+    window.__jasaKonsStrukturActive = true;
+    window.__jasaKonsStrukturMatchIndex = foundIndex;
+    window.__jasaKonsStrukturMatchMappingName = foundMappingName;
+
+    console.log(
+        '[jasa-konstruksi-struktur] ✅ Match di mapping #' + (foundIndex + 1) +
+        ' — Label: "' + foundMappingName + '"' +
+        ' — EXECUTE flag set'
     );
+})();
+
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN 3] FUNGSI UTAMA — Pembuka
+// ═══════════════════════════════════════════════════════════
+
+function initJasaKonsStrukturPillar() {
+    // ⚡ Guard flag
+    if (!window.__jasaKonsStrukturActive) {
+        console.log('[jasa-konstruksi-struktur] ⏭️ Execute SKIP — URL tidak cocok');
+        return;
+    }
+
+    console.log('[jasa-konstruksi-struktur] 🚀 Execute — URL cocok');
+
+    var cleanUrlJasaJasaKonsStruktur = window.location.href.split(/[?#]/)[0];
+
+    // ✅ Guard elemen DOM
+    var JasaKonsStruktur = document.getElementById("JasaKonsStruktur");
+    if (!JasaKonsStruktur) {
+        console.error("[jasa-konstruksi-struktur] ❌ elemen Id JasaKonsStruktur kondisi terhapus");
+        return;
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 1] JASA KONSTRUKSI BANGUNAN (MONEY_MASTER)
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-bangunan.html' },
+                { name: 'Perbandingan Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-bangunan.html' },
+                { name: 'Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 2] JASA KONSTRUKSI STRUKTUR (MONEY_MASTER)
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+                { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+                { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 3] JASA STRUKTUR BAJA DAN RANGKA RINGAN (MONEY_PAGE)
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+                { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+                { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+                { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 4] JASA KONSTRUKSI BAJA RINGAN (MONEY_PAGE)
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+                { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+                { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+                { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' },
+                { name: 'Jasa Konstruksi Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 5] JASA STRUKTUR BETON DAN PENGECORAN (MONEY_PAGE)
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+                { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+                { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+                { name: 'Jasa Struktur Beton dan Pengecoran', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 6] JASA KONSTRUKSI MODULAR DAN PRECAST (MONEY_PAGE)
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+                { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+                { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+                { name: 'Jasa Konstruksi Modular dan Precast', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 7] JASA STRUKTUR KHUSUS (MONEY_MASTER)
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+                { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+                { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 8] JASA KOLAM RENANG (MONEY_PAGE)
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+                { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+                { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+                { name: 'Jasa Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-renang.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 9] JASA KOLAM IKAN (MONEY_PAGE)
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+                { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+                { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+                { name: 'Jasa Kolam Ikan', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-ikan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 10] JASA SEPTIC TANK (MONEY_PAGE)
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaSepticTankFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaSepticTankFromMoneyMaster1MoneyPage,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+                { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+                { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+                { name: 'Jasa Septic Tank', url: 'https://www.betonjayareadymix.com/p/jasa-septic-tank.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 11] JASA PEMBUATAN SEPTIC TANK (MONEY_PAGE)
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaPembuatanSepticTankFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPembuatanSepticTankFromMoneyPageMoneyPage1,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+                { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+                { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+                { name: 'Jasa Septic Tank', url: 'https://www.betonjayareadymix.com/p/jasa-septic-tank.html' },
+                { name: 'Jasa Pembuatan Septic Tank', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 12] JASA TANGKI AIR (MONEY_PAGE)
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaTangkiAirFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaTangkiAirFromMoneyMaster1MoneyPage,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+                { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+                { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+                { name: 'Jasa Tangki Air', url: 'https://www.betonjayareadymix.com/p/jasa-tangki-air.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 13] JASA BAK PENAMPUNGAN (MONEY_PAGE)
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaBakPenampunganFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaBakPenampunganFromMoneyMaster1MoneyPage,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+                { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+                { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+                { name: 'Jasa Bak Penampungan', url: 'https://www.betonjayareadymix.com/p/jasa-bak-penampungan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 14] JASA MENARA AIR (MONEY_PAGE)
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaMenaraAirFromMoneyMaster1MoneyPage[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaMenaraAirFromMoneyMaster1MoneyPage,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+                { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+                { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+                { name: 'Jasa Menara Air', url: 'https://www.betonjayareadymix.com/p/jasa-menara-air.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 15] JASA PEMBUATAN LAPANGAN OLAHRAGA (MONEY_PAGE)
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
+                { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
+                { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' },
+                { name: 'Jasa Pembuatan Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
 }
- 
 
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN 4] AUTO-INIT saat DOM siap
+// ═══════════════════════════════════════════════════════════
 
-	
-   });
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initJasaKonsStrukturPillar);
+} else {
+    initJasaKonsStrukturPillar();
+}
