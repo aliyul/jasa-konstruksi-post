@@ -228,7 +228,7 @@ function initJasaPerkuatanTanahLongsor() {
             cleanUrlJasaPerkuatanTanahLongsorKonsPost,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html' },
                 { name: 'Jasa Bronjong Penahan Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-bronjong-penahan-longsor.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -248,7 +248,7 @@ function initJasaPerkuatanTanahLongsor() {
             cleanUrlJasaPerkuatanTanahLongsorKonsPost,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html' },
                 { name: 'Jasa Soil Nailing Tebing', url: 'https://www.betonjayareadymix.com/p/jasa-soil-nailing-tebing.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -268,7 +268,7 @@ function initJasaPerkuatanTanahLongsor() {
             cleanUrlJasaPerkuatanTanahLongsorKonsPost,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html' },
                 { name: 'Jasa Dinding Penahan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-dinding-penahan-tanah-longsor.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -288,7 +288,7 @@ function initJasaPerkuatanTanahLongsor() {
             cleanUrlJasaPerkuatanTanahLongsorKonsPost,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html' },
                 { name: 'Jasa Geotextile Perkuatan Lereng', url: 'https://www.betonjayareadymix.com/p/jasa-geotextile-perkuatan-lereng.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -308,7 +308,7 @@ function initJasaPerkuatanTanahLongsor() {
             cleanUrlJasaPerkuatanTanahLongsorKonsPost,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html' },
                 { name: 'Jasa Sheet Pile Penahan Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-sheet-pile-penahan-longsor.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -328,7 +328,7 @@ function initJasaPerkuatanTanahLongsor() {
             cleanUrlJasaPerkuatanTanahLongsorKonsPost,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html' },
                 { name: 'Jasa Stabilisasi Tanah Labil', url: 'https://www.betonjayareadymix.com/p/jasa-stabilisasi-tanah-labil.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -348,7 +348,7 @@ function initJasaPerkuatanTanahLongsor() {
             cleanUrlJasaPerkuatanTanahLongsorKonsPost,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html' },
                 { name: 'Jasa Perkuatan Tanah Longsor Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post-rumah.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -368,7 +368,7 @@ function initJasaPerkuatanTanahLongsor() {
             cleanUrlJasaPerkuatanTanahLongsorKonsPost,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html' },
                 { name: 'Jasa Perkuatan Tebing Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tebing-jalan.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -388,7 +388,7 @@ function initJasaPerkuatanTanahLongsor() {
             cleanUrlJasaPerkuatanTanahLongsorKonsPost,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html' },
                 { name: 'Jasa Perkuatan Longsor Perkebunan', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-longsor-perkebunan.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -408,7 +408,7 @@ function initJasaPerkuatanTanahLongsor() {
             cleanUrlJasaPerkuatanTanahLongsorKonsPost,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor-post.html' },
+                { name: 'Jasa Perkuatan Tanah Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html' },
                 { name: 'Jasa Drainase Anti Longsor', url: 'https://www.betonjayareadymix.com/p/jasa-drainase-anti-longsor.html' }
             ],
             'JASA_KONSTRUKSI'
