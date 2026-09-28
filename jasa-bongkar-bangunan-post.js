@@ -725,27 +725,33 @@ function restoreCondition(conditionId) {
         urlMappingJasaPerbaikanTalangBocorFromSub2MoneyPage
     ];
 
-    var MERGED_MAP = {};
-    for (var i = 0; i < ALL_MAPPINGS_ARRAY.length; i++) {
-        var m = ALL_MAPPINGS_ARRAY[i];
-        if (m && typeof m === 'object') {
-            for (var key in m) {
-                if (m.hasOwnProperty(key)) {
-                    MERGED_MAP[key] = m[key];
-                }
-            }
-        }
-    }
+    var foundIndex = -1;
+var foundMappingName = '';
 
-    if (!MERGED_MAP.hasOwnProperty(cleanUrl)) {
-        console.log('[jasa-bongkar-bangunan-post] ⏭️ SKIP — URL tidak cocok');
-        window.__jasaBongkarBangunanPostActive = false;
-        return;
+for (var i = 0; i < ALL_MAPPINGS_ARRAY.length; i++) {
+    var m = ALL_MAPPINGS_ARRAY[i];
+    if (!m || typeof m !== 'object') {          // ← Guard yang sama
+        continue;
     }
+    if (m.hasOwnProperty(cleanUrl)) {           // ← CEK LANGSUNG
+        foundIndex = i;
+        foundMappingName = m[cleanUrl];
+        break;                                  // ← SHORT-CIRCUIT
+    }
+}
 
-    window.__jasaBongkarBangunanPostMerged = MERGED_MAP;
-    window.__jasaBongkarBangunanPostActive = true;
-    console.log('[jasa-bongkar-bangunan-post] ✅ EXECUTE flag set');
+if (foundIndex === -1) {
+    console.log('⏭️ SKIP');
+    window.__jasaBongkarBangunanPostActive = false;
+    return;
+}
+
+window.__jasaBongkarBangunanPostActive = true;
+window.__jasaBongkarBangunanPostMatchIndex = foundIndex;
+window.__jasaBongkarBangunanPostMatchMappingName = foundMappingName;
+
+console.log('✅ Match di mapping #' + (foundIndex + 1) + ' — Label: "' + foundMappingName + '"');
+
 })();
 
 // ────────────────────────────────────────────────────────────
