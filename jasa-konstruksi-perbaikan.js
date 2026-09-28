@@ -3,7 +3,7 @@
 // v2.2.0 — Early Exit v2.0.0 + Fix v2.1.0 + Pendekatan C
 // ============================================================
 
-console.log('[jasa-perbaikan-kons-post] 📄 File loaded, waiting for DOM...');
+console.log('[jasa-perbaikan-kons] 📄 File loaded, waiting for DOM...');
 
 // ═══════════════════════════════════════════════════════════
 // [BAGIAN 1] DEFINISI SEMUA MAPPING
@@ -628,7 +628,7 @@ const urlMappingRenovasiInteriorRuanganFromMoneyPageMoneyPage1 = {
     'use strict';
     
     var cleanUrl = window.location.href.split(/[?#]/)[0];
-    console.log('[jasa-perbaikan-kons-post] 🔍 Check: ' + cleanUrl);
+    console.log('[jasa-perbaikan-kons] 🔍 Check: ' + cleanUrl);
     
     var ALL_MAPPINGS = [
         urlMappingPerbaikanWaterproofingBangunanFromMoneyPageMoneyPage1,
@@ -684,7 +684,7 @@ const urlMappingRenovasiInteriorRuanganFromMoneyPageMoneyPage1 = {
     
     for (var i = 0; i < ALL_MAPPINGS.length; i++) {
         if (!ALL_MAPPINGS[i] || typeof ALL_MAPPINGS[i] !== 'object') {
-            console.warn('[jasa-perbaikan-kons-post] ⚠️ Mapping #' + (i + 1) + ' bukan object — skip');
+            console.warn('[jasa-perbaikan-kons] ⚠️ Mapping #' + (i + 1) + ' bukan object — skip');
             continue;
         }
         if (ALL_MAPPINGS[i][cleanUrl]) {
@@ -695,18 +695,18 @@ const urlMappingRenovasiInteriorRuanganFromMoneyPageMoneyPage1 = {
     }
     
     if (foundIndex === -1) {
-        console.log('[jasa-perbaikan-kons-post] ⏭️ SKIP — URL tidak cocok');
-        window.__jasaPerbaikanKonsPostActive = false;
+        console.log('[jasa-perbaikan-kons] ⏭️ SKIP — URL tidak cocok');
+        window.__jasaPerbaikanKonsActive = false;
         return;
     }
     
-    window.__jasaPerbaikanKonsPostActive = true;
-    window.__jasaPerbaikanKonsPostMatchIndex = foundIndex;
-    window.__jasaPerbaikanKonsPostMatchMappingName = foundMappingName;
-    window.__jasaPerbaikanKonsPostMappings = ALL_MAPPINGS;
+    window.__jasaPerbaikanKonsActive = true;
+    window.__jasaPerbaikanKonsMatchIndex = foundIndex;
+    window.__jasaPerbaikanKonsMatchMappingName = foundMappingName;
+    window.__jasaPerbaikanKonsMappings = ALL_MAPPINGS;
     
     console.log(
-        '[jasa-perbaikan-kons-post] ✅ Match di mapping #' + (foundIndex + 1) +
+        '[jasa-perbaikan-kons] ✅ Match di mapping #' + (foundIndex + 1) +
         ' — Label: "' + foundMappingName + '"' +
         ' — EXECUTE flag set'
     );
@@ -722,19 +722,19 @@ console.log('══════════════════════�
 
 function initJasaPerbaikanKonsPost() {
     // ⚡ Guard flag
-    if (!window.__jasaPerbaikanKonsPostActive) {
-        console.log('[jasa-perbaikan-kons-post] ⏭️ Execute SKIP — URL tidak cocok');
+    if (!window.__jasaPerbaikanKonsActive) {
+        console.log('[jasa-perbaikan-kons] ⏭️ Execute SKIP — URL tidak cocok');
         return;
     }
     
-    console.log('[jasa-perbaikan-kons-post] 🚀 Execute — URL cocok');
+    console.log('[jasa-perbaikan-kons] 🚀 Execute — URL cocok');
     
     var cleanUrlJasaPerbaikanKonsSub = window.location.href.split(/[?#]/)[0];
     
     // ✅ Guard elemen DOM
     var JasaKonsPerbaikan = document.getElementById("JasaKonsPerbaikan");
     if (!JasaKonsPerbaikan) {
-        console.error("[jasa-perbaikan-kons-post] ❌ elemen Id JasaKonsPerbaikan kondisi terhapus");
+        console.error("[jasa-perbaikan-kons] ❌ elemen Id JasaKonsPerbaikan kondisi terhapus");
         return;
     }
 
@@ -1494,7 +1494,7 @@ function initJasaPerbaikanKonsPost() {
         );
     }
 
-    console.log('[jasa-perbaikan-kons-post] ✅ Semua breadcrumb selesai diproses');
+    console.log('[jasa-perbaikan-kons] ✅ Semua breadcrumb selesai diproses');
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -1507,10 +1507,10 @@ function initJasaPerbaikanKonsPost() {
 // ═══════════════════════════════════════════════════════════
 
 if (document.readyState === 'loading') {
-    console.log('[jasa-perbaikan-kons-post] ⏳ DOM loading, tunggu event');
+    console.log('[jasa-perbaikan-kons] ⏳ DOM loading, tunggu event');
     document.addEventListener('DOMContentLoaded', initJasaPerbaikanKonsPost);
 } else {
-    console.log('[jasa-perbaikan-kons-post] ⚡ DOM ready, langsung execute');
+    console.log('[jasa-perbaikan-kons] ⚡ DOM ready, langsung execute');
     initJasaPerbaikanKonsPost();
 }
 
