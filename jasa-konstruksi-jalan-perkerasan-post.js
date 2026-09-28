@@ -1,3 +1,10 @@
+// ============================================================
+// JASA JALAN & PERKERASAN - BLOG POST (MONEY PAGE)
+// Pattern: Early Exit v2.0.0 + Fix v2.1.0 + Pendekatan C
+// ============================================================
+
+console.log('[jasa-jalan-perkerasan-post] 📄 File loaded, waiting for DOM...');
+
 /*
 const urlMappingJasaPembangunanInfrastrukturJalan = {
 
@@ -21,13 +28,13 @@ const urlMappingJasaPemadatanPersiapanTanahJalan = {
   "https://www.betonjayareadymix.com/p/jasa-urugan-tanah-jalan.html": "Jasa Urugan Tanah Jalan",
   "https://www.betonjayareadymix.com/p/jasa-pemadatan-tanah-jalan.html": "Jasa Pemadatan Tanah Jalan",
   "https://www.betonjayareadymix.com/p/jasa-stabilisasi-tanah-jalan.html": "Jasa Stabilisasi Tanah Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-perkerasan-tanah-subgrade.html": "Jasa Perkerasan Tanah SubPostgrade"
+  "https://www.betonjayareadymix.com/p/jasa-perkerasan-tanah-subgrade.html": "Jasa Perkerasan Tanah Subgrade"
 
 };
 */
 /*
 const urlMappingJasaPerkerasanJalan = {
-"https://www.betonjayareadymix.com/p/jasa-timbunan-subbase-jalan.html": "Jasa Timbunan SubPostbase Jalan",
+"https://www.betonjayareadymix.com/p/jasa-timbunan-subbase-jalan.html": "Jasa Timbunan Subbase Jalan",
   "https://www.betonjayareadymix.com/p/jasa-perkerasan-base-course-jalan.html": "Jasa Perkerasan Base Course Jalan",
   "https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-kerikil.html": "Jasa Perkerasan Jalan Kerikil",
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-dasar-tanah-jalan.html": "Jasa Perkuatan Dasar Tanah Jalan",
@@ -57,7 +64,7 @@ const urlMappingJasaPengerasanJalan = {
   "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-batu.html": "Jasa Pengerasan Jalan Batu",
   "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-kerikil.html": "Jasa Pengerasan Jalan Kerikil",
   "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-base-course.html": "Jasa Pengerasan Jalan Base Course",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-subbase.html": "Jasa Pengerasan Jalan SubPost Base",
+  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-subbase.html": "Jasa Pengerasan Jalan SubBase",
   "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-agregat.html": "Jasa Pengerasan Jalan Agregat",
   "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-makadam.html": "Jasa Pengerasan Jalan Makadam",
   "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan-urugan-material.html": "Jasa Pengerasan Jalan Urugan Material",
@@ -70,8 +77,6 @@ const urlMappingJasaPengerasanJalan = {
 };
 */
 /*
-.
-
 📊 RINGKASAN STATUS
 Const										Jumlah URL	Valid	Kontak Halaman (Konten)	Perlu Redirect	Saran Tambah
 urlMappingJasaPavingBlockJalanPost			0		-	-		-						5+ URL 			(saran)
@@ -399,132 +404,171 @@ function restoreCondition(conditionId) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-	
-    // ⚡ EARLY EXIT — Cek URL SEBELUM eksekusi
-    (function() {
-      var cleanUrl = window.location.href.split(/[?#]/)[0];
-      console.log('[jasa-jalan-perkerasan-post] 🔍 Check: ' + cleanUrl);
-      
-      var ALL_MAPPINGS = [
+// ═══════════════════════════════════════════════════════════
+// EARLY EXIT v2.0.0 — DI LUAR DOMContentLoaded
+// ═══════════════════════════════════════════════════════════
+(function() {
+    'use strict';
+    
+    var cleanUrl = window.location.href.split(/[?#]/)[0];
+    console.log('[jasa-jalan-perkerasan-post] 🔍 Check: ' + cleanUrl);
+    
+    var ALL_MAPPINGS = [
         urlMappingHargaJasaPengaspalanJalanFromMoneyPage2MoneyChild,
         urlMappingHargaJasaPengecoranJalanBetonFromMoneyPage2MoneyChild,
         urlMappingHargaJasaPasangPavingFromMoneyPage2MoneyChild,
         urlMappingJasaPavingBlockJalanPost,
         urlMappingJasaPengecoranJalanBetonPost,
         urlMappingJasaPengaspalanJalanPost,
-        urlMappingJasaPerkerasanAgregatJalanPost
-      ];
-      
-      var found = false;
-      for (var i = 0; i < ALL_MAPPINGS.length; i++) {
-        if (ALL_MAPPINGS[i] && ALL_MAPPINGS[i][cleanUrl]) {
-          found = true;
-          console.log('[jasa-jalan-perkerasan-post] ✅ Match di mapping #' + (i + 1));
-          break;
+        urlMappingJasaPerkerasanAgregatJalanPost,
+        urlMappingJasaPerkerasanJalanBetonPost,
+        urlMappingJasaPerkerasanJalanAspalPost,
+        urlMappingJasaPerkerasanJalanKompositPost,
+        urlMappingJasaPerkerasanJalanRabatBetonPost,
+        urlMappingJasaPerkerasanJalanSemiRigidPost,
+        urlMappingJasaPerkerasanJalanKerikilPost
+    ];
+    
+    // ✅ PENDEKATAN C: Loop + foundIndex + break
+    var foundIndex = -1;
+    var foundMappingName = '';
+    
+    for (var i = 0; i < ALL_MAPPINGS.length; i++) {
+        if (!ALL_MAPPINGS[i] || typeof ALL_MAPPINGS[i] !== 'object') {
+            console.warn('[jasa-jalan-perkerasan-post] ⚠️ Mapping #' + (i + 1) + ' bukan object — skip');
+            continue;
         }
-      }
-      
-      if (!found) {
+        if (ALL_MAPPINGS[i][cleanUrl]) {
+            foundIndex = i;
+            foundMappingName = ALL_MAPPINGS[i][cleanUrl];
+            break;
+        }
+    }
+    
+    if (foundIndex === -1) {
         console.log('[jasa-jalan-perkerasan-post] ⏭️ SKIP — URL tidak cocok');
         window.__jasaJalanPerkerasanPostActive = false;
         return;
-      }
-      
-      window.__jasaJalanPerkerasanPostActive = true;
-      console.log('[jasa-jalan-perkerasan-post] ✅ EXECUTE flag set');
-    })();
+    }
     
-    // ⚡ Cek flag — skip kalau tidak aktif
-    if (!window.__jasaJalanPerkerasanPostActive) return;
+    window.__jasaJalanPerkerasanPostActive = true;
+    window.__jasaJalanPerkerasanPostMatchIndex = foundIndex;
+    window.__jasaJalanPerkerasanPostMatchMappingName = foundMappingName;
     
-    // var currentUrl = window.location.href;
-     //const cleanUrl = currentUrl.split('?')[0]; // Menghapus parameter seperti ?m=1
-    const cleanUrlJasaJalanPerkerasanKonsPost = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
-	
+    console.log(
+        '[jasa-jalan-perkerasan-post] ✅ Match di mapping #' + (foundIndex + 1) +
+        ' — Label: "' + foundMappingName + '"' +
+        ' — EXECUTE flag set'
+    );
+})();
 
-     // Menemukan elemen menggunakan Id
-    var JasaKonsJalanPerkerasanPost = document.getElementById("JasaKonsJalanPerkerasanPost");
-
-    if (!JasaKonsJalanPerkerasanPost) {
-        console.error("elemen Id JasaKonsJalanPerkerasanPost kondisi terhapus");
+// ═══════════════════════════════════════════════════════════
+// FUNGSI UTAMA — Semua logic breadcrumb
+// ═══════════════════════════════════════════════════════════
+function initJasaJalanPerkerasanPost() {
+    // ⚡ Guard flag
+    if (!window.__jasaJalanPerkerasanPostActive) {
+        console.log('[jasa-jalan-perkerasan-post] ⏭️ Execute SKIP — URL tidak cocok');
         return;
     }
-	
-   //SUB MAPPING JASA JALAN & PERKERASAN
-       
-/*SUB MAPPING Jasa Perkerasan Jalan : 
-   "https://www.betonjayareadymix.com/p/jasa-perkerasan-agregat-jalan.html": "Jasa Perkerasan Agregat Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-pengerasan-jalan.html": "Jasa Pengerasan Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-pengecoran-jalan-beton.html": "Jasa Pengecoran Jalan Beton",
-  "https://www.betonjayareadymix.com/p/jasa-pengaspalan-jalan.html": "Jasa Pengaspalan Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-paving-block-jalan.html": "Jasa Paving Block Jalan" */
-
-if (urlMappingHargaJasaPengaspalanJalanFromMoneyPage2MoneyChild[cleanUrlJasaJalanPerkerasanKonsPost]) {
-      generateBreadcrumbShared(
-        urlMappingHargaJasaPengaspalanJalanFromMoneyPage2MoneyChild,
-        cleanUrlJasaJalanPerkerasanKonsPost,
-       [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-jalan-perkerasan.html' },
-            { name: 'Perbandingan Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-jalan-perkerasan.html' },
-            { name: 'Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html' },
-            { name: 'Jasa Perkerasan Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html' },
-            { name: 'Jasa Perkerasan Jalan Layanan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-layanan.html' },
-            { name: 'Jasa Pengaspalan Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-pengaspalan-jalan.html' },
-            { name: 'Harga Jasa Pengaspalan Jalan', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pengaspalan-jalan.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-
-if (urlMappingHargaJasaPengecoranJalanBetonFromMoneyPage2MoneyChild[cleanUrlJasaJalanPerkerasanKonsPost]) {
-      generateBreadcrumbShared(
-        urlMappingHargaJasaPengecoranJalanBetonFromMoneyPage2MoneyChild,
-        cleanUrlJasaJalanPerkerasanKonsPost,
-       [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-jalan-perkerasan.html' },
-            { name: 'Perbandingan Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-jalan-perkerasan.html' },
-            { name: 'Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html' },
-            { name: 'Jasa Perkerasan Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html' },
-            { name: 'Jasa Perkerasan Jalan Layanan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-layanan.html' },
-            { name: 'Jasa Pengecoran Jalan Beton', url: 'https://www.betonjayareadymix.com/p/jasa-pengecoran-jalan-beton.html' },
-            { name: 'Harga Jasa Pengecoran Jalan Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pengecoran-jalan-beton.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-
-if (urlMappingHargaJasaPasangPavingFromMoneyPage2MoneyChild[cleanUrlJasaJalanPerkerasanKonsPost]) {
-      generateBreadcrumbShared(
-        urlMappingHargaJasaPasangPavingFromMoneyPage2MoneyChild,
-        cleanUrlJasaJalanPerkerasanKonsPost,
-       [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-jalan-perkerasan.html' },
-            { name: 'Perbandingan Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-jalan-perkerasan.html' },
-            { name: 'Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html' },
-            { name: 'Jasa Perkerasan Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html' },
-            { name: 'Jasa Perkerasan Jalan Layanan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-layanan.html' },
-            { name: 'Jasa Pasang Paving', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-paving.html' },
-            { name: 'Harga Jasa Pasang Paving', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-paving.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-
-if (urlMappingJasaPengaspalanJalanPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
-      
-}
-
-if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
     
+    console.log('[jasa-jalan-perkerasan-post] 🚀 Execute — URL cocok');
+    
+    var cleanUrlJasaJalanPerkerasanKonsPost = window.location.href.split(/[?#]/)[0];
+    
+    // ✅ Guard elemen DOM
+    var JasaKonsJalanPerkerasanPost = document.getElementById("JasaKonsJalanPerkerasanPost");
+    if (!JasaKonsJalanPerkerasanPost) {
+        console.error('[jasa-jalan-perkerasan-post] ❌ elemen Id JasaKonsJalanPerkerasanPost kondisi terhapus');
+        return;
+    }
+    
+    // ═══════════════════════════════════════════════════════
+    // SEMUA IF BREADCRUMB
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingHargaJasaPengaspalanJalanFromMoneyPage2MoneyChild[cleanUrlJasaJalanPerkerasanKonsPost]) {
+        generateBreadcrumbShared(
+            urlMappingHargaJasaPengaspalanJalanFromMoneyPage2MoneyChild,
+            cleanUrlJasaJalanPerkerasanKonsPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-jalan-perkerasan.html' },
+                { name: 'Perbandingan Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-jalan-perkerasan.html' },
+                { name: 'Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html' },
+                { name: 'Jasa Perkerasan Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html' },
+                { name: 'Jasa Perkerasan Jalan Layanan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-layanan.html' },
+                { name: 'Jasa Pengaspalan Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-pengaspalan-jalan.html' },
+                { name: 'Harga Jasa Pengaspalan Jalan', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pengaspalan-jalan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingHargaJasaPengecoranJalanBetonFromMoneyPage2MoneyChild[cleanUrlJasaJalanPerkerasanKonsPost]) {
+        generateBreadcrumbShared(
+            urlMappingHargaJasaPengecoranJalanBetonFromMoneyPage2MoneyChild,
+            cleanUrlJasaJalanPerkerasanKonsPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-jalan-perkerasan.html' },
+                { name: 'Perbandingan Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-jalan-perkerasan.html' },
+                { name: 'Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html' },
+                { name: 'Jasa Perkerasan Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html' },
+                { name: 'Jasa Perkerasan Jalan Layanan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-layanan.html' },
+                { name: 'Jasa Pengecoran Jalan Beton', url: 'https://www.betonjayareadymix.com/p/jasa-pengecoran-jalan-beton.html' },
+                { name: 'Harga Jasa Pengecoran Jalan Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pengecoran-jalan-beton.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingHargaJasaPasangPavingFromMoneyPage2MoneyChild[cleanUrlJasaJalanPerkerasanKonsPost]) {
+        generateBreadcrumbShared(
+            urlMappingHargaJasaPasangPavingFromMoneyPage2MoneyChild,
+            cleanUrlJasaJalanPerkerasanKonsPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-jalan-perkerasan.html' },
+                { name: 'Perbandingan Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-jalan-perkerasan.html' },
+                { name: 'Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html' },
+                { name: 'Jasa Perkerasan Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html' },
+                { name: 'Jasa Perkerasan Jalan Layanan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-layanan.html' },
+                { name: 'Jasa Pasang Paving', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-paving.html' },
+                { name: 'Harga Jasa Pasang Paving', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-paving.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    // ⚠️ CATATAN: Tiga blok di bawah ini KOSONG di file lama.
+    // Kalau memang mau di-handle, isi generateBreadcrumbShared()-nya.
+    // Kalau tidak, HAPUS saja blok-nya supaya tidak membingungkan.
+    
+    /*
+    if (urlMappingJasaPengaspalanJalanPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
+        // ⚠️ TODO: Isi generateBreadcrumbShared() atau hapus blok ini
+    }
+    
+    if (urlMappingJasaPengecoranJalanBetonPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
+        // ⚠️ TODO: Isi generateBreadcrumbShared() atau hapus blok ini
+    }
+    
+    if (urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
+        // ⚠️ TODO: Isi generateBreadcrumbShared() atau hapus blok ini
+    }
+    */
+    
+    console.log('[jasa-jalan-perkerasan-post] ✅ Semua breadcrumb selesai diproses');
 }
-   
-if (urlMappingJasaPerkerasanAgregatJalanPost[cleanUrlJasaJalanPerkerasanKonsPost]) {
-       
-}
-  
-});
 
+// ═══════════════════════════════════════════════════════════
+// FIX v2.1.0 — readyState check
+// ═══════════════════════════════════════════════════════════
+if (document.readyState === 'loading') {
+    console.log('[jasa-jalan-perkerasan-post] ⏳ DOM loading, tunggu event');
+    document.addEventListener('DOMContentLoaded', initJasaJalanPerkerasanPost);
+} else {
+    console.log('[jasa-jalan-perkerasan-post] ⚡ DOM ready, langsung execute');
+    initJasaJalanPerkerasanPost();
+}
