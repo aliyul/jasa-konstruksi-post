@@ -471,35 +471,7 @@ console.log('══════════════════════�
 // [BAGIAN 2] FUNGSI HELPER
 // ═══════════════════════════════════════════════════════════
 
-var removedElementsJasaKonsFinishing = {};
 
-function removeCondition(conditionId) {
-    // ✅ GUARD: Jangan hapus container utama
-    if (conditionId === 'JasaKonsFinishing') {
-        console.warn('[jasa-konstruksi-finishing] ⚠️ Tidak boleh menghapus container utama: ' + conditionId);
-        return;
-    }
-    
-    var conditionElement = document.getElementById(conditionId);
-    if (conditionElement) {
-        removedElementsJasaKonsFinishing[conditionId] = conditionElement;
-        conditionElement.remove();
-        console.log('[jasa-konstruksi-finishing] 🔧 Removed: ' + conditionId);
-    }
-}
-
-function restoreCondition(conditionId) {
-    var breadcrumb = document.querySelector('.breadcrumb');
-    var elementToRestore = removedElementsJasaKonsFinishing[conditionId];
-    
-    if (elementToRestore) {
-        breadcrumb.appendChild(elementToRestore);
-        delete removedElementsJasaKonsFinishing[conditionId];
-        console.log('[jasa-konstruksi-finishing] 🔧 Restored: ' + conditionId);
-    } else {
-        console.warn('[jasa-konstruksi-finishing] ⚠️ Elemen ' + conditionId + ' tidak ditemukan');
-    }
-}
 
 // ═══════════════════════════════════════════════════════════
 // [BAGIAN 3] EARLY EXIT v2.0.0 — PENDEKATAN C
