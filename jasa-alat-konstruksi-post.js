@@ -836,30 +836,44 @@ function restoreCondition(conditionId) {
         urlMappingSewaStamperFromMoneyMaster1MoneyPage
     ];
 
-    // Merge array of objects → 1 object flat
-    var MERGED_MAP = {};
+    // ─── Loop + break (TANPA MERGED_MAP) ───
+    var foundIndex = -1;
+    var foundMappingName = '';
+
     for (var i = 0; i < ALL_MAPPINGS_ARRAY.length; i++) {
         var m = ALL_MAPPINGS_ARRAY[i];
-        if (m && typeof m === 'object') {
-            for (var key in m) {
-                if (m.hasOwnProperty(key)) {
-                    MERGED_MAP[key] = m[key];
-                }
-            }
+
+        // Guard: skip kalau undefined/null/bukan object
+        if (!m || typeof m !== 'object') {
+            console.warn('[jasa-alat-konstruksi-post] ⚠️ Mapping #' + (i + 1) + ' bukan object — skip');
+            continue;
+        }
+
+        // Cek langsung — apakah cleanUrl ada di mapping ini?
+        if (m.hasOwnProperty(cleanUrl)) {
+            foundIndex = i;
+            foundMappingName = m[cleanUrl];
+            break;  // ⚡ Short-circuit
         }
     }
 
-    // Cek SEKALI — O(1) bukan O(n)
-    if (!MERGED_MAP.hasOwnProperty(cleanUrl)) {
+    // ─── Cek hasil — pakai foundIndex ───
+    if (foundIndex === -1) {
         console.log('[jasa-alat-konstruksi-post] ⏭️ SKIP — URL tidak cocok');
         window.__jasaAlatKonstruksiPostActive = false;
         return;
     }
 
-    // Simpan hasil merge untuk dipakai nanti
-    window.__jasaAlatKonstruksiPostMerged = MERGED_MAP;
+    // ─── Match! Set flag + log detail ───
     window.__jasaAlatKonstruksiPostActive = true;
-    console.log('[jasa-alat-konstruksi-post] ✅ EXECUTE flag set');
+    window.__jasaAlatKonstruksiPostMatchIndex = foundIndex;
+    window.__jasaAlatKonstruksiPostMatchMappingName = foundMappingName;
+
+    console.log(
+        '[jasa-alat-konstruksi-post] ✅ Match di mapping #' + (foundIndex + 1) +
+        ' — Label: "' + foundMappingName + '" — EXECUTE flag set'
+    );
+
 })();
 
 // ────────────────────────────────────────────────────────────
