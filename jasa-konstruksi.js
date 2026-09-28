@@ -556,7 +556,7 @@ const urlMappingJasaBorePileFromMoneyMasterMoneyPage= {
 "https://www.betonjayareadymix.com/p/mutu-jasa-bore-pile.html": "Mutu Jasa Bore Pile",
 "https://www.betonjayareadymix.com/p/spesifikasi-jasa-bore-pile.html": "Spesifikasi Jasa Bore Pile",
 	
- "https://www.betonjayareadymix.com/p/jasa-bore-pile-promo.html": "Jasa Bore Pile Promp",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-promo.html": "Jasa Bore Pile Promo",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-diskon.html": "Jasa Bore Pile Diskon",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-termurah.html": "Jasa Bore Pile Termurah",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-termahal.html": "Jasa Bore Pile Termahal",
@@ -1016,7 +1016,7 @@ const urlMappingSewaAlatBeratFromSub1MoneyMaster = {
   */
 };
 const urlMappingHargaSewaAlatBeratFromSub1MoneyMaster = {
-   "https://www.betonjayareadymix.com/p/harga-sewa-alat-berat.html": "HargaSewa Alat Berat",  // TYPE: MoneyMaster 
+   "https://www.betonjayareadymix.com/p/harga-sewa-alat-berat.html": "Harga Sewa Alat Berat",  // TYPE: MoneyMaster 
   "https://www.betonjayareadymix.com/p/harga-sewa-excavator.html": "Harga Sewa Excavator",  // TYPE: MoneyMaster 
  // "https://www.betonjayareadymix.com/p/sewa-beko.html": "Sewa Beko",  // TYPE: MoneyMaster 
   "https://www.betonjayareadymix.com/p/harga-sewa-forklift.html": "Harga Sewa Forklift",  // TYPE: MoneyMaster 
@@ -1958,6 +1958,7 @@ function restoreCondition(conditionId) {
     }
 }
 
+console.log('[jasa-kons] 📄 File loaded, waiting for DOM...');
 // ═══════════════════════════════════════════════════════════════
 // ⚡ EARLY EXIT — CEK URL SEBELUM EKSEKUSI (v2.0.0)
 // ═══════════════════════════════════════════════════════════════
@@ -2160,33 +2161,38 @@ function restoreCondition(conditionId) {
     urlMappingJasaPembatasPengamanFromMoneyMasterMoneyPage,
     urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage
   ];
-  
-     // ✅ FIX: Merge array of objects ke satu object flat
-  // Perhatikan: ALL_MAPPINGS_MERGED harus jadi OBJECT, bukan array!
-  var MERGED_MAP = {};  // ← object baru
-  for (var i = 0; i < ALL_MAPPINGS_MERGED.length; i++) {
-    var m = ALL_MAPPINGS_MERGED[i];
-    if (m && typeof m === 'object') {
-      for (var key in m) {
-        if (m.hasOwnProperty(key)) {
-          MERGED_MAP[key] = m[key];
-        }
-      }
-    }
-  }
-  ALL_MAPPINGS_MERGED = MERGED_MAP;  // ← ganti array jadi object
-  
-  // Cek SEKALI — O(1) bukan O(n)
-  if (!ALL_MAPPINGS_MERGED.hasOwnProperty(cleanUrl)) {
-    console.log('[jasa-kons] ⏭️ SKIP — URL tidak cocok');
-    window.__jasaKonsActive = false;
-    return;
-  }
-  
-  // Simpan hasil merge untuk dipakai nanti
-  window.__jasaKonsMerged = ALL_MAPPINGS_MERGED;
-  window.__jasaKonsActive = true;
-  console.log('[jasa-kons] ✅ EXECUTE flag set');
+	var foundIndex = -1;
+	var foundMappingName = '';
+	
+	for (var i = 0; i < ALL_MAPPINGS.length; i++) {
+	    var m = ALL_MAPPINGS[i];
+	    if (!m || typeof m !== 'object') {
+	        console.warn('[jasa-kons] ⚠️ Mapping #' + (i + 1) + ' bukan object — skip');
+	        continue;
+	    }
+	    if (m.hasOwnProperty(cleanUrl)) {  // ← LANGSUNG CEK
+	        foundIndex = i;
+	        foundMappingName = m[cleanUrl];
+	        break;                          // ← SHORT-CIRCUIT
+	    }
+	}
+	
+	if (foundIndex === -1) {
+	    console.log('[jasa-kons] ⏭️ SKIP — URL tidak cocok');
+	    window.__jasaKonsActive = false;
+	    return;
+	}
+	
+	window.__jasaKonsActive = true;
+	window.__jasaKonsMatchIndex = foundIndex;
+	window.__jasaKonsMatchMappingName = foundMappingName;
+	
+	console.log(
+	    '[jasa-kons] ✅ Match di mapping #' + (foundIndex + 1) +
+	    ' — Label: "' + foundMappingName + '"' +
+	    ' — EXECUTE flag set'
+	);
+
 })();
   
 // ═══════════════════════════════════════════════════════════════
