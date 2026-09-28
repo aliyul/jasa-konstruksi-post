@@ -1,2637 +1,1794 @@
+// ============================================================
+// JASA KONSTRUKSI FINISHING — POST
+// v2.2.0 — Early Exit v2.0.0 + Fix v2.1.0 + Pendekatan C
+// ============================================================
 
+console.log('[jasa-konstruksi-finishing] 📄 File loaded, waiting for DOM...');
+
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN 1] DEFINISI SEMUA MAPPING
+// ═══════════════════════════════════════════════════════════
 
 const urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1 = {
-	"https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-tangga.html": "Jasa Pasang Vinyl Tangga"
+  "https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-tangga.html": "Jasa Pasang Vinyl Tangga"
 };
+
 const urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-vinyl-per-meter.html": "Harga Jasa Pasang Vinyl Per Meter"
 };
 
 const urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage = {
-  //"https://www.betonjayareadymix.com/2020/02/jasa-pasang-pvc-board.html": "Jasa Pasang PVC Board", 
- "https://www.betonjayareadymix.com/p/jasa-pasang-pvc-dinding.html": "Jasa Pasang PVC Dinding",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-pvc-lantai.html": "Jasa Pasang PVC Lantai"
-	
+  "https://www.betonjayareadymix.com/p/jasa-pasang-pvc-dinding.html": "Jasa Pasang PVC Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-pvc-lantai.html": "Jasa Pasang PVC Lantai"
 };
 
-const urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage  = {
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-wpc-premium.html": "Jasa Pasang Plafon WPC Premium",   
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-wpc.html": "Jasa Pasang Plafon WPC",  
+const urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage = {
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-wpc-premium.html": "Jasa Pasang Plafon WPC Premium",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-wpc.html": "Jasa Pasang Plafon WPC",
   "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-gypsum.html": "Jasa Pasang Plafon Gypsum",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-pvc.html": "Jasa Pasang Plafon PVC",  
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-grc.html": "Jasa Pasang Plafon GRC",  
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-akustik.html": "Jasa Pasang Plafon Akustik",  
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-pvc.html": "Jasa Pasang Plafon PVC",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-grc.html": "Jasa Pasang Plafon GRC",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-akustik.html": "Jasa Pasang Plafon Akustik",
   "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-upvc.html": "Jasa Pasang Plafon UPVC"
 };
 
 const urlMappingFinishingBangunanFromMoneyMaster1MoneyPage = {
-    // MP DARI MM "JASA FINISHING BANGUNAN"
-    "https://www.betonjayareadymix.com/p/jasa-finishing-rumah.html": "Jasa Finishing Rumah",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-gedung.html": "Jasa Finishing Gedung",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-ruko.html": "Jasa Finishing Ruko",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-pabrik.html": "Jasa Finishing Pabrik",
-   // "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-interior.html": "Jasa Finishing Bangunan Interior",
-   // "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-eksterior.html": "Jasa Finishing Bangunan Eksterior",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-modern.html": "Jasa Finishing Bangunan Modern",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-minimalis.html": "Jasa Finishing Bangunan Minimalis",
-
-	// TAMBAHAN MP UNTUK JASA FINISHING BANGUNAN
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-finishing-kantor.html": "Jasa Finishing Kantor",
-"https://www.betonjayareadymix.com/p/jasa-finishing-toko.html": "Jasa Finishing Toko",
-"https://www.betonjayareadymix.com/p/jasa-finishing-hotel.html": "Jasa Finishing Hotel",
-"https://www.betonjayareadymix.com/p/jasa-finishing-apartemen.html": "Jasa Finishing Apartemen",
-"https://www.betonjayareadymix.com/p/jasa-finishing-mewah.html": "Jasa Finishing Mewah"
+  "https://www.betonjayareadymix.com/p/jasa-finishing-rumah.html": "Jasa Finishing Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-gedung.html": "Jasa Finishing Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-ruko.html": "Jasa Finishing Ruko",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-pabrik.html": "Jasa Finishing Pabrik",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-modern.html": "Jasa Finishing Bangunan Modern",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-minimalis.html": "Jasa Finishing Bangunan Minimalis",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-kantor.html": "Jasa Finishing Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-toko.html": "Jasa Finishing Toko",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-hotel.html": "Jasa Finishing Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-apartemen.html": "Jasa Finishing Apartemen",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-mewah.html": "Jasa Finishing Mewah"
 };
-
-// ============================================================
-// 📁 JASA FINISHING FURNITURE - MP dari MM Jasa Finishing Furniture
-// 🧠 Parent: Jasa Finishing Furniture (L4)
-// ============================================================
 
 const urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1 = {
-	 //   "https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html": "Jasa Pembuatan Furniture",
-	// "https://www.betonjayareadymix.com/p/jasa-pasang-furniture.html": "Jasa Pasang Furniture",
-   // "https://www.betonjayareadymix.com/p/jasa-custom-furniture.html": "Jasa Custom Furniture",
-	//  "https://www.betonjayareadymix.com/p/jasa-furniture-interior.html": "Jasa Furniture & Interior"
-
-"https://www.betonjayareadymix.com/p/harga-custom-furniture-per-meter.html": "Harga Custom Furniture Per Meter"
-//"https://www.betonjayareadymix.com/p/jasa-furniture-interior-exterior.html": "Jasa Furniture Interior Exterior"
+  "https://www.betonjayareadymix.com/p/harga-custom-furniture-per-meter.html": "Harga Custom Furniture Per Meter"
 };
 
-// ============================================================
-// 📁 JASA FINISHING DINDING - MP dari MM Jasa Finishing Dinding
-// 🧠 Parent: Jasa Finishing Dinding (L4)
-// ============================================================
-
-// ============================================================
-// 📁 JASA FINISHING DINDING - MP dari MM Jasa Finishing Dinding
-// 🧠 Parent: Jasa Finishing Dinding (L4)
-// ✅ SEMUA URL SUDAH MP (MINIMAL 3 KATA)
-// ============================================================
-
-
 const urlMappingFinishingDindingFromMoneyMaster1MoneyPage = {
-    // ============================================================
-    // PARENT MM (DIKOMENTARKAN, TETAP DIPERTAHANKAN)
-    // ============================================================
-    // "https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html": "Jasa Finishing Dinding",
-
-    // ============================================================
-    // MP (Money-Page) Level 5 - SEMUA 3+ KATA
-    // ============================================================
-    
-    // Wallpaper & Cat
-    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-wallpaper.html": "Jasa Finishing Dinding Wallpaper",
- 
-
-    
-    // Epoxy & Finishing Khusus
-    "https://www.betonjayareadymix.com/p/jasa-finishing-epoxy-dinding.html": "Jasa Finishing Epoxy Dinding",
-	
-    // "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-epoxy.html": "Jasa Finishing Dinding Epoxy",
-    
-    // Plesteran, Acian, Ekspos
-    "https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html": "Jasa Plesteran & Acian Dinding",
-	
-    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-ekspos.html": "Jasa Finishing Dinding Ekspos",
-
-    // ga usah "https://www.betonjayareadymix.com/p/jasa-finishing-beton-ekspos-dinding.html": "Jasa Finishing Beton Ekspos Dinding",
-    
-    // ============================================================
-    // TAMBAHAN MP MATERIAL FINISHING DINDING
-    // ============================================================
-
-    // WPC (Wood Plastic Composite)
-   
-
-    "https://www.betonjayareadymix.com/p/jasa-finishing-wpc-dinding.html": "Jasa Finishing WPC Dinding",
-
-    // PVC Panel
-   
-    "https://www.betonjayareadymix.com/p/jasa-finishing-pvc-dinding.html": "Jasa Finishing PVC Dinding",
-
-    // Conwood (Kayu Komposit)
-
-    // Wall Moulding
-
-    "https://www.betonjayareadymix.com/p/jasa-finishing-wall-moulding.html": "Jasa Finishing Wall Moulding",
-
-    // Finishing Dinding Berdasarkan Jenis Properti
-    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-rumah.html": "Jasa Finishing Dinding Rumah",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-kantor.html": "Jasa Finishing Dinding Kantor",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-hotel.html": "Jasa Finishing Dinding Hotel",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-restoran.html": "Jasa Finishing Dinding Restoran"
-    
-    // ❌ (Konten berikut sudah benar, hanya sebagai pengingat)
-    // Hapus duplikasi konten eksterior yang tidak relevan dengan finishing dinding.
+  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-wallpaper.html": "Jasa Finishing Dinding Wallpaper",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-epoxy-dinding.html": "Jasa Finishing Epoxy Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html": "Jasa Plesteran & Acian Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-ekspos.html": "Jasa Finishing Dinding Ekspos",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-wpc-dinding.html": "Jasa Finishing WPC Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-pvc-dinding.html": "Jasa Finishing PVC Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-wall-moulding.html": "Jasa Finishing Wall Moulding",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-rumah.html": "Jasa Finishing Dinding Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-kantor.html": "Jasa Finishing Dinding Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-hotel.html": "Jasa Finishing Dinding Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-restoran.html": "Jasa Finishing Dinding Restoran"
 };
 
 const urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wallpaper-per-meter.html": "Harga Jasa Pasang Wallpaper per Meter",  // TYPE: MONEY_PAGE
-   "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-3d.html": "Jasa Pasang Wallpaper 3D",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-custom.html": "Jasa Pasang Wallpaper Custom",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-kamar-tidur.html": "Jasa Pasang Wallpaper Kamar Tidur",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-ruang-tamu.html": "Jasa Pasang Wallpaper Ruang Tamu"  // TYPE: MONEY_CHILD
-
-	
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wallpaper-per-meter.html": "Harga Jasa Pasang Wallpaper per Meter",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-3d.html": "Jasa Pasang Wallpaper 3D",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-custom.html": "Jasa Pasang Wallpaper Custom",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-kamar-tidur.html": "Jasa Pasang Wallpaper Kamar Tidur",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-ruang-tamu.html": "Jasa Pasang Wallpaper Ruang Tamu"
 };
+
 const urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1 = {
-"https://www.betonjayareadymix.com/p/harga-jasa-epoxy-dinding-per-meter.html": "Harga Jasa Finishing Epoxy Dinding Per Meter"
-	
+  "https://www.betonjayareadymix.com/p/harga-jasa-epoxy-dinding-per-meter.html": "Harga Jasa Finishing Epoxy Dinding Per Meter"
 };
+
 const urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1 = {
- "https://www.betonjayareadymix.com/p/harga-jasa-plesteran-acian.html": "Harga Jasa Plesteran & Acian"
-	
+  "https://www.betonjayareadymix.com/p/harga-jasa-plesteran-acian.html": "Harga Jasa Plesteran & Acian"
 };
+
 const urlMappingHargaJasaPlesteranAcianFromMoneyPage1MoneyPage2 = {
- "https://www.betonjayareadymix.com/p/harga-jasa-plesteran-acian-per-meter.html": "Harga Jasa Plesteran & Acian Per Meter",
-"https://www.betonjayareadymix.com/p/harga-jasa-borongan-plesteran-acian.html": "Harga Jasa Borongan Plesteran & Acian"
-	
+  "https://www.betonjayareadymix.com/p/harga-jasa-plesteran-acian-per-meter.html": "Harga Jasa Plesteran & Acian Per Meter",
+  "https://www.betonjayareadymix.com/p/harga-jasa-borongan-plesteran-acian.html": "Harga Jasa Borongan Plesteran & Acian"
 };
+
 const urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc.html": "Harga Jasa Pasang WPC",
-	"https://www.betonjayareadymix.com/p/jasa-pasang-wpc-lantai.html": "Jasa Pasang WPC Lantai",
-     "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding"
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc.html": "Harga Jasa Pasang WPC",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-lantai.html": "Jasa Pasang WPC Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding"
 };
-const urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1  = {
-	"https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding-per-meter.html": "Jasa Pasang WPC Dinding Per Meter",
-	
-	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-dinding.html": "Harga Jasa Pasang WPC Dinding"
+
+const urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1 = {
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding-per-meter.html": "Jasa Pasang WPC Dinding Per Meter",
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-dinding.html": "Harga Jasa Pasang WPC Dinding"
 };
+
 const urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1 = {
- "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-lantai.html": "Harga Jasa Pasang WPC Lantai"
-	
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-lantai.html": "Harga Jasa Pasang WPC Lantai"
 };
-
-
-// ============================================================
-// 📁 JASA FINISHING LANTAI - MP dari MM Jasa Finishing Lantai
-// 🧠 Parent: Jasa Finishing Lantai (L4)
-// ============================================================
 
 const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai.html": "Harga Jasa Finishing Lantai",
-	 "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html": "Jasa Finishing Lantai Beton",
-    // ============================================================
-    // MP UNTUK MATERIAL LANTAI LAINNYA (tetap dipertahankan)
-    // ============================================================
-    "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-keramik.html": "Jasa Finishing Lantai Keramik",
-  
-    "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-marmer.html": "Jasa Finishing Lantai Marmer",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html": "Jasa Finishing Lantai Granit",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-kayu.html": "Jasa Finishing Lantai Kayu",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-epoxy.html": "Jasa Finishing Lantai Epoxy"
-	
-    // ============================================================
-    // TAMBAHAN MP UNTUK JASA FINISHING LANTAI
-    // ============================================================
-	
-};	
-
+  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai.html": "Harga Jasa Finishing Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html": "Jasa Finishing Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-keramik.html": "Jasa Finishing Lantai Keramik",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-marmer.html": "Jasa Finishing Lantai Marmer",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html": "Jasa Finishing Lantai Granit",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-kayu.html": "Jasa Finishing Lantai Kayu",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-epoxy.html": "Jasa Finishing Lantai Epoxy"
+};
 
 const urlMappingHargaJasaFinishingLantaiFromMoneyPageMoneyPage1 = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai-gudang.html": "Harga Jasa Finishing Lantai Gudang"
+  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai-gudang.html": "Harga Jasa Finishing Lantai Gudang"
 };
+
 const urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1 = {
-"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai-beton.html": "Harga Jasa Finishing Lantai Beton",
-      "https://www.betonjayareadymix.com/p/jasa-poles-lantai-beton.html": "Jasa Poles Lantai Beton",
-	"https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton-ekspos.html": "Jasa Finishing Lantai Beton Ekspos",  
-	"https://www.betonjayareadymix.com/p/jasa-waterproofing-lantai-beton-baru.html": "Jasa Waterproofing Lantai Beton Baru",
-    // ============================================================
-    // MP UNTUK FINISHING LANTAI BETON (EXPOSE/POLISHED CONCRETE) ✅
-    // ============================================================
-   
-   // "https://www.betonjayareadymix.com/p/jasa-ekspos-lantai-beton.html": "Jasa Ekspos Lantai Beton",
-
-    // ============================================================
-    // 🆕 METODE FINISHING LANTAI BETON (TAMBAHAN)
-    // ============================================================
-	"https://www.betonjayareadymix.com/p/jasa-lantai-super-flat.html": "Jasa Lantai Super Flat",
-	  "https://www.betonjayareadymix.com/p/jasa-lapangan-super-flat.html": "Jasa Lapangan Super Flat",
-    // 1. Jasa Trowel Lantai (finishing dengan mesin trowel)
-    "https://www.betonjayareadymix.com/p/jasa-trowel-lantai-beton.html": "Jasa Trowel Lantai Beton",
-    
-    // 2. Jasa Screeding Lantai (perataan lantai beton)
-    "https://www.betonjayareadymix.com/p/jasa-screeding-lantai-beton.html": "Jasa Screeding Lantai Beton",
-    "https://www.betonjayareadymix.com/p/jasa-perataan-lantai-beton.html": "Jasa Perataan Lantai Beton",
-
-    // 3. Jasa Floor Hardener (pengeras lantai)
-    "https://www.betonjayareadymix.com/p/jasa-floor-hardener-lantai.html": "Jasa Floor Hardener Lantai",
-
-    // 4. Jasa Self Leveling (lantai rata sempurna)
-    "https://www.betonjayareadymix.com/p/jasa-self-leveling-lantai.html": "Jasa Self Leveling Lantai",
-
-    // 5. Jasa Coating Lantai (pelapis lantai)
-    "https://www.betonjayareadymix.com/p/jasa-coating-lantai-beton.html": "Jasa Coating Lantai Beton",
-    "https://www.betonjayareadymix.com/p/jasa-pelapisan-lantai-beton.html": "Jasa Pelapisan Lantai Beton",
-
-    // 6. Jasa Grinding & Poles (existing)
-    "https://www.betonjayareadymix.com/p/jasa-grinding-lantai-beton.html": "Jasa Grinding Lantai Beton"
-
+  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai-beton.html": "Harga Jasa Finishing Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-poles-lantai-beton.html": "Jasa Poles Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton-ekspos.html": "Jasa Finishing Lantai Beton Ekspos",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-lantai-beton-baru.html": "Jasa Waterproofing Lantai Beton Baru",
+  "https://www.betonjayareadymix.com/p/jasa-lantai-super-flat.html": "Jasa Lantai Super Flat",
+  "https://www.betonjayareadymix.com/p/jasa-lapangan-super-flat.html": "Jasa Lapangan Super Flat",
+  "https://www.betonjayareadymix.com/p/jasa-trowel-lantai-beton.html": "Jasa Trowel Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-screeding-lantai-beton.html": "Jasa Screeding Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perataan-lantai-beton.html": "Jasa Perataan Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-floor-hardener-lantai.html": "Jasa Floor Hardener Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-self-leveling-lantai.html": "Jasa Self Leveling Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-coating-lantai-beton.html": "Jasa Coating Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-lantai-beton.html": "Jasa Pelapisan Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-grinding-lantai-beton.html": "Jasa Grinding Lantai Beton"
 };
-const urlMappingJasaFinishingLantaiKayuFromMoneyPageMoneyPage1 = {
-     
-};
+
+const urlMappingJasaFinishingLantaiKayuFromMoneyPageMoneyPage1 = {};
+
 const urlMappingJasaFinishingLantaiMarmerFromMoneyPageMoneyPage1 = {
- "https://www.betonjayareadymix.com/p/jasa-poles-lantai-marmer.html": "Jasa Poles Lantai Marmer"
-       
+  "https://www.betonjayareadymix.com/p/jasa-poles-lantai-marmer.html": "Jasa Poles Lantai Marmer"
 };
+
 const urlMappingJasaPolesLantaiGranitFromMoneyPageMoneyPage1 = {
-"https://www.betonjayareadymix.com/p/jasa-poles-lantai-granit.html": "Jasa Poles Lantai Granit"
-       
+  "https://www.betonjayareadymix.com/p/jasa-poles-lantai-granit.html": "Jasa Poles Lantai Granit"
 };
+
 const urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1 = {
-"https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-lantai.html": "Harga Jasa Pasang Keramik Lantai",  
-"https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-24-jam.html": "Jasa Pasang Keramik Lantai 24 Jam",
- "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-rumah.html": "Jasa Pasang Keramik Lantai Rumah",  
- "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-kantor.html": "Jasa Pasang Keramik Lantai Kantor",  
- "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-gudang.html": "Jasa Pasang Keramik Lantai Gudang" 
-
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-lantai.html": "Harga Jasa Pasang Keramik Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-24-jam.html": "Jasa Pasang Keramik Lantai 24 Jam",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-rumah.html": "Jasa Pasang Keramik Lantai Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-kantor.html": "Jasa Pasang Keramik Lantai Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-gudang.html": "Jasa Pasang Keramik Lantai Gudang"
 };
+
 const urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2 = {
- "https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-per-meter.html": "Harga Jasa Pasang Keramik per Meter",  // TYPE: MONEY_PAGE
-    "https://www.betonjayareadymix.com/p/harga-borongan-pasang-keramik-per-meter.html": "Harga Borongan Pasang Keramik per Meter",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-murah.html": "Jasa Pasang Keramik Lantai Murah" 
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-per-meter.html": "Harga Jasa Pasang Keramik per Meter",
+  "https://www.betonjayareadymix.com/p/harga-borongan-pasang-keramik-per-meter.html": "Harga Borongan Pasang Keramik per Meter",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-murah.html": "Jasa Pasang Keramik Lantai Murah"
 };
-
 
 const urlMappingJasaLantaiSuperFlatFromMoneyPage1MoneyPage2 = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-lapangan-super-flat.html": "Harga Jasa Lapangan Super Flat",
-	"https://www.betonjayareadymix.com/p/harga-jasa-lantai-super-flat.html": "Harga Jasa Lantai Super Flat"
-       
-};
-const urlMappingJasaTrowelLantaiBetonFromMoneyPage1MoneyPage2 = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-trowel-lantai.html": "Harga Jasa Trowel Lantai",
-	"https://www.betonjayareadymix.com/p/harga-jasa-trowel-floor-hardener.html": "Harga Jasa Trowel Floor Hardener",
-	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-trowel.html": "Harga Jasa finishing Trowel"
-       
-};
-const urlMappingJasaScreedingLantaiBetonFromMoneyPage1MoneyPage2 = {
-		"https://www.betonjayareadymix.com/p/harga-jasa-screeding-per-meter.html": "Harga Jasa Screeding Per Meter",
-	"https://www.betonjayareadymix.com/p/harga-jasa-screeding-lantai.html": "Harga Jasa Screeding Lantai"
-       
-};
-const urlMappingJasaFloorHardenerLantaiFromMoneyPage1MoneyPage2 = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-floor-hardener.html": "Harga Jasa Floor Hardener"
-       
-};
-const urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoney1Page2 = {
-"https://www.betonjayareadymix.com/p/harga-jasa-epoxy-lantai-per-meter.html": "Harga Jasa Finishing Epoxy Lantai Per Meter"
-    
+  "https://www.betonjayareadymix.com/p/harga-jasa-lapangan-super-flat.html": "Harga Jasa Lapangan Super Flat",
+  "https://www.betonjayareadymix.com/p/harga-jasa-lantai-super-flat.html": "Harga Jasa Lantai Super Flat"
 };
 
-// ============================================================
-// 📁 JASA FINISHING INTERIOR - MP dari MM Jasa Finishing Interior
-// 🧠 Parent: Jasa Finishing Interior (L4)
-// ============================================================
+const urlMappingJasaTrowelLantaiBetonFromMoneyPage1MoneyPage2 = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-trowel-lantai.html": "Harga Jasa Trowel Lantai",
+  "https://www.betonjayareadymix.com/p/harga-jasa-trowel-floor-hardener.html": "Harga Jasa Trowel Floor Hardener",
+  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-trowel.html": "Harga Jasa finishing Trowel"
+};
+
+const urlMappingJasaScreedingLantaiBetonFromMoneyPage1MoneyPage2 = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-screeding-per-meter.html": "Harga Jasa Screeding Per Meter",
+  "https://www.betonjayareadymix.com/p/harga-jasa-screeding-lantai.html": "Harga Jasa Screeding Lantai"
+};
+
+const urlMappingJasaFloorHardenerLantaiFromMoneyPage1MoneyPage2 = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-floor-hardener.html": "Harga Jasa Floor Hardener"
+};
+
+const urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoney1Page2 = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-epoxy-lantai-per-meter.html": "Harga Jasa Finishing Epoxy Lantai Per Meter"
+};
 
 const urlMappingFinishingInteriorFromMoneyMasterMoneyPage = {
-   // "https://www.betonjayareadymix.com/p/jasa-pasang-acp-interior.html": "Jasa Pasang ACP Interior",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-kantor.html": "Jasa Finishing Interior Kantor", 
-    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-apartemen.html": "Jasa Finishing Interior Apartemen", 
-    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-rumah.html": "Jasa Finishing Interior Rumah", 
-    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis", 
-    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html": "Jasa Finishing Interior Klasik",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern"
-
-	 
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-kantor.html": "Jasa Finishing Interior Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-apartemen.html": "Jasa Finishing Interior Apartemen",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-rumah.html": "Jasa Finishing Interior Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html": "Jasa Finishing Interior Klasik",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern"
 };
+
 const urlMappingJasaInteriorFromMoneyMasterMoneyPage = {
-  // ============================================================
-    // LEVEL 5 (MP) - HALAMAN HARGA INTERIOR
-    // ============================================================
-	"https://www.betonjayareadymix.com/p/harga-jasa-interior.html": "Harga Jasa Interior"
-   
+  "https://www.betonjayareadymix.com/p/harga-jasa-interior.html": "Harga Jasa Interior"
 };
-const urlMappingHargaJasaInteriorFromMoneyPageMoneyPage = {
-  // ============================================================
-    // LEVEL 5 (MP) - HALAMAN HARGA INTERIOR
-    // ============================================================
-    "https://www.betonjayareadymix.com/p/harga-jasa-interior-per-meter.html": "Harga Jasa Interior Per Meter",
-    "https://www.betonjayareadymix.com/p/harga-jasa-borongan-interior.html": "Harga Jasa Borongan Interior",
-    //"https://www.betonjayareadymix.com/p/harga-interior-kamar.html": "Harga Jasa Interior Kamar",
-    "https://www.betonjayareadymix.com/p/harga-jasa-interior-kamar-tidur.html": "Harga Jasa Interior Kamar Tidur",
-    "https://www.betonjayareadymix.com/p/harga-jasa-interior-ruang-tamu.html": "Harga Jasa Interior Ruang Tamu"
 
+const urlMappingHargaJasaInteriorFromMoneyPageMoneyPage = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-interior-per-meter.html": "Harga Jasa Interior Per Meter",
+  "https://www.betonjayareadymix.com/p/harga-jasa-borongan-interior.html": "Harga Jasa Borongan Interior",
+  "https://www.betonjayareadymix.com/p/harga-jasa-interior-kamar-tidur.html": "Harga Jasa Interior Kamar Tidur",
+  "https://www.betonjayareadymix.com/p/harga-jasa-interior-ruang-tamu.html": "Harga Jasa Interior Ruang Tamu"
 };
-// ============================================================
-// 📁 JASA FINISHING LAMPU - MP dari MM Jasa Finishing Lampu
-// 🧠 Parent: Jasa Finishing Lampu (L4)
-// ============================================================
 
 const urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage = {
-	// Smart Home (kategori berbeda)
-"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-smart-home.html": "Jasa Pasang Lampu Smart Home",  // TYPE: MONEY_PAGE
-// Perbaikan Lampu Interior (layanan berbeda)
-//"https://www.betonjayareadymix.com/p/jasa-perbaikan-lampu-interior.html": "Jasa Perbaikan Lampu Interior",  // TYPE: MONEY_PAGE
-
-
-	    // ============================================================
-    // MP - PASANG LAMPU (untuk jenis lampu)
-    // ============================================================
-	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-downlight.html": "Jasa Pasang Lampu Downlight",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-led.html": "Jasa Pasang Lampu LED",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-track.html": "Jasa Pasang Lampu Track",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-gantung.html": "Jasa Pasang Lampu Gantung",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-tembak.html": "Jasa Pasang Lampu Tembak",
-
-		    // 🔴 PRIORITAS WAJIB
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior.html": "Jasa Pasang Lampu Interior",
-
-    // 🟡 PRIORITAS SEDANG
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-eksterior.html": "Jasa Pasang Lampu Eksterior",
-
-	"https://www.betonjayareadymix.com/p/jasa-pasang-lampu-taman.html": "Jasa Pasang Lampu Taman"
-   
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-smart-home.html": "Jasa Pasang Lampu Smart Home",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-downlight.html": "Jasa Pasang Lampu Downlight",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-led.html": "Jasa Pasang Lampu LED",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-track.html": "Jasa Pasang Lampu Track",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-gantung.html": "Jasa Pasang Lampu Gantung",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-tembak.html": "Jasa Pasang Lampu Tembak",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior.html": "Jasa Pasang Lampu Interior",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-eksterior.html": "Jasa Pasang Lampu Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-taman.html": "Jasa Pasang Lampu Taman"
 };
-
-// ============================================================
-// 📁 JASA PASANG LAMPU INTERIOR (Turunan dari MP) - Level 6 (Money-Child)
-// 🧠 Parent: Jasa Pasang Lampu Interior (MP Level 5)
-// ============================================================
 
 const urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1 = {
-   	"https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-interior.html": "Harga Jasa Pasang Lampu Interior",
-	// Harga Borongan (halaman harga)
-"https://www.betonjayareadymix.com/p/harga-borongan-pasang-lampu-interior.html": "Harga Borongan Pasang Lampu Interior",  // TYPE: MONEY_PAGE
-
-	// 🟠 PRIORITAS TINGGI 
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-modern.html": "Jasa Pasang Lampu Interior Modern",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-minimalis.html": "Jasa Pasang Lampu Interior Minimalis",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-rumah.html": "Jasa Pasang Lampu Interior Rumah",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-gedung.html": "Jasa Pasang Lampu Interior Gedung",
-
-	// Turunan dari Jasa Pasang Lampu Interior
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-kamar-tidur.html": "Jasa Pasang Lampu Kamar Tidur",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-ruang-tamu.html": "Jasa Pasang Lampu Ruang Tamu",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-dapur.html": "Jasa Pasang Lampu Dapur",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-kantor.html": "Jasa Pasang Lampu Kantor"
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-interior.html": "Harga Jasa Pasang Lampu Interior",
+  "https://www.betonjayareadymix.com/p/harga-borongan-pasang-lampu-interior.html": "Harga Borongan Pasang Lampu Interior",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-modern.html": "Jasa Pasang Lampu Interior Modern",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-minimalis.html": "Jasa Pasang Lampu Interior Minimalis",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-rumah.html": "Jasa Pasang Lampu Interior Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-gedung.html": "Jasa Pasang Lampu Interior Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-kamar-tidur.html": "Jasa Pasang Lampu Kamar Tidur",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-ruang-tamu.html": "Jasa Pasang Lampu Ruang Tamu",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-dapur.html": "Jasa Pasang Lampu Dapur",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-kantor.html": "Jasa Pasang Lampu Kantor"
 };
+
 const urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-eksterior.html": "Harga Jasa Pasang Lampu Eksterior"
 };
+
 const urlMappingJasaPasangLampuTamanFromMoneyPageMoneyPage1 = {
- "https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-taman.html": "Harga Jasa Pasang Lampu Taman"
+  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-taman.html": "Harga Jasa Pasang Lampu Taman"
 };
+
 const urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage = {
- "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-taman.html": "Jasa Finishing Lampu Taman",
-	
-    // 🟢 PRIORITAS RENDAH
-    "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-cafe.html": "Jasa Finishing Lampu Cafe",
-	
-    "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-hotel.html": "Jasa Finishing Lampu Hotel",
-	
-    "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-kantor.html": "Jasa Finishing Lampu Kantor"
-	
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-taman.html": "Jasa Finishing Lampu Taman",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-cafe.html": "Jasa Finishing Lampu Cafe",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-hotel.html": "Jasa Finishing Lampu Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-kantor.html": "Jasa Finishing Lampu Kantor"
 };
+
 const urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage = {
- "https://www.betonjayareadymix.com/p/harga-jasa-finishing-lampu-cafe.html": "Harga Jasa Finishing Lampu Cafe"
+  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-lampu-cafe.html": "Harga Jasa Finishing Lampu Cafe"
 };
+
 const urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage = {
-"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lampu-hotel.html": "Harga Jasa Finishing Lampu Hotel"
+  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-lampu-hotel.html": "Harga Jasa Finishing Lampu Hotel"
 };
+
 const urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage = {
- "https://www.betonjayareadymix.com/p/harga-jasa-finishing-lampu-kantor.html": "Harga Jasa Finishing Lampu Kantor"
+  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-lampu-kantor.html": "Harga Jasa Finishing Lampu Kantor"
 };
-// ============================================================
-// 📁 JASA FINISHING CAT - MP dari MM Jasa Finishing Cat
-// 🧠 Parent: Jasa Finishing Cat (L4)
-// ============================================================
 
 const urlMappingJasaCatFromMoneyMaster1MoneyPage = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-cat.html": "Harga Jasa Cat",
-	  "https://www.betonjayareadymix.com/p/jasa-cat-permukaan-khusus.html": "Jasa Cat Permukaan Khusus",
-	  "https://www.betonjayareadymix.com/p/jasa-cat-dinding.html": "Jasa Cat Dinding",
-	 "https://www.betonjayareadymix.com/p/jasa-finishing-cat.html": "Jasa Finishing Cat",
-	 "https://www.betonjayareadymix.com/p/jasa-cat-interior.html": "Jasa Cat Interior",
-	 "https://www.betonjayareadymix.com/p/jasa-cat-eksterior.html": "Jasa Cat Eksterior"
-    
+  "https://www.betonjayareadymix.com/p/harga-jasa-cat.html": "Harga Jasa Cat",
+  "https://www.betonjayareadymix.com/p/jasa-cat-permukaan-khusus.html": "Jasa Cat Permukaan Khusus",
+  "https://www.betonjayareadymix.com/p/jasa-cat-dinding.html": "Jasa Cat Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-cat.html": "Jasa Finishing Cat",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior.html": "Jasa Cat Interior",
+  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior.html": "Jasa Cat Eksterior"
 };
-const urlMappingHargaJasaCatFromMoneyPageMoneyPage1 = {
- // ============================================================
-    // 📌 KELOMPOK 3: HARGA JASA CAT (L5 - MP)
-    // Fokus pada informasi biaya
-    // ============================================================
-    "https://www.betonjayareadymix.com/p/harga-jasa-cat-interior-per-meter.html": "Harga Jasa Cat Interior Per Meter",
-    "https://www.betonjayareadymix.com/p/harga-borongan-cat-interior-per-meter.html": "Harga Borongan Cat Interior Per Meter",
-	
-"https://www.betonjayareadymix.com/p/harga-jasa-cat-eksterior-per-meter.html": "Harga Jasa Cat Eksterior Per Meter",
-"https://www.betonjayareadymix.com/p/harga-borongan-cat-eksterior-per-meter.html": "Harga Borongan Cat Eksterior Per Meter"
-};
-const urlMappingJasaCatPermukaanKhususFromMoneyPageMoneyPage1 = {
-    // ============================================================
-    // 📌 KELOMPOK 4: JASA CAT PERMUKAAN KHUSUS (L5 - MP)
-    // Fokus pada objek yang dicat (plafon, kayu, interior)
-    // ============================================================
-// ============================================================
-// 📌 TAMBAHAN: JASA CAT PERMUKAAN KHUSUS (L6 - MC)
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-cat-plafon-eksterior.html": "Jasa Cat Plafon Eksterior",
-"https://www.betonjayareadymix.com/p/jasa-cat-kayu-eksterior.html": "Jasa Cat Kayu Eksterior",
-	
-"https://www.betonjayareadymix.com/p/jasa-cat-besi-interior.html": "Jasa Cat Besi Interior",
-"https://www.betonjayareadymix.com/p/jasa-cat-besi-eksterior.html": "Jasa Cat Besi Eksterior",
-"https://www.betonjayareadymix.com/p/jasa-cat-genteng.html": "Jasa Cat Genteng",
-"https://www.betonjayareadymix.com/p/jasa-cat-atap.html": "Jasa Cat Atap",
-"https://www.betonjayareadymix.com/p/jasa-cat-pagar.html": "Jasa Cat Pagar",
-"https://www.betonjayareadymix.com/p/jasa-cat-kolam-renang.html": "Jasa Cat Kolam Renang",
-"https://www.betonjayareadymix.com/p/jasa-cat-lantai.html": "Jasa Cat Lantai",
-"https://www.betonjayareadymix.com/p/jasa-cat-beton.html": "Jasa Cat Beton",
-"https://www.betonjayareadymix.com/p/jasa-cat-paving-block.html": "Jasa Cat Paving Block",
-"https://www.betonjayareadymix.com/p/jasa-cat-keramik.html": "Jasa Cat Keramik"
-};
-const urlMappingJasaCatDindingFromMoneyPageMoneyPage1 = {
-    // ============================================================
-    // 📌 KELOMPOK 1: JASA CAT DINDING (L5 - MP)
-    // Turunan langsung dari Jasa Cat
-    // ============================================================
-    "https://www.betonjayareadymix.com/p/jasa-cat-dinding-interior.html": "Jasa Cat Dinding Interior",
-    "https://www.betonjayareadymix.com/p/jasa-cat-dinding-eksterior.html": "Jasa Cat Dinding Eksterior"
-};
-const urlMappingJasaFinishingCatFromMoneyPageMoneyPage1 = {
- // ============================================================
-    // 📌 KELOMPOK 2: JASA FINISHING CAT (L5 - MP)
-    // Fokus pada finishing cat secara umum (berbagai permukaan)
-    // ============================================================
-    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-interior.html": "Jasa Finishing Cat Interior",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-eksterior.html": "Jasa Finishing Cat Eksterior",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-dinding.html": "Jasa Finishing Cat Dinding",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-kayu.html": "Jasa Finishing Cat Kayu",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-besi.html": "Jasa Finishing Cat Besi",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-modern.html": "Jasa Finishing Cat Modern",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-minimalis.html": "Jasa Finishing Cat Minimalis",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-mewah.html": "Jasa Finishing Cat Mewah",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-tahan-lama.html": "Jasa Finishing Cat Tahan Lama",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-anti-bocor.html": "Jasa Finishing Cat Anti Bocor",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-cat-epoxy.html": "Jasa Finishing Cat Epoxy"
 
+const urlMappingHargaJasaCatFromMoneyPageMoneyPage1 = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-cat-interior-per-meter.html": "Harga Jasa Cat Interior Per Meter",
+  "https://www.betonjayareadymix.com/p/harga-borongan-cat-interior-per-meter.html": "Harga Borongan Cat Interior Per Meter",
+  "https://www.betonjayareadymix.com/p/harga-jasa-cat-eksterior-per-meter.html": "Harga Jasa Cat Eksterior Per Meter",
+  "https://www.betonjayareadymix.com/p/harga-borongan-cat-eksterior-per-meter.html": "Harga Borongan Cat Eksterior Per Meter"
 };
+
+const urlMappingJasaCatPermukaanKhususFromMoneyPageMoneyPage1 = {
+  "https://www.betonjayareadymix.com/p/jasa-cat-plafon-eksterior.html": "Jasa Cat Plafon Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-cat-kayu-eksterior.html": "Jasa Cat Kayu Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-cat-besi-interior.html": "Jasa Cat Besi Interior",
+  "https://www.betonjayareadymix.com/p/jasa-cat-besi-eksterior.html": "Jasa Cat Besi Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-cat-genteng.html": "Jasa Cat Genteng",
+  "https://www.betonjayareadymix.com/p/jasa-cat-atap.html": "Jasa Cat Atap",
+  "https://www.betonjayareadymix.com/p/jasa-cat-pagar.html": "Jasa Cat Pagar",
+  "https://www.betonjayareadymix.com/p/jasa-cat-kolam-renang.html": "Jasa Cat Kolam Renang",
+  "https://www.betonjayareadymix.com/p/jasa-cat-lantai.html": "Jasa Cat Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-cat-beton.html": "Jasa Cat Beton",
+  "https://www.betonjayareadymix.com/p/jasa-cat-paving-block.html": "Jasa Cat Paving Block",
+  "https://www.betonjayareadymix.com/p/jasa-cat-keramik.html": "Jasa Cat Keramik"
+};
+
+const urlMappingJasaCatDindingFromMoneyPageMoneyPage1 = {
+  "https://www.betonjayareadymix.com/p/jasa-cat-dinding-interior.html": "Jasa Cat Dinding Interior",
+  "https://www.betonjayareadymix.com/p/jasa-cat-dinding-eksterior.html": "Jasa Cat Dinding Eksterior"
+};
+
+const urlMappingJasaFinishingCatFromMoneyPageMoneyPage1 = {
+  "https://www.betonjayareadymix.com/p/jasa-finishing-cat-interior.html": "Jasa Finishing Cat Interior",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-cat-eksterior.html": "Jasa Finishing Cat Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-cat-dinding.html": "Jasa Finishing Cat Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-cat-kayu.html": "Jasa Finishing Cat Kayu",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-cat-besi.html": "Jasa Finishing Cat Besi",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-cat-modern.html": "Jasa Finishing Cat Modern",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-cat-minimalis.html": "Jasa Finishing Cat Minimalis",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-cat-mewah.html": "Jasa Finishing Cat Mewah",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-cat-tahan-lama.html": "Jasa Finishing Cat Tahan Lama",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-cat-anti-bocor.html": "Jasa Finishing Cat Anti Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-cat-epoxy.html": "Jasa Finishing Cat Epoxy"
+};
+
 const urlMappingJasaCatInteriorFromMoneyPageMoneyPage1 = {
-// ============================================================
-    // 📌 KELOMPOK 5: JASA CAT INTERIOR (L5 - MP)
-    // Fokus pada jenis properti/ruangan
-    // ============================================================
-    "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
-    "https://www.betonjayareadymix.com/p/jasa-cat-interior-modern.html": "Jasa Cat Interior Modern",
-    "https://www.betonjayareadymix.com/p/jasa-cat-interior-minimalis.html": "Jasa Cat Interior Minimalis",
-    "https://www.betonjayareadymix.com/p/jasa-cat-interior-apartemen.html": "Jasa Cat Interior Apartemen",
-    "https://www.betonjayareadymix.com/p/jasa-cat-interior-gedung.html": "Jasa Cat Interior Gedung",
-    "https://www.betonjayareadymix.com/p/jasa-cat-interior-kantor.html": "Jasa Cat Interior Kantor"
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-modern.html": "Jasa Cat Interior Modern",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-minimalis.html": "Jasa Cat Interior Minimalis",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-apartemen.html": "Jasa Cat Interior Apartemen",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-gedung.html": "Jasa Cat Interior Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-kantor.html": "Jasa Cat Interior Kantor"
 };
 
 const urlMappingJasaCatEksteriorFromMoneyPageMoneyPage1 = {
-  // ============================================================
-// 📌 TAMBAHAN JASA CAT EKSTERIOR (TIDAK BENTROK)
-// ============================================================
-
-// 1. Berdasarkan jenis properti
-"https://www.betonjayareadymix.com/p/jasa-cat-eksterior-rumah.html": "Jasa Cat Eksterior Rumah",
-"https://www.betonjayareadymix.com/p/jasa-cat-eksterior-gedung.html": "Jasa Cat Eksterior Gedung",
-"https://www.betonjayareadymix.com/p/jasa-cat-eksterior-kantor.html": "Jasa Cat Eksterior Kantor",
-
-// 2. Berdasarkan gaya desain
-"https://www.betonjayareadymix.com/p/jasa-cat-eksterior-modern.html": "Jasa Cat Eksterior Modern",
-"https://www.betonjayareadymix.com/p/jasa-cat-eksterior-minimalis.html": "Jasa Cat Eksterior Minimalis",
-"https://www.betonjayareadymix.com/p/jasa-cat-eksterior-klasik.html": "Jasa Cat Eksterior Klasik",
-
+  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-rumah.html": "Jasa Cat Eksterior Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-gedung.html": "Jasa Cat Eksterior Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-kantor.html": "Jasa Cat Eksterior Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-modern.html": "Jasa Cat Eksterior Modern",
+  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-minimalis.html": "Jasa Cat Eksterior Minimalis",
+  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-klasik.html": "Jasa Cat Eksterior Klasik"
 };
 
 const urlMappingJasaCatInteriorRumahFromMoneyPage1MoneyPage2 = {
- // [MONEY_PAGE] - JASA CAT INTERIOR PER JENIS RUANGAN
-  // ============================================================
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-kamar-tidur.html": "Jasa Cat Interior Kamar Tidur",  // TYPE: MONEY_PAGE
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-ruang-tamu.html": "Jasa Cat Interior Ruang Tamu",  // TYPE: MONEY_PAGE
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-kamar-tidur.html": "Jasa Cat Interior Kamar Tidur",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-ruang-tamu.html": "Jasa Cat Interior Ruang Tamu",
   "https://www.betonjayareadymix.com/p/jasa-cat-interior-dapur.html": "Jasa Cat Interior Dapur"
-
 };
-const urlMappingJasaCatInteriorKantorFromMoneyPage1MoneyPage2 = {
 
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-ruang-kantor.html": "Jasa Cat Interior Ruang Kantor" 
-};	
-// ============================================================
-// 📁 JASA FINISHING EKSTERIOR - MP dari MM Jasa Finishing Eksterior
-// 🧠 Parent: Jasa Finishing Eksterior (L4)
-// ============================================================
+const urlMappingJasaCatInteriorKantorFromMoneyPage1MoneyPage2 = {
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-ruang-kantor.html": "Jasa Cat Interior Ruang Kantor"
+};
 
 const urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage = {
-    // 1. LAYANAN INTI FINISHING EKSTERIOR
-    "https://www.betonjayareadymix.com/p/jasa-finishing-fasad-eksterior.html": "Jasa Finishing Fasad Eksterior",
-	 "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak.html": "Jasa Pelapisan Genteng Dak",
-    "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-cuaca.html": "Jasa Pelapisan Anti Cuaca",
-    "https://www.betonjayareadymix.com/p/jasa-pelapisan-dinding-luar.html": "Jasa Pelapisan Dinding Luar",
-    "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html": "Jasa Pelapisan Batu Alam Eksterior",
-
-
-
-    // 3. BERDASARKAN JENIS PROPERTI
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-rumah.html": "Jasa Finishing Eksterior Rumah",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gedung.html": "Jasa Finishing Eksterior Gedung",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-ruko.html": "Jasa Finishing Eksterior Ruko",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-pabrik.html": "Jasa Finishing Eksterior Pabrik",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kantor.html": "Jasa Finishing Eksterior Kantor",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-hotel.html": "Jasa Finishing Eksterior Hotel",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-cafe.html": "Jasa Finishing Eksterior Cafe",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-restoran.html": "Jasa Finishing Eksterior Restoran",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-sekolah.html": "Jasa Finishing Eksterior Sekolah",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-rumah-sakit.html": "Jasa Finishing Eksterior Rumah Sakit",
-
-    // 4. BERDASARKAN GAYA
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-modern.html": "Jasa Finishing Eksterior Modern",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-minimalis.html": "Jasa Finishing Eksterior Minimalis",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-klasik.html": "Jasa Finishing Eksterior Klasik",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-mewah.html": "Jasa Finishing Eksterior Mewah",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-industrial.html": "Jasa Finishing Eksterior Industrial",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-skandinavian.html": "Jasa Finishing Eksterior Skandinavian",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kontemporer.html": "Jasa Finishing Eksterior Kontemporer",
-
-    // 5. BERDASARKAN ELEMEN BANGUNAN
-	    //"https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-taman.html": "Jasa Finishing Eksterior Taman",
-	
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-dinding.html": "Jasa Finishing Eksterior Dinding",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-pagar.html": "Jasa Finishing Eksterior Pagar",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-balkon.html": "Jasa Finishing Eksterior Balkon",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-teras.html": "Jasa Finishing Eksterior Teras",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kanopi.html": "Jasa Finishing Eksterior Kanopi",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kolam-renang.html": "Jasa Finishing Eksterior Kolam Renang",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-plafon-terbuka.html": "Jasa Finishing Eksterior Plafon Terbuka",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-tangga-luar.html": "Jasa Finishing Eksterior Tangga Luar",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gazebo.html": "Jasa Finishing Eksterior Gazebo",
-
-    // 6. LAYANAN FINISHING TAMBAHAN
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-toko.html": "Jasa Finishing Eksterior Toko",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-showroom.html": "Jasa Finishing Eksterior Showroom",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gudang.html": "Jasa Finishing Eksterior Gudang",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-mushola.html": "Jasa Finishing Eksterior Mushola",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-masjid.html": "Jasa Finishing Eksterior Masjid"
+  "https://www.betonjayareadymix.com/p/jasa-finishing-fasad-eksterior.html": "Jasa Finishing Fasad Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak.html": "Jasa Pelapisan Genteng Dak",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-cuaca.html": "Jasa Pelapisan Anti Cuaca",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-dinding-luar.html": "Jasa Pelapisan Dinding Luar",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html": "Jasa Pelapisan Batu Alam Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-rumah.html": "Jasa Finishing Eksterior Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gedung.html": "Jasa Finishing Eksterior Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-ruko.html": "Jasa Finishing Eksterior Ruko",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-pabrik.html": "Jasa Finishing Eksterior Pabrik",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kantor.html": "Jasa Finishing Eksterior Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-hotel.html": "Jasa Finishing Eksterior Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-cafe.html": "Jasa Finishing Eksterior Cafe",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-restoran.html": "Jasa Finishing Eksterior Restoran",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-sekolah.html": "Jasa Finishing Eksterior Sekolah",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-rumah-sakit.html": "Jasa Finishing Eksterior Rumah Sakit",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-modern.html": "Jasa Finishing Eksterior Modern",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-minimalis.html": "Jasa Finishing Eksterior Minimalis",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-klasik.html": "Jasa Finishing Eksterior Klasik",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-mewah.html": "Jasa Finishing Eksterior Mewah",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-industrial.html": "Jasa Finishing Eksterior Industrial",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-skandinavian.html": "Jasa Finishing Eksterior Skandinavian",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kontemporer.html": "Jasa Finishing Eksterior Kontemporer",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-dinding.html": "Jasa Finishing Eksterior Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-pagar.html": "Jasa Finishing Eksterior Pagar",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-balkon.html": "Jasa Finishing Eksterior Balkon",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-teras.html": "Jasa Finishing Eksterior Teras",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kanopi.html": "Jasa Finishing Eksterior Kanopi",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kolam-renang.html": "Jasa Finishing Eksterior Kolam Renang",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-plafon-terbuka.html": "Jasa Finishing Eksterior Plafon Terbuka",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-tangga-luar.html": "Jasa Finishing Eksterior Tangga Luar",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gazebo.html": "Jasa Finishing Eksterior Gazebo",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-toko.html": "Jasa Finishing Eksterior Toko",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-showroom.html": "Jasa Finishing Eksterior Showroom",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gudang.html": "Jasa Finishing Eksterior Gudang",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-mushola.html": "Jasa Finishing Eksterior Mushola",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-masjid.html": "Jasa Finishing Eksterior Masjid"
 };
+
 const urlMappingJasaEksteriorFromMoneyMasterMoneyMaster1 = {
-   "https://www.betonjayareadymix.com/p/harga-jasa-eksterior.html": "Harga Jasa Eksterior",
-   "https://www.betonjayareadymix.com/p/jasa-fasad-rumah.html": "Jasa Fasad Rumah",
-   "https://www.betonjayareadymix.com/p/jasa-taman.html": "Jasa Taman"
+  "https://www.betonjayareadymix.com/p/harga-jasa-eksterior.html": "Harga Jasa Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-fasad-rumah.html": "Jasa Fasad Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-taman.html": "Jasa Taman"
 };
-const urlMappingHargaJasaEksteriorFromMoneyMaster1MoneyPage = {
- 
 
-};
+const urlMappingHargaJasaEksteriorFromMoneyMaster1MoneyPage = {};
+
 const urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-fasad-rumah.html": "Harga Jasa Fasad Rumah"
-	
-    // 2. PASANG MATERIAL EKSTERIOR
-	 // LEVEL 5 (MP) - LAYANAN UTAMA
-    // ============================================================
-	     // BERDASARKAN MATERIAL NYA
-
-    //"https://www.betonjayareadymix.com/p/jasa-pasang-acp-fasad.html": "Jasa Pasang ACP Fasad",
-
-   // "https://www.betonjayareadymix.com/p/jasa-pasang-grc-fasad.html": "Jasa Pasang GRC Fasad",
-   // "https://www.betonjayareadymix.com/p/jasa-pasang-kaca-fasad.html": "Jasa Pasang Kaca Fasad",
-   // "https://www.betonjayareadymix.com/p/jasa-pasang-batu-alam-fasad.html": "Jasa Pasang Batu Alam Fasad",
-   // "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-fasad.html": "Jasa Pasang Wood Plank Fasad",
-  //  "https://www.betonjayareadymix.com/p/jasa-pasang-hpl-fasad.html": "Jasa Pasang HPL Fasad"
-
+  "https://www.betonjayareadymix.com/p/harga-jasa-fasad-rumah.html": "Harga Jasa Fasad Rumah"
 };
 
 const urlMappingJasaTamanFromMoneyMaster2MoneyMaster3 = {
-  // ============================================================
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",
-    "https://www.betonjayareadymix.com/p/jasa-tukang-taman.html": "Jasa Tukang Taman",
-    "https://www.betonjayareadymix.com/p/jasa-relief-taman.html": "Jasa Relief Taman",
-    "https://www.betonjayareadymix.com/p/jasa-perawatan-taman.html": "Jasa Perawatan Taman",
-    
-    // ============================================================
-    // LEVEL 6 (MC) - VARIASI DENGAN MODIFIER
-    // ============================================================
-    "https://www.betonjayareadymix.com/p/jasa-taman-murah.html": "Jasa Taman Murah"
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",
+  "https://www.betonjayareadymix.com/p/jasa-tukang-taman.html": "Jasa Tukang Taman",
+  "https://www.betonjayareadymix.com/p/jasa-relief-taman.html": "Jasa Relief Taman",
+  "https://www.betonjayareadymix.com/p/jasa-perawatan-taman.html": "Jasa Perawatan Taman",
+  "https://www.betonjayareadymix.com/p/jasa-taman-murah.html": "Jasa Taman Murah"
 };
+
 const urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage = {
-   "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman-rumah.html": "Jasa Pembuatan Taman Rumah",
-	"https://www.betonjayareadymix.com/p/jasa-pembuatan-taman-relief.html": "Jasa Pembuatan Taman Relief"
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman-rumah.html": "Jasa Pembuatan Taman Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman-relief.html": "Jasa Pembuatan Taman Relief"
 };
 
-const urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1 = {
-   //"https://www.betonjayareadymix.com/p/harga-jasa-pasang-acp.html": "Harga Jasa Pasang ACP",  // TYPE: MONEY_PAGE
- // "https://www.betonjayareadymix.com/p/harga-jasa-pasang-acp-per-meter.html": "Harga Jasa Pasang ACP Per Meter",  // TYPE: MONEY_PAGE
- // "https://www.betonjayareadymix.com/p/jasa-pasang-acp-per-meter.html": "Jasa Pasang ACP Per Meter",
-// "https://www.betonjayareadymix.com/p/jasa-laser-cutting-acp.html": "Jasa Laser Cutting ACP",
-};
+const urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1 = {};
+
 const urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1 = {
-  // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
-  "https://www.betonjayareadymix.com/p/harga-pelapisan-batu-alam-eksterior.html": "Harga Pelapisan Batu Alam Eksterior"  // TYPE: MONEY_PAGE
-  // "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior-jakarta.html": "Jasa Pelapisan Batu Alam Eksterior Jakarta",  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/p/harga-pelapisan-batu-alam-eksterior.html": "Harga Pelapisan Batu Alam Eksterior"
 };
+
 const urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1 = {
-  // 🟡 SARAN ITEM (BELUM AKTIF - PERLU DIBUAT KONTEN)
-   "https://www.betonjayareadymix.com/p/harga-pelapisan-genteng-dak.html": "Harga Pelapisan Genteng Dak",  // TYPE: MONEY_PAGE
-   "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak-murah.html": "Jasa Pelapisan Genteng Dak Murah"  // TYPE: MONEY_CHILD
+  "https://www.betonjayareadymix.com/p/harga-pelapisan-genteng-dak.html": "Harga Pelapisan Genteng Dak",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak-murah.html": "Jasa Pelapisan Genteng Dak Murah"
 };
 
-
-// ============================================================
-// 📁 JASA FINISHING STRUKTUR - MP dari MM Jasa Finishing Struktur
-// 🧠 Parent: Jasa Finishing Struktur (L4)
-// ============================================================
-
-// ✅ DIPERBAIKI - menghilangkan deklarasi ganda
 const urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage = {
-    // MP (Money-Page) dari MM Jasa Finishing Struktur
-	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-struktur.html": "Harga Jasa Finishing Struktur",
-	"https://www.betonjayareadymix.com/p/jasa-waterproofing-dak-beton-baru.html": "Jasa Waterproofing Dak Beton Baru",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html": "Jasa Finishing Dak Beton",
-
-    "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-beton-ekspos.html": "Jasa Finishing Struktur Beton Ekspos",
-	
-   //masuk perbaikan "https://www.betonjayareadymix.com/p/jasa-finishing-grouting-struktur-beton.html": "Jasa Finishing Grouting Struktur Beton",
-    "https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html": "Jasa Pelapisan Coating Struktur",
-	
-    "https://www.betonjayareadymix.com/p/jasa-finishing-kolom-dan-balok.html": "Jasa Finishing Kolom dan Balok"
-
-
-   // masuk perbaikan "https://www.betonjayareadymix.com/p/jasa-pelindung-retak-struktur.html": "Jasa Pelindung Retak Struktur"
-    
+  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-struktur.html": "Harga Jasa Finishing Struktur",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-dak-beton-baru.html": "Jasa Waterproofing Dak Beton Baru",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html": "Jasa Finishing Dak Beton",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-beton-ekspos.html": "Jasa Finishing Struktur Beton Ekspos",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html": "Jasa Pelapisan Coating Struktur",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-kolom-dan-balok.html": "Jasa Finishing Kolom dan Balok"
 };
+
 const urlMappingJasaFinishingDakBetonFromMoneyPageMoneyPage1 = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-finishing-dak-beton.html": "Harga Jasa Finishing Dak Beton"
+  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-dak-beton.html": "Harga Jasa Finishing Dak Beton"
 };
+
 const urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyPage1 = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-struktur-beton-ekspos.html": "Harga Jasa Struktur Beton Ekspos"
+  "https://www.betonjayareadymix.com/p/harga-jasa-struktur-beton-ekspos.html": "Harga Jasa Struktur Beton Ekspos"
 };
+
 const urlMappingJasaFinishingKolomdanBalokFromMoneyPageMoneyPage1 = {
-		"https://www.betonjayareadymix.com/p/harga-jasa-finishing-kolom-balok.html": "Harga Jasa Finishing Kolom Balok"
+  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-kolom-balok.html": "Harga Jasa Finishing Kolom Balok"
 };
+
 const urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1 = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-coating-struktur-beton.html": "Harga Jasa Coating Struktur Beton",
-	"https://www.betonjayareadymix.com/p/jasa-coating-anti-karat-beton.html": "Jasa Coating Anti Karat Beton", 
-	"https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html": "Jasa Pelapisan Waterproofing Struktur"
+  "https://www.betonjayareadymix.com/p/harga-jasa-coating-struktur-beton.html": "Harga Jasa Coating Struktur Beton",
+  "https://www.betonjayareadymix.com/p/jasa-coating-anti-karat-beton.html": "Jasa Coating Anti Karat Beton",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html": "Jasa Pelapisan Waterproofing Struktur"
 };
+
 const urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPage1MoneyPage2 = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-waterproofing-struktur.html": "Harga Jasa Waterproofing Struktur"
+  "https://www.betonjayareadymix.com/p/harga-jasa-waterproofing-struktur.html": "Harga Jasa Waterproofing Struktur"
 };
-// ============================================================
-// 📁 JASA FINISHING INFRASTRUKTUR - MP dari MM Jasa Finishing Infrastruktur
-// 🧠 Parent: Jasa Finishing Infrastruktur (L4)
-// ============================================================
 
 const urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage = {
-    // Struktur & Utilitas
-    "https://www.betonjayareadymix.com/p/jasa-finishing-rumah-pompa.html": "Jasa Finishing Rumah Pompa",
-    "https://www.betonjayareadymix.com/p/jasa-pelapisan-box-utilitas.html": "Jasa Pelapisan Box Utilitas",
-    "https://www.betonjayareadymix.com/p/jasa-epoxy-struktur-publik.html": "Jasa Epoxy Struktur Publik",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-penutup-kabel-beton.html": "Jasa Finishing Penutup Kabel Beton",
-
-    // Proteksi & Epoxy Luar Ruang
-    "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-karat-beton.html": "Jasa Pelapisan Anti Karat Beton",
-    "https://www.betonjayareadymix.com/p/jasa-epoxy-beton-luar-ruang.html": "Jasa Epoxy Beton Luar Ruang",
-    "https://www.betonjayareadymix.com/p/jasa-proteksi-struktur-beton-luar.html": "Jasa Proteksi Struktur Beton Luar",
-    
-    // Jalan, Jembatan, Trotoar, Saluran
-    "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-jembatan.html": "Jasa Finishing Jalan Jembatan",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-jembatan-beton.html": "Jasa Finishing Jembatan Beton",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-beton.html": "Jasa Finishing Jalan Beton",
-    "https://www.betonjayareadymix.com/p/jasa-pengecatan-marking-jalan.html": "Jasa Pengecatan Marking Jalan",
-    "https://www.betonjayareadymix.com/p/jasa-pelapisan-jalan-tol.html": "Jasa Pelapisan Jalan Tol",
-    "https://www.betonjayareadymix.com/p/jasa-coating-jembatan.html": "Jasa Coating Jembatan",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar-area-publik.html": "Jasa Finishing Trotoar Area Publik",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar.html": "Jasa Finishing Trotoar",
-    "https://www.betonjayareadymix.com/p/jasa-penataan-trotoar-beton.html": "Jasa Penataan Trotoar Beton",
-    "https://www.betonjayareadymix.com/p/jasa-epoxy-area-publik.html": "Jasa Epoxy Area Publik",
-    "https://www.betonjayareadymix.com/p/jasa-pelapisan-area-pejalan-kaki.html": "Jasa Pelapisan Area Pejalan Kaki",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-saluran-drainase.html": "Jasa Finishing Saluran Drainase",
-    "https://www.betonjayareadymix.com/p/jasa-coating-gorong-gorong.html": "Jasa Coating Gorong Gorong",
-    "https://www.betonjayareadymix.com/p/jasa-pelapisan-saluran-beton.html": "Jasa Pelapisan Saluran Beton",
-    "https://www.betonjayareadymix.com/p/jasa-waterproofing-saluran-air.html": "Jasa Waterproofing Saluran Air",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-penutup-saluran.html": "Jasa Finishing Penutup Saluran",
-
-    // Proteksi Beton Umum
-    "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-utilitas.html": "Jasa Finishing Struktur Utilitas",
-    "https://www.betonjayareadymix.com/p/jasa-finishing-proteksi-beton.html": "Jasa Finishing Proteksi Beton"
+  "https://www.betonjayareadymix.com/p/jasa-finishing-rumah-pompa.html": "Jasa Finishing Rumah Pompa",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-box-utilitas.html": "Jasa Pelapisan Box Utilitas",
+  "https://www.betonjayareadymix.com/p/jasa-epoxy-struktur-publik.html": "Jasa Epoxy Struktur Publik",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-penutup-kabel-beton.html": "Jasa Finishing Penutup Kabel Beton",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-karat-beton.html": "Jasa Pelapisan Anti Karat Beton",
+  "https://www.betonjayareadymix.com/p/jasa-epoxy-beton-luar-ruang.html": "Jasa Epoxy Beton Luar Ruang",
+  "https://www.betonjayareadymix.com/p/jasa-proteksi-struktur-beton-luar.html": "Jasa Proteksi Struktur Beton Luar",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-jembatan.html": "Jasa Finishing Jalan Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-jembatan-beton.html": "Jasa Finishing Jembatan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-beton.html": "Jasa Finishing Jalan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-pengecatan-marking-jalan.html": "Jasa Pengecatan Marking Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-jalan-tol.html": "Jasa Pelapisan Jalan Tol",
+  "https://www.betonjayareadymix.com/p/jasa-coating-jembatan.html": "Jasa Coating Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar-area-publik.html": "Jasa Finishing Trotoar Area Publik",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar.html": "Jasa Finishing Trotoar",
+  "https://www.betonjayareadymix.com/p/jasa-penataan-trotoar-beton.html": "Jasa Penataan Trotoar Beton",
+  "https://www.betonjayareadymix.com/p/jasa-epoxy-area-publik.html": "Jasa Epoxy Area Publik",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-area-pejalan-kaki.html": "Jasa Pelapisan Area Pejalan Kaki",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-saluran-drainase.html": "Jasa Finishing Saluran Drainase",
+  "https://www.betonjayareadymix.com/p/jasa-coating-gorong-gorong.html": "Jasa Coating Gorong Gorong",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-saluran-beton.html": "Jasa Pelapisan Saluran Beton",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-saluran-air.html": "Jasa Waterproofing Saluran Air",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-penutup-saluran.html": "Jasa Finishing Penutup Saluran",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-utilitas.html": "Jasa Finishing Struktur Utilitas",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-proteksi-beton.html": "Jasa Finishing Proteksi Beton"
 };
-// ============================================================
-// 📁 TAMBAHAN SARAN ITEM (BELUM AKTIF - DIMATIKAN DENGAN //)
-// ============================================================
 
-// SARAN UNTUK JASA FINISHING DAK BETON (MONEY PAGE & MONEY CHILD)
-// const urlMappingJasaFinishingDakBetonFromJasaFinishingStrukturMoneyPage = {
-//   "https://www.betonjayareadymix.com/2018/10/harga-jasa-finishing-dak-beton.html": "Harga Jasa Finishing Dak Beton",  // TYPE: MONEY_PAGE
-// };
+console.log('═══════════════════════════════════════════════════════════');
+console.log('📦 PART 1 SELESAI — Lanjut ke PART 2 (Early Exit + Fungsi Utama)');
+console.log('═══════════════════════════════════════════════════════════');
 
-// SARAN UNTUK JASA PLESTERAN ACIAN (MONEY CHILD per LOKASI)
-// const urlMappingJasaPlesteranAcianFromMoneyPageMoneyChild = {
-//   "https://www.betonjayareadymix.com/2018/11/harga-borongan-plesteran-acian-jakarta.html": "Harga Borongan Plesteran Acian Jakarta",  // TYPE: MONEY_CHILD
-//   "https://www.betonjayareadymix.com/2018/11/harga-borongan-plesteran-acian-bekasi.html": "Harga Borongan Plesteran Acian Bekasi",  // TYPE: MONEY_CHILD
-//   "https://www.betonjayareadymix.com/2018/11/harga-borongan-plesteran-acian-bogor.html": "Harga Borongan Plesteran Acian Bogor",  // TYPE: MONEY_CHILD
-//   "https://www.betonjayareadymix.com/2018/11/harga-borongan-plesteran-acian-depok.html": "Harga Borongan Plesteran Acian Depok",  // TYPE: MONEY_CHILD
-//   "https://www.betonjayareadymix.com/2018/11/harga-borongan-plesteran-acian-tangerang.html": "Harga Borongan Plesteran Acian Tangerang",  // TYPE: MONEY_CHILD
-// };
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN 2] FUNGSI HELPER
+// ═══════════════════════════════════════════════════════════
 
-// SARAN UNTUK JASA FINISHING LANTAI BETON (MONEY CHILD per LOKASI)
-// const urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyChild = {
-//   "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-lantai-bekasi.html": "Harga Jasa Trowel Lantai Bekasi",  // TYPE: MONEY_CHILD
-//   "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-lantai-depok.html": "Harga Jasa Trowel Lantai Depok",  // TYPE: MONEY_CHILD
-//   "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-lantai-jakarta.html": "Harga Jasa Trowel Lantai Jakarta",  // TYPE: MONEY_CHILD
-//   "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-lantai-tangerang.html": "Harga Jasa Trowel Lantai Tangerang",  // TYPE: MONEY_CHILD
-//   "https://www.betonjayareadymix.com/2018/10/harga-jasa-trowel-lantai-bogor.html": "Harga Jasa Trowel Lantai Bogor",  // TYPE: MONEY_CHILD
-// };
+var removedElementsJasaKonsFinishing = {};
 
-// SARAN UNTUK JASA KITCHEN SET (MONEY CHILD per JENIS)
-// const urlMappingJasaKitchenSetFromJasaFinishingInteriorMoneyChild = {
-//   "https://www.betonjayareadymix.com/p/jasa-kitchen-set-minimalis.html": "Jasa Kitchen Set Minimalis",  // TYPE: MONEY_CHILD
-//   "https://www.betonjayareadymix.com/p/jasa-kitchen-set-modern.html": "Jasa Kitchen Set Modern",  // TYPE: MONEY_CHILD
-//   "https://www.betonjayareadymix.com/p/jasa-kitchen-set-klasik.html": "Jasa Kitchen Set Klasik",  // TYPE: MONEY_CHILD
-//   "https://www.betonjayareadymix.com/p/jasa-kitchen-set-custom.html": "Jasa Kitchen Set Custom",  // TYPE: MONEY_CHILD
-//   "https://www.betonjayareadymix.com/p/harga-kitchen-set-per-meter.html": "Harga Kitchen Set Per Meter",  // TYPE: MONEY_PAGE
-// };
-
-
-// ============================================================
-// 📋 RINGKASAN TYPE PER CONST
-// ============================================================
-
-
-// Menyimpan elemen yang dihapus dalam variabel
-let removedElementsJasaKonsFinishing = {};
-// Fungsi untuk menghapus elemen berdasarkan ID
 function removeCondition(conditionId) {
-    const conditionElement = document.getElementById(conditionId);
-
+    // ✅ GUARD: Jangan hapus container utama
+    if (conditionId === 'JasaKonsFinishing') {
+        console.warn('[jasa-konstruksi-finishing] ⚠️ Tidak boleh menghapus container utama: ' + conditionId);
+        return;
+    }
+    
+    var conditionElement = document.getElementById(conditionId);
     if (conditionElement) {
-        // Menyimpan elemen yang dihapus dalam objek untuk bisa dikembalikan
         removedElementsJasaKonsFinishing[conditionId] = conditionElement;
-        conditionElement.remove(); // Menghapus elemen tersebut
+        conditionElement.remove();
+        console.log('[jasa-konstruksi-finishing] 🔧 Removed: ' + conditionId);
     }
 }
 
-// Fungsi untuk mengembalikan elemen yang telah dihapus
 function restoreCondition(conditionId) {
-    const breadcrumb = document.querySelector('.breadcrumb');
-    const elementToRestore = removedElementsJasaKonsFinishing[conditionId]; // Mendapatkan elemen yang disimpan
-
+    var breadcrumb = document.querySelector('.breadcrumb');
+    var elementToRestore = removedElementsJasaKonsFinishing[conditionId];
+    
     if (elementToRestore) {
-        breadcrumb.appendChild(elementToRestore); // Menambahkan elemen kembali ke dalam breadcrumb
-        delete removedElementsJasaKonsFinishing[conditionId]; // Menghapus elemen dari objek setelah dikembalikan
+        breadcrumb.appendChild(elementToRestore);
+        delete removedElementsJasaKonsFinishing[conditionId];
+        console.log('[jasa-konstruksi-finishing] 🔧 Restored: ' + conditionId);
     } else {
-        console.log(`Elemen dengan ID ${conditionId} tidak ditemukan di removedElementsJasaKonsFinishing.`);
+        console.warn('[jasa-konstruksi-finishing] ⚠️ Elemen ' + conditionId + ' tidak ditemukan');
     }
 }
 
-// ═══════════════════════════════════════════════════════════════
-// ⚡ EARLY EXIT — CEK URL SEBELUM EKSEKUSI (v2.0.0)
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN 3] EARLY EXIT v2.0.0 — PENDEKATAN C
+// ═══════════════════════════════════════════════════════════
+// STRATEGI:
+//   - Loop + foundIndex + foundMappingName + break (paling cepat)
+//   - TIDAK bikin MERGED_MAP (hemat memori ~10KB)
+//   - Simpan ALL_MAPPINGS + foundIndex + foundMappingName untuk debug
+// ═══════════════════════════════════════════════════════════
+
 (function() {
   'use strict';
   
   var cleanUrl = window.location.href.split(/[?#]/)[0];
   console.log('[jasa-konstruksi-finishing] 🔍 Check URL: ' + cleanUrl);
   
-  // Kumpulkan semua mapping ke array (TANPA Object.assign)
+  // Kumpulkan SEMUA mapping ke array (TANPA Object.assign)
   var ALL_MAPPINGS = [
-    
-		urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
-		urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
-		
-		urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage,
-		urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage,
-		
-		urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
-		urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
-
-		urlMappingJasaInteriorFromMoneyMasterMoneyPage,
-		urlMappingHargaJasaInteriorFromMoneyPageMoneyPage,
-		
-		urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage,
-		urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1,
-        urlMappingJasaPasangLampuTamanFromMoneyPageMoneyPage1,
-
-		urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage,
-		urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage,
-        urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage,
-		urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage,
-		
-		urlMappingJasaCatFromMoneyMaster1MoneyPage,
-		urlMappingHargaJasaCatFromMoneyPageMoneyPage1,
-		urlMappingJasaCatPermukaanKhususFromMoneyPageMoneyPage1,
-		urlMappingJasaCatDindingFromMoneyPageMoneyPage1,
-		urlMappingJasaFinishingCatFromMoneyPageMoneyPage1,
-		urlMappingJasaCatInteriorFromMoneyPageMoneyPage1,
-		urlMappingJasaCatEksteriorFromMoneyPageMoneyPage1,
-		urlMappingJasaCatInteriorRumahFromMoneyPage1MoneyPage2,
-		urlMappingJasaCatInteriorKantorFromMoneyPage1MoneyPage2,
-		
-		urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1,
-		urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
-		urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
-		urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1,
-		
-		urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1,
-		urlMappingHargaJasaPlesteranAcianFromMoneyPage1MoneyPage2,
-		
-		urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage,
-		urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1,
-		urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
-		urlMappingHargaJasaFinishingLantaiFromMoneyPageMoneyPage1,
-		
-		
-		urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1,
-		urlMappingJasaFinishingLantaiKayuFromMoneyPageMoneyPage1,
-		urlMappingJasaFinishingLantaiMarmerFromMoneyPageMoneyPage1,
-		urlMappingJasaPolesLantaiGranitFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1,
-		urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2,
-		
-		urlMappingJasaLantaiSuperFlatFromMoneyPage1MoneyPage2,
-		urlMappingJasaTrowelLantaiBetonFromMoneyPage1MoneyPage2,
-		urlMappingJasaScreedingLantaiBetonFromMoneyPage1MoneyPage2,
-		urlMappingJasaFloorHardenerLantaiFromMoneyPage1MoneyPage2,
-       urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoney1Page2,
-		
-		
-		urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage,
-
-		urlMappingJasaEksteriorFromMoneyMasterMoneyMaster1,
-		urlMappingHargaJasaEksteriorFromMoneyMaster1MoneyPage,
-        urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage,
-		urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1,
-		
-		urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1,
-		urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1,
-	
-		urlMappingJasaTamanFromMoneyMaster2MoneyMaster3,
-		urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage,
-		
-		urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage,
-		urlMappingJasaFinishingDakBetonFromMoneyPageMoneyPage1,
-		urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyPage1,
-		urlMappingJasaFinishingKolomdanBalokFromMoneyPageMoneyPage1,
-		urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1,
-		urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPage1MoneyPage2,
-
-		
-		urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage
+    urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
+    urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage,
+    urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage,
+    urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
+    urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
+    urlMappingJasaInteriorFromMoneyMasterMoneyPage,
+    urlMappingHargaJasaInteriorFromMoneyPageMoneyPage,
+    urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage,
+    urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangLampuTamanFromMoneyPageMoneyPage1,
+    urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage,
+    urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage,
+    urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage,
+    urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage,
+    urlMappingJasaCatFromMoneyMaster1MoneyPage,
+    urlMappingHargaJasaCatFromMoneyPageMoneyPage1,
+    urlMappingJasaCatPermukaanKhususFromMoneyPageMoneyPage1,
+    urlMappingJasaCatDindingFromMoneyPageMoneyPage1,
+    urlMappingJasaFinishingCatFromMoneyPageMoneyPage1,
+    urlMappingJasaCatInteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaCatEksteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaCatInteriorRumahFromMoneyPage1MoneyPage2,
+    urlMappingJasaCatInteriorKantorFromMoneyPage1MoneyPage2,
+    urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1,
+    urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
+    urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
+    urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1,
+    urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1,
+    urlMappingHargaJasaPlesteranAcianFromMoneyPage1MoneyPage2,
+    urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage,
+    urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1,
+    urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
+    urlMappingHargaJasaFinishingLantaiFromMoneyPageMoneyPage1,
+    urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1,
+    urlMappingJasaFinishingLantaiKayuFromMoneyPageMoneyPage1,
+    urlMappingJasaFinishingLantaiMarmerFromMoneyPageMoneyPage1,
+    urlMappingJasaPolesLantaiGranitFromMoneyPageMoneyPage1,
+    urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1,
+    urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2,
+    urlMappingJasaLantaiSuperFlatFromMoneyPage1MoneyPage2,
+    urlMappingJasaTrowelLantaiBetonFromMoneyPage1MoneyPage2,
+    urlMappingJasaScreedingLantaiBetonFromMoneyPage1MoneyPage2,
+    urlMappingJasaFloorHardenerLantaiFromMoneyPage1MoneyPage2,
+    urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoney1Page2,
+    urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage,
+    urlMappingJasaEksteriorFromMoneyMasterMoneyMaster1,
+    urlMappingHargaJasaEksteriorFromMoneyMaster1MoneyPage,
+    urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage,
+    urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1,
+    urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1,
+    urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1,
+    urlMappingJasaTamanFromMoneyMaster2MoneyMaster3,
+    urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage,
+    urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage,
+    urlMappingJasaFinishingDakBetonFromMoneyPageMoneyPage1,
+    urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyPage1,
+    urlMappingJasaFinishingKolomdanBalokFromMoneyPageMoneyPage1,
+    urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1,
+    urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPage1MoneyPage2,
+    urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage
   ];
   
-  // Loop — cek URL, break kalau cocok
-  var found = false;
+  // ✅ PENDEKATAN C: Loop + foundIndex + foundMappingName + break
+  var foundIndex = -1;
+  var foundMappingName = '';
+  
   for (var i = 0; i < ALL_MAPPINGS.length; i++) {
-    var m = ALL_MAPPINGS[i];
-    if (m && typeof m === 'object' && m[cleanUrl]) {
-      found = true;
-      console.log('[jasa-konstruksi-finishing] ✅ Match di mapping #' + (i + 1));
+    if (!ALL_MAPPINGS[i] || typeof ALL_MAPPINGS[i] !== 'object') {
+      console.warn('[jasa-konstruksi-finishing] ⚠️ Mapping #' + (i + 1) + ' bukan object — skip');
+      continue;
+    }
+    if (ALL_MAPPINGS[i][cleanUrl]) {
+      foundIndex = i;
+      foundMappingName = ALL_MAPPINGS[i][cleanUrl];
       break;
     }
   }
   
-  // ❌ Skip kalau tidak cocok
-  if (!found) {
+  if (foundIndex === -1) {
     console.log('[jasa-konstruksi-finishing] ⏭️ SKIP — URL tidak cocok di semua cluster');
     window.__jasaKonsFinishingActive = false;
     return;
   }
   
-  // ✅ Cocok — set flag
+  // ✅ Cocok — set flag + simpan info untuk debug
   window.__jasaKonsFinishingActive = true;
-  console.log('[jasa-kons-finishing] ✅ EXECUTE flag set');
+  window.__jasaKonsFinishingMatchIndex = foundIndex;
+  window.__jasaKonsFinishingMatchMappingName = foundMappingName;
+  window.__jasaKonsFinishingMappings = ALL_MAPPINGS;
+  
+  console.log(
+    '[jasa-konstruksi-finishing] ✅ Match di mapping #' + (foundIndex + 1) +
+    ' — Label: "' + foundMappingName + '"' +
+    ' — EXECUTE flag set'
+  );
 })();
 
-document.addEventListener("DOMContentLoaded", function() {
-   // ⚡ EARLY EXIT — Skip kalau flag tidak aktif
+console.log('═══════════════════════════════════════════════════════════');
+console.log('📦 PART 2 SELESAI — Lanjut ke PART 3 (Fungsi Utama + If Breadcrumb)');
+console.log('═══════════════════════════════════════════════════════════');
+
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN 4] FUNGSI UTAMA — Semua logic breadcrumb
+// ═══════════════════════════════════════════════════════════
+
+function initJasaKonsFinishing() {
+    // ⚡ Guard flag
     if (!window.__jasaKonsFinishingActive) {
-      console.log('[jasa-konstruksi-finishing] ⏭️ DOMContentLoaded SKIP — URL tidak cocok');
-      return;
-    }
-    const cleanUrlJasaKonsFinishing = window.location.href.split(/[?#]/)[0]; // Menghilangkan parameter seperti ?m=1
-
-	/*
-	// --- gabungkan semua mapping ---
-    const urlMappingGabungan = Object.assign(
-      {},
-		urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
-		urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
-		
-		urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage,
-		urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage,
-		
-		urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
-		urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
-
-		urlMappingJasaInteriorFromMoneyMasterMoneyPage,
-		urlMappingHargaJasaInteriorFromMoneyPageMoneyPage,
-		
-		urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage,
-		urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1,
-        urlMappingJasaPasangLampuTamanFromMoneyPageMoneyPage1,
-
-		urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage,
-		urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage,
-        urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage,
-		urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage,
-		
-		urlMappingJasaCatFromMoneyMaster1MoneyPage,
-		urlMappingHargaJasaCatFromMoneyPageMoneyPage1,
-		urlMappingJasaCatPermukaanKhususFromMoneyPageMoneyPage1,
-		urlMappingJasaCatDindingFromMoneyPageMoneyPage1,
-		urlMappingJasaFinishingCatFromMoneyPageMoneyPage1,
-		urlMappingJasaCatInteriorFromMoneyPageMoneyPage1,
-		urlMappingJasaCatEksteriorFromMoneyPageMoneyPage1,
-		urlMappingJasaCatInteriorRumahFromMoneyPage1MoneyPage2,
-		urlMappingJasaCatInteriorKantorFromMoneyPage1MoneyPage2,
-		
-		urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1,
-		urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
-		urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
-		urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1,
-		
-		urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1,
-		urlMappingHargaJasaPlesteranAcianFromMoneyPage1MoneyPage2,
-		
-		urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage,
-		urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1,
-		urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
-		urlMappingHargaJasaFinishingLantaiFromMoneyPageMoneyPage1,
-		
-		
-		urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1,
-		urlMappingJasaFinishingLantaiKayuFromMoneyPageMoneyPage1,
-		urlMappingJasaFinishingLantaiMarmerFromMoneyPageMoneyPage1,
-		urlMappingJasaPolesLantaiGranitFromMoneyPageMoneyPage1,
-		urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1,
-		urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2,
-		
-		urlMappingJasaLantaiSuperFlatFromMoneyPage1MoneyPage2,
-		urlMappingJasaTrowelLantaiBetonFromMoneyPage1MoneyPage2,
-		urlMappingJasaScreedingLantaiBetonFromMoneyPage1MoneyPage2,
-		urlMappingJasaFloorHardenerLantaiFromMoneyPage1MoneyPage2,
-       urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoney1Page2,
-		
-		
-		urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage,
-
-		urlMappingJasaEksteriorFromMoneyMasterMoneyMaster1,
-		urlMappingHargaJasaEksteriorFromMoneyMaster1MoneyPage,
-        urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage,
-		urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1,
-		
-		urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1,
-		urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1,
-	
-		urlMappingJasaTamanFromMoneyMaster2MoneyMaster3,
-		urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage,
-		
-		urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage,
-		urlMappingJasaFinishingDakBetonFromMoneyPageMoneyPage1,
-		urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyPage1,
-		urlMappingJasaFinishingKolomdanBalokFromMoneyPageMoneyPage1,
-		urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1,
-		urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPage1MoneyPage2,
-
-		
-		urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage
-		
-    );
-
-    // --- validasi URL terdaftar ---
-    if (!urlMappingGabungan[cleanUrlJasaKonsFinishing]) {
-      console.log(`[HybridDateModified] URL tidak terdaftar: ${cleanUrlJasaKonsFinishing}`);
-      return;
-    }
-   */
-/* ============================================================
- 🔥 Hybrid Date Modified v7.9 — UNTUK betonjayareadymix.com
-    ✅ SINKRON dengan Page Level Detector v22.1
-    ✅ FIXED: Support PLD v22.0, v22.1, v20.x, v19.x
-    ✅ FIXED: Variable name konsisten dengan PLD v22.x
-    ✅ FULL COMPATIBLE: Page Level Detector v22.x, v20.x, v19.x, v18, v17
-    ✅ FIX: Support JASA MONEY-MASTER detection
-    ✅ FIX: 'home' TIDAK termasuk EVERGREEN_LEVELS
-    ✅ ENHANCED: Mendapatkan confidence score dari PLD v22.x
-    ✅ ENHANCED: Enhanced logging dengan confidence dan strategy
-    ✅ Better error handling
-============================================================ */
-
-(async function runHybridDateModified() {
-  try {
-    const CURRENT_DOMAIN = window.location.hostname;
-    
-    // Khusus untuk betonjayareadymix.com
-    if (CURRENT_DOMAIN !== 'www.betonjayareadymix.com' && !CURRENT_DOMAIN.includes('localhost')) {
-      console.log(`⏸️ Domain ${CURRENT_DOMAIN} not targeted. Script skipped.`);
-      return;
-    }
-
-    // ============================================================
-    // 📌 KONSTANTA PAGE LEVELS (KATEGORISASI YANG BENAR)
-    // ============================================================
-    const EVERGREEN_LEVELS = ['pillar', 'sub-pillar-tipe-2', 'variant', 'sub-variant'];
-    const FLEXIBLE_LEVELS = ['sub-pillar-tipe-1'];
-    const MONEY_LEVELS = ['money-master', 'money-page', 'money-child', 'money-leadgen'];
-
-    // ============================================================
-    // 📌 FUNGSI LOAD EXTERNAL JS
-    // ============================================================
-    function loadExternalJS(src) {
-      return new Promise((resolve) => {
-        if (document.querySelector(`script[src="${src}"]`)) {
-          resolve();
-          return;
-        }
-        const s = document.createElement("script");
-        s.src = src;
-        s.defer = true;
-        s.onload = resolve;
-        s.onerror = () => {
-          console.warn("[HybridDateModified] Gagal load:", src);
-          resolve();
-        };
-        document.head.appendChild(s);
-      });
-    }
-
-    // ============================================================
-    // 📌 TUNGGU PAGE LEVEL DETECTOR READY (SUPPORT v22.x, v20.x, v19.x, v18, v17)
-    // ============================================================
-    function waitForPageLevelDetector() {
-      return new Promise((resolve) => {
-        // ✅ SUPPORT v22.x (v22.0, v22.1)
-        if (window.pageLevelDetectorv22 && window.pageLevelDetectorv22Ready) {
-          console.log("✅ Page Level Detector v22.x already ready");
-          resolve(true);
-          return;
-        }
-        
-        // ✅ SUPPORT v20.x (v20.0, v20.1, v20.2)
-        if (window.pageLevelDetectorv20 && window.pageLevelDetectorv20Ready) {
-          console.log("✅ Page Level Detector v20.x already ready");
-          resolve(true);
-          return;
-        }
-        
-        // ✅ SUPPORT v19.0
-        if (window.pageLevelDetectorv19 && window.pageLevelDetectorv19Ready) {
-          console.log("✅ Page Level Detector v19 already ready");
-          resolve(true);
-          return;
-        }
-        
-        // ✅ SUPPORT v18
-        if (window.pageLevelDetectorV18 && window.pageLevelDetectorv18Ready) {
-          console.log("✅ Page Level Detector v18 already ready");
-          resolve(true);
-          return;
-        }
-        
-        // ✅ SUPPORT v17
-        if (window.pageLevelDetectorV17 && window.pageLevelDetectorv17Ready) {
-          console.log("✅ Page Level Detector v17 already ready");
-          resolve(true);
-          return;
-        }
-        
-        // ✅ SUPPORT legacy
-        if (window.pageLevelDetector && window.__pageLevelDetectorReady) {
-          console.log("✅ Page Level Detector legacy already ready");
-          resolve(true);
-          return;
-        }
-        
-        // ✅ Event listener untuk semua versi
-        const onReadyV22 = () => {
-          console.log("✅ Page Level Detector v22.x ready (event)");
-          resolve(true);
-        };
-        
-        const onReadyV20 = () => {
-          console.log("✅ Page Level Detector v20.x ready (event)");
-          resolve(true);
-        };
-        
-        const onReadyV19 = () => {
-          console.log("✅ Page Level Detector v19 ready (event)");
-          resolve(true);
-        };
-        
-        const onReadyV18 = () => {
-          console.log("✅ Page Level Detector v18 ready (event fallback)");
-          resolve(true);
-        };
-        
-        const onReadyLegacy = () => {
-          console.log("✅ Page Level Detector legacy ready (event fallback)");
-          resolve(true);
-        };
-        
-        window.addEventListener("pageLevelDetectorv22Ready", onReadyV22, { once: true });
-        window.addEventListener("pageLevelDetectorv20Ready", onReadyV20, { once: true });
-        window.addEventListener("pageLevelDetectorv19Ready", onReadyV19, { once: true });
-        window.addEventListener("pageLevelDetectorV19Ready", onReadyV19, { once: true });
-        window.addEventListener("pageLevelDetectorv18Ready", onReadyV18, { once: true });
-        window.addEventListener("pageLevelDetectorReady", onReadyLegacy, { once: true });
-        
-        // Fallback timeout 10 detik
-        setTimeout(() => {
-          if (window.pageLevelDetectorv22 || window.pageLevelDetectorv20 || 
-              window.pageLevelDetectorv19 || window.pageLevelDetectorV18 || 
-              window.pageLevelDetector) {
-            console.log("✅ Page Level Detector ready (timeout fallback)");
-            resolve(true);
-          } else {
-            console.warn("⚠️ PageLevelDetector timeout, using defaults");
-            resolve(false);
-          }
-        }, 10000);
-      });
-    }
-
-    // ============================================================
-    // 📌 TUNGGU DETECT EVERGREEN READY
-    // ============================================================
-    function waitForDetectEvergreen() {
-      return new Promise((resolve) => {
-        if (window.__detectEvergreenReady && typeof window.detectEvergreen === "function") {
-          resolve(true);
-          return;
-        }
-        window.addEventListener("detectEvergreenReady", () => resolve(true), { once: true });
-        setTimeout(() => {
-          if (typeof window.detectEvergreen === "function") {
-            resolve(true);
-          } else {
-            console.warn("⚠️ detectEvergreen timeout");
-            resolve(false);
-          }
-        }, 5000);
-      });
-    }
-
-    // ============================================================
-    // 📌 LOAD ALL SCRIPTS
-    // ============================================================
-    async function loadAllScripts() {
-      // Gunakan PLD v22.x (terbaru, weighted voting system)
-      const PAGE_LEVEL_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/PageLevelDetector.js";
-      const EVERGREEN_DETECTOR_URL = "https://raw.githack.com/aliyul/solution-blogger/main/SmartEvergreenDetector.js";
-      
-      if (typeof window.pageLevelDetectorv22 === "undefined" && 
-          typeof window.pageLevelDetectorv20 === "undefined" &&
-          typeof window.pageLevelDetectorv19 === "undefined" &&
-          typeof window.pageLevelDetectorV18 === "undefined" &&
-          typeof window.pageLevelDetectorV17 === "undefined" &&
-          typeof window.pageLevelDetector === "undefined") {
-        console.log("⏳ Loading Page Level Detector v22.x...");
-        await loadExternalJS(PAGE_LEVEL_DETECTOR_URL);
-        await waitForPageLevelDetector();
-        console.log("✅ Page Level Detector v22.x READY");
-      }
-      
-      if (typeof window.detectEvergreen !== "function") {
-        console.log("⏳ Loading Smart Evergreen Detector...");
-        await loadExternalJS(EVERGREEN_DETECTOR_URL);
-        await waitForDetectEvergreen();
-        console.log("✅ Smart Evergreen Detector READY");
-      }
-    }
-
-    // ============================================================
-    // 📌 TO ISO WITH TIMEZONE LOCAL
-    // ============================================================
-    function toISOWithTimezoneLocal(date, offset = "+07:00") {
-      if (!date) return null;
-      const d = new Date(date);
-      if (isNaN(d.getTime())) return null;
-      const pad = (n) => n.toString().padStart(2, "0");
-      const yyyy = d.getFullYear();
-      const mm = pad(d.getMonth() + 1);
-      const dd = pad(d.getDate());
-      const hh = pad(d.getHours());
-      const min = pad(d.getMinutes());
-      const ss = pad(d.getSeconds());
-      return `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${offset}`;
-    }
-
-    // ============================================================
-    // 📌 STABLE HASH
-    // ============================================================
-    function stableHash(str) {
-      let hash = 0;
-      for (let i = 0; i < str.length; i++) {
-        hash = (hash << 5) - hash + str.charCodeAt(i);
-        hash |= 0;
-      }
-      return Math.abs(hash);
-    }
-
-    // ============================================================
-    // 📌 UPDATE META DATE MODIFIED
-    // ============================================================
-    function updateMetaDateModified(isoDate) {
-      const selectors = [
-        ['meta[itemprop="dateModified"]', 'itemprop', 'dateModified'],
-        ['meta[name="dateModified"]', 'name', 'dateModified'],
-        ['meta[property="article:modified_time"]', 'property', 'article:modified_time']
-      ];
-      
-      selectors.forEach(([selector, attr, val]) => {
-        let meta = document.querySelector(selector);
-        if (!meta) {
-          meta = document.createElement("meta");
-          meta.setAttribute(attr, val);
-          document.head.appendChild(meta);
-        }
-        meta.setAttribute("content", isoDate);
-      });
-    }
-
-    // ============================================================
-    // 📌 FUNGSI MENENTUKAN CUSTOM DATE BERDASARKAN PAGE LEVEL
-    // ============================================================
-    function getCustomDateByPageLevel(pageLevel, entityType) {
-      if (EVERGREEN_LEVELS.includes(pageLevel)) {
-        if (pageLevel === 'pillar') {
-          return "2026-04-01T10:30:00+07:00";
-        }
-        return "2026-04-02T00:00:00+07:00";
-      }
-      
-      if (FLEXIBLE_LEVELS.includes(pageLevel)) {
-        return "2026-04-15T00:00:00+07:00";
-      }
-      
-      if (MONEY_LEVELS.includes(pageLevel)) {
-        return null;
-      }
-      
-      if (pageLevel === 'home') {
-        return null;
-      }
-      
-      return null;
-    }
-
-    // ============================================================
-    // 📌 FUNGSI GET CATEGORY LABEL
-    // ============================================================
-    function getCategoryLabel(pageLevel) {
-      if (EVERGREEN_LEVELS.includes(pageLevel)) return 'EVERGREEN';
-      if (FLEXIBLE_LEVELS.includes(pageLevel)) return 'FLEXIBLE';
-      if (MONEY_LEVELS.includes(pageLevel)) return 'MONEY';
-      if (pageLevel === 'home') return 'HOMEPAGE (DYNAMIC)';
-      return 'UNKNOWN';
-    }
-
-    // ============================================================
-    // 📌 GET PAGE LEVEL FROM DETECTOR (SUPPORT v22.x, v20.x, v19.x, v18, v17)
-    // ============================================================
-    async function getPageLevelFromDetector() {
-      await new Promise(resolve => setTimeout(resolve, 300));
-      
-      let pageLevel = 'pillar';
-      let entityType = 'produk';
-      let detectorVersion = 'unknown';
-      let confidence = null;
-      let strategies = null;
-      let strategyCount = null;
-      
-      // ✅ PRIORITAS v22.x (weighted voting system - 100% accuracy)
-      if (window.pageLevelDetectorv22 && typeof window.pageLevelDetectorv22.detect === 'function') {
-        try {
-          pageLevel = window.pageLevelDetectorv22.detect();
-          entityType = window.pageLevelDetectorv22.detectEntityType();
-          detectorVersion = 'v22.x';
-          
-          // Dapatkan confidence score jika tersedia
-          if (typeof window.pageLevelDetectorv22.getConfidenceScore === 'function') {
-            const confidenceScore = window.pageLevelDetectorv22.getConfidenceScore();
-            confidence = confidenceScore.confidence;
-            strategies = confidenceScore.strategies;
-            strategyCount = confidenceScore.strategyCount;
-          }
-          
-          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
-          if (confidence) {
-            console.log(`   🎯 Confidence: ${confidence}% (${strategyCount} strategies: ${strategies?.join(", ")})`);
-          }
-        } catch (e) {
-          console.warn(`⚠️ Error calling pageLevelDetectorv22:`, e);
-        }
-      } 
-      // FALLBACK v20.x
-      else if (window.pageLevelDetectorv20 && typeof window.pageLevelDetectorv20.detect === 'function') {
-        try {
-          pageLevel = window.pageLevelDetectorv20.detect();
-          entityType = window.pageLevelDetectorv20.detectEntityType();
-          detectorVersion = 'v20.x';
-          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
-        } catch (e) {
-          console.warn(`⚠️ Error calling pageLevelDetectorv20:`, e);
-        }
-      } 
-      // FALLBACK v19.0
-      else if (window.pageLevelDetectorv19 && typeof window.pageLevelDetectorv19.detect === 'function') {
-        try {
-          pageLevel = window.pageLevelDetectorv19.detect();
-          entityType = window.pageLevelDetectorv19.detectEntityType();
-          detectorVersion = 'v19.0';
-          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
-        } catch (e) {
-          console.warn(`⚠️ Error calling pageLevelDetectorv19:`, e);
-        }
-      } 
-      // FALLBACK v18
-      else if (window.pageLevelDetectorV18 && typeof window.pageLevelDetectorV18.detect === 'function') {
-        try {
-          pageLevel = window.pageLevelDetectorV18.detect();
-          entityType = window.pageLevelDetectorV18.detectEntityType();
-          detectorVersion = 'v18.7';
-          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
-        } catch (e) {
-          console.warn(`⚠️ Error calling pageLevelDetectorV18:`, e);
-        }
-      } 
-      // FALLBACK v17
-      else if (window.pageLevelDetectorV17 && typeof window.pageLevelDetectorV17.detect === 'function') {
-        try {
-          pageLevel = window.pageLevelDetectorV17.detect();
-          entityType = window.pageLevelDetectorV17.detectEntityType();
-          detectorVersion = 'v17.0';
-          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
-        } catch (e) {
-          console.warn(`⚠️ Error calling pageLevelDetectorV17:`, e);
-        }
-      } 
-      // FALLBACK legacy
-      else if (window.pageLevelDetector && typeof window.pageLevelDetector.detect === 'function') {
-        try {
-          pageLevel = window.pageLevelDetector.detect();
-          entityType = window.pageLevelDetector.detectEntityType();
-          detectorVersion = 'legacy';
-          console.log(`📌 [${detectorVersion}] Detected Page Level: ${pageLevel}, Entity Type: ${entityType}`);
-        } catch (e) {
-          console.warn(`⚠️ Error calling pageLevelDetector legacy:`, e);
-        }
-      } 
-      else {
-        console.warn("⚠️ PageLevelDetector not ready, using defaults (pillar/produk)");
-      }
-      
-      return { pageLevel, entityType, detectorVersion, confidence, strategies, strategyCount };
-    }
-
-    // ============================================================
-    // 📌 EKSEKUSI UTAMA
-    // ============================================================
-    
-    console.log("🔥 Hybrid Date Modified v7.9 - Starting...");
-    
-    await loadAllScripts();
-    
-    const { pageLevel, entityType, detectorVersion, confidence, strategies, strategyCount } = await getPageLevelFromDetector();
-    
-    // Validasi page level
-    const ALL_KNOWN_LEVELS = [...EVERGREEN_LEVELS, ...FLEXIBLE_LEVELS, ...MONEY_LEVELS, 'home'];
-    let finalPageLevel = pageLevel;
-    if (!ALL_KNOWN_LEVELS.includes(finalPageLevel)) {
-      console.warn(`⚠️ Unknown page level: ${finalPageLevel}, defaulting to pillar`);
-      finalPageLevel = 'pillar';
+        console.log('[jasa-konstruksi-finishing] ⏭️ Execute SKIP — URL tidak cocok');
+        return;
     }
     
-    // Tentukan custom date
-    let customDate = getCustomDateByPageLevel(finalPageLevel, entityType);
-    let manualMode = customDate !== null;
-    let categoryLabel = getCategoryLabel(finalPageLevel);
+    console.log('[jasa-konstruksi-finishing] 🚀 Execute — URL cocok');
     
-    console.log(`📋 PAGE CLASSIFICATION:`);
-    console.log(`   - Page Level: ${finalPageLevel}`);
-    console.log(`   - Entity Type: ${entityType}`);
-    console.log(`   - Category: ${categoryLabel}`);
-    console.log(`   - Detector: ${detectorVersion}`);
-    if (confidence) {
-      console.log(`   - Confidence: ${confidence}%`);
-    }
-    if (strategies && strategyCount) {
-      console.log(`   - Strategies: ${strategyCount} strategies (${strategies.join(", ")})`);
-    }
-    console.log(`   - Mode: ${manualMode ? 'MANUAL (custom date)' : 'AUTO'}`);
+    var cleanUrlJasaKonsFinishing = window.location.href.split(/[?#]/)[0];
     
-    if (manualMode && customDate) {
-      console.log(`   - Custom Date: ${customDate}`);
-    }
-    
-    // Jalankan detectEvergreen
-    if (window.detectEvergreen) {
-      if (manualMode && customDate) {
-        await window.detectEvergreen({ customDateModified: customDate });
-        console.log(`✅ MANUAL mode executed with custom date: ${customDate}`);
-      } else {
-        await window.detectEvergreen();
-        console.log(`✅ AUTO mode executed`);
-      }
-    } else {
-      console.warn("⚠️ detectEvergreen function not available");
-    }
-    
-    // Pastikan AEDMetaDates tersedia
-    if (!window.AEDMetaDates || !window.AEDMetaDates.dateModified) {
-      console.warn("[HybridDateModified] AEDMetaDates tidak ditemukan, skip update.");
-      return;
-    }
-
-    const { dateModified, nextUpdate, type: aedType, entityType: detectedEntityType, pageLevel: detectedPageLevel } = window.AEDMetaDates;
-
-    console.log(`📊 betonjayareadymix.com Page Info:`);
-    console.log(`   - type: ${aedType}`);
-    console.log(`   - entityType: ${detectedEntityType}`);
-    console.log(`   - pageLevel: ${detectedPageLevel}`);
-    console.log(`   - dateModified: ${dateModified}`);
-    console.log(`   - nextUpdate: ${nextUpdate}`);
-
-    // Hitung variasi tanggal
-    const uniquePageIdentifier = window.location.pathname;
-    let hashSource = uniquePageIdentifier;
-    
-    if (EVERGREEN_LEVELS.includes(detectedPageLevel)) {
-      hashSource = 'evergreen-' + hashSource;
-    } else if (FLEXIBLE_LEVELS.includes(detectedPageLevel)) {
-      hashSource = 'flexible-' + hashSource;
-    } else if (detectedEntityType === 'jasa') {
-      hashSource = 'jasa-' + hashSource;
-    } else if (MONEY_LEVELS.includes(detectedPageLevel)) {
-      hashSource = 'money-' + hashSource;
-    } else if (detectedPageLevel === 'home') {
-      hashSource = 'home-' + hashSource;
-    }
-    
-    const hash = stableHash(hashSource);
-    const offsetSeconds = hash % 86400;
-    const finalDate = new Date(new Date(dateModified).getTime() + offsetSeconds * 1000);
-    const isoDate = toISOWithTimezoneLocal(finalDate);
-
-    updateMetaDateModified(isoDate);
-
-    window.AEDMetaDates = {
-      ...window.AEDMetaDates,
-      dateModified: isoDate,
-      hashOffset: offsetSeconds,
-      detectorVersion: detectorVersion,
-      category: categoryLabel,
-      mode: manualMode ? 'MANUAL' : 'AUTO',
-      originalDateModified: dateModified,
-      hybridVersion: '7.9',
-      detectionConfidence: confidence,
-      detectionStrategies: strategies,
-      detectionStrategyCount: strategyCount
-    };
-
-    console.log(`✅ [HybridDateModified] ${uniquePageIdentifier}`);
-    console.log(`   → Final Date Modified: ${isoDate}`);
-    console.log(`   → Offset: ${offsetSeconds} detik (${Math.floor(offsetSeconds / 3600)} jam ${Math.floor((offsetSeconds % 3600) / 60)} menit)`);
-    console.log(`   → Mode: ${manualMode ? 'MANUAL' : 'AUTO'}`);
-    console.log(`   → Category: ${categoryLabel}`);
-    console.log(`   → Detector: ${detectorVersion}`);
-    if (confidence) {
-      console.log(`   → Detection Confidence: ${confidence}%`);
-    }
-    console.log(`📋 Hybrid Date Modified v7.9 applied successfully`);
-
-  } catch (err) {
-    console.error("[HybridDateModified] Fatal error:", err);
-  }
-})();
-	
-     // Menemukan elemen menggunakan Id
+    // ✅ Guard elemen DOM
     var JasaKonsFinishing = document.getElementById("JasaKonsFinishing");
     if (!JasaKonsFinishing) {
-        console.error("elemen Id JasaKonsFinishing kondisi terhapus");
+        console.error("[jasa-konstruksi-finishing] ❌ elemen Id JasaKonsFinishing kondisi terhapus");
         return;
-    } 
+    }
 
-     var JasaKonstruksiFinishingSubLink = document.getElementById("JasaKonstruksiFinishingSub");
-     var JasaFinishingSubLink = document.getElementById("JasaFinishingSub");
-     var JasaFinishingBangunanLink = document.getElementById("JasaFinishingBangunanSub");
-     var JasaFinishingInfrastrukturLink = document.getElementById("JasaFinishingInfrastrukturSub");
-    //sub finishing bangunan
+    var JasaKonstruksiFinishingSubLink = document.getElementById("JasaKonstruksiFinishingSub");
+    var JasaFinishingSubLink = document.getElementById("JasaFinishingSub");
+    var JasaFinishingBangunanLink = document.getElementById("JasaFinishingBangunanSub");
+    var JasaFinishingInfrastrukturLink = document.getElementById("JasaFinishingInfrastrukturSub");
+    
+    // Sub finishing bangunan
     var JasaFinishingInteriorLink = document.getElementById("JasaFinishingBangunanInterior");
     var JasaFinishingEksteriorLink = document.getElementById("JasaFinishingBangunanEksterior");
     var JasaFinishingStrukturLink = document.getElementById("JasaFinishingBangunanStruktur");
 
-    //sub finishing infrastruktur
+    // Sub finishing infrastruktur
     var JasaFinishingJalanLink = document.getElementById("JasaFinishingInfrastrukturJalan");
     var JasaFinishingTrotoarLink = document.getElementById("JasaFinishingInfrastrukturTrotoar");
     var JasaFinishingSaluranLink = document.getElementById("JasaFinishingInfrastrukturSaluran");
-    var JasaFinishingStrukturLink = document.getElementById("JasaFinishingInfrastrukturStruktur");
+    var JasaFinishingInfraStrukturLink = document.getElementById("JasaFinishingInfrastrukturStruktur");
     var JasaFinishingProteksiLink = document.getElementById("JasaFinishingInfrastrukturProteksi");
 
-     var pageNameJasaKonsFinishing = document.getElementById("pageNameJasaKonsFinishing");
+    var pageNameJasaKonsFinishing = document.getElementById("pageNameJasaKonsFinishing");
     
-
-     // Default untuk menyembunyikan elemen
-     JasaKonstruksiFinishingSubLink.style.visibility = 'hidden';
-     JasaFinishingSubLink.style.visibility = 'hidden';
-     JasaFinishingBangunanLink.style.visibility = 'hidden';
-     JasaFinishingInfrastrukturLink.style.visibility = 'hidden';
-     pageNameJasaKonsFinishing.textContent = "";
+    // Default: sembunyikan semua elemen
+    if (JasaKonstruksiFinishingSubLink) JasaKonstruksiFinishingSubLink.style.visibility = 'hidden';
+    if (JasaFinishingSubLink) JasaFinishingSubLink.style.visibility = 'hidden';
+    if (JasaFinishingBangunanLink) JasaFinishingBangunanLink.style.visibility = 'hidden';
+    if (JasaFinishingInfrastrukturLink) JasaFinishingInfrastrukturLink.style.visibility = 'hidden';
+    if (pageNameJasaKonsFinishing) pageNameJasaKonsFinishing.textContent = "";
 	
-     if (urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-		// ✅ Generate Breadcrumb untuk Jasa Finishing Interior Modern Vinyl
-		generateBreadcrumbShared(
-        urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html' },
-            { name: 'Jasa Pasang Lantai Vinyl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai-vinyl.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 1] JASA PASANG LANTAI VINYL
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html' },
+                { name: 'Jasa Pasang Lantai Vinyl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai-vinyl.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
     if (urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-		// ✅ Generate Breadcrumb untuk Jasa Finishing Interior Modern Vinyl
-		generateBreadcrumbShared(
-        urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Harga Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-lantai.html' },
-            { name: 'Harga Jasa Pasang Lantai Vinyl', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-lantai-vinyl.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-	
-if (urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
-		// ✅ Generate Breadcrumb untuk Jasa Finishing Interior Modern Vinyl
-		generateBreadcrumbShared(
-        urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang PVC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pvc.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}	
-if (urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
-		// ✅ Generate Breadcrumb untuk Jasa Finishing Interior Modern Vinyl
-		generateBreadcrumbShared(
-        urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang Plafon', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}	
-
-	
-if (urlMappingFinishingBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-           { name: 'Jasa Finishing Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
+        generateBreadcrumbShared(
+            urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Harga Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-lantai.html' },
+                { name: 'Harga Jasa Pasang Lantai Vinyl', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-lantai-vinyl.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
     }
+	
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 2] JASA PASANG PVC
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang PVC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pvc.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }	
+	
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 3] JASA PASANG PLAFON
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang Plafon', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }	
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 4] JASA FINISHING BANGUNAN
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingFinishingBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-bangunan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 5] JASA FINISHING INTERIOR
+    // ═══════════════════════════════════════════════════════
+    
     if (urlMappingFinishingInteriorFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-           { name: 'Jasa Finishing Interior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
+        generateBreadcrumbShared(
+            urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Interior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-interior.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
     }
 
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 6] JASA INTERIOR
+    // ═══════════════════════════════════════════════════════
+    
     if (urlMappingJasaInteriorFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaInteriorFromMoneyMasterMoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Interior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-interior.html' },
-            { name: 'Perbandingan Jasa Interior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html' },
-           { name: 'Jasa Interior', url: 'https://www.betonjayareadymix.com/p/jasa-interior.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
+        generateBreadcrumbShared(
+            urlMappingJasaInteriorFromMoneyMasterMoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Interior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-interior.html' },
+                { name: 'Perbandingan Jasa Interior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html' },
+                { name: 'Jasa Interior', url: 'https://www.betonjayareadymix.com/p/jasa-interior.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
     }
-	if (urlMappingHargaJasaInteriorFromMoneyPageMoneyPage[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingHargaJasaInteriorFromMoneyPageMoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Interior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-interior.html' },
-            { name: 'Perbandingan Jasa Interior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html' },
-           { name: 'Jasa Interior', url: 'https://www.betonjayareadymix.com/p/jasa-interior.html'},
-           { name: 'Harga Jasa Interior', url: 'https://www.betonjayareadymix.com/p/harga-jasa-interior.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-
-	if (urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-			{ name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
-           { name: 'Jasa Pasang Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
+    
+    if (urlMappingHargaJasaInteriorFromMoneyPageMoneyPage[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingHargaJasaInteriorFromMoneyPageMoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Interior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-interior.html' },
+                { name: 'Perbandingan Jasa Interior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html' },
+                { name: 'Jasa Interior', url: 'https://www.betonjayareadymix.com/p/jasa-interior.html' },
+                { name: 'Harga Jasa Interior', url: 'https://www.betonjayareadymix.com/p/harga-jasa-interior.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
     }
 
-	
-	 if (urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-           { name: 'Jasa Finishing Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lampu.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 7] JASA PASANG LAMPU
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
+                { name: 'Jasa Pasang Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
     }
-     if (urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-           { name: 'Jasa Finishing Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lampu.html'},
-           { name: 'Jasa Finishing Lampu Cafe', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lampu-cafe.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }	
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 8] JASA FINISHING LAMPU
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lampu.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaFinishingLampuCafeFromMoneyPageMoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lampu.html' },
+                { name: 'Jasa Finishing Lampu Cafe', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lampu-cafe.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
     if (urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-           { name: 'Jasa Finishing Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lampu.html'},
-           { name: 'Jasa Finishing Lampu Hotel', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lampu-hotel.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
+        generateBreadcrumbShared(
+            urlMappingJasaFinishingLampuHotelFromMoneyPageMoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lampu.html' },
+                { name: 'Jasa Finishing Lampu Hotel', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lampu-hotel.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+	
+    if (urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lampu.html' },
+                { name: 'Jasa Finishing Lampu Kantor', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lampu-kantor.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
     }	
-	if (urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaFinishingLampuKantorFromMoneyPageMoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-           { name: 'Jasa Finishing Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lampu.html'},
-           { name: 'Jasa Finishing Lampu Kantor', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lampu-kantor.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }	
-   
-	 if (urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-			{ name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
-			 { name: 'Jasa Pasang Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html'},
-           { name: 'Jasa Pasang Lampu Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 9] JASA PASANG LAMPU INTERIOR / EKSTERIOR / TAMAN
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
+                { name: 'Jasa Pasang Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html' },
+                { name: 'Jasa Pasang Lampu Interior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
     }
-	 if (urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-			{ name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
-			 { name: 'Jasa Pasang Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html'},
-           { name: 'Jasa Pasang Lampu Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-	if (urlMappingJasaPasangLampuTamanFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaPasangLampuTamanFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-			{ name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
-			 { name: 'Jasa Pasang Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html'},
-           { name: 'Jasa Pasang Lampu Taman', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu-taman.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-   	
-	if (urlMappingJasaCatFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaCatFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-	if (urlMappingHargaJasaCatFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingHargaJasaCatFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html'},
-            { name: 'Harga Jasa Cat', url: 'https://www.betonjayareadymix.com/p/harga-jasa-cat.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-	if (urlMappingJasaCatPermukaanKhususFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaCatPermukaanKhususFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html'},
-            { name: 'Jasa Cat Permukaan Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-cat-permukaan-khusus.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-	if (urlMappingJasaCatDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaCatDindingFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html'},
-            { name: 'Jasa Cat Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-cat-dinding.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-	if (urlMappingJasaFinishingCatFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaFinishingCatFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html'},
-            { name: 'Jasa Finishing Cat', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-cat.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-	if (urlMappingJasaCatInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaCatInteriorFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html'},
-            { name: 'Jasa Cat Interior', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-	if (urlMappingJasaCatEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaCatEksteriorFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html'},
-            { name: 'Jasa Cat Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-cat-eksterior.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-   if (urlMappingJasaCatInteriorRumahFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaCatInteriorRumahFromMoneyPage1MoneyPage2,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html'},
-            { name: 'Jasa Cat Interior', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior.html'},
-            { name: 'Jasa Cat Interior Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-	if (urlMappingJasaCatInteriorKantorFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaCatInteriorKantorFromMoneyPage1MoneyPage2,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html'},
-            { name: 'Jasa Cat Interior', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior.html'},
-            { name: 'Jasa Cat Interior Kantor', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior-kantor.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
+    
+    // ✅ FIX: URL Eksterior (sebelumnya salah ke interior)
+    if (urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
+                { name: 'Jasa Pasang Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html' },
+                { name: 'Jasa Pasang Lampu Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu-eksterior.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
     }
 	
-  if (urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
- { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
-            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
-            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'},
-            { name: 'Jasa Pembuatan Furniture', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html'},
-            { name: 'Harga Jasa Pembuatan Furniture', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-furniture.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-	
-if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-	
-	if (urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-			{ name: 'Jasa Pasang Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-dinding.html'},
-            { name: 'Jasa Pasang Wallpaper Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-	if (urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html'},
-            { name: 'Jasa Finishing Epoxy Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-epoxy-dinding.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-	if (urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html'},
-            { name: 'Jasa Plesteran Acian Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }
-	if (urlMappingHargaJasaPlesteranAcianFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingHargaJasaPlesteranAcianFromMoneyPage1MoneyPage2,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html'},
-            { name: 'Jasa Plesteran Acian Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html'},
-            { name: 'Harga Jasa Plesteran & Acian', url: 'https://www.betonjayareadymix.com/p/harga-jasa-plesteran-acian.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
+    if (urlMappingJasaPasangLampuTamanFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPasangLampuTamanFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
+                { name: 'Jasa Pasang Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html' },
+                { name: 'Jasa Pasang Lampu Taman', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu-taman.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
     }
 
-	if (urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-			{ name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
-            { name: 'Jasa Pasang WPC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 10] JASA CAT
+    // ═══════════════════════════════════════════════════════
+	
+    if (urlMappingJasaCatFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaCatFromMoneyMaster1MoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
     }
-	if (urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-         generateBreadcrumbShared(
-        urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-			{ name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
-            { name: 'Jasa Pasang WPC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html'},
-            { name: 'Jasa Pasang WPC Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
+    
+    if (urlMappingHargaJasaCatFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingHargaJasaCatFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html' },
+                { name: 'Harga Jasa Cat', url: 'https://www.betonjayareadymix.com/p/harga-jasa-cat.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
     }
+    
+    if (urlMappingJasaCatPermukaanKhususFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaCatPermukaanKhususFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html' },
+                { name: 'Jasa Cat Permukaan Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-cat-permukaan-khusus.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaCatDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaCatDindingFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html' },
+                { name: 'Jasa Cat Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-cat-dinding.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaFinishingCatFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaFinishingCatFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html' },
+                { name: 'Jasa Finishing Cat', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-cat.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaCatInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaCatInteriorFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html' },
+                { name: 'Jasa Cat Interior', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaCatEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaCatEksteriorFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html' },
+                { name: 'Jasa Cat Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-cat-eksterior.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaCatInteriorRumahFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaCatInteriorRumahFromMoneyPage1MoneyPage2,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html' },
+                { name: 'Jasa Cat Interior', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior.html' },
+                { name: 'Jasa Cat Interior Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaCatInteriorKantorFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaCatInteriorKantorFromMoneyPage1MoneyPage2,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html' },
+                { name: 'Jasa Cat Interior', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior.html' },
+                { name: 'Jasa Cat Interior Kantor', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior-kantor.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 11] HARGA JASA PEMBUATAN FURNITURE
+    // ═══════════════════════════════════════════════════════
+	
+    if (urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html' },
+                { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html' },
+                { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html' },
+                { name: 'Jasa Pembuatan Furniture', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html' },
+                { name: 'Harga Jasa Pembuatan Furniture', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-furniture.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+	
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 12] JASA FINISHING DINDING
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+	
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 13] JASA PASANG WALLPAPER DINDING
+    // ═══════════════════════════════════════════════════════
+	
+    if (urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-dinding.html' },
+                { name: 'Jasa Pasang Wallpaper Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 14] JASA FINISHING EPOXY DINDING
+    // ═══════════════════════════════════════════════════════
+	
+    if (urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaFinishingEpoxyDindingFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html' },
+                { name: 'Jasa Finishing Epoxy Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-epoxy-dinding.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 15] JASA PLESTERAN ACIAN DINDING
+    // ═══════════════════════════════════════════════════════
+	
+    if (urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPlesteranAcianDindingFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html' },
+                { name: 'Jasa Plesteran Acian Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingHargaJasaPlesteranAcianFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingHargaJasaPlesteranAcianFromMoneyPage1MoneyPage2,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html' },
+                { name: 'Jasa Plesteran Acian Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html' },
+                { name: 'Harga Jasa Plesteran & Acian', url: 'https://www.betonjayareadymix.com/p/harga-jasa-plesteran-acian.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 16] JASA PASANG WPC
+    // ═══════════════════════════════════════════════════════
+	
+    if (urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
+                { name: 'Jasa Pasang WPC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
+                { name: 'Jasa Pasang WPC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html' },
+                { name: 'Jasa Pasang WPC Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+	
+    if (urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang WPC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html' },
+                { name: 'Jasa Pasang WPC Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wpc-lantai.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 17] JASA FINISHING INFRASTRUKTUR
+    // ═══════════════════════════════════════════════════════
 	
     if (urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
-		generateBreadcrumbShared(
-        urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-//Sub FinishingBangunan
-   if (urlMappingFinishingLantaiFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
-       generateBreadcrumbShared(
-        urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-   if (urlMappingHargaJasaFinishingLantaiFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-       generateBreadcrumbShared(
-        urlMappingHargaJasaFinishingLantaiFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'},
-            { name: 'Harga Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
+        generateBreadcrumbShared(
+            urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
 
-	if (urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-        urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'},
-            { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-	if (urlMappingJasaFinishingLantaiKayuFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-        urlMappingJasaFinishingLantaiKayuFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'},
-            { name: 'Jasa Finishing Lantai Kayu', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-kayu.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-	if (urlMappingJasaFinishingLantaiMarmerFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-        urlMappingJasaFinishingLantaiMarmerFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'},
-            { name: 'Jasa Finishing Lantai Marmer', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-marmer.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-	if (urlMappingJasaPolesLantaiGranitFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-        urlMappingJasaPolesLantaiGranitFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'},
-            { name: 'Jasa Finishing Lantai Granit', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-	if (urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-        urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-           { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang WPC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html' },
-            { name: 'Jasa Pasang WPC Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wpc-lantai.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 18] JASA FINISHING LANTAI
+    // ═══════════════════════════════════════════════════════
 	
-	if (urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingFinishingLantaiFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-        urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
-            { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html'},
-            { name: 'Jasa Pasang Keramik Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }	
-	if (urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+            urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingHargaJasaFinishingLantaiFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-        urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
-            { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html'},
-            { name: 'Jasa Pasang Keramik Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html'},
-            { name: 'Harga Jasa Pasang Keramik Lantai', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-lantai.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
+            urlMappingHargaJasaFinishingLantaiFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
+                { name: 'Harga Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
 
-	if (urlMappingJasaLantaiSuperFlatFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-        urlMappingJasaLantaiSuperFlatFromMoneyPage1MoneyPage2,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'},
-            { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html'},
-            { name: 'Jasa Lantai Super Flat', url: 'https://www.betonjayareadymix.com/p/jasa-lantai-super-flat.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-	if (urlMappingJasaTrowelLantaiBetonFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+            urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
+                { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaFinishingLantaiKayuFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-        urlMappingJasaTrowelLantaiBetonFromMoneyPage1MoneyPage2,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'},
-            { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html'},
-            { name: 'Jasa Trowel Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-trowel-lantai-beton.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-	if (urlMappingJasaScreedingLantaiBetonFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+            urlMappingJasaFinishingLantaiKayuFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
+                { name: 'Jasa Finishing Lantai Kayu', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-kayu.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaFinishingLantaiMarmerFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-        urlMappingJasaScreedingLantaiBetonFromMoneyPage1MoneyPage2,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'},
-            { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html'},
-            { name: 'Jasa Screeding Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-screeding-lantai-beton.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-	if (urlMappingJasaFloorHardenerLantaiFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+            urlMappingJasaFinishingLantaiMarmerFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
+                { name: 'Jasa Finishing Lantai Marmer', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-marmer.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaPolesLantaiGranitFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-        urlMappingJasaFloorHardenerLantaiFromMoneyPage1MoneyPage2,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'},
-            { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html'},
-            { name: 'Jasa Floor Hardener Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-floor-hardener-lantai.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-	if (urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoney1Page2[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-        urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoney1Page2,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html'},
-            { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html'},
-            { name: 'Jasa Finishing Lantai Epoxy', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-epoxy.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
+            urlMappingJasaPolesLantaiGranitFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
+                { name: 'Jasa Finishing Lantai Granit', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 19] JASA PASANG KERAMIK LANTAI
+    // ═══════════════════════════════════════════════════════
 	
-   if (urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-        urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
+            urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
+                { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html' },
+                { name: 'Jasa Pasang Keramik Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
+                { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html' },
+                { name: 'Jasa Pasang Keramik Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html' },
+                { name: 'Harga Jasa Pasang Keramik Lantai', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-lantai.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 20] JASA LANTAI SUPER FLAT + TROWEL + SCREEDING + FLOOR HARDENER + EPOXY
+    // ═══════════════════════════════════════════════════════
+
+    if (urlMappingJasaLantaiSuperFlatFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaLantaiSuperFlatFromMoneyPage1MoneyPage2,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
+                { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html' },
+                { name: 'Jasa Lantai Super Flat', url: 'https://www.betonjayareadymix.com/p/jasa-lantai-super-flat.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaTrowelLantaiBetonFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaTrowelLantaiBetonFromMoneyPage1MoneyPage2,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
+                { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html' },
+                { name: 'Jasa Trowel Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-trowel-lantai-beton.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaScreedingLantaiBetonFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaScreedingLantaiBetonFromMoneyPage1MoneyPage2,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
+                { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html' },
+                { name: 'Jasa Screeding Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-screeding-lantai-beton.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaFloorHardenerLantaiFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaFloorHardenerLantaiFromMoneyPage1MoneyPage2,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
+                { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html' },
+                { name: 'Jasa Floor Hardener Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-floor-hardener-lantai.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoney1Page2[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoney1Page2,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
+                { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html' },
+                { name: 'Jasa Finishing Lantai Epoxy', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-epoxy.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 21] JASA FINISHING EKSTERIOR
+    // ═══════════════════════════════════════════════════════
+    
+    if (urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 22] JASA EKSTERIOR + FASAD
+    // ═══════════════════════════════════════════════════════
+    
     if (urlMappingJasaEksteriorFromMoneyMasterMoneyMaster1[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-        urlMappingJasaEksteriorFromMoneyMasterMoneyMaster1,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
-            { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
-            { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-     if (urlMappingHargaJasaEksteriorFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+            urlMappingJasaEksteriorFromMoneyMasterMoneyMaster1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
+                { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
+                { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingHargaJasaEksteriorFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-        urlMappingHargaJasaEksteriorFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
-            { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
-            { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html'},
-            { name: 'Harga Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/harga-jasa-eksterior.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-	if (urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+            urlMappingHargaJasaEksteriorFromMoneyMaster1MoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
+                { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
+                { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html' },
+                { name: 'Harga Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/harga-jasa-eksterior.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-        urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
-            { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
-            { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html'},
-            { name: 'Jasa Fasad Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-fasad-rumah.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-	if (urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+            urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
+                { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
+                { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html' },
+                { name: 'Jasa Fasad Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-fasad-rumah.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-        urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
-            { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
-            { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html'},
-            { name: 'Jasa Fasad Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-fasad-rumah.html'},
-            { name: 'Jasa Pasang ACP Fasad', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp-fasad.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
+            urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
+                { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
+                { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html' },
+                { name: 'Jasa Fasad Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-fasad-rumah.html' },
+                { name: 'Jasa Pasang ACP Fasad', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp-fasad.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 23] JASA PELAPISAN BATU ALAM EKSTERIOR + GENTENG DAK
+    // ═══════════════════════════════════════════════════════
 	
-	   if (urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-        urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html'},
-            { name: 'Jasa Pelapisan Batu Alam Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
+            urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html' },
+                { name: 'Jasa Pelapisan Batu Alam Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
 
-	if (urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-        urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html'},
-            { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-			{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-            { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html'},
-            { name: 'Jasa Pelapisan Genteng Dak', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
+            urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-eksterior.html' },
+                { name: 'Jasa Pelapisan Genteng Dak', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
 	
-	if (urlMappingJasaTamanFromMoneyMaster2MoneyMaster3[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-        urlMappingJasaTamanFromMoneyMaster2MoneyMaster3,
-        cleanUrlJasaKonsFinishing,
-        [
-             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
-            { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
-            { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html'},
-            { name: 'Jasa Taman', url: 'https://www.betonjayareadymix.com/p/jasa-taman.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-	if (urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-        urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
-            { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
-            { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html'},
-            { name: 'Jasa Taman', url: 'https://www.betonjayareadymix.com/p/jasa-taman.html'},
-            { name: 'Jasa Pembuatan Taman', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 24] JASA TAMAN
+    // ═══════════════════════════════════════════════════════
 	
-   if (urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
-	 generateBreadcrumbShared(
-        urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKonsFinishing,
-        [
-        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-        { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-		{ name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-		{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-        { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-   if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-	 generateBreadcrumbShared(
-        urlMappingJasaFinishingDakBetonFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-        { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-		{ name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-		{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-        { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
-        { name: 'Jasa Finishing Dak Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-   if (urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-	 generateBreadcrumbShared(
-        urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-        { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-		{ name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-		{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-        { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
-        { name: 'Jasa Finishing Struktur Beton Ekspos', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur-beton-ekspos.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-if (urlMappingJasaFinishingKolomdanBalokFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-	 generateBreadcrumbShared(
-        urlMappingJasaFinishingKolomdanBalokFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-        { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-		{ name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-		{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-        { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
-        { name: 'Jasa Finishing Kolom dan Balok', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-kolom-dan-balok.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-if (urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-	 generateBreadcrumbShared(
-        urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1,
-        cleanUrlJasaKonsFinishing,
-        [
-        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-        { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-		{ name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-		{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-        { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
-        { name: 'Jasa Pelapisan Coating Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-if (urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
-	 generateBreadcrumbShared(
-        urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPage1MoneyPage2,
-        cleanUrlJasaKonsFinishing,
-        [
-        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-        { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-		{ name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html'},
-		{ name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html'},
-        { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
-        { name: 'Jasa Pelapisan Coating Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html' },
-        { name: 'Jasa Pelapisan Waterproofing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
- //Sub Finishing Infrastruktur
-/* if (urlMappingFinishingInfrastrukturJalanFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaTamanFromMoneyMaster2MoneyMaster3[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-        urlMappingFinishingInfrastrukturJalanFromJasaFinishingInfrastrukturSub2Sub2,
-        cleanUrlJasaKonsFinishing,
-        [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-            { name: 'Jasa Finishing Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html' },
-            { name: 'Jasa Finishing Jalan Jembatan', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-jalan-jembatan.html' }
-        ],
-        'JASA'
-    );
-}
-*/
-/*
-if (urlMappingFinishingInfrastrukturTrotoarFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing]) {
-   generateBreadcrumbShared(
-        urlMappingFinishingInfrastrukturTrotoarFromJasaFinishingInfrastrukturSub2Sub2,
-        cleanUrlJasaKonsFinishing,
-        [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-            { name: 'Jasa Finishing Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html' },
-            { name: 'Jasa Finishing Trotoar Area Publik', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-trotoar-area-publik.html' }
-        ],
-        'JASA'
-    );
-}
-
-   
-if (urlMappingFinishingInfrastrukturSaluranFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing]) {
-	   generateBreadcrumbShared(
-        urlMappingFinishingInfrastrukturSaluranFromJasaFinishingInfrastrukturSub2Sub2,
-        cleanUrlJasaKonsFinishing,
-        [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-            { name: 'Jasa Finishing Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html' },
-            { name: 'Jasa Finishing Saluran Drainase', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-saluran-drainase.html' }
-        ],
-        'JASA'
-    );
-}
-
-  if (urlMappingFinishingInfrastrukturStrukturFromJasaFinishingInfrastrukturSub2Sub2[cleanUrlJasaKonsFinishing]) {
-	   generateBreadcrumbShared(
-        urlMappingFinishingInfrastrukturStrukturFromJasaFinishingInfrastrukturSub2Sub2,
-        cleanUrlJasaKonsFinishing,
-        [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-            { name: 'Jasa Finishing Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html' },
-            { name: 'Jasa Finishing Struktur Utilitas', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur-utilitas.html' }
-        ],
-        'JASA'
-    );
-}
-
-
-  if (urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2MoneyLeadgen[cleanUrlJasaKonsFinishing]) {
-       // restoreCondition('JasaFinishingInfrastrukturSub');
-        restoreCondition('JasaFinishingInfrastrukturProteksi');
-       
-          // hapus elemen id DIV Lain
-	removeCondition('ProdukInFur');
-        removeCondition('MaterialKons');
-	       removeCondition('ProdukKons');
-        //removeCondition('ProdukKonsSaluran');
-        //removeCondition('ProdukKonsPembatas');
-        removeCondition('JasaKonsPembatas');
-        removeCondition('JasaKonsJalanPerkerasan');
-        removeCondition('JasaKonsPondasiTanah');
-        removeCondition('JasaKonsPerbaikan');
-        removeCondition('JasaKonsStruktur');
-       	removeCondition('JasaKons');
-        removeCondition('JasaKonsSub');
-        removeCondition('MenuKons');
-
-	  //skip level
-        removeCondition('JasaFinishingInfrastrukturSub');
-        removeCondition('JasaFinishingSub');
-       
-        // hapus elemen id lain nya
-        removeCondition('JasaFinishingInfrastrukturJalan');
-        removeCondition('JasaFinishingInfrastrukturTrotoar');
-        removeCondition('JasaFinishingInfrastrukturSaluran');
-        removeCondition('JasaFinishingInfrastrukturStruktur');
-       //hapus elemen id bangunan
-        removeCondition('JasaFinishingBangunanSub');
-        removeCondition('JasaFinishingBangunanInterior');
-        removeCondition('JasaFinishingBangunanEksterior');
-        removeCondition('JasaFinishingBangunanStruktur');
-       
-        JasaKonstruksiFinishingSubLink.style.visibility = 'visible';
-
-       //sub finish infrastruktur
-        JasaFinishingProteksiLink.style.visibility = 'visible';
-   
-        pageNameJasaKonsFinishing.textContent = urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2MoneyLeadgen[cleanUrlJasaKonsFinishing];
+            urlMappingJasaTamanFromMoneyMaster2MoneyMaster3,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
+                { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
+                { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html' },
+                { name: 'Jasa Taman', url: 'https://www.betonjayareadymix.com/p/jasa-taman.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-        urlMappingFinishingInfrastrukturProteksiFromJasaFinishingInfrastrukturSub2MoneyLeadgen,
-        cleanUrlJasaKonsFinishing,
-        [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-            { name: 'Jasa Finishing Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html' },
-            { name: 'Jasa Finishing Proteksi Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-proteksi-beton.html' }
-        ],
-        'JASA'
-    );
-} */
+            urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
+                { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
+                { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html' },
+                { name: 'Jasa Taman', url: 'https://www.betonjayareadymix.com/p/jasa-taman.html' },
+                { name: 'Jasa Pembuatan Taman', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
 
-   });
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 25] JASA FINISHING STRUKTUR
+    // ═══════════════════════════════════════════════════════
+	
+    if (urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaFinishingDakBetonFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+                { name: 'Jasa Finishing Dak Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+                { name: 'Jasa Finishing Struktur Beton Ekspos', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur-beton-ekspos.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaFinishingKolomdanBalokFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaFinishingKolomdanBalokFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+                { name: 'Jasa Finishing Kolom dan Balok', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-kolom-dan-balok.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+                { name: 'Jasa Pelapisan Coating Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
+    if (urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPelapisanWaterproofingStrukturFromMoneyPage1MoneyPage2,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
+                { name: 'Jasa Pelapisan Coating Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html' },
+                { name: 'Jasa Pelapisan Waterproofing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    console.log('[jasa-konstruksi-finishing] ✅ Semua breadcrumb selesai diproses');
+}
+
+console.log('═══════════════════════════════════════════════════════════');
+console.log('📦 PART 3 SELESAI — Lanjut ke PART 4 (Fix v2.1.0 + Penutup)');
+console.log('═══════════════════════════════════════════════════════════');
+
+// ═══════════════════════════════════════════════════════════
+// [BAGIAN 5] FIX v2.1.0 — Handle DOMContentLoaded race condition
+// ═══════════════════════════════════════════════════════════
+// MASALAH: kalau script di-load SETELAH DOMContentLoaded fire
+// (misal pakai defer/async), maka addEventListener tidak dipanggil.
+// SOLUSI: cek document.readyState — kalau sudah siap, langsung
+// panggil handler tanpa tunggu event.
+// ═══════════════════════════════════════════════════════════
+
+if (document.readyState === 'loading') {
+    console.log('[jasa-konstruksi-finishing] ⏳ DOM loading, tunggu event');
+    document.addEventListener('DOMContentLoaded', initJasaKonsFinishing);
+} else {
+    console.log('[jasa-konstruksi-finishing] ⚡ DOM ready, langsung execute');
+    initJasaKonsFinishing();
+}
+
+// ============================================================
+// AKHIR FILE — TIDAK ADA KARAKTER TAMBAHAN
+// ============================================================
