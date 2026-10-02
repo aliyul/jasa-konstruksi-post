@@ -761,35 +761,34 @@ const urlMappingJasaStraussPileFromMoneyMasterMoneyPage= {
 	
 };
 const urlMappingHargaJasaStraussPileFromMoneyMasterMoneyPage= { 	
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-hidrolik.html": "Harga Jasa Strauss Pile Hidrolik",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-manual.html": "Harga Jasa Strauss Pile Manual",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-rotary.html": "Harga Jasa Strauss Pile Rotary",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-auger.html": "Harga Jasa Strauss Pile Auger",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-basah.html": "Harga Jasa Strauss Pile Basah",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-kering.html": "Harga Jasa Strauss Pile Kering",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-hidrolik.html": "Harga Jasa Strauss Pile Hidrolik",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-manual.html": "Harga Jasa Strauss Pile Manual",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-rotary.html": "Harga Jasa Strauss Pile Rotary",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-auger.html": "Harga Jasa Strauss Pile Auger",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-basah.html": "Harga Jasa Strauss Pile Basah",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-kering.html": "Harga Jasa Strauss Pile Kering",
 	
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-rumahan.html": "Harga Jasa Strauss Pile Rumahan",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-komersial.html": "Harga Jasa Strauss Pile Komersial",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-industri.html": "Harga Jasa Strauss Pile Industri",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-kecil.html": "Harga Jasa Strauss Pile Kecil",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-besar.html": "Harga Jasa Strauss Pile Besar",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-rumahan.html": "Harga Jasa Strauss Pile Rumahan",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-komersial.html": "Harga Jasa Strauss Pile Komersial",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-industri.html": "Harga Jasa Strauss Pile Industri",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-kecil.html": "Harga Jasa Strauss Pile Kecil",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-besar.html": "Harga Jasa Strauss Pile Besar",
 	
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-20cm.html": "Harga Jasa Strauss Pile 20cm",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-30cm.html": "Harga Jasa Strauss Pile 30cm",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-40cm.html": "Harga Jasa Strauss Pile 40cm",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-20cm.html": "Harga Jasa Strauss Pile 20cm",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-30cm.html": "Harga Jasa Strauss Pile 30cm",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-40cm.html": "Harga Jasa Strauss Pile 40cm",
 	
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-beton.html": "Harga Jasa Strauss Pile Beton",
- //"https://www.betonjayareadymix.com/p/jasa-strauss-pile-besi.html": "Harga Jasa Strauss Pile Besi",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-beton.html": "Harga Jasa Strauss Pile Beton",
+
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-promo.html": "Harga Jasa Strauss Pile Promo",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-diskon.html": "Harga Jasa Strauss Pile Diskon",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-termurah.html": "Harga Jasa Strauss Pile Termurah",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-termahal.html": "Harga Jasa Strauss Pile Termahal",
 	
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-promo.html": "Harga Jasa Strauss Pile Promo",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-diskon.html": "Harga Jasa Strauss Pile Diskon",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-termurah.html": "Harga Jasa Strauss Pile Termurah",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-termahal.html": "Harga Jasa Strauss Pile Termahal",
-	
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-50cm.html": "Harga Jasa Strauss Pile 50cm",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-per-meter.html": "Harga Jasa Strauss Pile Per Meter",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-per-titik.html": "Harga Jasa Strauss Pile Per Titik",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-pondasi.html": "Harga Jasa Strauss Pile Pondasi"
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-50cm.html": "Harga Jasa Strauss Pile 50cm",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-per-meter.html": "Harga Jasa Strauss Pile Per Meter",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-per-titik.html": "Harga Jasa Strauss Pile Per Titik",
+ "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-pondasi.html": "Harga Jasa Strauss Pile Pondasi"
 	
 };
 
