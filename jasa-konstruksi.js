@@ -2206,16 +2206,59 @@ console.log('[jasa-kons] 📄 File loaded, waiting for DOM...');
 // SOLUSI: cek document.readyState — kalau sudah siap, langsung
 // panggil handler tanpa tunggu event.
 // ═══════════════════════════════════════════════════════════════
+var _jasaKonsExecuted = false;
+var _jasaKonsRetrying = false;
+
 function __jasaKonsExecute() {
-    // ⚡ EARLY EXIT — Skip kalau flag tidak aktif
-    if (!window.__jasaKonsActive) {
-      console.log('[jasa-kons] ⏭️ Execute SKIP — URL tidak cocok');
-      return;
+    // ═══════════════════════════════════════════════════════════════
+    // 🔥 FIX: Guard check untuk prevent race condition
+    // ═══════════════════════════════════════════════════════════════
+    
+    // Skip kalau sudah pernah execute
+    if (_jasaKonsExecuted) {
+        console.log('[jasa-kons] ⏭️ Sudah pernah dijalankan — skip');
+        return;
     }
     
+    // Skip kalau flag tidak aktif (URL tidak cocok)
+    if (!window.__jasaKonsActive) {
+        _jasaKonsExecuted = true;
+        console.log('[jasa-kons] ⏭️ Execute SKIP — URL tidak cocok');
+        return;
+    }
+    
+    // ═══ FIX RACE-CONDITION: Tunggu generateBreadcrumbShared tersedia ═══
+    if (typeof generateBreadcrumbShared !== "function") {
+        if (_jasaKonsRetrying) {
+            console.log('[jasa-kons] ⏳ Masih retrying...');
+            return;
+        }
+        
+        _jasaKonsRetrying = true;
+        console.warn('[jasa-kons] ⏳ generateBreadcrumbShared belum siap — retry...');
+        var _retryCount = 0;
+        var _retryMax = 30;  // max 30x = 3 detik
+        var _retryInterval = setInterval(function() {
+            _retryCount++;
+            if (typeof generateBreadcrumbShared === "function") {
+                clearInterval(_retryInterval);
+                _jasaKonsRetrying = false;
+                console.log('[jasa-kons] ✅ generateBreadcrumbShared OK setelah ' + (_retryCount * 100) + 'ms');
+                __jasaKonsExecute();  // panggil ulang
+            } else if (_retryCount >= _retryMax) {
+                clearInterval(_retryInterval);
+                _jasaKonsRetrying = false;
+                console.error('[jasa-kons] ❌ generateBreadcrumbShared TIDAK ditemukan setelah 3 detik');
+            }
+        }, 100);
+        return;
+    }
+    
+    // ═══ Semua siap — tandai dan lanjutkan ═══
+    _jasaKonsExecuted = true;
     const cleanUrlJasaKons = window.location.href.split(/[?#]/)[0];
     console.log('[jasa-kons] 🚀 Execute — URL cocok');
-    
+  
      // Menemukan elemen menggunakan Id
     var JasaKons = document.getElementById("JasaKons");
     var JasaKonsSub = document.getElementById("JasaKonsSub");
@@ -2232,7 +2275,6 @@ if (!JasaKons || !JasaKonsSub) {
 	console.error("elemen Id JasaKonsSub kondisi terhapus");
 }
 }
-
 
 if (urlMappingJasaDesainFromPillarSub2[cleanUrlJasaKons]) {
 	
