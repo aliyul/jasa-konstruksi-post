@@ -793,9 +793,9 @@ const urlMappingHargaJasaStraussPileFromMoneyMasterMoneyPage= {
 };
 
 const urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyPage= { 	
- "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-30cm.html": "Jasa Borongan Strauss Pile 30c",
- "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-40cm.html": "Jasa Borongan Strauss Pile 40c",
- "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-50cm.html": "Jasa Borongan Strauss Pile 50c",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-30cm.html": "Jasa Borongan Strauss Pile 30cm",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-40cm.html": "Jasa Borongan Strauss Pile 40cm",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-50cm.html": "Jasa Borongan Strauss Pile 50cm",
  "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-beton.html": "Jasa Borongan Strauss Pile Beton",
  "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-manual.html": "Jasa Borongan Strauss Pile Manual",
  "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-hidrolik.html": "Jasa Borongan Strauss Pile Hidrolik",
@@ -813,6 +813,28 @@ const urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyPage= {
  "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile-mesin.html": "Jasa Borongan Strauss Pile Mesin"
 	
 };
+const urlMappingHargaJasaBoronganStraussPileFromMoneyMasterMoneyPage= { 	
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-30cm.html": "Harga Jasa Borongan Strauss Pile 30cm",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-40cm.html": "Harga Jasa Borongan Strauss Pile 40cm",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-50cm.html": "Harga Jasa Borongan Strauss Pile 50cm",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-beton.html": "Harga Jasa Borongan Strauss Pile Beton",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-manual.html": "Harga Jasa Borongan Strauss Pile Manual",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-hidrolik.html": "Harga Jasa Borongan Strauss Pile Hidrolik",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-rotary.html": "Harga Jasa Borongan Strauss Pile Rotary",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-auger.html": "Harga Jasa Borongan Strauss Pile Auger",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-kering.html": "Harga Jasa Borongan Strauss Pile Kering",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-basah.html": "Harga Jasa Borongan Strauss Pile Basah",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-industri.html": "Harga Jasa Borongan Strauss Pile Industri",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-perumahan.html": "Harga Jasa Borongan Strauss Pile Perumahan",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-per-titik.html": "Harga Jasa Borongan Strauss Pile Per Titik",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-per-meter.html": "Harga Jasa Borongan Strauss Pile Per Meter",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-12-meter.html": "Harga Jasa Borongan Strauss Pile 12 Meter",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-9-meter.html": "Harga Jasa Borongan Strauss Pile 9 Meter",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-6-meter.html": "Harga Jasa Borongan Strauss Pile 6 Meter",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile-mesin.html": "Harga Jasa Borongan Strauss Pile Mesin"
+	
+};
+
 
 const urlMappingJasaBorSumurFromMoneyMasterMoneyPage= {
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-per-meter.html": "Harga Jasa Sumur Bor Per Meter",
@@ -2204,6 +2226,8 @@ console.log('[jasa-kons] 📄 File loaded, waiting for DOM...');
 	urlMappingHargaJasaStraussPileFromMoneyMasterMoneyPage,
 	  
     urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyPage,
+	urlMappingHargaJasaBoronganStraussPileFromMoneyMasterMoneyPage,
+	  
     urlMappingJasaBorSumurFromMoneyMasterMoneyPage,
     urlMappingHargaJasaBorSumurFromMoneyMasterMoneyPage,
     urlMappingJasaBorSumurMurahFromMoneyMasterMoneyPage,
@@ -4882,6 +4906,21 @@ if (urlMappingJasaBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
             { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
             { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
             { name: 'Jasa Borongan Strauss Pile', url: 'https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
+	if (urlMappingHargaJasaBoronganStraussPileFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	
+	generateBreadcrumbShared(
+        urlMappingHargaJasaBoronganStraussPileFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Harga Jasa Borongan Strauss Pile', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile.html'}
         ],
         'JASA_KONSTRUKSI'
     );
