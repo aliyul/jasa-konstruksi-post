@@ -694,6 +694,22 @@ const urlMappingJasaBoronganBorePileFromMoneyMasterMoneyPage= {
  "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile-manual.html": "Jasa Borongan Bore Pile Manual"
 	
 };
+const urlMappingHargaJasaBoronganBorePileFromMoneyMasterMoneyPage= { 
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile-promo.html": "Harga Jasa Borongan Bore Pile Promo",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile-ruko.html": "Harga Jasa Borongan Bore Pile Ruko",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile-rumah.html": "Harga Jasa Borongan Bore Pile Rumah",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile-industri.html": "Harga Jasa Borongan Bore Pile Industri",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile-komersial.html": "Harga Jasa Borongan Bore Pile Komersial",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile-perumahan.html": "Harga Jasa Borongan Bore Pile Perumahan",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile-gedung.html": "Harga Jasa Borongan Bore Pile Gedung",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile-pondasi.html": "Harga Jasa Borongan Bore Pile Pondasi",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile-per-meter.html": "Harga Jasa Borongan Bore Pile Per Meter",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile-40cm.html": "Harga Jasa Borongan Bore Pile 40cm",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile-30cm.html": "Harga Jasa Borongan Bore Pile 30cm",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile-hidrolik.html": "Harga Jasa Borongan Bore Pile Hidrolik",
+ "https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile-manual.html": "Harga Jasa Borongan Bore Pile Manual"
+	
+};
 
 const urlMappingJasaPengeboranBorePileFromMoneyMasterMoneyPage= { 
  "https://www.betonjayareadymix.com/p/jasa-pengeboran-bore-pile-ruko.html": "Jasa Pengeboran Bore Pile Ruko",
@@ -2150,6 +2166,8 @@ console.log('[jasa-kons] 📄 File loaded, waiting for DOM...');
     urlMappingJasaBorePileMurahFromMoneyMasterMoneyPage,
     urlMappingHargaJasaBorePileMurahFromMoneyMasterMoneyPage,
     urlMappingJasaBoronganBorePileFromMoneyMasterMoneyPage,
+	urlMappingHargaJasaBoronganBorePileFromMoneyMasterMoneyPage,
+	  
     urlMappingJasaPengeboranBorePileFromMoneyMasterMoneyPage,
     urlMappingJasaStraussPileFromMoneyMasterMoneyPage,
     urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyPage,
@@ -4758,7 +4776,21 @@ if (urlMappingJasaBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
     }
-
+    if (urlMappingHargaJasaBoronganBorePileFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+	
+	generateBreadcrumbShared(
+        urlMappingHargaJasaBoronganBorePileFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
+            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
+            { name: 'Harga Jasa Borongan Bore Pile', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+    }
 	
     if (urlMappingJasaPengeboranBorePileFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 	
