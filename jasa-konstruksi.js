@@ -558,7 +558,7 @@ const urlMappingJasaBorePileFromMoneyMasterMoneyPage= {
 	
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-promo.html": "Jasa Bore Pile Promo",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-diskon.html": "Jasa Bore Pile Diskon",
-// "https://www.betonjayareadymix.com/p/jasa-bore-pile-termurah.html": "Jasa Bore Pile Termurah",
+"https://www.betonjayareadymix.com/p/jasa-bore-pile-termurah.html": "Jasa Bore Pile Termurah",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-termahal.html": "Jasa Bore Pile Termahal",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-30cm.html": "Jasa Bore Pile 30cm",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-50cm.html": "Jasa Bore Pile 50cm",
@@ -597,7 +597,7 @@ const urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage= {
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-beton.html": "Harga Jasa Bore Pile Beton", 
     "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-mini.html": "Harga Jasa Bore Pile Mini",
 
-// "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-termurah.html": "Harga Jasa Bore Pile Termurah",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-termurah.html": "Harga Jasa Bore Pile Termurah",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-30cm.html": "Harga Jasa Bore Pile 30cm",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-50cm.html": "Harga Jasa Bore Pile 50cm",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-2-inch.html": "Harga Jasa Bore Pile 2 Inch",
@@ -651,7 +651,7 @@ const urlMappingJasaBorePileMurahFromMoneyMasterMoneyPage= {
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-murah-ruko.html": "Jasa Bore Pile Murah Ruko",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-murah-komersial.html": "Jasa Bore Pile Murah Komersial",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-murah-industri.html": "Jasa Bore Pile Murah Industri",
- //"https://www.betonjayareadymix.com/p/jasa-bore-pile-murah-termurah.html": "Jasa Bore Pile Murah Termurah"
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-murah-termurah.html": "Jasa Bore Pile Murah Termurah"
 	
 };
 const urlMappingHargaJasaBorePileMurahFromMoneyMasterMoneyPage= { 
@@ -674,7 +674,7 @@ const urlMappingHargaJasaBorePileMurahFromMoneyMasterMoneyPage= {
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-ruko.html": "Jasa Bore Pile Murah Ruko",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-komersial.html": "Jasa Bore Pile Murah Komersial",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-industri.html": "Jasa Bore Pile Murah Industri",
- //"https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-termurah.html": "Jasa Bore Pile Murah Termurah"
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-termurah.html": "Jasa Bore Pile Murah Termurah"
 	
 };
 
@@ -735,7 +735,7 @@ const urlMappingJasaStraussPileFromMoneyMasterMoneyPage= {
 	
  "https://www.betonjayareadymix.com/p/jasa-strauss-pile-promo.html": "Jasa Strauss Pile Promo",
  "https://www.betonjayareadymix.com/p/jasa-strauss-pile-diskon.html": "Jasa Strauss Pile Diskon",
- //"https://www.betonjayareadymix.com/p/jasa-strauss-pile-termurah.html": "Jasa Strauss Pile Termurah",
+ "https://www.betonjayareadymix.com/p/jasa-strauss-pile-termurah.html": "Jasa Strauss Pile Termurah",
  "https://www.betonjayareadymix.com/p/jasa-strauss-pile-termahal.html": "Jasa Strauss Pile Termahal",
 	
  "https://www.betonjayareadymix.com/p/jasa-strauss-pile-50cm.html": "Jasa Strauss Pile 50cm",
