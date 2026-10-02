@@ -574,7 +574,7 @@ const urlMappingJasaBorePileFromMoneyMasterMoneyPage= {
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-basah.html": "Jasa Bore Pile Basah",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-kering.html": "Jasa Bore Pile Kering",
 	
- "https://www.betonjayareadymix.com/p/jasa-bore-pile-40cm.html": "Jasa Bore Pile 40 cm",
+ "https://www.betonjayareadymix.com/p/jasa-bore-pile-40cm.html": "Jasa Bore Pile 40cm",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-4-inch.html": "Jasa Bore Pile 4 inch",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-6-inch.html": "Jasa Bore Pile 6 inch",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-per-meter.html": "Jasa Bore Pile Per Meter",
@@ -612,7 +612,7 @@ const urlMappingHargaJasaBorePileFromMoneyMasterMoneyPage= {
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-basah.html": "Harga Jasa Bore Pile Basah",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-kering.html": "Harga Jasa Bore Pile Kering",
 	
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-40cm.html": "Harga Jasa Bore Pile 40 cm",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-40-cm.html": "Harga Jasa Bore Pile 40 cm",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-4-inch.html": "Harga Jasa Bore Pile 4 inch",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-6-inch.html": "Harga Jasa Bore Pile 6 inch",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-per-meter.html": "Harga Jasa Bore Pile Per Meter",
