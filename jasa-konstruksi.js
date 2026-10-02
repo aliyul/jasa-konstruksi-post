@@ -655,26 +655,26 @@ const urlMappingJasaBorePileMurahFromMoneyMasterMoneyPage= {
 	
 };
 const urlMappingHargaJasaBorePileMurahFromMoneyMasterMoneyPage= { 
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-manual.html": "Jasa Bore Pile Murah Manual",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-hidrolik.html": "Jasa Bore Pile Murah Hidrolik",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-30cm.html": "Jasa Bore Pile Murah 30cm",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-50cm.html": "Jasa Bore Pile Murah 50cm",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-per-meter.html": "Jasa Bore Pile Murah Per Meter",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-per-titik.html": "Jasa Bore Pile Murah Per Titik",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-manual.html": "Harga Jasa Bore Pile Murah Manual",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-hidrolik.html": "Harga Jasa Bore Pile Murah Hidrolik",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-30cm.html": "Harga Jasa Bore Pile Murah 30cm",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-50cm.html": "Harga Jasa Bore Pile Murah 50cm",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-per-meter.html": "Harga Jasa Bore Pile Murah Per Meter",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-per-titik.html": "Harga Jasa Bore Pile Murah Per Titik",
  "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-pondasi.html": "Harga Jasa Bore Pile Murah Pondasi",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-rotary.html": "Jasa Bore Pile Murah Rotary",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-gedung.html": "Jasa Bore Pile Murah Gedung",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-basah.html": "Jasa Bore Pile Murah Basah",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-kering.html": "Jasa Bore Pile Murah kering",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-40cm.html": "Jasa Bore Pile Murah 40cm",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-60cm.html": "Jasa Bore Pile Murah 60cm",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-2-inch.html": "Jasa Bore Pile Murah 2 Inch",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-6-meter.html": "Jasa Bore Pile Murah 6 Meter",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-rumah.html": "Jasa Bore Pile Murah Rumah",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-ruko.html": "Jasa Bore Pile Murah Ruko",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-komersial.html": "Jasa Bore Pile Murah Komersial",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-industri.html": "Jasa Bore Pile Murah Industri",
- "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-termurah.html": "Jasa Bore Pile Murah Termurah"
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-rotary.html": "Harga Jasa Bore Pile Murah Rotary",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-gedung.html": "Harga Jasa Bore Pile Murah Gedung",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-basah.html": "Harga Jasa Bore Pile Murah Basah",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-kering.html": "Harga Jasa Bore Pile Murah kering",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-40cm.html": "Harga Jasa Bore Pile Murah 40cm",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-60cm.html": "Harga Jasa Bore Pile Murah 60cm",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-2-inch.html": "Harga Jasa Bore Pile Murah 2 Inch",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-6-meter.html": "Harga Jasa Bore Pile Murah 6 Meter",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-rumah.html": "Harga Jasa Bore Pile Murah Rumah",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-ruko.html": "Harga Jasa Bore Pile Murah Ruko",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-komersial.html": "Harga Jasa Bore Pile Murah Komersial",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-industri.html": "Harga Jasa Bore Pile Murah Industri",
+ "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah-termurah.html": "Harga Jasa Bore Pile Murah Termurah"
 	
 };
 
