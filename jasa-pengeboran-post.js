@@ -94,7 +94,8 @@ const urlMappingJasaBorePileFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-depok.html": "Jasa Bore Pile Depok",
   "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-tangerang.html": "Jasa Bore Pile Tangerang",
   "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-bekasi.html": "Jasa Bore Pile Bekasi",
-  "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-karawang.html": "Jasa Bore Pile Karawang"
+  "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-karawang.html": "Jasa Bore Pile Karawang",
+  "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-surabaya.html": "Jasa Bore Pile Surabaya"
 };
 const urlMappingHargaJasaBorePileFromMoneyMasterMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-terdekat.html": "Harga Jasa Bore Pile Terdekat",
