@@ -1266,9 +1266,12 @@ const urlMappingSewaAlatPendukungFromSub1MoneyMaster = {
 "https://www.betonjayareadymix.com/p/sewa-akses-keamanan.html": "Sewa Akses Keamanan",
   "https://www.betonjayareadymix.com/p/sewa-alat-survey.html": "Sewa Alat Survey",
 //  "https://www.betonjayareadymix.com/p/sewa-alat-pendukung.html": "Sewa Alat Pendukung",  
+	
     "https://www.betonjayareadymix.com/p/sewa-pencahayaan-proyek.html": "Sewa Pencahayaan Proyek",
+	 "https://www.betonjayareadymix.com/p/sewa-pencahayaan-utilitas.html": "Sewa Pencahayaan Utilitas",
+	
 // "https://www.betonjayareadymix.com/p/sewa-bekisting-scaffolding.html": "Sewa Bekisting Scaffolding",
- //   "https://www.betonjayareadymix.com/p/sewa-pencahayaan-utilitas.html": "Sewa Pencahayaan Utilitas",
+  
 	"https://www.betonjayareadymix.com/p/sewa-bekisting.html": "Sewa Bekisting",
 	"https://www.betonjayareadymix.com/p/sewa-scaffolding.html": "Sewa Scaffolding",
 	"https://www.betonjayareadymix.com/p/sewa-pompa-dewatering.html": "Sewa Pompa Dewatering",
@@ -1282,7 +1285,10 @@ const urlMappingSewaAlatPendukungFromSub1MoneyMaster = {
 const urlMappingHargaSewaAlatPendukungFromSub1MoneyMaster = {
    "https://www.betonjayareadymix.com/p/harga-sewa-akses-keamanan.html": "Harga Sewa Akses Keamanan",
   "https://www.betonjayareadymix.com/p/harga-sewa-alat-survey.html": "Harga Sewa Alat Survey",
+	
     "https://www.betonjayareadymix.com/p/harga-sewa-pencahayaan-proyek.html": "Harga Sewa Pencahayaan Proyek",
+	 "https://www.betonjayareadymix.com/p/harga-sewa-pencahayaan-utilitas.html": "Harga Sewa Pencahayaan Utilitas",
+	
 	"https://www.betonjayareadymix.com/p/harga-sewa-bekisting.html": "Harga Sewa Bekisting",
 	"https://www.betonjayareadymix.com/p/harga-sewa-scaffolding.html": "Harga Sewa Scaffolding",
 	"https://www.betonjayareadymix.com/p/harga-sewa-pompa-dewatering.html": "Harga Sewa Pompa Dewatering",
