@@ -428,43 +428,43 @@ const urlMappingSewaAlatBeratPostFromMoneyMasterMoneyPage = {
 };
 
 const urlMappingSewaforkliftPostFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-forklift.html": "Harga Sewa Forklift"
+ // "https://www.betonjayareadymix.com/2019/02/harga-sewa-forklift.html": "Harga Sewa Forklift"
 };
 const urlMappingSewaCranePostFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-crane.html": "Harga Sewa Crane"
+ // "https://www.betonjayareadymix.com/2019/02/harga-sewa-crane.html": "Harga Sewa Crane"
 };
 const urlMappingSewaSelfLoaderPostFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-self-loader.html": "Harga Sewa Self Loader"
+ // "https://www.betonjayareadymix.com/2019/02/harga-sewa-self-loader.html": "Harga Sewa Self Loader"
 };
 const urlMappingSewaWheelLoaderPostFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-wheel-loader.html": "Harga Sewa Wheel Loader"
+ // "https://www.betonjayareadymix.com/2019/02/harga-sewa-wheel-loader.html": "Harga Sewa Wheel Loader"
 };
 const urlMappingSewaVibroRollerPostFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-vibro-roller.html": "Harga Sewa Vibro Roller"
+ // "https://www.betonjayareadymix.com/2019/02/harga-sewa-vibro-roller.html": "Harga Sewa Vibro Roller"
 };
 const urlMappingSewaWalesStoomPostFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-wales-stoom.html": "Harga Sewa Wales Stoom"
+ // "https://www.betonjayareadymix.com/2019/02/harga-sewa-wales-stoom.html": "Harga Sewa Wales Stoom"
 };
 const urlMappingSewaTandemRollerPostFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-tandem-roller.html": "Harga Sewa Tandem Roller"
+ // "https://www.betonjayareadymix.com/2019/02/harga-sewa-tandem-roller.html": "Harga Sewa Tandem Roller"
 };
 const urlMappingSewaBulldozerPostFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-bulldozer.html": "Harga Sewa Bulldozer"
+ // "https://www.betonjayareadymix.com/2019/02/harga-sewa-bulldozer.html": "Harga Sewa Bulldozer"
 };
 const urlMappingSewaExcavatorPostFromMoneyMasterMoneyMaster1 = {
-  "https://www.betonjayareadymix.com/2019/02/sewa-excavator-mini.html": "Sewa Excavator Mini"
+ // "https://www.betonjayareadymix.com/2019/02/sewa-excavator-mini.html": "Sewa Excavator Mini"
 };
 const urlMappingSewaExcavatorPostFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator.html": "Harga Sewa Excavator"
+  //"https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator.html": "Harga Sewa Excavator"
 };
 const urlMappingSewaBackhoeLoaderPostFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-backhoe-loader.html": "Harga Sewa Backhoe Loader"
+ // "https://www.betonjayareadymix.com/2019/02/harga-sewa-backhoe-loader.html": "Harga Sewa Backhoe Loader"
 };
 const urlMappingSewaBabyRollerPostFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-baby-roller.html": "Harga Sewa Baby Roller"
+ // "https://www.betonjayareadymix.com/2019/02/harga-sewa-baby-roller.html": "Harga Sewa Baby Roller"
 };
 const urlMappingSewaMotorGraderPostFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-motor-grader.html": "Harga Sewa Motor Grader"
+ // "https://www.betonjayareadymix.com/2019/02/harga-sewa-motor-grader.html": "Harga Sewa Motor Grader"
 };
 
 const urlMappingSewaAlatPancangPostFromMoneyMasterMoneyPage = {
@@ -591,7 +591,7 @@ const urlMappingSewaMesinTrowelFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-trowel.html": "Harga Sewa Mesin Trowel"
 };
 const urlMappingSewaMesinScreedFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-screed.html": "Harga Sewa Mesin Screed"
+  //"https://www.betonjayareadymix.com/2019/02/harga-sewa-mesin-screed.html": "Harga Sewa Mesin Screed"
 };
 const urlMappingSewaStamperFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-stamper.html": "Harga Sewa Stamper"
@@ -1873,8 +1873,7 @@ function initJasaKonsAlatKonstruksiPost() {
                 { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
                 { name: 'Daftar Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-berat.html' },
                 { name: 'Perbandingan Sewa Excavator', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-excavator.html' },
-                { name: 'Sewa Excavator', url: 'https://www.betonjayareadymix.com/p/sewa-excavator.html' },
-                { name: 'Harga Sewa Excavator', url: 'https://www.betonjayareadymix.com/p/harga-sewa-excavator.html' }
+                { name: 'Sewa Excavator', url: 'https://www.betonjayareadymix.com/p/sewa-excavator.html' }
             ],
             'SEWA_RENTAL'
         );
@@ -1931,6 +1930,20 @@ function initJasaKonsAlatKonstruksiPost() {
             'SEWA_RENTAL'
         );
     }
+    if (urlMappingSewaPileDriverPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        generateBreadcrumbShared(
+            urlMappingSewaPileDriverPostFromMoneyMasterMoneyPage,
+            cleanUrlJasaKonsAlatKonstruksiPost,
+            [
+                { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+                { name: 'Daftar Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-berat.html' },
+                { name: 'Perbandingan Sewa Alat Pancang', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-alat-pancang.html' },
+                { name: 'Sewa Pile Driver', url: 'https://www.betonjayareadymix.com/p/sewa-pile-driver.html' }
+            ],
+            'SEWA_RENTAL'
+        );
+    }
+  
     if (urlMappingSewaConcretePaverPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
         generateBreadcrumbShared(
             urlMappingSewaConcretePaverPostFromMoneyMasterMoneyPage,
