@@ -512,7 +512,7 @@ const urlMappingSewaAlatBeratPostFromMoneyMasterMoneyChild = {
   "https://www.betonjayareadymix.com/2019/02/harga-sewa-alat-berat-jakarta.html": "Harga Sewa Alat Berat Jakarta"
 };
 
-const urlMappingSewaExcavatorPostFromMoneyPageMoneyChild = {
+const urlMappingSewaExcavatorPostFromMoneyMasterMoneyChild = {
   "https://www.betonjayareadymix.com/2019/02/sewa-excavator-surakarta.html": "Sewa Excavator Surakarta",
   "https://www.betonjayareadymix.com/2019/02/sewa-excavator-salatiga.html": "Sewa Excavator Salatiga",
   "https://www.betonjayareadymix.com/2019/02/sewa-excavator-wonosobo.html": "Sewa Excavator Wonosobo",
@@ -560,6 +560,55 @@ const urlMappingSewaExcavatorPostFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/02/sewa-excavator-depok.html": "Sewa Excavator Depok",
   "https://www.betonjayareadymix.com/2019/02/sewa-excavator-bekasi.html": "Sewa Excavator Bekasi",
   "https://www.betonjayareadymix.com/2019/02/sewa-excavator-bogor.html": "Sewa Excavator Bogor"
+};
+const urlMappingHargaSewaExcavatorPostFromMoneyMasterMoneyChild = {
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-surakarta.html": "Harga Sewa Excavator Surakarta",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-salatiga.html": "Harga Sewa Excavator Salatiga",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-wonosobo.html": "Harga Sewa Excavator Wonosobo",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-wonogiri.html": "Harga Sewa Excavator Wonogiri",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-tegal.html": "Harga Sewa Excavator Tegal",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-temanggung.html": "Harga Sewa Excavator Temanggung",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-sukoharjo.html": "Harga Sewa Excavator Sukoharjo",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-sragen.html": "Harga Sewa Excavator Sragen",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-rembang.html": "Harga Sewa Excavator Rembang",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-purworejo.html": "Harga Sewa Excavator Purworejo",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-purbalingga.html": "Harga Sewa Excavator Purbalingga",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-pemalang.html": "Harga Sewa Excavator Pemalang",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-pekalongan.html": "Harga Sewa Excavator Pekalongan",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-pati.html": "Harga Sewa Excavator Pati",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-magelang.html": "Harga Sewa Excavator Magelang",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-kudus.html": "Harga Sewa Excavator Kudus",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-klaten.html": "Harga Sewa Excavator Klaten",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-kendal.html": "Harga Sewa Excavator Kendal",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-kebumen.html": "Harga Sewa Excavator Kebumen",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-karanganyar.html": "Harga Sewa Excavator Karanganyar",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-jepara.html": "Harga Sewa Excavator Jepara",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-grobogan.html": "Harga Sewa Excavator Grobogan",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-demak.html": "Harga Sewa Excavator Demak",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-cilacap.html": "Harga Sewa Excavator Cilacap",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-brebes.html": "Harga Sewa Excavator Brebes",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-boyolali.html": "Harga Sewa Excavator Boyolali",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-blora.html": "Harga Sewa Excavator Blora",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-batang.html": "Harga Sewa Excavator Batang",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-banyumas.html": "Harga Sewa Excavator Banyumas",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-banjarnegara.html": "Harga Sewa Excavator Banjarnegara",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-semarang.html": "Harga Sewa Excavator Semarang",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-kuningan.html": "Harga Sewa Excavator Kuningan",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-ciamis.html": "Harga Sewa Excavator Ciamis",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-cirebon.html": "Harga Sewa Excavator Cirebon",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-purwakarta.html": "Harga Sewa Excavator Purwakarta",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-majalengka.html": "Harga Sewa Excavator Majalengka",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-sukabumi.html": "Harga Sewa Excavator Sukabumi",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-sumedang.html": "Harga Sewa Excavator Sumedang",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-bandung.html": "Harga Sewa Excavator Bandung",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-subang.html": "Harga Sewa Excavator Subang",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-tasikmalaya.html": "Harga Sewa Excavator Tasikmalaya",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-karawang.html": "Harga Sewa Excavator Karawang",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-tangerang.html": "Harga Sewa Excavator Tangerang",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-jakarta.html": "Harga Sewa Excavator Jakarta",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-depok.html": "Harga Sewa Excavator Depok",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-bekasi.html": "Harga Sewa Excavator Bekasi",
+  "https://www.betonjayareadymix.com/2019/02/harga-sewa-excavator-bogor.html": "Harga Sewa Excavator Bogor"
 };
 
 const urlMappingSewaConcreteCutterFromMoneyMaster1MoneyPage = {
@@ -807,7 +856,7 @@ function restoreCondition(conditionId) {
         urlMappingSewaBulldozerPostFromMoneyMasterMoneyPage,
         urlMappingSewaExcavatorPostFromMoneyMasterMoneyMaster1,
         urlMappingSewaExcavatorPostFromMoneyMasterMoneyPage,
-        urlMappingSewaExcavatorPostFromMoneyPageMoneyChild,
+        urlMappingSewaExcavatorPostFromMoneyMasterMoneyChild,
         urlMappingSewaBackhoeLoaderPostFromMoneyMasterMoneyPage,
         urlMappingSewaBabyRollerPostFromMoneyMasterMoneyPage,
         urlMappingSewaMotorGraderPostFromMoneyMasterMoneyPage,
@@ -1865,9 +1914,9 @@ function initJasaKonsAlatKonstruksiPost() {
             'SEWA_RENTAL'
         );
     }
-    if (urlMappingSewaExcavatorPostFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
+    if (urlMappingSewaExcavatorPostFromMoneyMasterMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
         generateBreadcrumbShared(
-            urlMappingSewaExcavatorPostFromMoneyPageMoneyChild,
+            urlMappingSewaExcavatorPostFromMoneyMasterMoneyChild,
             cleanUrlJasaKonsAlatKonstruksiPost,
             [
                 { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
@@ -1878,6 +1927,20 @@ function initJasaKonsAlatKonstruksiPost() {
             'SEWA_RENTAL'
         );
     }
+    if (urlMappingHargaSewaExcavatorPostFromMoneyMasterMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        generateBreadcrumbShared(
+            urlMappingHargaSewaExcavatorPostFromMoneyMasterMoneyChild,
+            cleanUrlJasaKonsAlatKonstruksiPost,
+            [
+                { name: 'Sewa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/sewa-alat-konstruksi.html' },
+                { name: 'Daftar Sewa Alat Berat', url: 'https://www.betonjayareadymix.com/p/daftar-sewa-alat-berat.html' },
+                { name: 'Perbandingan Sewa Excavator', url: 'https://www.betonjayareadymix.com/p/perbandingan-sewa-excavator.html' },
+                { name: 'Harga Sewa Excavator', url: 'https://www.betonjayareadymix.com/p/harga-sewa-excavator.html' }
+            ],
+            'SEWA_RENTAL'
+        );
+    }
+
     if (urlMappingSewaBackhoeLoaderPostFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
         generateBreadcrumbShared(
             urlMappingSewaBackhoeLoaderPostFromMoneyMasterMoneyPage,
