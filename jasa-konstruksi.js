@@ -1075,6 +1075,7 @@ const urlMappingSewaAlatBeratFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/sewa-trencher.html": "Sewa Trencher",   
   "https://www.betonjayareadymix.com/p/sewa-concrete-paver.html": "Sewa Concrete Paver",   
 
+ "https://www.betonjayareadymix.com/p/sewa-drop-hammer.html":"Sewa Drop Hammer",
   "https://www.betonjayareadymix.com/p/sewa-pile-driver.html": "Sewa Pile Driver",  
 "https://www.betonjayareadymix.com/p/sewa-diesel-hammer.html": "Sewa Diesel Hammer",  
   "https://www.betonjayareadymix.com/p/sewa-alat-pancang-hidrolik.html": "Sewa Alat Pancang Hidrolik",  
@@ -1114,6 +1115,7 @@ const urlMappingHargaSewaAlatBeratFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/harga-sewa-trencher.html": "Harga Sewa Trencher",   
   "https://www.betonjayareadymix.com/p/harga-sewa-concrete-paver.html": "Harga Sewa Concrete Paver",
 
+"https://www.betonjayareadymix.com/p/harga-sewa-drop-hammer.html":"Harga Sewa Drop Hammer",
 "https://www.betonjayareadymix.com/p/harga-sewa-pile-driver.html": "Harga Sewa Pile Driver",  
 "https://www.betonjayareadymix.com/p/harga-sewa-diesel-hammer.html": "Harga Sewa Diesel Hammer",  
   "https://www.betonjayareadymix.com/p/harga-sewa-alat-pancang-hidrolik.html": "Harga Sewa Alat Pancang Hidrolik",  
