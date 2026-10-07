@@ -1200,6 +1200,7 @@ const urlMappingSewaAlatRinganFromMoneyMasterMoneyMaster1 = {
 
 "https://www.betonjayareadymix.com/p/sewa-screed.html":
   "Sewa Screed",
+"https://www.betonjayareadymix.com/p/sewa-mesin-screed.html": "Sewa Mesin Screed",
 
 "https://www.betonjayareadymix.com/p/sewa-trowel.html":
   "Sewa Trowel",
@@ -1244,7 +1245,8 @@ const urlMappingHargaSewaAlatRinganFromMoneyMasterMoneyMaster1 = {
 
 "https://www.betonjayareadymix.com/p/harga-sewa-screed.html":
   "Harga Sewa Screed",
-
+"https://www.betonjayareadymix.com/p/harga-sewa-mesin-screed.html": "Harga Sewa Mesin Screed",
+	
 "https://www.betonjayareadymix.com/p/harga-sewa-trowel.html":
   "Harga Sewa Trowel",
 
