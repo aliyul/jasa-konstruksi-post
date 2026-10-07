@@ -1057,7 +1057,9 @@ const urlMappingSewaAlatBeratFromSub2Sub1 = {
    "https://www.betonjayareadymix.com/p/durasi-sewa-alat-berat.html": "Durasi Sewa Alat Berat"  // TYPE: SUB1 pendukung
 };
 const urlMappingSewaAlatBeratFromSub1MoneyMaster = {
-   "https://www.betonjayareadymix.com/p/sewa-alat-berat.html": "Sewa Alat Berat",   
+   "https://www.betonjayareadymix.com/p/sewa-alat-berat.html": "Sewa Alat Berat", 
+   "https://www.betonjayareadymix.com/p/sewa-alat-berat-murah.html": "Sewa Alat Berat Murah",
+	
   "https://www.betonjayareadymix.com/p/sewa-excavator.html": "Sewa Excavator",   
  // "https://www.betonjayareadymix.com/p/sewa-beko.html": "Sewa Beko",   
   "https://www.betonjayareadymix.com/p/sewa-forklift.html": "Sewa Forklift",   
@@ -1098,6 +1100,8 @@ const urlMappingSewaAlatBeratFromSub1MoneyMaster = {
 };
 const urlMappingHargaSewaAlatBeratFromSub1MoneyMaster = {
    "https://www.betonjayareadymix.com/p/harga-sewa-alat-berat.html": "Harga Sewa Alat Berat",   
+   "https://www.betonjayareadymix.com/p/harga-sewa-alat-berat-murah.html": "Harga Sewa Alat Berat Murah",
+
   "https://www.betonjayareadymix.com/p/harga-sewa-excavator.html": "Harga Sewa Excavator",   
  // "https://www.betonjayareadymix.com/p/sewa-beko.html": "Sewa Beko",   
   "https://www.betonjayareadymix.com/p/harga-sewa-forklift.html": "Harga Sewa Forklift",   
