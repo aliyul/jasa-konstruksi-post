@@ -1264,6 +1264,17 @@ const urlMappingSewaAlatPendukungFromSub2Sub1 = {
 const urlMappingSewaAlatPendukungFromSub1MoneyMaster = {
   //"https://www.betonjayareadymix.com/p/harga-sewa-alat-pendukung.html": "Harga Sewa Alat Pendukung"  
 "https://www.betonjayareadymix.com/p/sewa-akses-keamanan.html": "Sewa Akses Keamanan",
+  "https://www.betonjayareadymix.com/p/sewa-akses-keamanan-proyek.html": "Sewa Akses Keamanan Proyek",
+	 "https://www.betonjayareadymix.com/p/sewa-tangga-proyek.html": "Sewa Tangga Proyek",
+"https://www.betonjayareadymix.com/p/sewa-mobile-scaffold.html": "Sewa Mobile Scaffold",
+	"https://www.betonjayareadymix.com/p/sewa-safety-barrier.html": "Sewa Safety Barrier",
+	 "https://www.betonjayareadymix.com/p/sewa-traffic-cone.html": "Sewa Traffic Cone",
+	 "https://www.betonjayareadymix.com/p/sewa-jaring-pengaman.html": "Sewa Jaring Pengaman",
+	 "https://www.betonjayareadymix.com/p/sewa-barrier-proyek.html": "Sewa Barrier Proyek",
+	 "https://www.betonjayareadymix.com/p/sewa-pagar-proyek.html": "Sewa Pagar Proyek",
+	 "https://www.betonjayareadymix.com/p/sewa-gerbang-proyek.html": "Sewa Gerbang Proyek",
+   "https://www.betonjayareadymix.com/p/sewa-pos-keamanan-proyek.html": "Sewa Pos Keamanan Proyek",
+	
   "https://www.betonjayareadymix.com/p/sewa-alat-survey.html": "Sewa Alat Survey",
 //  "https://www.betonjayareadymix.com/p/sewa-alat-pendukung.html": "Sewa Alat Pendukung",  
 	
@@ -1277,10 +1288,32 @@ const urlMappingSewaAlatPendukungFromSub1MoneyMaster = {
 	"https://www.betonjayareadymix.com/p/sewa-pompa-dewatering.html": "Sewa Pompa Dewatering",
 	"https://www.betonjayareadymix.com/p/sewa-pompa-air.html": "Sewa Pompa Air",
     "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur.html": "Sewa Pompa Lumpur",
+
 	"https://www.betonjayareadymix.com/p/sewa-alat-bor.html": "Sewa Alat Bor",
+	"https://www.betonjayareadymix.com/p/sewa-alat-bor-ground-work.html": "Sewa Alat Bor Ground Work",
+	 "https://www.betonjayareadymix.com/p/sewa-alat-bor-tanah.html": "Sewa Alat Bor Tanah",
+	  "https://www.betonjayareadymix.com/p/sewa-alat-bor-sumur.html": "Sewa Alat Bor Sumur",
+	"https://www.betonjayareadymix.com/p/sewa-alat-bor-beton.html": "Sewa Alat Bor Beton",
+	 "https://www.betonjayareadymix.com/p/sewa-alat-bor-pancang.html": "Sewa Alat Bor Pancang",
+	
     "https://www.betonjayareadymix.com/p/sewa-tangki-air.html": "Sewa Tangki Air",
+	"https://www.betonjayareadymix.com/p/sewa-bak-air-proyek.html": "Sewa Bak Air Proyek",
+	 "https://www.betonjayareadymix.com/p/sewa-tandon-air.html": "Sewa Tandon Air",
+      "https://www.betonjayareadymix.com/p/sewa-tangki-air-proyek.html": "Sewa Tangki Air Proyek",
+	  "https://www.betonjayareadymix.com/p/sewa-tangki-air-industri.html": "Sewa Tangki Air Industri",
+	
     "https://www.betonjayareadymix.com/p/sewa-selang-proyek.html": "Sewa Selang Proyek",
-    "https://www.betonjayareadymix.com/p/sewa-pipa-proyek.html": "Sewa Pipa Proyek"
+   "https://www.betonjayareadymix.com/p/sewa-selang-air.html": "Sewa Selang Air",
+  "https://www.betonjayareadymix.com/p/sewa-selang-pompa.html": "Sewa Selang Pompa",
+  "https://www.betonjayareadymix.com/p/sewa-selang-lumpur.html": "Sewa Selang Lumpur",
+  "https://www.betonjayareadymix.com/p/sewa-selang-industrial.html": "Sewa Selang Industrial",
+	
+   "https://www.betonjayareadymix.com/p/sewa-pipa-proyek.html": "Sewa Pipa Proyek",
+   "https://www.betonjayareadymix.com/p/sewa-pipa-air.html": "Sewa Pipa Air",
+  "https://www.betonjayareadymix.com/p/sewa-pipa-dewatering.html": "Sewa Pipa Dewatering",
+  "https://www.betonjayareadymix.com/p/sewa-pipa-hdpe.html": "Sewa Pipa HDPE",
+  "https://www.betonjayareadymix.com/p/sewa-pipa-industrial.html": "Sewa Pipa Industrial"
+	
 };
 const urlMappingHargaSewaAlatPendukungFromSub1MoneyMaster = {
    "https://www.betonjayareadymix.com/p/harga-sewa-akses-keamanan.html": "Harga Sewa Akses Keamanan",
