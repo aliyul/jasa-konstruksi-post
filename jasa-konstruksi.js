@@ -1216,37 +1216,37 @@ const urlMappingHargaSewaAlatRinganFromMoneyMasterMoneyMaster1 = {
 "https://www.betonjayareadymix.com/p/harga-sewa-mesin-polisher.html":
   "Harga Sewa Mesin Polisher",
 
-"https://www.betonjayareadymix.com/p/sewa-concrete-cutter.html":
+"https://www.betonjayareadymix.com/p/harga-sewa-concrete-cutter.html":
   "Harga Sewa Concrete Cutter",
 
-"https://www.betonjayareadymix.com/p/sewa-jack-hammer.html":
+"https://www.betonjayareadymix.com/p/harga-sewa-jack-hammer.html":
   "Harga Sewa Jack Hammer",
 
-"https://www.betonjayareadymix.com/p/sewa-vibrator-beton.html":
+"https://www.betonjayareadymix.com/p/harga-sewa-vibrator-beton.html":
   "Harga Sewa Vibrator Beton",
 
-"https://www.betonjayareadymix.com/p/sewa-mesin-molen.html":
+"https://www.betonjayareadymix.com/p/harga-sewa-mesin-molen.html":
   "Harga Sewa Mesin Molen",
 
-"https://www.betonjayareadymix.com/p/sewa-genset.html":
+"https://www.betonjayareadymix.com/p/harga-sewa-genset.html":
   "Harga Sewa Genset",
 
-"https://www.betonjayareadymix.com/p/sewa-mesin-compressor.html":
+"https://www.betonjayareadymix.com/p/harga-sewa-mesin-compressor.html":
   "Harga Sewa Mesin Compressor",
 
-"https://www.betonjayareadymix.com/p/sewa-cutting-beton.html":
+"https://www.betonjayareadymix.com/p/harga-sewa-cutting-beton.html":
   "Harga Sewa Cutting Beton",
 
-"https://www.betonjayareadymix.com/p/sewa-mesin-rumput.html":
+"https://www.betonjayareadymix.com/p/harga-sewa-mesin-rumput.html":
   "Harga Sewa Mesin Rumput",
 
-"https://www.betonjayareadymix.com/p/sewa-screed.html":
+"https://www.betonjayareadymix.com/p/harga-sewa-screed.html":
   "Harga Sewa Screed",
 
-"https://www.betonjayareadymix.com/p/sewa-trowel.html":
+"https://www.betonjayareadymix.com/p/harga-sewa-trowel.html":
   "Harga Sewa Trowel",
 
-"https://www.betonjayareadymix.com/p/sewa-stamper.html":
+"https://www.betonjayareadymix.com/p/harga-sewa-stamper.html":
   "Harga Sewa Stamper"
 };
 const urlMappingSewaAlatPendukungFromSub2Sub1 = {
