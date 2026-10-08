@@ -1276,19 +1276,47 @@ const urlMappingSewaAlatPendukungFromSub1MoneyMaster = {
    "https://www.betonjayareadymix.com/p/sewa-pos-keamanan-proyek.html": "Sewa Pos Keamanan Proyek",
 	
   "https://www.betonjayareadymix.com/p/sewa-alat-survey.html": "Sewa Alat Survey",
+    "https://www.betonjayareadymix.com/p/sewa-alat-survey-pengukuran.html": "Sewa Alat Survey Pengukuran",
+    "https://www.betonjayareadymix.com/p/sewa-total-station.html": "Sewa Total Station",
+  "https://www.betonjayareadymix.com/p/sewa-waterpass.html": "Sewa Waterpass",
+  "https://www.betonjayareadymix.com/p/sewa-theodolite.html": "Sewa Theodolite",
+  "https://www.betonjayareadymix.com/2019/03/sewa-laser-level.html": "Sewa Laser Level",
 //  "https://www.betonjayareadymix.com/p/sewa-alat-pendukung.html": "Sewa Alat Pendukung",  
 	
     "https://www.betonjayareadymix.com/p/sewa-pencahayaan-proyek.html": "Sewa Pencahayaan Proyek",
 	 "https://www.betonjayareadymix.com/p/sewa-pencahayaan-utilitas.html": "Sewa Pencahayaan Utilitas",
-	
+  "https://www.betonjayareadymix.com/p/sewa-tower-lamp.html": "Sewa Tower Lamp",
+  "https://www.betonjayareadymix.com/p/sewa-lampu-proyek.html": "Sewa Lampu Proyek",
+  "https://www.betonjayareadymix.com/p/sewa-lampu-sorot.html": "Sewa Lampu Sorot",
+  "https://www.betonjayareadymix.com/p/sewa-lampu-tembak.html": "Sewa Lampu Tembak",
+  "https://www.betonjayareadymix.com/p/sewa-panel-listrik.html": "Sewa Panel Listrik"
 // "https://www.betonjayareadymix.com/p/sewa-bekisting-scaffolding.html": "Sewa Bekisting Scaffolding",
   
 	"https://www.betonjayareadymix.com/p/sewa-bekisting.html": "Sewa Bekisting",
+	  "https://www.betonjayareadymix.com/p/sewa-bekisting-cor-jalan.html": "Sewa Bekisting Cor Jalan",
+  "https://www.betonjayareadymix.com/p/sewa-bekisting-kolom-balok.html": "Sewa Bekisting Kolom Balok",
+  "https://www.betonjayareadymix.com/p/sewa-bekisting-plat-lantai.html": "Sewa Bekisting Plat Lantai",
+	
 	"https://www.betonjayareadymix.com/p/sewa-scaffolding.html": "Sewa Scaffolding",
+	
 	"https://www.betonjayareadymix.com/p/sewa-pompa-dewatering.html": "Sewa Pompa Dewatering",
+	  "https://www.betonjayareadymix.com/p/sewa-pompa-dewatering-proyek.html": "Sewa Pompa Dewatering Proyek",
+  "https://www.betonjayareadymix.com/p/sewa-pompa-dewatering-basement.html": "Sewa Pompa Dewatering Basement",
+  "https://www.betonjayareadymix.com/p/sewa-pompa-dewatering-tambang.html": "Sewa Pompa Dewatering Tambang",
+	  
 	"https://www.betonjayareadymix.com/p/sewa-pompa-air.html": "Sewa Pompa Air",
+	  "https://www.betonjayareadymix.com/p/sewa-mesin-pompa-air.html": "Sewa Mesin Pompa Air",
+  "https://www.betonjayareadymix.com/p/sewa-pompa-air-diesel.html": "Sewa Pompa Air Diesel",
+  "https://www.betonjayareadymix.com/p/sewa-pompa-air-kapasitas-besar.html": "Sewa Pompa Air Kapasitas Besar",
+  "https://www.betonjayareadymix.com/p/sewa-pompa-air-banjir.html": "Sewa Pompa Air Banjir",
+  "https://www.betonjayareadymix.com/p/sewa-pompa-air-irigasi.html": "Sewa Pompa Air Irigasi,
+	  
     "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur.html": "Sewa Pompa Lumpur",
-
+  "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur-diesel.html": "Sewa Pompa Lumpur Diesel",
+  "https://www.betonjayareadymix.com/p/sewa-pompa-sedot-lumpur.html": "Sewa Pompa Sedot Lumpur",
+  "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur-proyek.html": "Sewa Pompa Lumpur Proyek",
+  "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur-tambang.html": "Sewa Pompa Lumpur Tambang",
+	
 	"https://www.betonjayareadymix.com/p/sewa-alat-bor.html": "Sewa Alat Bor",
 	"https://www.betonjayareadymix.com/p/sewa-alat-bor-ground-work.html": "Sewa Alat Bor Ground Work",
 	 "https://www.betonjayareadymix.com/p/sewa-alat-bor-tanah.html": "Sewa Alat Bor Tanah",
