@@ -749,8 +749,8 @@ const urlMappingJasaStraussPileFromMoneyMasterMoneyPage= {
  "https://www.betonjayareadymix.com/p/jasa-strauss-pile-beton.html": "Jasa Strauss Pile Beton",
 // "https://www.betonjayareadymix.com/p/jasa-strauss-pile-besi.html": "Jasa Strauss Pile Besi",
 	
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-promo.html": "Jasa Strauss Pile Promo",
- "https://www.betonjayareadymix.com/p/jasa-strauss-pile-diskon.html": "Jasa Strauss Pile Diskon",
+// "https://www.betonjayareadymix.com/p/jasa-strauss-pile-promo.html": "Jasa Strauss Pile Promo",
+ //"https://www.betonjayareadymix.com/p/jasa-strauss-pile-diskon.html": "Jasa Strauss Pile Diskon",
  "https://www.betonjayareadymix.com/p/jasa-strauss-pile-termurah.html": "Jasa Strauss Pile Termurah",
  "https://www.betonjayareadymix.com/p/jasa-strauss-pile-termahal.html": "Jasa Strauss Pile Termahal",
 	
@@ -780,8 +780,8 @@ const urlMappingHargaJasaStraussPileFromMoneyMasterMoneyPage= {
 	
  "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-beton.html": "Harga Jasa Strauss Pile Beton",
 
- "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-promo.html": "Harga Jasa Strauss Pile Promo",
- "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-diskon.html": "Harga Jasa Strauss Pile Diskon",
+// "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-promo.html": "Harga Jasa Strauss Pile Promo",
+ //"https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-diskon.html": "Harga Jasa Strauss Pile Diskon",
  "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-termurah.html": "Harga Jasa Strauss Pile Termurah",
  "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-termahal.html": "Harga Jasa Strauss Pile Termahal",
 	
