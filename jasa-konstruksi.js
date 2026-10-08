@@ -1289,7 +1289,7 @@ const urlMappingSewaAlatPendukungFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/sewa-lampu-proyek.html": "Sewa Lampu Proyek",
   "https://www.betonjayareadymix.com/p/sewa-lampu-sorot.html": "Sewa Lampu Sorot",
   "https://www.betonjayareadymix.com/p/sewa-lampu-tembak.html": "Sewa Lampu Tembak",
-  "https://www.betonjayareadymix.com/p/sewa-panel-listrik.html": "Sewa Panel Listrik"
+  "https://www.betonjayareadymix.com/p/sewa-panel-listrik.html": "Sewa Panel Listrik",
 // "https://www.betonjayareadymix.com/p/sewa-bekisting-scaffolding.html": "Sewa Bekisting Scaffolding",
   
 	"https://www.betonjayareadymix.com/p/sewa-bekisting.html": "Sewa Bekisting",
