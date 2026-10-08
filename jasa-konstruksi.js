@@ -1309,7 +1309,7 @@ const urlMappingSewaAlatPendukungFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/sewa-pompa-air-diesel.html": "Sewa Pompa Air Diesel",
   "https://www.betonjayareadymix.com/p/sewa-pompa-air-kapasitas-besar.html": "Sewa Pompa Air Kapasitas Besar",
   "https://www.betonjayareadymix.com/p/sewa-pompa-air-banjir.html": "Sewa Pompa Air Banjir",
-  "https://www.betonjayareadymix.com/p/sewa-pompa-air-irigasi.html": "Sewa Pompa Air Irigasi,
+  "https://www.betonjayareadymix.com/p/sewa-pompa-air-irigasi.html": "Sewa Pompa Air Irigasi",
 	  
     "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur.html": "Sewa Pompa Lumpur",
   "https://www.betonjayareadymix.com/p/sewa-pompa-lumpur-diesel.html": "Sewa Pompa Lumpur Diesel",
