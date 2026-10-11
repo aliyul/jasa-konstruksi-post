@@ -137,7 +137,18 @@ const urlMappingJasaStraussPileFromMoneyMasterMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-strauss-pile-depok.html": "Jasa Strauss Pile Depok",
   "https://www.betonjayareadymix.com/2019/08/jasa-strauss-pile-tangerang.html": "Jasa Strauss Pile Tangerang",
   "https://www.betonjayareadymix.com/2019/08/jasa-strauss-pile-bekasi.html": "Jasa Strauss Pile Bekasi",
-  "https://www.betonjayareadymix.com/2019/08/jasa-strauss-pile-karawang.html": "Jasa Strauss Pile Karawang"
+  "https://www.betonjayareadymix.com/2019/08/jasa-strauss-pile-karawang.html": "Jasa Strauss Pile Karawang",
+  "https://www.betonjayareadymix.com/2019/08/jasa-strauss-pile-surabaya.html": "Jasa Strauss Pile Surabaya",
+  "https://www.betonjayareadymix.com/2019/08/jasa-strauss-pile-terdekat.html": "Jasa Strauss Pile Terdekat"
+};
+const urlMappingHargaJasaStraussPileFromMoneyMasterMoneyChild = {
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile-jakarta.html": "Harga Jasa Strauss Pile Jakarta",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile-bogor.html": "Harga Jasa Strauss Pile Bogor",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile-depok.html": "Harga Jasa Strauss Pile Depok",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile-tangerang.html": "Harga Jasa Strauss Pile Tangerang",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile-bekasi.html": "Harga Jasa Strauss Pile Bekasi",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile-karawang.html": "Harga Jasa Strauss Pile Karawang",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile-surabaya.html": "Harga Jasa Strauss Pile Surabaya"
 };
 
 const urlMappingJasaBorePileBetonFromMoneyPageMoneyChild = {
@@ -457,7 +468,7 @@ function restoreCondition(conditionId) {
         urlMappingHargaJasaBorePileMurahFromMoneyMasterMoneyChild,
 
         urlMappingJasaStraussPileFromMoneyMasterMoneyChild,
-      
+        urlMappingHargaJasaStraussPileFromMoneyMasterMoneyChild,
       
         urlMappingHargaJasaBorePileFromMoneyMaster1MoneyPage,
     
@@ -951,7 +962,20 @@ function initJasaPengeboranPost() {
             'JASA_KONSTRUKSI'
         );
     }
-  
+   if (urlMappingHargaJasaStraussPileFromMoneyMasterMoneyChild[cleanUrlJasaPengeboranPost]) {
+        generateBreadcrumbShared(
+            urlMappingHargaJasaStraussPileFromMoneyMasterMoneyChild,
+            cleanUrlJasaPengeboranPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
+                { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
+                { name: 'Harga Jasa Strauss Pile', url: 'https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
     // ─── HARGA BORE PILE (MONEY_PAGE) ───
     if (urlMappingHargaJasaBorePileFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
         generateBreadcrumbShared(
