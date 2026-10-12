@@ -160,7 +160,7 @@ const urlMappingSewaPipaProyekFromMoneyMasterMoneyMaster1 = {
   "https://www.betonjayareadymix.com/p/sewa-pipa-dewatering.html": "Sewa Pipa Dewatering",
   "https://www.betonjayareadymix.com/p/sewa-pipa-hdpe.html": "Sewa Pipa HDPE",
   "https://www.betonjayareadymix.com/p/sewa-pipa-industrial.html": "Sewa Pipa Industrial"
-  ^/
+  */
 };
 
 const urlMappingSewaAlatProyekFromMoneyMasterMoneyPage = {};
