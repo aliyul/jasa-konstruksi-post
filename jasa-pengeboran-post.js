@@ -13,6 +13,25 @@
 const urlMappingJasaTukangBorFromMoneyMaster1MoneyChild = {
 };
 
+const urlMappingJasaBorFromMoneyMasterMoneyChild = {
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-jakarta.html": "Jasa Bor Jakarta",
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-bogor.html": "Jasa Bor Bogor",
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-depok.html": "Jasa Bor Depok",
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-tangerang.html": "Jasa Bor Tangerang",
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-bekasi.html": "Jasa Bor Bekasi",
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-karawang.html": "Jasa Bor Karawang",
+  "https://www.betonjayareadymix.com/2019/08/jasa-bor-surabaya.html": "Jasa Bor Surabaya"
+};
+const urlMappingHargaJasaBorFromMoneyMasterMoneyChild = {
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-jakarta.html": "Harga Jasa Bor Jakarta",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-bogor.html": "Harga Jasa Bor Bogor",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-depok.html": "Harga Jasa Bor Depok",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-tangerang.html": "Harga Jasa Bor Tangerang",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-bekasi.html": "Harga Jasa Bor Bekasi",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-karawang.html": "Harga Jasa Bor Karawang",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-surabaya.html": "Harga Jasa Bor Surabaya"
+};
+
 // ============================================================
 // [SUB2] - JASA BOR AIR SUMUR (KATEGORI)
 // ============================================================
@@ -453,6 +472,8 @@ function restoreCondition(conditionId) {
 
     // Kumpulkan semua mapping ke array (hindari Object.assign)
     var ALL_MAPPINGS_ARRAY = [
+        urlMappingHargaJasaBorFromMoneyMasterMoneyChild,
+      
         urlMappingJasaBorSumurFromMoneyMaster1MoneyChild,
         urlMappingJasaBorSumurFromMoneyMaster1MoneyPage,
         urlMappingJasaBorSumurFromMoneyMaster1Variant,
@@ -548,6 +569,35 @@ function initJasaPengeboranPost() {
         console.error('[jasa-pengeboran] ❌ elemen Id JasaKonsPengeboranPost kondisi terhapus');
         return;
     }
+  
+   // ─── BOR (MONEY_CHILD) ───
+   if (urlMappingJasaBorFromMoneyMasterMoneyChild[cleanUrlJasaPengeboranPost]) {
+        generateBreadcrumbShared(
+            urlMappingJasaBorFromMoneyMasterMoneyChild,
+            cleanUrlJasaPengeboranPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
+                { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
+                { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+    if (urlMappingHargaJasaBorFromMoneyMasterMoneyChild[cleanUrlJasaPengeboranPost]) {
+        generateBreadcrumbShared(
+            urlMappingHargaJasaBorFromMoneyMasterMoneyChild,
+            cleanUrlJasaPengeboranPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
+                { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
+                { name: 'harga Jasa Bor', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
 
     // ─── BOR SUMUR (MONEY_CHILD) ───
     if (urlMappingJasaBorSumurFromMoneyMaster1MoneyChild[cleanUrlJasaPengeboranPost]) {
@@ -558,7 +608,6 @@ function initJasaPengeboranPost() {
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
                 { name: 'Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/jasa-bor-sumur.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -574,7 +623,6 @@ function initJasaPengeboranPost() {
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
                 { name: 'Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/jasa-bor-sumur.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -590,8 +638,6 @@ function initJasaPengeboranPost() {
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
-                { name: 'Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/jasa-bor-sumur.html' },
                 { name: 'Tukang Sumur Bor', url: 'https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -607,8 +653,6 @@ function initJasaPengeboranPost() {
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
-                { name: 'Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/jasa-bor-sumur.html' },
                 { name: 'Tukang Sumur Bor', url: 'https://www.betonjayareadymix.com/p/tukang-sumur-bor.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -624,8 +668,6 @@ function initJasaPengeboranPost() {
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
-                { name: 'Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/jasa-bor-sumur.html' },
                 { name: 'Harga Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -641,8 +683,6 @@ function initJasaPengeboranPost() {
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
-                { name: 'Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/jasa-bor-sumur.html' },
                 { name: 'Harga Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/08/harga-jasa-bor-sumur.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -658,7 +698,7 @@ function initJasaPengeboranPost() {
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
+                { name: 'Jasa Coring', url: 'https://www.betonjayareadymix.com/p/jasa-coring.html' },
                 { name: 'Jasa Coring Beton', url: 'https://www.betonjayareadymix.com/p/jasa-coring-beton.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -674,7 +714,7 @@ function initJasaPengeboranPost() {
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
+                { name: 'Jasa Coring', url: 'https://www.betonjayareadymix.com/p/jasa-coring.html' },
                 { name: 'Jasa Coring Beton', url: 'https://www.betonjayareadymix.com/p/jasa-coring-beton.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -690,9 +730,8 @@ function initJasaPengeboranPost() {
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
-                { name: 'Jasa Coring Beton', url: 'https://www.betonjayareadymix.com/p/jasa-coring-beton.html' },
-                { name: 'Harga Jasa Coring Beton', url: 'https://www.betonjayareadymix.com/2018/11/harga-jasa-coring-beton.html' }
+                { name: 'Harga Jasa Coring', url: 'https://www.betonjayareadymix.com/p/harga-jasa-coring.html' },
+                { name: 'Harga Jasa Coring Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-coring-beton.html' }
             ],
             'JASA_KONSTRUKSI'
         );
@@ -708,7 +747,7 @@ function initJasaPengeboranPost() {
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
                 { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
-                { name: 'Jasa Bor Tembok', url: 'https://www.betonjayareadymix.com/p/jasa-bor-tembok.html' }
+                { name: 'Jasa Bor Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-bor-dinding.html' }
             ],
             'JASA_KONSTRUKSI'
         );
@@ -723,9 +762,8 @@ function initJasaPengeboranPost() {
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
-                { name: 'Jasa Bor Tembok', url: 'https://www.betonjayareadymix.com/p/jasa-bor-tembok.html' },
-                { name: 'Harga Jasa Bor Tembok', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor-tembok.html' }
+                { name: 'Harga Jasa Bor', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor.html' },
+                { name: 'Harga Jasa Bor Dinding', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor-dinding.html' }
             ],
             'JASA_KONSTRUKSI'
         );
@@ -741,7 +779,7 @@ function initJasaPengeboranPost() {
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
                 { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
-                { name: 'Jasa Bor Tembok', url: 'https://www.betonjayareadymix.com/p/jasa-bor-tembok.html' }
+                { name: 'Jasa Bor Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-bor-dinding.html' }
             ],
             'JASA_KONSTRUKSI'
         );
@@ -772,9 +810,9 @@ function initJasaPengeboranPost() {
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
-                { name: 'Jasa Bor Beton', url: 'https://www.betonjayareadymix.com/p/jasa-bor-beton.html' },
-                { name: 'Harga Jasa Bor Beton', url: 'https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-beton.html' }
+                { name: 'Harga Jasa Bor', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor.html' },
+                { name: 'Harga Jasa Bor Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor-beton.html' }
+               // { name: 'Harga Jasa Bor Beton', url: 'https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-beton.html' }
             ],
             'JASA_KONSTRUKSI'
         );
@@ -821,7 +859,7 @@ function initJasaPengeboranPost() {
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Harga Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pengeboran.html' },
+                { name: 'Harga Jasa Bor', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor.html' },
                 { name: 'Harga Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor-tanah.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -837,7 +875,7 @@ function initJasaPengeboranPost() {
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Harga Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pengeboran.html' },
+                { name: 'Harga Jasa Bor', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor.html' },
                 { name: 'Harga Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor-tanah.html' }
             ],
             'JASA_KONSTRUKSI'
@@ -870,8 +908,8 @@ function initJasaPengeboranPost() {
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
                 { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
-                { name: 'Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/p/jasa-bor-tanah.html' },
-                { name: 'Jasa Bor Tanah Dalam', url: 'https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam.html' }
+                { name: 'Jasa Bor Tanah', url: 'https://www.betonjayareadymix.com/p/jasa-bor-tanah.html' }
+              //  { name: 'Jasa Bor Tanah Dalam', url: 'https://www.betonjayareadymix.com/2019/08/jasa-bor-tanah-dalam.html' }
             ],
             'JASA_KONSTRUKSI'
         );
