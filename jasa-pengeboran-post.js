@@ -186,6 +186,22 @@ const urlMappingHargaJasaStraussPileFromMoneyMasterMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-strauss-pile-surabaya.html": "Harga Jasa Strauss Pile Surabaya"
 };
 
+const urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyChild = {
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-strauss-pile-jakarta.html": "Jasa Borongan Strauss Pile Jakarta",
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-strauss-pile-bogor.html": "Jasa Borongan Strauss Pile Bogor",
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-strauss-pile-depok.html": "Jasa Borongan Strauss Pile Depok",
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-strauss-pile-tangerang.html": "Jasa Borongan Strauss Pile Tangerang",
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-strauss-pile-bekasi.html": "Jasa Borongan Strauss Pile Bekasi",
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-strauss-pile-karawang.html": "Jasa Borongan Strauss Pile Karawang"
+};
+const urlMappingHargaJasaBoronganStraussPileFromMoneyMasterMoneyChild = {
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-strauss-pile-jakarta.html": "Harga Jasa Borongan Strauss Pile Jakarta",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-strauss-pile-bogor.html": "Harga Jasa Borongan Strauss Pile Bogor",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-strauss-pile-depok.html": "Harga Jasa Borongan Strauss Pile Depok",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-strauss-pile-tangerang.html": "Harga Jasa Borongan Strauss Pile Tangerang",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-strauss-pile-bekasi.html": "Harga Jasa Borongan Strauss Pile Bekasi",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-strauss-pile-karawang.html": "Harga Jasa Borongan Strauss Pile Karawang"
+};
 const urlMappingJasaBorePileBetonFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-beton-terdekat.html": "Jasa Bore Pile Beton Terdekat",
   "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-beton-jakarta.html": "Jasa Bore Pile Beton Jakarta",
@@ -506,6 +522,8 @@ function restoreCondition(conditionId) {
 
         urlMappingJasaStraussPileFromMoneyMasterMoneyChild,
         urlMappingHargaJasaStraussPileFromMoneyMasterMoneyChild,
+        urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyChild,
+      
       
         urlMappingHargaJasaBorePileFromMoneyMaster1MoneyPage,
     
@@ -1058,7 +1076,32 @@ function initJasaPengeboranPost() {
             'JASA_KONSTRUKSI'
         );
     }
-    
+   if (urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyChild[cleanUrlJasaPengeboranPost]) {
+        generateBreadcrumbShared(
+            urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyChild,
+            cleanUrlJasaPengeboranPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
+                { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
+                { name: 'Jasa Borongan Strauss Pile', url: 'https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    if (urlMappingHargaJasaBoronganStraussPileFromMoneyMasterMoneyChild[cleanUrlJasaPengeboranPost]) {
+        generateBreadcrumbShared(
+            urlMappingHargaJasaBoronganStraussPileFromMoneyMasterMoneyChild,
+            cleanUrlJasaPengeboranPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
+                { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
+                { name: 'Harga Jasa Borongan Strauss Pile', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
     // ─── HARGA BORE PILE (MONEY_PAGE) ───
     if (urlMappingHargaJasaBorePileFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
         generateBreadcrumbShared(
