@@ -523,7 +523,7 @@ function restoreCondition(conditionId) {
         urlMappingJasaStraussPileFromMoneyMasterMoneyChild,
         urlMappingHargaJasaStraussPileFromMoneyMasterMoneyChild,
         urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyChild,
-      
+       urlMappingHargaJasaBoronganStraussPileFromMoneyMasterMoneyChild, 
       
         urlMappingHargaJasaBorePileFromMoneyMaster1MoneyPage,
     
