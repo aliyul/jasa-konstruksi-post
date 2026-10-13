@@ -135,12 +135,12 @@ const urlMappingJasaBoronganBorePileFromMoneyMasterMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-borongan-bore-pile-karawang.html": "Jasa Borongan Bore Pile Karawang"
 };
 const urlMappingHargaJasaBoronganBorePileFromMoneyMasterMoneyChild = {
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-jakarta.html": "Jasa Borongan Bore Pile Jakarta",
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-bogor.html": "Jasa Borongan Bore Pile Bogor",
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-depok.html": "Jasa Borongan Bore Pile Depok",
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-tangerang.html": "Jasa Borongan Bore Pile Tangerang",
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-bekasi.html": "Jasa Borongan Bore Pile Bekasi",
-  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-karawang.html": "Jasa Borongan Bore Pile Karawang"
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-jakarta.html": "Harga Jasa Borongan Bore Pile Jakarta",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-bogor.html": "Harga Jasa Borongan Bore Pile Bogor",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-depok.html": "Harga Jasa Borongan Bore Pile Depok",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-tangerang.html": "Harga Jasa Borongan Bore Pile Tangerang",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-bekasi.html": "Harga Jasa Borongan Bore Pile Bekasi",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-karawang.html": "Harga Jasa Borongan Bore Pile Karawang"
 };
 
 const urlMappingHargaJasaBorePileFromMoneyMaster1MoneyPage = {
