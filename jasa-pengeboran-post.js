@@ -126,6 +126,22 @@ const urlMappingHargaJasaBorePileFromMoneyMasterMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-karawang.html": "Harga Jasa Bore Pile Karawang",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bore-pile-surabaya.html": "Harga Jasa Bore Pile Surabaya"
 };
+const urlMappingJasaBoronganBorePileFromMoneyMasterMoneyChild = {
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-bore-pile-jakarta.html": "Jasa Borongan Bore Pile Jakarta",
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-bore-pile-bogor.html": "Jasa Borongan Bore Pile Bogor",
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-bore-pile-depok.html": "Jasa Borongan Bore Pile Depok",
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-bore-pile-tangerang.html": "Jasa Borongan Bore Pile Tangerang",
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-bore-pile-bekasi.html": "Jasa Borongan Bore Pile Bekasi",
+  "https://www.betonjayareadymix.com/2019/08/jasa-borongan-bore-pile-karawang.html": "Jasa Borongan Bore Pile Karawang"
+};
+const urlMappingHargaJasaBoronganBorePileFromMoneyMasterMoneyChild = {
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-jakarta.html": "Jasa Borongan Bore Pile Jakarta",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-bogor.html": "Jasa Borongan Bore Pile Bogor",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-depok.html": "Jasa Borongan Bore Pile Depok",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-tangerang.html": "Jasa Borongan Bore Pile Tangerang",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-bekasi.html": "Jasa Borongan Bore Pile Bekasi",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-karawang.html": "Jasa Borongan Bore Pile Karawang"
+};
 
 const urlMappingHargaJasaBorePileFromMoneyMaster1MoneyPage = {
 //  redirect "https://www.betonjayareadymix.com/2019/08/harga-jasa-auger-bore-pile.html": "Harga Jasa Auger Bore Pile",
@@ -482,6 +498,9 @@ function restoreCondition(conditionId) {
         urlMappingJasaBorePileFromMoneyMaster1MoneyPage,
         urlMappingJasaBorePileFromMoneyMaster1MoneyChild,
         urlMappingHargaJasaBorePileFromMoneyMasterMoneyChild,
+        urlMappingJasaBoronganBorePileFromMoneyMasterMoneyChild,
+        urlMappingHargaJasaBoronganBorePileFromMoneyMasterMoneyChild,
+      
         urlMappingJasaBorePileMurahFromMoneyMasterMoneyChild,
         urlMappingHargaJasaBorePileMurahFromMoneyMasterMoneyChild,
 
@@ -954,7 +973,36 @@ function initJasaPengeboranPost() {
             'JASA_KONSTRUKSI'
         );
     }
-    
+
+  
+    // ─── BORONGAN BORE PILE (MONEY_CHILD) ───
+    if (urlMappingJasaBoronganBorePileFromMoneyMasterMoneyChild[cleanUrlJasaPengeboranPost]) {
+        generateBreadcrumbShared(
+            urlMappingJasaBoronganBorePileFromMoneyMasterMoneyChild,
+            cleanUrlJasaPengeboranPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
+                { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
+                { name: 'Jasa Borongan Bore Pile', url: 'https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+  if (urlMappingHargaJasaBoronganBorePileFromMoneyMasterMoneyChild[cleanUrlJasaPengeboranPost]) {
+        generateBreadcrumbShared(
+            urlMappingHargaJasaBoronganBorePileFromMoneyMasterMoneyChild,
+            cleanUrlJasaPengeboranPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
+                { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
+                { name: 'Harga Jasa Borongan Bore Pile', url: 'https://www.betonjayareadymix.com/p/harga-jasa-borongan-bore-pile.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
       // ─── BORE PILE (MONEY_CHILD) ───
     if (urlMappingJasaBorePileMurahFromMoneyMasterMoneyChild[cleanUrlJasaPengeboranPost]) {
         generateBreadcrumbShared(
