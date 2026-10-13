@@ -447,8 +447,6 @@ const urlMappingJasaPengeboranFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/tukang-sumur-bor.html": "Tukang Sumur Bor",
 	
   "https://www.betonjayareadymix.com/p/jasa-bor.html": "Jasa Bor",
-  "https://www.betonjayareadymix.com/p/jasa-bor-sumur.html": "Jasa Bor Sumur",
-  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah.html": "Jasa Bor Sumur Murah", 
   "https://www.betonjayareadymix.com/p/jasa-bore-pile.html": "Jasa Bore Pile",
    "https://www.betonjayareadymix.com/p/jasa-strauss-pile.html": "Jasa Strauss Pile",
      "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile.html": "Jasa Borongan Strauss Pile",  
@@ -465,9 +463,6 @@ const urlMappingJasaPengeboranFromSub1MoneyMaster = {
 };
 const urlMappingHargaJasaPengeboranFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/harga-jasa-bor.html": "Harga Jasa Bor",
-  
-  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah.html": "Harga Jasa Bor Sumur Murah", 
-  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",
 
   "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile", 
   
@@ -486,6 +481,8 @@ const urlMappingHargaJasaPengeboranFromSub1MoneyMaster = {
 
 
 const urlMappingJasaBorFromMoneyMasterMoneyPage= {
+   "https://www.betonjayareadymix.com/p/jasa-bor-sumur.html": "Jasa Bor Sumur",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah.html": "Jasa Bor Sumur Murah", 
   //MP — Metode (pembeda cara)
    "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal",
  "https://www.betonjayareadymix.com/p/jasa-bor-hidrolik.html": "Jasa Bor Hidrolik", 
@@ -523,6 +520,8 @@ const urlMappingJasaBorFromMoneyMasterMoneyPage= {
 	
 };
 const urlMappingHargaJasaBorFromMoneyMasterMoneyPage = {
+"https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah.html": "Harga Jasa Bor Sumur Murah", 
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",	
   "https://www.betonjayareadymix.com/p/harga-jasa-bor-horizontal.html": "Harga Jasa Bor Horizontal",
 
 	  "https://www.betonjayareadymix.com/p/harga-jasa-bor-beton.html": "Harga Jasa Bor Beton",  
