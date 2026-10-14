@@ -526,7 +526,7 @@ function restoreCondition(conditionId) {
         urlMappingHargaJasaBorSumurFromMoneyPageVariant,
         urlMappingHargaJasaBorSumurFromVariantSubVariant,
         urlMappingJasaBorSumurFromMoneyPageVariant,
-        urlMappingJasaBorSumurFromVariantSubVariant
+        urlMappingJasaBorSumurFromVariantSubVariant,
         urlMappingJasaBorSumurFromMoneyPageMoneyChild,
         urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild,
         urlMappingJasaBorePileFromMoneyMaster1MoneyPage,
@@ -774,7 +774,7 @@ function initJasaPengeboranPost() {
             'JASA_KONSTRUKSI'
         );
     }
-      if (urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild[cleanUrlJasaPengeboranPost]) {
+    if (urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild[cleanUrlJasaPengeboranPost]) {
         generateBreadcrumbShared(
             urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild,
             cleanUrlJasaPengeboranPost,
