@@ -492,7 +492,7 @@ const urlMappingJasaBorFromMoneyMasterMoneyPage= {
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-dalam.html": "Jasa Sumur Bor Dalam",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-dangkal.html": "Jasa Sumur Bor Dangkal",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-proyek.html": "Jasa Sumur Bor Proyek",
-  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-borongan.html": "Jasa Sumur Bor Borongan"
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-borongan.html": "Jasa Sumur Bor Borongan",
 
   //MP — Metode (pembeda cara)
    "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal",
