@@ -487,8 +487,7 @@ const urlMappingJasaBorFromMoneyMasterMoneyPage= {
   "https://www.betonjayareadymix.com/p/faktor-penentu-biaya-jasa-bor-sumur.html": "Faktor Penentu Biaya Jasa Bor Sumur",
   "https://www.betonjayareadymix.com/p/spesifikasi-jasa-sumur-bor.html": "Spesifikasi Jasa Sumur Bor",
   "https://www.betonjayareadymix.com/p/mutu-jasa-sumur-bor.html": "Mutu Jasa Sumur Bor",
-
-  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-per-meter.html": "Jasa Sumur Bor Per Meter",
+	
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-dalam.html": "Jasa Sumur Bor Dalam",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-dangkal.html": "Jasa Sumur Bor Dangkal",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-proyek.html": "Jasa Sumur Bor Proyek",
