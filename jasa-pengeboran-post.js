@@ -699,7 +699,7 @@ function initJasaPengeboranPost() {
     // ─── HARGA BOR SUMUR (VARIANT SUB VARIANT) ───
   if (urlMappingHargaJasaBorSumurFromMoneyPageVariant[cleanUrlJasaPengeboranPost]) {
         generateBreadcrumbShared(
-            urlMappinghargaJasaBorSumurFromMoneyPageVariant,
+            urlMappingHargaJasaBorSumurFromMoneyPageVariant,
             cleanUrlJasaPengeboranPost,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
