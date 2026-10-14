@@ -72,7 +72,17 @@ const urlMappingHargaJasaBorSumurFromVariantSubVariant = {
 };
 
 const urlMappingJasaBorSumurFromMoneyPageVariant = {
-    "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-per-meter.html": "Jasa Sumur Bor Per Meter"
+    "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-per-meter.html": "Jasa Sumur Bor Per Meter",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-manual.html": "Jasa Bor Sumur Manual",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-hidrolik.html": "Jasa Bor Sumur Hidrolik",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-rotary.html": "Jasa Bor Sumur Rotary",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-auger.html": "Jasa Bor Sumur Auger",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-jet-pump.html": "Jasa Bor Sumur Jet Pump",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-artesis.html": "Jasa Bor Sumur Artesis",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-rumahan.html": "Jasa Bor Sumur Rumahan",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-komersial.html": "Jasa Bor Sumur Komersial",
+    "https://www.betonjayareadymix.com/2019/08/jasa-bor-sumur-industri.html": "Jasa Bor Sumur Industri"
+  
 };
 const urlMappingJasaBorSumurFromVariantSubVariant = {
    "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-150-meter.html": "Jasa Sumur Bor 150 Meter",
