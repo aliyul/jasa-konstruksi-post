@@ -481,13 +481,14 @@ const urlMappingHargaJasaPengeboranFromSub1MoneyMaster = {
 
 
 const urlMappingJasaBorFromMoneyMasterMoneyPage= {
-//bor sumur
+//bor sumur fokus informasi
    "https://www.betonjayareadymix.com/p/jasa-bor-sumur.html": "Jasa Bor Sumur",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah.html": "Jasa Bor Sumur Murah", 
   "https://www.betonjayareadymix.com/p/faktor-penentu-biaya-jasa-bor-sumur.html": "Faktor Penentu Biaya Jasa Bor Sumur",
   "https://www.betonjayareadymix.com/p/spesifikasi-jasa-sumur-bor.html": "Spesifikasi Jasa Sumur Bor",
   "https://www.betonjayareadymix.com/p/mutu-jasa-sumur-bor.html": "Mutu Jasa Sumur Bor",
-	
+
+  //fokus gabung
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-dalam.html": "Jasa Sumur Bor Dalam",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-dangkal.html": "Jasa Sumur Bor Dangkal",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-proyek.html": "Jasa Sumur Bor Proyek",
@@ -530,11 +531,13 @@ const urlMappingJasaBorFromMoneyMasterMoneyPage= {
 	
 };
 const urlMappingHargaJasaBorFromMoneyMasterMoneyPage = {
+//fokus harga
 "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah.html": "Harga Jasa Bor Sumur Murah", 
-  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",	
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",
+	
   "https://www.betonjayareadymix.com/p/harga-jasa-bor-horizontal.html": "Harga Jasa Bor Horizontal",
 
-	  "https://www.betonjayareadymix.com/p/harga-jasa-bor-beton.html": "Harga Jasa Bor Beton",  
+  "https://www.betonjayareadymix.com/p/harga-jasa-bor-beton.html": "Harga Jasa Bor Beton",  
   "https://www.betonjayareadymix.com/p/harga-jasa-bor-tanah.html": "Harga Jasa Bor Tanah",  
   "https://www.betonjayareadymix.com/p/harga-jasa-bor-dinding.html": "Harga Jasa Bor Dinding",
   
@@ -559,7 +562,6 @@ const urlMappingHargaJasaBorFromMoneyMasterMoneyPage = {
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-per-titik.html": "Harga Jasa Bor Per Titik",
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-rotary.html": "Harga Jasa Bor Rotary",
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-auger.html": "Harga Jasa Bor Auger"
-	
 };
 
 const urlMappingJasaBorePileFromMoneyMasterMoneyPage= { 
