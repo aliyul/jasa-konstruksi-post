@@ -23,6 +23,7 @@ const urlMappingJasaBorFromMoneyMasterMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-surabaya.html": "Jasa Bor Surabaya"
 };
 const urlMappingHargaJasaBorFromMoneyMasterMoneyChild = {
+  /* redirect jika sudah terindex
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-jakarta.html": "Harga Jasa Bor Jakarta",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-bogor.html": "Harga Jasa Bor Bogor",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-depok.html": "Harga Jasa Bor Depok",
@@ -30,6 +31,7 @@ const urlMappingHargaJasaBorFromMoneyMasterMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-bekasi.html": "Harga Jasa Bor Bekasi",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-karawang.html": "Harga Jasa Bor Karawang",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-surabaya.html": "Harga Jasa Bor Surabaya"
+  */
 };
 
 // ============================================================
@@ -339,6 +341,7 @@ const urlMappingJasaCoringBetonFromMoneyMaster1MoneyChild = {
 };
 
 const urlMappingHargaJasaCoringBetonFromMoneyPageMoneyChild = {
+  /* KONTEN GABUNG
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-coring-beton-terdekat.html": "Harga Jasa Coring Beton Terdekat",
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-coring-beton-jakarta.html": "Harga Jasa Coring Beton Jakarta",
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-coring-beton-bogor.html": "Harga Jasa Coring Beton Bogor",
@@ -346,6 +349,8 @@ const urlMappingHargaJasaCoringBetonFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-coring-beton-tangerang.html": "Harga Jasa Coring Beton Tangerang",
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-coring-beton-bekasi.html": "Harga Jasa Coring Beton Bekasi",
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-coring-beton-karawang.html": "Harga Jasa Coring Beton Karawang"
+  */
+  
 };
 
 const urlMappingJasaCoringBetonFromMoneyMaster1Variant = {};
@@ -530,7 +535,7 @@ function restoreCondition(conditionId) {
 
     // Kumpulkan semua mapping ke array (hindari Object.assign)
     var ALL_MAPPINGS_ARRAY = [
-        urlMappingHargaJasaBorFromMoneyMasterMoneyChild,
+        urlMappingJasaBorFromMoneyMasterMoneyChild,
       
         urlMappingJasaBorSumurFromMoneyMaster1MoneyPage,
         urlMappingJasaBorSumurFromMoneyMaster1Variant,
