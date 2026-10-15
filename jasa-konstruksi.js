@@ -900,7 +900,7 @@ const urlMappingJasaCoringFromMoneyMasterMoneyPage = {
 	
 };
 const urlMappingHargaJasaCoringFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-coring-beton.html": "Harga Jasa Coring Beton"
+ // KONTEN GABUNG GA PERLU "https://www.betonjayareadymix.com/p/harga-jasa-coring-beton.html": "Harga Jasa Coring Beton"
 	
 	
 };
