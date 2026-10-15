@@ -494,6 +494,7 @@ const urlMappingJasaBorFromMoneyMasterMoneyPage= {
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-proyek.html": "Jasa Sumur Bor Proyek",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-borongan.html": "Jasa Sumur Bor Borongan",
 
+	//fokus gabung
   //MP — Metode (pembeda cara)
    "https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html": "Jasa Bor Horizontal",
  "https://www.betonjayareadymix.com/p/jasa-bor-hidrolik.html": "Jasa Bor Hidrolik", 
@@ -533,9 +534,10 @@ const urlMappingJasaBorFromMoneyMasterMoneyPage= {
 const urlMappingHargaJasaBorFromMoneyMasterMoneyPage = {
 //fokus harga
 "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah.html": "Harga Jasa Bor Sumur Murah", 
-  "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur",
+"https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur"
 	
-  "https://www.betonjayareadymix.com/p/harga-jasa-bor-horizontal.html": "Harga Jasa Bor Horizontal",
+ /* ga perlu karna udah gabung konten harga informasi comercial 
+ "https://www.betonjayareadymix.com/p/harga-jasa-bor-horizontal.html": "Harga Jasa Bor Horizontal",
 
   "https://www.betonjayareadymix.com/p/harga-jasa-bor-beton.html": "Harga Jasa Bor Beton",  
   "https://www.betonjayareadymix.com/p/harga-jasa-bor-tanah.html": "Harga Jasa Bor Tanah",  
@@ -562,6 +564,8 @@ const urlMappingHargaJasaBorFromMoneyMasterMoneyPage = {
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-per-titik.html": "Harga Jasa Bor Per Titik",
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-rotary.html": "Harga Jasa Bor Rotary",
 	"https://www.betonjayareadymix.com/p/harga-jasa-bor-auger.html": "Harga Jasa Bor Auger"
+ */
+	
 };
 
 const urlMappingJasaBorePileFromMoneyMasterMoneyPage= { 
