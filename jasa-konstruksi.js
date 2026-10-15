@@ -444,9 +444,7 @@ const urlMappingJasaPengeboranBridgeFromSub2Sub1 = {
 };
 const urlMappingJasaPengeboranFromSub1MoneyMaster = {
  // "https://www.betonjayareadymix.com/p/jasa-pengeboran.html": "Jasa Pengeboran",
-  "https://www.betonjayareadymix.com/p/tukang-sumur-bor.html": "Tukang Sumur Bor",
-	
-  "https://www.betonjayareadymix.com/p/jasa-bor.html": "Jasa Bor",
+
   "https://www.betonjayareadymix.com/p/jasa-bore-pile.html": "Jasa Bore Pile",
    "https://www.betonjayareadymix.com/p/jasa-strauss-pile.html": "Jasa Strauss Pile",
      "https://www.betonjayareadymix.com/p/jasa-borongan-strauss-pile.html": "Jasa Borongan Strauss Pile",  
@@ -454,6 +452,8 @@ const urlMappingJasaPengeboranFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-bore-pile-murah.html": "Jasa Bore Pile Murah",  
 
   //KONTEN GABUNG
+   "https://www.betonjayareadymix.com/p/tukang-sumur-bor.html": "Tukang Sumur Bor",
+    "https://www.betonjayareadymix.com/p/jasa-bor.html": "Jasa Bor",
   "https://www.betonjayareadymix.com/p/jasa-coring.html": "Jasa Coring"
 
 //  "https://www.betonjayareadymix.com/p/jasa-pengeboran-bore-pile.html": "Jasa Pengeboran Bore Pile",	
