@@ -453,7 +453,7 @@ const urlMappingJasaPengeboranFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-borongan-bore-pile.html": "Jasa Borongan Bore Pile", 
   "https://www.betonjayareadymix.com/p/jasa-bore-pile-murah.html": "Jasa Bore Pile Murah",  
 
-  //MM INFORMASI JASA CORING BETON
+  //KONTEN GABUNG
   "https://www.betonjayareadymix.com/p/jasa-coring.html": "Jasa Coring"
 
 //  "https://www.betonjayareadymix.com/p/jasa-pengeboran-bore-pile.html": "Jasa Pengeboran Bore Pile",	
@@ -466,7 +466,8 @@ const urlMappingHargaJasaPengeboranFromSub1MoneyMaster = {
 
   "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile", 
   
-  "https://www.betonjayareadymix.com/p/harga-jasa-coring.html": "Harga Jasa Coring",
+ // konten gabung ga perlu "https://www.betonjayareadymix.com/p/harga-jasa-coring.html": "Harga Jasa Coring",
+	
     "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile.html": "Harga Jasa Strauss Pile",  
   "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile-murah.html": "Harga Jasa Bore Pile Murah",  
   "https://www.betonjayareadymix.com/p/harga-jasa-borongan-strauss-pile.html": "Harga Jasa Borongan Strauss Pile",  
