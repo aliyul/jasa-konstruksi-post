@@ -462,7 +462,7 @@ const urlMappingJasaPengeboranFromSub1MoneyMaster = {
 
 };
 const urlMappingHargaJasaPengeboranFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-bor.html": "Harga Jasa Bor",
+//gabung ga perlu  "https://www.betonjayareadymix.com/p/harga-jasa-bor.html": "Harga Jasa Bor",
 
   "https://www.betonjayareadymix.com/p/harga-jasa-bore-pile.html": "Harga Jasa Bore Pile", 
   
@@ -483,13 +483,14 @@ const urlMappingHargaJasaPengeboranFromSub1MoneyMaster = {
 
 const urlMappingJasaBorFromMoneyMasterMoneyPage= {
 //bor sumur fokus informasi
-   "https://www.betonjayareadymix.com/p/jasa-bor-sumur.html": "Jasa Bor Sumur",
-  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah.html": "Jasa Bor Sumur Murah", 
   "https://www.betonjayareadymix.com/p/faktor-penentu-biaya-jasa-bor-sumur.html": "Faktor Penentu Biaya Jasa Bor Sumur",
   "https://www.betonjayareadymix.com/p/spesifikasi-jasa-sumur-bor.html": "Spesifikasi Jasa Sumur Bor",
   "https://www.betonjayareadymix.com/p/mutu-jasa-sumur-bor.html": "Mutu Jasa Sumur Bor",
 
   //fokus gabung
+     "https://www.betonjayareadymix.com/p/jasa-bor-sumur.html": "Jasa Bor Sumur",
+  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah.html": "Jasa Bor Sumur Murah", 
+	
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-dalam.html": "Jasa Sumur Bor Dalam",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-dangkal.html": "Jasa Sumur Bor Dangkal",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-proyek.html": "Jasa Sumur Bor Proyek",
@@ -533,10 +534,11 @@ const urlMappingJasaBorFromMoneyMasterMoneyPage= {
 	
 };
 const urlMappingHargaJasaBorFromMoneyMasterMoneyPage = {
-//fokus harga
+//fokus harga tapi udah gabung jadi ga usah
+/*
 "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur-murah.html": "Harga Jasa Bor Sumur Murah", 
 "https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html": "Harga Jasa Bor Sumur"
-	
+ */
  /* ga perlu karna udah gabung konten harga informasi comercial 
  "https://www.betonjayareadymix.com/p/harga-jasa-bor-horizontal.html": "Harga Jasa Bor Horizontal",
 
