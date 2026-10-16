@@ -58,9 +58,12 @@ const urlMappingTukangSumurBorFromMoneyMaster1MoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/tukang-sumur-bor-bogor.html": "Tukang Sumur Bor Bogor"
 };
 const urlMappingHargaJasaBorSumurFromMoneyPageVariant = {
+  /* HAPUS KARNA GABUNG
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-sumur-bor-per-meter.html": "Harga Jasa Sumur Bor Per Meter"
+  */
 };
 const urlMappingHargaJasaBorSumurFromVariantSubVariant = {
+  /* HAPUS KARNA KONTEN GABUNG
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-sumur-bor-150-meter.html": "Harga Jasa Sumur Bor 150 Meter",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-sumur-bor-100-meter.html": "Harga Jasa Sumur Bor 100 Meter",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-sumur-bor-60-meter.html": "Harga Jasa Sumur Bor 60 Meter",
@@ -70,6 +73,7 @@ const urlMappingHargaJasaBorSumurFromVariantSubVariant = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-sumur-bor-10-meter.html": "Harga Jasa Sumur Bor 10 Meter",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-sumur-bor-20-meter.html": "Harga Jasa Sumur Bor 20 Meter",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-sumur-bor-30-meter.html": "Harga Jasa Sumur Bor 30 Meter"
+  */
   
 };
 
@@ -119,6 +123,7 @@ const urlMappingJasaBorSumurFromMoneyPageMoneyChild = {
 
 };
 const urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild = {
+  /* HAPUS KARNA GANBUNG
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-terdekat.html": "Harga Jasa Bor Sumur Terdekat",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-jakarta.html": "Harga Jasa Bor Sumur Jakarta",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-bogor.html": "Harga Jasa Bor Sumur Bogor",
@@ -127,6 +132,7 @@ const urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-bekasi.html": "Harga Jasa Bor Sumur Bekasi",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-karawang.html": "Harga Jasa Bor Sumur Karawang",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-surabaya.html": "Harga Jasa Bor Sumur Surabaya"
+  */
 };
 
 // ============================================================
