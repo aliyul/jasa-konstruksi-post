@@ -125,7 +125,7 @@ const urlMappingJasaBorSumurFromMoneyPageMoneyChild = {
 
 };
 const urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild = {
-  /* HAPUS KARNA GANBUNG
+  // KONTEN GANBUNG DENGAN INFORMASI
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-terdekat.html": "Harga Jasa Bor Sumur Terdekat",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-jakarta.html": "Harga Jasa Bor Sumur Jakarta",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-bogor.html": "Harga Jasa Bor Sumur Bogor",
@@ -134,7 +134,6 @@ const urlMappingHargaJasaBorSumurFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-bekasi.html": "Harga Jasa Bor Sumur Bekasi",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-karawang.html": "Harga Jasa Bor Sumur Karawang",
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-bor-sumur-surabaya.html": "Harga Jasa Bor Sumur Surabaya"
-  */
 };
 
 // ============================================================
@@ -808,8 +807,8 @@ function initJasaPengeboranPost() {
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Harga Jasa Bor', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor.html' },
-                { name: 'Harga Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bor-sumur.html' }
+                { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
+                { name: 'Jasa Bor Sumur', url: 'https://www.betonjayareadymix.com/p/jasa-bor-sumur.html' }
             ],
             'JASA_KONSTRUKSI'
         );
