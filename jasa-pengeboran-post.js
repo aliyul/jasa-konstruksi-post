@@ -10,8 +10,6 @@
 // ============================================================
 // [SUB2] - TUKANG BOR (KATEGORI)
 // ============================================================
-const urlMappingJasaTukangBorFromMoneyMaster1MoneyChild = {
-};
 
 const urlMappingJasaBorFromMoneyMasterMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-jakarta.html": "Jasa Bor Jakarta",
@@ -179,10 +177,7 @@ const urlMappingHargaJasaBoronganBorePileFromMoneyMasterMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/harga-jasa-borongan-bore-pile-karawang.html": "Harga Jasa Borongan Bore Pile Karawang"
 };
 
-const urlMappingHargaJasaBorePileFromMoneyMaster1MoneyPage = {
-//  redirect "https://www.betonjayareadymix.com/2019/08/harga-jasa-auger-bore-pile.html": "Harga Jasa Auger Bore Pile",
-// redirect  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pengeboran-strauss-pile.html": "Harga Jasa Pengeboran Strauss Pile"
-};
+
 const urlMappingJasaBorePileMurahFromMoneyMasterMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-murah-jakarta.html": "Jasa Bore Pile Murah Jakarta",
   "https://www.betonjayareadymix.com/2019/08/jasa-bore-pile-murah-bogor.html": "Jasa Bore Pile Murah Bogor",
@@ -364,7 +359,6 @@ const urlMappingHargaJasaCoringBetonFromMoneyPageMoneyChild = {
   
 };
  */
-const urlMappingJasaCoringBetonFromMoneyMaster1Variant = {};
 
   /* konten gabung
 const urlMappingHargaJasaBorBetonFromMoneyPageMoneyChild = {
@@ -439,9 +433,8 @@ const urlMappingJasaBorTanahFromMoneyMaster1Variant = {};
 // ============================================================
 // [SUB2] - JASA BOR HORIZONTAL (KATEGORI)
 // ============================================================
-const urlMappingJasaBorHorizontalFromMoneyMaster1MoneyPage = {};
 
-const urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild = {
+const urlMappingJasaBorHorizontalFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-surabaya.html": "Jasa Bor Horizontal Surabaya",
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-karawang.html": "Jasa Bor Horizontal Karawang",
   "https://www.betonjayareadymix.com/2019/08/jasa-bor-horizontal-bekasi.html": "Jasa Bor Horizontal Bekasi",
@@ -562,8 +555,6 @@ function restoreCondition(conditionId) {
         urlMappingHargaJasaStraussPileFromMoneyMasterMoneyChild,
         urlMappingJasaBoronganStraussPileFromMoneyMasterMoneyChild,
        urlMappingHargaJasaBoronganStraussPileFromMoneyMasterMoneyChild, 
-      
-        urlMappingHargaJasaBorePileFromMoneyMaster1MoneyPage,
     
         urlMappingJasaBorePileBetonFromMoneyPageMoneyChild,
         urlMappingHargaJasaBorePileBetonFromMoneyPageMoneyChild,
@@ -581,9 +572,7 @@ function restoreCondition(conditionId) {
         urlMappingJasaCoringBetonFromMoneyPageVariant,
        urlMappingJasaCoringBetonFromVariantSubVariant,
       urlMappingJasaCoringBetonFromMoneyPageMoneyChild,
-        urlMappingHargaJasaCoringBetonFromMoneyPageMoneyChild,
-        urlMappingJasaCoringBetonFromMoneyMaster1Variant,
-
+   
         urlMappingJasaBorBetonFromMoneyMaster1MoneyChild,
         urlMappingJasaBorBetonFromMoneyMaster1Variant,
         urlMappingJasaBorTanahFromMoneyPageVariant,
@@ -592,9 +581,9 @@ function restoreCondition(conditionId) {
         urlMappingJasaBorTanahFromMoneyMaster1MoneyChild,
         urlMappingJasaBorTanahDalamFromVariantSubVariant,
         urlMappingJasaBorTanahFromMoneyMaster1Variant,
-        urlMappingJasaBorHorizontalFromMoneyMaster1MoneyPage,
-        urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild,
-        urlMappingJasaTukangBorFromMoneyMaster1MoneyChild
+
+        urlMappingJasaBorHorizontalFromMoneyPageMoneyChild
+ 
     ];
 
     // Merge array of objects → 1 object flat
@@ -1148,21 +1137,7 @@ function initJasaPengeboranPost() {
         );
     }
     // ─── HARGA BORE PILE (MONEY_PAGE) ───
-    if (urlMappingHargaJasaBorePileFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
-        generateBreadcrumbShared(
-            urlMappingHargaJasaBorePileFromMoneyMaster1MoneyPage,
-            cleanUrlJasaPengeboranPost,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
-                { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Harga Jasa Bore Pile', url: 'https://www.betonjayareadymix.com/p/harga-jasa-bore-pile.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
 
-   
     // ─── BORE PILE BETON ───
     if (urlMappingJasaBorePileBetonFromMoneyPageMoneyChild[cleanUrlJasaPengeboranPost]) {
         generateBreadcrumbShared(
@@ -1238,49 +1213,23 @@ function initJasaPengeboranPost() {
     }
     
     // ─── BOR HORIZONTAL (MONEY_PAGE) ───
-    if (urlMappingJasaBorHorizontalFromMoneyMaster1MoneyPage[cleanUrlJasaPengeboranPost]) {
-        generateBreadcrumbShared(
-            urlMappingJasaBorHorizontalFromMoneyMaster1MoneyPage,
-            cleanUrlJasaPengeboranPost,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
-                { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-               { name: 'Jasa Bor Horizontal', url: 'https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-
     // ─── BOR HORIZONTAL (MONEY_CHILD) ───
-    if (urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild[cleanUrlJasaPengeboranPost]) {
+    if (urlMappingJasaBorHorizontalFromMoneyPageMoneyChild[cleanUrlJasaPengeboranPost]) {
         generateBreadcrumbShared(
-            urlMappingJasaBorHorizontalFromMoneyMaster1MoneyChild,
+            urlMappingJasaBorHorizontalFromMoneyPageMoneyChild,
             cleanUrlJasaPengeboranPost,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
                 { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
+                { name: 'Jasa Bor', url: 'https://www.betonjayareadymix.com/p/jasa-bor.html' },
                 { name: 'Jasa Bor Horizontal', url: 'https://www.betonjayareadymix.com/p/jasa-bor-horizontal.html' }
             ],
             'JASA_KONSTRUKSI'
         );
     }
 
-    // ─── TUKANG BOR (MONEY_CHILD) ───
-    if (urlMappingJasaTukangBorFromMoneyMaster1MoneyChild[cleanUrlJasaPengeboranPost]) {
-        generateBreadcrumbShared(
-            urlMappingJasaTukangBorFromMoneyMaster1MoneyChild,
-            cleanUrlJasaPengeboranPost,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html' },
-                { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html' },
-                { name: 'Jasa Tukang Bor', url: 'https://www.betonjayareadymix.com/p/jasa-tukang-bor.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
+   
 
     console.log('[jasa-pengeboran] ✅ Semua breadcrumb selesai diproses');
 }
