@@ -506,7 +506,11 @@ const urlMappingJasaBorFromMoneyMasterMoneyPage= {
 	"https://www.betonjayareadymix.com/p/jasa-bor-per-meter.html": "Jasa Bor Per Meter",
 	"https://www.betonjayareadymix.com/p/jasa-bor-per-titik.html": "Jasa Bor Per Titik",
 
-	"https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton",  
+	"https://www.betonjayareadymix.com/p/jasa-bor-beton.html": "Jasa Bor Beton", 
+	  "https://www.betonjayareadymix.com/p/spesifikasi-jasa-bor-beton.html": "Spesifikasi Jasa Bor Beton",
+  "https://www.betonjayareadymix.com/p/ukuran-jasa-bor-beton.html": "Ukuran Jasa Bor Beton",
+  "https://www.betonjayareadymix.com/p/jasa-bor-beton-per-lubang.html": "Jasa Bor Beton Per Lubang",
+  "https://www.betonjayareadymix.com/p/jasa-bor-beton-bertulang.html": "Jasa Bor Beton Bertulang",
 	
   "https://www.betonjayareadymix.com/p/jasa-bor-tanah.html": "Jasa Bor Tanah",  
   "https://www.betonjayareadymix.com/p/spesifikasi-jasa-bor-tanah.html": "Spesifikasi Jasa Bor Tanah",
