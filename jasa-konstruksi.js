@@ -885,6 +885,10 @@ const urlMappingTukangSumurBorFromMoneyMasterMoneyPage = {
 
 const urlMappingJasaCoringFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-coring-beton.html": "Jasa Coring Beton",
+ "https://www.betonjayareadymix.com/p/pengeboran-beton-instalasi-pipa.html": "Pengeboran Beton Instalasi Pipa",
+  "https://www.betonjayareadymix.com/p/spesifikasi-jasa-coring-beton.html": "Spesifikasi Jasa Coring Beton",
+  "https://www.betonjayareadymix.com/p/ukuran-jasa-coring-beton.html": "Ukuran Jasa Coring Beton",
+	  
   "https://www.betonjayareadymix.com/p/jasa-coring-dinding.html": "Jasa Coring Dinding",
   "https://www.betonjayareadymix.com/p/jasa-coring-lantai.html": "Jasa Coring Lantai",
   "https://www.betonjayareadymix.com/p/jasa-coring-manual.html": "Jasa Coring Manual",
