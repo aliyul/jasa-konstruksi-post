@@ -1,4 +1,4 @@
- // Cek URL saat ini dan sesuaikan dengan kondisi yang diinginkan
+// Cek URL saat ini dan sesuaikan dengan kondisi yang diinginkan
 // ============================================================
 // 🔍 ENTITY TYPE: JASA
 // ATURAN: JASA TIDAK BOLEH MENGGUNAKAN MONEY_MASTER
@@ -524,7 +524,6 @@ const urlMappingJasaBorFromMoneyMasterMoneyPage= {
 	"https://www.betonjayareadymix.com/p/jasa-bor-plat.html": "Jasa Bor Plat",
 	"https://www.betonjayareadymix.com/p/jasa-bor-lantai.html": "Jasa Bor Lantai",
 	"https://www.betonjayareadymix.com/p/jasa-bor-besi.html": "Jasa Bor Besi",
-//	"https://www.betonjayareadymix.com/p/jasa-bor-pondasi.html": "Jasa Bor Pondasi",
 	"https://www.betonjayareadymix.com/p/jasa-bor-baja.html": "Jasa Bor Baja",
 	"https://www.betonjayareadymix.com/p/jasa-bor-kaca.html": "Jasa Bor Kaca",
 	"https://www.betonjayareadymix.com/p/jasa-bor-batu.html": "Jasa Bor Batu",
