@@ -93,6 +93,7 @@ const urlMappingJasaBorSumurFromMoneyPageVariant = {
   
 };
 const urlMappingJasaBorSumurFromVariantSubVariant = {
+  /* ini INFORMASI ga perlu karna udah gabung ke harga
    "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-150-meter.html": "Jasa Sumur Bor 150 Meter",
   "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-100-meter.html": "Jasa Sumur Bor 100 Meter",
   "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-60-meter.html": "Jasa Sumur Bor 60 Meter",
@@ -102,7 +103,7 @@ const urlMappingJasaBorSumurFromVariantSubVariant = {
   "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-10-meter.html": "Jasa Sumur Bor 10 Meter",
   "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-20-meter.html": "Jasa Sumur Bor 20 Meter",
   "https://www.betonjayareadymix.com/2019/08/jasa-sumur-bor-30-meter.html": "Jasa Sumur Bor 30 Meter"
-
+ */
 };
 const urlMappingJasaBorSumurFromMoneyPageMoneyChild = {
  "https://www.betonjayareadymix.com/2019/08/jasa-bor-air-tanah-surabaya.html": "Jasa Bor Air Tanah Surabaya",
