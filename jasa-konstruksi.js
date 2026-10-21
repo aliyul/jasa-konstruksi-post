@@ -575,13 +575,11 @@ const urlMappingHargaJasaBorFromMoneyMasterMoneyPage = {
 };
 
 const urlMappingJasaBorePileFromMoneyMasterMoneyPage= { 
- "https://www.betonjayareadymix.com/p/jasa-bore-pile-beton.html": "Jasa Bore Pile Beton",
+"https://www.betonjayareadymix.com/p/jasa-bore-pile-beton.html": "Jasa Bore Pile Beton",
 "https://www.betonjayareadymix.com/p/jasa-bore-pile-mini.html": "Jasa Bore Pile Mini",
 "https://www.betonjayareadymix.com/p/metode-jasa-bore-pile.html": "Metode Jasa Bore Pile",
 "https://www.betonjayareadymix.com/p/mutu-jasa-bore-pile.html": "Mutu Jasa Bore Pile",
 "https://www.betonjayareadymix.com/p/spesifikasi-jasa-bore-pile.html": "Spesifikasi Jasa Bore Pile",
-	
- "https://www.betonjayareadymix.com/p/jasa-bore-pile-promo.html": "Jasa Bore Pile Promo",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-diskon.html": "Jasa Bore Pile Diskon",
 "https://www.betonjayareadymix.com/p/jasa-bore-pile-termurah.html": "Jasa Bore Pile Termurah",
  "https://www.betonjayareadymix.com/p/jasa-bore-pile-termahal.html": "Jasa Bore Pile Termahal",
@@ -772,10 +770,7 @@ const urlMappingJasaStraussPileFromMoneyMasterMoneyPage= {
  "https://www.betonjayareadymix.com/p/jasa-strauss-pile-40cm.html": "Jasa Strauss Pile 40cm",
 	
  "https://www.betonjayareadymix.com/p/jasa-strauss-pile-beton.html": "Jasa Strauss Pile Beton",
-// "https://www.betonjayareadymix.com/p/jasa-strauss-pile-besi.html": "Jasa Strauss Pile Besi",
-	
-// "https://www.betonjayareadymix.com/p/jasa-strauss-pile-promo.html": "Jasa Strauss Pile Promo",
- //"https://www.betonjayareadymix.com/p/jasa-strauss-pile-diskon.html": "Jasa Strauss Pile Diskon",
+
  "https://www.betonjayareadymix.com/p/jasa-strauss-pile-termurah.html": "Jasa Strauss Pile Termurah",
  "https://www.betonjayareadymix.com/p/jasa-strauss-pile-termahal.html": "Jasa Strauss Pile Termahal",
 	
@@ -805,8 +800,6 @@ const urlMappingHargaJasaStraussPileFromMoneyMasterMoneyPage= {
 	
  "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-beton.html": "Harga Jasa Strauss Pile Beton",
 
-// "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-promo.html": "Harga Jasa Strauss Pile Promo",
- //"https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-diskon.html": "Harga Jasa Strauss Pile Diskon",
  "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-termurah.html": "Harga Jasa Strauss Pile Termurah",
  "https://www.betonjayareadymix.com/p/harga-jasa-strauss-pile-termahal.html": "Harga Jasa Strauss Pile Termahal",
 	
