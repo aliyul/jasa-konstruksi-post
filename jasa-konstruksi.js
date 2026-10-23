@@ -1343,6 +1343,9 @@ const urlMappingHargaJasaKitchenSetFromMoneyMasterMoneyPage = {
 };
 
 const urlMappingJasaPembuatanFromSub1MoneyMaster = {
+	 "https://www.betonjayareadymix.com/p/jasa-pembuatan.html": "Jasa Pembuatan"
+};
+const urlMappingJasaPembuatanFromMoneyMasterMoneyPage = {
     // ================================================================
     // 📌 MONEY-MASTER (LEVEL 4) - JASA PEMBUATAN (HANYA KATEGORI UTAMA)
     // ================================================================
@@ -1361,7 +1364,9 @@ const urlMappingJasaPembuatanFromSub1MoneyMaster = {
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-pintu.html": "Jasa Pembuatan Pintu",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-jendela.html": "Jasa Pembuatan Jendela"
 };
+/*
 const urlMappingHargaJasaPembuatanFromSub1MoneyMaster = {
+  Gabung harga ke INFORMASI
     // ================================================================
     // 📌 MONEY-MASTER (LEVEL 4) - JASA PEMBUATAN (HANYA KATEGORI UTAMA)
     // ================================================================
@@ -1380,6 +1385,7 @@ const urlMappingHargaJasaPembuatanFromSub1MoneyMaster = {
     "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-pintu.html": "Harga Jasa Pembuatan Pintu",
     "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-jendela.html": "Harga Jasa Pembuatan Jendela"
 };
+*/
 
 const urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage = {
  "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-bangunan.html": "Harga Jasa Pembuatan Bangunan"  
@@ -1407,7 +1413,6 @@ const urlMappingJasaPembuatanRumahFromMoneyMaster2MoneyMaster3 = {
 // 📌 MONEY-PAGE (LEVEL 5) - HANYA UNTUK JENIS FURNITURE SPESIFIK
 // ================================================================
 const urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyPage = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-furniture.html": "Harga Jasa Pembuatan Furniture",
 	"https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture-custom.html": "Jasa Pembuatan Furniture Custom", // (Perbaiki URL yang 404)
 //"https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set",
 "https://www.betonjayareadymix.com/p/jasa-pembuatan-lemari-built-in.html": "Jasa Pembuatan Lemari Built In",
@@ -1423,53 +1428,11 @@ const urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyPage = {
 // 📋 TOTAL: 20 MONEY-MASTER (LEVEL 4)
 // ================================================================
 const urlMappingJasaPasangFromSub1MoneyMaster = {
-	//"https://www.betonjayareadymix.com/p/jasa-pasang.html": "Jasa Pasang"
-	//MM INFORMASI DAN HARGA TERPISAH
-	"https://www.betonjayareadymix.com/p/jasa-pasang-acp.html": "Jasa Pasang Acp",
-   "https://www.betonjayareadymix.com/p/jasa-pasang-batu.html": "Jasa Pasang Batu",
-   "https://www.betonjayareadymix.com/p/jasa-pasang-grc.html": "Jasa Pasang Grc",
-   "https://www.betonjayareadymix.com/p/jasa-pasang-kaca.html": "Jasa Pasang Kaca",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-woodplank.html": "Jasa Pasang WoodPlank",
-   "https://www.betonjayareadymix.com/p/jasa-pasang-hpl.html": "Jasa Pasang Hpl",
-    // ================================================================
-    // 📌 MONEY-MASTER (LEVEL 4) - HANYA KATEGORI UTAMA
-    // ================================================================
-    "https://www.betonjayareadymix.com/p/jasa-pasang-keramik.html": "Jasa Pasang Keramik",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html": "Jasa Pasang WPC",
-	 "https://www.betonjayareadymix.com/p/jasa-pasang-pvc.html": "Jasa Pasang PVC",
-    // 1. Lantai & Dinding (sebagai induk)
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html": "Jasa Pasang Lantai",
-	"https://www.betonjayareadymix.com/p/jasa-borongan-lantai.html": "Jasa Borongan Lantai",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-dinding.html": "Jasa Pasang Dinding",
-	 
-    // 2. Plafon & Atap
-    "https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html": "Jasa Pasang Plafon",
-    "https://www.betonjayareadymix.com/p/jasa-rangka-atap.html": "Jasa Rangka Atap",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-atap.html": "Jasa Pasang Atap",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-kanopi.html": "Jasa Pasang Kanopi",
-    
-    // 3. Furniture & Elemen Interior
-    "https://www.betonjayareadymix.com/p/jasa-pasang-furniture.html": "Jasa Pasang Furniture",
-   // "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-partisi.html": "Jasa Pasang Partisi",
-    
-    // 4. Kusen, Pintu, Jendela
-    "https://www.betonjayareadymix.com/p/jasa-pasang-kusen.html": "Jasa Pasang Kusen",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-pintu.html": "Jasa Pasang Pintu",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-jendela.html": "Jasa Pasang Jendela",
-    
-    // 5. Area Outdoor & Lanskap
-    "https://www.betonjayareadymix.com/p/jasa-pasang-decking.html": "Jasa Pasang Decking",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html": "Jasa Pasang Pagar",
-    // "https://www.betonjayareadymix.com/p/jasa-pasang-paving.html": "Jasa Pasang Paving",
-    
-    // 6. Utilitas & Teknologi
-    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html": "Jasa Pasang Lampu",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-cctv.html": "Jasa Pasang CCTV",
-    "https://www.betonjayareadymix.com/p/jasa-pasang-ac.html": "Jasa Pasang AC"
-
+    "https://www.betonjayareadymix.com/p/jasa-pasang.html": "Jasa Pasang"
 };
-//FOKUS HARGA
+
+/*
+//FOKUS HARGA TAPI UDAH GABUNG KE INFORMASI
 const urlMappinghargaJasaPasangFromSub1MoneyMaster = {
 	//"https://www.betonjayareadymix.com/p/jasa-pasang.html": "Jasa Pasang"
 	//MM INFORMASI DAN HARGA TERPISAH
@@ -1517,9 +1480,53 @@ const urlMappinghargaJasaPasangFromSub1MoneyMaster = {
     "https://www.betonjayareadymix.com/p/harga-jasa-pasang-ac.html": "Harga Jasa Pasang AC"
 
 };
+*/
 
-const urlMappingJasaPasangFromMoneyMasterMoneyMaster1 = {
+const urlMappingJasaPasangFromMoneyMasterMoneyPage = {
+  //MM INFORMASI DAN HARGA TERPISAH
+	"https://www.betonjayareadymix.com/p/jasa-pasang-acp.html": "Jasa Pasang Acp",
+   "https://www.betonjayareadymix.com/p/jasa-pasang-batu.html": "Jasa Pasang Batu",
+   "https://www.betonjayareadymix.com/p/jasa-pasang-grc.html": "Jasa Pasang Grc",
+   "https://www.betonjayareadymix.com/p/jasa-pasang-kaca.html": "Jasa Pasang Kaca",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-woodplank.html": "Jasa Pasang WoodPlank",
+   "https://www.betonjayareadymix.com/p/jasa-pasang-hpl.html": "Jasa Pasang Hpl",
+    // ================================================================
+    // 📌 MONEY-MASTER (LEVEL 4) - HANYA KATEGORI UTAMA
+    // ================================================================
+    "https://www.betonjayareadymix.com/p/jasa-pasang-keramik.html": "Jasa Pasang Keramik",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html": "Jasa Pasang WPC",
+	 "https://www.betonjayareadymix.com/p/jasa-pasang-pvc.html": "Jasa Pasang PVC",
+    // 1. Lantai & Dinding (sebagai induk)
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html": "Jasa Pasang Lantai",
+	"https://www.betonjayareadymix.com/p/jasa-borongan-lantai.html": "Jasa Borongan Lantai",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-dinding.html": "Jasa Pasang Dinding",
+	 
+    // 2. Plafon & Atap
+    "https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html": "Jasa Pasang Plafon",
+    "https://www.betonjayareadymix.com/p/jasa-rangka-atap.html": "Jasa Rangka Atap",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-atap.html": "Jasa Pasang Atap",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-kanopi.html": "Jasa Pasang Kanopi",
+    
+    // 3. Furniture & Elemen Interior
+    "https://www.betonjayareadymix.com/p/jasa-pasang-furniture.html": "Jasa Pasang Furniture",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-partisi.html": "Jasa Pasang Partisi",
+    
+    // 4. Kusen, Pintu, Jendela
+    "https://www.betonjayareadymix.com/p/jasa-pasang-kusen.html": "Jasa Pasang Kusen",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-pintu.html": "Jasa Pasang Pintu",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-jendela.html": "Jasa Pasang Jendela",
+    
+    // 5. Area Outdoor & Lanskap
+    "https://www.betonjayareadymix.com/p/jasa-pasang-decking.html": "Jasa Pasang Decking",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html": "Jasa Pasang Pagar",
+ 
+    // 6. Utilitas & Teknologi
+    "https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html": "Jasa Pasang Lampu",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-cctv.html": "Jasa Pasang CCTV",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-ac.html": "Jasa Pasang AC"
 
+	   // "https://www.betonjayareadymix.com/p/jasa-pasang-paving.html": "Jasa Pasang Paving",
+       // "https://www.betonjayareadymix.com/p/jasa-pasang-kitchen-set.html": "Jasa Pasang Kitchen Set",
 };
 
 const urlMappingJasaPasangGrcFromMoneyMaster1MoneyPage = {
@@ -2195,15 +2202,17 @@ console.log('[jasa-kons] 📄 File loaded, waiting for DOM...');
     urlMappingJasaKitchenSetFromMoneyMasterMoneyPage,
     urlMappingHargaJasaKitchenSetFromMoneyMasterMoneyPage,
     urlMappingJasaPasangFromSub1MoneyMaster,
-    urlMappinghargaJasaPasangFromSub1MoneyMaster,
+    //urlMappinghargaJasaPasangFromSub1MoneyMaster,
     urlMappingJasaPembuatanFromSub1MoneyMaster,
-    urlMappingHargaJasaPembuatanFromSub1MoneyMaster,
+	urlMappingJasaPembuatanFromMoneyMasterMoneyPage,
+	  
+    //urlMappingHargaJasaPembuatanFromSub1MoneyMaster,
     urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage,
     urlMappingHargaJasaPembuatanBangunanFromMoneyPageMoneyPage1,
     urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyMaster2,
     urlMappingJasaPembuatanRumahFromMoneyMaster2MoneyMaster3,
     urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyPage,
-    urlMappingJasaPasangFromMoneyMasterMoneyMaster1,
+    urlMappingJasaPasangFromMoneyMasterMoneyPage,
     urlMappingJasaPasangGrcFromMoneyMaster1MoneyPage,
     urlMappingHargaJasaPasangGrcFromMoneyMasterMoneyPage,
     urlMappingJasaPasangGrcEksteriorFromMoneyPageMoneyPage1,
@@ -4063,6 +4072,22 @@ if (urlMappingJasaPembuatanFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
+if (urlMappingJasaPembuatanFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
+
+	    generateBreadcrumbShared(
+        urlMappingJasaPembuatanFromMoneyMasterMoneyPage,
+        cleanUrlJasaKons,
+        [
+            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html'},
+            { name: 'Perbandingan Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html'},
+            { name: 'Jasa Pembuatan', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan.html'}
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+/*
 if (urlMappingHargaJasaPembuatanFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbShared(
@@ -4077,6 +4102,7 @@ if (urlMappingHargaJasaPembuatanFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
+*/
 	
 if (urlMappingJasaPasangFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
@@ -4092,7 +4118,7 @@ if (urlMappingJasaPasangFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
-
+/*
 if (urlMappinghargaJasaPasangFromSub1MoneyMaster[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbShared(
@@ -4107,6 +4133,7 @@ if (urlMappinghargaJasaPasangFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
+*/
 	
 if (urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
 
@@ -4190,10 +4217,10 @@ if (urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyPage[cleanUrlJasaKons])
     );
 }
 
-if (urlMappingJasaPasangFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
+if (urlMappingJasaPasangFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbShared(
-        urlMappingJasaPasangFromMoneyMasterMoneyMaster1,
+        urlMappingJasaPasangFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
         [
             //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
