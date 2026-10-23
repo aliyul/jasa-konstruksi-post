@@ -1503,7 +1503,7 @@ const urlMappingJasaPasangFromMoneyMasterMoneyPage = {
 	 
     // 2. Plafon & Atap
     "https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html": "Jasa Pasang Plafon",
-    "https://www.betonjayareadymix.com/p/jasa-rangka-atap.html": "Jasa Rangka Atap",
+    "https://www.betonjayareadymix.com/p/jasa-pasang-rangka-atap.html": "Jasa Pasang Rangka Atap",
     "https://www.betonjayareadymix.com/p/jasa-pasang-atap.html": "Jasa Pasang Atap",
     "https://www.betonjayareadymix.com/p/jasa-pasang-kanopi.html": "Jasa Pasang Kanopi",
     
