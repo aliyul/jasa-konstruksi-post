@@ -490,7 +490,7 @@ const urlMappingJasaBorFromMoneyMasterMoneyPage= {
   //fokus gabung
      "https://www.betonjayareadymix.com/p/jasa-bor-sumur.html": "Jasa Bor Sumur",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-murah.html": "Jasa Bor Sumur Murah", 
-  "https://www.betonjayareadymix.com/p/jasa-bor-sumur-hidrolik.html": "Jasa Bor Sumur Hidrolik",
+  //variant "https://www.betonjayareadymix.com/p/jasa-bor-sumur-hidrolik.html": "Jasa Bor Sumur Hidrolik",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-dalam.html": "Jasa Sumur Bor Dalam",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-dangkal.html": "Jasa Sumur Bor Dangkal",
   "https://www.betonjayareadymix.com/p/jasa-bor-sumur-proyek.html": "Jasa Sumur Bor Proyek",
