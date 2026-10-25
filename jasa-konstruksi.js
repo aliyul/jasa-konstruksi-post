@@ -524,7 +524,7 @@ const urlMappingJasaBorFromMoneyMasterMoneyPage= {
 	"https://www.betonjayareadymix.com/p/jasa-bor-plat.html": "Jasa Bor Plat",
 	"https://www.betonjayareadymix.com/p/jasa-bor-lantai.html": "Jasa Bor Lantai",
 	"https://www.betonjayareadymix.com/p/jasa-bor-besi.html": "Jasa Bor Besi",
-	"https://www.betonjayareadymix.com/p/jasa-bor-baja.html": "Jasa Bor Baja",
+	//duplikat dengan besi "https://www.betonjayareadymix.com/p/jasa-bor-baja.html": "Jasa Bor Baja",
 	"https://www.betonjayareadymix.com/p/jasa-bor-kaca.html": "Jasa Bor Kaca",
 	"https://www.betonjayareadymix.com/p/jasa-bor-batu.html": "Jasa Bor Batu",
 	"https://www.betonjayareadymix.com/p/jasa-bor-atap.html": "Jasa Bor Atap",
