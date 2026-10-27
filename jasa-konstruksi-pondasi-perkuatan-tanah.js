@@ -173,7 +173,7 @@ const urlMappingPondasiVariantFromMoneyPageVariant = {
     // Kumpulkan SEMUA mapping ke array
     var ALL_MAPPINGS = [
         urlMappingJasaPondasiFromMoneyMasterMoneyPage,
-        urlMappingJasaCakarAyamFromMoneyMaster1MoneyPage,
+        urlMappingJasaCakarAyamFromMoneyMasterMoneyPage,
         urlMappingJasaTiangPancangFromMoneyMasterMoneyPage,
         urlMappingJasaPondasiSumuranFromMoneyPageVariant,
 		urlMappingJasaPondasiTapakFromMoneyPageVariant,
@@ -336,9 +336,9 @@ function initJasaPondasiPerkuatanTanah() {
     // [BLOK 9] JASA CAKAR AYAM
     // ═══════════════════════════════════════════════════════
 	
-    if (urlMappingJasaCakarAyamFromMoneyMaster1MoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+    if (urlMappingJasaCakarAyamFromMoneyMasterMoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
         generateBreadcrumbShared(
-            urlMappingJasaCakarAyamFromMoneyMaster1MoneyPage,
+            urlMappingJasaCakarAyamFromMoneyMasterMoneyPage,
             cleanUrlJasaPondasiPerkuatanTanahKons,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
