@@ -46,26 +46,8 @@ const urlMappingJasaRetrofittingPondasi = {
 // ❌ Dilarang: MONEY_MASTER untuk JASA
 
 const urlMappingJasaPondasiFromMoneyMasterMoneyMaster1 = {
-// ============================================================
-// 📌 MM - JASA PONDASI (LEVEL 4) - INDUK UTAMA
-// ============================================================
-//"https://www.betonjayareadymix.com/p/jasa-pondasi.html": "Jasa Pondasi",  // ✅ MM (L4)
-// ============================================================
-// 📌 MM - JASA PONDASI CAKAR AYAM (LEVEL 4)
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-cakar-ayam.html": "Jasa Cakar Ayam",  // ✅ MM (L4)
-// ============================================================
-// 📌 MM - JASA PONDASI TAPAK (LEVEL 4)
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-pondasi-tapak.html": "Jasa Pondasi Tapak",  // ✅ MM (L4)
-	// ============================================================
-// 📌 MM - JASA PONDASI TIANG PANCANG (LEVEL 4)
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html": "Jasa Tiang Pancang",  // ✅ MM (L4)
-// ============================================================
-// 📌 MM - JASA PONDASI SUMURAN (LEVEL 4)
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-pondasi-sumuran.html": "Jasa Pondasi Sumuran",  // ✅ MM (L4)
+"https://www.betonjayareadymix.com/p/jasa-pondasi-tapak.html": "Jasa Pondasi Tapak",
+"https://www.betonjayareadymix.com/p/jasa-pondasi-sumuran.html": "Jasa Pondasi Sumuran",
 
 // ============================================================
 // 📌 MP LANGSUNG DI BAWAH JASA PONDASI (LEVEL 5)
@@ -73,8 +55,8 @@ const urlMappingJasaPondasiFromMoneyMasterMoneyMaster1 = {
  "https://www.betonjayareadymix.com/p/jasa-persiapan-pondasi.html": "Jasa Persiapan Pondasi",
  "https://www.betonjayareadymix.com/p/jasa-pemadatan-pondasi.html": "Jasa Pemadatan Pondasi",
 "https://www.betonjayareadymix.com/p/jasa-pondasi-tanah.html": "Jasa Pondasi Tanah",  
-"https://www.betonjayareadymix.com/p/jasa-pondasi-bangunan.html": "Jasa Pondasi Bangunan", 
-"https://www.betonjayareadymix.com/p/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi"  
+"https://www.betonjayareadymix.com/p/jasa-pondasi-bangunan.html": "Jasa Pondasi Bangunan" 
+
 //"https://www.betonjayareadymix.com/p/borongan-pondasi.html": "Borongan Pondasi"
 };
 const urlMappingJasaBoronganPondasiFromMoneyMaster1MoneyPage = {
@@ -129,6 +111,8 @@ const urlMappingJasaPersiapanPondasiFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-leveling-tanah-proyek-gedung.html": "Jasa Leveling Tanah Proyek Gedung",  
   "https://www.betonjayareadymix.com/p/jasa-pembersihan-lahan-konstruksi.html": "Jasa Pembersihan Lahan Konstruksi"  
 };
+//AKHIR JASA PONDASI
+
 const urlMappingJasaPerkuatanTanahFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-tanah-longsor.html": "Jasa Perkuatan Tanah Longsor" 
 };
