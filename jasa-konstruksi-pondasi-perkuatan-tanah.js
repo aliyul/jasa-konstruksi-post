@@ -46,7 +46,7 @@ const urlMappingJasaPersiapanPondasiFromMoneyMasterMoneyPage = {
  "https://www.betonjayareadymix.com/p/jasa-uji-kepadatan-tanah-pondasi.html": "Jasa Uji Kepadatan Tanah Pondasi",
 	
   "https://www.betonjayareadymix.com/p/jasa-cut-and-fill-pondasi.html": "Jasa Cut and Fill Pondasi",  
-   "https://www.betonjayareadymix.com/p/jasa-pembersihan-lahan-konstruksi.html": "Jasa Pembersihan Lahan Konstruksi"  
+   "https://www.betonjayareadymix.com/p/jasa-pembersihan-lahan-konstruksi.html": "Jasa Pembersihan Lahan Konstruksi",
   "https://www.betonjayareadymix.com/p/jasa-leveling-tanah-proyek.html": "Jasa Leveling Tanah Proyek" 
  
 };
