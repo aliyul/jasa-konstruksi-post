@@ -362,6 +362,7 @@ const urlMappingJasaPondasiBridgeFromSub2Sub1 = {
 };
 const urlMappingJasaPondasiFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-pondasi.html": "Jasa Pondasi",
+   "https://www.betonjayareadymix.com/p/jasa-persiapan-pondasi.html": "Jasa Persiapan Pondasi",
   "https://www.betonjayareadymix.com/p/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi",
   "https://www.betonjayareadymix.com/p/jasa-cakar-ayam.html": "Jasa Cakar Ayam",
   "https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html": "Jasa Tiang Pancang"  
