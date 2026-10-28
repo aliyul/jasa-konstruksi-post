@@ -26,7 +26,14 @@ const urlMappingJasaPondasiTapakFromMoneyPageVariant = {
 };
 //khusus tiang pancang nanti money child nya terpisah fokus konten nya
 const urlMappingJasaTiangPancangFromMoneyMasterMoneyPage = {
-"https://www.betonjayareadymix.com/p/jasa-pondasi-tiang-pancang.html": "Jasa Pondasi Tiang Pancang"
+"https://www.betonjayareadymix.com/p/jasa-pondasi-tiang-pancang.html": "Jasa Pondasi Tiang Pancang",
+"https://www.betonjayareadymix.com/p/jasa-pondasi-tiang-pancang-murah.html": "Jasa Pondasi Tiang Pancang Murah",
+"https://www.betonjayareadymix.com/p/jasa-pancang-drop-hammer.html": "Jasa Pancang Drop Hammer",
+"https://www.betonjayareadymix.com/p/jasa-pancang-spun-pile.html": "Jasa Pancang Spun Pile",
+"https://www.betonjayareadymix.com/p/jasa-pancang-mini-pile.html": "Jasa Pancang Mini Pile",
+"https://www.betonjayareadymix.com/p/jasa-pemasangan-mini-pile.html": "Jasa Pemasangan Mini Pile",
+"https://www.betonjayareadymix.com/p/jasa-pancang-hidrolik.html": "Jasa Pancang Hidrolik",
+ "https://www.betonjayareadymix.com/p/jasa-pemasangan-tiang-pancang.html": "Jasa Pemasangan Tiang Pancang"
 };
 /*
 const urlMappingHargaJasaTiangPancangFromMoneyMasterMoneyPage = {
