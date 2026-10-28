@@ -78,6 +78,17 @@ const urlMappingJasaPondasiTapakFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tapak-terdekat.html": "Jasa Pondasi Tapak Terdekat"
 };
 
+
+const urlMappingJasaTiangPancangFromMoneyMasterMoneyChild = {
+  //"https://www.betonjayareadymix.com/2019/08/jasa-tiang-pancang-terdekat.html": "Jasa Tiang Pancang Terdekat",
+  "https://www.betonjayareadymix.com/2019/08/jasa-tiang-pancang-karawang.html": "Jasa Tiang Pancang Karawang",
+  "https://www.betonjayareadymix.com/2019/08/jasa-tiang-pancang-bekasi.html": "Jasa Tiang Pancang Bekasi",
+  "https://www.betonjayareadymix.com/2019/08/jasa-tiang-pancang-tangerang.html": "Jasa Tiang Pancang Tangerang",
+  "https://www.betonjayareadymix.com/2019/08/jasa-tiang-pancang-depok.html": "Jasa Tiang Pancang Depok",
+  "https://www.betonjayareadymix.com/2019/08/jasa-tiang-pancang-bogor.html": "Jasa Tiang Pancang Bogor",
+  "https://www.betonjayareadymix.com/2019/08/jasa-tiang-pancang-jakarta.html": "Jasa Tiang Pancang Jakarta",
+  "https://www.betonjayareadymix.com/2019/08/jasa-tiang-pancang-surabaya.html": "Jasa Tiang Pancang Surabaya"
+};
 const urlMappingJasaPondasiTiangPancangFromMoneyPageMoneyChild = {
   // ✅ FIX: Hapus "Harga" dari label (URL-nya "jasa-...", bukan "harga-...")
   "https://www.betonjayareadymix.com/2019/08/jasa-pondasi-tiang-pancang-terdekat.html": "Jasa Pondasi Tiang Pancang Terdekat",
@@ -149,6 +160,7 @@ const urlMappingJasaPondasiSumuranFromMoneyMaster1MoneyChild = {
         urlMappingJasaTiangPancangFromMoneyMasterSub2,
         urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyPage1,
         urlMappingHargaJasaPondasiTiangPancangFromMoneyPageMoneyChild,
+        urlMappingJasaTiangPancangFromMoneyMasterMoneyChild,
         urlMappingJasaPondasiTiangPancangFromMoneyPageMoneyChild,
         urlMappingJasaPondasiSumuranFromMoneyMaster1MoneyChild
     ];
@@ -341,7 +353,20 @@ function initJasaPondasiPerkuatanTanah() {
     // ═══════════════════════════════════════════════════════
     // [BLOK 7] JASA PONDASI TIANG PANCANG (Money Child)
     // ═══════════════════════════════════════════════════════
-    
+    if (urlMappingJasaTiangPancangFromMoneyMasterMoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
+        generateBreadcrumbShared(
+            urlMappingJasaTiangPancangFromMoneyMasterMoneyChild,
+            cleanUrlJasaPondasiPerkuatanTanahKonsPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+                { name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
+               // { name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
+                { name: 'Jasa Tiang Pancang', url: 'https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
     if (urlMappingJasaPondasiTiangPancangFromMoneyPageMoneyChild[cleanUrlJasaPondasiPerkuatanTanahKonsPost]) {
         generateBreadcrumbShared(
             urlMappingJasaPondasiTiangPancangFromMoneyPageMoneyChild,
