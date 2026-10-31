@@ -103,7 +103,7 @@ const urlMappingJasaPondasiTiangPancangFromMoneyPageMoneyChild = {
 
 const urlMappingJasaTiangPancangFromMoneyMasterSub2 = {
   //jadi sub2 informasi saja, Sub-Pillar 2 bukan karena posisinya di bawah siapa(LEVEL APA), JADI TETAP DI IDEAL NYA DIBAWAH JASA TIANG PANCANG MM
-  //melainkan karena SIFAT KONTENNYA adalah Informasi (Edukasi), bukan Jualan (Transaksi
+  //melainkan karena SIFAT KONTENNYA adalah Informasi (Edukasi), bukan Jualan (Transaksi, TAPI PRIBAOI SAYA INI COCOK NYA VARIANT FOKUS INFORMASI
   "https://www.betonjayareadymix.com/2019/08/spesifikasi-jasa-tiang-pancang.html": "Spesifikasi Jasa Tiang Pancang",
   "https://www.betonjayareadymix.com/2019/08/mutu-jasa-tiang-pancang.html": "Mutu Jasa Tiang Pancang",
   "https://www.betonjayareadymix.com/2019/08/metode-jasa-tiang-pancang.html": "Metode Jasa Tiang Pancang"
