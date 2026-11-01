@@ -50,21 +50,21 @@ const urlMappingJasaPembuatanPagarFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar-aluminium.html": "Jasa Pembuatan Pagar Aluminium"
 };
 
-// --- MONEY_MASTER: Jasa Pasang Pagar — FOKUS INFORMASI (Level 4) ---
-const urlMappingPasangPagarFromMoneyMaster1MoneyPage = {
-  // "https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html": "Jasa Pasang Pagar",  // MM (2 kata)
-  "https://www.betonjayareadymix.com/p/jasa-pasang-dinding-pembatas-bata.html": "Jasa Pasang Dinding Pembatas Bata",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-panel-beton.html": "Jasa Pasang Pagar Panel Beton",
+
+const urlMappingPasangPagarFromMoneyPageVariant = {
+  //variant
   "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc.html": "Jasa Pasang Pagar BRC",
   "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-besi-hollow.html": "Jasa Pasang Pagar Besi Hollow",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-kawat-harmonika.html": "Jasa Pasang Pagar Kawat Harmonika",
   "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-beton-precast.html": "Jasa Pasang Pagar Beton Precast",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-plat-laser.html": "Jasa Pasang Pagar Plat Laser",
   "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-rumah.html": "Jasa Pasang Pagar Rumah",
   "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-bangunan.html": "Jasa Pasang Pagar Bangunan"
 };
-
-// --- MONEY_MASTER: Harga Pasang Pagar — FOKUS HARGA ---
+const urlMappingPasangDindingFromMoneyPageVariant = {
+  //variant
+   "https://www.betonjayareadymix.com/p/jasa-pasang-dinding-pembatas.html": "Jasa Pasang Dinding Pembatas"
+};
+// --- HAPUS SAJA ---
+/*
 const urlMappingHargaPasangPagarFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-dinding-pembatas-bata.html": "Harga Jasa Pasang Dinding Pembatas Bata",
   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-panel-beton.html": "Harga Jasa Pasang Pagar Panel Beton",
@@ -76,12 +76,19 @@ const urlMappingHargaPasangPagarFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-rumah.html": "Harga Jasa Pasang Pagar Rumah",
   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-bangunan.html": "Harga Jasa Pasang Pagar Bangunan"
 };
+*/
 
 // --- MoneyPage → MoneyPage (BRC Panel) ---
-const urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc-panel.html": "Jasa Pasang Pagar BRC Panel"
+const urlMappingJasaPasangPagarFromVariantSubVariant = {
+  //sub variant
+  "https://www.betonjayareadymix.com/p/jasa-pasang-dinding-pembatas-bata.html": "Jasa Pasang Dinding Pembatas Bata"
 };
-
+const urlMappingJasaPasangDindingPembatasFromVariantSubVariant = {
+  //sub variant
+"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-panel-beton.html": "Jasa Pasang Pagar Panel Beton",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-kawat-harmonika.html": "Jasa Pasang Pagar Kawat Harmonika",
+"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-plat-laser.html": "Jasa Pasang Pagar Plat Laser"
+};
 // ═══════════════════════════════════════════════════════════
 // [BAGIAN 2] FUNGSI HELPER
 // ═══════════════════════════════════════════════════════════
@@ -136,8 +143,8 @@ function restoreCondition(conditionId) {
         urlMappingJasaRambudanSistemKeamananVisualFromMoneyPageMoneyPage1,
         urlMappingJasaPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1,
         urlMappingJasaPembuatanPagarFromMoneyMaster1MoneyPage,
-        urlMappingPasangPagarFromMoneyMaster1MoneyPage,
-        urlMappingHargaPasangPagarFromMoneyMaster1MoneyPage,
+        urlMappingPasangPagarFromMoneyPageVariant,
+        urlMappingPasangDindingFromMoneyPageVariant,
         urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1
     ];
 
@@ -147,8 +154,8 @@ function restoreCondition(conditionId) {
         'urlMappingJasaRambudanSistemKeamananVisualFromMoneyPageMoneyPage1',
         'urlMappingJasaPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1',
         'urlMappingJasaPembuatanPagarFromMoneyMaster1MoneyPage',
-        'urlMappingPasangPagarFromMoneyMaster1MoneyPage',
-        'urlMappingHargaPasangPagarFromMoneyMaster1MoneyPage',
+        'urlMappingPasangPagarFromMoneyPageVariant',
+         'urlMappingPasangDindingFromMoneyPageVariant',
         'urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1'
     ];
 
@@ -232,39 +239,40 @@ function initJasaPembatasPengaman() {
     }
 
     // ═══════════════════════════════════════════════════════
-    // MONEY_MASTER: Jasa Pasang Pagar (Fokus Informasi)
+    // VARIANT JASA PASANG PAGAR
     // ═══════════════════════════════════════════════════════
-    if (urlMappingPasangPagarFromMoneyMaster1MoneyPage[cleanUrlJasaPembatasKons]) {
+    if (urlMappingPasangPagarFromMoneyPageVariant[cleanUrlJasaPembatasKons]) {
         generateBreadcrumbShared(
-            urlMappingPasangPagarFromMoneyMaster1MoneyPage,
+            urlMappingPasangPagarFromMoneyPageVariant,
             cleanUrlJasaPembatasKons,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
                 { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
                 { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' }
             ],
             'JASA_KONSTRUKSI'
         );
     }
-
+// ═══════════════════════════════════════════════════════
+    // VARIANT JASA PASANG DINDING
     // ═══════════════════════════════════════════════════════
-    // MONEY_MASTER: Harga Pasang Pagar (Fokus Harga)
-    // ═══════════════════════════════════════════════════════
-    if (urlMappingHargaPasangPagarFromMoneyMaster1MoneyPage[cleanUrlJasaPembatasKons]) {
+    if (urlMappingPasangDindingFromMoneyPageVariant[cleanUrlJasaPembatasKons]) {
         generateBreadcrumbShared(
-            urlMappingHargaPasangPagarFromMoneyMaster1MoneyPage,
+            urlMappingPasangDindingFromMoneyPageVariant,
             cleanUrlJasaPembatasKons,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
                 { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
-                { name: 'Harga Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar.html' }
+                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
+                { name: 'Jasa Pasang Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-dinding.html' }
             ],
             'JASA_KONSTRUKSI'
         );
     }
-
+    
     // ═══════════════════════════════════════════════════════
     // MoneyPage → MoneyPage: Jasa Pasang Pagar BRC Panel
     // ═══════════════════════════════════════════════════════
