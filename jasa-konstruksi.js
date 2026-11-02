@@ -1524,6 +1524,7 @@ const urlMappingJasaPasangFromMoneyMasterMoneyPage = {
     // 5. Area Outdoor & Lanskap
     "https://www.betonjayareadymix.com/p/jasa-pasang-decking.html": "Jasa Pasang Decking",
     "https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html": "Jasa Pasang Pagar",
+	"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-panel-beton.html": "Jasa Pasang Pagar Panel Beton",
  
     // 6. Utilitas & Teknologi
     "https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html": "Jasa Pasang Lampu",
