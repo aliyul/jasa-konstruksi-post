@@ -83,7 +83,7 @@ const urlMappingJasaPasangDindingPembatasFromVariantSubVariant = {
   //sub variant
   "https://www.betonjayareadymix.com/p/jasa-pasang-dinding-pembatas-bata.html": "Jasa Pasang Dinding Pembatas Bata"
 };
-const urlMappingJasaPasangPagarFromVariantSubVariant = {
+const urlMappingJasaPasangPagarFromMoneyPageSubVariant = {
   //sub variant
   "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-kawat-harmonika.html": "Jasa Pasang Pagar Kawat Harmonika",
 "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-plat-laser.html": "Jasa Pasang Pagar Plat Laser"
@@ -143,7 +143,7 @@ function restoreCondition(conditionId) {
         urlMappingJasaPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1,
         urlMappingJasaPembuatanPagarFromMoneyMaster1MoneyPage,
         urlMappingPasangPagarFromMoneyPageVariant,
-       urlMappingJasaPasangPagarFromVariantSubVariant,
+       urlMappingJasaPasangPagarFromMoneyPageSubVariant,
         urlMappingPasangDindingFromMoneyPageVariant,
         urlMappingJasaPasangDindingPembatasFromVariantSubVariant
     ];
@@ -155,7 +155,7 @@ function restoreCondition(conditionId) {
         'urlMappingJasaPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1',
         'urlMappingJasaPembuatanPagarFromMoneyMaster1MoneyPage',
         'urlMappingPasangPagarFromMoneyPageVariant',
-        'urlMappingJasaPasangPagarFromVariantSubVariant',
+        'urlMappingJasaPasangPagarFromMoneyPageSubVariant',
          'urlMappingPasangDindingFromMoneyPageVariant',
          'urlMappingJasaPasangDindingPembatasFromVariantSubVariant'
     ];
@@ -256,9 +256,9 @@ function initJasaPembatasPengaman() {
             'JASA_KONSTRUKSI'
         );
     }
-    if (urlMappingJasaPasangPagarFromVariantSubVariant[cleanUrlJasaPembatasKons]) {
+    if (urlMappingJasaPasangPagarFromMoneyPageSubVariant[cleanUrlJasaPembatasKons]) {
         generateBreadcrumbShared(
-            urlMappingJasaPasangPagarFromVariantSubVariant,
+            urlMappingJasaPasangPagarFromMoneyPageSubVariant,
             cleanUrlJasaPembatasKons,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
