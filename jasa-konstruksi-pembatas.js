@@ -79,13 +79,12 @@ const urlMappingHargaPasangPagarFromMoneyMaster1MoneyPage = {
 */
 
 // --- MoneyPage → MoneyPage (BRC Panel) ---
-const urlMappingJasaPasangPagarFromVariantSubVariant = {
+const urlMappingJasaPasangDindingPembatasFromVariantSubVariant = {
   //sub variant
   "https://www.betonjayareadymix.com/p/jasa-pasang-dinding-pembatas-bata.html": "Jasa Pasang Dinding Pembatas Bata"
 };
-const urlMappingJasaPasangDindingPembatasFromVariantSubVariant = {
+const urlMappingJasaPasangPagarFromVariantSubVariant = {
   //sub variant
-"https://www.betonjayareadymix.com/p/jasa-pasang-pagar-panel-beton.html": "Jasa Pasang Pagar Panel Beton",
   "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-kawat-harmonika.html": "Jasa Pasang Pagar Kawat Harmonika",
 "https://www.betonjayareadymix.com/p/jasa-pasang-pagar-plat-laser.html": "Jasa Pasang Pagar Plat Laser"
 };
@@ -144,8 +143,9 @@ function restoreCondition(conditionId) {
         urlMappingJasaPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1,
         urlMappingJasaPembuatanPagarFromMoneyMaster1MoneyPage,
         urlMappingPasangPagarFromMoneyPageVariant,
+       urlMappingJasaPasangPagarFromVariantSubVariant,
         urlMappingPasangDindingFromMoneyPageVariant,
-        urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1
+        urlMappingJasaPasangDindingPembatasFromVariantSubVariant
     ];
 
     // Nama mapping untuk log detail (paralel dengan ALL_MAPPINGS)
@@ -155,8 +155,9 @@ function restoreCondition(conditionId) {
         'urlMappingJasaPengamananSisiJalanInfrastrukturFromMoneyPageMoneyPage1',
         'urlMappingJasaPembuatanPagarFromMoneyMaster1MoneyPage',
         'urlMappingPasangPagarFromMoneyPageVariant',
+        'urlMappingJasaPasangPagarFromVariantSubVariant',
          'urlMappingPasangDindingFromMoneyPageVariant',
-        'urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1'
+         'urlMappingJasaPasangDindingPembatasFromVariantSubVariant'
     ];
 
     // ✅ PENDEKATAN C: Loop + foundIndex + break
@@ -255,6 +256,21 @@ function initJasaPembatasPengaman() {
             'JASA_KONSTRUKSI'
         );
     }
+    if (urlMappingJasaPasangPagarFromVariantSubVariant[cleanUrlJasaPembatasKons]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPasangPagarFromVariantSubVariant,
+            cleanUrlJasaPembatasKons,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
+                { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+  
 // ═══════════════════════════════════════════════════════
     // VARIANT JASA PASANG DINDING
     // ═══════════════════════════════════════════════════════
@@ -272,24 +288,22 @@ function initJasaPembatasPengaman() {
             'JASA_KONSTRUKSI'
         );
     }
-    
-    // ═══════════════════════════════════════════════════════
-    // MoneyPage → MoneyPage: Jasa Pasang Pagar BRC Panel
-    // ═══════════════════════════════════════════════════════
-    if (urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKons]) {
+    if (urlMappingJasaPasangDindingPembatasFromVariantSubVariant[cleanUrlJasaPembatasKons]) {
         generateBreadcrumbShared(
-            urlMappingJasaPasangPagarBRCFromMoneyPageMoneyPage1,
+            urlMappingJasaPasangDindingPembatasFromVariantSubVariant,
             cleanUrlJasaPembatasKons,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
                 { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
-                { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
-                { name: 'Jasa Pasang Pagar BRC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-brc.html' }
+                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
+                { name: 'Jasa Pasang Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-dinding.html' },
+                { name: 'Jasa Pasang Dinding Pemabatas', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-dinding-pembatas.html' }
             ],
             'JASA_KONSTRUKSI'
         );
     }
+    
 
     // ═══════════════════════════════════════════════════════
     // SUB1: Pengamanan Sisi Jalan Infrastruktur
