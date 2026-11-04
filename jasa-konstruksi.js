@@ -178,9 +178,6 @@ const urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1 = {
 const urlMappingJasaProfilBetonInteriorFromMoneyPageMoneyPage1 = {
     "https://www.betonjayareadymix.com/p/jasa-profil-beton-pilar-interior.html": "Jasa Profil Beton Pilar Interior"
 };
-const urlMappingHargaJasaProfilBetonFromMoneyPageMoneyPage1 = {
-
-};
 
 const urlMappingJasaEksteriorBridgeFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html": "Perbandingan Jasa Eksterior" // (Tipe: Sub-Pillar Tipe 1)
@@ -906,11 +903,7 @@ const urlMappingJasaCoringFromMoneyMasterMoneyPage = {
 	
 	
 };
-const urlMappingHargaJasaCoringFromMoneyMasterMoneyPage = {
- // KONTEN GABUNG GA PERLU "https://www.betonjayareadymix.com/p/harga-jasa-coring-beton.html": "Harga Jasa Coring Beton"
-	
-	
-};
+
 const urlMappingJasaPerkuatanTanahBridgeFromSub2Sub1 = {
    "https://www.betonjayareadymix.com/p/perbandingan-jasa-perkuatan-tanah.html": "Perbandingan Jasa Perkuatan Tanah"  // TYPE: SUB1
 };
@@ -2066,7 +2059,6 @@ console.log('[jasa-kons] 📄 File loaded, waiting for DOM...');
     urlMappingJasaProfilBetonBangunanFromMoneyPageMoneyPage1,
     urlMappingJasaProfilBetonEksteriorFromMoneyPageMoneyPage1,
     urlMappingJasaProfilBetonInteriorFromMoneyPageMoneyPage1,
-    urlMappingHargaJasaProfilBetonFromMoneyPageMoneyPage1,
     urlMappingJasaEksteriorBridgeFromSub2Sub1,
     urlMappingJasaEksteriorFromSub1MoneyMaster,
     urlMappingJasaInteriorBridgeFromSub2Sub1,
@@ -2193,7 +2185,6 @@ console.log('[jasa-kons] 📄 File loaded, waiting for DOM...');
     urlMappingJasaPasangAcpFromMoneyPageVariant,
     urlMappingJasaPasangAcpInteriorFromVariantSubVariant,
     urlMappingJasaPasangAcpEksteriorFromVariantSubVariant,
-    urlMappingJasaLaserCuttingACPFromMoneyPageMoneyPage1,
     urlMappingJasaPasangLantaiFromMoneyPageVariant,
     urlMappingJasaPasangDindingFromMoneyPageVariant,
     urlMappingJasaPasangFurnitureFromMoneyPageVariant,
@@ -2222,7 +2213,6 @@ console.log('[jasa-kons] 📄 File loaded, waiting for DOM...');
 	  
     urlMappingTukangSumurBorFromMoneyMasterMoneyPage,
     urlMappingJasaCoringFromMoneyMasterMoneyPage,
-    urlMappingHargaJasaCoringFromMoneyMasterMoneyPage,
     urlMappingJasaPembatasPengamanFromMoneyMasterMoneyPage,
     urlMappingJasaInstalasiListrikFromMoneyMasterMoneyPage
   ];
@@ -2629,23 +2619,8 @@ if (urlMappingJasaProfilBetonInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKons]) 
         'JASA_KONSTRUKSI'
     );
    }
-if (urlMappingHargaJasaProfilBetonFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
-     generateBreadcrumbShared(
-        urlMappingHargaJasaProfilBetonFromMoneyPageMoneyPage1,
-        cleanUrlJasaKons,
-       [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-profil-beton.html' },
-            { name: 'Perbandingan Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-profil-beton.html' },
-            { name: 'Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton.html' },
-            { name: 'Harga Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-profil-beton.html' }
-	   ],
-        'JASA_KONSTRUKSI'
-    );
-   }
 
-
-if (urlMappingJasaEksteriorBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+  if (urlMappingJasaEksteriorBridgeFromSub2Sub1[cleanUrlJasaKons]) {
      generateBreadcrumbShared(
         urlMappingJasaEksteriorBridgeFromSub2Sub1,
         cleanUrlJasaKons,
@@ -4524,35 +4499,6 @@ if (urlMappingJasaPasangAcpEksteriorFromVariantSubVariant[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
-if (urlMappingJasaLaserCuttingACPFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
-
-	    generateBreadcrumbShared(
-        urlMappingJasaLaserCuttingACPFromMoneyPageMoneyPage1,
-        cleanUrlJasaKons,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang Acp', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp.html'},
-            { name: 'Jasa Laser Cutting Acp', url: 'https://www.betonjayareadymix.com/p/jasa-laser-cutting-acp.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-if (urlMappingHargaJasaPasangACPFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
-
-	    generateBreadcrumbShared(
-        urlMappingHargaJasaPasangACPFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKons,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Harga Jasa Pasang Acp', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-acp.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
 
 if (urlMappingJasaPasangLantaiFromMoneyPageVariant[cleanUrlJasaKons]) {
 	    generateBreadcrumbShared(
@@ -4832,22 +4778,7 @@ if (urlMappingJasaBorFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
     }
-    if (urlMappingHargaJasaCoringFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
-	
-	generateBreadcrumbShared(
-        urlMappingHargaJasaCoringFromMoneyMasterMoneyPage,
-        cleanUrlJasaKons,
-        [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pengeboran.html'},
-            { name: 'Perbandingan Jasa Pengeboran', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pengeboran.html'},
-            { name: 'Harga Jasa Coring', url: 'https://www.betonjayareadymix.com/p/harga-jasa-coring.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-    }	
-	
+    
 	if (urlMappingJasaPerbaikanBangunanFromSub1MoneyMaster[cleanUrlJasaKons]) {
 	
 	generateBreadcrumbShared(
