@@ -1622,7 +1622,7 @@ const urlMappingJasaPasangWoodPlankInteriorFromVariantSubVariant = {
   "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-ruang-tamu.html": "Jasa Pasang Wood Plank Ruang Tamu",
   "https://www.betonjayareadymix.com/p/jasa-pasang-wood-plank-kamar-tidur.html": "Jasa Pasang Wood Plank Kamar Tidur"
 };
-/ ═════════════════════════════════════════════════════════════════════
+// ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: Jasa Pasang Wood Plank (MP) ➔ CHILD: Variant
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaPasangWoodPlankFromMoneyPageVariant = {
