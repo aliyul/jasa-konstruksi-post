@@ -4172,22 +4172,7 @@ if (urlMappingJasaPasangGrcFromMoneyPageVariant[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
-if (urlMappingHargaJasaPasangGrcFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 
-	    generateBreadcrumbShared(
-        urlMappingHargaJasaPasangGrcFromMoneyMasterMoneyPage,
-        cleanUrlJasaKons,
-        [
-            //{ name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Harga Jasa Pasang Grc', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-grc.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-	
 if (urlMappingJasaPasangGrcEksteriorFromVariantSubVariant[cleanUrlJasaKons]) {
 
 	    generateBreadcrumbShared(
