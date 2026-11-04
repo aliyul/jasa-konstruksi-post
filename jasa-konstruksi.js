@@ -4387,20 +4387,6 @@ if (urlMappingJasaPasangHplFromMoneyPageVariant[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
-if (urlMappingHargaJasaPasangHplFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
-
-	    generateBreadcrumbShared(
-        urlMappingHargaJasaPasangHplFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKons,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Harga Jasa Pasang Hpl', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-hpl.html'}
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
 
 if (urlMappingJasaPasangHplEksteriorFromVariantSubVariant[cleanUrlJasaKons]) {
 
