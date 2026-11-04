@@ -114,26 +114,40 @@ const urlMappingJasaReliefBridgeFromSub2Sub1 = {
 const urlMappingJasaReliefBridgeFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-relief.html": "Jasa Relief" 
 };
-const urlMappingHargaJasaReliefFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-relief.html": "Harga Jasa Relief" 
-};
+
 const urlMappingJasaReliefFromMoneyMasterMoneyPage = {
-  	 "https://www.betonjayareadymix.com/p/jasa-relief-dinding.html": "Jasa Relief Dinding",
-  "https://www.betonjayareadymix.com/p/jasa-relief-kayu-custom.html": "Jasa Relief Kayu Custom",
-  "https://www.betonjayareadymix.com/p/jasa-relief-beton-ekspos.html": "Jasa Relief Beton Ekspos",
-   	"https://www.betonjayareadymix.com/p/jasa-relief-batu-alam.html": "Jasa Relief Batu Alam"
+"https://www.betonjayareadymix.com/p/jasa-relief-dinding.html": "Jasa Relief Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-relief-batu.html": "Jasa Relief Batu",
+  "https://www.betonjayareadymix.com/p/jasa-relief-kayu.html": "Jasa Relief Kayu",
+  "https://www.betonjayareadymix.com/p/jasa-relief-beton.html": "Jasa Relief Beton"
 };
-const urlMappingJasaReliefDindingFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/jasa-pembuatan-relief-dinding.html": "Jasa Pembuatan Relief Dinding",
+const urlMappingJasaReliefDindingFromMoneyPageVariant = {
+	  "https://www.betonjayareadymix.com/p/jasa-pembuatan-relief-dinding.html": "Jasa Pembuatan Relief Dinding",
 "https://www.betonjayareadymix.com/p/jasa-relief-dinding-3d.html": "Jasa Relief Dinding 3D",
 	"https://www.betonjayareadymix.com/p/jasa-relief-dinding-interior.html": "Jasa Relief Dinding Interior",
-    "https://www.betonjayareadymix.com/p/jasa-relief-batu-alam-interior.html": "Jasa Relief Batu Alam Interior",
   "https://www.betonjayareadymix.com/p/jasa-relief-dinding-eksterior.html": "Jasa Relief Dinding Eksterior"
+	
 };
-const urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1 = {
-    "https://www.betonjayareadymix.com/p/jasa-relief-taman-batu-alam.html": "Jasa Relief Taman Batu Alam",
+// Pindahkan material dari MP-Dinding ke MP-Material
+const urlMappingJasaReliefBatuFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-relief-batu-alam.html": "Jasa Relief Batu Alam"
+};
+
+const urlMappingJasaReliefKayuFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-relief-kayu-custom.html": "Jasa Relief Kayu Custom"
+};
+
+const urlMappingJasaReliefBetonFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-relief-beton-ekspos.html": "Jasa Relief Beton Ekspos"
+};
+
+const urlMappingJasaReliefBatuAlamFromVariantSubVariant = {
+    "https://www.betonjayareadymix.com/p/jasa-relief-taman-batu-alam.html": "Jasa Relief Taman Batu Alam",    
+	"https://www.betonjayareadymix.com/p/jasa-relief-batu-alam-interior.html": "Jasa Relief Batu Alam Interior",
     "https://www.betonjayareadymix.com/p/jasa-relief-batu-alam-dinding.html": "Jasa Relief Batu Alam Dinding",
     "https://www.betonjayareadymix.com/p/jasa-relief-batu-alam-pilar.html": "Jasa Relief Batu Alam Pilar"
+
+	
 };
 
 const urlMappingJasaProfilBetonBridgeFromSub2Sub1 = {
@@ -2036,10 +2050,12 @@ console.log('[jasa-kons] 📄 File loaded, waiting for DOM...');
     urlMappingJasaKonsFromPillarSub2,
     urlMappingJasaReliefBridgeFromSub2Sub1,
     urlMappingJasaReliefBridgeFromSub1MoneyMaster,
-    urlMappingHargaJasaReliefFromSub1MoneyMaster,
     urlMappingJasaReliefFromMoneyMasterMoneyPage,
-    urlMappingJasaReliefDindingFromMoneyPageMoneyPage1,
-    urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1,
+    urlMappingJasaReliefDindingFromMoneyPageVariant,
+	urlMappingJasaReliefBatuFromMoneyPageVariant,
+	urlMappingJasaReliefKayuFromMoneyPageVariant,
+	urlMappingJasaReliefBetonFromMoneyPageVariant,
+    urlMappingJasaReliefBatuAlamFromVariantSubVariant,
     urlMappingJasaProfilBetonBridgeFromSub2Sub1,
     urlMappingJasaProfilBetonFromSub1MoneyMaster,
     urlMappingHargaJasaProfilBetonFromSub1MoneyMaster,
@@ -2423,18 +2439,7 @@ if (urlMappingJasaReliefBridgeFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
-if (urlMappingHargaJasaReliefFromSub1MoneyMaster[cleanUrlJasaKons]) {
-     generateBreadcrumbShared(
-        urlMappingHargaJasaReliefFromSub1MoneyMaster,
-        cleanUrlJasaKons,
-       [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Relief', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-relief.html' },
-            { name: 'Perbandingan Jasa Relief', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-relief.html' }
-	   ],
-        'JASA_KONSTRUKSI'
-    );
-}
+
 if (urlMappingJasaReliefFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
      generateBreadcrumbShared(
         urlMappingJasaReliefFromMoneyMasterMoneyPage,
@@ -2448,9 +2453,10 @@ if (urlMappingJasaReliefFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
-if (urlMappingJasaReliefDindingFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
+	
+if (urlMappingJasaReliefDindingFromMoneyPageVariant[cleanUrlJasaKons]) {
      generateBreadcrumbShared(
-        urlMappingJasaReliefDindingFromMoneyPageMoneyPage1,
+        urlMappingJasaReliefDindingFromMoneyPageVariant,
         cleanUrlJasaKons,
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -2462,15 +2468,62 @@ if (urlMappingJasaReliefDindingFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
 }
-if (urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1[cleanUrlJasaKons]) {
+
+if (urlMappingJasaReliefBatuFromMoneyPageVariant[cleanUrlJasaKons]) {
      generateBreadcrumbShared(
-        urlMappingJasaReliefBatuAlamFromMoneyPageMoneyPage1,
+        urlMappingJasaReliefBatuFromMoneyPageVariant,
         cleanUrlJasaKons,
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Relief', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-relief.html' },
             { name: 'Perbandingan Jasa Relief', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-relief.html' },
             { name: 'Jasa Relief', url: 'https://www.betonjayareadymix.com/p/jasa-relief.html' },
+            { name: 'Jasa Relief Batu', url: 'https://www.betonjayareadymix.com/p/jasa-relief-batu.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+    );
+}	
+
+if (urlMappingJasaReliefKayuFromMoneyPageVariant[cleanUrlJasaKons]) {
+     generateBreadcrumbShared(
+        urlMappingJasaReliefKayuFromMoneyPageVariant,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Relief', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-relief.html' },
+            { name: 'Perbandingan Jasa Relief', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-relief.html' },
+            { name: 'Jasa Relief', url: 'https://www.betonjayareadymix.com/p/jasa-relief.html' },
+            { name: 'Jasa Relief Kayu', url: 'https://www.betonjayareadymix.com/p/jasa-relief-kayu.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+    );
+}	
+
+if (urlMappingJasaReliefBetonFromMoneyPageVariant[cleanUrlJasaKons]) {
+     generateBreadcrumbShared(
+        urlMappingJasaReliefBetonFromMoneyPageVariant,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Relief', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-relief.html' },
+            { name: 'Perbandingan Jasa Relief', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-relief.html' },
+            { name: 'Jasa Relief', url: 'https://www.betonjayareadymix.com/p/jasa-relief.html' },
+            { name: 'Jasa Relief Beton', url: 'https://www.betonjayareadymix.com/p/jasa-relief-beton.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+    );
+}	
+
+if (urlMappingJasaReliefBatuAlamFromVariantSubVariant[cleanUrlJasaKons]) {
+     generateBreadcrumbShared(
+        urlMappingJasaReliefBatuAlamFromVariantSubVariant,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Relief', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-relief.html' },
+            { name: 'Perbandingan Jasa Relief', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-relief.html' },
+            { name: 'Jasa Relief', url: 'https://www.betonjayareadymix.com/p/jasa-relief.html' },
+            { name: 'Jasa Relief Batu', url: 'https://www.betonjayareadymix.com/p/jasa-relief-batu.html' },
             { name: 'Jasa Relief Batu Alam', url: 'https://www.betonjayareadymix.com/p/jasa-relief-batu-alam.html' }
 	   ],
         'JASA_KONSTRUKSI'
