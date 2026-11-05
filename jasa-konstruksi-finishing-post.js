@@ -16,6 +16,7 @@
 console.log('[jasa-konstruksi-finishing-post] 📄 File loaded, waiting for DOM...');
 
 const urlMappingJasaReliefFromMoneyMasterMoneyChild = {
+//FOKUS INFORMASI ATAU COMERCIAL (PILIH SALAH SATU SAJA)
 "https://www.betonjayareadymix.com/2018/09/jasa-relief-terdekat.html": "Jasa Relief Terdekat",
 "https://www.betonjayareadymix.com/2018/09/jasa-relief-jakarta.html": "Jasa Relief Jakarta",
 "https://www.betonjayareadymix.com/2018/09/jasa-relief-bogor.html": "Jasa Relief Bogor",
@@ -25,9 +26,9 @@ const urlMappingJasaReliefFromMoneyMasterMoneyChild = {
 "https://www.betonjayareadymix.com/2018/09/jasa-relief-karawang.html": "Jasa Relief Karawang",
 "https://www.betonjayareadymix.com/2018/09/jasa-relief-sukabumi.html": "Jasa Relief Sukabumi",
 "https://www.betonjayareadymix.com/2018/09/jasa-relief-purwakarta.html": "Jasa Relief Purwakarta",
-"https://www.betonjayareadymix.com/2018/09/jasa-relief-surabaya.html": "Jasa Relief Surabaya"
-};	
-const urlMappingHargaJasaReliefFromMoneyPageMoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/jasa-relief-surabaya.html": "Jasa Relief Surabaya",
+
+//FOKUS HARGA	
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-relief-terdekat.html": "Harga Jasa Relief Terdekat",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-relief-jakarta.html": "Harga Jasa Relief Jakarta",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-relief-bogor.html": "Harga Jasa Relief Bogor",
@@ -39,6 +40,7 @@ const urlMappingHargaJasaReliefFromMoneyPageMoneyChild = {
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-relief-purwakarta.html": "Harga Jasa Relief Purwakarta",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-relief-surabaya.html": "Harga Jasa Relief Surabaya"
 };	
+
 const urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild = {
 "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-terdekat.html": "Jasa Desain Interior Terdekat",
 "https://www.betonjayareadymix.com/2018/09/jasa-desain-interior-jakarta.html": "Jasa Desain Interior Jakarta",
@@ -53,6 +55,7 @@ const urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild = {
 };	
 
 const urlMappingJasaEksteriorFromMoneyMasterMoneyChild = {
+//FOKUS INFORMASI ATAU COMERCIAL(PILIH SALAH SATU)
 "https://www.betonjayareadymix.com/2018/09/jasa-eksterior-terdekat.html": "Jasa Eksterior Terdekat",
 "https://www.betonjayareadymix.com/2018/09/jasa-eksterior-jakarta.html": "Jasa Eksterior Jakarta",
 "https://www.betonjayareadymix.com/2018/09/jasa-eksterior-bogor.html": "Jasa Eksterior Bogor",
@@ -62,9 +65,9 @@ const urlMappingJasaEksteriorFromMoneyMasterMoneyChild = {
 "https://www.betonjayareadymix.com/2018/09/jasa-eksterior-karawang.html": "Jasa Eksterior Karawang",
 "https://www.betonjayareadymix.com/2018/09/jasa-eksterior-surabaya.html": "Jasa Eksterior Surabaya",
 "https://www.betonjayareadymix.com/2018/09/jasa-eksterior-sukabumi.html": "Jasa Eksterior Sukabumi",
-"https://www.betonjayareadymix.com/2018/09/jasa-eksterior-purwakarta.html": "Jasa Eksterior Purwakarta"
-};	
-const urlMappingHargaJasaEksteriorFromMoneyPageMoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/jasa-eksterior-purwakarta.html": "Jasa Eksterior Purwakarta",
+	
+//FOKUS HARGA
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-eksterior-terdekat.html": "Harga Jasa Eksterior Terdekat",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-eksterior-jakarta.html": "Harga Jasa Eksterior Jakarta",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-eksterior-bogor.html": "Harga Jasa Eksterior Bogor",
@@ -76,7 +79,9 @@ const urlMappingHargaJasaEksteriorFromMoneyPageMoneyChild = {
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-eksterior-sukabumi.html": "Harga Jasa Eksterior Sukabumi",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-eksterior-purwakarta.html": "Harga Jasa Eksterior Purwakarta"
 };	
+
 const urlMappingJasaInteriorFromMoneyMasterMoneyChild = {
+//FOKUS INFORMASI ATAU COMERCIAL (PILIH SALAH SATU)
 "https://www.betonjayareadymix.com/2018/09/jasa-interior-terdekat.html": "Jasa Interior Terdekat",
 "https://www.betonjayareadymix.com/2018/09/jasa-interior-jakarta.html": "Jasa Interior Jakarta",
 "https://www.betonjayareadymix.com/2018/09/jasa-interior-bogor.html": "Jasa Interior Bogor",
@@ -86,9 +91,9 @@ const urlMappingJasaInteriorFromMoneyMasterMoneyChild = {
 "https://www.betonjayareadymix.com/2018/09/jasa-interior-karawang.html": "Jasa Interior Karawang",
 "https://www.betonjayareadymix.com/2018/09/jasa-interior-surabaya.html": "Jasa Interior Surabaya",
 "https://www.betonjayareadymix.com/2018/09/jasa-interior-sukabumi.html": "Jasa Interior Sukabumi",
-"https://www.betonjayareadymix.com/2018/09/jasa-interior-purwakarta.html": "Jasa Interior Purwakarta"
-};	
-const urlMappingHargaJasaInteriorFromMoneyPageMoneyChild = {
+"https://www.betonjayareadymix.com/2018/09/jasa-interior-purwakarta.html": "Jasa Interior Purwakarta",
+
+//FOKUS HARGA
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-terdekat.html": "Harga Jasa Interior Terdekat",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-jakarta.html": "Harga Jasa Furniture Jakarta",
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-bogor.html": "Harga Jasa Interior Bogor",
@@ -101,13 +106,26 @@ const urlMappingHargaJasaInteriorFromMoneyPageMoneyChild = {
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-interior-purwakarta.html": "Harga Jasa Interior Purwakarta"
 };	
 
-const urlMappingJasaProfilBetonFromMoneyMasterVariant = {
+
+const urlMappingJasaProfilBetonFromMoneyMasterSub2 = {
   "https://www.betonjayareadymix.com/2018/09/spesifikasi-jasa-profil-beton.html": "Spesifikasi Jasa Profil Beton",
   "https://www.betonjayareadymix.com/2018/09/ukuran-jasa-profil-beton.html": "Ukuran Jasa Profil Beton",
   "https://www.betonjayareadymix.com/2018/09/desain-jasa-profil-beton.html": "Desain Jasa Profil Beton"
 };
-const urlMappingHargaJasaProfilBetonFromMoneyPageMoneyChild = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-terdekat.html": "Harga Jasa Profil Beton Terdekat",
+const urlMappingJasaProfilBetonFromMoneyPageMoneyChild = {
+//FOKUS INFORMASI ATAU COMERCIAL (PILIH SALAH SATU)
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-terdekat.html": "Harga Jasa Profil Beton Terdekat",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-jakarta.html": "Harga Jasa Profil Beton Jakarta",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-bogor.html": "Harga Jasa Profil Beton Bogor",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-depok.html": "Harga Jasa Profil Beton Depok",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-tangerang.html": "Harga Jasa Profil Beton Tangerang",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-bekasi.html": "Harga Jasa Profil Beton Bekasi",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-karawang.html": "Harga Jasa Profil Beton Karawang",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-sukabumi.html": "Harga Jasa Profil Beton Sukabumi",
+  "https://www.betonjayareadymix.com/2018/09/jasa-profil-beton-purwakarta.html": "Harga Jasa Profil Beton Purwakarta",
+
+//FOKUS HARGA
+   "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-terdekat.html": "Harga Jasa Profil Beton Terdekat",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-jakarta.html": "Harga Jasa Profil Beton Jakarta",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-bogor.html": "Harga Jasa Profil Beton Bogor",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-depok.html": "Harga Jasa Profil Beton Depok",
@@ -117,6 +135,7 @@ const urlMappingHargaJasaProfilBetonFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-sukabumi.html": "Harga Jasa Profil Beton Sukabumi",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-profil-beton-purwakarta.html": "Harga Jasa Profil Beton Purwakarta"
 };
+
 // ============================================================
 // 📁 JASA FINISHING DAK BETON - MONEY PAGE & TURUNAN
 // 🧠 ENTITY: JASA → TYPE: MONEY_PAGE (bukan MONEY_MASTER)
@@ -895,25 +914,22 @@ const urlMappingJasaCustomKitchenSetFromMoneyPageMoneyPage1 = {
 // ============================================================
 const urlMappingJasaPasangACPFromMoneyMaster1MoneyChild = {
  // ============================================================
-  // [MONEY_CHILD] - JASA ACP PER LOKASI
+  // [MONEY_CHILD] - FOKUS INFORMASI ATAU COMERCIAL (PILIH SALAH SATU SAJA)
   // ============================================================
   "https://www.betonjayareadymix.com/2020/01/jasa-pasang-acp-jakarta.html": "Jasa Pasang ACP Jakarta",  
   "https://www.betonjayareadymix.com/2020/01/jasa-pasang-acp-bogor.html": "Jasa Pasang ACP Bogor",  
   "https://www.betonjayareadymix.com/2020/01/jasa-pasang-acp-depok.html": "Jasa Pasang ACP Depok",  
   "https://www.betonjayareadymix.com/2020/01/jasa-pasang-acp-tangerang.html": "Jasa Pasang ACP Tangerang",  
-  "https://www.betonjayareadymix.com/2020/01/jasa-pasang-acp-bekasi.html": "Jasa Pasang ACP Bekasi"  
-  
-};
-const urlMappingHargaJasaPasangACPFromMoneyPageMoneyChild = {
-  // ============================================================
-  // [MONEY_CHILD] - HARGA JASA ACP PER LOKASI
-  // ============================================================
-  "https://www.betonjayareadymix.com/2020/01/harga-jasa-pasang-acp-jakarta.html": "Harga Jasa Pasang ACP Jakarta",  
+  "https://www.betonjayareadymix.com/2020/01/jasa-pasang-acp-bekasi.html": "Jasa Pasang ACP Bekasi",
+  //FOKUS HARGA
+    "https://www.betonjayareadymix.com/2020/01/harga-jasa-pasang-acp-jakarta.html": "Harga Jasa Pasang ACP Jakarta",  
   "https://www.betonjayareadymix.com/2020/01/harga-jasa-pasang-acp-bogor.html": "Harga Jasa Pasang ACP Bogor",  
   "https://www.betonjayareadymix.com/2020/01/harga-jasa-pasang-acp-depok.html": "Harga Jasa Pasang ACP Depok",  
   "https://www.betonjayareadymix.com/2020/01/harga-jasa-pasang-acp-tangerang.html": "Harga Jasa Pasang ACP Tangerang",  
   "https://www.betonjayareadymix.com/2020/01/harga-jasa-pasang-acp-bekasi.html": "Harga Jasa Pasang ACP Bekasi"  
+  
 };
+
 const urlMappingJasaPasangACPPerMeterFromMoneyPageMoneyChild = {
   // ============================================================
   // [MONEY_CHILD] - JASA ACP PER METER PER LOKASI
@@ -1099,14 +1115,11 @@ function restoreCondition(conditionId) {
     
     var ALL_MAPPINGS = [
     urlMappingJasaReliefFromMoneyMasterMoneyChild,
-    urlMappingHargaJasaReliefFromMoneyPageMoneyChild,
     urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild,
     urlMappingJasaEksteriorFromMoneyMasterMoneyChild,
-    urlMappingHargaJasaEksteriorFromMoneyPageMoneyChild,
     urlMappingJasaInteriorFromMoneyMasterMoneyChild,
-    urlMappingHargaJasaInteriorFromMoneyPageMoneyChild,
-    urlMappingJasaProfilBetonFromMoneyMasterVariant,
-    urlMappingHargaJasaProfilBetonFromMoneyPageMoneyChild,
+    urlMappingJasaProfilBetonFromMoneyMasterSub2,
+	urlMappingJasaProfilBetonFromMoneyPageMoneyChild,
     urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild,
     urlMappingJasaFinishingStrukturBetonEksposFromMoneyPageMoneyChild,
     urlMappingHargaJasaBoronganPlesteranAcianFromMoneyPage2MoneyPage3,
@@ -1143,7 +1156,6 @@ function restoreCondition(conditionId) {
     urlMappingHargaJasaPembuatanKitchenSetFromMoneyPage1MoneyPage2,
     urlMappingJasaCustomKitchenSetFromMoneyPageMoneyPage1,
     urlMappingJasaPasangACPFromMoneyMaster1MoneyChild,
-    urlMappingHargaJasaPasangACPFromMoneyPageMoneyChild,
     urlMappingJasaPasangACPPerMeterFromMoneyPageMoneyChild,
     urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyChild,
     urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyChild,
@@ -1206,20 +1218,6 @@ if (urlMappingJasaReliefFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPost]
         'JASA_KONSTRUKSI'
 	    );
 }
-if (urlMappingHargaJasaReliefFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
-        generateBreadcrumbShared(
-	        urlMappingHargaJasaReliefFromMoneyPageMoneyChild,
-	        cleanUrlJasaKonsFinishingPost,
-	        [
-	        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Relief', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-relief.html' },
-            { name: 'Perbandingan Jasa Relief', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-relief.html' },
-            { name: 'Jasa Relief', url: 'https://www.betonjayareadymix.com/p/jasa-relief.html' },
-            { name: 'Harga Jasa Relief', url: 'https://www.betonjayareadymix.com/p/harga-jasa-relief.html' }
-	   ],
-        'JASA_KONSTRUKSI'
-	    );
-}
 
 if (urlMappingJasaDesainInteriorFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPost]) {
         generateBreadcrumbShared(
@@ -1248,20 +1246,7 @@ if (urlMappingJasaEksteriorFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPo
 	        'JASA_KONSTRUKSI'
 	    );
 }
-if (urlMappingHargaJasaEksteriorFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
-        generateBreadcrumbShared(
-	        urlMappingHargaJasaEksteriorFromMoneyPageMoneyChild,
-	        cleanUrlJasaKonsFinishingPost,
-	        [
-	        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
-            { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
-           { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html'},
-           { name: 'Harga Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/harga-jasa-eksterior.html'}
-	        ],
-	        'JASA_KONSTRUKSI'
-	    );
-}
+
 	
 if (urlMappingJasaInteriorFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPost]) {
         generateBreadcrumbShared(
@@ -1276,22 +1261,9 @@ if (urlMappingJasaInteriorFromMoneyMasterMoneyChild[cleanUrlJasaKonsFinishingPos
 	        'JASA_KONSTRUKSI'
 	    );
 }
-if (urlMappingHargaJasaInteriorFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
-        generateBreadcrumbShared(
-	        urlMappingHargaJasaInteriorFromMoneyPageMoneyChild,
-	        cleanUrlJasaKonsFinishingPost,
-	        [
-	        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Interior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-interior.html' },
-            { name: 'Perbandingan Jasa Interior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html' },
-           { name: 'Jasa Interior', url: 'https://www.betonjayareadymix.com/p/jasa-interior.html'},
-           { name: 'Harga Jasa Interior', url: 'https://www.betonjayareadymix.com/p/harga-jasa-interior.html'}
-	        ],
-	        'JASA_KONSTRUKSI'
-	    );
-}
+
 	
-if (urlMappingJasaProfilBetonFromMoneyMasterVariant[cleanUrlJasaKonsFinishingPost]) {
+if (urlMappingJasaProfilBetonFromMoneyMasterSub2[cleanUrlJasaKonsFinishingPost]) {
         generateBreadcrumbShared(
 	        urlMappingJasaProfilBetonFromMoneyMasterMoneyChild,
 	        cleanUrlJasaKonsFinishingPost,
@@ -1304,22 +1276,22 @@ if (urlMappingJasaProfilBetonFromMoneyMasterVariant[cleanUrlJasaKonsFinishingPos
 	        'JASA_KONSTRUKSI'
 	    );
 	}	
-if (urlMappingHargaJasaProfilBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
+	
+if (urlMappingJasaProfilBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
         generateBreadcrumbShared(
-	        urlMappingHargaJasaProfilBetonFromMoneyPageMoneyChild,
+	        urlMappingJasaProfilBetonFromMoneyPageMoneyChild,
 	        cleanUrlJasaKonsFinishingPost,
 	        [
 	        { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-profil-beton.html' },
             { name: 'Perbandingan Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-profil-beton.html' },
-            { name: 'Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton.html' },
-            { name: 'Harga Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-profil-beton.html' }
+            { name: 'Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton.html' }
 	        ],
 	        'JASA_KONSTRUKSI'
 	    );
 	}
 
-	
+
 if (urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
         generateBreadcrumbShared(
 	        urlMappingJasaFinishingDakBetonFromMoneyPageMoneyChild,
@@ -1977,21 +1949,6 @@ if (urlMappingJasaPasangACPFromMoneyMaster1MoneyChild[cleanUrlJasaKonsFinishingP
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
             { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
             { name: 'Jasa Pasang Acp', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp.html'}
-        ],
-        'JASA'
-    );
-}
-	if (urlMappingHargaJasaPasangACPFromMoneyPageMoneyChild[cleanUrlJasaKonsFinishingPost]) {
-     generateBreadcrumbShared(
-        urlMappingHargaJasaPasangACPFromMoneyPageMoneyChild,
-        cleanUrlJasaKonsFinishingPost,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html'},
-            { name: 'Jasa Pasang Acp', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-acp.html'},
-            { name: 'Harga-Jasa Pasang ACP', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-acp.html' }
         ],
         'JASA'
     );
