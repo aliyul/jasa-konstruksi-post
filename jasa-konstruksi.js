@@ -155,7 +155,7 @@ const urlMappingJasaProfilBetonBridgeFromSub2Sub1 = {
 };
 
 const urlMappingHargaJasaProfilBetonFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-profil-beton.html": "Harga Jasa Profil Beton"   
+  "https://www.betonjayareadymix.com/p/jasa-profil-beton.html": "Jasa Profil Beton"   
 };
 
 const urlMappingJasaProfilBetonFromMoneyMasterMoneyPage = {
@@ -188,7 +188,7 @@ const urlMappingJasaInteriorBridgeFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html": "Perbandingan Jasa Interior" // (Tipe: Sub-Pillar Tipe 1)
 };
 const urlMappingJasaInteriorFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/jasa-interior.html": "Jasa Interior"  // TYPE: MoneyPage
+  "https://www.betonjayareadymix.com/p/jasa-interior.html": "Jasa Interior" 
 };
 const urlMappingJasaKonsultanBridgeFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-konsultan.html": "Perbandingan Jasa Konsultan" // (Tipe: Sub-Pillar Tipe 1)
@@ -2551,7 +2551,7 @@ if (urlMappingJasaProfilBetonFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-profil-beton.html' },
             { name: 'Perbandingan Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-profil-beton.html' },
-            { name: 'Harga Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-profil-beton.html' }
+            { name: 'Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton.html' }
 	   ],
         'JASA_KONSTRUKSI'
     );
@@ -2565,7 +2565,7 @@ if (urlMappingJasaProfilBetonPilarFromMoneyPageVariant[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-profil-beton.html' },
             { name: 'Perbandingan Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-profil-beton.html' },
-            { name: 'Harga Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-profil-beton.html' },
+            { name: 'Jasa Profil Beton', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton.html' },
             { name: 'Jasa Profil Beton Pilar', url: 'https://www.betonjayareadymix.com/p/jasa-profil-beton-pilar.html' }
 	   ],
         'JASA_KONSTRUKSI'
