@@ -504,7 +504,6 @@ console.log('══════════════════════�
 	urlMappingJasaInteriorKamarFromMoneyPageVariant,
 	urlMappingJasaInteriorRuangFromMoneyPageVariant,
 	  
-    urlMappingHargaJasaInteriorFromMoneyPageMoneyPage,
     urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage,
     urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1,
     urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1,
@@ -806,20 +805,6 @@ function initJasaKonsFinishing() {
         );
     }
     
-    if (urlMappingHargaJasaInteriorFromMoneyPageMoneyPage[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingHargaJasaInteriorFromMoneyPageMoneyPage,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Interior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-interior.html' },
-                { name: 'Perbandingan Jasa Interior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html' },
-                { name: 'Jasa Interior', url: 'https://www.betonjayareadymix.com/p/jasa-interior.html' },
-                { name: 'Harga Jasa Interior', url: 'https://www.betonjayareadymix.com/p/harga-jasa-interior.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
 
     // ═══════════════════════════════════════════════════════
     // [BLOK 7] JASA PASANG LAMPU
