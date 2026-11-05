@@ -408,7 +408,7 @@ const urlMappingJasaBuangPuingFromSub1MoneyMaster = {
 };
 
 const urlMappingJasaBuangPuingFromMoneyMasterMoneyPage = {
-	"https://www.betonjayareadymix.com/p/harga-jasa-buang-puing-per-rit.html": "Harga Jasa Buang Puing Per Rit"
+	"https://www.betonjayareadymix.com/p/harga-jasa-buang-puing-per-rit.html": "Harga Jasa Buang Puing Per Rit",
 	"https://www.betonjayareadymix.com/p/jasa-buang-puing-pengurugan-tanah.": "Jasa Buang Puing Pengurugan Tanah",
 	"https://www.betonjayareadymix.com/p/jasa-buang-puing-proyek-konstruksi.html": "Jasa Buang Puing Proyek Konstruksi",
 	"https://www.betonjayareadymix.com/p/jasa-buang-puing-rumah-bangunan.html": "Jasa Buang Puing Rumah & Bangunan"
