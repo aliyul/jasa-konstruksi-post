@@ -189,13 +189,17 @@ const urlMappingFinishingInteriorFromMoneyMasterMoneyPage = {
 };
 
 const urlMappingJasaInteriorFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-interior.html": "Harga Jasa Interior"
+//  "https://www.betonjayareadymix.com/p/harga-jasa-interior.html": "Harga Jasa Interior"
+// redirect ke jasa interior saja "https://www.betonjayareadymix.com/p/harga-jasa-borongan-interior.html": "Harga Jasa Borongan Interior",
+	"https://www.betonjayareadymix.com/p/jasa-interior-ruang.html": "Jasa Interior Ruang",
+	"https://www.betonjayareadymix.com/p/jasa-interior-kamar.html": "Jasa Interior Kamar",
+	  "https://www.betonjayareadymix.com/p/harga-jasa-interior-per-meter.html": "Harga Jasa Interior Per Meter"
 };
 
-const urlMappingHargaJasaInteriorFromMoneyPageMoneyPage = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-interior-per-meter.html": "Harga Jasa Interior Per Meter",
-  "https://www.betonjayareadymix.com/p/harga-jasa-borongan-interior.html": "Harga Jasa Borongan Interior",
-  "https://www.betonjayareadymix.com/p/harga-jasa-interior-kamar-tidur.html": "Harga Jasa Interior Kamar Tidur",
+const urlMappingJasaInteriorKamarFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/harga-jasa-interior-kamar-tidur.html": "Harga Jasa Interior Kamar Tidur"
+};
+const urlMappingJasaInteriorRuangFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/harga-jasa-interior-ruang-tamu.html": "Harga Jasa Interior Ruang Tamu"
 };
 
@@ -497,6 +501,9 @@ console.log('══════════════════════�
     urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
     urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
     urlMappingJasaInteriorFromMoneyMasterMoneyPage,
+	urlMappingJasaInteriorKamarFromMoneyPageVariant,
+	urlMappingJasaInteriorRuangFromMoneyPageVariant,
+	  
     urlMappingHargaJasaInteriorFromMoneyPageMoneyPage,
     urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage,
     urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1,
@@ -766,6 +773,34 @@ function initJasaKonsFinishing() {
                 { name: 'Daftar Jasa Interior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-interior.html' },
                 { name: 'Perbandingan Jasa Interior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html' },
                 { name: 'Jasa Interior', url: 'https://www.betonjayareadymix.com/p/jasa-interior.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+	if (urlMappingJasaInteriorKamarFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaInteriorKamarFromMoneyPageVariant,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Interior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-interior.html' },
+                { name: 'Perbandingan Jasa Interior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html' },
+                { name: 'Jasa Interior', url: 'https://www.betonjayareadymix.com/p/jasa-interior.html' },
+                { name: 'Jasa Interior Kamar', url: 'https://www.betonjayareadymix.com/p/jasa-interior-kamar.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+	if (urlMappingJasaInteriorRuangFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaInteriorRuangFromMoneyPageVariant,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Interior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-interior.html' },
+                { name: 'Perbandingan Jasa Interior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-interior.html' },
+                { name: 'Jasa Interior', url: 'https://www.betonjayareadymix.com/p/jasa-interior.html' },
+                { name: 'Jasa Interior Ruang', url: 'https://www.betonjayareadymix.com/p/jasa-interior-ruang.html' }
             ],
             'JASA_KONSTRUKSI'
         );
