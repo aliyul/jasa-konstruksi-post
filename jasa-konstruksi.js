@@ -225,11 +225,12 @@ const urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1 = {
 "https://www.betonjayareadymix.com/p/kelebihan-kekurangan-jasa-alat-konstruksi.html": "Kelebihan & Kekurangan Jasa Alat Konstruksi" //(Tipe: Sub-Pillar Tipe 1)
 };
 const urlMappingJasaAlatKonstruksiFromSub1MoneyMaster = {
-  "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html": "Jasa Alat Konstruksi"  // TYPE: MoneyPage
+  //FOKUS INFORMASI
+  "https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html": "Jasa Alat Konstruksi",
+//FOKUS HARGA
+    "https://www.betonjayareadymix.com/p/estimasi-biaya-jasa-alat-konstruksi.html": "Estimasi Biaya Jasa Alat Konstruksi"
 };
-const urlMappingJasaAlatKonstruksiFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/p/estimasi-biaya-jasa-alat-konstruksi.html": "Estimasi Biaya Jasa Alat Konstruksi"
-};
+
 
 const urlMappingJasaKonstruksiStrukturBridgeFromSub2Sub1 = {
    "https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html": "Perbandingan Jasa Konstruksi Struktur"  // TYPE: SUB1
@@ -1988,7 +1989,6 @@ console.log('[jasa-kons] 📄 File loaded, waiting for DOM...');
     urlMappingJasaPembuatanBridgeFromSub2Sub1,
     urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1,
     urlMappingJasaAlatKonstruksiFromSub1MoneyMaster,
-    urlMappingJasaAlatKonstruksiFromMoneyMasterMoneyPage,
     urlMappingJasaKonstruksiStrukturBridgeFromSub2Sub1,
     urlMappingJasaKonstruksiStrukturFromSub1MoneyMaster,
     urlMappingJasaStrukturKhususBridgeFromSub2Sub1,
@@ -2641,21 +2641,7 @@ if (urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );
    }
-   if (urlMappingJasaAlatKonstruksiFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
-    generateBreadcrumbShared(
-        urlMappingJasaAlatKonstruksiFromMoneyMasterMoneyPage,
-        cleanUrlJasaKons,
-       [
-           // { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-alat-konstruksi.html' },
-            { name: 'Perbandingan Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-alat-konstruksi.html' },
-            { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-
+   
 	if (urlMappingJasaKonstruksiStrukturBridgeFromSub2Sub1[cleanUrlJasaKons]) {
 	generateBreadcrumbShared(
         urlMappingJasaKonstruksiStrukturBridgeFromSub2Sub1,
