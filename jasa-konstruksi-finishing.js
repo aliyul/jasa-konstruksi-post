@@ -372,17 +372,17 @@ const urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-masjid.html": "Jasa Finishing Eksterior Masjid"
 };
 
-const urlMappingJasaEksteriorFromMoneyMasterMoneyMaster1 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-eksterior.html": "Harga Jasa Eksterior",
-  "https://www.betonjayareadymix.com/p/jasa-fasad-rumah.html": "Jasa Fasad Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-taman.html": "Jasa Taman"
+const urlMappingJasaEksteriorFromMoneyMasterMoneyPage = {
+  "https://www.betonjayareadymix.com/p/jasa-fasad.html": "Jasa Fasad",
+  "https://www.betonjayareadymix.com/p/jasa-taman.html": "Jasa Taman",,
+  "https://www.betonjayareadymix.com/p/harga-jasa-eksterior-per-meter.html": "Harga Jasa Eksterior Per Meter"
 };
 
-const urlMappingHargaJasaEksteriorFromMoneyMaster1MoneyPage = {};
-
-const urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-fasad-rumah.html": "Harga Jasa Fasad Rumah"
+const urlMappingJasaEksteriorFromMoneyPageVariant = {
+"https://www.betonjayareadymix.com/p/jasa-fasad-rumah.html": "Jasa Fasad Rumah"
+	
 };
+
 
 const urlMappingJasaTamanFromMoneyMaster2MoneyMaster3 = {
   "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",
@@ -544,9 +544,8 @@ console.log('══════════════════════�
     urlMappingJasaFloorHardenerLantaiFromMoneyPage1MoneyPage2,
     urlMappingJasaFinishingLantaiEpoxyFromMoneyPageMoney1Page2,
     urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage,
-    urlMappingJasaEksteriorFromMoneyMasterMoneyMaster1,
-    urlMappingHargaJasaEksteriorFromMoneyMaster1MoneyPage,
-    urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage,
+    urlMappingJasaEksteriorFromMoneyMasterMoneyPage,
+    urlMappingJasaEksteriorFromMoneyPageVariant,
     urlMappingJasaPasangACPFasadFromMoneyPageMoneyPage1,
     urlMappingJasaPelapisanBatuAlamEksteriorFromMoneyPageMoneyPage1,
     urlMappingJasaPelapisanGentengDakFromMoneyPageMoneyPage1,
@@ -1526,9 +1525,9 @@ function initJasaKonsFinishing() {
     // [BLOK 22] JASA EKSTERIOR + FASAD
     // ═══════════════════════════════════════════════════════
     
-    if (urlMappingJasaEksteriorFromMoneyMasterMoneyMaster1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaEksteriorFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaEksteriorFromMoneyMasterMoneyMaster1,
+            urlMappingJasaEksteriorFromMoneyMasterMoneyPage,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -1540,31 +1539,16 @@ function initJasaKonsFinishing() {
         );
     }
     
-    if (urlMappingHargaJasaEksteriorFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaEksteriorFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingHargaJasaEksteriorFromMoneyMaster1MoneyPage,
+            urlMappingJasaEksteriorFromMoneyPageVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
                 { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
                 { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html' },
-                { name: 'Harga Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/harga-jasa-eksterior.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-    
-    if (urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingJasaFasadRumahFromMoneyMaster1MoneyPage,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html' },
-                { name: 'Perbandingan Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-eksterior.html' },
-                { name: 'Jasa Eksterior', url: 'https://www.betonjayareadymix.com/p/jasa-eksterior.html' },
-                { name: 'Jasa Fasad Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-fasad-rumah.html' }
+                { name: 'Jasa Fasad', url: 'https://www.betonjayareadymix.com/p/jasa-fasad.html' }
             ],
             'JASA_KONSTRUKSI'
         );
