@@ -374,7 +374,7 @@ const urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage = {
 
 const urlMappingJasaEksteriorFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-fasad.html": "Jasa Fasad",
-  "https://www.betonjayareadymix.com/p/jasa-taman.html": "Jasa Taman",,
+  "https://www.betonjayareadymix.com/p/jasa-taman.html": "Jasa Taman",
   "https://www.betonjayareadymix.com/p/harga-jasa-eksterior-per-meter.html": "Harga Jasa Eksterior Per Meter"
 };
 
