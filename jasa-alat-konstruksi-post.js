@@ -51,7 +51,7 @@ const urlMappingJasaAlatKonstruksiFromMoneyMasterMoneyPage = {
 };
 const urlMappingJasaAlatKonstruksiHargaPaketFromMoneyPageVariant = {
 //variant
-  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-harga-paket-all-in..html": "Jasa Alat Konstruksi Harha Paket All In",
+  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-harga-paket-all-in.html": "Jasa Alat Konstruksi Harha Paket All In",
   "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-harga-paket-lepas.html": "Jasa Alat Konstruksi Harha Paket Lepas"
 }
 const urlMappingJasaAlatKonstruksiMetodeLemburFromMoneyPageVariant = {
