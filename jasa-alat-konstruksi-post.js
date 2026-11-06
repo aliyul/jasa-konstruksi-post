@@ -25,12 +25,10 @@ const urlMappingJasaKonsultanFromMoneyMasterMoneyChild = {
   "https://www.betonjayareadymix.com/2018/09/jasa-konsultan-depok.html": "Jasa Konsultan Depok",
   "https://www.betonjayareadymix.com/2018/09/jasa-konsultan-tangerang.html": "Jasa Konsultan Tangerang",
   "https://www.betonjayareadymix.com/2018/09/jasa-konsultan-bekasi.html": "Jasa Konsultan Bekasi",
-  "https://www.betonjayareadymix.com/2018/09/jasa-konsultan-karawang.html": "Jasa Konsultan Karawang"
-};
+  "https://www.betonjayareadymix.com/2018/09/jasa-konsultan-karawang.html": "Jasa Konsultan Karawang",
 
-const urlMappingHargaJasaKonsultanFromMoneyPageMoneyChild = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-konsultan-terdekat.html": "Harga Jasa Konsultan Terdekat",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-konsultan-jakarta.html": "Harga Jasa Konsultan Jakarta",
+  //FOKUS HARGA LOCAL
+    "https://www.betonjayareadymix.com/2018/09/harga-jasa-konsultan-jakarta.html": "Harga Jasa Konsultan Jakarta",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-konsultan-bogor.html": "Harga Jasa Konsultan Bogor",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-konsultan-depok.html": "Harga Jasa Konsultan Depok",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-konsultan-tangerang.html": "Harga Jasa Konsultan Tangerang",
@@ -759,7 +757,6 @@ function restoreCondition(conditionId) {
 
         // ─── JASA KONSULTAN ───
         urlMappingJasaKonsultanFromMoneyMasterMoneyChild,
-        urlMappingHargaJasaKonsultanFromMoneyPageMoneyChild,
 
         // ─── JASA ALAT KONSTRUKSI ───
         urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChild,
@@ -993,20 +990,6 @@ function initJasaKonsAlatKonstruksiPost() {
                 { name: 'Daftar Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konsultan.html' },
                 { name: 'Perbandingan Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konsultan.html' },
                 { name: 'Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/jasa-konsultan.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-    if (urlMappingHargaJasaKonsultanFromMoneyPageMoneyChild[cleanUrlJasaKonsAlatKonstruksiPost]) {
-        generateBreadcrumbShared(
-            urlMappingHargaJasaKonsultanFromMoneyPageMoneyChild,
-            cleanUrlJasaKonsAlatKonstruksiPost,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konsultan.html' },
-                { name: 'Perbandingan Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konsultan.html' },
-                { name: 'Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/jasa-konsultan.html' },
-                { name: 'Harga Jasa Konsultan', url: 'https://www.betonjayareadymix.com/p/harga-jasa-konsultan.html' }
             ],
             'JASA_KONSTRUKSI'
         );
