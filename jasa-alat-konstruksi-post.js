@@ -40,24 +40,37 @@ const urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-surabaya.html": "Estimasi Biaya Jasa Alat Konstruksi Surabaya",
   "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-bandung.html": "Estimasi Biaya Jasa Alat Konstruksi Bandung",
   "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-karawang.html": "Estimasi Biaya Jasa Alat Konstruksi Karawang",
-  "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-bekasi.html": "Estimasi Biaya Jasa Alat Konstruksi Bekasi",
-  "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-tangerang.html": "Estimasi Biaya Jasa Alat Konstruksi Tangerang",
-  "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-depok.html": "Estimasi Biaya Jasa Alat Konstruksi Depok",
-  "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-bogor.html": "Estimasi Biaya Jasa Alat Konstruksi Bogor",
-  "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-jakarta.html": "Estimasi Biaya Jasa Alat Konstruksi Jakarta"
+  "https://www.betonjayareadymix.com/2019/06/estimasi-biaya-jasa-alat-konstruksi-jabodetabek.html": "Estimasi Biaya Jasa Alat Konstruksi Jabodetabek"
 };
 
-const urlMappingJasaAlatKonstruksiBridgeFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-operator-bersertifikat.html": "Jasa Alat Konstruksi Operator Bersertifikat",
+const urlMappingJasaAlatKonstruksiFromMoneyMasterMoneyPage = {
+  //MP
+  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-harga-paket.html": "Jasa Alat Konstruksi Harga Paket",
   "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-metode-lembur.html": "Jasa Alat Konstruksi Metode Lembur",
-  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-termasuk-bahan-bakar.html": "Jasa Alat Konstruksi Termasuk Bahan Bakar"
+  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-operator.html": "Jasa Alat Konstruksi Operator"
 };
+const urlMappingJasaAlatKonstruksiHargaPaketFromMoneyPageVariant = {
+//variant
+  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-harga-paket-all-in..html": "Jasa Alat Konstruksi Harha Paket All In",
+  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-harga-paket-lepas.html": "Jasa Alat Konstruksi Harha Paket Lepas"
+}
+const urlMappingJasaAlatKonstruksiMetodeLemburFromMoneyPageVariant = {
+//variant
+    "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-lembur.html": "Jasa Alat Konstruksi Lembur"
+}
+const urlMappingJasaAlatKonstruksiLemburFromVariantSubVariant = {
+//subvariant
+  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-lembur-shift-malam.html": "Jasa Alat Konstruksi Lembur Shift Malam"
+}
+const urlMappingJasaAlatKonstruksiOperatorFromMoneyPageVariant = {
+//variant
+  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-operator-bersertifikat.html": "Jasa Alat Konstruksi Operator Bersertifikat"
+}
+const urlMappingJasaAlatKonstruksiOperatorBersertifikatFromVariantSubVariant = {
+//subvariant
+  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-operator-sio-alat-berat-besar.html": "Jasa Alat Konstruksi Operator SIO Alat Berat Besar"
+}
 
-const urlMappingJasaAlatKonstruksiBridgeFromMoneyPage1Variant = {
-  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-operator-sio-alat-berat-besar.html": "Jasa Alat Konstruksi Operator SIO Alat Berat Besar",
-  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-lembur-shift-malam.html": "Jasa Alat Konstruksi Lembur Shift Malam",
-  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-termasuk-bbm-proyek-panjang.html": "Jasa Alat Konstruksi Termasuk BBM Proyek Panjang"
-};
 
 const urlMappingSewaPompaDewateringFromMoneyMaster1MoneyPage = {
   /*
@@ -760,8 +773,12 @@ function restoreCondition(conditionId) {
 
         // ─── JASA ALAT KONSTRUKSI ───
         urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1MoneyPageMoneyChild,
-        urlMappingJasaAlatKonstruksiBridgeFromMoneyPage1MoneyPage2,
-        urlMappingJasaAlatKonstruksiBridgeFromMoneyPage1Variant,
+        urlMappingJasaAlatKonstruksiFromMoneyMasterMoneyPage,
+        urlMappingJasaAlatKonstruksiHargaPaketFromMoneyPageVariant,
+       urlMappingJasaAlatKonstruksiMetodeLemburFromMoneyPageVariant,
+      urlMappingJasaAlatKonstruksiLemburFromVariantSubVariant,
+      urlMappingJasaAlatKonstruksiOperatorFromMoneyPageVariant,
+      urlMappingJasaAlatKonstruksiOperatorBersertifikatFromVariantSubVariant,
 
         // ─── SEWA ALAT PROYEK ───
         urlMappingSewaAlatProyekFromMoneyMasterMoneyPage,
@@ -1011,9 +1028,9 @@ function initJasaKonsAlatKonstruksiPost() {
             'JASA_KONSTRUKSI'
         );
     }
-    if (urlMappingJasaAlatKonstruksiBridgeFromMoneyPage1MoneyPage2[cleanUrlJasaKonsAlatKonstruksiPost]) {
+    if (urlMappingJasaAlatKonstruksiFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
         generateBreadcrumbShared(
-            urlMappingJasaAlatKonstruksiBridgeFromMoneyPage1MoneyPage2,
+            urlMappingJasaAlatKonstruksiFromMoneyMasterMoneyPage,
             cleanUrlJasaKonsAlatKonstruksiPost,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -1024,20 +1041,80 @@ function initJasaKonsAlatKonstruksiPost() {
             'JASA_KONSTRUKSI'
         );
     }
-    if (urlMappingJasaAlatKonstruksiBridgeFromMoneyPage1Variant[cleanUrlJasaKonsAlatKonstruksiPost]) {
+    if (urlMappingJasaAlatKonstruksiHargaPaketFromMoneyPageVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
         generateBreadcrumbShared(
-            urlMappingJasaAlatKonstruksiBridgeFromMoneyPage1Variant,
+            urlMappingJasaAlatKonstruksiHargaPaketFromMoneyPageVariant,
             cleanUrlJasaKonsAlatKonstruksiPost,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
                 { name: 'Perbandingan Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-alat-konstruksi.html' },
-                { name: 'Estimasi Biaya Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/estimasi-biaya-jasa-alat-konstruksi.html' }
+                { name: 'Estimasi Biaya Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/estimasi-biaya-jasa-alat-konstruksi.html' },
+                { name: 'Jasa Alat Konstruksi Harga Paket', url: 'https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-harga-paket.html' }
             ],
             'JASA_KONSTRUKSI'
         );
     }
-    // ────────────────────────────────────────────────────────────
+     if (urlMappingJasaAlatKonstruksiMetodeLemburFromMoneyPageVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        generateBreadcrumbShared(
+            urlMappingJasaAlatKonstruksiMetodeLemburFromMoneyPageVariant,
+            cleanUrlJasaKonsAlatKonstruksiPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+                { name: 'Perbandingan Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-alat-konstruksi.html' },
+                { name: 'Estimasi Biaya Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/estimasi-biaya-jasa-alat-konstruksi.html' },
+                { name: 'Jasa Alat Konstruksi Metode Lembur', url: 'https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-metode-lembur.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    if (urlMappingJasaAlatKonstruksiLemburFromVariantSubVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        generateBreadcrumbShared(
+            urlMappingJasaAlatKonstruksiLemburFromVariantSubVariant,
+            cleanUrlJasaKonsAlatKonstruksiPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+                { name: 'Perbandingan Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-alat-konstruksi.html' },
+                { name: 'Estimasi Biaya Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/estimasi-biaya-jasa-alat-konstruksi.html' },
+                { name: 'Jasa Alat Konstruksi Metode Lembur', url: 'https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-metode-lembur.html' },
+                { name: 'Jasa Alat Konstruksi Lembur', url: 'https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-lembur.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+     if (urlMappingJasaAlatKonstruksiOperatorFromMoneyPageVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        generateBreadcrumbShared(
+            urlMappingJasaAlatKonstruksiOperatorFromMoneyPageVariant,
+            cleanUrlJasaKonsAlatKonstruksiPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+                { name: 'Perbandingan Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-alat-konstruksi.html' },
+                { name: 'Estimasi Biaya Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/estimasi-biaya-jasa-alat-konstruksi.html' },
+                { name: 'Jasa Alat Konstruksi Operator', url: 'https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-operator.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+   if (  urlMappingJasaAlatKonstruksiOperatorBersertifikatFromVariantSubVariant[cleanUrlJasaKonsAlatKonstruksiPost]) {
+        generateBreadcrumbShared(
+              urlMappingJasaAlatKonstruksiOperatorBersertifikatFromVariantSubVariant,
+            cleanUrlJasaKonsAlatKonstruksiPost,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-alat-konstruksi.html' },
+                { name: 'Perbandingan Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-alat-konstruksi.html' },
+                { name: 'Estimasi Biaya Jasa Alat Konstruksi', url: 'https://www.betonjayareadymix.com/p/estimasi-biaya-jasa-alat-konstruksi.html' },
+                { name: 'Jasa Alat Konstruksi Operator', url: 'https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-operator.html' },
+                { name: 'Jasa Alat Konstruksi Operator Bersertifikat', url: 'https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-operator-bersertifikat.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+  // ────────────────────────────────────────────────────────────
     // [BAGIAN 4.4] SEWA ALAT PROYEK (MASTER)
     // ────────────────────────────────────────────────────────────
     if (urlMappingSewaAlatProyekFromMoneyMasterMoneyPage[cleanUrlJasaKonsAlatKonstruksiPost]) {
