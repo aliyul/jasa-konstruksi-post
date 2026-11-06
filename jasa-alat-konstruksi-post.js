@@ -56,7 +56,7 @@ const urlMappingJasaAlatKonstruksiHargaPaketFromMoneyPageVariant = {
 }
 const urlMappingJasaAlatKonstruksiMetodeLemburFromMoneyPageVariant = {
 //variant
-    "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-lembur.html": "Jasa Alat Konstruksi Lembur"
+  //  "https://www.betonjayareadymix.com/2019/06/jasa-alat-konstruksi-lembur.html": "Jasa Alat Konstruksi Lembur"
 }
 const urlMappingJasaAlatKonstruksiLemburFromVariantSubVariant = {
 //subvariant
