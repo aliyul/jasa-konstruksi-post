@@ -236,7 +236,7 @@ const urlMappingJasaKonstruksiStrukturBridgeFromSub2Sub1 = {
    "https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html": "Perbandingan Jasa Konstruksi Struktur"  // TYPE: SUB1
 };
 const urlMappingJasaKonstruksiStrukturFromSub1MoneyMaster = {
-   "https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html": "Jasa Konstruksi Struktur"  // TYPE: SUB1
+   "https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html": "Jasa Konstruksi Struktur"
 };
 
 const urlMappingJasaStrukturKhususBridgeFromSub2Sub1 = {
@@ -1434,6 +1434,7 @@ const urlMappinghargaJasaPasangFromSub1MoneyMaster = {
 // 📂 PARENT: Jasa Pasang (MM) ➔ CHILD: Money Page
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaPasangFromMoneyMasterMoneyPage = {
+  "https://www.betonjayareadymix.com/p/jasa-pasang-sandwich-panel.html": "Jasa Pasang Sandwich Panel",
   "https://www.betonjayareadymix.com/p/jasa-pasang-acp.html": "Jasa Pasang Acp",
   "https://www.betonjayareadymix.com/p/jasa-pasang-batu.html": "Jasa Pasang Batu",
   "https://www.betonjayareadymix.com/p/jasa-pasang-grc.html": "Jasa Pasang Grc",
