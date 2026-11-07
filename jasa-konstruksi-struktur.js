@@ -34,56 +34,72 @@ const urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage = {
 // 📁 JASA KONSTRUKSI STRUKTUR (MONEY_MASTER)
 // ============================================================
 const urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage = {
-    "https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html": "Jasa Struktur Baja dan Rangka Ringan",
-    "https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html": "Jasa Struktur Beton dan Pengecoran",
-    "https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html": "Jasa Konstruksi Modular dan Precast"
+   // "https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html": "Jasa Struktur Baja dan Rangka Ringan",
+  //  "https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html": "Jasa Struktur Beton dan Pengecoran",
+  //  "https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html": "Jasa Konstruksi Modular dan Precast"
 };
 
 // ============================================================
 // 📁 JASA STRUKTUR BAJA DAN RANGKA RINGAN (MONEY_PAGE)
 // ============================================================
-const urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1 = {
-    "https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html": "Jasa Konstruksi Baja Ringan",
-    "https://www.betonjayareadymix.com/p/jasa-rangka-atap-baja-ringan.html": "Jasa Rangka Atap Baja Ringan",
-    "https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-konvensional.html": "Jasa Konstruksi Baja Konvensional",
-    "https://www.betonjayareadymix.com/p/jasa-kanopi-baja-dan-besi.html": "Jasa Kanopi Baja dan Besi",
-    "https://www.betonjayareadymix.com/p/jasa-struktur-baja-gudang.html": "Jasa Struktur Baja Gudang"
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-konstruksi-struktur (MM) ➔ CHILD: Money Page
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage = {
+  // Baja (payung)
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-baja.html": "Jasa Konstruksi Baja",
+  
+  // Baja Ringan (B2C)
+  "https://www.betonjayareadymix.com/p/jasa-pasang-baja-ringan.html": "Jasa Pasang Baja Ringan",
+  
+  // Beton (payung)
+  "https://www.betonjayareadymix.com/p/jasa-pengecoran-beton.html": "Jasa Pengecoran Beton",
+  
+  // Precast
+  "https://www.betonjayareadymix.com/p/jasa-panel-beton-precast.html": "Jasa Panel Beton Precast"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-konstruksi-baja (MP) ➔ CHILD: Variant
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaKonstruksiBajaFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html": "Jasa Konstruksi Baja Ringan",
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-konvensional.html": "Jasa Konstruksi Baja Konvensional"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-konstruksi-baja-ringan (Variant) ➔ CHILD: Sub-variant
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaKonstruksiBajaRinganFromVariantSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-rangka-atap-baja-ringan.html": "Jasa Rangka Atap Baja Ringan",
+  "https://www.betonjayareadymix.com/p/jasa-struktur-baja-gudang.html": "Jasa Struktur Baja Gudang"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pengecoran-beton (MP) ➔ CHILD: Variant
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPengecoranBetonFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-pengecoran-kolom-beton.html": "Jasa Pengecoran Kolom Beton",
+  "https://www.betonjayareadymix.com/p/jasa-rabat-beton.html": "Jasa Rabat Beton",
+  "https://www.betonjayareadymix.com/p/jasa-gelar-beton.html": "Jasa Gelar Beton",
+  "https://www.betonjayareadymix.com/p/jasa-cor-ring-balok.html": "Jasa Cor Ring Balok",
+  "https://www.betonjayareadymix.com/p/jasa-sloof-beton.html": "Jasa Sloof Beton",
+  "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-dak.html": "Jasa Pengecoran Lantai Dak",
+  "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-gudang.html": "Jasa Pengecoran Lantai Gudang"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pengecoran-beton (MP) ➔ CHILD: Sub-variant
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPengecoranBetonFromMoneyPageSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-cor-beton-ready-mix.html": "Jasa Cor Beton Ready Mix"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-konstruksi-struktur (MM) ➔ CHILD: Sub-variant
+// (Modular/Precast tidak punya parent MP fisik, langsung di bawah MM)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaKonstruksiStrukturFromMoneyMasterSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-tangga-beton-precast.html": "Jasa Tangga Beton Precast",
+  "https://www.betonjayareadymix.com/p/jasa-toilet-modular-prefab.html": "Jasa Toilet Modular Prefab",
+  "https://www.betonjayareadymix.com/p/jasa-rumah-modular-prefab.html": "Jasa Rumah Modular Prefab"
 };
 
-// ============================================================
-// 📁 JASA KONSTRUKSI BAJA RINGAN (MONEY_PAGE)
-// ============================================================
-const urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2 = {
-    "https://www.betonjayareadymix.com/p/jasa-pasang-baja-ringan.html": "Jasa Pasang Baja Ringan"
-};
-
-// ============================================================
-// 📁 JASA STRUKTUR BETON DAN PENGECORAN (MONEY_PAGE)
-// ============================================================
-const urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1 = {
-    "https://www.betonjayareadymix.com/p/jasa-rabat-beton.html": "Jasa Rabat Beton",
-    "https://www.betonjayareadymix.com/p/jasa-gelar-beton.html": "Jasa Gelar Beton",
-    "https://www.betonjayareadymix.com/p/jasa-cor-tiang-beton.html": "Jasa Cor Tiang Beton",
-    "https://www.betonjayareadymix.com/p/jasa-cor-ring-balok.html": "Jasa Cor Ring Balok",
-    "https://www.betonjayareadymix.com/p/jasa-sloof-beton.html": "Jasa Sloof Beton",
-    "https://www.betonjayareadymix.com/p/jasa-cor-beton-ready-mix.html": "Jasa Cor Beton Ready Mix",
-    "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-dak.html": "Jasa Pengecoran Lantai Dak",
-    "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-gudang.html": "Jasa Pengecoran Lantai Gudang",
-    "https://www.betonjayareadymix.com/p/jasa-bekisting-dan-pembesian.html": "Jasa Bekisting dan Pembesian",
-    "https://www.betonjayareadymix.com/p/jasa-pengecoran-kolom-beton.html": "Jasa Pengecoran Kolom Beton"
-};
-
-// ============================================================
-// 📁 JASA KONSTRUKSI MODULAR DAN PRECAST (MONEY_PAGE)
-// ============================================================
-const urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1 = {
-    "https://www.betonjayareadymix.com/p/jasa-panel-beton-precast.html": "Jasa Panel Beton Precast",
-    "https://www.betonjayareadymix.com/p/jasa-dinding-precast-bangunan.html": "Jasa Dinding Precast Bangunan",
-    "https://www.betonjayareadymix.com/p/jasa-tangga-beton-precast.html": "Jasa Tangga Beton Precast",
-    "https://www.betonjayareadymix.com/p/jasa-balok-dan-sloof-precast.html": "Jasa Balok dan Sloof Precast",
-    "https://www.betonjayareadymix.com/p/jasa-toilet-modular-prefab.html": "Jasa Toilet Modular Prefab",
-    "https://www.betonjayareadymix.com/p/jasa-rumah-modular-prefab.html": "Jasa Rumah Modular Prefab"
-};
 
 // ============================================================
 // 📁 JASA STRUKTUR KHUSUS (MONEY_MASTER)
@@ -180,10 +196,12 @@ const urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1 = {
     var ALL_MAPPINGS = [
         urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage,
         urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage,
-        urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1,
-        urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2,
-        urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1,
-        urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1,
+        urlMappingJasaKonstruksiBajaFromMoneyPageVariant,
+        urlMappingJasaKonstruksiBajaRinganFromVariantSubVariant,
+        urlMappingJasaPengecoranBetonFromMoneyPageVariant,
+        urlMappingJasaPengecoranBetonFromMoneyPageSubVariant,
+        
+        urlMappingJasaKonstruksiStrukturFromMoneyMasterSubVariant,
         urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1,
         urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage,
         urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage,
@@ -284,75 +302,75 @@ function initJasaKonsStrukturPillar() {
             'JASA_KONSTRUKSI'
         );
     }
-
-    // ═══════════════════════════════════════════════════════
-    // [BLOK 3] JASA STRUKTUR BAJA DAN RANGKA RINGAN (MONEY_PAGE)
-    // ═══════════════════════════════════════════════════════
-    if (urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
+ 
+   if (urlMappingJasaKonstruksiBajaFromMoneyPageVariant[cleanUrlJasaJasaKonsStruktur]) {
         generateBreadcrumbShared(
-            urlMappingJasaStrukturBajaRangkaRinganFromMoneyPageMoneyPage1,
+            urlMappingJasaKonstruksiBajaFromMoneyPageVariant,
             cleanUrlJasaJasaKonsStruktur,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
                 { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
                 { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
-                { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' }
+                { name: 'Jasa Konstruksi Baja', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja.html' }
             ],
             'JASA_KONSTRUKSI'
         );
     }
-
-    // ═══════════════════════════════════════════════════════
-    // [BLOK 4] JASA KONSTRUKSI BAJA RINGAN (MONEY_PAGE)
-    // ═══════════════════════════════════════════════════════
-    if (urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStruktur]) {
+    if (urlMappingJasaKonstruksiBajaRinganFromVariantSubVariant[cleanUrlJasaJasaKonsStruktur]) {
         generateBreadcrumbShared(
-            urlMappingJasaKonstruksiBajaRinganFromMoneyPage1MoneyPage2,
+            urlMappingJasaKonstruksiBajaRinganFromVariantSubVariant,
             cleanUrlJasaJasaKonsStruktur,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
                 { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
                 { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
-                { name: 'Jasa Struktur Baja dan Rangka Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html' },
+                { name: 'Jasa Konstruksi Baja', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja.html' },
                 { name: 'Jasa Konstruksi Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan.html' }
             ],
             'JASA_KONSTRUKSI'
         );
     }
-
-    // ═══════════════════════════════════════════════════════
-    // [BLOK 5] JASA STRUKTUR BETON DAN PENGECORAN (MONEY_PAGE)
-    // ═══════════════════════════════════════════════════════
-    if (urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
+   
+    if (urlMappingJasaPengecoranBetonFromMoneyPageVariant[cleanUrlJasaJasaKonsStruktur]) {
         generateBreadcrumbShared(
-            urlMappingJasaStrukturBetonDanPengecoranFromMoneyPageMoneyPage1,
+            urlMappingJasaPengecoranBetonFromMoneyPageVariant,
             cleanUrlJasaJasaKonsStruktur,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
                 { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
                 { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
-                { name: 'Jasa Struktur Beton dan Pengecoran', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html' }
+                { name: 'Jasa Pengecoran Beton', url: 'https://www.betonjayareadymix.com/p/jasa-pengecoran-beton.html' }
             ],
             'JASA_KONSTRUKSI'
         );
     }
-
-    // ═══════════════════════════════════════════════════════
-    // [BLOK 6] JASA KONSTRUKSI MODULAR DAN PRECAST (MONEY_PAGE)
-    // ═══════════════════════════════════════════════════════
-    if (urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStruktur]) {
+    if (urlMappingJasaPengecoranBetonFromMoneyPageSubVariant[cleanUrlJasaJasaKonsStruktur]) {
         generateBreadcrumbShared(
-            urlMappingJasaKonstruksiModularDanPrecastFromMoneyPageMoneyPage1,
+            urlMappingJasaPengecoranBetonFromMoneyPageSubVariant,
             cleanUrlJasaJasaKonsStruktur,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
                 { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
                 { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
-                { name: 'Jasa Konstruksi Modular dan Precast', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html' }
+                { name: 'Jasa Pengecoran Beton', url: 'https://www.betonjayareadymix.com/p/jasa-pengecoran-beton.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+   
+    if (urlMappingJasaKonstruksiStrukturFromMoneyMasterSubVariant[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaKonstruksiStrukturFromMoneyMasterSubVariant,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+                { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+                { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' }
             ],
             'JASA_KONSTRUKSI'
         );
