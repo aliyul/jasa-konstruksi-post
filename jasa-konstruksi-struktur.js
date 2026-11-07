@@ -61,7 +61,6 @@ const urlMappingJasaKonstruksiBajaFromMoneyPageVariant = {
 const urlMappingJasaKonstruksiBajaRinganFromVariantSubVariant = {
   "https://www.betonjayareadymix.com/p/jasa-rangka-atap-baja-ringan.html": "Jasa Rangka Atap Baja Ringan",
   "https://www.betonjayareadymix.com/p/jasa-struktur-baja-gudang.html": "Jasa Struktur Baja Gudang",
-  / 🆕 TAMBAHKAN:
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan-ruko.html": "Jasa Konstruksi Baja Ringan Ruko"
 
 };
