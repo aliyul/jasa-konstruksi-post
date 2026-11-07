@@ -32,16 +32,6 @@ const urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage = {
 
 // ============================================================
 // 📁 JASA KONSTRUKSI STRUKTUR (MONEY_MASTER)
-// ============================================================
-const urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage = {
-   // "https://www.betonjayareadymix.com/p/jasa-struktur-baja-dan-rangka-ringan.html": "Jasa Struktur Baja dan Rangka Ringan",
-  //  "https://www.betonjayareadymix.com/p/jasa-struktur-beton-dan-pengecoran.html": "Jasa Struktur Beton dan Pengecoran",
-  //  "https://www.betonjayareadymix.com/p/jasa-konstruksi-modular-dan-precast.html": "Jasa Konstruksi Modular dan Precast"
-};
-
-// ============================================================
-// 📁 JASA STRUKTUR BAJA DAN RANGKA RINGAN (MONEY_PAGE)
-// ============================================================
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-konstruksi-struktur (MM) ➔ CHILD: Money Page
 // ═════════════════════════════════════════════════════════════════════
@@ -70,7 +60,19 @@ const urlMappingJasaKonstruksiBajaFromMoneyPageVariant = {
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaKonstruksiBajaRinganFromVariantSubVariant = {
   "https://www.betonjayareadymix.com/p/jasa-rangka-atap-baja-ringan.html": "Jasa Rangka Atap Baja Ringan",
-  "https://www.betonjayareadymix.com/p/jasa-struktur-baja-gudang.html": "Jasa Struktur Baja Gudang"
+  "https://www.betonjayareadymix.com/p/jasa-struktur-baja-gudang.html": "Jasa Struktur Baja Gudang",
+  / 🆕 TAMBAHKAN:
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-baja-ringan-ruko.html": "Jasa Konstruksi Baja Ringan Ruko"
+
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pasang-baja-ringan (MP) ➔ CHILD: Variant
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPasangBajaRinganFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-pasang-atap-baja-ringan.html": "Jasa Pasang Atap Baja Ringan",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-kanopi-baja-ringan.html": "Jasa Pasang Kanopi Baja Ringan",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-baja-ringan-per-meter.html": "Jasa Pasang Baja Ringan per Meter",
+  "https://www.betonjayareadymix.com/p/jasa-borongan-rangka-atap-baja-ringan.html": "Jasa Borongan Rangka Atap Baja Ringan"
 };
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-pengecoran-beton (MP) ➔ CHILD: Variant
@@ -198,6 +200,7 @@ const urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1 = {
         urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage,
         urlMappingJasaKonstruksiBajaFromMoneyPageVariant,
         urlMappingJasaKonstruksiBajaRinganFromVariantSubVariant,
+        urlMappingJasaPasangBajaRinganFromMoneyPageVariant,
         urlMappingJasaPengecoranBetonFromMoneyPageVariant,
         urlMappingJasaPengecoranBetonFromMoneyPageSubVariant,
         
@@ -332,6 +335,21 @@ function initJasaKonsStrukturPillar() {
             'JASA_KONSTRUKSI'
         );
     }
+   if (urlMappingJasaPasangBajaRinganFromMoneyPageVariant[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPasangBajaRinganFromMoneyPageVariant,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-struktur.html' },
+                { name: 'Perbandingan Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-struktur.html' },
+                { name: 'Jasa Konstruksi Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-struktur.html' },
+                { name: 'Jasa Pasang Baja Ringan', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-baja-ringan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
    
     if (urlMappingJasaPengecoranBetonFromMoneyPageVariant[cleanUrlJasaJasaKonsStruktur]) {
         generateBreadcrumbShared(
