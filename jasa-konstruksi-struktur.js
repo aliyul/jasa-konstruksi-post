@@ -55,7 +55,7 @@ const urlMappingJasaPembuatanRumahFromMoneyPageVariant = {
 };
 const urlMappingJasaPembuatanRumahFromMoneyPageSubVariant = {
   "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-per-meter-terima.html": "Jasa Borongan Rumah Per Meter Terima Kunci",
-  "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-2-lantai-per-m2.html": "Jasa Borongan Rumah 2 Lantai Per M2,
+  "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-2-lantai-per-m2.html": "Jasa Borongan Rumah 2 Lantai Per M2",
  "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-1-lantai-per-meter.html": "Jasa Borongan Rumah 1 Lantai Per Meter",
  "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-per-meter-plus.html": "Jasa Borongan Rumah Per Meter Plus Material",
  "https://www.betonjayareadymix.com/p/jasa-upah-tenaga-borongan-bangunan-per.html": "Jasa Upah Tenaga Borongan Bangunan Per M2"
