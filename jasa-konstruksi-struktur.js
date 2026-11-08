@@ -53,7 +53,13 @@ const urlMappingJasaPembuatanRumahFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah-per-m2.html": "Jasa Konstruksi Rumah per m2",
   "https://www.betonjayareadymix.com/p/jasa-borongan-tenaga-bangunan-rumah.html": "Jasa Borongan Tenaga Bangunan Rumah"
 };
-
+const urlMappingJasaPembuatanRumahFromMoneyPageSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-per-meter-terima.html": "Jasa Borongan Rumah Per Meter Terima Kunci",
+  "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-2-lantai-per-m2.html": "Jasa Borongan Rumah 2 Lantai Per M2,
+ "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-1-lantai-per-meter.html": "Jasa Borongan Rumah 1 Lantai Per Meter",
+ "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-per-meter-plus.html": "Jasa Borongan Rumah Per Meter Plus Material",
+ "https://www.betonjayareadymix.com/p/jasa-upah-tenaga-borongan-bangunan-per.html": "Jasa Upah Tenaga Borongan Bangunan Per M2"
+};
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: MP Bangunan Komersial ➔ CHILD: Variant (spesifikasi mewah/bintang)
 // ═════════════════════════════════════════════════════════════════════
@@ -70,9 +76,16 @@ const urlMappingJasaPembuatanSekolahFromMoneyPageVariant = {
 };
 
 const urlMappingJasaPembuatanGudangFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gudang-logistik.html": "Jasa Konstruksi Gudang Logistik"
-};
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gudang-logistik.html": "Jasa Konstruksi Gudang Logistik",
+ "https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang-per-m2.html": "Jasa Pembuatan Gedung Per M2",
+ "https://www.betonjayareadymix.com/p/biaya-jasa-pembuatan-gudang-baja-ringan.html": "Biaya Jasa Pembuatan Gudang Baja Ringan"
 
+};
+const urlMappingJasaPembuatanGudangFromVariantSubVariant = {
+"https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang-rangka-baja.html": "Jasa Pembuatan Gudang Rangka Baja",
+"https://www.betonjayareadymix.com/p/jasa-borong-tenaga-bikin-gudang.html": "Jasa Borongan Tenaga Bikin Gudang"
+
+};
 const urlMappingJasaKonstruksiGudangLogistikFromVariantSubVariant = {
     "https://www.betonjayareadymix.com/p/jasa-konstruksi-cold-storage-modern.html": "Jasa Konstruksi Cold Storage Modern"
 };
@@ -91,8 +104,7 @@ const urlMappingJasaPembuatanFurnitureFromMoneyPageVariant = {
 // (Perlu dibuat MP baru: jasa-pembuatan-gedung & jasa-pembuatan-pabrik)
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaPembuatanGedungFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-perkantoran.html": "Jasa Konstruksi Gedung Perkantoran",
-     "https://www.betonjayareadymix.com/p/biaya-jasa-pembuatan-gudang-baja-ringan.html": "Biaya Jasa Pembuatan Gudang Baja Ringan"
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-perkantoran.html": "Jasa Konstruksi Gedung Perkantoran"
 };
 
 const urlMappingJasaPembuatanPabrikFromMoneyPageVariant = {
@@ -118,7 +130,10 @@ const urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage = {
   
   // Beton (payung)
   "https://www.betonjayareadymix.com/p/jasa-pengecoran-beton.html": "Jasa Pengecoran Beton",
-  
+
+  //Borongan Sloof
+  "https://www.betonjayareadymix.com/p/jasa-borongan-sloof-beton.html": "Jasa Borongan Sloof Beton",
+    
   // Precast
   "https://www.betonjayareadymix.com/p/jasa-panel-beton-precast.html": "Jasa Panel Beton Precast"
 };
@@ -171,7 +186,8 @@ const urlMappingJasaPengecoranBetonFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/jasa-cor-ring-balok.html": "Jasa Cor Ring Balok",
   "https://www.betonjayareadymix.com/p/jasa-sloof-beton.html": "Jasa Sloof Beton",
   "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-dak.html": "Jasa Pengecoran Lantai Dak",
-  "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-gudang.html": "Jasa Pengecoran Lantai Gudang"
+  "https://www.betonjayareadymix.com/p/jasa-pengecoran-lantai-gudang.html": "Jasa Pengecoran Lantai Gudang",
+  "https://www.betonjayareadymix.com/p/jasa-borongan-cor-beton-bangunan.html": "Jasa Borongan Cor Beton Bangunan"
 };
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-pengecoran-beton (MP) ➔ CHILD: Sub-variant
@@ -289,6 +305,8 @@ const urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1 = {
     var ALL_MAPPINGS = [
         urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage,
         urlMappingJasaPembuatanRumahFromMoneyPageVariant,
+        urlMappingJasaPembuatanRumahFromMoneyPageSubVariant,
+        
         urlMappingJasaPembuatanApartemenFromMoneyPageVariant,
         urlMappingJasaPembuatanHotelFromMoneyPageVariant,
         urlMappingJasaPembuatanSekolahFromMoneyPageVariant,
@@ -406,6 +424,21 @@ function initJasaKonsStrukturPillar() {
             'JASA_KONSTRUKSI'
         );
     }
+    if (urlMappingJasaPembuatanRumahFromMoneyPageSubVariant[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPembuatanRumahFromMoneyPageSubVariant,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-bangunan.html' },
+                { name: 'Perbandingan Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-bangunan.html' },
+                { name: 'Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html' },
+                { name: 'Jasa Pembuatan Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
     if (urlMappingJasaPembuatanApartemenFromMoneyPageVariant[cleanUrlJasaJasaKonsStruktur]) {
         generateBreadcrumbShared(
             urlMappingJasaPembuatanApartemenFromMoneyPageVariant,
