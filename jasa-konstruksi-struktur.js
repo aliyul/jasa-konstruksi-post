@@ -14,7 +14,7 @@ console.log('[jasa-konstruksi-struktur] 📄 File loaded, waiting for DOM...');
 // ============================================================
 const urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage = {
     //MP BANGUNAN HUNIAN
-     "https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html": "Jasa Pembuatan Bangunan",
+   //  "https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html": "Jasa Pembuatan Bangunan",
      "https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html": "Jasa Pembuatan Rumah",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-apartemen.html": "Jasa Pembuatan Apartemen",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-hotel.html": "Jasa Pembuatan Hotel",
