@@ -36,7 +36,7 @@ const urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage = {
         // Kusen/Pintu/Jendela bisa menjadi MM sendiri atau di bawah Furniture
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-kusen.html": "Jasa Pembuatan Kusen",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-pintu.html": "Jasa Pembuatan Pintu",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-jendela.html": "Jasa Pembuatan Jendela"
+    "https://www.betonjayareadymix.com/p/jasa-pembuatan-jendela.html": "Jasa Pembuatan Jendela",
         
     //MP Furnitur
      "https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html": "Jasa Pembuatan Furniture"  
