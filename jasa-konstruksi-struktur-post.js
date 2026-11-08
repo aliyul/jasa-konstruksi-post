@@ -82,35 +82,30 @@ const urlMappingJasaTukangBajaRinganFromMoneyPage3MoneyPage4 = {
 // ============================================================
 
 const urlMappingJasaKonstruksiBajaKonvensionalFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-baja-konvensional.html": "Harga Jasa Konstruksi Baja Konvensional",
-  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-gudang.html": "Jasa Konstruksi Baja Gudang",
-  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-pabrik.html": "Jasa Konstruksi Baja Pabrik",
-  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-ruko.html": "Jasa Konstruksi Baja Ruko",
-  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-rumah.html": "Jasa Konstruksi Baja Rumah",
-  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-baja-gedung.html": "Jasa Konstruksi Baja Gedung",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembangunan-tower-baja.html": "Jasa Pembangunan Tower Baja"
+
+
+
+  
 };
 
 const urlMappingHargaJasaKonstruksiBajaKonvensionalFromMoneyPage2MoneyPage3 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-besi-wf.html": "Harga Jasa Konstruksi Besi WF",
+ // "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-besi-wf.html": "Harga Jasa Konstruksi Besi WF",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-baja-wf.html": "Harga Jasa Konstruksi Baja WF",
-  "https://www.betonjayareadymix.com/2018/09/harga-konstruksi-baja-wf-per-m2.html": "Harga Konstruksi Baja WF Per M2",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-rumah-baja": "Harga Jasa Konstruksi Rumah Baja",
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-jasa-konstruksi-besi.html": "Harga Borongan Jasa Konstruksi Besi",
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-besi.html": "Harga Borongan Konstruksi Besi",
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-baja-wf.html": "Harga Borongan Konstruksi Baja WF",
-  "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-baja-per-meter.html": "Harga Borongan Konstruksi Baja Per Meter"
+
+ // "https://www.betonjayareadymix.com/2018/09/harga-konstruksi-baja-wf-per-m2.html": "Harga Konstruksi Baja WF Per M2",
+ // "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-rumah-baja": "Harga Jasa Konstruksi Rumah Baja",
+ // "https://www.betonjayareadymix.com/2018/09/harga-borongan-jasa-konstruksi-besi.html": "Harga Borongan Jasa Konstruksi Besi",
+  //"https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-besi.html": "Harga Borongan Konstruksi Besi",
+ // "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-baja-wf.html": "Harga Borongan Konstruksi Baja WF",
+ // "https://www.betonjayareadymix.com/2018/09/harga-borongan-konstruksi-baja-per-meter.html": "Harga Borongan Konstruksi Baja Per Meter"
 };
 
 const urlMappingJasaPembangunanTowerBajaFromMoneyPage2MoneyPage3 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembangunan-tower-baja.html": "Harga Jasa Pembangunan Tower Baja",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pemasangan-tower-bts.html": "Jasa Pemasangan Tower BTS",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pemasangan-tower-triangle.html": "Jasa Pemasangan Tower Triangle"
 };
 
 const urlMappingHargaJasaPembangunanTowerBajaFromMoneyPage3MoneyPage4 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-tower.html": "Harga Jasa Pasang Tower",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-pasang-tower.html": "Harga Jasa Borongan Pasang Tower"
+ // "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-tower.html": "Harga Jasa Pasang Tower",
+  //"https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-pasang-tower.html": "Harga Jasa Borongan Pasang Tower"
 };
 
 // ============================================================
@@ -130,19 +125,20 @@ const urlMappingJasaStrukturBajaGudangFromMoneyPage1MoneyPage2 = {};
 // ============================================================
 
 const urlMappingJasaCorRingBalokFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-ring-balok.html": "Harga Jasa Borongan Cor Ring Balok"
+//  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-cor-ring-balok.html": "Harga Jasa Borongan Cor Ring Balok"
 };
 
 const urlMappingJasaSloofBetonFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-cor-beton-sloof.html": "Harga Jasa Cor Beton Sloof",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-sloof-beton.html": "Harga Jasa Borongan Sloof Beton"
+//  "https://www.betonjayareadymix.com/2018/09/harga-jasa-cor-beton-sloof.html": "Harga Jasa Cor Beton Sloof",
+//  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-sloof-beton.html": "Harga Jasa Borongan Sloof Beton"
 };
 
 const urlMappingHargaJasaBoronganSloofBetonFromMoneyPage2MoneyPage3 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-sloof-beton-per-meter.html": "Harga Jasa Borongan Sloof Beton Per Meter"
+ // "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-sloof-beton-per-meter.html": "Harga Jasa Borongan Sloof Beton Per Meter"
 };
 
 const urlMappingHargaJasaBoronganSloofBetonPerMeterFromMoneyPage3MoneyChild = {
+  /*
   "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-kuningan.html": "Harga Jasa Sloof Beton Per Meter Kuningan",
   "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-ciamis.html": "Harga Jasa Sloof Beton Per Meter Ciamis",
   "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-cianjur.html": "Harga Jasa Sloof Beton Per Meter Cianjur",
@@ -162,6 +158,7 @@ const urlMappingHargaJasaBoronganSloofBetonPerMeterFromMoneyPage3MoneyChild = {
   "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-jakarta.html": "Harga Jasa Sloof Beton Per Meter Jakarta",
   "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-bekasi.html": "Harga Jasa Sloof Beton Per Meter Bekasi",
   "https://www.betonjayareadymix.com/2019/01/harga-jasa-sloof-beton-per-meter-bogor.html": "Harga Jasa Sloof Beton Per Meter Bogor"
+  */
 };
 
 const urlMappingJasaCorBetonReadyMixFromMoneyPage1MoneyPage2 = {
@@ -227,12 +224,11 @@ console.log('══════════════════════�
 const urlMappingJasaPengecoranLantaiGudangFromMoneyPage1MoneyPage2 = {};
 
 const urlMappingJasaBekistingdanPembesianFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/2021/12/jasa-bekisting-sloof-per-m2.html": "Jasa Bekisting Sloof per m2",
-  "https://www.betonjayareadymix.com/2021/08/jasa-bekisting-rumah.html": "Jasa Bekisting Rumah"
+
 };
 
 const urlMappingJasaPengecoranKolomBetonFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-kolom-beton.html": "Harga Jasa Borongan Kolom Beton"
+ // "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-kolom-beton.html": "Harga Jasa Borongan Kolom Beton"
 };
 
 // ============================================================
@@ -248,8 +244,6 @@ const urlMappingJasaKonstruksiGedungHunianFromMoneyPageMoneyPage1 = {};
 const urlMappingHargaJasaBoronganBangunanFromMoneyPage1MoneyPage2 = {
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-upah-tenaga-borongan-bangunan-per-m2.html": "Harga Jasa Upah Tenaga Borongan Bangunan Per M2",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-konstruksi-per-meter.html": "Harga Jasa Borongan Konstruksi Per Meter",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-tukang-bangunan-per-meter.html": "Harga Jasa Borongan Tukang Bangunan Per Meter",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-bangunan-plus-material.html": "Harga Jasa Borongan Bangunan Plus Material"
 };
 
 const urlMappingHargaJasaBoronganBangunanFromMoneyPage1MoneyChild = {
@@ -261,20 +255,17 @@ const urlMappingHargaJasaBoronganBangunanFromMoneyPage1MoneyChild = {
 };
 
 const urlMappingJasaPembuatanRumahFromMoneyMaster2MoneyPage = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-rumah.html": "Harga Jasa Pembuatan Rumah"
+
 };
 
 const urlMappingHargaJasaPembuatanRumahFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-rumah.html": "Harga Jasa Borongan Rumah",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-rumah-per-m2": "Harga Jasa Konstruksi Rumah Per M2"
 };
 
 const urlMappingHargaJasaBoronganRumahFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-bangunan-rumah.html": "Harga Jasa Borongan Bangunan Rumah",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-rumah-per-meter-plus-material.html": "Harga Jasa Borongan Rumah Per Meter Plus Material",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-rumah-per-meter-terima-kunci.html": "Harga Jasa Borongan Rumah Per Meter Terima Kunci",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-rumah-1-lantai-per-meter.html": "Harga Jasa Borongan Rumah 1 Lantai Per Meter",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-tenaga-bangunan-rumah.html": "Harga Jasa Borongan Tenaga Bangunan Rumah",
+
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-rumah-2-lantai-per-m2.html": "Harga Jasa Borongan Rumah 2 Lantai Per M2"
 };
 
@@ -291,7 +282,7 @@ const urlMappingHargaJasaBoronganRumahFromMoneyPage1MoneyChild = {
 };
 
 const urlMappingJasaBangunRumahFromMoneyMaster3MoneyPage = {
-  "https://www.betonjayareadymix.com/2018/09/jasa-bangun-rumah-borongan.html": "Jasa Bangun Rumah Borongan"
+
 };
 
 const urlMappingJasaBangunRumahFromMoneyMaster3MoneyChild = {
@@ -324,7 +315,6 @@ const urlMappingJasaPembuatanGudangFromFromMoneyMaster2MoneyPage = {
 };
 
 const urlMappingHargaJasaPembuatanGudangFromFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/2018/09/biaya-jasa-pembuatan-gudang-baja-ringan.html": "Biaya Jasa Pembuatan Gudang Baja Ringan",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-konstruksi-gudang-per-meter.html": "Harga Jasa Konstruksi Gudang per Meter",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borong-tenaga-bikin-gudang.html": "Harga Jasa Borong Tenaga Bikin Gudang",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-gudang-per-m2.html": "Harga Jasa Borongan Gudang per M2",
