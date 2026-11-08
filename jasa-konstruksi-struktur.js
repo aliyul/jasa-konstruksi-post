@@ -73,7 +73,7 @@ const urlMappingJasaPembuatanGudangFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-gudang-logistik.html": "Jasa Konstruksi Gudang Logistik"
 };
 
-const urlMappingJasaKonstruksiGudangLogistikFromVariantSubVariant {
+const urlMappingJasaKonstruksiGudangLogistikFromVariantSubVariant = {
     "https://www.betonjayareadymix.com/p/jasa-konstruksi-cold-storage-modern.html": "Jasa Konstruksi Cold Storage Modern"
 };
 const urlMappingJasaPembuatanFurnitureFromMoneyPageVariant = {
