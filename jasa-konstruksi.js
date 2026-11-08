@@ -58,7 +58,7 @@ const urlMappingJasaKonsFromPillarSub2 = {
 "https://www.betonjayareadymix.com/p/daftar-jasa-eksterior.html": "Daftar Jasa Eksterior",
 "https://www.betonjayareadymix.com/p/daftar-jasa-konsultan.html": "Daftar Jasa Konsultan",
 "https://www.betonjayareadymix.com/p/daftar-jasa-kitchen-set.html": "Daftar Jasa Kitchen Set",  
-"https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html": "Daftar Jasa Pembuatan",  
+//"https://www.betonjayareadymix.com/p/daftar-jasa-pembuatan.html": "Daftar Jasa Pembuatan",  
 "https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html": "Daftar Jasa Pasang",  
   "https://www.betonjayareadymix.com/p/daftar-jasa-alat-konstruksi.html": "Daftar Jasa Alat Konstruksi",  
   "https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-bangunan.html": "Daftar Jasa Konstruksi Bangunan",  
@@ -122,7 +122,7 @@ const urlMappingJasaReliefFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-relief-beton.html": "Jasa Relief Beton"
 };
 const urlMappingJasaReliefDindingFromMoneyPageVariant = {
-	  "https://www.betonjayareadymix.com/p/jasa-pembuatan-relief-dinding.html": "Jasa Pembuatan Relief Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-relief-dinding.html": "Jasa Pembuatan Relief Dinding",
 "https://www.betonjayareadymix.com/p/jasa-relief-dinding-3d.html": "Jasa Relief Dinding 3D",
 	"https://www.betonjayareadymix.com/p/jasa-relief-dinding-interior.html": "Jasa Relief Dinding Interior",
   "https://www.betonjayareadymix.com/p/jasa-relief-dinding-eksterior.html": "Jasa Relief Dinding Eksterior"
@@ -216,7 +216,7 @@ const urlMappingJasaPasangBridgeFromSub2Sub1 = {
   "https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html": "Perbandingan Jasa Pasang" // (Tipe: Sub-Pillar Tipe 1)
 };
 const urlMappingJasaPembuatanBridgeFromSub2Sub1 = {
-  "https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html": "Perbandingan Jasa Pembuatan" // (Tipe: Sub-Pillar Tipe 1)
+// "https://www.betonjayareadymix.com/p/perbandingan-jasa-pembuatan.html": "Perbandingan Jasa Pembuatan" // (Tipe: Sub-Pillar Tipe 1)
 };
 
 const urlMappingJasaAlatKonstruksiBridgeFromSub2Sub1 = {
@@ -889,7 +889,7 @@ const urlMappingHargaJasaPerkuatanTanahFromSub1MoneyMaster = {
 };
 
 const urlMappingJasaPembatasPengamanBridgeFromSub2Sub1 = {
-  "https://www.betonjayareadymix.com/p/perbandingan-jasa-pembatas-pengaman.html": "Perbandingan Jasa Pembatas Pengaman"  // TYPE: SUB1
+//  "https://www.betonjayareadymix.com/p/perbandingan-jasa-pembatas-pengaman.html": "Perbandingan Jasa Pembatas Pengaman"  // TYPE: SUB1
 };
 const urlMappingJasaPembatasPengamanFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-pembatas-pengaman.html": "Jasa Pembatas Pengaman"  
@@ -1298,26 +1298,13 @@ const urlMappingJasaKitchenSetFromMoneyMasterMoneyPage = {
 };
 
 const urlMappingJasaPembuatanFromSub1MoneyMaster = {
-	 "https://www.betonjayareadymix.com/p/jasa-pembuatan.html": "Jasa Pembuatan"
+	// "https://www.betonjayareadymix.com/p/jasa-pembuatan.html": "Jasa Pembuatan"
 };
 const urlMappingJasaPembuatanFromMoneyMasterMoneyPage = {
     // ================================================================
     // 📌 MONEY-MASTER (LEVEL 4) - JASA PEMBUATAN (HANYA KATEGORI UTAMA)
     // ================================================================
 	
-	 "https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html": "Jasa Pembuatan Bangunan",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html": "Jasa Pembuatan Furniture",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar.html": "Jasa Pembuatan Pagar",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kanopi.html": "Jasa Pembuatan Kanopi",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-tangga.html": "Jasa Pembuatan Tangga",
-
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-balkon.html": "Jasa Pembuatan Balkon",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-decking.html": "Jasa Pembuatan Decking",
-   // "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",
-    // Kusen/Pintu/Jendela bisa menjadi MM sendiri atau di bawah Furniture
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kusen.html": "Jasa Pembuatan Kusen",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-pintu.html": "Jasa Pembuatan Pintu",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-jendela.html": "Jasa Pembuatan Jendela"
 };
 /*
 const urlMappingHargaJasaPembuatanFromSub1MoneyMaster = {
@@ -1343,33 +1330,19 @@ const urlMappingHargaJasaPembuatanFromSub1MoneyMaster = {
 */
 
 const urlMappingJasaPembuatanBangunanFromMoneyMaster1MoneyMaster2 = {
-  "https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html": "Jasa Pembuatan Rumah",
- // MP Tambahan (bisa ditambah sesuai kebutuhan)
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-apartemen.html": "Jasa Pembuatan Apartemen",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-hotel.html": "Jasa Pembuatan Hotel",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-sekolah.html": "Jasa Pembuatan Sekolah",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-rs.html": "Jasa Pembuatan Rumah Sakit",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-masjid.html": "Jasa Pembuatan Masjid",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-ruko.html": "Jasa Pembuatan Ruko",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang.html": "Jasa Pembuatan Gudang"
+// MP Tambahan (bisa ditambah sesuai kebutuhan)
+
+
 
 };
 const urlMappingJasaPembuatanRumahFromMoneyMaster2MoneyMaster3 = {
-	"https://www.betonjayareadymix.com/p/jasa-bangun-rumah.html": "Jasa Bangun Rumah"
+	//"https://www.betonjayareadymix.com/p/jasa-bangun-rumah.html": "Jasa Bangun Rumah"
  };
 // ================================================================
 // 📌 MONEY-PAGE (LEVEL 5) - HANYA UNTUK JENIS FURNITURE SPESIFIK
 // ================================================================
 const urlMappingJasaPembuatanFurnitureFromMoneyMaster1MoneyPage = {
-	"https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture-custom.html": "Jasa Pembuatan Furniture Custom", // (Perbaiki URL yang 404)
-//"https://www.betonjayareadymix.com/p/jasa-pembuatan-kitchen-set.html": "Jasa Pembuatan Kitchen Set",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lemari-built-in.html": "Jasa Pembuatan Lemari Built In",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-partisi-ruangan.html": "Jasa Pembuatan Partisi Ruangan",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-meja-kursi.html": "Jasa Pembuatan Meja Kursi",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-sofa-custom.html": "Jasa Pembuatan Sofa Custom",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-tempat-tidur.html": "Jasa Pembuatan Tempat Tidur",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-rak-buku.html": "Jasa Pembuatan Rak Buku",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-kamar-set.html": "Jasa Pembuatan Kamar Set"
+	
 };
 
 // ================================================================
