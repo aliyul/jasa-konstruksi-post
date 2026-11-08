@@ -147,7 +147,7 @@ const urlMappingJasaKonstruksiBajaRinganFromVariantSubVariant = {
 // 📂 PARENT: jasa-pasang-tower (MP) ➔ CHILD: Variant
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaPasangTowerFromMoneyPageVariant = {
- "https://www.betonjayareadymix.com/p/jasa-pemasangan-tower-triangle.html": "Jasa Pemasangan Tower Triangle"
+ "https://www.betonjayareadymix.com/p/jasa-pemasangan-tower-triangle.html": "Jasa Pemasangan Tower Triangle",
  "https://www.betonjayareadymix.com/p/jasa-pembangunan-tower-baja.html": "Jasa Pembangunan Tower Baja",
   "https://www.betonjayareadymix.com/p/jasa-pemasangan-tower-bts.html": "Jasa Pemasangan Tower BTS"
 
