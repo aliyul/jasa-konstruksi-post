@@ -5,16 +5,7 @@
 
 console.log('[jasa-jalan-perkerasan-post] 📄 File loaded, waiting for DOM...');
 
-const urlMappingHargaJasaPengaspalanJalanFromMoneyPage2MoneyChild = {
-"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-terdekat.html": "Harga Jasa Pengaspalan Jalan Terdekat",
-"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-jakarta.html": "Harga Jasa Pengaspalan Jalan Jakarta",
-"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-bogor.html": "Harga Jasa Pengaspalan Jalan Bogor",
-"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-depok.html": "Harga Jasa Pengaspalan Jalan Depok",
-"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-tangerang.html": "Harga Jasa Pengaspalan Jalan Tangerang",
-"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-bekasi.html": "Harga Jasa Pengaspalan Jalan Bekasi",
-"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-karawang.html": "Harga Jasa Pengaspalan Jalan Karawang",
-"https://www.betonjayareadymix.com/2018/10/harga-jasa-pengaspalan-jalan-surabaya.html": "Harga Jasa Pengaspalan Jalan Surabaya"
-};
+
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-pengecoran-jalan-beton (MP) ➔ CHILD: Money Child
 // Cluster: Cor Beton Jalan — 13 location pages (Jawa Barat + DKI)
@@ -108,7 +99,6 @@ function restoreCondition(conditionId) {
     console.log('[jasa-jalan-perkerasan-post] 🔍 Check: ' + cleanUrl);
     
     var ALL_MAPPINGS = [
-        urlMappingHargaJasaPengaspalanJalanFromMoneyPage2MoneyChild,
         urlMappingJasaPengecoranJalanBetonFromMoneyPageMoneyChild,
         urlMappingJasaPasangPavingFromMoneyPageMoneyChild,
         urlMappingJasaPengaspalanJalanFromMoneyPageMoneyChild,
@@ -173,24 +163,6 @@ function initJasaJalanPerkerasanPost() {
     // ═══════════════════════════════════════════════════════
     // SEMUA IF BREADCRUMB
     // ═══════════════════════════════════════════════════════
-    
-    if (urlMappingHargaJasaPengaspalanJalanFromMoneyPage2MoneyChild[cleanUrlJasaJalanPerkerasanKonsPost]) {
-        generateBreadcrumbShared(
-            urlMappingHargaJasaPengaspalanJalanFromMoneyPage2MoneyChild,
-            cleanUrlJasaJalanPerkerasanKonsPost,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-jalan-perkerasan.html' },
-                { name: 'Perbandingan Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-jalan-perkerasan.html' },
-                { name: 'Jasa Jalan & Perkerasan', url: 'https://www.betonjayareadymix.com/p/jasa-jalan-perkerasan.html' },
-                { name: 'Jasa Perkerasan Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan.html' },
-                { name: 'Jasa Perkerasan Jalan Layanan', url: 'https://www.betonjayareadymix.com/p/jasa-perkerasan-jalan-layanan.html' },
-                { name: 'Jasa Pengaspalan Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-pengaspalan-jalan.html' },
-                { name: 'Harga Jasa Pengaspalan Jalan', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pengaspalan-jalan.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
     
     if (urlMappingJasaPengecoranJalanBetonFromMoneyPageMoneyChild[cleanUrlJasaJalanPerkerasanKonsPost]) {
         generateBreadcrumbShared(
