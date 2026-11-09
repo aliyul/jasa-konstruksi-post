@@ -78,7 +78,8 @@ const urlMappingJasaPembuatanSekolahFromMoneyPageVariant = {
 const urlMappingJasaPembuatanGudangFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-gudang-logistik.html": "Jasa Konstruksi Gudang Logistik",
  "https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang-per-m2.html": "Jasa Pembuatan Gedung Per M2",
- "https://www.betonjayareadymix.com/p/biaya-jasa-pembuatan-gudang-baja-ringan.html": "Biaya Jasa Pembuatan Gudang Baja Ringan"
+ "https://www.betonjayareadymix.com/p/biaya-jasa-pembuatan-gudang-baja-ringan.html": "Biaya Jasa Pembuatan Gudang Baja Ringan",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang-rangka-baja.html": "Jasa Pembuatan Gudang Rangka Baja"
 
 };
 const urlMappingJasaPembuatanGudangFromVariantSubVariant = {
