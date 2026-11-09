@@ -20,19 +20,19 @@ const urlMappingHargaJasaPengaspalanJalanFromMoneyPage2MoneyChild = {
 // Cluster: Cor Beton Jalan — 13 location pages (Jawa Barat + DKI)
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaPengecoranJalanBetonFromMoneyPageMoneyChild = {
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-tasikmalaya.html": "Harga Cor Beton Jalan Tasikmalaya",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-sukabumi.html":    "Harga Cor Beton Jalan Sukabumi",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-kuningan.html":    "Harga Cor Beton Jalan Kuningan",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-karawang.html":    "Harga Cor Beton Jalan Karawang",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-majalengka.html":  "Harga Cor Beton Jalan Majalengka",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-subang.html":      "Harga Cor Beton Jalan Subang",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-ciamis.html":      "Harga Cor Beton Jalan Ciamis",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-jakarta.html":     "Harga Cor Beton Jalan Jakarta",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-bogor.html":       "Harga Cor Beton Jalan Bogor",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-tangerang.html":   "Harga Cor Beton Jalan Tangerang",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-bekasi.html":      "Harga Cor Beton Jalan Bekasi",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-depok.html":       "Harga Cor Beton Jalan Depok",
-  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-cirebon.html":     "Harga Cor Beton Jalan Cirebon"
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-tasikmalaya.html":"Harga Cor Beton Jalan Tasikmalaya",
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-sukabumi.html":"Harga Cor Beton Jalan Sukabumi",
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-kuningan.html": "Harga Cor Beton Jalan Kuningan",
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-karawang.html": "Harga Cor Beton Jalan Karawang",
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-majalengka.html": "Harga Cor Beton Jalan Majalengka",
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-subang.html": "Harga Cor Beton Jalan Subang",
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-ciamis.html": "Harga Cor Beton Jalan Ciamis",
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-jakarta.html": "Harga Cor Beton Jalan Jakarta",
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-bogor.html": "Harga Cor Beton Jalan Bogor",
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-tangerang.html": "Harga Cor Beton Jalan Tangerang",
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-bekasi.html": "Harga Cor Beton Jalan Bekasi",
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-depok.html": "Harga Cor Beton Jalan Depok",
+  "https://www.betonjayareadymix.com/2019/01/harga-cor-beton-jalan-cirebon.html": "Harga Cor Beton Jalan Cirebon"
 };
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-pengecoran-jalan-beton (MP) ➔ CHILD: Variant
