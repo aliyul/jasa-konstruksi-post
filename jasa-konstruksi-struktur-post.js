@@ -408,7 +408,7 @@ const urlMappingJasaPembuatanLapanganSerbagunaFromMoneyPage1MoneyPage2 = {
 // ============================================================
 
 const urlMappingKontraktorKolamRenangFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/2018/09/kontraktor-waterpark-indonesia.html": "Kontraktor Waterpark Indonesia"
+//  "https://www.betonjayareadymix.com/2018/09/kontraktor-waterpark-indonesia.html": "Kontraktor Waterpark Indonesia"
 };
 
 
