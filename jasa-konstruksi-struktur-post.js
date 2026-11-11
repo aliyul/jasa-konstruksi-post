@@ -412,7 +412,7 @@ const urlMappingKontraktorKolamRenangFromMoneyPageMoneyPage1 = {
 };
 
 const urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kolam-renang.html": "Harga Jasa Pembuatan Kolam Renang"
+//  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kolam-renang.html": "Harga Jasa Pembuatan Kolam Renang"
 };
 
 const urlMappingHargaJasaPembuatanKolamRenangFromMoneyPage1MoneyPage2 = {
@@ -423,24 +423,54 @@ const urlMappingHargaJasaPembuatanKolamRenangFromMoneyPage1MoneyPage2 = {
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-tenaga-bikin-kolam-renang.html": "Harga Jasa Borongan Tenaga Bikin Kolam Renang"
 };
 
-const urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyChild = {
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-ciamis.html": "Jasa Kolam Renang Ciamis",
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-kuningan.html": "Jasa Kolam Renang Kuningan",
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-cirebon.html": "Jasa Kolam Renang Cirebon",
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-garut.html": "Jasa Kolam Renang Garut",
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-purwakarta.html": "Jasa Kolam Renang Purwakarta",
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-sukabumi.html": "Jasa Kolam Renang Sukabumi",
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-cianjur.html": "Jasa Kolam Renang Cianjur",
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-bandung.html": "Jasa Kolam Renang Bandung",
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-depok.html": "Jasa Kolam Renang Depok",
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-tangerang.html": "Jasa Kolam Renang Tangerang",
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-jakarta.html": "Jasa Kolam Renang Jakarta",
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-bekasi.html": "Jasa Kolam Renang Bekasi",
-  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-bogor.html": "Jasa Kolam Renang Bogor"
-};
 
-const urlMappingJasaPembuatanKolamIkanFromSub2MoneyPage = {};
-const urlMappingJasaSepticTankBetonFromSub2MoneyPage = {};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-kolam-renang (MP) ➔ CHILD: Money Child (13 kota)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaKolamRenangFromMoneyPageMoneyChild = {
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-ciamis.html":     "Jasa Kolam Renang Ciamis",
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-kuningan.html":   "Jasa Kolam Renang Kuningan",
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-garut.html":      "Jasa Kolam Renang Garut",
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-purwakarta.html": "Jasa Kolam Renang Purwakarta",
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-sukabumi.html":   "Jasa Kolam Renang Sukabumi",
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-cianjur.html":    "Jasa Kolam Renang Cianjur",
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-bandung.html":    "Jasa Kolam Renang Bandung",
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-depok.html":      "Jasa Kolam Renang Depok",
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-tangerang.html":  "Jasa Kolam Renang Tangerang",
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-jakarta.html":    "Jasa Kolam Renang Jakarta",
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-bekasi.html":     "Jasa Kolam Renang Bekasi",
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-bogor.html":      "Jasa Kolam Renang Bogor",
+  "https://www.betonjayareadymix.com/2018/11/jasa-kolam-renang-cirebon.html":    "Jasa Kolam Renang Cirebon"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-kolam-renang (MP) ➔ CHILD: Variant (8)
+// Specifier + waterpark/wahana variants
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaKolamRenangFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/2018/09/jasa-renovasi-kolam-renang.html":                       "Jasa Renovasi Kolam Renang",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perawatan-kolam-renang.html":                      "Jasa Perawatan Kolam Renang",
+  "https://www.betonjayareadymix.com/2018/09/biaya-jasa-bangun-kolam-renang-per-meter.html":   "Biaya Jasa Bangun Kolam Renang per Meter",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kolam-renang-per-m2..html":  "Harga Jasa Pembuatan Kolam Renang per m2",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-tenaga-bikin-kolam-renang.html": "Harga Jasa Borongan Tenaga Bikin Kolam Renang",
+  "https://www.betonjayareadymix.com/2018/09/kontraktor-waterpark-indonesia.html":             "Kontraktor Waterpark Indonesia",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-waterpark-kolam-renang.html":"Harga Jasa Pembuatan Waterpark Kolam Renang",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-wahana-kolam-renang.html":   "Harga Jasa Pembuatan Wahana Kolam Renang"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-kolam-ikan (MP) ➔ CHILD: Variant (1)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaKolamIkanFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-kolam-ikan-koi.html": "Jasa Pembuatan Kolam Ikan Koi"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-septic-tank (MP) ➔ CHILD: Variant (4)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaSepticTankFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-septic-tank-beton.html":      "Jasa Pembuatan Septic Tank Beton",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-septic-tank-biofilter.html":  "Jasa Pembuatan Septic Tank Biofilter",
+  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-septic-tank.html":            "Jasa Perbaikan Septic Tank",
+  "https://www.betonjayareadymix.com/2018/09/jasa-sedot-septic-tank.html":                "Jasa Sedot Septic Tank"
+};
 const urlMappingJasaPembuatanTangkiAirFromSub2MoneyPage = {};
 const urlMappingJasaPembuatanBakPenampunganFromSub2MoneyPage = {};
 const urlMappingJasaKonstruksiMenaraAirFromSub2MoneyPage = {};
@@ -476,7 +506,7 @@ console.log('══════════════════════�
         urlMappingJasaTukangBajaRinganFromMoneyPage3MoneyPage4,
         urlMappingJasaKonstruksiBajaKonvensionalFromMoneyPage1MoneyPage2,
         urlMappingHargaJasaKonstruksiBajaKonvensionalFromMoneyPage2MoneyPage3,
-        urlMappingJasaPembangunanTowerBajaFromMoneyPage2MoneyPage3,
+         urlMappingJasaPembangunanTowerBajaFromMoneyPage2MoneyPage3,
         urlMappingHargaJasaPembangunanTowerBajaFromMoneyPage3MoneyPage4,
         urlMappingJasaKanopiBajadanBesiFromMoneyPage1MoneyPage2,
         urlMappingJasaStrukturBajaGudangFromMoneyPage1MoneyPage2,
@@ -528,9 +558,12 @@ console.log('══════════════════════�
         urlMappingKontraktorKolamRenangFromMoneyPageMoneyPage1,
         urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyPage1,
         urlMappingHargaJasaPembuatanKolamRenangFromMoneyPage1MoneyPage2,
-        urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyChild,
-        urlMappingJasaPembuatanKolamIkanFromSub2MoneyPage,
-        urlMappingJasaSepticTankBetonFromSub2MoneyPage,
+      
+        urlMappingJasaKolamRenangFromMoneyPageMoneyChild,
+        urlMappingJasaKolamRenangFromMoneyPageVariant,
+      
+        urlMappingJasaKolamIkanFromMoneyPageVariant,
+        urlMappingJasaSepticTankFromMoneyPageVariant ,
         urlMappingJasaPembuatanTangkiAirFromSub2MoneyPage,
         urlMappingJasaPembuatanBakPenampunganFromSub2MoneyPage,
         urlMappingJasaKonstruksiMenaraAirFromSub2MoneyPage
@@ -1550,22 +1583,65 @@ if (urlMappingHargaJasaPembuatanKolamRenangFromMoneyPage1MoneyPage2[cleanUrlJasa
     );
 }
 
-if (urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
+if (urlMappingJasaKolamRenangFromMoneyPageMoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
     generateBreadcrumbShared(
-        urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyChild,
+        urlMappingJasaKolamRenangFromMoneyPageMoneyChild,
         cleanUrlJasaJasaKonsStrukturPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
             { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
             { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
-            { name: 'Jasa Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-renang.html' },
-            { name: 'Jasa Pembuatan Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html' }
+            { name: 'Jasa Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-renang.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaKolamRenangFromMoneyPageVariant[cleanUrlJasaJasaKonsStrukturPost]) {
+    generateBreadcrumbShared(
+        urlMappingJasaKolamRenangFromMoneyPageVariant,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+            { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+            { name: 'Jasa Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-renang.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+  
+if (urlMappingJasaKolamIkanFromMoneyPageVariant[cleanUrlJasaJasaKonsStrukturPost]) {
+    generateBreadcrumbShared(
+        urlMappingJasaKolamIkanFromMoneyPageVariant,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+            { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+            { name: 'Jasa Kolam Ikan', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-ikan.html' }
         ],
         'JASA_KONSTRUKSI'
     );
 }
 
+if (urlMappingJasaSepticTankFromMoneyPageVariant[cleanUrlJasaJasaKonsStrukturPost]) {
+    generateBreadcrumbShared(
+        urlMappingJasaSepticTankFromMoneyPageVariant,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
+            { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
+            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
+            { name: 'Jasa Septic Tank', url: 'https://www.betonjayareadymix.com/p/jasa-septic-tank.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+   
 // ═══════════════════════════════════════════════════════
 // Penutup fungsi initJasaKonsStrukturPost
 } // <-- penutup function initJasaKonsStrukturPost
