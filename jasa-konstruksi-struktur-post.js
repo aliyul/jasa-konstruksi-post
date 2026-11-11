@@ -419,7 +419,7 @@ const urlMappingHargaJasaPembuatanKolamRenangFromMoneyPage1MoneyPage2 = {
   "https://www.betonjayareadymix.com/2018/09/biaya-jasa-bangun-kolam-renang-per-meter.html": "Biaya Jasa Bangun Kolam Renang Per Meter",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-waterpark-kolam-renang.html": "Harga Jasa Pembuatan Waterpark Kolam Renang",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-wahana-kolam-renang.html": "Harga Jasa Pembuatan Wahana Kolam Renang",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kolam-renang-per-m2..html": "Harga Jasa Pembuatan Kolam Renang Per M2",
+  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kolam-renang-per-m2.html": "Harga Jasa Pembuatan Kolam Renang Per M2",
   "https://www.betonjayareadymix.com/2018/09/harga-jasa-borongan-tenaga-bikin-kolam-renang.html": "Harga Jasa Borongan Tenaga Bikin Kolam Renang"
 };
 
