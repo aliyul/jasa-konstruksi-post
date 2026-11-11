@@ -245,8 +245,8 @@ const urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage = {
 // ============================================================
 const urlMappingJasaSepticTankFromMoneyMaster1MoneyPage = {
    // "https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank.html": "Jasa Pembuatan Septic Tank",
-    "https://www.betonjayareadymix.com/p/jasa-perbaikan-septic-tank.html": "Jasa Perbaikan Septic Tank",
-    "https://www.betonjayareadymix.com/p/jasa-sedot-septic-tank.html": "Jasa Sedot Septic Tank"
+   // "https://www.betonjayareadymix.com/p/jasa-perbaikan-septic-tank.html": "Jasa Perbaikan Septic Tank",
+   // "https://www.betonjayareadymix.com/p/jasa-sedot-septic-tank.html": "Jasa Sedot Septic Tank"
 };
 
 // ============================================================
@@ -254,8 +254,8 @@ const urlMappingJasaSepticTankFromMoneyMaster1MoneyPage = {
 // ============================================================
 const urlMappingJasaPembuatanSepticTankFromMoneyPageMoneyPage1 = {
   //  "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-septic-tank.html": "Harga Jasa Pembuatan Septic Tank",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank-beton.html": "Jasa Pembuatan Septic Tank Beton",
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank-biofilter.html": "Jasa Pembuatan Septic Tank Biofilter"
+   // "https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank-beton.html": "Jasa Pembuatan Septic Tank Beton",
+   // "https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank-biofilter.html": "Jasa Pembuatan Septic Tank Biofilter"
 };
 
 // ============================================================
