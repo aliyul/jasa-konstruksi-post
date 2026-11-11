@@ -411,9 +411,7 @@ const urlMappingKontraktorKolamRenangFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/2018/09/kontraktor-waterpark-indonesia.html": "Kontraktor Waterpark Indonesia"
 };
 
-const urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyPage1 = {
-//  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-kolam-renang.html": "Harga Jasa Pembuatan Kolam Renang"
-};
+
 /*
 const urlMappingHargaJasaPembuatanKolamRenangFromMoneyPage1MoneyPage2 = {
   "https://www.betonjayareadymix.com/2018/09/biaya-jasa-bangun-kolam-renang-per-meter.html": "Biaya Jasa Bangun Kolam Renang Per Meter",
@@ -556,7 +554,7 @@ console.log('══════════════════════�
         urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyChild,
         urlMappingJasaPembuatanLapanganSerbagunaFromMoneyPage1MoneyPage2,
         urlMappingKontraktorKolamRenangFromMoneyPageMoneyPage1,
-        urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyPage1,
+
       
         urlMappingJasaKolamRenangFromMoneyPageMoneyChild,
         urlMappingJasaKolamRenangFromMoneyPageVariant,
@@ -1547,23 +1545,6 @@ if (urlMappingKontraktorKolamRenangFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsS
         ],
         'JASA_KONSTRUKSI'
     );
-}
-
-if (urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStrukturPost]) {
-    generateBreadcrumbShared(
-        urlMappingJasaPembuatanKolamRenangFromMoneyPageMoneyPage1,
-        cleanUrlJasaJasaKonsStrukturPost,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
-            { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
-            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
-            { name: 'Jasa Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-renang.html' },
-            { name: 'Jasa Pembuatan Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
 }
 
 if (urlMappingJasaKolamRenangFromMoneyPageMoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
