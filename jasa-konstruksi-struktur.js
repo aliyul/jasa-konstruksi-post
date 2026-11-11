@@ -237,7 +237,7 @@ const urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage = {
 // 📁 JASA KOLAM IKAN (MONEY_PAGE)
 // ============================================================
 const urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage = {
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-ikan-koi.html": "Jasa Pembuatan Kolam Ikan Koi"
+  //  "https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-ikan-koi.html": "Jasa Pembuatan Kolam Ikan Koi"
 };
 
 // ============================================================
