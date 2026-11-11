@@ -211,26 +211,26 @@ const urlMappingJasaKonstruksiStrukturFromMoneyMasterSubVariant = {
 };
 
 
-// ============================================================
-// 📁 JASA STRUKTUR KHUSUS (MONEY_MASTER)
-// ============================================================
-const urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1 = {
-    "https://www.betonjayareadymix.com/p/jasa-kolam-renang.html": "Jasa Kolam Renang",
-    "https://www.betonjayareadymix.com/p/jasa-kolam-ikan.html": "Jasa Kolam Ikan",
-    "https://www.betonjayareadymix.com/p/jasa-septic-tank.html": "Jasa Septic Tank",
-    "https://www.betonjayareadymix.com/p/jasa-tangki-air.html": "Jasa Tangki Air",
-    "https://www.betonjayareadymix.com/p/jasa-bak-penampungan.html": "Jasa Bak Penampungan",
-    "https://www.betonjayareadymix.com/p/jasa-menara-air.html": "Jasa Menara Air"
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-struktur-khusus (MM) ➔ CHILD: Money Page (6)
+// Umbrella MP untuk tiap kategori struktur khusus
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaStrukturKhususFromMoneyMasterMoneyPage = {
+  "https://www.betonjayareadymix.com/p/jasa-kolam-renang.html":         "Jasa Kolam Renang",
+  "https://www.betonjayareadymix.com/p/jasa-kolam-ikan.html":           "Jasa Kolam Ikan",
+  "https://www.betonjayareadymix.com/p/jasa-septic-tank.html":          "Jasa Septic Tank",
+  "https://www.betonjayareadymix.com/p/jasa-tangki-air.html":           "Jasa Tangki Air",
+  "https://www.betonjayareadymix.com/p/jasa-bak-penampungan.html":      "Jasa Bak Penampungan",
+  "https://www.betonjayareadymix.com/p/jasa-menara-air.html":           "Jasa Menara Air"
 };
-
 // ============================================================
 // 📁 JASA KOLAM RENANG (MONEY_PAGE)
 // ============================================================
 const urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage = {
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html": "Jasa Pembuatan Kolam Renang",
-    "https://www.betonjayareadymix.com/p/jasa-renovasi-kolam-renang.html": "Jasa Renovasi Kolam Renang",
-    "https://www.betonjayareadymix.com/p/jasa-perawatan-kolam-renang.html": "Jasa Perawatan Kolam Renang",
-    "https://www.betonjayareadymix.com/p/kontraktor-kolam-renang.html": "Kontraktor Kolam Renang"
+  //  "https://www.betonjayareadymix.com/p/jasa-pembuatan-kolam-renang.html": "Jasa Pembuatan Kolam Renang",
+   // "https://www.betonjayareadymix.com/p/jasa-renovasi-kolam-renang.html": "Jasa Renovasi Kolam Renang",
+   // "https://www.betonjayareadymix.com/p/jasa-perawatan-kolam-renang.html": "Jasa Perawatan Kolam Renang",
+   // "https://www.betonjayareadymix.com/p/kontraktor-kolam-renang.html": "Kontraktor Kolam Renang"
 };
 
 // ============================================================
@@ -244,7 +244,7 @@ const urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage = {
 // 📁 JASA SEPTIC TANK (MONEY_PAGE)
 // ============================================================
 const urlMappingJasaSepticTankFromMoneyMaster1MoneyPage = {
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank.html": "Jasa Pembuatan Septic Tank",
+   // "https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank.html": "Jasa Pembuatan Septic Tank",
     "https://www.betonjayareadymix.com/p/jasa-perbaikan-septic-tank.html": "Jasa Perbaikan Septic Tank",
     "https://www.betonjayareadymix.com/p/jasa-sedot-septic-tank.html": "Jasa Sedot Septic Tank"
 };
@@ -253,7 +253,7 @@ const urlMappingJasaSepticTankFromMoneyMaster1MoneyPage = {
 // 📁 JASA PEMBUATAN SEPTIC TANK (MONEY_PAGE)
 // ============================================================
 const urlMappingJasaPembuatanSepticTankFromMoneyPageMoneyPage1 = {
-    "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-septic-tank.html": "Harga Jasa Pembuatan Septic Tank",
+  //  "https://www.betonjayareadymix.com/p/harga-jasa-pembuatan-septic-tank.html": "Harga Jasa Pembuatan Septic Tank",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank-beton.html": "Jasa Pembuatan Septic Tank Beton",
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-septic-tank-biofilter.html": "Jasa Pembuatan Septic Tank Biofilter"
 };
@@ -262,21 +262,21 @@ const urlMappingJasaPembuatanSepticTankFromMoneyPageMoneyPage1 = {
 // 📁 JASA TANGKI AIR (MONEY_PAGE)
 // ============================================================
 const urlMappingJasaTangkiAirFromMoneyMaster1MoneyPage = {
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-tangki-air.html": "Jasa Pembuatan Tangki Air"
+  //  "https://www.betonjayareadymix.com/p/jasa-pembuatan-tangki-air.html": "Jasa Pembuatan Tangki Air"
 };
 
 // ============================================================
 // 📁 JASA BAK PENAMPUNGAN (MONEY_PAGE)
 // ============================================================
 const urlMappingJasaBakPenampunganFromMoneyMaster1MoneyPage = {
-    "https://www.betonjayareadymix.com/p/jasa-pembuatan-bak-penampungan.html": "Jasa Pembuatan Bak Penampungan"
+   // "https://www.betonjayareadymix.com/p/jasa-pembuatan-bak-penampungan.html": "Jasa Pembuatan Bak Penampungan"
 };
 
 // ============================================================
 // 📁 JASA MENARA AIR (MONEY_PAGE)
 // ============================================================
 const urlMappingJasaMenaraAirFromMoneyMaster1MoneyPage = {
-    "https://www.betonjayareadymix.com/p/jasa-konstruksi-menara-air.html": "Jasa Konstruksi Menara Air"
+    //"https://www.betonjayareadymix.com/p/jasa-konstruksi-menara-air.html": "Jasa Konstruksi Menara Air"
 };
 
 // ============================================================
@@ -328,7 +328,7 @@ const urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyPage1 = {
 
         urlMappingJasaKonstruksiStrukturFromMoneyMasterVariant,
         urlMappingJasaKonstruksiStrukturFromMoneyMasterSubVariant,
-        urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1,
+        urlMappingJasaStrukturKhususFromMoneyMasterMoneyPage,
         urlMappingJasaKolamRenangFromMoneyMaster1MoneyPage,
         urlMappingJasaKolamIkanFromMoneyMaster1MoneyPage,
         urlMappingJasaSepticTankFromMoneyMaster1MoneyPage,
@@ -704,9 +704,9 @@ function initJasaKonsStrukturPillar() {
     // ═══════════════════════════════════════════════════════
     // [BLOK 7] JASA STRUKTUR KHUSUS (MONEY_MASTER)
     // ═══════════════════════════════════════════════════════
-    if (urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1[cleanUrlJasaJasaKonsStruktur]) {
+    if (urlMappingJasaStrukturKhususFromMoneyMasterMoneyPage[cleanUrlJasaJasaKonsStruktur]) {
         generateBreadcrumbShared(
-            urlMappingJasaStrukturKhususFromMoneyMasterMoneyMaster1,
+            urlMappingJasaStrukturKhususFromMoneyMasterMoneyPage,
             cleanUrlJasaJasaKonsStruktur,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
