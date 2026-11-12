@@ -521,8 +521,7 @@ console.log('══════════════════════�
         urlMappingJasaKonstruksiColdStorageModernFromMoneyPageMoneyPage1,
         urlMappingJasaKonstruksiBengkelModernFromMoneyPageMoneyPage1,
         urlMappingJasaKonstruksiWorkshopModernFromMoneyPageMoneyPage1,
-        urlMappingJasaPembuatanLapanganOlahRagaFromMoneyPageMoneyChild,
-        urlMappingJasaPembuatanLapanganFutsalFromMoneyPage1MoneyPage2,
+        urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyChild,
         urlMappingJasaPembuatanLapanganFutsalFromMoneyPageMoneyChild,
         urlMappingJasaPembuatanLapanganFutsalFromMoneyPageVariant,
         urlMappingJasaPembuatanLapanganVoliFromMoneyPageMoneyChild,
@@ -1339,9 +1338,9 @@ if (urlMappingJasaKonstruksiWorkshopModernFromMoneyPageMoneyPage1[cleanUrlJasaJa
 // [BLOK 8] JASA LAPANGAN OLAHRAGA
 // ═══════════════════════════════════════════════════════
 
-if (urlMappingJasaPembuatanLapanganOlahRagaFromMoneyPageMoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
+if (urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
     generateBreadcrumbShared(
-        urlMappingJasaPembuatanLapanganOlahRagaFromMoneyPageMoneyChild,
+        urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyChild,
         cleanUrlJasaJasaKonsStrukturPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
