@@ -378,7 +378,7 @@ const urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPageSport = {
         urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage,
         urlMappingJasaKonstruksiBangunanFromMoneyMasterElementMP,
         urlMappingJasaKonstruksiBangunanFromMoneyMasterConditionalMP,
-        urlMappingJasaKonstruksiBangunanFromMoneyMasterVariantGeneric,
+     
         urlMappingJasaPembuatanRumahFromMoneyPageVariant,
         urlMappingJasaBoronganTenagaBangunanRumahFromVariantSubVariant,
         
@@ -501,19 +501,6 @@ function initJasaKonsStrukturPillar() {
     if (urlMappingJasaKonstruksiBangunanFromMoneyMasterConditionalMP[cleanUrlJasaJasaKonsStruktur]) {
         generateBreadcrumbShared(
             urlMappingJasaKonstruksiBangunanFromMoneyMasterConditionalMP,
-            cleanUrlJasaJasaKonsStruktur,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-bangunan.html' },
-                { name: 'Perbandingan Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-bangunan.html' },
-                { name: 'Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-    if (urlMappingJasaKonstruksiBangunanFromMoneyMasterVariantGeneric[cleanUrlJasaJasaKonsStruktur]) {
-        generateBreadcrumbShared(
-            urlMappingJasaKonstruksiBangunanFromMoneyMasterVariantGeneric,
             cleanUrlJasaJasaKonsStruktur,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
