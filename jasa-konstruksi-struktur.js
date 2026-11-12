@@ -381,9 +381,6 @@ const urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPageSport = {
      
         urlMappingJasaPembuatanRumahFromMoneyPageVariant,
         urlMappingJasaBoronganTenagaBangunanRumahFromVariantSubVariant,
-        
-        urlMappingJasaPembuatanRumahFromMoneyPageSubVariant,
-        
         urlMappingJasaPembuatanApartemenFromMoneyPageVariant,
         urlMappingJasaPembuatanHotelFromMoneyPageVariant,
         urlMappingJasaPembuatanSekolahFromMoneyPageVariant,
@@ -543,20 +540,6 @@ function initJasaKonsStrukturPillar() {
         );
     }
     
-    if (urlMappingJasaPembuatanRumahFromMoneyPageSubVariant[cleanUrlJasaJasaKonsStruktur]) {
-        generateBreadcrumbShared(
-            urlMappingJasaPembuatanRumahFromMoneyPageSubVariant,
-            cleanUrlJasaJasaKonsStruktur,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-bangunan.html' },
-                { name: 'Perbandingan Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-bangunan.html' },
-                { name: 'Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html' },
-                { name: 'Jasa Pembuatan Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
     
     if (urlMappingJasaPembuatanApartemenFromMoneyPageVariant[cleanUrlJasaJasaKonsStruktur]) {
         generateBreadcrumbShared(
