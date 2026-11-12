@@ -8,10 +8,26 @@ console.log('[jasa-konstruksi-struktur] 📄 File loaded, waiting for DOM...');
 // ═══════════════════════════════════════════════════════════
 // [BAGIAN 1] DEFINISI SEMUA MAPPING
 // ═══════════════════════════════════════════════════════════
-
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-konstruksi-bangunan (MM) ➔ CHILD: Money Page (10)
+// Tipe bangunan utuh — masing-masing 1 tipe spesifik
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage = {
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html":        "Jasa Pembuatan Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-apartemen.html":    "Jasa Pembuatan Apartemen",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-hotel.html":        "Jasa Pembuatan Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-sekolah.html":      "Jasa Pembuatan Sekolah",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-masjid.html":       "Jasa Pembuatan Masjid",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-ruko.html":         "Jasa Pembuatan Ruko",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang.html":       "Jasa Pembuatan Gudang",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-pabrik.html":       "Jasa Pembuatan Pabrik",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-gedung.html":       "Jasa Pembuatan Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-rs.html":   "Jasa Konstruksi Gedung RS"
+};
 // ============================================================
 // 📁 JASA KONSTRUKSI BANGUNAN (MONEY_MASTER)
 // ============================================================
+/*
 const urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage = {
     //MP BANGUNAN HUNIAN
    //  "https://www.betonjayareadymix.com/p/jasa-pembuatan-bangunan.html": "Jasa Pembuatan Bangunan",
@@ -22,7 +38,7 @@ const urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage = {
     "https://www.betonjayareadymix.com/p/jasa-pembuatan-masjid.html": "Jasa Pembuatan Masjid",
         "https://www.betonjayareadymix.com/p/jasa-pembuatan-ruko.html": "Jasa Pembuatan Ruko",
         "https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang.html": "Jasa Pembuatan Gudang",
-      "https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah-tinggal.html": "Jasa Konstruksi Rumah Tinggal",
+    
        "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-rs.html": "Jasa Konstruksi Gedung Rumah Sakit",
        "https://www.betonjayareadymix.com/p/jasa-pembuatan-gedung.html": "Jasa Pembuatan Gedung",
        "https://www.betonjayareadymix.com/p/jasa-pembuatan-pabrik.html": "Jasa Pembuatan Pabrik",
@@ -40,26 +56,77 @@ const urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage = {
         
     //MP Furnitur
      "https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html": "Jasa Pembuatan Furniture"  
+
+     // "https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah-tinggal.html": "Jasa Konstruksi Rumah Tinggal",
   
+};
+*/
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-konstruksi-bangunan (MM) ➔ CHILD: Money Page (7)
+// Elemen struktural CUSTOM (bukan install ready product)
+// 
+// KEEP BOTH: pagar, decking, kusen, pintu, jendela, furniture
+//   → "pembuatan" = custom fabrication
+//   → "pasang" = install ready (di cluster lain)
+//   → WAJIB cross-link untuk hindari doorway
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaKonstruksiBangunanFromMoneyMasterElementMP = {
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-pagar.html":        "Jasa Pembuatan Pagar",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-decking.html":      "Jasa Pembuatan Decking",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-kusen.html":        "Jasa Pembuatan Kusen",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-pintu.html":        "Jasa Pembuatan Pintu",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-jendela.html":      "Jasa Pembuatan Jendela",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-tangga.html":       "Jasa Pembuatan Tangga",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-balkon.html":       "Jasa Pembuatan Balkon",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture.html":    "Jasa Pembuatan Furniture"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-konstruksi-bangunan (MM) ➔ CHILD: Money Page (1)
+// Kanopi — CONDITIONAL
+// 
+// Syarat KEEP:
+//   jasa-pasang-kanopi TIDAK cover custom fabrication
+// Syarat REDIRECT:
+//   jasa-pasang-kanopi sudah cover custom (kanopi selalu custom)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaKonstruksiBangunanFromMoneyMasterConditionalMP = {
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-kanopi.html":       "Jasa Pembuatan Kanopi"
+};
+
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pembuatan-rumah (MP) ➔ CHILD: Variant (6)
+// 
+// ✅ 3 generic borongan di sini — parallel, business-aligned
+//    (accept minor semantic stretch: "bangunan" ≈ rumah di pasar ID)
+// ✅ 3 rumah-specific variants
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPembuatanRumahFromMoneyPageVariant = {
+  // ─── Rumah-specific variants ───
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-villa-modern.html":            "Jasa Konstruksi Villa Modern",
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah-per-m2.html":            "Jasa Konstruksi Rumah per m2",
+  "https://www.betonjayareadymix.com/p/jasa-borongan-tenaga-bangunan-rumah.html":     "Jasa Borongan Tenaga Bangunan Rumah",
+
+  // ─── Generic borongan (residential-leaning) ───
+  "https://www.betonjayareadymix.com/p/jasa-borongan-tukang-bangunan-per-meter.html": "Jasa Borongan Tukang Bangunan per Meter",
+  "https://www.betonjayareadymix.com/p/jasa-borongan-bangunan-plus-material.html":    "Jasa Borongan Bangunan Plus Material",
+  "https://www.betonjayareadymix.com/p/jasa-upah-tenaga-borongan-bangunan-per.html":  "Jasa Upah Tenaga Borongan Bangunan Per M2"
 };
 
 // ═════════════════════════════════════════════════════════════════════
-// 📂 PARENT: Jasa Pembuatan Bangunan Hunian (MP) ➔ CHILD: Variant
+// 📂 PARENT: jasa-borongan-tenaga-bangunan-rumah (Variant) 
+// ➔ CHILD: Sub-variant (4)
+// 
+// ✅ SV specific "rumah" — child of borongan-tenaga-bangunan-rumah
+// ✅ Const name reflects actual hierarchy (FromVariantSubVariant)
 // ═════════════════════════════════════════════════════════════════════
-const urlMappingJasaPembuatanRumahFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-villa-modern.html": "Jasa Konstruksi Villa Modern",
-  "https://www.betonjayareadymix.com/p/jasa-borongan-tukang-bangunan-per-meter.html": "Jasa Borongan Tukang Bangunan per Meter",
-  "https://www.betonjayareadymix.com/p/jasa-borongan-bangunan-plus-material.html": "Jasa Borongan Bangunan Plus Material",
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-rumah-per-m2.html": "Jasa Konstruksi Rumah per m2",
-  "https://www.betonjayareadymix.com/p/jasa-borongan-tenaga-bangunan-rumah.html": "Jasa Borongan Tenaga Bangunan Rumah"
+const urlMappingJasaBoronganTenagaBangunanRumahFromVariantSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-per-meter-terima.html":   "Jasa Borongan Rumah Per Meter Terima Kunci",
+  "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-2-lantai-per-m2.html":    "Jasa Borongan Rumah 2 Lantai Per M2",
+  "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-1-lantai-per-meter.html": "Jasa Borongan Rumah 1 Lantai Per Meter",
+  "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-per-meter-plus.html":     "Jasa Borongan Rumah Per Meter Plus Material"
 };
-const urlMappingJasaPembuatanRumahFromMoneyPageSubVariant = {
-  "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-per-meter-terima.html": "Jasa Borongan Rumah Per Meter Terima Kunci",
-  "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-2-lantai-per-m2.html": "Jasa Borongan Rumah 2 Lantai Per M2",
- "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-1-lantai-per-meter.html": "Jasa Borongan Rumah 1 Lantai Per Meter",
- "https://www.betonjayareadymix.com/p/jasa-borongan-rumah-per-meter-plus.html": "Jasa Borongan Rumah Per Meter Plus Material",
- "https://www.betonjayareadymix.com/p/jasa-upah-tenaga-borongan-bangunan-per.html": "Jasa Upah Tenaga Borongan Bangunan Per M2"
-};
+
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: MP Bangunan Komersial ➔ CHILD: Variant (spesifikasi mewah/bintang)
 // ═════════════════════════════════════════════════════════════════════
@@ -71,35 +138,6 @@ const urlMappingJasaPembuatanHotelFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-hotel-bintang.html": "Jasa Konstruksi Hotel Bintang"
 };
 
-const urlMappingJasaPembuatanSekolahFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-sekolah.html": "Jasa Konstruksi Gedung Sekolah"
-};
-
-const urlMappingJasaPembuatanGudangFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gudang-logistik.html": "Jasa Konstruksi Gudang Logistik",
- "https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang-per-m2.html": "Jasa Pembuatan Gedung Per M2",
- "https://www.betonjayareadymix.com/p/biaya-jasa-pembuatan-gudang-baja-ringan.html": "Biaya Jasa Pembuatan Gudang Baja Ringan",
-  "https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang-rangka-baja.html": "Jasa Pembuatan Gudang Rangka Baja"
-
-};
-const urlMappingJasaPembuatanGudangFromVariantSubVariant = {
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang-rangka-baja.html": "Jasa Pembuatan Gudang Rangka Baja",
-"https://www.betonjayareadymix.com/p/jasa-borong-tenaga-bikin-gudang.html": "Jasa Borongan Tenaga Bikin Gudang"
-
-};
-const urlMappingJasaKonstruksiGudangLogistikFromVariantSubVariant = {
-    "https://www.betonjayareadymix.com/p/jasa-konstruksi-cold-storage-modern.html": "Jasa Konstruksi Cold Storage Modern"
-};
-const urlMappingJasaPembuatanFurnitureFromMoneyPageVariant = {
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture-custom.html": "Jasa Pembuatan Furniture Custom",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-lemari-built-in.html": "Jasa Pembuatan Lemari Built In",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-partisi-ruangan.html": "Jasa Pembuatan Partisi Ruangan",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-meja-kursi.html": "Jasa Pembuatan Meja Kursi",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-sofa-custom.html": "Jasa Pembuatan Sofa Custom",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-tempat-tidur.html": "Jasa Pembuatan Tempat Tidur",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-rak-buku.html": "Jasa Pembuatan Rak Buku",
-"https://www.betonjayareadymix.com/p/jasa-pembuatan-kamar-set.html": "Jasa Pembuatan Kamar Set"
-};
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: MP Bangunan Umum ➔ CHILD: Variant
 // (Perlu dibuat MP baru: jasa-pembuatan-gedung & jasa-pembuatan-pabrik)
@@ -108,14 +146,48 @@ const urlMappingJasaPembuatanGedungFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/jasa-konstruksi-gedung-perkantoran.html": "Jasa Konstruksi Gedung Perkantoran"
 };
 
-const urlMappingJasaPembuatanPabrikFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-pabrik-industri.html": "Jasa Konstruksi Pabrik Industri",
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-workshop-modern.html": "Jasa Konstruksi Workshop Modern"
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pembuatan-gudang (MP) ➔ CHILD: Variant (5)
+// 
+// ✅ Duplicate gudang-rangka-baja DIHAPUS dari SV (hanya di sini)
+// ✅ borongan-tenaga-bikin-gudang = Skenario A (fix typo, labor-only Variant)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPembuatanGudangFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-gudang-logistik.html":          "Jasa Konstruksi Gudang Logistik",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang-per-m2.html":             "Jasa Pembuatan Gudang per m2",
+  "https://www.betonjayareadymix.com/p/biaya-jasa-pembuatan-gudang-baja-ringan.html":  "Biaya Jasa Pembuatan Gudang Baja Ringan",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang-rangka-baja.html":        "Jasa Pembuatan Gudang Rangka Baja",
+  "https://www.betonjayareadymix.com/p/jasa-borongan-tenaga-bikin-gudang.html":        "Jasa Borongan Tenaga Bikin Gudang"
 };
 
-const urlMappingJasaKonstruksiBangunanFromMoneyMastrVariant = {
-  "https://www.betonjayareadymix.com/p/jasa-konstruksi-bengkel-modern.html": "Jasa Konstruksi Bengkel Modern"
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pembuatan-pabrik (MP) ➔ CHILD: Variant (3)
+// 
+// ✅ bengkel-modern dipindah dari MM (was wrong placement)
+// ✅ cold-storage-modern dipindah dari gudang-logistik SV (was wrong hierarchy)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPembuatanPabrikFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-workshop-modern.html":      "Jasa Konstruksi Workshop Modern",
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-bengkel-modern.html":       "Jasa Konstruksi Bengkel Modern",
+  "https://www.betonjayareadymix.com/p/jasa-konstruksi-cold-storage-modern.html":  "Jasa Konstruksi Cold Storage Modern"
 };
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pembuatan-furniture (MP) ➔ CHILD: Variant (8)
+// ⚠️  Flag: partisi-ruangan → pertimbangkan relokasi ke interior cluster
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPembuatanFurnitureFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-furniture-custom.html":    "Jasa Pembuatan Furniture Custom",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-lemari-built-in.html":     "Jasa Pembuatan Lemari Built In",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-partisi-ruangan.html":     "Jasa Pembuatan Partisi Ruangan",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-meja-kursi.html":          "Jasa Pembuatan Meja Kursi",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-sofa-custom.html":         "Jasa Pembuatan Sofa Custom",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-tempat-tidur.html":        "Jasa Pembuatan Tempat Tidur",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-rak-buku.html":            "Jasa Pembuatan Rak Buku",
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-kamar-set.html":           "Jasa Pembuatan Kamar Set"
+};
+
 // ============================================================
 // 📁 JASA KONSTRUKSI STRUKTUR (MONEY_MASTER)
 // ═════════════════════════════════════════════════════════════════════
@@ -304,19 +376,22 @@ const urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPageSport = {
     // Kumpulkan SEMUA mapping ke array
     var ALL_MAPPINGS = [
         urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyPage,
+        urlMappingJasaKonstruksiBangunanFromMoneyMasterElementMP,
+        urlMappingJasaKonstruksiBangunanFromMoneyMasterConditionalMP,
+        urlMappingJasaKonstruksiBangunanFromMoneyMasterVariantGeneric,
         urlMappingJasaPembuatanRumahFromMoneyPageVariant,
+        urlMappingJasaBoronganTenagaBangunanRumahFromVariantSubVariant,
+        
         urlMappingJasaPembuatanRumahFromMoneyPageSubVariant,
         
         urlMappingJasaPembuatanApartemenFromMoneyPageVariant,
         urlMappingJasaPembuatanHotelFromMoneyPageVariant,
         urlMappingJasaPembuatanSekolahFromMoneyPageVariant,
         urlMappingJasaPembuatanGudangFromMoneyPageVariant,
-        urlMappingJasaKonstruksiGudangLogistikFromVariantSubVariant,
         urlMappingJasaPembuatanFurnitureFromMoneyPageVariant,
         urlMappingJasaPembuatanGedungFromMoneyPageVariant,
         urlMappingJasaPembuatanPabrikFromMoneyPageVariant,
-        urlMappingJasaKonstruksiBangunanFromMoneyMastrVariant,
-        
+
         urlMappingJasaKonstruksiStrukturFromMoneyMasterMoneyPage,
         urlMappingJasaKonstruksiBajaFromMoneyPageVariant,
         urlMappingJasaKonstruksiBajaRinganFromVariantSubVariant,
@@ -410,6 +485,46 @@ function initJasaKonsStrukturPillar() {
             'JASA_KONSTRUKSI'
         );
     }
+    if (urlMappingJasaKonstruksiBangunanFromMoneyMasterElementMP[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaKonstruksiBangunanFromMoneyMasterElementMP,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-bangunan.html' },
+                { name: 'Perbandingan Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-bangunan.html' },
+                { name: 'Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    if (urlMappingJasaKonstruksiBangunanFromMoneyMasterConditionalMP[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaKonstruksiBangunanFromMoneyMasterConditionalMP,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-bangunan.html' },
+                { name: 'Perbandingan Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-bangunan.html' },
+                { name: 'Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    if (urlMappingJasaKonstruksiBangunanFromMoneyMasterVariantGeneric[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaKonstruksiBangunanFromMoneyMasterVariantGeneric,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-bangunan.html' },
+                { name: 'Perbandingan Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-bangunan.html' },
+                { name: 'Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
     if (urlMappingJasaPembuatanRumahFromMoneyPageVariant[cleanUrlJasaJasaKonsStruktur]) {
         generateBreadcrumbShared(
             urlMappingJasaPembuatanRumahFromMoneyPageVariant,
@@ -424,6 +539,23 @@ function initJasaKonsStrukturPillar() {
             'JASA_KONSTRUKSI'
         );
     }
+    
+    if (urlMappingJasaBoronganTenagaBangunanRumahFromVariantSubVariant[cleanUrlJasaJasaKonsStruktur]) {
+        generateBreadcrumbShared(
+            urlMappingJasaBoronganTenagaBangunanRumahFromVariantSubVariant,
+            cleanUrlJasaJasaKonsStruktur,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-bangunan.html' },
+                { name: 'Perbandingan Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-bangunan.html' },
+                { name: 'Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html' },
+                { name: 'Jasa Pembuatan Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-rumah.html' },
+                { name: 'Jasa Borongan Tenaga Bangunan Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-borongan-tenaga-bangunan-rumah.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    
     if (urlMappingJasaPembuatanRumahFromMoneyPageSubVariant[cleanUrlJasaJasaKonsStruktur]) {
         generateBreadcrumbShared(
             urlMappingJasaPembuatanRumahFromMoneyPageSubVariant,
@@ -495,21 +627,7 @@ function initJasaKonsStrukturPillar() {
             'JASA_KONSTRUKSI'
         );
     }
-   if (urlMappingJasaKonstruksiGudangLogistikFromVariantSubVariant[cleanUrlJasaJasaKonsStruktur]) {
-        generateBreadcrumbShared(
-            urlMappingJasaKonstruksiGudangLogistikFromVariantSubVariant,
-            cleanUrlJasaJasaKonsStruktur,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-bangunan.html' },
-                { name: 'Perbandingan Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-bangunan.html' },
-                { name: 'Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html' },
-                { name: 'Jasa Pembuatan Gudang', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang.html' },
-                { name: 'Jasa Pembuatan Gudang Logistik', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-gudang-logistik.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
+  
    if (urlMappingJasaPembuatanFurnitureFromMoneyPageVariant[cleanUrlJasaJasaKonsStruktur]) {
         generateBreadcrumbShared(
             urlMappingJasaPembuatanFurnitureFromMoneyPageVariant,
@@ -553,19 +671,6 @@ function initJasaKonsStrukturPillar() {
         );
     }
     
-    if (urlMappingJasaKonstruksiBangunanFromMoneyMastrVariant[cleanUrlJasaJasaKonsStruktur]) {
-        generateBreadcrumbShared(
-            urlMappingJasaKonstruksiBangunanFromMoneyMastrVariant,
-            cleanUrlJasaJasaKonsStruktur,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-konstruksi-bangunan.html' },
-                { name: 'Perbandingan Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-konstruksi-bangunan.html' },
-                { name: 'Jasa Konstruksi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi-bangunan.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
     
     // ═══════════════════════════════════════════════════════
     // [BLOK 2] JASA KONSTRUKSI STRUKTUR (MONEY_MASTER)
