@@ -23,7 +23,6 @@ const urlMappingStrukturBajaRangka = {
 // ============================================================
 
 const urlMappingJasaKonstruksiBangunanFromMoneyMasterMoneyChild = {
-  "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-bangunan-terdekat.html": "Jasa Konstruksi Bangunan Terdekat",
   "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-bangunan-jakarta.html": "Jasa Konstruksi Bangunan Jakarta",
   "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-bangunan-bogor.html": "Jasa Konstruksi Bangunan Bogor",
   "https://www.betonjayareadymix.com/2018/09/jasa-konstruksi-bangunan-depok.html": "Jasa Konstruksi Bangunan Depok",
