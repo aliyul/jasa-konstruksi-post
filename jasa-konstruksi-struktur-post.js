@@ -344,72 +344,50 @@ const urlMappingJasaKonstruksiColdStorageModernFromMoneyPageMoneyPage1 = {};
 const urlMappingJasaKonstruksiBengkelModernFromMoneyPageMoneyPage1 = {};
 const urlMappingJasaKonstruksiWorkshopModernFromMoneyPageMoneyPage1 = {};
 
-// ============================================================
-// JASA LAPANGAN OLAHRAGA
-// ============================================================
-
-const urlMappingJasaPembuatanLapanganOlahRagaFromMoneyPageMoneyChild = {
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-jakarta.html": "Jasa Pembuatan Lapangan OlahRaga Jakarta",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-bogor.html": "Jasa Pembuatan Lapangan OlahRaga Bogor",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-depok.html": "Jasa Pembuatan Lapangan OlahRaga Depok",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-tangerang.html": "Jasa Pembuatan Lapangan OlahRaga Tangerang",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-bekasi.html": "Jasa Pembuatan Lapangan OlahRaga Bekasi",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-karawang.html": "Jasa Pembuatan Lapangan OlahRaga Karawang",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-terdekat.html": "Jasa Pembuatan Lapangan OlahRaga Terdekat"
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pembuatan-lapangan-olahraga (MP) ➔ CHILD: MC (6)
+// REVISED: parent sekarang MP, bukan MM (fix hierarchy)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPembuatanLapanganOlahragaFromMoneyPageMoneyChild = {
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-jakarta.html":   "Jasa Pembuatan Lapangan Olahraga Jakarta",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-bogor.html":     "Jasa Pembuatan Lapangan Olahraga Bogor",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-depok.html":     "Jasa Pembuatan Lapangan Olahraga Depok",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-tangerang.html": "Jasa Pembuatan Lapangan Olahraga Tangerang",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-bekasi.html":    "Jasa Pembuatan Lapangan Olahraga Bekasi",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-olahraga-karawang.html":  "Jasa Pembuatan Lapangan Olahraga Karawang"
 };
 
-const urlMappingJasaPembuatanLapanganFutsalFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-lapangan-futsal.html": "Harga Jasa Pembuatan Lapangan Futsal"
-};
-
-const urlMappingJasaPembuatanLapanganFutsalFromMoneyPage1MoneyChild = {
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-bekasi.html": "Jasa Pembuatan Lapangan Futsal Bekasi",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-depok.html": "Jasa Pembuatan Lapangan Futsal Depok",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-jakarta.html": "Jasa Pembuatan Lapangan Futsal Jakarta",
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pembuatan-lapangan-futsal (MP)
+// ➔ CHILD: MC (5) + Variant (1)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPembuatanLapanganFutsalFromMoneyPageMoneyChild = {
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-bekasi.html":    "Jasa Pembuatan Lapangan Futsal Bekasi",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-depok.html":     "Jasa Pembuatan Lapangan Futsal Depok",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-jakarta.html":   "Jasa Pembuatan Lapangan Futsal Jakarta",
   "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-tangerang.html": "Jasa Pembuatan Lapangan Futsal Tangerang",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-bogor.html": "Jasa Pembuatan Lapangan Futsal Bogor"
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-futsal-bogor.html":     "Jasa Pembuatan Lapangan Futsal Bogor"
 };
 
-const urlMappingJasaPembuatanLapanganBasketFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-buat-lapangan-basket.html": "Harga Jasa Pembuatan Lapangan Basket"
-};
-
-const urlMappingJasaPembuatanLapanganSepakbolaFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-lapangan-mini-soccer.html": "Harga Jasa Pembuatan Lapangan Mini Soccer",
+const urlMappingJasaPembuatanLapanganFutsalFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/2018/09/jasa-pembuatan-lapangan-mini-soccer.html": "Jasa Pembuatan Lapangan Mini Soccer"
 };
 
-const urlMappingJasaPembuatanLapanganTenisFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-lapangan-tenis.html": "Harga Jasa Pembuatan Lapangan Tenis"
-};
-
-const urlMappingJasaPembuatanLapanganBadmintonFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-lapangan-badminton.html": "Harga Jasa Pembuatan Lapangan Badminton"
-};
-
-const urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-lapangan-voli.html": "Harga Jasa Pembuatan Lapangan Voli"
-};
-
-const urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyChild = {
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-depok.html": "Jasa Pembuatan Lapangan Voli Depok",
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pembuatan-lapangan-voli (MP) ➔ CHILD: MC (5)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPembuatanLapanganVoliFromMoneyPageMoneyChild = {
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-depok.html":     "Jasa Pembuatan Lapangan Voli Depok",
   "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-tangerang.html": "Jasa Pembuatan Lapangan Voli Tangerang",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-jakarta.html": "Jasa Pembuatan Lapangan Voli Jakarta",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-bekasi.html": "Jasa Pembuatan Lapangan Voli Bekasi",
-  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-bogor.html": "Jasa Pembuatan Lapangan Voli Bogor"
-};
-
-const urlMappingJasaPembuatanLapanganSerbagunaFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pembuatan-lapangan-serbaguna.html": "Harga Jasa Pembuatan Lapangan  Serbaguna"
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-jakarta.html":   "Jasa Pembuatan Lapangan Voli Jakarta",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-bekasi.html":    "Jasa Pembuatan Lapangan Voli Bekasi",
+  "https://www.betonjayareadymix.com/2018/11/jasa-pembuatan-lapangan-voli-bogor.html":     "Jasa Pembuatan Lapangan Voli Bogor"
 };
 
 // ============================================================
 // JASA STRUKTUR KHUSUS (Kolam Renang, Septic Tank, dll)
 // ============================================================
 
-const urlMappingKontraktorKolamRenangFromMoneyPageMoneyPage1 = {
-//  "https://www.betonjayareadymix.com/2018/09/kontraktor-waterpark-indonesia.html": "Kontraktor Waterpark Indonesia"
-};
 
 
 /*
@@ -545,17 +523,10 @@ console.log('══════════════════════�
         urlMappingJasaKonstruksiWorkshopModernFromMoneyPageMoneyPage1,
         urlMappingJasaPembuatanLapanganOlahRagaFromMoneyPageMoneyChild,
         urlMappingJasaPembuatanLapanganFutsalFromMoneyPage1MoneyPage2,
-        urlMappingJasaPembuatanLapanganFutsalFromMoneyPage1MoneyChild,
-        urlMappingJasaPembuatanLapanganBasketFromMoneyPage1MoneyPage2,
-        urlMappingJasaPembuatanLapanganSepakbolaFromMoneyPage1MoneyPage2,
-        urlMappingJasaPembuatanLapanganTenisFromMoneyPage1MoneyPage2,
-        urlMappingJasaPembuatanLapanganBadmintonFromMoneyPage1MoneyPage2,
-        urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyPage2,
-        urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyChild,
-        urlMappingJasaPembuatanLapanganSerbagunaFromMoneyPage1MoneyPage2,
-        urlMappingKontraktorKolamRenangFromMoneyPageMoneyPage1,
+        urlMappingJasaPembuatanLapanganFutsalFromMoneyPageMoneyChild,
+        urlMappingJasaPembuatanLapanganFutsalFromMoneyPageVariant,
+        urlMappingJasaPembuatanLapanganVoliFromMoneyPageMoneyChild,
 
-      
         urlMappingJasaKolamRenangFromMoneyPageMoneyChild,
         urlMappingJasaKolamRenangFromMoneyPageVariant,
       
@@ -1383,170 +1354,56 @@ if (urlMappingJasaPembuatanLapanganOlahRagaFromMoneyPageMoneyChild[cleanUrlJasaJ
     );
 }
 
-if (urlMappingJasaPembuatanLapanganFutsalFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
+if (urlMappingJasaPembuatanLapanganFutsalFromMoneyPageMoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
     generateBreadcrumbShared(
-        urlMappingJasaPembuatanLapanganFutsalFromMoneyPage1MoneyPage2,
+        urlMappingJasaPembuatanLapanganFutsalFromMoneyPageMoneyChild,
         cleanUrlJasaJasaKonsStrukturPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
             { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
             { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html' },
+            { name: 'Jasa Pembuatan Lapangan Futsal', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-futsal.html' }
+        ],
+        'JASA_KONSTRUKSI'
+    );
+}
+  
+if (urlMappingJasaPembuatanLapanganFutsalFromMoneyPageVariant[cleanUrlJasaJasaKonsStrukturPost]) {
+    generateBreadcrumbShared(
+        urlMappingJasaPembuatanLapanganFutsalFromMoneyPageVariant,
+        cleanUrlJasaJasaKonsStrukturPost,
+        [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
+            { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
+            { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' },
             { name: 'Jasa Pembuatan Lapangan Futsal', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-futsal.html' }
         ],
         'JASA_KONSTRUKSI'
     );
 }
 
-if (urlMappingJasaPembuatanLapanganFutsalFromMoneyPage1MoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
-    generateBreadcrumbShared(
-        urlMappingJasaPembuatanLapanganFutsalFromMoneyPage1MoneyChild,
-        cleanUrlJasaJasaKonsStrukturPost,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
-            { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Futsal', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-futsal.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
 
-if (urlMappingJasaPembuatanLapanganBasketFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
+if (urlMappingJasaPembuatanLapanganVoliFromMoneyPageMoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
     generateBreadcrumbShared(
-        urlMappingJasaPembuatanLapanganBasketFromMoneyPage1MoneyPage2,
+        urlMappingJasaPembuatanLapanganVoliFromMoneyPageMoneyChild,
         cleanUrlJasaJasaKonsStrukturPost,
         [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
             { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
             { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Basket', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-basket.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-
-if (urlMappingJasaPembuatanLapanganSepakbolaFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
-    generateBreadcrumbShared(
-        urlMappingJasaPembuatanLapanganSepakbolaFromMoneyPage1MoneyPage2,
-        cleanUrlJasaJasaKonsStrukturPost,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
-            { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Sepakbola', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-sepakbola.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-
-if (urlMappingJasaPembuatanLapanganTenisFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
-    generateBreadcrumbShared(
-        urlMappingJasaPembuatanLapanganTenisFromMoneyPage1MoneyPage2,
-        cleanUrlJasaJasaKonsStrukturPost,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
-            { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Tenis', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-tenis.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-
-if (urlMappingJasaPembuatanLapanganBadmintonFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
-    generateBreadcrumbShared(
-        urlMappingJasaPembuatanLapanganBadmintonFromMoneyPage1MoneyPage2,
-        cleanUrlJasaJasaKonsStrukturPost,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
-            { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Badminton', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-badminton.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-
-if (urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
-    generateBreadcrumbShared(
-        urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyPage2,
-        cleanUrlJasaJasaKonsStrukturPost,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
-            { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html' },
             { name: 'Jasa Pembuatan Lapangan Voli', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-voli.html' }
         ],
         'JASA_KONSTRUKSI'
     );
 }
 
-if (urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
-    generateBreadcrumbShared(
-        urlMappingJasaPembuatanLapanganVoliFromMoneyPage1MoneyChild,
-        cleanUrlJasaJasaKonsStrukturPost,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
-            { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Voli', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-voli.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-
-if (urlMappingJasaPembuatanLapanganSerbagunaFromMoneyPage1MoneyPage2[cleanUrlJasaJasaKonsStrukturPost]) {
-    generateBreadcrumbShared(
-        urlMappingJasaPembuatanLapanganSerbagunaFromMoneyPage1MoneyPage2,
-        cleanUrlJasaJasaKonsStrukturPost,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-lapangan-olahraga.html' },
-            { name: 'Perbandingan Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Olahraga', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html' },
-            { name: 'Jasa Pembuatan Lapangan Serbaguna', url: 'https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-serbaguna.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
 
 // ═══════════════════════════════════════════════════════
 // [BLOK 9] JASA STRUKTUR KHUSUS (Kolam Renang, dll)
 // ═══════════════════════════════════════════════════════
-
-if (urlMappingKontraktorKolamRenangFromMoneyPageMoneyPage1[cleanUrlJasaJasaKonsStrukturPost]) {
-    generateBreadcrumbShared(
-        urlMappingKontraktorKolamRenangFromMoneyPageMoneyPage1,
-        cleanUrlJasaJasaKonsStrukturPost,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-khusus.html' },
-            { name: 'Perbandingan Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-struktur-khusus.html' },
-            { name: 'Jasa Struktur Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-struktur-khusus.html' },
-            { name: 'Jasa Kolam Renang', url: 'https://www.betonjayareadymix.com/p/jasa-kolam-renang.html' },
-            { name: 'Kontraktor Kolam Renang', url: 'https://www.betonjayareadymix.com/p/kontraktor-kolam-renang.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-}
-
 if (urlMappingJasaKolamRenangFromMoneyPageMoneyChild[cleanUrlJasaJasaKonsStrukturPost]) {
     generateBreadcrumbShared(
         urlMappingJasaKolamRenangFromMoneyPageMoneyChild,
