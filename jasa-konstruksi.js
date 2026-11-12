@@ -254,9 +254,13 @@ const urlMappingJasaLapanganOlahragaFromSub1MoneyMaster = {
  "https://www.betonjayareadymix.com/p/jasa-lapangan-olahraga.html": "Jasa Lapangan Olahraga" 
 };
 
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-lapangan-olahraga (MM) ➔ CHILD: Money Page (2)
+// Umbrella layanan: pembuatan & perbaikan
+// ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaLapanganOlahragaFromMoneyMasterMoneyPage = {
- "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html": "Jasa Pembuatan Lapangan Olahraga",
- "https://www.betonjayareadymix.com/p/jasa-perbaikan-lapangan-olahraga.html": "Jasa Perbaikan Lapangan Olahraga"
+  "https://www.betonjayareadymix.com/p/jasa-pembuatan-lapangan-olahraga.html": "Jasa Pembuatan Lapangan Olahraga",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lapangan-olahraga.html": "Jasa Perbaikan Lapangan Olahraga"
 };
 
 const urlMappingKonstruksiBangunanBridgeFromSub2Sub1 = {
