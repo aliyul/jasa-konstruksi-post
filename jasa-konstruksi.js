@@ -1739,19 +1739,55 @@ const urlMappingJasaRenovasiFromMoneyMasterMoneyPage = {
 | Jasa Renovasi Ruko | /p/jasa-renovasi-ruko.html | [VARIANT] | Home > Jasa Konstruksi > Jasa Renovasi > Jasa Renovasi Bangunan > Jasa Renovasi Ruko |
 | Harga Jasa Renovasi Bangunan | /2019/08/harga-renovasi-bangunan.html | [MONEY PAGE] | Home > Jasa Konstruksi > Jasa Renovasi > Harga Renovasi Bangunan |
 */
-// ============================================================
-// 📁 JASA PERAWATAN & PERBAIKAN BANGUNAN - SUB2 (LEVEL 2)
-// ============================================================
 
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-perbaikan-bangunan (MM) ➔ CHILD: Money Page (19)
+// Cluster: Perbaikan Bangunan Struktural (atap, lantai, pondasi, waterproofing)
+// 
+// ⚠️  Yang DIKELUARKAN (pindah ke Perbaikan Infrastruktur):
+//     - jasa-perbaikan-jalan-aspal
+//     - jasa-perbaikan-jalan-beton
+//     - jasa-perbaikan-jalan-coring-beton
+//     - jasa-bongkar-pasang-jalan-paving
+//     - jasa-perbaikan-jalan-perumahan
+// ═════════════════════════════════════════════════════════════════════
+// 🆕 PERUBAHAN:
+//   ❌ REMOVED: jasa-perbaikan-saluran-air (redirect → Jasa Drainase)
+//   ✅ ADDED:   jasa-perbaikan-pipa-air-bocor (rename dari pipa-bocor)
+//   🟡 KEEP:    jasa-perbaikan-drainase-bangunan (borderline — verify konten)
+// ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage = {
-  // MP - TURUNAN (LEVEL 5) - URL BARU
-// ============================================================
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-bangunan.html": "Jasa Perbaikan Lantai Bangunan",
-"https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html": "Jasa Perbaikan Struktur Bangunan", 
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-waterproofing-bangunan.html": "Jasa Perbaikan Waterproofing Bangunan",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-elemen-arsitektural.html": "Jasa Perbaikan Elemen Arsitektural",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-bangunan.html": "Jasa Perbaikan Atap Bangunan",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase-bangunan.html": "Jasa Perbaikan Drainase Bangunan"
+
+  // ─── Struktural (5) ───
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html":        "Jasa Perbaikan Struktur Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-struktur.html":         "Jasa Perbaikan Pondasi Struktur",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-bangunan.html":         "Jasa Perbaikan Pondasi Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pondasi-rumah.html":            "Jasa Perbaikan Pondasi Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-penguatan-pondasi-bangunan.html":         "Jasa Penguatan Pondasi Bangunan",
+
+  // ─── Komponen Bangunan (5) ───
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-bangunan.html":          "Jasa Perbaikan Lantai Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-bangunan.html":            "Jasa Perbaikan Atap Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-rangka-atap.html":              "Jasa Perbaikan Rangka Atap",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-elemen-arsitektural.html":      "Jasa Perbaikan Elemen Arsitektural",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-cat-mengelupas.html":           "Jasa Perbaikan Cat Mengelupas",
+
+  // ─── Waterproofing (5) ───
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-waterproofing-bangunan.html":   "Jasa Perbaikan Waterproofing Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-beton.html":                "Jasa Waterproofing Beton",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-dak-beton.html":            "Jasa Waterproofing Dak Beton",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-basement-bangunan.html":    "Jasa Waterproofing Basement Bangunan",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-dinding-bangunan.html":     "Jasa Waterproofing Dinding Bangunan",
+
+  // ─── Bangunan Spesifik (2) ───
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-gedung-bertingkat.html":        "Jasa Perbaikan Gedung Bertingkat",
+  "https://www.betonjayareadymix.com/p/jasa-restorasi-bangunan-tua.html":             "Jasa Restorasi Bangunan Tua",
+
+  // ─── Utilitas & Plumbing (2) ───
+  // 🟡 BORDERLINE — verify konten fokus "drainase bangunan" (atap/basement/perimeter)
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase-bangunan.html":        "Jasa Perbaikan Drainase Bangunan",
+  // 🆕 RENAME dari jasa-perbaikan-pipa-bocor (plumbing — pipa air bersih)
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-air-bocor.html":           "Jasa Perbaikan Pipa Air Bocor"
 };
 
 // ============================================================
