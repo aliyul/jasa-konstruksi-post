@@ -149,22 +149,21 @@ const urlMappingJasaChippingBetonBobokFromMoneyPage2MoneyPage3 = {
   "https://www.betonjayareadymix.com/2019/06/harga-pekerjaan-chipping-beton.html": "Harga Pekerjaan Chipping Beton"
 };
 
-const urlMappingHargaJasaRenovasiRumahFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-renovasi-rumah-subsidi.html": "Harga Jasa Renovasi Rumah Subsidi",
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-renovasi-rumah-murah.html": "Harga Jasa Renovasi Rumah Murah"
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-renovasi-bangunan-rumah (MP) ➔ CHILD: Money Child (8 kota)
+// MC Location — Jakarta, Bogor, Depok, Tangerang, Bekasi, Jogja, Semarang, Surabaya
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaRenovasiBangunanRumahFromMoneyPageMoneyChild = {
+  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-jakarta.html":   "Harga Jasa Renovasi Rumah Jakarta",
+  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-bogor.html":     "Harga Jasa Renovasi Rumah Bogor",
+  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-depok.html":     "Harga Jasa Renovasi Rumah Depok",
+  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-tangerang.html": "Harga Jasa Renovasi Rumah Tangerang",
+  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-bekasi.html":    "Harga Jasa Renovasi Rumah Bekasi",
+  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-jogja.html":     "Harga Jasa Renovasi Rumah Jogja",
+  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-semarang.html":  "Harga Jasa Renovasi Rumah Semarang",
+  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-surabaya.html":  "Harga Jasa Renovasi Rumah Surabaya"
 };
 
-const urlMappingHargaJasaRenovasiRumahFromMoneyPage1MoneyChild = {
-  "https://www.betonjayareadymix.com/2019/06/harga-jasa-renovasi-rumah-terdekat.html": "Harga Jasa Renovasi Rumah Terdekat",
-  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-surabaya.html": "Harga Jasa Renovasi Rumah Surabaya",
-  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-jogja.html": "Harga Jasa Renovasi Rumah Jogja",
-  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-semarang.html": "Harga Jasa Renovasi Rumah Semarang",
-  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-tangerang.html": "Harga Jasa Renovasi Rumah Tangerang",
-  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-depok.html": "Harga Jasa Renovasi Rumah Depok",
-  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-bekasi.html": "Harga Jasa Renovasi Rumah Bekasi",
-  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-bogor.html": "Harga Jasa Renovasi Rumah Bogor",
-  "https://www.betonjayareadymix.com/2019/07/harga-jasa-renovasi-rumah-jakarta.html": "Harga Jasa Renovasi Rumah Jakarta"
-};
 
 // Mapping kosong (placeholder — aman, otomatis di-skip loop)
 const urlMappingJasaRenovasiRumahMinimalis = {};
@@ -261,8 +260,7 @@ function restoreCondition(conditionId) {
         urlMappingJasaBobokBetonChippingFromMoneyPage2MoneyPage3,
         urlMappingHargaJasaBobokBetonFromMoneyPage3MoneyPage4,
         urlMappingHargaJasaBobokLantaiBetonFromMoneyPage4MoneyPage5,
-        urlMappingHargaJasaRenovasiRumahFromMoneyPage1MoneyPage2,
-        urlMappingHargaJasaRenovasiRumahFromMoneyPage1MoneyChild,
+        urlMappingJasaRenovasiBangunanRumahFromMoneyPageMoneyChild,
         urlMappingJasaRenovasiRumahMinimalis,
         urlMappingJasaRenovasiRumahType36,
         urlMappingJasaRenovasiRumahType45,
@@ -313,8 +311,7 @@ function restoreCondition(conditionId) {
         'urlMappingJasaBobokBetonChippingFromMoneyPage2MoneyPage3',
         'urlMappingHargaJasaBobokBetonFromMoneyPage3MoneyPage4',
         'urlMappingHargaJasaBobokLantaiBetonFromMoneyPage4MoneyPage5',
-        'urlMappingHargaJasaRenovasiRumahFromMoneyPage1MoneyPage2',
-        'urlMappingHargaJasaRenovasiRumahFromMoneyPage1MoneyChild',
+        'urlMappingJasaRenovasiBangunanRumahFromMoneyPageMoneyChild',
         'urlMappingJasaRenovasiRumahMinimalis',
         'urlMappingJasaRenovasiRumahType36',
         'urlMappingJasaRenovasiRumahType45',
@@ -846,36 +843,16 @@ function initJasaPerbaikanPost() {
     // ───────────────────────────────────────────────────────────
     // SUB JasaRenovasiPerbaikanBangunanRumahPost
     // ───────────────────────────────────────────────────────────
-
-    if (urlMappingHargaJasaRenovasiRumahFromMoneyPage1MoneyPage2[cleanUrlJasaKonsPerbaikanPost]) {
+    if (urlMappingJasaRenovasiBangunanRumahFromMoneyPageMoneyChild[cleanUrlJasaKonsPerbaikanPost]) {
         generateBreadcrumbShared(
-            urlMappingHargaJasaRenovasiRumahFromMoneyPage1MoneyPage2,
+            urlMappingJasaRenovasiBangunanRumahFromMoneyPageMoneyChild,
             cleanUrlJasaKonsPerbaikanPost,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
                 { name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
                 { name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
-                { name: 'Jasa Renovasi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan.html' },
-                { name: 'Jasa Renovasi Bangunan Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-rumah.html' },
-                { name: 'Harga Jasa Renovasi Rumah', url: 'https://www.betonjayareadymix.com/p/harga-jasa-renovasi-rumah.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-
-    if (urlMappingHargaJasaRenovasiRumahFromMoneyPage1MoneyChild[cleanUrlJasaKonsPerbaikanPost]) {
-        generateBreadcrumbShared(
-            urlMappingHargaJasaRenovasiRumahFromMoneyPage1MoneyChild,
-            cleanUrlJasaKonsPerbaikanPost,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
-                { name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
-                { name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
-                { name: 'Jasa Renovasi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan.html' },
-                { name: 'Jasa Renovasi Bangunan Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-rumah.html' },
-                { name: 'Harga Jasa Renovasi Rumah', url: 'https://www.betonjayareadymix.com/p/harga-jasa-renovasi-rumah.html' }
+                { name: 'Jasa Renovasi Bangunan Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-rumah.html' }
             ],
             'JASA_KONSTRUKSI'
         );
