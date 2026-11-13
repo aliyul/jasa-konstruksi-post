@@ -304,14 +304,17 @@ const urlMappingJasaRenovasiBangunanRumahFromMoneyPageVariant = {
 // 📂 PARENT: jasa-renovasi-eksterior (MP) ➔ Variant (5)
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaRenovasiEksteriorFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-fasad-dekoratif-bangunan.html":          "Jasa Fasad Dekoratif Bangunan"
+ /*
   "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-rumah.html":            "Jasa Desain Eksterior Rumah",
   "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-komersial.html":        "Jasa Desain Eksterior Komersial",
   "https://www.betonjayareadymix.com/p/jasa-desain-renovasi-fasad-bangunan.html":    "Jasa Desain Renovasi Fasad Bangunan",
-  "https://www.betonjayareadymix.com/p/jasa-fasad-dekoratif-bangunan.html":          "Jasa Fasad Dekoratif Bangunan",
   "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-villa-dan-resort.html": "Jasa Desain Eksterior Villa dan Resort",
   "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-hunian-vertikal.html":  "Jasa Desain Eksterior Hunian Vertikal",
   "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-fasilitas-publik.html": "Jasa Desain Eksterior Fasilitas Publik"
+  */
 };
+
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-renovasi-fasad-bangunan (MP) ➔ Variant (7)
 // Fasad material & repair variants
