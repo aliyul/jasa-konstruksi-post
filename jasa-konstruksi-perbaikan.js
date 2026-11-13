@@ -341,8 +341,8 @@ const urlMappingJasaRenovasiKanopiBangunanFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-pagar-dan-gerbang.html":    "Jasa Renovasi Pagar dan Gerbang",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-taman-dan-landscape.html":  "Jasa Renovasi Taman dan Landscape",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-balkon-dan-teras.html":     "Jasa Renovasi Balkon dan Teras",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-jalur-pejalan-akses.html":  "Jasa Renovasi Jalur Pejalan Akses",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan-rusak.html": "Jasa Perbaikan Trotoar Jalan Rusak"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-jalur-pejalan-akses.html":  "Jasa Renovasi Jalur Pejalan Akses"
+ // "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan-rusak.html": "Jasa Perbaikan Trotoar Jalan Rusak"
 };
 // ============================================================
 // JASA RENOVASI ARSITEKTUR EKSTERIOR (SUB2)
