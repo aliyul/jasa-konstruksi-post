@@ -303,17 +303,17 @@ const urlMappingJasaRenovasiBangunanRumahFromMoneyPageVariant = {
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-renovasi-eksterior (MP) ➔ Variant (5)
 // ═════════════════════════════════════════════════════════════════════
+// ✅ AFTER REVISION — hanya 1 tersisa
 const urlMappingJasaRenovasiEksteriorFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/p/jasa-fasad-dekoratif-bangunan.html":          "Jasa Fasad Dekoratif Bangunan"
- /*
-  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-rumah.html":            "Jasa Desain Eksterior Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-komersial.html":        "Jasa Desain Eksterior Komersial",
-  "https://www.betonjayareadymix.com/p/jasa-desain-renovasi-fasad-bangunan.html":    "Jasa Desain Renovasi Fasad Bangunan",
-  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-villa-dan-resort.html": "Jasa Desain Eksterior Villa dan Resort",
-  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-hunian-vertikal.html":  "Jasa Desain Eksterior Hunian Vertikal",
-  "https://www.betonjayareadymix.com/p/jasa-desain-eksterior-fasilitas-publik.html": "Jasa Desain Eksterior Fasilitas Publik"
-  */
+  "https://www.betonjayareadymix.com/p/jasa-fasad-dekoratif-bangunan.html": "Jasa Fasad Dekoratif Bangunan"
 };
+// ❌ REMOVE 6 URL ini (pindah ke cluster Jasa Desain):
+// jasa-desain-eksterior-rumah
+// jasa-desain-eksterior-komersial
+// jasa-desain-eksterior-villa-dan-resort
+// jasa-desain-eksterior-hunian-vertikal
+// jasa-desain-eksterior-fasilitas-publik
+// jasa-desain-renovasi-fasad-bangunan
 
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-renovasi-fasad-bangunan (MP) ➔ Variant (7)
@@ -330,23 +330,21 @@ const urlMappingJasaRenovasiFasadBangunanFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/jasa-pembersihan-fasad-gedung.html":                    "Jasa Pembersihan Fasad Gedung"
 };
 
-// ═════════════════════════════════════════════════════════════════════
-// 📂 PARENT: jasa-renovasi-lantai-bangunan (MP) ➔ Variant (1)
-// ═════════════════════════════════════════════════════════════════════
-const urlMappingJasaRenovasiLantaiBangunanFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-rusak.html": "Jasa Renovasi Lantai Rusak"
-};
+
 
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-renovasi-kanopi-bangunan (MP) ➔ Variant (1)
 // ═════════════════════════════════════════════════════════════════════
+// ✅ AFTER REVISION — 4 tersisa
 const urlMappingJasaRenovasiKanopiBangunanFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-pagar-dan-gerbang.html":    "Jasa Renovasi Pagar dan Gerbang",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-taman-dan-landscape.html":  "Jasa Renovasi Taman dan Landscape",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-balkon-dan-teras.html":     "Jasa Renovasi Balkon dan Teras",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-jalur-pejalan-akses.html":  "Jasa Renovasi Jalur Pejalan Akses"
- // "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan-rusak.html": "Jasa Perbaikan Trotoar Jalan Rusak"
 };
+// ❌ REMOVE 1 URL ini (pindah ke Infra):
+// jasa-perbaikan-trotoar-jalan-rusak
+
 // ============================================================
 // JASA RENOVASI ARSITEKTUR EKSTERIOR (SUB2)
 // Parent: Jasa Renovasi Fasad Eksterior
@@ -403,31 +401,37 @@ const urlMappingPerbaikanStadionFromMoneyMaster1MoneyPage = {
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-renovasi-terminal-penumpang (MP) ➔ Variant (6)
 // ═════════════════════════════════════════════════════════════════════
+// ✅ AFTER REVISION — 3 tetap
 const urlMappingJasaRenovasiTerminalPenumpangFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-area-tunggu-terminal.html":       "Jasa Renovasi Area Tunggu Terminal",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi-terminal.html":       "Jasa Renovasi Kamar Mandi Terminal",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kanopi-terminal.html":            "Jasa Renovasi Kanopi Terminal",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-terminal.html":          "Jasa Perbaikan Dinding Terminal",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pagar-terminal.html":            "Jasa Perbaikan Pagar Terminal",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-penerangan-terminal.html":       "Jasa Perbaikan Penerangan Terminal"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-area-tunggu-terminal.html": "Jasa Renovasi Area Tunggu Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi-terminal.html": "Jasa Renovasi Kamar Mandi Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-kanopi-terminal.html":      "Jasa Renovasi Kanopi Terminal"
 };
+// ❌ REMOVE 3 URL ini (pindah ke Infra):
+// jasa-perbaikan-dinding-terminal
+// jasa-perbaikan-pagar-terminal
+// jasa-perbaikan-penerangan-terminal
 
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-renovasi-taman-kota (MP) ➔ Variant (5)
 // ═════════════════════════════════════════════════════════════════════
+// ✅ AFTER REVISION — 2 tetap
 const urlMappingJasaRenovasiTamanKotaFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-lampu-taman-kota.html":           "Jasa Renovasi Lampu Taman Kota",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-lansekap-taman-kota.html":        "Jasa Renovasi Lansekap Taman Kota",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-fasilitas-taman.html":           "Jasa Perbaikan Fasilitas Taman",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalur-pedestrian-taman.html":    "Jasa Perbaikan Jalur Pedestrian Taman",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-area-bermain-anak-taman.html":   "Jasa Perbaikan Area Bermain Anak Taman"
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-lampu-taman-kota.html":    "Jasa Renovasi Lampu Taman Kota",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-lansekap-taman-kota.html": "Jasa Renovasi Lansekap Taman Kota"
 };
+// ❌ REMOVE 3 URL ini (pindah ke Infra):
+// jasa-perbaikan-fasilitas-taman
+// jasa-perbaikan-jalur-pedestrian-taman
+// jasa-perbaikan-area-bermain-anak-taman
+
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-renovasi-fasilitas (MP) ➔ Variant (12)
 // Sekolah, Stadion, Halte — fasilitas publik umum
 // ═════════════════════════════════════════════════════════════════════
+// ✅ AFTER REVISION — hapus 4 perbaikan-halte, keep sisanya
 const urlMappingJasaRenovasiFasilitasFromMoneyPageVariant = {
-  // ─── Sekolah ───
+  // ─── Sekolah (6) ───
   "https://www.betonjayareadymix.com/p/jasa-renovasi-gedung-sekolah.html":         "Jasa Renovasi Gedung Sekolah",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-kelas.html":            "Jasa Renovasi Ruang Kelas",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-fasilitas-laboratorium.html": "Jasa Renovasi Fasilitas Laboratorium",
@@ -435,21 +439,23 @@ const urlMappingJasaRenovasiFasilitasFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi-sekolah.html":    "Jasa Renovasi Kamar Mandi Sekolah",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-dinding-lantai-sekolah.html": "Jasa Renovasi Dinding Lantai Sekolah",
 
-  // ─── Stadion ───
+  // ─── Stadion (5) ───
   "https://www.betonjayareadymix.com/p/jasa-renovasi-stadion-olahraga.html":       "Jasa Renovasi Stadion Olahraga",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-tribun-stadion.html":         "Jasa Renovasi Tribun Stadion",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-lapangan-stadion.html":       "Jasa Renovasi Lapangan Stadion",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-pagar-stadion.html":          "Jasa Renovasi Pagar Stadion",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-ganti-stadion.html":    "Jasa Renovasi Kamar Ganti Stadion",
 
-  // ─── Halte Bus ───
+  // ─── Halte (2) — hanya yang prefix renovasi ───
   "https://www.betonjayareadymix.com/p/jasa-renovasi-halte-bus.html":              "Jasa Renovasi Halte Bus",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kanopi-halte.html":          "Jasa Perbaikan Kanopi Halte",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-penerangan-halte.html":      "Jasa Perbaikan Penerangan Halte",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-halte.html":          "Jasa Perbaikan Lantai Halte",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-tempat-duduk-halte.html":    "Jasa Perbaikan Tempat Duduk Halte",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-desain-halte-modern.html":    "Jasa Renovasi Desain Halte Modern"
 };
+// ❌ REMOVE 4 URL ini (pindah ke Infra):
+// jasa-perbaikan-kanopi-halte
+// jasa-perbaikan-penerangan-halte
+// jasa-perbaikan-lantai-halte
+// jasa-perbaikan-tempat-duduk-halte
+
 
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-renovasi-interior (MP) ➔ CHILD: Variant (32)
@@ -556,7 +562,6 @@ const urlMappingJasaRenovasiInteriorFromMoneyPageVariant = {
         urlMappingJasaRenovasiFasadBangunanFromMoneyPageVariant ,
         urlMappingJasaRenovasiBangunanGedungFromMoneyPageVariant,
         urlMappingJasaRenovasiBangunanGudangFromMoneyPageVariant,
-        urlMappingJasaRenovasiLantaiBangunanFromMoneyPageVariant,
         urlMappingJasaRenovasiTamanKotaFromMoneyPageVariant,
         urlMappingJasaRenovasiKanopiBangunanFromMoneyPageVariant,
     
@@ -1010,23 +1015,7 @@ function initJasaPerbaikanKonsPost() {
             'JASA_KONSTRUKSI'
         );
     }
-
-    if (urlMappingJasaRenovasiLantaiBangunanFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
-        generateBreadcrumbShared(
-            urlMappingJasaRenovasiLantaiBangunanFromMoneyPageVariant,
-            cleanUrlJasaPerbaikanKonsSub,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
-                { name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
-                { name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
-                { name: 'Jasa Renovasi Lantai Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-lantai-bangunan.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-
-
+  
     if (urlMappingJasaRenovasiTamanKotaFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
         generateBreadcrumbShared(
             urlMappingJasaRenovasiTamanKotaFromMoneyPageVariant,
