@@ -1672,7 +1672,7 @@ const urlMappingJasaBongkarBangunanFromMoneyMasterMoneyMaster1 = {
   "https://www.betonjayareadymix.com/p/jasa-bongkar-pagar.html": "Jasa Bongkar Pagar",  
   "https://www.betonjayareadymix.com/p/jasa-bongkar-lantai.html": "Jasa Bongkar Lantai"  
 };
-
+/*
 // ============================================================
 // 📁 JASA RENOVASI - SUB2 (LEVEL 2)
 // ============================================================
@@ -1702,7 +1702,32 @@ const urlMappingJasaRenovasiBangunanFromMoneyMaster1MoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-gudang.html": "Jasa Renovasi Bangunan Gudang",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-apartemen.html": "Jasa Renovasi Hotel Apartemen"
 };
+*/
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-renovasi (MM) ➔ CHILD: Money Page
+// Cluster: Bangunan Utuh by Type (14 MP)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaRenovasiFromMoneyMasterMoneyPage = {
+  // ─── Bangunan Umum (5) ───
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-rumah.html":    "Jasa Renovasi Bangunan Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-kantor.html":   "Jasa Renovasi Bangunan Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-gedung.html":   "Jasa Renovasi Bangunan Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-gudang.html":   "Jasa Renovasi Bangunan Gudang",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-pabrik.html":   "Jasa Renovasi Bangunan Pabrik",
 
+  // ─── Fasilitas Publik (3) ───
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-rumah-sakit.html":       "Jasa Renovasi Rumah Sakit",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-terminal-penumpang.html":"Jasa Renovasi Terminal Penumpang",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-taman-kota.html":        "Jasa Renovasi Taman Kota",
+
+  // ─── Tempat Ibadah (6) — parallel markets ───
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-mushola.html":  "Jasa Renovasi Bangunan Mushola",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-masjid.html":   "Jasa Renovasi Bangunan Masjid",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-gereja.html":   "Jasa Renovasi Bangunan Gereja",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-pura.html":     "Jasa Renovasi Bangunan Pura",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-vihara.html":   "Jasa Renovasi Bangunan Vihara",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan-klenteng.html": "Jasa Renovasi Bangunan Klenteng"
+};
 // ============================================================
 // 🟡 SARAN ITEM BARU - JASA RENOVASI BANGUNAN
 // ============================================================
@@ -2070,8 +2095,8 @@ console.log('[jasa-kons] 📄 File loaded, waiting for DOM...');
     urlMappingJasaPasangDindingFromMoneyPageVariant,
     urlMappingJasaPasangFurnitureFromMoneyPageVariant,
     urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage,
-    urlMappingJasaRenovasiFromMoneyMasterMoneyMaster1,
-    urlMappingJasaRenovasiBangunanFromMoneyMaster1MoneyPage,
+    urlMappingJasaRenovasiFromMoneyMasterMoneyPage,
+
     urlMappingJasaSaluranDrainaseFromMoneyMasterMoneyPage,
 	urlMappingJasaSaluranAirFromMoneyPageVariant,
 	urlMappingJasaSaluranIrigasiFromMoneyPageVariant,
@@ -3526,9 +3551,9 @@ if (urlMappingHargaSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
 }
 	
   //AKHIR JASA KONTRUKSI ALAT
- if (urlMappingJasaRenovasiFromMoneyMasterMoneyMaster1[cleanUrlJasaKons]) {
+ if (urlMappingJasaRenovasiFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 	   generateBreadcrumbShared(
-        urlMappingJasaRenovasiFromMoneyMasterMoneyMaster1,
+        urlMappingJasaRenovasiFromMoneyMasterMoneyPage,
         cleanUrlJasaKons,
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -3539,20 +3564,7 @@ if (urlMappingHargaSewaAlatBeratFromSub1MoneyMaster[cleanUrlJasaKons]) {
         'JASA_KONSTRUKSI'
     );   
 }
- if (urlMappingJasaRenovasiBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaKons]) {
-	   generateBreadcrumbShared(
-        urlMappingJasaRenovasiBangunanFromMoneyMaster1MoneyPage,
-        cleanUrlJasaKons,
-       [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-renovasi.html' },
-           	{ name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
-           	{ name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
-           	{ name: 'Jasa Renovasi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-bangunan.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );   
-}
+
 //JASA SALURAN DRAINASE
 if (urlMappingJasaSaluranDrainaseFromMoneyMasterMoneyPage[cleanUrlJasaKons]) {
 	   generateBreadcrumbShared(
