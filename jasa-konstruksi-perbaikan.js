@@ -6,6 +6,27 @@
 console.log('[jasa-perbaikan-kons] 📄 File loaded, waiting for DOM...');
 
 // ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-plumbing (MM) ➔ CHILD: Money Page (8)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPlumbingFromMoneyMasterMoneyPage = {
+
+  // ─── Instalasi (5) ───
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-pipa-air.html":         "Jasa Instalasi Pipa Air",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-sanitair.html":         "Jasa Instalasi Sanitair",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-toren-tandon.html":     "Jasa Instalasi Toren Tandon",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-air-pdam.html":         "Jasa Instalasi Air PDAM",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-water-heater.html":     "Jasa Instalasi Water Heater",
+
+  // ─── Perbaikan (2) ───
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-air-bocor.html":   "Jasa Perbaikan Pipa Air Bocor",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kran-air.html":         "Jasa Perbaikan Kran Air",
+
+  // ─── Service (1) ───
+  "https://www.betonjayareadymix.com/p/jasa-service-pompa-air.html":          "Jasa Service Pompa Air"
+};
+
+
+// ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-perbaikan-struktur-bangunan (MP) ➔ CHILD: Variant (15)
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaPerbaikanStrukturBangunanFromMoneyPageVariant = {
@@ -120,17 +141,32 @@ const urlMappingJasaPerbaikanGedungBertingkatFromMoneyPageSubVariant = {
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-gedung-bertingkat.html": "Jasa Perkuatan Gedung Bertingkat"
 };
 
+// ❌ DELETE CONST INI
+// const urlMappingJasaPerbaikanSaluranAirFromMoneyPageVariant = {
+//   "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air-tersumbat.html": "Jasa Perbaikan Saluran Air Tersumbat",
+//   "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air-kotor.html":     "Jasa Perbaikan Saluran Air Kotor",
+//   "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air-hujan.html":     "Jasa Perbaikan Saluran Air Hujan",
+//   "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-bocor.html":            "Jasa Perbaikan Pipa Bocor"
+// };
 // ═════════════════════════════════════════════════════════════════════
-// 📂 PARENT: jasa-perbaikan-saluran-air (MP) ➔ CHILD: Variant (4)
-// Drainase bangunan (bukan saluran kota)
+// 📂 PARENT: jasa-perbaikan-pipa-air-bocor (MP — Plumbing intent)
+// ➔ CHILD: Variant (1) — setelah rename pipa-bocor
+// 
+// ⚠️  Kalau tidak ada cluster Plumbing, KEEP di sini sebagai MP standalone
 // ═════════════════════════════════════════════════════════════════════
-const urlMappingJasaPerbaikanSaluranAirFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air-tersumbat.html": "Jasa Perbaikan Saluran Air Tersumbat",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air-kotor.html":     "Jasa Perbaikan Saluran Air Kotor",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air-hujan.html":     "Jasa Perbaikan Saluran Air Hujan",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-bocor.html":            "Jasa Perbaikan Pipa Bocor"
+const urlMappingJasaPerbaikanPipaAirBocorFromMoneyPageVariant = {
+  // 🟠 KEEP di Perbaikan Bangunan (bukan drainase, bukan saluran)
+  //     Rename slug → jasa-perbaikan-pipa-air-bocor (clarify intent)
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-air-bocor.html": "Jasa Perbaikan Pipa Air Bocor"
 };
 
+// ═════════════════════════════════════════════════════════════════════
+// CATATAN: 
+// - 3 URL saluran-air SV (tersumbat, kotor, hujan) → MOVE ke Jasa Drainase
+//   (di-handle di file Jasa Drainase, bukan di sini)
+// - 1 URL pipa-bocor → RENAME (keep di sini as MP baru)
+// - jasa-perbaikan-saluran-air (MP) → REDIRECT (di redirect map)
+// ═════════════════════════════════════════════════════════════════════
 /*
 // ============================================================
 // JASA REHABILITASI BETON
