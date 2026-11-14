@@ -301,8 +301,6 @@ function restoreCondition(conditionId) {
         urlMappingJasaInjeksiBetonFromMoneyPageMoneyChild,
       
 
-
-
         urlMappingJasaRenovasiBangunanRumahFromMoneyPageMoneyChild,
         urlMappingJasaRenovasiRumahMinimalis,
         urlMappingJasaRenovasiRumahType36,
@@ -344,12 +342,7 @@ function restoreCondition(conditionId) {
         'urlMappingJasaGantiLantaiAmblesFromMoneyPage1MoneyChild',
         'urlMappingJasaRenovasiLantaiBangunanFromMoneyPageMoneyChild',
         'urlMappingJasaRenovasiLantaiRusakFromMoneyPage1MoneyChild',
-    \
         'urlMappingJasaInjeksiBetonFromMoneyPageMoneyChild',
- 
-      
-     
-   
 
         'urlMappingJasaRenovasiBangunanRumahFromMoneyPageMoneyChild',
         'urlMappingJasaRenovasiRumahMinimalis',
