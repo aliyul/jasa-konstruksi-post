@@ -1802,6 +1802,17 @@ const urlMappingJasaRenovasiFromMoneyMasterMoneyPage = {
 //   - Bangunan spesifik (gedung bertingkat, bangunan tua)
 //   - Drainase bangunan (atap, basement, perimeter)
 // ═════════════════════════════════════════════════════════════════════
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-perbaikan-bangunan (MM) ➔ CHILD: Money Page (23)
+// 
+// ✅ VERIFIED 2024-11-14: 0 konflik cross-cluster
+// 
+// 🆕 PROMOTED methods (was Variant in beton MP):
+//    - jasa-injeksi-beton
+//    - jasa-bobok-beton
+//    - jasa-shotcrete-beton
+//    - jasa-tambal-beton
+// ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage = {
 
   // ─── Struktural (5) ───
@@ -1829,9 +1840,14 @@ const urlMappingJasaPerbaikanBangunanFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-gedung-bertingkat.html":        "Jasa Perbaikan Gedung Bertingkat",
   "https://www.betonjayareadymix.com/p/jasa-restorasi-bangunan-tua.html":             "Jasa Restorasi Bangunan Tua",
 
-  // ─── Utilitas (1) ───
-  // 🟡 BORDERLINE — verify konten fokus "drainase bangunan" (atap/basement/perimeter)
-  //     Kalau generic drainase → MOVE ke Jasa Drainase
+  // ─── Spesialis Beton (5) ───
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton.html":                    "Jasa Perbaikan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-injeksi-beton.html":                      "Jasa Injeksi Beton",        // 🆕
+  "https://www.betonjayareadymix.com/p/jasa-bobok-beton.html":                        "Jasa Bobok Beton",          // 🆕
+  "https://www.betonjayareadymix.com/p/jasa-shotcrete-beton.html":                    "Jasa Shotcrete Beton",      // 🆕
+  "https://www.betonjayareadymix.com/p/jasa-tambal-beton.html":                       "Jasa Tambal Beton",         // 🆕
+
+  // ─── Utilitas (1) — borderline ───
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-drainase-bangunan.html":        "Jasa Perbaikan Drainase Bangunan"
 };
 
