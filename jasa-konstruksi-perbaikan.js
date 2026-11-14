@@ -4,7 +4,22 @@
 // ============================================================
 
 console.log('[jasa-perbaikan-kons] 📄 File loaded, waiting for DOM...');
-
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-plumbing (MM) ➔ CHILD: Money Page (8)
+// 
+// ✅ VERIFIED: 0 konflik dengan cluster Jasa Drainase (audit 2024-11-14)
+// 
+// 🚨 BOUNDARY WITH DRAINASE — JANGAN TAMBAH URL INI:
+//    ❌ jasa-perbaikan-saluran-tersumbat    (ambiguous → Drainase)
+//    ❌ jasa-perbaikan-saluran-air          (sudah di Drainase)
+//    ❌ jasa-instalasi-saluran-buangan      (overlap sanitair)
+//    ❌ jasa-instalasi-saluran-drainase     (drainase ≠ plumbing)
+//    ❌ jasa-perbaikan-saluran-drainase     (sudah di Drainase)
+//    ❌ jasa-instalasi-pipa-drainase        (sudah di Drainase MP)
+// 
+// ✅ BOUNDARY RULE:
+//    Plumbing = dari DALAM rumah ke BATAS PROPERTI (air bersih)
+//    Drainase  = dari BATAS PROPERTI ke SALURAN KOTA (air buangan)
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-plumbing (MM) ➔ CHILD: Money Page (8)
 // ═════════════════════════════════════════════════════════════════════
@@ -24,8 +39,79 @@ const urlMappingJasaPlumbingFromMoneyMasterMoneyPage = {
   // ─── Service (1) ───
   "https://www.betonjayareadymix.com/p/jasa-service-pompa-air.html":          "Jasa Service Pompa Air"
 };
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-instalasi-pipa-air (MP) ➔ CHILD: Variant (4)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaInstalasiPipaAirFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-pipa-pvc.html":         "Jasa Instalasi Pipa PVC",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-pipa-ppr.html":         "Jasa Instalasi Pipa PPR",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-pipa-tembaga.html":     "Jasa Instalasi Pipa Tembaga",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-pipa-hdpe.html":        "Jasa Instalasi Pipa HDPE"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-perbaikan-pipa-air-bocor (MP) ➔ CHILD: Variant (4)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPerbaikanPipaAirBocorFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-bocor-dalam-dinding.html": "Jasa Perbaikan Pipa Bocor Dalam Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-bocor-tanah.html":         "Jasa Perbaikan Pipa Bocor Tanah",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-bocor-atap.html":          "Jasa Perbaikan Pipa Bocor Atap",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-bocor-kamar-mandi.html":   "Jasa Perbaikan Pipa Bocor Kamar Mandi"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-service-pompa-air (MP) ➔ CHILD: Variant (3)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaServicePompaAirFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-service-jet-pump.html":           "Jasa Service Jet Pump",
+  "https://www.betonjayareadymix.com/p/jasa-service-pompa-submersible.html":  "Jasa Service Pompa Submersible",
+  "https://www.betonjayareadymix.com/p/jasa-service-pompa-booster.html":      "Jasa Service Pompa Booster"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-instalasi-sanitair (MP) ➔ CHILD: Variant (4)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaInstalasiSanitairFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-kloset.html":           "Jasa Instalasi Kloset",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-wastafel.html":         "Jasa Instalasi Wastafel",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-shower.html":           "Jasa Instalasi Shower",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-kran.html":             "Jasa Instalasi Kran"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-instalasi-toren-tandon (MP) ➔ CHILD: Variant (2)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaInstalasiTorenTandonFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-toren-air.html":        "Jasa Instalasi Toren Air",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-tandon-air.html":       "Jasa Instalasi Tandon Air"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-instalasi-air-pdam (MP) ➔ CHILD: Variant (2)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaInstalasiAirPdamFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-pasang-air-pdam-baru.html":       "Jasa Pasang Air PDAM Baru",
+  "https://www.betonjayareadymix.com/p/jasa-balik-nama-pdam.html":            "Jasa Balik Nama PDAM"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-instalasi-water-heater (MP) ➔ CHILD: Variant (2)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaInstalasiWaterHeaterFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-water-heater-listrik.html": "Jasa Instalasi Water Heater Listrik",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-water-heater-gas.html":     "Jasa Instalasi Water Heater Gas"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-perbaikan-kran-air (MP) ➔ CHILD: Variant (2)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPerbaikanKranAirFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-ganti-kran-air.html":             "Jasa Ganti Kran Air",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kran-bocor.html":       "Jasa Perbaikan Kran Bocor"
+};
 
 
+//JASA PERBAIAN BANGUNAN
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-perbaikan-struktur-bangunan (MP) ➔ CHILD: Variant (15)
 // ═════════════════════════════════════════════════════════════════════
@@ -141,24 +227,13 @@ const urlMappingJasaPerbaikanGedungBertingkatFromMoneyPageSubVariant = {
   "https://www.betonjayareadymix.com/p/jasa-perkuatan-gedung-bertingkat.html": "Jasa Perkuatan Gedung Bertingkat"
 };
 
-// ❌ DELETE CONST INI
+// ❌ DELETE CONST INI KANA BAGIAN DARI DRAINASE
 // const urlMappingJasaPerbaikanSaluranAirFromMoneyPageVariant = {
 //   "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air-tersumbat.html": "Jasa Perbaikan Saluran Air Tersumbat",
 //   "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air-kotor.html":     "Jasa Perbaikan Saluran Air Kotor",
 //   "https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air-hujan.html":     "Jasa Perbaikan Saluran Air Hujan",
 //   "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-bocor.html":            "Jasa Perbaikan Pipa Bocor"
 // };
-// ═════════════════════════════════════════════════════════════════════
-// 📂 PARENT: jasa-perbaikan-pipa-air-bocor (MP — Plumbing intent)
-// ➔ CHILD: Variant (1) — setelah rename pipa-bocor
-// 
-// ⚠️  Kalau tidak ada cluster Plumbing, KEEP di sini sebagai MP standalone
-// ═════════════════════════════════════════════════════════════════════
-const urlMappingJasaPerbaikanPipaAirBocorFromMoneyPageVariant = {
-  // 🟠 KEEP di Perbaikan Bangunan (bukan drainase, bukan saluran)
-  //     Rename slug → jasa-perbaikan-pipa-air-bocor (clarify intent)
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-air-bocor.html": "Jasa Perbaikan Pipa Air Bocor"
-};
 
 // ═════════════════════════════════════════════════════════════════════
 // CATATAN: 
@@ -167,29 +242,7 @@ const urlMappingJasaPerbaikanPipaAirBocorFromMoneyPageVariant = {
 // - 1 URL pipa-bocor → RENAME (keep di sini as MP baru)
 // - jasa-perbaikan-saluran-air (MP) → REDIRECT (di redirect map)
 // ═════════════════════════════════════════════════════════════════════
-/*
-// ============================================================
-// JASA REHABILITASI BETON
-// Parent: Jasa Perbaikan Struktur
-// ============================================================
 
-const urlMappingRehabilitasiBetonStrukturFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-cfrp.html": "Jasa Perkuatan Struktur CFRP",
-  "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-korosi-beton.html": "Jasa Pelapisan Anti Korosi Beton",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-sambungan-beton.html": "Jasa Perbaikan Sambungan Beton",
-  "https://www.betonjayareadymix.com/p/jasa-waterproofing-beton.html": "Jasa Waterproofing Beton",
-  "https://www.betonjayareadymix.com/p/jasa-patching-beton-retak.html": "Jasa Patching Beton Retak",
-  "https://www.betonjayareadymix.com/p/jasa-injeksi-beton-retak.html": "Jasa Injeksi Beton Retak",
-  "https://www.betonjayareadymix.com/p/jasa-aplikasi-shotcrete-beton.html": "Jasa Aplikasi Shotcrete Beton",
-  "https://www.betonjayareadymix.com/p/jasa-grouting-struktur-beton.html": "Jasa Grouting Struktur Beton",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-mengelupas.html": "Jasa Perbaikan Beton Mengelupas",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-keropos.html": "Jasa Perbaikan Beton Keropos",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-retak.html": "Jasa Perbaikan Beton Retak",
-  "https://www.betonjayareadymix.com/p/jasa-chipping-beton-bobok.html": "Jasa Chipping Beton Bobok",
-  "https://www.betonjayareadymix.com/p/jasa-bobok-beton-chipping.html": "Jasa Bobok Beton Chipping",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-karbonasi.html": "Jasa Perbaikan Beton Karbonasi"
-};
-*/
 /*
 // ============================================================
 // JASA PERBAIKAN JALAN (VARIANT)
@@ -245,6 +298,129 @@ const urlMappingPerbaikanJembatanFromMoneyMaster1MoneyPage = {
 };
 */
 
+
+//Jasa Perbaikan Infrastruktur
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-perbaikan-jalan (MP) ➔ CHILD: Variant (19)
+// 
+// 🆕 SOURCE: 19 dari 23 "Jalan move" (3 trotoar → Trotoar MP, 1 halte → Halte MP)
+// ⚠️  Level overrides needed: 5 was-MP + 6 was-SV → Variant
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPerbaikanJalanFromMoneyPageVariant = {
+
+  // ─── Material-based (2) ───
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-aspal.html":              "Jasa Perbaikan Jalan Aspal",       // was MP → Variant
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-beton.html":              "Jasa Perbaikan Jalan Beton",       // was MP → Variant
+
+  // ─── Metode/cakupan (3) ───
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-coring-beton.html":       "Jasa Perbaikan Jalan Coring Beton",// was MP → Variant
+  "https://www.betonjayareadymix.com/p/jasa-bongkar-pasang-jalan-paving.html":        "Jasa Bongkar Pasang Jalan Paving", // was MP → Variant
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-perumahan.html":          "Jasa Perbaikan Jalan Perumahan",   // was MP → Variant
+
+  // ─── Kerusakan spesifik (5) ───
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-berlubang.html":          "Jasa Perbaikan Jalan Berlubang",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-ambles.html":             "Jasa Perbaikan Jalan Ambles",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-retak.html":              "Jasa Perbaikan Jalan Retak",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-permukaan-jalan.html":          "Jasa Perbaikan Permukaan Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-paving.html":             "Jasa Perbaikan Jalan Paving",
+
+  // ─── Tipe jalan (3) ───
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-komplek.html":            "Jasa Perbaikan Jalan Komplek",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-raya.html":               "Jasa Perbaikan Jalan Raya",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-perusahaan.html":         "Jasa Perbaikan Jalan Perusahaan",
+
+  // ─── Metode advanced (6) — was SV → Variant ───
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan-rusak-berat.html":        "Jasa Perbaikan Jalan Rusak Berat",
+  "https://www.betonjayareadymix.com/p/jasa-overlay-jalan-aspal.html":                "Jasa Overlay Jalan Aspal",
+  "https://www.betonjayareadymix.com/p/jasa-rekonstruksi-jalan-beton.html":           "Jasa Rekonstruksi Jalan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-penambalan-jalan-berlubang.html":         "Jasa Penambalan Jalan Berlubang",
+  "https://www.betonjayareadymix.com/p/jasa-repair-jalan-dengan-cold-mix.html":       "Jasa Repair Jalan dengan Cold Mix",
+  "https://www.betonjayareadymix.com/p/jasa-marking-jalan-dan-repair.html":           "Jasa Marking Jalan dan Repair"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-perbaikan-jembatan (MP) ➔ CHILD: Variant (7)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPerbaikanJembatanFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-jembatan.html":        "Jasa Perbaikan Struktur Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan-beton.html":           "Jasa Perbaikan Jembatan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan-besi.html":            "Jasa Perbaikan Jembatan Besi",
+  "https://www.betonjayareadymix.com/p/jasa-rehabilitasi-jembatan.html":              "Jasa Rehabilitasi Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-fondasi-jembatan.html":         "Jasa Perbaikan Fondasi Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-jembatan.html":          "Jasa Perbaikan Lantai Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-balok-jembatan.html":           "Jasa Perbaikan Balok Jembatan"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-perbaikan-jembatan-beton (Variant) ➔ CHILD: SV (4)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPerbaikanJembatanBetonFromVariantSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-retak-jembatan-beton.html":     "Jasa Perbaikan Retak Jembatan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-rekonstruksi-jembatan-beton.html":        "Jasa Rekonstruksi Jembatan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-chipping-jembatan-beton.html":            "Jasa Chipping Jembatan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-injeksi-retak-jembatan.html":             "Jasa Injeksi Retak Jembatan"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-perbaikan-struktur-jembatan (Variant) ➔ CHILD: SV (3)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPerbaikanStrukturJembatanFromVariantSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-perkuatan-struktur-jembatan.html":        "Jasa Perkuatan Struktur Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-tiang-penyangga-jembatan.html": "Jasa Perbaikan Tiang Penyangga Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-aplikasi-shotcrete-jembatan.html":        "Jasa Aplikasi Shotcrete Jembatan"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-perbaikan-trotoar (MP) ➔ CHILD: Variant (2)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPerbaikanTrotoarFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan.html":            "Jasa Perbaikan Trotoar Jalan",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-beton.html":            "Jasa Perbaikan Trotoar Beton"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-perbaikan-trotoar-jalan (Variant) ➔ CHILD: SV (1)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPerbaikanTrotoarJalanFromVariantSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan-rusak.html":      "Jasa Perbaikan Trotoar Jalan Rusak"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-perbaikan-stadion (MP) ➔ CHILD: Variant (5)
+// 
+// 🆕 NOTE: perbaikan-fasilitas-penonton-stadion → RENAME ke jasa-perbaikan-...
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPerbaikanStadionFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-stadion.html":             "Jasa Perbaikan Atap Stadion",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lintasan-atletik.html":         "Jasa Perbaikan Lintasan Atletik",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pencahayaan-stadion.html":      "Jasa Perbaikan Pencahayaan Stadion",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-stadion.html":         "Jasa Perbaikan Struktur Stadion",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-fasilitas-penonton-stadion.html": "Jasa Perbaikan Fasilitas Penonton Stadion"  // 🆕 renamed
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-perbaikan-terminal-penumpang (MP) ➔ CHILD: Variant (3)
+// 🆕 FROM MOVE RENOVASI
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPerbaikanTerminalPenumpangFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-dinding-terminal.html":         "Jasa Perbaikan Dinding Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pagar-terminal.html":           "Jasa Perbaikan Pagar Terminal",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-penerangan-terminal.html":      "Jasa Perbaikan Penerangan Terminal"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-perbaikan-halte-bus (MP) ➔ CHILD: Variant (4)
+// 🆕 FROM MOVE RENOVASI (4 komponen halte)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPerbaikanHalteBusFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kanopi-halte.html":             "Jasa Perbaikan Kanopi Halte",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-penerangan-halte.html":        "Jasa Perbaikan Penerangan Halte",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lantai-halte.html":             "Jasa Perbaikan Lantai Halte",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-tempat-duduk-halte.html":      "Jasa Perbaikan Tempat Duduk Halte"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-perbaikan-taman-kota (MP) ➔ CHILD: Variant (3)
+// 🆕 FROM MOVE RENOVASI
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPerbaikanTamanKotaFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-fasilitas-taman.html":          "Jasa Perbaikan Fasilitas Taman",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-jalur-pedestrian-taman.html":   "Jasa Perbaikan Jalur Pedestrian Taman",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-area-bermain-anak-taman.html":  "Jasa Perbaikan Area Bermain Anak Taman"
+};
+
+//JASA RENOVASI
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-renovasi (MM) ➔ CHILD: Money Page
 // Cluster: Area & Komponen (8 MP)
@@ -513,10 +689,19 @@ const urlMappingJasaRenovasiInteriorFromMoneyPageVariant = {
     console.log('[jasa-perbaikan-kons] 🔍 Check: ' + cleanUrl);
     
     var ALL_MAPPINGS = [
-        urlMappingJasaRenovasiFromMoneyMasterAreaMP,
+       urlMappingJasaPlumbingFromMoneyMasterMoneyPage,
+      urlMappingJasaInstalasiPipaAirFromMoneyPageVariant,
+      urlMappingJasaPerbaikanPipaAirBocorFromMoneyPageVariant,
+      urlMappingJasaServicePompaAirFromMoneyPageVariant,
+      urlMappingJasaInstalasiSanitairFromMoneyPageVariant,
+      urlMappingJasaInstalasiTorenTandonFromMoneyPageVariant,
+      urlMappingJasaInstalasiAirPdamFromMoneyPageVariant,
+      urlMappingJasaInstalasiWaterHeaterFromMoneyPageVariant,
+      urlMappingJasaPerbaikanKranAirFromMoneyPageVariant,
+      
 
+      urlMappingJasaPerbaikanStrukturBangunanFromMoneyPageVariant, 
         urlMappingJasaPerbaikanStrukturBangunanFromVariantSubVariant,
-        urlMappingJasaPerbaikanStrukturBangunanFromMoneyPageVariant, 
         urlMappingJasaPerbaikanLantaiBangunanFromMoneyPageVariant,
         urlMappingJasaPerbaikanLantaiAmblesFromVariantSubVariant,
        urlMappingJasaPerbaikanAtapBangunanFromMoneyPageVariant,
@@ -524,8 +709,19 @@ const urlMappingJasaRenovasiInteriorFromMoneyPageVariant = {
        urlMappingJasaPerbaikanElemenArsitekturalFromMoneyPageVariant,
         urlMappingJasaPerbaikanWaterproofingBangunanFromMoneyPageVariant,
        urlMappingJasaPerbaikanGedungBertingkatFromMoneyPageSubVariant,
-       urlMappingJasaPerbaikanSaluranAirFromMoneyPageVariant,
- 
+
+       urlMappingJasaPerbaikanJalanFromMoneyPageVariant,
+      urlMappingJasaPerbaikanJembatanFromMoneyPageVariant,
+      urlMappingJasaPerbaikanJembatanBetonFromVariantSubVariant,
+      urlMappingJasaPerbaikanStrukturJembatanFromVariantSubVariant,
+      urlMappingJasaPerbaikanTrotoarFromMoneyPageVariant,
+      urlMappingJasaPerbaikanTrotoarJalanFromVariantSubVariant,
+      urlMappingJasaPerbaikanStadionFromMoneyPageVariant,
+      urlMappingJasaPerbaikanTerminalPenumpangFromMoneyPageVariant,    
+      urlMappingJasaPerbaikanHalteBusFromMoneyPageVariant,
+      urlMappingJasaPerbaikanTamanKotaFromMoneyPageVariant,
+
+      urlMappingJasaRenovasiFromMoneyMasterAreaMP,
         urlMappingJasaRenovasiEksteriorFromMoneyPageVariant,
         urlMappingJasaRenovasiBangunanPabrikFromMoneyPageVariant,
         urlMappingJasaRenovasiBangunanRumahFromMoneyPageVariant,
@@ -603,8 +799,139 @@ function initJasaPerbaikanKonsPost() {
         return;
     }
 
+  
     // ═══════════════════════════════════════════════════════
-    // [BLOK 1] PERBAIKAN STRUKTUR (SUB2)
+    // [BLOK JASA PLUMBING]
+    // ═══════════════════════════════════════════════════════
+    if (urlMappingJasaPlumbingFromMoneyMasterMoneyPage[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPlumbingFromMoneyMasterMoneyPage,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-plumbing.html' },
+                { name: 'Perbandingan Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-plumbing.html' },
+                { name: 'Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/jasa-plumbing.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+   if (urlMappingJasaInstalasiPipaAirFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaInstalasiPipaAirFromMoneyPageVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-plumbing.html' },
+                { name: 'Perbandingan Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-plumbing.html' },
+                { name: 'Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/jasa-plumbing.html' },
+                { name: 'Jasa Instalasi Pipa Air', url: 'https://www.betonjayareadymix.com/p/jasa-instalasi-pipa-air.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+  if (urlMappingJasaPerbaikanPipaAirBocorFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPerbaikanPipaAirBocorFromMoneyPageVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-plumbing.html' },
+                { name: 'Perbandingan Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-plumbing.html' },
+                { name: 'Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/jasa-plumbing.html' },
+                { name: 'Jasa Perbaikan Pipa Air Bocor', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-air-bocor.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+  if (urlMappingJasaServicePompaAirFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaServicePompaAirFromMoneyPageVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-plumbing.html' },
+                { name: 'Perbandingan Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-plumbing.html' },
+                { name: 'Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/jasa-plumbing.html' },
+                { name: 'Jasa Service Pompa Air', url: 'https://www.betonjayareadymix.com/p/jasa-service-pompa-air.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    if (urlMappingJasaInstalasiSanitairFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaInstalasiSanitairFromMoneyPageVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-plumbing.html' },
+                { name: 'Perbandingan Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-plumbing.html' },
+                { name: 'Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/jasa-plumbing.html' },
+                { name: 'Jasa Instalasi Sanitair', url: 'https://www.betonjayareadymix.com/p/jasa-instalasi-sanitair.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+   if (urlMappingJasaInstalasiTorenTandonFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaInstalasiTorenTandonFromMoneyPageVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-plumbing.html' },
+                { name: 'Perbandingan Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-plumbing.html' },
+                { name: 'Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/jasa-plumbing.html' },
+                { name: 'Jasa Instalasi Toren Tandon', url: 'https://www.betonjayareadymix.com/p/jasa-instalasi-toren-tandon.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    if (urlMappingJasaInstalasiAirPdamFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaInstalasiAirPdamFromMoneyPageVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-plumbing.html' },
+                { name: 'Perbandingan Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-plumbing.html' },
+                { name: 'Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/jasa-plumbing.html' },
+                { name: 'Jasa Instalasi Air Pdam', url: 'https://www.betonjayareadymix.com/p/jasa-instalasi-air-pdam.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    if (urlMappingJasaInstalasiWaterHeaterFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaInstalasiWaterHeaterFromMoneyPageVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-plumbing.html' },
+                { name: 'Perbandingan Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-plumbing.html' },
+                { name: 'Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/jasa-plumbing.html' },
+                { name: 'Jasa Instalasi Water Heater', url: 'https://www.betonjayareadymix.com/p/jasa-instalasi-water-heater.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+  if (urlMappingJasaPerbaikanKranAirFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPerbaikanKranAirFromMoneyPageVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-plumbing.html' },
+                { name: 'Perbandingan Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-plumbing.html' },
+                { name: 'Jasa Plumbing', url: 'https://www.betonjayareadymix.com/p/jasa-plumbing.html' },
+                { name: 'Jasa Perbaikan Kran Air', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-kran-air.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+
+  
+    // ═══════════════════════════════════════════════════════
+    // [BLOK 1] PERBAIKAN STRUKTUR
     // ═══════════════════════════════════════════════════════
 
     if (urlMappingJasaRenovasiFromMoneyMasterAreaMP[cleanUrlJasaPerbaikanKonsSub]) {
@@ -810,40 +1137,169 @@ function initJasaPerbaikanKonsPost() {
         );
     }
 
-    // ═══════════════════════════════════════════════════════
-    // [BLOK 6] PERBAIKAN INFRASTRUKTUR
-    // ═══════════════════════════════════════════════════════
-
     if (urlMappingJasaPerbaikanGedungBertingkatFromMoneyPageSubVariant[cleanUrlJasaPerbaikanKonsSub]) {
         generateBreadcrumbShared(
             urlMappingJasaPerbaikanGedungBertingkatFromMoneyPageSubVariant,
             cleanUrlJasaPerbaikanKonsSub,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html' },
-                { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html' },
-                { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html' },
+                { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
+                { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
+                { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
                 { name: 'Jasa Perbaikan Gedung Bertingkat', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-gedung-bertingkat.html' }
             ],
             'JASA_KONSTRUKSI'
         );
     }
-  
-    if (urlMappingJasaPerbaikanSaluranAirFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
+
+   // ═══════════════════════════════════════════════════════
+    // [BLOK 6] PERBAIKAN INFRASTRUKTUR
+    // ═══════════════════════════════════════════════════════ 
+    if (urlMappingJasaPerbaikanJalanFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
         generateBreadcrumbShared(
-            urlMappingJasaPerbaikanSaluranAirFromMoneyPageVariant,
+            urlMappingJasaPerbaikanJalanFromMoneyPageVariant,
             cleanUrlJasaPerbaikanKonsSub,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html' },
                 { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html' },
                 { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html' },
-                { name: 'Jasa Perbaikan Saluran Air', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-saluran-air.html' }
+                { name: 'Jasa Perbaikan Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-jalan.html' }
             ],
             'JASA_KONSTRUKSI'
         );
     }
-
+    if (urlMappingJasaPerbaikanJembatanFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPerbaikanJembatanFromMoneyPageVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html' },
+                { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Jembatan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    if (urlMappingJasaPerbaikanJembatanBetonFromVariantSubVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPerbaikanJembatanBetonFromVariantSubVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html' },
+                { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Jembatan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan.html' },
+                { name: 'Jasa Perbaikan Jembatan Beton', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan-beton.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+   if (urlMappingJasaPerbaikanStrukturJembatanFromVariantSubVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPerbaikanStrukturJembatanFromVariantSubVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html' },
+                { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Jembatan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-jembatan.html' },
+                { name: 'Jasa Perbaikan Struktur Jembatan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-jembatan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    if (urlMappingJasaPerbaikanTrotoarFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPerbaikanTrotoarFromMoneyPageVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html' },
+                { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Trotoar', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+   if (urlMappingJasaPerbaikanTrotoarJalanFromVariantSubVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPerbaikanTrotoarJalanFromVariantSubVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html' },
+                { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Trotoar', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar.html' },
+                { name: 'Jasa Perbaikan Trotoar Jalan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-trotoar-jalan.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+  if (urlMappingJasaPerbaikanStadionFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPerbaikanStadionFromMoneyPageVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html' },
+                { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Stadion', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-stadion.html' }           
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+   if (urlMappingJasaPerbaikanTerminalPenumpangFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPerbaikanTerminalPenumpangFromMoneyPageVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html' },
+                { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Terminal', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-terminal.html' }            
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+   if (urlMappingJasaPerbaikanHalteBusFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPerbaikanHalteBusFromMoneyPageVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html' },
+                { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Halte Bus', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-halte-bus.html' }           
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+  if (urlMappingJasaPerbaikanTamanKotaFromMoneyPageVariant[cleanUrlJasaPerbaikanKonsSub]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPerbaikanTamanKotaFromMoneyPageVariant,
+            cleanUrlJasaPerbaikanKonsSub,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html' },
+                { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html' },
+                { name: 'Jasa Perbaikan Taman Kota', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-taman-kota.html' }           
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+  //AKHIR JASA INFRASTRUKTUR
+  
     // ═══════════════════════════════════════════════════════
     // [BLOK 7] RENOVASI BANGUNAN
     // ═══════════════════════════════════════════════════════
