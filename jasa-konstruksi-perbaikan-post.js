@@ -56,23 +56,7 @@ const urlMappingJasaPlumbingFromMoneyPageMoneyChild = {
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-kran-air-bekasi.html":    "Jasa Perbaikan Kran Air Bekasi"
 };
 
-// ═════════════════════════════════════════════════════════════════════
-// 📂 PARENT: Variant → Sub-variant (6) — metode/teknik deep spec
-// ═════════════════════════════════════════════════════════════════════
-const urlMappingJasaPlumbingFromVariantSubVariant = {
-
-  // ─── SV under: jasa-perbaikan-pipa-bocor-dalam-dinding ───
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-bocor-tanpa-bongkar.html":        "Jasa Perbaikan Pipa Bocor Tanpa Bongkar",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-bocor-dengan-bongkar.html":       "Jasa Perbaikan Pipa Bocor Dengan Bongkar",
-
-  // ─── SV under: jasa-perbaikan-pipa-bocor-tanah ───
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-bocor-tanah-tanpa-gali.html":     "Jasa Perbaikan Pipa Bocor Tanah Tanpa Gali",
-  "https://www.betonjayareadymix.com/p/jasa-deteksi-pipa-bocor-tanah.html":                  "Jasa Deteksi Pipa Bocor Tanah",
-
-  // ─── SV under: jasa-instalasi-pipa-ppr ───
-  "https://www.betonjayareadymix.com/p/jasa-instalasi-pipa-ppr-panas.html":                  "Jasa Instalasi Pipa PPR Panas",
-  "https://www.betonjayareadymix.com/p/jasa-instalasi-pipa-ppr-dingin.html":                 "Jasa Instalasi Pipa PPR Dingin"
-};
+//akhir JASA PLUMBING
 
 // ═══════════════════════════════════════════════════════════
 // [BAGIAN 1] DEFINISI SEMUA MAPPING (TIDAK DIUBAH)
