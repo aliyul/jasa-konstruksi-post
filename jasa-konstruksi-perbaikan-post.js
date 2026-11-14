@@ -6,6 +6,74 @@
 
 console.log('[jasa-perbaikan-post] 📄 File loaded, waiting for DOM...');
 
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: MM → Money Child (30) — 6 services × 5 kota
+// MC = location parallel (bukan child Variant)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPlumbingFromMoneyPageMoneyChild = {
+
+  // ─── MC: Instalasi Pipa Air (5) ───
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-pipa-air-jakarta.html":   "Jasa Instalasi Pipa Air Jakarta",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-pipa-air-bogor.html":     "Jasa Instalasi Pipa Air Bogor",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-pipa-air-depok.html":     "Jasa Instalasi Pipa Air Depok",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-pipa-air-tangerang.html": "Jasa Instalasi Pipa Air Tangerang",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-pipa-air-bekasi.html":    "Jasa Instalasi Pipa Air Bekasi",
+
+  // ─── MC: Perbaikan Pipa Air Bocor (5) ───
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-air-bocor-jakarta.html":   "Jasa Perbaikan Pipa Air Bocor Jakarta",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-air-bocor-bogor.html":     "Jasa Perbaikan Pipa Air Bocor Bogor",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-air-bocor-depok.html":     "Jasa Perbaikan Pipa Air Bocor Depok",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-air-bocor-tangerang.html": "Jasa Perbaikan Pipa Air Bocor Tangerang",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-air-bocor-bekasi.html":    "Jasa Perbaikan Pipa Air Bocor Bekasi",
+
+  // ─── MC: Service Pompa Air (5) ───
+  "https://www.betonjayareadymix.com/p/jasa-service-pompa-air-jakarta.html":   "Jasa Service Pompa Air Jakarta",
+  "https://www.betonjayareadymix.com/p/jasa-service-pompa-air-bogor.html":     "Jasa Service Pompa Air Bogor",
+  "https://www.betonjayareadymix.com/p/jasa-service-pompa-air-depok.html":     "Jasa Service Pompa Air Depok",
+  "https://www.betonjayareadymix.com/p/jasa-service-pompa-air-tangerang.html": "Jasa Service Pompa Air Tangerang",
+  "https://www.betonjayareadymix.com/p/jasa-service-pompa-air-bekasi.html":    "Jasa Service Pompa Air Bekasi",
+
+  // ─── MC: Instalasi Sanitair (5) ───
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-sanitair-jakarta.html":   "Jasa Instalasi Sanitair Jakarta",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-sanitair-bogor.html":     "Jasa Instalasi Sanitair Bogor",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-sanitair-depok.html":     "Jasa Instalasi Sanitair Depok",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-sanitair-tangerang.html": "Jasa Instalasi Sanitair Tangerang",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-sanitair-bekasi.html":    "Jasa Instalasi Sanitair Bekasi",
+
+  // ─── MC: Instalasi Toren Tandon (5) ───
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-toren-tandon-jakarta.html":   "Jasa Instalasi Toren Tandon Jakarta",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-toren-tandon-bogor.html":     "Jasa Instalasi Toren Tandon Bogor",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-toren-tandon-depok.html":     "Jasa Instalasi Toren Tandon Depok",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-toren-tandon-tangerang.html": "Jasa Instalasi Toren Tandon Tangerang",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-toren-tandon-bekasi.html":    "Jasa Instalasi Toren Tandon Bekasi",
+
+  // ─── MC: Perbaikan Kran Air (5) ───
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kran-air-jakarta.html":   "Jasa Perbaikan Kran Air Jakarta",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kran-air-bogor.html":     "Jasa Perbaikan Kran Air Bogor",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kran-air-depok.html":     "Jasa Perbaikan Kran Air Depok",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kran-air-tangerang.html": "Jasa Perbaikan Kran Air Tangerang",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-kran-air-bekasi.html":    "Jasa Perbaikan Kran Air Bekasi"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: Variant → Sub-variant (6) — metode/teknik deep spec
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPlumbingFromVariantSubVariant = {
+
+  // ─── SV under: jasa-perbaikan-pipa-bocor-dalam-dinding ───
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-bocor-tanpa-bongkar.html":        "Jasa Perbaikan Pipa Bocor Tanpa Bongkar",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-bocor-dengan-bongkar.html":       "Jasa Perbaikan Pipa Bocor Dengan Bongkar",
+
+  // ─── SV under: jasa-perbaikan-pipa-bocor-tanah ───
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pipa-bocor-tanah-tanpa-gali.html":     "Jasa Perbaikan Pipa Bocor Tanah Tanpa Gali",
+  "https://www.betonjayareadymix.com/p/jasa-deteksi-pipa-bocor-tanah.html":                  "Jasa Deteksi Pipa Bocor Tanah",
+
+  // ─── SV under: jasa-instalasi-pipa-ppr ───
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-pipa-ppr-panas.html":                  "Jasa Instalasi Pipa PPR Panas",
+  "https://www.betonjayareadymix.com/p/jasa-instalasi-pipa-ppr-dingin.html":                 "Jasa Instalasi Pipa PPR Dingin"
+};
+
 // ═══════════════════════════════════════════════════════════
 // [BAGIAN 1] DEFINISI SEMUA MAPPING (TIDAK DIUBAH)
 // ═══════════════════════════════════════════════════════════
