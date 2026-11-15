@@ -121,18 +121,18 @@ const urlMappingJasaPerbaikanKranAirFromMoneyPageVariant = {
 const urlMappingJasaPerbaikanBetonFromMoneyPageVariant = {
 
   // ─── 12 KATEGORI PERBAIKAN ───
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-delaminasi.html":           "Jasa Perbaikan Beton Delaminasi",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-retak-struktural-beton.html":     "Jasa Perbaikan Retak Struktural Beton",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-akibat-korosi.html":        "Jasa Perbaikan Beton Akibat Korosi",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-akibat-overload.html":      "Jasa Perbaikan Beton Akibat Overload",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-akibat-asr.html":           "Jasa Perbaikan Beton Akibat ASR",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-serangan-sulfat.html":      "Jasa Perbaikan Beton Serangan Sulfat",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-area-pesisir.html":         "Jasa Perbaikan Beton Area Pesisir",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perbaikan-beton-area-industri.html":        "Jasa Perbaikan Beton Area Industri",
-  "https://www.betonjayareadymix.com/2018/09/jasa-rehabilitasi-struktur-beton-lama.html":     "Jasa Rehabilitasi Struktur Beton Lama",
-  "https://www.betonjayareadymix.com/2018/09/jasa-retrofit-struktur-beton-eksisting.html":    "Jasa Retrofit Struktur Beton Eksisting",
-  "https://www.betonjayareadymix.com/2018/09/jasa-peningkatan-kapasitas-struktur-beton.html": "Jasa Peningkatan Kapasitas Struktur Beton",
-  "https://www.betonjayareadymix.com/2018/09/jasa-perpanjangan-umur-struktur-beton.html":     "Jasa Perpanjangan Umur Struktur Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-delaminasi.html":           "Jasa Perbaikan Beton Delaminasi",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-retak-struktural-beton.html":     "Jasa Perbaikan Retak Struktural Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-akibat-korosi.html":        "Jasa Perbaikan Beton Akibat Korosi",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-akibat-overload.html":      "Jasa Perbaikan Beton Akibat Overload",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-akibat-asr.html":           "Jasa Perbaikan Beton Akibat ASR",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-serangan-sulfat.html":      "Jasa Perbaikan Beton Serangan Sulfat",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-area-pesisir.html":         "Jasa Perbaikan Beton Area Pesisir",
+  "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-area-industri.html":        "Jasa Perbaikan Beton Area Industri",
+  "https://www.betonjayareadymix.com/p/jasa-rehabilitasi-struktur-beton-lama.html":     "Jasa Rehabilitasi Struktur Beton Lama",
+  "https://www.betonjayareadymix.com/p/jasa-retrofit-struktur-beton-eksisting.html":    "Jasa Retrofit Struktur Beton Eksisting",
+  "https://www.betonjayareadymix.com/p/jasa-peningkatan-kapasitas-struktur-beton.html": "Jasa Peningkatan Kapasitas Struktur Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perpanjangan-umur-struktur-beton.html":     "Jasa Perpanjangan Umur Struktur Beton",
 
   // ─── 4 FROM STRUKTUR-BANGUNAN ───
   "https://www.betonjayareadymix.com/p/jasa-perbaikan-beton-mengelupas.html":  "Jasa Perbaikan Beton Mengelupas",
