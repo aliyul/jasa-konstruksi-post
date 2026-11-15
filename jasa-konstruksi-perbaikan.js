@@ -609,15 +609,6 @@ const urlMappingJasaRenovasiBangunanGudangFromMoneyPageVariant = {
 };
 
 
-const urlMappingPerbaikanStadionFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-atap-stadion.html": "Jasa Perbaikan Atap Stadion",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-lintasan-atletik.html": "Jasa Perbaikan Lintasan Atletik",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-pencahayaan-stadion.html": "Jasa Perbaikan Pencahayaan Stadion",
-  "https://www.betonjayareadymix.com/p/perbaikan-fasilitas-penonton-stadion.html": "Jasa Perbaikan Fasilitas Penonton Stadion",
-  "https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-stadion.html": "Jasa Perbaikan Struktur Stadion"
-};
-
-
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-renovasi-terminal-penumpang (MP) ➔ Variant (6)
 // ═════════════════════════════════════════════════════════════════════
@@ -700,7 +691,7 @@ const urlMappingJasaRenovasiInteriorFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-studio-apartemen.html": "Jasa Renovasi Interior Studio Apartemen",
 
   // ─── Furniture (1) — keep natural slug tanpa jasa ───
-  "https://www.betonjayareadymix.com/p/renovasi-furniture.html":                  "Renovasi Furniture",
+ // "https://www.betonjayareadymix.com/p/renovasi-furniture.html":                  "Renovasi Furniture",
 
   // ─── By Room — Interior Specific (6) ───
   "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruang-tamu.html":   "Jasa Renovasi Interior Ruang Tamu",
@@ -711,14 +702,9 @@ const urlMappingJasaRenovasiInteriorFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-interior-ruang-keluarga.html":"Jasa Renovasi Interior Ruang Keluarga",
 
   // ─── By Room — General (8, tanpa interior prefix) ───
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-tidur.html":           "Jasa Renovasi Kamar Tidur",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi.html":           "Jasa Renovasi Kamar Mandi",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-tamu.html":            "Jasa Renovasi Ruang Tamu",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-keluarga.html":        "Jasa Renovasi Ruang Keluarga",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-belajar.html":         "Jasa Renovasi Ruang Belajar",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-makan.html":           "Jasa Renovasi Ruang Makan",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-multifungsi.html":     "Jasa Renovasi Ruang Multifungsi",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-dapur.html":                 "Jasa Renovasi Dapur",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-direksi.html":         "Jasa Renovasi Ruang Direksi",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-coworking-space.html":       "Jasa Renovasi Coworking Space",
 
@@ -739,10 +725,18 @@ const urlMappingJasaRenovasiInteriorFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-kerja-karyawan.html":  "Jasa Renovasi Ruang Kerja Karyawan",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-rapat-kantor.html":    "Jasa Renovasi Ruang Rapat Kantor",
   "https://www.betonjayareadymix.com/p/jasa-renovasi-lobby-dan-resepsionis.html": "Jasa Renovasi Lobby dan Resepsionis",
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-partisi-ruang-kantor.html":  "Jasa Renovasi Partisi Ruang Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-renovasi-partisi-ruang-kantor.html":  "Jasa Renovasi Partisi Ruang Kantor"
 
   // ─── Hotel-Apartment Combined (1) ───
-  "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-apartemen.html":       "Jasa Renovasi Hotel dan Apartemen"
+ // "https://www.betonjayareadymix.com/p/jasa-renovasi-hotel-apartemen.html":       "Jasa Renovasi Hotel dan Apartemen"
+
+// ─── By Room — General (8, tanpa interior prefix) ───REDIRECT AJA KE INTERIOR JIKA UDAH TERINDEX
+   // "https://www.betonjayareadymix.com/p/jasa-renovasi-dapur.html":                 "Jasa Renovasi Dapur",
+   // "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-tidur.html":           "Jasa Renovasi Kamar Tidur",
+ // "https://www.betonjayareadymix.com/p/jasa-renovasi-kamar-mandi.html":           "Jasa Renovasi Kamar Mandi",
+  //"https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-tamu.html":            "Jasa Renovasi Ruang Tamu",
+  //"https://www.betonjayareadymix.com/p/jasa-renovasi-ruang-keluarga.html":        "Jasa Renovasi Ruang Keluarga",
+  
 };
 
 
@@ -811,7 +805,6 @@ const urlMappingJasaRenovasiInteriorFromMoneyPageVariant = {
         urlMappingJasaRenovasiTerminalPenumpangFromMoneyPageVariant,
         urlMappingJasaRenovasiFasilitasFromMoneyPageVariant,
    
-        urlMappingPerbaikanStadionFromMoneyMaster1MoneyPage,
         urlMappingJasaRenovasiInteriorFromMoneyPageVariant
      
     ];
@@ -1567,21 +1560,6 @@ function initJasaPerbaikanKonsPost() {
                 { name: 'Perbandingan Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-renovasi.html' },
                 { name: 'Jasa Renovasi', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi.html' },
                 { name: 'Jasa Renovasi Kanopi Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-renovasi-kanopi-bangunan.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-
-    if (urlMappingPerbaikanStadionFromMoneyMaster1MoneyPage[cleanUrlJasaPerbaikanKonsSub]) {
-        generateBreadcrumbShared(
-            urlMappingPerbaikanStadionFromMoneyMaster1MoneyPage,
-            cleanUrlJasaPerbaikanKonsSub,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-infrastruktur.html' },
-                { name: 'Perbandingan Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/perbandingan-perbaikan-infrastruktur.html' },
-                { name: 'Jasa Perbaikan Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-infrastruktur.html' },
-                { name: 'Jasa Perbaikan Stadion', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-stadion.html' }
             ],
             'JASA_KONSTRUKSI'
         );
