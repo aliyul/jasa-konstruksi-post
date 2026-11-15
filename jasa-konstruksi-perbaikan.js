@@ -145,7 +145,7 @@ const urlMappingJasaPerbaikanBetonFromMoneyPageVariant = {
 // Pricing variant (was SV under Variant, promoted to Variant under MP)
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaInjeksiBetonFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-injeksi-beton.html": "Harga Jasa Injeksi Beton"
+  "https://www.betonjayareadymix.com/p/harga-jasa-injeksi-beton.html": "Harga Jasa Injeksi Beton"
 }; 
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-bobok-beton (MP) ➔ CHILD: Variant (5)
@@ -159,11 +159,11 @@ const urlMappingJasaBobokBetonFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/jasa-bobok-beton-chipping.html":             "Jasa Bobok Beton Chipping"
 };
 const urlMappingJasaShotcreteBetonFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-shotcrete-beton.html": "Harga Jasa Shotcrete Beton"
+  "https://www.betonjayareadymix.com/p/harga-jasa-shotcrete-beton.html": "Harga Jasa Shotcrete Beton"
 };
 const urlMappingJasaTambalBetonFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/2018/09/borongan-tambal-beton.html":   "Borongan Tambal Beton",
-  "https://www.betonjayareadymix.com/2018/09/jasa-tambal-beton-retak.html":"Jasa Tambal Beton Retak"
+  "https://www.betonjayareadymix.com/p/borongan-tambal-beton.html":   "Borongan Tambal Beton",
+  "https://www.betonjayareadymix.com/p/jasa-tambal-beton-retak.html":"Jasa Tambal Beton Retak"
 };
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-perbaikan-struktur-bangunan (MP) ➔ CHILD: Variant (11)
