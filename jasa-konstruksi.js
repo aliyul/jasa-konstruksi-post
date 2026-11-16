@@ -1514,7 +1514,12 @@ const urlMappingJasaPasangGrcInteriorFromVariantSubVariant = {
 // 📂 PARENT: Jasa Pasang Plafon (MP) ➔ CHILD: Variant
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaPasangPlafonFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-grc.html": "Jasa Pasang Plafon GRC"
+	  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-wpc.html":     "Jasa Pasang Plafon WPC",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-gypsum.html":  "Jasa Pasang Plafon Gypsum",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-pvc.html":     "Jasa Pasang Plafon PVC",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-grc.html":     "Jasa Pasang Plafon GRC",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-akustik.html": "Jasa Pasang Plafon Akustik",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-upvc.html":    "Jasa Pasang Plafon UPVC"
 };
 
 // ═════════════════════════════════════════════════════════════════════
