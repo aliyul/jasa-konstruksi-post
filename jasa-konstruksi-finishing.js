@@ -304,17 +304,6 @@ const urlMappingJasaPasangWallpaperDindingFromVariantSubVariant = {
   "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-ruang-tamu.html":  "Jasa Pasang Wallpaper Ruang Tamu"
 };
 
-// ═════════════════════════════════════════════════════════════════════
-// 📂 PARENT: jasa-pasang-plafon (MP) ➔ CHILD: Variant (6)
-// ═════════════════════════════════════════════════════════════════════
-const urlMappingJasaPasangPlafonFromMoneyPageVariant = {
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-wpc.html":     "Jasa Pasang Plafon WPC",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-gypsum.html":  "Jasa Pasang Plafon Gypsum",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-pvc.html":     "Jasa Pasang Plafon PVC",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-grc.html":     "Jasa Pasang Plafon GRC",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-akustik.html": "Jasa Pasang Plafon Akustik",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-upvc.html":    "Jasa Pasang Plafon UPVC"
-};
 
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-pasang-plafon-wpc (Variant) ➔ CHILD: SV (1)
@@ -483,7 +472,6 @@ console.log('══════════════════════�
 	urlMappingJasaPasangWpcDindingFromVariantSubVariant,
 	urlMappingJasaPasangWallpaper3dFromMoneyPageVariant,
 	urlMappingJasaPasangWallpaperDindingFromVariantSubVariant,
-	urlMappingJasaPasangPlafonFromMoneyPageVariant,
 	urlMappingJasaPasangPlafonWpcFromVariantSubVariant,
 	urlMappingJasaPasangPvcFromMoneyPageVariant,
     urlMappingJasaPasangLantaiFromMoneyPageVariant_Add,
@@ -625,23 +613,6 @@ function initJasaKonsFinishing() {
                 { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
                 { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
                 { name: 'Jasa Pasang PVC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pvc.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }	
-	
-    // ═══════════════════════════════════════════════════════
-    // [BLOK 3] JASA PASANG PLAFON
-    // ═══════════════════════════════════════════════════════
-    if (urlMappingJasaPasangPlafonFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingJasaPasangPlafonFromMoneyPageVariant,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
-                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
-                { name: 'Jasa Pasang Plafon', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html' }
             ],
             'JASA_KONSTRUKSI'
         );
