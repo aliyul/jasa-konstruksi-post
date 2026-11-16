@@ -256,72 +256,141 @@ const urlMappingJasaFinishingSaluranDrainaseFromVariantSubVariant = {
 
 
 // ═══════════════════════════════════════════════════════════
-// [BAGIAN 1] DEFINISI SEMUA MAPPING
+//JASA PASANG LANJUTAN DARI JASA KONSTRUKSI
 // ═══════════════════════════════════════════════════════════
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pasang-keramik-lantai (Variant) ➔ CHILD: SV (4)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPasangKeramikLantaiFromVariantSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-24-jam.html":   "Jasa Pasang Keramik Lantai 24 Jam",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-rumah.html":    "Jasa Pasang Keramik Lantai Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-kantor.html":   "Jasa Pasang Keramik Lantai Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-gudang.html":   "Jasa Pasang Keramik Lantai Gudang"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pasang-wpc (MP) ➔ CHILD: Variant (2)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPasangWpcFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-lantai.html":  "Jasa Pasang WPC Lantai"
+};
 
-const urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1 = {
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pasang-wpc-dinding (Variant) ➔ CHILD: SV (1)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPasangWpcDindingFromVariantSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding-per-meter.html": "Jasa Pasang WPC Dinding Per Meter"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pasang (MM) ➔ CHILD: Money Page (1)
+// Sudah ada di MP list — NOT new
+// ═════════════════════════════════════════════════════════════════════
+// "jasa-pasang-wallpaper-3d": "money-page" ← existing MP
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pasang-wallpaper-3d (MP) ➔ CHILD: Variant (2)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPasangWallpaper3dFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-custom.html": "Jasa Pasang Wallpaper Custom",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html": "Jasa Pasang Wallpaper Dinding"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pasang-wallpaper-dinding (Variant) ➔ CHILD: SV (2)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPasangWallpaperDindingFromVariantSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-kamar-tidur.html": "Jasa Pasang Wallpaper Kamar Tidur",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-ruang-tamu.html":  "Jasa Pasang Wallpaper Ruang Tamu"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pasang-plafon (MP) ➔ CHILD: Variant (6)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPasangPlafonFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-wpc.html":     "Jasa Pasang Plafon WPC",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-gypsum.html":  "Jasa Pasang Plafon Gypsum",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-pvc.html":     "Jasa Pasang Plafon PVC",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-grc.html":     "Jasa Pasang Plafon GRC",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-akustik.html": "Jasa Pasang Plafon Akustik",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-upvc.html":    "Jasa Pasang Plafon UPVC"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pasang-plafon-wpc (Variant) ➔ CHILD: SV (1)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPasangPlafonWpcFromVariantSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-wpc-premium.html": "Jasa Pasang Plafon WPC Premium"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pasang-pvc (MP) ➔ CHILD: Variant (2)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPasangPvcFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-pasang-pvc-dinding.html": "Jasa Pasang PVC Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-pvc-lantai.html":  "Jasa Pasang PVC Lantai"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pasang-lantai (MP) ➔ CHILD: Variant (adding vinyl-tangga)
+// ═════════════════════════════════════════════════════════════════════
+// existing: jasa-pasang-lantai-vinyl
+const urlMappingJasaPasangLantaiFromMoneyPageVariant_Add = {
   "https://www.betonjayareadymix.com/p/jasa-pasang-vinyl-tangga.html": "Jasa Pasang Vinyl Tangga"
 };
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pasang-lampu (MP) ➔ CHILD: Variant (9)
+// 
+// 🆕 EXPANDED: was 2 Variant (interior, eksterior) → now 9 Variant
+//    - 2 location umbrella: interior, eksterior
+//    - 6 type-based: downlight, led, track, gantung, tembak, smart-home
+//    - 1 previously SV smart-home promoted to Variant
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPasangLampuFromMoneyPageVariant = {
+  // ─── Location umbrella (2) ───
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior.html":   "Jasa Pasang Lampu Interior",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-eksterior.html":  "Jasa Pasang Lampu Eksterior",
 
-const urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-vinyl-per-meter.html": "Harga Jasa Pasang Vinyl Per Meter"
+  // ─── Type-based (6) ───
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-downlight.html":  "Jasa Pasang Lampu Downlight",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-led.html":        "Jasa Pasang Lampu LED",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-track.html":      "Jasa Pasang Lampu Track",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-gantung.html":    "Jasa Pasang Lampu Gantung",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-tembak.html":     "Jasa Pasang Lampu Tembak",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-smart-home.html": "Jasa Pasang Lampu Smart Home"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pasang-lampu-interior (Variant) ➔ CHILD: SV (8)
+// 
+// 🆕 NEW const — indoor room/style variants
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPasangLampuInteriorFromVariantSubVariant = {
+
+  // ─── Style-based (2) ───
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-modern.html":    "Jasa Pasang Lampu Interior Modern",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-minimalis.html": "Jasa Pasang Lampu Interior Minimalis",
+
+  // ─── Building-type (2) ───
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-rumah.html":     "Jasa Pasang Lampu Interior Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-gedung.html":    "Jasa Pasang Lampu Interior Gedung",
+
+  // ─── Room-based (4) ───
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-dapur.html":              "Jasa Pasang Lampu Dapur",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-kantor.html":             "Jasa Pasang Lampu Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-kamar-tidur.html":        "Jasa Pasang Lampu Kamar Tidur",
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-ruang-tamu.html":         "Jasa Pasang Lampu Ruang Tamu"
 };
 
-const urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-pasang-pvc-dinding.html": "Jasa Pasang PVC Dinding",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-pvc-lantai.html": "Jasa Pasang PVC Lantai"
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pasang-lampu-eksterior (Variant) ➔ CHILD: SV (1)
+// 🆕 NEW const — outdoor room variant
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPasangLampuEksteriorFromVariantSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-taman.html": "Jasa Pasang Lampu Taman"
 };
 
-const urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-wpc-premium.html": "Jasa Pasang Plafon WPC Premium",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-wpc.html": "Jasa Pasang Plafon WPC",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-gypsum.html": "Jasa Pasang Plafon Gypsum",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-pvc.html": "Jasa Pasang Plafon PVC",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-grc.html": "Jasa Pasang Plafon GRC",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-akustik.html": "Jasa Pasang Plafon Akustik",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-plafon-upvc.html": "Jasa Pasang Plafon UPVC"
-};
 
 const urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1 = {
   "https://www.betonjayareadymix.com/p/harga-custom-furniture-per-meter.html": "Harga Custom Furniture Per Meter"
-};
-
-const urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wallpaper-per-meter.html": "Harga Jasa Pasang Wallpaper per Meter",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-3d.html": "Jasa Pasang Wallpaper 3D",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-custom.html": "Jasa Pasang Wallpaper Custom",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-kamar-tidur.html": "Jasa Pasang Wallpaper Kamar Tidur",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-ruang-tamu.html": "Jasa Pasang Wallpaper Ruang Tamu"
-};
-
-
-const urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc.html": "Harga Jasa Pasang WPC",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-lantai.html": "Jasa Pasang WPC Lantai",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding.html": "Jasa Pasang WPC Dinding"
-};
-
-const urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/jasa-pasang-wpc-dinding-per-meter.html": "Jasa Pasang WPC Dinding Per Meter",
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-dinding.html": "Harga Jasa Pasang WPC Dinding"
-};
-
-const urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-wpc-lantai.html": "Harga Jasa Pasang WPC Lantai"
-};
-
-const urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-lantai.html": "Harga Jasa Pasang Keramik Lantai",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-24-jam.html": "Jasa Pasang Keramik Lantai 24 Jam",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-rumah.html": "Jasa Pasang Keramik Lantai Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-kantor.html": "Jasa Pasang Keramik Lantai Kantor",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-gudang.html": "Jasa Pasang Keramik Lantai Gudang"
-};
-
-const urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-per-meter.html": "Harga Jasa Pasang Keramik per Meter",
-  "https://www.betonjayareadymix.com/p/harga-borongan-pasang-keramik-per-meter.html": "Harga Borongan Pasang Keramik per Meter",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-murah.html": "Jasa Pasang Keramik Lantai Murah"
 };
 
 const urlMappingJasaInteriorFromMoneyMasterMoneyPage = {
@@ -339,38 +408,6 @@ const urlMappingJasaInteriorRuangFromMoneyPageVariant = {
   "https://www.betonjayareadymix.com/p/harga-jasa-interior-ruang-tamu.html": "Harga Jasa Interior Ruang Tamu"
 };
 
-const urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-smart-home.html": "Jasa Pasang Lampu Smart Home",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-downlight.html": "Jasa Pasang Lampu Downlight",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-led.html": "Jasa Pasang Lampu LED",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-track.html": "Jasa Pasang Lampu Track",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-gantung.html": "Jasa Pasang Lampu Gantung",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-tembak.html": "Jasa Pasang Lampu Tembak",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior.html": "Jasa Pasang Lampu Interior",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-eksterior.html": "Jasa Pasang Lampu Eksterior",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-taman.html": "Jasa Pasang Lampu Taman"
-};
-
-const urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-interior.html": "Harga Jasa Pasang Lampu Interior",
-  "https://www.betonjayareadymix.com/p/harga-borongan-pasang-lampu-interior.html": "Harga Borongan Pasang Lampu Interior",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-modern.html": "Jasa Pasang Lampu Interior Modern",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-minimalis.html": "Jasa Pasang Lampu Interior Minimalis",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-rumah.html": "Jasa Pasang Lampu Interior Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-interior-gedung.html": "Jasa Pasang Lampu Interior Gedung",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-kamar-tidur.html": "Jasa Pasang Lampu Kamar Tidur",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-ruang-tamu.html": "Jasa Pasang Lampu Ruang Tamu",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-dapur.html": "Jasa Pasang Lampu Dapur",
-  "https://www.betonjayareadymix.com/p/jasa-pasang-lampu-kantor.html": "Jasa Pasang Lampu Kantor"
-};
-
-const urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-eksterior.html": "Harga Jasa Pasang Lampu Eksterior"
-};
-
-const urlMappingJasaPasangLampuTamanFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-pasang-lampu-taman.html": "Harga Jasa Pasang Lampu Taman"
-};
 
 const urlMappingJasaEksteriorFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-fasad.html": "Jasa Fasad",
@@ -382,7 +419,6 @@ const urlMappingJasaEksteriorFromMoneyPageVariant = {
 "https://www.betonjayareadymix.com/p/jasa-fasad-rumah.html": "Jasa Fasad Rumah"
 	
 };
-
 
 const urlMappingJasaTamanFromMoneyMaster2MoneyMaster3 = {
   "https://www.betonjayareadymix.com/p/jasa-pembuatan-taman.html": "Jasa Pembuatan Taman",
@@ -441,33 +477,26 @@ console.log('══════════════════════�
 	urlMappingJasaFinishingInfrastrukturFromMoneyPageVariant,	
 	 urlMappingJasaFinishingTrotoarFromVariantSubVariant,
 	urlMappingJasaFinishingSaluranDrainaseFromVariantSubVariant,
+
+	urlMappingJasaPasangKeramikLantaiFromVariantSubVariant,
+	 urlMappingJasaPasangWpcFromMoneyPageVariant,
+	urlMappingJasaPasangWpcDindingFromVariantSubVariant,
+	urlMappingJasaPasangWallpaper3dFromMoneyPageVariant,
+	urlMappingJasaPasangWallpaperDindingFromVariantSubVariant,
+	urlMappingJasaPasangPlafonFromMoneyPageVariant,
+	urlMappingJasaPasangPlafonWpcFromVariantSubVariant,
+	urlMappingJasaPasangPvcFromMoneyPageVariant,
+    urlMappingJasaPasangLantaiFromMoneyPageVariant_Add,
+	urlMappingJasaPasangLampuFromMoneyPageVariant,
+	urlMappingJasaPasangLampuInteriorFromVariantSubVariant,
+    urlMappingJasaPasangLampuEksteriorFromVariantSubVariant,
 	  
-    urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
-    urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
-    urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage,
-    urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage,
-   
     urlMappingJasaInteriorFromMoneyMasterMoneyPage,
 	urlMappingJasaInteriorKamarFromMoneyPageVariant,
 	urlMappingJasaInteriorRuangFromMoneyPageVariant,
 	  
-    urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage,
-    urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1,
-    urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1,
-    urlMappingJasaPasangLampuTamanFromMoneyPageMoneyPage1,
-
     urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1,
-    urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
-
-
-    urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage,
-    urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1,
-    urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1,
-
-    
-    urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1,
-    urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2,
-    
+        
     urlMappingJasaEksteriorFromMoneyMasterMoneyPage,
     urlMappingJasaEksteriorFromMoneyPageVariant,
   
@@ -567,45 +596,28 @@ function initJasaKonsFinishing() {
     // [BLOK 1] JASA PASANG LANTAI VINYL
     // ═══════════════════════════════════════════════════════
     
-    if (urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaPasangLantaiFromMoneyPageVariant_Add[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
+            urlMappingJasaPasangLantaiFromMoneyPageVariant_Add,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
                 { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
-                { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html' },
-                { name: 'Jasa Pasang Lantai Vinyl', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai-vinyl.html' }
+                { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html' }
             ],
             'JASA_KONSTRUKSI'
         );
     }
     
-    if (urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
-                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
-                { name: 'Harga Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-lantai.html' },
-                { name: 'Harga Jasa Pasang Lantai Vinyl', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-lantai-vinyl.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-	
     // ═══════════════════════════════════════════════════════
     // [BLOK 2] JASA PASANG PVC
     // ═══════════════════════════════════════════════════════
     
-    if (urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaPasangPvcFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage,
+            urlMappingJasaPasangPvcFromMoneyPageVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Beton Jaya Readymix', url: 'https://www.betonjayareadymix.com/' },
@@ -621,16 +633,30 @@ function initJasaKonsFinishing() {
     // ═══════════════════════════════════════════════════════
     // [BLOK 3] JASA PASANG PLAFON
     // ═══════════════════════════════════════════════════════
-    
-    if (urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaPasangPlafonFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage,
+            urlMappingJasaPasangPlafonFromMoneyPageVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
                 { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
                 { name: 'Jasa Pasang Plafon', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }	
+    
+    if (urlMappingJasaPasangPlafonWpcFromVariantSubVariant[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPasangPlafonWpcFromVariantSubVariant,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Jasa Pasang Plafon', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html' },
+                { name: 'Jasa Pasang Plafon Wpc', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-plafon-wpc.html' }
             ],
             'JASA_KONSTRUKSI'
         );
@@ -725,9 +751,9 @@ function initJasaKonsFinishing() {
     // [BLOK 7] JASA PASANG LAMPU
     // ═══════════════════════════════════════════════════════
     
-    if (urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaPasangLampuFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaPasangLampuFromMoneyMaster1MoneyPage,
+            urlMappingJasaPasangLampuFromMoneyPageVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -763,9 +789,9 @@ function initJasaKonsFinishing() {
     // [BLOK 9] JASA PASANG LAMPU INTERIOR / EKSTERIOR / TAMAN
     // ═══════════════════════════════════════════════════════
     
-    if (urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaPasangLampuInteriorFromVariantSubVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1,
+            urlMappingJasaPasangLampuInteriorFromVariantSubVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -780,9 +806,9 @@ function initJasaKonsFinishing() {
     }
     
     // ✅ FIX: URL Eksterior (sebelumnya salah ke interior)
-    if (urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaPasangLampuEksteriorFromVariantSubVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1,
+            urlMappingJasaPasangLampuEksteriorFromVariantSubVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -796,22 +822,6 @@ function initJasaKonsFinishing() {
         );
     }
 	
-    if (urlMappingJasaPasangLampuTamanFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingJasaPasangLampuTamanFromMoneyPageMoneyPage1,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
-                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
-                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
-                { name: 'Jasa Pasang Lampu', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu.html' },
-                { name: 'Jasa Pasang Lampu Taman', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lampu-taman.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-
     // ═══════════════════════════════════════════════════════
     // [BLOK 10] JASA CAT
     // ═══════════════════════════════════════════════════════
@@ -918,15 +928,29 @@ function initJasaKonsFinishing() {
     // ═══════════════════════════════════════════════════════
     // [BLOK 13] JASA PASANG WALLPAPER DINDING
     // ═══════════════════════════════════════════════════════
-	
-    if (urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaPasangWallpaper3dFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
+            urlMappingJasaPasangWallpaper3dFromMoneyPageVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
-                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },,
+                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
+                { name: 'Jasa Pasang Wallpaper Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-3d.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+    if (urlMappingJasaPasangWallpaperDindingFromVariantSubVariant[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaPasangWallpaperDindingFromVariantSubVariant,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
+                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },,
+                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
                 { name: 'Jasa Pasang Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-dinding.html' },
                 { name: 'Jasa Pasang Wallpaper Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-dinding.html' }
             ],
@@ -940,9 +964,9 @@ function initJasaKonsFinishing() {
     // [BLOK 16] JASA PASANG WPC
     // ═══════════════════════════════════════════════════════
 	
-    if (urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaPasangWpcFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage,
+            urlMappingJasaPasangWpcFromMoneyPageVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -955,9 +979,9 @@ function initJasaKonsFinishing() {
         );
     }
     
-    if (urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaPasangWpcDindingFromVariantSubVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1,
+            urlMappingJasaPasangWpcDindingFromVariantSubVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -971,21 +995,6 @@ function initJasaKonsFinishing() {
         );
     }
 	
-    if (urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
-                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
-                { name: 'Jasa Pasang WPC', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wpc.html' },
-                { name: 'Jasa Pasang WPC Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-wpc-lantai.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-
     // ═══════════════════════════════════════════════════════
     // [BLOK 17] JASA FINISHING INFRASTRUKTUR
     // ═══════════════════════════════════════════════════════
@@ -1040,9 +1049,9 @@ function initJasaKonsFinishing() {
     // [BLOK 19] JASA PASANG KERAMIK LANTAI
     // ═══════════════════════════════════════════════════════
 	
-    if (urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaPasangKeramikLantaiFromVariantSubVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1,
+            urlMappingJasaPasangKeramikLantaiFromVariantSubVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -1055,25 +1064,7 @@ function initJasaKonsFinishing() {
             'JASA_KONSTRUKSI'
         );
     }
-    
-    if (urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html' },
-                { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html' },
-                { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
-                { name: 'Jasa Pasang Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html' },
-                { name: 'Jasa Pasang Keramik Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai.html' },
-                { name: 'Harga Jasa Pasang Keramik Lantai', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-lantai.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-
-
+ 
     if (urlMappingJasaFinishingSaluranDrainaseFromVariantSubVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
             urlMappingJasaFinishingSaluranDrainaseFromVariantSubVariant,
