@@ -6,229 +6,252 @@
 console.log('[jasa-konstruksi-finishing] 📄 File loaded, waiting for DOM...');
 
 //AWAL FINISHING
-const urlMappingFinishingBangunanFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-finishing-rumah.html": "Jasa Finishing Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-gedung.html": "Jasa Finishing Gedung",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-ruko.html": "Jasa Finishing Ruko",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-pabrik.html": "Jasa Finishing Pabrik",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-modern.html": "Jasa Finishing Bangunan Modern",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-minimalis.html": "Jasa Finishing Bangunan Minimalis",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-kantor.html": "Jasa Finishing Kantor",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-toko.html": "Jasa Finishing Toko",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-hotel.html": "Jasa Finishing Hotel",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-apartemen.html": "Jasa Finishing Apartemen",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-mewah.html": "Jasa Finishing Mewah"
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-finishing-bangunan (MP) ➔ CHILD: Variant (11)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFinishingBangunanFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-finishing-rumah.html":               "Jasa Finishing Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-gedung.html":              "Jasa Finishing Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-ruko.html":                "Jasa Finishing Ruko",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-pabrik.html":              "Jasa Finishing Pabrik",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-kantor.html":              "Jasa Finishing Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-toko.html":                "Jasa Finishing Toko",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-hotel.html":               "Jasa Finishing Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-apartemen.html":           "Jasa Finishing Apartemen",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-mewah.html":               "Jasa Finishing Mewah",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-modern.html":     "Jasa Finishing Bangunan Modern",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-bangunan-minimalis.html":  "Jasa Finishing Bangunan Minimalis"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-cat (MP) ➔ CHILD: Variant (18)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaCatFromMoneyPageVariant = {
+  // ─── By Surface (12) ───
+  "https://www.betonjayareadymix.com/p/jasa-cat-dinding.html":                 "Jasa Cat Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior.html":                "Jasa Cat Interior",
+  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior.html":               "Jasa Cat Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-cat-kayu-eksterior.html":          "Jasa Cat Kayu Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-cat-besi-interior.html":           "Jasa Cat Besi Interior",
+  "https://www.betonjayareadymix.com/p/jasa-cat-besi-eksterior.html":          "Jasa Cat Besi Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-cat-genteng.html":                 "Jasa Cat Genteng",
+  "https://www.betonjayareadymix.com/p/jasa-cat-atap.html":                    "Jasa Cat Atap",
+  "https://www.betonjayareadymix.com/p/jasa-cat-pagar.html":                   "Jasa Cat Pagar",
+  "https://www.betonjayareadymix.com/p/jasa-cat-lantai.html":                  "Jasa Cat Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-cat-beton.html":                   "Jasa Cat Beton",
+  "https://www.betonjayareadymix.com/p/jasa-cat-keramik.html":                 "Jasa Cat Keramik",
+
+  // ─── By Scope (3) ───
+  "https://www.betonjayareadymix.com/p/jasa-cat-dinding-interior.html":        "Jasa Cat Dinding Interior",
+  "https://www.betonjayareadymix.com/p/jasa-cat-dinding-eksterior.html":       "Jasa Cat Dinding Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-cat-plafon-eksterior.html":        "Jasa Cat Plafon Eksterior",
+
+  // ─── Special Surface (3) ───
+  "https://www.betonjayareadymix.com/p/jasa-cat-permukaan-khusus.html":        "Jasa Cat Permukaan Khusus",
+  "https://www.betonjayareadymix.com/p/jasa-cat-kolam-renang.html":            "Jasa Cat Kolam Renang",
+  "https://www.betonjayareadymix.com/p/jasa-cat-paving-block.html":            "Jasa Cat Paving Block"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-cat-interior (Variant) ➔ CHILD: SV (10)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaCatInteriorFromVariantSubVariant = {
+  // ─── By Building Type (6) ───
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html":          "Jasa Cat Interior Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-apartemen.html":      "Jasa Cat Interior Apartemen",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-gedung.html":         "Jasa Cat Interior Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-kantor.html":         "Jasa Cat Interior Kantor",
+  // ─── By Style (2) ───
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-modern.html":         "Jasa Cat Interior Modern",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-minimalis.html":      "Jasa Cat Interior Minimalis",
+  // ─── By Room (4) ───
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-kamar-tidur.html":    "Jasa Cat Interior Kamar Tidur",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-ruang-tamu.html":     "Jasa Cat Interior Ruang Tamu",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-dapur.html":          "Jasa Cat Interior Dapur",
+  "https://www.betonjayareadymix.com/p/jasa-cat-interior-ruang-kantor.html":   "Jasa Cat Interior Ruang Kantor"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-cat-eksterior (Variant) ➔ CHILD: SV (6)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaCatEksteriorFromVariantSubVariant = {
+  // ─── By Building Type (3) ───
+  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-rumah.html":         "Jasa Cat Eksterior Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-gedung.html":        "Jasa Cat Eksterior Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-kantor.html":        "Jasa Cat Eksterior Kantor",
+  // ─── By Style (3) ───
+  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-modern.html":        "Jasa Cat Eksterior Modern",
+  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-minimalis.html":     "Jasa Cat Eksterior Minimalis",
+  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-klasik.html":        "Jasa Cat Eksterior Klasik"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-finishing-dinding (MP) ➔ CHILD: Variant (9)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFinishingDindingFromMoneyPageVariant = {
+"https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html": "Jasa Plesteran Acian Dinding",
+	"https://www.betonjayareadymix.com/p/jasa-finishing-dinding-wallpaper.html":  "Jasa Finishing Dinding Wallpaper",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-ekspos.html":     "Jasa Finishing Dinding Ekspos",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-wpc-dinding.html":        "Jasa Finishing WPC Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-pvc-dinding.html":        "Jasa Finishing PVC Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-wall-moulding.html":      "Jasa Finishing Wall Moulding",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-rumah.html":      "Jasa Finishing Dinding Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-kantor.html":     "Jasa Finishing Dinding Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-hotel.html":      "Jasa Finishing Dinding Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-restoran.html":   "Jasa Finishing Dinding Restoran"
 };
 
-const urlMappingFinishingDindingFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-wallpaper.html": "Jasa Finishing Dinding Wallpaper",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-epoxy-dinding.html": "Jasa Finishing Epoxy Dinding",
-  "https://www.betonjayareadymix.com/p/jasa-plesteran-acian-dinding.html": "Jasa Plesteran & Acian Dinding",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-ekspos.html": "Jasa Finishing Dinding Ekspos",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-wpc-dinding.html": "Jasa Finishing WPC Dinding",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-pvc-dinding.html": "Jasa Finishing PVC Dinding",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-wall-moulding.html": "Jasa Finishing Wall Moulding",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-rumah.html": "Jasa Finishing Dinding Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-kantor.html": "Jasa Finishing Dinding Kantor",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-hotel.html": "Jasa Finishing Dinding Hotel",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-dinding-restoran.html": "Jasa Finishing Dinding Restoran"
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-finishing-lantai (MP) ➔ CHILD: Variant (11)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFinishingLantaiFromMoneyPageVariant = {
+  // ─── By Material (6) ───
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-epoxy.html":      "Jasa Finishing Lantai Epoxy",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html":      "Jasa Finishing Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-keramik.html":     "Jasa Finishing Lantai Keramik",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-marmer.html":     "Jasa Finishing Lantai Marmer",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html":     "Jasa Finishing Lantai Granit",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-kayu.html":       "Jasa Finishing Lantai Kayu",
+
+  // ─── By Method (5) ───
+  "https://www.betonjayareadymix.com/p/jasa-poles-lantai-beton.html":          "Jasa Poles Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-coating-lantai-beton.html":        "Jasa Coating Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-grinding-lantai-beton.html":       "Jasa Grinding Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-poles-lantai-marmer.html":         "Jasa Poles Lantai Marmer",
+  "https://www.betonjayareadymix.com/p/jasa-poles-lantai-granit.html":         "Jasa Poles Lantai Granit"
 };
-
-
-const urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1 = {
-//  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai-beton.html": "Harga Jasa Finishing Lantai Beton",
-  "https://www.betonjayareadymix.com/p/jasa-poles-lantai-beton.html": "Jasa Poles Lantai Beton",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton-ekspos.html": "Jasa Finishing Lantai Beton Ekspos",
-  "https://www.betonjayareadymix.com/p/jasa-waterproofing-lantai-beton-baru.html": "Jasa Waterproofing Lantai Beton Baru",
-  "https://www.betonjayareadymix.com/p/jasa-lantai-super-flat.html": "Jasa Lantai Super Flat",
-  "https://www.betonjayareadymix.com/p/jasa-lapangan-super-flat.html": "Jasa Lapangan Super Flat",
-  "https://www.betonjayareadymix.com/p/jasa-trowel-lantai-beton.html": "Jasa Trowel Lantai Beton",
-  "https://www.betonjayareadymix.com/p/jasa-screeding-lantai-beton.html": "Jasa Screeding Lantai Beton",
-  "https://www.betonjayareadymix.com/p/jasa-perataan-lantai-beton.html": "Jasa Perataan Lantai Beton",
-  "https://www.betonjayareadymix.com/p/jasa-floor-hardener-lantai.html": "Jasa Floor Hardener Lantai",
-  "https://www.betonjayareadymix.com/p/jasa-self-leveling-lantai.html": "Jasa Self Leveling Lantai",
-  "https://www.betonjayareadymix.com/p/jasa-coating-lantai-beton.html": "Jasa Coating Lantai Beton",
-  "https://www.betonjayareadymix.com/p/jasa-pelapisan-lantai-beton.html": "Jasa Pelapisan Lantai Beton",
-  "https://www.betonjayareadymix.com/p/jasa-grinding-lantai-beton.html": "Jasa Grinding Lantai Beton"
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-finishing-lantai-beton (Variant) ➔ CHILD: SV (10)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFinishingLantaiBetonFromVariantSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton-ekspos.html":        "Jasa Finishing Lantai Beton Ekspos",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-lantai-beton-baru.html":      "Jasa Waterproofing Lantai Beton Baru",
+  "https://www.betonjayareadymix.com/p/jasa-lantai-super-flat.html":                    "Jasa Lantai Super Flat",
+  "https://www.betonjayareadymix.com/p/jasa-lapangan-super-flat.html":                  "Jasa Lapangan Super Flat",
+  "https://www.betonjayareadymix.com/p/jasa-trowel-lantai-beton.html":                  "Jasa Trowel Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-screeding-lantai-beton.html":               "Jasa Screeding Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-perataan-lantai-beton.html":                "Jasa Perataan Lantai Beton",
+  "https://www.betonjayareadymix.com/p/jasa-floor-hardener-lantai.html":                "Jasa Floor Hardener Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-self-leveling-lantai.html":                 "Jasa Self Leveling Lantai",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-lantai-beton.html":               "Jasa Pelapisan Lantai Beton"
 };
-
-const urlMappingFinishingLantaiFromMoneyMasterMoneyPage = {
-  //"https://www.betonjayareadymix.com/p/harga-jasa-finishing-lantai.html": "Harga Jasa Finishing Lantai",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html": "Jasa Finishing Lantai Beton",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-keramik.html": "Jasa Finishing Lantai Keramik",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-marmer.html": "Jasa Finishing Lantai Marmer",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html": "Jasa Finishing Lantai Granit",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-kayu.html": "Jasa Finishing Lantai Kayu",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-epoxy.html": "Jasa Finishing Lantai Epoxy"
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-finishing-interior (MP) ➔ CHILD: Variant (6)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFinishingInteriorFromMoneyPageVariant = {
+  // ─── By Building (3) ───
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-kantor.html":     "Jasa Finishing Interior Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-apartemen.html":  "Jasa Finishing Interior Apartemen",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-rumah.html":      "Jasa Finishing Interior Rumah",
+  // ─── By Style (3) ───
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html":  "Jasa Finishing Interior Minimalis",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html":     "Jasa Finishing Interior Klasik",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html":     "Jasa Finishing Interior Modern"
 };
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-finishing-eksterior (MP) ➔ CHILD: Variant (35)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFinishingEksteriorFromMoneyPageVariant = {
+  // ─── By Building Type (15) ───
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-rumah.html":        "Jasa Finishing Eksterior Rumah",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gedung.html":       "Jasa Finishing Eksterior Gedung",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-ruko.html":         "Jasa Finishing Eksterior Ruko",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-pabrik.html":       "Jasa Finishing Eksterior Pabrik",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kantor.html":       "Jasa Finishing Eksterior Kantor",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-hotel.html":        "Jasa Finishing Eksterior Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-cafe.html":         "Jasa Finishing Eksterior Cafe",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-restoran.html":     "Jasa Finishing Eksterior Restoran",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-sekolah.html":      "Jasa Finishing Eksterior Sekolah",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-rumah-sakit.html":  "Jasa Finishing Eksterior Rumah Sakit",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-toko.html":         "Jasa Finishing Eksterior Toko",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-showroom.html":     "Jasa Finishing Eksterior Showroom",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gudang.html":       "Jasa Finishing Eksterior Gudang",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-mushola.html":      "Jasa Finishing Eksterior Mushola",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-masjid.html":       "Jasa Finishing Eksterior Masjid",
 
-const urlMappingJasaFinishingLantaiMarmerFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/jasa-poles-lantai-marmer.html": "Jasa Poles Lantai Marmer"
-};
-
-const urlMappingJasaPolesLantaiGranitFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/jasa-poles-lantai-granit.html": "Jasa Poles Lantai Granit"
-};
-
-const urlMappingFinishingInteriorFromMoneyMasterMoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-kantor.html": "Jasa Finishing Interior Kantor",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-apartemen.html": "Jasa Finishing Interior Apartemen",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-rumah.html": "Jasa Finishing Interior Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-minimalis.html": "Jasa Finishing Interior Minimalis",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-klasik.html": "Jasa Finishing Interior Klasik",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-interior-modern.html": "Jasa Finishing Interior Modern"
-};
-
-const urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-taman.html": "Jasa Finishing Lampu Taman",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-cafe.html": "Jasa Finishing Lampu Cafe",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-hotel.html": "Jasa Finishing Lampu Hotel",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-kantor.html": "Jasa Finishing Lampu Kantor"
-};
-
-const urlMappingJasaCatFromMoneyMaster1MoneyPage = {
-// "https://www.betonjayareadymix.com/p/harga-jasa-cat.html": "Harga Jasa Cat",
-  "https://www.betonjayareadymix.com/p/jasa-cat-permukaan-khusus.html": "Jasa Cat Permukaan Khusus",
-  "https://www.betonjayareadymix.com/p/jasa-cat-dinding.html": "Jasa Cat Dinding",
- // "https://www.betonjayareadymix.com/p/jasa-finishing-cat.html": "Jasa Finishing Cat",
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior.html": "Jasa Cat Interior",
-  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior.html": "Jasa Cat Eksterior"
-};
-
-
-const urlMappingJasaCatPermukaanKhususFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/jasa-cat-plafon-eksterior.html": "Jasa Cat Plafon Eksterior",
-  "https://www.betonjayareadymix.com/p/jasa-cat-kayu-eksterior.html": "Jasa Cat Kayu Eksterior",
-  "https://www.betonjayareadymix.com/p/jasa-cat-besi-interior.html": "Jasa Cat Besi Interior",
-  "https://www.betonjayareadymix.com/p/jasa-cat-besi-eksterior.html": "Jasa Cat Besi Eksterior",
-  "https://www.betonjayareadymix.com/p/jasa-cat-genteng.html": "Jasa Cat Genteng",
-  "https://www.betonjayareadymix.com/p/jasa-cat-atap.html": "Jasa Cat Atap",
-  "https://www.betonjayareadymix.com/p/jasa-cat-pagar.html": "Jasa Cat Pagar",
-  "https://www.betonjayareadymix.com/p/jasa-cat-kolam-renang.html": "Jasa Cat Kolam Renang",
-  "https://www.betonjayareadymix.com/p/jasa-cat-lantai.html": "Jasa Cat Lantai",
-  "https://www.betonjayareadymix.com/p/jasa-cat-beton.html": "Jasa Cat Beton",
-  "https://www.betonjayareadymix.com/p/jasa-cat-paving-block.html": "Jasa Cat Paving Block",
-  "https://www.betonjayareadymix.com/p/jasa-cat-keramik.html": "Jasa Cat Keramik"
-};
-
-const urlMappingJasaCatDindingFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/jasa-cat-dinding-interior.html": "Jasa Cat Dinding Interior",
-  "https://www.betonjayareadymix.com/p/jasa-cat-dinding-eksterior.html": "Jasa Cat Dinding Eksterior"
-};
-
-const urlMappingJasaCatInteriorFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html": "Jasa Cat Interior Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-modern.html": "Jasa Cat Interior Modern",
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-minimalis.html": "Jasa Cat Interior Minimalis",
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-apartemen.html": "Jasa Cat Interior Apartemen",
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-gedung.html": "Jasa Cat Interior Gedung",
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-kantor.html": "Jasa Cat Interior Kantor"
-};
-
-const urlMappingJasaCatEksteriorFromMoneyPageMoneyPage1 = {
-  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-rumah.html": "Jasa Cat Eksterior Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-gedung.html": "Jasa Cat Eksterior Gedung",
-  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-kantor.html": "Jasa Cat Eksterior Kantor",
-  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-modern.html": "Jasa Cat Eksterior Modern",
-  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-minimalis.html": "Jasa Cat Eksterior Minimalis",
-  "https://www.betonjayareadymix.com/p/jasa-cat-eksterior-klasik.html": "Jasa Cat Eksterior Klasik"
-};
-
-const urlMappingJasaCatInteriorRumahFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-kamar-tidur.html": "Jasa Cat Interior Kamar Tidur",
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-ruang-tamu.html": "Jasa Cat Interior Ruang Tamu",
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-dapur.html": "Jasa Cat Interior Dapur"
-};
-
-const urlMappingJasaCatInteriorKantorFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/p/jasa-cat-interior-ruang-kantor.html": "Jasa Cat Interior Ruang Kantor"
-};
-
-const urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-finishing-fasad-eksterior.html": "Jasa Finishing Fasad Eksterior",
-  "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak.html": "Jasa Pelapisan Genteng Dak",
-  "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-cuaca.html": "Jasa Pelapisan Anti Cuaca",
-  "https://www.betonjayareadymix.com/p/jasa-pelapisan-dinding-luar.html": "Jasa Pelapisan Dinding Luar",
-  "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html": "Jasa Pelapisan Batu Alam Eksterior",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-rumah.html": "Jasa Finishing Eksterior Rumah",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gedung.html": "Jasa Finishing Eksterior Gedung",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-ruko.html": "Jasa Finishing Eksterior Ruko",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-pabrik.html": "Jasa Finishing Eksterior Pabrik",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kantor.html": "Jasa Finishing Eksterior Kantor",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-hotel.html": "Jasa Finishing Eksterior Hotel",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-cafe.html": "Jasa Finishing Eksterior Cafe",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-restoran.html": "Jasa Finishing Eksterior Restoran",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-sekolah.html": "Jasa Finishing Eksterior Sekolah",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-rumah-sakit.html": "Jasa Finishing Eksterior Rumah Sakit",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-modern.html": "Jasa Finishing Eksterior Modern",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-minimalis.html": "Jasa Finishing Eksterior Minimalis",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-klasik.html": "Jasa Finishing Eksterior Klasik",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-mewah.html": "Jasa Finishing Eksterior Mewah",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-industrial.html": "Jasa Finishing Eksterior Industrial",
+  // ─── By Style (7) ───
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-modern.html":       "Jasa Finishing Eksterior Modern",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-minimalis.html":    "Jasa Finishing Eksterior Minimalis",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-klasik.html":       "Jasa Finishing Eksterior Klasik",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-mewah.html":        "Jasa Finishing Eksterior Mewah",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-industrial.html":   "Jasa Finishing Eksterior Industrial",
   "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-skandinavian.html": "Jasa Finishing Eksterior Skandinavian",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kontemporer.html": "Jasa Finishing Eksterior Kontemporer",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-dinding.html": "Jasa Finishing Eksterior Dinding",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-pagar.html": "Jasa Finishing Eksterior Pagar",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-balkon.html": "Jasa Finishing Eksterior Balkon",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-teras.html": "Jasa Finishing Eksterior Teras",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kanopi.html": "Jasa Finishing Eksterior Kanopi",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kolam-renang.html": "Jasa Finishing Eksterior Kolam Renang",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-plafon-terbuka.html": "Jasa Finishing Eksterior Plafon Terbuka",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-tangga-luar.html": "Jasa Finishing Eksterior Tangga Luar",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gazebo.html": "Jasa Finishing Eksterior Gazebo",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-toko.html": "Jasa Finishing Eksterior Toko",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-showroom.html": "Jasa Finishing Eksterior Showroom",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gudang.html": "Jasa Finishing Eksterior Gudang",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-mushola.html": "Jasa Finishing Eksterior Mushola",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-masjid.html": "Jasa Finishing Eksterior Masjid"
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kontemporer.html":  "Jasa Finishing Eksterior Kontemporer",
+
+  // ─── By Component (9) ───
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-dinding.html":         "Jasa Finishing Eksterior Dinding",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-pagar.html":           "Jasa Finishing Eksterior Pagar",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-balkon.html":          "Jasa Finishing Eksterior Balkon",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-teras.html":           "Jasa Finishing Eksterior Teras",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kanopi.html":          "Jasa Finishing Eksterior Kanopi",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-kolam-renang.html":    "Jasa Finishing Eksterior Kolam Renang",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-plafon-terbuka.html":  "Jasa Finishing Eksterior Plafon Terbuka",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-tangga-luar.html":     "Jasa Finishing Eksterior Tangga Luar",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-eksterior-gazebo.html":          "Jasa Finishing Eksterior Gazebo",
+
+  // ─── Pelapisan (4) ───
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-genteng-dak.html":               "Jasa Pelapisan Genteng Dak",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-cuaca.html":                "Jasa Pelapisan Anti Cuaca",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-dinding-luar.html":              "Jasa Pelapisan Dinding Luar",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-batu-alam-eksterior.html":       "Jasa Pelapisan Batu Alam Eksterior",
+
+  // ─── Fasad & Epoxy (2) ───
+  "https://www.betonjayareadymix.com/p/jasa-finishing-fasad-eksterior.html":           "Jasa Finishing Fasad Eksterior",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-epoxy-dinding.html":             "Jasa Finishing Epoxy Dinding"
+};
+const urlMappingJasaFinishingLampuFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-taman.html":   "Jasa Finishing Lampu Taman",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-cafe.html":    "Jasa Finishing Lampu Cafe",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-hotel.html":   "Jasa Finishing Lampu Hotel",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-lampu-kantor.html":  "Jasa Finishing Lampu Kantor"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-finishing-struktur (MP) ➔ CHILD: Variant (6)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFinishingStrukturFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html":           "Jasa Finishing Dak Beton",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-beton.html":         "Jasa Finishing Jalan Beton",
+  "https://www.betonjayareadymix.com/p/jasa-coating-jembatan.html":              "Jasa Coating Jembatan",
+  "https://www.betonjayareadymix.com/p/jasa-waterproofing-saluran-air.html":     "Jasa Waterproofing Saluran Air",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html":    "Jasa Pelapisan Coating Struktur",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-utilitas.html":   "Jasa Finishing Struktur Utilitas"
 };
 
-const urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage = {
-  //"https://www.betonjayareadymix.com/p/harga-jasa-finishing-struktur.html": "Harga Jasa Finishing Struktur",
-  "https://www.betonjayareadymix.com/p/jasa-waterproofing-dak-beton-baru.html": "Jasa Waterproofing Dak Beton Baru",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-dak-beton.html": "Jasa Finishing Dak Beton",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-beton-ekspos.html": "Jasa Finishing Struktur Beton Ekspos",
-  "https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html": "Jasa Pelapisan Coating Struktur",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-kolom-dan-balok.html": "Jasa Finishing Kolom dan Balok"
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-finishing-struktur-beton-ekspos (Variant) ➔ CHILD: SV (8)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFinishingStrukturBetonEksposFromVariantSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-beton-ekspos.html":   "Jasa Finishing Struktur Beton Ekspos",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-kolom-dan-balok.html":         "Jasa Finishing Kolom dan Balok",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-penutup-kabel-beton.html":     "Jasa Finishing Penutup Kabel Beton",
+  "https://www.betonjayareadymix.com/p/jasa-coating-anti-karat-beton.html":          "Jasa Coating Anti Karat Beton",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-karat-beton.html":        "Jasa Pelapisan Anti Karat Beton",
+  "https://www.betonjayareadymix.com/p/jasa-epoxy-beton-luar-ruang.html":            "Jasa Epoxy Beton Luar Ruang",
+  "https://www.betonjayareadymix.com/p/jasa-proteksi-struktur-beton-luar.html":      "Jasa Proteksi Struktur Beton Luar",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-proteksi-beton.html":          "Jasa Finishing Proteksi Beton"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-finishing-infrastruktur (MP) ➔ CHILD: Variant (3)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFinishingInfrastrukturFromMoneyPageVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar.html":             "Jasa Finishing Trotoar",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-saluran-drainase.html":    "Jasa Finishing Saluran Drainase",
+  "https://www.betonjayareadymix.com/p/jasa-coating-gorong-gorong.html":         "Jasa Coating Gorong-Gorong"
 };
 
-
-
-const urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1 = {
-  //"https://www.betonjayareadymix.com/p/harga-jasa-coating-struktur-beton.html": "Harga Jasa Coating Struktur Beton",
-  "https://www.betonjayareadymix.com/p/jasa-coating-anti-karat-beton.html": "Jasa Coating Anti Karat Beton",
-  "https://www.betonjayareadymix.com/p/jasa-pelapisan-waterproofing-struktur.html": "Jasa Pelapisan Waterproofing Struktur"
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-finishing-trotoar (Variant) ➔ CHILD: SV (4)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFinishingTrotoarFromVariantSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar-area-publik.html":     "Jasa Finishing Trotoar Area Publik",
+  "https://www.betonjayareadymix.com/p/jasa-penataan-trotoar-beton.html":            "Jasa Penataan Trotoar Beton",
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-area-pejalan-kaki.html":       "Jasa Pelapisan Area Pejalan Kaki",
+  "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar-jalan-rusak.html":     "Jasa Finishing Trotoar Jalan Rusak"
 };
 
-
-
-const urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage = {
-  "https://www.betonjayareadymix.com/p/jasa-finishing-rumah-pompa.html": "Jasa Finishing Rumah Pompa",
-  "https://www.betonjayareadymix.com/p/jasa-pelapisan-box-utilitas.html": "Jasa Pelapisan Box Utilitas",
-  "https://www.betonjayareadymix.com/p/jasa-epoxy-struktur-publik.html": "Jasa Epoxy Struktur Publik",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-penutup-kabel-beton.html": "Jasa Finishing Penutup Kabel Beton",
-  "https://www.betonjayareadymix.com/p/jasa-pelapisan-anti-karat-beton.html": "Jasa Pelapisan Anti Karat Beton",
-  "https://www.betonjayareadymix.com/p/jasa-epoxy-beton-luar-ruang.html": "Jasa Epoxy Beton Luar Ruang",
-  "https://www.betonjayareadymix.com/p/jasa-proteksi-struktur-beton-luar.html": "Jasa Proteksi Struktur Beton Luar",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-jembatan.html": "Jasa Finishing Jalan Jembatan",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-jembatan-beton.html": "Jasa Finishing Jembatan Beton",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-jalan-beton.html": "Jasa Finishing Jalan Beton",
-  "https://www.betonjayareadymix.com/p/jasa-pengecatan-marking-jalan.html": "Jasa Pengecatan Marking Jalan",
-  "https://www.betonjayareadymix.com/p/jasa-pelapisan-jalan-tol.html": "Jasa Pelapisan Jalan Tol",
-  "https://www.betonjayareadymix.com/p/jasa-coating-jembatan.html": "Jasa Coating Jembatan",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar-area-publik.html": "Jasa Finishing Trotoar Area Publik",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-trotoar.html": "Jasa Finishing Trotoar",
-  "https://www.betonjayareadymix.com/p/jasa-penataan-trotoar-beton.html": "Jasa Penataan Trotoar Beton",
-  "https://www.betonjayareadymix.com/p/jasa-epoxy-area-publik.html": "Jasa Epoxy Area Publik",
-  "https://www.betonjayareadymix.com/p/jasa-pelapisan-area-pejalan-kaki.html": "Jasa Pelapisan Area Pejalan Kaki",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-saluran-drainase.html": "Jasa Finishing Saluran Drainase",
-  "https://www.betonjayareadymix.com/p/jasa-coating-gorong-gorong.html": "Jasa Coating Gorong Gorong",
-  "https://www.betonjayareadymix.com/p/jasa-pelapisan-saluran-beton.html": "Jasa Pelapisan Saluran Beton",
-  "https://www.betonjayareadymix.com/p/jasa-waterproofing-saluran-air.html": "Jasa Waterproofing Saluran Air",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-penutup-saluran.html": "Jasa Finishing Penutup Saluran",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-struktur-utilitas.html": "Jasa Finishing Struktur Utilitas",
-  "https://www.betonjayareadymix.com/p/jasa-finishing-proteksi-beton.html": "Jasa Finishing Proteksi Beton"
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-finishing-saluran-drainase (Variant) ➔ CHILD: SV (1)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFinishingSaluranDrainaseFromVariantSubVariant = {
+  "https://www.betonjayareadymix.com/p/jasa-pelapisan-saluran-beton.html": "Jasa Pelapisan Saluran Beton"
 };
+
 //AKHIR FINISHIING
 
 
@@ -299,26 +322,6 @@ const urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2 = {
   "https://www.betonjayareadymix.com/p/harga-jasa-pasang-keramik-per-meter.html": "Harga Jasa Pasang Keramik per Meter",
   "https://www.betonjayareadymix.com/p/harga-borongan-pasang-keramik-per-meter.html": "Harga Borongan Pasang Keramik per Meter",
   "https://www.betonjayareadymix.com/p/jasa-pasang-keramik-lantai-murah.html": "Jasa Pasang Keramik Lantai Murah"
-};
-
-const urlMappingJasaLantaiSuperFlatFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-lapangan-super-flat.html": "Harga Jasa Lapangan Super Flat",
-  "https://www.betonjayareadymix.com/p/harga-jasa-lantai-super-flat.html": "Harga Jasa Lantai Super Flat"
-};
-
-const urlMappingJasaTrowelLantaiBetonFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-trowel-lantai.html": "Harga Jasa Trowel Lantai",
-  "https://www.betonjayareadymix.com/p/harga-jasa-trowel-floor-hardener.html": "Harga Jasa Trowel Floor Hardener",
-  "https://www.betonjayareadymix.com/p/harga-jasa-finishing-trowel.html": "Harga Jasa finishing Trowel"
-};
-
-const urlMappingJasaScreedingLantaiBetonFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-screeding-per-meter.html": "Harga Jasa Screeding Per Meter",
-  "https://www.betonjayareadymix.com/p/harga-jasa-screeding-lantai.html": "Harga Jasa Screeding Lantai"
-};
-
-const urlMappingJasaFloorHardenerLantaiFromMoneyPage1MoneyPage2 = {
-  "https://www.betonjayareadymix.com/p/harga-jasa-floor-hardener.html": "Harga Jasa Floor Hardener"
 };
 
 const urlMappingJasaInteriorFromMoneyMasterMoneyPage = {
@@ -423,12 +426,27 @@ console.log('══════════════════════�
   
   // Kumpulkan SEMUA mapping ke array (TANPA Object.assign)
   var ALL_MAPPINGS = [
+	 urlMappingJasaFinishingBangunanFromMoneyPageVariant,
+	 urlMappingJasaCatFromMoneyPageVariant,
+	urlMappingJasaCatInteriorFromVariantSubVariant,
+	urlMappingJasaCatEksteriorFromVariantSubVariant,
+	 urlMappingJasaFinishingDindingFromMoneyPageVariant,
+	urlMappingJasaFinishingLantaiFromMoneyPageVariant,
+	urlMappingJasaFinishingLantaiBetonFromVariantSubVariant,
+    urlMappingJasaFinishingInteriorFromMoneyPageVariant,
+	urlMappingJasaFinishingEksteriorFromMoneyPageVariant,
+	urlMappingJasaFinishingLampuFromMoneyPageVariant,
+	urlMappingJasaFinishingStrukturFromMoneyPageVariant,
+    urlMappingJasaFinishingStrukturBetonEksposFromVariantSubVariant,
+	urlMappingJasaFinishingInfrastrukturFromMoneyPageVariant,	
+	 urlMappingJasaFinishingTrotoarFromVariantSubVariant,
+	urlMappingJasaFinishingSaluranDrainaseFromVariantSubVariant,
+	  
     urlMappingJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
     urlMappingHargaJasaPasangLantaiVinylFromMoneyPageMoneyPage1,
     urlMappingJasaPasangPVCFromMoneyMaster1MoneyPage,
     urlMappingJasaPasangPlafonFromMoneyMaster1MoneyPage,
-    urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
-    urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
+   
     urlMappingJasaInteriorFromMoneyMasterMoneyPage,
 	urlMappingJasaInteriorKamarFromMoneyPageVariant,
 	urlMappingJasaInteriorRuangFromMoneyPageVariant,
@@ -437,50 +455,25 @@ console.log('══════════════════════�
     urlMappingJasaPasangLampuInteriorFromMoneyPageMoneyPage1,
     urlMappingJasaPasangLampuEksteriorFromMoneyPageMoneyPage1,
     urlMappingJasaPasangLampuTamanFromMoneyPageMoneyPage1,
-    urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage,
 
- 
-
-    urlMappingJasaCatFromMoneyMaster1MoneyPage,
-    urlMappingJasaCatPermukaanKhususFromMoneyPageMoneyPage1,
-    urlMappingJasaCatDindingFromMoneyPageMoneyPage1,
-
-    urlMappingJasaCatInteriorFromMoneyPageMoneyPage1,
-    urlMappingJasaCatEksteriorFromMoneyPageMoneyPage1,
-    urlMappingJasaCatInteriorRumahFromMoneyPage1MoneyPage2,
-    urlMappingJasaCatInteriorKantorFromMoneyPage1MoneyPage2,
     urlMappingHargaJasaPembuatanFurnitureFromMoneyPageMoneyPage1,
-    urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
     urlMappingJasaPasangWallpaperDindingFromMoneyPageMoneyPage1,
 
 
     urlMappingJasaPasangWpcFromMoneyMaster1MoneyPage,
     urlMappingJasaPasangWPCDindingFromMoneyPageMoneyPage1,
     urlMappingJasaPasangWPCLantaiFromMoneyPageMoneyPage1,
-    urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
 
-    urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1,
-
-    urlMappingJasaFinishingLantaiMarmerFromMoneyPageMoneyPage1,
-    urlMappingJasaPolesLantaiGranitFromMoneyPageMoneyPage1,
+    
     urlMappingJasaPasangKeramikLantaiFromMoneyPageMoneyPage1,
     urlMappingHargaJasaPasangKeramikLantaiFromMoneyPage1MoneyPage2,
-    urlMappingJasaLantaiSuperFlatFromMoneyPage1MoneyPage2,
-    urlMappingJasaTrowelLantaiBetonFromMoneyPage1MoneyPage2,
-    urlMappingJasaScreedingLantaiBetonFromMoneyPage1MoneyPage2,
-    urlMappingJasaFloorHardenerLantaiFromMoneyPage1MoneyPage2,
-
-    urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage,
+    
     urlMappingJasaEksteriorFromMoneyMasterMoneyPage,
     urlMappingJasaEksteriorFromMoneyPageVariant,
   
     urlMappingJasaTamanFromMoneyMaster2MoneyMaster3,
-    urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage,
-    urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage,
-
-
-    urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1,
-    urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage
+    urlMappingJasaPembuatanTamanFromMoneyMaster3MoneyPage
+    
   ];
   
   // ✅ PENDEKATAN C: Loop + foundIndex + foundMappingName + break
@@ -647,9 +640,9 @@ function initJasaKonsFinishing() {
     // [BLOK 4] JASA FINISHING BANGUNAN
     // ═══════════════════════════════════════════════════════
     
-    if (urlMappingFinishingBangunanFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaFinishingBangunanFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingFinishingBangunanFromMoneyMaster1MoneyPage,
+            urlMappingJasaFinishingBangunanFromMoneyPageVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -666,9 +659,9 @@ function initJasaKonsFinishing() {
     // [BLOK 5] JASA FINISHING INTERIOR
     // ═══════════════════════════════════════════════════════
     
-    if (urlMappingFinishingInteriorFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaFinishingInteriorFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingFinishingInteriorFromMoneyMasterMoneyPage,
+            urlMappingJasaFinishingInteriorFromMoneyPageVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -751,9 +744,9 @@ function initJasaKonsFinishing() {
     // [BLOK 8] JASA FINISHING LAMPU
     // ═══════════════════════════════════════════════════════
     
-    if (urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaFinishingLampuFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaFinishingLampuFromMoneyMaster1MoneyPage,
+            urlMappingJasaFinishingLampuFromMoneyPageVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -823,9 +816,25 @@ function initJasaKonsFinishing() {
     // [BLOK 10] JASA CAT
     // ═══════════════════════════════════════════════════════
 	
-    if (urlMappingJasaCatFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaFinishingTrotoarFromVariantSubVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaCatFromMoneyMaster1MoneyPage,
+            urlMappingJasaFinishingTrotoarFromVariantSubVariant,
+            cleanUrlJasaKonsFinishing,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
+                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
+                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
+                { name: 'Jasa Finishing Trotoar', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-trotoar.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
+   
+    
+    if (urlMappingJasaCatFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
+        generateBreadcrumbShared(
+            urlMappingJasaCatFromMoneyPageVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -837,43 +846,25 @@ function initJasaKonsFinishing() {
             'JASA_KONSTRUKSI'
         );
     }
-   
     
-    if (urlMappingJasaCatPermukaanKhususFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaFinishingDindingFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaCatPermukaanKhususFromMoneyPageMoneyPage1,
+            urlMappingJasaFinishingDindingFromMoneyPageVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
                 { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
                 { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-                { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html' },
-                { name: 'Jasa Cat Permukaan Khusus', url: 'https://www.betonjayareadymix.com/p/jasa-cat-permukaan-khusus.html' }
+                { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html' }
             ],
             'JASA_KONSTRUKSI'
         );
     }
     
-    if (urlMappingJasaCatDindingFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaCatInteriorFromVariantSubVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaCatDindingFromMoneyPageMoneyPage1,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
-                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-                { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html' },
-                { name: 'Jasa Cat Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-cat-dinding.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-    
-    if (urlMappingJasaCatInteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingJasaCatInteriorFromMoneyPageMoneyPage1,
+            urlMappingJasaCatInteriorFromVariantSubVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -887,9 +878,9 @@ function initJasaKonsFinishing() {
         );
     }
     
-    if (urlMappingJasaCatEksteriorFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaCatEksteriorFromVariantSubVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaCatEksteriorFromMoneyPageMoneyPage1,
+            urlMappingJasaCatEksteriorFromVariantSubVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -903,40 +894,6 @@ function initJasaKonsFinishing() {
         );
     }
     
-    if (urlMappingJasaCatInteriorRumahFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingJasaCatInteriorRumahFromMoneyPage1MoneyPage2,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
-                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-                { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html' },
-                { name: 'Jasa Cat Interior', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior.html' },
-                { name: 'Jasa Cat Interior Rumah', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior-rumah.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-    
-    if (urlMappingJasaCatInteriorKantorFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingJasaCatInteriorKantorFromMoneyPage1MoneyPage2,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
-                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-                { name: 'Jasa Cat', url: 'https://www.betonjayareadymix.com/p/jasa-cat.html' },
-                { name: 'Jasa Cat Interior', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior.html' },
-                { name: 'Jasa Cat Interior Kantor', url: 'https://www.betonjayareadymix.com/p/jasa-cat-interior-kantor.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-
     // ═══════════════════════════════════════════════════════
     // [BLOK 11] HARGA JASA PEMBUATAN FURNITURE
     // ═══════════════════════════════════════════════════════
@@ -957,25 +914,7 @@ function initJasaKonsFinishing() {
         );
     }
 	
-    // ═══════════════════════════════════════════════════════
-    // [BLOK 12] JASA FINISHING DINDING
-    // ═══════════════════════════════════════════════════════
-    
-    if (urlMappingFinishingDindingFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingFinishingDindingFromMoneyMaster1MoneyPage,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
-                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-                { name: 'Jasa Finishing Dinding', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-dinding.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-	
+   
     // ═══════════════════════════════════════════════════════
     // [BLOK 13] JASA PASANG WALLPAPER DINDING
     // ═══════════════════════════════════════════════════════
@@ -1051,9 +990,9 @@ function initJasaKonsFinishing() {
     // [BLOK 17] JASA FINISHING INFRASTRUKTUR
     // ═══════════════════════════════════════════════════════
 	
-    if (urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaFinishingInfrastrukturFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingFinishingInfrastrukturFromMoneyMaster1MoneyPage,
+            urlMappingJasaFinishingInfrastrukturFromMoneyPageVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -1066,13 +1005,10 @@ function initJasaKonsFinishing() {
         );
     }
 
-    // ═══════════════════════════════════════════════════════
-    // [BLOK 18] JASA FINISHING LANTAI
-    // ═══════════════════════════════════════════════════════
-	
-    if (urlMappingFinishingLantaiFromMoneyMasterMoneyPage[cleanUrlJasaKonsFinishing]) {
+    
+    if (urlMappingJasaFinishingLantaiFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingFinishingLantaiFromMoneyMasterMoneyPage,
+            urlMappingJasaFinishingLantaiFromMoneyPageVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -1084,50 +1020,17 @@ function initJasaKonsFinishing() {
             'JASA_KONSTRUKSI'
         );
     }
-    
-    if (urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+   
+    if (urlMappingJasaFinishingLantaiBetonFromVariantSubVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaFinishingLantaiBetonFromMoneyPageMoneyPage1,
+            urlMappingJasaFinishingLantaiBetonFromVariantSubVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
                 { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
                 { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
                 { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-    
-    if (urlMappingJasaFinishingLantaiMarmerFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingJasaFinishingLantaiMarmerFromMoneyPageMoneyPage1,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
-                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
-                { name: 'Jasa Finishing Lantai Marmer', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-marmer.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-    
-    if (urlMappingJasaPolesLantaiGranitFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingJasaPolesLantaiGranitFromMoneyPageMoneyPage1,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
-                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
-                { name: 'Jasa Finishing Lantai Granit', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-granit.html' }
             ],
             'JASA_KONSTRUKSI'
         );
@@ -1170,85 +1073,30 @@ function initJasaKonsFinishing() {
         );
     }
 
-    // ═══════════════════════════════════════════════════════
-    // [BLOK 20] JASA LANTAI SUPER FLAT + TROWEL + SCREEDING + FLOOR HARDENER + EPOXY
-    // ═══════════════════════════════════════════════════════
 
-    if (urlMappingJasaLantaiSuperFlatFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaFinishingSaluranDrainaseFromVariantSubVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaLantaiSuperFlatFromMoneyPage1MoneyPage2,
+            urlMappingJasaFinishingSaluranDrainaseFromVariantSubVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
                 { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
                 { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
                 { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
-                { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html' },
-                { name: 'Jasa Lantai Super Flat', url: 'https://www.betonjayareadymix.com/p/jasa-lantai-super-flat.html' }
+                { name: 'Jasa Finishing Infrastruktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-infrastruktur.html' },
+                { name: 'Jasa Finishing Saluran Drainase', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-saluran-drainase.html' }
             ],
             'JASA_KONSTRUKSI'
         );
     }
     
-    if (urlMappingJasaTrowelLantaiBetonFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingJasaTrowelLantaiBetonFromMoneyPage1MoneyPage2,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
-                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
-                { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html' },
-                { name: 'Jasa Trowel Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-trowel-lantai-beton.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-    
-    if (urlMappingJasaScreedingLantaiBetonFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingJasaScreedingLantaiBetonFromMoneyPage1MoneyPage2,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
-                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
-                { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html' },
-                { name: 'Jasa Screeding Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-screeding-lantai-beton.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-    
-    if (urlMappingJasaFloorHardenerLantaiFromMoneyPage1MoneyPage2[cleanUrlJasaKonsFinishing]) {
-        generateBreadcrumbShared(
-            urlMappingJasaFloorHardenerLantaiFromMoneyPage1MoneyPage2,
-            cleanUrlJasaKonsFinishing,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-finishing.html' },
-                { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
-                { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
-                { name: 'Jasa Finishing Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai.html' },
-                { name: 'Jasa Finishing Lantai Beton', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html' },
-                { name: 'Jasa Floor Hardener Lantai', url: 'https://www.betonjayareadymix.com/p/jasa-floor-hardener-lantai.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-	
     // ═══════════════════════════════════════════════════════
     // [BLOK 21] JASA FINISHING EKSTERIOR
     // ═══════════════════════════════════════════════════════
     
-    if (urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaFinishingEksteriorFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingFinishingEksteriorFromMoneyMaster1MoneyPage,
+            urlMappingJasaFinishingEksteriorFromMoneyPageVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -1333,9 +1181,9 @@ function initJasaKonsFinishing() {
     // [BLOK 25] JASA FINISHING STRUKTUR
     // ═══════════════════════════════════════════════════════
 	
-    if (urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaFinishingStrukturFromMoneyPageVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaFinishingStrukturFromMoneyMaster1MoneyPage,
+            urlMappingJasaFinishingStrukturFromMoneyPageVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -1348,9 +1196,9 @@ function initJasaKonsFinishing() {
         );
     }
    
-    if (urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1[cleanUrlJasaKonsFinishing]) {
+    if (urlMappingJasaFinishingStrukturBetonEksposFromVariantSubVariant[cleanUrlJasaKonsFinishing]) {
         generateBreadcrumbShared(
-            urlMappingJasaPelapisanCoatingStrukturFromMoneyPageMoneyPage1,
+            urlMappingJasaFinishingStrukturBetonEksposFromVariantSubVariant,
             cleanUrlJasaKonsFinishing,
             [
                 { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
@@ -1358,7 +1206,7 @@ function initJasaKonsFinishing() {
                 { name: 'Perbandingan Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-finishing.html' },
                 { name: 'Jasa Finishing', url: 'https://www.betonjayareadymix.com/p/jasa-finishing.html' },
                 { name: 'Jasa Finishing Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur.html' },
-                { name: 'Jasa Pelapisan Coating Struktur', url: 'https://www.betonjayareadymix.com/p/jasa-pelapisan-coating-struktur.html' }
+                { name: 'Jasa Finishing Struktur Beton Ekspos', url: 'https://www.betonjayareadymix.com/p/jasa-finishing-struktur-beton-ekspos.html' }
             ],
             'JASA_KONSTRUKSI'
         );
