@@ -1447,6 +1447,7 @@ const urlMappinghargaJasaPasangFromSub1MoneyMaster = {
 // 📂 PARENT: Jasa Pasang (MM) ➔ CHILD: Money Page
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaPasangFromMoneyMasterMoneyPage = {
+   "https://www.betonjayareadymix.com/p/jasa-pasang-wallpaper-3d.html": "Jasa Pasang Wallpaper 3D",   // 🆕 CONFIRMED — parent wallpaper Variant
   "https://www.betonjayareadymix.com/p/jasa-pasang-sandwich-panel.html": "Jasa Pasang Sandwich Panel",
   "https://www.betonjayareadymix.com/p/jasa-pasang-acp.html": "Jasa Pasang Acp",
   "https://www.betonjayareadymix.com/p/jasa-pasang-batu.html": "Jasa Pasang Batu",
