@@ -1134,60 +1134,7 @@ function initJasaPerbaikanKonsPost() {
             'JASA_KONSTRUKSI'
         );
     }
-
-    // ═══════════════════════════════════════════════════════
-    // [BLOK 2] PERBAIKAN STRUKTUR — TURUNAN
-    // ═══════════════════════════════════════════════════════
-
-    if (urlMappingPerbaikanStrukturGedungBertingkatFromMoneyPage1MoneyPage2[cleanUrlJasaPerbaikanKonsSub]) {
-        generateBreadcrumbShared(
-            urlMappingPerbaikanStrukturGedungBertingkatFromMoneyPage1MoneyPage2,
-            cleanUrlJasaPerbaikanKonsSub,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
-                { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
-                { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
-                { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html' },
-                { name: 'Jasa Perbaikan Gedung Bertingkat', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-gedung-bertingkat.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-
-    // ✅ FIX: Ganti urlMappingPerbaikanStrukturGedungBertingkat → urlMappingPerbaikanStrukturBangunanMiring
-    if (urlMappingPerbaikanStrukturBangunanMiringFromMoneyPage1MoneyPage2[cleanUrlJasaPerbaikanKonsSub]) {
-        generateBreadcrumbShared(
-            urlMappingPerbaikanStrukturBangunanMiringFromMoneyPage1MoneyPage2,
-            cleanUrlJasaPerbaikanKonsSub,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
-                { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
-                { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
-                { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html' },
-                { name: 'Jasa Perbaikan Struktur Bangunan Miring', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-miring.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-
-    if (urlMappingPerbaikanStrukturBangunanTuaFromMoneyPage1MoneyPage2[cleanUrlJasaPerbaikanKonsSub]) {
-        generateBreadcrumbShared(
-            urlMappingPerbaikanStrukturBangunanTuaFromMoneyPage1MoneyPage2,
-            cleanUrlJasaPerbaikanKonsSub,
-            [
-                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-                { name: 'Daftar Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-perbaikan-bangunan.html' },
-                { name: 'Perbandingan Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-perbaikan-bangunan.html' },
-                { name: 'Jasa Perbaikan Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-bangunan.html' },
-                { name: 'Jasa Perbaikan Struktur Bangunan', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan.html' },
-                { name: 'Jasa Perbaikan Struktur Bangunan Tua', url: 'https://www.betonjayareadymix.com/p/jasa-perbaikan-struktur-bangunan-tua.html' }
-            ],
-            'JASA_KONSTRUKSI'
-        );
-    }
-
+  
     if (urlMappingJasaPerbaikanLantaiAmblesFromVariantSubVariant[cleanUrlJasaPerbaikanKonsSub]) {
         generateBreadcrumbShared(
             urlMappingJasaPerbaikanLantaiAmblesFromVariantSubVariant,
