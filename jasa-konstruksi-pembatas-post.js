@@ -659,22 +659,6 @@ if (urlMappingJasaPasangPagarFromMoneyPageToVariant[cleanUrlJasaPembatasKonsPost
     );
    }
  
-   if (urlMappingPasangJasaPagarKawatHarmonikaFromMoneyPageMoneyPage1[cleanUrlJasaPembatasKonsPost]) {
-     generateBreadcrumbShared(
-        urlMappingPasangJasaPagarKawatHarmonikaFromMoneyPageMoneyPage1,
-        cleanUrlJasaPembatasKonsPost,
-        [
-           { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-            { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
-            { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
-            { name: 'Jasa Pasang Pagar Kawat Harmonika', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-kawat-harmonika.html' }
-        ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-	
 	if (urlMappingJasaPasangPagarRumahFromVariantSubVariant[cleanUrlJasaPembatasKonsPost]) {
         generateBreadcrumbShared(
         urlMappingJasaPasangPagarRumahFromVariantSubVariant,
