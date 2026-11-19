@@ -1460,7 +1460,6 @@ const urlMappingJasaPasangFromMoneyMasterMoneyPage = {
   "https://www.betonjayareadymix.com/p/jasa-pasang-pvc.html": "Jasa Pasang PVC",
   // Induk Area
   "https://www.betonjayareadymix.com/p/jasa-pasang-lantai.html": "Jasa Pasang Lantai",
-  "https://www.betonjayareadymix.com/p/jasa-borongan-lantai.html": "Jasa Borongan Lantai",
   "https://www.betonjayareadymix.com/p/jasa-pasang-dinding.html": "Jasa Pasang Dinding",
   // Plafon & Atap
   "https://www.betonjayareadymix.com/p/jasa-pasang-plafon.html": "Jasa Pasang Plafon",
