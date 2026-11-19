@@ -170,10 +170,10 @@ const urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyChild  = {
 const urlMappingJasaPasangPagarPanelBetonFromMoneyPageSub2  = {
 //sub2 karna sifat nya informasi tapi tetap level nya di bawah jasa pasang pagar panel beton
 "https://www.betonjayareadymix.com/2018/11/spesifikasi-jasa-pasang-pagar-panel.html": "Spesifikasi Jasa Pasang Pagar Panel Beton",
- "https://www.betonjayareadymix.com/2018/11/ukuran-jasa-pasang-pagar-panel-beton.html": "Ukuran Jasa Pasang Pagar Panel Beton",
+ "https://www.betonjayareadymix.com/2018/11/ukuran-jasa-pasang-pagar-panel-beton.html": "Ukuran Jasa Pasang Pagar Panel Beton"
 };
 const urlMappingJasaPasangPagarPanelBetonFromMoneyPageVariant  = {
-  "https://www.betonjayareadymix.com/2018/09/jasa-pagar-panel-beton-terpasang.html": "Jasa Pagar Panel Beton Terpasang",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-terpasang.html": "Jasa Pasang Pagar Panel Beton Terpasang",
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-per-meter.html": "Jasa Pasang Pagar Panel Beton Per Meter",
 	
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-motif.html": "Jasa Pasang Pagar Panel Beton Motif",
@@ -197,7 +197,7 @@ const urlMappingJasaPasangPagarPanelBetonFromMoneyPageVariant  = {
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-kedap-suara.html": "Jasa Pasang Pagar Panel Beton Kedap Suara", 
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tahan-lama.html": "Jasa Pasang Pagar Panel Beton Tahan Lama",  
   "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-cepat-dipasang.html": "Jasa Pasang Pagar Panel Beton Cepat Dipasang", 
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tahan-banjir.html": "Jasa Pasang Pagar Panel Beton Tahan Banjir",
+  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-panel-beton-tahan-banjir.html": "Jasa Pasang Pagar Panel Beton Tahan Banjir"
 		
 };
 
