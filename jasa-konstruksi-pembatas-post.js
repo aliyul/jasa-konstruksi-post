@@ -44,7 +44,7 @@ const urlMappingPembuatanPagarDinding = {
 // ============================================================
 
 const urlMappingJasaPasangPagarFromMoneyMasterMoneyChild = {
-"https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-terdekat.html": "Jasa Pasang Pagar Terdekat",
+//redirect ke jasa pasang pagar "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-terdekat.html": "Jasa Pasang Pagar Terdekat",
 "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-surabaya.html": "Jasa Pasang Pagar Surabaya",
 "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-karawang.html": "Jasa Pasang Pagar Karawang",
 "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-bekasi.html": "Jasa Pasang Pagar Bekasi",
@@ -118,7 +118,7 @@ const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyChild  = {
   // Breadcrumb: Home > Jasa Pembatas & Pengaman > Jasa Pembuatan Pagar Dinding Pembatas > Harga Pasang Pagar Panel Beton
   // ============================================================
 
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-terdekat.html": "Jasa Pasang Pagar Panel Beton Terdekat", 
+ //ini ga perlu karna udah di wakili lokasi nya "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-terdekat.html": "Jasa Pasang Pagar Panel Beton Terdekat", 
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-jakarta.html": "Jasa Pasang Pagar Panel Beton Jakarta",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-bogor.html": "Jasa Pasang Pagar Panel Beton Bogor",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-depok.html": "Jasa Pasang Pagar Panel Beton Depok",  // TYPE: MONEY_CHILD
@@ -134,10 +134,11 @@ const urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyChild  = {
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-indramayu.html": "Jasa Pasang Pagar Panel Beton Indramayu",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-majalengka.html": "Jasa Pasang Pagar Panel Beton Majalengka",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-tasikmalaya.html": "Jasa Pasang Pagar Panel Beton Tasikmalaya",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-purwakarta.html": "Jasa Pasang Pagar Panel Beton Purwakarta"
+  "https://www.betonjayareadymix.com/2018/11/jasa-pasang-pagar-panel-beton-purwakarta.html": "Jasa Pasang Pagar Panel Beton Purwakarta",
+    "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-panel-beton-subang.html": "Harga Jasa Pasang Pagar Panel Beton Subang"
 	
 };
-
+/*
 const urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyChild  = {
   // ============================================================
   // [MONEY_MASTER] - HARGA PASANG PAGAR PANEL BETON
@@ -162,9 +163,9 @@ const urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyChild  = {
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-panel-beton-majalengka.html": "Harga Jasa Pasang Pagar Panel Beton Majalengka",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-panel-beton-tasikmalaya.html": "Harga Jasa Pasang Pagar Panel Beton Tasikmalaya",  // TYPE: MONEY_CHILD
   "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-panel-beton-purwakarta.html": "Harga Jasa Pasang Pagar Panel Beton Purwakarta",  // TYPE: MONEY_CHILD
-  "https://www.betonjayareadymix.com/2018/11/harga-jasa-pasang-pagar-panel-beton-subang.html": "Harga Jasa Pasang Pagar Panel Beton Subang"
 	
 };
+*/
 
 const urlMappingJasaPasangPagarPanelBetonFromMoneyPageSub2  = {
 //sub2 karna sifat nya informasi tapi tetap level nya di bawah jasa pasang pagar panel beton
@@ -438,7 +439,6 @@ function restoreCondition(conditionId) {
 		urlMappingJasaPasangPagarBRCFromVariantSubVariant,
 		urlMappingJasaPasangDindingPembatasFromVariantSubVariant,
         urlMappingJasaPasangPagarPanelBetonFromMoneyPageMoneyChild,
-        urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyChild,
         urlMappingJasaPasangPagarPanelBetonFromMoneyPageSub2,
         urlMappingJasaPasangPagarPanelBetonFromMoneyPageVariant,
         urlMappingHargaJasaPasangPagarBRCFromMoneyPage1MoneyChild,
@@ -605,7 +605,6 @@ if (urlMappingJasaPasangPagarFromMoneyPageToVariant[cleanUrlJasaPembatasKonsPost
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
             { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
-            { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
             { name: 'Jasa Pasang Pagar Panel Beton', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-panel-beton.html' }
         ],
         'JASA_KONSTRUKSI'
@@ -620,25 +619,8 @@ if (urlMappingJasaPasangPagarFromMoneyPageToVariant[cleanUrlJasaPembatasKonsPost
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
             { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
-            { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
             { name: 'Jasa Pasang Pagar Panel Beton', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-panel-beton.html' }
         ],
-        'JASA_KONSTRUKSI'
-    );
-   }
-
- if (urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyChild[cleanUrlJasaPembatasKonsPost]) {
-    generateBreadcrumbShared(
-        urlMappingHargaJasaPasangPagarPanelBetonFromMoneyPageMoneyChild,
-        cleanUrlJasaPembatasKonsPost,
-        [
-            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
-            { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
-            { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
-           { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
-			{ name: 'Harga Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar.html' },
-            { name: 'Harga Jasa Pasang Pagar Panel Beton', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pasang-pagar-panel-beton.html' }
-	   ],
         'JASA_KONSTRUKSI'
     );
    }
@@ -652,7 +634,6 @@ if (urlMappingJasaPasangPagarFromMoneyPageToVariant[cleanUrlJasaPembatasKonsPost
             { name: 'Daftar Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pasang.html'},
             { name: 'Perbandingan Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pasang.html'},
             { name: 'Jasa Pasang', url: 'https://www.betonjayareadymix.com/p/jasa-pasang.html' },
-            { name: 'Jasa Pasang Pagar', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar.html' },
             { name: 'Jasa Pasang Pagar Panel Beton', url: 'https://www.betonjayareadymix.com/p/jasa-pasang-pagar-panel-beton.html' }
         ],
         'JASA_KONSTRUKSI'
