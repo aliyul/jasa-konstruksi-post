@@ -64,16 +64,7 @@ const urlMappingHargaJasaPasangPagarFromMoneyPageMoneyChild = {
 "https://www.betonjayareadymix.com/2018/09/harga-jasa-pasang-pagar-jakarta.html": "Harga Jasa Pasang Pagar Jakarta"
 };
 */
-// ═════════════════════════════════════════════════════════════════════
-// 📂 PARENT: jasa-pasang-pagar (Money-Page) ➔ CHILD: Variant (5)
-// ═════════════════════════════════════════════════════════════════════
-const urlMappingJasaPasangPagarFromMoneyPageToVariant = {
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-brc.html": "Jasa Pasang Pagar BRC",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-besi-hollow.html": "Jasa Pasang Pagar Besi Hollow",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-beton-precast.html": "Jasa Pasang Pagar Beton Precast",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pasang-pagar-rumah.html": "Jasa Pasang Pagar Rumah",
-  "https://www.betonjayareadymix.com/2018/11/biaya-jasa-pasang-pagar-rumah.html": "Biaya Jasa Pasang Pagar Rumah"
-};
+
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-pasang-pagar (Money-Page) ➔ CHILD: Variant (Material Spesifik)
 // ═════════════════════════════════════════════════════════════════════
