@@ -101,6 +101,7 @@ const urlMappingJasaFinishingDindingFromMoneyPageVariant = {
 // 📂 PARENT: jasa-finishing-lantai (MP) ➔ CHILD: Variant (11)
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaFinishingLantaiFromMoneyPageVariant = {
+ "https://www.betonjayareadymix.com/p/jasa-borongan-lantai.html":      "Jasa Borongan Lantai",
   // ─── By Material (6) ───
   "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-epoxy.html":      "Jasa Finishing Lantai Epoxy",
   "https://www.betonjayareadymix.com/p/jasa-finishing-lantai-beton.html":      "Jasa Finishing Lantai Beton",
