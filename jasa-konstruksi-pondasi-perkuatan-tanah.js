@@ -35,6 +35,26 @@ const urlMappingJasaTiangPancangFromMoneyMasterMoneyPage = {
 "https://www.betonjayareadymix.com/p/jasa-pancang-hidrolik.html": "Jasa Pancang Hidrolik",
  "https://www.betonjayareadymix.com/p/jasa-pemasangan-tiang-pancang.html": "Jasa Pemasangan Tiang Pancang"
 };
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-sheet-pile (Money-Master) 
+// ➔ CHILD: Money-Page (7)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaSheetPileFromMoneyMasterToMoneyPage = {
+  // Berdasarkan Material
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-sheet-pile-baja.html": "Jasa Pemasangan Sheet Pile Baja",
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-sheet-pile-beton.html": "Jasa Pemasangan Sheet Pile Beton",
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-sheet-pile-vinyl.html": "Jasa Pemasangan Sheet Pile Vinyl",
+  
+  // Berdasarkan Aplikasi Khusus
+  "https://www.betonjayareadymix.com/p/jasa-turap-sheet-pile-basement.html": "Jasa Turap Sheet Pile Basement",
+  "https://www.betonjayareadymix.com/p/jasa-cofferdam-sheet-pile.html": "Jasa Cofferdam Sheet Pile",
+  
+  // Layanan Pasca-Pemasangan
+  "https://www.betonjayareadymix.com/p/jasa-pencabutan-sheet-pile.html": "Jasa Pencabutan Sheet Pile",
+  
+  // Pricing (Nasional)
+  "https://www.betonjayareadymix.com/p/harga-jasa-pemasangan-sheet-pile.html": "Harga Jasa Pemasangan Sheet Pile"
+};
 /*
 const urlMappingHargaJasaTiangPancangFromMoneyMasterMoneyPage = {
 "https://www.betonjayareadymix.com/p/harga-jasa-pondasi-tiang-pancang.html": "Harga Jasa Pondasi Tiang Pancang"
@@ -182,6 +202,7 @@ const urlMappingPondasiVariantFromMoneyPageVariant = {
         urlMappingJasaPondasiFromMoneyMasterMoneyPage,
         urlMappingJasaCakarAyamFromMoneyMasterMoneyPage,
         urlMappingJasaTiangPancangFromMoneyMasterMoneyPage,
+		urlMappingJasaSheetPileFromMoneyMasterToMoneyPage,
         urlMappingJasaPondasiSumuranFromMoneyPageVariant,
 		urlMappingJasaPondasiTapakFromMoneyPageVariant,
         urlMappingJasaPersiapanPondasiFromMoneyMasterMoneyPage,
@@ -377,7 +398,20 @@ function initJasaPondasiPerkuatanTanah() {
             'JASA_KONSTRUKSI'
         );
     }
-
+    if (urlMappingJasaSheetPileFromMoneyMasterToMoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        generateBreadcrumbShared(
+            urlMappingJasaSheetPileFromMoneyMasterToMoneyPage,
+            cleanUrlJasaPondasiPerkuatanTanahKons,
+            [
+                { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+                { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
+                { name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
+               // { name: 'Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/jasa-pondasi.html' },
+                { name: 'Jasa Sheet Pile', url: 'https://www.betonjayareadymix.com/p/jasa-sheet-pile.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
 
     // ═══════════════════════════════════════════════════════
     // [BLOK 16] JASA PONDASI SUMURAN
