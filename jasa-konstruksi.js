@@ -388,7 +388,8 @@ const urlMappingJasaPondasiFromSub1MoneyMaster = {
   "https://www.betonjayareadymix.com/p/jasa-borongan-pondasi.html": "Jasa Borongan Pondasi",
   "https://www.betonjayareadymix.com/p/jasa-borongan-pondasi-murah.html": "Jasa Borongan Pondasi Murah",
   "https://www.betonjayareadymix.com/p/jasa-cakar-ayam.html": "Jasa Cakar Ayam",
-  "https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html": "Jasa Tiang Pancang"  
+  "https://www.betonjayareadymix.com/p/jasa-tiang-pancang.html": "Jasa Tiang Pancang",
+  "https://www.betonjayareadymix.com/p/jasa-sheet-pile.html": "Jasa Sheet Pile"  
 };
 const urlMappingJasaSaluranDrainaseBridgeFromSub2Sub1 = {
   //"https://www.betonjayareadymix.com/p/panduan-perbaikan-infrastruktur.html": "Panduan Perbaikan Infrastruktur"  // TYPE: SUB1
