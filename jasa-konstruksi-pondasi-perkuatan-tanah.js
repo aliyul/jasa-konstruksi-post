@@ -29,7 +29,7 @@ const urlMappingJasaPondasiTapakFromMoneyPageVariant = {
 // 📂 PARENT: jasa-tiang-pancang (Money-Master) 
 // ➔ CHILD: Money-Page (9 URL Optimal, Bebas Kanibalisasi)
 // ═════════════════════════════════════════════════════════════════════
-const urlMappingJasaTiangPancangFromMoneyMasterToMoneyPage = {
+const urlMappingJasaTiangPancangFromMoneyMasterMoneyPage = {
   // 🗑️ URL YANG DIHAPUS DARI MAPPING (Lakukan 301 Redirect ke URL di atas):
 // - https://www.betonjayareadymix.com/p/jasa-pemasangan-tiang-pancang.html 
 //   ➔ Redirect ke: /p/jasa-pondasi-tiang-pancang.html
