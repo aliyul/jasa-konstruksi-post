@@ -25,16 +25,39 @@ const urlMappingJasaPondasiTapakFromMoneyPageVariant = {
  "https://www.betonjayareadymix.com/p/jasa-pondasi-tapak-per-meter.html": "Jasa Pondasi Tapak Per Meter"
 };
 //khusus tiang pancang nanti money child nya terpisah fokus konten nya
-const urlMappingJasaTiangPancangFromMoneyMasterMoneyPage = {
-"https://www.betonjayareadymix.com/p/jasa-pondasi-tiang-pancang.html": "Jasa Pondasi Tiang Pancang",
-"https://www.betonjayareadymix.com/p/jasa-pondasi-tiang-pancang-murah.html": "Jasa Pondasi Tiang Pancang Murah",
-"https://www.betonjayareadymix.com/p/jasa-pancang-drop-hammer.html": "Jasa Pancang Drop Hammer",
-"https://www.betonjayareadymix.com/p/jasa-pancang-spun-pile.html": "Jasa Pancang Spun Pile",
-"https://www.betonjayareadymix.com/p/jasa-pancang-mini-pile.html": "Jasa Pancang Mini Pile",
-"https://www.betonjayareadymix.com/p/jasa-pemasangan-mini-pile.html": "Jasa Pemasangan Mini Pile",
-"https://www.betonjayareadymix.com/p/jasa-pancang-hidrolik.html": "Jasa Pancang Hidrolik",
- "https://www.betonjayareadymix.com/p/jasa-pemasangan-tiang-pancang.html": "Jasa Pemasangan Tiang Pancang"
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-tiang-pancang (Money-Master) 
+// ➔ CHILD: Money-Page (9 URL Optimal, Bebas Kanibalisasi)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaTiangPancangFromMoneyMasterToMoneyPage = {
+  // 🗑️ URL YANG DIHAPUS DARI MAPPING (Lakukan 301 Redirect ke URL di atas):
+// - https://www.betonjayareadymix.com/p/jasa-pemasangan-tiang-pancang.html 
+//   ➔ Redirect ke: /p/jasa-pondasi-tiang-pancang.html
+// - https://www.betonjayareadymix.com/p/jasa-pemasangan-mini-pile.html 
+//   ➔ Redirect ke: /p/jasa-pancang-mini-pile.html
+
+  // 1. Umbrella / Head Term Utama (Paling Umum Dicari)
+  "https://www.betonjayareadymix.com/p/jasa-pondasi-tiang-pancang.html": "Jasa Pondasi Tiang Pancang",
+  
+  // 2. Commercial Intent (Budget-Focused)
+  "https://www.betonjayareadymix.com/p/jasa-pondasi-tiang-pancang-murah.html": "Jasa Pondasi Tiang Pancang Murah",
+  
+  // 3. Berdasarkan Material Utama
+  "https://www.betonjayareadymix.com/p/jasa-pemancangan-tiang-pancang-baja.html": "Jasa Pemancangan Tiang Pancang Baja",
+  "https://www.betonjayareadymix.com/p/jasa-pemancangan-tiang-pancang-beton.html": "Jasa Pemancangan Tiang Pancang Beton",
+  
+  // 4. Berdasarkan Metode & Tipe Tiang Spesifik
+  "https://www.betonjayareadymix.com/p/jasa-pancang-spun-pile.html": "Jasa Pancang Spun Pile",
+  "https://www.betonjayareadymix.com/p/jasa-pancang-mini-pile.html": "Jasa Pancang Mini Pile",
+  "https://www.betonjayareadymix.com/p/jasa-pancang-drop-hammer.html": "Jasa Pancang Drop Hammer",
+  
+  // 5. Berdasarkan Metode Khusus (Static Piling)
+  "https://www.betonjayareadymix.com/p/jasa-jacking-pile.html": "Jasa Jacking Pile",
+  "https://www.betonjayareadymix.com/p/jasa-pancang-hidrolik.html": "Jasa Pancang Hidrolik"
+	
 };
+
+
 // ═════════════════════════════════════════════════════════════════════
 // 📂 PARENT: jasa-sheet-pile (Money-Master) 
 // ➔ CHILD: Money-Page (7)
