@@ -81,9 +81,6 @@ const urlMappingJasaTukangBajaRinganFromMoneyPage3MoneyPage4 = {
 // ============================================================
 
 const urlMappingJasaKonstruksiBajaKonvensionalFromMoneyPage1MoneyPage2 = {
-
-
-
   
 };
 
