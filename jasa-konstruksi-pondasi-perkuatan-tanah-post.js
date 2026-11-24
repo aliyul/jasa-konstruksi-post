@@ -725,7 +725,7 @@ function initJasaPondasiPerkuatanTanah() {
                 { name: 'Daftar Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-pondasi.html' },
                 { name: 'Perbandingan Jasa Pondasi', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-pondasi.html' },
                 { name: 'Jasa Sheet Pile', url: 'https://www.betonjayareadymix.com/p/jasa-sheet-pile.html' },
-                { name: 'Jasa Pencabutan Sheet Pile', url: 'https://www.betonjayareadymix.com/p/jasa-pencabutan-sheet-pile.html' }
+                { name: 'Harga Jasa Pemasangan Sheet Pile', url: 'https://www.betonjayareadymix.com/p/harga-jasa-pemasangan-sheet-pile.html' }
             ],
             'JASA_KONSTRUKSI'
         );
