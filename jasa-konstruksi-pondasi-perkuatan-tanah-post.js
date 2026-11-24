@@ -215,9 +215,9 @@ const urlMappingJasaPemasanganSheetPileBetonFromMoneyPageToVariant = {
 // ➔ CHILD: Variant (Aplikasi & Grade)
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaPemasanganSheetPileVinylFromMoneyPageToVariant = {
-  "https://www.betonjayareadymix.com/2018/09/jasa-pemasangan-sheet-pile-vinyl-kolam.html": "Jasa Pemasangan Sheet Pile Vinyl Kolam",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pemasangan-sheet-pile-vinyl-standar.html": "Jasa Pemasangan Sheet Pile Vinyl Standar",
-  "https://www.betonjayareadymix.com/2018/09/jasa-pemasangan-sheet-pile-vinyl-heavy-duty.html": "Jasa Pemasangan Sheet Pile Vinyl Heavy Duty"
+  "https://www.betonjayareadymix.com/2019/08/jasa-pemasangan-sheet-pile-vinyl-kolam.html": "Jasa Pemasangan Sheet Pile Vinyl Kolam",
+  "https://www.betonjayareadymix.com/2019/08/jasa-pemasangan-sheet-pile-vinyl-standar.html": "Jasa Pemasangan Sheet Pile Vinyl Standar",
+  "https://www.betonjayareadymix.com/2019/08/jasa-pemasangan-sheet-pile-vinyl-heavy-duty.html": "Jasa Pemasangan Sheet Pile Vinyl Heavy Duty"
 };
 
 // ═════════════════════════════════════════════════════════════════════
@@ -225,8 +225,8 @@ const urlMappingJasaPemasanganSheetPileVinylFromMoneyPageToVariant = {
 // ➔ CHILD: Variant (Jumlah Lantai)
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaTurapSheetPileBasementFromMoneyPageToVariant = {
-  "https://www.betonjayareadymix.com/2018/09/jasa-turap-sheet-pile-basement-1-lantai.html": "Jasa Turap Sheet Pile Basement 1 Lantai",
-  "https://www.betonjayareadymix.com/2018/09/jasa-turap-sheet-pile-basement-2-lantai.html": "Jasa Turap Sheet Pile Basement 2 Lantai"
+  "https://www.betonjayareadymix.com/2019/08/jasa-turap-sheet-pile-basement-1-lantai.html": "Jasa Turap Sheet Pile Basement 1 Lantai",
+  "https://www.betonjayareadymix.com/2019/08/jasa-turap-sheet-pile-basement-2-lantai.html": "Jasa Turap Sheet Pile Basement 2 Lantai"
 };
 
 // ═════════════════════════════════════════════════════════════════════
@@ -234,8 +234,8 @@ const urlMappingJasaTurapSheetPileBasementFromMoneyPageToVariant = {
 // ➔ CHILD: Variant (Lokasi Air)
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaCofferdamSheetPileFromMoneyPageToVariant = {
-  "https://www.betonjayareadymix.com/2018/09/jasa-cofferdam-sheet-pile-sungai.html": "Jasa Cofferdam Sheet Pile Sungai",
-  "https://www.betonjayareadymix.com/2018/09/jasa-cofferdam-sheet-pile-pantai.html": "Jasa Cofferdam Sheet Pile Pantai"
+  "https://www.betonjayareadymix.com/2019/08/jasa-cofferdam-sheet-pile-sungai.html": "Jasa Cofferdam Sheet Pile Sungai",
+  "https://www.betonjayareadymix.com/2019/08/jasa-cofferdam-sheet-pile-pantai.html": "Jasa Cofferdam Sheet Pile Pantai"
 };
 
 // ═════════════════════════════════════════════════════════════════════
@@ -243,7 +243,7 @@ const urlMappingJasaCofferdamSheetPileFromMoneyPageToVariant = {
 // ➔ CHILD: Variant (Material)
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingJasaPencabutanSheetPileFromMoneyPageToVariant = {
-  "https://www.betonjayareadymix.com/2018/09/jasa-pencabutan-sheet-pile-baja.html": "Jasa Pencabutan Sheet Pile Baja"
+  "https://www.betonjayareadymix.com/2019/08/jasa-pencabutan-sheet-pile-baja.html": "Jasa Pencabutan Sheet Pile Baja"
 };
 
 // ═════════════════════════════════════════════════════════════════════
@@ -251,9 +251,9 @@ const urlMappingJasaPencabutanSheetPileFromMoneyPageToVariant = {
 // ➔ CHILD: Variant (Pricing per Satuan)
 // ═════════════════════════════════════════════════════════════════════
 const urlMappingHargaJasaPemasanganSheetPileFromMoneyPageToVariant = {
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pemasangan-sheet-pile-baja-per-m2.html": "Harga Jasa Pemasangan Sheet Pile Baja per m2",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pemasangan-sheet-pile-beton-per-m2.html": "Harga Jasa Pemasangan Sheet Pile Beton per m2",
-  "https://www.betonjayareadymix.com/2018/09/harga-jasa-pemasangan-sheet-pile-per-meter.html": "Harga Jasa Pemasangan Sheet Pile per Meter"
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pemasangan-sheet-pile-baja-per-m2.html": "Harga Jasa Pemasangan Sheet Pile Baja per m2",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pemasangan-sheet-pile-beton-per-m2.html": "Harga Jasa Pemasangan Sheet Pile Beton per m2",
+  "https://www.betonjayareadymix.com/2019/08/harga-jasa-pemasangan-sheet-pile-per-meter.html": "Harga Jasa Pemasangan Sheet Pile per Meter"
 };
 const urlMappingJasaSheetPileFromMoneyMasterToChild = {
   "https://www.betonjayareadymix.com/2019/08/jasa-sheet-pile-jakarta.html": "Jasa Sheet Pile Jakarta",
