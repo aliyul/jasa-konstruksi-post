@@ -5,6 +5,73 @@
 
 console.log('[jasa-pondasi-perkuatan-tanah-post] 📄 File loaded, waiting for DOM...');
 
+//Jasa Fireproofing
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-fireproofing-baja (Money-Page)
+// ➔ CHILD: Variant (Aplikasi & Rating)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFireproofingBajaFromMoneyPageToVariant = {
+  "https://www.betonjayareadymix.com/2019/08/jasa-fireproofing-baja-gedung-bertingkat.html": "Jasa Fireproofing Baja Gedung Bertingkat",
+  "https://www.betonjayareadymix.com/2019/08/jasa-fireproofing-baja-pabrik.html": "Jasa Fireproofing Baja Pabrik",
+  "https://www.betonjayareadymix.com/2019/08/jasa-fireproofing-rating-2-jam.html": "Jasa Fireproofing Rating 2 Jam",
+  "https://www.betonjayareadymix.com/2019/08/jasa-fireproofing-rating-3-jam.html": "Jasa Fireproofing Rating 3 Jam"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-fireproofing-beton (Money-Page)
+// ➔ CHILD: Variant (Aplikasi)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFireproofingBetonFromMoneyPageToVariant = {
+  "https://www.betonjayareadymix.com/2019/08/jasa-fireproofing-beton-dermaga.html": "Jasa Fireproofing Beton Dermaga",
+  "https://www.betonjayareadymix.com/2019/08/jasa-fireproofing-beton-saluran-irigasi.html": "Jasa Fireproofing Beton Saluran Irigasi"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-fireproofing-vinyl (Money-Page)
+// ➔ CHILD: Variant (Aplikasi & Grade)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFireproofingVinylFromMoneyPageToVariant = {
+  "https://www.betonjayareadymix.com/2019/08/jasa-fireproofing-vinyl-kolam.html": "Jasa Fireproofing Vinyl Kolam",
+  "https://www.betonjayareadymix.com/2019/08/jasa-fireproofing-vinyl-heavy-duty.html": "Jasa Fireproofing Vinyl Heavy Duty"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-spray-fireproofing (Money-Page)
+// ➔ CHILD: Variant (Material Spray)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaSprayFireproofingFromMoneyPageToVariant = {
+  "https://www.betonjayareadymix.com/2019/08/jasa-spray-fireproofing-cementitious.html": "Jasa Spray Fireproofing Cementitious",
+  "https://www.betonjayareadymix.com/2019/08/jasa-spray-fireproofing-vermiculite.html": "Jasa Spray Fireproofing Vermiculite"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pengecatan-intumescent (Money-Page)
+// ➔ CHILD: Variant (Lokasi Aplikasi)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPengecatanIntumescentFromMoneyPageToVariant = {
+  "https://www.betonjayareadymix.com/2019/08/jasa-pengecatan-intumescent-internal.html": "Jasa Pengecatan Intumescent Internal",
+  "https://www.betonjayareadymix.com/2019/08/jasa-pengecatan-intumescent-eksternal.html": "Jasa Pengecatan Intumescent Eksternal"
+};
+
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-pemasangan-fireproof-board (Money-Page)
+// ➔ CHILD: Variant (Jenis Board)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaPemasanganFireproofBoardFromMoneyPageToVariant = {
+  "https://www.betonjayareadymix.com/2019/08/jasa-pemasangan-fireproof-board-kalsium-silikat.html": "Jasa Pemasangan Fireproof Board Kalsium Silikat"
+};
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-fireproofing (Money-Master)
+// ➔ CHILD: Money-Child (Lokasi / Kawasan Industri)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFireproofingFromMoneyMasterToMoneyChild = {
+  "https://www.betonjayareadymix.com/2019/08/jasa-fireproofing-jakarta.html": "Jasa Fireproofing Jakarta",
+  "https://www.betonjayareadymix.com/2019/08/jasa-fireproofing-karawang.html": "Jasa Fireproofing Karawang",
+  "https://www.betonjayareadymix.com/2019/08/jasa-fireproofing-bekasi.html": "Jasa Fireproofing Bekasi",
+  "https://www.betonjayareadymix.com/2019/08/jasa-fireproofing-cikarang.html": "Jasa Fireproofing Cikarang",
+  "https://www.betonjayareadymix.com/2019/08/jasa-fireproofing-surabaya.html": "Jasa Fireproofing Surabaya"
+};
+
 // ============================================================
 // 🔍 ENTITY TYPE: JASA (Pondasi Bangunan)
 // ============================================================
