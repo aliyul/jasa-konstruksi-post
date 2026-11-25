@@ -1,3 +1,27 @@
+//Jasa Fireproofing
+// ═════════════════════════════════════════════════════════════════════
+// 📂 PARENT: jasa-fireproofing (Money-Master / Pricing Hub)
+// ➔ CHILD: Money-Page (9 URL)
+// ═════════════════════════════════════════════════════════════════════
+const urlMappingJasaFireproofingFromMoneyMasterToMoneyPage = {
+  
+  // 1. Berdasarkan Target Material
+  "https://www.betonjayareadymix.com/p/jasa-fireproofing-baja.html": "Jasa Fireproofing Baja",
+  "https://www.betonjayareadymix.com/p/jasa-fireproofing-beton.html": "Jasa Fireproofing Beton",
+  "https://www.betonjayareadymix.com/p/jasa-fireproofing-kayu.html": "Jasa Fireproofing Kayu",
+  
+  // 2. Berdasarkan Metode Aplikasi
+  "https://www.betonjayareadymix.com/p/jasa-spray-fireproofing.html": "Jasa Spray Fireproofing",
+  "https://www.betonjayareadymix.com/p/jasa-pengecatan-intumescent.html": "Jasa Pengecatan Intumescent",
+  "https://www.betonjayareadymix.com/p/jasa-pemasangan-fireproof-board.html": "Jasa Pemasangan Fireproof Board",
+  
+  // 3. Berdasarkan Aplikasi Spesifik
+  "https://www.betonjayareadymix.com/p/jasa-fireproofing-kabel.html": "Jasa Fireproofing Kabel",
+  "https://www.betonjayareadymix.com/p/jasa-fireproofing-ducting.html": "Jasa Fireproofing Ducting",
+  
+  // 4. Pricing Hub Nasional (Fokus HARGA)
+  "https://www.betonjayareadymix.com/p/harga-jasa-fireproofing.html": "Harga Jasa Fireproofing"
+};
 // ============================================================
 // 🔍 ENTITY TYPE: JASA (Pondasi & Perkuatan Tanah)
 // ATURAN: JASA TIDAK BOLEH MENGGUNAKAN MONEY_MASTER
@@ -222,6 +246,7 @@ const urlMappingPondasiVariantFromMoneyPageVariant = {
     
     // Kumpulkan SEMUA mapping ke array
     var ALL_MAPPINGS = [
+		urlMappingJasaFireproofingFromMoneyMasterToMoneyPage,
         urlMappingJasaPondasiFromMoneyMasterMoneyPage,
         urlMappingJasaCakarAyamFromMoneyMasterMoneyPage,
         urlMappingJasaTiangPancangFromMoneyMasterMoneyPage,
@@ -365,6 +390,20 @@ function initJasaPondasiPerkuatanTanah() {
         );
     }
 
+	//Jasa Fireproofing
+	if (urlMappingJasaFireproofingFromMoneyMasterToMoneyPage[cleanUrlJasaPondasiPerkuatanTanahKons]) {
+        generateBreadcrumbShared(
+            urlMappingJasaFireproofingFromMoneyMasterToMoneyPage,
+            cleanUrlJasaPondasiPerkuatanTanahKons,
+            [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Fireproofing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-fireproofing.html' },
+            { name: 'Perbandingan Jasa Fireproofing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-fireproofing.html' },
+            { name: 'Jasa Fireproofing', url: 'https://www.betonjayareadymix.com/p/jasa-fireproofing.html' }
+            ],
+            'JASA_KONSTRUKSI'
+        );
+    }
     // ═══════════════════════════════════════════════════════
     // [BLOK 5] JASA PONDASI (MM)
     // ═══════════════════════════════════════════════════════
