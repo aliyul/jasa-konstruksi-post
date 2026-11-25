@@ -2487,7 +2487,7 @@ if (urlMappingJasaFireproofingFromSub1MoneyMaster[cleanUrlJasaKons]) {
        [
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
             { name: 'Daftar Jasa Fireproofing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-fireproofing.html' },
-            { name: 'Perbandingan Jasa Fireproofing', url: 'https://www.betonjayareadymix.com/p/perbandngan-jasa-fireproofing.html' }
+            { name: 'Perbandingan Jasa Fireproofing', url: 'https://www.betonjayareadymix.com/p/perbandingan-jasa-fireproofing.html' }
 	   ],
         'JASA_KONSTRUKSI'
     );
