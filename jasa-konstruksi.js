@@ -52,6 +52,9 @@ const urlMappingJasaKonsFromPillarSub2 = {
   // 🧠 TYPE: SUB2 (Intent Informasional 60%)
   // Breadcrumb: Home > Jasa Konstruksi > [Nama Layanan] (3 level)
   // ============================================================
+// ─── FIREPROOFING ───
+  "https://www.betonjayareadymix.com/p/daftar-jasa-fireproofing.html":          "Daftar Jasa Fireproofing", // INI BUAT BREADCRUMBS
+
 // ─── PLUMBING ───
   "https://www.betonjayareadymix.com/p/daftar-jasa-plumbing.html":          "Daftar Jasa Plumbing", // INI BUAT BREADCRUMBS
   "https://www.betonjayareadymix.com/p/daftar-jenis-tukang-ledeng.html":    "Daftar Jenis Tukang Ledeng", //INI INFORMASI SAJA DAN BUKAN BUAT BRADCRUMBS
@@ -107,6 +110,13 @@ const urlMappingJasaKonsFromPillarSub2 = {
 | 2 | /p/jasa-konstruksi-infrastruktur.html | /p/jasa-konstruksi.html | 301 | Intent sama, gabung ke PILLAR |
 | 3 | /p/jasa-konstruksi-indonesia.html | /p/jasa-konstruksi.html | 301 | Terlalu umum, cukup PILLAR utama |
 */
+const urlMappingJasaFireproofingBridgeFromSub2Sub1 = {
+  "https://www.betonjayareadymix.com/p/perbandingan-jasa-fireproofing.html": "Perbandingan Jasa Fireproofing" // (Tipe: Sub-Pillar Tipe 1)
+};
+const urlMappingJasaFireproofingFromSub1MoneyMaster = {
+  "https://www.betonjayareadymix.com/p/jasa-fireproofing.html": "Jasa Fireproofing"
+};
+
 
 // ============================================================
 // 📁 LEVEL 3 - SUB1 (Turunan dari SUB2 - PANDUAN / BRIDGE KE MONEY_PAGE)
@@ -2105,6 +2115,9 @@ console.log('[jasa-kons] 📄 File loaded, waiting for DOM...');
     urlMappingHargaJasaDesainFromSub1MoneyMaster,
     urlMappingJasaDesainInteriorFromMoneyPageVariant,
     urlMappingJasaKonsFromPillarSub2,
+	urlMappingJasaFireproofingBridgeFromSub2Sub1,
+	urlMappingJasaFireproofingFromSub1MoneyMaster,
+	  
     urlMappingJasaReliefBridgeFromSub2Sub1,
     urlMappingJasaReliefBridgeFromSub1MoneyMaster,
     urlMappingJasaReliefFromMoneyMasterMoneyPage,
@@ -2452,6 +2465,30 @@ if (urlMappingJasaKonsFromPillarSub2[cleanUrlJasaKons]) {
             { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' }
            // { name: 'Daftar Jasa Struktur Konstruksi', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-struktur-konstruksi.html' }
         ],
+        'JASA_KONSTRUKSI'
+    );
+}
+	
+if (urlMappingJasaFireproofingBridgeFromSub2Sub1[cleanUrlJasaKons]) {
+     generateBreadcrumbShared(
+        urlMappingJasaFireproofingBridgeFromSub2Sub1,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Fireproofing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-fireproofing.html' }
+	   ],
+        'JASA_KONSTRUKSI'
+    );
+}
+if (urlMappingJasaFireproofingFromSub1MoneyMaster[cleanUrlJasaKons]) {
+     generateBreadcrumbShared(
+        urlMappingJasaFireproofingFromSub1MoneyMaster,
+        cleanUrlJasaKons,
+       [
+            { name: 'Jasa Konstruksi', url: 'https://www.betonjayareadymix.com/p/jasa-konstruksi.html' },
+            { name: 'Daftar Jasa Fireproofing', url: 'https://www.betonjayareadymix.com/p/daftar-jasa-fireproofing.html' },
+            { name: 'Perbandingan Jasa Fireproofing', url: 'https://www.betonjayareadymix.com/p/jasa-fireproofing.html' }
+	   ],
         'JASA_KONSTRUKSI'
     );
 }
